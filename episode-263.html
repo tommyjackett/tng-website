@@ -93,7 +93,7 @@
   .hint{font-size:12.5px;color:var(--muted);padding:2px 10px 10px;border-bottom:1px solid rgba(255,255,255,.08);margin-bottom:6px}
 
   /* ── Listen banner ── */
-  .listen{display:flex;flex-wrap:wrap;justify-content:center;gap:10px 28px;margin-top:16px;
+  .listen{display:flex;flex-wrap:wrap;justify-content:center;gap:10px 28px;margin-top:34px;
     padding:13px 12px;border:1px solid var(--line);background:var(--card)}
   .listen a{display:inline-flex;align-items:center;gap:9px;text-decoration:none;font-size:13.5px;font-weight:600;color:var(--white);opacity:.9;transition:.15s}
   .listen a:hover{opacity:1;color:var(--mint)}
@@ -104,7 +104,10 @@
      "similar ground" + reason lines ONLY when moment-level topic overlap is
      genuinely strong; otherwise show the latest released episodes with dates —
      never invent a connection. ── */
-  .relsec{margin-top:26px}
+  .relsec{margin-top:38px}
+  .reldots{display:flex;justify-content:center;gap:7px;margin-top:12px}
+  .reldots span{width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.25);transition:.2s}
+  .reldots span.on{background:var(--mint)}
   .relsec .rtitle{font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.5px;font-size:15px;color:var(--white)}
   .relsec .rhint{display:block;font-size:12.5px;color:var(--muted);margin:3px 0 12px}
   .relgrid{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding-bottom:6px;scrollbar-width:none}
@@ -117,7 +120,7 @@
   .relcard .rwhy{display:block;font-size:11.5px;color:var(--mint);padding:5px 8px 10px}
 
   /* ── Dropdown sections (accordion under the player) ── */
-  .drops{margin-top:22px;display:flex;flex-direction:column;gap:11px}
+  .drops{margin-top:34px;display:flex;flex-direction:column;gap:11px}
   .drop{border:1px solid var(--line);border-radius:14px;background:var(--card);overflow:hidden;transition:border-color .15s}
   .drop[open]{border-color:rgba(122,217,168,.35)}
   .drop>summary{list-style:none;cursor:pointer;padding:16px 18px;display:flex;align-items:center;justify-content:space-between;gap:12px}
@@ -239,37 +242,6 @@
       </a>
     </div>
 
-    <div class="relsec">
-      <span class="rtitle">Keep exploring</span>
-      <span class="rhint">The latest from the show.</span>
-      <div class="relgrid">
-        <a class="relcard" href="episode-283.html">
-          <img src="https://i.ytimg.com/vi/le7HuIBq6Ow/hqdefault.jpg" alt="EP 283 thumbnail">
-          <span class="rtag">EP 283</span>
-          <span class="rt">What Real Budget Reform for Young Australians Would Actually Look Like</span>
-          <span class="rwhy">29 June 2026</span>
-        </a>
-        <a class="relcard" href="episode-282.html">
-          <img src="https://i.ytimg.com/vi/nC_JkW320Tw/hqdefault.jpg" alt="EP 282 thumbnail">
-          <span class="rtag">EP 282</span>
-          <span class="rt">The Business of Gift Cards</span>
-          <span class="rwhy">22 June 2026</span>
-        </a>
-        <a class="relcard" href="episode-281.html">
-          <img src="https://i.ytimg.com/vi/X-sSC-WROOQ/hqdefault.jpg" alt="EP 281 thumbnail">
-          <span class="rtag">EP 281</span>
-          <span class="rt">How to Know If Your Skills Transfer in an AI World</span>
-          <span class="rwhy">15 June 2026</span>
-        </a>
-      </div>
-    </div>
-
-    <div class="cta">
-      <h3>Got a question about <span class="m">your</span> numbers?</h3>
-      <p>Whether it's your business, your tax or your plan for the year, the team would love to hear from you.</p>
-      <a class="btn" href="#" id="getInTouch">Get in touch</a>
-    </div>
-
     <div class="drops">
 
       <details class="drop">
@@ -300,6 +272,38 @@
         </div>
       </details>
 
+    </div>
+
+    <div class="relsec">
+      <span class="rtitle">Keep exploring</span>
+      <span class="rhint">The latest from the show.</span>
+      <div class="relgrid">
+        <a class="relcard" href="episode-283.html">
+          <img src="https://i.ytimg.com/vi/le7HuIBq6Ow/hqdefault.jpg" alt="EP 283 thumbnail">
+          <span class="rtag">EP 283</span>
+          <span class="rt">What Real Budget Reform for Young Australians Would Actually Look Like</span>
+          <span class="rwhy">29 June 2026</span>
+        </a>
+        <a class="relcard" href="episode-282.html">
+          <img src="https://i.ytimg.com/vi/nC_JkW320Tw/hqdefault.jpg" alt="EP 282 thumbnail">
+          <span class="rtag">EP 282</span>
+          <span class="rt">The Business of Gift Cards</span>
+          <span class="rwhy">22 June 2026</span>
+        </a>
+        <a class="relcard" href="episode-281.html">
+          <img src="https://i.ytimg.com/vi/X-sSC-WROOQ/hqdefault.jpg" alt="EP 281 thumbnail">
+          <span class="rtag">EP 281</span>
+          <span class="rt">How to Know If Your Skills Transfer in an AI World</span>
+          <span class="rwhy">15 June 2026</span>
+        </a>
+      </div>
+      <div class="reldots" id="reldots"></div>
+    </div>
+
+    <div class="cta">
+      <h3>Got a question about <span class="m">your</span> numbers?</h3>
+      <p>Whether it's your business, your tax or your plan for the year, the team would love to hear from you.</p>
+      <a class="btn" href="#" id="getInTouch">Get in touch</a>
     </div>
 
   </main>
@@ -351,6 +355,23 @@
     var qEl=document.getElementById('qa');
     QUESTIONS.forEach(function(q){var b=document.createElement('button');b.className='q';b.onclick=function(){startAt(q.s)};b.innerHTML='<span class="qm">?</span><span class="qx">'+q.q+'</span><span class="go">›</span>';qEl.appendChild(b);});
     document.getElementById('qcount').textContent=QUESTIONS.length;
+
+    /* Keep-exploring dots: only shown when the strip actually scrolls (mobile). */
+    var rg=document.querySelector('.relgrid'), rd=document.getElementById('reldots');
+    if(rg&&rd){
+      var relCards=rg.querySelectorAll('.relcard');
+      relCards.forEach(function(){rd.appendChild(document.createElement('span'))});
+      var updDots=function(){
+        var scrollable=rg.scrollWidth>rg.clientWidth+4;
+        rd.style.display=scrollable?'flex':'none';
+        if(!scrollable)return;
+        var i=Math.round(rg.scrollLeft/(rg.scrollWidth-rg.clientWidth)*(relCards.length-1));
+        rd.querySelectorAll('span').forEach(function(s,n){s.classList.toggle('on',n===i)});
+      };
+      rg.addEventListener('scroll',updDots,{passive:true});
+      window.addEventListener('resize',updDots);
+      updDots();
+    }
 
     /* Explore tabs: swap the visible panel; the row stays put so you never lose your place. */
     var tabBtns=document.querySelectorAll('.tabbtn');
