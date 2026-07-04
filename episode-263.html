@@ -96,6 +96,20 @@
   .listen a:hover{opacity:1;color:var(--mint)}
   .listen svg{width:18px;height:18px;fill:currentColor;flex:none}
 
+  /* ── Quotes carousel (verbatim pull-quotes; whole card seeks the player) ──
+     Display text must be an exact substring of the moment's machine-verified quote —
+     trim at the edges for readability, never edit the middle. ── */
+  .qsec{margin-top:26px}
+  .qsec .qtitle{font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.5px;font-size:15px;color:var(--white)}
+  .qsec .qhint{display:block;font-size:12.5px;color:var(--muted);margin:3px 0 10px}
+  .qscroll{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding-bottom:6px;scrollbar-width:none}
+  .qscroll::-webkit-scrollbar{display:none}
+  .qcard{flex:0 0 84%;max-width:430px;scroll-snap-align:start;background:var(--purple);border:0;cursor:pointer;text-align:left;padding:16px 16px 13px;color:var(--white);font-family:inherit;transition:.15s}
+  .qcard:hover{filter:brightness(1.08)}
+  .qcard .qq{font-family:var(--display);font-weight:400;text-transform:uppercase;font-size:19px;line-height:1.3;letter-spacing:.2px}
+  .qcard .qwho{display:flex;justify-content:space-between;align-items:baseline;margin-top:12px;font-size:12px;font-weight:600;color:rgba(255,255,255,.75)}
+  .qcard .qwho b{color:var(--mint);font-weight:700;font-variant-numeric:tabular-nums}
+
   /* ── Dropdown sections (accordion under the player) ── */
   .drops{margin-top:22px;display:flex;flex-direction:column;gap:11px}
   .drop{border:1px solid var(--line);border-radius:14px;background:var(--card);overflow:hidden;transition:border-color .15s}
@@ -219,6 +233,12 @@
       </a>
     </div>
 
+    <div class="qsec">
+      <span class="qtitle">Quotes</span>
+      <span class="qhint">Word for word from the episode. Tap one to hear it in context.</span>
+      <div class="qscroll" id="pullquotes"></div>
+    </div>
+
     <div class="cta">
       <h3>Got a question about <span class="m">your</span> numbers?</h3>
       <p>Whether it's your business, your tax or your plan for the year, the team would love to hear from you.</p>
@@ -306,6 +326,20 @@
     var qEl=document.getElementById('qa');
     QUESTIONS.forEach(function(q){var b=document.createElement('button');b.className='q';b.onclick=function(){startAt(q.s)};b.innerHTML='<span class="qm">?</span><span class="qx">'+q.q+'</span><span class="go">›</span>';qEl.appendChild(b);});
     document.getElementById('qcount').textContent=QUESTIONS.length;
+
+    var PULLQUOTES=[
+      {q:"Before you know it it's December and you're limping to the line",who:"Nick",t:"01:41",s:101},
+      {q:"I say yes to everything and then try and figure it out later",who:"Jason",t:"07:40",s:460},
+      {q:"You have to accept where you're at",who:"Nick",t:"08:36",s:516},
+      {q:"I actually come into work and I write it on a bit of paper. Old school write it with a pen",who:"Nick",t:"11:12",s:672},
+      {q:"Don't wait for overwhelm or burnout. Put these things in place right now",who:"Jason",t:"23:50",s:1430}
+    ];
+    var pqEl=document.getElementById('pullquotes');
+    PULLQUOTES.forEach(function(p){
+      var b=document.createElement('button');b.className='qcard';b.onclick=function(){startAt(p.s)};
+      b.innerHTML='<span class="qq">“'+p.q+'”</span><span class="qwho"><span>'+p.who+'</span><b>'+p.t+'</b></span>';
+      pqEl.appendChild(b);
+    });
 
     /* Explore tabs: swap the visible panel; the row stays put so you never lose your place. */
     var tabBtns=document.querySelectorAll('.tabbtn');
