@@ -66,10 +66,13 @@
   .facade .play::after{content:"";border-style:solid;border-width:11px 0 11px 19px;border-color:transparent transparent transparent #fff;margin-left:5px}
   .player iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
 
-  /* ── Meta ── */
-  .meta{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin-top:18px}
-  .meta .date{font-size:14px;color:var(--muted);font-weight:500}
-  .meta .dot{width:3px;height:3px;border-radius:50%;background:var(--dim)}
+  /* ── Episode facts (bottom of the Summary panel — templated per episode) ── */
+  .sumfacts{margin:14px 10px 4px;padding-top:13px;border-top:1px solid rgba(255,255,255,.08);display:flex;flex-direction:column;gap:8px}
+  .fact{display:flex;gap:12px;font-size:13.5px}
+  .fact .fl{flex:none;width:104px;color:var(--dim);font-weight:600;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;padding-top:2px}
+  .fact .fv{color:rgba(255,255,255,.9);font-weight:500}
+  .fact .fv a{color:var(--mint);text-decoration:none;border-bottom:1px solid rgba(122,217,168,.4);transition:.15s}
+  .fact .fv a:hover{border-bottom-color:var(--mint)}
 
   /* ── Episode tag (identity: black label hanging off the title corner) ── */
   .eptag{display:inline-block;position:relative;left:-6px;margin-bottom:-7px;z-index:2;
@@ -108,8 +111,7 @@
   .reldots{display:flex;justify-content:center;gap:7px;margin-top:12px}
   .reldots span{width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.25);transition:.2s}
   .reldots span.on{background:var(--mint)}
-  .relsec .rtitle{font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.5px;font-size:15px;color:var(--white)}
-  .relsec .rhint{display:block;font-size:12.5px;color:var(--muted);margin:3px 0 12px}
+  .relsec .rtitle{display:block;font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.5px;font-size:15px;color:var(--white);margin-bottom:12px}
   .relgrid{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding-bottom:6px;scrollbar-width:none}
   .relgrid::-webkit-scrollbar{display:none}
   .relcard{flex:0 0 56%;max-width:232px;scroll-snap-align:start;display:block;text-decoration:none;background:var(--card);border:1px solid var(--line);transition:.15s}
@@ -121,7 +123,7 @@
 
   /* ── Dropdown sections (accordion under the player) ── */
   .drops{margin-top:34px;display:flex;flex-direction:column;gap:11px}
-  .drop{border:1px solid var(--line);border-radius:14px;background:var(--card);overflow:hidden;transition:border-color .15s}
+  .drop{border:1px solid var(--line);border-radius:0;background:var(--card);overflow:hidden;transition:border-color .15s}
   .drop[open]{border-color:rgba(122,217,168,.35)}
   .drop>summary{list-style:none;cursor:pointer;padding:16px 18px;display:flex;align-items:center;justify-content:space-between;gap:12px}
   .drop>summary::-webkit-details-marker{display:none}
@@ -200,12 +202,6 @@
       </div>
     </div>
 
-    <div class="meta">
-      <span class="date">9 February 2026</span>
-      <span class="dot"></span>
-      <span class="date">Nick Reilly &amp; Jason Robinson</span>
-    </div>
-
     <div class="explore">
       <div class="tabs" role="tablist">
         <button class="tabbtn on" data-panel="p-summary">Summary</button>
@@ -215,6 +211,10 @@
       <section class="tpanel" id="p-summary">
         <div class="summary-body">
           <p>Most people start the year fired up, then fall back into the same yearly pattern and end up on the fast track to burnout by December. So how do you break that cycle and stay consistent all year? Nick runs through the patterns he's noticed and the system he's putting in place to keep energy and momentum steady.</p>
+        </div>
+        <div class="sumfacts">
+          <div class="fact"><span class="fl">Release date</span><span class="fv">9 February 2026</span></div>
+          <div class="fact"><span class="fl">Voices</span><span class="fv"><a href="nick-reilly.html">Nick Reilly</a> &amp; <a href="jason-robinson.html">Jason Robinson</a></span></div>
         </div>
       </section>
       <section class="tpanel" id="p-chapters" hidden>
@@ -245,7 +245,7 @@
     <div class="drops">
 
       <details class="drop">
-        <summary><span class="st">Full transcript</span><span class="chev">+</span></summary>
+        <summary><span class="st">Episode transcript</span><span class="chev">+</span></summary>
         <div class="drop-body tbody">
           <p><span class="spk">Jason · 00:00</span>Welcome to another episode of the Numbers game. I'm Jace. I'm here with Nick. Since we have no Marty anymore, the budget for other things has gone up. Nick, 2026, welcome to the show. How you going?</p>
           <p><span class="spk">Nick · 00:19</span>Look really well. Sad not to have Marty here, but stoked. I am charged, mate. I'm ready. I'm fired up. Tommy the producer's got a tighter rein on us, so should be a bigger and better show this year.</p>
@@ -275,8 +275,7 @@
     </div>
 
     <div class="relsec">
-      <span class="rtitle">Keep exploring</span>
-      <span class="rhint">The latest from the show.</span>
+      <span class="rtitle">More like this</span>
       <div class="relgrid">
         <a class="relcard" href="episode-283.html">
           <img src="https://i.ytimg.com/vi/le7HuIBq6Ow/hqdefault.jpg" alt="EP 283 thumbnail">
