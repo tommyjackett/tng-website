@@ -96,18 +96,22 @@
   .listen a:hover{opacity:1;color:var(--mint)}
   .listen svg{width:18px;height:18px;fill:currentColor;flex:none}
 
-  /* ── Keep exploring (thumbnails link to other episode PAGES, never timecodes;
-     picks + reason lines come from moment-level topic overlap in the episode data) ── */
+  /* ── Keep exploring (thumbnails link to other episode PAGES, never timecodes).
+     Swipeable strip on mobile, fits three-up on desktop. Variant rule: claim
+     "similar ground" + reason lines ONLY when moment-level topic overlap is
+     genuinely strong; otherwise show the latest released episodes with dates —
+     never invent a connection. ── */
   .relsec{margin-top:26px}
   .relsec .rtitle{font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.5px;font-size:15px;color:var(--white)}
   .relsec .rhint{display:block;font-size:12.5px;color:var(--muted);margin:3px 0 12px}
-  .relgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px}
-  .relcard{display:block;text-decoration:none;background:var(--card);border:1px solid var(--line);transition:.15s}
+  .relgrid{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding-bottom:6px;scrollbar-width:none}
+  .relgrid::-webkit-scrollbar{display:none}
+  .relcard{flex:0 0 56%;max-width:232px;scroll-snap-align:start;display:block;text-decoration:none;background:var(--card);border:1px solid var(--line);transition:.15s}
   .relcard:hover{background:var(--card-hi);border-color:rgba(122,217,168,.55)}
   .relcard img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block}
-  .relcard .rtag{display:inline-block;background:#0a0a0a;color:var(--white);font-family:var(--display);font-size:11px;letter-spacing:1.2px;text-transform:uppercase;padding:4px 8px 2px;margin:10px 10px 0}
-  .relcard .rt{display:block;font-size:14px;font-weight:600;color:rgba(255,255,255,.92);line-height:1.4;padding:7px 10px 0}
-  .relcard .rwhy{display:block;font-size:12px;color:var(--mint);padding:6px 10px 12px}
+  .relcard .rtag{display:inline-block;background:#0a0a0a;color:var(--white);font-family:var(--display);font-size:10px;letter-spacing:1.2px;text-transform:uppercase;padding:3px 7px 2px;margin:8px 8px 0}
+  .relcard .rt{display:block;font-size:12.5px;font-weight:600;color:rgba(255,255,255,.92);line-height:1.4;padding:5px 8px 0}
+  .relcard .rwhy{display:block;font-size:11.5px;color:var(--mint);padding:5px 8px 10px}
 
   /* ── Dropdown sections (accordion under the player) ── */
   .drops{margin-top:22px;display:flex;flex-direction:column;gap:11px}
@@ -234,25 +238,25 @@
 
     <div class="relsec">
       <span class="rtitle">Keep exploring</span>
-      <span class="rhint">Episodes that cover similar ground to this one.</span>
+      <span class="rhint">The latest from the show.</span>
       <div class="relgrid">
-        <a class="relcard" href="episode-270.html">
-          <img src="https://i.ytimg.com/vi/O7CTNjXPPOI/hqdefault.jpg" alt="EP 270 thumbnail">
-          <span class="rtag">EP 270</span>
-          <span class="rt">AI Agents Are Here and Your Business Needs a Plan</span>
-          <span class="rwhy">Also covers: mindset</span>
+        <a class="relcard" href="episode-283.html">
+          <img src="https://i.ytimg.com/vi/le7HuIBq6Ow/hqdefault.jpg" alt="EP 283 thumbnail">
+          <span class="rtag">EP 283</span>
+          <span class="rt">What Real Budget Reform for Young Australians Would Actually Look Like</span>
+          <span class="rwhy">29 June 2026</span>
         </a>
-        <a class="relcard" href="episode-280.html">
-          <img src="https://i.ytimg.com/vi/sppkdu-w5jU/hqdefault.jpg" alt="EP 280 thumbnail">
-          <span class="rtag">EP 280</span>
-          <span class="rt">Victoria Owes $199 Billion</span>
-          <span class="rwhy">Also covers: mindset</span>
+        <a class="relcard" href="episode-282.html">
+          <img src="https://i.ytimg.com/vi/nC_JkW320Tw/hqdefault.jpg" alt="EP 282 thumbnail">
+          <span class="rtag">EP 282</span>
+          <span class="rt">The Business of Gift Cards</span>
+          <span class="rwhy">22 June 2026</span>
         </a>
-        <a class="relcard" href="episode-277.html">
-          <img src="https://i.ytimg.com/vi/owBCnFLV_vM/hqdefault.jpg" alt="EP 277 thumbnail">
-          <span class="rtag">EP 277</span>
-          <span class="rt">The 5-Day Week Is 100 Years Old</span>
-          <span class="rwhy">Also covers: productivity</span>
+        <a class="relcard" href="episode-281.html">
+          <img src="https://i.ytimg.com/vi/X-sSC-WROOQ/hqdefault.jpg" alt="EP 281 thumbnail">
+          <span class="rtag">EP 281</span>
+          <span class="rt">How to Know If Your Skills Transfer in an AI World</span>
+          <span class="rwhy">15 June 2026</span>
         </a>
       </div>
     </div>
