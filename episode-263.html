@@ -68,12 +68,32 @@
   .meta{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin-top:18px}
   .meta .date{font-size:14px;color:var(--muted);font-weight:500}
   .meta .dot{width:3px;height:3px;border-radius:50%;background:var(--dim)}
-  .chip{font-size:12.5px;font-weight:600;color:rgba(255,255,255,.85);padding:5px 12px;border:1px solid var(--line);border-radius:999px;background:var(--card)}
 
-  /* ── Listen buttons ── */
-  .listen{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
-  .listen a{display:inline-flex;align-items:center;gap:9px;text-decoration:none;font-size:13.5px;font-weight:600;color:var(--white);padding:10px 16px;border-radius:12px;border:1px solid var(--line);background:var(--card);transition:.15s}
-  .listen a:hover{background:var(--card-hi);border-color:rgba(122,217,168,.55);transform:translateY(-1px)}
+  /* ── Episode tag (identity: black label hanging off the title corner) ── */
+  .eptag{display:inline-block;position:relative;left:-6px;margin-bottom:-7px;z-index:2;
+    background:#0a0a0a;color:var(--white);font-family:var(--display);font-weight:400;
+    font-size:13.5px;letter-spacing:1.5px;text-transform:uppercase;padding:6px 11px 4px}
+
+  /* ── Explore tabs (sticky mode switcher; one panel swaps below, nothing shoves) ── */
+  .explore{margin-top:22px}
+  .tabs{position:sticky;top:58px;z-index:40;display:flex;flex-wrap:wrap;gap:8px;padding:10px 0;
+    background:linear-gradient(180deg,rgba(18,10,55,.96),rgba(18,10,55,.86));
+    backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+  .tabbtn{font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.5px;
+    font-size:14.5px;color:rgba(255,255,255,.82);background:none;border:1px solid rgba(255,255,255,.28);
+    padding:9px 13px 7px;cursor:pointer;transition:.15s}
+  .tabbtn:hover{border-color:rgba(122,217,168,.6);color:var(--white)}
+  .tabbtn.on{background:var(--mint);border-color:var(--mint);color:#0a0a0a}
+  .tabbtn .ct{font-size:12px;opacity:.75;font-variant-numeric:tabular-nums}
+  .tabbtn .ct::before{content:" · "}
+  .tpanel{border:1px solid var(--line);background:var(--card);padding:12px 10px 14px}
+  .hint{font-size:12.5px;color:var(--muted);padding:2px 10px 10px;border-bottom:1px solid rgba(255,255,255,.08);margin-bottom:6px}
+
+  /* ── Listen banner ── */
+  .listen{display:flex;flex-wrap:wrap;justify-content:center;gap:10px 28px;margin-top:16px;
+    padding:13px 12px;border:1px solid var(--line);background:var(--card)}
+  .listen a{display:inline-flex;align-items:center;gap:9px;text-decoration:none;font-size:13.5px;font-weight:600;color:var(--white);opacity:.9;transition:.15s}
+  .listen a:hover{opacity:1;color:var(--mint)}
   .listen svg{width:18px;height:18px;fill:currentColor;flex:none}
 
   /* ── Dropdown sections (accordion under the player) ── */
@@ -143,6 +163,7 @@
 
     <header class="hero">
       <div class="hook">
+        <span class="eptag">EP 263</span>
         <h1 class="hk"><span>Avoid burnout in 2026</span></h1>
         <p class="pay"><span>A simple plan to stay consistent</span></p>
       </div>
@@ -159,8 +180,28 @@
     <div class="meta">
       <span class="date">9 February 2026</span>
       <span class="dot"></span>
-      <span class="chip">Nick Reilly</span>
-      <span class="chip">Jason Robinson</span>
+      <span class="date">Nick Reilly &amp; Jason Robinson</span>
+    </div>
+
+    <div class="explore">
+      <div class="tabs" role="tablist">
+        <button class="tabbtn on" data-panel="p-summary">Summary</button>
+        <button class="tabbtn" data-panel="p-chapters">Chapters<span class="ct" id="chcount"></span></button>
+        <button class="tabbtn" data-panel="p-questions">Questions<span class="ct" id="qcount"></span></button>
+      </div>
+      <section class="tpanel" id="p-summary">
+        <div class="summary-body">
+          <p>Most people start the year fired up, then fall back into the same yearly pattern and end up on the fast track to burnout by December. So how do you break that cycle and stay consistent all year? Nick runs through the patterns he's noticed and the system he's putting in place to keep energy and momentum steady.</p>
+        </div>
+      </section>
+      <section class="tpanel" id="p-chapters" hidden>
+        <p class="hint">Jump straight to the part you need.</p>
+        <div id="chapters"></div>
+      </section>
+      <section class="tpanel" id="p-questions" hidden>
+        <p class="hint">Real questions this episode answers. Tap one to hear the answer.</p>
+        <div id="qa"></div>
+      </section>
     </div>
 
     <div class="listen">
@@ -178,24 +219,13 @@
       </a>
     </div>
 
+    <div class="cta">
+      <h3>Got a question about <span class="m">your</span> numbers?</h3>
+      <p>Whether it's your business, your tax or your plan for the year, the team would love to hear from you.</p>
+      <a class="btn" href="#" id="getInTouch">Get in touch</a>
+    </div>
+
     <div class="drops">
-
-      <details class="drop" open>
-        <summary><span class="st">Summary</span><span class="chev">+</span></summary>
-        <div class="drop-body summary-body">
-          <p>Most people start the year fired up, then fall back into the same yearly pattern and end up on the fast track to burnout by December. So how do you break that cycle and stay consistent all year? Nick runs through the patterns he's noticed and the system he's putting in place to keep energy and momentum steady.</p>
-        </div>
-      </details>
-
-      <details class="drop">
-        <summary><span class="st">What this episode answers</span><span class="ct" id="qcount"></span><span class="chev">+</span></summary>
-        <div class="drop-body" id="qa"></div>
-      </details>
-
-      <details class="drop">
-        <summary><span class="st">Chapters</span><span class="ct" id="chcount"></span><span class="chev">+</span></summary>
-        <div class="drop-body" id="chapters"></div>
-      </details>
 
       <details class="drop">
         <summary><span class="st">Full transcript</span><span class="chev">+</span></summary>
@@ -225,12 +255,6 @@
         </div>
       </details>
 
-    </div>
-
-    <div class="cta">
-      <h3>Got a question about <span class="m">your</span> numbers?</h3>
-      <p>Whether it's your business, your tax or your plan for the year, the team would love to hear from you.</p>
-      <a class="btn" href="#" id="getInTouch">Get in touch</a>
     </div>
 
   </main>
@@ -282,6 +306,17 @@
     var qEl=document.getElementById('qa');
     QUESTIONS.forEach(function(q){var b=document.createElement('button');b.className='q';b.onclick=function(){startAt(q.s)};b.innerHTML='<span class="qm">?</span><span class="qx">'+q.q+'</span><span class="go">›</span>';qEl.appendChild(b);});
     document.getElementById('qcount').textContent=QUESTIONS.length;
+
+    /* Explore tabs: swap the visible panel; the row stays put so you never lose your place. */
+    var tabBtns=document.querySelectorAll('.tabbtn');
+    tabBtns.forEach(function(b){
+      b.addEventListener('click',function(){
+        tabBtns.forEach(function(o){o.classList.remove('on')});
+        document.querySelectorAll('.tpanel').forEach(function(p){p.hidden=true});
+        b.classList.add('on');
+        document.getElementById(b.getAttribute('data-panel')).hidden=false;
+      });
+    });
 
     /* YouTube: clean facade, then real player on demand. Seek without yanking to top. */
     var player=null, ready=false, apiReady=false, pending=null;
