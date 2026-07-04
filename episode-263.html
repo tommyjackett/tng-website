@@ -39,18 +39,20 @@
   .nav a.home{text-decoration:none;font-size:13px;font-weight:600;color:var(--muted);display:inline-flex;align-items:center;gap:7px;padding:8px 14px;border:1px solid var(--line);border-radius:999px;transition:.15s}
   .nav a.home:hover{color:var(--white);border-color:rgba(122,217,168,.6)}
 
-  /* ── Hero / hook (EXACT carousel spec: uniform bars, purple setup + one mint payoff) ── */
+  /* ── Hero / hook (marker-highlight system: purple hook wraps naturally, mint payoff below)
+     Rules: title splits at its natural break (colon/pipe/question mark). Front = hook (purple,
+     big), back = payoff (mint, smaller). No break in title = purple hook only. Highlights hug
+     the text (tight em padding tuned to Anton) and wrap via box-decoration-break — never
+     hand-pick line breaks or mint words. ── */
   header.hero{padding:34px 0 6px}
-  .hook{display:flex;flex-direction:column;align-items:flex-start;gap:10px}
-  .hook .bar{
-    font-family:var(--display);font-weight:400;text-transform:uppercase;white-space:nowrap;
-    font-size:clamp(26px,6.8vw,52px);line-height:.98;letter-spacing:-.5px;
-    padding:12px 24px 8px;display:inline-block;
-  }
-  .hook .bar.p{background:var(--purple);color:var(--white)}
-  .hook .bar.m{background:var(--mint);color:#0a0a0a}
-  .hook .bar.p:first-of-type{box-shadow:0 12px 24px rgba(0,0,0,.45)}
-  .hook .sub{font-family:var(--display);font-size:clamp(15px,3.6vw,21px);letter-spacing:1px;text-transform:uppercase;color:rgba(255,255,255,.9);margin-top:16px}
+  .hook .hk{font-family:var(--display);font-weight:400;text-transform:uppercase;
+    font-size:clamp(28px,7vw,52px);line-height:1.3;letter-spacing:.2px}
+  .hook .hk span{background:var(--purple);color:var(--white);padding:.04em .3em .02em;
+    -webkit-box-decoration-break:clone;box-decoration-break:clone}
+  .hook .pay{font-family:var(--display);font-weight:400;text-transform:uppercase;
+    font-size:clamp(16px,4vw,24px);line-height:1.5;letter-spacing:.6px;margin-top:14px}
+  .hook .pay span{background:var(--mint);color:#0a0a0a;padding:.08em .4em .04em;
+    -webkit-box-decoration-break:clone;box-decoration-break:clone}
 
   /* ── Player (clean facade → real player on tap) ── */
   .player-wrap{margin:24px 0 4px;scroll-margin-top:76px}
@@ -140,9 +142,8 @@
 
     <header class="hero">
       <div class="hook">
-        <span class="bar p">Avoid burnout</span>
-        <span class="bar m">In 2026</span>
-        <span class="sub">A simple plan to stay consistent</span>
+        <h1 class="hk"><span>Avoid burnout in 2026</span></h1>
+        <p class="pay"><span>A simple plan to stay consistent</span></p>
       </div>
     </header>
 
