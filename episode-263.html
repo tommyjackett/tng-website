@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EP 263 · Stop The Yearly Burnout Cycle | The Numbers Game</title>
+<meta name="description" content="The Numbers Game EP 263: most people start the year fired up then limp to December. Nick's system for staying consistent and avoiding burnout all year. Jump to any moment, or read the full transcript.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --purple:#585af3; --purple-dark:#2c1b8a; --mint:#7ad9a8; --vidpod:#00ffaa;
+    --white:#ffffff; --ink:#0b0820;
+    --muted:rgba(255,255,255,.60); --dim:rgba(255,255,255,.42);
+    --line:rgba(255,255,255,.12); --card:rgba(255,255,255,.045); --card-hi:rgba(255,255,255,.08);
+    --display:'Anton',Impact,'Helvetica Neue',sans-serif;
+    --sans:'Inter',system-ui,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif;
+    --wrap:760px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:var(--sans); color:var(--white); line-height:1.6; -webkit-font-smoothing:antialiased;
+    background:#12093a;
+    background-image:
+      radial-gradient(1200px 600px at 82% -6%, rgba(88,90,243,.45) 0%, transparent 55%),
+      radial-gradient(900px 700px at 5% 8%, rgba(122,217,168,.10) 0%, transparent 50%),
+      linear-gradient(180deg, #2c1b8a 0%, #1a1150 28%, #100b34 62%, #0b0820 100%);
+    background-attachment:fixed;
+  }
+  a{color:inherit}
+  .wrap{max-width:var(--wrap);margin:0 auto;padding:0 20px}
+
+  /* ── Navbar ── */
+  .nav{
+    position:sticky; top:0; z-index:50;
+    background:linear-gradient(180deg, rgba(24,15,74,.92), rgba(24,15,74,.72));
+    backdrop-filter:blur(14px); -webkit-backdrop-filter:blur(14px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav-in{max-width:var(--wrap);margin:0 auto;padding:12px 20px;display:flex;align-items:center;justify-content:space-between}
+  .brand{display:flex;align-items:center;gap:9px;text-decoration:none}
+  .brand img{height:19px;width:auto;display:block}
+  .brand .the,.brand .game{font-family:var(--display);font-size:19px;letter-spacing:.5px;line-height:1;color:var(--white);text-transform:uppercase}
+  .nav a.home{
+    text-decoration:none;font-size:13px;font-weight:600;letter-spacing:.02em;color:var(--muted);
+    display:inline-flex;align-items:center;gap:7px;padding:8px 14px;border:1px solid var(--line);border-radius:999px;
+    transition:.15s;
+  }
+  .nav a.home:hover{color:var(--white);border-color:rgba(122,217,168,.6)}
+
+  /* ── Header / hook ── */
+  header.hero{padding:38px 0 8px}
+  .kicker{font-family:var(--sans);font-weight:800;font-size:12.5px;letter-spacing:.28em;text-transform:uppercase;color:var(--mint);margin-bottom:16px}
+  .hook{display:flex;flex-direction:column;align-items:flex-start;gap:8px}
+  .hook .bar{
+    font-family:var(--display);font-weight:400;text-transform:uppercase;
+    font-size:clamp(34px,9.2vw,66px); line-height:.94; letter-spacing:.5px;
+    padding:6px 15px 9px; display:inline-block;
+  }
+  .hook .bar.p{background:var(--purple);color:var(--white);box-shadow:0 12px 30px rgba(0,0,0,.35)}
+  .hook .bar.m{background:var(--mint);color:#08210f}
+  .hook .sub{
+    font-family:var(--display);font-size:clamp(18px,4.6vw,26px);letter-spacing:1px;text-transform:uppercase;
+    color:rgba(255,255,255,.9);margin-top:14px;
+  }
+
+  /* ── Player ── */
+  .player-shell{margin:24px 0 4px;scroll-margin-top:78px}
+  .player{
+    position:relative;width:100%;padding-top:56.25%;border-radius:16px;overflow:hidden;
+    background:#000;box-shadow:0 30px 70px rgba(0,0,0,.5),0 0 0 1px rgba(255,255,255,.06);
+  }
+  .player iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+
+  /* ── Meta row ── */
+  .meta{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin-top:18px}
+  .meta .date{font-size:14px;color:var(--muted);font-weight:500}
+  .meta .dot{width:3px;height:3px;border-radius:50%;background:var(--dim)}
+  .chip{
+    font-size:12.5px;font-weight:600;letter-spacing:.01em;color:rgba(255,255,255,.85);
+    padding:5px 12px;border:1px solid var(--line);border-radius:999px;background:var(--card);
+  }
+
+  /* ── Listen buttons ── */
+  .listen{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+  .listen a{
+    display:inline-flex;align-items:center;gap:9px;text-decoration:none;
+    font-size:13.5px;font-weight:600;color:var(--white);
+    padding:10px 16px;border-radius:12px;border:1px solid var(--line);background:var(--card);transition:.15s;
+  }
+  .listen a:hover{background:var(--card-hi);border-color:rgba(122,217,168,.55);transform:translateY(-1px)}
+  .listen svg{width:18px;height:18px;fill:currentColor;flex:none}
+
+  /* ── Sections ── */
+  section{padding:30px 0;border-top:1px solid var(--line)}
+  section:first-of-type{border-top:0}
+  .label{font-family:var(--sans);font-weight:800;font-size:12.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--mint);margin-bottom:16px}
+  .summary p{font-size:17.5px;line-height:1.62;color:rgba(255,255,255,.9)}
+
+  /* ── Chapters ── */
+  .chapters{display:flex;flex-direction:column;gap:2px}
+  .chapter{
+    display:flex;align-items:baseline;gap:14px;width:100%;text-align:left;cursor:pointer;
+    background:none;border:0;color:inherit;font-family:inherit;padding:11px 12px;border-radius:10px;transition:.13s;
+  }
+  .chapter:hover{background:var(--card-hi)}
+  .chapter .tc{font-variant-numeric:tabular-nums;font-weight:700;font-size:14px;color:var(--mint);flex:none;width:48px}
+  .chapter .ct{font-size:15.5px;font-weight:500;color:rgba(255,255,255,.9)}
+  .chapter:hover .ct{color:#fff}
+
+  /* ── This episode answers ── */
+  .qa{display:flex;flex-direction:column;gap:9px}
+  .q{
+    display:flex;align-items:center;gap:13px;width:100%;text-align:left;cursor:pointer;
+    background:var(--card);border:1px solid var(--line);color:inherit;font-family:inherit;
+    padding:14px 16px;border-radius:13px;transition:.15s;
+  }
+  .q:hover{background:var(--card-hi);border-color:rgba(122,217,168,.5);transform:translateX(3px)}
+  .q .qmark{font-family:var(--display);font-size:15px;color:var(--mint);flex:none;line-height:1;transform:translateY(1px)}
+  .q .qt{font-size:15.5px;font-weight:500;color:rgba(255,255,255,.92)}
+  .q .go{margin-left:auto;flex:none;color:var(--dim);font-size:18px;transition:.15s}
+  .q:hover .go{color:var(--mint);transform:translateX(2px)}
+
+  /* ── Transcript ── */
+  details.transcript{border:1px solid var(--line);border-radius:14px;background:var(--card);overflow:hidden}
+  details.transcript summary{
+    list-style:none;cursor:pointer;padding:16px 18px;display:flex;align-items:center;justify-content:space-between;
+    font-weight:700;font-size:15px;
+  }
+  details.transcript summary::-webkit-details-marker{display:none}
+  details.transcript summary .plus{color:var(--mint);font-family:var(--display);font-size:18px;transition:.2s}
+  details.transcript[open] summary .plus{transform:rotate(45deg)}
+  .tbody{padding:4px 18px 22px;border-top:1px solid var(--line)}
+  .tbody p{font-size:14.5px;line-height:1.7;color:rgba(255,255,255,.78);margin-top:16px;max-width:64ch}
+  .tbody .spk{display:block;font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--mint);margin-bottom:2px}
+
+  /* ── CTA ── */
+  .cta{text-align:center;padding:34px 0}
+  .cta h3{font-family:var(--display);font-size:clamp(24px,6vw,34px);text-transform:uppercase;letter-spacing:.5px;line-height:1}
+  .cta h3 .m{color:var(--mint)}
+  .cta p{color:var(--muted);font-size:15px;margin:12px auto 20px;max-width:44ch}
+  .btn{
+    display:inline-block;text-decoration:none;font-weight:700;font-size:15px;letter-spacing:.01em;color:#08210f;
+    background:var(--mint);padding:14px 30px;border-radius:999px;transition:.15s;
+  }
+  .btn:hover{filter:brightness(1.06);transform:translateY(-1px);box-shadow:0 14px 34px rgba(122,217,168,.28)}
+
+  /* ── Footer ── */
+  footer{border-top:1px solid var(--line);margin-top:10px;padding:40px 20px 54px;text-align:center}
+  .foot-label{font-size:11px;font-weight:700;letter-spacing:.26em;text-transform:uppercase;color:var(--dim);margin-bottom:16px}
+  .sponsors{display:flex;justify-content:center;align-items:center;gap:38px;flex-wrap:wrap}
+  .sponsors img{height:34px;width:auto;opacity:.92}
+  .produced{margin-top:34px}
+  .vidpod{
+    display:inline-flex;align-items:center;font-family:var(--display);font-size:26px;letter-spacing:.5px;color:var(--white);line-height:1;
+    position:relative;padding:2px 0;
+  }
+  .vidpod .pod{position:relative;z-index:1}
+  .vidpod .pod::before{
+    content:"";position:absolute;inset:-4px -7px -6px -5px;background:var(--vidpod);z-index:-1;transform:rotate(-4deg);border-radius:2px;
+  }
+  .copyright{margin-top:30px;font-size:12px;color:var(--dim)}
+
+  @media(min-width:720px){
+    header.hero{padding:52px 0 8px}
+    .summary p{font-size:18.5px}
+  }
+</style>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-in">
+      <a class="brand" href="index.html" aria-label="The Numbers Game home">
+        <span class="the">The</span><img src="assets/tng-logo.png" alt="Numbers"><span class="game">Game</span>
+      </a>
+      <a class="home" href="index.html">← All episodes</a>
+    </div>
+  </nav>
+
+  <main class="wrap">
+
+    <header class="hero">
+      <div class="kicker">The Numbers Game · Episode 263</div>
+      <div class="hook">
+        <span class="bar p">Stop the yearly</span>
+        <span class="bar m">Burnout cycle</span>
+        <span class="sub">Stay consistent in 2026</span>
+      </div>
+    </header>
+
+    <div class="player-shell" id="player-shell">
+      <div class="player"><div id="ytplayer"></div></div>
+    </div>
+
+    <div class="meta">
+      <span class="date">9 February 2026</span>
+      <span class="dot"></span>
+      <span class="chip">Nick Reilly</span>
+      <span class="chip">Jason Robinson</span>
+    </div>
+
+    <div class="listen">
+      <a href="https://youtu.be/dDY0Eg3wP6o" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.12-2.14C19.5 3.55 12 3.55 12 3.55s-7.5 0-9.38.51A3 3 0 0 0 .5 6.2 31.4 31.4 0 0 0 0 12a31.4 31.4 0 0 0 .5 5.8 3 3 0 0 0 2.12 2.14c1.88.51 9.38.51 9.38.51s7.5 0 9.38-.51a3 3 0 0 0 2.12-2.14A31.4 31.4 0 0 0 24 12a31.4 31.4 0 0 0-.5-5.8zM9.55 15.57V8.43L15.82 12z"/></svg>
+        Watch on YouTube
+      </a>
+      <a href="https://open.spotify.com/search/the%20numbers%20game%20podcast" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.52 17.34c-.24.36-.66.48-1.02.24-2.82-1.74-6.36-2.1-10.56-1.14-.42.12-.78-.18-.9-.54-.12-.42.18-.78.54-.9 4.56-1.02 8.52-.6 11.64 1.32.42.18.48.66.3 1.02zm1.44-3.3c-.3.42-.84.6-1.26.3-3.24-1.98-8.16-2.58-11.94-1.38-.48.12-1.02-.12-1.14-.6-.12-.48.12-1.02.6-1.14 4.32-1.32 9.72-.66 13.44 1.62.36.18.54.78.3 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.3c-.6.18-1.2-.18-1.38-.72-.18-.6.18-1.2.72-1.38 4.26-1.26 11.28-1.02 15.72 1.62.54.3.72 1.02.42 1.56-.3.42-1.02.6-1.56.3z"/></svg>
+        Spotify
+      </a>
+      <a href="https://podcasts.apple.com/search?term=the%20numbers%20game" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M12 2a8 8 0 0 0-4.5 14.6c.3.2.5.6.4 1l-.3 1.4c-.1.5.3.9.8.8l1.9-.5a1 1 0 0 1 .6 0l1.9.5c.5.1.9-.3.8-.8l-.3-1.4c-.1-.4.1-.8.4-1A8 8 0 0 0 12 2zm0 3.4a2.3 2.3 0 1 1 0 4.6 2.3 2.3 0 0 1 0-4.6zm0 5.6c1.7 0 3 .9 3 2.1 0 .8-.5 3.3-.9 4.6-.2.6-.7 1-1.3 1h-1.6c-.6 0-1.1-.4-1.3-1-.4-1.3-.9-3.8-.9-4.6 0-1.2 1.3-2.1 3-2.1z"/></svg>
+        Apple Podcasts
+      </a>
+    </div>
+
+    <section class="summary">
+      <div class="label">The episode</div>
+      <p>Most people start the year fired up, then fall back into the same yearly pattern and end up on the fast track to burnout by December. So how do you break that cycle and stay consistent all year? Nick runs through the patterns he's noticed and the system he's putting in place to keep energy and momentum steady.</p>
+    </section>
+
+    <section>
+      <div class="label">Chapters</div>
+      <div class="chapters" id="chapters"></div>
+    </section>
+
+    <section>
+      <div class="label">This episode answers</div>
+      <div class="qa" id="qa"></div>
+    </section>
+
+    <section>
+      <details class="transcript">
+        <summary>Full transcript <span class="plus">+</span></summary>
+        <div class="tbody">
+          <p><span class="spk">Jason · 00:00</span>Welcome to another episode of the Numbers game. I'm Jace. I'm here with Nick and for anyone watching online you may notice that it looks a little bit different. Go and check out the video on Spotify or YouTube. But basically since we have no Marty anymore, the budget for other things has gone up. Nick, 2026, welcome to the show. How you going?</p>
+          <p><span class="spk">Nick · 00:19</span>Look really well. Sad not to have Marty here, but yeah, stoked. I am charged, mate. I'm ready. I'm fired up. Got Tommy the producer's got a tighter rein on us, so should be a bigger and better show this year.</p>
+          <p><span class="spk">Jason · 01:03</span>It is the end of January 2026 and there's so much energy around New Year's, people going alcohol free, dry January, kickstarting the year with lots of energy. But Nick, today you want to chat to us around that phenomenon of new year, new me, and what happens.</p>
+          <p><span class="spk">Nick · 01:41</span>Exactly that. You come back super energised, you've got all these goals, whether they're business or personal, supercharged. And then throughout the year you just follow these patterns that you follow all the time. You were gonna implement this and you didn't. And then before you know it it's December and you're limping to the line. So I've been reflecting on how to change that pattern. I started back at work on the 12th of Jan, three-week break, fired up. We're now towards the end of Jan, two weeks in, and you're already feeling a little bit of a lag.</p>
+          <p><span class="spk">Jason · 02:49</span>There's probably so many people at home nodding going, yep, that's exactly how I was feeling. First couple of weeks back in Jan it's let's go, I'm fresh, recharged. And man, that drops off pretty quick.</p>
+          <p><span class="spk">Nick · 03:02</span>Drops off quick. And then you think, oh Easter's coming, I'm gonna get another break at Easter, so I'm just gonna push through to Easter. You get to Easter, then winter, you've got a long six months ahead. Then spring's busy, Melbourne Cup Carnival, and I get to the end of spring absolutely spent, limping to the line to December. I put it down to being busier. The busier you are, the quicker the time goes because you've got more time, more things to do.</p>
+          <p><span class="spk">Nick · 04:25</span>We see it a lot in the financial planning business. Our busiest time is January because new year resolutions that weren't ticked off two or three years ago, people come back with renewed energy, but then they won't do anything and two years later they come back. So I've been reflecting on how I'm going to change that pattern this year.</p>
+          <p><span class="spk">Jason · 05:00</span>Absolutely resonate with the majority of it. In accounting land you get through Feb, March is busy, FBT year end, April hits tax planning. By April, May, June you're doing the year-end lodgements. It's the same cycle, and often there's an intention to change it but it's the natural thing to fall back into that pattern, just rinse and repeat.</p>
+          <p><span class="spk">Nick · 06:14</span>I'm not sitting here saying I have the answers. It's all about getting away from being motivated and having sustained energy. Particularly as you get older, I'm 43, the biggest change I noticed was 40 onwards in energy. It's not about running through brick walls all year, you need a sustained level of energy. And if I don't have good energy as a leader in our business, how does that impact the wider staff? If I come home with no energy, what am I giving to my family?</p>
+          <p><span class="spk">Jason · 07:40</span>One thing I'd like to change is overcommitment. I say yes to everything and then try and figure it out later. And you said you started saying no to things that didn't serve you or weren't worth your energy. Definitely going to take that on board.</p>
+          <p><span class="spk">Nick · 08:36</span>The thing I had to do first is you have to accept where you're at. You have to reflect and own your current position. Own the fact that I am tired, I was going to do this and I didn't. Because if you don't accept that, you can't commit to making the changes. Am I wired, am I coasting, am I just going through the motions, or am I burnt out?</p>
+          <p><span class="spk">Jason · 09:21</span>Most people just go to making plans for the year without stopping and reflecting. Burnout's a real thing that maybe goes unnoticed for people that have come back from holidays. They're feeling refreshed after a couple of weeks off, then burnout creeps back in. You can't ignore it because you're not stopping to reflect.</p>
+          <p><span class="spk">Nick · 10:12</span>For me it was overcommitting, not having any real breaks where you switch off, the constant on mode. And setting annual goals that are so far away. So I've got an annual goal, why don't I bring it back to quarterly? When you tick one off, you're motivated to tick the next one off. And one thing I've done this year, anything I want to get done that day, I come into work and write it on a bit of paper. Old school, with a pen. I put a line through each task as I do them, and it motivates me.</p>
+          <p><span class="spk">Jason · 12:09</span>If you're not doing that, you get an email, a Slack message, a phone call, and very quickly you're taken away from the most important things you should have achieved that day, because you let other people put their problems onto you. All morning I was reacting to a message from someone calling in sick, an email overnight, and I didn't get any of the main things I wanted to achieve before I came here today.</p>
+          <p><span class="spk">Nick · 12:56</span>The biggest thing for me is the momentum it creates. The feeling you get when you put a line through one of those tasks gives you momentum. It's the same in financial planning: clients come up with a plan, come back in a year and see they've ticked off year one, and it creates this motivation, this momentum, and they double down. Same as saving, you see an interest payment come in and think, I'm gonna save more next month.</p>
+          <p><span class="spk">Nick · 15:07</span>Tony Robbins was on Diary of a CEO and said something that resonated. Well-being and putting yourself first, creating space for yourself, has been done to death, and that doesn't necessarily fill his cup. What fills his cup is giving back and helping people. Most people get the most joy out of life when they can help someone and put them in a better position. So maybe I implement quarterly activities where I'm actually helping people.</p>
+          <p><span class="spk">Jason · 16:39</span>A lot of high performers don't get energy from rest, they get it from contribution. I've done a cold plunge every week for three years and now it's just part of the routine. But the last two days I spent in Xero's head office giving back, working with the Xero team, telling them what was right and wrong with the product. I walked out going, I've made a difference today. That fills my cup more than a 30 minute meditation.</p>
+          <p><span class="spk">Nick · 18:18</span>He's a great example of me putting things off. When I turned 40 I said I was going to get my blood work done, and I've put it off for two years. Not because I didn't want to, I just thought I'll get it done at some stage during the year. This year it's gotta be done by the first quarter.</p>
+          <p><span class="spk">Nick · 19:10</span>I've been rethinking the annual sprint, mapping out when I'm going to have breaks. My proposed pattern: come back in January recharged, a mini break in March, three to four days away. A decent reset at Easter, a longer break in July because Melbourne's cold, another mini break in September, then a proper shutdown in January. And time your breaks to make sense for your industry. Our mortgage brokers should break when their referral partners, the real estate agents, are away.</p>
+          <p><span class="spk">Nick · 22:59</span>People might say I've only got four weeks annual leave. My argument is I'm better off taking five or six weeks and being super productive when I'm present at work. That's something you can negotiate with your employer in today's day and age, as long as you're performing.</p>
+          <p><span class="spk">Jason · 23:50</span>Right now, very intentional rather than reactive. Don't wait for overwhelm or burnout, put these things in place right now so you've got that carrot dangled. It's a good thing to sit down with your partner and map these things out as a family too. Breaking up the year with intent sets you up very differently to just going through a year that's rinse and repeat.</p>
+          <p><span class="spk">Nick · 25:51</span>What it is for a lot of people is big promises and big intentions in January and then a really long 11 months. I'm not saying this is the way to do it, this is just what I'm going to try. You need to continue to try things and see what works for you.</p>
+        </div>
+      </details>
+    </section>
+
+    <div class="cta">
+      <h3>Got a question about <span class="m">your</span> numbers?</h3>
+      <p>Whether it's your business, your tax or your plan for the year, the team would love to hear from you.</p>
+      <a class="btn" href="#" id="getInTouch">Get in touch</a>
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="foot-label">Brought to you by</div>
+    <div class="sponsors">
+      <img src="assets/inovayt-white.png" alt="Inovayt">
+      <img src="assets/future-advisory-white.png" alt="Future Advisory">
+    </div>
+    <div class="produced">
+      <div class="foot-label">Produced by</div>
+      <span class="vidpod">VID<span class="pod">POD.</span></span>
+    </div>
+    <div class="copyright">© 2026 The Numbers Game</div>
+  </footer>
+
+  <script>
+    /* ── Episode data (this becomes data/episodes/263.json when we templatise) ── */
+    var CHAPTERS = [
+      {t:"00:00", s:0,   title:"Intro"},
+      {t:"01:41", s:101, title:"Why New Year Motivation Fades So Fast"},
+      {t:"06:14", s:374, title:"How To Build Sustainable Energy All Year"},
+      {t:"08:36", s:516, title:"The Self Reflection Step Most People Skip"},
+      {t:"10:12", s:612, title:"The Habits That Cause Burnout"},
+      {t:"10:55", s:655, title:"Quarterly Goals For Consistency And Momentum"},
+      {t:"11:12", s:672, title:"The Daily Task List System For Focus"},
+      {t:"15:07", s:907, title:"Why Helping Others Refills Your Energy"},
+      {t:"16:39", s:999, title:"When Ice Baths Stop Feeling Like A Reset"},
+      {t:"18:18", s:1098,title:"Blood Work After 40 And Why People Put It Off"},
+      {t:"19:10", s:1150,title:"Planning Breaks Before You Burn Out"}
+    ];
+    var QUESTIONS = [
+      {q:"Why does my New Year motivation fade so fast?", s:101},
+      {q:"Why does the year feel like it just disappears?", s:182},
+      {q:"How do I stay energised all year instead of relying on motivation?", s:374},
+      {q:"How does my energy as a leader affect my team?", s:400},
+      {q:"How do I stop overcommitting?", s:460},
+      {q:"What's the first step to breaking the burnout cycle?", s:516},
+      {q:"What habits actually cause burnout?", s:612},
+      {q:"How do I stay focused and get the important things done each day?", s:672},
+      {q:"What actually refills your energy?", s:907},
+      {q:"How should I plan my breaks across the year?", s:1150}
+    ];
+
+    /* ── Render chapters + questions ── */
+    var chEl = document.getElementById('chapters');
+    CHAPTERS.forEach(function(c){
+      var b=document.createElement('button'); b.className='chapter'; b.onclick=function(){seek(c.s)};
+      b.innerHTML='<span class="tc">'+c.t+'</span><span class="ct">'+c.title+'</span>';
+      chEl.appendChild(b);
+    });
+    var qEl=document.getElementById('qa');
+    QUESTIONS.forEach(function(q){
+      var b=document.createElement('button'); b.className='q'; b.onclick=function(){seek(q.s)};
+      b.innerHTML='<span class="qmark">?</span><span class="qt">'+q.q+'</span><span class="go">›</span>';
+      qEl.appendChild(b);
+    });
+
+    /* ── YouTube player + seek ── */
+    var player, playerReady=false, pending=null;
+    window.onYouTubeIframeAPIReady=function(){
+      player=new YT.Player('ytplayer',{
+        videoId:'dDY0Eg3wP6o',
+        playerVars:{rel:0,modestbranding:1,playsinline:1},
+        events:{onReady:function(){playerReady=true; if(pending!=null){go(pending);pending=null;}}}
+      });
+    };
+    function go(sec){ player.seekTo(sec,true); player.playVideo(); }
+    function seek(sec){
+      document.getElementById('player-shell').scrollIntoView({behavior:'smooth',block:'start'});
+      if(playerReady){ go(sec); } else { pending=sec; }
+    }
+    (function(){var s=document.createElement('script');s.src='https://www.youtube.com/iframe_api';document.head.appendChild(s);})();
+
+    document.getElementById('getInTouch').addEventListener('click',function(e){e.preventDefault();/* contact page TBD */});
+  </script>
+</body>
+</html>
