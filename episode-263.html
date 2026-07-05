@@ -40,8 +40,22 @@
   @media(max-width:720px){.nav-in{padding:11px 22px}}
   .brand{display:block;line-height:0}
   .brand img{height:36px;width:auto;display:block}
-  .nav a.home{text-decoration:none;font-size:13px;font-weight:600;color:var(--muted);display:inline-flex;align-items:center;gap:7px;padding:8px 14px;border:1px solid var(--line);border-radius:999px;transition:.15s}
-  .nav a.home:hover{color:var(--white);border-color:rgba(122,217,168,.6)}
+  .navlinks{display:flex;gap:28px}
+  .navlinks a{text-decoration:none;font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);transition:.15s}
+  .navlinks a:hover{color:var(--white)}
+  .navburger{display:none;background:none;border:1px solid var(--line);padding:8px 10px;cursor:pointer;color:var(--white);transition:.15s}
+  .navburger:hover{border-color:rgba(122,217,168,.6)}
+  .navburger svg{width:20px;height:20px;fill:currentColor;display:block}
+  .navdrop{display:none}
+  @media(max-width:720px){
+    .navlinks{display:none}
+    .navburger{display:block}
+    .navdrop{display:block;position:absolute;left:0;right:0;top:100%;
+      background:#180f4a;border-bottom:1px solid var(--line);box-shadow:0 24px 50px rgba(0,0,0,.45)}
+    .navdrop[hidden]{display:none}
+    .navdrop a{display:block;padding:15px 22px;text-decoration:none;font-size:14px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:rgba(255,255,255,.9);border-bottom:1px solid rgba(255,255,255,.06)}
+    .navdrop a:last-child{border-bottom:0}
+  }
 
   /* ── Hero / hook (marker-highlight system: purple hook wraps naturally, mint payoff below)
      Rules: title splits at its natural break (colon/pipe/question mark). Front = hook (purple,
@@ -204,8 +218,21 @@
 
   <nav class="nav">
     <div class="nav-in">
-      <a class="brand" href="index.html" aria-label="The Numbers Game"><img src="assets/tng-logo.png" alt="The Numbers Game"></a>
-      <a class="home" href="index.html">← All episodes</a>
+      <a class="brand" href="index.html" aria-label="The Numbers Game home"><img src="assets/tng-logo.png" alt="The Numbers Game"></a>
+      <div class="navlinks">
+        <a href="episodes.html">Episodes</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <button class="navburger" id="navburger" type="button" aria-label="Menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24"><path d="M3 6h18v2H3zM3 11h18v2H3zM3 16h18v2H3z"/></svg>
+      </button>
+    </div>
+    <div class="navdrop" id="navdrop" hidden>
+      <a href="index.html">Home</a>
+      <a href="episodes.html">Episodes</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
     </div>
   </nav>
 
@@ -405,6 +432,13 @@
     var qEl=document.getElementById('qa');
     QUESTIONS.forEach(function(q){var b=document.createElement('button');b.className='q';b.onclick=function(){startAt(q.s)};b.innerHTML='<span class="qm">?</span><span class="qx">'+q.q+'</span><span class="go">›</span>';qEl.appendChild(b);});
     document.getElementById('qcount').textContent=QUESTIONS.length;
+
+    /* Mobile nav dropdown. */
+    var burger=document.getElementById('navburger'), navdrop=document.getElementById('navdrop');
+    if(burger&&navdrop){burger.addEventListener('click',function(){
+      navdrop.hidden=!navdrop.hidden;
+      burger.setAttribute('aria-expanded', navdrop.hidden?'false':'true');
+    });}
 
     /* Voice-note button reveals the recorder; × tucks it away. */
     var vbtn=document.getElementById('vbtn'), vslot=document.getElementById('vslot'), vclose=document.getElementById('vclose');
