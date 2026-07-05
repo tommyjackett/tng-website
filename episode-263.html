@@ -163,13 +163,21 @@
   .tbody p{font-size:14.5px;line-height:1.7;color:rgba(255,255,255,.78);margin-top:15px;max-width:64ch}
   .tbody .spk{display:block;font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--mint);margin-bottom:2px}
 
-  /* ── CTA ── */
-  .cta{text-align:center;border-top:1px solid var(--line);margin-top:64px;padding:58px 0 62px}
-  .cta h3{font-family:var(--display);font-size:clamp(24px,6vw,34px);text-transform:uppercase;letter-spacing:.5px;line-height:1}
-  .cta h3 .m{color:var(--mint)}
-  .cta p{color:var(--muted);font-size:15px;margin:12px auto 20px;max-width:44ch}
-  .btn{display:inline-block;text-decoration:none;font-weight:700;font-size:15px;color:#08210f;background:var(--mint);padding:14px 30px;border-radius:999px;transition:.15s}
-  .btn:hover{filter:brightness(1.06);transform:translateY(-1px);box-shadow:0 14px 34px rgba(122,217,168,.28)}
+  /* ── Be part of the show (participation: prompts + voice note + subscribe) ── */
+  .involve{border-top:1px solid var(--line);margin-top:64px;padding:58px 0 66px}
+  .involve-in{max-width:560px;margin:0 auto}
+  .ititle{display:inline-block;font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.5px;font-size:14.5px;background:var(--mint);color:#0a0a0a;padding:9px 13px 7px}
+  .ilede{color:var(--muted);font-size:15px;line-height:1.6;margin:16px 0 18px;max-width:46ch}
+  .ichip{display:flex;align-items:center;gap:14px;border:1px solid rgba(255,255,255,.22);padding:12px 14px;margin-bottom:9px}
+  .ichip .inum{font-family:var(--display);color:var(--mint);font-size:15px;letter-spacing:1px}
+  .ichip .it{font-size:14px;font-weight:600;color:rgba(255,255,255,.92)}
+  .ichip .it small{display:block;font-weight:400;font-size:12px;color:var(--dim);margin-top:1px}
+  .iacts{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+  .iacts a{display:inline-flex;align-items:center;gap:9px;padding:12px 20px;border-radius:999px;text-decoration:none;font-weight:800;font-size:12.5px;letter-spacing:.04em;text-transform:uppercase;transition:.15s}
+  .iacts a:hover{filter:brightness(1.08);transform:translateY(-1px)}
+  .iacts a.yt{background:var(--purple);color:var(--white)}
+  .iacts a.vn{background:var(--mint);color:#08210f}
+  .iacts svg{width:18px;height:18px;fill:currentColor;flex:none}
 
   /* ── Footer ── */
   footer{border-top:1px solid var(--line);margin-top:6px;padding:48px 20px 58px;text-align:center}
@@ -326,10 +334,26 @@
       </div>
     </div>
 
-    <div class="cta">
-      <h3>Got a question about <span class="m">your</span> numbers?</h3>
-      <p>Whether it's your business, your tax or your plan for the year, the team would love to hear from you.</p>
-      <a class="btn" href="#" id="getInTouch">Get in touch</a>
+    <div class="involve">
+      <div class="involve-in">
+        <span class="ititle">Be part of the show</span>
+        <p class="ilede">The best episodes start with listeners. Tell Nick and Jase what to cover next, and you might hear it answered on the show.</p>
+        <div class="ichip"><span class="inum">01</span><span class="it">A topic you want covered<small>Tax, property, business, money habits</small></span></div>
+        <div class="ichip"><span class="inum">02</span><span class="it">A guest we should interview<small>Who would you love to hear from?</small></span></div>
+        <div class="ichip"><span class="inum">03</span><span class="it">A question about your numbers<small>It could become a whole episode</small></span></div>
+        <div class="iacts">
+          <!-- SpeakPipe voice-note slot: once the show's free SpeakPipe account exists, either
+               drop the inline embed here or point this pill at the recorder page:
+          <a class="vn" href="https://www.speakpipe.com/SHOW_HANDLE" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24"><path d="M12 14a3 3 0 0 0 3-3V6a3 3 0 1 0-6 0v5a3 3 0 0 0 3 3zm5-3a5 5 0 0 1-10 0H5a7 7 0 0 0 6 6.92V21h2v-3.08A7 7 0 0 0 19 11h-2z"/></svg>
+            Send a voice note
+          </a> -->
+          <a class="yt" href="https://www.youtube.com/@thenumbersgamepodcast?sub_confirmation=1" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.12-2.14C19.5 3.55 12 3.55 12 3.55s-7.5 0-9.38.51A3 3 0 0 0 .5 6.2 31.4 31.4 0 0 0 0 12a31.4 31.4 0 0 0 .5 5.8 3 3 0 0 0 2.12 2.14c1.88.51 9.38.51 9.38.51s7.5 0 9.38-.51a3 3 0 0 0 2.12-2.14A31.4 31.4 0 0 0 24 12a31.4 31.4 0 0 0-.5-5.8zM9.55 15.57V8.43L15.82 12z"/></svg>
+            Subscribe on YouTube
+          </a>
+        </div>
+      </div>
     </div>
 
   </main>
@@ -423,7 +447,6 @@
     }
     document.getElementById('facade').addEventListener('click',function(){startAt(0);});
     (function(){var s=document.createElement('script');s.src='https://www.youtube.com/iframe_api';document.head.appendChild(s);})();
-    document.getElementById('getInTouch').addEventListener('click',function(e){e.preventDefault();});
   </script>
 </body>
 </html>
