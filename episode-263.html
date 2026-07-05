@@ -15,7 +15,8 @@
     --line:rgba(255,255,255,.12); --card:rgba(255,255,255,.05); --card-hi:rgba(255,255,255,.09);
     --display:'Anton',Impact,'Helvetica Neue',sans-serif;
     --sans:'Inter',system-ui,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif;
-    --wrap:760px;
+    --wrap:1280px;   /* page frame (nav spans this) */
+    --col:960px;     /* content column (player, tabs, text) */
   }
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth}
@@ -29,11 +30,14 @@
     background-attachment:fixed;
   }
   a{color:inherit}
-  .wrap{max-width:var(--wrap);margin:0 auto;padding:0 20px}
+  .wrap{max-width:var(--wrap);margin:0 auto;padding:0 36px}
+  main.wrap{max-width:var(--col)}
+  @media(max-width:720px){.wrap{padding:0 22px}}
 
   /* ── Navbar ── */
   .nav{position:sticky;top:0;z-index:50;background:linear-gradient(180deg,rgba(24,15,74,.92),rgba(24,15,74,.72));backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
-  .nav-in{max-width:var(--wrap);margin:0 auto;padding:11px 20px;display:flex;align-items:center;justify-content:space-between}
+  .nav-in{max-width:var(--wrap);margin:0 auto;padding:11px 36px;display:flex;align-items:center;justify-content:space-between}
+  @media(max-width:720px){.nav-in{padding:11px 22px}}
   .brand{display:block;line-height:0}
   .brand img{height:36px;width:auto;display:block}
   .nav a.home{text-decoration:none;font-size:13px;font-weight:600;color:var(--muted);display:inline-flex;align-items:center;gap:7px;padding:8px 14px;border:1px solid var(--line);border-radius:999px;transition:.15s}
