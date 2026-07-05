@@ -168,7 +168,13 @@
   .involve-in{max-width:520px;margin:0 auto}
   .ititle{display:inline-block;font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.5px;font-size:14.5px;background:var(--mint);color:#0a0a0a;padding:9px 13px 7px}
   .ilede{color:var(--muted);font-size:15px;line-height:1.6;margin:16px auto 22px;max-width:40ch}
-  .vslot{background:var(--purple);padding:9px;max-width:480px;margin:0 auto;box-shadow:0 22px 50px rgba(0,0,0,.35)}
+  .vbtn{display:inline-flex;align-items:center;gap:9px;padding:13px 22px;border-radius:999px;border:0;cursor:pointer;
+    background:var(--mint);color:#08210f;font-family:inherit;font-weight:800;font-size:12.5px;
+    letter-spacing:.04em;text-transform:uppercase;transition:.15s}
+  .vbtn:hover{filter:brightness(1.06);transform:translateY(-1px);box-shadow:0 12px 30px rgba(122,217,168,.25)}
+  .vbtn svg{width:18px;height:18px;fill:currentColor;flex:none}
+  .vslot{background:var(--purple);padding:9px;max-width:480px;margin:18px auto 0;box-shadow:0 22px 50px rgba(0,0,0,.35)}
+  .vslot[hidden]{display:none}
   .vslot iframe{display:block}
   .subline{font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--dim);margin:30px 0 12px}
   .iacts{display:flex;flex-wrap:wrap;gap:10px;justify-content:center}
@@ -337,7 +343,11 @@
       <div class="involve-in">
         <span class="ititle">Get involved in the show</span>
         <p class="ilede">Got a question, some feedback or a topic you want us to cover? Leave up to a 90 second voice note below.</p>
-        <div class="vslot">
+        <button class="vbtn" id="vbtn" type="button">
+          <svg viewBox="0 0 24 24"><path d="M12 14a3 3 0 0 0 3-3V6a3 3 0 1 0-6 0v5a3 3 0 0 0 3 3zm5-3a5 5 0 0 1-10 0H5a7 7 0 0 0 6 6.92V21h2v-3.08A7 7 0 0 0 19 11h-2z"/></svg>
+          Leave a voice note
+        </button>
+        <div class="vslot" id="vslot" hidden>
           <iframe src="https://www.speakpipe.com/widget/inline/hhq6kzggsx7zpcsvakgxfrzun3zidpde" allow="microphone" width="100%" height="200" frameborder="0" title="Leave The Numbers Game a voice note"></iframe>
         </div>
         <script async src="https://www.speakpipe.com/widget/loader.js" charset="utf-8"></script>
@@ -395,6 +405,10 @@
     var qEl=document.getElementById('qa');
     QUESTIONS.forEach(function(q){var b=document.createElement('button');b.className='q';b.onclick=function(){startAt(q.s)};b.innerHTML='<span class="qm">?</span><span class="qx">'+q.q+'</span><span class="go">›</span>';qEl.appendChild(b);});
     document.getElementById('qcount').textContent=QUESTIONS.length;
+
+    /* Voice-note button reveals the recorder. */
+    var vbtn=document.getElementById('vbtn'), vslot=document.getElementById('vslot');
+    if(vbtn&&vslot){vbtn.addEventListener('click',function(){vslot.hidden=!vslot.hidden;});}
 
     /* Keep-exploring dots: only shown when the strip actually scrolls (mobile). */
     var rg=document.querySelector('.relgrid'), rd=document.getElementById('reldots');
