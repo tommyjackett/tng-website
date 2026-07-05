@@ -163,26 +163,28 @@
   .tbody p{font-size:14.5px;line-height:1.7;color:rgba(255,255,255,.78);margin-top:15px;max-width:64ch}
   .tbody .spk{display:block;font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--mint);margin-bottom:2px}
 
-  /* ── Get involved (voice note in a brand frame + subscribe) ── */
-  .involve{border-top:1px solid var(--line);margin-top:64px;padding:58px 0 66px;text-align:center}
-  .involve-in{max-width:520px;margin:0 auto}
-  .ititle{display:inline-block;font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.5px;font-size:14.5px;background:var(--mint);color:#0a0a0a;padding:9px 13px 7px}
-  .ilede{color:var(--muted);font-size:15px;line-height:1.6;margin:16px auto 22px;max-width:40ch}
-  .vbtn{display:inline-flex;align-items:center;gap:9px;padding:13px 22px;border-radius:999px;border:0;cursor:pointer;
+  /* ── Voice note ask (lives at the bottom of the Summary panel) ── */
+  .vask{margin:16px 10px 4px}
+  .vbtn{display:inline-flex;align-items:center;gap:9px;padding:12px 20px;border-radius:999px;border:0;cursor:pointer;
     background:var(--mint);color:#08210f;font-family:inherit;font-weight:800;font-size:12.5px;
     letter-spacing:.04em;text-transform:uppercase;transition:.15s}
   .vbtn:hover{filter:brightness(1.06);transform:translateY(-1px);box-shadow:0 12px 30px rgba(122,217,168,.25)}
   .vbtn svg{width:18px;height:18px;fill:currentColor;flex:none}
-  .vslot{background:var(--purple);padding:9px;max-width:480px;margin:18px auto 0;box-shadow:0 22px 50px rgba(0,0,0,.35)}
+  .vslot{background:var(--purple);padding:12px 10px 10px;max-width:460px;margin:14px 0 4px;box-shadow:0 18px 40px rgba(0,0,0,.35)}
   .vslot[hidden]{display:none}
+  .vhead{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;margin-bottom:10px}
+  .vhead .vt{font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:1px;font-size:13px;color:var(--white)}
+  .vhead .vs{display:block;font-family:var(--sans);font-size:11.5px;color:rgba(255,255,255,.75);text-transform:none;letter-spacing:0;margin-top:3px;font-weight:400}
+  .vclose{background:none;border:0;color:rgba(255,255,255,.85);font-size:22px;line-height:1;cursor:pointer;padding:0 2px}
+  .vclose:hover{color:var(--white)}
   .vslot iframe{display:block}
-  .subline{font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--dim);margin:30px 0 12px}
-  .iacts{display:flex;flex-wrap:wrap;gap:10px;justify-content:center}
-  .iacts a{display:inline-flex;align-items:center;gap:9px;padding:12px 20px;border-radius:999px;text-decoration:none;font-weight:800;font-size:12.5px;letter-spacing:.04em;text-transform:uppercase;transition:.15s}
-  .iacts a:hover{filter:brightness(1.08);transform:translateY(-1px)}
-  .iacts a.yt{background:var(--purple);color:var(--white)}
-  .iacts a.vn{background:var(--mint);color:#08210f}
-  .iacts svg{width:18px;height:18px;fill:currentColor;flex:none}
+
+  /* ── Footer subscribe ── */
+  .subwrap{margin-bottom:38px}
+  .yt-pill{display:inline-flex;align-items:center;gap:9px;padding:12px 20px;border-radius:999px;text-decoration:none;
+    background:var(--purple);color:var(--white);font-weight:800;font-size:12.5px;letter-spacing:.04em;text-transform:uppercase;transition:.15s}
+  .yt-pill:hover{filter:brightness(1.1);transform:translateY(-1px)}
+  .yt-pill svg{width:18px;height:18px;fill:currentColor;flex:none}
 
   /* ── Footer ── */
   footer{border-top:1px solid var(--line);margin-top:6px;padding:48px 20px 58px;text-align:center}
@@ -232,6 +234,20 @@
       <section class="tpanel" id="p-summary">
         <div class="summary-body">
           <p>Most people start the year fired up, then fall back into the same yearly pattern and end up on the fast track to burnout by December. So how do you break that cycle and stay consistent all year? Nick runs through the patterns he's noticed and the system he's putting in place to keep energy and momentum steady.</p>
+        </div>
+        <div class="vask">
+          <button class="vbtn" id="vbtn" type="button">
+            <svg viewBox="0 0 24 24"><path d="M12 14a3 3 0 0 0 3-3V6a3 3 0 1 0-6 0v5a3 3 0 0 0 3 3zm5-3a5 5 0 0 1-10 0H5a7 7 0 0 0 6 6.92V21h2v-3.08A7 7 0 0 0 19 11h-2z"/></svg>
+            Leave us a voice note
+          </button>
+          <div class="vslot" id="vslot" hidden>
+            <div class="vhead">
+              <span class="vt">Record your voice note<span class="vs">Up to 90 seconds. A question, some feedback or a topic you want covered.</span></span>
+              <button class="vclose" id="vclose" type="button" aria-label="Close">&times;</button>
+            </div>
+            <iframe src="https://www.speakpipe.com/widget/inline/hhq6kzggsx7zpcsvakgxfrzun3zidpde" allow="microphone" width="100%" height="200" frameborder="0" title="Leave The Numbers Game a voice note"></iframe>
+          </div>
+          <script async src="https://www.speakpipe.com/widget/loader.js" charset="utf-8"></script>
         </div>
         <div class="sumfacts">
           <div class="fact"><span class="fl">Release date</span><span class="fv">9 February 2026</span></div>
@@ -339,31 +355,16 @@
       </div>
     </div>
 
-    <div class="involve">
-      <div class="involve-in">
-        <span class="ititle">Get involved in the show</span>
-        <p class="ilede">Got a question, some feedback or a topic you want us to cover? Leave up to a 90 second voice note below.</p>
-        <button class="vbtn" id="vbtn" type="button">
-          <svg viewBox="0 0 24 24"><path d="M12 14a3 3 0 0 0 3-3V6a3 3 0 1 0-6 0v5a3 3 0 0 0 3 3zm5-3a5 5 0 0 1-10 0H5a7 7 0 0 0 6 6.92V21h2v-3.08A7 7 0 0 0 19 11h-2z"/></svg>
-          Leave a voice note
-        </button>
-        <div class="vslot" id="vslot" hidden>
-          <iframe src="https://www.speakpipe.com/widget/inline/hhq6kzggsx7zpcsvakgxfrzun3zidpde" allow="microphone" width="100%" height="200" frameborder="0" title="Leave The Numbers Game a voice note"></iframe>
-        </div>
-        <script async src="https://www.speakpipe.com/widget/loader.js" charset="utf-8"></script>
-        <p class="subline">Don't miss an episode</p>
-        <div class="iacts">
-          <a class="yt" href="https://www.youtube.com/@thenumbersgamepodcast?sub_confirmation=1" target="_blank" rel="noopener">
-            <svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.12-2.14C19.5 3.55 12 3.55 12 3.55s-7.5 0-9.38.51A3 3 0 0 0 .5 6.2 31.4 31.4 0 0 0 0 12a31.4 31.4 0 0 0 .5 5.8 3 3 0 0 0 2.12 2.14c1.88.51 9.38.51 9.38.51s7.5 0 9.38-.51a3 3 0 0 0 2.12-2.14A31.4 31.4 0 0 0 24 12a31.4 31.4 0 0 0-.5-5.8zM9.55 15.57V8.43L15.82 12z"/></svg>
-            Subscribe on YouTube
-          </a>
-        </div>
-      </div>
-    </div>
-
   </main>
 
   <footer>
+    <div class="subwrap">
+      <div class="foot-label">Don't miss an episode</div>
+      <a class="yt-pill" href="https://www.youtube.com/@thenumbersgamepodcast?sub_confirmation=1" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.12-2.14C19.5 3.55 12 3.55 12 3.55s-7.5 0-9.38.51A3 3 0 0 0 .5 6.2 31.4 31.4 0 0 0 0 12a31.4 31.4 0 0 0 .5 5.8 3 3 0 0 0 2.12 2.14c1.88.51 9.38.51 9.38.51s7.5 0 9.38-.51a3 3 0 0 0 2.12-2.14A31.4 31.4 0 0 0 24 12a31.4 31.4 0 0 0-.5-5.8zM9.55 15.57V8.43L15.82 12z"/></svg>
+        Subscribe on YouTube
+      </a>
+    </div>
     <div class="produced">
       <div class="foot-label">Produced by</div>
       <img src="assets/vidpod-white.png" alt="VIDPOD">
@@ -406,9 +407,10 @@
     QUESTIONS.forEach(function(q){var b=document.createElement('button');b.className='q';b.onclick=function(){startAt(q.s)};b.innerHTML='<span class="qm">?</span><span class="qx">'+q.q+'</span><span class="go">›</span>';qEl.appendChild(b);});
     document.getElementById('qcount').textContent=QUESTIONS.length;
 
-    /* Voice-note button reveals the recorder. */
-    var vbtn=document.getElementById('vbtn'), vslot=document.getElementById('vslot');
+    /* Voice-note button reveals the recorder; × tucks it away. */
+    var vbtn=document.getElementById('vbtn'), vslot=document.getElementById('vslot'), vclose=document.getElementById('vclose');
     if(vbtn&&vslot){vbtn.addEventListener('click',function(){vslot.hidden=!vslot.hidden;});}
+    if(vclose&&vslot){vclose.addEventListener('click',function(){vslot.hidden=true;});}
 
     /* Keep-exploring dots: only shown when the strip actually scrolls (mobile). */
     var rg=document.querySelector('.relgrid'), rd=document.getElementById('reldots');
