@@ -22,13 +22,9 @@ Sticky navbar (logo + "All episodes") → **carousel-exact hook title** (purple 
 - No em dashes. Numbers-forward. Dark/premium = YouTube-thumbnail energy.
 
 ## OPERATIONAL (so pushing/previewing just works)
-- **Token:** `~/Desktop/TOMMY AI/.secrets/TNG WEBSITE_github-token.txt` (classic PAT, `public_repo` scope).
-- **Push** (bypasses a stale macOS-keychain credential that 403s):
-  ```
-  export GH_TOKEN="$(cat '/Users/tommyjackett/Desktop/TOMMY AI/.secrets/TNG WEBSITE_github-token.txt' | tr -d '[:space:]')"
-  git -c credential.helper= -c credential.helper='!f(){ echo username=tommyjackett; echo "password=$GH_TOKEN"; };f' push origin main
-  ```
-- **Pages deploy flaps if you push rapidly** — GitHub cancels overlapping deploys, so the "deploy failed" emails are noise from back-to-back pushes. Push once, wait ~30–60s, then verify the live URL. The site always keeps the last good deploy (never goes down).
+- **Token:** `~/Desktop/TOMMY AI/.secrets/TNG WEBSITE_github-token.txt` (classic PAT, `public_repo` + `workflow` scopes).
+- **Ship a change:** commit, then run `scripts/push-live.sh` (local tooling, gitignored). It pushes, polls the live URL until it matches the local file byte-for-byte, and re-dispatches the deploy workflow if a deploy stalls. Never re-push to fix a stuck deploy.
+- **Deploys run through OUR workflow** `.github/workflows/deploy-pages.yml` (Pages build_type=workflow since 5 Jul 2026). It queues deploys and auto-retries transient failures inside the run — the old branch-based pipeline's "Deployment failed, try again later" emails are gone. The site always keeps the last good deploy (never goes down).
 - **Preview:** `preview_start "tng-site"` (config in `Brain/Vidpod/clients/TNG/.claude/launch.json`, serves the repo on :8137) → open `/episode-263.html`. Or Tommy's `Tools/Desktop Phone Preview/preview.html` (paste the live URL; shows desktop + iPhone).
 
 ## OPEN / NEXT (in order)
