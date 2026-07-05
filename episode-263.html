@@ -114,7 +114,7 @@
      genuinely strong; otherwise show the latest released episodes with dates —
      never invent a connection. ── */
   .relsec{margin-top:60px;padding-top:58px;border-top:1px solid var(--line)} /* line = end of this episode's info */
-  .broughtby{text-align:center;margin-top:68px}
+  .broughtby{text-align:center;margin-top:68px;margin-bottom:48px} /* bottom gap matches footer's top padding so the line sits halfway */
   .reldots{display:flex;justify-content:center;gap:7px;margin-top:12px}
   .reldots span{width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.25);transition:.2s}
   .reldots span.on{background:var(--mint)}
@@ -182,6 +182,12 @@
   /* ── YouTube subscribe pill (sits in the listen row; outranks .listen a's mint) ── */
   .listen a.yt-pill{background:var(--purple);color:var(--white)}
   .listen a.yt-pill:hover{filter:brightness(1.1);transform:translateY(-1px)}
+  @media(max-width:720px){ /* mobile: no label, three compact pills on one row */
+    .listen .lname{display:none}
+    .listen{gap:8px}
+    .listen a{padding:10px 13px;font-size:11px;gap:6px}
+    .listen svg{width:16px;height:16px}
+  }
 
   /* ── Footer ── */
   footer{border-top:1px solid var(--line);margin-top:6px;padding:48px 20px 58px;text-align:center}
