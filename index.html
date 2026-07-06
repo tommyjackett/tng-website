@@ -111,6 +111,11 @@
   .serve.show{display:block}
   .mplayer{position:relative;width:100%;padding-top:56.25%;background:#000;box-shadow:0 30px 70px rgba(0,0,0,.5),0 0 0 1px rgba(255,255,255,.06)}
   .mplayer iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+  .mfacade{position:absolute;inset:0;border:0;cursor:pointer;background:linear-gradient(160deg,#1a1150,#0b0820);display:flex;align-items:center;justify-content:center}
+  .mfacade[hidden]{display:none}
+  .mplay{width:74px;height:74px;border-radius:50%;background:var(--mint);display:flex;align-items:center;justify-content:center;transition:.18s}
+  .mfacade:hover .mplay{transform:scale(1.07)}
+  .mplay::after{content:"";border-style:solid;border-width:11px 0 11px 19px;border-color:transparent transparent transparent #08210f;margin-left:5px}
   .nowplaying{font-size:13px;color:var(--muted);margin:10px 2px 14px}
   .nowplaying b{color:var(--white);font-weight:600}
   .nowplaying a{color:var(--mint);text-decoration:none;font-weight:600}
@@ -191,7 +196,7 @@
 
       <div class="newhere">
         <h1>New to the show?</h1>
-        <p class="sell" id="sell-line">280+ episodes. Hundreds of hours. Pick what interests you and start watching.</p>
+        <p class="sell" id="sell-line">280+ episodes. Hundreds of hours of business, property, tax and wealth. Pick what interests you and watch the best bits below.</p>
 
         <div class="step"><span class="n">01</span><span class="t">Pick what interests you</span><span class="why">tap as many as you like</span></div>
         <div class="chips" id="topic-chips"></div>
@@ -202,7 +207,12 @@
 
         <div class="serve" id="serve">
           <div class="step" style="margin-top:0"><span class="n">03</span><span class="t">Watch. Swipe. Repeat.</span></div>
-          <div class="mplayer"><div id="mplayer-slot"></div></div>
+          <div class="mplayer">
+            <div id="mplayer-slot"></div>
+            <button class="mfacade" id="mfacade" type="button" aria-label="Play this moment">
+              <span class="mplay"></span>
+            </button>
+          </div>
           <p class="nowplaying" id="nowplaying"></p>
           <div class="mrow" id="mrow"></div>
           <div class="moreline">
@@ -259,7 +269,6 @@
     POOL=res[1].filter(function(m){return m.standalone>=MIN_SCORE&&m.durationSec>=MIN_DUR&&released[m.episodeNumber]});
 
     /* sell line with live counts */
-    document.getElementById('sell-line').textContent='280+ episodes. '+res[1].length+' moments mapped. Pick what interests you and start watching.';
 
     /* latest episode */
     var L=CAT[0];
@@ -331,7 +340,7 @@
     }).sort(function(a,b){return b.standalone-a.standalone});
   }
   function serve(reset){
-    if(reset) servedIds=[];
+    if(reset){servedIds=[];currentQueue=[];}
     var picks=[], perSub={};
     eligible().forEach(function(m){
       if(picks.length>=SERVE) return;
@@ -339,20 +348,22 @@
       if((perSub[k]||0)>=PER_SUB) return;
       perSub[k]=(perSub[k]||0)+1; picks.push(m);
     });
-    if(!picks.length){document.getElementById('drynote').textContent="That's the best of it for now. Try another topic.";return;}
+    if(!picks.length&&!currentQueue.length){document.getElementById('drynote').textContent="That's the best of it for now. Try another topic.";return;}
     picks.forEach(function(m){servedIds.push(m.momentId)});
-    currentQueue=picks;
-    document.getElementById('drynote').textContent='';
+    var firstServe=currentQueue.length===0;
+    currentQueue=currentQueue.concat(picks);
     document.getElementById('serve').classList.add('show');
     renderQueue();
-    playMoment(0,false);
-    if(reset!==true) document.getElementById('serve').scrollIntoView({behavior:'smooth',block:'nearest'});
+    var remaining=eligible().length;
+    document.getElementById('more-btn').style.display=remaining?'':'none';
+    document.getElementById('drynote').textContent=remaining?'':"That's the best of it for now. Try another topic.";
+    if(firstServe){ playMoment(0,false); document.getElementById('serve').scrollIntoView({behavior:'smooth',block:'nearest'}); }
   }
   function renderQueue(){
     var row=document.getElementById('mrow'); row.innerHTML='';
     currentQueue.forEach(function(m,i){
       var b=document.createElement('div'); b.className='mcard'; b.setAttribute('role','button'); b.tabIndex=0;
-      b.innerHTML='<span class="mn">0'+(i+1)+'</span><span class="mq"></span>'+
+      b.innerHTML='<span class="mn">'+(i<9?'0':'')+(i+1)+'</span><span class="mq"></span>'+
         '<span class="md"><span class="mtag"></span><span class="mdur">'+fmtDur(m.endSec-m.startSec)+'</span></span>';
       b.querySelector('.mtag').textContent=m.subtopic||m.topic;
       b.querySelector('.mq').textContent=m.questionAsked||m.title;
@@ -363,18 +374,22 @@
   }
   function nowPlaying(m){
     var np=document.getElementById('nowplaying');
-    np.innerHTML='Now playing: <b></b> · '+fmtDur(m.endSec-m.startSec)+' &nbsp; <a href="episode-'+m.episodeNumber+'.html">Watch the full episode →</a>';
+    np.innerHTML='Now playing: <b></b> · '+fmtDur(m.endSec-m.startSec)+' &nbsp; <a href="episode-'+m.episodeNumber+'.html">From EP '+m.episodeNumber+' — watch the full episode →</a>';
     np.querySelector('b').textContent=m.questionAsked||m.title;
     [].forEach.call(document.querySelectorAll('.mcard'),function(c,i){c.classList.toggle('playing',currentQueue[i]===m)});
   }
+  var currentIdx=0;
   function playMoment(i,autoplay){
     var m=currentQueue[i]; if(!m) return;
-    nowPlaying(m);
+    currentIdx=i; nowPlaying(m);
+    if(!autoplay&&!player) return; /* facade stays until a real play intent */
+    document.getElementById('mfacade').hidden=true;
     var spec={videoId:m.youtubeId,startSeconds:m.startSec,endSeconds:m.endSec};
     if(player&&playerReady){ autoplay?player.loadVideoById(spec):player.cueVideoById(spec); return; }
     pendingSpec={spec:spec,autoplay:autoplay};
     if(window.YT&&YT.Player&&!player) createPlayer();
   }
+  document.getElementById('mfacade').addEventListener('click',function(){playMoment(currentIdx,true)});
   var pendingSpec=null;
   function createPlayer(){
     player=new YT.Player('mplayer-slot',{width:'100%',height:'100%',
