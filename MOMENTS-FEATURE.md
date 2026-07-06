@@ -53,7 +53,7 @@ PER_SUB   = 2     // variety cap per subtopic within a deal
 
 ## 5. The placeholder (resting state = exact preview)
 
-A one-to-one mock of the served state: 16:9 screen using a real hosts still under a purple tint, **slightly blurred** (image + tint fused in ONE layer so edges can't mismatch; the blur says "placeholder" — Tommy, 6 Jul), a **simple centred caption** in plain sans (`YOUR MOMENTS WILL PLAY HERE` — deliberately NOT the title-bar treatment), small corner play indicator (marks a player, doesn't beg a dead click), a full-width explainer line where Now Playing will sit, and three ghost cards (`01/02/03 · Best bit · YOUR TOPIC · 1m 20s`) at reduced opacity. The promise looks exactly like the payoff.
+A one-to-one mock of the served state: 16:9 screen using a real hosts still under a purple tint, **slightly blurred** (image + tint fused in ONE layer so edges can't mismatch; the blur says "placeholder" — Tommy, 6 Jul), a **simple centred caption** in plain sans (`YOUR MOMENTS WILL PLAY HERE` — deliberately NOT the title-bar treatment), a small play indicator centred BEHIND the caption and blurred with the still (part of the mock, not a button), and three simple ghost cards (`Best bit 1 / 2 / 3`) at reduced opacity. No explainer line. The promise looks exactly like the payoff.
 
 ## 6. Layout
 
