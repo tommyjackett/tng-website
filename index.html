@@ -69,16 +69,29 @@
   .hero-top{display:grid;grid-template-columns:3fr 2fr;gap:44px;padding:44px 0 8px;align-items:start}
   .hero-top>*{min-width:0}
   @media(max-width:900px){.hero-top{grid-template-columns:1fr;gap:36px;padding:30px 0 4px}}
-  .aboutart{background:linear-gradient(160deg,#241a6b,#12093a);border:1px solid var(--line);padding:38px;display:flex;align-items:center;justify-content:center;margin-bottom:16px}
-  .aboutart img{width:72%;max-width:340px}
+  .about{display:flex;gap:28px;align-items:center}
+  .podart{width:200px;height:200px;border-radius:22px;flex:none;
+    box-shadow:0 24px 60px rgba(0,0,0,.55),0 4px 14px rgba(0,0,0,.4)}
   .abouttext{color:var(--muted);font-size:15px;line-height:1.65;max-width:56ch}
+  @media(max-width:900px){.about{gap:20px;align-items:flex-start}.podart{width:132px;height:132px;border-radius:16px}}
   .secline{border-top:1px solid var(--line);margin:52px 0 0}
   .momentsec{padding:56px 0 8px}
-  .mgrid{display:grid;grid-template-columns:2fr 3fr;gap:48px;margin-top:4px}
+  .mgrid{display:grid;grid-template-columns:1fr 1.9fr;gap:48px;margin-top:4px}
   .mgrid>*{min-width:0}
   @media(max-width:900px){.mgrid{grid-template-columns:1fr;gap:34px}}
-  .watch-ph{aspect-ratio:16/9;border:1px dashed rgba(255,255,255,.25);display:flex;align-items:center;justify-content:center;padding:20px;text-align:center;color:var(--dim);font-size:13.5px}
+  .watch-ph{aspect-ratio:16/9;position:relative;background:linear-gradient(160deg,#241a6b 0%,#161049 55%,#0b0820 100%);
+    border:1px solid var(--line);display:flex;flex-direction:column;justify-content:center;align-items:flex-start;
+    padding:7% 9%;box-shadow:0 30px 70px rgba(0,0,0,.5)}
   .watch-ph[hidden]{display:none}
+  .watch-ph .php{display:inline-block;font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.2px;
+    font-size:clamp(22px,2.6vw,34px);line-height:1;background:var(--purple);color:var(--white);padding:.14em .4em .08em}
+  .watch-ph .phm{display:inline-block;font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.4px;
+    font-size:clamp(14px,1.6vw,20px);line-height:1;background:var(--mint);color:#0a0a0a;padding:.16em .5em .1em;margin-top:9px}
+  .watch-ph .phline{color:rgba(255,255,255,.75);font-size:13.5px;line-height:1.5;margin-top:16px;max-width:38ch}
+  .watch-ph .phplay{position:absolute;right:7%;bottom:9%;width:58px;height:58px;border-radius:50%;
+    border:2px solid rgba(255,255,255,.45);display:flex;align-items:center;justify-content:center}
+  .watch-ph .phplay::after{content:"";border-style:solid;border-width:9px 0 9px 15px;border-color:transparent transparent transparent rgba(255,255,255,.6);margin-left:4px}
+  @media(max-width:900px){.watch-ph .phplay{display:none}}
 
   /* latest episode card (locked card anatomy, scaled up) */
   .latest .seclabel{margin-bottom:14px}
@@ -199,7 +212,7 @@
 
     <div class="hero-top">
       <div class="about">
-        <div class="aboutart"><img src="assets/tng-logo.png" alt="The Numbers Game podcast"></div>
+        <img class="podart" src="assets/podcast-art.jpg" alt="The Numbers Game podcast artwork">
         <p class="abouttext">Thanks for stopping by. The Numbers Game is a weekly show about business, property, tax and money, hosted by financial planner Nick Reilly and accountant Jason Robinson. Real numbers, real talk, new episodes every Monday.</p>
       </div>
       <div class="latest">
@@ -215,18 +228,23 @@
     <div class="secline"></div>
 
     <div class="momentsec">
-      <h1>Find the moments that matter to you</h1>
-      <p class="sell" id="sell-line">280+ episodes. Hundreds of hours of conversations about business, property, tax and money. We built a way in. Pick what interests you and watch the best bits.</p>
+      <h1>Find the moments that matter</h1>
+      <p class="sell" id="sell-line">280+ episodes. Hundreds of hours. Tell us what you're into and we'll queue up the best bits.</p>
       <div class="mgrid">
         <div class="mpick">
-          <div class="step" style="margin-top:0"><span class="n">01</span><span class="t">Pick what interests you</span><span class="why">tap as many as you like</span></div>
+          <div class="step" style="margin-top:0"><span class="n">01</span><span class="t">Pick your topics</span><span class="why">tap as many as you like</span></div>
           <div class="chips" id="topic-chips"></div>
           <div class="subchips" id="sub-chips"></div>
-          <div class="step"><span class="n">02</span><span class="t">Get the best bits</span><span class="why">5 standout moments</span></div>
+          <div class="step"><span class="n">02</span><span class="t">Get your moments</span><span class="why">the 5 best, straight up</span></div>
           <button class="servebtn" id="serve-btn" type="button" disabled>Show me the moments</button>
         </div>
         <div class="mwatch">
-          <div class="watch-ph" id="watch-ph"><span>Pick your topics, press the button, and your moments appear right here.</span></div>
+          <div class="watch-ph" id="watch-ph">
+            <span class="php">Your moments</span>
+            <span class="phm">Play right here</span>
+            <p class="phline">Pick a topic and the best bits of the show queue up in this player.</p>
+            <span class="phplay" aria-hidden="true"></span>
+          </div>
           <div class="serve" id="serve">
             <div class="step" style="margin-top:0"><span class="n">03</span><span class="t">Watch. Swipe. Repeat.</span></div>
             <div class="mplayer">
