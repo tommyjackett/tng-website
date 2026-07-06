@@ -28,11 +28,11 @@ Sticky navbar (logo + "All episodes") → **carousel-exact hook title** (purple 
 - **Deploys run through OUR workflow** `.github/workflows/deploy-pages.yml` (Pages build_type=workflow since 5 Jul 2026). It queues deploys and auto-retries transient failures inside the run — the old branch-based pipeline's "Deployment failed, try again later" emails are gone. The site always keeps the last good deploy (never goes down).
 - **Preview:** `preview_start "tng-site"` (config in `Brain/Vidpod/clients/TNG/.claude/launch.json`, serves the repo on :8137) → open `/episode-263.html`. Or Tommy's `Tools/Desktop Phone Preview/preview.html` (paste the live URL; shows desktop + iPhone).
 
-## OPEN / NEXT (in order — updated 6 Jul 2026)
-1. **BATCH the released 2026 episodes (266–284)**: per episode `python3 scripts/build_episode.py N` → `python3 scripts/verify_episode.py N` → ship via `scripts/push-live.sh` → add to LIVE-PAGES.md. Tommy click-through + first/last chapter spot-checks.
-2. **Homepage (`index.html`)** — full design locked in `HOMEPAGE-PLAN.md` (two-col hero: latest ep + the NEW TO THE SHOW moments feature; episodes grid below). Iterate live with Tommy, then lock as a spec.
+## OPEN / NEXT (updated 6 Jul 2026, evening)
+1. ✅ DONE — all 22 released 2026 episodes live (generator + audit, see LIVE-PAGES.md).
+2. **IN PROGRESS — Homepage (`index.html`)**: hero (podcast-art app icon + about + latest ep) and the moments feature ("Skip to the good bits", spec = `MOMENTS-FEATURE.md`) are built and iterated live with Tommy; NOT yet finished — continue refining with his notes (copy passes pending; top-of-page concept still open; heading block just switched black→purple).
 3. **Episodes page** (search + topic filters) → **Contact** (form + voice-note component) → **About + host pages**.
-4. Parked: **direct Apple/Spotify show URLs** (listen pills use search links until Tommy supplies them). Later: back-catalogue mining (everything auto-scales).
+4. Parked: direct Apple/Spotify show URLs; engine review list (EP 276 FBT/Company Setup mis-tag, weak moment descriptions Tommy spots); back-catalogue mining (all features auto-scale; moments payload optimisation trigger documented in MOMENTS-FEATURE.md §10).
 
 ## WORKING-STYLE REMINDERS (Tommy's, hard-won)
 - Flag reasoning + intended action BEFORE consequential/irreversible steps (source-file edits, deploys). Don't build design without sign-off.
