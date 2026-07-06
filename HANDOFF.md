@@ -1,6 +1,6 @@
 # TNG WEBSITE — HANDOFF (read this first to resume)
 
-*Written 4 July 2026. This is the pickup point for the WEBSITE work. The content-ENGINE state lives in `Brain/Vidpod/clients/TNG/Website Build/RESUME.md` (24 episodes 263–286 processed to the deep standard; 670 moments; site-data compiled).*
+*Written 4 July 2026. This is the pickup point for the WEBSITE work. The content-ENGINE state lives in `Brain/Vidpod/clients/TNG/Website Build/ENGINE-STATE.md` (24 episodes 263–286 processed to the deep standard; 670 moments; site-data compiled).*
 
 ---
 
@@ -40,4 +40,4 @@ Sticky navbar (logo + "All episodes") → **carousel-exact hook title** (purple 
 
 ## HOW TO RESUME
 Start a new session in this project and say:
-> "Read `repos/tng-website/HANDOFF.md` and `Brain/Vidpod/clients/TNG/Website Build/RESUME.md`, then continue the TNG website — EP 263 template review + roll-out."
+> "Read `repos/tng-website/HANDOFF.md` and `repos/tng-website/PROCESS.md`, then continue the TNG website roll-out."

@@ -2,7 +2,7 @@
 
 *The end-to-end pipeline, so it never lives only in anyone's head. Last updated: 6 July 2026.*
 
-**Reading order note (fixes the two-READMEs confusion):** in `Brain/Vidpod/clients/TNG/Website Build/` there are two overview docs — **`RESUME.md` is the pickup point and wins on any conflict**; `README.md` is older background (mission + early decisions) kept for context only. Per-episode mining steps live in `schema/EPISODE-PROCESSING-GUIDE.md`.
+**Where the engine docs live:** in `Brain/Vidpod/clients/TNG/Website Build/` — **`README.md` is the map (start there)**, **`ENGINE-STATE.md` is the engine's state and rules** (formerly RESUME.md), and per-episode mining steps live in `schema/EPISODE-PROCESSING-GUIDE.md`.
 
 ---
 
