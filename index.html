@@ -84,11 +84,12 @@
   }
   @media(prefers-reduced-motion:reduce){.banner video{display:none}.banner-logo img{animation:none;opacity:0}}
 
-  /* where-do-you-start doors (overlap the banner fade) */
-  .wherestart{position:relative;z-index:2;margin-top:clamp(-120px,-9vw,-64px);
-    display:flex;flex-direction:column;align-items:center;gap:18px;text-align:center;padding:0 22px}
+  /* Section 2: the directive + doors (its own block, below the video) */
+  .wherestart{display:flex;flex-direction:column;align-items:center;gap:20px;text-align:center;
+    padding:30px 22px 110px}
+  @media(max-width:720px){.wherestart{padding:22px 22px 80px}}
   .ws-line{font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.3px;
-    font-size:clamp(20px,2.6vw,32px);line-height:1.1;color:var(--white);text-shadow:0 4px 24px rgba(0,0,0,.55)}
+    font-size:clamp(20px,2.6vw,32px);line-height:1.1;color:var(--white)}
   .ws-doors{display:flex;gap:14px;flex-wrap:wrap;justify-content:center}
   .bdoor{display:inline-block;font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.4px;
     font-size:clamp(15px,1.7vw,21px);line-height:1;padding:.55em .75em .4em;text-decoration:none;transition:.15s}
@@ -102,7 +103,7 @@
   @media(max-width:900px){.about{gap:20px;align-items:flex-start}.podart{width:116px;height:116px;border-radius:14px}}
   .aboutsec{border-top:1px solid var(--line);margin-top:110px;padding:64px 0 0}
   @media(max-width:720px){.aboutsec{margin-top:80px;padding:48px 0 0}}
-  .momentsec{padding:110px 0 8px}
+  .momentsec{border-top:1px solid var(--line);padding:110px 0 8px}
   @media(max-width:720px){.momentsec{padding:80px 0 8px}}
   .mgrid{display:grid;grid-template-columns:1fr 1fr;gap:48px;margin-top:4px;align-items:start}
   .mgrid>*{min-width:0}
@@ -246,7 +247,7 @@
   </div>
 
   <div class="wherestart">
-    <p class="ws-line">Where do you want to start?</p>
+    <p class="ws-line">Start here</p>
     <div class="ws-doors">
       <a class="bdoor mint" id="banner-latest" href="#">Latest episode</a>
       <a class="bdoor purple" href="#goodbits">Choose your own adventure</a>
