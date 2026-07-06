@@ -162,5 +162,6 @@ Hairline + large gap after the listen row. Meaning: above = this episode, below 
 4. Validation gate (§5, timestamp integrity #2): ranges + ordering pass, all links resolve to the patterns in the link map, exactly 6 Discover More cards, all from released episodes.
 5. Push via `scripts/push-live.sh episode-{N}.html` (verifies live == local byte-for-byte).
 6. Live spot-check: first + last chapter jump lands on the right words; swipe the Discover strip; open the voice recorder.
+7. Add the page to `LIVE-PAGES.md` (Tommy's click-through review list) and give him the live link in chat.
 
 **Never:** em dashes in copy · invented "similar" claims · unreleased episodes in Discover More · timecode links that leave the page · hand-typed timestamps · new CSS per episode.
