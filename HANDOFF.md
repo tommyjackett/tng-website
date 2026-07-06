@@ -14,6 +14,7 @@
   - No `index.html` at root yet (Tommy's call — no homepage until we design it).
 
 ## THE TEMPLATE (what's built in episode-263.html)
+**LOCKED 5 Jul 2026 — the full spec with strict per-element rules lives in `EPISODE-PAGE-TEMPLATE.md`. New pages follow that document, never re-decide.** Summary of what's on the page:
 Sticky navbar (logo + "All episodes") → **carousel-exact hook title** (purple setup bars + one mint payoff bar, from `design.md`) → **clean YouTube facade** (thumbnail + semi-transparent play button, NO YouTube chrome; loads real player on tap) → meta (date + host tags) → Listen buttons (YouTube/Spotify/Apple) → **collapsible dropdowns**: Summary, What this episode answers, Chapters, Full transcript → tapping a chapter/question **seeks the player WITHOUT yanking to top** (only nudges if off-screen) → CTA ("Get in touch") → footer (Brought to you by Inovayt + Future Advisory, Produced by VIDPOD).
 
 ## BRAND (source of truth: `Brain/Vidpod/clients/TNG/Carousel/design.md`)
