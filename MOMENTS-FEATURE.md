@@ -77,3 +77,7 @@ Released episodes only · chips only with real inventory behind them · every co
 - YouTube's minimum player chrome shows *during* playback (their terms; pre-play is fully ours).
 - No autoplay-chaining between moments in v1 (a "keep playing" toggle is possible later — chain `loadVideoById` on the `ENDED` event).
 - On the release day of a new episode, its moments/counts appear automatically — but its episode page must be built the same day or exits 404 (the page-build step in PROCESS.md).
+
+## 10. Scale plan (back-catalogue growth)
+
+Everything adapts automatically as episodes are mined — chips, counts, subtopics, serve depth all recompute at load; new topics appear when they cross `CHIP_MIN`. The only manual step is PROCESS.md stage 3 (copy refreshed JSONs into `data/` and push). **One planned optimisation:** `search-index.json` is 129KB gzipped at 24 episodes but ~1.5MB at 280. Before that bites (trigger: gzipped size passes ~300KB), add a build step emitting `moments-lite.json` with only this feature's 11 fields (49KB now, ~570KB at full scale; can be split per-topic and lazy-loaded if needed). No design change required.
