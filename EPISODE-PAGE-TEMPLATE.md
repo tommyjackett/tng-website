@@ -110,15 +110,13 @@ Hairline + large gap after the listen row. Meaning: above = this episode, below 
 - **Card anatomy (fixed):** thumbnail (`hqdefault.jpg`, 16:9 cover, square corners) → title (hook part only, before the title break) → footer row pinned to card bottom: **date/reason bottom-LEFT (mint), EP tag bottom-RIGHT (black block)**. Whole card links to `episode-{N}.html` — a PAGE, never a timecode, never YouTube.
 - **Layout:** horizontal swipe strip on ALL screen sizes; cards `flex-basis 56%, max-width 232px`, scroll-snap. Mint position dots below, one per card, auto-hidden whenever the strip doesn't actually scroll. Dots track scroll position.
 
-## 10. BROUGHT TO YOU BY
+## 10 + 11. FOOTER (merged 6 Jul 2026 — matches adventure.html site-wide)
 
-- Centred label + two logos (34px tall), 68px below Discover More, 48px above the footer line (line sits halfway to PRODUCED BY).
-- Links (new tab): Inovayt → `https://www.inovayt.com.au/` · Future Advisory → `https://futureadvisory.com.au/`.
-
-## 11. FOOTER
-
-- `PRODUCED BY` + VIDPOD logo → `https://www.vidpod.com.au/` (new tab).
-- `© {year} The Numbers Game`.
+- Everything sits BELOW the footer line, in a two-column grid (`.footgrid`, stacks under 720px):
+  **left column** `BROUGHT TO YOU BY` label + the two sponsor logos (34px tall) · **right column** `PRODUCED BY` + VIDPOD logo (30px).
+- No separate mid-page "Brought to you by" block above the line anymore (the old §10 layout is retired).
+- Links (new tab): Inovayt → `https://www.inovayt.com.au/` · Future Advisory → `https://futureadvisory.com.au/` · VIDPOD → `https://www.vidpod.com.au/`.
+- `© {year} The Numbers Game` centred beneath the grid.
 
 ---
 
