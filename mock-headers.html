@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MOCKUP — Adventure page banner options</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --purple:#585af3; --purple-dark:#2c1b8a; --mint:#7ad9a8;
+    --white:#fff; --muted:rgba(255,255,255,.60); --dim:rgba(255,255,255,.42);
+    --line:rgba(255,255,255,.12); --card:rgba(255,255,255,.05);
+    --display:'Anton',Impact,sans-serif; --sans:'Inter',system-ui,sans-serif; --wrap:1280px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:var(--sans);color:var(--white);line-height:1.6;-webkit-font-smoothing:antialiased;
+    background:#12093a;
+    background-image:linear-gradient(180deg,#2c1b8a 0%,#1a1150 28%,#100b34 62%,#0b0820 100%);
+    background-attachment:fixed}
+  .wrap{max-width:var(--wrap);margin:0 auto;padding:0 36px}
+  @media(max-width:720px){.wrap{padding:0 22px}}
+
+  /* mockup chrome */
+  .mocklabel{max-width:var(--wrap);margin:0 auto;padding:70px 36px 14px;font-family:var(--display);
+    font-size:22px;letter-spacing:1px;text-transform:uppercase;color:var(--mint)}
+  .mocklabel small{display:block;font-family:var(--sans);font-size:13px;font-weight:500;color:var(--muted);
+    letter-spacing:0;text-transform:none;margin-top:6px}
+  .fakenav{background:linear-gradient(180deg,rgba(24,15,74,.92),rgba(24,15,74,.72));border-bottom:1px solid var(--line);padding:11px 36px;
+    display:flex;justify-content:space-between;align-items:center;max-width:100%}
+  .fakenav img{height:30px}
+  .fakenav span{font-size:11px;font-weight:600;letter-spacing:.06em;color:var(--muted);text-transform:uppercase}
+  .toolhint{max-width:var(--wrap);margin:34px auto 0;padding:0 36px;opacity:.38;pointer-events:none}
+  .toolhint .th-in{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+  @media(max-width:800px){.toolhint .th-in{grid-template-columns:1fr}}
+  .th-step{font-family:var(--display);font-size:16px;text-transform:uppercase;letter-spacing:.5px;margin-bottom:12px}
+  .th-step b{color:var(--mint);margin-right:10px;font-weight:400}
+  .th-chip{display:inline-block;font-family:var(--display);font-size:12px;text-transform:uppercase;background:var(--mint);
+    color:#0a0a0a;padding:9px 13px 7px;margin:0 8px 8px 0}
+  .th-screen{aspect-ratio:16/9;background:#0b0820;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;
+    font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.7)}
+  .divider{border-top:1px dashed rgba(122,217,168,.4);margin:64px 0 0}
+
+  /* shared title pieces */
+  .tb{font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.2px;line-height:1;
+    padding:.18em .5em .1em;display:inline-block;white-space:nowrap}
+
+  /* ── OPTION 1: full purple billboard band ── */
+  .b1{background:linear-gradient(135deg,#585af3 0%,#3d2fb5 55%,#2c1b8a 100%);padding:58px 0 62px;
+    box-shadow:0 30px 70px rgba(0,0,0,.35)}
+  .b1 .b1-in{max-width:var(--wrap);margin:0 auto;padding:0 36px;display:grid;grid-template-columns:auto 1fr;
+    gap:26px 72px;align-items:center}
+  @media(max-width:900px){.b1 .b1-in{grid-template-columns:1fr}}
+  .b1 .t1{display:flex;flex-direction:column;align-items:flex-start;gap:10px}
+  .b1 .tb-w{background:var(--white);color:#2c1b8a;font-size:clamp(28px,3.6vw,48px)}
+  .b1 .tb-m{background:var(--mint);color:#0a0a0a;font-size:clamp(28px,3.6vw,48px)}
+  .b1 p{color:var(--white);font-size:15.5px;line-height:1.7;max-width:58ch}
+
+  /* ── OPTION 2: cinematic image band (matches homepage banner language) ── */
+  .b2{position:relative;overflow:hidden;padding:74px 0 84px;
+    -webkit-mask-image:linear-gradient(180deg,#000 78%,transparent 100%);
+    mask-image:linear-gradient(180deg,#000 78%,transparent 100%)}
+  .b2::before{content:"";position:absolute;inset:-8px;
+    background:linear-gradient(rgba(44,27,138,.62),rgba(18,9,58,.72)),url('assets/hosts-still.jpg') center/cover no-repeat;
+    filter:blur(3px);transform:scale(1.04)}
+  .b2 .b2-in{position:relative;z-index:1;max-width:900px;margin:0 auto;padding:0 36px;text-align:center;
+    display:flex;flex-direction:column;align-items:center;gap:12px}
+  .b2 .tb-p{background:var(--purple);color:var(--white);font-size:clamp(28px,3.8vw,50px)}
+  .b2 .tb-m{background:var(--mint);color:#0a0a0a;font-size:clamp(28px,3.8vw,50px)}
+  .b2 p{color:var(--white);font-size:15.5px;line-height:1.7;max-width:62ch;margin-top:12px;text-shadow:0 2px 16px rgba(0,0,0,.5)}
+
+  /* ── OPTION 3: typographic stat strip ── */
+  .b3{padding:64px 0 0;text-align:center}
+  .b3 .b3-in{max-width:900px;margin:0 auto;padding:0 36px;display:flex;flex-direction:column;align-items:center;gap:12px}
+  .b3 .tb-p{background:var(--purple);color:var(--white);font-size:clamp(28px,3.8vw,50px)}
+  .b3 .tb-m{background:var(--mint);color:#0a0a0a;font-size:clamp(28px,3.8vw,50px)}
+  .b3 p{color:var(--white);font-size:15.5px;line-height:1.7;max-width:62ch;margin-top:10px}
+  .b3 .stats{display:flex;gap:14px;flex-wrap:wrap;justify-content:center;margin-top:26px}
+  .b3 .stat{font-family:var(--display);font-size:clamp(14px,1.5vw,19px);letter-spacing:.6px;text-transform:uppercase;
+    color:var(--mint);border:1.5px solid rgba(122,217,168,.55);padding:12px 18px 10px}
+  .b3 .rule{width:100%;border-top:1px solid var(--line);margin-top:44px}
+</style>
+</head>
+<body>
+
+  <div class="mocklabel">Option 1 — The billboard
+    <small>A solid purple band running the full width, straight after the nav. The title and sell live INSIDE the colour, so the header is unmistakably one banner — and everything below it sits on dark, making the player the hero.</small>
+  </div>
+  <div class="fakenav"><img src="assets/tng-logo.png" alt=""><span>Home&nbsp;&nbsp;Episodes&nbsp;&nbsp;About&nbsp;&nbsp;Contact</span></div>
+  <div class="b1">
+    <div class="b1-in">
+      <div class="t1">
+        <span class="tb tb-w">Choose your</span>
+        <span class="tb tb-m">own adventure</span>
+      </div>
+      <p>Just discovered the show, or been here for years? With 280+ episodes and hundreds of hours of conversations, we've built a way to find the moments that interest you. Not whole episodes, the exact bits inside them. Pick a topic and we'll jump you straight there.</p>
+    </div>
+  </div>
+  <div class="toolhint"><div class="th-in">
+    <div><div class="th-step"><b>01</b>Select a topic</div><span class="th-chip">Property · 17</span><span class="th-chip">Business growth · 13</span><span class="th-chip">Tax · 10</span></div>
+    <div class="th-screen">The player — the masterpiece</div>
+  </div></div>
+  <div class="divider"></div>
+
+  <div class="mocklabel">Option 2 — The cinematic band
+    <small>The hosts still, softly blurred under the purple tint, running full width with the title and sell centred on it — the same visual language as the homepage video banner, fading out at the bottom. The two pages feel like one family.</small>
+  </div>
+  <div class="fakenav"><img src="assets/tng-logo.png" alt=""><span>Home&nbsp;&nbsp;Episodes&nbsp;&nbsp;About&nbsp;&nbsp;Contact</span></div>
+  <div class="b2">
+    <div class="b2-in">
+      <span class="tb tb-p">Choose your</span>
+      <span class="tb tb-m">own adventure</span>
+      <p>Just discovered the show, or been here for years? With 280+ episodes and hundreds of hours of conversations, we've built a way to find the moments that interest you. Not whole episodes, the exact bits inside them. Pick a topic and we'll jump you straight there.</p>
+    </div>
+  </div>
+  <div class="toolhint"><div class="th-in">
+    <div><div class="th-step"><b>01</b>Select a topic</div><span class="th-chip">Property · 17</span><span class="th-chip">Business growth · 13</span><span class="th-chip">Tax · 10</span></div>
+    <div class="th-screen">The player — the masterpiece</div>
+  </div></div>
+  <div class="divider"></div>
+
+  <div class="mocklabel">Option 3 — The numbers strip
+    <small>Pure typography, centred: title, one sell line, then a row of live stat chips (the numbers-forward brand doing the selling). Slimmest option — a hard rule underneath hands the stage to the player.</small>
+  </div>
+  <div class="fakenav"><img src="assets/tng-logo.png" alt=""><span>Home&nbsp;&nbsp;Episodes&nbsp;&nbsp;About&nbsp;&nbsp;Contact</span></div>
+  <div class="b3">
+    <div class="b3-in">
+      <span class="tb tb-p">Choose your</span>
+      <span class="tb tb-m">own adventure</span>
+      <p>Pick the topics you're into and we'll play you the standout moments. Not whole episodes, the exact bits inside them.</p>
+      <div class="stats"><span class="stat">280+ episodes</span><span class="stat">670 moments mapped</span><span class="stat">13 topics</span></div>
+    </div>
+    <div class="rule"></div>
+  </div>
+  <div class="toolhint"><div class="th-in">
+    <div><div class="th-step"><b>01</b>Select a topic</div><span class="th-chip">Property · 17</span><span class="th-chip">Business growth · 13</span><span class="th-chip">Tax · 10</span></div>
+    <div class="th-screen">The player — the masterpiece</div>
+  </div></div>
+
+  <div style="height:90px"></div>
+</body>
+</html>
