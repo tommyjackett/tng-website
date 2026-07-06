@@ -1,0 +1,652 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EP 275 · Six Years of Zero Growth, $786B Spent | Australia's Productivity Crisis | The Numbers Game</title>
+<meta name="description" content="Australia hasn't had real productivity growth in six years, but the government keeps spending more and taxing more to cover the gap.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --purple:#585af3; --purple-dark:#2c1b8a; --mint:#7ad9a8;
+    --white:#ffffff; --muted:rgba(255,255,255,.60); --dim:rgba(255,255,255,.42);
+    --line:rgba(255,255,255,.12); --card:rgba(255,255,255,.05); --card-hi:rgba(255,255,255,.09);
+    --display:'Anton',Impact,'Helvetica Neue',sans-serif;
+    --sans:'Inter',system-ui,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif;
+    --wrap:1280px;   /* page frame (nav spans this) */
+    --col:960px;     /* content column (player, tabs, text) */
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:var(--sans); color:var(--white); line-height:1.6; -webkit-font-smoothing:antialiased;
+    background:#12093a;
+    background-image:
+      radial-gradient(1200px 600px at 82% -6%, rgba(88,90,243,.45) 0%, transparent 55%),
+      radial-gradient(900px 700px at 5% 8%, rgba(122,217,168,.10) 0%, transparent 50%),
+      linear-gradient(180deg,#2c1b8a 0%,#1a1150 28%,#100b34 62%,#0b0820 100%);
+    background-attachment:fixed;
+  }
+  a{color:inherit}
+  .wrap{max-width:var(--wrap);margin:0 auto;padding:0 36px}
+  main.wrap{max-width:var(--col)}
+  @media(max-width:720px){.wrap{padding:0 22px}}
+
+  /* ── Navbar ── */
+  .nav{position:sticky;top:0;z-index:50;background:linear-gradient(180deg,rgba(24,15,74,.92),rgba(24,15,74,.72));backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+  .nav-in{max-width:var(--wrap);margin:0 auto;padding:11px 36px;display:flex;align-items:center;justify-content:space-between}
+  @media(max-width:720px){.nav-in{padding:11px 22px}}
+  .brand{display:block;line-height:0}
+  .brand img{height:36px;width:auto;display:block}
+  .navlinks{display:flex;gap:28px;align-items:center}
+  .navlinks a{text-decoration:none;font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);transition:.15s}
+  .navlinks a:hover{color:var(--white)}
+  .navgroup{position:relative;display:flex;align-items:center}
+  .navgroup .subnav{display:none;position:absolute;top:100%;left:50%;transform:translateX(-50%);padding-top:14px;min-width:180px}
+  .navgroup:hover .subnav,.navgroup:focus-within .subnav{display:block}
+  .subnav-in,.navgroup .subnav{z-index:60}
+  .navgroup .subnav a{display:block;background:#180f4a;border:1px solid var(--line);border-top:0;padding:12px 16px;font-size:12px;color:rgba(255,255,255,.85)}
+  .navgroup .subnav a:first-child{border-top:1px solid var(--line)}
+  .navgroup .subnav a:hover{background:#221768;color:var(--white)}
+  .navburger{display:none;background:none;border:1px solid var(--line);padding:8px 10px;cursor:pointer;color:var(--white);transition:.15s}
+  .navburger:hover{border-color:rgba(122,217,168,.6)}
+  .navburger svg{width:20px;height:20px;fill:currentColor;display:block}
+  .navdrop{display:none}
+  @media(max-width:720px){
+    .navlinks{display:none}
+    .navburger{display:block}
+    .navdrop{display:block;position:absolute;left:0;right:0;top:100%;
+      background:#180f4a;border-bottom:1px solid var(--line);box-shadow:0 24px 50px rgba(0,0,0,.45)}
+    .navdrop[hidden]{display:none}
+    .navdrop a{display:block;padding:15px 22px;text-decoration:none;font-size:14px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:rgba(255,255,255,.9);border-bottom:1px solid rgba(255,255,255,.06)}
+    .navdrop a:last-child{border-bottom:0}
+    .navdrop a.sub{padding-left:42px;font-size:13px;color:rgba(255,255,255,.72)}
+  }
+
+  /* ── Hero / hook (marker-highlight system: purple hook wraps naturally, mint payoff below)
+     Rules: title splits at its natural break (colon/pipe/question mark). Front = hook (purple,
+     big), back = payoff (mint, smaller). No break in title = purple hook only. Highlights hug
+     the text (tight em padding tuned to Anton) and wrap via box-decoration-break — never
+     hand-pick line breaks or mint words. ── */
+  header.hero{padding:34px 0 6px}
+  .hook{--inx:clamp(8.4px,2.1vw,15.6px)} /* one shared text inset so hook + payoff first letters align */
+  .hook .hk{font-family:var(--display);font-weight:400;text-transform:uppercase;
+    font-size:clamp(28px,7vw,52px);line-height:1.3;letter-spacing:-.5px;text-wrap:balance}
+  .hook .hk span{color:var(--white);padding:.04em var(--inx) .02em;
+    background:linear-gradient(var(--purple),var(--purple)) 0 50%/100% 87% no-repeat;
+    -webkit-box-decoration-break:clone;box-decoration-break:clone}
+  .hook .pay{font-family:var(--display);font-weight:400;text-transform:uppercase;
+    font-size:clamp(16px,4vw,24px);line-height:1.5;letter-spacing:.6px;margin-top:8px;text-wrap:balance}
+  .hook .pay span{color:#0a0a0a;padding:.08em var(--inx) .04em;
+    background:linear-gradient(var(--mint),var(--mint)) 0 50%/100% 88% no-repeat;
+    -webkit-box-decoration-break:clone;box-decoration-break:clone}
+  /* no-hook titles: mid-split into two full-size rows, purple then mint */
+  .hook .hk span.hkrow{display:block;background:none;padding:0}
+  .hook .hk .hkrow+.hkrow{margin-top:8px}
+  .hook .hk span.mintseg{color:#0a0a0a;
+    background:linear-gradient(var(--mint),var(--mint)) 0 50%/100% 87% no-repeat}
+
+  /* ── Player (clean facade → real player on tap) ── */
+  .player-wrap{margin:24px 0 4px;scroll-margin-top:76px}
+  .player{position:relative;width:100%;padding-top:56.25%;border-radius:0;overflow:hidden;background:#000;box-shadow:0 30px 70px rgba(0,0,0,.5),0 0 0 1px rgba(255,255,255,.06)}
+  .facade{position:absolute;inset:0;border:0;cursor:pointer;background-size:cover;background-position:center;display:flex;align-items:center;justify-content:center;padding:0}
+  .facade .play{width:74px;height:74px;border-radius:50%;background:rgba(10,6,30,.40);border:2px solid rgba(255,255,255,.72);display:flex;align-items:center;justify-content:center;transition:.18s;-webkit-backdrop-filter:blur(1px);backdrop-filter:blur(1px)}
+  .facade:hover .play{background:rgba(88,90,243,.62);transform:scale(1.07);border-color:#fff}
+  .facade .play::after{content:"";border-style:solid;border-width:11px 0 11px 19px;border-color:transparent transparent transparent #fff;margin-left:5px}
+  .player iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+
+  /* ── Episode facts (bottom of the Summary panel — templated per episode) ── */
+  .sumfacts{margin:14px 10px 4px;padding-top:13px;border-top:1px solid rgba(255,255,255,.08);display:flex;flex-direction:column;gap:8px}
+  .fact{display:flex;gap:12px;font-size:13.5px}
+  .fact .fl{flex:none;width:104px;color:var(--dim);font-weight:600;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;padding-top:2px}
+  .fact .fv{color:rgba(255,255,255,.9);font-weight:500}
+  .fact .fv a{color:var(--mint);text-decoration:none;border-bottom:1px solid rgba(122,217,168,.4);transition:.15s}
+  .fact .fv a:hover{border-bottom-color:var(--mint)}
+
+  /* ── Episode tag (identity: black label hanging off the title corner) ── */
+  .eptag{display:inline-block;position:relative;left:-6px;margin-bottom:-7px;z-index:2;
+    background:#0a0a0a;color:var(--white);font-family:var(--display);font-weight:400;
+    font-size:13.5px;letter-spacing:1.5px;text-transform:uppercase;padding:6px 11px 4px}
+
+  /* ── Explore tabs (sticky mode switcher; one panel swaps below, nothing shoves) ── */
+  .explore{margin-top:22px}
+  .tabs{position:sticky;top:58px;z-index:40;display:flex;flex-wrap:wrap;gap:8px;padding:10px 0;
+    background:linear-gradient(180deg,rgba(18,10,55,.96),rgba(18,10,55,.86));
+    backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+  .tabbtn{font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.5px;
+    font-size:14.5px;color:var(--white);background:var(--purple);border:1px solid var(--purple);
+    padding:9px 13px 7px;cursor:pointer;transition:.15s}
+  .tabbtn:hover{filter:brightness(1.12)}
+  .tabbtn.on{background:var(--mint);border-color:var(--mint);color:#0a0a0a}
+  .tabbtn.on:hover{filter:none}
+  .tabbtn .ct{font-size:12px;opacity:.75;font-variant-numeric:tabular-nums}
+  .tabbtn .ct::before{content:" · "}
+  .tpanel{border:1px solid var(--line);background:var(--card);padding:12px 10px 14px}
+  .hint{font-size:12.5px;color:var(--muted);padding:2px 10px 10px;border-bottom:1px solid rgba(255,255,255,.08);margin-bottom:6px}
+
+  /* ── Listen row (no box: label left, service pills follow) ── */
+  .listen{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:12px 16px;margin-top:34px}
+  .listen .lname{font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--dim)}
+  .listen a{display:inline-flex;align-items:center;gap:9px;padding:11px 18px;border-radius:999px;
+    background:var(--mint);color:#08210f;text-decoration:none;font-weight:800;font-size:12.5px;
+    letter-spacing:.04em;text-transform:uppercase;transition:.15s}
+  .listen a:hover{filter:brightness(1.06);transform:translateY(-1px);box-shadow:0 12px 30px rgba(122,217,168,.25)}
+  .listen svg{width:20px;height:20px;fill:currentColor;flex:none}
+
+  /* ── Keep exploring (thumbnails link to other episode PAGES, never timecodes).
+     Swipeable strip on mobile, fits three-up on desktop. Variant rule: claim
+     "similar ground" + reason lines ONLY when moment-level topic overlap is
+     genuinely strong; otherwise show the latest released episodes with dates —
+     never invent a connection. ── */
+  .relsec{margin-top:60px;padding-top:58px;border-top:1px solid var(--line)} /* line = end of this episode's info */
+  .broughtby{text-align:center;margin-top:68px;margin-bottom:48px} /* bottom gap matches footer's top padding so the line sits halfway */
+  .reldots{display:flex;justify-content:center;gap:7px;margin-top:12px}
+  .reldots span{width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.25);transition:.2s}
+  .reldots span.on{background:var(--mint)}
+  .relsec .rtitle{display:inline-block;font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.5px;font-size:14.5px;background:var(--mint);color:#0a0a0a;padding:9px 13px 7px;margin-bottom:18px}
+  .relgrid{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding-bottom:6px;scrollbar-width:none}
+  .relgrid::-webkit-scrollbar{display:none}
+  .relcard{flex:0 0 56%;max-width:232px;scroll-snap-align:start;display:flex;flex-direction:column;text-decoration:none;background:var(--card);border:1px solid var(--line);transition:.15s}
+  .relcard:hover{background:var(--card-hi);border-color:rgba(122,217,168,.55)}
+  .relcard img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block}
+  .relcard .rt{display:block;font-size:12.5px;font-weight:600;color:rgba(255,255,255,.92);line-height:1.4;padding:8px 8px 0}
+  .relcard .rfoot{margin-top:auto;display:flex;justify-content:space-between;align-items:flex-end;gap:8px;padding:10px 8px 9px}
+  .relcard .rwhy{font-size:11.5px;color:var(--mint)}
+  .relcard .rtag{display:inline-block;background:#0a0a0a;color:var(--white);font-family:var(--display);font-size:10px;letter-spacing:1.2px;text-transform:uppercase;padding:3px 7px 2px}
+
+  /* ── Dropdown sections (accordion under the player) ── */
+  .drops{margin-top:34px;display:flex;flex-direction:column;gap:11px}
+  .drop{border:1px solid var(--line);border-radius:0;background:var(--card);overflow:hidden;transition:border-color .15s}
+  .drop[open]{border-color:rgba(122,217,168,.35)}
+  .drop>summary{list-style:none;cursor:pointer;padding:16px 18px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+  .drop>summary::-webkit-details-marker{display:none}
+  .drop>summary .st{font-weight:700;font-size:15.5px;letter-spacing:.005em}
+  .drop>summary .ct{margin-left:auto;font-size:12px;color:var(--dim);font-weight:600;font-variant-numeric:tabular-nums}
+  .drop>summary .chev{flex:none;width:22px;height:22px;border-radius:50%;background:rgba(122,217,168,.14);color:var(--mint);display:flex;align-items:center;justify-content:center;font-family:var(--display);font-size:15px;line-height:1;transition:.2s;transform:translateY(-1px)}
+  .drop[open]>summary .chev{transform:rotate(45deg)}
+  .drop-body{padding:2px 12px 12px}
+
+  /* chapters */
+  .chapter{display:flex;align-items:baseline;gap:14px;width:100%;text-align:left;cursor:pointer;background:none;border:0;color:inherit;font-family:inherit;padding:11px 10px;border-radius:10px;transition:.13s}
+  .chapter:hover{background:var(--card-hi)}
+  .chapter .tc{font-variant-numeric:tabular-nums;font-weight:700;font-size:14px;color:var(--mint);flex:none;width:48px}
+  .chapter .cx{font-size:15px;font-weight:500;color:rgba(255,255,255,.9)}
+  .chapter:hover .cx{color:#fff}
+
+  /* questions */
+  .q{display:flex;align-items:center;gap:12px;width:100%;text-align:left;cursor:pointer;background:none;border:0;border-radius:11px;color:inherit;font-family:inherit;padding:12px 10px;transition:.14s}
+  .q+.q{border-top:1px solid rgba(255,255,255,.05)}
+  .q:hover{background:var(--card-hi)}
+  .q .qm{font-family:var(--display);font-size:15px;color:var(--mint);flex:none;line-height:1;transform:translateY(1px)}
+  .q .qx{font-size:15px;font-weight:500;color:rgba(255,255,255,.92)}
+  .q .go{margin-left:auto;flex:none;color:var(--dim);font-size:18px;transition:.15s}
+  .q:hover .go{color:var(--mint);transform:translateX(2px)}
+
+  /* summary + transcript bodies */
+  .summary-body p{font-size:16.5px;line-height:1.62;color:rgba(255,255,255,.9);padding:6px 10px 4px}
+  .tbody{padding:2px 10px 8px}
+  .tbody p{font-size:14.5px;line-height:1.7;color:rgba(255,255,255,.78);margin-top:15px;max-width:64ch}
+  .tbody .spk{display:block;font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--mint);margin-bottom:2px}
+
+  /* ── Voice note ask (lives at the bottom of the Summary panel) ── */
+  .vask{margin:16px 10px 4px}
+  .vbtn{display:inline-flex;align-items:center;gap:9px;padding:12px 20px;border-radius:999px;border:0;cursor:pointer;
+    background:var(--mint);color:#08210f;font-family:inherit;font-weight:800;font-size:12.5px;
+    letter-spacing:.04em;text-transform:uppercase;transition:.15s}
+  .vbtn:hover{filter:brightness(1.06);transform:translateY(-1px);box-shadow:0 12px 30px rgba(122,217,168,.25)}
+  .vbtn svg{width:18px;height:18px;fill:currentColor;flex:none}
+  .vslot{background:var(--purple);padding:12px 10px 10px;margin:14px 0 4px;box-shadow:0 18px 40px rgba(0,0,0,.35)}
+  .vslot[hidden]{display:none}
+  .vhead{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;margin-bottom:10px}
+  .vhead .vmsg{font-family:var(--sans);font-size:13px;line-height:1.55;color:rgba(255,255,255,.92);margin:2px 0 0;padding:0 2px}
+  .vclose{background:none;border:0;color:rgba(255,255,255,.85);font-size:22px;line-height:1;cursor:pointer;padding:0 2px}
+  .vclose:hover{color:var(--white)}
+  .vslot iframe{display:block}
+
+  /* ── YouTube subscribe pill (sits in the listen row; outranks .listen a's mint) ── */
+  .listen a.yt-pill{background:var(--purple);color:var(--white)}
+  .listen a.yt-pill:hover{filter:brightness(1.1);transform:translateY(-1px)}
+  @media(max-width:720px){ /* mobile: no label, three compact pills on one row */
+    .listen .lname{display:none}
+    .listen{gap:8px}
+    .listen a{padding:10px 13px;font-size:11px;gap:6px}
+    .listen svg{width:16px;height:16px}
+  }
+
+  /* ── Footer ── */
+  footer{border-top:1px solid var(--line);margin-top:6px;padding:48px 20px 58px;text-align:center}
+  .foot-label{font-size:11px;font-weight:700;letter-spacing:.26em;text-transform:uppercase;color:var(--dim);margin-bottom:16px}
+  .sponsors{display:flex;justify-content:center;align-items:center;gap:38px;flex-wrap:wrap}
+  .sponsors a{display:inline-flex;transition:.15s}
+  .sponsors a:hover{transform:translateY(-1px)}
+  .sponsors img{height:34px;width:auto;opacity:.92}
+  .sponsors a:hover img{opacity:1}
+  .produced a{display:inline-flex;transition:.15s}
+  .produced a:hover img{opacity:1}
+  .produced{margin-top:0}
+  .produced img{height:30px;width:auto;opacity:.95}
+  .copyright{margin-top:28px;font-size:12px;color:var(--dim)}
+
+  @media(min-width:720px){header.hero{padding:48px 0 6px}}
+</style>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-in">
+      <a class="brand" href="index.html" aria-label="The Numbers Game home"><img src="assets/tng-logo.png" alt="The Numbers Game"></a>
+      <div class="navlinks">
+        <a href="index.html">Home</a>
+        <a href="episodes.html">Episodes</a>
+        <div class="navgroup">
+          <a href="about.html">About</a>
+          <div class="subnav">
+            <a href="about.html">The show</a>
+            <a href="nick-reilly.html">Nick Reilly</a>
+            <a href="jason-robinson.html">Jason Robinson</a>
+          </div>
+        </div>
+        <a href="contact.html">Contact</a>
+      </div>
+      <button class="navburger" id="navburger" type="button" aria-label="Menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24"><path d="M3 6h18v2H3zM3 11h18v2H3zM3 16h18v2H3z"/></svg>
+      </button>
+    </div>
+    <div class="navdrop" id="navdrop" hidden>
+      <a href="index.html">Home</a>
+      <a href="episodes.html">Episodes</a>
+      <a href="about.html">About</a>
+      <a class="sub" href="nick-reilly.html">Nick Reilly</a>
+      <a class="sub" href="jason-robinson.html">Jason Robinson</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+
+  <main class="wrap">
+
+    <header class="hero">
+      <div class="hook">
+        <span class="eptag">EP 275</span>
+        <h1 class="hk"><span>Six Years of Zero Growth, $786B Spent</span></h1>
+        <p class="pay"><span>Australia's Productivity Crisis</span></p>
+      </div>
+    </header>
+
+    <div class="player-wrap" id="player-wrap">
+      <div class="player" id="player">
+        <button class="facade" id="facade" style="background-image:url('https://i.ytimg.com/vi/H-91xGnsyJA/maxresdefault.jpg')" aria-label="Play episode">
+          <span class="play"></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="explore">
+      <div class="tabs" role="tablist">
+        <button class="tabbtn on" data-panel="p-summary">Summary</button>
+        <button class="tabbtn" data-panel="p-chapters">Chapters<span class="ct" id="chcount"></span></button>
+        <button class="tabbtn" data-panel="p-questions">Questions<span class="ct" id="qcount"></span></button>
+      </div>
+      <section class="tpanel" id="p-summary">
+        <div class="summary-body">
+          <p>Australia hasn't had real productivity growth in six years, but the government keeps spending more and taxing more to cover the gap. Nick goes through the federal budget numbers, what productivity actually means when you strip out the spin, and why the answer might not be another tax bracket or another levy, but actually spending less.</p>
+        </div>
+        <div class="vask">
+          <button class="vbtn" id="vbtn" type="button">
+            <svg viewBox="0 0 24 24"><path d="M12 14a3 3 0 0 0 3-3V6a3 3 0 1 0-6 0v5a3 3 0 0 0 3 3zm5-3a5 5 0 0 1-10 0H5a7 7 0 0 0 6 6.92V21h2v-3.08A7 7 0 0 0 19 11h-2z"/></svg>
+            Send us a voice note
+          </button>
+          <div class="vslot" id="vslot" hidden>
+            <div class="vhead">
+              <p class="vmsg">We'd love to hear from you. You can leave up to a 90 second voice note for us to play on the show: a question, some feedback, or a topic you want covered.</p>
+              <button class="vclose" id="vclose" type="button" aria-label="Close">&times;</button>
+            </div>
+            <iframe src="https://www.speakpipe.com/widget/inline/hhq6kzggsx7zpcsvakgxfrzun3zidpde" allow="microphone" width="100%" height="200" frameborder="0" title="Leave The Numbers Game a voice note"></iframe>
+          </div>
+          <script async src="https://www.speakpipe.com/widget/loader.js" charset="utf-8"></script>
+        </div>
+        <div class="sumfacts">
+          <div class="fact"><span class="fl">Release date</span><span class="fv">4 May 2026</span></div>
+          <div class="fact"><span class="fl">Hosts</span><span class="fv"><a href="nick-reilly.html">Nick Reilly</a> &amp; <a href="jason-robinson.html">Jason Robinson</a></span></div>
+          <!-- template: add <div class="fact"><span class="fl">Guest</span>...</div> only when the episode has one -->
+
+        </div>
+      </section>
+      <section class="tpanel" id="p-chapters" hidden>
+        <p class="hint">Jump straight to the part you need.</p>
+        <div id="chapters"></div>
+      </section>
+      <section class="tpanel" id="p-questions" hidden>
+        <p class="hint">Real questions this episode answers. Tap one to hear the answer.</p>
+        <div id="qa"></div>
+      </section>
+    </div>
+
+    <div class="drops">
+
+      <details class="drop">
+        <summary><span class="st">Episode transcript</span><span class="chev">+</span></summary>
+        <div class="drop-body tbody">
+          <p><span class="spk">Unknown · 00:00</span>Jase: Welcome to episode 275 of The Numbers Game. I'm Jase. I'm here with Nick. How are you, mate?</p>
+          <p><span class="spk">Unknown · 00:05</span>Nick: Very good. Yeah, feeling good. Sun's out. I think this might be our last week of sun before the cold sets in, so we're making the most of it.</p>
+          <p><span class="spk">Unknown · 00:15</span>Jase: Yep, making the most of it.</p>
+          <p><span class="spk">Unknown · 00:15</span>Nick: Just smashed out a couple of episodes. Lots to talk about.</p>
+          <p><span class="spk">Unknown · 00:17</span>Jase: Lots to talk about. I've got a question for you. How much free public transport have you been taking advantage of since we're in the midst of our couple of months of free transport here in Victoria? For those playing at home, if you're not in Victoria, apologies that you're probably still paying for public transport wherever you are.</p>
+          <p><span class="spk">Unknown · 00:32</span>Nick: Uh, zero, zero. I, um, yeah, I live very close to work, so I don't have the need for public transport.</p>
+          <p><span class="spk">Unknown · 00:39</span>Jase: I'm the same. I went out of the way to catch public transport just to get some money, just to save some money, just, no, just, just to get some of my taxpayer dollars back. So I wanted to, you know, we're talking about productivity crisis here today, great episode being driven by you, but I wanted to just kind of start the It was a really great video that caught my attention this morning before we came here to record.</p>
+          <p><span class="spk">Unknown · 00:58</span>And it was Jacinta Allan on Sunrise, you know, sharing how amazing it is to provide public transport for free for Victorians at a cost of $400 million to taxpayers. Now, when she was challenged by Nat on Sunrise, which phenomenal, like tip of the hat to Nat.</p>
+          <p><span class="spk">Unknown · 01:18</span>This, you've got to go and find this video if you haven't seen it. Nat was like, 'How can you afford to give away public transport for free for the 2 months and then half price in June?' Whatever they've announced. You know, and she's going, 'Oh, we're the only state on the east of Australia that's going to deliver a budget surplus.' And it's like, cool, like nice spin on the answer, but you're $200 billion in debt.</p>
+          <p><span class="spk">Unknown · 01:42</span>Nick: Yeah.</p>
+          <p><span class="spk">Unknown · 01:43</span>Jase: 'Yes, Nat, but we're delivering a budget surplus.' And Nat just wouldn't have a bar of it. She just slammed her and was like, 'No, you're not listening, Jacinta. It's...' It's how are you giving away $400 million of transport when you're in such a huge amount of debt? The interest bill per day. So, we're talking about spending.</p>
+          <p><span class="spk">Unknown · 01:59</span>Nick, I'll throw to you.</p>
+          <p><span class="spk">Unknown · 02:00</span>Nick: Well, I think she just keeps putting another nail in the coffin, right? But— I hope so. How much longer has she got? Did you see her cry the other day online?</p>
+          <p><span class="spk">Unknown · 02:08</span>Jase: I didn't. We've got to start sending each other these videos.</p>
+          <p><span class="spk">Unknown · 02:11</span>Nick: Yeah, yeah, yeah. She welled up over— I know we're hijacking this conversation, but— petrol prices and the impact that can have on, you know, single families and single mums in particular. I do understand why it's a serious, quite serious topic.</p>
+          <p><span class="spk">Unknown · 02:27</span>But yeah, she brought the tears on and I just can't cop that. I just really—</p>
+          <p><span class="spk">Unknown · 02:32</span>Jase: You reckon that was a bit of crocodile tears?</p>
+          <p><span class="spk">Unknown · 02:33</span>Nick: Oh yeah.</p>
+          <p><span class="spk">Unknown · 02:34</span>Jase: Yeah.</p>
+          <p><span class="spk">Unknown · 02:35</span>Nick: Yeah. She's had acting training for sure.</p>
+          <p><span class="spk">Unknown · 02:36</span>Jase: Well, yeah, she didn't handle Nat's questions too well. Shit the bed there. But anyway, what's happening, Nick?</p>
+          <p><span class="spk">Unknown · 02:41</span>Nick: As you're the accountant, Joe, you should be well aware there's some big budget reforms that were announced by Mr. Chalmers and I'm not gonna talk about all of 'em, but we'll talk about the important ones. Changes to the capital gains tax. So basically they want to reduce the CGT discount.</p>
+          <p><span class="spk">Unknown · 02:58</span>Jase: Always gets a mention.</p>
+          <p><span class="spk">Unknown · 02:59</span>Nick: Always gets a mention. They've been talking about it for a long time. It's just a matter of time before something happened.</p>
+          <p><span class="spk">Unknown · 03:04</span>Jase: No one's been successful for quite a while, but watch that space.</p>
+          <p><span class="spk">Unknown · 03:07</span>Nick: Changes to negative gearing. So limiting that, I believe, to 2 properties per individual or per group. I assume it's per couple, per group. There was some changes around EV tax, which we won't go into. There was—</p>
+          <p><span class="spk">Unknown · 03:21</span>Jase: Family trusts.</p>
+          <p><span class="spk">Unknown · 03:22</span>Nick: Family trusts and also taxing gas was the other one. So basically the government bringing in more money, they need more money. So what I wanted to talk about today was the, what seems to be a disconnect in the government spending money and the government bringing in revenue.</p>
+          <p><span class="spk">Unknown · 03:42</span>And I guess what really got me thinking about this, and you will relate to this, that as a business owner, as an SME, the easiest thing that you can do in most cases in your business is save money.</p>
+          <p><span class="spk">Unknown · 03:57</span>So for us, when we get to the close to the end of the financial year and we're looking at the next venue, we're looking at our budgets and they're not quite where we need them to be, whether it's from a net profit point of view or a surplus point of view in the government's case, it's very hard for us to manipulate revenue.</p>
+          <p><span class="spk">Unknown · 04:15</span>It's very difficult because you have to bring more clients in. Bring more clients in, that costs money. You're then reliant on salespeople bringing more clients in, for example, in our business. Whereas you can look at your cost base and it's generally pretty easy to drop a certain percentage off.</p>
+          <p><span class="spk">Unknown · 04:32</span>'Cause most businesses when they do, they're doing well, get this thing called margin creep, where they're doing well, so they spend a little bit here, spend a little bit there, and all of a sudden their margins weigh out. So I know for a fact when we do our budgets and we've gone through that process at the moment for, we're going through that process for next fin year, starts with the cost base because that's a guaranteed saving and it's one that we can actually have a result, a guaranteed result on.</p>
+          <p><span class="spk">Unknown · 04:56</span>So I look at the current government and the consistent increase in spending. We won't go into it, NBN, NDIS. I saw something on TV last night that suggested there's, you know, they can wipe $30 billion out of the NDIS from a cost point of view, just with the click of a finger.</p>
+          <p><span class="spk">Unknown · 05:18</span>Jase: Just from better fiscal management so it doesn't cost $50, $60, $70 billion a year.</p>
+          <p><span class="spk">Unknown · 05:23</span>Nick: Lots of stuff going on there that's just mind-boggling if you want to go down a rabbit hole on what you can actually get via the NDIS. So I look at the current government and these new budget reforms, which are going to have significant impacts. We know what capital gains tax is going to do to the investment landscape.</p>
+          <p><span class="spk">Unknown · 05:40</span>We know what it's going to do to people renting houses and the cost that they're going to have to pay to rent a house. We know what negative gearing is going to do. They're talking about a retrospective tax on foreign investors. Now, that's got all kinds of issues all over it because if you're now going back and taxing people in an environment that was 20 years ago, what confidence do they have to continue to invest?</p>
+          <p><span class="spk">Unknown · 06:06</span>And obviously we've got to worry about the future. So I just want to talk about productivity. At what stage does our government stop spending money instead of just bringing money in? I've got some numbers for you. So Australia has had zero productivity growth for 6 years straight.</p>
+          <p><span class="spk">Unknown · 06:25</span>Our labour productivity has actually fell by 1.2% last year. The government's projected spending next fin year is $786 billion against revenue of $749 billion.</p>
+          <p><span class="spk">Unknown · 06:42</span>And this is the crazy one. Tax to GDP ratio is climbing to 23, just above 23%. So we've got a serious issue here and we won't go on the AI journey because we're going to talk about that in other episodes, but If you look at what you and I are trying to do in our business, which is productivity, less money out, you can only control the money in to a certain degree.</p>
+          <p><span class="spk">Unknown · 07:07</span>We've gotta get the productivity up. Productivity then obviously impacts inflation. People seem to be doing less with more. At what stage does the government start looking at productivity and then the money that they're actually spending before just trying to tax everyone and really sending this country, not just myself, but a lot of people believe, into the abyss because the future is very uncertain.</p>
+          <p><span class="spk">Unknown · 07:34</span>It's an unattractive place to invest now for a lot of people unless you've bought a property in Brisbane or Perth in the last few years. But they seem to be siloed, those two areas, from a growth point of view. So yeah, I just wanna have a chat about that as a business owner.</p>
+          <p><span class="spk">Unknown · 07:51</span>What do you, what do you think?</p>
+          <p><span class="spk">Unknown · 07:53</span>Jase: Oh, look, it's mind-boggling that there isn't the lens of running our country like a business. And, you know, love or hate Donald Trump, he came into power with the entrepreneurial business mindset and then looked to do things around, you know, making the country a better place, bringing in more revenue, reducing costs.</p>
+          <p><span class="spk">Unknown · 08:10</span>You know, Elon came on as his— whatever the name of his fancy title was, but it was all about cutting government spending on, on useless areas that were kind of bleeding money for no reason. Now, won't go into that side. Focusing back more on Australia, just go, you know, politicians earn their six-figure salaries, they're there for a certain amount of time, and then they get their government pension off into the sunset.</p>
+          <p><span class="spk">Unknown · 08:32</span>But what are the KPIs? You know, we know that when we hire staff, we have team members that work for us, they've got billable targets or sales targets, they've got revenue requirements they need to meet. We know how to look at what they cost our business and then what we need in return to continue to be profitable and to survive and pay all our bills.</p>
+          <p><span class="spk">Unknown · 08:51</span>You'd love it if the same lens was applied to government spending as opposed to spending more than they actually bring in consistently. Like, we don't get to a trillion-dollar debt without consistently spending money that we as a country do not have.</p>
+          <p><span class="spk">Unknown · 09:09</span>So it's— it is mind-boggling.</p>
+          <p><span class="spk">Unknown · 09:13</span>Nick: And what's the biggest expense line for most people?</p>
+          <p><span class="spk">Unknown · 09:15</span>Jase: Wages. Yep.</p>
+          <p><span class="spk">Unknown · 09:17</span>Nick: Second biggest. And it might be below the expense line. Tax. Yeah.</p>
+          <p><span class="spk">Unknown · 09:22</span>Jase: Oh, correct.</p>
+          <p><span class="spk">Unknown · 09:22</span>Nick: So, yeah, you know, here we are as business owners and a lot of Australians out there and a lot of SMEs doing everything we can to be more productive so we can be profitable. And you just continue to get more and more taken away from you by the government.</p>
+          <p><span class="spk">Unknown · 09:37</span>And it's just stifling. It's stifling investment. It's, you know, people don't want to grow anymore and people don't want to progress. Because of what's going on. And if you flip it the other way and you promote that growth, then everyone is better off.</p>
+          <p><span class="spk">Unknown · 09:57</span>And I know there's more to it than that, but if you tax people less, particularly small business or any kind of enterprise, and you give them incentive to continue to grow, you give them incentive to invest, they then hire people, those people pay income tax and the country progresses.</p>
+          <p><span class="spk">Unknown · 10:13</span>Is prosperous. But we are, the real thing that I struggle with is it's common sense. And as business owners, it's common sense for us that, okay, we need to bring more money in if we can, but we definitely need to spend more.</p>
+          <p><span class="spk">Unknown · 10:31</span>And if we do that, we're gonna have more profitability and that means we can invest more into our businesses and we can continue to grow. So that to me is common sense. So seeing what you see now from a government point of view, is what's really frustrating, particularly when you look at the whole productivity issue and the divide in the public sector.</p>
+          <p><span class="spk">Unknown · 10:51</span>So the government versus you and I, the private sector. And you look at non-market sectors such as health, education, and public admin. So their percentage of the economy is growing because they're spending more money there, but they're subtracting 0.3% every year from productivity.</p>
+          <p><span class="spk">Unknown · 11:11</span>There's some old stats here that say since 2017-18, healthcare productivity alone has decreased by 13.5%. Just healthcare. So I don't know, this might sound like a bit of a rant, but I just, I would love, I don't know how we fix it.</p>
+          <p><span class="spk">Unknown · 11:29</span>Clearly the people that run the country are not smart enough. So there's an underlying issue there as to how do we get smarter people in government to do things that seem absolutely Sensible.</p>
+          <p><span class="spk">Unknown · 11:44</span>Jase: Common sense.</p>
+          <p><span class="spk">Unknown · 11:44</span>Nick: Common sense.</p>
+          <p><span class="spk">Unknown · 11:45</span>Jase: Correct. Correct.</p>
+          <p><span class="spk">Unknown · 11:47</span>Nick: But we just, you know, we just can't seem to get there. And we've, you look at all the productivity gains that we're getting privately now through AI, even things like offshoring, however many years ago. Like we are, look, we have conversations in our business about the productivity gains that we expect to get over the next 2 to 3 years.</p>
+          <p><span class="spk">Unknown · 12:09</span>I did some numbers for our board meeting last week. Our broker productivity in the last 12 months is up 38%. That's crazy. So the amount of loans lodged per broker in this business is up 38% on the same time last year. And we are obviously investing in AI, but not massively.</p>
+          <p><span class="spk">Unknown · 12:29</span>Like we're being cautious and from a spend point of view, we're being cautious, but we're not spending heaps and getting significant gains.</p>
+          <p><span class="spk">Unknown · 12:37</span>Jase: So I think we'd be showing similar numbers. Revenue up 10%, wages up 1 or 2% in a sense of just natural, you know, natural growth. But all other expenses have maintained pretty steady. We've literally just been more productive through whether it's technology or also just the team getting better and better and more consistency too.</p>
+          <p><span class="spk">Unknown · 12:54</span>I mean, yeah, and you'd love the same thing applied to government. Like, you know, where can they seek just some smart policies? And then, you know, I think we touched on in the gas episode, um, David Pocock, and I've been an avid watcher of all of his content now since that episode.</p>
+          <p><span class="spk">Unknown · 13:11</span>But, you know, somebody needs to go out on a limb and start to create policies that, you know, don't necessarily make the big lobbying gas companies and mining companies happy. You know, Sportsbet, there's gambling ads around Sportsbet where those things are happening, and he's advocating for getting rid of advertising, which is sucking in young, you know, young people into gambling and betting when they shouldn't be.</p>
+          <p><span class="spk">Unknown · 13:34</span>So there's, there's some common sense policies that are being advocated for and promoted, and you just wonder why we don't have more people like David Pocock that are doing, you know, things that make sense, as opposed to when it goes to vote and everybody votes against taxing gas 25%, or almost everyone.</p>
+          <p><span class="spk">Unknown · 13:51</span>Why? Like, what do we as the general punter out there not know that's going on behind closed doors up at government level? Yeah.</p>
+          <p><span class="spk">Unknown · 14:00</span>Nick: And clearly a lot.</p>
+          <p><span class="spk">Unknown · 14:01</span>Jase: Yeah.</p>
+          <p><span class="spk">Unknown · 14:01</span>Nick: There's clearly a lot we don't know.</p>
+          <p><span class="spk">Unknown · 14:03</span>Jase: I mean, the other ones, again, this sounds like a bit of a rant. Love people's comments in the comment section if you want to get some stuff off your chest. But there was the $15 billion that went missing through CFMEU and government projects in Victoria around construction. Now, that $15 billion disappeared and there was a vote for an investigation into corruption.</p>
+          <p><span class="spk">Unknown · 14:22</span>And the government voted against it. The government that were in control of the final say of whether they would do an anti-corruption and an investigation into where $15 billion of taxpayer money went. Under Labor's hands, they got the final say and they went, nope, we're not investigating, move on.</p>
+          <p><span class="spk">Unknown · 14:38</span>That's our taxpayer money. How can you just decide to not investigate where $15 billion disappears to? Yeah.</p>
+          <p><span class="spk">Unknown · 14:45</span>Nick: Crazy.</p>
+          <p><span class="spk">Unknown · 14:46</span>Jase: If that was your business or mine, at a much smaller scale, we would want to know where that money went.</p>
+          <p><span class="spk">Unknown · 14:51</span>Nick: Well, what about the COVID debacle? And, you know, they come out with the small business package. Now, you and I both know that half the businesses that got that package did not need it. It was common knowledge that— More than half.</p>
+          <p><span class="spk">Unknown · 15:04</span>Jase: Way more than half.</p>
+          <p><span class="spk">Unknown · 15:05</span>Nick: Way more than half. For me, it was common knowledge that people were fudging numbers because it wasn't audited. So you could basically put in the system what you, from memory, I'm trying to think about how it worked, but you basically put in what you expected your loss of revenue to be over that COVID period.</p>
+          <p><span class="spk">Unknown · 15:25</span>And it was like throwing mud at the wall, right? Yeah.</p>
+          <p><span class="spk">Unknown · 15:27</span>Jase: And it was like a 2-week period now versus a 2-week period there was your revenue difference, but you get to pick your 2 weeks.</p>
+          <p><span class="spk">Unknown · 15:33</span>Nick: Yeah.</p>
+          <p><span class="spk">Unknown · 15:34</span>Jase: Like, you know, it's pretty easy to gamify that to still show the right result to pass the box. But it didn't mean you're actually entitled to it. There was no means testing as to whether you could have afford, not afford and yeah.</p>
+          <p><span class="spk">Unknown · 15:46</span>Nick: So they openly come out and said that we got that wrong, but we're not gonna go through the process to audit it. We're just gonna move on. And then, so not only do they want more from us continuously and it feels like they're relying on other people to fix the problem for them, but then now you've got this tax debt issue where now is it 11% or something on any tax debt that you owe?</p>
+          <p><span class="spk">Unknown · 16:12</span>Jase: Yeah, interest charges, non-deductible.</p>
+          <p><span class="spk">Unknown · 16:14</span>Nick: Non-deductible, so you then can't claim claim that. So, you know, we're doing a lot of work in our commercial lending business now, refinancing tax debt or giving people money to pay tax debt out because not only can you not get a decent payment plan, but you're paying 11% that you can't then claim as a tax deduction.</p>
+          <p><span class="spk">Unknown · 16:32</span>So you refinance that into a normal lender where you might pay 13%, 14%, but that's tax deductible. So you're ahead and you can get decent payment terms. So they want more from us, they won't negotiate on the repayment terms. And you look, look, I know there are businesses out there that probably should have paid their tax and have maybe used the ATO as a line of credit facility, but there's a lot of small businesses that are generally doing it tough and dealing with the way our tax system</p>
+          <p><span class="spk">Unknown · 17:02</span>works is not easy. So people can fall into troubles, particularly with what's going on in the particularly in Victoria at the moment where business is difficult for a lot of people. So yeah, I just don't know where we go from here.</p>
+          <p><span class="spk">Unknown · 17:16</span>Jase: Well, I've got a question to throw back at you, which is something that I, you know, comment that came along in defending our politicians. So they earn, call it half a mil, you know, average salary, $300,000, $400,000, $500,000. But if we look at the CEOs of our top 10 ASX listed businesses, that, you know, by GDP and revenue and whatnot, were not even comparable to what Australia as a country might be.</p>
+          <p><span class="spk">Unknown · 17:42</span>They get millions and millions and millions of dollars as their CEO salaries. Yeah. Would you be comfortable with Albo having a $10 or $15 million salary if it meant that our country was run better?</p>
+          <p><span class="spk">Unknown · 17:56</span>Nick: It's the only way it works. I think that's, that, that's always been the issue for me. And, you know, there is the The trade-off that, and don't quote me on how it works exactly, but they do get a lifelong pension. So they can go in there and be public servants and they basically live happily ever after.</p>
+          <p><span class="spk">Unknown · 18:12</span>That frustrates people.</p>
+          <p><span class="spk">Unknown · 18:14</span>Jase: Get a board seat at a gas company.</p>
+          <p><span class="spk">Unknown · 18:16</span>Nick: Yeah. And that frustrates people even more because there's no KPIs. At least with a CEO of a major listed business, there's KPIs, there's long and short-term incentives. If you don't hit your KPIs, you don't get your incentives. Yeah, I think the reality is that $500,000 these days, a lot of people might think this is a throwaway comment, but $500,000 for that kind of role is absolute peanuts.</p>
+          <p><span class="spk">Unknown · 18:40</span>And you've just explained what you can get at somewhere, somewhere else. Not that these guys would probably get a job somewhere else. I know some of them do, but it's only because of handshakes. But I think that's one of the first issues. It's what is the— what does the package look like?</p>
+          <p><span class="spk">Unknown · 18:56</span>But also what is the criteria to get into these roles? Do you have any business experience? You know, I listened to a podcast this morning with Pauline Hanson on it. It was actually pretty good. And she was going through her experience and I know she's got some, yeah, she's got some policies that people won't, or beliefs that people won't agree with.</p>
+          <p><span class="spk">Unknown · 19:18</span>But talking about her career, you know, working in a fish and chip shop, then ran a plumbing business with her partner at the time. So, general business experience. And imagine if you had a politician, and to be a politician— this is a pipe dream— but to be a politician, you had to have 4 to 5 years in the private sector in small business or something.</p>
+          <p><span class="spk">Unknown · 19:41</span>Jase: Yep.</p>
+          <p><span class="spk">Unknown · 19:42</span>Nick: You know, running a small business, or then you had to get the right education to upskill to be able to do what a politician does, which in its own— has its own, you know, well, you've got to learn how to not answer a question for starters, but maybe you don't have that training. But you see, the training's wrong. Like, it's— yeah.</p>
+          <p><span class="spk">Unknown · 19:57</span>So, you've got these people that are good at doing politics, being politics, good at politics and being politicians.</p>
+          <p><span class="spk">Unknown · 20:04</span>Jase: Yeah.</p>
+          <p><span class="spk">Unknown · 20:04</span>Nick: But they have no idea how to run a budget or, you know.</p>
+          <p><span class="spk">Unknown · 20:07</span>Jase: Well, and we saw that in some of the questioning of the Minister for Finance when she couldn't answer.</p>
+          <p><span class="spk">Unknown · 20:12</span>Nick: I see, from Pocock. Oh no, it wasn't Pocock.</p>
+          <p><span class="spk">Unknown · 20:15</span>Jase: It was, yeah, that other bloke. Didn't know if it was net or gross. So, was that net or gross savings?</p>
+          <p><span class="spk">Unknown · 20:20</span>Nick: Had no idea.</p>
+          <p><span class="spk">Unknown · 20:20</span>Jase: Oh, I don't have those numbers. Well, no, no, you've just said it was $100 billion. In, in—</p>
+          <p><span class="spk">Unknown · 20:24</span>Nick: She looked at her phone like her phone was going to give her—</p>
+          <p><span class="spk">Unknown · 20:26</span>Jase: They kind of like unlocked like she was going for the calculator. Like, and again, I go, right now, would I, would I be interested in doing something in politics knowing what I know about the exposure, the potential income you could get? I mean, it's not that appealing.</p>
+          <p><span class="spk">Unknown · 20:40</span>Nick: No.</p>
+          <p><span class="spk">Unknown · 20:41</span>Jase: So we're not really attracting the best of the best to run our country. And again, like, you know, we throw to that Norway thing, but Norway taxing gas and creating a $3 trillion fund which was worth, you know, $450,000 AUD per citizen of Norway because they made the policy to tax gas for the benefit of their country.</p>
+          <p><span class="spk">Unknown · 20:59</span>Nick: Yeah.</p>
+          <p><span class="spk">Unknown · 21:00</span>Jase: Who's making the decisions for the benefit of Australia and Australian people? You know, it doesn't seem like there's that many that are in there truly advocating and making the decisions what is best long term. A lot of it, government by government, is what, what can we do while we're in power for this 2 or 3 year term?</p>
+          <p><span class="spk">Unknown · 21:16</span>To try and appease the people and keep people happy enough. But while bringing in enough revenue and then spending what we can to look good, like the new road, the new hospital, the new school, whatever it is. But it's spend, spend, spend.</p>
+          <p><span class="spk">Unknown · 21:30</span>Nick: Yeah.</p>
+          <p><span class="spk">Unknown · 21:30</span>Jase: Someone's just got to come in, take to the budget like what we do with our business and go, where can we cut some stuff out that is deadwood, that is not needed? Yeah. You know, and I'd love to kind of see, you know, they open up the books and, you know, the independent audits the advisors.</p>
+          <p><span class="spk">Unknown · 21:45</span>But I mean, look, you've got the top 4 that are paid big dollars to sit there and kind of work with the government as well. So, there's too much lining of each other's pockets without the vested interest of the everyday Aussie. And when you look at the tax to GDP number, we are just getting robbed every direction we can.</p>
+          <p><span class="spk">Unknown · 22:02</span>The everyday Aussie versus the big corporates, the multinationals. Again, if they are going to focus on revenue rather than cutting spending, Focus on bringing in revenue from the big top end of town as opposed to the everyday small business that generally sees very limited tax cuts or tax concessions.</p>
+          <p><span class="spk">Unknown · 22:22</span>Nick: Yeah, but then balance that carefully not to stifle investment. Correct. And that's the big risk at the moment. Yeah. Yeah, look, the only hope I think at the moment is, in the current environment, is the exposure that we're getting to this stuff.</p>
+          <p><span class="spk">Unknown · 22:37</span>You know, we would never have been having these conversations 10 years ago. Um, you look, look at what, um, Pauline and Barnaby Joyce are doing. Whether you like them or not, they've got far more following now. Um, so that would never have been the case. There's definitely a different landscape now where people are fed up with it.</p>
+          <p><span class="spk">Unknown · 22:55</span>More people are talking about it. Yeah, I talked about the Karl Stefanovic podcast, which I've just started listening to.</p>
+          <p><span class="spk">Unknown · 23:01</span>Jase: Yeah, with Albo.</p>
+          <p><span class="spk">Unknown · 23:02</span>Nick: I haven't listened to that one yet.</p>
+          <p><span class="spk">Unknown · 23:03</span>Jase: That's But definitely get on to that one.</p>
+          <p><span class="spk">Unknown · 23:06</span>Nick: All about this stuff. It's all about Australia, our country. If you look at the intro to his podcast that talks about— better give us a plug too, by the way. Yeah, Carl, if you're listening. If you look at the intro to his podcast, it actually talks about his growing up, you know, growing up on the outskirts of Brisbane, disappearing on the bike all day, coming home, you know, it's a good old days, what the weekends were like.</p>
+          <p><span class="spk">Unknown · 23:27</span>And if you look at all the guests he's had to date, it's politicians, it's, you know, it's Clive Palmer, it's Pauline Hanson, just trying to get a an objective view on what's going on because he's clearly concerned about the direction the country is heading and he's been big on the, the fuel prices.</p>
+          <p><span class="spk">Unknown · 23:43</span>So the awareness is there is where I'm going with this. And you're starting now to get smart, educated people that want to make a change. I think now whether they have the power or not to make the change, who knows? But holding on to hope that, you know, we are moving in the right direction, particularly from an awareness point of view.</p>
+          <p><span class="spk">Unknown · 24:03</span>Jase: And you know what, I think that's the message, right? That if, if the everyday Aussie pays attention, gets involved, you know, there's petitions that pop up. And if there's one thing we can take out of social media, the TikToks and the Instagram Reels that is showcasing some of the, the, um, the shortfalls of our, our current ways and the way the government goes about it, there's this awareness piece.</p>
+          <p><span class="spk">Unknown · 24:25</span>And there's simple things you can do, like sign the petitions. If you can afford to donate to the right people so that they can you know, run the right parties and make the right awareness campaigns. Like, again, David Pocock's running ads against the oil and gas companies because they've come out and all over Canberra there's billboards saying how much tax oil and gas companies pay because they're trying to get into the politicians' heads to go, we don't need to change the policy on taxing gas.</p>
+          <p><span class="spk">Unknown · 24:51</span>Look at all these billboards at the airport. You get off the plane at Canberra and they put billboards up everywhere saying how much tax they're actually paying. And then David Pocock was raising money to run ads the other way to go, don't listen to this bullshit. It's all lies.</p>
+          <p><span class="spk">Unknown · 25:06</span>Like, here is the number you need to look at. So again, there's more awareness. There's, you know, we're paying a bit more attention to it. We're discussing it. Karl, our mate, is discussing it too.</p>
+          <p><span class="spk">Unknown · 25:15</span>Nick: Karl's discussing it.</p>
+          <p><span class="spk">Unknown · 25:16</span>Jase: Yeah.</p>
+          <p><span class="spk">Unknown · 25:16</span>Nick: One more thing before we close out. Did you see the latest campaign on saving fuel? No. That cost them $20 million.</p>
+          <p><span class="spk">Unknown · 25:23</span>Jase: Oh yes. Sorry. Oh my God. Yeah.</p>
+          <p><span class="spk">Unknown · 25:26</span>Nick: Pump your tires up and get rid of your roof racks.</p>
+          <p><span class="spk">Unknown · 25:28</span>Jase: $20 million. That was the other like epic sunrise video of Albo getting interviewed on that.</p>
+          <p><span class="spk">Unknown · 25:35</span>Nick: And that's, you know, that's the same thing. That's 20 mum and dads retiring for the rest of their lives. Done. That's what $20 million means.</p>
+          <p><span class="spk">Unknown · 25:42</span>Jase: To pump your tires and take your roof racks off.</p>
+          <p><span class="spk">Unknown · 25:44</span>Nick: Yes.</p>
+          <p><span class="spk">Unknown · 25:44</span>Jase: Like, come on. Who?</p>
+          <p><span class="spk">Unknown · 25:46</span>Nick: It's embarrassing. It's actually embarrassing.</p>
+          <p><span class="spk">Unknown · 25:49</span>Jase: Yeah. It is embarrassing. Well, anyway, anyway, if you've listened, we'd love to know your thoughts, whether you're on YouTube or Spotify or wherever you get your podcast. Chuck a comment. We'd love to see what you think about the productivity of Australia and what we can do to change it up.</p>
+          <p><span class="spk">Unknown · 26:05</span>Nick: Productivity of our government.</p>
+          <p><span class="spk">Unknown · 26:06</span>Jase: Productivity of our government. Correct. Sorry, we're very productive. Here we are. They keep telling us to be more productive while they spend more tax more and deliver less, something doesn't add up. Game over. This podcast is for educational and informational purposes only.</p>
+          <p><span class="spk">Unknown · 26:24</span>The conversations are of a general nature and do not qualify as financial or tax advice. We recommend before you make any financial decisions, you consult a licensed professional. Individuals on the podcast may hold positions in the companies discussed. ---</p>
+        </div>
+      </details>
+
+    </div>
+
+    <div class="listen">
+      <span class="lname">Listen on</span>
+      <a href="https://open.spotify.com/search/the%20numbers%20game%20podcast" target="_blank" rel="noopener" aria-label="Listen on Spotify">
+        <svg viewBox="0 0 24 24"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.52 17.34c-.24.36-.66.48-1.02.24-2.82-1.74-6.36-2.1-10.56-1.14-.42.12-.78-.18-.9-.54-.12-.42.18-.78.54-.9 4.56-1.02 8.52-.6 11.64 1.32.42.18.48.66.3 1.02zm1.44-3.3c-.3.42-.84.6-1.26.3-3.24-1.98-8.16-2.58-11.94-1.38-.48.12-1.02-.12-1.14-.6-.12-.48.12-1.02.6-1.14 4.32-1.32 9.72-.66 13.44 1.62.36.18.54.78.3 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.3c-.6.18-1.2-.18-1.38-.72-.18-.6.18-1.2.72-1.38 4.26-1.26 11.28-1.02 15.72 1.62.54.3.72 1.02.42 1.56-.3.42-1.02.6-1.56.3z"/></svg>
+        Spotify
+      </a>
+      <a href="https://podcasts.apple.com/search?term=the%20numbers%20game" target="_blank" rel="noopener" aria-label="Listen on Apple Podcasts">
+        <svg viewBox="0 0 24 24"><path d="M5.34 0A5.328 5.328 0 000 5.34v13.32A5.328 5.328 0 005.34 24h13.32A5.328 5.328 0 0024 18.66V5.34A5.328 5.328 0 0018.66 0H5.34zm6.525 2.568c2.336 0 4.448.902 6.056 2.587 1.224 1.272 1.912 2.619 2.264 4.392l.04.23c.04.272-.16.527-.432.567a.505.505 0 01-.567-.431l-.04-.213c-.312-1.57-.92-2.747-2.004-3.867-1.428-1.496-3.293-2.294-5.393-2.294-2.1 0-3.966.798-5.394 2.294-1.084 1.12-1.692 2.298-2.004 3.867l-.04.213a.507.507 0 01-.567.431.504.504 0 01-.432-.567l.04-.23c.352-1.773 1.04-3.12 2.264-4.392 1.608-1.685 3.72-2.587 6.056-2.587h.153zm.136 3.033c1.74 0 3.312.67 4.527 1.934.883.916 1.394 1.93 1.663 3.253l.04.23a.505.505 0 01-.431.567.503.503 0 01-.567-.432l-.04-.212c-.23-1.112-.659-1.97-1.396-2.732-1.052-1.1-2.404-1.672-3.9-1.672s-2.849.572-3.901 1.672c-.737.762-1.167 1.62-1.396 2.732l-.04.212a.503.503 0 01-.567.432.505.505 0 01-.432-.567l.04-.23c.27-1.323.78-2.337 1.664-3.253 1.215-1.264 2.787-1.934 4.527-1.934h.21zm-.078 3.05c1.092 0 2.091.424 2.89 1.22.582.58.924 1.245 1.107 2.15l.04.218a.501.501 0 01-.424.568.499.499 0 01-.568-.424l-.04-.198c-.146-.724-.413-1.253-.871-1.716-.63-.63-1.398-.957-2.226-.957s-1.595.328-2.225.957c-.459.463-.726.992-.871 1.716l-.04.198a.499.499 0 01-.568.424.501.501 0 01-.424-.568l.04-.219c.183-.904.525-1.569 1.106-2.149.8-.796 1.799-1.22 2.89-1.22h.184zM12 14.07a2.477 2.477 0 012.48 2.478A2.477 2.477 0 0112 19.024a2.477 2.477 0 01-2.48-2.477A2.477 2.477 0 0112 14.07z"/></svg>
+        Apple
+      </a>
+      <a class="yt-pill" href="https://www.youtube.com/@thenumbersgamepodcast?sub_confirmation=1" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.12-2.14C19.5 3.55 12 3.55 12 3.55s-7.5 0-9.38.51A3 3 0 0 0 .5 6.2 31.4 31.4 0 0 0 0 12a31.4 31.4 0 0 0 .5 5.8 3 3 0 0 0 2.12 2.14c1.88.51 9.38.51 9.38.51s7.5 0 9.38-.51a3 3 0 0 0 2.12-2.14A31.4 31.4 0 0 0 24 12a31.4 31.4 0 0 0-.5-5.8zM9.55 15.57V8.43L15.82 12z"/></svg>
+        Subscribe
+      </a>
+    </div>
+
+    <div class="relsec">
+      <span class="rtitle">Discover more</span>
+      <div class="relgrid">
+        <a class="relcard" href="episode-280.html">
+          <img src="https://i.ytimg.com/vi/sppkdu-w5jU/hqdefault.jpg" alt="EP 280 thumbnail">
+          <span class="rt">Victoria Owes $199 Billion</span>
+          <span class="rfoot"><span class="rwhy">Also covers: policy &amp; reform</span><span class="rtag">EP 280</span></span>
+        </a>
+        <a class="relcard" href="episode-268.html">
+          <img src="https://i.ytimg.com/vi/JbWmJhmkaP0/hqdefault.jpg" alt="EP 268 thumbnail">
+          <span class="rt">Your Beer Is Taxed More Than Our Gas Exports</span>
+          <span class="rfoot"><span class="rwhy">Also covers: policy &amp; reform</span><span class="rtag">EP 268</span></span>
+        </a>
+        <a class="relcard" href="episode-283.html">
+          <img src="https://i.ytimg.com/vi/le7HuIBq6Ow/hqdefault.jpg" alt="EP 283 thumbnail">
+          <span class="rt">What Real Budget Reform for Young Australians Would Actually Look Like</span>
+          <span class="rfoot"><span class="rwhy">Also covers: policy &amp; reform</span><span class="rtag">EP 283</span></span>
+        </a>
+        <a class="relcard" href="episode-284.html">
+          <img src="https://i.ytimg.com/vi/V-10kMQrsDM/hqdefault.jpg" alt="EP 284 thumbnail">
+          <span class="rt">The Most Expensive Day in Aussie Small Business History</span>
+          <span class="rfoot"><span class="rwhy">6 July 2026</span><span class="rtag">EP 284</span></span>
+        </a>
+        <a class="relcard" href="episode-282.html">
+          <img src="https://i.ytimg.com/vi/nC_JkW320Tw/hqdefault.jpg" alt="EP 282 thumbnail">
+          <span class="rt">The Business of Gift Cards</span>
+          <span class="rfoot"><span class="rwhy">22 June 2026</span><span class="rtag">EP 282</span></span>
+        </a>
+        <a class="relcard" href="episode-281.html">
+          <img src="https://i.ytimg.com/vi/X-sSC-WROOQ/hqdefault.jpg" alt="EP 281 thumbnail">
+          <span class="rt">How to Know If Your Skills Transfer in an AI World</span>
+          <span class="rfoot"><span class="rwhy">15 June 2026</span><span class="rtag">EP 281</span></span>
+        </a>
+      </div>
+      <div class="reldots" id="reldots"></div>
+    </div>
+
+    <div class="broughtby">
+      <div class="foot-label">Brought to you by</div>
+      <div class="sponsors">
+        <a href="https://www.inovayt.com.au/" target="_blank" rel="noopener"><img src="assets/inovayt-white.png" alt="Inovayt"></a>
+        <a href="https://futureadvisory.com.au/" target="_blank" rel="noopener"><img src="assets/future-advisory-white.png" alt="Future Advisory"></a>
+      </div>
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="produced">
+      <div class="foot-label">Produced by</div>
+      <a href="https://www.vidpod.com.au/" target="_blank" rel="noopener"><img src="assets/vidpod-white.png" alt="VIDPOD"></a>
+    </div>
+    <div class="copyright">© 2026 The Numbers Game</div>
+  </footer>
+
+  <script>
+    var VIDEO='H-91xGnsyJA';
+    var CHAPTERS=[
+      {t:"00:00",s:0,title:"Intro"},
+      {t:"00:58",s:58,title:"Free Public Transport in Victoria and the $400 Million Price Tag"},
+      {t:"01:18",s:78,title:"Jacinta Allan on Sunrise and Victoria's $200 Billion Debt"},
+      {t:"02:41",s:161,title:"Federal Budget Reforms: CGT, Negative Gearing, Family Trusts"},
+      {t:"03:42",s:222,title:"Why Cutting Costs Is Easier Than Growing Revenue in Business"},
+      {t:"06:06",s:366,title:"Zero Productivity Growth for 6 Years and $786 Billion in Spending"},
+      {t:"07:53",s:473,title:"Why Government Doesn't Run Like a Business"},
+      {t:"10:51",s:651,title:"Public Sector Healthcare Productivity Down 13.5% Since 2017"},
+      {t:"14:03",s:843,title:"The $15 Billion CFMEU Money Nobody Investigated"},
+      {t:"14:51",s:891,title:"COVID Business Packages and 11% Non-Deductible ATO Interest"},
+      {t:"17:16",s:1036,title:"Should the PM Earn $10 Million for Better Results"},
+      {t:"22:22",s:1342,title:"Why More Australians Are Paying Attention to Government Waste"},
+      {t:"25:16",s:1516,title:"The $20 Million Campaign to Pump Your Tyres"}
+    ];
+    var QUESTIONS=[
+      {q:"Is it easier to cut costs or grow revenue in a business?",s:222},
+      {q:"What is margin creep and how does it hurt my business?",s:272},
+      {q:"How long has Australia gone without productivity growth?",s:366},
+      {q:"How much more is the government spending than it earns?",s:385},
+      {q:"What is Australia's tax to GDP ratio?",s:402},
+      {q:"How does taxing business less help the whole economy?",s:577},
+      {q:"How much has public sector healthcare productivity fallen?",s:651},
+      {q:"What happened to the $15 billion in Victorian construction projects?",s:843},
+      {q:"How did Norway benefit from taxing its gas?",s:1241},
+      {q:"What did the government's fuel saving campaign cost?",s:1516}
+    ];
+
+    var chEl=document.getElementById('chapters');
+    CHAPTERS.forEach(function(c){var b=document.createElement('button');b.className='chapter';b.onclick=function(){startAt(c.s)};b.innerHTML='<span class="tc">'+c.t+'</span><span class="cx">'+c.title+'</span>';chEl.appendChild(b);});
+    document.getElementById('chcount').textContent=CHAPTERS.length;
+    var qEl=document.getElementById('qa');
+    QUESTIONS.forEach(function(q){var b=document.createElement('button');b.className='q';b.onclick=function(){startAt(q.s)};b.innerHTML='<span class="qm">?</span><span class="qx">'+q.q+'</span><span class="go">›</span>';qEl.appendChild(b);});
+    document.getElementById('qcount').textContent=QUESTIONS.length;
+
+    /* Mobile nav dropdown. */
+    var burger=document.getElementById('navburger'), navdrop=document.getElementById('navdrop');
+    if(burger&&navdrop){burger.addEventListener('click',function(){
+      navdrop.hidden=!navdrop.hidden;
+      burger.setAttribute('aria-expanded', navdrop.hidden?'false':'true');
+    });}
+
+    /* Voice-note button reveals the recorder; × tucks it away. */
+    var vbtn=document.getElementById('vbtn'), vslot=document.getElementById('vslot'), vclose=document.getElementById('vclose');
+    if(vbtn&&vslot){vbtn.addEventListener('click',function(){vslot.hidden=!vslot.hidden;});}
+    if(vclose&&vslot){vclose.addEventListener('click',function(){vslot.hidden=true;});}
+
+    /* Keep-exploring dots: only shown when the strip actually scrolls (mobile). */
+    var rg=document.querySelector('.relgrid'), rd=document.getElementById('reldots');
+    if(rg&&rd){
+      var relCards=rg.querySelectorAll('.relcard');
+      relCards.forEach(function(){rd.appendChild(document.createElement('span'))});
+      var updDots=function(){
+        var scrollable=rg.scrollWidth>rg.clientWidth+4;
+        rd.style.display=scrollable?'flex':'none';
+        if(!scrollable)return;
+        var i=Math.round(rg.scrollLeft/(rg.scrollWidth-rg.clientWidth)*(relCards.length-1));
+        rd.querySelectorAll('span').forEach(function(s,n){s.classList.toggle('on',n===i)});
+      };
+      rg.addEventListener('scroll',updDots,{passive:true});
+      window.addEventListener('resize',updDots);
+      updDots();
+    }
+
+    /* Explore tabs: swap the visible panel; the row stays put so you never lose your place. */
+    var tabBtns=document.querySelectorAll('.tabbtn');
+    tabBtns.forEach(function(b){
+      b.addEventListener('click',function(){
+        tabBtns.forEach(function(o){o.classList.remove('on')});
+        document.querySelectorAll('.tpanel').forEach(function(p){p.hidden=true});
+        b.classList.add('on');
+        document.getElementById(b.getAttribute('data-panel')).hidden=false;
+      });
+    });
+
+    /* YouTube: clean facade, then real player on demand. Seek without yanking to top. */
+    var player=null, ready=false, apiReady=false, pending=null;
+    window.onYouTubeIframeAPIReady=function(){apiReady=true; if(pending!=null){var s=pending;pending=null;createPlayer(s);}};
+    function createPlayer(sec){
+      var wrap=document.getElementById('player'); wrap.innerHTML='<div id="yt"></div>';
+      player=new YT.Player('yt',{videoId:VIDEO,playerVars:{autoplay:1,rel:0,modestbranding:1,playsinline:1,start:Math.floor(sec||0)},events:{onReady:function(){ready=true;}}});
+    }
+    function nudge(){
+      var p=document.getElementById('player-wrap'), r=p.getBoundingClientRect();
+      if(r.bottom<80 || r.top>window.innerHeight-90){ p.scrollIntoView({behavior:'smooth',block:'start'}); }
+    }
+    function startAt(sec){
+      nudge();
+      if(player&&ready){ player.seekTo(sec,true); player.playVideo(); return; }
+      if(apiReady){ createPlayer(sec); } else { pending=sec; }
+    }
+    document.getElementById('facade').addEventListener('click',function(){startAt(0);});
+    (function(){var s=document.createElement('script');s.src='https://www.youtube.com/iframe_api';document.head.appendChild(s);})();
+  </script>
+</body>
+</html>

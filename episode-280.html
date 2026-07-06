@@ -1,0 +1,633 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EP 280 · Victoria Owes $199 Billion | What It Means for Your Business | The Numbers Game</title>
+<meta name="description" content="Victoria's $199 billion in debt, and if you're running a small business in this state, you're the one wearing it.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --purple:#585af3; --purple-dark:#2c1b8a; --mint:#7ad9a8;
+    --white:#ffffff; --muted:rgba(255,255,255,.60); --dim:rgba(255,255,255,.42);
+    --line:rgba(255,255,255,.12); --card:rgba(255,255,255,.05); --card-hi:rgba(255,255,255,.09);
+    --display:'Anton',Impact,'Helvetica Neue',sans-serif;
+    --sans:'Inter',system-ui,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif;
+    --wrap:1280px;   /* page frame (nav spans this) */
+    --col:960px;     /* content column (player, tabs, text) */
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:var(--sans); color:var(--white); line-height:1.6; -webkit-font-smoothing:antialiased;
+    background:#12093a;
+    background-image:
+      radial-gradient(1200px 600px at 82% -6%, rgba(88,90,243,.45) 0%, transparent 55%),
+      radial-gradient(900px 700px at 5% 8%, rgba(122,217,168,.10) 0%, transparent 50%),
+      linear-gradient(180deg,#2c1b8a 0%,#1a1150 28%,#100b34 62%,#0b0820 100%);
+    background-attachment:fixed;
+  }
+  a{color:inherit}
+  .wrap{max-width:var(--wrap);margin:0 auto;padding:0 36px}
+  main.wrap{max-width:var(--col)}
+  @media(max-width:720px){.wrap{padding:0 22px}}
+
+  /* ── Navbar ── */
+  .nav{position:sticky;top:0;z-index:50;background:linear-gradient(180deg,rgba(24,15,74,.92),rgba(24,15,74,.72));backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+  .nav-in{max-width:var(--wrap);margin:0 auto;padding:11px 36px;display:flex;align-items:center;justify-content:space-between}
+  @media(max-width:720px){.nav-in{padding:11px 22px}}
+  .brand{display:block;line-height:0}
+  .brand img{height:36px;width:auto;display:block}
+  .navlinks{display:flex;gap:28px;align-items:center}
+  .navlinks a{text-decoration:none;font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);transition:.15s}
+  .navlinks a:hover{color:var(--white)}
+  .navgroup{position:relative;display:flex;align-items:center}
+  .navgroup .subnav{display:none;position:absolute;top:100%;left:50%;transform:translateX(-50%);padding-top:14px;min-width:180px}
+  .navgroup:hover .subnav,.navgroup:focus-within .subnav{display:block}
+  .subnav-in,.navgroup .subnav{z-index:60}
+  .navgroup .subnav a{display:block;background:#180f4a;border:1px solid var(--line);border-top:0;padding:12px 16px;font-size:12px;color:rgba(255,255,255,.85)}
+  .navgroup .subnav a:first-child{border-top:1px solid var(--line)}
+  .navgroup .subnav a:hover{background:#221768;color:var(--white)}
+  .navburger{display:none;background:none;border:1px solid var(--line);padding:8px 10px;cursor:pointer;color:var(--white);transition:.15s}
+  .navburger:hover{border-color:rgba(122,217,168,.6)}
+  .navburger svg{width:20px;height:20px;fill:currentColor;display:block}
+  .navdrop{display:none}
+  @media(max-width:720px){
+    .navlinks{display:none}
+    .navburger{display:block}
+    .navdrop{display:block;position:absolute;left:0;right:0;top:100%;
+      background:#180f4a;border-bottom:1px solid var(--line);box-shadow:0 24px 50px rgba(0,0,0,.45)}
+    .navdrop[hidden]{display:none}
+    .navdrop a{display:block;padding:15px 22px;text-decoration:none;font-size:14px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:rgba(255,255,255,.9);border-bottom:1px solid rgba(255,255,255,.06)}
+    .navdrop a:last-child{border-bottom:0}
+    .navdrop a.sub{padding-left:42px;font-size:13px;color:rgba(255,255,255,.72)}
+  }
+
+  /* ── Hero / hook (marker-highlight system: purple hook wraps naturally, mint payoff below)
+     Rules: title splits at its natural break (colon/pipe/question mark). Front = hook (purple,
+     big), back = payoff (mint, smaller). No break in title = purple hook only. Highlights hug
+     the text (tight em padding tuned to Anton) and wrap via box-decoration-break — never
+     hand-pick line breaks or mint words. ── */
+  header.hero{padding:34px 0 6px}
+  .hook{--inx:clamp(8.4px,2.1vw,15.6px)} /* one shared text inset so hook + payoff first letters align */
+  .hook .hk{font-family:var(--display);font-weight:400;text-transform:uppercase;
+    font-size:clamp(28px,7vw,52px);line-height:1.3;letter-spacing:-.5px;text-wrap:balance}
+  .hook .hk span{color:var(--white);padding:.04em var(--inx) .02em;
+    background:linear-gradient(var(--purple),var(--purple)) 0 50%/100% 87% no-repeat;
+    -webkit-box-decoration-break:clone;box-decoration-break:clone}
+  .hook .pay{font-family:var(--display);font-weight:400;text-transform:uppercase;
+    font-size:clamp(16px,4vw,24px);line-height:1.5;letter-spacing:.6px;margin-top:8px;text-wrap:balance}
+  .hook .pay span{color:#0a0a0a;padding:.08em var(--inx) .04em;
+    background:linear-gradient(var(--mint),var(--mint)) 0 50%/100% 88% no-repeat;
+    -webkit-box-decoration-break:clone;box-decoration-break:clone}
+  /* no-hook titles: mid-split into two full-size rows, purple then mint */
+  .hook .hk span.hkrow{display:block;background:none;padding:0}
+  .hook .hk .hkrow+.hkrow{margin-top:8px}
+  .hook .hk span.mintseg{color:#0a0a0a;
+    background:linear-gradient(var(--mint),var(--mint)) 0 50%/100% 87% no-repeat}
+
+  /* ── Player (clean facade → real player on tap) ── */
+  .player-wrap{margin:24px 0 4px;scroll-margin-top:76px}
+  .player{position:relative;width:100%;padding-top:56.25%;border-radius:0;overflow:hidden;background:#000;box-shadow:0 30px 70px rgba(0,0,0,.5),0 0 0 1px rgba(255,255,255,.06)}
+  .facade{position:absolute;inset:0;border:0;cursor:pointer;background-size:cover;background-position:center;display:flex;align-items:center;justify-content:center;padding:0}
+  .facade .play{width:74px;height:74px;border-radius:50%;background:rgba(10,6,30,.40);border:2px solid rgba(255,255,255,.72);display:flex;align-items:center;justify-content:center;transition:.18s;-webkit-backdrop-filter:blur(1px);backdrop-filter:blur(1px)}
+  .facade:hover .play{background:rgba(88,90,243,.62);transform:scale(1.07);border-color:#fff}
+  .facade .play::after{content:"";border-style:solid;border-width:11px 0 11px 19px;border-color:transparent transparent transparent #fff;margin-left:5px}
+  .player iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+
+  /* ── Episode facts (bottom of the Summary panel — templated per episode) ── */
+  .sumfacts{margin:14px 10px 4px;padding-top:13px;border-top:1px solid rgba(255,255,255,.08);display:flex;flex-direction:column;gap:8px}
+  .fact{display:flex;gap:12px;font-size:13.5px}
+  .fact .fl{flex:none;width:104px;color:var(--dim);font-weight:600;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;padding-top:2px}
+  .fact .fv{color:rgba(255,255,255,.9);font-weight:500}
+  .fact .fv a{color:var(--mint);text-decoration:none;border-bottom:1px solid rgba(122,217,168,.4);transition:.15s}
+  .fact .fv a:hover{border-bottom-color:var(--mint)}
+
+  /* ── Episode tag (identity: black label hanging off the title corner) ── */
+  .eptag{display:inline-block;position:relative;left:-6px;margin-bottom:-7px;z-index:2;
+    background:#0a0a0a;color:var(--white);font-family:var(--display);font-weight:400;
+    font-size:13.5px;letter-spacing:1.5px;text-transform:uppercase;padding:6px 11px 4px}
+
+  /* ── Explore tabs (sticky mode switcher; one panel swaps below, nothing shoves) ── */
+  .explore{margin-top:22px}
+  .tabs{position:sticky;top:58px;z-index:40;display:flex;flex-wrap:wrap;gap:8px;padding:10px 0;
+    background:linear-gradient(180deg,rgba(18,10,55,.96),rgba(18,10,55,.86));
+    backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+  .tabbtn{font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.5px;
+    font-size:14.5px;color:var(--white);background:var(--purple);border:1px solid var(--purple);
+    padding:9px 13px 7px;cursor:pointer;transition:.15s}
+  .tabbtn:hover{filter:brightness(1.12)}
+  .tabbtn.on{background:var(--mint);border-color:var(--mint);color:#0a0a0a}
+  .tabbtn.on:hover{filter:none}
+  .tabbtn .ct{font-size:12px;opacity:.75;font-variant-numeric:tabular-nums}
+  .tabbtn .ct::before{content:" · "}
+  .tpanel{border:1px solid var(--line);background:var(--card);padding:12px 10px 14px}
+  .hint{font-size:12.5px;color:var(--muted);padding:2px 10px 10px;border-bottom:1px solid rgba(255,255,255,.08);margin-bottom:6px}
+
+  /* ── Listen row (no box: label left, service pills follow) ── */
+  .listen{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:12px 16px;margin-top:34px}
+  .listen .lname{font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--dim)}
+  .listen a{display:inline-flex;align-items:center;gap:9px;padding:11px 18px;border-radius:999px;
+    background:var(--mint);color:#08210f;text-decoration:none;font-weight:800;font-size:12.5px;
+    letter-spacing:.04em;text-transform:uppercase;transition:.15s}
+  .listen a:hover{filter:brightness(1.06);transform:translateY(-1px);box-shadow:0 12px 30px rgba(122,217,168,.25)}
+  .listen svg{width:20px;height:20px;fill:currentColor;flex:none}
+
+  /* ── Keep exploring (thumbnails link to other episode PAGES, never timecodes).
+     Swipeable strip on mobile, fits three-up on desktop. Variant rule: claim
+     "similar ground" + reason lines ONLY when moment-level topic overlap is
+     genuinely strong; otherwise show the latest released episodes with dates —
+     never invent a connection. ── */
+  .relsec{margin-top:60px;padding-top:58px;border-top:1px solid var(--line)} /* line = end of this episode's info */
+  .broughtby{text-align:center;margin-top:68px;margin-bottom:48px} /* bottom gap matches footer's top padding so the line sits halfway */
+  .reldots{display:flex;justify-content:center;gap:7px;margin-top:12px}
+  .reldots span{width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.25);transition:.2s}
+  .reldots span.on{background:var(--mint)}
+  .relsec .rtitle{display:inline-block;font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.5px;font-size:14.5px;background:var(--mint);color:#0a0a0a;padding:9px 13px 7px;margin-bottom:18px}
+  .relgrid{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding-bottom:6px;scrollbar-width:none}
+  .relgrid::-webkit-scrollbar{display:none}
+  .relcard{flex:0 0 56%;max-width:232px;scroll-snap-align:start;display:flex;flex-direction:column;text-decoration:none;background:var(--card);border:1px solid var(--line);transition:.15s}
+  .relcard:hover{background:var(--card-hi);border-color:rgba(122,217,168,.55)}
+  .relcard img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block}
+  .relcard .rt{display:block;font-size:12.5px;font-weight:600;color:rgba(255,255,255,.92);line-height:1.4;padding:8px 8px 0}
+  .relcard .rfoot{margin-top:auto;display:flex;justify-content:space-between;align-items:flex-end;gap:8px;padding:10px 8px 9px}
+  .relcard .rwhy{font-size:11.5px;color:var(--mint)}
+  .relcard .rtag{display:inline-block;background:#0a0a0a;color:var(--white);font-family:var(--display);font-size:10px;letter-spacing:1.2px;text-transform:uppercase;padding:3px 7px 2px}
+
+  /* ── Dropdown sections (accordion under the player) ── */
+  .drops{margin-top:34px;display:flex;flex-direction:column;gap:11px}
+  .drop{border:1px solid var(--line);border-radius:0;background:var(--card);overflow:hidden;transition:border-color .15s}
+  .drop[open]{border-color:rgba(122,217,168,.35)}
+  .drop>summary{list-style:none;cursor:pointer;padding:16px 18px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+  .drop>summary::-webkit-details-marker{display:none}
+  .drop>summary .st{font-weight:700;font-size:15.5px;letter-spacing:.005em}
+  .drop>summary .ct{margin-left:auto;font-size:12px;color:var(--dim);font-weight:600;font-variant-numeric:tabular-nums}
+  .drop>summary .chev{flex:none;width:22px;height:22px;border-radius:50%;background:rgba(122,217,168,.14);color:var(--mint);display:flex;align-items:center;justify-content:center;font-family:var(--display);font-size:15px;line-height:1;transition:.2s;transform:translateY(-1px)}
+  .drop[open]>summary .chev{transform:rotate(45deg)}
+  .drop-body{padding:2px 12px 12px}
+
+  /* chapters */
+  .chapter{display:flex;align-items:baseline;gap:14px;width:100%;text-align:left;cursor:pointer;background:none;border:0;color:inherit;font-family:inherit;padding:11px 10px;border-radius:10px;transition:.13s}
+  .chapter:hover{background:var(--card-hi)}
+  .chapter .tc{font-variant-numeric:tabular-nums;font-weight:700;font-size:14px;color:var(--mint);flex:none;width:48px}
+  .chapter .cx{font-size:15px;font-weight:500;color:rgba(255,255,255,.9)}
+  .chapter:hover .cx{color:#fff}
+
+  /* questions */
+  .q{display:flex;align-items:center;gap:12px;width:100%;text-align:left;cursor:pointer;background:none;border:0;border-radius:11px;color:inherit;font-family:inherit;padding:12px 10px;transition:.14s}
+  .q+.q{border-top:1px solid rgba(255,255,255,.05)}
+  .q:hover{background:var(--card-hi)}
+  .q .qm{font-family:var(--display);font-size:15px;color:var(--mint);flex:none;line-height:1;transform:translateY(1px)}
+  .q .qx{font-size:15px;font-weight:500;color:rgba(255,255,255,.92)}
+  .q .go{margin-left:auto;flex:none;color:var(--dim);font-size:18px;transition:.15s}
+  .q:hover .go{color:var(--mint);transform:translateX(2px)}
+
+  /* summary + transcript bodies */
+  .summary-body p{font-size:16.5px;line-height:1.62;color:rgba(255,255,255,.9);padding:6px 10px 4px}
+  .tbody{padding:2px 10px 8px}
+  .tbody p{font-size:14.5px;line-height:1.7;color:rgba(255,255,255,.78);margin-top:15px;max-width:64ch}
+  .tbody .spk{display:block;font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--mint);margin-bottom:2px}
+
+  /* ── Voice note ask (lives at the bottom of the Summary panel) ── */
+  .vask{margin:16px 10px 4px}
+  .vbtn{display:inline-flex;align-items:center;gap:9px;padding:12px 20px;border-radius:999px;border:0;cursor:pointer;
+    background:var(--mint);color:#08210f;font-family:inherit;font-weight:800;font-size:12.5px;
+    letter-spacing:.04em;text-transform:uppercase;transition:.15s}
+  .vbtn:hover{filter:brightness(1.06);transform:translateY(-1px);box-shadow:0 12px 30px rgba(122,217,168,.25)}
+  .vbtn svg{width:18px;height:18px;fill:currentColor;flex:none}
+  .vslot{background:var(--purple);padding:12px 10px 10px;margin:14px 0 4px;box-shadow:0 18px 40px rgba(0,0,0,.35)}
+  .vslot[hidden]{display:none}
+  .vhead{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;margin-bottom:10px}
+  .vhead .vmsg{font-family:var(--sans);font-size:13px;line-height:1.55;color:rgba(255,255,255,.92);margin:2px 0 0;padding:0 2px}
+  .vclose{background:none;border:0;color:rgba(255,255,255,.85);font-size:22px;line-height:1;cursor:pointer;padding:0 2px}
+  .vclose:hover{color:var(--white)}
+  .vslot iframe{display:block}
+
+  /* ── YouTube subscribe pill (sits in the listen row; outranks .listen a's mint) ── */
+  .listen a.yt-pill{background:var(--purple);color:var(--white)}
+  .listen a.yt-pill:hover{filter:brightness(1.1);transform:translateY(-1px)}
+  @media(max-width:720px){ /* mobile: no label, three compact pills on one row */
+    .listen .lname{display:none}
+    .listen{gap:8px}
+    .listen a{padding:10px 13px;font-size:11px;gap:6px}
+    .listen svg{width:16px;height:16px}
+  }
+
+  /* ── Footer ── */
+  footer{border-top:1px solid var(--line);margin-top:6px;padding:48px 20px 58px;text-align:center}
+  .foot-label{font-size:11px;font-weight:700;letter-spacing:.26em;text-transform:uppercase;color:var(--dim);margin-bottom:16px}
+  .sponsors{display:flex;justify-content:center;align-items:center;gap:38px;flex-wrap:wrap}
+  .sponsors a{display:inline-flex;transition:.15s}
+  .sponsors a:hover{transform:translateY(-1px)}
+  .sponsors img{height:34px;width:auto;opacity:.92}
+  .sponsors a:hover img{opacity:1}
+  .produced a{display:inline-flex;transition:.15s}
+  .produced a:hover img{opacity:1}
+  .produced{margin-top:0}
+  .produced img{height:30px;width:auto;opacity:.95}
+  .copyright{margin-top:28px;font-size:12px;color:var(--dim)}
+
+  @media(min-width:720px){header.hero{padding:48px 0 6px}}
+</style>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-in">
+      <a class="brand" href="index.html" aria-label="The Numbers Game home"><img src="assets/tng-logo.png" alt="The Numbers Game"></a>
+      <div class="navlinks">
+        <a href="index.html">Home</a>
+        <a href="episodes.html">Episodes</a>
+        <div class="navgroup">
+          <a href="about.html">About</a>
+          <div class="subnav">
+            <a href="about.html">The show</a>
+            <a href="nick-reilly.html">Nick Reilly</a>
+            <a href="jason-robinson.html">Jason Robinson</a>
+          </div>
+        </div>
+        <a href="contact.html">Contact</a>
+      </div>
+      <button class="navburger" id="navburger" type="button" aria-label="Menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24"><path d="M3 6h18v2H3zM3 11h18v2H3zM3 16h18v2H3z"/></svg>
+      </button>
+    </div>
+    <div class="navdrop" id="navdrop" hidden>
+      <a href="index.html">Home</a>
+      <a href="episodes.html">Episodes</a>
+      <a href="about.html">About</a>
+      <a class="sub" href="nick-reilly.html">Nick Reilly</a>
+      <a class="sub" href="jason-robinson.html">Jason Robinson</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+
+  <main class="wrap">
+
+    <header class="hero">
+      <div class="hook">
+        <span class="eptag">EP 280</span>
+        <h1 class="hk"><span>Victoria Owes $199 Billion</span></h1>
+        <p class="pay"><span>What It Means for Your Business</span></p>
+      </div>
+    </header>
+
+    <div class="player-wrap" id="player-wrap">
+      <div class="player" id="player">
+        <button class="facade" id="facade" style="background-image:url('https://i.ytimg.com/vi/sppkdu-w5jU/maxresdefault.jpg')" aria-label="Play episode">
+          <span class="play"></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="explore">
+      <div class="tabs" role="tablist">
+        <button class="tabbtn on" data-panel="p-summary">Summary</button>
+        <button class="tabbtn" data-panel="p-chapters">Chapters<span class="ct" id="chcount"></span></button>
+        <button class="tabbtn" data-panel="p-questions">Questions<span class="ct" id="qcount"></span></button>
+      </div>
+      <section class="tpanel" id="p-summary">
+        <div class="summary-body">
+          <p>Victoria's $199 billion in debt, and if you're running a small business in this state, you're the one wearing it. Taxes keep climbing, businesses are going under at record rates, and the COVID levy that was sold as temporary isn't going anywhere. Jase has done the numbers on where the money went and what it means for Victorian business owners heading into end of financial year.</p>
+        </div>
+        <div class="vask">
+          <button class="vbtn" id="vbtn" type="button">
+            <svg viewBox="0 0 24 24"><path d="M12 14a3 3 0 0 0 3-3V6a3 3 0 1 0-6 0v5a3 3 0 0 0 3 3zm5-3a5 5 0 0 1-10 0H5a7 7 0 0 0 6 6.92V21h2v-3.08A7 7 0 0 0 19 11h-2z"/></svg>
+            Send us a voice note
+          </button>
+          <div class="vslot" id="vslot" hidden>
+            <div class="vhead">
+              <p class="vmsg">We'd love to hear from you. You can leave up to a 90 second voice note for us to play on the show: a question, some feedback, or a topic you want covered.</p>
+              <button class="vclose" id="vclose" type="button" aria-label="Close">&times;</button>
+            </div>
+            <iframe src="https://www.speakpipe.com/widget/inline/hhq6kzggsx7zpcsvakgxfrzun3zidpde" allow="microphone" width="100%" height="200" frameborder="0" title="Leave The Numbers Game a voice note"></iframe>
+          </div>
+          <script async src="https://www.speakpipe.com/widget/loader.js" charset="utf-8"></script>
+        </div>
+        <div class="sumfacts">
+          <div class="fact"><span class="fl">Release date</span><span class="fv">8 June 2026</span></div>
+          <div class="fact"><span class="fl">Hosts</span><span class="fv"><a href="nick-reilly.html">Nick Reilly</a> &amp; <a href="jason-robinson.html">Jason Robinson</a></span></div>
+          <!-- template: add <div class="fact"><span class="fl">Guest</span>...</div> only when the episode has one -->
+
+        </div>
+      </section>
+      <section class="tpanel" id="p-chapters" hidden>
+        <p class="hint">Jump straight to the part you need.</p>
+        <div id="chapters"></div>
+      </section>
+      <section class="tpanel" id="p-questions" hidden>
+        <p class="hint">Real questions this episode answers. Tap one to hear the answer.</p>
+        <div id="qa"></div>
+      </section>
+    </div>
+
+    <div class="drops">
+
+      <details class="drop">
+        <summary><span class="st">Episode transcript</span><span class="chev">+</span></summary>
+        <div class="drop-body tbody">
+          <p><span class="spk">Unknown · 00:00</span>Jase: Welcome to another episode of The Numbers Game. I'm Jase and I'm here with Nick. How are you today, mate?</p>
+          <p><span class="spk">Unknown · 00:05</span>Nick: Super excited, mate. I just love when you bring government, debt, cash, small business. It's all the good stuff and you bring it and you're very good at it. So I'm keen to hear what you have to say today, mate.</p>
+          <p><span class="spk">Unknown · 00:17</span>Jase: Thank you. Yeah, I put on my big boy jacket. I noticed that. I didn't want to be like Punters Politics and cop shit for trying to talk politics with a t-shirt on. What's the badge? It's a CPA 10-year anniversary badge. You get a little jewel in there as well, which is pretty cool.</p>
+          <p><span class="spk">Unknown · 00:32</span>Nick: That's it. They give you the present or is that the present?</p>
+          <p><span class="spk">Unknown · 00:34</span>Jase: I think that's the present.</p>
+          <p><span class="spk">Unknown · 00:35</span>Nick: Oh, okay.</p>
+          <p><span class="spk">Unknown · 00:35</span>Jase: Right. Yeah, I had a 140-year celebration badge somewhere. I've got to find it tonight before my divisional council meeting with the CPA.</p>
+          <p><span class="spk">Unknown · 00:42</span>Nick: That's very smart.</p>
+          <p><span class="spk">Unknown · 00:43</span>Jase: Thank you, mate. I always try and scrub up for you. Well, sometimes anyway. Today, Nico, I don't want to go too far into it. We've covered a bit before. We, you know, in Victoria, we're coming up to election this year for the Victorian State Government.</p>
+          <p><span class="spk">Unknown · 00:59</span>We've also got the federal budget that's come out. We'll unpack that in a different episode. It's not today's topic. But for today, the thing that's kind of getting my attention and making a lot of noise that I believe directly impacts small business owners in Victoria and everyday taxpayers in Victoria is Victoria's $199 billion debt book or the debt that is approaching $199 billion.</p>
+          <p><span class="spk">Unknown · 01:25</span>And what I wanted to talk about is just the sheer magnitude of what $199 billion means, what it could have been spent on, where it's gone. I won't spend too much on it, but then I want to revert into what it actually means for people still living in Victoria and what it means for small business owners who are realistically paying the price for what seems like some pretty bad mismanagement.</p>
+          <p><span class="spk">Unknown · 01:52</span>Is it just me, Nick? Is my algorithm, because of my Punters Politics and my David Pocock, have I gone into some kind of really weird space online, or are you seeing a bit of noise about this stuff too?</p>
+          <p><span class="spk">Unknown · 02:03</span>Nick: No, look, it's clearly an issue. And I think with, you know, the access to information now, it's, it's definitely magnified. Not that the issue is magnified. It was always there. I just think we're all hearing about it now. And obviously politics across the whole country is in a bit of turmoil and we're seeing some significant change.</p>
+          <p><span class="spk">Unknown · 02:19</span>So, you know, this stuff is right at the top of everyone's agenda. But I really like where you're going with this because You hear all the numbers get thrown around, but what does it actually mean? What should you be thinking about as an individual outside of the throwaway line that our kids are stuffed?</p>
+          <p><span class="spk">Unknown · 02:37</span>What does it actually mean?</p>
+          <p><span class="spk">Unknown · 02:40</span>Jase: Hear that a fair bit, definitely. So where the motivation came from before, I kind of wanted to bring it back to something relevant to the Numbers Game audience. I saw a post by Nicole Werner. She's an MP and it was a bit of an infographic, but it was along the lines and I'll run down where the $199 billion could been spent or what $199 billion looks like.</p>
+          <p><span class="spk">Unknown · 03:02</span>But this particular statement caught my attention as well. Nick, if you made $1 million a day and spent zero, you just continued to go out every day and made $1 million a day, you would have to work for 55 years to save $199 billion.</p>
+          <p><span class="spk">Unknown · 03:20</span>Nick: Hang on, so you're earning $1 million a day, so you're earning $365 million a year. To get to the current Victorian debt level, you'd have to save all that?</p>
+          <p><span class="spk">Unknown · 03:35</span>Jase: Yep. You're not allowed to spend a cent?</p>
+          <p><span class="spk">Unknown · 03:37</span>Nick: For 50 years.</p>
+          <p><span class="spk">Unknown · 03:38</span>Jase: For 55 years.</p>
+          <p><span class="spk">Unknown · 03:40</span>Nick: Yeah, look, there's a few examples or analogies like that you could throw around that are just not going to be believable, are they?</p>
+          <p><span class="spk">Unknown · 03:47</span>Jase: No, correct.</p>
+          <p><span class="spk">Unknown · 03:48</span>Nick: But it does definitely describe the issue at hand.</p>
+          <p><span class="spk">Unknown · 03:53</span>Jase: And when you think about it, you know, there's, what are we, 6.7 million Victorians at the moment? You know, it's this— We're a good, good population, but in the scheme of things. So what I'll just reel through this for you and I'll just kind of give you one at a time, but we're going to go from the smallest example up to what $199 billion means.</p>
+          <p><span class="spk">Unknown · 04:10</span>But for $1.5 billion, Nick, I can build you a 500-bed hospital that would treat 130,000 people a year. That's $1.5 billion. For a touch under $5 billion, that would fund the entire Victorian Police budget for an entire year.</p>
+          <p><span class="spk">Unknown · 04:27</span>At $13 billion, we could build a train line that we've all talked about and we'd love directly from Melbourne to the Melbourne Airport. $13 billion. I mean, we're still at very small change compared to the $199 billion.</p>
+          <p><span class="spk">Unknown · 04:42</span>Nick: 20 billions left. Yeah.</p>
+          <p><span class="spk">Unknown · 04:43</span>Jase: Just after $13 billion, there's $15 billion, which is what went missing on the Big Build corruption sites as reported, but not investigated. At $21 billion, it's what the debt was when Labor came into power in 2014.</p>
+          <p><span class="spk">Unknown · 04:59</span>It's quite a big jump from $21 billion to nearly $200 billion. $32 billion funds the entire public health system. $41 billion is our interest bill over the next 4 years alone. $43 billion is what we collect in taxes in a year in Victoria.</p>
+          <p><span class="spk">Unknown · 05:17</span>$59 billion is our entire— Australia's entire Defence Force budget, the whole of Australia. $88 billion is the entire national budget for Medicare and NDIS combined, the whole of Australia.</p>
+          <p><span class="spk">Unknown · 05:33</span>$88 billion. At $104 billion, we can give $40,000 cash to every Victorian household. $40,000 cash to every Victorian household, and we're only at $100 billion.</p>
+          <p><span class="spk">Unknown · 05:48</span>At $120 billion, I could build you a new primary school in every suburb in Victoria, roughly 3,000 schools. At $130 billion, HECS or HELP debt no longer exists for every single Australian that's gone to university and studied twice.</p>
+          <p><span class="spk">Unknown · 06:07</span>We could, we could pay it. And then $145 billion, I could give everyone free electricity and gas for 15 years in Victoria. And that's at $145 billion. So we're still climbing up to what $199 billion really does.</p>
+          <p><span class="spk">Unknown · 06:25</span>So that's examples of if you were to spend that $199 billion, they're the things you could get for it. The kicker that really kind of stuck out to me was we collect $43 billion in tax per year, and a lot of that's just going straight back to paying interest, not really chipping away at the debt.</p>
+          <p><span class="spk">Unknown · 06:42</span>So the Governor-General— the Auditor-General, sorry— recons or says we will be at about $237 billion debt as a state by 2029. That's the projections, the way it's all going. So I share those examples just more because I just think day to day in politics and in Victoria, we go about our business, we go about our lives.</p>
+          <p><span class="spk">Unknown · 07:05</span>We're not really taking into consideration what that means and what it could have meant for our state and for our prosperity and for our economy. And now, We've got the, well, what does the next 10 to 20 years minimum look like of clawing that back? And for now, there's a lot of it that is being pushed back towards small business owners.</p>
+          <p><span class="spk">Unknown · 07:23</span>There's a lot of it that is impacting Victorian people who live in this state who then have to pay extra land taxes, state taxes, payroll taxes with lower thresholds compared to every other state in the country. And then also this COVID tax levy or the COVID levy, which I think it's about $1.4 billion in additional taxes expected to be collected through the COVID levy, which is something that no other the state is paying.</p>
+          <p><span class="spk">Unknown · 07:46</span>So on this particular post that Nicole Werner did, there was a couple of comments there that I wanted to kind of discuss with you. And, you know, the things you'll hear is that, you know, Jacinta Allen's throwing out that we're going to have an operating surplus. So even though we've got all this debt, there's an operating surplus.</p>
+          <p><span class="spk">Unknown · 08:03</span>Do you understand? Yeah.</p>
+          <p><span class="spk">Unknown · 08:04</span>Nick: And she kept referring to that when she was quizzed on the— in recent times on the free transport. Which was costing $400 million, I think, as free transport for 2 or 3 months, whatever else.</p>
+          <p><span class="spk">Unknown · 08:17</span>Jase: I think April, May was free and then June might be half price. And that was coming out of the taxpayer money for the tune of $400 million.</p>
+          <p><span class="spk">Unknown · 08:23</span>Nick: Yeah. And then she kept referring when she was asked about the budget and the debt, she kept referring to the surplus.</p>
+          <p><span class="spk">Unknown · 08:29</span>Jase: Yeah.</p>
+          <p><span class="spk">Unknown · 08:29</span>Nick: She wouldn't acknowledge the debt.</p>
+          <p><span class="spk">Unknown · 08:30</span>Jase: Yeah, correct. There's a few other handouts that have been kind of splashed around at the moment that they're talking about. And essentially all we continue to hear is You know, it's all good and well to give these free extra freebies and extra things, but at the end of the day, it's all going to come out of someone's pocket and it's often the taxpayer that is going to be funding these things.</p>
+          <p><span class="spk">Unknown · 08:48</span>The difference between operating surplus compared to having the debt is that the budget is actually accounted for on some different measures of capital infrastructure budget, which is accounted for separate to the overall budget and operating surplus, how it's calculated. So while it's not technically dishonest, It's actually designed to look better than it is.</p>
+          <p><span class="spk">Unknown · 09:09</span>So there's— there can be quite complicated and different numbers compared to how they report on their books. There was another comment that government debt is good debt, same as your mortgage. So you go out and buy a house for $1 million, you take out an $800,000 home loan. What do you have there, Nick, that usually makes it good debt?</p>
+          <p><span class="spk">Unknown · 09:26</span>Nick: Well, the asset goes up, hypothetically.</p>
+          <p><span class="spk">Unknown · 09:29</span>Jase: Good one, Nick. The asset goes up. So the question here is, of the government infrastructure debt, In theory, while this is good debt because the government spent on making Victoria a better place, it is around what is our return on investment? What can we expect to get from what we've now got in debt that has gone and built, for example, the suburban rail project, which is still in the process of being built?</p>
+          <p><span class="spk">Unknown · 09:51</span>The big build of roads, the East-West Link or the Westlink Tunnel. What is our ROI on these projects? Are we getting a lot of people using them? Are we collecting back the other way? So that is a question for you. I won't go into too many others, but if you've got any comments that you want to add, please feel free to let me know as I—</p>
+          <p><span class="spk">Unknown · 10:11</span>Nick: No, look, the only thing I'll say is it's just really hard to see a way out, right? And obviously you're going to touch on this a bit more, but hearing these things, you're obviously rattling off some pretty significant numbers. It's what is the way out?</p>
+          <p><span class="spk">Unknown · 10:27</span>And I'm not saying you've got that answer, but you just said that we're predicted to go to $237 billion by 2029. It's only gonna get worse. So as a small business owner, I'm sitting here and I know what it costs to run our business. And most businesses that I know are probably sitting at somewhere between 15 to 25% net profit.</p>
+          <p><span class="spk">Unknown · 10:51</span>Is that a fair enough assumption?</p>
+          <p><span class="spk">Unknown · 10:52</span>Jase: Yeah, yeah. A lot of people would take those numbers too.</p>
+          <p><span class="spk">Unknown · 10:55</span>Nick: Would take those numbers. Yep.</p>
+          <p><span class="spk">Unknown · 10:56</span>Jase: Yeah.</p>
+          <p><span class="spk">Unknown · 10:56</span>Nick: So, you know, if you're, let's work in the middle there at 20%, If you're running a business that turns over $1 million, you're keeping $200,000 of that. Yep.</p>
+          <p><span class="spk">Unknown · 11:07</span>Jase: And then you're gonna give $50 grand to the ATO.</p>
+          <p><span class="spk">Unknown · 11:09</span>Nick: And then you're getting taxed on that.</p>
+          <p><span class="spk">Unknown · 11:11</span>Jase: Yep.</p>
+          <p><span class="spk">Unknown · 11:11</span>Nick: So why, so I'm left with $150,000. Well, I could easily go get a job doing that. Let's go the other way and say you're running a big business at $500 million, at $5 million, at 20%, you're keeping a mil. Government's taking $250,000.</p>
+          <p><span class="spk">Unknown · 11:29</span>So you're down to $750,000. At a $5 million business, you've probably got 3 business owners, 2 to 3.</p>
+          <p><span class="spk">Unknown · 11:35</span>Jase: Yep.</p>
+          <p><span class="spk">Unknown · 11:36</span>Nick: So you split that down the middle. Obviously you might take a bit of a wage, but most business owners don't. They'll take a minimal wage. You split that down the middle, that's your personal income. Then you got tax on that. And if you go the other, if you go further on that and you've got a $10 million business, Now you might be keeping 20% of that.</p>
+          <p><span class="spk">Unknown · 11:55</span>That's great.</p>
+          <p><span class="spk">Unknown · 11:56</span>Jase: Government takes $500,000.</p>
+          <p><span class="spk">Unknown · 11:58</span>Nick: Yeah. So you're down to $1.5 million. That sounds like a lot of money. It was a $10 million business like ours. You might have 8 partners, so it dwindles down pretty quick. And then second to that, at a $10 million business, you're basically locking in $8 million of costs.</p>
+          <p><span class="spk">Unknown · 12:15</span>So the risks associated are massive and People might think, oh, well, okay, with $10 million business, you make $2 million, but the risk you take to get there, plus by the time it dwindles down. So I'll just, you know, as a small business owner or even an S, a medium business owner, you're looking at this and you're thinking, this is gonna get worse.</p>
+          <p><span class="spk">Unknown · 12:38</span>Yeah. Why do I keep continuing to grind and grow my business if I've really got no control over where this is going to end.</p>
+          <p><span class="spk">Unknown · 12:47</span>Jase: Yep.</p>
+          <p><span class="spk">Unknown · 12:47</span>Nick: Because if anything, they're going to want more.</p>
+          <p><span class="spk">Unknown · 12:49</span>Jase: Correct. And I think, you know, what I see as a bit of an answer is accountability. You know, there's— I've actually gone deep into a rabbit hole of numbers here that I'll continue to revert back to how small business owners are affected by this.</p>
+          <p><span class="spk">Unknown · 13:02</span>Nick: But can I just quickly touch on that?</p>
+          <p><span class="spk">Unknown · 13:03</span>Jase: Of course.</p>
+          <p><span class="spk">Unknown · 13:04</span>Nick: Because I think what you said there was spot on, accountability. And this again is this disconnect between private and public sector.</p>
+          <p><span class="spk">Unknown · 13:11</span>Jase: Yep.</p>
+          <p><span class="spk">Unknown · 13:12</span>Nick: So we've obviously got this AI craze at the moment and our business is heavily investing in it. And we are heavily investing in it as a lot of other business would be because we need to. We need to invest in that to increase our productivity, to keep our net profit margins viable so we have a healthy business and we can support everyone in the business.</p>
+          <p><span class="spk">Unknown · 13:33</span>Jase: Yep.</p>
+          <p><span class="spk">Unknown · 13:34</span>Nick: So from an accountability point of view, most SMEs are out there going, what do I need to do to make sure I can maintain 15%, 20% net profit. Well, I'm going to fork out more money into AI. And for anyone that's out there, we might cover this at some stage as well.</p>
+          <p><span class="spk">Unknown · 13:49</span>AI is not free. Like once you start to run a big business and you start to build things out, it costs money and it costs significant money. So we're being accountable, trying to protect our margins by taking more money out of our pockets just so we can make a dollar after everything that gets taken away from us.</p>
+          <p><span class="spk">Unknown · 14:09</span>So I'm looking at that and I'm thinking, well, I'm showing accountability. Do I keep trying to be better when I don't really know where this is going to end? Do you know?</p>
+          <p><span class="spk">Unknown · 14:17</span>Jase: Yep. 100%. It's a great point. And I'm glad you talked to— well, continued to flow on from my statement of accountability. Where I get to with the accountability number is I think our state's been propped up with fake news. And then the flow-on effect is that we have the largest insolvency numbers in the country.</p>
+          <p><span class="spk">Unknown · 14:35</span>So in Victoria, year on year up, I wrote down some numbers numbers here. So there was in 23-24, there was 2,863 businesses that went under, went insolvent. It went up 48% the following year to 4,242 Victorian-owned and ran businesses went under.</p>
+          <p><span class="spk">Unknown · 14:55</span>That was in the 24-25 year. It is reported to be as high as 63% up year on year heading into the next financial year. So we are talking record numbers of Victorian small businesses are going out of business and it is devastating.</p>
+          <p><span class="spk">Unknown · 15:12</span>And I always think back to the accountability of our state government and how that has a flow-on effect. When I say about some of the fake news during COVID and through the years of, you know, the early 2020s, 2021, 2022, they would share the job numbers and, you know, there wasn't a lot of job losses.</p>
+          <p><span class="spk">Unknown · 15:31</span>Job numbers were going up. Now, a lot of these job numbers were actually jobs in the public sector. So when in 2014 the Victorian public sector employed 36,000 people, by the time Dan Andrews finished, there was 57,000 staff employed in the public sector, a 60% increase in staff, but only a 29% growth in population.</p>
+          <p><span class="spk">Unknown · 15:55</span>And then even his personal staff alone, he had 86 staff in his prem— in the Premier's office in 2022. At the time, ScoMo, the Prime Minister of Australia, had 51 staff. So Dan Andrews had exploded the number of staff.</p>
+          <p><span class="spk">Unknown · 16:13</span>And these are an additional 20— like, that number from $36,000 to $57,000 is $21,000 extra admin salaries. Not revenue-producing, not frontline, you know, not nurses, police, doctors, health. Pure back office It is a staggering amount of cash.</p>
+          <p><span class="spk">Unknown · 16:38</span>Nick: I actually did see, and I wish I had it handy, but I saw a graph the other day that had public servants as a percentage of total population. And it was an international one, so it had all different countries. Australia was top of the list.</p>
+          <p><span class="spk">Unknown · 16:54</span>Jase: Yeah.</p>
+          <p><span class="spk">Unknown · 16:54</span>Nick: And then there was a sharp decline. Sharp decline. And, you know, countries like America were nowhere near us. Yeah.</p>
+          <p><span class="spk">Unknown · 17:00</span>Jase: So you look at productivity and accountability, like why do we need that many people employed in those sectors, divisions, public sector? What are they doing? You've touched on AI. Is there a better way? If we had to do it with less people, we find a way. It's like, you know, Murphy's Law or whatever it is.</p>
+          <p><span class="spk">Unknown · 17:17</span>You know, if you've got 8 hours to get something done, you'll use the whole 8 hours. If you've got the ability to double your staff from 36,000 or, you know, from 36,000 to 57,000, nearly double. You, if you've got the means and nobody's, nobody's monitoring, nobody's kind of asking you the questions why, and you can just do it, you know, hire all your mates, prop up jobs, give out jobs like it's going out of fashion.</p>
+          <p><span class="spk">Unknown · 17:37</span>Like, there is no accountability.</p>
+          <p><span class="spk">Unknown · 17:39</span>Nick: So it's not your money either, correct?</p>
+          <p><span class="spk">Unknown · 17:40</span>Jase: It's not your money. I'll get back to small business. So in Melbourne and in Victoria, this is a very Victorian-targeted kind of message because this is about the state position that we're in. The COVID levy is not temporary. We will continue to pay extra taxes.</p>
+          <p><span class="spk">Unknown · 17:56</span>And again, I said it's projected to be $1.4 billion up by 2029. So this is ongoing extra taxes that small business owners are paying. Melbourne CBD vacancy is the highest in the nation. We're at 18% vacancy rates. It's the highest since 1997. And then along those times, I mean, 2024 is a prime example.</p>
+          <p><span class="spk">Unknown · 18:14</span>Nearly 16,000 people left Victoria to go to Queensland and other states. You know, Queensland gained 34,500 people in the same year we lost 15,000. So not only are we spending more on public sector, we're blowing money like it's going out of fashion and we're losing people out of our state because it's not a great place to be right now in numbers, in theory.</p>
+          <p><span class="spk">Unknown · 18:36</span>I still think Victoria is a great place to live, but you know, I need to be a little bit biased. As do I. Yeah, as do you. So the actionable takeaways I want to make sure are heard by small business owners apart from getting fired up and angry and turning to these politicians and going and commenting on Instagram like I have and getting into a bit of a hole here and, you know, getting lost.</p>
+          <p><span class="spk">Unknown · 18:58</span>Nick: How bad do you feel when you comment?</p>
+          <p><span class="spk">Unknown · 19:00</span>Jase: No, I love it. I do.</p>
+          <p><span class="spk">Unknown · 19:02</span>Nick: I comment, I'm like, oh God.</p>
+          <p><span class="spk">Unknown · 19:04</span>Jase: No, no, it's all— well, I think now at the moment it's more about sharing the message so that more people can get around and actually understand. And, you know, I won't go into it. I'll save it for later. But there is one, one great message that I shared that's got, you know, nearly 2,000 likes at the moment.</p>
+          <p><span class="spk">Unknown · 19:21</span>And I feel like, you know, I've made it. But back to business. The takeaways for our audience and the one— these are the messages we talk to our clients about. You need to know your exact tax position, not just today, not last year, but also to be able to project it forward.</p>
+          <p><span class="spk">Unknown · 19:37</span>I mean, Nick, you run a big business, as you touched on. You've got turnover, you've got a lot of staff, you've got other business owners. Payroll tax, if you're a landowner or a commercial property owner, land tax, or if you own multiple properties, the COVID levy, WorkCover.</p>
+          <p><span class="spk">Unknown · 19:54</span>All of these things have had drastic increases. WorkCover was up 40% year on year. The COVID levy eats into your bottom line. Payroll tax, we've got, as I said, the lowest threshold in the country. And then land taxes are out of control at the moment. And a lot of the business insolvencies are kind of turning and pointing back to things like a change in land tax and how that's hitting them.</p>
+          <p><span class="spk">Unknown · 20:15</span>When you then plan out your tax position, that doesn't even include the 25% company tax and then any marginal tax when you do kick the money out to yourself and your family. You need to model all that out in advance. You don't want to become one of these businesses that goes insolvent because you didn't plan it out.</p>
+          <p><span class="spk">Unknown · 20:32</span>You lent on the ATO, you know, as the bank of the ATO, and you had extra funds that you weren't paying them because the activity from the ATO now where it's non-deductible interest that we've touched on before, it's just not worth it. What you then also need to model is what does a 20% drop in revenue look like?</p>
+          <p><span class="spk">Unknown · 20:49</span>Because for a lot of small business owners out there, they are doing it tough and their revenue has dropped or their prices haven't been able to keep up with the decreasing margins because it wasn't modeled and it wasn't stress tested. They're now deep in the hole and they weren't prepared for it. Understanding your breakeven number is extremely important.</p>
+          <p><span class="spk">Unknown · 21:08</span>Again, it's things we've touched on in previous episodes. If you can't reel off your breakeven number, you are flying blind. If you don't know how much money you need to bring in each month to meet your outgoings, that is a really scary position to be in as a business owner. You've got your head buried in the sand and it's not a great place to be.</p>
+          <p><span class="spk">Unknown · 21:24</span>The last one, or second last one I should say, is to review your structure. We have had countless meetings at the moment. We're coming up to end of financial year. It's tax planning time. But this is the time where people need to review their structure. Are they a family trust? Are they a company?</p>
+          <p><span class="spk">Unknown · 21:39</span>Do they have a holding company? Is there a bucket company? All things we've touched on in spoken about before. If you are in the wrong structure, it can become really, really expensive. So make sure you check that out. And with all the different things coming out around taxing trusts and CGT and negative gearing, there is no better time right now than to get a meeting with your accountant and sit down and map these things out.</p>
+          <p><span class="spk">Unknown · 22:00</span>And the last message from me here is do not wait for the environment to improve before you act. You need to plan for the environment that we are in now because I can't see for the foreseeable future that our environment here in Victoria will be any more friendly for small business owners.</p>
+          <p><span class="spk">Unknown · 22:15</span>Nick: Yeah. Even beyond that, I think if you're running a bigger business too and you've got responsibilities outside of yourself, being employees, you should really be projecting out 2 years, 2 years ahead and then factoring in what-ifs.</p>
+          <p><span class="spk">Unknown · 22:30</span>Because I think one thing we've learned, which is everything you're talking about now, is things could change. So you really need to be stress testing your business and understanding what could happen if something went wrong. So whether that be higher taxes, a drop in revenue, and then what does it look like in not just '26, '27, '28, '29?</p>
+          <p><span class="spk">Unknown · 22:50</span>Jase: And if you are in a bit of strife, I share the insolvency numbers are up like crazy, but insolvency is there for a reason. Before you get too deep where you start getting director penalty notices and the debts become yours personally, there's lockdown DPNs. If you don't know what that means, go and check it out. If you have received a DPN, you've got 21 days to act on it.</p>
+          <p><span class="spk">Unknown · 23:09</span>Usually do not sit on this, do not sleep on it, do not ignore it. Also go and check your addresses with the ATO too, because if— and with ASIC, because if you get a director penalty notice and it's sent, the 21-day clock is ticking whether you receive that or not. 21 days later, that debt can be locked down and become yours personally for good.</p>
+          <p><span class="spk">Unknown · 23:27</span>You want to know if that's the scenario you're in. You want to know at the time. So make sure you are alert and you're checking messages, emails, texts, whatever you get, however you get it from your accountant or the ATO. And early intervention or early meetings around this are the best thing you can do.</p>
+          <p><span class="spk">Unknown · 23:44</span>Even if you go, "I'm pretty sure I can trade out of this." That's great. That's fantastic if you've got that belief and you've got a plan. But if you're kind of on knife's edge where debt is growing, it's up there and it is becoming more and more challenging, the early meeting with an insolvency specialist and your accountant, get them both in the room together so you've got a team there with you.</p>
+          <p><span class="spk">Unknown · 24:02</span>Is to then go, what are my options? And it might be small business restructure, it might be deed of company arrangement, it might be a straight liquidation or voluntary administration. And I reel those things off because they are several options. I'm not an insolvency expert, but we work with them, you know, week in, week out to help our clients go through sometimes some pretty shitty situations.</p>
+          <p><span class="spk">Unknown · 24:22</span>Nick: Yeah, look, personally, I've been attached to some clients that have had incredible outcomes through things like small business restructure, and it's almost hard to believe at how easy it is. So, you know, I think the one thing you said there that really resonated with me was, you know, you've got to, you've got to attack this stuff head-on.</p>
+          <p><span class="spk">Unknown · 24:44</span>Like, you put your head in the sand, there's only one way it goes, it gets worse. But at least if you're upfront about it, you understand the position you're in, and you understand some of the options you've got, at your fingertips. I think a lot of people would be surprised about how easy it can be to get through this stuff, because at the end of the day, the— you, you probably might think differently, but I personally don't think the ATO is out there wanting to sink people.</p>
+          <p><span class="spk">Unknown · 25:11</span>If anything, they want people to succeed because that means they hire people and more taxes get paid. So if you're upfront and you communicate, you can generally find a way through. Most things. And if you can't, then there's ways to, to make sure you come through as unscathed as possible.</p>
+          <p><span class="spk">Unknown · 25:27</span>Jase: Yeah, very good message, Nick. Couldn't agree more. If you are listening and you think this episode could help a friend out, please share the episode. Give us a follow or subscribe on YouTube and all the other different things, whether it's Apple Podcasts or Spotify. We appreciate you tuning into the show.</p>
+          <p><span class="spk">Unknown · 25:42</span>Until next time.</p>
+          <p><span class="spk">Unknown · 25:44</span>Nick: Well, mates, $199 billion in debt, going to $239. But you can't steer away from it. It's not your debt, but you're paying the interest. Game over.</p>
+          <p><span class="spk">Unknown · 25:55</span>Jase: This podcast is for educational and informational purposes only. The conversations are of a general nature and do not qualify as financial or tax advice. We recommend before you make any financial decisions, you consult a licensed professional. Individuals on the podcast may hold positions in the companies discussed. ---</p>
+        </div>
+      </details>
+
+    </div>
+
+    <div class="listen">
+      <span class="lname">Listen on</span>
+      <a href="https://open.spotify.com/search/the%20numbers%20game%20podcast" target="_blank" rel="noopener" aria-label="Listen on Spotify">
+        <svg viewBox="0 0 24 24"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.52 17.34c-.24.36-.66.48-1.02.24-2.82-1.74-6.36-2.1-10.56-1.14-.42.12-.78-.18-.9-.54-.12-.42.18-.78.54-.9 4.56-1.02 8.52-.6 11.64 1.32.42.18.48.66.3 1.02zm1.44-3.3c-.3.42-.84.6-1.26.3-3.24-1.98-8.16-2.58-11.94-1.38-.48.12-1.02-.12-1.14-.6-.12-.48.12-1.02.6-1.14 4.32-1.32 9.72-.66 13.44 1.62.36.18.54.78.3 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.3c-.6.18-1.2-.18-1.38-.72-.18-.6.18-1.2.72-1.38 4.26-1.26 11.28-1.02 15.72 1.62.54.3.72 1.02.42 1.56-.3.42-1.02.6-1.56.3z"/></svg>
+        Spotify
+      </a>
+      <a href="https://podcasts.apple.com/search?term=the%20numbers%20game" target="_blank" rel="noopener" aria-label="Listen on Apple Podcasts">
+        <svg viewBox="0 0 24 24"><path d="M5.34 0A5.328 5.328 0 000 5.34v13.32A5.328 5.328 0 005.34 24h13.32A5.328 5.328 0 0024 18.66V5.34A5.328 5.328 0 0018.66 0H5.34zm6.525 2.568c2.336 0 4.448.902 6.056 2.587 1.224 1.272 1.912 2.619 2.264 4.392l.04.23c.04.272-.16.527-.432.567a.505.505 0 01-.567-.431l-.04-.213c-.312-1.57-.92-2.747-2.004-3.867-1.428-1.496-3.293-2.294-5.393-2.294-2.1 0-3.966.798-5.394 2.294-1.084 1.12-1.692 2.298-2.004 3.867l-.04.213a.507.507 0 01-.567.431.504.504 0 01-.432-.567l.04-.23c.352-1.773 1.04-3.12 2.264-4.392 1.608-1.685 3.72-2.587 6.056-2.587h.153zm.136 3.033c1.74 0 3.312.67 4.527 1.934.883.916 1.394 1.93 1.663 3.253l.04.23a.505.505 0 01-.431.567.503.503 0 01-.567-.432l-.04-.212c-.23-1.112-.659-1.97-1.396-2.732-1.052-1.1-2.404-1.672-3.9-1.672s-2.849.572-3.901 1.672c-.737.762-1.167 1.62-1.396 2.732l-.04.212a.503.503 0 01-.567.432.505.505 0 01-.432-.567l.04-.23c.27-1.323.78-2.337 1.664-3.253 1.215-1.264 2.787-1.934 4.527-1.934h.21zm-.078 3.05c1.092 0 2.091.424 2.89 1.22.582.58.924 1.245 1.107 2.15l.04.218a.501.501 0 01-.424.568.499.499 0 01-.568-.424l-.04-.198c-.146-.724-.413-1.253-.871-1.716-.63-.63-1.398-.957-2.226-.957s-1.595.328-2.225.957c-.459.463-.726.992-.871 1.716l-.04.198a.499.499 0 01-.568.424.501.501 0 01-.424-.568l.04-.219c.183-.904.525-1.569 1.106-2.149.8-.796 1.799-1.22 2.89-1.22h.184zM12 14.07a2.477 2.477 0 012.48 2.478A2.477 2.477 0 0112 19.024a2.477 2.477 0 01-2.48-2.477A2.477 2.477 0 0112 14.07z"/></svg>
+        Apple
+      </a>
+      <a class="yt-pill" href="https://www.youtube.com/@thenumbersgamepodcast?sub_confirmation=1" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.12-2.14C19.5 3.55 12 3.55 12 3.55s-7.5 0-9.38.51A3 3 0 0 0 .5 6.2 31.4 31.4 0 0 0 0 12a31.4 31.4 0 0 0 .5 5.8 3 3 0 0 0 2.12 2.14c1.88.51 9.38.51 9.38.51s7.5 0 9.38-.51a3 3 0 0 0 2.12-2.14A31.4 31.4 0 0 0 24 12a31.4 31.4 0 0 0-.5-5.8zM9.55 15.57V8.43L15.82 12z"/></svg>
+        Subscribe
+      </a>
+    </div>
+
+    <div class="relsec">
+      <span class="rtitle">Discover more</span>
+      <div class="relgrid">
+        <a class="relcard" href="episode-275.html">
+          <img src="https://i.ytimg.com/vi/H-91xGnsyJA/hqdefault.jpg" alt="EP 275 thumbnail">
+          <span class="rt">Six Years of Zero Growth, $786B Spent</span>
+          <span class="rfoot"><span class="rwhy">Also covers: policy &amp; reform</span><span class="rtag">EP 275</span></span>
+        </a>
+        <a class="relcard" href="episode-268.html">
+          <img src="https://i.ytimg.com/vi/JbWmJhmkaP0/hqdefault.jpg" alt="EP 268 thumbnail">
+          <span class="rt">Your Beer Is Taxed More Than Our Gas Exports</span>
+          <span class="rfoot"><span class="rwhy">Also covers: policy &amp; reform</span><span class="rtag">EP 268</span></span>
+        </a>
+        <a class="relcard" href="episode-283.html">
+          <img src="https://i.ytimg.com/vi/le7HuIBq6Ow/hqdefault.jpg" alt="EP 283 thumbnail">
+          <span class="rt">What Real Budget Reform for Young Australians Would Actually Look Like</span>
+          <span class="rfoot"><span class="rwhy">Also covers: policy &amp; reform</span><span class="rtag">EP 283</span></span>
+        </a>
+        <a class="relcard" href="episode-284.html">
+          <img src="https://i.ytimg.com/vi/V-10kMQrsDM/hqdefault.jpg" alt="EP 284 thumbnail">
+          <span class="rt">The Most Expensive Day in Aussie Small Business History</span>
+          <span class="rfoot"><span class="rwhy">6 July 2026</span><span class="rtag">EP 284</span></span>
+        </a>
+        <a class="relcard" href="episode-282.html">
+          <img src="https://i.ytimg.com/vi/nC_JkW320Tw/hqdefault.jpg" alt="EP 282 thumbnail">
+          <span class="rt">The Business of Gift Cards</span>
+          <span class="rfoot"><span class="rwhy">22 June 2026</span><span class="rtag">EP 282</span></span>
+        </a>
+        <a class="relcard" href="episode-281.html">
+          <img src="https://i.ytimg.com/vi/X-sSC-WROOQ/hqdefault.jpg" alt="EP 281 thumbnail">
+          <span class="rt">How to Know If Your Skills Transfer in an AI World</span>
+          <span class="rfoot"><span class="rwhy">15 June 2026</span><span class="rtag">EP 281</span></span>
+        </a>
+      </div>
+      <div class="reldots" id="reldots"></div>
+    </div>
+
+    <div class="broughtby">
+      <div class="foot-label">Brought to you by</div>
+      <div class="sponsors">
+        <a href="https://www.inovayt.com.au/" target="_blank" rel="noopener"><img src="assets/inovayt-white.png" alt="Inovayt"></a>
+        <a href="https://futureadvisory.com.au/" target="_blank" rel="noopener"><img src="assets/future-advisory-white.png" alt="Future Advisory"></a>
+      </div>
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="produced">
+      <div class="foot-label">Produced by</div>
+      <a href="https://www.vidpod.com.au/" target="_blank" rel="noopener"><img src="assets/vidpod-white.png" alt="VIDPOD"></a>
+    </div>
+    <div class="copyright">© 2026 The Numbers Game</div>
+  </footer>
+
+  <script>
+    var VIDEO='sppkdu-w5jU';
+    var CHAPTERS=[
+      {t:"00:00",s:0,title:"Intro"},
+      {t:"00:43",s:43,title:"Victoria's $199 Billion State Debt"},
+      {t:"02:40",s:160,title:"$1 Million a Day for 55 Years to Reach $199 Billion"},
+      {t:"04:10",s:250,title:"What $199 Billion Could Have Built for Victoria"},
+      {t:"06:25",s:385,title:"$43 Billion in Tax and Most of It Goes to Interest"},
+      {t:"07:23",s:443,title:"How the Debt Hits Small Business Through Extra Taxes"},
+      {t:"09:09",s:549,title:"Is Government Debt Really Good Debt"},
+      {t:"10:11",s:611,title:"Real Margins at $1M, $5M and $10M Turnover"},
+      {t:"14:35",s:875,title:"Victorian Insolvencies Up 48% and Projected to Rise 63%"},
+      {t:"15:31",s:931,title:"Public Sector Staff Up 60% on 29% Population Growth"},
+      {t:"17:40",s:1060,title:"18% CBD Vacancy and 16,000 People Leaving Victoria"},
+      {t:"19:21",s:1161,title:"How to Work Out What You'll Owe Victoria This Year"},
+      {t:"21:24",s:1284,title:"Review Your Business Structure Before 30 June"},
+      {t:"22:50",s:1370,title:"Director Penalty Notices and When to Get Help"}
+    ];
+    var QUESTIONS=[
+      {q:"How big is $199 billion in terms I can actually picture?",s:160},
+      {q:"Where does Victoria's tax revenue actually go?",s:385},
+      {q:"What do I actually take home from my business turnover?",s:656},
+      {q:"How many Victorian businesses are going insolvent?",s:875},
+      {q:"How much did Victoria's public sector grow?",s:931},
+      {q:"Are people leaving Victoria for other states?",s:1094},
+      {q:"How do I work out what I'll owe in state taxes this year?",s:1161},
+      {q:"Why does my breakeven number matter so much?",s:1249},
+      {q:"What happens if I get a director penalty notice?",s:1370},
+      {q:"Is the ATO trying to shut my business down?",s:1462}
+    ];
+
+    var chEl=document.getElementById('chapters');
+    CHAPTERS.forEach(function(c){var b=document.createElement('button');b.className='chapter';b.onclick=function(){startAt(c.s)};b.innerHTML='<span class="tc">'+c.t+'</span><span class="cx">'+c.title+'</span>';chEl.appendChild(b);});
+    document.getElementById('chcount').textContent=CHAPTERS.length;
+    var qEl=document.getElementById('qa');
+    QUESTIONS.forEach(function(q){var b=document.createElement('button');b.className='q';b.onclick=function(){startAt(q.s)};b.innerHTML='<span class="qm">?</span><span class="qx">'+q.q+'</span><span class="go">›</span>';qEl.appendChild(b);});
+    document.getElementById('qcount').textContent=QUESTIONS.length;
+
+    /* Mobile nav dropdown. */
+    var burger=document.getElementById('navburger'), navdrop=document.getElementById('navdrop');
+    if(burger&&navdrop){burger.addEventListener('click',function(){
+      navdrop.hidden=!navdrop.hidden;
+      burger.setAttribute('aria-expanded', navdrop.hidden?'false':'true');
+    });}
+
+    /* Voice-note button reveals the recorder; × tucks it away. */
+    var vbtn=document.getElementById('vbtn'), vslot=document.getElementById('vslot'), vclose=document.getElementById('vclose');
+    if(vbtn&&vslot){vbtn.addEventListener('click',function(){vslot.hidden=!vslot.hidden;});}
+    if(vclose&&vslot){vclose.addEventListener('click',function(){vslot.hidden=true;});}
+
+    /* Keep-exploring dots: only shown when the strip actually scrolls (mobile). */
+    var rg=document.querySelector('.relgrid'), rd=document.getElementById('reldots');
+    if(rg&&rd){
+      var relCards=rg.querySelectorAll('.relcard');
+      relCards.forEach(function(){rd.appendChild(document.createElement('span'))});
+      var updDots=function(){
+        var scrollable=rg.scrollWidth>rg.clientWidth+4;
+        rd.style.display=scrollable?'flex':'none';
+        if(!scrollable)return;
+        var i=Math.round(rg.scrollLeft/(rg.scrollWidth-rg.clientWidth)*(relCards.length-1));
+        rd.querySelectorAll('span').forEach(function(s,n){s.classList.toggle('on',n===i)});
+      };
+      rg.addEventListener('scroll',updDots,{passive:true});
+      window.addEventListener('resize',updDots);
+      updDots();
+    }
+
+    /* Explore tabs: swap the visible panel; the row stays put so you never lose your place. */
+    var tabBtns=document.querySelectorAll('.tabbtn');
+    tabBtns.forEach(function(b){
+      b.addEventListener('click',function(){
+        tabBtns.forEach(function(o){o.classList.remove('on')});
+        document.querySelectorAll('.tpanel').forEach(function(p){p.hidden=true});
+        b.classList.add('on');
+        document.getElementById(b.getAttribute('data-panel')).hidden=false;
+      });
+    });
+
+    /* YouTube: clean facade, then real player on demand. Seek without yanking to top. */
+    var player=null, ready=false, apiReady=false, pending=null;
+    window.onYouTubeIframeAPIReady=function(){apiReady=true; if(pending!=null){var s=pending;pending=null;createPlayer(s);}};
+    function createPlayer(sec){
+      var wrap=document.getElementById('player'); wrap.innerHTML='<div id="yt"></div>';
+      player=new YT.Player('yt',{videoId:VIDEO,playerVars:{autoplay:1,rel:0,modestbranding:1,playsinline:1,start:Math.floor(sec||0)},events:{onReady:function(){ready=true;}}});
+    }
+    function nudge(){
+      var p=document.getElementById('player-wrap'), r=p.getBoundingClientRect();
+      if(r.bottom<80 || r.top>window.innerHeight-90){ p.scrollIntoView({behavior:'smooth',block:'start'}); }
+    }
+    function startAt(sec){
+      nudge();
+      if(player&&ready){ player.seekTo(sec,true); player.playVideo(); return; }
+      if(apiReady){ createPlayer(sec); } else { pending=sec; }
+    }
+    document.getElementById('facade').addEventListener('click',function(){startAt(0);});
+    (function(){var s=document.createElement('script');s.src='https://www.youtube.com/iframe_api';document.head.appendChild(s);})();
+  </script>
+</body>
+</html>

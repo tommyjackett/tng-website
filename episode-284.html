@@ -1,0 +1,694 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EP 284 · The Most Expensive Day in Aussie Small Business History | The Numbers Game</title>
+<meta name="description" content="1 July might be the most expensive day in Australian small business history.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --purple:#585af3; --purple-dark:#2c1b8a; --mint:#7ad9a8;
+    --white:#ffffff; --muted:rgba(255,255,255,.60); --dim:rgba(255,255,255,.42);
+    --line:rgba(255,255,255,.12); --card:rgba(255,255,255,.05); --card-hi:rgba(255,255,255,.09);
+    --display:'Anton',Impact,'Helvetica Neue',sans-serif;
+    --sans:'Inter',system-ui,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif;
+    --wrap:1280px;   /* page frame (nav spans this) */
+    --col:960px;     /* content column (player, tabs, text) */
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:var(--sans); color:var(--white); line-height:1.6; -webkit-font-smoothing:antialiased;
+    background:#12093a;
+    background-image:
+      radial-gradient(1200px 600px at 82% -6%, rgba(88,90,243,.45) 0%, transparent 55%),
+      radial-gradient(900px 700px at 5% 8%, rgba(122,217,168,.10) 0%, transparent 50%),
+      linear-gradient(180deg,#2c1b8a 0%,#1a1150 28%,#100b34 62%,#0b0820 100%);
+    background-attachment:fixed;
+  }
+  a{color:inherit}
+  .wrap{max-width:var(--wrap);margin:0 auto;padding:0 36px}
+  main.wrap{max-width:var(--col)}
+  @media(max-width:720px){.wrap{padding:0 22px}}
+
+  /* ── Navbar ── */
+  .nav{position:sticky;top:0;z-index:50;background:linear-gradient(180deg,rgba(24,15,74,.92),rgba(24,15,74,.72));backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+  .nav-in{max-width:var(--wrap);margin:0 auto;padding:11px 36px;display:flex;align-items:center;justify-content:space-between}
+  @media(max-width:720px){.nav-in{padding:11px 22px}}
+  .brand{display:block;line-height:0}
+  .brand img{height:36px;width:auto;display:block}
+  .navlinks{display:flex;gap:28px;align-items:center}
+  .navlinks a{text-decoration:none;font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);transition:.15s}
+  .navlinks a:hover{color:var(--white)}
+  .navgroup{position:relative;display:flex;align-items:center}
+  .navgroup .subnav{display:none;position:absolute;top:100%;left:50%;transform:translateX(-50%);padding-top:14px;min-width:180px}
+  .navgroup:hover .subnav,.navgroup:focus-within .subnav{display:block}
+  .subnav-in,.navgroup .subnav{z-index:60}
+  .navgroup .subnav a{display:block;background:#180f4a;border:1px solid var(--line);border-top:0;padding:12px 16px;font-size:12px;color:rgba(255,255,255,.85)}
+  .navgroup .subnav a:first-child{border-top:1px solid var(--line)}
+  .navgroup .subnav a:hover{background:#221768;color:var(--white)}
+  .navburger{display:none;background:none;border:1px solid var(--line);padding:8px 10px;cursor:pointer;color:var(--white);transition:.15s}
+  .navburger:hover{border-color:rgba(122,217,168,.6)}
+  .navburger svg{width:20px;height:20px;fill:currentColor;display:block}
+  .navdrop{display:none}
+  @media(max-width:720px){
+    .navlinks{display:none}
+    .navburger{display:block}
+    .navdrop{display:block;position:absolute;left:0;right:0;top:100%;
+      background:#180f4a;border-bottom:1px solid var(--line);box-shadow:0 24px 50px rgba(0,0,0,.45)}
+    .navdrop[hidden]{display:none}
+    .navdrop a{display:block;padding:15px 22px;text-decoration:none;font-size:14px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:rgba(255,255,255,.9);border-bottom:1px solid rgba(255,255,255,.06)}
+    .navdrop a:last-child{border-bottom:0}
+    .navdrop a.sub{padding-left:42px;font-size:13px;color:rgba(255,255,255,.72)}
+  }
+
+  /* ── Hero / hook (marker-highlight system: purple hook wraps naturally, mint payoff below)
+     Rules: title splits at its natural break (colon/pipe/question mark). Front = hook (purple,
+     big), back = payoff (mint, smaller). No break in title = purple hook only. Highlights hug
+     the text (tight em padding tuned to Anton) and wrap via box-decoration-break — never
+     hand-pick line breaks or mint words. ── */
+  header.hero{padding:34px 0 6px}
+  .hook{--inx:clamp(8.4px,2.1vw,15.6px)} /* one shared text inset so hook + payoff first letters align */
+  .hook .hk{font-family:var(--display);font-weight:400;text-transform:uppercase;
+    font-size:clamp(28px,7vw,52px);line-height:1.3;letter-spacing:-.5px;text-wrap:balance}
+  .hook .hk span{color:var(--white);padding:.04em var(--inx) .02em;
+    background:linear-gradient(var(--purple),var(--purple)) 0 50%/100% 87% no-repeat;
+    -webkit-box-decoration-break:clone;box-decoration-break:clone}
+  .hook .pay{font-family:var(--display);font-weight:400;text-transform:uppercase;
+    font-size:clamp(16px,4vw,24px);line-height:1.5;letter-spacing:.6px;margin-top:8px;text-wrap:balance}
+  .hook .pay span{color:#0a0a0a;padding:.08em var(--inx) .04em;
+    background:linear-gradient(var(--mint),var(--mint)) 0 50%/100% 88% no-repeat;
+    -webkit-box-decoration-break:clone;box-decoration-break:clone}
+  /* no-hook titles: mid-split into two full-size rows, purple then mint */
+  .hook .hk span.hkrow{display:block;background:none;padding:0}
+  .hook .hk .hkrow+.hkrow{margin-top:8px}
+  .hook .hk span.mintseg{color:#0a0a0a;
+    background:linear-gradient(var(--mint),var(--mint)) 0 50%/100% 87% no-repeat}
+
+  /* ── Player (clean facade → real player on tap) ── */
+  .player-wrap{margin:24px 0 4px;scroll-margin-top:76px}
+  .player{position:relative;width:100%;padding-top:56.25%;border-radius:0;overflow:hidden;background:#000;box-shadow:0 30px 70px rgba(0,0,0,.5),0 0 0 1px rgba(255,255,255,.06)}
+  .facade{position:absolute;inset:0;border:0;cursor:pointer;background-size:cover;background-position:center;display:flex;align-items:center;justify-content:center;padding:0}
+  .facade .play{width:74px;height:74px;border-radius:50%;background:rgba(10,6,30,.40);border:2px solid rgba(255,255,255,.72);display:flex;align-items:center;justify-content:center;transition:.18s;-webkit-backdrop-filter:blur(1px);backdrop-filter:blur(1px)}
+  .facade:hover .play{background:rgba(88,90,243,.62);transform:scale(1.07);border-color:#fff}
+  .facade .play::after{content:"";border-style:solid;border-width:11px 0 11px 19px;border-color:transparent transparent transparent #fff;margin-left:5px}
+  .player iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+
+  /* ── Episode facts (bottom of the Summary panel — templated per episode) ── */
+  .sumfacts{margin:14px 10px 4px;padding-top:13px;border-top:1px solid rgba(255,255,255,.08);display:flex;flex-direction:column;gap:8px}
+  .fact{display:flex;gap:12px;font-size:13.5px}
+  .fact .fl{flex:none;width:104px;color:var(--dim);font-weight:600;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;padding-top:2px}
+  .fact .fv{color:rgba(255,255,255,.9);font-weight:500}
+  .fact .fv a{color:var(--mint);text-decoration:none;border-bottom:1px solid rgba(122,217,168,.4);transition:.15s}
+  .fact .fv a:hover{border-bottom-color:var(--mint)}
+
+  /* ── Episode tag (identity: black label hanging off the title corner) ── */
+  .eptag{display:inline-block;position:relative;left:-6px;margin-bottom:-7px;z-index:2;
+    background:#0a0a0a;color:var(--white);font-family:var(--display);font-weight:400;
+    font-size:13.5px;letter-spacing:1.5px;text-transform:uppercase;padding:6px 11px 4px}
+
+  /* ── Explore tabs (sticky mode switcher; one panel swaps below, nothing shoves) ── */
+  .explore{margin-top:22px}
+  .tabs{position:sticky;top:58px;z-index:40;display:flex;flex-wrap:wrap;gap:8px;padding:10px 0;
+    background:linear-gradient(180deg,rgba(18,10,55,.96),rgba(18,10,55,.86));
+    backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+  .tabbtn{font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.5px;
+    font-size:14.5px;color:var(--white);background:var(--purple);border:1px solid var(--purple);
+    padding:9px 13px 7px;cursor:pointer;transition:.15s}
+  .tabbtn:hover{filter:brightness(1.12)}
+  .tabbtn.on{background:var(--mint);border-color:var(--mint);color:#0a0a0a}
+  .tabbtn.on:hover{filter:none}
+  .tabbtn .ct{font-size:12px;opacity:.75;font-variant-numeric:tabular-nums}
+  .tabbtn .ct::before{content:" · "}
+  .tpanel{border:1px solid var(--line);background:var(--card);padding:12px 10px 14px}
+  .hint{font-size:12.5px;color:var(--muted);padding:2px 10px 10px;border-bottom:1px solid rgba(255,255,255,.08);margin-bottom:6px}
+
+  /* ── Listen row (no box: label left, service pills follow) ── */
+  .listen{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:12px 16px;margin-top:34px}
+  .listen .lname{font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--dim)}
+  .listen a{display:inline-flex;align-items:center;gap:9px;padding:11px 18px;border-radius:999px;
+    background:var(--mint);color:#08210f;text-decoration:none;font-weight:800;font-size:12.5px;
+    letter-spacing:.04em;text-transform:uppercase;transition:.15s}
+  .listen a:hover{filter:brightness(1.06);transform:translateY(-1px);box-shadow:0 12px 30px rgba(122,217,168,.25)}
+  .listen svg{width:20px;height:20px;fill:currentColor;flex:none}
+
+  /* ── Keep exploring (thumbnails link to other episode PAGES, never timecodes).
+     Swipeable strip on mobile, fits three-up on desktop. Variant rule: claim
+     "similar ground" + reason lines ONLY when moment-level topic overlap is
+     genuinely strong; otherwise show the latest released episodes with dates —
+     never invent a connection. ── */
+  .relsec{margin-top:60px;padding-top:58px;border-top:1px solid var(--line)} /* line = end of this episode's info */
+  .broughtby{text-align:center;margin-top:68px;margin-bottom:48px} /* bottom gap matches footer's top padding so the line sits halfway */
+  .reldots{display:flex;justify-content:center;gap:7px;margin-top:12px}
+  .reldots span{width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.25);transition:.2s}
+  .reldots span.on{background:var(--mint)}
+  .relsec .rtitle{display:inline-block;font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.5px;font-size:14.5px;background:var(--mint);color:#0a0a0a;padding:9px 13px 7px;margin-bottom:18px}
+  .relgrid{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding-bottom:6px;scrollbar-width:none}
+  .relgrid::-webkit-scrollbar{display:none}
+  .relcard{flex:0 0 56%;max-width:232px;scroll-snap-align:start;display:flex;flex-direction:column;text-decoration:none;background:var(--card);border:1px solid var(--line);transition:.15s}
+  .relcard:hover{background:var(--card-hi);border-color:rgba(122,217,168,.55)}
+  .relcard img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block}
+  .relcard .rt{display:block;font-size:12.5px;font-weight:600;color:rgba(255,255,255,.92);line-height:1.4;padding:8px 8px 0}
+  .relcard .rfoot{margin-top:auto;display:flex;justify-content:space-between;align-items:flex-end;gap:8px;padding:10px 8px 9px}
+  .relcard .rwhy{font-size:11.5px;color:var(--mint)}
+  .relcard .rtag{display:inline-block;background:#0a0a0a;color:var(--white);font-family:var(--display);font-size:10px;letter-spacing:1.2px;text-transform:uppercase;padding:3px 7px 2px}
+
+  /* ── Dropdown sections (accordion under the player) ── */
+  .drops{margin-top:34px;display:flex;flex-direction:column;gap:11px}
+  .drop{border:1px solid var(--line);border-radius:0;background:var(--card);overflow:hidden;transition:border-color .15s}
+  .drop[open]{border-color:rgba(122,217,168,.35)}
+  .drop>summary{list-style:none;cursor:pointer;padding:16px 18px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+  .drop>summary::-webkit-details-marker{display:none}
+  .drop>summary .st{font-weight:700;font-size:15.5px;letter-spacing:.005em}
+  .drop>summary .ct{margin-left:auto;font-size:12px;color:var(--dim);font-weight:600;font-variant-numeric:tabular-nums}
+  .drop>summary .chev{flex:none;width:22px;height:22px;border-radius:50%;background:rgba(122,217,168,.14);color:var(--mint);display:flex;align-items:center;justify-content:center;font-family:var(--display);font-size:15px;line-height:1;transition:.2s;transform:translateY(-1px)}
+  .drop[open]>summary .chev{transform:rotate(45deg)}
+  .drop-body{padding:2px 12px 12px}
+
+  /* chapters */
+  .chapter{display:flex;align-items:baseline;gap:14px;width:100%;text-align:left;cursor:pointer;background:none;border:0;color:inherit;font-family:inherit;padding:11px 10px;border-radius:10px;transition:.13s}
+  .chapter:hover{background:var(--card-hi)}
+  .chapter .tc{font-variant-numeric:tabular-nums;font-weight:700;font-size:14px;color:var(--mint);flex:none;width:48px}
+  .chapter .cx{font-size:15px;font-weight:500;color:rgba(255,255,255,.9)}
+  .chapter:hover .cx{color:#fff}
+
+  /* questions */
+  .q{display:flex;align-items:center;gap:12px;width:100%;text-align:left;cursor:pointer;background:none;border:0;border-radius:11px;color:inherit;font-family:inherit;padding:12px 10px;transition:.14s}
+  .q+.q{border-top:1px solid rgba(255,255,255,.05)}
+  .q:hover{background:var(--card-hi)}
+  .q .qm{font-family:var(--display);font-size:15px;color:var(--mint);flex:none;line-height:1;transform:translateY(1px)}
+  .q .qx{font-size:15px;font-weight:500;color:rgba(255,255,255,.92)}
+  .q .go{margin-left:auto;flex:none;color:var(--dim);font-size:18px;transition:.15s}
+  .q:hover .go{color:var(--mint);transform:translateX(2px)}
+
+  /* summary + transcript bodies */
+  .summary-body p{font-size:16.5px;line-height:1.62;color:rgba(255,255,255,.9);padding:6px 10px 4px}
+  .tbody{padding:2px 10px 8px}
+  .tbody p{font-size:14.5px;line-height:1.7;color:rgba(255,255,255,.78);margin-top:15px;max-width:64ch}
+  .tbody .spk{display:block;font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--mint);margin-bottom:2px}
+
+  /* ── Voice note ask (lives at the bottom of the Summary panel) ── */
+  .vask{margin:16px 10px 4px}
+  .vbtn{display:inline-flex;align-items:center;gap:9px;padding:12px 20px;border-radius:999px;border:0;cursor:pointer;
+    background:var(--mint);color:#08210f;font-family:inherit;font-weight:800;font-size:12.5px;
+    letter-spacing:.04em;text-transform:uppercase;transition:.15s}
+  .vbtn:hover{filter:brightness(1.06);transform:translateY(-1px);box-shadow:0 12px 30px rgba(122,217,168,.25)}
+  .vbtn svg{width:18px;height:18px;fill:currentColor;flex:none}
+  .vslot{background:var(--purple);padding:12px 10px 10px;margin:14px 0 4px;box-shadow:0 18px 40px rgba(0,0,0,.35)}
+  .vslot[hidden]{display:none}
+  .vhead{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;margin-bottom:10px}
+  .vhead .vmsg{font-family:var(--sans);font-size:13px;line-height:1.55;color:rgba(255,255,255,.92);margin:2px 0 0;padding:0 2px}
+  .vclose{background:none;border:0;color:rgba(255,255,255,.85);font-size:22px;line-height:1;cursor:pointer;padding:0 2px}
+  .vclose:hover{color:var(--white)}
+  .vslot iframe{display:block}
+
+  /* ── YouTube subscribe pill (sits in the listen row; outranks .listen a's mint) ── */
+  .listen a.yt-pill{background:var(--purple);color:var(--white)}
+  .listen a.yt-pill:hover{filter:brightness(1.1);transform:translateY(-1px)}
+  @media(max-width:720px){ /* mobile: no label, three compact pills on one row */
+    .listen .lname{display:none}
+    .listen{gap:8px}
+    .listen a{padding:10px 13px;font-size:11px;gap:6px}
+    .listen svg{width:16px;height:16px}
+  }
+
+  /* ── Footer ── */
+  footer{border-top:1px solid var(--line);margin-top:6px;padding:48px 20px 58px;text-align:center}
+  .foot-label{font-size:11px;font-weight:700;letter-spacing:.26em;text-transform:uppercase;color:var(--dim);margin-bottom:16px}
+  .sponsors{display:flex;justify-content:center;align-items:center;gap:38px;flex-wrap:wrap}
+  .sponsors a{display:inline-flex;transition:.15s}
+  .sponsors a:hover{transform:translateY(-1px)}
+  .sponsors img{height:34px;width:auto;opacity:.92}
+  .sponsors a:hover img{opacity:1}
+  .produced a{display:inline-flex;transition:.15s}
+  .produced a:hover img{opacity:1}
+  .produced{margin-top:0}
+  .produced img{height:30px;width:auto;opacity:.95}
+  .copyright{margin-top:28px;font-size:12px;color:var(--dim)}
+
+  @media(min-width:720px){header.hero{padding:48px 0 6px}}
+</style>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-in">
+      <a class="brand" href="index.html" aria-label="The Numbers Game home"><img src="assets/tng-logo.png" alt="The Numbers Game"></a>
+      <div class="navlinks">
+        <a href="index.html">Home</a>
+        <a href="episodes.html">Episodes</a>
+        <div class="navgroup">
+          <a href="about.html">About</a>
+          <div class="subnav">
+            <a href="about.html">The show</a>
+            <a href="nick-reilly.html">Nick Reilly</a>
+            <a href="jason-robinson.html">Jason Robinson</a>
+          </div>
+        </div>
+        <a href="contact.html">Contact</a>
+      </div>
+      <button class="navburger" id="navburger" type="button" aria-label="Menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24"><path d="M3 6h18v2H3zM3 11h18v2H3zM3 16h18v2H3z"/></svg>
+      </button>
+    </div>
+    <div class="navdrop" id="navdrop" hidden>
+      <a href="index.html">Home</a>
+      <a href="episodes.html">Episodes</a>
+      <a href="about.html">About</a>
+      <a class="sub" href="nick-reilly.html">Nick Reilly</a>
+      <a class="sub" href="jason-robinson.html">Jason Robinson</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+
+  <main class="wrap">
+
+    <header class="hero">
+      <div class="hook">
+        <span class="eptag">EP 284</span>
+        <h1 class="hk"><span class="hkrow"><span>The Most Expensive Day in</span></span>
+        <span class="hkrow"><span class="mintseg">Aussie Small Business History</span></span></h1>
+      </div>
+    </header>
+
+    <div class="player-wrap" id="player-wrap">
+      <div class="player" id="player">
+        <button class="facade" id="facade" style="background-image:url('https://i.ytimg.com/vi/V-10kMQrsDM/maxresdefault.jpg')" aria-label="Play episode">
+          <span class="play"></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="explore">
+      <div class="tabs" role="tablist">
+        <button class="tabbtn on" data-panel="p-summary">Summary</button>
+        <button class="tabbtn" data-panel="p-chapters">Chapters<span class="ct" id="chcount"></span></button>
+        <button class="tabbtn" data-panel="p-questions">Questions<span class="ct" id="qcount"></span></button>
+      </div>
+      <section class="tpanel" id="p-summary">
+        <div class="summary-body">
+          <p>1 July might be the most expensive day in Australian small business history. Jase has done the maths on a 10-person business and the cost is around $50,000 extra a year on the basics alone. If you're employing people in Australia, this is hitting you now, and he's mapped out a game plan to tackle it.</p>
+        </div>
+        <div class="vask">
+          <button class="vbtn" id="vbtn" type="button">
+            <svg viewBox="0 0 24 24"><path d="M12 14a3 3 0 0 0 3-3V6a3 3 0 1 0-6 0v5a3 3 0 0 0 3 3zm5-3a5 5 0 0 1-10 0H5a7 7 0 0 0 6 6.92V21h2v-3.08A7 7 0 0 0 19 11h-2z"/></svg>
+            Send us a voice note
+          </button>
+          <div class="vslot" id="vslot" hidden>
+            <div class="vhead">
+              <p class="vmsg">We'd love to hear from you. You can leave up to a 90 second voice note for us to play on the show: a question, some feedback, or a topic you want covered.</p>
+              <button class="vclose" id="vclose" type="button" aria-label="Close">&times;</button>
+            </div>
+            <iframe src="https://www.speakpipe.com/widget/inline/hhq6kzggsx7zpcsvakgxfrzun3zidpde" allow="microphone" width="100%" height="200" frameborder="0" title="Leave The Numbers Game a voice note"></iframe>
+          </div>
+          <script async src="https://www.speakpipe.com/widget/loader.js" charset="utf-8"></script>
+        </div>
+        <div class="sumfacts">
+          <div class="fact"><span class="fl">Release date</span><span class="fv">6 July 2026</span></div>
+          <div class="fact"><span class="fl">Hosts</span><span class="fv"><a href="nick-reilly.html">Nick Reilly</a> &amp; <a href="jason-robinson.html">Jason Robinson</a></span></div>
+          <!-- template: add <div class="fact"><span class="fl">Guest</span>...</div> only when the episode has one -->
+
+        </div>
+      </section>
+      <section class="tpanel" id="p-chapters" hidden>
+        <p class="hint">Jump straight to the part you need.</p>
+        <div id="chapters"></div>
+      </section>
+      <section class="tpanel" id="p-questions" hidden>
+        <p class="hint">Real questions this episode answers. Tap one to hear the answer.</p>
+        <div id="qa"></div>
+      </section>
+    </div>
+
+    <div class="drops">
+
+      <details class="drop">
+        <summary><span class="st">Episode transcript</span><span class="chev">+</span></summary>
+        <div class="drop-body tbody">
+          <p><span class="spk">Unknown · 00:00</span>Jase: Welcome to episode 284 of The Numbers Game. I'm Jayce. I'm here with Nick. How are you, mate? Happy New Year. Yes.</p>
+          <p><span class="spk">Unknown · 00:08</span>Nick: New financial year.</p>
+          <p><span class="spk">Unknown · 00:09</span>Jase: Yes.</p>
+          <p><span class="spk">Unknown · 00:09</span>Nick: I forgot you guys talk July to June.</p>
+          <p><span class="spk">Unknown · 00:12</span>Jase: You guys, come on, mate. Business owners surely like end of financial year, 30 June.</p>
+          <p><span class="spk">Unknown · 00:16</span>Nick: Every week's a new week, mate. We just roll it back and best thing about the start of financial year is you get to do it all again. Well, yes. And everything you did last year means absolutely nothing. Yes.</p>
+          <p><span class="spk">Unknown · 00:26</span>Jase: Yes. And I don't want to be dramatic, but what if I told you that earlier this week on the 1st of July that it was possible possibly one of the most expensive days ever for small business owners in Australia.</p>
+          <p><span class="spk">Unknown · 00:36</span>Nick: Okay. Well, I'm not surprised because I think every day costs more money, but you clearly have some good reasoning.</p>
+          <p><span class="spk">Unknown · 00:46</span>Jase: I'm going to play a little clip. We'll cut it in. But, you know, I saw this clip and just thought, we've got to unpack this. There's a few big things that are going on at the moment, but I'll play this first and then we'll crack in.</p>
+          <p><span class="spk">Unknown · 00:56</span>Clip: Okay. So I don't want to alarm anyone, But July 1st is 15 days away and it's going to be the most expensive day in small business history. Here's everything hitting at midnight on June 30th. Payday super starts. Minimum wages go up to $26.44 an hour.</p>
+          <p><span class="spk">Unknown · 01:15</span>ASIC fees go up. The Australian Government's fuel excise relief ends, so that's 32 cents a litre of protection no more. ATO tax relief for small businesses also gone. Your business text messages get flagged as scams unless you're registered listed with the ACMA.</p>
+          <p><span class="spk">Unknown · 01:31</span>Card surcharges are also banned from October 1st, so you'll be absorbing those costs too, I'm assuming, or putting your prices up. In the media today, Business New South Wales just reported SME confidence at a record low. Nearly half of small businesses reported falling income.</p>
+          <p><span class="spk">Unknown · 01:48</span>In the last 3 years, Australia lost 33,500 small businesses— that's net closures— 3 years in a row. That has never happened before in our recorded history. Small business owners did not cause this crisis, but we seem to be the ones paying for it.</p>
+          <p><span class="spk">Unknown · 02:07</span>I reckon there's a few things we can do about that.</p>
+          <p><span class="spk">Unknown · 02:11</span>Jase: We'll link who that video comes from, it's Liz_Nabel. But, uh, appreciate the video, Liz. She dropped that pre-30 June. Um, I don't know if there's anything that jumps out to you straight away there. We are going to unpack a little bit, but anything that kind of jumped out to you that was surprising?</p>
+          <p><span class="spk">Unknown · 02:26</span>Nick: Look, not— well, well, things I didn't know about was the, um, The text message.</p>
+          <p><span class="spk">Unknown · 02:31</span>Jase: Yep.</p>
+          <p><span class="spk">Unknown · 02:31</span>Nick: That's interesting. I knew about the Payday Super. Yeah, like nothing surprising, but keen to unpack it because— Yeah, for sure. You know, as a business owner, we're talking about this, like you just, the, and I think it's just, this is very much unappreciated by anyone who's not in business, but you are constantly working extremely hard to keep your head above water.</p>
+          <p><span class="spk">Unknown · 02:58</span>Jase: Yeah. Yeah. Well, I think the net 33,000 businesses that are gone is a bit of a figure that—</p>
+          <p><span class="spk">Unknown · 03:03</span>Nick: Yeah, actually that was surprising. And I was going to ask you, as an accountant, would some of that be sort of ABNs that are registered that weren't legitimate businesses?</p>
+          <p><span class="spk">Unknown · 03:13</span>Jase: It's potential that those numbers might be coming from, you know, an ABN gets shut down. But if it was an ABN being shut down because a company was being formed as part of a restructure, that should then be net zero rather than— the net loss of $30,000 or $33,000. But the other caveat I'll give there, just to kind of, you know, not be a doomsday kind of thing, is the ATO have been on a rampage of shutting down ABNs.</p>
+          <p><span class="spk">Unknown · 03:36</span>So imagine you had an ABN before you started Innovate and it's just been sitting there dormant. What they've done at the moment is they've gone back through your tax return as an example and gone, Nick, Nick actually hasn't reported any business income for some time. We're just going to cancel his ABN. So they'll send you a cancellation letter.</p>
+          <p><span class="spk">Unknown · 03:51</span>And if you needed it, you've got the opportunity to go, well, sorry guys, I actually do need the ABN. Yep. Whoops. Or you just let it be cancelled. So I'd say a big, big chunk of the 33,000 is probably just ABNs being cancelled for non-use.</p>
+          <p><span class="spk">Unknown · 04:05</span>Nick: Even so, right? Let's say a third of it's legit.</p>
+          <p><span class="spk">Unknown · 04:08</span>Jase: Yeah.</p>
+          <p><span class="spk">Unknown · 04:08</span>Nick: 11,000 businesses. That to me is mind-blowing. Yeah.</p>
+          <p><span class="spk">Unknown · 04:12</span>Jase: Well, insolvencies numbers are up considerably. So on the, you know, the idea of the most expensive day in Australian small business history, I've got a few to call out on. But the other one, apart from the text message thing, which is interesting, because if you are running a business and you rely on texts to go to your clients or customers for any particular reason, registering to make sure that you're not getting seen as a scam or spam, obviously an issue.</p>
+          <p><span class="spk">Unknown · 04:35</span>The other one on the 1st of October is credit card surcharges. So, you know, quite often I'll go to the local grocery store, the deli, the café, and if you pay on card, there's often, you know, the surcharge and you see it pop up separately. The till will say $5, but by the time you've tapped your card and see what it says, it's like $5 $1.25 or whatever it is.</p>
+          <p><span class="spk">Unknown · 04:57</span>That now becomes— you can't do that. You can't add a credit card surcharge after the 1st of October. So you need to change your point of sale system. You need to change the way things are doing. We, we had changed our direct debit system to say if you pay by direct debit with BSB and account number, there's no surcharge.</p>
+          <p><span class="spk">Unknown · 05:15</span>If you want the benefit of an Amex or a Visa so you can get your points and spread your cash flow rather than us losing, you know, 1.95% on our side to manage the card fees. We were passing that back to the customer. We can't do that anymore. So as a business, we go back to— again, business goes back to wearing that cost.</p>
+          <p><span class="spk">Unknown · 05:32</span>We either adjust the pricing or we take a hit.</p>
+          <p><span class="spk">Unknown · 05:34</span>Nick: But even just the— this is the thing, even just the— obviously you'll come to a conclusion and it'll probably be adjust your pricing. But going through that, the cost of going through that process.</p>
+          <p><span class="spk">Unknown · 05:44</span>Jase: Yeah, correct. And, you know, the reason that video kind of jumped out to me, there's a bit going on beyond that. I'll focus on this bit first and then give a bit of a Sevenplay playbook of things that you should look at about if you are a small business owner and it is the start of a new year. And it's not just that, oh, it's a nice emotional time because it's an end of financial year and you can reset and start budgets for a new year.</p>
+          <p><span class="spk">Unknown · 06:05</span>It is for the ones out there that don't do budgets and that are just going to roll into this year going business as usual, it's all good. If you then have got used to the last couple of months where fuel prices stabilised and came down, and I drove past the Bowser the other day and it was $1.66.</p>
+          <p><span class="spk">Unknown · 06:21</span>Clip: Great.</p>
+          <p><span class="spk">Unknown · 06:22</span>Jase: I thought, geez, that's, that's pretty low compared to what it was even pre the fuel crisis. Oh, back in my mind, I forgot that the 32-cent fuel excise that wasn't included is now back on from 1st of July. So you would have seen overnight, you would have— if you didn't fill up on the 30th of June, you thought, oh geez, the, the petrol tank's looking pretty low, um, I'll grab it tomorrow.</p>
+          <p><span class="spk">Unknown · 06:43</span>You went back out the next morning and you're paying an extra 32 cents a litre. Then, I mean, I saw a clip of Pauline talking about this, but you know, again, it's not about kind of the minimum wage earner versus the business owner. But as a small business owner, if you've got 10, 20, 30 staff and you say you are in a cafe, you know, with team members coming and going, the minimum wage up 4.75% and then add super on top of that, that's a pretty substantial jump up.</p>
+          <p><span class="spk">Unknown · 07:10</span>If you then add in, you know, what CPI is and everything else, like there's a lot of costs. Payroll tax, 4.85%.</p>
+          <p><span class="spk">Unknown · 07:20</span>Nick: Yeah. This is the thing. It's wage increase.</p>
+          <p><span class="spk">Unknown · 07:25</span>Jase: And then you add that extra—</p>
+          <p><span class="spk">Unknown · 07:26</span>Nick: More PAYG tax to the government.</p>
+          <p><span class="spk">Unknown · 07:27</span>Jase: Extra super, extra payroll tax.</p>
+          <p><span class="spk">Unknown · 07:28</span>Nick: More payroll tax to the state government.</p>
+          <p><span class="spk">Unknown · 07:31</span>Jase: Yep. Yep. Correct.</p>
+          <p><span class="spk">Unknown · 07:32</span>Nick: More super. Tax inside of super at 15% to the government.</p>
+          <p><span class="spk">Unknown · 07:36</span>Jase: Yep. And then on top of that, I mean, this isn't necessarily a change in going up. Super stays 12%. That didn't change. But what did change is instead of the super accumulating over a quarter and then the business owner paying that money into super at the end of the quarter within 28 days.</p>
+          <p><span class="spk">Unknown · 07:52</span>Every single time an employee gets paid now, super must hit their super fund within 7 days. Now, from a fundamental change, payroll gets more complicated. The pressure on the business owner or the person running payroll is you can't muck that up.</p>
+          <p><span class="spk">Unknown · 08:07</span>You've got to make sure the cash flow is there, as it should be. I mean, you've got to plan ahead for this, but in small business land it can be difficult. Cash flow can take a crunch and that's where talking to, you know, the team at Innovate, for example, about a line of credit or an overdraft or some business funding?</p>
+          <p><span class="spk">Unknown · 08:22</span>Nick: We're doing a lot of that work at the moment because, but people have payment terms, you know, you don't, some people have 90-day payment terms and sometimes those terms aren't met. And if you've got a significant client that holds back a payment for, you know, 2 to 3 weeks, it can have a big impact.</p>
+          <p><span class="spk">Unknown · 08:37</span>So yeah, we're doing a lot of education with our business clients on, hey, have a line of credit there. The idea is you'll dip into it sometimes, but get it back to, get it back to par whenever you can. But it's there for that rainy day.</p>
+          <p><span class="spk">Unknown · 08:51</span>Jase: 100%. And I think for anyone who listens to this and, you know, we'll get through the numbers, but having access to that line of credit for that rainy day or for that emergency when you need it, not for it to be fully extended all the time. But as you said, you might need to dip in and then you top it back up and you don't necessarily rely on always having those funds out.</p>
+          <p><span class="spk">Unknown · 09:08</span>It could be a tax payment comes out of nowhere. If you're on annual payroll tax, that's pretty much due next week. So I think we've got a $70,000-$80,000 annual payroll tax bill we'll pay next week. Great for cash flow, no worries. So these things kind of keep creeping up.</p>
+          <p><span class="spk">Unknown · 09:23</span>But the Payday Super, as I said, every time you do payroll, has to be in the fund within 7 days. That's a big change. Last month, that wasn't the case. Apart from that, rates are up 75— interest rates are up 75 basis points so far this year. I think we had a hold for June.</p>
+          <p><span class="spk">Unknown · 09:39</span>Yep, we did. Yeah, that's right.</p>
+          <p><span class="spk">Unknown · 09:41</span>Nick: Positive?</p>
+          <p><span class="spk">Unknown · 09:42</span>Jase: Yeah. Again, you know, the cost in what a mortgage was at the start of the year to what it is today has obviously changed and quite considerably. So again, more cash flow pressure. But it's not just somebody who has a home loan, it's also the business owner with business lending as well. So there's an impact on both sides.</p>
+          <p><span class="spk">Unknown · 09:59</span>Electricity is up 22.5%. Yeah. So there was some basically underlying discounts and rebates being applied last year due to some things in the background. They're gone. Which means electricity prices go back to where they should have been without those underlying rebates and discounts.</p>
+          <p><span class="spk">Unknown · 10:17</span>So think about like 22, 22.5% on your electricity bill. It's a lot. That's for, you know, if you're, if you're in hospitality and you're running a cafe or a restaurant or a pub.</p>
+          <p><span class="spk">Unknown · 10:27</span>Nick: Yeah.</p>
+          <p><span class="spk">Unknown · 10:27</span>Jase: And you got used to last year's electricity prices for like, go back to the drawing board today, model out your year, add, you know, if you've got cars on the road and you got used, don't use last quarter's fuel expenses if you, if you need to then model out the year. So sometimes people do that too.</p>
+          <p><span class="spk">Unknown · 10:43</span>They take their last couple of months and they model the numbers forward and go, yep, we're looking alright. So you've actually got a basic but good tip. Yeah. And you've got to— this is where, as much as I'm all for saying if you've got a basic budget, great, at least you've got something. This is probably the first year where I'm like, I don't want to see that $33,000 number, which might be $11,000 real, but I don't want to see that number growing.</p>
+          <p><span class="spk">Unknown · 11:04</span>We love small business owners. We want to see them thrive. But unless you're across your numbers, I reckon this year is one of those years that is going to catch some people out.</p>
+          <p><span class="spk">Unknown · 11:13</span>Nick: So that just leads to a question. So for someone who is doing their budget for next year or their forecasts, would you suggest looking at what the cost was in that last month, call it June 30, and look, for a lot of people, they're probably doing their budgets earlier than that, and just adding CPI to every single cost?</p>
+          <p><span class="spk">Unknown · 11:31</span>Is that a failsafe?</p>
+          <p><span class="spk">Unknown · 11:33</span>Jase: I generally, if it's an established business that's rolling year on year, I kind of prefer to look at the full year and stack you know, '24 next to '25 next to '26 and then looking at full year expenses where you spent money at a high level. Because once you've done the full year view of what it looks like, then you can reverse engineer the monthly.</p>
+          <p><span class="spk">Unknown · 11:51</span>And for some businesses you can just divide it by 12 and spread it.</p>
+          <p><span class="spk">Unknown · 11:54</span>Nick: But would you then be adding—</p>
+          <p><span class="spk">Unknown · 11:55</span>Jase: Yeah, sorry.</p>
+          <p><span class="spk">Unknown · 11:56</span>Clip: Yes.</p>
+          <p><span class="spk">Unknown · 11:56</span>Jase: To answer the question, yeah. Whatever you spent for 2025, you would apply what is going to go up. So electricity, you wouldn't add 5%, you'd be adding 22%.</p>
+          <p><span class="spk">Unknown · 12:05</span>Nick: So don't do a blanket.</p>
+          <p><span class="spk">Unknown · 12:06</span>Jase: Yeah, don't do a blanket. Go line by line. What do you, what do you expect to increase your revenue by?</p>
+          <p><span class="spk">Unknown · 12:09</span>Nick: Are you growing?</p>
+          <p><span class="spk">Unknown · 12:09</span>Jase: Have you growing every year, cool, apply 10% rev growth because you put the price up 5% and you expect to grow 5% of new rev. Cool.</p>
+          <p><span class="spk">Unknown · 12:19</span>Nick: Yeah.</p>
+          <p><span class="spk">Unknown · 12:19</span>Jase: And then it'd be same thing wages. If you've just gone and had performance reviews with your whole team, use the real figure. Don't just apply 5% to your wage bill from last year. Have a forecast forward. Did you actually give people a little bit more than 5%, less than 5%? And are you factoring in new hires? Put them in there.</p>
+          <p><span class="spk">Unknown · 12:35</span>See, because you want to know what your business is going to look like if the year goes as planned. And then you want to be able to tinker with the numbers to go, am I happy with the end result? Sometimes we'll run it with a business owner at a bare minimum, the basic 12-month, look at the bottom line and say, is that a good year?</p>
+          <p><span class="spk">Unknown · 12:50</span>If we get 12 months from now and we're sitting in tax planning in May 2027, are you happy if that's the year you're on track for? And we'll either get the response of, yep, I'm comfortable with that number, let's go for that. Or nah, Nick, Jase, what am I working that hard for to take home that number?</p>
+          <p><span class="spk">Unknown · 13:07</span>Yeah. What do I need to do different? And then that's where we kind of unpack benchmarking. You know, you can look at, am I spending more than the plumber down the road for my plumbing business? Yeah. What do I need to change?</p>
+          <p><span class="spk">Unknown · 13:19</span>Clip: Good.</p>
+          <p><span class="spk">Unknown · 13:19</span>Jase: Outside of that, there's then general CPI as well, which is 4.2%. There's probably a few other things in the video that she mentioned. I then took that and ran it across a 10-person business as a rough example. So that extrapolation that we just talked about, you're looking at around an extra $50,000 in annual costs for a 10-person business.</p>
+          <p><span class="spk">Unknown · 13:34</span>Just in basic, basic wage increases. If they've got some company cars, the fuel, the electricity, depending on the type of business. But if you're running a business with 10 people, call that 20, or call it for you or for me, 30. If I times that by 3 and my costs went up $150 grand, there's a lot of things that I need to factor into.</p>
+          <p><span class="spk">Unknown · 13:55</span>Where do I then make some savings or how do I increase revenue? And if I'm increasing revenue, how do I make sure there's value going back to my customers?</p>
+          <p><span class="spk">Unknown · 14:02</span>Nick: Yeah.</p>
+          <p><span class="spk">Unknown · 14:03</span>Jase: So very interesting time around that. So what I will then unpack for you now is a few of the things that I thought caught my eye in the lead up to end of year. And then how beyond those things I just talked about from a budgeting perspective, they're conversations and awareness pieces that you need to have for planning for the 26-27 year and beyond.</p>
+          <p><span class="spk">Unknown · 14:27</span>Now, the big one that you may have heard about was the Bendell case, and I've got an example that I want to unpack a little bit there. But essentially, at a higher level, Bendell was a court case against the ATO, and the High Court actually ruled in favour of Bendell.</p>
+          <p><span class="spk">Unknown · 14:45</span>He's an accountant and he was doing things a certain way in the books for his clients, and as are a lot of accountants. And essentially, at a higher level, and I'll go into more detail, it was that UPEs aren't Div 7A loans. Now, that's a you know, some interesting acronyms, but UPEs are Unpaid Present Entitlements.</p>
+          <p><span class="spk">Unknown · 15:04</span>And then DIV7A loans, we've talked about before. It's where money that should be in the company, it's already had company tax paid on it, but not income tax for the individual. If you take money out of your company and don't repay it, you end up with a DIV7A loan and you have to put it into, or you end up in DIV7A territory and you'll need to put it into a DIV7A loan and pay interest back to your company because you or someone has the money.</p>
+          <p><span class="spk">Unknown · 15:28</span>Nick: And you've got a certain amount of time second loan can only be for a certain time.</p>
+          <p><span class="spk">Unknown · 15:31</span>Jase: 7 years, only 7 years. And you've got to make the repayments, minimum repayments along that journey.</p>
+          <p><span class="spk">Unknown · 15:36</span>Nick: And then after 7 years, you've got to pay the tax.</p>
+          <p><span class="spk">Unknown · 15:37</span>Jase: It's got to be paid back in full or the whole lot becomes taxable in your personal tax rate. Perfect. Yeah. So what that— I'll just unpack it a little bit there. So what it meant was the ATO's understanding was that if a family trust distributed to a bucket company, if the money never ended up in the bucket company, that would create a DIV 7A loan because the money's not there.</p>
+          <p><span class="spk">Unknown · 16:01</span>Nick: In most cases, used personally.</p>
+          <p><span class="spk">Unknown · 16:02</span>Jase: Yep. But in the case where the money stays inside the family trust and is used in the family trust and it didn't go to the bucket company, that was being called an unpaid present entitlement. So the bucket company had an entitlement to the money, but it stayed in the family trust.</p>
+          <p><span class="spk">Unknown · 16:18</span>Nick: Wouldn't you have to— I don't want to get caught up in the logistics here, but wouldn't— doesn't the trust have to just distribute that money?</p>
+          <p><span class="spk">Unknown · 16:26</span>Jase: The trust has to distribute it to someone to pay tax on, which is why it distributed to the bucket company.</p>
+          <p><span class="spk">Unknown · 16:31</span>Nick: But the money didn't change hands.</p>
+          <p><span class="spk">Unknown · 16:33</span>Jase: Correct.</p>
+          <p><span class="spk">Unknown · 16:33</span>Nick: Didn't physically go from the— So the bucket company effectively did, on paper, got the distribution.</p>
+          <p><span class="spk">Unknown · 16:41</span>Jase: And then paid the company tax.</p>
+          <p><span class="spk">Unknown · 16:43</span>Nick: Yep. But the money was kept inside the family trust.</p>
+          <p><span class="spk">Unknown · 16:46</span>Jase: Yeah.</p>
+          <p><span class="spk">Unknown · 16:47</span>Nick: To invest or something?</p>
+          <p><span class="spk">Unknown · 16:48</span>Jase: Yep. To, you know, work in capital, run the family trust if it was a business, do what it needed to do.</p>
+          <p><span class="spk">Unknown · 16:52</span>Nick: Yeah.</p>
+          <p><span class="spk">Unknown · 16:53</span>Jase: So essentially it was always treated— well, from the ATO's point of view, it wanted to treat that money as a Div 7A loan and it wanted repayments made, it wanted interest charged. The case was won the other way where it was an unpaid present entitlement and you did not have to apply Div 7A. So there's far-reaching effects essentially that for anyone who in the past, over the last couple of years, has treated the unpaid present entitlement as a Div 7A loan and has been paying interest or paying additional taxes because of that interest</p>
+          <p><span class="spk">Unknown · 17:23</span>charge on a Div 7A, essentially especially after Bendell Cases 1, it's saying that that wasn't the case. You didn't need to charge interest and pay tax on that.</p>
+          <p><span class="spk">Unknown · 17:31</span>Nick: Wouldn't that be most?</p>
+          <p><span class="spk">Unknown · 17:32</span>Jase: There's a lot. Yeah, there's a lot that just treated it that way and said the bucket company didn't get the money, the bucket company should have had it. So that's been treated as a Div 7A rather than a UPE.</p>
+          <p><span class="spk">Unknown · 17:43</span>Nick: So just on the UPE argument, why— this could be a stupid question, but why would that not be captured? Why did he win that argument? Because the reality is it did not go to the bucket company. What's your read on it though?</p>
+          <p><span class="spk">Unknown · 17:59</span>Jase: My read on it is that it never left the environment where it was then used by the individual for their benefit. So because it stayed in the family trust environment, used as working capital in the business, it's then gone between the family trust and the bucket company. There was corporate rate of tax paid on that money.</p>
+          <p><span class="spk">Unknown · 18:16</span>The individual didn't take it out and buy a beautiful home down in Portsea or whatever hill.</p>
+          <p><span class="spk">Unknown · 18:22</span>Nick: Gotcha.</p>
+          <p><span class="spk">Unknown · 18:22</span>Jase: So then that's, that's why the link of the unpaid present entitlement was between the trust and the bucket company.</p>
+          <p><span class="spk">Unknown · 18:27</span>Nick: Yep.</p>
+          <p><span class="spk">Unknown · 18:27</span>Jase: Don't get me wrong, if the individual had sucked the money out and gone and spent it all on a beautiful property that they were living in, totally different story. That unpaid present entitlement, the funds are gone over there to be used.</p>
+          <p><span class="spk">Unknown · 18:38</span>Nick: So that would be most circumstances.</p>
+          <p><span class="spk">Unknown · 18:41</span>Jase: Yeah.</p>
+          <p><span class="spk">Unknown · 18:41</span>Nick: Not many people would leave it in there. They would pull it out and use it, right? Yeah.</p>
+          <p><span class="spk">Unknown · 18:45</span>Jase: I think it's a combo though. Like there's probably an amount and this is where, you know, the whole thing is complex and at the end of the day, I mean, this, this, the numbers say that it could affect up to 800,000 trusts. So there's 800,000 trusts that trade as a business and then distribute out.</p>
+          <p><span class="spk">Unknown · 19:00</span>Nick: It's got Morris Blackburn written all over it.</p>
+          <p><span class="spk">Unknown · 19:03</span>Jase: Yeah. Well, and then this is the thing, right? So where the ATO take an L and they've got a loss, you have to think about what happens on the 1st of July, 2028.</p>
+          <p><span class="spk">Unknown · 19:13</span>Nick: Do you know? No. You're going to tell me.</p>
+          <p><span class="spk">Unknown · 19:17</span>Jase: Essentially, this whole thing gets scrapped because family trusts have a minimum tax of 30%. So there is no, like what you said, "Oh, don't family trust not pay tax? They have to distribute it." So yeah, cool. That was the case. But now, no matter what, a family trust from 1 July '28 has a minimum rate of 30%.</p>
+          <p><span class="spk">Unknown · 19:36</span>And this is where the small business world went nuts. Those $800,000 trusts, think about the local café down there, which might be mum and dad that run it. They make $150,000 profit. $75,000 each and then they pay marginal tax on that.</p>
+          <p><span class="spk">Unknown · 19:52</span>They're probably paying $0.24 to the dollar on a $75K income each. Yeah. Like, and that's same as what the person on a salary would.</p>
+          <p><span class="spk">Unknown · 20:00</span>Nick: Yeah.</p>
+          <p><span class="spk">Unknown · 20:00</span>Jase: Now, just because they were running their business as a family trust, smack, 30%.</p>
+          <p><span class="spk">Unknown · 20:05</span>Nick: Yeah.</p>
+          <p><span class="spk">Unknown · 20:07</span>Jase: Too bad. They're going to pay extra tax because of their choice of structure to run a small business as a family.</p>
+          <p><span class="spk">Unknown · 20:12</span>Nick: Yeah. Yeah.</p>
+          <p><span class="spk">Unknown · 20:13</span>Jase: Then beyond that, the reason the Bendow case ends up dead or doesn't really matter that he's won. It'll matter retrospectively, but not moving forward after 1 July '28. This is the big one where people went nuts. Buried in all the budget detail and what was uncovered.</p>
+          <p><span class="spk">Unknown · 20:29</span>If you have a family trust, Nick, we've talked about it on The Numbers Game before, bucket companies. We've always said that if you've got excess funds, rather than paying individual rate of 47%, send it to a bucket company, pay tax at around 30%, and then invest that money.</p>
+          <p><span class="spk">Unknown · 20:45</span>Do you know what the tax rate is for a bucket company after 1 July 2028?</p>
+          <p><span class="spk">Unknown · 20:49</span>Nick: Well, it's over 60% because you don't get the—</p>
+          <p><span class="spk">Unknown · 20:52</span>Jase: Correct. It's essentially 60%. You pay 30% in the family trust.</p>
+          <p><span class="spk">Unknown · 20:57</span>Nick: Or it's somewhere like 61%, 62% if they get to that.</p>
+          <p><span class="spk">Unknown · 20:59</span>Jase: Yeah, it's— Anyway, I'm just going to cap it at 60%. But so because the family trust pays tax at 30%, if it passes it to you, you'll get a credit, kind of like a franking credit. But if your tax rate ends up being 25%, you won't get the extra 5 cents back. They're going to keep that.</p>
+          <p><span class="spk">Unknown · 21:15</span>Nick: That.</p>
+          <p><span class="spk">Unknown · 21:16</span>Jase: If the family trust distributes to the bucket company, doesn't get the 30% credit that the trustee of the trust already paid, pays another 30% in the bucket company.</p>
+          <p><span class="spk">Unknown · 21:25</span>Nick: Cool. I think they'll backflip on that.</p>
+          <p><span class="spk">Unknown · 21:27</span>Jase: Well, overnight, like, they've just— remember, they've taken a loss on the Bendell case. The trust being taxed at 30% and they're not allowing bucket companies to work, like, through a family trust, that's a big win back the other way, you know. And they've taken the loss on the Bendell case.</p>
+          <p><span class="spk">Unknown · 21:43</span>So I don't know, there's— there maybe feels like there's some motivation to be able to stick it to the taxpayer in a couple of years to go, you can't have bucket companies. If you do want to use the bucket company, you know, good old Jack Henderson and people like that that are doing their whiteboard sessions, there are structures where you'd have your trading company and you'd have a holding company and then you'd have another company.</p>
+          <p><span class="spk">Unknown · 22:05</span>So as long as there's no family trust, your trading company owned 100% by a holding co, you pay the dividend up, you transfer the money out to an investment company, company to company loan. You've then got your 25% tax write-off or potentially 30% at holding depending on the structure.</p>
+          <p><span class="spk">Unknown · 22:22</span>And then there's no 60% bucket, but you also don't have a family trust to distribute in that thing. Like you've gotta rely on making money in the company realm.</p>
+          <p><span class="spk">Unknown · 22:31</span>Clip: Yeah, yeah.</p>
+          <p><span class="spk">Unknown · 22:31</span>Nick: I think at the same time though, you've got options with a standard company, right?</p>
+          <p><span class="spk">Unknown · 22:36</span>Jase: Yep, correct.</p>
+          <p><span class="spk">Unknown · 22:36</span>Nick: You can decide not to distribute one year. Yeah. So you can, manipulate's the wrong word, but you can have control over your own tax rate.</p>
+          <p><span class="spk">Unknown · 22:45</span>Jase: You can use smart tax minimisation and tax planning. Yeah. I think about, We've got a client at the moment who, you know, we spoke to them about husband and wife or, you know, young couple getting together and, you know, in the future they're planning on having kids. So it was, well, while we can legally use our bucket company, build some wealth, invest it, pay capital gains, pay the tax, so no CGT discount, but pay full whack of tax on whatever income and investments we earn.</p>
+          <p><span class="spk">Unknown · 23:10</span>But then down the track when wife is pregnant, is off work, you know, helping the baby and, you know, grow a family and, you know, contribute. All of a sudden they've got this investment company that can pay dividends out and support them while they grow a family and grow their wealth in their life.</p>
+          <p><span class="spk">Unknown · 23:28</span>Nick: So that's the way to go. And is there a time limit on retained profits or you can just keep them in there forever until you want to? That's right.</p>
+          <p><span class="spk">Unknown · 23:37</span>Jase: And we've had some fun seeing like retired couples that have built wealth in a company. You know, they had retained earnings and taxes paid and then after retirement, they've just dwindled smaller chunks of that money out of their company that they used to grow wealth.</p>
+          <p><span class="spk">Unknown · 23:53</span>And then with— and this is where, you know, any changes to franking credits and franking credit refunds, you know, if you've paid 25% tax on all of that and your tax rate is less than 25%, that's where you get a physical cash refund. So again, time in the game works really well, but sometimes retro— like tax changes that then retrospectively change things can be a real problem.</p>
+          <p><span class="spk">Unknown · 24:17</span>Nick: Is your advice here though, just, you know, for people just to chill out for the moment? Because there is a lot of discussion, but people need to remember that this hasn't gotten through yet. And from what I would— from what I'm hearing, and you would know this better than I because you're probably part of these discussions, that there is some high-level discussions with government on Hey, do you understand the impacts this is going to have?</p>
+          <p><span class="spk">Unknown · 24:42</span>So people just need to sit tight for now, right?</p>
+          <p><span class="spk">Unknown · 24:44</span>Jase: My honest read at the moment is business as usual. The main change for trusts, for example, is 1st July '28. We don't know how they're going to allow for restructure with some concessions for restructuring so that you're not copping stupid amount of tax because you had a trust and you need to become a company.</p>
+          <p><span class="spk">Unknown · 25:01</span>A lot of that is unknown. So yeah, my, my, my version is control the controllables, keep running a great business and, you know, don't make any like rushed changes because we don't know if it's going to stick. We're going to have an election at some point later this year or we've got at least the state and then federal as well later this year.</p>
+          <p><span class="spk">Unknown · 25:21</span>Nick: No, a couple of years.</p>
+          <p><span class="spk">Unknown · 25:22</span>Jase: A couple of years. So yeah, there's a bit of water to go under the bridge on that one. Just to roll through a couple of the others we've touched on in a previous episode as well is the CGT discount being replaced by CPI indexation that is live from July. 2027 and the 50% discount is dead.</p>
+          <p><span class="spk">Unknown · 25:39</span>Yeah. On that though, there was, and you know, welcome for people to kind of look into it and maybe we'll expand on it. The bit that people are getting a bit fired up over that is your CPI on your gains is indexed, but if you make a capital loss, it doesn't move.</p>
+          <p><span class="spk">Unknown · 25:54</span>So you don't get the benefit of indexation on your losses, which means that there is, there's an imbalance or no asymmetry to how the CGT system works. So if you lock in a loss today in today's value of money and at the same time you've invested somewhere, your investment will go up with CGI.</p>
+          <p><span class="spk">Unknown · 26:13</span>And when you sell— yeah, CGI, CPI indexation. And when you sell it, you'll pay the full whack of the capital gain, but your losses will stay stagnant. Not— they're not indexed. So your losses are less powerful than your gains, which means you'll pay more tax.</p>
+          <p><span class="spk">Unknown · 26:28</span>So it's kind of like I don't know, it's a, it's a, it's a, it's an unfair system. It's, it's not gamed to be fair and reasonable. So the other one on that, we've said as well, 30% minimum tax on discretionary trust income from July 2028.</p>
+          <p><span class="spk">Unknown · 26:44</span>There is no 30% tax on a fixed trust. So if you have a fixed beneficiary, and that means a unit trust, if you and I, Nick, have a unit trust, you own 50 units, I own 50 units, and we have a commercial property that pays 'Put us $50,000 into the unit trust.</p>
+          <p><span class="spk">Unknown · 26:59</span>You get $25,000, I get $25,000. We'll pay the tax in our own names.' But if it's discretionary and you and I can pick and choose who gets what, 30% upfront first. So outside of that, we also touched on negative gearing being quarantined to established property only after budget night, 12th of May, 2026.</p>
+          <p><span class="spk">Unknown · 27:17</span>And the other big one before I finish on my little 7-point practical playbook is the foreign investor angle. And this one people are losing their shit over. It is, and I think I had a good example, I want to try and find it. If you and I invest in a commercial property here and we make $1 million profit on it, we will pay minimum 30% capital gains tax.</p>
+          <p><span class="spk">Unknown · 27:41</span>Yeah, but if we live in Singapore and we have a managed investment trust and we buy the same property and make $1 million capital gain, we will pay 15% tax. So the equivalent on the numbers with, with CG, uh, with indexation was you and I would pay $255,000 in capital gains tax, but the foreign investor would pay $150,000 in capital gains tax.</p>
+          <p><span class="spk">Unknown · 28:08</span>So there's $100,000 better off to live overseas and invest in Australia rather than us Aussie punters having a crack and then giving more money to the government So it's a pretty strong closing argument for the fact that they're imbeciles. Yeah.</p>
+          <p><span class="spk">Unknown · 28:24</span>Nick: Like, shit, like seriously, like for all the other stuff that you rattled off, like that is just, you know.</p>
+          <p><span class="spk">Unknown · 28:30</span>Jase: Yeah, yeah. My 7th play.</p>
+          <p><span class="spk">Unknown · 28:32</span>Nick: Please encourage foreign investment 'cause that'll do a lot for the young people trying to get into property.</p>
+          <p><span class="spk">Unknown · 28:36</span>Jase: Tell me about it. And look, people are going nuts. I think Hughsey, Dave Hughes did a video on that and got pretty fired up on the, I'm pretty sure the MIT one. And there's another bloke though, I love watching his videos. It's Financial Lee. And he, you know, on one side he's wearing a suit, on the other side he's dressed like an Aussie battler, you know, drinking a wine or a beer.</p>
+          <p><span class="spk">Unknown · 28:55</span>And he does that, great videos back and forth. He did the same thing. Like it's just that shock factor of what? Like, you know, you can pay less tax than me and like I live here and, you know, work in Australia and contribute. And so it's pretty wild. I'm already paying 45% Yeah, tell me about it.</p>
+          <p><span class="spk">Unknown · 29:11</span>The 7-point playbook. I'd scripted this before 30 June, so unfortunately if this is coming out and you haven't done it, the first tip was going to be to fill up your tank before 30 June on the first, just to get that one extra tank of $0.32 less the night before.</p>
+          <p><span class="spk">Unknown · 29:27</span>So that is gone. We'll scrap that. If you haven't already, what you need to do— this is early July, you still have time. I hope you haven't processed a payroll and forgot to pay super yet. Go and check your payroll system. Make sure that it's set up for Payday Super.</p>
+          <p><span class="spk">Unknown · 29:42</span>Most of the systems like Xero and the others will have it auto-baked in. You'll go to process payroll and there's a button like in your face now, which is PaySuper. It's there, it's in your face, and there's new kind of step-through screens. If you're not using Xero or you haven't seen it, jump in, get familiar, check the settings.</p>
+          <p><span class="spk">Unknown · 30:00</span>On top of that, while you're in there, review your staff costs and the pricing. If you did have anyone on minimum wage, have you put that wage up 4.75%?. Do not get stuck having to do a back pay later on. Run the numbers and adjust as you need.</p>
+          <p><span class="spk">Unknown · 30:15</span>If you trade out of a family trust, Bendell case has happened. If you had UPEs or if you were paying Div 7A loans, have a chat. Year-end strategy. Is there anything different that you can do or need to do given the Bendell case has just gone through? If you do have CGT assets, model your CGT assets.</p>
+          <p><span class="spk">Unknown · 30:35</span>Are you going to sell before July 2027? It could differ by tens of thousands depending on the scenario, so you should be running those scenarios with your accountants. Again, don't rush to sell good assets if you don't need to. Also, not just talking to your accountant from a CGT point of view, but of course, talking to your financial advisor.</p>
+          <p><span class="spk">Unknown · 30:51</span>Nick: Of course.</p>
+          <p><span class="spk">Unknown · 30:52</span>Jase: Which just gives you armed with information and education to make an informed decision rather than getting a few years down the track and going, "Oh geez, I wish I'd sold then," or "I wish I knew that then." Also, understand your negative gearing circumstances. Now, of course, if you already own the property in negative geared pre- No dramas.</p>
+          <p><span class="spk">Unknown · 31:10</span>But if you are getting phone calls from property spruikers, if you are looking at a property and still stuck in the mindset that negative gearing might work on a certain property, again, model it without the tax deduction. Talk to your advisor, your mortgage broker, your property agent.</p>
+          <p><span class="spk">Unknown · 31:27</span>They were all there to kind of inform you. And like anything, build where possible. It's difficult in a small business in Australia at the moment, but build a cash buffer.</p>
+          <p><span class="spk">Unknown · 31:36</span>Nick: Buffer.</p>
+          <p><span class="spk">Unknown · 31:37</span>Jase: You know, that ability to be comfortable or sleep at night knowing there's a cash buffer in your business. If you don't have a cash buffer, we touched on it earlier, it is the line of credit, is the overdraft, is the rainy day access to funds to make sure that you aren't getting hit out by fuel cost, wages, super, rate hikes, and operating costs that have jumped materially.</p>
+          <p><span class="spk">Unknown · 31:58</span>Make sure you give yourself some breathing room. And that, Nico, is my start of financial year toolkit.</p>
+          <p><span class="spk">Unknown · 32:05</span>Nick: Sensational. Invaluable. Honestly, if you can make business work in this country, you're smarter than our finance minister who's earning $400K a year. So it's nice to know there's fallback options. Game over.</p>
+          <p><span class="spk">Unknown · 32:19</span>Jase: This podcast is for educational and informational purposes only. The conversations are of a general nature and do not qualify as financial or tax advice. We recommend before you make any financial decisions, you consult a licensed professional Individuals on the podcast may hold positions in the companies discussed. ---</p>
+        </div>
+      </details>
+
+    </div>
+
+    <div class="listen">
+      <span class="lname">Listen on</span>
+      <a href="https://open.spotify.com/search/the%20numbers%20game%20podcast" target="_blank" rel="noopener" aria-label="Listen on Spotify">
+        <svg viewBox="0 0 24 24"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.52 17.34c-.24.36-.66.48-1.02.24-2.82-1.74-6.36-2.1-10.56-1.14-.42.12-.78-.18-.9-.54-.12-.42.18-.78.54-.9 4.56-1.02 8.52-.6 11.64 1.32.42.18.48.66.3 1.02zm1.44-3.3c-.3.42-.84.6-1.26.3-3.24-1.98-8.16-2.58-11.94-1.38-.48.12-1.02-.12-1.14-.6-.12-.48.12-1.02.6-1.14 4.32-1.32 9.72-.66 13.44 1.62.36.18.54.78.3 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.3c-.6.18-1.2-.18-1.38-.72-.18-.6.18-1.2.72-1.38 4.26-1.26 11.28-1.02 15.72 1.62.54.3.72 1.02.42 1.56-.3.42-1.02.6-1.56.3z"/></svg>
+        Spotify
+      </a>
+      <a href="https://podcasts.apple.com/search?term=the%20numbers%20game" target="_blank" rel="noopener" aria-label="Listen on Apple Podcasts">
+        <svg viewBox="0 0 24 24"><path d="M5.34 0A5.328 5.328 0 000 5.34v13.32A5.328 5.328 0 005.34 24h13.32A5.328 5.328 0 0024 18.66V5.34A5.328 5.328 0 0018.66 0H5.34zm6.525 2.568c2.336 0 4.448.902 6.056 2.587 1.224 1.272 1.912 2.619 2.264 4.392l.04.23c.04.272-.16.527-.432.567a.505.505 0 01-.567-.431l-.04-.213c-.312-1.57-.92-2.747-2.004-3.867-1.428-1.496-3.293-2.294-5.393-2.294-2.1 0-3.966.798-5.394 2.294-1.084 1.12-1.692 2.298-2.004 3.867l-.04.213a.507.507 0 01-.567.431.504.504 0 01-.432-.567l.04-.23c.352-1.773 1.04-3.12 2.264-4.392 1.608-1.685 3.72-2.587 6.056-2.587h.153zm.136 3.033c1.74 0 3.312.67 4.527 1.934.883.916 1.394 1.93 1.663 3.253l.04.23a.505.505 0 01-.431.567.503.503 0 01-.567-.432l-.04-.212c-.23-1.112-.659-1.97-1.396-2.732-1.052-1.1-2.404-1.672-3.9-1.672s-2.849.572-3.901 1.672c-.737.762-1.167 1.62-1.396 2.732l-.04.212a.503.503 0 01-.567.432.505.505 0 01-.432-.567l.04-.23c.27-1.323.78-2.337 1.664-3.253 1.215-1.264 2.787-1.934 4.527-1.934h.21zm-.078 3.05c1.092 0 2.091.424 2.89 1.22.582.58.924 1.245 1.107 2.15l.04.218a.501.501 0 01-.424.568.499.499 0 01-.568-.424l-.04-.198c-.146-.724-.413-1.253-.871-1.716-.63-.63-1.398-.957-2.226-.957s-1.595.328-2.225.957c-.459.463-.726.992-.871 1.716l-.04.198a.499.499 0 01-.568.424.501.501 0 01-.424-.568l.04-.219c.183-.904.525-1.569 1.106-2.149.8-.796 1.799-1.22 2.89-1.22h.184zM12 14.07a2.477 2.477 0 012.48 2.478A2.477 2.477 0 0112 19.024a2.477 2.477 0 01-2.48-2.477A2.477 2.477 0 0112 14.07z"/></svg>
+        Apple
+      </a>
+      <a class="yt-pill" href="https://www.youtube.com/@thenumbersgamepodcast?sub_confirmation=1" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.12-2.14C19.5 3.55 12 3.55 12 3.55s-7.5 0-9.38.51A3 3 0 0 0 .5 6.2 31.4 31.4 0 0 0 0 12a31.4 31.4 0 0 0 .5 5.8 3 3 0 0 0 2.12 2.14c1.88.51 9.38.51 9.38.51s7.5 0 9.38-.51a3 3 0 0 0 2.12-2.14A31.4 31.4 0 0 0 24 12a31.4 31.4 0 0 0-.5-5.8zM9.55 15.57V8.43L15.82 12z"/></svg>
+        Subscribe
+      </a>
+    </div>
+
+    <div class="relsec">
+      <span class="rtitle">Discover more</span>
+      <div class="relgrid">
+        <a class="relcard" href="episode-264.html">
+          <img src="https://i.ytimg.com/vi/DM_b95zERsI/hqdefault.jpg" alt="EP 264 thumbnail">
+          <span class="rt">The 3 Numbers Every Business Owner Must Track</span>
+          <span class="rfoot"><span class="rwhy">Also covers: cash flow</span><span class="rtag">EP 264</span></span>
+        </a>
+        <a class="relcard" href="episode-282.html">
+          <img src="https://i.ytimg.com/vi/nC_JkW320Tw/hqdefault.jpg" alt="EP 282 thumbnail">
+          <span class="rt">The Business of Gift Cards</span>
+          <span class="rfoot"><span class="rwhy">Also covers: cash flow</span><span class="rtag">EP 282</span></span>
+        </a>
+        <a class="relcard" href="episode-283.html">
+          <img src="https://i.ytimg.com/vi/le7HuIBq6Ow/hqdefault.jpg" alt="EP 283 thumbnail">
+          <span class="rt">What Real Budget Reform for Young Australians Would Actually Look Like</span>
+          <span class="rfoot"><span class="rwhy">29 June 2026</span><span class="rtag">EP 283</span></span>
+        </a>
+        <a class="relcard" href="episode-281.html">
+          <img src="https://i.ytimg.com/vi/X-sSC-WROOQ/hqdefault.jpg" alt="EP 281 thumbnail">
+          <span class="rt">How to Know If Your Skills Transfer in an AI World</span>
+          <span class="rfoot"><span class="rwhy">15 June 2026</span><span class="rtag">EP 281</span></span>
+        </a>
+        <a class="relcard" href="episode-280.html">
+          <img src="https://i.ytimg.com/vi/sppkdu-w5jU/hqdefault.jpg" alt="EP 280 thumbnail">
+          <span class="rt">Victoria Owes $199 Billion</span>
+          <span class="rfoot"><span class="rwhy">8 June 2026</span><span class="rtag">EP 280</span></span>
+        </a>
+        <a class="relcard" href="episode-279.html">
+          <img src="https://i.ytimg.com/vi/SkVVJ7VzjuI/hqdefault.jpg" alt="EP 279 thumbnail">
+          <span class="rt">The Bank of Mum and Dad</span>
+          <span class="rfoot"><span class="rwhy">1 June 2026</span><span class="rtag">EP 279</span></span>
+        </a>
+      </div>
+      <div class="reldots" id="reldots"></div>
+    </div>
+
+    <div class="broughtby">
+      <div class="foot-label">Brought to you by</div>
+      <div class="sponsors">
+        <a href="https://www.inovayt.com.au/" target="_blank" rel="noopener"><img src="assets/inovayt-white.png" alt="Inovayt"></a>
+        <a href="https://futureadvisory.com.au/" target="_blank" rel="noopener"><img src="assets/future-advisory-white.png" alt="Future Advisory"></a>
+      </div>
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="produced">
+      <div class="foot-label">Produced by</div>
+      <a href="https://www.vidpod.com.au/" target="_blank" rel="noopener"><img src="assets/vidpod-white.png" alt="VIDPOD"></a>
+    </div>
+    <div class="copyright">© 2026 The Numbers Game</div>
+  </footer>
+
+  <script>
+    var VIDEO='V-10kMQrsDM';
+    var CHAPTERS=[
+      {t:"00:00",s:0,title:"Intro"},
+      {t:"00:26",s:26,title:"The Most Expensive Day In Small Business History"},
+      {t:"00:56",s:56,title:"Everything Hitting Small Business On 1 July"},
+      {t:"03:13",s:193,title:"Why 33,500 Businesses Disappeared"},
+      {t:"04:35",s:275,title:"The Card Surcharge Ban Hitting 1 October"},
+      {t:"06:22",s:382,title:"The Fuel And Wage Hit Of 1 July"},
+      {t:"07:36",s:456,title:"How Payday Super Killed Quarterly Cash Flow"},
+      {t:"09:59",s:599,title:"Why Power Bills Just Jumped 22.5%"},
+      {t:"13:19",s:799,title:"The $50,000 Hit On 10 Staff"},
+      {t:"14:27",s:867,title:"The Bendel Case Explained"},
+      {t:"19:17",s:1157,title:"The 30% Trust Tax Coming In 2028"},
+      {t:"25:22",s:1522,title:"Why Selling Assets Just Got More Taxing"},
+      {t:"27:17",s:1637,title:"Why Foreign Investors Pay Less Tax Than You"},
+      {t:"29:27",s:1767,title:"Jase's 7-Step Game Plan"}
+    ];
+    var QUESTIONS=[
+      {q:"How many small businesses has Australia lost?",s:91},
+      {q:"When is the credit card surcharge ban in Australia?",s:275},
+      {q:"How does payday super work?",s:456},
+      {q:"How should I use a business line of credit?",s:502},
+      {q:"Why did electricity prices jump in 2026?",s:599},
+      {q:"How much do the 1 July changes cost a small business?",s:799},
+      {q:"What is the 30% minimum tax on family trusts?",s:1157},
+      {q:"How does the trust tax hit small family businesses?",s:1212},
+      {q:"Why do foreign investors pay less capital gains tax than Australians?",s:1637},
+      {q:"How do I protect my business against rising costs?",s:1887}
+    ];
+
+    var chEl=document.getElementById('chapters');
+    CHAPTERS.forEach(function(c){var b=document.createElement('button');b.className='chapter';b.onclick=function(){startAt(c.s)};b.innerHTML='<span class="tc">'+c.t+'</span><span class="cx">'+c.title+'</span>';chEl.appendChild(b);});
+    document.getElementById('chcount').textContent=CHAPTERS.length;
+    var qEl=document.getElementById('qa');
+    QUESTIONS.forEach(function(q){var b=document.createElement('button');b.className='q';b.onclick=function(){startAt(q.s)};b.innerHTML='<span class="qm">?</span><span class="qx">'+q.q+'</span><span class="go">›</span>';qEl.appendChild(b);});
+    document.getElementById('qcount').textContent=QUESTIONS.length;
+
+    /* Mobile nav dropdown. */
+    var burger=document.getElementById('navburger'), navdrop=document.getElementById('navdrop');
+    if(burger&&navdrop){burger.addEventListener('click',function(){
+      navdrop.hidden=!navdrop.hidden;
+      burger.setAttribute('aria-expanded', navdrop.hidden?'false':'true');
+    });}
+
+    /* Voice-note button reveals the recorder; × tucks it away. */
+    var vbtn=document.getElementById('vbtn'), vslot=document.getElementById('vslot'), vclose=document.getElementById('vclose');
+    if(vbtn&&vslot){vbtn.addEventListener('click',function(){vslot.hidden=!vslot.hidden;});}
+    if(vclose&&vslot){vclose.addEventListener('click',function(){vslot.hidden=true;});}
+
+    /* Keep-exploring dots: only shown when the strip actually scrolls (mobile). */
+    var rg=document.querySelector('.relgrid'), rd=document.getElementById('reldots');
+    if(rg&&rd){
+      var relCards=rg.querySelectorAll('.relcard');
+      relCards.forEach(function(){rd.appendChild(document.createElement('span'))});
+      var updDots=function(){
+        var scrollable=rg.scrollWidth>rg.clientWidth+4;
+        rd.style.display=scrollable?'flex':'none';
+        if(!scrollable)return;
+        var i=Math.round(rg.scrollLeft/(rg.scrollWidth-rg.clientWidth)*(relCards.length-1));
+        rd.querySelectorAll('span').forEach(function(s,n){s.classList.toggle('on',n===i)});
+      };
+      rg.addEventListener('scroll',updDots,{passive:true});
+      window.addEventListener('resize',updDots);
+      updDots();
+    }
+
+    /* Explore tabs: swap the visible panel; the row stays put so you never lose your place. */
+    var tabBtns=document.querySelectorAll('.tabbtn');
+    tabBtns.forEach(function(b){
+      b.addEventListener('click',function(){
+        tabBtns.forEach(function(o){o.classList.remove('on')});
+        document.querySelectorAll('.tpanel').forEach(function(p){p.hidden=true});
+        b.classList.add('on');
+        document.getElementById(b.getAttribute('data-panel')).hidden=false;
+      });
+    });
+
+    /* YouTube: clean facade, then real player on demand. Seek without yanking to top. */
+    var player=null, ready=false, apiReady=false, pending=null;
+    window.onYouTubeIframeAPIReady=function(){apiReady=true; if(pending!=null){var s=pending;pending=null;createPlayer(s);}};
+    function createPlayer(sec){
+      var wrap=document.getElementById('player'); wrap.innerHTML='<div id="yt"></div>';
+      player=new YT.Player('yt',{videoId:VIDEO,playerVars:{autoplay:1,rel:0,modestbranding:1,playsinline:1,start:Math.floor(sec||0)},events:{onReady:function(){ready=true;}}});
+    }
+    function nudge(){
+      var p=document.getElementById('player-wrap'), r=p.getBoundingClientRect();
+      if(r.bottom<80 || r.top>window.innerHeight-90){ p.scrollIntoView({behavior:'smooth',block:'start'}); }
+    }
+    function startAt(sec){
+      nudge();
+      if(player&&ready){ player.seekTo(sec,true); player.playVideo(); return; }
+      if(apiReady){ createPlayer(sec); } else { pending=sec; }
+    }
+    document.getElementById('facade').addEventListener('click',function(){startAt(0);});
+    (function(){var s=document.createElement('script');s.src='https://www.youtube.com/iframe_api';document.head.appendChild(s);})();
+  </script>
+</body>
+</html>
