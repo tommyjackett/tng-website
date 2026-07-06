@@ -105,6 +105,8 @@
     background:var(--mint);color:#08210f;font-family:var(--sans);font-weight:800;font-size:13px;letter-spacing:.05em;text-transform:uppercase;transition:.15s}
   .servebtn:hover{filter:brightness(1.06);transform:translateY(-1px);box-shadow:0 12px 30px rgba(122,217,168,.25)}
   .servebtn:disabled{opacity:.4;cursor:default;transform:none;box-shadow:none}
+  .servebtn.clear{background:none;border:1px solid rgba(255,255,255,.35);color:rgba(255,255,255,.88)}
+  .servebtn.clear:hover{border-color:var(--mint);color:var(--mint);box-shadow:none}
 
   /* the serve: player + moment cards */
   .serve{display:none;margin-top:26px}
@@ -120,6 +122,7 @@
   .nowplaying b{color:var(--white);font-weight:600}
   .nowplaying a{color:var(--mint);text-decoration:none;font-weight:600}
   .nowplaying a:hover{text-decoration:underline}
+  .npdesc{display:block;color:var(--muted);font-size:12.5px;line-height:1.5;margin-top:4px}
   .mrow{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding-bottom:6px;scrollbar-width:none}
   .mrow::-webkit-scrollbar{display:none}
   .mcard{flex:0 0 56%;max-width:250px;scroll-snap-align:start;background:var(--card);border:1px solid var(--line);padding:12px;cursor:pointer;text-align:left;font-family:inherit;color:inherit;transition:.15s;display:flex;flex-direction:column;gap:8px}
@@ -308,8 +311,10 @@
     if(i>-1){selTopics.splice(i,1);btn.classList.remove('on');selSubs=selSubs.filter(function(s){return s.topic!==t});}
     else{selTopics.push(t);btn.classList.add('on');}
     renderSubchips();
+    var active=document.getElementById('serve').classList.contains('show');
+    if(active&&!selTopics.length){resetAll();return;}
     document.getElementById('serve-btn').disabled=selTopics.length===0;
-    if(document.getElementById('serve').classList.contains('show')&&selTopics.length) serve(true);
+    if(active&&selTopics.length) serve(true);
   }
   function renderSubchips(){
     var box=document.getElementById('sub-chips'); box.innerHTML=''; box.classList.toggle('show',selTopics.length>0);
@@ -345,7 +350,8 @@
     eligible().forEach(function(m){
       if(picks.length>=SERVE) return;
       var k=m.subtopic||m.topic;
-      if((perSub[k]||0)>=PER_SUB) return;
+      var explicit=selSubs.some(function(x){return x.topic===m.topic&&x.sub===(m.subtopic||'General')});
+      if(!explicit&&(perSub[k]||0)>=PER_SUB) return;
       perSub[k]=(perSub[k]||0)+1; picks.push(m);
     });
     if(!picks.length&&!currentQueue.length){document.getElementById('drynote').textContent="That's the best of it for now. Try another topic.";return;}
@@ -358,6 +364,8 @@
     document.getElementById('more-btn').style.display=remaining?'':'none';
     document.getElementById('drynote').textContent=remaining?'':"That's the best of it for now. Try another topic.";
     if(firstServe){ playMoment(0,false); document.getElementById('serve').scrollIntoView({behavior:'smooth',block:'nearest'}); }
+    var btn=document.getElementById('serve-btn');
+    btn.classList.add('clear'); btn.textContent='Clear and start again'; btn.disabled=false;
   }
   function renderQueue(){
     var row=document.getElementById('mrow'); row.innerHTML='';
@@ -376,8 +384,9 @@
     var fac=document.getElementById('mfacade');
     if(!fac.hidden) fac.style.backgroundImage="linear-gradient(rgba(10,6,30,.35),rgba(10,6,30,.35)),url('https://i.ytimg.com/vi/"+m.youtubeId+"/maxresdefault.jpg')";
     var np=document.getElementById('nowplaying');
-    np.innerHTML='Now playing: <b></b> · '+fmtDur(m.endSec-m.startSec)+' &nbsp; <a href="episode-'+m.episodeNumber+'.html">From EP '+m.episodeNumber+' — watch the full episode →</a>';
-    np.querySelector('b').textContent=m.questionAsked||m.title;
+    var num=(currentIdx<9?'0':'')+(currentIdx+1);
+    np.innerHTML='Now playing <b>'+num+'</b> · '+fmtDur(m.endSec-m.startSec)+' &nbsp; <a href="episode-'+m.episodeNumber+'.html">From EP '+m.episodeNumber+' — watch the full episode →</a><span class="npdesc"></span>';
+    np.querySelector('.npdesc').textContent=m.description||m.questionAsked||'';
     [].forEach.call(document.querySelectorAll('.mcard'),function(c,i){c.classList.toggle('playing',currentQueue[i]===m)});
   }
   var currentIdx=0;
@@ -403,7 +412,20 @@
   window.onYouTubeIframeAPIReady=function(){if(pendingSpec&&!player)createPlayer();};
   (function(){var s=document.createElement('script');s.src='https://www.youtube.com/iframe_api';document.head.appendChild(s);})();
 
-  document.getElementById('serve-btn').addEventListener('click',function(){serve(false)});
+  document.getElementById('serve-btn').addEventListener('click',function(){
+    var btn=document.getElementById('serve-btn');
+    if(btn.classList.contains('clear')) resetAll(); else serve(false);
+  });
+  function resetAll(){
+    selTopics=[];selSubs=[];servedIds=[];currentQueue=[];currentIdx=0;
+    document.querySelectorAll('#topic-chips .chip.on').forEach(function(c){c.classList.remove('on')});
+    renderSubchips();
+    document.getElementById('serve').classList.remove('show');
+    if(player){try{player.destroy()}catch(e){} player=null;playerReady=false;}
+    var fac=document.getElementById('mfacade'); fac.hidden=false; fac.style.backgroundImage='';
+    var btn=document.getElementById('serve-btn');
+    btn.classList.remove('clear'); btn.textContent='Show me the moments'; btn.disabled=true;
+  }
   document.getElementById('more-btn').addEventListener('click',function(){serve(false)});
   </script>
 </body>
