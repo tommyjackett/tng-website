@@ -40,6 +40,7 @@
   - **Hook** → `<h1>`, purple `--purple` highlight band, Anton, `clamp(28px, 7vw, 52px)`, letter-spacing -0.5px.
   - **Payoff** → mint `--mint` highlight band, dark text, Anton, `clamp(16px, 4vw, 24px)`, 8px below the hook.
 - Band mechanics (do not change): highlight is a background band trimmed to 87% (hook) / 88% (payoff) of line height, vertically centred; wraps per-line via `box-decoration-break: clone`; hook and payoff first letters align via the shared `--inx` inset.
+- **Line balancing (`text-wrap: balance` on hook and payoff):** when a title wraps, the browser distributes words evenly across the lines — no one-word last lines (widows), at any viewport, for any length. Line breaks are never hand-picked; balancing is the only wrapping control.
 - Verified across all 24 current titles: 23 render as a 1–2-line hook. Guidance for future title writing: keep the pre-break part under ~65 characters (only EP 283 exceeds it → 3 lines, still clean).
 
 ## 4. PLAYER
