@@ -84,18 +84,20 @@
   }
   @media(prefers-reduced-motion:reduce){.banner video{display:none}.banner-logo img{animation:none;opacity:0}}
 
-  /* Section 2: the directive + doors (its own block, below the video) */
-  .wherestart{display:flex;flex-direction:column;align-items:center;gap:20px;text-align:center;
-    padding:30px 22px 110px}
-  @media(max-width:720px){.wherestart{padding:22px 22px 80px}}
-  .ws-line{font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.3px;
-    font-size:clamp(20px,2.6vw,32px);line-height:1.1;color:var(--white)}
-  .ws-doors{display:flex;gap:14px;flex-wrap:wrap;justify-content:center}
-  .bdoor{display:inline-block;font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.4px;
-    font-size:clamp(15px,1.7vw,21px);line-height:1;padding:.55em .75em .4em;text-decoration:none;transition:.15s}
-  .bdoor:hover{filter:brightness(1.07);transform:translateY(-2px);box-shadow:0 14px 34px rgba(0,0,0,.35)}
-  .bdoor.mint{background:var(--mint);color:#0a0a0a}
-  .bdoor.purple{background:var(--purple);color:var(--white)}
+  /* Section 2: the three pillar cards (below the video) */
+  .wherestart{max-width:var(--wrap);margin:0 auto;padding:34px 36px 110px}
+  @media(max-width:720px){.wherestart{padding:24px 22px 80px}}
+  .pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  .pillars>*{min-width:0}
+  @media(max-width:900px){.pillars{grid-template-columns:1fr}}
+  .pcard{display:flex;flex-direction:column;gap:10px;background:var(--card);border:1px solid var(--line);
+    padding:24px 24px 20px;text-decoration:none;transition:.15s}
+  .pcard:hover{background:var(--card-hi);border-color:rgba(122,217,168,.55);transform:translateY(-2px)}
+  .pcard .pn{font-family:var(--display);color:var(--mint);font-size:15px;letter-spacing:1px}
+  .pcard .ph{font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.3px;
+    font-size:clamp(18px,1.8vw,22px);line-height:1.2;color:var(--white)}
+  .pcard .pd{font-size:13.5px;color:var(--muted);line-height:1.55;margin:2px 0 14px}
+  .pcard .pa{margin-top:auto;color:var(--mint);font-size:17px;line-height:1}
   .about{display:flex;gap:28px;align-items:center}
   .podart{width:148px;height:148px;border-radius:18px;flex:none;
     box-shadow:0 24px 60px rgba(0,0,0,.55),0 4px 14px rgba(0,0,0,.4)}
@@ -103,6 +105,27 @@
   @media(max-width:900px){.about{gap:20px;align-items:flex-start}.podart{width:116px;height:116px;border-radius:14px}}
   .aboutsec{border-top:1px solid var(--line);margin-top:110px;padding:64px 0 0}
   @media(max-width:720px){.aboutsec{margin-top:80px;padding:48px 0 0}}
+
+  /* Section 5: this year's episodes grid (interim library, HOMEPAGE-PLAN card anatomy) */
+  .epsec{border-top:1px solid var(--line);margin-top:110px;padding:64px 0 0}
+  @media(max-width:720px){.epsec{margin-top:80px;padding:48px 0 0}}
+  .epsec h2{font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.2px;
+    font-size:clamp(28px,2.9vw,38px);line-height:1.25;text-wrap:balance}
+  .epsec h2 .hblk{background:var(--purple);color:var(--white);padding:.12em .42em .08em;
+    -webkit-box-decoration-break:clone;box-decoration-break:clone}
+  .epgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:30px}
+  .epgrid>*{min-width:0}
+  @media(max-width:1000px){.epgrid{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:560px){.epgrid{grid-template-columns:1fr}}
+  .ecard{display:flex;flex-direction:column;text-decoration:none;background:var(--card);border:1px solid var(--line);transition:.15s}
+  .ecard:hover{background:var(--card-hi);border-color:rgba(122,217,168,.55)}
+  .ecard img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block}
+  .ecard .et{font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.2px;
+    font-size:15px;line-height:1.35;color:var(--white);padding:12px 12px 0;text-wrap:balance}
+  .ecard .ef{margin-top:auto;display:flex;justify-content:space-between;align-items:flex-end;gap:8px;padding:12px}
+  .ecard .ed{font-size:12px;color:var(--mint)}
+  .ecard .ee{display:inline-block;background:#0a0a0a;color:var(--white);font-family:var(--display);
+    font-size:10.5px;letter-spacing:1.2px;text-transform:uppercase;padding:3px 7px 2px}
   .momentsec{border-top:1px solid var(--line);padding:110px 0 8px}
   @media(max-width:720px){.momentsec{padding:80px 0 8px}}
   .mgrid{display:grid;grid-template-columns:1fr 1fr;gap:48px;margin-top:4px;align-items:start}
@@ -212,7 +235,7 @@
     <div class="nav-in">
       <a class="brand" href="index.html" aria-label="The Numbers Game home"><img src="assets/tng-logo.png" alt="The Numbers Game"></a>
       <div class="navlinks">
-        <a href="episodes.html">Episodes</a>
+        <a href="#episodes">Episodes</a>
         <div class="navgroup">
           <a href="about.html">About</a>
           <div class="subnav">
@@ -228,7 +251,7 @@
       </button>
     </div>
     <div class="navdrop" id="navdrop" hidden>
-      <a href="episodes.html">Episodes</a>
+      <a href="#episodes">Episodes</a>
       <a href="about.html">About</a>
       <a class="sub" href="nick-reilly.html">Nick Reilly</a>
       <a class="sub" href="jason-robinson.html">Jason Robinson</a>
@@ -247,10 +270,25 @@
   </div>
 
   <div class="wherestart">
-    <p class="ws-line">Start here</p>
-    <div class="ws-doors">
-      <a class="bdoor mint" id="banner-latest" href="#">Latest episode</a>
-      <a class="bdoor purple" href="#goodbits">Choose your own adventure</a>
+    <div class="pillars">
+      <a class="pcard" id="banner-latest" href="#">
+        <span class="pn">01</span>
+        <span class="ph">Latest episode</span>
+        <p class="pd">The freshest episode we've dropped. Jump straight into this week's conversation.</p>
+        <span class="pa">&rarr;</span>
+      </a>
+      <a class="pcard" href="#goodbits">
+        <span class="pn">02</span>
+        <span class="ph">Choose your own adventure</span>
+        <p class="pd">Pick the topics you're into and we'll play you the standout moments. Not whole episodes, the exact bits inside them.</p>
+        <span class="pa">&rarr;</span>
+      </a>
+      <a class="pcard" href="#episodes">
+        <span class="pn">03</span>
+        <span class="ph">Explore every episode</span>
+        <p class="pd">Browse the full library and find whole episodes on the stuff you care about, newest first.</p>
+        <span class="pa">&darr;</span>
+      </a>
     </div>
   </div>
 
@@ -306,6 +344,11 @@
       </div>
     </div>
 
+    <div class="epsec" id="episodes">
+      <h2><span class="hblk">This year's episodes</span></h2>
+      <div class="epgrid" id="epgrid"></div>
+    </div>
+
     <div class="broughtby">
       <div class="foot-label">Brought to you by</div>
       <div class="sponsors">
@@ -355,6 +398,21 @@
     /* latest episode */
     var L=CAT[0];
     document.getElementById('banner-latest').href='episode-'+L.episodeNumber+'.html';
+
+    /* this year's episodes grid */
+    var eg=document.getElementById('epgrid');
+    CAT.forEach(function(e){
+      var a=document.createElement('a'); a.className='ecard'; a.href='episode-'+e.episodeNumber+'.html';
+      var im=document.createElement('img'); im.loading='lazy'; im.alt='';
+      im.src='https://i.ytimg.com/vi/'+e.youtubeId+'/hqdefault.jpg';
+      var t=document.createElement('span'); t.className='et'; t.textContent=e.title;
+      var f=document.createElement('span'); f.className='ef';
+      var d=document.createElement('span'); d.className='ed'; d.textContent=fmtDate(e.date);
+      var n=document.createElement('span'); n.className='ee'; n.textContent='EP '+e.episodeNumber;
+      f.appendChild(d); f.appendChild(n);
+      a.appendChild(im); a.appendChild(t); a.appendChild(f);
+      eg.appendChild(a);
+    });
 
 
     /* topic chips (inventory-gated) */
