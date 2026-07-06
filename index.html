@@ -73,26 +73,37 @@
   @media(max-width:720px){.banner{height:clamp(300px,73vw,420px)}}
   .banner video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
   .banner-tint{position:absolute;inset:-4px;background:rgba(44,27,138,.5)}
-  .banner-in{position:relative;z-index:1;max-width:var(--wrap);margin:0 auto;padding:0 36px;height:100%;
-    display:flex;flex-direction:column;justify-content:center;align-items:flex-start;gap:13px}
-  @media(max-width:720px){.banner-in{padding:0 22px;gap:10px}}
-  .bctas{display:flex;gap:12px;flex-wrap:wrap}
-  .bbtn{display:inline-flex;align-items:center;gap:8px;padding:13px 24px;border-radius:999px;text-decoration:none;
-    font-family:var(--sans);font-weight:800;font-size:12.5px;letter-spacing:.05em;text-transform:uppercase;transition:.15s}
-  .bbtn.solid{background:var(--mint);color:#08210f}
-  .bbtn.solid:hover{filter:brightness(1.06);transform:translateY(-1px);box-shadow:0 12px 30px rgba(122,217,168,.3)}
-  .bbtn.ghost{border:1px solid rgba(255,255,255,.55);color:var(--white);background:rgba(10,6,30,.25);backdrop-filter:blur(4px)}
-  .bbtn.ghost:hover{border-color:var(--mint);color:var(--mint)}
-  @media(max-width:720px){.bbtn{padding:11px 18px;font-size:11.5px}}
-  @media(prefers-reduced-motion:reduce){.banner video{display:none}}
+  .banner-logo{position:absolute;inset:0;z-index:1;display:flex;align-items:center;justify-content:center;pointer-events:none}
+  .banner-logo img{height:clamp(64px,11vw,130px);width:auto;opacity:0;
+    filter:drop-shadow(0 14px 40px rgba(0,0,0,.5));animation:logoPop 3.6s ease forwards}
+  @keyframes logoPop{
+    0%{opacity:0;transform:scale(.55) translateY(22px)}
+    18%{opacity:1;transform:scale(1) translateY(0)}
+    72%{opacity:1;transform:scale(1) translateY(0)}
+    100%{opacity:0;transform:scale(1.06) translateY(-14px)}
+  }
+  @media(prefers-reduced-motion:reduce){.banner video{display:none}.banner-logo img{animation:none;opacity:0}}
+
+  /* where-do-you-start doors (overlap the banner fade) */
+  .wherestart{position:relative;z-index:2;margin-top:clamp(-120px,-9vw,-64px);
+    display:flex;flex-direction:column;align-items:center;gap:18px;text-align:center;padding:0 22px}
+  .ws-line{font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.3px;
+    font-size:clamp(20px,2.6vw,32px);line-height:1.1;color:var(--white);text-shadow:0 4px 24px rgba(0,0,0,.55)}
+  .ws-doors{display:flex;gap:14px;flex-wrap:wrap;justify-content:center}
+  .bdoor{display:inline-block;font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.4px;
+    font-size:clamp(15px,1.7vw,21px);line-height:1;padding:.55em .75em .4em;text-decoration:none;transition:.15s}
+  .bdoor:hover{filter:brightness(1.07);transform:translateY(-2px);box-shadow:0 14px 34px rgba(0,0,0,.35)}
+  .bdoor.mint{background:var(--mint);color:#0a0a0a}
+  .bdoor.purple{background:var(--purple);color:var(--white)}
   .about{display:flex;gap:28px;align-items:center}
   .podart{width:148px;height:148px;border-radius:18px;flex:none;
     box-shadow:0 24px 60px rgba(0,0,0,.55),0 4px 14px rgba(0,0,0,.4)}
   .abouttext{color:var(--muted);font-size:15px;line-height:1.65;max-width:56ch}
   @media(max-width:900px){.about{gap:20px;align-items:flex-start}.podart{width:116px;height:116px;border-radius:14px}}
-  .aboutsec{border-top:1px solid var(--line);margin-top:64px;padding:48px 0 0}
-  .secline{border-top:1px solid var(--line);margin:52px 0 0}
-  .momentsec{padding:56px 0 8px}
+  .aboutsec{border-top:1px solid var(--line);margin-top:110px;padding:64px 0 0}
+  @media(max-width:720px){.aboutsec{margin-top:80px;padding:48px 0 0}}
+  .momentsec{padding:110px 0 8px}
+  @media(max-width:720px){.momentsec{padding:80px 0 8px}}
   .mgrid{display:grid;grid-template-columns:1fr 1fr;gap:48px;margin-top:4px;align-items:start}
   .mgrid>*{min-width:0}
   @media(max-width:900px){.mgrid{grid-template-columns:1fr;gap:34px}}
@@ -117,27 +128,6 @@
   .ph-card .mtag{background:#0a0a0a;color:var(--mint);font-family:var(--display);font-size:10px;letter-spacing:1px;text-transform:uppercase;padding:3px 7px 2px}
   .ph-card .mdur{font-size:11.5px;color:var(--mint)}
 
-  /* latest episode strip (slim, full-width) */
-  .lstrip{display:flex;align-items:center;gap:18px;margin-top:26px;padding:12px 16px 12px 12px;text-decoration:none;
-    background:var(--card);border:1px solid var(--line);transition:.15s}
-  .lstrip:hover{background:var(--card-hi);border-color:rgba(122,217,168,.55)}
-  .lstrip img{width:118px;aspect-ratio:16/9;object-fit:cover;display:block;flex:none}
-  .lstrip .lsnew{flex:none;background:var(--mint);color:#0a0a0a;font-family:var(--display);font-weight:400;
-    font-size:12px;letter-spacing:.6px;text-transform:uppercase;padding:6px 9px 4px}
-  .lstrip .lt{font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.2px;
-    font-size:16.5px;line-height:1.3;color:var(--white);min-width:0}
-  .lstrip .lsmeta{margin-left:auto;flex:none;display:flex;align-items:center;gap:14px}
-  .lstrip .ldate{font-size:12.5px;color:var(--mint)}
-  .lstrip .ltag{display:inline-block;background:#0a0a0a;color:var(--white);font-family:var(--display);font-size:11px;letter-spacing:1.2px;text-transform:uppercase;padding:3px 8px 2px}
-  .lstrip .lsarrow{flex:none;color:var(--mint);font-size:18px;line-height:1}
-  @media(max-width:720px){
-    .lstrip{flex-wrap:wrap;gap:12px;padding:12px}
-    .lstrip .lsnew{order:0}
-    .lstrip .lsmeta{order:1;width:auto}
-    .lstrip img{order:2;width:104px}
-    .lstrip .lt{order:3;font-size:14.5px;flex:1;min-width:0}
-    .lstrip .lsarrow{display:none}
-  }
 
   /* new-to-the-show feature */
   .momentsec h1{font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.2px;font-size:clamp(28px,2.9vw,38px);line-height:1.25;text-wrap:balance}
@@ -200,7 +190,7 @@
 
 
   /* ── Brought to you by + footer (template convention) ── */
-  .broughtby{text-align:center;margin-top:68px;margin-bottom:48px}
+  .broughtby{text-align:center;margin-top:100px;margin-bottom:64px}
   .foot-label{font-size:11px;font-weight:700;letter-spacing:.26em;text-transform:uppercase;color:var(--dim);margin-bottom:16px}
   .sponsors{display:flex;justify-content:center;align-items:center;gap:38px;flex-wrap:wrap}
   .sponsors a{display:inline-flex;transition:.15s}
@@ -250,23 +240,20 @@
       <source src="assets/banner-opener.mp4" type="video/mp4">
     </video>
     <div class="banner-tint"></div>
-    <div class="banner-in">
-      <div class="bctas">
-        <a class="bbtn solid" id="banner-latest" href="#">Latest episode</a>
-        <a class="bbtn ghost" href="#goodbits">Skip to the good bits &darr;</a>
-      </div>
+    <div class="banner-logo" aria-hidden="true">
+      <img src="assets/tng-logo.png" alt="">
+    </div>
+  </div>
+
+  <div class="wherestart">
+    <p class="ws-line">Where do you want to start?</p>
+    <div class="ws-doors">
+      <a class="bdoor mint" id="banner-latest" href="#">Latest episode</a>
+      <a class="bdoor purple" href="#goodbits">Choose your own adventure</a>
     </div>
   </div>
 
   <main class="wrap">
-
-    <a class="lstrip" id="latest-card" href="#">
-      <span class="lsnew">Latest episode</span>
-      <img id="latest-thumb" src="" alt="Latest episode thumbnail">
-      <span class="lt" id="latest-title"></span>
-      <span class="lsmeta"><span class="ltag" id="latest-tag"></span><span class="ldate" id="latest-date"></span></span>
-      <span class="lsarrow">&rarr;</span>
-    </a>
 
     <div class="momentsec" id="goodbits">
       <div class="mgrid">
@@ -367,11 +354,6 @@
     /* latest episode */
     var L=CAT[0];
     document.getElementById('banner-latest').href='episode-'+L.episodeNumber+'.html';
-    document.getElementById('latest-card').href='episode-'+L.episodeNumber+'.html';
-    document.getElementById('latest-thumb').src='https://i.ytimg.com/vi/'+L.youtubeId+'/maxresdefault.jpg';
-    document.getElementById('latest-title').textContent=L.title;
-    document.getElementById('latest-date').textContent=fmtDate(L.date);
-    document.getElementById('latest-tag').textContent='EP '+L.episodeNumber;
 
 
     /* topic chips (inventory-gated) */
