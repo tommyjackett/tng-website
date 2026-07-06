@@ -30,7 +30,8 @@
 
 ## Site pages
 
-*(none yet — Episodes, Contact, About, host pages, Home to come)*
+- [Homepage — hero, NEW TO THE SHOW moments feature, episodes grid](https://tommyjackett.github.io/tng-website/) — added 6 Jul 2026
+*(to come: Episodes page with search/filters, Contact, About, host pages)*
 
 ## Reference
 

@@ -1,0 +1,418 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Numbers Game — Business, Property, Wealth &amp; Finance Podcast</title>
+<meta name="description" content="The Numbers Game with Nick Reilly and Jason Robinson. 280+ episodes on business, property, tax and wealth. Pick a topic and we'll show you the best moments.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --purple:#585af3; --purple-dark:#2c1b8a; --mint:#7ad9a8;
+    --white:#ffffff; --muted:rgba(255,255,255,.60); --dim:rgba(255,255,255,.42);
+    --line:rgba(255,255,255,.12); --card:rgba(255,255,255,.05); --card-hi:rgba(255,255,255,.09);
+    --display:'Anton',Impact,'Helvetica Neue',sans-serif;
+    --sans:'Inter',system-ui,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif;
+    --wrap:1280px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:var(--sans); color:var(--white); line-height:1.6; -webkit-font-smoothing:antialiased;
+    background:#12093a;
+    background-image:
+      radial-gradient(1200px 600px at 82% -6%, rgba(88,90,243,.45) 0%, transparent 55%),
+      radial-gradient(900px 700px at 5% 8%, rgba(122,217,168,.10) 0%, transparent 50%),
+      linear-gradient(180deg,#2c1b8a 0%,#1a1150 28%,#100b34 62%,#0b0820 100%);
+    background-attachment:fixed;
+  }
+  a{color:inherit}
+  .wrap{max-width:var(--wrap);margin:0 auto;padding:0 36px}
+  @media(max-width:720px){.wrap{padding:0 22px}}
+
+  /* ── Navbar (homepage: no HOME item) ── */
+  .nav{position:sticky;top:0;z-index:50;background:linear-gradient(180deg,rgba(24,15,74,.92),rgba(24,15,74,.72));backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+  .nav-in{max-width:var(--wrap);margin:0 auto;padding:11px 36px;display:flex;align-items:center;justify-content:space-between}
+  @media(max-width:720px){.nav-in{padding:11px 22px}}
+  .brand{display:block;line-height:0}
+  .brand img{height:36px;width:auto;display:block}
+  .navlinks{display:flex;gap:28px;align-items:center}
+  .navlinks a{text-decoration:none;font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);transition:.15s}
+  .navlinks a:hover{color:var(--white)}
+  .navgroup{position:relative;display:flex;align-items:center}
+  .navgroup .subnav{display:none;position:absolute;top:100%;left:50%;transform:translateX(-50%);padding-top:14px;min-width:180px;z-index:60}
+  .navgroup:hover .subnav,.navgroup:focus-within .subnav{display:block}
+  .navgroup .subnav a{display:block;background:#180f4a;border:1px solid var(--line);border-top:0;padding:12px 16px;font-size:12px;color:rgba(255,255,255,.85)}
+  .navgroup .subnav a:first-child{border-top:1px solid var(--line)}
+  .navgroup .subnav a:hover{background:#221768;color:var(--white)}
+  .navburger{display:none;background:none;border:1px solid var(--line);padding:8px 10px;cursor:pointer;color:var(--white);transition:.15s}
+  .navburger:hover{border-color:rgba(122,217,168,.6)}
+  .navburger svg{width:20px;height:20px;fill:currentColor;display:block}
+  .navdrop{display:none}
+  @media(max-width:720px){
+    .navlinks{display:none}
+    .navburger{display:block}
+    .navdrop{display:block;position:absolute;left:0;right:0;top:100%;
+      background:#180f4a;border-bottom:1px solid var(--line);box-shadow:0 24px 50px rgba(0,0,0,.45)}
+    .navdrop[hidden]{display:none}
+    .navdrop a{display:block;padding:15px 22px;text-decoration:none;font-size:14px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:rgba(255,255,255,.9);border-bottom:1px solid rgba(255,255,255,.06)}
+    .navdrop a:last-child{border-bottom:0}
+    .navdrop a.sub{padding-left:42px;font-size:13px;color:rgba(255,255,255,.72)}
+  }
+
+  /* ── Section labels (mint block, template convention) ── */
+  .seclabel{display:inline-block;font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.5px;font-size:14.5px;background:var(--mint);color:#0a0a0a;padding:9px 13px 7px}
+
+  /* ── Hero: two columns ── */
+  .hero2{display:grid;grid-template-columns:2fr 3fr;gap:44px;padding:44px 0 10px;align-items:start}
+  .hero2>*{min-width:0} /* grid items must be allowed to shrink below content width */
+  @media(max-width:900px){.hero2{grid-template-columns:1fr;gap:40px;padding:30px 0 6px}
+    .latest{order:2}.newhere{order:1}}
+
+  /* latest episode card (locked card anatomy, scaled up) */
+  .latest .seclabel{margin-bottom:14px}
+  .lcard{display:flex;flex-direction:column;text-decoration:none;background:var(--card);border:1px solid var(--line);transition:.15s}
+  .lcard:hover{background:var(--card-hi);border-color:rgba(122,217,168,.55)}
+  .lcard img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block}
+  .lcard .lt{font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.2px;font-size:20px;line-height:1.3;color:var(--white);padding:14px 14px 0;text-wrap:balance}
+  .lcard .lfoot{margin-top:auto;display:flex;justify-content:space-between;align-items:flex-end;gap:8px;padding:14px}
+  .lcard .ldate{font-size:12.5px;color:var(--mint)}
+  .lcard .ltag{display:inline-block;background:#0a0a0a;color:var(--white);font-family:var(--display);font-size:11px;letter-spacing:1.2px;text-transform:uppercase;padding:3px 8px 2px}
+
+  /* new-to-the-show feature */
+  .newhere h1{font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.2px;font-size:clamp(30px,4.5vw,44px);line-height:1.05}
+  .newhere .sell{color:var(--muted);font-size:15.5px;line-height:1.6;margin:10px 0 22px;max-width:52ch}
+  .step{display:flex;gap:12px;align-items:baseline;margin:22px 0 12px}
+  .step .n{font-family:var(--display);color:var(--mint);font-size:17px}
+  .step .t{font-family:var(--display);color:var(--white);font-size:15px;text-transform:uppercase;letter-spacing:.5px}
+  .step .why{font-size:12px;color:var(--dim);margin-left:auto;text-align:right}
+  .chips{display:flex;flex-wrap:wrap;gap:8px}
+  .chip{font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.5px;font-size:13.5px;
+    color:var(--white);background:var(--purple);border:1px solid var(--purple);padding:9px 13px 7px;cursor:pointer;transition:.15s}
+  .chip:hover{filter:brightness(1.12)}
+  .chip.on{background:var(--mint);border-color:var(--mint);color:#0a0a0a}
+  .chip .ct{font-size:11px;opacity:.75;font-variant-numeric:tabular-nums}
+  .chip .ct::before{content:" · "}
+  .chip.more{background:none;border:1px solid rgba(255,255,255,.3);color:rgba(255,255,255,.8)}
+  .subchips{display:none;flex-wrap:wrap;gap:7px;margin-top:10px}
+  .subchips.show{display:flex}
+  .subchips .sl{width:100%;font-size:11.5px;color:var(--dim);font-family:var(--sans)}
+  .subchip{font-family:var(--sans);font-weight:600;font-size:12px;color:rgba(255,255,255,.85);
+    background:none;border:1px solid rgba(255,255,255,.3);padding:7px 11px;cursor:pointer;transition:.15s}
+  .subchip.on{border-color:var(--mint);color:var(--mint)}
+  .servebtn{display:inline-flex;align-items:center;gap:9px;margin-top:8px;padding:14px 26px;border-radius:999px;border:0;cursor:pointer;
+    background:var(--mint);color:#08210f;font-family:var(--sans);font-weight:800;font-size:13px;letter-spacing:.05em;text-transform:uppercase;transition:.15s}
+  .servebtn:hover{filter:brightness(1.06);transform:translateY(-1px);box-shadow:0 12px 30px rgba(122,217,168,.25)}
+  .servebtn:disabled{opacity:.4;cursor:default;transform:none;box-shadow:none}
+
+  /* the serve: player + moment cards */
+  .serve{display:none;margin-top:26px}
+  .serve.show{display:block}
+  .mplayer{position:relative;width:100%;padding-top:56.25%;background:#000;box-shadow:0 30px 70px rgba(0,0,0,.5),0 0 0 1px rgba(255,255,255,.06)}
+  .mplayer iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+  .nowplaying{font-size:13px;color:var(--muted);margin:10px 2px 14px}
+  .nowplaying b{color:var(--white);font-weight:600}
+  .mrow{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding-bottom:6px;scrollbar-width:none}
+  .mrow::-webkit-scrollbar{display:none}
+  .mcard{flex:0 0 62%;max-width:270px;scroll-snap-align:start;background:var(--card);border:1px solid var(--line);padding:11px;cursor:pointer;text-align:left;font-family:inherit;color:inherit;transition:.15s;display:flex;flex-direction:column}
+  .mcard:hover{background:var(--card-hi);border-color:rgba(122,217,168,.55)}
+  .mcard.playing{border-color:var(--mint)}
+  .mcard .mn{font-family:var(--display);color:var(--mint);font-size:13px;letter-spacing:1px}
+  .mcard .mtag{display:inline-block;background:#0a0a0a;color:var(--mint);font-family:var(--display);font-size:10px;letter-spacing:1px;text-transform:uppercase;padding:3px 7px 2px;margin:7px 0 8px;align-self:flex-start}
+  .mcard .mq{font-size:13px;font-weight:600;color:rgba(255,255,255,.92);line-height:1.4}
+  .mcard .md{margin-top:auto;padding-top:10px;font-size:11.5px;color:var(--mint);display:flex;justify-content:space-between;gap:8px}
+  .mcard .md a{color:var(--dim);text-decoration:none;font-weight:600}
+  .mcard .md a:hover{color:var(--white)}
+  .moreline{margin-top:14px;display:flex;align-items:center;gap:14px}
+  .morebtn{background:none;border:1px solid rgba(255,255,255,.3);color:rgba(255,255,255,.85);font-family:var(--display);text-transform:uppercase;letter-spacing:.5px;font-size:13px;padding:10px 16px 8px;cursor:pointer;transition:.15s}
+  .morebtn:hover{border-color:var(--mint);color:var(--mint)}
+  .drynote{font-size:12.5px;color:var(--dim)}
+
+  /* ── Episodes grid ── */
+  .epsec{margin-top:64px;padding-top:56px;border-top:1px solid var(--line)}
+  .epsec .seclabel{margin-bottom:18px}
+  .egrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:14px}
+  @media(max-width:720px){.egrid{grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:10px}}
+  .gcard{display:flex;flex-direction:column;text-decoration:none;background:var(--card);border:1px solid var(--line);transition:.15s}
+  .gcard:hover{background:var(--card-hi);border-color:rgba(122,217,168,.55)}
+  .gcard img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block}
+  .gcard .gt{font-size:12.5px;font-weight:600;color:rgba(255,255,255,.92);line-height:1.4;padding:8px 8px 0}
+  .gcard .gfoot{margin-top:auto;display:flex;justify-content:space-between;align-items:flex-end;gap:8px;padding:10px 8px 9px}
+  .gcard .gdate{font-size:11.5px;color:var(--mint)}
+  .gcard .gtag{display:inline-block;background:#0a0a0a;color:var(--white);font-family:var(--display);font-size:10px;letter-spacing:1.2px;text-transform:uppercase;padding:3px 7px 2px}
+
+  /* ── Brought to you by + footer (template convention) ── */
+  .broughtby{text-align:center;margin-top:68px;margin-bottom:48px}
+  .foot-label{font-size:11px;font-weight:700;letter-spacing:.26em;text-transform:uppercase;color:var(--dim);margin-bottom:16px}
+  .sponsors{display:flex;justify-content:center;align-items:center;gap:38px;flex-wrap:wrap}
+  .sponsors a{display:inline-flex;transition:.15s}
+  .sponsors a:hover{transform:translateY(-1px)}
+  .sponsors img{height:34px;width:auto;opacity:.92}
+  .sponsors a:hover img{opacity:1}
+  footer{border-top:1px solid var(--line);margin-top:6px;padding:48px 20px 58px;text-align:center}
+  .produced{margin-top:0}
+  .produced a{display:inline-flex;transition:.15s}
+  .produced a:hover img{opacity:1}
+  .produced img{height:30px;width:auto;opacity:.95}
+  .copyright{margin-top:28px;font-size:12px;color:var(--dim)}
+</style>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-in">
+      <a class="brand" href="index.html" aria-label="The Numbers Game home"><img src="assets/tng-logo.png" alt="The Numbers Game"></a>
+      <div class="navlinks">
+        <a href="#episodes">Episodes</a>
+        <div class="navgroup">
+          <a href="about.html">About</a>
+          <div class="subnav">
+            <a href="about.html">The show</a>
+            <a href="nick-reilly.html">Nick Reilly</a>
+            <a href="jason-robinson.html">Jason Robinson</a>
+          </div>
+        </div>
+        <a href="contact.html">Contact</a>
+      </div>
+      <button class="navburger" id="navburger" type="button" aria-label="Menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24"><path d="M3 6h18v2H3zM3 11h18v2H3zM3 16h18v2H3z"/></svg>
+      </button>
+    </div>
+    <div class="navdrop" id="navdrop" hidden>
+      <a href="#episodes">Episodes</a>
+      <a href="about.html">About</a>
+      <a class="sub" href="nick-reilly.html">Nick Reilly</a>
+      <a class="sub" href="jason-robinson.html">Jason Robinson</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+
+  <main class="wrap">
+
+    <div class="hero2">
+      <div class="latest">
+        <span class="seclabel">Latest episode</span>
+        <a class="lcard" id="latest-card" href="#">
+          <img id="latest-thumb" src="" alt="Latest episode thumbnail">
+          <span class="lt" id="latest-title"></span>
+          <span class="lfoot"><span class="ldate" id="latest-date"></span><span class="ltag" id="latest-tag"></span></span>
+        </a>
+      </div>
+
+      <div class="newhere">
+        <h1>New to the show?</h1>
+        <p class="sell" id="sell-line">280+ episodes. Hundreds of hours. Pick what interests you and start watching.</p>
+
+        <div class="step"><span class="n">01</span><span class="t">Pick what interests you</span><span class="why">tap as many as you like</span></div>
+        <div class="chips" id="topic-chips"></div>
+        <div class="subchips" id="sub-chips"></div>
+
+        <div class="step"><span class="n">02</span><span class="t">Get the best bits</span><span class="why">5 standout moments</span></div>
+        <button class="servebtn" id="serve-btn" type="button" disabled>Show me the moments</button>
+
+        <div class="serve" id="serve">
+          <div class="step" style="margin-top:0"><span class="n">03</span><span class="t">Watch. Swipe. Repeat.</span></div>
+          <div class="mplayer"><div id="mplayer-slot"></div></div>
+          <p class="nowplaying" id="nowplaying"></p>
+          <div class="mrow" id="mrow"></div>
+          <div class="moreline">
+            <button class="morebtn" id="more-btn" type="button">Show me more</button>
+            <span class="drynote" id="drynote"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="epsec" id="episodes">
+      <span class="seclabel">This year's episodes</span>
+      <div class="egrid" id="egrid"></div>
+    </div>
+
+    <div class="broughtby">
+      <div class="foot-label">Brought to you by</div>
+      <div class="sponsors">
+        <a href="https://www.inovayt.com.au/" target="_blank" rel="noopener"><img src="assets/inovayt-white.png" alt="Inovayt"></a>
+        <a href="https://futureadvisory.com.au/" target="_blank" rel="noopener"><img src="assets/future-advisory-white.png" alt="Future Advisory"></a>
+      </div>
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="produced">
+      <div class="foot-label">Produced by</div>
+      <a href="https://www.vidpod.com.au/" target="_blank" rel="noopener"><img src="assets/vidpod-white.png" alt="VIDPOD"></a>
+    </div>
+    <div class="copyright">© 2026 The Numbers Game</div>
+  </footer>
+
+  <script>
+  /* Mobile nav */
+  var burger=document.getElementById('navburger'), navdrop=document.getElementById('navdrop');
+  if(burger&&navdrop){burger.addEventListener('click',function(){
+    navdrop.hidden=!navdrop.hidden;
+    burger.setAttribute('aria-expanded', navdrop.hidden?'false':'true');
+  });}
+
+  /* ── Data-driven homepage. Rules live in HOMEPAGE-PLAN.md. ── */
+  var MIN_SCORE=80, MIN_DUR=60, CHIP_MIN=5, LEAD_CHIPS=8, SERVE=5, PER_SUB=2;
+  var CAT=[], POOL=[], byTopic={}, selTopics=[], selSubs=[], servedIds=[], player=null, playerReady=false, currentQueue=[];
+
+  function fmtDate(iso){var d=new Date(iso+'T00:00:00');return d.getDate()+' '+d.toLocaleString('en-AU',{month:'long'})+' '+d.getFullYear();}
+  function fmtDur(s){var m=Math.floor(s/60),r=s%60;return m>0?(m+'m '+(r>0?r+'s':'')).trim():r+'s';}
+  function hookOf(t){var seps=[' | ',': '];for(var i=0;i<seps.length;i++){var p=t.indexOf(seps[i]);if(p>-1)return t.slice(0,p);}var q=t.search(/[?.] /);return q>-1?t.slice(0,q+1):t;}
+
+  Promise.all([
+    fetch('data/catalogue.json').then(function(r){return r.json()}),
+    fetch('data/search-index.json').then(function(r){return r.json()})
+  ]).then(function(res){
+    var today=new Date(); today.setHours(23,59,59);
+    CAT=res[0].filter(function(e){return new Date(e.date+'T00:00:00')<=today});
+    CAT.sort(function(a,b){return a.date<b.date?1:-1});
+    var released={}; CAT.forEach(function(e){released[e.episodeNumber]=true});
+    POOL=res[1].filter(function(m){return m.standalone>=MIN_SCORE&&m.durationSec>=MIN_DUR&&released[m.episodeNumber]});
+
+    /* sell line with live counts */
+    document.getElementById('sell-line').textContent='280+ episodes. '+res[1].length+' moments mapped. Pick what interests you and start watching.';
+
+    /* latest episode */
+    var L=CAT[0];
+    document.getElementById('latest-card').href='episode-'+L.episodeNumber+'.html';
+    document.getElementById('latest-thumb').src='https://i.ytimg.com/vi/'+L.youtubeId+'/maxresdefault.jpg';
+    document.getElementById('latest-title').textContent=L.title;
+    document.getElementById('latest-date').textContent=fmtDate(L.date);
+    document.getElementById('latest-tag').textContent='EP '+L.episodeNumber;
+
+    /* episodes grid */
+    var g=document.getElementById('egrid');
+    CAT.forEach(function(e){
+      var a=document.createElement('a'); a.className='gcard'; a.href='episode-'+e.episodeNumber+'.html';
+      a.innerHTML='<img loading="lazy" src="https://i.ytimg.com/vi/'+e.youtubeId+'/hqdefault.jpg" alt="EP '+e.episodeNumber+' thumbnail">'+
+        '<span class="gt"></span><span class="gfoot"><span class="gdate">'+fmtDate(e.date)+'</span><span class="gtag">EP '+e.episodeNumber+'</span></span>';
+      a.querySelector('.gt').textContent=hookOf(e.title);
+      g.appendChild(a);
+    });
+
+    /* topic chips (inventory-gated) */
+    POOL.forEach(function(m){
+      var t=m.topic; byTopic[t]=byTopic[t]||{count:0,subs:{}};
+      byTopic[t].count++;
+      var s=m.subtopic||'General'; byTopic[t].subs[s]=(byTopic[t].subs[s]||0)+1;
+    });
+    var topics=Object.keys(byTopic).filter(function(t){return byTopic[t].count>=CHIP_MIN})
+      .sort(function(a,b){return byTopic[b].count-byTopic[a].count});
+    var chipbox=document.getElementById('topic-chips');
+    function addChip(t){
+      var b=document.createElement('button'); b.type='button'; b.className='chip';
+      b.innerHTML='<span></span><span class="ct">'+byTopic[t].count+'</span>';
+      b.querySelector('span').textContent=t;
+      b.addEventListener('click',function(){toggleTopic(t,b)});
+      chipbox.appendChild(b);
+    }
+    topics.slice(0,LEAD_CHIPS).forEach(addChip);
+    if(topics.length>LEAD_CHIPS){
+      var more=document.createElement('button'); more.type='button'; more.className='chip more'; more.textContent='+ more topics';
+      more.addEventListener('click',function(){more.remove();topics.slice(LEAD_CHIPS).forEach(addChip);});
+      chipbox.appendChild(more);
+    }
+  });
+
+  function toggleTopic(t,btn){
+    var i=selTopics.indexOf(t);
+    if(i>-1){selTopics.splice(i,1);btn.classList.remove('on');selSubs=selSubs.filter(function(s){return s.topic!==t});}
+    else{selTopics.push(t);btn.classList.add('on');}
+    renderSubchips();
+    document.getElementById('serve-btn').disabled=selTopics.length===0;
+    if(document.getElementById('serve').classList.contains('show')&&selTopics.length) serve(true);
+  }
+  function renderSubchips(){
+    var box=document.getElementById('sub-chips'); box.innerHTML=''; box.classList.toggle('show',selTopics.length>0);
+    selTopics.forEach(function(t){
+      var subs=Object.keys(byTopic[t].subs);
+      if(subs.length<2) return;
+      var l=document.createElement('span'); l.className='sl'; l.textContent='Inside '+t.toLowerCase()+' — get specific if you like:'; box.appendChild(l);
+      subs.sort(function(a,b){return byTopic[t].subs[b]-byTopic[t].subs[a]}).forEach(function(s){
+        var b=document.createElement('button'); b.type='button'; b.className='subchip';
+        if(selSubs.some(function(x){return x.topic===t&&x.sub===s})) b.classList.add('on');
+        b.textContent=s+' · '+byTopic[t].subs[s];
+        b.addEventListener('click',function(){
+          var idx=selSubs.findIndex(function(x){return x.topic===t&&x.sub===s});
+          if(idx>-1){selSubs.splice(idx,1);b.classList.remove('on');}else{selSubs.push({topic:t,sub:s});b.classList.add('on');}
+          if(document.getElementById('serve').classList.contains('show')) serve(true);
+        });
+        box.appendChild(b);
+      });
+    });
+  }
+
+  function eligible(){
+    return POOL.filter(function(m){
+      if(selTopics.indexOf(m.topic)===-1) return false;
+      var subsForTopic=selSubs.filter(function(x){return x.topic===m.topic});
+      if(subsForTopic.length&&!subsForTopic.some(function(x){return x.sub===(m.subtopic||'General')})) return false;
+      return servedIds.indexOf(m.momentId)===-1;
+    }).sort(function(a,b){return b.standalone-a.standalone});
+  }
+  function serve(reset){
+    if(reset) servedIds=[];
+    var picks=[], perSub={};
+    eligible().forEach(function(m){
+      if(picks.length>=SERVE) return;
+      var k=m.subtopic||m.topic;
+      if((perSub[k]||0)>=PER_SUB) return;
+      perSub[k]=(perSub[k]||0)+1; picks.push(m);
+    });
+    if(!picks.length){document.getElementById('drynote').textContent="That's the best of it for now. Try another topic.";return;}
+    picks.forEach(function(m){servedIds.push(m.momentId)});
+    currentQueue=picks;
+    document.getElementById('drynote').textContent='';
+    document.getElementById('serve').classList.add('show');
+    renderQueue();
+    playMoment(0,false);
+    if(reset!==true) document.getElementById('serve').scrollIntoView({behavior:'smooth',block:'nearest'});
+  }
+  function renderQueue(){
+    var row=document.getElementById('mrow'); row.innerHTML='';
+    currentQueue.forEach(function(m,i){
+      var b=document.createElement('div'); b.className='mcard'; b.setAttribute('role','button'); b.tabIndex=0;
+      b.innerHTML='<span class="mn">0'+(i+1)+'</span><span class="mtag"></span><span class="mq"></span>'+
+        '<span class="md"><span>'+fmtDur(m.endSec-m.startSec)+'</span><a href="episode-'+m.episodeNumber+'.html">Full episode →</a></span>';
+      b.querySelector('.mtag').textContent=m.subtopic||m.topic;
+      b.querySelector('.mq').textContent=m.questionAsked||m.title;
+      b.addEventListener('click',function(ev){if(ev.target.tagName!=='A') playMoment(i,true)});
+      b.addEventListener('keydown',function(ev){if(ev.key==='Enter'&&ev.target.tagName!=='A') playMoment(i,true)});
+      row.appendChild(b);
+    });
+  }
+  function nowPlaying(m){
+    var np=document.getElementById('nowplaying');
+    np.innerHTML='Now playing: <b></b> · '+(m.subtopic||m.topic)+' · '+fmtDur(m.endSec-m.startSec);
+    np.querySelector('b').textContent=m.questionAsked||m.title;
+    [].forEach.call(document.querySelectorAll('.mcard'),function(c,i){c.classList.toggle('playing',currentQueue[i]===m)});
+  }
+  function playMoment(i,autoplay){
+    var m=currentQueue[i]; if(!m) return;
+    nowPlaying(m);
+    var spec={videoId:m.youtubeId,startSeconds:m.startSec,endSeconds:m.endSec};
+    if(player&&playerReady){ autoplay?player.loadVideoById(spec):player.cueVideoById(spec); return; }
+    pendingSpec={spec:spec,autoplay:autoplay};
+    if(window.YT&&YT.Player&&!player) createPlayer();
+  }
+  var pendingSpec=null;
+  function createPlayer(){
+    player=new YT.Player('mplayer-slot',{width:'100%',height:'100%',
+      playerVars:{rel:0,modestbranding:1,playsinline:1},
+      events:{onReady:function(){playerReady=true;
+        if(pendingSpec){pendingSpec.autoplay?player.loadVideoById(pendingSpec.spec):player.cueVideoById(pendingSpec.spec);pendingSpec=null;}
+      }}});
+  }
+  window.onYouTubeIframeAPIReady=function(){if(pendingSpec&&!player)createPlayer();};
+  (function(){var s=document.createElement('script');s.src='https://www.youtube.com/iframe_api';document.head.appendChild(s);})();
+
+  document.getElementById('serve-btn').addEventListener('click',function(){serve(false)});
+  document.getElementById('more-btn').addEventListener('click',function(){serve(false)});
+  </script>
+</body>
+</html>
