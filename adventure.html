@@ -101,6 +101,9 @@
   .step:first-child{margin-top:0}
   .step .n{font-family:var(--display);color:var(--mint);font-size:21px}
   .step .t{font-family:var(--display);color:var(--white);font-size:18px;text-transform:uppercase;letter-spacing:.5px}
+  .step .sarr{color:var(--mint);font-size:16px;line-height:1;animation:stepbob 1.6s ease-in-out infinite}
+  @keyframes stepbob{0%,100%{transform:translateY(0);opacity:.55}50%{transform:translateY(4px);opacity:1}}
+  @media(prefers-reduced-motion:reduce){.step .sarr{animation:none}}
   .chips{display:flex;flex-wrap:wrap;gap:12px}
   .chip{font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.5px;font-size:15px;
     color:#0a0a0a;background:var(--mint);border:1px solid var(--mint);padding:12px 18px 10px;cursor:pointer;transition:.15s}
@@ -216,15 +219,15 @@
     <div class="momentsec" id="goodbits">
       <div class="mgrid">
         <div class="mpick">
-          <div class="step"><span class="n">01</span><span class="t">Select a topic</span></div>
+          <div class="step"><span class="n">1</span><span class="t">Select a topic</span><span class="sarr" aria-hidden="true">&darr;</span></div>
           <div class="chips" id="topic-chips"></div>
-          <div class="step"><span class="n">02</span><span class="t">Get specific</span></div>
+          <div class="step"><span class="n">2</span><span class="t">Get specific</span><span class="sarr" aria-hidden="true">&darr;</span></div>
           <div class="subchips" id="sub-chips"></div>
-          <div class="step"><span class="n">03</span><span class="t">Get your moments</span></div>
+          <div class="step"><span class="n">3</span><span class="t">Get your moments</span><span class="sarr" aria-hidden="true">&darr;</span></div>
           <button class="servebtn" id="serve-btn" type="button" disabled>Show me the moments</button>
         </div>
         <div class="mwatch">
-          <div class="step"><span class="n">04</span><span class="t">Play your moments</span></div>
+          <div class="step"><span class="n">4</span><span class="t">Play your moments</span></div>
           <div class="watch-ph" id="watch-ph" aria-hidden="true">
             <div class="ph-screen">
               <span class="mplay" aria-hidden="true"></span>
