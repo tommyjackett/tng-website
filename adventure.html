@@ -93,9 +93,9 @@
   .ph-screen::before{content:"";position:absolute;inset:0;
     background:linear-gradient(rgba(18,10,55,.5),rgba(10,6,30,.6)),url('assets/hosts-still.jpg') center/cover no-repeat;
     filter:blur(10px);transform:scale(1.1)}
-  .ph-caption{position:absolute;inset:0;z-index:2;display:flex;align-items:center;justify-content:center;padding:22px}
-  .ph-caption .pcx{font-family:var(--sans);font-weight:600;font-size:15px;letter-spacing:.12em;text-transform:uppercase;
-    color:rgba(255,255,255,.95);text-align:center;line-height:1.7;text-shadow:0 2px 16px rgba(0,0,0,.65)}
+  .ph-screen .mplay{position:absolute;z-index:1;inset:0;margin:auto;width:40px;height:40px;
+    filter:blur(6px);box-shadow:0 10px 24px rgba(0,0,0,.5)}
+  .ph-screen .mplay::after{border-width:6px 0 6px 10px;margin-left:3px}
 
   .step{display:flex;gap:13px;align-items:baseline;margin:38px 0 16px}
   .step:first-child{margin-top:0}
@@ -224,9 +224,10 @@
           <button class="servebtn" id="serve-btn" type="button" disabled>Show me the moments</button>
         </div>
         <div class="mwatch">
+          <div class="step"><span class="n">04</span><span class="t">Play your moments</span></div>
           <div class="watch-ph" id="watch-ph" aria-hidden="true">
             <div class="ph-screen">
-              <div class="ph-caption"><span class="pcx">Your moments will play here</span></div>
+              <span class="mplay" aria-hidden="true"></span>
             </div>
           </div>
           <div class="serve" id="serve">

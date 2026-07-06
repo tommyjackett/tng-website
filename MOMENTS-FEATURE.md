@@ -53,11 +53,11 @@ PER_SUB   = 2     // variety cap per subtopic within a deal
 
 ## 5. The placeholder (resting state = exact preview)
 
-Deliberately minimal (simplified with Tommy, 6 Jul): a 16:9 screen using the hosts still under the purple tint, **heavily blurred** (image + tint fused in ONE layer so edges can't mismatch; the strong blur both says "placeholder" and differentiates from the page banner, which uses the same still lightly blurred), with a **single centred caption** in plain sans: `YOUR MOMENTS WILL PLAY HERE`. Nothing else — no play indicator, no ghost cards, no explainer line.
+Deliberately minimal (simplified with Tommy, 6 Jul): a 16:9 screen using the hosts still under the purple tint, **heavily blurred** (image + tint fused in ONE layer so edges can't mismatch; the strong blur both says "placeholder" and differentiates from the page banner, which uses the same still lightly blurred), with a **small play indicator centred and blurred into the still**. No caption, no ghost cards, no explainer line — the step label above the screen (`04 · PLAY YOUR MOMENTS`) does the talking.
 
 ## 6. Layout
 
-- **Desktop:** two even panes. Left = titled control column (black-block heading `SKIP TO THE GOOD BITS`, sell copy, steps 01 SELECT A TOPIC / 02 GET SPECIFIC / 03 GET YOUR MOMENTS + button). Right = the screen. Nothing spans both panes.
+- **Desktop:** two even panes. Left = control column (steps 01 SELECT A TOPIC / 02 GET SPECIFIC / 03 GET YOUR MOMENTS + button). Right = step 04 PLAY YOUR MOMENTS above the screen (the four-step process spans both panes — Tommy, 6 Jul). Page title + sell live in the cinematic banner above, not in the panes. Nothing else spans both panes.
 - **Mobile:** single stack in the same DOM order — title, sell, 01, 02, 03, button, then the screen and cards below.
 - Grid items carry `min-width:0` (the card strip otherwise blows the column wide).
 
