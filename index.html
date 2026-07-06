@@ -66,19 +66,15 @@
   .seclabel{display:inline-block;font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.5px;font-size:14.5px;background:var(--mint);color:#0a0a0a;padding:9px 13px 7px}
 
   /* ── Video banner (slim, full-bleed, tinted) ── */
-  .banner{position:relative;height:clamp(240px,32vw,460px);overflow:hidden;
+  .banner{position:relative;height:clamp(310px,42vw,600px);overflow:hidden;
     border-bottom:1px solid var(--line);background:url('assets/banner-poster.jpg') center/cover no-repeat}
-  @media(max-width:720px){.banner{height:clamp(230px,56vw,320px)}}
+  @media(max-width:720px){.banner{height:clamp(300px,73vw,420px)}}
   .banner video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-  .banner-tint{position:absolute;inset:0;
-    background:linear-gradient(180deg,rgba(88,90,243,.28) 0%,rgba(44,27,138,.42) 55%,rgba(18,9,58,.62) 100%)}
+  .banner-tint{position:absolute;inset:0;background:rgba(44,27,138,.5)}
   .banner-in{position:relative;z-index:1;max-width:var(--wrap);margin:0 auto;padding:0 36px;height:100%;
     display:flex;flex-direction:column;justify-content:center;align-items:flex-start;gap:13px}
   @media(max-width:720px){.banner-in{padding:0 22px;gap:10px}}
-  .banner .bhead{font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.3px;
-    font-size:clamp(24px,3.4vw,44px);line-height:1;background:var(--purple);color:var(--white);padding:.2em .5em .12em;
-    box-shadow:0 14px 40px rgba(0,0,0,.35)}
-  .bctas{display:flex;gap:12px;flex-wrap:wrap;margin-top:6px}
+  .bctas{display:flex;gap:12px;flex-wrap:wrap}
   .bbtn{display:inline-flex;align-items:center;gap:8px;padding:13px 24px;border-radius:999px;text-decoration:none;
     font-family:var(--sans);font-weight:800;font-size:12.5px;letter-spacing:.05em;text-transform:uppercase;transition:.15s}
   .bbtn.solid{background:var(--mint);color:#08210f}
@@ -253,7 +249,6 @@
     </video>
     <div class="banner-tint"></div>
     <div class="banner-in">
-      <span class="bhead">Get started here</span>
       <div class="bctas">
         <a class="bbtn solid" id="banner-latest" href="#">Latest episode</a>
         <a class="bbtn ghost" href="#goodbits">Skip to the good bits &darr;</a>
