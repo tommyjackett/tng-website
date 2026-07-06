@@ -32,7 +32,8 @@ Follow `schema/EPISODE-PROCESSING-GUIDE.md` + `schema/EXTRACTION-RULES.md`. In s
 ## Stage 4 — Generate the page (this repo)
 
 1. `python3 scripts/build_episode.py N` — builds `episode-N.html` from the master template (`episode-263.html`) applying every rule in `EPISODE-PAGE-TEMPLATE.md` (title modes, chapters, questions, discover-more selection, transcript). It validates before writing and refuses on any violation.
-2. Quick local preview if the change warrants it.
+2. `python3 scripts/verify_episode.py N` — independent audit: re-derives everything from source data and confirms the finished HTML matches, incl. no master-template leakage. Must print VERIFIED.
+3. Quick local preview if the change warrants it.
 
 ## Stage 5 — Ship
 

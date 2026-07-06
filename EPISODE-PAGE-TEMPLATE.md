@@ -159,9 +159,10 @@ Hairline + large gap after the listen row. Meaning: above = this episode, below 
 1. Copy `episode-263.html` → `episode-{N}.html`. Replace ONLY: title tag, meta description, EP tag, hook/payoff, youtubeId (facade image + JS `VIDEO`), summary, CHAPTERS array, QUESTIONS array, transcript block, facts (date, hosts, guest-if-any), Discover More cards (run the selection algorithm), copyright year if changed.
 2. Title split follows §3 exactly — no hand-chosen line breaks or mint words.
 3. Chapters/questions derived by §5b/§5c rules — no hand-curation without a noted override.
-4. Validation gate (§5, timestamp integrity #2): ranges + ordering pass, all links resolve to the patterns in the link map, exactly 6 Discover More cards, all from released episodes.
-5. Push via `scripts/push-live.sh episode-{N}.html` (verifies live == local byte-for-byte).
-6. Live spot-check: first + last chapter jump lands on the right words; swipe the Discover strip; open the voice recorder.
-7. Add the page to `LIVE-PAGES.md` (Tommy's click-through review list) and give him the live link in chat.
+4. Validation gate (§5, timestamp integrity #2): ranges + ordering pass, all links resolve to the patterns in the link map, exactly 6 Discover More cards, all from released episodes. (`build_episode.py` enforces this before writing.)
+5. **Independent audit:** `python3 scripts/verify_episode.py {N}` — re-derives every value from the source data and checks the finished HTML matches (chapters, questions, transcript round-trip, discover cards, video id, facts), including that nothing from the master template leaked through. Must print VERIFIED before pushing.
+6. Push via `scripts/push-live.sh episode-{N}.html` (verifies live == local byte-for-byte).
+7. Live spot-check: first + last chapter jump lands on the right words; swipe the Discover strip; open the voice recorder.
+8. Add the page to `LIVE-PAGES.md` (Tommy's click-through review list) and give him the live link in chat.
 
 **Never:** em dashes in copy · invented "similar" claims · unreleased episodes in Discover More · timecode links that leave the page · hand-typed timestamps · new CSS per episode.
