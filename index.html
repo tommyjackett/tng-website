@@ -65,15 +65,34 @@
   /* ── Section labels (mint block, template convention) ── */
   .seclabel{display:inline-block;font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.5px;font-size:14.5px;background:var(--mint);color:#0a0a0a;padding:9px 13px 7px}
 
-  /* ── Hero: two columns ── */
-  .hero-top{display:grid;grid-template-columns:3fr 2fr;gap:44px;padding:44px 0 8px;align-items:start}
-  .hero-top>*{min-width:0}
-  @media(max-width:900px){.hero-top{grid-template-columns:1fr;gap:36px;padding:30px 0 4px}}
+  /* ── Video banner (slim, full-bleed, tinted) ── */
+  .banner{position:relative;height:clamp(240px,32vw,460px);overflow:hidden;
+    border-bottom:1px solid var(--line);background:url('assets/banner-poster.jpg') center/cover no-repeat}
+  @media(max-width:720px){.banner{height:clamp(230px,56vw,320px)}}
+  .banner video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .banner-tint{position:absolute;inset:0;
+    background:linear-gradient(180deg,rgba(88,90,243,.28) 0%,rgba(44,27,138,.42) 55%,rgba(18,9,58,.62) 100%)}
+  .banner-in{position:relative;z-index:1;max-width:var(--wrap);margin:0 auto;padding:0 36px;height:100%;
+    display:flex;flex-direction:column;justify-content:center;align-items:flex-start;gap:13px}
+  @media(max-width:720px){.banner-in{padding:0 22px;gap:10px}}
+  .banner .bhead{font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.3px;
+    font-size:clamp(24px,3.4vw,44px);line-height:1;background:var(--purple);color:var(--white);padding:.2em .5em .12em;
+    box-shadow:0 14px 40px rgba(0,0,0,.35)}
+  .bctas{display:flex;gap:12px;flex-wrap:wrap;margin-top:6px}
+  .bbtn{display:inline-flex;align-items:center;gap:8px;padding:13px 24px;border-radius:999px;text-decoration:none;
+    font-family:var(--sans);font-weight:800;font-size:12.5px;letter-spacing:.05em;text-transform:uppercase;transition:.15s}
+  .bbtn.solid{background:var(--mint);color:#08210f}
+  .bbtn.solid:hover{filter:brightness(1.06);transform:translateY(-1px);box-shadow:0 12px 30px rgba(122,217,168,.3)}
+  .bbtn.ghost{border:1px solid rgba(255,255,255,.55);color:var(--white);background:rgba(10,6,30,.25);backdrop-filter:blur(4px)}
+  .bbtn.ghost:hover{border-color:var(--mint);color:var(--mint)}
+  @media(max-width:720px){.bbtn{padding:11px 18px;font-size:11.5px}}
+  @media(prefers-reduced-motion:reduce){.banner video{display:none}}
   .about{display:flex;gap:28px;align-items:center}
-  .podart{width:200px;height:200px;border-radius:22px;flex:none;
+  .podart{width:148px;height:148px;border-radius:18px;flex:none;
     box-shadow:0 24px 60px rgba(0,0,0,.55),0 4px 14px rgba(0,0,0,.4)}
   .abouttext{color:var(--muted);font-size:15px;line-height:1.65;max-width:56ch}
-  @media(max-width:900px){.about{gap:20px;align-items:flex-start}.podart{width:132px;height:132px;border-radius:16px}}
+  @media(max-width:900px){.about{gap:20px;align-items:flex-start}.podart{width:116px;height:116px;border-radius:14px}}
+  .aboutsec{border-top:1px solid var(--line);margin-top:64px;padding:48px 0 0}
   .secline{border-top:1px solid var(--line);margin:52px 0 0}
   .momentsec{padding:56px 0 8px}
   .mgrid{display:grid;grid-template-columns:1fr 1fr;gap:48px;margin-top:4px;align-items:start}
@@ -100,15 +119,27 @@
   .ph-card .mtag{background:#0a0a0a;color:var(--mint);font-family:var(--display);font-size:10px;letter-spacing:1px;text-transform:uppercase;padding:3px 7px 2px}
   .ph-card .mdur{font-size:11.5px;color:var(--mint)}
 
-  /* latest episode card (locked card anatomy, scaled up) */
-  .latest .seclabel{margin-bottom:14px}
-  .lcard{display:flex;flex-direction:column;text-decoration:none;background:var(--card);border:1px solid var(--line);transition:.15s}
-  .lcard:hover{background:var(--card-hi);border-color:rgba(122,217,168,.55)}
-  .lcard img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block}
-  .lcard .lt{font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.2px;font-size:20px;line-height:1.3;color:var(--white);padding:14px 14px 0;text-wrap:balance}
-  .lcard .lfoot{margin-top:auto;display:flex;justify-content:space-between;align-items:flex-end;gap:8px;padding:14px}
-  .lcard .ldate{font-size:12.5px;color:var(--mint)}
-  .lcard .ltag{display:inline-block;background:#0a0a0a;color:var(--white);font-family:var(--display);font-size:11px;letter-spacing:1.2px;text-transform:uppercase;padding:3px 8px 2px}
+  /* latest episode strip (slim, full-width) */
+  .lstrip{display:flex;align-items:center;gap:18px;margin-top:26px;padding:12px 16px 12px 12px;text-decoration:none;
+    background:var(--card);border:1px solid var(--line);transition:.15s}
+  .lstrip:hover{background:var(--card-hi);border-color:rgba(122,217,168,.55)}
+  .lstrip img{width:118px;aspect-ratio:16/9;object-fit:cover;display:block;flex:none}
+  .lstrip .lsnew{flex:none;background:var(--mint);color:#0a0a0a;font-family:var(--display);font-weight:400;
+    font-size:12px;letter-spacing:.6px;text-transform:uppercase;padding:6px 9px 4px}
+  .lstrip .lt{font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.2px;
+    font-size:16.5px;line-height:1.3;color:var(--white);min-width:0}
+  .lstrip .lsmeta{margin-left:auto;flex:none;display:flex;align-items:center;gap:14px}
+  .lstrip .ldate{font-size:12.5px;color:var(--mint)}
+  .lstrip .ltag{display:inline-block;background:#0a0a0a;color:var(--white);font-family:var(--display);font-size:11px;letter-spacing:1.2px;text-transform:uppercase;padding:3px 8px 2px}
+  .lstrip .lsarrow{flex:none;color:var(--mint);font-size:18px;line-height:1}
+  @media(max-width:720px){
+    .lstrip{flex-wrap:wrap;gap:12px;padding:12px}
+    .lstrip .lsnew{order:0}
+    .lstrip .lsmeta{order:1;width:auto}
+    .lstrip img{order:2;width:104px}
+    .lstrip .lt{order:3;font-size:14.5px;flex:1;min-width:0}
+    .lstrip .lsarrow{display:none}
+  }
 
   /* new-to-the-show feature */
   .momentsec h1{font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.2px;font-size:clamp(28px,2.9vw,38px);line-height:1.25;text-wrap:balance}
@@ -216,26 +247,31 @@
     </div>
   </nav>
 
-  <main class="wrap">
-
-    <div class="hero-top">
-      <div class="about">
-        <img class="podart" src="assets/podcast-art.jpg" alt="The Numbers Game podcast artwork">
-        <p class="abouttext">Thanks for stopping by. The Numbers Game is a weekly show about business, property, tax and money, hosted by financial planner Nick Reilly and accountant Jason Robinson. Real numbers, real talk, new episodes every Monday.</p>
-      </div>
-      <div class="latest">
-        <span class="seclabel">Latest episode</span>
-        <a class="lcard" id="latest-card" href="#">
-          <img id="latest-thumb" src="" alt="Latest episode thumbnail">
-          <span class="lt" id="latest-title"></span>
-          <span class="lfoot"><span class="ldate" id="latest-date"></span><span class="ltag" id="latest-tag"></span></span>
-        </a>
+  <div class="banner">
+    <video autoplay muted loop playsinline preload="auto" poster="assets/banner-poster.jpg" aria-hidden="true">
+      <source src="assets/banner-opener.mp4" type="video/mp4">
+    </video>
+    <div class="banner-tint"></div>
+    <div class="banner-in">
+      <span class="bhead">Get started here</span>
+      <div class="bctas">
+        <a class="bbtn solid" id="banner-latest" href="#">Latest episode</a>
+        <a class="bbtn ghost" href="#goodbits">Skip to the good bits &darr;</a>
       </div>
     </div>
+  </div>
 
-    <div class="secline"></div>
+  <main class="wrap">
 
-    <div class="momentsec">
+    <a class="lstrip" id="latest-card" href="#">
+      <span class="lsnew">Latest episode</span>
+      <img id="latest-thumb" src="" alt="Latest episode thumbnail">
+      <span class="lt" id="latest-title"></span>
+      <span class="lsmeta"><span class="ltag" id="latest-tag"></span><span class="ldate" id="latest-date"></span></span>
+      <span class="lsarrow">&rarr;</span>
+    </a>
+
+    <div class="momentsec" id="goodbits">
       <div class="mgrid">
         <div class="mpick">
           <h1><span class="hblk">Skip to the good bits</span></h1>
@@ -278,6 +314,12 @@
       </div>
     </div>
 
+    <div class="aboutsec">
+      <div class="about">
+        <img class="podart" src="assets/podcast-art.jpg" alt="The Numbers Game podcast artwork">
+        <p class="abouttext">Thanks for stopping by. The Numbers Game is a weekly show about business, property, tax and money, hosted by financial planner Nick Reilly and accountant Jason Robinson. Real numbers, real talk, new episodes every Monday.</p>
+      </div>
+    </div>
 
     <div class="broughtby">
       <div class="foot-label">Brought to you by</div>
@@ -327,6 +369,7 @@
 
     /* latest episode */
     var L=CAT[0];
+    document.getElementById('banner-latest').href='episode-'+L.episodeNumber+'.html';
     document.getElementById('latest-card').href='episode-'+L.episodeNumber+'.html';
     document.getElementById('latest-thumb').src='https://i.ytimg.com/vi/'+L.youtubeId+'/maxresdefault.jpg';
     document.getElementById('latest-title').textContent=L.title;
