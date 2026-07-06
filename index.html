@@ -68,8 +68,7 @@
   /* ── Hero: two columns ── */
   .hero2{display:grid;grid-template-columns:2fr 3fr;gap:44px;padding:44px 0 10px;align-items:start}
   .hero2>*{min-width:0} /* grid items must be allowed to shrink below content width */
-  @media(max-width:900px){.hero2{grid-template-columns:1fr;gap:40px;padding:30px 0 6px}
-    .latest{order:2}.newhere{order:1}}
+  @media(max-width:900px){.hero2{grid-template-columns:1fr;gap:40px;padding:30px 0 6px}}
 
   /* latest episode card (locked card anatomy, scaled up) */
   .latest .seclabel{margin-bottom:14px}
@@ -88,11 +87,11 @@
   .step .n{font-family:var(--display);color:var(--mint);font-size:17px}
   .step .t{font-family:var(--display);color:var(--white);font-size:15px;text-transform:uppercase;letter-spacing:.5px}
   .step .why{font-size:12px;color:var(--dim);margin-left:auto;text-align:right}
-  .chips{display:flex;flex-wrap:wrap;gap:8px}
-  .chip{font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.5px;font-size:13.5px;
-    color:var(--white);background:var(--purple);border:1px solid var(--purple);padding:9px 13px 7px;cursor:pointer;transition:.15s}
-  .chip:hover{filter:brightness(1.12)}
-  .chip.on{background:var(--mint);border-color:var(--mint);color:#0a0a0a}
+  .chips{display:flex;flex-wrap:wrap;gap:10px}
+  .chip{font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.5px;font-size:14px;
+    color:#0a0a0a;background:var(--mint);border:1px solid var(--mint);padding:10px 15px 8px;cursor:pointer;transition:.15s}
+  .chip:hover{filter:brightness(1.06)}
+  .chip.on{background:var(--purple);border-color:var(--purple);color:var(--white)}
   .chip .ct{font-size:11px;opacity:.75;font-variant-numeric:tabular-nums}
   .chip .ct::before{content:" · "}
   .chip.more{background:none;border:1px solid rgba(255,255,255,.3);color:rgba(255,255,255,.8)}
@@ -101,7 +100,7 @@
   .subchips .sl{width:100%;font-size:11.5px;color:var(--dim);font-family:var(--sans)}
   .subchip{font-family:var(--sans);font-weight:600;font-size:12px;color:rgba(255,255,255,.85);
     background:none;border:1px solid rgba(255,255,255,.3);padding:7px 11px;cursor:pointer;transition:.15s}
-  .subchip.on{border-color:var(--mint);color:var(--mint)}
+  .subchip.on{background:var(--purple);border-color:var(--purple);color:var(--white)}
   .servebtn{display:inline-flex;align-items:center;gap:9px;margin-top:8px;padding:14px 26px;border-radius:999px;border:0;cursor:pointer;
     background:var(--mint);color:#08210f;font-family:var(--sans);font-weight:800;font-size:13px;letter-spacing:.05em;text-transform:uppercase;transition:.15s}
   .servebtn:hover{filter:brightness(1.06);transform:translateY(-1px);box-shadow:0 12px 30px rgba(122,217,168,.25)}
@@ -114,34 +113,23 @@
   .mplayer iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
   .nowplaying{font-size:13px;color:var(--muted);margin:10px 2px 14px}
   .nowplaying b{color:var(--white);font-weight:600}
+  .nowplaying a{color:var(--mint);text-decoration:none;font-weight:600}
+  .nowplaying a:hover{text-decoration:underline}
   .mrow{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding-bottom:6px;scrollbar-width:none}
   .mrow::-webkit-scrollbar{display:none}
-  .mcard{flex:0 0 62%;max-width:270px;scroll-snap-align:start;background:var(--card);border:1px solid var(--line);padding:11px;cursor:pointer;text-align:left;font-family:inherit;color:inherit;transition:.15s;display:flex;flex-direction:column}
+  .mcard{flex:0 0 66%;max-width:290px;scroll-snap-align:start;background:var(--card);border:1px solid var(--line);padding:14px;cursor:pointer;text-align:left;font-family:inherit;color:inherit;transition:.15s;display:flex;flex-direction:column;gap:10px}
   .mcard:hover{background:var(--card-hi);border-color:rgba(122,217,168,.55)}
   .mcard.playing{border-color:var(--mint)}
-  .mcard .mn{font-family:var(--display);color:var(--mint);font-size:13px;letter-spacing:1px}
-  .mcard .mtag{display:inline-block;background:#0a0a0a;color:var(--mint);font-family:var(--display);font-size:10px;letter-spacing:1px;text-transform:uppercase;padding:3px 7px 2px;margin:7px 0 8px;align-self:flex-start}
-  .mcard .mq{font-size:13px;font-weight:600;color:rgba(255,255,255,.92);line-height:1.4}
-  .mcard .md{margin-top:auto;padding-top:10px;font-size:11.5px;color:var(--mint);display:flex;justify-content:space-between;gap:8px}
-  .mcard .md a{color:var(--dim);text-decoration:none;font-weight:600}
-  .mcard .md a:hover{color:var(--white)}
+  .mcard .mn{font-family:var(--display);color:var(--mint);font-size:14px;letter-spacing:1px}
+  .mcard .mq{font-size:14px;font-weight:600;color:rgba(255,255,255,.94);line-height:1.5}
+  .mcard .md{margin-top:auto;display:flex;justify-content:space-between;align-items:center;gap:8px}
+  .mcard .mtag{display:inline-block;background:#0a0a0a;color:var(--mint);font-family:var(--display);font-size:10px;letter-spacing:1px;text-transform:uppercase;padding:3px 7px 2px}
+  .mcard .mdur{font-size:11.5px;color:var(--mint)}
   .moreline{margin-top:14px;display:flex;align-items:center;gap:14px}
   .morebtn{background:none;border:1px solid rgba(255,255,255,.3);color:rgba(255,255,255,.85);font-family:var(--display);text-transform:uppercase;letter-spacing:.5px;font-size:13px;padding:10px 16px 8px;cursor:pointer;transition:.15s}
   .morebtn:hover{border-color:var(--mint);color:var(--mint)}
   .drynote{font-size:12.5px;color:var(--dim)}
 
-  /* ── Episodes grid ── */
-  .epsec{margin-top:64px;padding-top:56px;border-top:1px solid var(--line)}
-  .epsec .seclabel{margin-bottom:18px}
-  .egrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:14px}
-  @media(max-width:720px){.egrid{grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:10px}}
-  .gcard{display:flex;flex-direction:column;text-decoration:none;background:var(--card);border:1px solid var(--line);transition:.15s}
-  .gcard:hover{background:var(--card-hi);border-color:rgba(122,217,168,.55)}
-  .gcard img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block}
-  .gcard .gt{font-size:12.5px;font-weight:600;color:rgba(255,255,255,.92);line-height:1.4;padding:8px 8px 0}
-  .gcard .gfoot{margin-top:auto;display:flex;justify-content:space-between;align-items:flex-end;gap:8px;padding:10px 8px 9px}
-  .gcard .gdate{font-size:11.5px;color:var(--mint)}
-  .gcard .gtag{display:inline-block;background:#0a0a0a;color:var(--white);font-family:var(--display);font-size:10px;letter-spacing:1.2px;text-transform:uppercase;padding:3px 7px 2px}
 
   /* ── Brought to you by + footer (template convention) ── */
   .broughtby{text-align:center;margin-top:68px;margin-bottom:48px}
@@ -165,7 +153,7 @@
     <div class="nav-in">
       <a class="brand" href="index.html" aria-label="The Numbers Game home"><img src="assets/tng-logo.png" alt="The Numbers Game"></a>
       <div class="navlinks">
-        <a href="#episodes">Episodes</a>
+        <a href="episodes.html">Episodes</a>
         <div class="navgroup">
           <a href="about.html">About</a>
           <div class="subnav">
@@ -181,7 +169,7 @@
       </button>
     </div>
     <div class="navdrop" id="navdrop" hidden>
-      <a href="#episodes">Episodes</a>
+      <a href="episodes.html">Episodes</a>
       <a href="about.html">About</a>
       <a class="sub" href="nick-reilly.html">Nick Reilly</a>
       <a class="sub" href="jason-robinson.html">Jason Robinson</a>
@@ -225,10 +213,6 @@
       </div>
     </div>
 
-    <div class="epsec" id="episodes">
-      <span class="seclabel">This year's episodes</span>
-      <div class="egrid" id="egrid"></div>
-    </div>
 
     <div class="broughtby">
       <div class="foot-label">Brought to you by</div>
@@ -285,15 +269,6 @@
     document.getElementById('latest-date').textContent=fmtDate(L.date);
     document.getElementById('latest-tag').textContent='EP '+L.episodeNumber;
 
-    /* episodes grid */
-    var g=document.getElementById('egrid');
-    CAT.forEach(function(e){
-      var a=document.createElement('a'); a.className='gcard'; a.href='episode-'+e.episodeNumber+'.html';
-      a.innerHTML='<img loading="lazy" src="https://i.ytimg.com/vi/'+e.youtubeId+'/hqdefault.jpg" alt="EP '+e.episodeNumber+' thumbnail">'+
-        '<span class="gt"></span><span class="gfoot"><span class="gdate">'+fmtDate(e.date)+'</span><span class="gtag">EP '+e.episodeNumber+'</span></span>';
-      a.querySelector('.gt').textContent=hookOf(e.title);
-      g.appendChild(a);
-    });
 
     /* topic chips (inventory-gated) */
     POOL.forEach(function(m){
@@ -377,8 +352,8 @@
     var row=document.getElementById('mrow'); row.innerHTML='';
     currentQueue.forEach(function(m,i){
       var b=document.createElement('div'); b.className='mcard'; b.setAttribute('role','button'); b.tabIndex=0;
-      b.innerHTML='<span class="mn">0'+(i+1)+'</span><span class="mtag"></span><span class="mq"></span>'+
-        '<span class="md"><span>'+fmtDur(m.endSec-m.startSec)+'</span><a href="episode-'+m.episodeNumber+'.html">Full episode →</a></span>';
+      b.innerHTML='<span class="mn">0'+(i+1)+'</span><span class="mq"></span>'+
+        '<span class="md"><span class="mtag"></span><span class="mdur">'+fmtDur(m.endSec-m.startSec)+'</span></span>';
       b.querySelector('.mtag').textContent=m.subtopic||m.topic;
       b.querySelector('.mq').textContent=m.questionAsked||m.title;
       b.addEventListener('click',function(ev){if(ev.target.tagName!=='A') playMoment(i,true)});
@@ -388,7 +363,7 @@
   }
   function nowPlaying(m){
     var np=document.getElementById('nowplaying');
-    np.innerHTML='Now playing: <b></b> · '+(m.subtopic||m.topic)+' · '+fmtDur(m.endSec-m.startSec);
+    np.innerHTML='Now playing: <b></b> · '+fmtDur(m.endSec-m.startSec)+' &nbsp; <a href="episode-'+m.episodeNumber+'.html">Watch the full episode →</a>';
     np.querySelector('b').textContent=m.questionAsked||m.title;
     [].forEach.call(document.querySelectorAll('.mcard'),function(c,i){c.classList.toggle('playing',currentQueue[i]===m)});
   }
