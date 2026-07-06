@@ -87,9 +87,9 @@
   .step .n{font-family:var(--display);color:var(--mint);font-size:17px}
   .step .t{font-family:var(--display);color:var(--white);font-size:15px;text-transform:uppercase;letter-spacing:.5px}
   .step .why{font-size:12px;color:var(--dim);margin-left:auto;text-align:right}
-  .chips{display:flex;flex-wrap:wrap;gap:10px}
-  .chip{font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.5px;font-size:14px;
-    color:#0a0a0a;background:var(--mint);border:1px solid var(--mint);padding:10px 15px 8px;cursor:pointer;transition:.15s}
+  .chips{display:flex;flex-wrap:wrap;gap:12px}
+  .chip{font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.5px;font-size:15px;
+    color:#0a0a0a;background:var(--mint);border:1px solid var(--mint);padding:12px 18px 10px;cursor:pointer;transition:.15s}
   .chip:hover{filter:brightness(1.06)}
   .chip.on{background:var(--purple);border-color:var(--purple);color:var(--white)}
   .chip .ct{font-size:11px;opacity:.75;font-variant-numeric:tabular-nums}
@@ -98,8 +98,8 @@
   .subchips{display:none;flex-wrap:wrap;gap:7px;margin-top:10px}
   .subchips.show{display:flex}
   .subchips .sl{width:100%;font-size:11.5px;color:var(--dim);font-family:var(--sans)}
-  .subchip{font-family:var(--sans);font-weight:600;font-size:12px;color:rgba(255,255,255,.85);
-    background:none;border:1px solid rgba(255,255,255,.3);padding:7px 11px;cursor:pointer;transition:.15s}
+  .subchip{font-family:var(--sans);font-weight:600;font-size:13px;color:rgba(255,255,255,.85);
+    background:none;border:1px solid rgba(255,255,255,.3);padding:9px 14px;cursor:pointer;transition:.15s}
   .subchip.on{background:var(--purple);border-color:var(--purple);color:var(--white)}
   .servebtn{display:inline-flex;align-items:center;gap:9px;margin-top:8px;padding:14px 26px;border-radius:999px;border:0;cursor:pointer;
     background:var(--mint);color:#08210f;font-family:var(--sans);font-weight:800;font-size:13px;letter-spacing:.05em;text-transform:uppercase;transition:.15s}
@@ -111,7 +111,7 @@
   .serve.show{display:block}
   .mplayer{position:relative;width:100%;padding-top:56.25%;background:#000;box-shadow:0 30px 70px rgba(0,0,0,.5),0 0 0 1px rgba(255,255,255,.06)}
   .mplayer iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
-  .mfacade{position:absolute;inset:0;border:0;cursor:pointer;background:linear-gradient(160deg,#1a1150,#0b0820);display:flex;align-items:center;justify-content:center}
+  .mfacade{position:absolute;inset:0;border:0;cursor:pointer;background:linear-gradient(160deg,#1a1150,#0b0820);background-size:cover;background-position:center;display:flex;align-items:center;justify-content:center}
   .mfacade[hidden]{display:none}
   .mplay{width:74px;height:74px;border-radius:50%;background:var(--mint);display:flex;align-items:center;justify-content:center;transition:.18s}
   .mfacade:hover .mplay{transform:scale(1.07)}
@@ -122,11 +122,11 @@
   .nowplaying a:hover{text-decoration:underline}
   .mrow{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding-bottom:6px;scrollbar-width:none}
   .mrow::-webkit-scrollbar{display:none}
-  .mcard{flex:0 0 66%;max-width:290px;scroll-snap-align:start;background:var(--card);border:1px solid var(--line);padding:14px;cursor:pointer;text-align:left;font-family:inherit;color:inherit;transition:.15s;display:flex;flex-direction:column;gap:10px}
+  .mcard{flex:0 0 56%;max-width:250px;scroll-snap-align:start;background:var(--card);border:1px solid var(--line);padding:12px;cursor:pointer;text-align:left;font-family:inherit;color:inherit;transition:.15s;display:flex;flex-direction:column;gap:8px}
   .mcard:hover{background:var(--card-hi);border-color:rgba(122,217,168,.55)}
   .mcard.playing{border-color:var(--mint)}
   .mcard .mn{font-family:var(--display);color:var(--mint);font-size:14px;letter-spacing:1px}
-  .mcard .mq{font-size:14px;font-weight:600;color:rgba(255,255,255,.94);line-height:1.5}
+  .mcard .mq{font-size:13px;font-weight:600;color:rgba(255,255,255,.94);line-height:1.45}
   .mcard .md{margin-top:auto;display:flex;justify-content:space-between;align-items:center;gap:8px}
   .mcard .mtag{display:inline-block;background:#0a0a0a;color:var(--mint);font-family:var(--display);font-size:10px;letter-spacing:1px;text-transform:uppercase;padding:3px 7px 2px}
   .mcard .mdur{font-size:11.5px;color:var(--mint)}
@@ -373,6 +373,8 @@
     });
   }
   function nowPlaying(m){
+    var fac=document.getElementById('mfacade');
+    if(!fac.hidden) fac.style.backgroundImage="linear-gradient(rgba(10,6,30,.35),rgba(10,6,30,.35)),url('https://i.ytimg.com/vi/"+m.youtubeId+"/maxresdefault.jpg')";
     var np=document.getElementById('nowplaying');
     np.innerHTML='Now playing: <b></b> · '+fmtDur(m.endSec-m.startSec)+' &nbsp; <a href="episode-'+m.episodeNumber+'.html">From EP '+m.episodeNumber+' — watch the full episode →</a>';
     np.querySelector('b').textContent=m.questionAsked||m.title;
