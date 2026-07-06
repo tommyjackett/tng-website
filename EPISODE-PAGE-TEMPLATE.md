@@ -2,7 +2,7 @@
 
 *Locked 5 July 2026 against `episode-263.html` (the master template file). Every new episode page is created by following THIS document — never by re-deciding anything. If a rule here conflicts with an older doc, this document wins. Change the rules only by changing this file first.*
 
-**How a new page gets made:** copy `episode-263.html`, replace only the data slots listed below, run the validation checklist at the bottom, push via `scripts/push-live.sh`. No design decisions. No new CSS. No hand-written content.
+**How a new page gets made:** `python3 scripts/build_episode.py N` — the generator applies every rule below and refuses to write on any validation failure. Then push via `scripts/push-live.sh episode-N.html`. No design decisions. No new CSS. No hand-written content. (Full pipeline incl. the content-engine stages: `PROCESS.md`.)
 
 ---
 
