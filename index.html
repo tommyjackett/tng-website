@@ -87,32 +87,30 @@
   /* Section 2: ways to watch — three coloured pillar cards (below the video) */
   .wherestart{max-width:var(--wrap);margin:0 auto;padding:90px 36px 110px}
   @media(max-width:720px){.wherestart{padding:60px 22px 80px}}
-  .wherestart h2{font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.2px;
-    font-size:clamp(28px,2.9vw,38px);line-height:1.25;text-wrap:balance}
-  .wherestart h2 .hblk{background:var(--purple);color:var(--white);padding:.12em .42em .08em;
-    -webkit-box-decoration-break:clone;box-decoration-break:clone}
-  .pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:34px}
+  .wherestart h2{font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.3px;
+    font-size:clamp(24px,2.4vw,32px);line-height:1.2;color:var(--white)}
+  .pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:24px;align-items:start}
   .pillars>*{min-width:0}
   @media(max-width:900px){.pillars{grid-template-columns:1fr}}
-  .pcard{display:flex;flex-direction:column;gap:12px;padding:30px 28px 24px;text-decoration:none;transition:.18s;
-    box-shadow:0 18px 44px rgba(0,0,0,.28)}
-  .pcard:hover{transform:translateY(-4px);filter:brightness(1.05);box-shadow:0 28px 60px rgba(0,0,0,.4)}
-  .pcard .pn{font-family:var(--display);font-size:19px;letter-spacing:1.5px}
+  .pcard{display:flex;flex-direction:column;gap:8px;padding:18px 20px 18px;text-decoration:none;transition:.18s;
+    box-shadow:0 12px 30px rgba(0,0,0,.25)}
+  .pcard:hover{transform:translateY(-3px);filter:brightness(1.05);box-shadow:0 20px 44px rgba(0,0,0,.35)}
   .pcard .ph{font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.3px;
-    font-size:clamp(21px,2vw,26px);line-height:1.15}
-  .pcard .pd{font-size:14px;line-height:1.6;margin:2px 0 18px}
-  .pcard .pa{margin-top:auto;font-size:20px;line-height:1}
+    font-size:19px;line-height:1.15}
+  .pcard .pd{font-size:13px;line-height:1.5;margin:0 0 10px}
+  .pcard .pgo{align-self:flex-start;display:inline-block;font-family:var(--display);font-weight:400;
+    text-transform:uppercase;letter-spacing:.6px;font-size:12.5px;padding:8px 13px 6px;border:1.5px solid}
   .pcard.mintc{background:var(--mint)}
-  .pcard.mintc .pn,.pcard.mintc .ph,.pcard.mintc .pa{color:#0a0a0a}
+  .pcard.mintc .ph,.pcard.mintc .pgo{color:#0a0a0a;border-color:rgba(10,10,10,.75)}
   .pcard.mintc .pd{color:rgba(10,10,10,.72)}
   .pcard.purplec{background:var(--purple)}
-  .pcard.purplec .pn,.pcard.purplec .pa{color:var(--mint)}
   .pcard.purplec .ph{color:var(--white)}
   .pcard.purplec .pd{color:rgba(255,255,255,.82)}
+  .pcard.purplec .pgo{color:var(--mint);border-color:rgba(122,217,168,.8)}
   .pcard.blackc{background:#0a0a0a}
-  .pcard.blackc .pn,.pcard.blackc .pa{color:var(--mint)}
   .pcard.blackc .ph{color:var(--white)}
   .pcard.blackc .pd{color:rgba(255,255,255,.72)}
+  .pcard.blackc .pgo{color:var(--mint);border-color:rgba(122,217,168,.8)}
   .about{display:flex;gap:28px;align-items:center}
   .podart{width:148px;height:148px;border-radius:18px;flex:none;
     box-shadow:0 24px 60px rgba(0,0,0,.55),0 4px 14px rgba(0,0,0,.4)}
@@ -285,25 +283,22 @@
   </div>
 
   <div class="wherestart">
-    <h2><span class="hblk">Ways to watch the show</span></h2>
+    <h2>Ways to watch the show</h2>
     <div class="pillars">
       <a class="pcard mintc" id="banner-latest" href="#">
-        <span class="pn">01</span>
         <span class="ph">Latest episode</span>
         <p class="pd">The freshest episode we've dropped. Jump straight into this week's conversation.</p>
-        <span class="pa">&rarr;</span>
+        <span class="pgo">Watch now</span>
       </a>
       <a class="pcard purplec" href="#goodbits">
-        <span class="pn">02</span>
         <span class="ph">Choose your own adventure</span>
         <p class="pd">Pick the topics you're into and we'll play you the standout moments. Not whole episodes, the exact bits inside them.</p>
-        <span class="pa">&rarr;</span>
+        <span class="pgo">Pick your topics</span>
       </a>
       <a class="pcard blackc" href="#episodes">
-        <span class="pn">03</span>
         <span class="ph">Explore every episode</span>
         <p class="pd">Browse the full library and find whole episodes on the stuff you care about, newest first.</p>
-        <span class="pa">&darr;</span>
+        <span class="pgo">Browse episodes</span>
       </a>
     </div>
   </div>
