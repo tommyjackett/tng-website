@@ -36,5 +36,6 @@
 ## Reference
 
 - [Template spec](https://tommyjackett.github.io/tng-website/EPISODE-PAGE-TEMPLATE.md)
+- [Moments feature spec](https://tommyjackett.github.io/tng-website/MOMENTS-FEATURE.md)
 - [Full process](https://tommyjackett.github.io/tng-website/PROCESS.md)
 - [Handoff](https://tommyjackett.github.io/tng-website/HANDOFF.md)
