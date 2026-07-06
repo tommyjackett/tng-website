@@ -82,6 +82,11 @@
   .hook .pay span{color:#0a0a0a;padding:.08em var(--inx) .04em;
     background:linear-gradient(var(--mint),var(--mint)) 0 50%/100% 88% no-repeat;
     -webkit-box-decoration-break:clone;box-decoration-break:clone}
+  /* no-hook titles: mid-split into two full-size rows, purple then mint */
+  .hook .hk span.hkrow{display:block;background:none;padding:0}
+  .hook .hk .hkrow+.hkrow{margin-top:8px}
+  .hook .hk span.mintseg{color:#0a0a0a;
+    background:linear-gradient(var(--mint),var(--mint)) 0 50%/100% 87% no-repeat}
 
   /* ── Player (clean facade → real player on tap) ── */
   .player-wrap{margin:24px 0 4px;scroll-margin-top:76px}
@@ -264,7 +269,8 @@
     <header class="hero">
       <div class="hook">
         <span class="eptag">EP 264</span>
-        <h1 class="hk"><span>The 3 Numbers Every Business Owner Must Track</span></h1>
+        <h1 class="hk"><span class="hkrow"><span>The 3 Numbers Every</span></span>
+        <span class="hkrow"><span class="mintseg">Business Owner Must Track</span></span></h1>
       </div>
     </header>
 
