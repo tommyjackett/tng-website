@@ -73,16 +73,32 @@
   @media(max-width:720px){.banner{height:clamp(300px,73vw,420px)}}
   .banner video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
   .banner-tint{position:absolute;inset:-4px;background:rgba(44,27,138,.5)}
-  .banner-logo{position:absolute;inset:0;z-index:1;display:flex;align-items:center;justify-content:center;pointer-events:none}
-  .banner-logo img{height:clamp(64px,11vw,130px);width:auto;opacity:0;
-    filter:drop-shadow(0 14px 40px rgba(0,0,0,.5));animation:logoPop 3.6s ease forwards}
-  @keyframes logoPop{
-    0%{opacity:0;transform:scale(.55) translateY(22px)}
-    18%{opacity:1;transform:scale(1) translateY(0)}
-    72%{opacity:1;transform:scale(1) translateY(0)}
-    100%{opacity:0;transform:scale(1.06) translateY(-14px)}
+  /* looping title sequence over the video: logo → 5 years / 280+ eps → show name */
+  .banner-seq{position:absolute;inset:0;z-index:1;pointer-events:none}
+  .banner-seq .bs{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;opacity:0}
+  .banner-seq img{height:clamp(64px,11vw,130px);width:auto;filter:drop-shadow(0 14px 40px rgba(0,0,0,.5))}
+  .banner-seq .bst{font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.5px;
+    text-align:center;line-height:1.1;color:var(--white);font-size:clamp(26px,4.6vw,58px);
+    text-shadow:0 6px 30px rgba(0,0,0,.65);padding:0 22px}
+  .bs1{animation:seq1 12s ease infinite}
+  .bs2{animation:seq2 12s ease infinite}
+  .bs3{animation:seq3 12s ease infinite}
+  @keyframes seq1{
+    0%{opacity:0;transform:scale(.6) translateY(20px)}
+    6%,26%{opacity:1;transform:scale(1) translateY(0)}
+    32%,100%{opacity:0;transform:scale(1.05) translateY(-12px)}
   }
-  @media(prefers-reduced-motion:reduce){.banner video{display:none}.banner-logo img{animation:none;opacity:0}}
+  @keyframes seq2{
+    0%,34%{opacity:0;transform:scale(.85) translateY(16px)}
+    40%,58%{opacity:1;transform:scale(1) translateY(0)}
+    64%,100%{opacity:0;transform:scale(1.03) translateY(-10px)}
+  }
+  @keyframes seq3{
+    0%,66%{opacity:0;transform:scale(.85) translateY(16px)}
+    72%,92%{opacity:1;transform:scale(1) translateY(0)}
+    98%,100%{opacity:0;transform:scale(1.03) translateY(-10px)}
+  }
+  @media(prefers-reduced-motion:reduce){.banner video{display:none}.banner-seq{display:none}}
 
   /* Section 2: ways to watch — three coloured pillar cards (below the video) */
   .wherestart{max-width:var(--wrap);margin:0 auto;padding:90px 36px 110px}
@@ -119,113 +135,6 @@
   .aboutsec{border-top:1px solid var(--line);margin-top:110px;padding:64px 0 0}
   @media(max-width:720px){.aboutsec{margin-top:80px;padding:48px 0 0}}
 
-  /* Section 5: this year's episodes grid (interim library, HOMEPAGE-PLAN card anatomy) */
-  .epsec{border-top:1px solid var(--line);margin-top:110px;padding:64px 0 0}
-  @media(max-width:720px){.epsec{margin-top:80px;padding:48px 0 0}}
-  .epsec h2{font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.2px;
-    font-size:clamp(28px,2.9vw,38px);line-height:1.25;text-wrap:balance}
-  .epsec h2 .hblk{background:var(--purple);color:var(--white);padding:.12em .42em .08em;
-    -webkit-box-decoration-break:clone;box-decoration-break:clone}
-  .epgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:30px}
-  .epgrid>*{min-width:0}
-  @media(max-width:1000px){.epgrid{grid-template-columns:repeat(2,1fr)}}
-  @media(max-width:560px){.epgrid{grid-template-columns:1fr}}
-  .ecard{display:flex;flex-direction:column;text-decoration:none;background:var(--card);border:1px solid var(--line);transition:.15s}
-  .ecard:hover{background:var(--card-hi);border-color:rgba(122,217,168,.55)}
-  .ecard img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block}
-  .ecard .et{font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.2px;
-    font-size:15px;line-height:1.35;color:var(--white);padding:12px 12px 0;text-wrap:balance}
-  .ecard .ef{margin-top:auto;display:flex;justify-content:space-between;align-items:flex-end;gap:8px;padding:12px}
-  .ecard .ed{font-size:12px;color:var(--mint)}
-  .ecard .ee{display:inline-block;background:#0a0a0a;color:var(--white);font-family:var(--display);
-    font-size:10.5px;letter-spacing:1.2px;text-transform:uppercase;padding:3px 7px 2px}
-  .momentsec{border-top:1px solid var(--line);padding:110px 0 8px}
-  @media(max-width:720px){.momentsec{padding:80px 0 8px}}
-  .mgrid{display:grid;grid-template-columns:1fr 1fr;gap:48px;margin-top:4px;align-items:start}
-  .mgrid>*{min-width:0}
-  @media(max-width:900px){.mgrid{grid-template-columns:1fr;gap:34px}}
-  .watch-ph[hidden]{display:none}
-  .ph-screen{position:relative;aspect-ratio:16/9;background:#0b0820;
-    border:1px solid var(--line);display:flex;align-items:flex-end;justify-content:flex-start;padding:22px;box-shadow:0 30px 70px rgba(0,0,0,.5);overflow:hidden}
-  .ph-screen::before{content:"";position:absolute;inset:0;
-    background:linear-gradient(rgba(18,10,55,.5),rgba(10,6,30,.6)),url('assets/hosts-still.jpg') center/cover no-repeat}
-  .ph-caption{position:relative;z-index:1;display:flex;flex-direction:column;align-items:flex-start;gap:8px}
-  .ph-caption .pc1{font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.2px;
-    font-size:clamp(20px,2.2vw,28px);line-height:1;background:var(--purple);color:var(--white);padding:.16em .45em .1em}
-  .ph-caption .pc2{font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.4px;
-    font-size:clamp(13px,1.4vw,17px);line-height:1;background:var(--mint);color:#0a0a0a;padding:.2em .55em .12em}
-  .ph-screen .mplay{position:absolute;z-index:1;right:20px;bottom:20px;width:44px;height:44px;box-shadow:0 10px 24px rgba(0,0,0,.5)}
-  .ph-screen .mplay::after{border-width:7px 0 7px 12px;margin-left:3px}
-  .ph-line{color:rgba(255,255,255,.78);font-size:13px;line-height:1.5;margin:10px 2px 14px}
-  .ph-cards{display:flex;gap:10px}
-  .ph-card{flex:1;max-width:250px;background:var(--card);border:1px solid var(--line);padding:12px;display:flex;flex-direction:column;gap:8px;opacity:.55}
-  .ph-card .mn{font-family:var(--display);color:var(--mint);font-size:14px;letter-spacing:1px}
-  .ph-card .mq{font-size:13px;font-weight:600;color:rgba(255,255,255,.94)}
-  .ph-card .md{margin-top:14px;display:flex;justify-content:space-between;align-items:center;gap:8px}
-  .ph-card .mtag{background:#0a0a0a;color:var(--mint);font-family:var(--display);font-size:10px;letter-spacing:1px;text-transform:uppercase;padding:3px 7px 2px}
-  .ph-card .mdur{font-size:11.5px;color:var(--mint)}
-
-
-  /* new-to-the-show feature */
-  .momentsec h1{font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.2px;font-size:clamp(28px,2.9vw,38px);line-height:1.25;text-wrap:balance}
-  .momentsec h1 .hblk{background:var(--purple);color:var(--white);padding:.12em .42em .08em;-webkit-box-decoration-break:clone;box-decoration-break:clone}
-  .momentsec .sell{color:var(--muted);font-size:15px;line-height:1.6;margin:10px 0 26px;max-width:52ch}
-  .step{display:flex;gap:12px;align-items:baseline;margin:22px 0 12px}
-  .step .n{font-family:var(--display);color:var(--mint);font-size:17px}
-  .step .t{font-family:var(--display);color:var(--white);font-size:15px;text-transform:uppercase;letter-spacing:.5px}
-  .step .why{font-size:12px;color:var(--dim);margin-left:auto;text-align:right}
-  .chips{display:flex;flex-wrap:wrap;gap:12px}
-  .chip{font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.5px;font-size:15px;
-    color:#0a0a0a;background:var(--mint);border:1px solid var(--mint);padding:12px 18px 10px;cursor:pointer;transition:.15s}
-  .chip:hover{filter:brightness(1.06)}
-  .chip.on{background:var(--purple);border-color:var(--purple);color:var(--white)}
-  .chip .ct{font-size:11px;opacity:.75;font-variant-numeric:tabular-nums}
-  .chip .ct::before{content:" · "}
-  .chip.more{background:none;border:1px solid rgba(255,255,255,.3);color:rgba(255,255,255,.8)}
-  .subchips{display:none;flex-wrap:wrap;gap:7px;margin-top:10px}
-  .subchips.show{display:flex}
-  .subchips .sl{width:100%;font-size:11.5px;color:var(--dim);font-family:var(--sans)}
-  .subchip{font-family:var(--sans);font-weight:600;font-size:13px;color:rgba(255,255,255,.85);
-    background:none;border:1px solid rgba(255,255,255,.3);padding:9px 14px;cursor:pointer;transition:.15s}
-  .subchip.on{background:var(--purple);border-color:var(--purple);color:var(--white)}
-  .servebtn{display:inline-flex;align-items:center;gap:9px;margin-top:8px;padding:14px 26px;border-radius:999px;border:0;cursor:pointer;
-    background:var(--mint);color:#08210f;font-family:var(--sans);font-weight:800;font-size:13px;letter-spacing:.05em;text-transform:uppercase;transition:.15s}
-  .servebtn:hover{filter:brightness(1.06);transform:translateY(-1px);box-shadow:0 12px 30px rgba(122,217,168,.25)}
-  .servebtn:disabled{opacity:.4;cursor:default;transform:none;box-shadow:none}
-  .servebtn.clear{background:none;border:1px solid rgba(255,255,255,.35);color:rgba(255,255,255,.88)}
-  .servebtn.clear:hover{border-color:var(--mint);color:var(--mint);box-shadow:none}
-
-  /* the serve: player + moment cards */
-  .serve{display:none;margin-top:0}
-  .serve.show{display:block}
-  .mplayer{position:relative;width:100%;padding-top:56.25%;background:#000;box-shadow:0 30px 70px rgba(0,0,0,.5),0 0 0 1px rgba(255,255,255,.06)}
-  .mplayer iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
-  .mfacade{position:absolute;inset:0;border:0;cursor:pointer;background:linear-gradient(160deg,#1a1150,#0b0820);background-size:cover;background-position:center;display:flex;align-items:center;justify-content:center}
-  .mfacade[hidden]{display:none}
-  .mplay{width:74px;height:74px;border-radius:50%;background:var(--mint);display:flex;align-items:center;justify-content:center;transition:.18s}
-  .mfacade:hover .mplay{transform:scale(1.07)}
-  .mplay::after{content:"";border-style:solid;border-width:11px 0 11px 19px;border-color:transparent transparent transparent #08210f;margin-left:5px}
-  .nowplaying{font-size:13px;color:var(--muted);margin:10px 2px 14px}
-  .nowplaying b{color:var(--white);font-weight:600}
-  .nowplaying a{color:var(--mint);text-decoration:none;font-weight:600}
-  .nowplaying a:hover{text-decoration:underline}
-  .npdesc{display:block;color:rgba(255,255,255,.92);font-size:13px;line-height:1.55;margin-top:5px}
-  .mrow{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding-bottom:6px;scrollbar-width:none}
-  .mrow::-webkit-scrollbar{display:none}
-  .mcard{flex:0 0 56%;max-width:250px;scroll-snap-align:start;background:var(--card);border:1px solid var(--line);padding:12px;cursor:pointer;text-align:left;font-family:inherit;color:inherit;transition:.15s;display:flex;flex-direction:column;gap:8px}
-  .mcard:hover{background:var(--card-hi);border-color:rgba(122,217,168,.55)}
-  .mcard.playing{border-color:var(--mint)}
-  .mcard .mn{font-family:var(--display);color:var(--mint);font-size:14px;letter-spacing:1px}
-  .mcard .mq{font-size:13px;font-weight:600;color:rgba(255,255,255,.94);line-height:1.45}
-  .mcard .md{margin-top:auto;display:flex;justify-content:space-between;align-items:center;gap:8px}
-  .mcard .mtag{display:inline-block;background:#0a0a0a;color:var(--mint);font-family:var(--display);font-size:10px;letter-spacing:1px;text-transform:uppercase;padding:3px 7px 2px}
-  .mcard .mdur{font-size:11.5px;color:var(--mint)}
-  .moreline{margin-top:14px;display:flex;align-items:center;gap:14px}
-  .morebtn{background:none;border:1px solid rgba(255,255,255,.3);color:rgba(255,255,255,.85);font-family:var(--display);text-transform:uppercase;letter-spacing:.5px;font-size:13px;padding:10px 16px 8px;cursor:pointer;transition:.15s}
-  .morebtn:hover{border-color:var(--mint);color:var(--mint)}
-  .drynote{font-size:12.5px;color:var(--dim)}
-
-
   /* ── Brought to you by + footer (template convention) ── */
   .broughtby{text-align:center;margin-top:100px;margin-bottom:64px}
   .foot-label{font-size:11px;font-weight:700;letter-spacing:.26em;text-transform:uppercase;color:var(--dim);margin-bottom:16px}
@@ -248,7 +157,7 @@
     <div class="nav-in">
       <a class="brand" href="index.html" aria-label="The Numbers Game home"><img src="assets/tng-logo.png" alt="The Numbers Game"></a>
       <div class="navlinks">
-        <a href="#episodes">Episodes</a>
+        <a href="episodes.html">Episodes</a>
         <div class="navgroup">
           <a href="about.html">About</a>
           <div class="subnav">
@@ -264,7 +173,7 @@
       </button>
     </div>
     <div class="navdrop" id="navdrop" hidden>
-      <a href="#episodes">Episodes</a>
+      <a href="episodes.html">Episodes</a>
       <a href="about.html">About</a>
       <a class="sub" href="nick-reilly.html">Nick Reilly</a>
       <a class="sub" href="jason-robinson.html">Jason Robinson</a>
@@ -277,8 +186,10 @@
       <source src="assets/banner-opener.mp4" type="video/mp4">
     </video>
     <div class="banner-tint"></div>
-    <div class="banner-logo" aria-hidden="true">
-      <img src="assets/tng-logo.png" alt="">
+    <div class="banner-seq" aria-hidden="true">
+      <div class="bs bs1"><img src="assets/tng-logo.png" alt=""></div>
+      <div class="bs bs2"><span class="bst">5 years. 280+ episodes.</span></div>
+      <div class="bs bs3"><span class="bst">The Numbers Game.</span></div>
     </div>
   </div>
 
@@ -290,74 +201,26 @@
         <p class="pd">The freshest episode we've dropped. Jump straight into this week's conversation.</p>
         <span class="pgo">Watch now</span>
       </a>
-      <a class="pcard purplec" href="#goodbits">
+      <a class="pcard purplec" href="adventure.html">
         <span class="ph">Choose your own adventure</span>
         <p class="pd">Pick the topics you're into and we'll play you the standout moments. Not whole episodes, the exact bits inside them.</p>
         <span class="pgo">Pick your topics</span>
       </a>
-      <a class="pcard blackc" href="#episodes">
+      <a class="pcard blackc" href="https://www.youtube.com/@thenumbersgamepodcast" target="_blank" rel="noopener">
         <span class="ph">Explore every episode</span>
         <p class="pd">Browse the full library and find whole episodes on the stuff you care about.</p>
-        <span class="pgo">Browse episodes</span>
+        <span class="pgo">Browse on YouTube</span>
       </a>
     </div>
   </div>
 
   <main class="wrap">
 
-    <div class="momentsec" id="goodbits">
-      <div class="mgrid">
-        <div class="mpick">
-          <h1><span class="hblk">Skip to the good bits</span></h1>
-          <p class="sell" id="sell-line">Just discovered the show, or listening for years? With 280+ episodes and hundreds of hours of conversations, we've built a way to find the moments that interest you. Not whole episodes, the exact bits inside them. Pick a topic and we'll jump you straight there.</p>
-          <div class="step"><span class="n">01</span><span class="t">Select a topic</span></div>
-          <div class="chips" id="topic-chips"></div>
-          <div class="step"><span class="n">02</span><span class="t">Get specific</span></div>
-          <div class="subchips" id="sub-chips"></div>
-          <div class="step"><span class="n">03</span><span class="t">Get your moments</span></div>
-          <button class="servebtn" id="serve-btn" type="button" disabled>Show me the moments</button>
-        </div>
-        <div class="mwatch">
-          <div class="watch-ph" id="watch-ph" aria-hidden="true">
-            <div class="ph-screen">
-              <div class="ph-caption"><span class="pc1">Your moments</span><span class="pc2">will play right here</span></div>
-              <span class="mplay" aria-hidden="true"></span>
-            </div>
-            <p class="ph-line">Pick a topic and the best bits of the show play right here.</p>
-            <div class="ph-cards">
-              <div class="ph-card"><span class="mn">01</span><span class="mq">Best bit</span><span class="md"><span class="mtag">Your topic</span><span class="mdur">1m 20s</span></span></div>
-              <div class="ph-card"><span class="mn">02</span><span class="mq">Best bit</span><span class="md"><span class="mtag">Your topic</span><span class="mdur">2m 05s</span></span></div>
-              <div class="ph-card"><span class="mn">03</span><span class="mq">Best bit</span><span class="md"><span class="mtag">Your topic</span><span class="mdur">1m 45s</span></span></div>
-            </div>
-          </div>
-          <div class="serve" id="serve">
-            <div class="mplayer">
-              <div id="mplayer-slot"></div>
-              <button class="mfacade" id="mfacade" type="button" aria-label="Play this moment">
-                <span class="mplay"></span>
-              </button>
-            </div>
-            <p class="nowplaying" id="nowplaying"></p>
-            <div class="mrow" id="mrow"></div>
-            <div class="moreline">
-              <button class="morebtn" id="more-btn" type="button">Show me more</button>
-              <span class="drynote" id="drynote"></span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
     <div class="aboutsec">
       <div class="about">
         <img class="podart" src="assets/podcast-art.jpg" alt="The Numbers Game podcast artwork">
         <p class="abouttext">Thanks for stopping by. The Numbers Game is a weekly show about business, property, tax and money, hosted by financial planner Nick Reilly and accountant Jason Robinson. Real numbers, real talk, new episodes every Monday.</p>
       </div>
-    </div>
-
-    <div class="epsec" id="episodes">
-      <h2><span class="hblk">This year's episodes</span></h2>
-      <div class="epgrid" id="epgrid"></div>
     </div>
 
     <div class="broughtby">
@@ -386,192 +249,13 @@
     burger.setAttribute('aria-expanded', navdrop.hidden?'false':'true');
   });}
 
-  /* ── Data-driven homepage. Rules live in HOMEPAGE-PLAN.md. ── */
-  var MIN_SCORE=80, MIN_DUR=60, CHIP_MIN=5, LEAD_CHIPS=8, SERVE=5, PER_SUB=2;
-  var CAT=[], POOL=[], byTopic={}, selTopics=[], selSubs=[], servedIds=[], player=null, playerReady=false, currentQueue=[];
-
-  function fmtDate(iso){var d=new Date(iso+'T00:00:00');return d.getDate()+' '+d.toLocaleString('en-AU',{month:'long'})+' '+d.getFullYear();}
-  function fmtDur(s){var m=Math.floor(s/60),r=s%60;return m>0?(m+'m '+(r>0?r+'s':'')).trim():r+'s';}
-  function hookOf(t){var seps=[' | ',': '];for(var i=0;i<seps.length;i++){var p=t.indexOf(seps[i]);if(p>-1)return t.slice(0,p);}var q=t.search(/[?.] /);return q>-1?t.slice(0,q+1):t;}
-
-  Promise.all([
-    fetch('data/catalogue.json').then(function(r){return r.json()}),
-    fetch('data/search-index.json').then(function(r){return r.json()})
-  ]).then(function(res){
+  /* Latest-episode card always points at the newest released episode */
+  fetch('data/catalogue.json').then(function(r){return r.json()}).then(function(cat){
     var today=new Date(); today.setHours(23,59,59);
-    CAT=res[0].filter(function(e){return new Date(e.date+'T00:00:00')<=today});
-    CAT.sort(function(a,b){return a.date<b.date?1:-1});
-    var released={}; CAT.forEach(function(e){released[e.episodeNumber]=true});
-    POOL=res[1].filter(function(m){return m.standalone>=MIN_SCORE&&m.durationSec>=MIN_DUR&&released[m.episodeNumber]});
-
-    /* sell line with live counts */
-
-    /* latest episode */
-    var L=CAT[0];
-    document.getElementById('banner-latest').href='episode-'+L.episodeNumber+'.html';
-
-    /* this year's episodes grid */
-    var eg=document.getElementById('epgrid');
-    CAT.forEach(function(e){
-      var a=document.createElement('a'); a.className='ecard'; a.href='episode-'+e.episodeNumber+'.html';
-      var im=document.createElement('img'); im.loading='lazy'; im.alt='';
-      im.src='https://i.ytimg.com/vi/'+e.youtubeId+'/hqdefault.jpg';
-      var t=document.createElement('span'); t.className='et'; t.textContent=e.title;
-      var f=document.createElement('span'); f.className='ef';
-      var d=document.createElement('span'); d.className='ed'; d.textContent=fmtDate(e.date);
-      var n=document.createElement('span'); n.className='ee'; n.textContent='EP '+e.episodeNumber;
-      f.appendChild(d); f.appendChild(n);
-      a.appendChild(im); a.appendChild(t); a.appendChild(f);
-      eg.appendChild(a);
-    });
-
-
-    /* topic chips (inventory-gated) */
-    POOL.forEach(function(m){
-      var t=m.topic; byTopic[t]=byTopic[t]||{count:0,subs:{}};
-      byTopic[t].count++;
-      var s=m.subtopic||'General'; byTopic[t].subs[s]=(byTopic[t].subs[s]||0)+1;
-    });
-    var topics=Object.keys(byTopic).filter(function(t){return byTopic[t].count>=CHIP_MIN})
-      .sort(function(a,b){return byTopic[b].count-byTopic[a].count});
-    var chipbox=document.getElementById('topic-chips');
-    function addChip(t){
-      var b=document.createElement('button'); b.type='button'; b.className='chip';
-      b.innerHTML='<span></span><span class="ct">'+byTopic[t].count+'</span>';
-      b.querySelector('span').textContent=t;
-      b.addEventListener('click',function(){toggleTopic(t,b)});
-      chipbox.appendChild(b);
-    }
-    topics.slice(0,LEAD_CHIPS).forEach(addChip);
-    if(topics.length>LEAD_CHIPS){
-      var more=document.createElement('button'); more.type='button'; more.className='chip more'; more.textContent='+ more topics';
-      more.addEventListener('click',function(){more.remove();topics.slice(LEAD_CHIPS).forEach(addChip);});
-      chipbox.appendChild(more);
-    }
+    var rel=cat.filter(function(e){return new Date(e.date+'T00:00:00')<=today});
+    rel.sort(function(a,b){return a.date<b.date?1:-1});
+    if(rel.length) document.getElementById('banner-latest').href='episode-'+rel[0].episodeNumber+'.html';
   });
-
-  function toggleTopic(t,btn){
-    var i=selTopics.indexOf(t);
-    if(i>-1){selTopics.splice(i,1);btn.classList.remove('on');selSubs=selSubs.filter(function(s){return s.topic!==t});}
-    else{selTopics.push(t);btn.classList.add('on');}
-    renderSubchips();
-    var active=document.getElementById('serve').classList.contains('show');
-    if(active&&!selTopics.length){resetAll();return;}
-    document.getElementById('serve-btn').disabled=selTopics.length===0;
-    if(active&&selTopics.length) serve(true);
-  }
-  function renderSubchips(){
-    var box=document.getElementById('sub-chips'); box.innerHTML=''; box.classList.toggle('show',selTopics.length>0);
-    selTopics.forEach(function(t){
-      var subs=Object.keys(byTopic[t].subs);
-      if(subs.length<2) return;
-      var l=document.createElement('span'); l.className='sl'; l.textContent='Inside '+t.toLowerCase()+' — get specific if you like:'; box.appendChild(l);
-      subs.sort(function(a,b){return byTopic[t].subs[b]-byTopic[t].subs[a]}).forEach(function(s){
-        var b=document.createElement('button'); b.type='button'; b.className='subchip';
-        if(selSubs.some(function(x){return x.topic===t&&x.sub===s})) b.classList.add('on');
-        b.textContent=s+' · '+byTopic[t].subs[s];
-        b.addEventListener('click',function(){
-          var idx=selSubs.findIndex(function(x){return x.topic===t&&x.sub===s});
-          if(idx>-1){selSubs.splice(idx,1);b.classList.remove('on');}else{selSubs.push({topic:t,sub:s});b.classList.add('on');}
-          if(document.getElementById('serve').classList.contains('show')) serve(true);
-        });
-        box.appendChild(b);
-      });
-    });
-  }
-
-  function eligible(){
-    return POOL.filter(function(m){
-      if(selTopics.indexOf(m.topic)===-1) return false;
-      var subsForTopic=selSubs.filter(function(x){return x.topic===m.topic});
-      if(subsForTopic.length&&!subsForTopic.some(function(x){return x.sub===(m.subtopic||'General')})) return false;
-      return servedIds.indexOf(m.momentId)===-1;
-    }).sort(function(a,b){return b.standalone-a.standalone});
-  }
-  function serve(reset){
-    if(reset){servedIds=[];currentQueue=[];}
-    var picks=[], perSub={};
-    eligible().forEach(function(m){
-      if(picks.length>=SERVE) return;
-      var k=m.subtopic||m.topic;
-      var explicit=selSubs.some(function(x){return x.topic===m.topic&&x.sub===(m.subtopic||'General')});
-      if(!explicit&&(perSub[k]||0)>=PER_SUB) return;
-      perSub[k]=(perSub[k]||0)+1; picks.push(m);
-    });
-    if(!picks.length&&!currentQueue.length){document.getElementById('drynote').textContent="That's the best of it for now. Try another topic.";return;}
-    picks.forEach(function(m){servedIds.push(m.momentId)});
-    var firstServe=currentQueue.length===0;
-    currentQueue=currentQueue.concat(picks);
-    document.getElementById('serve').classList.add('show');
-    renderQueue();
-    var remaining=eligible().length;
-    document.getElementById('more-btn').style.display=remaining?'':'none';
-    document.getElementById('drynote').textContent=remaining?'':"That's the best of it for now. Try another topic.";
-    if(firstServe){ document.getElementById('watch-ph').hidden=true; playMoment(0,false); document.getElementById('serve').scrollIntoView({behavior:'smooth',block:'nearest'}); }
-    var btn=document.getElementById('serve-btn');
-    btn.classList.add('clear'); btn.textContent='Clear and start again'; btn.disabled=false;
-  }
-  function renderQueue(){
-    var row=document.getElementById('mrow'); row.innerHTML='';
-    currentQueue.forEach(function(m,i){
-      var b=document.createElement('div'); b.className='mcard'; b.setAttribute('role','button'); b.tabIndex=0;
-      b.innerHTML='<span class="mn">'+(i<9?'0':'')+(i+1)+'</span><span class="mq"></span>'+
-        '<span class="md"><span class="mtag"></span><span class="mdur">'+fmtDur(m.endSec-m.startSec)+'</span></span>';
-      b.querySelector('.mtag').textContent=m.subtopic||m.topic;
-      b.querySelector('.mq').textContent=m.questionAsked||m.title;
-      b.addEventListener('click',function(ev){if(ev.target.tagName!=='A') playMoment(i,true)});
-      b.addEventListener('keydown',function(ev){if(ev.key==='Enter'&&ev.target.tagName!=='A') playMoment(i,true)});
-      row.appendChild(b);
-    });
-  }
-  function nowPlaying(m){
-    var fac=document.getElementById('mfacade');
-    if(!fac.hidden) fac.style.backgroundImage="linear-gradient(rgba(10,6,30,.35),rgba(10,6,30,.35)),url('https://i.ytimg.com/vi/"+m.youtubeId+"/maxresdefault.jpg')";
-    var np=document.getElementById('nowplaying');
-    var num=(currentIdx<9?'0':'')+(currentIdx+1);
-    np.innerHTML='Now playing <b>'+num+'</b> · '+fmtDur(m.endSec-m.startSec)+' &nbsp; <a href="episode-'+m.episodeNumber+'.html">From EP '+m.episodeNumber+' — watch the full episode →</a><span class="npdesc"></span>';
-    np.querySelector('.npdesc').textContent=m.description||m.questionAsked||'';
-    [].forEach.call(document.querySelectorAll('.mcard'),function(c,i){c.classList.toggle('playing',currentQueue[i]===m)});
-  }
-  var currentIdx=0;
-  function playMoment(i,autoplay){
-    var m=currentQueue[i]; if(!m) return;
-    currentIdx=i; nowPlaying(m);
-    if(!autoplay&&!player) return; /* facade stays until a real play intent */
-    document.getElementById('mfacade').hidden=true;
-    var spec={videoId:m.youtubeId,startSeconds:m.startSec,endSeconds:m.endSec};
-    if(player&&playerReady){ autoplay?player.loadVideoById(spec):player.cueVideoById(spec); return; }
-    pendingSpec={spec:spec,autoplay:autoplay};
-    if(window.YT&&YT.Player&&!player) createPlayer();
-  }
-  document.getElementById('mfacade').addEventListener('click',function(){playMoment(currentIdx,true)});
-  var pendingSpec=null;
-  function createPlayer(){
-    player=new YT.Player('mplayer-slot',{width:'100%',height:'100%',
-      playerVars:{rel:0,modestbranding:1,playsinline:1},
-      events:{onReady:function(){playerReady=true;
-        if(pendingSpec){pendingSpec.autoplay?player.loadVideoById(pendingSpec.spec):player.cueVideoById(pendingSpec.spec);pendingSpec=null;}
-      }}});
-  }
-  window.onYouTubeIframeAPIReady=function(){if(pendingSpec&&!player)createPlayer();};
-  (function(){var s=document.createElement('script');s.src='https://www.youtube.com/iframe_api';document.head.appendChild(s);})();
-
-  document.getElementById('serve-btn').addEventListener('click',function(){
-    var btn=document.getElementById('serve-btn');
-    if(btn.classList.contains('clear')) resetAll(); else serve(false);
-  });
-  function resetAll(){
-    selTopics=[];selSubs=[];servedIds=[];currentQueue=[];currentIdx=0;
-    document.querySelectorAll('#topic-chips .chip.on').forEach(function(c){c.classList.remove('on')});
-    renderSubchips();
-    document.getElementById('serve').classList.remove('show');
-    if(player){try{player.destroy()}catch(e){} player=null;playerReady=false;}
-    var fac=document.getElementById('mfacade'); fac.hidden=false; fac.style.backgroundImage='';
-    document.getElementById('watch-ph').hidden=false;
-    var btn=document.getElementById('serve-btn');
-    btn.classList.remove('clear'); btn.textContent='Show me the moments'; btn.disabled=true;
-  }
-  document.getElementById('more-btn').addEventListener('click',function(){serve(false)});
   </script>
 </body>
 </html>

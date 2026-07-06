@@ -11,7 +11,8 @@
   - File: `episode-263.html` — self-contained (styles + inline episode data + JS). This IS the template; other episodes become data swaps.
   - `assets/`: `tng-logo.png` (trimmed to 2.44:1 — full "THE NUMBERS game"), `inovayt-white.png`, `future-advisory-white.png`, `vidpod-white.png`, `numbers-wordmark.png`.
   - `data/`: `catalogue.json`, `search-index.json`, `entities.json` (263–286).
-  - `index.html` = the homepage (LIVE, in progress — see OPEN/NEXT #2, plan in `HOMEPAGE-PLAN.md`, feature spec in `MOMENTS-FEATURE.md`). All 22 released 2026 episode pages live too.
+  - `index.html` = the homepage, restructured 6 Jul evening as a ROUTER: video banner (looping title sequence: logo → "5 years. 280+ episodes." → "The Numbers Game.") → WAYS TO WATCH THE SHOW (three coloured cards: mint Latest episode / purple Choose your own adventure / black Explore every episode → YouTube channel until episodes.html exists) → about → footer.
+  - `adventure.html` = **Choose Your Own Adventure** (LIVE 6 Jul) — the moments feature as its own page/product (spec: `MOMENTS-FEATURE.md`). All 22 released 2026 episode pages live too.
 
 ## THE TEMPLATE (what's built in episode-263.html)
 **LOCKED 5 Jul 2026 — the full spec with strict per-element rules lives in `EPISODE-PAGE-TEMPLATE.md`. New pages follow that document, never re-decide.** Summary of what's on the page:
@@ -28,11 +29,12 @@ Sticky navbar (logo + "All episodes") → **carousel-exact hook title** (purple 
 - **Deploys run through OUR workflow** `.github/workflows/deploy-pages.yml` (Pages build_type=workflow since 5 Jul 2026). It queues deploys and auto-retries transient failures inside the run — the old branch-based pipeline's "Deployment failed, try again later" emails are gone. The site always keeps the last good deploy (never goes down).
 - **Preview:** `preview_start "tng-site"` (config in `Brain/Vidpod/clients/TNG/.claude/launch.json`, serves the repo on :8137) → open `/episode-263.html`. Or Tommy's `Tools/Desktop Phone Preview/preview.html` (paste the live URL; shows desktop + iPhone).
 
-## OPEN / NEXT (updated 6 Jul 2026, evening)
+## OPEN / NEXT (updated 6 Jul 2026, late evening)
 1. ✅ DONE — all 22 released 2026 episodes live (generator + audit, see LIVE-PAGES.md).
-2. **IN PROGRESS — Homepage (`index.html`)**: hero (podcast-art app icon + about + latest ep) and the moments feature ("Skip to the good bits", spec = `MOMENTS-FEATURE.md`) are built and iterated live with Tommy; NOT yet finished — continue refining with his notes (copy passes pending; top-of-page concept still open; heading block just switched black→purple).
-3. **Episodes page** (search + topic filters) → **Contact** (form + voice-note component) → **About + host pages**.
-4. Parked: direct Apple/Spotify show URLs; engine review list (EP 276 FBT/Company Setup mis-tag, weak moment descriptions Tommy spots); back-catalogue mining (all features auto-scale; moments payload optimisation trigger documented in MOMENTS-FEATURE.md §10).
+2. ✅ DONE — Homepage restructured as the three-door ROUTER and `adventure.html` launched (Tommy's model: latest episode / choose your own adventure / explore every episode — siloed experiences). All copy on both pages is DRAFT pending Tommy's voice pass. Banner title-sequence wording ("5 years. 280+ episodes.") also draft.
+3. **Episodes page** (`episodes.html`: search + topic filters, grid anatomy already proven) — when built: repoint homepage card 3 (currently → YouTube channel) and it fixes the nav EPISODES 404 on every page. Then **Contact** (form + voice-note component) → **About + host pages**. Tommy explicitly parked all of these on 6 Jul — do NOT start without his word.
+4. Tommy wants to keep fleshing out the adventure page as a product (his words: "a real solid product"). Ideas discussed: topic deep-links (?topic=property), share-a-moment URLs, surprise-me button, ask-the-show search over questionAsked.
+5. Parked: direct Apple/Spotify show URLs; engine review list (EP 276 FBT/Company Setup mis-tag, weak moment descriptions Tommy spots); back-catalogue mining (all features auto-scale; moments payload optimisation trigger documented in MOMENTS-FEATURE.md §10).
 
 ## WORKING-STYLE REMINDERS (Tommy's, hard-won)
 - **Pushing after commit is STANDARD (Tommy, 6 Jul 2026):** edit → quick local sanity check only if visual/layout → commit → `scripts/push-live.sh <file>` immediately. Never stop at a local commit or ask whether to push — Tommy reviews on the LIVE site, not previews. Only hold if he explicitly says "don't push yet".

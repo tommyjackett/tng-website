@@ -1,5 +1,7 @@
 # HOMEPAGE PLAN — locked design decisions (6 July 2026)
 
+> **SUPERSEDED (6 Jul 2026, evening).** The homepage became a ROUTER after live iteration with Tommy: video banner (looping title sequence) → WAYS TO WATCH THE SHOW (three coloured cards: Latest episode / Choose your own adventure / Explore every episode) → about → footer. The moments feature moved to its own page `adventure.html` (spec: MOMENTS-FEATURE.md). The episodes grid below was built, shipped, then removed — its job moves to the future `episodes.html`; card 3 points at the YouTube channel until then. This file stays as the record of the two-column-hero era.
+
 *Everything agreed with Tommy in the 5–6 Jul planning sessions. Build AFTER the 2026 episode batch. When built and iterated, this graduates into a locked spec like EPISODE-PAGE-TEMPLATE.md.*
 
 **Scope note:** 2026 episodes only for now. Back-catalogue mining comes later — every count and queue below simply grows when it does; nothing here changes.

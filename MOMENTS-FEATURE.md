@@ -1,6 +1,6 @@
 # MOMENTS FEATURE — product spec ("Skip to the good bits")
 
-*Documented 6 July 2026, as deployed on the TNG homepage (`index.html`, the `.momentsec` section). This is a portable VIDPOD product: **content-engine data + interest picker + moment player + episode exits**. The Huddle (Help at Hand) was v1; this is v2. Change behaviour only by changing this spec first.*
+*Documented 6 July 2026. Deployed as its own page, `adventure.html` ("Choose Your Own Adventure"), since the 6 Jul homepage restructure; the homepage carries an entry card. This is a portable VIDPOD product: **content-engine data + interest picker + moment player + episode exits**. The Huddle (Help at Hand) was v1; this is v2. Change behaviour only by changing this spec first.*
 
 **What it does:** a visitor lands on a show with hundreds of episodes. They pick the topics they're into; the feature pulls up the standout moments on exactly those topics and plays them right there — jumping to the exact seconds inside episodes, not to episode lists. It serves both newcomers (taste the show) and existing listeners (mine the back catalogue).
 
@@ -70,7 +70,7 @@ Released episodes only · chips only with real inventory behind them · every co
 1. Produce the two JSONs from that show's content engine (schema in §1) — this is the hard part and the moat.
 2. Swap: brand tokens (colours/fonts), constants (§2), the placeholder still, copy strings, channel links.
 3. Episode exits: link to episode pages if the show has them; otherwise point at YouTube timestamps or hide the exit.
-4. The section is self-contained (HTML + CSS + JS in one block) — designed to lift out of `index.html` into any page, or become its own page.
+4. The section is self-contained (HTML + CSS + JS in one block) — it lifted cleanly out of `index.html` into its own page (`adventure.html`, 6 Jul 2026), proving the portability claim.
 
 ## 9. Known limits
 
