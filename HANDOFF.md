@@ -35,8 +35,11 @@ Sticky navbar (logo + "All episodes") → **carousel-exact hook title** (purple 
 4. Parked: direct Apple/Spotify show URLs; engine review list (EP 276 FBT/Company Setup mis-tag, weak moment descriptions Tommy spots); back-catalogue mining (all features auto-scale; moments payload optimisation trigger documented in MOMENTS-FEATURE.md §10).
 
 ## WORKING-STYLE REMINDERS (Tommy's, hard-won)
-- Flag reasoning + intended action BEFORE consequential/irreversible steps (source-file edits, deploys). Don't build design without sign-off.
-- Words before pixels; match the carousel exactly; be his eyes/ears on cross-episode threads.
+- **Pushing after commit is STANDARD (Tommy, 6 Jul 2026):** edit → quick local sanity check only if visual/layout → commit → `scripts/push-live.sh <file>` immediately. Never stop at a local commit or ask whether to push — Tommy reviews on the LIVE site, not previews. Only hold if he explicitly says "don't push yet".
+- One change live before the next, or batch several edits into a single push. If a deploy stalls the script handles it — never re-push to fix it.
+- After each push: give the live link + a short summary of exactly what changed.
+- Specs are law: EPISODE-PAGE-TEMPLATE.md, MOMENTS-FEATURE.md, PROCESS.md, this file. A new rule agreed with Tommy gets written into the relevant spec in the same push.
+- Words before pixels; don't build design without sign-off; match the carousel exactly; be his eyes/ears on cross-episode threads.
 
 ## HOW TO RESUME
 Start a new session in this project and say:
