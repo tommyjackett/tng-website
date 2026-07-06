@@ -392,8 +392,7 @@
     var fac=document.getElementById('mfacade');
     if(!fac.hidden) fac.style.backgroundImage="linear-gradient(rgba(10,6,30,.35),rgba(10,6,30,.35)),url('https://i.ytimg.com/vi/"+m.youtubeId+"/maxresdefault.jpg')";
     var np=document.getElementById('nowplaying');
-    var num=(currentIdx<9?'0':'')+(currentIdx+1);
-    np.innerHTML='Now playing <b>'+num+'</b> · '+fmtDur(m.endSec-m.startSec)+' &nbsp; <a href="episode-'+m.episodeNumber+'.html">From EP '+m.episodeNumber+' — watch the full episode →</a><span class="npdesc"></span>';
+    np.innerHTML=fmtDur(m.endSec-m.startSec)+' &nbsp; <a href="episode-'+m.episodeNumber+'.html">From EP '+m.episodeNumber+' →</a><span class="npdesc"></span>';
     np.querySelector('.npdesc').textContent=m.description||m.questionAsked||'';
     [].forEach.call(document.querySelectorAll('.mcard'),function(c,i){c.classList.toggle('playing',currentQueue[i]===m)});
   }
