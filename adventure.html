@@ -101,9 +101,10 @@
   .step:first-child{margin-top:0}
   .step .n{font-family:var(--display);color:var(--mint);font-size:21px}
   .step .t{font-family:var(--display);color:var(--white);font-size:18px;text-transform:uppercase;letter-spacing:.5px}
-  .step .sarr{color:var(--mint);font-size:16px;line-height:1;animation:stepbob 1.6s ease-in-out infinite}
+  .step .sarr{color:var(--mint);font-size:16px;line-height:1;opacity:.22;transition:opacity .3s}
+  .step .sarr.on{animation:stepbob 1.6s ease-in-out infinite}
   @keyframes stepbob{0%,100%{transform:translateY(0);opacity:.55}50%{transform:translateY(4px);opacity:1}}
-  @media(prefers-reduced-motion:reduce){.step .sarr{animation:none}}
+  @media(prefers-reduced-motion:reduce){.step .sarr.on{animation:none;opacity:1}}
   .chips{display:flex;flex-wrap:wrap;gap:12px}
   .chip{font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.5px;font-size:15px;
     color:#0a0a0a;background:var(--mint);border:1px solid var(--mint);padding:12px 18px 10px;cursor:pointer;transition:.15s}
@@ -219,11 +220,11 @@
     <div class="momentsec" id="goodbits">
       <div class="mgrid">
         <div class="mpick">
-          <div class="step"><span class="n">1</span><span class="t">Select a topic</span><span class="sarr" aria-hidden="true">&darr;</span></div>
+          <div class="step"><span class="n">1</span><span class="t">Select a topic</span><span class="sarr" id="sarr1" aria-hidden="true">&darr;</span></div>
           <div class="chips" id="topic-chips"></div>
-          <div class="step"><span class="n">2</span><span class="t">Get specific</span><span class="sarr" aria-hidden="true">&darr;</span></div>
+          <div class="step"><span class="n">2</span><span class="t">Get specific</span><span class="sarr" id="sarr2" aria-hidden="true">&darr;</span></div>
           <div class="subchips" id="sub-chips"></div>
-          <div class="step"><span class="n">3</span><span class="t">Get your moments</span><span class="sarr" aria-hidden="true">&darr;</span></div>
+          <div class="step"><span class="n">3</span><span class="t">Get your moments</span><span class="sarr" id="sarr3" aria-hidden="true">&darr;</span></div>
           <button class="servebtn" id="serve-btn" type="button" disabled>Show me the moments</button>
         </div>
         <div class="mwatch">
@@ -318,6 +319,15 @@
     }
   });
 
+  /* Workflow arrows: only the next undone step pulses (1 -> topic picked -> 2 -> subchip touched -> 3; quiet once served; clear restarts) */
+  function updateArrows(){
+    var served=document.getElementById('serve').classList.contains('show');
+    var s1=selTopics.length>0, s2=selSubs.length>0;
+    document.getElementById('sarr1').classList.toggle('on', !s1);
+    document.getElementById('sarr2').classList.toggle('on', s1&&!s2&&!served);
+    document.getElementById('sarr3').classList.toggle('on', s1&&s2&&!served);
+  }
+
   function toggleTopic(t,btn){
     var i=selTopics.indexOf(t);
     if(i>-1){selTopics.splice(i,1);btn.classList.remove('on');selSubs=selSubs.filter(function(s){return s.topic!==t});}
@@ -327,6 +337,7 @@
     if(active&&!selTopics.length){resetAll();return;}
     document.getElementById('serve-btn').disabled=selTopics.length===0;
     if(active&&selTopics.length) serve(true);
+    updateArrows();
   }
   function renderSubchips(){
     var box=document.getElementById('sub-chips'); box.innerHTML=''; box.classList.toggle('show',selTopics.length>0);
@@ -342,6 +353,7 @@
           var idx=selSubs.findIndex(function(x){return x.topic===t&&x.sub===s});
           if(idx>-1){selSubs.splice(idx,1);b.classList.remove('on');}else{selSubs.push({topic:t,sub:s});b.classList.add('on');}
           if(document.getElementById('serve').classList.contains('show')) serve(true);
+          updateArrows();
         });
         box.appendChild(b);
       });
@@ -378,6 +390,7 @@
     if(firstServe){ document.getElementById('watch-ph').hidden=true; playMoment(0,false); document.getElementById('serve').scrollIntoView({behavior:'smooth',block:'nearest'}); }
     var btn=document.getElementById('serve-btn');
     btn.classList.add('clear'); btn.textContent='Clear and start again'; btn.disabled=false;
+    updateArrows();
   }
   function renderQueue(){
     var row=document.getElementById('mrow'); row.innerHTML='';
@@ -437,8 +450,10 @@
     document.getElementById('watch-ph').hidden=false;
     var btn=document.getElementById('serve-btn');
     btn.classList.remove('clear'); btn.textContent='Show me the moments'; btn.disabled=true;
+    updateArrows();
   }
   document.getElementById('more-btn').addEventListener('click',function(){serve(false)});
+  updateArrows();
   </script>
 </body>
 </html>

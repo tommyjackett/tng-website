@@ -60,6 +60,7 @@ Deliberately minimal (simplified with Tommy, 6 Jul): a 16:9 screen using the hos
 - **Desktop:** two even panes. Left = control column (steps 01 SELECT A TOPIC / 02 GET SPECIFIC / 03 GET YOUR MOMENTS + button). Right = step 04 PLAY YOUR MOMENTS above the screen (the four-step process spans both panes — Tommy, 6 Jul). Page title + sell live in the cinematic banner above, not in the panes. Nothing else spans both panes.
 - **Mobile:** single stack in the same DOM order — title, sell, 01, 02, 03, button, then the screen and cards below.
 - Grid items carry `min-width:0` (the card strip otherwise blows the column wide).
+- **Workflow arrows (Tommy, 6 Jul):** steps 1–3 carry a small mint down-arrow after the label; only the NEXT undone step's arrow pulses — 1 until a topic is picked, then 2, then 3 once a subchip is touched; all quiet once served; clear (or deselecting everything) restarts at 1. Step 4 never has an arrow — it's the destination. Done/future arrows sit static at low opacity.
 
 ## 7. Honesty rules (the product's soul)
 
