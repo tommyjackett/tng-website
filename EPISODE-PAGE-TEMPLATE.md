@@ -36,9 +36,10 @@
 ## 3. EPISODE IDENTITY + TITLE LOCKUP
 
 - **EP tag**: black `#0a0a0a` block, white Anton 13.5px, text `EP {N}`, overlapping the title's top-left corner (offset -6px left, -7px down). Data: episode number.
-- **Title split rule (automatic, never hand-picked):** split the full title at the first ` | ` or `: `; if neither exists, at the first `? ` or `. ` (punctuation stays on the hook); if no break at all → the whole title is the hook, no payoff line.
-  - **Hook** → `<h1>`, purple `--purple` highlight band, Anton, `clamp(28px, 7vw, 52px)`, letter-spacing -0.5px.
-  - **Payoff** → mint `--mint` highlight band, dark text, Anton, `clamp(16px, 4vw, 24px)`, 8px below the hook.
+- **Title rule (automatic, never hand-picked) — every page is two-tone. Two modes:**
+  - **Mode 1 — title has a natural break** (first ` | ` or `: `; else first `? ` or `. `, punctuation staying on the hook): front phrase = **hook** → `<h1>`, purple band, Anton `clamp(28px, 7vw, 52px)`, letter-spacing -0.5px; back phrase = **payoff** → mint band, dark text, Anton `clamp(16px, 4vw, 24px)`, 8px below.
+  - **Mode 2 — no break in the title**: split at the word boundary nearest the title's character midpoint. First half → purple band; second half → mint band, dark text — **both at full hook size**, stacked with an 8px gap (markup: two `.hkrow` block spans inside the `<h1>`, second segment classed `mintseg`). The split is maths, so the same words are mint on every device.
+  - A single-word title (back-catalogue edge case) renders purple only.
 - Band mechanics (do not change): highlight is a background band trimmed to 87% (hook) / 88% (payoff) of line height, vertically centred; wraps per-line via `box-decoration-break: clone`; hook and payoff first letters align via the shared `--inx` inset.
 - **Line balancing (`text-wrap: balance` on hook and payoff):** when a title wraps, the browser distributes words evenly across the lines — no one-word last lines (widows), at any viewport, for any length. Line breaks are never hand-picked; balancing is the only wrapping control.
 - Verified across all 24 current titles: 23 render as a 1–2-line hook. Guidance for future title writing: keep the pre-break part under ~65 characters (only EP 283 exceeds it → 3 lines, still clean).
