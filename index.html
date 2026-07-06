@@ -79,19 +79,17 @@
   .mgrid{display:grid;grid-template-columns:1fr 1fr;gap:48px;margin-top:4px;align-items:start}
   .mgrid>*{min-width:0}
   @media(max-width:900px){.mgrid{grid-template-columns:1fr;gap:34px}}
-  .watch-ph{aspect-ratio:16/9;position:relative;background:linear-gradient(160deg,#241a6b 0%,#161049 55%,#0b0820 100%);
-    border:1px solid var(--line);display:flex;flex-direction:column;justify-content:center;align-items:flex-start;
-    padding:7% 9%;box-shadow:0 30px 70px rgba(0,0,0,.5)}
   .watch-ph[hidden]{display:none}
-  .watch-ph .php{display:inline-block;font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.2px;
-    font-size:clamp(22px,2.6vw,34px);line-height:1;background:var(--purple);color:var(--white);padding:.14em .4em .08em}
-  .watch-ph .phm{display:inline-block;font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.4px;
-    font-size:clamp(14px,1.6vw,20px);line-height:1;background:var(--mint);color:#0a0a0a;padding:.16em .5em .1em;margin-top:9px}
-  .watch-ph .phline{color:rgba(255,255,255,.75);font-size:13.5px;line-height:1.5;margin-top:16px;max-width:38ch}
-  .watch-ph .phplay{position:absolute;right:7%;bottom:9%;width:58px;height:58px;border-radius:50%;
-    border:2px solid rgba(255,255,255,.45);display:flex;align-items:center;justify-content:center}
-  .watch-ph .phplay::after{content:"";border-style:solid;border-width:9px 0 9px 15px;border-color:transparent transparent transparent rgba(255,255,255,.6);margin-left:4px}
-  @media(max-width:900px){.watch-ph .phplay{display:none}}
+  .ph-screen{aspect-ratio:16/9;background:linear-gradient(160deg,#241a6b 0%,#161049 55%,#0b0820 100%);
+    border:1px solid var(--line);display:flex;align-items:center;justify-content:center;box-shadow:0 30px 70px rgba(0,0,0,.5)}
+  .ph-line{color:rgba(255,255,255,.78);font-size:13px;line-height:1.5;margin:10px 2px 14px}
+  .ph-cards{display:flex;gap:10px}
+  .ph-card{flex:1;max-width:250px;background:var(--card);border:1px solid var(--line);padding:12px;display:flex;flex-direction:column;gap:8px;opacity:.55}
+  .ph-card .mn{font-family:var(--display);color:var(--mint);font-size:14px;letter-spacing:1px}
+  .ph-card .mq{font-size:13px;font-weight:600;color:rgba(255,255,255,.94)}
+  .ph-card .md{margin-top:14px;display:flex;justify-content:space-between;align-items:center;gap:8px}
+  .ph-card .mtag{background:#0a0a0a;color:var(--mint);font-family:var(--display);font-size:10px;letter-spacing:1px;text-transform:uppercase;padding:3px 7px 2px}
+  .ph-card .mdur{font-size:11.5px;color:var(--mint)}
 
   /* latest episode card (locked card anatomy, scaled up) */
   .latest .seclabel{margin-bottom:14px}
@@ -240,11 +238,14 @@
           <button class="servebtn" id="serve-btn" type="button" disabled>Show me the moments</button>
         </div>
         <div class="mwatch">
-          <div class="watch-ph" id="watch-ph">
-            <span class="php">Your moments</span>
-            <span class="phm">Play right here</span>
-            <p class="phline">Pick a topic and the best bits of the show queue up in this player.</p>
-            <span class="phplay" aria-hidden="true"></span>
+          <div class="watch-ph" id="watch-ph" aria-hidden="true">
+            <div class="ph-screen"><span class="mplay"></span></div>
+            <p class="ph-line">Pick a topic and the best bits of the show play right here.</p>
+            <div class="ph-cards">
+              <div class="ph-card"><span class="mn">01</span><span class="mq">Best bit</span><span class="md"><span class="mtag">Your topic</span><span class="mdur">1m 20s</span></span></div>
+              <div class="ph-card"><span class="mn">02</span><span class="mq">Best bit</span><span class="md"><span class="mtag">Your topic</span><span class="mdur">2m 05s</span></span></div>
+              <div class="ph-card"><span class="mn">03</span><span class="mq">Best bit</span><span class="md"><span class="mtag">Your topic</span><span class="mdur">1m 45s</span></span></div>
+            </div>
           </div>
           <div class="serve" id="serve">
             <div class="mplayer">
