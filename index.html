@@ -81,10 +81,16 @@
   @media(max-width:900px){.mgrid{grid-template-columns:1fr;gap:34px}}
   .watch-ph[hidden]{display:none}
   .ph-screen{position:relative;aspect-ratio:16/9;background:#0b0820;
-    border:1px solid var(--line);display:flex;align-items:center;justify-content:center;box-shadow:0 30px 70px rgba(0,0,0,.5);overflow:hidden}
+    border:1px solid var(--line);display:flex;align-items:flex-end;justify-content:flex-start;padding:22px;box-shadow:0 30px 70px rgba(0,0,0,.5);overflow:hidden}
   .ph-screen::before{content:"";position:absolute;inset:0;
-    background:linear-gradient(rgba(18,10,55,.55),rgba(10,6,30,.55)),url('assets/hosts-still.jpg') center/cover no-repeat}
-  .ph-screen .mplay{position:relative;z-index:1;width:84px;height:84px;box-shadow:0 12px 32px rgba(0,0,0,.5)}
+    background:linear-gradient(rgba(18,10,55,.5),rgba(10,6,30,.6)),url('assets/hosts-still.jpg') center/cover no-repeat}
+  .ph-caption{position:relative;z-index:1;display:flex;flex-direction:column;align-items:flex-start;gap:8px}
+  .ph-caption .pc1{font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.2px;
+    font-size:clamp(20px,2.2vw,28px);line-height:1;background:var(--purple);color:var(--white);padding:.16em .45em .1em}
+  .ph-caption .pc2{font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.4px;
+    font-size:clamp(13px,1.4vw,17px);line-height:1;background:var(--mint);color:#0a0a0a;padding:.2em .55em .12em}
+  .ph-screen .mplay{position:absolute;z-index:1;right:20px;bottom:20px;width:44px;height:44px;box-shadow:0 10px 24px rgba(0,0,0,.5)}
+  .ph-screen .mplay::after{border-width:7px 0 7px 12px;margin-left:3px}
   .ph-line{color:rgba(255,255,255,.78);font-size:13px;line-height:1.5;margin:10px 2px 14px}
   .ph-cards{display:flex;gap:10px}
   .ph-card{flex:1;max-width:250px;background:var(--card);border:1px solid var(--line);padding:12px;display:flex;flex-direction:column;gap:8px;opacity:.55}
@@ -243,7 +249,10 @@
         </div>
         <div class="mwatch">
           <div class="watch-ph" id="watch-ph" aria-hidden="true">
-            <div class="ph-screen"><span class="mplay"></span></div>
+            <div class="ph-screen">
+              <div class="ph-caption"><span class="pc1">Your moments</span><span class="pc2">will play right here</span></div>
+              <span class="mplay" aria-hidden="true"></span>
+            </div>
             <p class="ph-line">Pick a topic and the best bits of the show play right here.</p>
             <div class="ph-cards">
               <div class="ph-card"><span class="mn">01</span><span class="mq">Best bit</span><span class="md"><span class="mtag">Your topic</span><span class="mdur">1m 20s</span></span></div>
