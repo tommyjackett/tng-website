@@ -40,9 +40,16 @@
   @media(max-width:720px){.nav-in{padding:11px 22px}}
   .brand{display:block;line-height:0}
   .brand img{height:36px;width:auto;display:block}
-  .navlinks{display:flex;gap:28px}
+  .navlinks{display:flex;gap:28px;align-items:center}
   .navlinks a{text-decoration:none;font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);transition:.15s}
   .navlinks a:hover{color:var(--white)}
+  .navgroup{position:relative}
+  .navgroup .subnav{display:none;position:absolute;top:100%;left:50%;transform:translateX(-50%);padding-top:14px;min-width:180px}
+  .navgroup:hover .subnav,.navgroup:focus-within .subnav{display:block}
+  .subnav-in,.navgroup .subnav{z-index:60}
+  .navgroup .subnav a{display:block;background:#180f4a;border:1px solid var(--line);border-top:0;padding:12px 16px;font-size:12px;color:rgba(255,255,255,.85)}
+  .navgroup .subnav a:first-child{border-top:1px solid var(--line)}
+  .navgroup .subnav a:hover{background:#221768;color:var(--white)}
   .navburger{display:none;background:none;border:1px solid var(--line);padding:8px 10px;cursor:pointer;color:var(--white);transition:.15s}
   .navburger:hover{border-color:rgba(122,217,168,.6)}
   .navburger svg{width:20px;height:20px;fill:currentColor;display:block}
@@ -55,6 +62,7 @@
     .navdrop[hidden]{display:none}
     .navdrop a{display:block;padding:15px 22px;text-decoration:none;font-size:14px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:rgba(255,255,255,.9);border-bottom:1px solid rgba(255,255,255,.06)}
     .navdrop a:last-child{border-bottom:0}
+    .navdrop a.sub{padding-left:42px;font-size:13px;color:rgba(255,255,255,.72)}
   }
 
   /* ── Hero / hook (marker-highlight system: purple hook wraps naturally, mint payoff below)
@@ -206,7 +214,12 @@
   footer{border-top:1px solid var(--line);margin-top:6px;padding:48px 20px 58px;text-align:center}
   .foot-label{font-size:11px;font-weight:700;letter-spacing:.26em;text-transform:uppercase;color:var(--dim);margin-bottom:16px}
   .sponsors{display:flex;justify-content:center;align-items:center;gap:38px;flex-wrap:wrap}
+  .sponsors a{display:inline-flex;transition:.15s}
+  .sponsors a:hover{transform:translateY(-1px)}
   .sponsors img{height:34px;width:auto;opacity:.92}
+  .sponsors a:hover img{opacity:1}
+  .produced a{display:inline-flex;transition:.15s}
+  .produced a:hover img{opacity:1}
   .produced{margin-top:0}
   .produced img{height:30px;width:auto;opacity:.95}
   .copyright{margin-top:28px;font-size:12px;color:var(--dim)}
@@ -221,7 +234,14 @@
       <a class="brand" href="index.html" aria-label="The Numbers Game home"><img src="assets/tng-logo.png" alt="The Numbers Game"></a>
       <div class="navlinks">
         <a href="episodes.html">Episodes</a>
-        <a href="about.html">About</a>
+        <div class="navgroup">
+          <a href="about.html">About</a>
+          <div class="subnav">
+            <a href="about.html">The show</a>
+            <a href="nick-reilly.html">Nick Reilly</a>
+            <a href="jason-robinson.html">Jason Robinson</a>
+          </div>
+        </div>
         <a href="contact.html">Contact</a>
       </div>
       <button class="navburger" id="navburger" type="button" aria-label="Menu" aria-expanded="false">
@@ -232,6 +252,8 @@
       <a href="index.html">Home</a>
       <a href="episodes.html">Episodes</a>
       <a href="about.html">About</a>
+      <a class="sub" href="nick-reilly.html">Nick Reilly</a>
+      <a class="sub" href="jason-robinson.html">Jason Robinson</a>
       <a href="contact.html">Contact</a>
     </div>
   </nav>
@@ -383,8 +405,8 @@
     <div class="broughtby">
       <div class="foot-label">Brought to you by</div>
       <div class="sponsors">
-        <img src="assets/inovayt-white.png" alt="Inovayt">
-        <img src="assets/future-advisory-white.png" alt="Future Advisory">
+        <a href="https://www.inovayt.com.au/" target="_blank" rel="noopener"><img src="assets/inovayt-white.png" alt="Inovayt"></a>
+        <a href="https://futureadvisory.com.au/" target="_blank" rel="noopener"><img src="assets/future-advisory-white.png" alt="Future Advisory"></a>
       </div>
     </div>
 
@@ -393,7 +415,7 @@
   <footer>
     <div class="produced">
       <div class="foot-label">Produced by</div>
-      <img src="assets/vidpod-white.png" alt="VIDPOD">
+      <a href="https://www.vidpod.com.au/" target="_blank" rel="noopener"><img src="assets/vidpod-white.png" alt="VIDPOD"></a>
     </div>
     <div class="copyright">© 2026 The Numbers Game</div>
   </footer>
