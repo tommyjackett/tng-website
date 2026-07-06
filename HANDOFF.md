@@ -11,7 +11,7 @@
   - File: `episode-263.html` — self-contained (styles + inline episode data + JS). This IS the template; other episodes become data swaps.
   - `assets/`: `tng-logo.png` (trimmed to 2.44:1 — full "THE NUMBERS game"), `inovayt-white.png`, `future-advisory-white.png`, `vidpod-white.png`, `numbers-wordmark.png`.
   - `data/`: `catalogue.json`, `search-index.json`, `entities.json` (263–286).
-  - No `index.html` at root yet (Tommy's call — no homepage until we design it).
+  - `index.html` = the homepage (LIVE, in progress — see OPEN/NEXT #2, plan in `HOMEPAGE-PLAN.md`, feature spec in `MOMENTS-FEATURE.md`). All 22 released 2026 episode pages live too.
 
 ## THE TEMPLATE (what's built in episode-263.html)
 **LOCKED 5 Jul 2026 — the full spec with strict per-element rules lives in `EPISODE-PAGE-TEMPLATE.md`. New pages follow that document, never re-decide.** Summary of what's on the page:
