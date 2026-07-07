@@ -51,9 +51,9 @@
   .pv-adv .p1{animation:phase1c 18s ease infinite}
   .pv-adv .p2{animation:phase2c 18s ease infinite}
   .pv-adv .p3{animation:phase3c 18s ease infinite}
-  @keyframes phase1c{0%,33%{opacity:1}36%,100%{opacity:0}}
-  @keyframes phase2c{0%,38%{opacity:0}41%,66%{opacity:1}69%,100%{opacity:0}}
-  @keyframes phase3c{0%,71%{opacity:0}74%,97%{opacity:1}100%{opacity:0}}
+  @keyframes phase1c{0%,38%{opacity:1}41%,100%{opacity:0}}
+  @keyframes phase2c{0%,43%{opacity:0}46%,71%{opacity:1}74%,100%{opacity:0}}
+  @keyframes phase3c{0%,76%{opacity:0}79%,97%{opacity:1}100%{opacity:0}}
   .pv-adv .plabel{display:flex;gap:8px;align-items:baseline;justify-content:center;opacity:0}
   .pv-adv .plabel .pn{font-family:var(--display);font-size:18px;color:var(--mint)}
   .pv-adv .plabel .pt{font-family:var(--display);font-size:16.5px;letter-spacing:.6px;text-transform:uppercase;color:#fff}
@@ -70,32 +70,37 @@
   .pv-adv .p1 .plabel{animation:lblA 18s ease infinite}
   .pv-adv .p2 .plabel{animation:lblB 18s ease infinite}
   .pv-adv .p3 .plabel{animation:lblC 18s ease infinite}
-  /* pops only — the phase container owns the shared fade-out */
-  @keyframes lblA{0%{opacity:0;transform:translateY(6px)}2%,100%{opacity:1;transform:translateY(0)}}
-  @keyframes chipA{0%,2%{opacity:0;transform:scale(.4)}4.5%,100%{opacity:1;transform:scale(1)}}
+  /* pops only — the phase container owns the shared fade-out. Every staggered element also
+     returns to hidden while its container is faded, so the loop wrap can't flash stale chips. */
+  @keyframes lblA{0%{opacity:0;transform:translateY(6px)}2%{opacity:1;transform:translateY(0)}42%{opacity:1}45%,100%{opacity:0}}
+  @keyframes chipA{0%,2%{opacity:0;transform:scale(.4)}4.5%{opacity:1;transform:scale(1)}42%{opacity:1}45%,100%{opacity:0}}
   @keyframes chipASel{
     0%,2%{opacity:0;transform:scale(.4);background:var(--mint);color:#0a0a0a}
     4.5%{opacity:1;transform:scale(1);background:var(--mint);color:#0a0a0a}
     16%{transform:scale(1);background:var(--mint);color:#0a0a0a}
     17.5%{transform:scale(.85)}
-    19%,100%{opacity:1;transform:scale(1);background:var(--purple);color:#fff}
+    19%{opacity:1;transform:scale(1);background:var(--purple);color:#fff}
+    42%{opacity:1;background:var(--purple);color:#fff}
+    45%,100%{opacity:0;background:var(--purple);color:#fff}
   }
-  @keyframes lblB{0%,42%{opacity:0;transform:translateY(6px)}45%,100%{opacity:1;transform:translateY(0)}}
-  @keyframes chipB{0%,44%{opacity:0;transform:scale(.4)}47%,100%{opacity:1;transform:scale(1)}}
+  @keyframes lblB{0%,45%{opacity:0;transform:translateY(6px)}48%{opacity:1;transform:translateY(0)}75%{opacity:1}78%,100%{opacity:0}}
+  @keyframes chipB{0%,47%{opacity:0;transform:scale(.4)}50%{opacity:1;transform:scale(1)}75%{opacity:1}78%,100%{opacity:0}}
   @keyframes chipBSel{
-    0%,44%{opacity:0;transform:scale(.4);background:transparent;color:rgba(255,255,255,.92)}
-    47%{opacity:1;transform:scale(1);background:transparent}
-    55%{transform:scale(1);background:transparent}
-    56.5%{transform:scale(.85)}
-    58%,100%{opacity:1;transform:scale(1);background:var(--purple);border-color:var(--purple);color:#fff}
+    0%,47%{opacity:0;transform:scale(.4);background:transparent;color:rgba(255,255,255,.92)}
+    50%{opacity:1;transform:scale(1);background:transparent}
+    56%{transform:scale(1);background:transparent}
+    57.5%{transform:scale(.85)}
+    59%{opacity:1;transform:scale(1);background:var(--purple);border-color:var(--purple);color:#fff}
+    75%{opacity:1;background:var(--purple)}
+    78%,100%{opacity:0;background:var(--purple)}
   }
-  @keyframes lblC{0%,75%{opacity:0;transform:translateY(6px)}78%,100%{opacity:1;transform:translateY(0)}}
+  @keyframes lblC{0%,78%{opacity:0;transform:translateY(6px)}81%,100%{opacity:1;transform:translateY(0)}}
   @keyframes btnC{
-    0%,77%{opacity:0;transform:scale(.5)}
-    80%{opacity:1;transform:scale(1)}
-    86%{transform:scale(1)}
-    88%{transform:scale(.9)}
-    90%,100%{opacity:1;transform:scale(1)}
+    0%,80%{opacity:0;transform:scale(.5)}
+    83%{opacity:1;transform:scale(1)}
+    88%{transform:scale(1)}
+    90%{transform:scale(.9)}
+    92%,100%{opacity:1;transform:scale(1)}
   }
 
   /* 3 — explore: a wall of small thumbs drifting downward — lots to explore */
