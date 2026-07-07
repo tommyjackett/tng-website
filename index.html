@@ -73,32 +73,41 @@
   @media(max-width:720px){.banner{height:clamp(300px,73vw,420px)}}
   .banner video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
   .banner-tint{position:absolute;inset:-4px;background:rgba(44,27,138,.5)}
-  /* looping title sequence over the video: logo → 5 years / 280+ eps → show name */
+  /* Title sequence over the video (plays once): logo → 5 years → 150+ hours / 280+ eps → show lockup (holds) */
   .banner-seq{position:absolute;inset:0;z-index:1;pointer-events:none}
-  .banner-seq .bs{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;opacity:0}
+  .banner-seq .bs{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;opacity:0;padding:0 22px}
   .banner-seq img{height:clamp(64px,11vw,130px);width:auto;filter:drop-shadow(0 14px 40px rgba(0,0,0,.5))}
   .banner-seq .bst{font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.5px;
     text-align:center;line-height:1.1;color:var(--white);font-size:clamp(26px,4.6vw,58px);
-    text-shadow:0 6px 30px rgba(0,0,0,.65);padding:0 22px}
-  .bs1{animation:seq1 12s ease infinite}
-  .bs2{animation:seq2 12s ease infinite}
-  .bs3{animation:seq3 12s ease infinite}
-  @keyframes seq1{
-    0%{opacity:0;transform:scale(.6) translateY(20px)}
-    6%,26%{opacity:1;transform:scale(1) translateY(0)}
-    32%,100%{opacity:0;transform:scale(1.05) translateY(-12px)}
+    text-shadow:0 6px 30px rgba(0,0,0,.65)}
+  .banner-seq .lockh{font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.3px;
+    text-align:center;line-height:1.15;color:var(--white);font-size:clamp(22px,3.3vw,44px);
+    text-shadow:0 6px 30px rgba(0,0,0,.65);text-wrap:balance;max-width:22ch}
+  .banner-seq .locks{font-size:clamp(13px,1.35vw,16px);font-weight:500;color:var(--white);text-align:center;
+    max-width:58ch;line-height:1.65;text-shadow:0 2px 6px rgba(10,6,30,.9),0 4px 22px rgba(0,0,0,.8)}
+  .bs1{animation:popthru 3.2s ease forwards}
+  .bs2{animation:popthru 2.7s ease 3.2s forwards}
+  .bs3{animation:popthru 3s ease 5.9s forwards}
+  .bs4{animation:lockin 1.1s ease 8.9s forwards}
+  @keyframes popthru{
+    0%{opacity:0;transform:scale(.72) translateY(20px)}
+    16%,74%{opacity:1;transform:scale(1) translateY(0)}
+    100%{opacity:0;transform:scale(1.05) translateY(-12px)}
   }
-  @keyframes seq2{
-    0%,34%{opacity:0;transform:scale(.85) translateY(16px)}
-    40%,58%{opacity:1;transform:scale(1) translateY(0)}
-    64%,100%{opacity:0;transform:scale(1.03) translateY(-10px)}
+  @keyframes lockin{
+    0%{opacity:0;transform:scale(.92) translateY(16px)}
+    100%{opacity:1;transform:scale(1) translateY(0)}
   }
-  @keyframes seq3{
-    0%,66%{opacity:0;transform:scale(.85) translateY(16px)}
-    72%,92%{opacity:1;transform:scale(1) translateY(0)}
-    98%,100%{opacity:0;transform:scale(1.03) translateY(-10px)}
+  /* scroll cue overlapping the banner fade, drawing down to section 2 */
+  .banner-cue{position:relative;z-index:2;margin-top:-58px;display:flex;justify-content:center;pointer-events:none}
+  .banner-cue span{color:var(--mint);font-size:24px;line-height:1;animation:cuebob 1.6s ease-in-out infinite}
+  @keyframes cuebob{0%,100%{transform:translateY(0);opacity:.5}50%{transform:translateY(7px);opacity:1}}
+  @media(prefers-reduced-motion:reduce){
+    .banner video{display:none}
+    .bs1,.bs2,.bs3{display:none}
+    .bs4{animation:none;opacity:1}
+    .banner-cue span{animation:none}
   }
-  @media(prefers-reduced-motion:reduce){.banner video{display:none}.banner-seq{display:none}}
 
   /* Section 2: ways to watch — three coloured pillar cards (below the video) */
   .wherestart{max-width:var(--wrap);margin:0 auto;padding:90px 36px 110px}
@@ -108,6 +117,13 @@
   .pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:24px}
   .pillars>*{min-width:0}
   @media(max-width:900px){.pillars{grid-template-columns:1fr}}
+  /* cards pop in when the section scrolls into view (JS adds .animready on load, .inview on scroll) */
+  .wherestart.animready .pcard{opacity:0}
+  .wherestart.animready.inview .pcard{animation:cardpop .55s ease forwards}
+  .wherestart.animready.inview .pcard:nth-child(2){animation-delay:.14s}
+  .wherestart.animready.inview .pcard:nth-child(3){animation-delay:.28s}
+  @keyframes cardpop{0%{opacity:0;transform:translateY(26px) scale(.97)}100%{opacity:1;transform:translateY(0) scale(1)}}
+  @media(prefers-reduced-motion:reduce){.wherestart.animready .pcard{opacity:1;animation:none}}
   .pcard{display:flex;flex-direction:column;gap:8px;padding:18px 20px 18px;text-decoration:none;transition:.18s;
     box-shadow:0 12px 30px rgba(0,0,0,.25)}
   .pcard:hover{transform:translateY(-3px);filter:brightness(1.05);box-shadow:0 20px 44px rgba(0,0,0,.35)}
@@ -127,28 +143,21 @@
   .pcard.blackc .ph{color:var(--white)}
   .pcard.blackc .pd{color:rgba(255,255,255,.72)}
   .pcard.blackc .pgo{color:var(--mint);border-color:rgba(122,217,168,.8)}
-  .about{display:flex;gap:28px;align-items:center}
-  .podart{width:148px;height:148px;border-radius:18px;flex:none;
-    box-shadow:0 24px 60px rgba(0,0,0,.55),0 4px 14px rgba(0,0,0,.4)}
-  .abouttext{color:var(--muted);font-size:15px;line-height:1.65;max-width:56ch}
-  @media(max-width:900px){.about{gap:20px;align-items:flex-start}.podart{width:116px;height:116px;border-radius:14px}}
-  .aboutsec{border-top:1px solid var(--line);margin-top:110px;padding:64px 0 0}
-  @media(max-width:720px){.aboutsec{margin-top:80px;padding:48px 0 0}}
-
-  /* ── Brought to you by + footer (template convention) ── */
-  .broughtby{text-align:center;margin-top:100px;margin-bottom:64px}
+  /* ── Footer: two columns under the line (Brought to you by | Produced by), site standard ── */
+  footer{border-top:1px solid var(--line);margin-top:24px;padding:52px 20px 58px}
+  .footgrid{max-width:var(--wrap);margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:start}
+  @media(max-width:720px){.footgrid{grid-template-columns:1fr;gap:40px}}
+  .fcol{text-align:center}
   .foot-label{font-size:11px;font-weight:700;letter-spacing:.26em;text-transform:uppercase;color:var(--dim);margin-bottom:16px}
   .sponsors{display:flex;justify-content:center;align-items:center;gap:38px;flex-wrap:wrap}
   .sponsors a{display:inline-flex;transition:.15s}
   .sponsors a:hover{transform:translateY(-1px)}
   .sponsors img{height:34px;width:auto;opacity:.92}
   .sponsors a:hover img{opacity:1}
-  footer{border-top:1px solid var(--line);margin-top:6px;padding:48px 20px 58px;text-align:center}
-  .produced{margin-top:0}
   .produced a{display:inline-flex;transition:.15s}
   .produced a:hover img{opacity:1}
   .produced img{height:30px;width:auto;opacity:.95}
-  .copyright{margin-top:28px;font-size:12px;color:var(--dim)}
+  .copyright{margin-top:40px;font-size:12px;color:var(--dim);text-align:center}
 </style>
 </head>
 <body>
@@ -186,15 +195,21 @@
       <source src="assets/banner-opener.mp4" type="video/mp4">
     </video>
     <div class="banner-tint"></div>
-    <div class="banner-seq" aria-hidden="true">
-      <div class="bs bs1"><img src="assets/tng-logo.png" alt=""></div>
-      <div class="bs bs2"><span class="bst">5 years. 280+ episodes.</span></div>
-      <div class="bs bs3"><span class="bst">The Numbers Game.</span></div>
+    <div class="banner-seq">
+      <div class="bs bs1" aria-hidden="true"><img src="assets/tng-logo.png" alt=""></div>
+      <div class="bs bs2" aria-hidden="true"><span class="bst">5 years.</span></div>
+      <div class="bs bs3" aria-hidden="true"><span class="bst">150+ hours. 280+ episodes.</span></div>
+      <div class="bs bs4">
+        <span class="lockh">Finance, investment &amp; business. Not as you know it.</span>
+        <p class="locks">Each week, accountant Jason Robinson and financial planner Nick Reilly bring you strategy and advice on knowing your numbers, in life and business.</p>
+      </div>
     </div>
   </div>
 
+  <div class="banner-cue" aria-hidden="true"><span>&darr;</span></div>
+
   <div class="wherestart">
-    <h2>Ways to watch the show</h2>
+    <h2>Ways to explore the show</h2>
     <div class="pillars">
       <a class="pcard mintc" id="banner-latest" href="#">
         <span class="ph">Latest episode</span>
@@ -214,29 +229,19 @@
     </div>
   </div>
 
-  <main class="wrap">
-
-    <div class="aboutsec">
-      <div class="about">
-        <img class="podart" src="assets/podcast-art.jpg" alt="The Numbers Game podcast artwork">
-        <p class="abouttext">Thanks for stopping by. The Numbers Game is a weekly show about business, property, tax and money, hosted by financial planner Nick Reilly and accountant Jason Robinson. Real numbers, real talk, new episodes every Monday.</p>
-      </div>
-    </div>
-
-    <div class="broughtby">
-      <div class="foot-label">Brought to you by</div>
-      <div class="sponsors">
-        <a href="https://www.inovayt.com.au/" target="_blank" rel="noopener"><img src="assets/inovayt-white.png" alt="Inovayt"></a>
-        <a href="https://futureadvisory.com.au/" target="_blank" rel="noopener"><img src="assets/future-advisory-white.png" alt="Future Advisory"></a>
-      </div>
-    </div>
-
-  </main>
-
   <footer>
-    <div class="produced">
-      <div class="foot-label">Produced by</div>
-      <a href="https://www.vidpod.com.au/" target="_blank" rel="noopener"><img src="assets/vidpod-white.png" alt="VIDPOD"></a>
+    <div class="footgrid">
+      <div class="fcol">
+        <div class="foot-label">Brought to you by</div>
+        <div class="sponsors">
+          <a href="https://www.inovayt.com.au/" target="_blank" rel="noopener"><img src="assets/inovayt-white.png" alt="Inovayt"></a>
+          <a href="https://futureadvisory.com.au/" target="_blank" rel="noopener"><img src="assets/future-advisory-white.png" alt="Future Advisory"></a>
+        </div>
+      </div>
+      <div class="fcol produced">
+        <div class="foot-label">Produced by</div>
+        <a href="https://www.vidpod.com.au/" target="_blank" rel="noopener"><img src="assets/vidpod-white.png" alt="VIDPOD"></a>
+      </div>
     </div>
     <div class="copyright">© 2026 The Numbers Game</div>
   </footer>
@@ -248,6 +253,18 @@
     navdrop.hidden=!navdrop.hidden;
     burger.setAttribute('aria-expanded', navdrop.hidden?'false':'true');
   });}
+
+  /* Ways-to-explore cards pop in when the section arrives: on scroll, or 2.4s after load
+     when it's already on screen (layered under the banner sequence); 9s failsafe = can never stay hidden */
+  var ws=document.querySelector('.wherestart');
+  if(ws){
+    ws.classList.add('animready');
+    var revealed=false;
+    var reveal=function(){if(revealed)return;revealed=true;ws.classList.add('inview');};
+    var chk=function(){if(ws.getBoundingClientRect().top<window.innerHeight*.85)reveal();};
+    window.addEventListener('scroll',chk,{passive:true});
+    setTimeout(chk,2400); setTimeout(reveal,9000);
+  }
 
   /* Latest-episode card always points at the newest released episode */
   fetch('data/catalogue.json').then(function(r){return r.json()}).then(function(cat){

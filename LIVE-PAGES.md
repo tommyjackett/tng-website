@@ -30,7 +30,7 @@
 
 ## Site pages
 
-- [Homepage — video banner + title sequence, three Ways to Watch cards, about](https://tommyjackett.github.io/tng-website/) — added 6 Jul 2026 · restructured 6 Jul 2026 (router model)
+- [Homepage — one-screen: video title sequence (logo, stats, show lockup) + Ways to Explore cards popping in](https://tommyjackett.github.io/tng-website/) — added 6 Jul 2026 · one-screen rebuild 6 Jul 2026
 - [Choose Your Own Adventure — the moments feature, own page](https://tommyjackett.github.io/tng-website/adventure.html) — added 6 Jul 2026
 *(to come: Episodes page with search/filters, Contact, About, host pages)*
 
