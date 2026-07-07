@@ -43,39 +43,38 @@
   .pv-latest .eptag{position:absolute;left:10px;bottom:10px;background:#0a0a0a;color:#fff;font-family:var(--display);
     font-size:11px;letter-spacing:1.2px;text-transform:uppercase;padding:4px 8px 3px}
 
-  /* 2 — adventure: numbered instruction at the top, chips pop in one by one, fade, next beat (9s loop) */
+  /* 2 — adventure: centred numbered instruction, ALL real topics fill the bucket, button gets pressed (14s loop) */
   .pv-adv{background:#3d2fb5}
-  .pv-adv .phase{position:absolute;inset:0;display:flex;flex-direction:column;align-items:flex-start;
-    gap:12px;padding:16px 18px}
-  .pv-adv .plabel{display:flex;gap:8px;align-items:baseline;opacity:0}
+  .pv-adv .phase{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;
+    gap:12px;padding:15px 14px;text-align:center}
+  .pv-adv .plabel{display:flex;gap:8px;align-items:baseline;justify-content:center;opacity:0}
   .pv-adv .plabel .pn{font-family:var(--display);font-size:16px;color:var(--mint)}
   .pv-adv .plabel .pt{font-family:var(--display);font-size:15px;letter-spacing:.6px;text-transform:uppercase;color:#fff}
-  .pv-adv .crow{display:flex;gap:7px;flex-wrap:wrap}
-  .pv-adv .c{font-family:var(--display);font-size:11px;letter-spacing:.5px;text-transform:uppercase;
-    background:var(--mint);color:#0a0a0a;padding:6px 9px 4px;opacity:0}
+  .pv-adv .crow{display:flex;gap:7px;flex-wrap:wrap;justify-content:center;align-content:flex-start}
+  .pv-adv .c{font-family:var(--display);font-size:10.5px;letter-spacing:.5px;text-transform:uppercase;
+    background:var(--mint);color:#0a0a0a;padding:6px 9px 4px;opacity:0;animation:chipA 14s ease infinite}
   .pv-adv .sc{font-family:var(--sans);font-weight:600;font-size:11px;color:rgba(255,255,255,.92);
-    border:1px solid rgba(255,255,255,.45);padding:5px 9px;opacity:0}
+    border:1px solid rgba(255,255,255,.45);padding:5px 9px;opacity:0;animation:chipB 14s ease infinite}
   .pv-adv .go{font-family:var(--sans);font-weight:800;font-size:11px;letter-spacing:.05em;text-transform:uppercase;
-    background:var(--mint);color:#08210f;border-radius:999px;padding:10px 18px;opacity:0;margin-top:6px}
-  .pv-adv .p1 .plabel{animation:lblA 9s ease infinite}
-  .pv-adv .p1 .c{animation:chipA 9s ease infinite}
-  .pv-adv .p1 .c:nth-child(2){animation-delay:.09s}.pv-adv .p1 .c:nth-child(3){animation-delay:.18s}
-  .pv-adv .p1 .c:nth-child(4){animation-delay:.27s}.pv-adv .p1 .c:nth-child(5){animation-delay:.36s}
-  .pv-adv .p1 .c:nth-child(6){animation-delay:.45s}.pv-adv .p1 .c:nth-child(7){animation-delay:.54s}
-  .pv-adv .p1 .c:nth-child(8){animation-delay:.63s}
-  .pv-adv .p2 .plabel{animation:lblB 9s ease infinite}
-  .pv-adv .p2 .sc{animation:chipB 9s ease infinite}
-  .pv-adv .p2 .sc:nth-child(2){animation-delay:.09s}.pv-adv .p2 .sc:nth-child(3){animation-delay:.18s}
-  .pv-adv .p2 .sc:nth-child(4){animation-delay:.27s}.pv-adv .p2 .sc:nth-child(5){animation-delay:.36s}
-  .pv-adv .p2 .sc:nth-child(6){animation-delay:.45s}
-  .pv-adv .p3 .plabel{animation:lblC 9s ease infinite}
-  .pv-adv .p3 .go{animation:btnC 9s cubic-bezier(.2,1.3,.4,1) infinite}
-  @keyframes lblA{0%{opacity:0;transform:translateY(6px)}2%,28%{opacity:1;transform:translateY(0)}32%,100%{opacity:0}}
-  @keyframes chipA{0%{opacity:0;transform:scale(.4)}4%{opacity:1;transform:scale(1)}27%{opacity:1}31%,100%{opacity:0}}
-  @keyframes lblB{0%,35%{opacity:0;transform:translateY(6px)}38%,61%{opacity:1;transform:translateY(0)}65%,100%{opacity:0}}
-  @keyframes chipB{0%,37%{opacity:0;transform:scale(.4)}41%{opacity:1;transform:scale(1)}60%{opacity:1}64%,100%{opacity:0}}
-  @keyframes lblC{0%,68%{opacity:0;transform:translateY(6px)}71%,96%{opacity:1;transform:translateY(0)}100%{opacity:0}}
-  @keyframes btnC{0%,71%{opacity:0;transform:scale(.5)}75%{opacity:1;transform:scale(1)}96%{opacity:1}100%{opacity:0}}
+    background:var(--mint);color:#08210f;border-radius:999px;padding:11px 19px;opacity:0;margin-top:10px;
+    animation:btnC 14s ease infinite;box-shadow:0 8px 22px rgba(0,0,0,.3)}
+  .pv-adv .p1 .plabel{animation:lblA 14s ease infinite}
+  .pv-adv .p2 .plabel{animation:lblB 14s ease infinite}
+  .pv-adv .p3 .plabel{animation:lblC 14s ease infinite}
+  @keyframes lblA{0%{opacity:0;transform:translateY(6px)}2%,33%{opacity:1;transform:translateY(0)}36%,100%{opacity:0}}
+  @keyframes chipA{0%{opacity:0;transform:scale(.4)}2.5%{opacity:1;transform:scale(1)}32%{opacity:1}35.5%,100%{opacity:0}}
+  @keyframes lblB{0%,38%{opacity:0;transform:translateY(6px)}41%,63%{opacity:1;transform:translateY(0)}66%,100%{opacity:0}}
+  @keyframes chipB{0%,39%{opacity:0;transform:scale(.4)}42%{opacity:1;transform:scale(1)}62%{opacity:1}65.5%,100%{opacity:0}}
+  @keyframes lblC{0%,68%{opacity:0;transform:translateY(6px)}71%,97%{opacity:1;transform:translateY(0)}100%{opacity:0}}
+  @keyframes btnC{
+    0%,70%{opacity:0;transform:scale(.5)}
+    73.5%{opacity:1;transform:scale(1)}
+    80%{transform:scale(1)}
+    82%{transform:scale(.9)}
+    84%{transform:scale(1)}
+    97%{opacity:1;transform:scale(1)}
+    100%{opacity:0}
+  }
 
   /* 3 — explore: a wall of small thumbs drifting downward — lots to explore */
   .pv-lib{background:#141414}
@@ -119,11 +118,11 @@
         <span class="pv pv-adv">
           <span class="phase p1">
             <span class="plabel"><span class="pn">1</span><span class="pt">Pick a topic</span></span>
-            <span class="crow"><span class="c">Property</span><span class="c">Tax</span><span class="c">Business growth</span><span class="c">Building wealth</span><span class="c">Economy</span><span class="c">Super</span><span class="c">Personal finance</span><span class="c">Leadership</span></span>
+            <span class="crow" id="topicrow"></span>
           </span>
           <span class="phase p2">
             <span class="plabel"><span class="pn">2</span><span class="pt">Dig a little deeper</span></span>
-            <span class="crow"><span class="sc">SMSF</span><span class="sc">Cash flow</span><span class="sc">Audits</span><span class="sc">CGT</span><span class="sc">Margins</span><span class="sc">Side hustles</span></span>
+            <span class="crow" id="subrow"></span>
           </span>
           <span class="phase p3">
             <span class="plabel"><span class="pn">3</span><span class="pt">Find the moments</span></span>
@@ -146,10 +145,35 @@
   </div>
 
   <script>
-  fetch('data/catalogue.json').then(function(r){return r.json()}).then(function(cat){
+  Promise.all([
+    fetch('data/catalogue.json').then(function(r){return r.json()}),
+    fetch('data/search-index.json').then(function(r){return r.json()})
+  ]).then(function(res){
+    var cat=res[0];
     var today=new Date(); today.setHours(23,59,59);
     var rel=cat.filter(function(e){return new Date(e.date+'T00:00:00')<=today});
     rel.sort(function(a,b){return a.date<b.date?1:-1});
+
+    /* adventure demo: the REAL chip-earning topics + real subtopics, same rules as the adventure page */
+    var released={}; rel.forEach(function(e){released[e.episodeNumber]=true});
+    var pool=res[1].filter(function(m){return m.standalone>=80&&m.durationSec>=60&&released[m.episodeNumber]});
+    var byTopic={};
+    pool.forEach(function(m){var t=m.topic;byTopic[t]=byTopic[t]||{count:0,subs:{}};byTopic[t].count++;
+      var s=m.subtopic||'General';byTopic[t].subs[s]=(byTopic[t].subs[s]||0)+1;});
+    var topics=Object.keys(byTopic).filter(function(t){return byTopic[t].count>=5})
+      .sort(function(a,b){return byTopic[b].count-byTopic[a].count});
+    var trow=document.getElementById('topicrow');
+    topics.forEach(function(t,i){
+      var s=document.createElement('span'); s.className='c'; s.textContent=t;
+      s.style.animationDelay=(i*0.12)+'s'; trow.appendChild(s);
+    });
+    var subs=Object.keys(byTopic[topics[0]].subs)
+      .sort(function(a,b){return byTopic[topics[0]].subs[b]-byTopic[topics[0]].subs[a]}).slice(0,8);
+    var srow=document.getElementById('subrow');
+    subs.forEach(function(t,i){
+      var s=document.createElement('span'); s.className='sc'; s.textContent=t;
+      s.style.animationDelay=(i*0.12)+'s'; srow.appendChild(s);
+    });
     /* latest: full thumbnail, uncropped */
     document.getElementById('latest-thumb').src='https://i.ytimg.com/vi/'+rel[0].youtubeId+'/mqdefault.jpg';
     document.getElementById('latest-tag').textContent='EP '+rel[0].episodeNumber;
