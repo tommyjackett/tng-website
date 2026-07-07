@@ -11,7 +11,7 @@
   - File: `episode-263.html` — self-contained (styles + inline episode data + JS). This IS the template; other episodes become data swaps.
   - `assets/`: `tng-logo.png` (trimmed to 2.44:1 — full "THE NUMBERS game"), `inovayt-white.png`, `future-advisory-white.png`, `vidpod-white.png`, `numbers-wordmark.png`.
   - `data/`: `catalogue.json`, `search-index.json`, `entities.json` (263–286).
-  - `index.html` = the homepage, restructured 6 Jul evening as a ROUTER: video banner (looping title sequence: logo → "5 years. 280+ episodes." → "The Numbers Game.") → WAYS TO WATCH THE SHOW (three coloured cards: mint Latest episode / purple Choose your own adventure / black Explore every episode → YouTube channel until episodes.html exists) → about → footer.
+  - `index.html` = the homepage, rebuilt 6 Jul late evening as ONE SCREEN: video banner with a play-once title sequence (logo pop → "5 years." → "150+ hours. 280+ episodes." → show lockup HOLDS) + pulsing scroll cue → WAYS TO EXPLORE THE SHOW (three coloured cards that pop in staggered: mint Latest episode / purple Choose your own adventure / black Explore every episode → YouTube channel until episodes.html exists) → footer. **LOCKED (Tommy): the video banner's bottom fade-out (mask-image, solid to 68%) must NEVER be removed.** No about section (lockup carries it); BTS photo band parked awaiting a photo from Tommy.
   - `adventure.html` = **Choose Your Own Adventure** (LIVE 6 Jul) — the moments feature as its own page/product (spec: `MOMENTS-FEATURE.md`). All 22 released 2026 episode pages live too.
 
 ## THE TEMPLATE (what's built in episode-263.html)
