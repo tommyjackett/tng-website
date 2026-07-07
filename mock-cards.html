@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MOCKUP — Explore cards with live previews</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{--purple:#585af3;--purple-dark:#2c1b8a;--mint:#7ad9a8;--white:#fff;--muted:rgba(255,255,255,.6);
+    --line:rgba(255,255,255,.12);--display:'Anton',Impact,sans-serif;--sans:'Inter',system-ui,sans-serif;--wrap:1280px}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:var(--sans);color:var(--white);line-height:1.6;-webkit-font-smoothing:antialiased;
+    background:#12093a;background-image:linear-gradient(180deg,#2c1b8a 0%,#1a1150 30%,#100b34 100%);background-attachment:fixed}
+  a{color:inherit;text-decoration:none}
+  .mocklabel{max-width:var(--wrap);margin:0 auto;padding:56px 36px 10px;font-family:var(--display);font-size:22px;
+    letter-spacing:1px;text-transform:uppercase;color:var(--mint)}
+  .mocklabel small{display:block;font-family:var(--sans);font-size:13px;font-weight:500;color:var(--muted);
+    text-transform:none;letter-spacing:0;margin-top:6px;max-width:80ch}
+  .wrapc{max-width:var(--wrap);margin:0 auto;padding:26px 36px 90px}
+  h2{font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.3px;
+    font-size:clamp(24px,2.4vw,32px);line-height:1.2;color:var(--white);text-align:center;margin-bottom:24px}
+  .pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  .pillars>*{min-width:0}
+  @media(max-width:900px){.pillars{grid-template-columns:1fr}}
+  .pcard{display:flex;flex-direction:column;gap:8px;padding:20px 20px 18px;transition:.18s;
+    box-shadow:0 12px 30px rgba(0,0,0,.25);cursor:pointer}
+  .pcard:hover{transform:translateY(-3px);filter:brightness(1.04);box-shadow:0 20px 44px rgba(0,0,0,.35)}
+  .pcard .ph{font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.3px;font-size:19px;line-height:1.15}
+  .pcard .pd{font-size:13px;line-height:1.5;margin:0 0 12px}
+  .pcard .pgo{align-self:flex-start;margin-top:14px;display:inline-block;font-family:var(--display);font-weight:400;
+    text-transform:uppercase;letter-spacing:.6px;font-size:12.5px;padding:8px 13px 6px;border:1.5px solid}
+  .mintc{background:var(--mint)} .mintc .ph{color:#0a0a0a} .mintc .pd{color:rgba(10,10,10,.72)} .mintc .pgo{color:#0a0a0a;border-color:rgba(10,10,10,.75)}
+  .purplec{background:var(--purple)} .purplec .ph{color:#fff} .purplec .pd{color:rgba(255,255,255,.82)} .purplec .pgo{color:var(--mint);border-color:rgba(122,217,168,.8)}
+  .blackc{background:#0a0a0a} .blackc .ph{color:#fff} .blackc .pd{color:rgba(255,255,255,.72)} .blackc .pgo{color:var(--mint);border-color:rgba(122,217,168,.8)}
+
+  /* the preview window each card carries (equal heights via flex) */
+  .pv{margin-top:auto;border-radius:4px;overflow:hidden;position:relative;height:158px;background:rgba(0,0,0,.25)}
+
+  /* 1 — latest episode: the real thumbnail */
+  .pv-latest img{width:100%;height:100%;object-fit:cover;display:block}
+  .pv-latest .eptag{position:absolute;left:10px;bottom:10px;background:#0a0a0a;color:#fff;font-family:var(--display);
+    font-size:11px;letter-spacing:1.2px;text-transform:uppercase;padding:4px 8px 3px}
+  .pv-latest .mp{position:absolute;right:10px;bottom:10px;width:34px;height:34px;border-radius:50%;background:var(--mint);
+    display:flex;align-items:center;justify-content:center}
+  .pv-latest .mp::after{content:"";border-style:solid;border-width:6px 0 6px 10px;border-color:transparent transparent transparent #08210f;margin-left:2px}
+
+  /* 2 — adventure: pick a topic, dig deeper (looping demo) */
+  .pv-adv{background:#3d2fb5;padding:12px;display:flex;flex-direction:column;gap:8px}
+  .pv-adv .prompt{font-size:10.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.75)}
+  .pv-adv .chiprow{display:flex;gap:6px}
+  .pv-adv .c{font-family:var(--display);font-size:11px;letter-spacing:.5px;text-transform:uppercase;
+    background:var(--mint);color:#0a0a0a;padding:6px 9px 4px}
+  .pv-adv .c2{animation:pickchip 7s ease infinite}
+  @keyframes pickchip{0%,14%{background:var(--mint);color:#0a0a0a}22%,88%{background:#0a0a0a;color:var(--mint)}96%,100%{background:var(--mint);color:#0a0a0a}}
+  .pv-adv .mini{background:rgba(10,6,30,.55);border:1px solid rgba(255,255,255,.18);padding:9px 11px;opacity:0;
+    animation:minicard 7s ease infinite;display:flex;flex-direction:column;gap:5px}
+  @keyframes minicard{0%,26%{opacity:0;transform:translateY(10px)}36%,86%{opacity:1;transform:translateY(0)}94%,100%{opacity:0;transform:translateY(10px)}}
+  .pv-adv .mini .q{font-size:11.5px;font-weight:600;color:#fff;line-height:1.35}
+  .pv-adv .mini .meta{display:flex;justify-content:space-between;align-items:center}
+  .pv-adv .mini .tag{background:#0a0a0a;color:var(--mint);font-family:var(--display);font-size:9px;letter-spacing:1px;text-transform:uppercase;padding:3px 6px 2px}
+  .pv-adv .mini .dur{font-size:10.5px;color:var(--mint)}
+
+  /* 3 — explore: endless swipe through the library */
+  .pv-lib{display:flex;align-items:center}
+  .pv-lib .strip{display:flex;gap:8px;width:max-content;animation:swipex 26s linear infinite}
+  .pv-lib:hover .strip{animation-play-state:paused}
+  .pv-lib .th{width:150px;aspect-ratio:16/9;object-fit:cover;display:block;border-radius:3px;opacity:.92}
+  @keyframes swipex{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+  @media(prefers-reduced-motion:reduce){.pv-lib .strip,.pv-adv .c2,.pv-adv .mini{animation:none}.pv-adv .mini{opacity:1}}
+</style>
+</head>
+<body>
+
+  <div class="mocklabel">Mockup — cards with living previews
+    <small>Same three colours and copy, taller cards, equal heights. Each carries a window showing exactly what's behind the door: the real latest-episode thumbnail, a looping pick-a-topic demo, and a strip swiping through the whole library. Hover the library strip to pause it.</small>
+  </div>
+
+  <div class="wrapc">
+    <h2>Ways to explore the show</h2>
+    <div class="pillars">
+
+      <a class="pcard mintc">
+        <span class="ph">Latest episode</span>
+        <p class="pd">The freshest episode we've dropped. Jump straight into this week's conversation.</p>
+        <span class="pv pv-latest">
+          <img id="latest-thumb" src="" alt="">
+          <span class="eptag" id="latest-tag">EP —</span>
+          <span class="mp"></span>
+        </span>
+        <span class="pgo">Watch now</span>
+      </a>
+
+      <a class="pcard purplec">
+        <span class="ph">Choose your own adventure</span>
+        <p class="pd">Pick the topics you're into and we'll play you the standout moments. Not whole episodes, the exact bits inside them.</p>
+        <span class="pv pv-adv">
+          <span class="prompt">Pick your topic, dig a little deeper</span>
+          <span class="chiprow"><span class="c">Property</span><span class="c c2">Tax</span><span class="c">Business</span></span>
+          <span class="mini">
+            <span class="q">Am I on the ATO's radar? The biggest audit triggers explained.</span>
+            <span class="meta"><span class="tag">Tax</span><span class="dur">1m 15s</span></span>
+          </span>
+        </span>
+        <span class="pgo">Pick your topics</span>
+      </a>
+
+      <a class="pcard blackc">
+        <span class="ph">Explore every episode</span>
+        <p class="pd">Browse the full library and find whole episodes on the stuff you care about.</p>
+        <span class="pv pv-lib">
+          <span class="strip" id="libstrip"></span>
+        </span>
+        <span class="pgo">Browse episodes</span>
+      </a>
+
+    </div>
+  </div>
+
+  <script>
+  fetch('data/catalogue.json').then(function(r){return r.json()}).then(function(cat){
+    var today=new Date(); today.setHours(23,59,59);
+    var rel=cat.filter(function(e){return new Date(e.date+'T00:00:00')<=today});
+    rel.sort(function(a,b){return a.date<b.date?1:-1});
+    /* latest thumbnail */
+    document.getElementById('latest-thumb').src='https://i.ytimg.com/vi/'+rel[0].youtubeId+'/hqdefault.jpg';
+    document.getElementById('latest-tag').textContent='EP '+rel[0].episodeNumber;
+    /* library swipe: a dozen thumbs, doubled for a seamless loop */
+    var strip=document.getElementById('libstrip');
+    var picks=rel.slice(0,12);
+    picks.concat(picks).forEach(function(e){
+      var im=document.createElement('img'); im.className='th'; im.loading='lazy'; im.alt='';
+      im.src='https://i.ytimg.com/vi/'+e.youtubeId+'/mqdefault.jpg';
+      strip.appendChild(im);
+    });
+  });
+  </script>
+</body>
+</html>
