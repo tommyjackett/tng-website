@@ -80,23 +80,43 @@
   .banner-seq .bst{font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.5px;
     text-align:center;line-height:1.1;color:var(--white);font-size:clamp(26px,4.6vw,58px);
     text-shadow:0 6px 30px rgba(0,0,0,.65)}
-  .banner-seq .lockh{font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.3px;
-    text-align:center;line-height:1.15;color:var(--white);font-size:clamp(22px,3.3vw,44px);
-    text-shadow:0 6px 30px rgba(0,0,0,.65);text-wrap:balance;max-width:22ch}
+  .banner-seq .l1{font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.3px;
+    text-align:center;line-height:1.15;color:var(--white);font-size:clamp(22px,3.1vw,42px);
+    text-shadow:0 6px 30px rgba(0,0,0,.65);text-wrap:balance}
+  .banner-seq .l2{font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.4px;
+    line-height:1;background:var(--mint);color:#0a0a0a;padding:.2em .55em .12em;font-size:clamp(20px,2.7vw,36px)}
   .banner-seq .locks{font-size:clamp(13px,1.35vw,16px);font-weight:500;color:var(--white);text-align:center;
     max-width:58ch;line-height:1.65;text-shadow:0 2px 6px rgba(10,6,30,.9),0 4px 22px rgba(0,0,0,.8)}
-  .bs1{animation:popthru 3.2s ease forwards}
-  .bs2{animation:popthru 2.7s ease 3.2s forwards}
-  .bs3{animation:popthru 3s ease 5.9s forwards}
-  .bs4{animation:lockin 1.1s ease 8.9s forwards}
+  .bs1{animation:popthru 2.6s ease forwards}
+  .bs2{animation:popthru 1.8s ease 2.6s forwards}
+  .bs3{animation:slamthru 1.8s ease 4.4s forwards}
+  .bs4{animation:risethru 1.8s ease 6.2s forwards}
+  .bs5{opacity:1}
+  .bs5 .l1{opacity:0;animation:lockin .7s ease 8.1s forwards}
+  .bs5 .l2{opacity:0;animation:slamin .5s cubic-bezier(.2,1.4,.4,1) 8.9s forwards}
+  .bs5 .locks{opacity:0;animation:lockin .8s ease 9.6s forwards}
   @keyframes popthru{
     0%{opacity:0;transform:scale(.72) translateY(20px)}
-    16%,74%{opacity:1;transform:scale(1) translateY(0)}
+    18%,76%{opacity:1;transform:scale(1) translateY(0)}
     100%{opacity:0;transform:scale(1.05) translateY(-12px)}
   }
+  @keyframes slamthru{
+    0%{opacity:0;transform:scale(1.9)}
+    16%,78%{opacity:1;transform:scale(1)}
+    100%{opacity:0;transform:scale(.94)}
+  }
+  @keyframes risethru{
+    0%{opacity:0;transform:translateY(70px)}
+    18%,78%{opacity:1;transform:translateY(0)}
+    100%{opacity:0;transform:translateY(-26px)}
+  }
   @keyframes lockin{
-    0%{opacity:0;transform:scale(.92) translateY(16px)}
-    100%{opacity:1;transform:scale(1) translateY(0)}
+    0%{opacity:0;transform:translateY(18px)}
+    100%{opacity:1;transform:translateY(0)}
+  }
+  @keyframes slamin{
+    0%{opacity:0;transform:scale(1.7)}
+    100%{opacity:1;transform:scale(1)}
   }
   /* scroll cue overlapping the banner fade, drawing down to section 2 */
   .banner-cue{position:relative;z-index:2;margin-top:-58px;display:flex;justify-content:center;pointer-events:none}
@@ -104,8 +124,8 @@
   @keyframes cuebob{0%,100%{transform:translateY(0);opacity:.5}50%{transform:translateY(7px);opacity:1}}
   @media(prefers-reduced-motion:reduce){
     .banner video{display:none}
-    .bs1,.bs2,.bs3{display:none}
-    .bs4{animation:none;opacity:1}
+    .bs1,.bs2,.bs3,.bs4{display:none}
+    .bs5 .l1,.bs5 .l2,.bs5 .locks{animation:none;opacity:1}
     .banner-cue span{animation:none}
   }
 
@@ -117,13 +137,13 @@
   .pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:24px}
   .pillars>*{min-width:0}
   @media(max-width:900px){.pillars{grid-template-columns:1fr}}
-  /* cards pop in when the section scrolls into view (JS adds .animready on load, .inview on scroll) */
-  .wherestart.animready .pcard{opacity:0}
-  .wherestart.animready.inview .pcard{animation:cardpop .55s ease forwards}
-  .wherestart.animready.inview .pcard:nth-child(2){animation-delay:.14s}
-  .wherestart.animready.inview .pcard:nth-child(3){animation-delay:.28s}
+  /* cards pop in staggered on load; fill-mode both hides them only while their animation waits,
+     so a browser that never runs animations just shows the cards */
+  .wherestart.inview .pcard{animation:cardpop .55s ease .5s both}
+  .wherestart.inview .pcard:nth-child(2){animation-delay:.68s}
+  .wherestart.inview .pcard:nth-child(3){animation-delay:.86s}
   @keyframes cardpop{0%{opacity:0;transform:translateY(26px) scale(.97)}100%{opacity:1;transform:translateY(0) scale(1)}}
-  @media(prefers-reduced-motion:reduce){.wherestart.animready .pcard{opacity:1;animation:none}}
+  @media(prefers-reduced-motion:reduce){.wherestart.inview .pcard{animation:none}}
   .pcard{display:flex;flex-direction:column;gap:8px;padding:18px 20px 18px;text-decoration:none;transition:.18s;
     box-shadow:0 12px 30px rgba(0,0,0,.25)}
   .pcard:hover{transform:translateY(-3px);filter:brightness(1.05);box-shadow:0 20px 44px rgba(0,0,0,.35)}
@@ -198,9 +218,11 @@
     <div class="banner-seq">
       <div class="bs bs1" aria-hidden="true"><img src="assets/tng-logo.png" alt=""></div>
       <div class="bs bs2" aria-hidden="true"><span class="bst">5 years.</span></div>
-      <div class="bs bs3" aria-hidden="true"><span class="bst">150+ hours. 280+ episodes.</span></div>
-      <div class="bs bs4">
-        <span class="lockh">Finance, investment &amp; business. Not as you know it.</span>
+      <div class="bs bs3" aria-hidden="true"><span class="bst">150+ hours.</span></div>
+      <div class="bs bs4" aria-hidden="true"><span class="bst">280+ episodes.</span></div>
+      <div class="bs bs5">
+        <span class="l1">It's finance, investment, business</span>
+        <span class="l2">but not as you know it!</span>
         <p class="locks">Each week, accountant Jason Robinson and financial planner Nick Reilly bring you strategy and advice on knowing your numbers, in life and business.</p>
       </div>
     </div>
@@ -254,17 +276,9 @@
     burger.setAttribute('aria-expanded', navdrop.hidden?'false':'true');
   });}
 
-  /* Ways-to-explore cards pop in when the section arrives: on scroll, or 2.4s after load
-     when it's already on screen (layered under the banner sequence); 9s failsafe = can never stay hidden */
+  /* Ways-to-explore cards pop in straight away, staggered (no JS = cards simply visible) */
   var ws=document.querySelector('.wherestart');
-  if(ws){
-    ws.classList.add('animready');
-    var revealed=false;
-    var reveal=function(){if(revealed)return;revealed=true;ws.classList.add('inview');};
-    var chk=function(){if(ws.getBoundingClientRect().top<window.innerHeight*.85)reveal();};
-    window.addEventListener('scroll',chk,{passive:true});
-    setTimeout(chk,2400); setTimeout(reveal,9000);
-  }
+  if(ws) ws.classList.add('inview');
 
   /* Latest-episode card always points at the newest released episode */
   fetch('data/catalogue.json').then(function(r){return r.json()}).then(function(cat){
