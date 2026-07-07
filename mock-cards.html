@@ -43,57 +43,59 @@
   .pv-latest .eptag{position:absolute;left:10px;bottom:10px;background:#0a0a0a;color:#fff;font-family:var(--display);
     font-size:11px;letter-spacing:1.2px;text-transform:uppercase;padding:4px 8px 3px}
 
-  /* 2 — adventure: centred numbered instruction, ALL real topics fill the bucket, button gets pressed (14s loop) */
+  /* 2 — adventure: centred numbered instruction, ALL real topics fill the bucket, button gets pressed.
+     18s loop; chips only pop IN, each beat fades out as ONE, leaving fresh space for the next. */
   .pv-adv{background:#3d2fb5}
   .pv-adv .phase{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;
-    gap:12px;padding:15px 14px;text-align:center}
+    gap:12px;padding:15px 14px;text-align:center;opacity:0}
+  .pv-adv .p1{animation:phase1c 18s ease infinite}
+  .pv-adv .p2{animation:phase2c 18s ease infinite}
+  .pv-adv .p3{animation:phase3c 18s ease infinite}
+  @keyframes phase1c{0%,33%{opacity:1}36%,100%{opacity:0}}
+  @keyframes phase2c{0%,38%{opacity:0}41%,66%{opacity:1}69%,100%{opacity:0}}
+  @keyframes phase3c{0%,71%{opacity:0}74%,97%{opacity:1}100%{opacity:0}}
   .pv-adv .plabel{display:flex;gap:8px;align-items:baseline;justify-content:center;opacity:0}
   .pv-adv .plabel .pn{font-family:var(--display);font-size:18px;color:var(--mint)}
   .pv-adv .plabel .pt{font-family:var(--display);font-size:16.5px;letter-spacing:.6px;text-transform:uppercase;color:#fff}
   .pv-adv .crow{display:flex;gap:7px;flex-wrap:wrap;justify-content:center;align-content:flex-start}
   .pv-adv .c{font-family:var(--display);font-size:10.5px;letter-spacing:.5px;text-transform:uppercase;
-    background:var(--mint);color:#0a0a0a;padding:6px 9px 4px;opacity:0;animation:chipA 14s ease infinite}
+    background:var(--mint);color:#0a0a0a;padding:6px 9px 4px;opacity:0;animation:chipA 18s ease infinite}
   .pv-adv .sc{font-family:var(--sans);font-weight:600;font-size:11px;color:rgba(255,255,255,.92);
-    border:1px solid rgba(255,255,255,.45);padding:5px 9px;opacity:0;animation:chipB 14s ease infinite}
+    border:1px solid rgba(255,255,255,.45);padding:5px 9px;opacity:0;animation:chipB 18s ease infinite}
   .pv-adv .go{font-family:var(--sans);font-weight:800;font-size:13px;letter-spacing:.05em;text-transform:uppercase;
     background:var(--mint);color:#08210f;border-radius:999px;padding:14px 26px;opacity:0;margin-top:14px;
-    animation:btnC 14s ease infinite;box-shadow:0 10px 26px rgba(0,0,0,.35)}
+    animation:btnC 18s ease infinite;box-shadow:0 10px 26px rgba(0,0,0,.35)}
   .pv-adv .c.sel{animation-name:chipASel}
   .pv-adv .sc.sel{animation-name:chipBSel}
+  .pv-adv .p1 .plabel{animation:lblA 18s ease infinite}
+  .pv-adv .p2 .plabel{animation:lblB 18s ease infinite}
+  .pv-adv .p3 .plabel{animation:lblC 18s ease infinite}
+  /* pops only — the phase container owns the shared fade-out */
+  @keyframes lblA{0%{opacity:0;transform:translateY(6px)}2%,100%{opacity:1;transform:translateY(0)}}
+  @keyframes chipA{0%,2%{opacity:0;transform:scale(.4)}4.5%,100%{opacity:1;transform:scale(1)}}
   @keyframes chipASel{
-    0%{opacity:0;transform:scale(.4);background:var(--mint);color:#0a0a0a}
-    2.5%{opacity:1;transform:scale(1);background:var(--mint);color:#0a0a0a}
-    15%{transform:scale(1);background:var(--mint);color:#0a0a0a}
-    16.5%{transform:scale(.85)}
-    18%{transform:scale(1);background:var(--purple-dark);color:#fff}
-    32%{opacity:1;background:var(--purple-dark);color:#fff}
-    35.5%,100%{opacity:0;background:var(--purple-dark);color:#fff}
+    0%,2%{opacity:0;transform:scale(.4);background:var(--mint);color:#0a0a0a}
+    4.5%{opacity:1;transform:scale(1);background:var(--mint);color:#0a0a0a}
+    16%{transform:scale(1);background:var(--mint);color:#0a0a0a}
+    17.5%{transform:scale(.85)}
+    19%,100%{opacity:1;transform:scale(1);background:var(--purple);color:#fff}
   }
+  @keyframes lblB{0%,42%{opacity:0;transform:translateY(6px)}45%,100%{opacity:1;transform:translateY(0)}}
+  @keyframes chipB{0%,44%{opacity:0;transform:scale(.4)}47%,100%{opacity:1;transform:scale(1)}}
   @keyframes chipBSel{
-    0%,39%{opacity:0;transform:scale(.4);background:transparent}
-    42%{opacity:1;transform:scale(1);background:transparent}
-    49%{transform:scale(1);background:transparent}
-    50.5%{transform:scale(.85)}
-    52%{transform:scale(1);background:var(--purple-dark);color:#fff;border-color:var(--purple-dark)}
-    62%{opacity:1;background:var(--purple-dark)}
-    65.5%,100%{opacity:0;background:var(--purple-dark)}
+    0%,44%{opacity:0;transform:scale(.4);background:transparent;color:rgba(255,255,255,.92)}
+    47%{opacity:1;transform:scale(1);background:transparent}
+    55%{transform:scale(1);background:transparent}
+    56.5%{transform:scale(.85)}
+    58%,100%{opacity:1;transform:scale(1);background:var(--purple);border-color:var(--purple);color:#fff}
   }
-  .pv-adv .p1 .plabel{animation:lblA 14s ease infinite}
-  .pv-adv .p2 .plabel{animation:lblB 14s ease infinite}
-  .pv-adv .p3 .plabel{animation:lblC 14s ease infinite}
-  @keyframes lblA{0%{opacity:0;transform:translateY(6px)}2%,33%{opacity:1;transform:translateY(0)}36%,100%{opacity:0}}
-  @keyframes chipA{0%{opacity:0;transform:scale(.4)}2.5%{opacity:1;transform:scale(1)}32%{opacity:1}35.5%,100%{opacity:0}}
-  @keyframes lblB{0%,38%{opacity:0;transform:translateY(6px)}41%,63%{opacity:1;transform:translateY(0)}66%,100%{opacity:0}}
-  @keyframes chipB{0%,39%{opacity:0;transform:scale(.4)}42%{opacity:1;transform:scale(1)}62%{opacity:1}65.5%,100%{opacity:0}}
-  @keyframes lblC{0%,68%{opacity:0;transform:translateY(6px)}71%,97%{opacity:1;transform:translateY(0)}100%{opacity:0}}
+  @keyframes lblC{0%,75%{opacity:0;transform:translateY(6px)}78%,100%{opacity:1;transform:translateY(0)}}
   @keyframes btnC{
-    0%,70%{opacity:0;transform:scale(.5)}
-    73.5%{opacity:1;transform:scale(1)}
-    80%{transform:scale(1)}
-    82%{transform:scale(.9)}
-    84%{transform:scale(1)}
-    97%{opacity:1;transform:scale(1)}
-    100%{opacity:0}
+    0%,77%{opacity:0;transform:scale(.5)}
+    80%{opacity:1;transform:scale(1)}
+    86%{transform:scale(1)}
+    88%{transform:scale(.9)}
+    90%,100%{opacity:1;transform:scale(1)}
   }
 
   /* 3 — explore: a wall of small thumbs drifting downward — lots to explore */
@@ -106,8 +108,8 @@
   .pv-lib img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block;border-radius:3px;opacity:.9}
   @keyframes driftdown{0%{transform:translateY(-50%)}100%{transform:translateY(0)}}
   @media(prefers-reduced-motion:reduce){
-    .pv-adv .plabel,.pv-adv .c,.pv-adv .sc,.pv-adv .go{animation:none}
-    .pv-adv .p1 .plabel,.pv-adv .p1 .c{opacity:1}
+    .pv-adv .phase,.pv-adv .plabel,.pv-adv .c,.pv-adv .sc,.pv-adv .go{animation:none}
+    .pv-adv .p1,.pv-adv .p1 .plabel,.pv-adv .p1 .c{opacity:1}
     .pv-lib .col .inner{animation:none}
   }
 </style>
@@ -183,10 +185,10 @@
     var topics=Object.keys(byTopic).filter(function(t){return byTopic[t].count>=5})
       .sort(function(a,b){return byTopic[b].count-byTopic[a].count});
     var trow=document.getElementById('topicrow');
-    var picked=[2,5,8]; /* three topics get visibly selected */
+    var picked=['Business Structures','Building Wealth','Leadership']; /* these three get visibly selected */
     topics.forEach(function(t,i){
-      var s=document.createElement('span'); s.className='c'+(picked.indexOf(i)>-1?' sel':''); s.textContent=t;
-      s.style.animationDelay=(i*0.12)+'s'; trow.appendChild(s);
+      var s=document.createElement('span'); s.className='c'+(picked.indexOf(t)>-1?' sel':''); s.textContent=t;
+      s.style.animationDelay=(i*0.14)+'s'; trow.appendChild(s);
     });
     /* deeper tabs: real subtopics from the top three topics, two get pressed */
     var subs=[];
