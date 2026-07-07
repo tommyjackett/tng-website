@@ -48,16 +48,36 @@
   .pv-adv .phase{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;
     gap:12px;padding:15px 14px;text-align:center}
   .pv-adv .plabel{display:flex;gap:8px;align-items:baseline;justify-content:center;opacity:0}
-  .pv-adv .plabel .pn{font-family:var(--display);font-size:16px;color:var(--mint)}
-  .pv-adv .plabel .pt{font-family:var(--display);font-size:15px;letter-spacing:.6px;text-transform:uppercase;color:#fff}
+  .pv-adv .plabel .pn{font-family:var(--display);font-size:18px;color:var(--mint)}
+  .pv-adv .plabel .pt{font-family:var(--display);font-size:16.5px;letter-spacing:.6px;text-transform:uppercase;color:#fff}
   .pv-adv .crow{display:flex;gap:7px;flex-wrap:wrap;justify-content:center;align-content:flex-start}
   .pv-adv .c{font-family:var(--display);font-size:10.5px;letter-spacing:.5px;text-transform:uppercase;
     background:var(--mint);color:#0a0a0a;padding:6px 9px 4px;opacity:0;animation:chipA 14s ease infinite}
   .pv-adv .sc{font-family:var(--sans);font-weight:600;font-size:11px;color:rgba(255,255,255,.92);
     border:1px solid rgba(255,255,255,.45);padding:5px 9px;opacity:0;animation:chipB 14s ease infinite}
-  .pv-adv .go{font-family:var(--sans);font-weight:800;font-size:11px;letter-spacing:.05em;text-transform:uppercase;
-    background:var(--mint);color:#08210f;border-radius:999px;padding:11px 19px;opacity:0;margin-top:10px;
-    animation:btnC 14s ease infinite;box-shadow:0 8px 22px rgba(0,0,0,.3)}
+  .pv-adv .go{font-family:var(--sans);font-weight:800;font-size:13px;letter-spacing:.05em;text-transform:uppercase;
+    background:var(--mint);color:#08210f;border-radius:999px;padding:14px 26px;opacity:0;margin-top:14px;
+    animation:btnC 14s ease infinite;box-shadow:0 10px 26px rgba(0,0,0,.35)}
+  .pv-adv .c.sel{animation-name:chipASel}
+  .pv-adv .sc.sel{animation-name:chipBSel}
+  @keyframes chipASel{
+    0%{opacity:0;transform:scale(.4);background:var(--mint);color:#0a0a0a}
+    2.5%{opacity:1;transform:scale(1);background:var(--mint);color:#0a0a0a}
+    15%{transform:scale(1);background:var(--mint);color:#0a0a0a}
+    16.5%{transform:scale(.85)}
+    18%{transform:scale(1);background:var(--purple-dark);color:#fff}
+    32%{opacity:1;background:var(--purple-dark);color:#fff}
+    35.5%,100%{opacity:0;background:var(--purple-dark);color:#fff}
+  }
+  @keyframes chipBSel{
+    0%,39%{opacity:0;transform:scale(.4);background:transparent}
+    42%{opacity:1;transform:scale(1);background:transparent}
+    49%{transform:scale(1);background:transparent}
+    50.5%{transform:scale(.85)}
+    52%{transform:scale(1);background:var(--purple-dark);color:#fff;border-color:var(--purple-dark)}
+    62%{opacity:1;background:var(--purple-dark)}
+    65.5%,100%{opacity:0;background:var(--purple-dark)}
+  }
   .pv-adv .p1 .plabel{animation:lblA 14s ease infinite}
   .pv-adv .p2 .plabel{animation:lblB 14s ease infinite}
   .pv-adv .p3 .plabel{animation:lblC 14s ease infinite}
@@ -163,15 +183,23 @@
     var topics=Object.keys(byTopic).filter(function(t){return byTopic[t].count>=5})
       .sort(function(a,b){return byTopic[b].count-byTopic[a].count});
     var trow=document.getElementById('topicrow');
+    var picked=[2,5,8]; /* three topics get visibly selected */
     topics.forEach(function(t,i){
-      var s=document.createElement('span'); s.className='c'; s.textContent=t;
+      var s=document.createElement('span'); s.className='c'+(picked.indexOf(i)>-1?' sel':''); s.textContent=t;
       s.style.animationDelay=(i*0.12)+'s'; trow.appendChild(s);
     });
-    var subs=Object.keys(byTopic[topics[0]].subs)
-      .sort(function(a,b){return byTopic[topics[0]].subs[b]-byTopic[topics[0]].subs[a]}).slice(0,8);
+    /* deeper tabs: real subtopics from the top three topics, two get pressed */
+    var subs=[];
+    topics.slice(0,3).forEach(function(t){
+      Object.keys(byTopic[t].subs).forEach(function(sname){
+        subs.push({n:sname,c:byTopic[t].subs[sname]});
+      });
+    });
+    subs.sort(function(a,b){return b.c-a.c});
+    subs=subs.slice(0,9);
     var srow=document.getElementById('subrow');
     subs.forEach(function(t,i){
-      var s=document.createElement('span'); s.className='sc'; s.textContent=t;
+      var s=document.createElement('span'); s.className='sc'+((i===1||i===4)?' sel':''); s.textContent=t.n;
       s.style.animationDelay=(i*0.12)+'s'; srow.appendChild(s);
     });
     /* latest: full thumbnail, uncropped */
