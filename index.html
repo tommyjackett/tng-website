@@ -88,10 +88,10 @@
   .banner-seq .locks{font-size:clamp(13px,1.35vw,16px);font-weight:500;color:var(--white);text-align:center;
     max-width:58ch;line-height:1.65;text-shadow:0 2px 6px rgba(10,6,30,.9),0 4px 22px rgba(0,0,0,.8)}
   .bs1{animation:popthru 2.6s ease forwards}
-  .bs2{animation:popthru 1.8s ease 2.6s forwards}
+  .bs2{animation:slamthru 1.8s ease 2.6s forwards}
   .bs3{animation:slamthru 1.8s ease 4.4s forwards}
-  .bs4{animation:risethru 1.8s ease 6.2s forwards}
-  .bs5{opacity:1}
+  .bs4{animation:slamthru 1.8s ease 6.2s forwards}
+  .banner-seq .bs5{opacity:1}
   .bs5 .l1{opacity:0;animation:lockin .7s ease 8.1s forwards}
   .bs5 .l2{opacity:0;animation:slamin .5s cubic-bezier(.2,1.4,.4,1) 8.9s forwards}
   .bs5 .locks{opacity:0;animation:lockin .8s ease 9.6s forwards}
@@ -104,11 +104,6 @@
     0%{opacity:0;transform:scale(1.9)}
     16%,78%{opacity:1;transform:scale(1)}
     100%{opacity:0;transform:scale(.94)}
-  }
-  @keyframes risethru{
-    0%{opacity:0;transform:translateY(70px)}
-    18%,78%{opacity:1;transform:translateY(0)}
-    100%{opacity:0;transform:translateY(-26px)}
   }
   @keyframes lockin{
     0%{opacity:0;transform:translateY(18px)}
@@ -137,13 +132,15 @@
   .pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:24px}
   .pillars>*{min-width:0}
   @media(max-width:900px){.pillars{grid-template-columns:1fr}}
-  /* cards pop in staggered on load; fill-mode both hides them only while their animation waits,
-     so a browser that never runs animations just shows the cards */
-  .wherestart.inview .pcard{animation:cardpop .55s ease .5s both}
-  .wherestart.inview .pcard:nth-child(2){animation-delay:.68s}
-  .wherestart.inview .pcard:nth-child(3){animation-delay:.86s}
+  /* whole section fades in immediately on load, cards pop staggered inside it;
+     fill-mode both hides only while an animation waits, so a browser that never runs animations shows everything */
+  .wherestart.inview{animation:sectionin .6s ease both}
+  .wherestart.inview .pcard{animation:cardpop .5s ease .12s both}
+  .wherestart.inview .pcard:nth-child(2){animation-delay:.26s}
+  .wherestart.inview .pcard:nth-child(3){animation-delay:.4s}
+  @keyframes sectionin{0%{opacity:0;transform:translateY(18px)}100%{opacity:1;transform:translateY(0)}}
   @keyframes cardpop{0%{opacity:0;transform:translateY(26px) scale(.97)}100%{opacity:1;transform:translateY(0) scale(1)}}
-  @media(prefers-reduced-motion:reduce){.wherestart.inview .pcard{animation:none}}
+  @media(prefers-reduced-motion:reduce){.wherestart.inview,.wherestart.inview .pcard{animation:none}}
   .pcard{display:flex;flex-direction:column;gap:8px;padding:18px 20px 18px;text-decoration:none;transition:.18s;
     box-shadow:0 12px 30px rgba(0,0,0,.25)}
   .pcard:hover{transform:translateY(-3px);filter:brightness(1.05);box-shadow:0 20px 44px rgba(0,0,0,.35)}
