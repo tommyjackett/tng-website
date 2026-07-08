@@ -31,7 +31,7 @@
 ## STAGE 2 — The page shell ×4 (the big stamp-out)
 Order: contact → about → jason → nick (each one push, Tommy reviews live).
 - [x] **contact.html** — SHIPPED 8 Jul. Band: IMG_8006 (optimised to assets/contact-band.jpg), bars GET IN / TOUCH, brief's copy, Web3Forms form live (key supplied by Tommy, redirect-back success note, honeypot), voice-note component as the second path.
-- [ ] **about.html** — band: IMG_6574, bars around "ABOUT / THE NUMBERS GAME STORY". One strong SEO paragraph block (story + hosts + what the show covers) drawn from the TNG brain md files, podcast artwork placed in content. Nothing too crazy per brief.
+- [x] **about.html** — SHIPPED 8 Jul. Band: IMG_7604 (Tommy swapped from IMG_6574; optimised to assets/about-band.jpg), bars ABOUT / THE NUMBERS GAME, layout per Tommy's example: artwork left (rounded, shadow), bio right (official show description, em dashes removed per house style), stat chips 5 YEARS / 280+ EPISODES / SINCE 2021.
 - [ ] **jason-robinson.html** — band: Ep 273 still, bars = his name. TNG-tone bio from brain md files, Future Advisory mention + link, Instagram + LinkedIn (pull handles from brain; ask if absent). Meet-your-hosts feel.
 - [ ] **nick-reilly.html** — same shell, Ep 271 still, Inovayt mention + link, socials.
 - These four kill every remaining nav 404 (About dropdown + Contact already point at these filenames on all 24 live pages).
