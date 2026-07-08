@@ -160,6 +160,92 @@
   .pcard.blackc .ph{color:var(--white)}
   .pcard.blackc .pd{color:rgba(255,255,255,.72)}
   .pcard.blackc .pgo{color:var(--mint);border-color:rgba(122,217,168,.8)}
+
+  /* ── Living previews inside the cards. 16:9 windows so the three cards stay identical (desktop);
+     on mobile the cards stack and the adventure demo takes the height its tabs need. ── */
+  .pv{margin-top:auto;border-radius:4px;overflow:hidden;position:relative;aspect-ratio:16/9}
+  .pcard .pgo{margin-top:14px}
+  .pcard .pd{margin:0 0 12px}
+  @media(max-width:900px){
+    .pv-adv{aspect-ratio:auto;height:290px}
+    .pv-adv .c{font-size:10px;padding:5px 8px 4px}
+  }
+
+  /* latest episode: the FULL thumbnail, uncropped and unobstructed */
+  .pv-latest img{width:100%;height:100%;display:block}
+
+  /* adventure: acted-out session, 18s loop — chips pop IN, each beat fades out as ONE.
+     Staggered elements return to hidden inside the faded window so the loop wrap can't flash stale chips. */
+  .pv-adv{background:#3d2fb5}
+  .pv-adv .phase{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;
+    gap:12px;padding:15px 14px;text-align:center;opacity:0}
+  .pv-adv .p1{animation:phase1c 18s ease infinite}
+  .pv-adv .p2{animation:phase2c 18s ease infinite}
+  .pv-adv .p3{animation:phase3c 18s ease infinite}
+  @keyframes phase1c{0%{opacity:0}2.5%,38%{opacity:1}41%,100%{opacity:0}}
+  @keyframes phase2c{0%,41%{opacity:0}44%,71%{opacity:1}74%,100%{opacity:0}}
+  @keyframes phase3c{0%,74%{opacity:0}77%,97%{opacity:1}100%{opacity:0}}
+  .pv-adv .plabel{display:flex;gap:8px;align-items:baseline;justify-content:center;opacity:0}
+  .pv-adv .plabel .pn{font-family:var(--display);font-size:18px;color:var(--mint)}
+  .pv-adv .plabel .pt{font-family:var(--display);font-size:16.5px;letter-spacing:.6px;text-transform:uppercase;color:#fff}
+  .pv-adv .crow{display:flex;gap:7px;flex-wrap:wrap;justify-content:center;align-content:flex-start}
+  .pv-adv .c{font-family:var(--display);font-size:10.5px;letter-spacing:.5px;text-transform:uppercase;
+    background:var(--mint);color:#0a0a0a;padding:6px 9px 4px;opacity:0;animation:chipA 18s ease infinite}
+  .pv-adv .sc{font-family:var(--sans);font-weight:600;font-size:11px;color:rgba(255,255,255,.92);
+    border:1px solid rgba(255,255,255,.45);padding:5px 9px;opacity:0;animation:chipB 18s ease infinite}
+  .pv-adv .go{font-family:var(--sans);font-weight:800;font-size:13px;letter-spacing:.05em;text-transform:uppercase;
+    background:var(--mint);color:#08210f;border-radius:999px;padding:14px 26px;opacity:0;margin-top:14px;
+    animation:btnC 18s ease infinite;box-shadow:0 10px 26px rgba(0,0,0,.35)}
+  .pv-adv .c.sel{animation-name:chipASel}
+  .pv-adv .sc.sel{animation-name:chipBSel}
+  .pv-adv .p1 .plabel{animation:lblA 18s ease infinite}
+  .pv-adv .p2 .plabel{animation:lblB 18s ease infinite}
+  .pv-adv .p3 .plabel{animation:lblC 18s ease infinite}
+  @keyframes lblA{0%,2%{opacity:0;transform:translateY(6px)}4%{opacity:1;transform:translateY(0)}42%{opacity:1}45%,100%{opacity:0}}
+  @keyframes chipA{0%,3%{opacity:0;transform:scale(.4)}5.5%{opacity:1;transform:scale(1)}42%{opacity:1}45%,100%{opacity:0}}
+  @keyframes chipASel{
+    0%,3%{opacity:0;transform:scale(.4);background:var(--mint);color:#0a0a0a}
+    5.5%{opacity:1;transform:scale(1);background:var(--mint);color:#0a0a0a}
+    16%{transform:scale(1);background:var(--mint);color:#0a0a0a}
+    17.5%{transform:scale(.85)}
+    19%{opacity:1;transform:scale(1);background:var(--purple);color:#fff}
+    42%{opacity:1;background:var(--purple);color:#fff}
+    45%,100%{opacity:0;background:var(--purple);color:#fff}
+  }
+  @keyframes lblB{0%,41%{opacity:0;transform:translateY(6px)}43.5%{opacity:1;transform:translateY(0)}75%{opacity:1}78%,100%{opacity:0}}
+  @keyframes chipB{0%,42%{opacity:0;transform:scale(.4)}45%{opacity:1;transform:scale(1)}75%{opacity:1}78%,100%{opacity:0}}
+  @keyframes chipBSel{
+    0%,42%{opacity:0;transform:scale(.4);background:transparent;color:rgba(255,255,255,.92)}
+    45%{opacity:1;transform:scale(1);background:transparent}
+    56%{transform:scale(1);background:transparent}
+    57.5%{transform:scale(.85)}
+    59%{opacity:1;transform:scale(1);background:var(--purple);border-color:var(--purple);color:#fff}
+    75%{opacity:1;background:var(--purple)}
+    78%,100%{opacity:0;background:var(--purple)}
+  }
+  @keyframes lblC{0%,74%{opacity:0;transform:translateY(6px)}76.5%,100%{opacity:1;transform:translateY(0)}}
+  @keyframes btnC{
+    0%,75.5%{opacity:0;transform:scale(.5)}
+    78.5%{opacity:1;transform:scale(1)}
+    87%{transform:scale(1)}
+    89%{transform:scale(.9)}
+    91%,100%{opacity:1;transform:scale(1)}
+  }
+
+  /* explore: a wall of small thumbs drifting downward */
+  .pv-lib{background:#141414}
+  .pv-lib .wall{position:absolute;inset:-6px;display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
+  .pv-lib .col{display:flex;flex-direction:column;gap:6px}
+  .pv-lib .col .inner{display:flex;flex-direction:column;gap:6px;animation:driftdown 22s linear infinite}
+  .pv-lib .col:nth-child(2) .inner{animation-duration:30s}
+  .pv-lib .col:nth-child(3) .inner{animation-duration:25s}
+  .pv-lib img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block;border-radius:3px;opacity:.9}
+  @keyframes driftdown{0%{transform:translateY(-50%)}100%{transform:translateY(0)}}
+  @media(prefers-reduced-motion:reduce){
+    .pv-adv .phase,.pv-adv .plabel,.pv-adv .c,.pv-adv .sc,.pv-adv .go{animation:none}
+    .pv-adv .p1,.pv-adv .p1 .plabel,.pv-adv .p1 .c{opacity:1}
+    .pv-lib .col .inner{animation:none}
+  }
   /* ── Footer: two columns under the line (Brought to you by | Produced by), site standard ── */
   footer{border-top:1px solid var(--line);margin-top:24px;padding:52px 20px 58px}
   .footgrid{max-width:var(--wrap);margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:start}
@@ -233,16 +319,32 @@
       <a class="pcard mintc" id="banner-latest" href="#">
         <span class="ph">Latest episode</span>
         <p class="pd">The freshest episode we've dropped. Jump straight into this week's conversation.</p>
-        <span class="pgo">Watch now</span>
+        <span class="pv pv-latest"><img id="latest-thumb" src="" alt=""></span>
+        <span class="pgo" id="latest-go">Watch now</span>
       </a>
       <a class="pcard purplec" href="adventure.html">
         <span class="ph">Choose your own adventure</span>
         <p class="pd">Pick the topics you're into and we'll play you the standout moments. Not whole episodes, the exact bits inside them.</p>
+        <span class="pv pv-adv" aria-hidden="true">
+          <span class="phase p1">
+            <span class="plabel"><span class="pn">1</span><span class="pt">Pick a topic</span></span>
+            <span class="crow" id="topicrow"></span>
+          </span>
+          <span class="phase p2">
+            <span class="plabel"><span class="pn">2</span><span class="pt">Dig a little deeper</span></span>
+            <span class="crow" id="subrow"></span>
+          </span>
+          <span class="phase p3">
+            <span class="plabel"><span class="pn">3</span><span class="pt">Find the moments</span></span>
+            <span class="go">Show me the moments</span>
+          </span>
+        </span>
         <span class="pgo">Pick your topics</span>
       </a>
       <a class="pcard blackc" href="https://www.youtube.com/@thenumbersgamepodcast" target="_blank" rel="noopener">
         <span class="ph">Explore every episode</span>
         <p class="pd">Browse the full library and find whole episodes on the stuff you care about.</p>
+        <span class="pv pv-lib" aria-hidden="true"><span class="wall" id="wall"></span></span>
         <span class="pgo">Browse on YouTube</span>
       </a>
     </div>
@@ -277,12 +379,59 @@
   var ws=document.querySelector('.wherestart');
   if(ws) ws.classList.add('inview');
 
-  /* Latest-episode card always points at the newest released episode */
-  fetch('data/catalogue.json').then(function(r){return r.json()}).then(function(cat){
+  /* Data-driven card previews: latest thumbnail + dynamic Watch EP button, real adventure inventory, library wall */
+  Promise.all([
+    fetch('data/catalogue.json').then(function(r){return r.json()}),
+    fetch('data/search-index.json').then(function(r){return r.json()})
+  ]).then(function(res){
     var today=new Date(); today.setHours(23,59,59);
-    var rel=cat.filter(function(e){return new Date(e.date+'T00:00:00')<=today});
+    var rel=res[0].filter(function(e){return new Date(e.date+'T00:00:00')<=today});
     rel.sort(function(a,b){return a.date<b.date?1:-1});
-    if(rel.length) document.getElementById('banner-latest').href='episode-'+rel[0].episodeNumber+'.html';
+    if(!rel.length) return;
+
+    /* latest: link, full thumbnail, button carries the episode number */
+    document.getElementById('banner-latest').href='episode-'+rel[0].episodeNumber+'.html';
+    document.getElementById('latest-thumb').src='https://i.ytimg.com/vi/'+rel[0].youtubeId+'/mqdefault.jpg';
+    document.getElementById('latest-go').textContent='Watch EP '+rel[0].episodeNumber;
+
+    /* adventure demo: the REAL chip-earning topics + real subtopics, same rules as adventure.html */
+    var released={}; rel.forEach(function(e){released[e.episodeNumber]=true});
+    var pool=res[1].filter(function(m){return m.standalone>=80&&m.durationSec>=60&&released[m.episodeNumber]});
+    var byTopic={};
+    pool.forEach(function(m){var t=m.topic;byTopic[t]=byTopic[t]||{count:0,subs:{}};byTopic[t].count++;
+      var s=m.subtopic||'General';byTopic[t].subs[s]=(byTopic[t].subs[s]||0)+1;});
+    var topics=Object.keys(byTopic).filter(function(t){return byTopic[t].count>=5})
+      .sort(function(a,b){return byTopic[b].count-byTopic[a].count});
+    var trow=document.getElementById('topicrow');
+    var picked=['Business Structures','Building Wealth','Leadership'];
+    topics.forEach(function(t,i){
+      var s=document.createElement('span'); s.className='c'+(picked.indexOf(t)>-1?' sel':''); s.textContent=t;
+      s.style.animationDelay=(i*0.14)+'s'; trow.appendChild(s);
+    });
+    var subs=[];
+    topics.slice(0,3).forEach(function(t){
+      Object.keys(byTopic[t].subs).forEach(function(sname){subs.push({n:sname,c:byTopic[t].subs[sname]})});
+    });
+    subs.sort(function(a,b){return b.c-a.c});
+    var srow=document.getElementById('subrow');
+    subs.slice(0,9).forEach(function(t,i){
+      var s=document.createElement('span'); s.className='sc'+((i===1||i===4)?' sel':''); s.textContent=t.n;
+      s.style.animationDelay=(i*0.12)+'s'; srow.appendChild(s);
+    });
+
+    /* library wall: 3 columns, stacks doubled for a seamless downward loop */
+    var wall=document.getElementById('wall');
+    for(var c=0;c<3;c++){
+      var col=document.createElement('span'); col.className='col';
+      var inner=document.createElement('span'); inner.className='inner';
+      var picks=rel.filter(function(e,i){return i%3===c}).slice(0,6);
+      picks.concat(picks).forEach(function(e){
+        var im=document.createElement('img'); im.alt='';
+        im.src='https://i.ytimg.com/vi/'+e.youtubeId+'/mqdefault.jpg';
+        inner.appendChild(im);
+      });
+      col.appendChild(inner); wall.appendChild(col);
+    }
   });
   </script>
 </body>
