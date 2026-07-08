@@ -120,6 +120,10 @@
   .ecard .ed{font-size:12px;color:var(--mint)}
   .ecard .ee{display:inline-block;background:#0a0a0a;color:var(--white);font-family:var(--display);
     font-size:10.5px;letter-spacing:1.2px;text-transform:uppercase;padding:3px 7px 2px}
+  .grouplab{grid-column:1/-1;margin:6px 0 -2px}
+  .grouplab span{display:inline-block;font-family:var(--display);font-weight:400;text-transform:uppercase;
+    letter-spacing:.5px;font-size:13.5px;background:var(--mint);color:#0a0a0a;padding:8px 12px 6px}
+  .grouplab.also span{background:none;border:1.5px solid rgba(255,255,255,.35);color:rgba(255,255,255,.85)}
   .nores{color:var(--muted);font-size:14.5px;padding:26px 0}
   .nores a{color:var(--mint)}
   .moreline{display:flex;justify-content:center;margin-top:30px}
@@ -325,12 +329,13 @@
       t2.sort(function(a,b){return byEp[b.episodeNumber].cover[state.topic]-byEp[a.episodeNumber].cover[state.topic]});
       t2.forEach(function(e){
         var mins=Math.max(1,Math.round((byEp[e.episodeNumber].coverSec[state.topic]||0)/60));
-        e._why='Also covers '+state.topic.toLowerCase()+' · '+mins+' min inside';
+        e._why='Talks '+state.topic.toLowerCase()+' for '+mins+' min';
+        e._tier=2;
       });
-      t1.forEach(function(e){delete e._why});
+      t1.forEach(function(e){delete e._why; e._tier=1});
       list=t1.concat(t2);
     } else {
-      list.forEach(function(e){delete e._why});
+      list.forEach(function(e){delete e._why; delete e._tier});
     }
 
     /* search: whole words only (prefix allowed from 4+ chars, so "guarant" finds guarantor but
@@ -370,7 +375,15 @@
   function render(){
     var list=results();
     var grid=document.getElementById('grid'); grid.innerHTML='';
+    var grouping=state.topic&&state.q.length<2, labelled={1:false,2:false};
+    function addLabel(tier){
+      var l=document.createElement('div'); l.className='grouplab'+(tier===2?' also':'');
+      var sp=document.createElement('span');
+      sp.textContent=(tier===1?'About '+state.topic:'Also talks '+state.topic);
+      l.appendChild(sp); grid.appendChild(l); labelled[tier]=true;
+    }
     list.slice(0,state.shown).forEach(function(e){
+      if(grouping&&e._tier&&!labelled[e._tier]) addLabel(e._tier);
       var a=document.createElement('a'); a.className='ecard'; a.href='episode-'+e.episodeNumber+'.html';
       var im=document.createElement('img'); im.loading='lazy'; im.alt='';
       im.src='https://i.ytimg.com/vi/'+e.youtubeId+'/hqdefault.jpg';
