@@ -38,15 +38,14 @@ Order: contact → about → jason → nick (each one push, Tommy reviews live).
 - These four kill every remaining nav 404 (About dropdown + Contact already point at these filenames on all 24 live pages).
 - [x] **Nav rule (Tommy, 8 Jul): the top-level ABOUT is NOT clickable** — hover/label only; the choosable items are The show / Nick Reilly / Jason Robinson (mobile menu shows About as a dim label with the three as sub-links). Applied across all 28 pages.
 
-## STAGE 3 — episodes.html (the library) + nav rewire
-**Proposed functionality (per brief's request for a recommendation, kept simple, all client-side from catalogue.json):**
-- [ ] Grid of episode cards (locked card anatomy, already built once), 4 across desktop, newest first, 12 shown, **SHOW MORE** reveals +12.
-- [ ] **Topic filter chips** across the top (each episode has a key topic in the data — chips with counts, same visual language as the adventure picker; one active at a time v1).
-- [ ] **Search bar** — instant filter over titles + topics ("ATO" → the ATO episodes). Simple contains-match v1; can deepen to question-level search later using search-index.
-- [ ] **Sort toggle** Newest/Oldest.
-- [ ] Header explains the two ways in: small cross-link card/line to Choose Your Own Adventure ("looking for the best bits instead?").
-- [ ] **Nav rewire everywhere** (index, adventure, 22 episode pages — batch swap like the footer rollout): EPISODES becomes a dropdown → All episodes (episodes.html) / Find moments (adventure.html).
-- [ ] Homepage card 3: href flips from YouTube channel → episodes.html (label already says Explore episodes).
+## STAGE 3 — episodes.html (the library) + nav rewire ✅ SHIPPED 8 Jul
+**The two-layer data model (agreed with Tommy — determines the page's quality):**
+- [x] Grid (locked card anatomy), 4 across, newest first, 12 + SHOW MORE (+12).
+- [x] **Topic chips with counts** (primary topic from catalogue). Filtering returns TWO tiers: primary-topic episodes first, then episodes with GENUINE moment-level coverage (>=2 verified moments from search-index), ranked by depth and flagged "Also covers: {topic} · N moments" — same never-invent-a-connection law as Discover More.
+- [x] **Question-level search** — matches title (100) > topic (50) > the 670 questionAsked/description texts (per-hit), relevance-ranked, cards annotated "Talked about inside · N mentions". Verified: "guarantor" finds Bank of Mum and Dad via 5 inside-mentions with no title match.
+- [x] Sort toggle Newest/Oldest · adventure cross-link in header + empty-state · deep links ?topic= and ?q= supported (feeds the future playlist/share direction).
+- [x] **Nav rewire on all 29 pages**: EPISODES is now an unclickable dropdown label → All episodes / Find moments (canonical nav in EPISODE-PAGE-TEMPLATE.md updated).
+- [x] Homepage card 3 → episodes.html (YouTube interim retired).
 
 ## STAGE 4 — SEO + extras
 - [ ] Unique `<title>` + meta description on every new page; human URLs already good (about, contact, host names).
@@ -55,6 +54,11 @@ Order: contact → about → jason → nick (each one push, Tommy reviews live).
 - [ ] **Listener database v1 recommendation:** one-field email capture using the same Web3Forms account (no new vendor), submissions to Tommy's email; upgradeable later. Placement: small strip on contact page + homepage Get Involved. *(Decision for Tommy: OK to use Web3Forms for this v1?)*
 - [ ] **Instagram feed: parked** — needs an embed service or manual grid decision; recommend a later phase (manual 6-tile grid linking to IG is the zero-dependency v1).
 - [ ] Voice-note "appears on each page at different times": v1 = present on episode pages (already), contact, and homepage Get Involved. Roaming/timed appearance parked as a later experiment.
+
+## GROWTH MODEL + FUTURES (agreed with Tommy, 8 Jul)
+- **Self-growing facets:** episodes.html renders chips/counts from data at load — new topics from back-catalogue ingestion appear automatically (threshold-gated). Engine gates are the taxonomy quality control; the site trusts verified data. At ~20+ topics: chip row folds behind "+ more"; search becomes the primary tool.
+- **Principle: add a field to the data, get a filter on the site.** Guests: add `guests[]` to the engine schema and capture it DURING back-catalogue mining (one pass); episodes page then gains guest facet + guest search for free (template already reserves a Guest fact slot). Same door for formats/series/years.
+- **Playlists ("send yourself a playlist"):** v1 = URL-encoded lists (?list=281,273,266), zero backend, page rebuilds the queue from the URL; v1.5 = localStorage My List; v2 = "Email me this playlist" via the same Web3Forms account — which doubles as the listener-database capture. Also a hosts' marketing tool (curated playlist links said on air).
 
 ## Open items needing Tommy
 1. **Web3Forms access key / embed snippet** (contact form + email capture).

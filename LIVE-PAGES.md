@@ -36,6 +36,7 @@
 - [About — the show story: artwork, bio, stat chips](https://tommyjackett.github.io/tng-website/about.html) — added 8 Jul 2026
 - [Jason Robinson — host page: video band, purple-shadow photo, bio + socials](https://tommyjackett.github.io/tng-website/jason-robinson.html) — added 8 Jul 2026
 - [Nick Reilly — host page, same pattern](https://tommyjackett.github.io/tng-website/nick-reilly.html) — added 8 Jul 2026
+- [Episodes — the library: topic chips, two-tier filter, question-level search](https://tommyjackett.github.io/tng-website/episodes.html) — added 8 Jul 2026
 *(to come: Episodes page with search/filters, Contact, About, host pages)*
 
 ## Reference

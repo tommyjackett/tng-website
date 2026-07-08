@@ -22,11 +22,11 @@
 ## THE SITE NAV (canonical for EVERY page, not just episodes — locked by Tommy 8 Jul 2026)
 
 Copy the nav verbatim from any current live page (e.g. `contact.html`). Rules:
-- Items: HOME · EPISODES · ABOUT (dropdown) · CONTACT. The homepage omits HOME (logo covers it).
-- **ABOUT is NOT clickable** — it is a hover label only (`<a class="navtop">`, no href, `cursor:default`). The choosable items live in its dropdown: **The show** (about.html) / **Nick Reilly** / **Jason Robinson**.
-- Mobile menu: About appears as a dim non-tappable label (`.navlabel`) with The show / Nick Reilly / Jason Robinson indented beneath it as `.sub` links.
-- Sticky, blurred backdrop, logo left (36px, links to index.html) — visual constants unchanged.
-- *Planned (build-plan Stage 3): EPISODES becomes the same dropdown pattern → All episodes (episodes.html) / Find moments (adventure.html). When that ships, this section gets updated in the same push.*
+- Items: HOME · EPISODES (dropdown) · ABOUT (dropdown) · CONTACT. The homepage omits HOME (logo covers it).
+- **Top-level EPISODES and ABOUT are NOT clickable** — hover labels only (`<a class="navtop">`, no href, `cursor:default`). The choosable items live in their dropdowns:
+  EPISODES → **All episodes** (episodes.html) / **Find moments** (adventure.html) · ABOUT → **The show** (about.html) / **Nick Reilly** / **Jason Robinson**.
+- Mobile menu: both appear as dim non-tappable labels (`.navlabel`) with their items indented beneath as `.sub` links.
+- Sticky, blurred backdrop, logo left (36px, links to index.html) — visual constants unchanged. (Shipped site-wide 8 Jul 2026.)
 
 ---
 

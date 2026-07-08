@@ -1,0 +1,367 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Every Episode — The Numbers Game</title>
+<meta name="description" content="Browse every episode of The Numbers Game. Filter by topic, search what's actually said inside episodes, and find whole conversations on business, property, tax and money.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --purple:#585af3; --purple-dark:#2c1b8a; --mint:#7ad9a8;
+    --white:#ffffff; --muted:rgba(255,255,255,.60); --dim:rgba(255,255,255,.42);
+    --line:rgba(255,255,255,.12); --card:rgba(255,255,255,.05); --card-hi:rgba(255,255,255,.09);
+    --display:'Anton',Impact,'Helvetica Neue',sans-serif;
+    --sans:'Inter',system-ui,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif;
+    --wrap:1280px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:var(--sans); color:var(--white); line-height:1.6; -webkit-font-smoothing:antialiased;
+    background:#12093a;
+    background-image:
+      radial-gradient(1200px 600px at 82% -6%, rgba(88,90,243,.45) 0%, transparent 55%),
+      radial-gradient(900px 700px at 5% 8%, rgba(122,217,168,.10) 0%, transparent 50%),
+      linear-gradient(180deg,#2c1b8a 0%,#1a1150 28%,#100b34 62%,#0b0820 100%);
+    background-attachment:fixed;
+  }
+  a{color:inherit}
+  .wrap{max-width:var(--wrap);margin:0 auto;padding:0 36px}
+  @media(max-width:720px){.wrap{padding:0 22px}}
+
+  /* ── Navbar ── */
+  .nav{position:sticky;top:0;z-index:50;background:linear-gradient(180deg,rgba(24,15,74,.92),rgba(24,15,74,.72));backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+  .nav-in{max-width:var(--wrap);margin:0 auto;padding:11px 36px;display:flex;align-items:center;justify-content:space-between}
+  @media(max-width:720px){.nav-in{padding:11px 22px}}
+  .brand{display:block;line-height:0}
+  .brand img{height:36px;width:auto;display:block}
+  .navlinks{display:flex;gap:28px;align-items:center}
+  .navlinks a{text-decoration:none;font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);transition:.15s}
+  .navlinks a:hover{color:var(--white)}
+  .navlinks a.navtop{cursor:default}
+  .navgroup{position:relative;display:flex;align-items:center}
+  .navgroup .subnav{display:none;position:absolute;top:100%;left:50%;transform:translateX(-50%);padding-top:14px;min-width:180px;z-index:60}
+  .navgroup:hover .subnav,.navgroup:focus-within .subnav{display:block}
+  .navgroup .subnav a{display:block;background:#180f4a;border:1px solid var(--line);border-top:0;padding:12px 16px;font-size:12px;color:rgba(255,255,255,.85)}
+  .navgroup .subnav a:first-child{border-top:1px solid var(--line)}
+  .navgroup .subnav a:hover{background:#221768;color:var(--white)}
+  .navburger{display:none;background:none;border:1px solid var(--line);padding:8px 10px;cursor:pointer;color:var(--white);transition:.15s}
+  .navburger:hover{border-color:rgba(122,217,168,.6)}
+  .navburger svg{width:20px;height:20px;fill:currentColor;display:block}
+  .navdrop{display:none}
+  @media(max-width:720px){
+    .navlinks{display:none}
+    .navburger{display:block}
+    .navdrop{display:block;position:absolute;left:0;right:0;top:100%;
+      background:#180f4a;border-bottom:1px solid var(--line);box-shadow:0 24px 50px rgba(0,0,0,.45)}
+    .navdrop[hidden]{display:none}
+    .navdrop a{display:block;padding:15px 22px;text-decoration:none;font-size:14px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:rgba(255,255,255,.9);border-bottom:1px solid rgba(255,255,255,.06)}
+    .navdrop a:last-child{border-bottom:0}
+    .navdrop a.sub{padding-left:42px;font-size:13px;color:rgba(255,255,255,.72)}
+    .navdrop .navlabel{display:block;padding:15px 22px 6px;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.4)}
+  }
+
+  /* ── Header: title + live counts + adventure cross-link ── */
+  .libhead{max-width:var(--wrap);margin:0 auto;padding:56px 36px 0;text-align:center}
+  @media(max-width:720px){.libhead{padding:40px 22px 0}}
+  .advtitle{display:flex;flex-direction:column;align-items:center;gap:4px;margin:0}
+  .advtitle .tb{font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.2px;line-height:1;
+    padding:.18em .5em .1em;white-space:nowrap}
+  .advtitle .tb-p{background:var(--purple);color:var(--white);font-size:clamp(30px,4vw,52px)}
+  .advtitle .tb-m{background:var(--mint);color:#0a0a0a;font-size:clamp(30px,4vw,52px)}
+  .libline{color:var(--white);font-size:15.5px;margin:18px auto 0;max-width:60ch}
+  .advlink{display:inline-block;margin-top:10px;font-size:13.5px;color:var(--mint);text-decoration:none;font-weight:600}
+  .advlink:hover{text-decoration:underline}
+
+  /* ── Toolbar: search + sort ── */
+  .toolbar{max-width:var(--wrap);margin:34px auto 0;padding:0 36px;display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+  @media(max-width:720px){.toolbar{padding:0 22px}}
+  .searchbox{flex:1;min-width:230px;position:relative}
+  .searchbox svg{position:absolute;left:14px;top:50%;transform:translateY(-50%);width:16px;height:16px;fill:var(--dim)}
+  .searchbox input{width:100%;background:rgba(255,255,255,.06);border:1px solid var(--line);color:var(--white);
+    font-family:var(--sans);font-size:14.5px;padding:13px 14px 13px 40px;border-radius:999px;transition:.15s}
+  .searchbox input:focus{outline:none;border-color:rgba(122,217,168,.7);background:rgba(255,255,255,.08)}
+  .searchbox input::placeholder{color:var(--dim)}
+  .sortbtn{background:none;border:1px solid rgba(255,255,255,.3);color:rgba(255,255,255,.85);
+    font-family:var(--display);text-transform:uppercase;letter-spacing:.5px;font-size:12.5px;
+    padding:11px 16px 9px;cursor:pointer;transition:.15s;border-radius:999px}
+  .sortbtn:hover{border-color:var(--mint);color:var(--mint)}
+
+  /* ── Topic chips ── */
+  .chips{max-width:var(--wrap);margin:18px auto 0;padding:0 36px;display:flex;flex-wrap:wrap;gap:10px}
+  @media(max-width:720px){.chips{padding:0 22px}}
+  .chip{font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.5px;font-size:13px;
+    color:#0a0a0a;background:var(--mint);border:1px solid var(--mint);padding:9px 14px 7px;cursor:pointer;transition:.15s}
+  .chip:hover{filter:brightness(1.06)}
+  .chip.on{background:var(--purple);border-color:var(--purple);color:var(--white)}
+  .chip .ct{font-size:10.5px;opacity:.75;font-variant-numeric:tabular-nums}
+  .chip .ct::before{content:" · "}
+  .chip.all{background:none;border:1px solid rgba(255,255,255,.35);color:rgba(255,255,255,.85)}
+  .chip.all.on{background:var(--purple);border-color:var(--purple);color:var(--white)}
+
+  /* ── Grid ── */
+  .libwrap{max-width:var(--wrap);margin:0 auto;padding:30px 36px 0}
+  @media(max-width:720px){.libwrap{padding:22px 22px 0}}
+  .count{font-size:12.5px;color:var(--dim);margin-bottom:14px}
+  .epgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+  .epgrid>*{min-width:0}
+  @media(max-width:1000px){.epgrid{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:560px){.epgrid{grid-template-columns:1fr}}
+  .ecard{display:flex;flex-direction:column;text-decoration:none;background:var(--card);border:1px solid var(--line);transition:.15s}
+  .ecard:hover{background:var(--card-hi);border-color:rgba(122,217,168,.55)}
+  .ecard img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block}
+  .ecard .et{font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.2px;
+    font-size:15px;line-height:1.35;color:var(--white);padding:12px 12px 0;text-wrap:balance}
+  .ecard .ew{font-size:11.5px;color:var(--mint);padding:8px 12px 0;line-height:1.4}
+  .ecard .ef{margin-top:auto;display:flex;justify-content:space-between;align-items:flex-end;gap:8px;padding:12px}
+  .ecard .ed{font-size:12px;color:var(--mint)}
+  .ecard .ee{display:inline-block;background:#0a0a0a;color:var(--white);font-family:var(--display);
+    font-size:10.5px;letter-spacing:1.2px;text-transform:uppercase;padding:3px 7px 2px}
+  .nores{color:var(--muted);font-size:14.5px;padding:26px 0}
+  .nores a{color:var(--mint)}
+  .moreline{display:flex;justify-content:center;margin-top:30px}
+  .morebtn{background:none;border:1px solid rgba(255,255,255,.3);color:rgba(255,255,255,.85);
+    font-family:var(--display);text-transform:uppercase;letter-spacing:.5px;font-size:14px;
+    padding:13px 26px 11px;cursor:pointer;transition:.15s}
+  .morebtn:hover{border-color:var(--mint);color:var(--mint)}
+
+  /* ── Footer: two columns under the line (site standard) ── */
+  footer{border-top:1px solid var(--line);margin-top:80px;padding:46px 20px 52px}
+  .footgrid{max-width:var(--wrap);margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:start}
+  @media(max-width:720px){.footgrid{grid-template-columns:1fr;gap:40px}}
+  .fcol{text-align:center}
+  .foot-label{font-size:11px;font-weight:700;letter-spacing:.26em;text-transform:uppercase;color:var(--dim);margin-bottom:16px}
+  .sponsors{display:flex;justify-content:center;align-items:center;gap:38px;flex-wrap:wrap}
+  .sponsors a{display:inline-flex;transition:.15s}
+  .sponsors a:hover{transform:translateY(-1px)}
+  .sponsors img{height:34px;width:auto;opacity:.92}
+  .sponsors a:hover img{opacity:1}
+  .produced a{display:inline-flex;transition:.15s}
+  .produced a:hover img{opacity:1}
+  .produced img{height:30px;width:auto;opacity:.95}
+  .copyright{margin-top:40px;font-size:12px;color:var(--dim);text-align:center}
+</style>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-in">
+      <a class="brand" href="index.html" aria-label="The Numbers Game home"><img src="assets/tng-logo.png" alt="The Numbers Game"></a>
+      <div class="navlinks">
+        <a href="index.html">Home</a>
+        <div class="navgroup">
+          <a class="navtop">Episodes</a>
+          <div class="subnav">
+            <a href="episodes.html">All episodes</a>
+            <a href="adventure.html">Find moments</a>
+          </div>
+        </div>
+        <div class="navgroup">
+          <a class="navtop">About</a>
+          <div class="subnav">
+            <a href="about.html">The show</a>
+            <a href="nick-reilly.html">Nick Reilly</a>
+            <a href="jason-robinson.html">Jason Robinson</a>
+          </div>
+        </div>
+        <a href="contact.html">Contact</a>
+      </div>
+      <button class="navburger" id="navburger" type="button" aria-label="Menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24"><path d="M3 6h18v2H3zM3 11h18v2H3zM3 16h18v2H3z"/></svg>
+      </button>
+    </div>
+    <div class="navdrop" id="navdrop" hidden>
+      <a href="index.html">Home</a>
+      <span class="navlabel">Episodes</span>
+      <a class="sub" href="episodes.html">All episodes</a>
+      <a class="sub" href="adventure.html">Find moments</a>
+      <span class="navlabel">About</span>
+      <a class="sub" href="about.html">The show</a>
+      <a class="sub" href="nick-reilly.html">Nick Reilly</a>
+      <a class="sub" href="jason-robinson.html">Jason Robinson</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+
+  <div class="libhead">
+    <h1 class="advtitle">
+      <span class="tb tb-p">Every</span>
+      <span class="tb tb-m">episode</span>
+    </h1>
+    <p class="libline" id="libline">The full library. Pick a topic, or search what's actually said inside the episodes.</p>
+    <a class="advlink" href="adventure.html">After the best bits instead? Choose your own adventure &rarr;</a>
+  </div>
+
+  <div class="toolbar">
+    <div class="searchbox">
+      <svg viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27a6.5 6.5 0 1 0-.7.7l.27.28v.79l5 4.99L20.49 19zm-6 0A4.5 4.5 0 1 1 14 9.5 4.5 4.5 0 0 1 9.5 14z"/></svg>
+      <input type="search" id="q" placeholder="Search episodes, topics, or the questions they answer" autocomplete="off">
+    </div>
+    <button class="sortbtn" id="sortbtn" type="button">Newest first</button>
+  </div>
+
+  <div class="chips" id="chips"></div>
+
+  <div class="libwrap">
+    <p class="count" id="count"></p>
+    <div class="epgrid" id="grid"></div>
+    <p class="nores" id="nores" hidden>Nothing matches that yet. Try another word, or <a href="adventure.html">let the adventure page find you the exact moments</a>.</p>
+    <div class="moreline"><button class="morebtn" id="more" type="button" hidden>Show more</button></div>
+  </div>
+
+  <footer>
+    <div class="footgrid">
+      <div class="fcol">
+        <div class="foot-label">Brought to you by</div>
+        <div class="sponsors">
+          <a href="https://www.inovayt.com.au/" target="_blank" rel="noopener"><img src="assets/inovayt-white.png" alt="Inovayt"></a>
+          <a href="https://futureadvisory.com.au/" target="_blank" rel="noopener"><img src="assets/future-advisory-white.png" alt="Future Advisory"></a>
+        </div>
+      </div>
+      <div class="fcol produced">
+        <div class="foot-label">Produced by</div>
+        <a href="https://www.vidpod.com.au/" target="_blank" rel="noopener"><img src="assets/vidpod-white.png" alt="VIDPOD"></a>
+      </div>
+    </div>
+    <div class="copyright">© 2026 The Numbers Game</div>
+  </footer>
+
+  <script>
+  /* Mobile nav */
+  var burger=document.getElementById('navburger'), navdrop=document.getElementById('navdrop');
+  if(burger&&navdrop){burger.addEventListener('click',function(){
+    navdrop.hidden=!navdrop.hidden;
+    burger.setAttribute('aria-expanded', navdrop.hidden?'false':'true');
+  });}
+
+  /* ── The library engine. Two-layer model per BUILD-PLAN-8-JUL.md:
+     tier 1 = primary topic (catalogue), tier 2 = genuine moment coverage (search-index, >=2 moments).
+     Search matches title -> topic -> the questions answered inside episodes. All client-side. ── */
+  var PAGE=12, COVER_MIN=2;
+  var EPS=[], byEp={}, state={q:'', topic:'', newest:true, shown:PAGE};
+
+  function fmtDate(iso){var d=new Date(iso+'T00:00:00');return d.getDate()+' '+d.toLocaleString('en-AU',{month:'long'})+' '+d.getFullYear();}
+
+  Promise.all([
+    fetch('data/catalogue.json').then(function(r){return r.json()}),
+    fetch('data/search-index.json').then(function(r){return r.json()})
+  ]).then(function(res){
+    var today=new Date(); today.setHours(23,59,59);
+    EPS=res[0].filter(function(e){return new Date(e.date+'T00:00:00')<=today});
+    EPS.sort(function(a,b){return a.date<b.date?1:-1});
+
+    /* per-episode: moment topic coverage + searchable text blob */
+    EPS.forEach(function(e){byEp[e.episodeNumber]={cover:{},blob:(e.title+' '+e.topic+' '+(e.subtopic||'')).toLowerCase(),qhits:0}});
+    res[1].forEach(function(m){
+      var b=byEp[m.episodeNumber]; if(!b) return;
+      b.cover[m.topic]=(b.cover[m.topic]||0)+1;
+      b.blob+=' '+((m.questionAsked||'')+' '+(m.description||'')).toLowerCase();
+    });
+
+    /* header count line */
+    document.getElementById('libline').textContent=
+      EPS.length+' episodes in the library. Pick a topic, or search what’s actually said inside them.';
+
+    /* topic chips (primary counts) */
+    var counts={};
+    EPS.forEach(function(e){counts[e.topic]=(counts[e.topic]||0)+1});
+    var topics=Object.keys(counts).sort(function(a,b){return counts[b]-counts[a]});
+    var box=document.getElementById('chips');
+    var all=document.createElement('button'); all.type='button'; all.className='chip all on'; all.textContent='All';
+    all.addEventListener('click',function(){setTopic('')});
+    box.appendChild(all);
+    topics.forEach(function(t){
+      var b=document.createElement('button'); b.type='button'; b.className='chip'; b.dataset.t=t;
+      b.innerHTML='<span></span><span class="ct">'+counts[t]+'</span>';
+      b.querySelector('span').textContent=t;
+      b.addEventListener('click',function(){setTopic(state.topic===t?'':t)});
+      box.appendChild(b);
+    });
+
+    /* deep-link support: ?topic=Property / ?q=guarantor */
+    var p=new URLSearchParams(location.search);
+    if(p.get('topic')&&counts[p.get('topic')]) state.topic=p.get('topic');
+    if(p.get('q')){state.q=p.get('q').toLowerCase(); document.getElementById('q').value=p.get('q');}
+    syncChips(); render();
+  });
+
+  function setTopic(t){state.topic=t; state.shown=PAGE; syncChips(); render();}
+  function syncChips(){
+    [].forEach.call(document.querySelectorAll('.chips .chip'),function(c){
+      c.classList.toggle('on', c.classList.contains('all') ? !state.topic : c.dataset.t===state.topic);
+    });
+  }
+
+  document.getElementById('q').addEventListener('input',function(){
+    state.q=this.value.trim().toLowerCase(); state.shown=PAGE; render();
+  });
+  document.getElementById('sortbtn').addEventListener('click',function(){
+    state.newest=!state.newest; this.textContent=state.newest?'Newest first':'Oldest first';
+    state.shown=PAGE; render();
+  });
+  document.getElementById('more').addEventListener('click',function(){state.shown+=PAGE; render();});
+
+  function results(){
+    var list=EPS.slice();
+    if(!state.newest) list.reverse();
+
+    /* topic filter: tier 1 primary, then tier 2 genuine coverage (>= COVER_MIN moments) by depth */
+    if(state.topic){
+      var t1=list.filter(function(e){return e.topic===state.topic});
+      var t2=list.filter(function(e){return e.topic!==state.topic&&(byEp[e.episodeNumber].cover[state.topic]||0)>=COVER_MIN});
+      t2.sort(function(a,b){return byEp[b.episodeNumber].cover[state.topic]-byEp[a.episodeNumber].cover[state.topic]});
+      t2.forEach(function(e){e._why='Also covers: '+state.topic+' · '+byEp[e.episodeNumber].cover[state.topic]+' moments'});
+      t1.forEach(function(e){delete e._why});
+      list=t1.concat(t2);
+    } else {
+      list.forEach(function(e){delete e._why});
+    }
+
+    /* search: title > topic > questions answered inside. Relevance order when searching. */
+    if(state.q.length>=2){
+      var scored=[];
+      list.forEach(function(e){
+        var b=byEp[e.episodeNumber], s=0;
+        if(e.title.toLowerCase().indexOf(state.q)>-1) s+=100;
+        if((e.topic+' '+(e.subtopic||'')).toLowerCase().indexOf(state.q)>-1) s+=50;
+        var qhits=0, idx=b.blob.indexOf(state.q);
+        while(idx>-1&&qhits<20){qhits++; idx=b.blob.indexOf(state.q,idx+1);}
+        s+=Math.min(qhits,10)*5;
+        if(s>0){
+          if(e.title.toLowerCase().indexOf(state.q)===-1&&qhits>0&&!e._why)
+            e._why='Talked about inside · '+qhits+' mention'+(qhits>1?'s':'');
+          scored.push({e:e,s:s});
+        }
+      });
+      scored.sort(function(a,b){return b.s-a.s});
+      list=scored.map(function(x){return x.e});
+    }
+    return list;
+  }
+
+  function render(){
+    var list=results();
+    var grid=document.getElementById('grid'); grid.innerHTML='';
+    list.slice(0,state.shown).forEach(function(e){
+      var a=document.createElement('a'); a.className='ecard'; a.href='episode-'+e.episodeNumber+'.html';
+      var im=document.createElement('img'); im.loading='lazy'; im.alt='';
+      im.src='https://i.ytimg.com/vi/'+e.youtubeId+'/hqdefault.jpg';
+      var t=document.createElement('span'); t.className='et'; t.textContent=e.title;
+      a.appendChild(im); a.appendChild(t);
+      if(e._why){var w=document.createElement('span'); w.className='ew'; w.textContent=e._why; a.appendChild(w);}
+      var f=document.createElement('span'); f.className='ef';
+      var d=document.createElement('span'); d.className='ed'; d.textContent=fmtDate(e.date);
+      var n=document.createElement('span'); n.className='ee'; n.textContent='EP '+e.episodeNumber;
+      f.appendChild(d); f.appendChild(n); a.appendChild(f);
+      grid.appendChild(a);
+    });
+    document.getElementById('nores').hidden=list.length>0;
+    document.getElementById('count').textContent=list.length?('Showing '+Math.min(state.shown,list.length)+' of '+list.length+' episodes'):'';
+    document.getElementById('more').hidden=list.length<=state.shown;
+  }
+  </script>
+</body>
+</html>
