@@ -26,11 +26,11 @@
 ## STAGE 1 — Homepage quick wins ✅ SHIPPED 8 Jul (awaiting Tommy review)
 - [x] Remove full stops in the banner sequence: "5 years" / "150+ hours" / "280+ episodes" (keep "but not as you know it!").
 - [x] **GET INVOLVED IN THE SHOW** section under Ways to Explore: centred heading + short line, two buttons centred — **LEAVE US A VOICE NOTE** (episode-page SpeakPipe component, opens inline) and **SEND US A MESSAGE** (→ contact.html — 404 until Stage 2 ships it, hours away). Copy is draft for voice pass.
-- [x] **Subscribe row v1**: quiet SUBSCRIBE ON YOUTUBE chip beneath the buttons. Spotify/Apple slots ready — ship when Tommy supplies show URLs.
+- [x] **Subscribe row v1** → revised per Tommy: three matching pill buttons across — voice note (mint) / message (purple) / SUBSCRIBE ON YOUTUBE (mint). Spotify/Apple ship when Tommy supplies show URLs.
 
 ## STAGE 2 — The page shell ×4 (the big stamp-out)
 Order: contact → about → jason → nick (each one push, Tommy reviews live).
-- [ ] **contact.html** — band: IMG_8006, bars "GET IN TOUCH" (purple) / mint payoff. Copy per brief (TNG voice pass): "We'd love to hear from you… use the form below." Web3Forms embed styled to brand. **BLOCKER: the Web3Forms access key/embed wasn't in the brief file and isn't in the brain — page ships with the form wired except the key; Tommy pastes the key, one push finishes it.** Voice-note button included as the second contact path.
+- [x] **contact.html** — SHIPPED 8 Jul. Band: IMG_8006 (optimised to assets/contact-band.jpg), bars GET IN / TOUCH, brief's copy, Web3Forms form live (key supplied by Tommy, redirect-back success note, honeypot), voice-note component as the second path.
 - [ ] **about.html** — band: IMG_6574, bars around "ABOUT / THE NUMBERS GAME STORY". One strong SEO paragraph block (story + hosts + what the show covers) drawn from the TNG brain md files, podcast artwork placed in content. Nothing too crazy per brief.
 - [ ] **jason-robinson.html** — band: Ep 273 still, bars = his name. TNG-tone bio from brain md files, Future Advisory mention + link, Instagram + LinkedIn (pull handles from brain; ask if absent). Meet-your-hosts feel.
 - [ ] **nick-reilly.html** — same shell, Ep 271 still, Inovayt mention + link, socials.
