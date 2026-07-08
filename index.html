@@ -66,13 +66,11 @@
   .seclabel{display:inline-block;font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.5px;font-size:14.5px;background:var(--mint);color:#0a0a0a;padding:9px 13px 7px}
 
   /* ── Video banner (slim, full-bleed, tinted) ── */
-  /* Viewport-tall banner: fills the first screen, leaving only the top of Ways to Explore
-     peeking above the fold so the next section clearly lives below a scroll */
-  .banner{position:relative;height:clamp(430px,calc(100svh - 215px),920px);overflow:hidden;
+  /* Section 1 = a full first screen: nav + video own the viewport, nothing else peeks */
+  .banner{position:relative;height:clamp(430px,calc(100svh - 58px),1200px);overflow:hidden;
     background:url('assets/banner-poster.jpg') center/cover no-repeat;
-    -webkit-mask-image:linear-gradient(180deg,#000 68%,transparent 100%);
-    mask-image:linear-gradient(180deg,#000 68%,transparent 100%)}
-  @media(max-width:720px){.banner{height:clamp(430px,calc(100svh - 185px),780px)}}
+    -webkit-mask-image:linear-gradient(180deg,#000 74%,transparent 100%);
+    mask-image:linear-gradient(180deg,#000 74%,transparent 100%)}
   .banner video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
   .banner-tint{position:absolute;inset:-4px;background:rgba(44,27,138,.5)}
   /* Title sequence over the video (plays once): logo → 5 years → 150+ hours / 280+ eps → show lockup (holds) */
@@ -115,9 +113,9 @@
     0%{opacity:0;transform:scale(1.7)}
     100%{opacity:1;transform:scale(1)}
   }
-  /* scroll cue overlapping the banner fade, drawing down to section 2 */
-  .banner-cue{position:relative;z-index:2;margin-top:-58px;display:flex;justify-content:center;pointer-events:none}
-  .banner-cue span{color:var(--mint);font-size:24px;line-height:1;animation:cuebob 1.6s ease-in-out infinite}
+  /* scroll cue sits low in the banner's fade, right at the fold, pulling you down */
+  .banner-cue{position:relative;z-index:2;margin-top:-88px;display:flex;justify-content:center;pointer-events:none}
+  .banner-cue span{color:var(--mint);font-size:30px;line-height:1;animation:cuebob 1.6s ease-in-out infinite}
   @keyframes cuebob{0%,100%{transform:translateY(0);opacity:.5}50%{transform:translateY(7px);opacity:1}}
   @media(prefers-reduced-motion:reduce){
     .banner video{display:none}
@@ -126,9 +124,10 @@
     .banner-cue span{animation:none}
   }
 
-  /* Section 2: ways to watch — three coloured pillar cards (below the video) */
-  .wherestart{max-width:var(--wrap);margin:0 auto;padding:90px 36px 110px}
-  @media(max-width:720px){.wherestart{padding:60px 22px 80px}}
+  /* Section 2 = its own full screen: ways to explore, centred on the viewport */
+  .wherestart{max-width:var(--wrap);margin:0 auto;padding:90px 36px 110px;
+    min-height:calc(100svh - 58px);display:flex;flex-direction:column;justify-content:center}
+  @media(max-width:720px){.wherestart{padding:60px 22px 80px;min-height:0}}
   .wherestart h2{font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.3px;
     font-size:clamp(24px,2.4vw,32px);line-height:1.2;color:var(--white);text-align:center}
   .pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:24px}
