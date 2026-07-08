@@ -2,6 +2,10 @@
 
 *Source brief: `Brain/Vidpod/clients/TNG/Website Build/DELETE ME/site changes 8 july 1122am.md` (moved there after this plan was written). This file is the tracked execution plan — tick items as they ship. Every push follows the standard system: edit → verify → commit → push-live → live link + summary. Specs updated in the same push as any new rule.*
 
+> **STATUS (end of 8 Jul session): MISSION ACCOMPLISHED — site LIVE at https://thenumbersgamepodcast.com.au, HTTPS enforced, all 29 pages, Stages 0-4 shipped.**
+> **NEXT SESSION STARTS HERE:** 1) Tommy: add the domain in Google Search Console + submit /sitemap.xml (his Google login). 2) Email-capture v1 — Tommy's yes/no on Web3Forms. 3) Spotify/Apple show URLs -> subscribe buttons. 4) Tommy's voice pass over draft copy (banner sequence, cards, page intros). 5) Futures when ready: playlists, Instagram grid, guests facet (engine schema, during back-catalogue mining), back-catalogue ingestion.
+> Local tooling note: scripts/push-live.sh (gitignored) now verifies against the NEW domain and follows redirects.
+
 **Mission: site finished today.** Cohesive, easy to navigate, the home for the show. Data-driven and scalable (back-catalogue will grow it 10x), SEO-conscious, and every pattern built portable for future VIDPOD clients/products.
 
 ---
