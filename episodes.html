@@ -254,12 +254,13 @@
     EPS.sort(function(a,b){return a.date<b.date?1:-1});
 
     /* per-episode: moment topic coverage + searchable text blob */
-    EPS.forEach(function(e){byEp[e.episodeNumber]={cover:{},coverSec:{},blob:(e.title+' '+e.topic+' '+(e.subtopic||'')).toLowerCase(),qhits:0}});
+    EPS.forEach(function(e){byEp[e.episodeNumber]={cover:{},coverSec:{},qs:[],ds:[]}});
     res[1].forEach(function(m){
       var b=byEp[m.episodeNumber]; if(!b) return;
       b.cover[m.topic]=(b.cover[m.topic]||0)+1;
       b.coverSec[m.topic]=(b.coverSec[m.topic]||0)+(m.durationSec||0);
-      b.blob+=' '+((m.questionAsked||'')+' '+(m.description||'')).toLowerCase();
+      if(m.questionAsked) b.qs.push(m.questionAsked);
+      if(m.description) b.ds.push(m.description);
     });
 
     /* header count line */
@@ -332,19 +333,31 @@
       list.forEach(function(e){delete e._why});
     }
 
-    /* search: title > topic > questions answered inside. Relevance order when searching. */
+    /* search: whole words only (prefix allowed from 4+ chars, so "guarant" finds guarantor but
+       "dan" can never match dangerous/redundant). Title > topic > the questions answered inside.
+       Cards QUOTE the question they matched, so the why is always visible. */
     if(state.q.length>=2){
+      var esc=state.q.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
+      var rx=new RegExp('\\b'+esc+(state.q.length<=3?'\\b':''),'i');
       var scored=[];
       list.forEach(function(e){
         var b=byEp[e.episodeNumber], s=0;
-        if(e.title.toLowerCase().indexOf(state.q)>-1) s+=100;
-        if((e.topic+' '+(e.subtopic||'')).toLowerCase().indexOf(state.q)>-1) s+=50;
-        var qhits=0, idx=b.blob.indexOf(state.q);
-        while(idx>-1&&qhits<20){qhits++; idx=b.blob.indexOf(state.q,idx+1);}
-        s+=Math.min(qhits,10)*5;
+        var inTitle=rx.test(e.title);
+        if(inTitle) s+=100;
+        if(rx.test(e.topic+' '+(e.subtopic||''))) s+=50;
+        var qMatches=b.qs.filter(function(t){return rx.test(t)});
+        var dMatches=b.ds.filter(function(t){return rx.test(t)});
+        var hits=qMatches.length+dMatches.length;
+        s+=Math.min(hits,10)*5;
         if(s>0){
-          if(e.title.toLowerCase().indexOf(state.q)===-1&&qhits>0&&!e._why)
-            e._why='Talked about inside · '+qhits+' mention'+(qhits>1?'s':'');
+          if(!inTitle&&hits>0&&!e._why){
+            if(qMatches.length){
+              var q0=qMatches[0].length>64?qMatches[0].slice(0,62)+'\u2026':qMatches[0];
+              e._why='Inside: \u201c'+q0+'\u201d'+(hits>1?' +'+(hits-1)+' more':'');
+            } else {
+              e._why='Talked about inside · '+hits+' mention'+(hits>1?'s':'');
+            }
+          }
           scored.push({e:e,s:s});
         }
       });
