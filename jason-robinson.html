@@ -62,22 +62,24 @@
     .navdrop a.sub{padding-left:42px;font-size:13px;color:rgba(255,255,255,.72)}
   }
 
-  /* ── Video banner (page-shell band, video variant) ── */
-  .advband{position:relative;overflow:hidden;padding:80px 0 104px;
+  /* ── Video banner (clean, no text — the name tags live on the photo below) ── */
+  .advband{position:relative;overflow:hidden;height:clamp(240px,26vw,330px);
     background:url('assets/banner-poster.jpg') center/cover no-repeat;
     -webkit-mask-image:linear-gradient(180deg,#000 76%,transparent 100%);
     mask-image:linear-gradient(180deg,#000 76%,transparent 100%)}
-  @media(max-width:720px){.advband{padding:54px 0 82px}}
   .advband video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
   .advband .tint{position:absolute;inset:-4px;background:rgba(44,27,138,.55)}
-  .advband-in{position:relative;z-index:1;max-width:940px;margin:0 auto;padding:0 36px;text-align:center;
-    display:flex;flex-direction:column;align-items:center}
-  .advtitle{display:flex;flex-direction:column;align-items:center;gap:4px}
-  .advtitle .tb{font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.2px;line-height:1;
-    padding:.18em .5em .1em;white-space:nowrap}
-  .advtitle .tb-p{background:var(--purple);color:var(--white);font-size:clamp(42px,5.7vw,75px)}
-  .advtitle .tb-m{background:var(--mint);color:#0a0a0a;font-size:clamp(42px,5.7vw,75px)}
   @media(prefers-reduced-motion:reduce){.advband video{display:none}}
+
+  /* name tags overlap the photo, bottom-left */
+  .photowrap{position:relative;height:100%}
+  @media(max-width:900px){.photowrap{height:auto;max-width:340px;margin:0 auto}}
+  .advtitle{position:absolute;bottom:26px;left:-18px;margin:0;
+    display:flex;flex-direction:column;align-items:flex-start;gap:4px}
+  .advtitle .tb{font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.2px;line-height:1;
+    padding:.18em .5em .1em;white-space:nowrap;box-shadow:0 10px 30px rgba(0,0,0,.35)}
+  .advtitle .tb-p{background:var(--purple);color:var(--white);font-size:clamp(26px,2.8vw,38px)}
+  .advtitle .tb-m{background:var(--mint);color:#0a0a0a;font-size:clamp(26px,2.8vw,38px)}
 
   /* ── The host: square photo with solid purple offset shadow + bio ── */
   .storysec{max-width:1080px;margin:0 auto;padding:34px 36px 20px;
@@ -151,17 +153,17 @@
       <source src="assets/banner-opener.mp4" type="video/mp4">
     </video>
     <div class="tint"></div>
-    <div class="advband-in">
-      <h1 class="advtitle">
-        <span class="tb tb-p">Jason</span>
-        <span class="tb tb-m">Robinson</span>
-      </h1>
-    </div>
   </div>
 
   <main>
     <div class="storysec">
-      <img class="hostart" src="assets/jason-robinson.jpg" alt="Jason Robinson, co-host of The Numbers Game">
+      <div class="photowrap">
+        <img class="hostart" src="assets/jason-robinson.jpg" alt="Jason Robinson, co-host of The Numbers Game">
+        <h1 class="advtitle">
+          <span class="tb tb-p">Jason</span>
+          <span class="tb tb-m">Robinson</span>
+        </h1>
+      </div>
       <div class="bio">
         <p class="lead"><b>Jason Robinson is the accountant who makes the numbers make sense.</b> A Fellow CPA and co-founder of Future Advisory, the Melbourne firm he has grown to a team of more than twenty (and a two-time Xero Partner of the Year), Jason spends his week inside the numbers of hundreds of Australian businesses, and every Monday turning what he sees into straight answers on The Numbers Game.</p>
         <p>It started young. Jason grew up watching his dad hand-write the debits and credits for his lawn mowing business at the kitchen table, then watched him walk away from it when GST arrived in 2000 and made it all too hard. That memory sits under everything he does: nobody should have to give up the thing they love because the numbers got complicated. Real talk, no jargon, every week.</p>
