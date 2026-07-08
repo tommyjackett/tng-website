@@ -41,6 +41,7 @@
   .navlinks{display:flex;gap:28px;align-items:center}
   .navlinks a{text-decoration:none;font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);transition:.15s}
   .navlinks a:hover{color:var(--white)}
+  .navlinks a.navtop{cursor:default}
   .navgroup{position:relative;display:flex;align-items:center}
   .navgroup .subnav{display:none;position:absolute;top:100%;left:50%;transform:translateX(-50%);padding-top:14px;min-width:180px;z-index:60}
   .navgroup:hover .subnav,.navgroup:focus-within .subnav{display:block}
@@ -60,6 +61,7 @@
     .navdrop a{display:block;padding:15px 22px;text-decoration:none;font-size:14px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:rgba(255,255,255,.9);border-bottom:1px solid rgba(255,255,255,.06)}
     .navdrop a:last-child{border-bottom:0}
     .navdrop a.sub{padding-left:42px;font-size:13px;color:rgba(255,255,255,.72)}
+    .navdrop .navlabel{display:block;padding:15px 22px 6px;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.4)}
   }
 
   /* ── Cinematic banner (page-shell pattern) ── */
@@ -122,7 +124,7 @@
         <a href="index.html">Home</a>
         <a href="episodes.html">Episodes</a>
         <div class="navgroup">
-          <a href="about.html">About</a>
+          <a class="navtop">About</a>
           <div class="subnav">
             <a href="about.html">The show</a>
             <a href="nick-reilly.html">Nick Reilly</a>
@@ -138,7 +140,8 @@
     <div class="navdrop" id="navdrop" hidden>
       <a href="index.html">Home</a>
       <a href="episodes.html">Episodes</a>
-      <a href="about.html">About</a>
+      <span class="navlabel">About</span>
+      <a class="sub" href="about.html">The show</a>
       <a class="sub" href="nick-reilly.html">Nick Reilly</a>
       <a class="sub" href="jason-robinson.html">Jason Robinson</a>
       <a href="contact.html">Contact</a>

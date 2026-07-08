@@ -36,6 +36,7 @@ Order: contact → about → jason → nick (each one push, Tommy reviews live).
 - [x] **nick-reilly.html** — SHIPPED 8 Jul, identical pattern (Ep 271 frame, Inovayt story).
 - **SOCIALS (logged, supplied by Tommy 8 Jul):** Jason IG https://www.instagram.com/jasonrobinson.cpa/ · Jason LinkedIn https://www.linkedin.com/in/jasonrobinsoncpa1/ · Nick IG https://www.instagram.com/nickreilly99/ · Nick LinkedIn https://www.linkedin.com/in/nickreilly/
 - These four kill every remaining nav 404 (About dropdown + Contact already point at these filenames on all 24 live pages).
+- [x] **Nav rule (Tommy, 8 Jul): the top-level ABOUT is NOT clickable** — hover/label only; the choosable items are The show / Nick Reilly / Jason Robinson (mobile menu shows About as a dim label with the three as sub-links). Applied across all 28 pages.
 
 ## STAGE 3 — episodes.html (the library) + nav rewire
 **Proposed functionality (per brief's request for a recommendation, kept simple, all client-side from catalogue.json):**
