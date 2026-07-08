@@ -34,6 +34,8 @@
 - [Choose Your Own Adventure — the moments feature, own page](https://tommyjackett.github.io/tng-website/adventure.html) — added 6 Jul 2026
 - [Contact — Get in Contact band, Web3Forms + voice note](https://tommyjackett.github.io/tng-website/contact.html) — added 8 Jul 2026
 - [About — the show story: artwork, bio, stat chips](https://tommyjackett.github.io/tng-website/about.html) — added 8 Jul 2026
+- [Jason Robinson — host page: video band, purple-shadow photo, bio + socials](https://tommyjackett.github.io/tng-website/jason-robinson.html) — added 8 Jul 2026
+- [Nick Reilly — host page, same pattern](https://tommyjackett.github.io/tng-website/nick-reilly.html) — added 8 Jul 2026
 *(to come: Episodes page with search/filters, Contact, About, host pages)*
 
 ## Reference

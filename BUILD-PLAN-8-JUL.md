@@ -32,8 +32,9 @@
 Order: contact → about → jason → nick (each one push, Tommy reviews live).
 - [x] **contact.html** — SHIPPED 8 Jul. Band: IMG_8006 (optimised to assets/contact-band.jpg), bars GET IN / TOUCH, brief's copy, Web3Forms form live (key supplied by Tommy, redirect-back success note, honeypot), voice-note component as the second path.
 - [x] **about.html** — SHIPPED 8 Jul. Band: IMG_7604 (Tommy swapped from IMG_6574; optimised to assets/about-band.jpg), bars ABOUT / THE NUMBERS GAME, layout per Tommy's example: artwork left (rounded, shadow), bio right (official show description, em dashes removed per house style), stat chips 5 YEARS / 280+ EPISODES / SINCE 2021.
-- [ ] **jason-robinson.html** — band: Ep 273 still, bars = his name. TNG-tone bio from brain md files, Future Advisory mention + link, Instagram + LinkedIn (pull handles from brain; ask if absent). Meet-your-hosts feel.
-- [ ] **nick-reilly.html** — same shell, Ep 271 still, Inovayt mention + link, socials.
+- [x] **jason-robinson.html** — SHIPPED 8 Jul. Host-page pattern set by Tommy: VIDEO band (homepage opener) + name across the two bars; square photo, no rounded corners, SOLID purple offset shadow, image stretches to match the bio block height, head-centred crop (analyse the frame first); bio + social chips where About has stat chips.
+- [x] **nick-reilly.html** — SHIPPED 8 Jul, identical pattern (Ep 271 frame, Inovayt story).
+- **SOCIALS (logged, supplied by Tommy 8 Jul):** Jason IG https://www.instagram.com/jasonrobinson.cpa/ · Jason LinkedIn https://www.linkedin.com/in/jasonrobinsoncpa1/ · Nick IG https://www.instagram.com/nickreilly99/ · Nick LinkedIn https://www.linkedin.com/in/nickreilly/
 - These four kill every remaining nav 404 (About dropdown + Contact already point at these filenames on all 24 live pages).
 
 ## STAGE 3 — episodes.html (the library) + nav rewire
