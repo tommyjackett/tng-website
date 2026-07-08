@@ -32,8 +32,7 @@
 Order: contact → about → jason → nick (each one push, Tommy reviews live).
 - [x] **contact.html** — SHIPPED 8 Jul. Band: IMG_8006 (optimised to assets/contact-band.jpg), bars GET IN / TOUCH, brief's copy, Web3Forms form live (key supplied by Tommy, redirect-back success note, honeypot), voice-note component as the second path.
 - [x] **about.html** — SHIPPED 8 Jul. Band: IMG_7604 (Tommy swapped from IMG_6574; optimised to assets/about-band.jpg), bars ABOUT / THE NUMBERS GAME, layout per Tommy's example: artwork left (rounded, shadow), bio right (official show description, em dashes removed per house style), stat chips 5 YEARS / 280+ EPISODES / SINCE 2021.
-- [x] **jason-robinson.html** — SHIPPED 8 Jul. Host-page pattern set by Tommy: VIDEO band (homepage opener) + name across the two bars; square photo, no rounded corners, SOLID purple offset shadow, image stretches to match the bio block height, head-centred crop (analyse the frame first); bio + social chips where About has stat chips.
-- [x] **nick-reilly.html** — SHIPPED 8 Jul, identical pattern (Ep 271 frame, Inovayt story).
+- [x] **jason-robinson.html + nick-reilly.html** — SHIPPED 8 Jul, then EVOLVED to final locked pattern: NO video band; whole page fits ONE SCREEN (nav -> photo+bio -> footer, no scrolling on desktop); square head-centred photo (ANALYSE the frame before cropping), solid PURPLE offset shadow, photo stretches to bio height; NAME TAGS as purple/mint bars OVERLAPPING the photo bottom-LEFT (both hosts); Jason photo-left, Nick photo-right (mirrored); personal socials wired (logged below).
 - **SOCIALS (logged, supplied by Tommy 8 Jul):** Jason IG https://www.instagram.com/jasonrobinson.cpa/ · Jason LinkedIn https://www.linkedin.com/in/jasonrobinsoncpa1/ · Nick IG https://www.instagram.com/nickreilly99/ · Nick LinkedIn https://www.linkedin.com/in/nickreilly/
 - These four kill every remaining nav 404 (About dropdown + Contact already point at these filenames on all 24 live pages).
 - [x] **Nav rule (Tommy, 8 Jul): the top-level ABOUT is NOT clickable** — hover/label only; the choosable items are The show / Nick Reilly / Jason Robinson (mobile menu shows About as a dim label with the three as sub-links). Applied across all 28 pages.
@@ -60,11 +59,12 @@ Order: contact → about → jason → nick (each one push, Tommy reviews live).
 - **Principle: add a field to the data, get a filter on the site.** Guests: add `guests[]` to the engine schema and capture it DURING back-catalogue mining (one pass); episodes page then gains guest facet + guest search for free (template already reserves a Guest fact slot). Same door for formats/series/years.
 - **Playlists ("send yourself a playlist"):** v1 = URL-encoded lists (?list=281,273,266), zero backend, page rebuilds the queue from the URL; v1.5 = localStorage My List; v2 = "Email me this playlist" via the same Web3Forms account — which doubles as the listener-database capture. Also a hosts' marketing tool (curated playlist links said on air).
 
-## Open items needing Tommy
-1. **Web3Forms access key / embed snippet** (contact form + email capture).
-2. **Spotify + Apple show URLs** (channels row; long-parked item).
-3. Host **Instagram/LinkedIn handles** if not found in the brain.
-4. Email-capture v1 via Web3Forms — yes/no.
+## Open items needing Tommy (updated end of day 8 Jul)
+1. ~~Web3Forms key~~ SUPPLIED (ad399097-ad89-481c-a55b-31f074b176f6, live on contact.html).
+2. **Spotify + Apple show URLs** — still needed (Get Involved subscribe row + future channels).
+3. ~~Host socials~~ SUPPLIED + live. Show socials also live on about.html (IG/TikTok/LinkedIn/FB id=100071290388343/YT).
+4. **Email-capture v1 via Web3Forms — yes/no** (Stage 4).
+5. Tommy voice pass over all draft copy (banner sequence, cards, page intros) whenever ready.
 
 ## Standing context (per the brief, for any future session)
 - The site is data-driven; treat design like a data scientist + expert UI dev. Everything must scale to the full back-catalogue (moments payload trigger documented in MOMENTS-FEATURE.md §10).
