@@ -38,10 +38,8 @@
   /* every preview window is 16:9 so the three cards stay identical */
   .pv{margin-top:auto;border-radius:4px;overflow:hidden;position:relative;aspect-ratio:16/9}
 
-  /* 1 — latest episode: the FULL thumbnail, uncropped — the hero of the card */
+  /* 1 — latest episode: the FULL thumbnail, uncropped and unobstructed — the hero of the card */
   .pv-latest img{width:100%;height:100%;display:block}
-  .pv-latest .eptag{position:absolute;left:10px;bottom:10px;background:#0a0a0a;color:#fff;font-family:var(--display);
-    font-size:11px;letter-spacing:1.2px;text-transform:uppercase;padding:4px 8px 3px}
 
   /* 2 — adventure: centred numbered instruction, ALL real topics fill the bucket, button gets pressed.
      18s loop; chips only pop IN, each beat fades out as ONE, leaving fresh space for the next. */
@@ -134,9 +132,8 @@
         <p class="pd">The freshest episode we've dropped. Jump straight into this week's conversation.</p>
         <span class="pv pv-latest">
           <img id="latest-thumb" src="" alt="">
-          <span class="eptag" id="latest-tag">EP —</span>
         </span>
-        <span class="pgo">Watch now</span>
+        <span class="pgo" id="latest-go">Watch now</span>
       </a>
 
       <a class="pcard purplec">
@@ -209,9 +206,9 @@
       var s=document.createElement('span'); s.className='sc'+((i===1||i===4)?' sel':''); s.textContent=t.n;
       s.style.animationDelay=(i*0.12)+'s'; srow.appendChild(s);
     });
-    /* latest: full thumbnail, uncropped */
+    /* latest: full thumbnail, uncropped; the button carries the episode number and updates with every release */
     document.getElementById('latest-thumb').src='https://i.ytimg.com/vi/'+rel[0].youtubeId+'/mqdefault.jpg';
-    document.getElementById('latest-tag').textContent='EP '+rel[0].episodeNumber;
+    document.getElementById('latest-go').textContent='Watch EP '+rel[0].episodeNumber;
     /* library wall: 3 columns, each column's stack doubled for a seamless downward loop */
     var wall=document.getElementById('wall');
     for(var c=0;c<3;c++){
