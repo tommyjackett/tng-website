@@ -23,10 +23,10 @@
 - [x] This plan committed to the repo (tracked in git); source brief moved to DELETE ME.
 - [x] HANDOFF points here as the active work queue.
 
-## STAGE 1 — Homepage quick wins
-- [ ] Remove full stops in the banner sequence: "5 years" / "150+ hours" / "280+ episodes" (keep "but not as you know it!").
-- [ ] **GET INVOLVED IN THE SHOW** section under Ways to Explore: centred heading + short line, two buttons centred — **LEAVE US A VOICE NOTE** (SpeakPipe widget, reusing the episode-page component) and **SEND US A MESSAGE** (→ contact.html). Built directly on the page, iterated live. Generous spacing per brief.
-- [ ] **Subscribe/channels row** (brief's "push people to the other channels"): quiet row in the same section — YouTube (have URL) + Spotify/Apple (**need show URLs from Tommy — parked item**; buttons ship when URLs arrive).
+## STAGE 1 — Homepage quick wins ✅ SHIPPED 8 Jul (awaiting Tommy review)
+- [x] Remove full stops in the banner sequence: "5 years" / "150+ hours" / "280+ episodes" (keep "but not as you know it!").
+- [x] **GET INVOLVED IN THE SHOW** section under Ways to Explore: centred heading + short line, two buttons centred — **LEAVE US A VOICE NOTE** (episode-page SpeakPipe component, opens inline) and **SEND US A MESSAGE** (→ contact.html — 404 until Stage 2 ships it, hours away). Copy is draft for voice pass.
+- [x] **Subscribe row v1**: quiet SUBSCRIBE ON YOUTUBE chip beneath the buttons. Spotify/Apple slots ready — ship when Tommy supplies show URLs.
 
 ## STAGE 2 — The page shell ×4 (the big stamp-out)
 Order: contact → about → jason → nick (each one push, Tommy reviews live).

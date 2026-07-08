@@ -251,6 +251,32 @@
     .pv-adv .p1,.pv-adv .p1 .plabel,.pv-adv .p1 .c{opacity:1}
     .pv-lib .col .inner{animation:none}
   }
+  /* ── Get involved: centred heading + the two contact doors (voice-note component = episode-page original) ── */
+  .getinvolved{max-width:var(--wrap);margin:0 auto;padding:72px 36px 96px;text-align:center;border-top:1px solid var(--line)}
+  @media(max-width:720px){.getinvolved{padding:56px 22px 72px}}
+  .getinvolved h2{font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.3px;
+    font-size:clamp(24px,2.4vw,32px);line-height:1.2;color:var(--white)}
+  .gi-line{color:var(--white);font-size:15px;line-height:1.6;margin:12px auto 30px;max-width:52ch}
+  .gi-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+  .vbtn{display:inline-flex;align-items:center;gap:9px;padding:14px 24px;border-radius:999px;border:0;cursor:pointer;
+    background:var(--mint);color:#08210f;font-family:inherit;font-weight:800;font-size:12.5px;
+    letter-spacing:.04em;text-transform:uppercase;transition:.15s;text-decoration:none}
+  .vbtn:hover{filter:brightness(1.06);transform:translateY(-1px);box-shadow:0 12px 30px rgba(122,217,168,.25)}
+  .vbtn svg{width:18px;height:18px;fill:currentColor;flex:none}
+  .vbtn.vpurple{background:var(--purple);color:var(--white)}
+  .vbtn.vpurple:hover{box-shadow:0 12px 30px rgba(88,90,243,.35)}
+  .vslot{background:var(--purple);padding:12px 10px 10px;margin:26px auto 0;max-width:600px;box-shadow:0 18px 40px rgba(0,0,0,.35);text-align:left}
+  .vslot[hidden]{display:none}
+  .vhead{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;margin-bottom:10px}
+  .vhead .vmsg{font-family:var(--sans);font-size:13px;line-height:1.55;color:rgba(255,255,255,.92);margin:2px 0 0;padding:0 2px}
+  .vclose{background:none;border:0;color:rgba(255,255,255,.85);font-size:22px;line-height:1;cursor:pointer;padding:0 2px}
+  .vclose:hover{color:var(--white)}
+  .vslot iframe{display:block}
+  .gi-sub{margin-top:34px}
+  .gi-sub a{display:inline-block;font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.6px;
+    font-size:12.5px;color:var(--mint);border:1.5px solid rgba(122,217,168,.55);padding:9px 14px 7px;text-decoration:none;transition:.15s}
+  .gi-sub a:hover{border-color:var(--mint);transform:translateY(-1px)}
+
   /* ── Footer: two columns under the line (Brought to you by | Produced by), site standard ── */
   footer{border-top:1px solid var(--line);margin-top:0;padding:46px 20px 52px}
   .footgrid{max-width:var(--wrap);margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:start}
@@ -305,9 +331,9 @@
     <div class="banner-tint"></div>
     <div class="banner-seq">
       <div class="bs bs1" aria-hidden="true"><img src="assets/tng-logo.png" alt=""></div>
-      <div class="bs bs2" aria-hidden="true"><span class="bst">5 years.</span></div>
-      <div class="bs bs3" aria-hidden="true"><span class="bst">150+ hours.</span></div>
-      <div class="bs bs4" aria-hidden="true"><span class="bst">280+ episodes.</span></div>
+      <div class="bs bs2" aria-hidden="true"><span class="bst">5 years</span></div>
+      <div class="bs bs3" aria-hidden="true"><span class="bst">150+ hours</span></div>
+      <div class="bs bs4" aria-hidden="true"><span class="bst">280+ episodes</span></div>
       <div class="bs bs5">
         <span class="l1">It's finance, investment, business</span>
         <span class="l2">but not as you know it!</span>
@@ -355,6 +381,27 @@
     </div>
   </div>
 
+  <div class="getinvolved">
+    <h2>Get involved in the show</h2>
+    <p class="gi-line">Got a question, some feedback or a topic you want covered? Two ways to reach the boys.</p>
+    <div class="gi-btns">
+      <button class="vbtn" id="vbtn" type="button">
+        <svg viewBox="0 0 24 24"><path d="M12 14a3 3 0 0 0 3-3V6a3 3 0 1 0-6 0v5a3 3 0 0 0 3 3zm5-3a5 5 0 0 1-10 0H5a7 7 0 0 0 6 6.92V21h2v-3.08A7 7 0 0 0 19 11h-2z"/></svg>
+        Leave us a voice note
+      </button>
+      <a class="vbtn vpurple" href="contact.html">Send us a message</a>
+    </div>
+    <div class="vslot" id="vslot" hidden>
+      <div class="vhead">
+        <p class="vmsg">We'd love to hear from you. You can leave up to a 90 second voice note for us to play on the show: a question, some feedback, or a topic you want covered.</p>
+        <button class="vclose" id="vclose" type="button" aria-label="Close">&times;</button>
+      </div>
+      <iframe src="https://www.speakpipe.com/widget/inline/hhq6kzggsx7zpcsvakgxfrzun3zidpde" allow="microphone" width="100%" height="200" frameborder="0" title="Leave The Numbers Game a voice note"></iframe>
+    </div>
+    <p class="gi-sub"><a href="https://www.youtube.com/@thenumbersgamepodcast?sub_confirmation=1" target="_blank" rel="noopener">Subscribe on YouTube</a></p>
+    <script async src="https://www.speakpipe.com/widget/loader.js" charset="utf-8"></script>
+  </div>
+
   <footer>
     <div class="footgrid">
       <div class="fcol">
@@ -383,6 +430,14 @@
   /* Ways-to-explore cards pop in straight away, staggered (no JS = cards simply visible) */
   var ws=document.querySelector('.wherestart');
   if(ws) ws.classList.add('inview');
+
+  /* Voice-note reveal (episode-page component) */
+  var vbtn=document.getElementById('vbtn'), vslot=document.getElementById('vslot'), vclose=document.getElementById('vclose');
+  if(vbtn&&vslot){
+    vbtn.addEventListener('click',function(){vslot.hidden=!vslot.hidden;
+      if(!vslot.hidden)vslot.scrollIntoView({behavior:'smooth',block:'nearest'});});
+    vclose.addEventListener('click',function(){vslot.hidden=true});
+  }
 
   /* Data-driven card previews: latest thumbnail + dynamic Watch EP button, real adventure inventory, library wall */
   Promise.all([
