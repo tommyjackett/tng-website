@@ -254,10 +254,11 @@
     EPS.sort(function(a,b){return a.date<b.date?1:-1});
 
     /* per-episode: moment topic coverage + searchable text blob */
-    EPS.forEach(function(e){byEp[e.episodeNumber]={cover:{},blob:(e.title+' '+e.topic+' '+(e.subtopic||'')).toLowerCase(),qhits:0}});
+    EPS.forEach(function(e){byEp[e.episodeNumber]={cover:{},coverSec:{},blob:(e.title+' '+e.topic+' '+(e.subtopic||'')).toLowerCase(),qhits:0}});
     res[1].forEach(function(m){
       var b=byEp[m.episodeNumber]; if(!b) return;
       b.cover[m.topic]=(b.cover[m.topic]||0)+1;
+      b.coverSec[m.topic]=(b.coverSec[m.topic]||0)+(m.durationSec||0);
       b.blob+=' '+((m.questionAsked||'')+' '+(m.description||'')).toLowerCase();
     });
 
@@ -266,8 +267,16 @@
       EPS.length+' episodes in the library. Pick a topic, or search what’s actually said inside them.';
 
     /* topic chips (primary counts) */
+    /* chip count = exactly how many episodes tapping it will show (primary + genuine coverage) */
     var counts={};
-    EPS.forEach(function(e){counts[e.topic]=(counts[e.topic]||0)+1});
+    EPS.forEach(function(e){
+      var seen={};
+      seen[e.topic]=1;
+      Object.keys(byEp[e.episodeNumber].cover).forEach(function(t){
+        if(byEp[e.episodeNumber].cover[t]>=COVER_MIN) seen[t]=1;
+      });
+      Object.keys(seen).forEach(function(t){counts[t]=(counts[t]||0)+1});
+    });
     var topics=Object.keys(counts).sort(function(a,b){return counts[b]-counts[a]});
     var box=document.getElementById('chips');
     var all=document.createElement('button'); all.type='button'; all.className='chip all on'; all.textContent='All';
@@ -313,7 +322,10 @@
       var t1=list.filter(function(e){return e.topic===state.topic});
       var t2=list.filter(function(e){return e.topic!==state.topic&&(byEp[e.episodeNumber].cover[state.topic]||0)>=COVER_MIN});
       t2.sort(function(a,b){return byEp[b.episodeNumber].cover[state.topic]-byEp[a.episodeNumber].cover[state.topic]});
-      t2.forEach(function(e){e._why='Also covers: '+state.topic+' · '+byEp[e.episodeNumber].cover[state.topic]+' moments'});
+      t2.forEach(function(e){
+        var mins=Math.max(1,Math.round((byEp[e.episodeNumber].coverSec[state.topic]||0)/60));
+        e._why='Also covers '+state.topic.toLowerCase()+' · '+mins+' min inside';
+      });
       t1.forEach(function(e){delete e._why});
       list=t1.concat(t2);
     } else {
