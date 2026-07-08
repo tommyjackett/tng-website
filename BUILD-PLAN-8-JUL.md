@@ -46,10 +46,16 @@ Order: contact → about → jason → nick (each one push, Tommy reviews live).
 - [x] **Nav rewire on all 29 pages**: EPISODES is now an unclickable dropdown label → All episodes / Find moments (canonical nav in EPISODE-PAGE-TEMPLATE.md updated).
 - [x] Homepage card 3 → episodes.html (YouTube interim retired).
 
-## STAGE 4 — SEO + extras
-- [ ] Unique `<title>` + meta description on every new page; human URLs already good (about, contact, host names).
-- [ ] `sitemap.xml` + `robots.txt`; JSON-LD (PodcastSeries on home, Person on host pages).
-- [ ] Footer quick-links row (all pages): Episodes / Adventure / About / Contact — the crawlable "index" the brief wants, tidy in the footer.
+## STAGE 4 — SEO + domain ✅ MOSTLY SHIPPED 8 Jul (domain = thenumbersgamepodcast.com.au)
+- [x] Unique titles + meta descriptions (all 29) · favicon + apple-touch-icon (podcast art) · footer quick-links row on every page (the crawlable index).
+- [x] Canonical tags + Open Graph/Twitter cards on all 29 pages (episode pages use their own YouTube thumbnails as og:image; others use assets/og-image.jpg 1200x630).
+- [x] JSON-LD: PodcastSeries (home, with all show socials as sameAs), Person (both hosts), PodcastEpisode (all 22, from catalogue data).
+- [x] sitemap.xml (29 URLs, domain-stamped) + robots.txt · contact-form redirect made domain-agnostic · push-live.sh curl now follows redirects (survives the move).
+- [ ] **DNS FLIP RUNBOOK (the only remaining step):**
+  1. Tommy at the registrar: apex `thenumbersgamepodcast.com.au` → A records `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`; `www` → CNAME `tommyjackett.github.io`.
+  2. AFTER records are set (and resolving): create one-line `CNAME` file in repo root containing `thenumbersgamepodcast.com.au`, commit, push. (Deliberately NOT committed yet — doing it before DNS = dark site.)
+  3. GitHub Pages settings: wait for the DNS check, then tick **Enforce HTTPS** (cert auto-provisions, can take up to an hour).
+  4. Verify https://thenumbersgamepodcast.com.au/ + confirm github.io 301s; submit sitemap in Google Search Console (property = the new domain).
 - [ ] **Listener database v1 recommendation:** one-field email capture using the same Web3Forms account (no new vendor), submissions to Tommy's email; upgradeable later. Placement: small strip on contact page + homepage Get Involved. *(Decision for Tommy: OK to use Web3Forms for this v1?)*
 - [ ] **Instagram feed: parked** — needs an embed service or manual grid decision; recommend a later phase (manual 6-tile grid linking to IG is the zero-dependency v1).
 - [ ] Voice-note "appears on each page at different times": v1 = present on episode pages (already), contact, and homepage Get Involved. Roaming/timed appearance parked as a later experiment.
