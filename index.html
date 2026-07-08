@@ -66,11 +66,13 @@
   .seclabel{display:inline-block;font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.5px;font-size:14.5px;background:var(--mint);color:#0a0a0a;padding:9px 13px 7px}
 
   /* ── Video banner (slim, full-bleed, tinted) ── */
-  .banner{position:relative;height:clamp(310px,42vw,600px);overflow:hidden;
+  /* Viewport-tall banner: fills the first screen, leaving only the top of Ways to Explore
+     peeking above the fold so the next section clearly lives below a scroll */
+  .banner{position:relative;height:clamp(430px,calc(100svh - 215px),920px);overflow:hidden;
     background:url('assets/banner-poster.jpg') center/cover no-repeat;
     -webkit-mask-image:linear-gradient(180deg,#000 68%,transparent 100%);
     mask-image:linear-gradient(180deg,#000 68%,transparent 100%)}
-  @media(max-width:720px){.banner{height:clamp(300px,73vw,420px)}}
+  @media(max-width:720px){.banner{height:clamp(430px,calc(100svh - 185px),780px)}}
   .banner video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
   .banner-tint{position:absolute;inset:-4px;background:rgba(44,27,138,.5)}
   /* Title sequence over the video (plays once): logo → 5 years → 150+ hours / 280+ eps → show lockup (holds) */
