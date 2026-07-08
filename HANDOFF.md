@@ -29,6 +29,9 @@ Sticky navbar (logo + "All episodes") → **carousel-exact hook title** (purple 
 - **Deploys run through OUR workflow** `.github/workflows/deploy-pages.yml` (Pages build_type=workflow since 5 Jul 2026). It queues deploys and auto-retries transient failures inside the run — the old branch-based pipeline's "Deployment failed, try again later" emails are gone. The site always keeps the last good deploy (never goes down).
 - **Preview:** `preview_start "tng-site"` (config in `Brain/Vidpod/clients/TNG/.claude/launch.json`, serves the repo on :8137) → open `/episode-263.html`. Or Tommy's `Tools/Desktop Phone Preview/preview.html` (paste the live URL; shows desktop + iPhone).
 
+## OPEN / NEXT
+**⚡ ACTIVE WORK QUEUE (8 Jul): `BUILD-PLAN-8-JUL.md` in this repo — Tommy's finish-the-site brief turned into the staged plan. Work from THAT file; the list below is the older backdrop.**
+
 ## OPEN / NEXT (updated 6 Jul 2026, late evening)
 1. ✅ DONE — all 22 released 2026 episodes live (generator + audit, see LIVE-PAGES.md).
 2. ✅ DONE — Homepage restructured as the three-door ROUTER and `adventure.html` launched (Tommy's model: latest episode / choose your own adventure / explore every episode — siloed experiences). All copy on both pages is DRAFT pending Tommy's voice pass. Banner title-sequence wording ("5 years. 280+ episodes.") also draft.
