@@ -5,7 +5,7 @@
 ---
 
 ## WHERE WE ARE
-- **Repo:** `tommyjackett/tng-website` (public, GitHub Pages, deploy-from-branch `main` / root). Local: `~/Desktop/TOMMY AI/repos/tng-website`.
+- **Repo:** `tommyjackett/tng-website` (public, GitHub Pages via Actions workflow). Local: `~/Desktop/TOMMY AI/repos/tng-website`. **LIVE DOMAIN (8 Jul): https://thenumbersgamepodcast.com.au** (HTTPS enforced; old github.io URLs 301 here; push-live.sh follows redirects).
 - **EP 263 is the FIRST live episode-page template (v2, approved-in-progress).**
   - Live: **https://tommyjackett.github.io/tng-website/episode-263.html**
   - File: `episode-263.html` — self-contained (styles + inline episode data + JS). This IS the template; other episodes become data swaps.

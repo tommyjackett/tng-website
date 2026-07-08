@@ -51,7 +51,7 @@ Order: contact → about → jason → nick (each one push, Tommy reviews live).
 - [x] Canonical tags + Open Graph/Twitter cards on all 29 pages (episode pages use their own YouTube thumbnails as og:image; others use assets/og-image.jpg 1200x630).
 - [x] JSON-LD: PodcastSeries (home, with all show socials as sameAs), Person (both hosts), PodcastEpisode (all 22, from catalogue data).
 - [x] sitemap.xml (29 URLs, domain-stamped) + robots.txt · contact-form redirect made domain-agnostic · push-live.sh curl now follows redirects (survives the move).
-- [ ] **DNS FLIP RUNBOOK (the only remaining step):**
+- [x] **DNS FLIP — DONE 8 Jul.** Site LIVE at https://thenumbersgamepodcast.com.au (HTTPS enforced, github.io 301s, www 301s, email untouched). NOTE for future: Pages runs build_type=workflow, so the custom domain needed BOTH the CNAME file AND `PUT /repos/tommyjackett/tng-website/pages {"cname":...}` via API (done). Original runbook kept below for reference:
   1. Tommy at the registrar: apex `thenumbersgamepodcast.com.au` → A records `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`; `www` → CNAME `tommyjackett.github.io`.
   2. AFTER records are set (and resolving): create one-line `CNAME` file in repo root containing `thenumbersgamepodcast.com.au`, commit, push. (Deliberately NOT committed yet — doing it before DNS = dark site.)
   3. GitHub Pages settings: wait for the DNS check, then tick **Enforce HTTPS** (cert auto-provisions, can take up to an hour).
