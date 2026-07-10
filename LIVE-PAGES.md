@@ -4,7 +4,19 @@
 
 ## Episode pages
 
+### 2025 back-catalogue — first 10 mined, all live 10 Jul 2026 (schema 2.1, value-model CYOA, MM:SS timecodes)
+- [EP 262 — 2026 Predictions And Marty's Final Episode](https://tommyjackett.github.io/tng-website/episode-262.html) — added 10 Jul 2026
+- [EP 261 — The Numbers Game of Life: Marty's 5 Biggest Lessons](https://tommyjackett.github.io/tng-website/episode-261.html) — added 10 Jul 2026
+- [EP 260 — Why Young Aussies Are Buying "Boring" Businesses Instead of Property](https://tommyjackett.github.io/tng-website/episode-260.html) — added 10 Jul 2026
+- [EP 259 — Singapore vs Australia: Which Tax System Actually Works?](https://tommyjackett.github.io/tng-website/episode-259.html) — added 10 Jul 2026
+- [EP 258 — How Your Inheritance Can Be Taken Over Without a Proper Will](https://tommyjackett.github.io/tng-website/episode-258.html) — added 10 Jul 2026
+- [EP 257 — Australia's Migration Numbers Explained: The Winners, Losers and Myths](https://tommyjackett.github.io/tng-website/episode-257.html) — added 10 Jul 2026
+- [EP 256 — How Businesses Can Do Good and Still Make Money](https://tommyjackett.github.io/tng-website/episode-256.html) — added 10 Jul 2026
+- [EP 255 — Is Your Super Really Safe? How $1.2 Billion in Super Was Lost](https://tommyjackett.github.io/tng-website/episode-255.html) — added 10 Jul 2026
+- [EP 254 — Do Aussies Pay Too Much Tax?](https://tommyjackett.github.io/tng-website/episode-254.html) — added 10 Jul 2026
 - [EP 253 — How to Beat the Stock Market Without Losing Your Pants!](https://tommyjackett.github.io/tng-website/episode-253.html) — added 10 Jul 2026 · **first 2025 back-catalogue episode live**
+
+### 2026 episodes
 - [EP 284 — The Most Expensive Day in Aussie Small Business History](https://tommyjackett.github.io/tng-website/episode-284.html) — added 6 Jul 2026
 - [EP 283 — What Real Budget Reform for Young Australians Would Actually Look Like](https://tommyjackett.github.io/tng-website/episode-283.html) — added 6 Jul 2026
 - [EP 282 — The Business of Gift Cards | Why Most Get the Accounting Wrong](https://tommyjackett.github.io/tng-website/episode-282.html) — added 6 Jul 2026
