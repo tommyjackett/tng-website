@@ -307,10 +307,27 @@
   });}
 
   /* ── Choose Your Own Adventure. Behaviour rules live in MOMENTS-FEATURE.md. ── */
-  var MIN_SCORE=80, MIN_DUR=60, CHIP_MIN=5, LEAD_CHIPS=8, SERVE=5, PER_SUB=2;
+  var TOP_PER_EP=4, CHIP_MIN=5, LEAD_CHIPS=8, SERVE=5, PER_SUB=2;
   var CAT=[], POOL=[], byTopic={}, selTopics=[], selSubs=[], servedIds=[], player=null, playerReady=false, currentQueue=[];
 
   function fmtDur(s){var m=Math.floor(s/60),r=s%60;return m>0?(m+'m '+(r>0?r+'s':'')).trim():r+'s';}
+
+  /* Moment VALUE model (0-100) — blends the five signals: quality(standalone) 40%,
+     time/substance(duration sweet-spot) 25%, searchability(answer richness) 25%,
+     value/timeliness(evergreen) 10%. This IS the ranking, and the same score is the
+     future social-snippet shortlist (that tool filters this pool by short length
+     instead of top-per-episode). Documented in MOMENTS-FEATURE.md. */
+  function momentValue(m){
+    function clamp(x){return Math.max(0,Math.min(1,x));}
+    var q=clamp((m.standalone-62)/26);                       // standalone 62..88 -> 0..1
+    var d=m.durationSec, t;
+    if(d<45) t=(d/45)*0.85;                                  // short: ramps up, capped
+    else if(d<=120) t=0.85+0.15*((d-45)/75);                 // 45..120s = substantive sweet spot
+    else t=Math.max(0.7,Math.min(1,1-(d-120)/300));          // long: gentle taper (rambly)
+    var s=clamp(0.4+0.3*(((m.answers||[]).length)-1));       // 1->0.4, 2->0.7, 3->1.0 answers
+    var v=(m.timeliness==='evergreen')?1.0:0.9;              // evergreen lasts; time-sensitive slight discount
+    return Math.round((0.40*q+0.25*t+0.25*s+0.10*v)*100);
+  }
 
   Promise.all([
     fetch('data/catalogue.json').then(function(r){return r.json()}),
@@ -320,7 +337,20 @@
     CAT=res[0].filter(function(e){return new Date(e.date+'T00:00:00')<=today});
     CAT.sort(function(a,b){return a.date<b.date?1:-1});
     var released={}; CAT.forEach(function(e){released[e.episodeNumber]=true});
-    POOL=res[1].filter(function(m){return m.standalone>=MIN_SCORE&&m.durationSec>=MIN_DUR&&released[m.episodeNumber]});
+    /* Score every released moment, then keep each episode's TOP_PER_EP by value.
+       Guarantees every episode is represented by its strongest moments (no episode
+       vanishes), while the value ranking keeps quality led. The full search index
+       (episodes.html) still covers all moments — nothing is lost, only curated here. */
+    var scored=res[1].filter(function(m){return released[m.episodeNumber]});
+    scored.forEach(function(m){m._v=momentValue(m)});
+    var byEp={};
+    scored.forEach(function(m){(byEp[m.episodeNumber]=byEp[m.episodeNumber]||[]).push(m)});
+    POOL=[];
+    Object.keys(byEp).forEach(function(e){
+      byEp[e].sort(function(a,b){return b._v-a._v});
+      POOL=POOL.concat(byEp[e].slice(0,TOP_PER_EP));
+    });
+    POOL.sort(function(a,b){return b._v-a._v});
 
     /* topic chips (inventory-gated) */
     POOL.forEach(function(m){
@@ -393,7 +423,7 @@
       var subsForTopic=selSubs.filter(function(x){return x.topic===m.topic});
       if(subsForTopic.length&&!subsForTopic.some(function(x){return x.sub===(m.subtopic||'General')})) return false;
       return servedIds.indexOf(m.momentId)===-1;
-    }).sort(function(a,b){return b.standalone-a.standalone});
+    }).sort(function(a,b){return b._v-a._v});
   }
   function serve(reset){
     if(reset){servedIds=[];currentQueue=[];}
