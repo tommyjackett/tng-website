@@ -4,7 +4,19 @@
 
 ## Episode pages
 
-### 2025 back-catalogue — first 10 mined, all live 10 Jul 2026 (schema 2.1, value-model CYOA, MM:SS timecodes)
+### 2025 back-catalogue — batch 2 (243-252) mined + live 10 Jul 2026
+- [EP 252 — Has Realestate.com.au Become Too Powerful?](https://tommyjackett.github.io/tng-website/episode-252.html) — added 10 Jul 2026
+- [EP 251 — ATO's 600 Million Data Points: What They Really Know About You](https://tommyjackett.github.io/tng-website/episode-251.html) — added 10 Jul 2026
+- [EP 250 — How to Win on Social Media: Vanity Metrics vs Real Results](https://tommyjackett.github.io/tng-website/episode-250.html) — added 10 Jul 2026
+- [EP 249 — Courage, Culture & Tough Calls: Cameron Schwab on Redefining Leadership](https://tommyjackett.github.io/tng-website/episode-249.html) — added 10 Jul 2026 · guest interview
+- [EP 248 — Property vs Shares: Which Is the Better Investment in 2025?](https://tommyjackett.github.io/tng-website/episode-248.html) — added 10 Jul 2026
+- [EP 247 — Melbourne Property Boom? Why 2025 Could Spark a Gold Rush](https://tommyjackett.github.io/tng-website/episode-247.html) — added 10 Jul 2026
+- [EP 246 — Joel Wermut - Reinventing Real Estate Tech With Prop App](https://tommyjackett.github.io/tng-website/episode-246.html) — added 10 Jul 2026 · guest interview
+- [EP 245 — Why You Should Track Profit Per Hour vs Revenue](https://tommyjackett.github.io/tng-website/episode-245.html) — added 10 Jul 2026
+- [EP 244 — 7 Financial Red Flags Every Business Owner Needs to Know](https://tommyjackett.github.io/tng-website/episode-244.html) — added 10 Jul 2026
+- [EP 243 — Profit Margins: The Difference Between Growth and Going Broke](https://tommyjackett.github.io/tng-website/episode-243.html) — added 10 Jul 2026
+
+### 2025 back-catalogue — batch 1 (253-262) mined + live 10 Jul 2026 (schema 2.1, value-model CYOA, MM:SS timecodes)
 - [EP 262 — 2026 Predictions And Marty's Final Episode](https://tommyjackett.github.io/tng-website/episode-262.html) — added 10 Jul 2026
 - [EP 261 — The Numbers Game of Life: Marty's 5 Biggest Lessons](https://tommyjackett.github.io/tng-website/episode-261.html) — added 10 Jul 2026
 - [EP 260 — Why Young Aussies Are Buying "Boring" Businesses Instead of Property](https://tommyjackett.github.io/tng-website/episode-260.html) — added 10 Jul 2026
