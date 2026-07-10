@@ -307,7 +307,7 @@
   });}
 
   /* ── Choose Your Own Adventure. Behaviour rules live in MOMENTS-FEATURE.md. ── */
-  var TOP_PER_EP=4, CHIP_MIN=5, LEAD_CHIPS=8, SERVE=5, PER_SUB=2;
+  var TOP_PER_EP=2, TOP_PER_SUB=3, CHIP_MIN=5, LEAD_CHIPS=8, SERVE=5, PER_SUB=2;
   var CAT=[], POOL=[], byTopic={}, selTopics=[], selSubs=[], servedIds=[], player=null, playerReady=false, currentQueue=[];
 
   function fmtDur(s){var m=Math.floor(s/60),r=s%60;return m>0?(m+'m '+(r>0?r+'s':'')).trim():r+'s';}
@@ -337,19 +337,27 @@
     CAT=res[0].filter(function(e){return new Date(e.date+'T00:00:00')<=today});
     CAT.sort(function(a,b){return a.date<b.date?1:-1});
     var released={}; CAT.forEach(function(e){released[e.episodeNumber]=true});
-    /* Score every released moment, then keep each episode's TOP_PER_EP by value.
-       Guarantees every episode is represented by its strongest moments (no episode
-       vanishes), while the value ranking keeps quality led. The full search index
+    /* Score every released moment, then build the pool as a HYBRID union so the
+       topic->subtopic browse actually works AND no episode vanishes:
+         - each EPISODE's top TOP_PER_EP by value  -> guarantees every episode appears
+         - each TOPIC+SUBTOPIC's top TOP_PER_SUB    -> guarantees subtopic diversity, so
+           "Get Specific" populates (a topic like Business Structures keeps Trusts +
+           Company Setup + Bucket Companies, not just its single highest-value subtopic).
+       Both selections are by value, so quality stays led. Full search index
        (episodes.html) still covers all moments — nothing is lost, only curated here. */
     var scored=res[1].filter(function(m){return released[m.episodeNumber]});
     scored.forEach(function(m){m._v=momentValue(m)});
-    var byEp={};
-    scored.forEach(function(m){(byEp[m.episodeNumber]=byEp[m.episodeNumber]||[]).push(m)});
-    POOL=[];
-    Object.keys(byEp).forEach(function(e){
-      byEp[e].sort(function(a,b){return b._v-a._v});
-      POOL=POOL.concat(byEp[e].slice(0,TOP_PER_EP));
-    });
+    function topBy(keyFn,n){
+      var g={}; scored.forEach(function(m){var k=keyFn(m);(g[k]=g[k]||[]).push(m)});
+      var out=[]; Object.keys(g).forEach(function(k){
+        g[k].sort(function(a,b){return b._v-a._v}); out=out.concat(g[k].slice(0,n));
+      });
+      return out;
+    }
+    var seen={}; POOL=[];
+    topBy(function(m){return m.episodeNumber},TOP_PER_EP)
+      .concat(topBy(function(m){return m.topic+'␟'+(m.subtopic||'General')},TOP_PER_SUB))
+      .forEach(function(m){ if(!seen[m.momentId]){seen[m.momentId]=1; POOL.push(m);} });
     POOL.sort(function(a,b){return b._v-a._v});
 
     /* topic chips (inventory-gated) */
