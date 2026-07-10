@@ -1,6 +1,8 @@
 # LIVE PAGES — click to review
 
-*Last updated: 6 July 2026. Every page ships with its date so we know what's fresh.*
+*Last updated: 11 July 2026. Every page ships with its date so we know what's fresh.*
+
+**11 Jul 2026 — credits fix (243–262):** hosts now render dynamically — 18 back-catalogue pages regained Marty Vidakovic (was hardcoded "Nick Reilly & Jason Robinson"); guest episodes now show a **Guest** row (246 Joel Wermut, 249 Cameron Schwab). Generator patched so it's automatic going forward.
 
 ## Episode pages
 
