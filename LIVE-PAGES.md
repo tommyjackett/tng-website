@@ -4,6 +4,7 @@
 
 ## Episode pages
 
+- [EP 253 — How to Beat the Stock Market Without Losing Your Pants!](https://tommyjackett.github.io/tng-website/episode-253.html) — added 10 Jul 2026 · **first 2025 back-catalogue episode live**
 - [EP 284 — The Most Expensive Day in Aussie Small Business History](https://tommyjackett.github.io/tng-website/episode-284.html) — added 6 Jul 2026
 - [EP 283 — What Real Budget Reform for Young Australians Would Actually Look Like](https://tommyjackett.github.io/tng-website/episode-283.html) — added 6 Jul 2026
 - [EP 282 — The Business of Gift Cards | Why Most Get the Accounting Wrong](https://tommyjackett.github.io/tng-website/episode-282.html) — added 6 Jul 2026
@@ -31,7 +32,7 @@
 ## Site pages
 
 - [Homepage — one-screen: video title sequence (logo, stats, show lockup) + Ways to Explore cards popping in](https://tommyjackett.github.io/tng-website/) — added 6 Jul 2026 · one-screen rebuild 6 Jul 2026
-- [Choose Your Own Adventure — the moments feature, own page](https://tommyjackett.github.io/tng-website/adventure.html) — added 6 Jul 2026
+- [Choose Your Own Adventure — the moments feature, own page](https://tommyjackett.github.io/tng-website/adventure.html) — added 6 Jul 2026 · updated 10 Jul 2026 (multi-signal value model + top-4/episode; every episode represented)
 - [Contact — Get in Contact band, Web3Forms + voice note](https://tommyjackett.github.io/tng-website/contact.html) — added 8 Jul 2026
 - [About — the show story: artwork, bio, stat chips](https://tommyjackett.github.io/tng-website/about.html) — added 8 Jul 2026
 - [Jason Robinson — host page: video band, purple-shadow photo, bio + socials](https://tommyjackett.github.io/tng-website/jason-robinson.html) — added 8 Jul 2026
