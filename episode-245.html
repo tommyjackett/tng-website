@@ -1,0 +1,655 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EP 245 · Why You Should Track Profit Per Hour vs Revenue | The Numbers Game</title>
+<meta name="description" content="Marty brings back four lessons from an investor on an advisory board.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" sizes="64x64" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="canonical" href="https://thenumbersgamepodcast.com.au/episode-245.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="The Numbers Game">
+<meta property="og:title" content="EP 245 · Why You Should Track Profit Per Hour vs Revenue | The Numbers Game">
+<meta property="og:description" content="Marty brings back four lessons from an investor on an advisory board.">
+<meta property="og:url" content="https://thenumbersgamepodcast.com.au/episode-245.html">
+<meta property="og:image" content="https://i.ytimg.com/vi/FUf4XcRx-w0/maxresdefault.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+  :root{
+    --purple:#585af3; --purple-dark:#2c1b8a; --mint:#7ad9a8;
+    --white:#ffffff; --muted:rgba(255,255,255,.60); --dim:rgba(255,255,255,.42);
+    --line:rgba(255,255,255,.12); --card:rgba(255,255,255,.05); --card-hi:rgba(255,255,255,.09);
+    --display:'Anton',Impact,'Helvetica Neue',sans-serif;
+    --sans:'Inter',system-ui,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif;
+    --wrap:1280px;   /* page frame (nav spans this) */
+    --col:960px;     /* content column (player, tabs, text) */
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:var(--sans); color:var(--white); line-height:1.6; -webkit-font-smoothing:antialiased;
+    background:#12093a;
+    background-image:
+      radial-gradient(1200px 600px at 82% -6%, rgba(88,90,243,.45) 0%, transparent 55%),
+      radial-gradient(900px 700px at 5% 8%, rgba(122,217,168,.10) 0%, transparent 50%),
+      linear-gradient(180deg,#2c1b8a 0%,#1a1150 28%,#100b34 62%,#0b0820 100%);
+    background-attachment:fixed;
+  }
+  a{color:inherit}
+  .wrap{max-width:var(--wrap);margin:0 auto;padding:0 36px}
+  main.wrap{max-width:var(--col)}
+  @media(max-width:720px){.wrap{padding:0 22px}}
+
+  /* ── Navbar ── */
+  .nav{position:sticky;top:0;z-index:50;background:linear-gradient(180deg,rgba(24,15,74,.92),rgba(24,15,74,.72));backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+  .nav-in{max-width:var(--wrap);margin:0 auto;padding:11px 36px;display:flex;align-items:center;justify-content:space-between}
+  @media(max-width:720px){.nav-in{padding:11px 22px}}
+  .brand{display:block;line-height:0}
+  .brand img{height:36px;width:auto;display:block}
+  .navlinks{display:flex;gap:28px;align-items:center}
+  .navlinks a{text-decoration:none;font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);transition:.15s}
+  .navlinks a:hover{color:var(--white)}
+  .navlinks a.navtop{cursor:default}
+  .navgroup{position:relative;display:flex;align-items:center}
+  .navgroup .subnav{display:none;position:absolute;top:100%;left:50%;transform:translateX(-50%);padding-top:14px;min-width:180px}
+  .navgroup:hover .subnav,.navgroup:focus-within .subnav{display:block}
+  .subnav-in,.navgroup .subnav{z-index:60}
+  .navgroup .subnav a{display:block;background:#180f4a;border:1px solid var(--line);border-top:0;padding:12px 16px;font-size:12px;color:rgba(255,255,255,.85)}
+  .navgroup .subnav a:first-child{border-top:1px solid var(--line)}
+  .navgroup .subnav a:hover{background:#221768;color:var(--white)}
+  .navburger{display:none;background:none;border:1px solid var(--line);padding:8px 10px;cursor:pointer;color:var(--white);transition:.15s}
+  .navburger:hover{border-color:rgba(122,217,168,.6)}
+  .navburger svg{width:20px;height:20px;fill:currentColor;display:block}
+  .navdrop{display:none}
+  @media(max-width:720px){
+    .navlinks{display:none}
+    .navburger{display:block}
+    .navdrop{display:block;position:absolute;left:0;right:0;top:100%;
+      background:#180f4a;border-bottom:1px solid var(--line);box-shadow:0 24px 50px rgba(0,0,0,.45)}
+    .navdrop[hidden]{display:none}
+    .navdrop a{display:block;padding:15px 22px;text-decoration:none;font-size:14px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:rgba(255,255,255,.9);border-bottom:1px solid rgba(255,255,255,.06)}
+    .navdrop a:last-child{border-bottom:0}
+    .navdrop a.sub{padding-left:42px;font-size:13px;color:rgba(255,255,255,.72)}
+    .navdrop .navlabel{display:block;padding:15px 22px 6px;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.4)}
+  }
+
+  /* ── Hero / hook (marker-highlight system: purple hook wraps naturally, mint payoff below)
+     Rules: title splits at its natural break (colon/pipe/question mark). Front = hook (purple,
+     big), back = payoff (mint, smaller). No break in title = purple hook only. Highlights hug
+     the text (tight em padding tuned to Anton) and wrap via box-decoration-break — never
+     hand-pick line breaks or mint words. ── */
+  header.hero{padding:34px 0 6px}
+  .hook{--inx:clamp(8.4px,2.1vw,15.6px)} /* one shared text inset so hook + payoff first letters align */
+  .hook .hk{font-family:var(--display);font-weight:400;text-transform:uppercase;
+    font-size:clamp(28px,7vw,52px);line-height:1.3;letter-spacing:-.5px;text-wrap:balance}
+  .hook .hk span{color:var(--white);padding:.04em var(--inx) .02em;
+    background:linear-gradient(var(--purple),var(--purple)) 0 50%/100% 87% no-repeat;
+    -webkit-box-decoration-break:clone;box-decoration-break:clone}
+  .hook .pay{font-family:var(--display);font-weight:400;text-transform:uppercase;
+    font-size:clamp(16px,4vw,24px);line-height:1.5;letter-spacing:.6px;margin-top:8px;text-wrap:balance}
+  .hook .pay span{color:#0a0a0a;padding:.08em var(--inx) .04em;
+    background:linear-gradient(var(--mint),var(--mint)) 0 50%/100% 88% no-repeat;
+    -webkit-box-decoration-break:clone;box-decoration-break:clone}
+  /* no-hook titles: mid-split into two full-size rows, purple then mint */
+  .hook .hk span.hkrow{display:block;background:none;padding:0}
+  .hook .hk .hkrow+.hkrow{margin-top:8px}
+  .hook .hk span.mintseg{color:#0a0a0a;
+    background:linear-gradient(var(--mint),var(--mint)) 0 50%/100% 87% no-repeat}
+
+  /* ── Player (clean facade → real player on tap) ── */
+  .player-wrap{margin:24px 0 4px;scroll-margin-top:76px}
+  .player{position:relative;width:100%;padding-top:56.25%;border-radius:0;overflow:hidden;background:#000;box-shadow:0 30px 70px rgba(0,0,0,.5),0 0 0 1px rgba(255,255,255,.06)}
+  .facade{position:absolute;inset:0;border:0;cursor:pointer;background-size:cover;background-position:center;display:flex;align-items:center;justify-content:center;padding:0}
+  .facade .play{width:74px;height:74px;border-radius:50%;background:rgba(10,6,30,.40);border:2px solid rgba(255,255,255,.72);display:flex;align-items:center;justify-content:center;transition:.18s;-webkit-backdrop-filter:blur(1px);backdrop-filter:blur(1px)}
+  .facade:hover .play{background:rgba(88,90,243,.62);transform:scale(1.07);border-color:#fff}
+  .facade .play::after{content:"";border-style:solid;border-width:11px 0 11px 19px;border-color:transparent transparent transparent #fff;margin-left:5px}
+  .player iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+
+  /* ── Episode facts (bottom of the Summary panel — templated per episode) ── */
+  .sumfacts{margin:14px 10px 4px;padding-top:13px;border-top:1px solid rgba(255,255,255,.08);display:flex;flex-direction:column;gap:8px}
+  .fact{display:flex;gap:12px;font-size:13.5px}
+  .fact .fl{flex:none;width:104px;color:var(--dim);font-weight:600;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;padding-top:2px}
+  .fact .fv{color:rgba(255,255,255,.9);font-weight:500}
+  .fact .fv a{color:var(--mint);text-decoration:none;border-bottom:1px solid rgba(122,217,168,.4);transition:.15s}
+  .fact .fv a:hover{border-bottom-color:var(--mint)}
+
+  /* ── Episode tag (identity: black label hanging off the title corner) ── */
+  .eptag{display:inline-block;position:relative;left:-6px;margin-bottom:-7px;z-index:2;
+    background:#0a0a0a;color:var(--white);font-family:var(--display);font-weight:400;
+    font-size:13.5px;letter-spacing:1.5px;text-transform:uppercase;padding:6px 11px 4px}
+
+  /* ── Explore tabs (sticky mode switcher; one panel swaps below, nothing shoves) ── */
+  .explore{margin-top:22px}
+  .tabs{position:sticky;top:58px;z-index:40;display:flex;flex-wrap:wrap;gap:8px;padding:10px 0;
+    background:linear-gradient(180deg,rgba(18,10,55,.96),rgba(18,10,55,.86));
+    backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+  .tabbtn{font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.5px;
+    font-size:14.5px;color:var(--white);background:var(--purple);border:1px solid var(--purple);
+    padding:9px 13px 7px;cursor:pointer;transition:.15s}
+  .tabbtn:hover{filter:brightness(1.12)}
+  .tabbtn.on{background:var(--mint);border-color:var(--mint);color:#0a0a0a}
+  .tabbtn.on:hover{filter:none}
+  .tabbtn .ct{font-size:12px;opacity:.75;font-variant-numeric:tabular-nums}
+  .tabbtn .ct::before{content:" · "}
+  .tpanel{border:1px solid var(--line);background:var(--card);padding:12px 10px 14px}
+  .hint{font-size:12.5px;color:var(--muted);padding:2px 10px 10px;border-bottom:1px solid rgba(255,255,255,.08);margin-bottom:6px}
+
+  /* ── Listen row (no box: label left, service pills follow) ── */
+  .listen{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:12px 16px;margin-top:34px}
+  .listen .lname{font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--dim)}
+  .listen a{display:inline-flex;align-items:center;gap:9px;padding:11px 18px;border-radius:999px;
+    background:var(--mint);color:#08210f;text-decoration:none;font-weight:800;font-size:12.5px;
+    letter-spacing:.04em;text-transform:uppercase;transition:.15s}
+  .listen a:hover{filter:brightness(1.06);transform:translateY(-1px);box-shadow:0 12px 30px rgba(122,217,168,.25)}
+  .listen svg{width:20px;height:20px;fill:currentColor;flex:none}
+
+  /* ── Keep exploring (thumbnails link to other episode PAGES, never timecodes).
+     Swipeable strip on mobile, fits three-up on desktop. Variant rule: claim
+     "similar ground" + reason lines ONLY when moment-level topic overlap is
+     genuinely strong; otherwise show the latest released episodes with dates —
+     never invent a connection. ── */
+  .relsec{margin-top:60px;padding-top:58px;border-top:1px solid var(--line)} /* line = end of this episode's info */
+  .reldots{display:flex;justify-content:center;gap:7px;margin-top:12px}
+  .reldots span{width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.25);transition:.2s}
+  .reldots span.on{background:var(--mint)}
+  .relsec .rtitle{display:inline-block;font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.5px;font-size:14.5px;background:var(--mint);color:#0a0a0a;padding:9px 13px 7px;margin-bottom:18px}
+  .relgrid{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding-bottom:6px;scrollbar-width:none}
+  .relgrid::-webkit-scrollbar{display:none}
+  .relcard{flex:0 0 56%;max-width:232px;scroll-snap-align:start;display:flex;flex-direction:column;text-decoration:none;background:var(--card);border:1px solid var(--line);transition:.15s}
+  .relcard:hover{background:var(--card-hi);border-color:rgba(122,217,168,.55)}
+  .relcard img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block}
+  .relcard .rt{display:block;font-size:12.5px;font-weight:600;color:rgba(255,255,255,.92);line-height:1.4;padding:8px 8px 0}
+  .relcard .rfoot{margin-top:auto;display:flex;justify-content:space-between;align-items:flex-end;gap:8px;padding:10px 8px 9px}
+  .relcard .rwhy{font-size:11.5px;color:var(--mint)}
+  .relcard .rtag{display:inline-block;background:#0a0a0a;color:var(--white);font-family:var(--display);font-size:10px;letter-spacing:1.2px;text-transform:uppercase;padding:3px 7px 2px}
+
+  /* ── Dropdown sections (accordion under the player) ── */
+  .drops{margin-top:34px;display:flex;flex-direction:column;gap:11px}
+  .drop{border:1px solid var(--line);border-radius:0;background:var(--card);overflow:hidden;transition:border-color .15s}
+  .drop[open]{border-color:rgba(122,217,168,.35)}
+  .drop>summary{list-style:none;cursor:pointer;padding:16px 18px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+  .drop>summary::-webkit-details-marker{display:none}
+  .drop>summary .st{font-weight:700;font-size:15.5px;letter-spacing:.005em}
+  .drop>summary .ct{margin-left:auto;font-size:12px;color:var(--dim);font-weight:600;font-variant-numeric:tabular-nums}
+  .drop>summary .chev{flex:none;width:22px;height:22px;border-radius:50%;background:rgba(122,217,168,.14);color:var(--mint);display:flex;align-items:center;justify-content:center;font-family:var(--display);font-size:15px;line-height:1;transition:.2s;transform:translateY(-1px)}
+  .drop[open]>summary .chev{transform:rotate(45deg)}
+  .drop-body{padding:2px 12px 12px}
+
+  /* chapters */
+  .chapter{display:flex;align-items:baseline;gap:14px;width:100%;text-align:left;cursor:pointer;background:none;border:0;color:inherit;font-family:inherit;padding:11px 10px;border-radius:10px;transition:.13s}
+  .chapter:hover{background:var(--card-hi)}
+  .chapter .tc{font-variant-numeric:tabular-nums;font-weight:700;font-size:14px;color:var(--mint);flex:none;width:48px}
+  .chapter .cx{font-size:15px;font-weight:500;color:rgba(255,255,255,.9)}
+  .chapter:hover .cx{color:#fff}
+
+  /* questions */
+  .q{display:flex;align-items:center;gap:12px;width:100%;text-align:left;cursor:pointer;background:none;border:0;border-radius:11px;color:inherit;font-family:inherit;padding:12px 10px;transition:.14s}
+  .q+.q{border-top:1px solid rgba(255,255,255,.05)}
+  .q:hover{background:var(--card-hi)}
+  .q .qm{font-family:var(--display);font-size:15px;color:var(--mint);flex:none;line-height:1;transform:translateY(1px)}
+  .q .qx{font-size:15px;font-weight:500;color:rgba(255,255,255,.92)}
+  .q .go{margin-left:auto;flex:none;color:var(--dim);font-size:18px;transition:.15s}
+  .q:hover .go{color:var(--mint);transform:translateX(2px)}
+
+  /* summary + transcript bodies */
+  .summary-body p{font-size:16.5px;line-height:1.62;color:rgba(255,255,255,.9);padding:6px 10px 4px}
+  .tbody{padding:2px 10px 8px}
+  .tbody p{font-size:14.5px;line-height:1.7;color:rgba(255,255,255,.78);margin-top:15px;max-width:64ch}
+  .tbody .spk{display:block;font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--mint);margin-bottom:2px}
+
+  /* ── Voice note ask (lives at the bottom of the Summary panel) ── */
+  .vask{margin:16px 10px 4px}
+  .vbtn{display:inline-flex;align-items:center;gap:9px;padding:12px 20px;border-radius:999px;border:0;cursor:pointer;
+    background:var(--mint);color:#08210f;font-family:inherit;font-weight:800;font-size:12.5px;
+    letter-spacing:.04em;text-transform:uppercase;transition:.15s}
+  .vbtn:hover{filter:brightness(1.06);transform:translateY(-1px);box-shadow:0 12px 30px rgba(122,217,168,.25)}
+  .vbtn svg{width:18px;height:18px;fill:currentColor;flex:none}
+  .vslot{background:var(--purple);padding:12px 10px 10px;margin:14px 0 4px;box-shadow:0 18px 40px rgba(0,0,0,.35)}
+  .vslot[hidden]{display:none}
+  .vhead{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;margin-bottom:10px}
+  .vhead .vmsg{font-family:var(--sans);font-size:13px;line-height:1.55;color:rgba(255,255,255,.92);margin:2px 0 0;padding:0 2px}
+  .vclose{background:none;border:0;color:rgba(255,255,255,.85);font-size:22px;line-height:1;cursor:pointer;padding:0 2px}
+  .vclose:hover{color:var(--white)}
+  .vslot iframe{display:block}
+
+  /* ── YouTube subscribe pill (sits in the listen row; outranks .listen a's mint) ── */
+  .listen a.yt-pill{background:var(--purple);color:var(--white)}
+  .listen a.yt-pill:hover{filter:brightness(1.1);transform:translateY(-1px)}
+  @media(max-width:720px){ /* mobile: no label, three compact pills on one row */
+    .listen .lname{display:none}
+    .listen{gap:8px}
+    .listen a{padding:10px 13px;font-size:11px;gap:6px}
+    .listen svg{width:16px;height:16px}
+  }
+
+  /* ── Footer: two columns under the line (Brought to you by | Produced by), matches adventure.html ── */
+  footer{border-top:1px solid var(--line);margin-top:68px;padding:52px 20px 58px}
+  .footgrid{max-width:var(--wrap);margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:start}
+  @media(max-width:720px){.footgrid{grid-template-columns:1fr;gap:40px}}
+  .fcol{text-align:center}
+  .foot-label{font-size:11px;font-weight:700;letter-spacing:.26em;text-transform:uppercase;color:var(--dim);margin-bottom:16px}
+  .sponsors{display:flex;justify-content:center;align-items:center;gap:38px;flex-wrap:wrap}
+  .sponsors a{display:inline-flex;transition:.15s}
+  .sponsors a:hover{transform:translateY(-1px)}
+  .sponsors img{height:34px;width:auto;opacity:.92}
+  .sponsors a:hover img{opacity:1}
+  .produced a{display:inline-flex;transition:.15s}
+  .produced a:hover img{opacity:1}
+  .produced img{height:30px;width:auto;opacity:.95}
+  .footnav{margin-top:36px;display:flex;justify-content:center;flex-wrap:wrap;gap:6px 26px}
+  .footnav a{font-size:12px;font-weight:600;letter-spacing:.04em;color:var(--dim);text-decoration:none;transition:.15s}
+  .footnav a:hover{color:var(--mint)}
+  .copyright{margin-top:40px;font-size:12px;color:var(--dim);text-align:center}
+
+  @media(min-width:720px){header.hero{padding:48px 0 6px}}
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "PodcastEpisode", "name": "Why You Should Track Profit Per Hour vs Revenue", "url": "https://thenumbersgamepodcast.com.au/episode-245.html", "datePublished": "2025-08-18", "episodeNumber": 245, "image": "https://i.ytimg.com/vi/FUf4XcRx-w0/maxresdefault.jpg", "partOfSeries": {"@type": "PodcastSeries", "name": "The Numbers Game", "url": "https://thenumbersgamepodcast.com.au/"}}</script>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-in">
+      <a class="brand" href="index.html" aria-label="The Numbers Game home"><img src="assets/tng-logo.png" alt="The Numbers Game"></a>
+      <div class="navlinks">
+        <a href="index.html">Home</a>
+        <div class="navgroup">
+          <a class="navtop">Episodes</a>
+          <div class="subnav">
+            <a href="episodes.html">All episodes</a>
+            <a href="adventure.html">Find moments</a>
+          </div>
+        </div>
+        <div class="navgroup">
+          <a class="navtop">About</a>
+          <div class="subnav">
+            <a href="about.html">The show</a>
+            <a href="nick-reilly.html">Nick Reilly</a>
+            <a href="jason-robinson.html">Jason Robinson</a>
+          </div>
+        </div>
+        <a href="contact.html">Contact</a>
+      </div>
+      <button class="navburger" id="navburger" type="button" aria-label="Menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24"><path d="M3 6h18v2H3zM3 11h18v2H3zM3 16h18v2H3z"/></svg>
+      </button>
+    </div>
+    <div class="navdrop" id="navdrop" hidden>
+      <a href="index.html">Home</a>
+      <span class="navlabel">Episodes</span>
+      <a class="sub" href="episodes.html">All episodes</a>
+      <a class="sub" href="adventure.html">Find moments</a>
+      <span class="navlabel">About</span>
+      <a class="sub" href="about.html">The show</a>
+      <a class="sub" href="nick-reilly.html">Nick Reilly</a>
+      <a class="sub" href="jason-robinson.html">Jason Robinson</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+
+  <main class="wrap">
+
+    <header class="hero">
+      <div class="hook">
+        <span class="eptag">EP 245</span>
+        <h1 class="hk"><span class="hkrow"><span>Why You Should Track</span></span>
+        <span class="hkrow"><span class="mintseg">Profit Per Hour vs Revenue</span></span></h1>
+      </div>
+    </header>
+
+    <div class="player-wrap" id="player-wrap">
+      <div class="player" id="player">
+        <button class="facade" id="facade" style="background-image:url('https://i.ytimg.com/vi/FUf4XcRx-w0/maxresdefault.jpg')" aria-label="Play episode">
+          <span class="play"></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="explore">
+      <div class="tabs" role="tablist">
+        <button class="tabbtn on" data-panel="p-summary">Summary</button>
+        <button class="tabbtn" data-panel="p-chapters">Chapters<span class="ct" id="chcount"></span></button>
+        <button class="tabbtn" data-panel="p-questions">Questions<span class="ct" id="qcount"></span></button>
+      </div>
+      <section class="tpanel" id="p-summary">
+        <div class="summary-body">
+          <p>Marty brings back four lessons from an investor on an advisory board. Track profit per hour, not just revenue, because a smaller, efficient client can beat a big, resource-hungry one. Build a business that is valuable, not just profitable, given owners hold most of their net worth in a business that only rarely sells. Don't let the founder be the revenue, value the business monthly, show upward trends before selling, and build something worth owning as well as worth selling.</p>
+        </div>
+        <div class="vask">
+          <button class="vbtn" id="vbtn" type="button">
+            <svg viewBox="0 0 24 24"><path d="M12 14a3 3 0 0 0 3-3V6a3 3 0 1 0-6 0v5a3 3 0 0 0 3 3zm5-3a5 5 0 0 1-10 0H5a7 7 0 0 0 6 6.92V21h2v-3.08A7 7 0 0 0 19 11h-2z"/></svg>
+            Send us a voice note
+          </button>
+          <div class="vslot" id="vslot" hidden>
+            <div class="vhead">
+              <p class="vmsg">We'd love to hear from you. You can leave up to a 90 second voice note for us to play on the show: a question, some feedback, or a topic you want covered.</p>
+              <button class="vclose" id="vclose" type="button" aria-label="Close">&times;</button>
+            </div>
+            <iframe src="https://www.speakpipe.com/widget/inline/hhq6kzggsx7zpcsvakgxfrzun3zidpde" allow="microphone" width="100%" height="200" frameborder="0" title="Leave The Numbers Game a voice note"></iframe>
+          </div>
+          <script async src="https://www.speakpipe.com/widget/loader.js" charset="utf-8"></script>
+        </div>
+        <div class="sumfacts">
+          <div class="fact"><span class="fl">Release date</span><span class="fv">18 August 2025</span></div>
+          <div class="fact"><span class="fl">Hosts</span><span class="fv"><a href="nick-reilly.html">Nick Reilly</a> &amp; <a href="jason-robinson.html">Jason Robinson</a></span></div>
+          <!-- template: add <div class="fact"><span class="fl">Guest</span>...</div> only when the episode has one -->
+
+        </div>
+      </section>
+      <section class="tpanel" id="p-chapters" hidden>
+        <p class="hint">Jump straight to the part you need.</p>
+        <div id="chapters"></div>
+      </section>
+      <section class="tpanel" id="p-questions" hidden>
+        <p class="hint">Real questions this episode answers. Tap one to hear the answer.</p>
+        <div id="qa"></div>
+      </section>
+    </div>
+
+    <div class="drops">
+
+      <details class="drop">
+        <summary><span class="st">Episode transcript</span><span class="chev">+</span></summary>
+        <div class="drop-body tbody">
+          <p><span class="spk">Jason · 00:00</span>Welcome to episode 245 of the Numbers Game. It's Jason, Nick, and Marty. Marty. How are you mate?</p>
+          <p><span class="spk">Marty · 00:06</span>I'm going. Well, Jace, uh, I've been pumped up. I've been out on the road engaging with people and business owners and investors, and I feel, feel alive. Uh, it's uh, it's funny how that face-to-face stuff you really.</p>
+          <p><span class="spk">Marty · 00:20</span>Learn things off people that you can only assume when you hide behind the laptop or, you know, sit in socials. And, uh, it's, it's one thing that, uh, I just encourage every salesperson, every business owner to do because you just, you learn so much for when you're in the, uh, when you're face to face in the trenches of battle.</p>
+          <p><span class="spk">Marty · 00:39</span>So, and today I wanted to talk about. Um, and this was inspired by something Nick said in a previous episode about understanding the cost of, uh, one of the financial planning products. Um, what if your largest client was costing you money? And the reason I bring up that episode is because there was an</p>
+          <p><span class="spk">Marty · 01:00</span>investor on an advisory board that I, I had the privilege of listening to.</p>
+          <p><span class="spk">Marty · 01:03</span>And um, and I was just asking questions because again, my, my knowledge is up to a certain point and I'm always interested to see what people are doing that have done much more than me. I think that's sometimes the best learning. And I picked up sort of four powerful lessons. Some we would've heard before, but there were others that I thought were.</p>
+          <p><span class="spk">Marty · 01:21</span>Pretty powerful. And I just hadn't thought about it in that way, even though we could probably break it down to how we know it. But, uh, so again, quality, profit, exit, uh, interesting things that investors are thinking about when buying businesses that sometimes the founder wouldn't recognize themselves when they're in the trenches of business.</p>
+          <p><span class="spk">Marty · 01:42</span>Uh, and lesson one. Was tracking profit per hour, not just, uh, revenue. So I thought that was interesting as to why, but, uh, we've all been taught to chase revenue and it's, uh, you know, it's a metric we all know and we look at overall</p>
+          <p><span class="spk">Marty · 02:00</span>profitability. Um, but when you're looking at profit per hour, it's sort of optimizing the efficiency around revenue.</p>
+          <p><span class="spk">Marty · 02:08</span>So what they're looking at is to say, if you've got a client that's generating revenue of a hundred thousand, but you are having to input, you know, massive amount of resources behind it, a lot of time around team, it's taking you 50 hours to get to that result and you're ending up with, um, you know, 20 grand net profit on the back end of it.</p>
+          <p><span class="spk">Marty · 02:29</span>That's not as optimal as some, some, a client that might be generating 30,000, creating a 15 grand profit that's taking, you know, a fifth of the time. And my question was, alright, I sort of, once, once it was explained, I sort of got where, where he was coming from, but. I said, why do you think in that way? And, and he said, well, as an investor I'm looking at sort of a four to five year timeframe on, you know, getting return on my money.</p>
+          <p><span class="spk">Marty · 02:57</span>So it's really important that the business is</p>
+          <p><span class="spk">Marty · 03:00</span>efficient per client so we can scale it. Um, and he said the other thing business owners tend to do is they get stuck in. Like huge timeframes in getting their revenues. And the, the line is, if you can jump over a 30 centimeter fence or a six meter high fence and you're gonna get the same reward, why wouldn't you jump over the 30 centimeter fence?</p>
+          <p><span class="spk">Marty · 03:23</span>Like sometimes through complexity, we, we make things harder in order because it looks good, or we might have a bigger ticket on the top end, but sometimes we can have simplicity, you know, in order to get to a result. A lot. Faster, that's more efficient that we can scale. And also there's less complexity around the operations to deliver it.</p>
+          <p><span class="spk">Marty · 03:44</span>So it's not affecting the quality. You want the quality to be really good in it, but it just, again, it was just a perspective shift that I thought, yeah. Okay. Why would you do something I. Harder when you get, can get a better result. And timing the</p>
+          <p><span class="spk">Marty · 04:00</span>profit per hour per client was actually interesting. I don't know, you've probably heard about it before, but I just hadn't heard it presented in that way and why that was important, you know, from an investor standpoint.</p>
+          <p><span class="spk">Marty · 04:11</span>So, Jace,</p>
+          <p><span class="spk">Jason · 04:12</span>no, I absolutely, absolutely love it. We're coming into that time of year where we start to review, you know, where we've come from over the journey of the last couple of years, how we've adapted our services, our products, our mix of what we sell to make. The ideal client. Um, and then when, as we head into the, you know, a new financial year, we also then try to define who is our ideal client.</p>
+          <p><span class="spk">Jason · 04:33</span>Now this, these numbers are triggering 'cause we've had the a hundred K client before, and what, uh, the stress, the pressure, how many team members need to be involved, what the deliverables are, how many entities there are, you know, what are the things we missed that we needed to be across that we then have to go back and catch up on, like.</p>
+          <p><span class="spk">Jason · 04:51</span>You know, what's the, the extra senior person on a bigger salary that needs to be across that particular client portfolio versus the 10 or 20 grand</p>
+          <p><span class="spk">Jason · 05:00</span>client or the 30,000 client in this example, how much simpler that can be to run, you know, the less experienced team member that may not be on as big a salary who can do the bulk of the heavy lifting.</p>
+          <p><span class="spk">Jason · 05:09</span>Like it is actually a really interesting way to look at it. It's something, we've done it at a bigger, more macro level, but I'm now interested off the back of that, Marty, to kind of cherry pick. A few clients that I think are really well looked after, but you know, there's a good value exchange in what we earn and what the client pays and everyone's happy.</p>
+          <p><span class="spk">Jason · 05:27</span>I'd be interested to unpack whether they're. The profitable clients that I envision that they are versus actually knowing the numbers the same way you've just unpacked it.</p>
+          <p><span class="spk">Marty · 05:35</span>No, no doubt. There's a sweet spot, isn't there? There's, there's when, when you hear it, you go, I wonder what that sweet spot is. And we're, look, I think about Nick even in regards to, I mean, mortgage lending is the core of our business, so it's important, but I think about some of that cash cashflow lending where you get that, uh.</p>
+          <p><span class="spk">Marty · 05:51</span>You know, you get that turnaround in 48 hours instead of four months to payment, and yet it's just as valuable to the client now. Now the business is more diversified</p>
+          <p><span class="spk">Marty · 06:00</span>and it's all important, but it's just interesting even when they're very much focused on, alright, tell me more about that product. It's around in 48 hours.</p>
+          <p><span class="spk">Marty · 06:09</span>Because I need to know that I can scale this quickly over a period of time, so, and create more of it.</p>
+          <p><span class="spk">Nick · 06:15</span>Yeah. And it's, um. Even, you know, for our own business, doing that kind of lending, um, it's a quick turnaround for us. Less time, similar amounts of money. Asset finance, quicker turnaround, less time, similar, similar amounts of money, pros and cons with, uh, cons with both.</p>
+          <p><span class="spk">Nick · 06:32</span>But, um, yeah, it's triggering for us what you're saying too because I'll think about our wealth business and, um. If we're looking at who you would assume profitable clients are, you would assume high Netwealth clients that are gonna pay more fees. Uh, but you could ask any of our advisors, and the first thing they'd say is, gimme a mom and dad client, um, over a high net wealth client any day of the week because the what</p>
+          <p><span class="spk">Nick · 07:00</span>the high Netwealth client is willing to pay.</p>
+          <p><span class="spk">Nick · 07:02</span>Um, versus what they expect from a, um, from a service proposition point of view, generally don't line up. Whereas the mum and dad's, um, happy to pay for the right value, um, and don't create too much noise for us. So</p>
+          <p><span class="spk">Marty · 07:16</span>appreciate it too. It, it's, yeah, yeah, yeah.</p>
+          <p><span class="spk">Nick · 07:19</span>Value what you do, you know, and,</p>
+          <p><span class="spk">Marty · 07:20</span>and it does and it does impact staff.</p>
+          <p><span class="spk">Marty · 07:22</span>You mentioned that as well. So if you get that streamlined effect and find that sweet spot, it means you can do more and more of it. And, uh. You can evolve a business a lot quicker. So really time leverage as per, you know, profit per hour. So something to think about as business owners. Again, different perspective to what I had, but at, uh, yeah, think about is potentially some of your best clients trading your revenues and what, what can you do about it?</p>
+          <p><span class="spk">Marty · 07:49</span>Um, lesson number two. Build a valuable business, not just a profitable one. Now I've always been very much on the metrics of profit and EBIT and</p>
+          <p><span class="spk">Marty · 08:00</span>everything else and margin, but um, this was a little bit deeper when I got the explanation. Um, 'cause they said there's a business that is profitable. Uh, the businesses that are profitable are not always valuable, but valuable businesses are always profitable and.</p>
+          <p><span class="spk">Marty · 08:17</span>Sort of said, look, explain a little bit more to me. This is, this is very interesting. And he said, look, there's a stat that'll blow your mind, you know, over a business owner that holds a business for over five years. They tend to hold 60 to 70% of their net worth, their personal net worth in the business.</p>
+          <p><span class="spk">Marty · 08:36</span>And this is going on two different tangents, so bear with me. Um, yet only eight to 10% of those businesses actually sell successfully, uh, when they go to market. So let that. Sort of sink in for a moment. Um, so think about it from an investor point of view. He's thinking about, or I need to get a return in five years when I'm investing.</p>
+          <p><span class="spk">Marty · 08:57</span>And he said the two main reasons people wanna</p>
+          <p><span class="spk">Marty · 09:00</span>sell a business, um, they, they want to. So it's a desire. So they optimize it and you know, they're excited to sell it. The other one is they have to, and he said not a lot of people think about the have to circumstance. Uh, it might be due to health issues, uh, life circumstances, uh, might be business events, market shift, black swan events that are unexpected.</p>
+          <p><span class="spk">Marty · 09:25</span>Um, so he's basically saying, if you're not building. A business that's valuable on, on all metrics, regardless of where you're at. You, you could be in a danger zone and you could be picked off. So, and he said value is also about, and I'll go into this in the next lesson as well, a lot more than what we are thinking just on the basic metrics, but it's really risky for, for business owners to have all that net wealth locked up in the business.</p>
+          <p><span class="spk">Marty · 09:55</span>And they're saying. If you love the business for what it is and you want to continue it,</p>
+          <p><span class="spk">Marty · 10:00</span>then absolutely go for it. But make sure you're talking to a financial planner or an advisor to build wealth outside of the business. I. So it might be an investment property optimizing super at another level. There are cash flows available where you must, you must build personal wealth if your plan is that you are happy to run a good business, you know, have good cash flows.</p>
+          <p><span class="spk">Marty · 10:25</span>And he said it's like, uh, when people don't address this property, it's like getting rent. From an investment property but not owning the investment property. So it's like he goes, that's the way I, I want founders to think about it and if you are going to do that, make sure that you're building an investment property elsewhere personally.</p>
+          <p><span class="spk">Marty · 10:44</span>So very, 'cause he goes, the percentages are not really in your favor. So you have to be able to play the trends, um, to your advantage when you're talking to investors and making sure the key numbers are matching. And then we'll go into the next phase of how you can optimize</p>
+          <p><span class="spk">Marty · 11:00</span>that.</p>
+          <p><span class="spk">Nick · 11:00</span>I think, you know, I'll think back to a previous episode, um, to create that wealth, you need to have the ability to pull the money outta the business too, right?</p>
+          <p><span class="spk">Nick · 11:09</span>Yeah. So it's a, it's actually a really good, um, reason to sit down and go, is this worth it? Because if you're building it. Just for the sake that it might be worth something one day for me that there's a lot of risks there. Um, it needs to be a business that has a combination of, okay, this is an asset that's worth something.</p>
+          <p><span class="spk">Nick · 11:30</span>Uh, and second to that, this is a, this is an asset that can provide, um, a reasonable income for me that allows me to feed my family and at the same time, invest and build wealth. Now. You know, some people might hear that and go, well, no, I'm, you know, I'm ballsing all into my business and I'm, I'm growing it.</p>
+          <p><span class="spk">Nick · 11:47</span>Well, that's great for some businesses, but for some businesses, if they're just a small to medium sized enterprise, um, they're not trying to achieve a, a massive valuation. They're hoping their business will be worth something one day and they can get something</p>
+          <p><span class="spk">Nick · 12:00</span>for it. But most people are in it to create an income stream and create, um, wealth.</p>
+          <p><span class="spk">Nick · 12:05</span>So yeah, that's a really good reason to sit down and say, well, what do I need as an individual? And can this business actually,</p>
+          <p><span class="spk">Marty · 12:11</span>and Nick something you, you did really well that I, I found was very helpful, is you would put a value on the business each month based on a level of metrics. So every shareholder within the business could see that value growing.</p>
+          <p><span class="spk">Marty · 12:25</span>So not only was there, you know, the revenues that were earned. But, um, you could see the value of that business month to month. And I thought that, uh, a lot of business owners don't understand the strength of that. They should be doing that for themselves, even if they're a smaller business. That's a really good, you know, way to go.</p>
+          <p><span class="spk">Marty · 12:43</span>Okay. I'm, I am growing my asset as well as drawing revenues from the business as well. I think that's powerful. Um, yeah.</p>
+          <p><span class="spk">Jason · 12:51</span>It's, it's a, it's a bigger conversation that we're having now. We, we've probably done more, call it appraisals. They're mini business valuations, but we've</p>
+          <p><span class="spk">Jason · 13:00</span>done more than probably ever in the last month or two.</p>
+          <p><span class="spk">Jason · 13:03</span>And there's a few different reasons around. Some of it's around transferring shares from an individual to a family trust, or we need a value that we can fall back on to do it all above board and legal. Keep asic and a TO and everyone happy. But sometimes it's also we've, we've got some, uh, trigger events where people are trying to buy out other shareholders and they want something to fall back on and say, Hey, I don't actually know what my business is worth.</p>
+          <p><span class="spk">Jason · 13:22</span>Like the, a shareholder wants to, wants to exit. How, how do I give them a fair offer? How do I buy them out? And, you know, what are the steps? And it drives a really good conversation to go. Cool. You might be running a profitable business, but if the founders walked away, is there something there to sell? Or is who's gonna stay on?</p>
+          <p><span class="spk">Jason · 13:40</span>Have you built something? Uh, Jason Cunningham's an accountant at the practice and he has a book called Have Your Cake and Sell It too. And it goes through the steps of how to build a business that can operate without you and, and have value. So it's a combination of profitable and saleable. Um, so if you have, have a, have a lens of when you view your</p>
+          <p><span class="spk">Jason · 14:00</span>business, could I sell this business?</p>
+          <p><span class="spk">Jason · 14:01</span>Is it a saleable asset? And try and try and do a combination of both. Um, I think it's a great approach.</p>
+          <p><span class="spk">Marty · 14:07</span>The one thing I really liked about this investor is that he, um, you know, he, he actually cared about the founder. So he had invested money into a business, but actually cared about the founder that they needed to build their personal wealth as well.</p>
+          <p><span class="spk">Marty · 14:19</span>So the guidance was not only in the business, but how, you know, he had built personal wealth personally having run a business previously. So I thought that was a great, uh, attribute. The other thing I found that was a little bit interesting within that premise, um, he said, we're all about, you know, we're all about, um, looking at what the culture looks like longer term, even though.</p>
+          <p><span class="spk">Marty · 14:41</span>Sales metrics were more shorter term, but like thinking about what we want from the bus, the business to do in the market, and who we want to attract to the business as a culture over a four to five year period. I think we're much more immediate on that, usually in the way we operate our businesses. I know I have</p>
+          <p><span class="spk">Marty · 15:00</span>been in the past, but um, yeah, just a longer term and, and why I thought that was important is you tend to rush.</p>
+          <p><span class="spk">Marty · 15:07</span>Um, you rush and sometimes force business in a direction 'cause you want to do more quickly. Um, but just the balanced approach he had in regards to setting the cultures right, that we were doing it evenly for the shorter term and longer term. So we weren't stepping on toes, burning out people. Um, it was really.</p>
+          <p><span class="spk">Marty · 15:28</span>Again, it was uniquely different to what I had seen in, in the past from my own experiences. So it was, um, it was interesting. But lesson number three, uh, the biggest misconception about selling your business, uh, business owners have is that it's worth more than it is because they're emotionally attached to it and they put so much sweat and grind into the business.</p>
+          <p><span class="spk">Marty · 15:50</span>We've all been there. We've all been there. And this is why you, like, you talk about Jace, you need to have some. You know, metric, foundational metric to value</p>
+          <p><span class="spk">Marty · 16:00</span>that business that you are confident in your industry that's gonna produce a certain result because every business owner that hasn't done that is, or it's like owning your own home.</p>
+          <p><span class="spk">Marty · 16:09</span>You always think it's like an un renovated home. You always still think it's worth more than it is, but someone's gotta come in and paint the walls and re stump the bloody thing, and you're not gonna get top dollar, you're gonna leave money on the table. So very, very similar. If your business is un renovated and you are, you know, you've been in it for 20 years, you are thinking, or 30 years or whatever, looks people retiring now.</p>
+          <p><span class="spk">Marty · 16:31</span>It's um. It's, yeah, it, it can become a real, um, it can become a real problem point if it becomes a necessity to sell and people haven't got time in the game because to optimize sometimes you need 18 months to two years to really work on it, to optimize. It's not just a quick fix. So that was, um, evidence and some of the lessons around it.</p>
+          <p><span class="spk">Marty · 16:52</span>Um. If you want to get the maximum, uh, value for sale, uh, you know, you gotta start with a</p>
+          <p><span class="spk">Marty · 17:00</span>plan and a goal in mind. Like, what does it look like? What's the timing around it? How much is it? What do we need to do? What do we need to invest, uh, in order to get it right, to get that return? Um, Jace, would that be some, something people could come to you with?</p>
+          <p><span class="spk">Jason · 17:14</span>Yep. A hundred percent. Love talking about the, the biggest strategy side and Yeah. And the succession plan and what does it look like and it's. If it's often a shock to a business owner when you say to them, but what if we removed you from the business? Like how would it run? What would it do? Would it still operate and survive, or, or are you a key person of dependence?</p>
+          <p><span class="spk">Jason · 17:32</span>Uh, and that, that often can swing the value of the business dramatically. Um, so yeah, having that goal in mind and that plan to go, what are the steps it's gonna take, you know, what do we need, you know, sales team, hr, it, like who does all the doing if the business owner's not there?</p>
+          <p><span class="spk">Marty · 17:46</span>You, you raise the exact point.</p>
+          <p><span class="spk">Marty · 17:49</span>The investor said. The last thing I want is, um, for the business owner to be driving the revenues. Directly to that business and being the major revenue driver,</p>
+          <p><span class="spk">Marty · 18:00</span>that's a thing that, um, kills most, uh, investments into business. If you can be an ambassador, uh, set up a, a fully authentic and driven team to be running the business, then um.</p>
+          <p><span class="spk">Marty · 18:13</span>Again, that transference is much easier, uh, for that investor just to take on board and to, you know, and to invest in as well. So that's one of the major reasons, uh, businesses don't get a sale, is because the heavy reliance on the founder that's generating the heartbeat of revenues to the business. And, um.</p>
+          <p><span class="spk">Marty · 18:34</span>Very important. And that is a big, I was chatting to an accountant this morning about this. Um, he said it's one of the biggest psychological factors that, that stop business owners from getting ahead and, and from getting top dollar. It's, they just can't release themselves. They can't make that transition.</p>
+          <p><span class="spk">Marty · 18:52</span>It's too big a jump. And, and we've said this before, sometimes Nick, like almost, when you are the deal maker and you are doing the deals on the</p>
+          <p><span class="spk">Marty · 19:00</span>front line, even in mortgage broking, and even if you're looking after then a team and you're sort of taking that next step back, you almost gotta see, you know, the, the, the broker as your deal.</p>
+          <p><span class="spk">Marty · 19:11</span>You know, you've gotta find some psychological, you've even removed yourself to the next station as more the ambassador and manager of the overall business. So it's, it's vitally. Yeah, it's vitally important to, to do that, but not many do not many without support in guiding 'em through. Um, soon as there's a little bit of a restriction on cash flow, because they're not driving it, the default is straight back into comfort.</p>
+          <p><span class="spk">Marty · 19:37</span>And I'll keep doing what I do again, until I get frustrated, burnt out, don't wanna do it anymore, then it becomes a problem all up. But, um, yeah, it's, it's, that was, that was a big one. The other one was, um. Show strong upward trends of financials prior to selling, so make sure it's trending up and make sure you're leaving</p>
+          <p><span class="spk">Marty · 20:00</span>something on the table.</p>
+          <p><span class="spk">Marty · 20:00</span>Everyone wants to exhaust the top dollar, so they're saying, but it's very, it's like trying to. Hit the top of the stock market with a stock, right? You're never gonna, you're never gonna get it right. But they're saying what you want to do is the upward trend and leave a little bit of skin on the, in the game for more momentum as well, because there's a win-win win.</p>
+          <p><span class="spk">Marty · 20:22</span>And it sort of guarantees that you. Or more of a guarantee that you're gonna get the lock in on a good, a strong price. Sometimes people go for that extended price and then miss the opportunity that was there. It's like you say, same again on properties. Like sometimes you get that great first offer and you go, no, no, no.</p>
+          <p><span class="spk">Marty · 20:39</span>There's 20 grand more in it and you go, ah, we haven't had another offer. And it's like, it's the same mechanism. So again, human psychology, but they're saying sometimes it's important to take the. Take the win, but leave a little bit more skin in the game. An accountant. It was funny talking to the accountant, Jace.</p>
+          <p><span class="spk">Marty · 20:56</span>'cause I'm going. You know, if you can buy an accountancy</p>
+          <p><span class="spk">Marty · 21:00</span>practice at one times earnings, that's the general, the general norm. I, I said, well, why aren't you looking at profit margin and things like that when you, when you're buying a business, an accountancy business? And he goes, because generally you'll have the efficiencies already inbuilt in your own business, so you're buying revenue.</p>
+          <p><span class="spk">Marty · 21:16</span>But he said you still look for a factor of around about 20 to 30% profitability. So it's like that generally still happens. Yeah. Particularly if they're smaller businesses being gobbled up with less expenses. So I thought, oh, that was interesting. Even in your industry</p>
+          <p><span class="spk">Jason · 21:32</span>because, because you generally, you strip out wherever they're renting can go, whatever subscriptions they're paying can bolt onto your already paid for subscriptions.</p>
+          <p><span class="spk">Jason · 21:40</span>The, you know, maybe there's an over. Double up in admin, you might have enough admin capacity to take it on. So all of a sudden it's not so much about what was happening on the bottom line. Because if you can bring in additional 500 K of revenue, if you've got strong systems and processes and good production, good people, you can turn that 500 K into.</p>
+          <p><span class="spk">Jason · 21:58</span>Ongoing margin and, and net profit.</p>
+          <p><span class="spk">Jason · 22:00</span>So yeah, so</p>
+          <p><span class="spk">Marty · 22:00</span>every industry has its, uh, niches, little neons as well, which is, which is really interesting. And the other one was build strong, uh, systems, team autonomy and repeatable operations. So again, if someone's gonna come in and invest, particularly it's not always someone with industry experience like that's coming in that's actually keen to make a good investment and wants to overview the operations.</p>
+          <p><span class="spk">Marty · 22:23</span>Very, very valuable. You actually. Enhancing your scope of sale by having those type of investors look at your opportunity as well as industry, um, investors and, and business owners as well. So really important. They don't want to have to reinvent the wheel if the wheels spin and well, and that can drive it harder.</p>
+          <p><span class="spk">Marty · 22:42</span>That's, um, that's very, very exciting. So, and again, Nick will love this, but build a business that you don't want to sell because it's that good. It's generating profitability. Um, and, uh, it's, it's building in value. So again, investors get very keen on those type of businesses and generally you're gonna get a</p>
+          <p><span class="spk">Marty · 23:00</span>higher price when you're in that position.</p>
+          <p><span class="spk">Marty · 23:02</span>So be in that position regardless better for you in real time and better opportunities. And sometimes they come outta left field as well. So it's, um, very powerful. And um, the final lesson was, um. And we've done this before, Nick, in regards to, you know, the strategy on the page, but the key objective for the quarter.</p>
+          <p><span class="spk">Marty · 23:23</span>What is the key objective and what are the four strategic strategy actions that you're gonna do to reach the key objective for the quarter? They're saying business owners get so distracted, they get bored and they will go off and want to do other. Interesting ventures, or we need to add this, we need to do that, but yet they're not meeting the key objective that actually makes the business valuable.</p>
+          <p><span class="spk">Marty · 23:45</span>So, and investors, uh, when they're on the advisory board, they say the main thing they're focusing on is to ensure that the key strategies are met. And, and executed on and focused on to meet the key</p>
+          <p><span class="spk">Marty · 24:00</span>objective, to build the value of that company, build the culture of that company, uh, build the qualities around the customer in that company and to execute, execute, execute, do more of what works and not more work on what doesn't.</p>
+          <p><span class="spk">Marty · 24:14</span>And that's an efficiency thing too. What's most efficient to getting you? Um, you know, and as I said, remember, building a valuable business isn't just about cashing out. It's about. Freedom, leverage, building wealth at that last well beyond your involvement as well. So if you can get to that point, people are genuinely interested.</p>
+          <p><span class="spk">Marty · 24:33</span>So yeah, again, just some points. Um, we've heard some of it before, but sometimes it's just pitched in a uniquely. Uh, different way and you pick up a couple of little subtleties there that can be helpful to business owners or good bus business practice anyway. Um, yeah, well, it's,</p>
+          <p><span class="spk">Jason · 24:50</span>yeah, and, and Marty, it's a really good mindset.</p>
+          <p><span class="spk">Jason · 24:52</span>I mean, you might not be interested in your selling your business at all. You may not be interested in an investor coming in at all, but what about the mindset to go,</p>
+          <p><span class="spk">Jason · 25:00</span>if an investor was gonna offer me money, how can I make sure my business was worth something? If I was gonna sell tomorrow? Or if I had to sell tomorrow, as you said, because of health or some other kind of thing that went, you know.</p>
+          <p><span class="spk">Jason · 25:10</span>Forced your hand, would I get what I deserve for my business because of how it's operating today,</p>
+          <p><span class="spk">Marty · 25:15</span>which happens. So more so I'm recognizing than, you know, lucky I'm fit and Vero at 53. But, but like a lot of people have misfortune, you know, whether it's even terrible situations with kids and, and stuff like that.</p>
+          <p><span class="spk">Marty · 25:28</span>Real serious stuff, you know, wives, spouses, it's, um, yeah, things can change pretty dramatically. So you wanna make sure. That you're in. Uh, yeah. And, and like he said, uh, you know, build a business worth owning. And selling, but worth owning, you know? And if it's worth</p>
+          <p><span class="spk">Nick · 25:46</span>owning or worth selling, that means it's performing for you anyway, and it's delivering what it needs to for you.</p>
+          <p><span class="spk">Nick · 25:51</span>Correct. Unbelievable. Welcome, Marty.</p>
+          <p><span class="spk">Jason · 25:53</span>Great, great lessons and always, uh, the fun. You know, Marty, you should get out on the road more often. Uh, I think, uh, it's getting you to think,</p>
+          <p><span class="spk">Jason · 26:00</span>think of some great things to share with our audience. So thank you for listening. Thank you for tuning in. Marty, thank for your, thank you for your beautiful brain and great ideas.</p>
+          <p><span class="spk">Jason · 26:08</span>Until next time,</p>
+          <p><span class="spk">Marty · 26:09</span>stay focused. Keep building game over.</p>
+          <p><span class="spk">Jason · 26:13</span>This podcast is for educational and informational purposes only. The conversations are of general nature and do not qualify as financial or tax advice. We recommend before you make any financial decisions, you consult a licensed professional.</p>
+          <p><span class="spk">Jason · 26:26</span>Individuals on the podcast may hold positions in the company's discussed. ---</p>
+        </div>
+      </details>
+
+    </div>
+
+    <div class="listen">
+      <span class="lname">Listen on</span>
+      <a href="https://open.spotify.com/search/the%20numbers%20game%20podcast" target="_blank" rel="noopener" aria-label="Listen on Spotify">
+        <svg viewBox="0 0 24 24"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.52 17.34c-.24.36-.66.48-1.02.24-2.82-1.74-6.36-2.1-10.56-1.14-.42.12-.78-.18-.9-.54-.12-.42.18-.78.54-.9 4.56-1.02 8.52-.6 11.64 1.32.42.18.48.66.3 1.02zm1.44-3.3c-.3.42-.84.6-1.26.3-3.24-1.98-8.16-2.58-11.94-1.38-.48.12-1.02-.12-1.14-.6-.12-.48.12-1.02.6-1.14 4.32-1.32 9.72-.66 13.44 1.62.36.18.54.78.3 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.3c-.6.18-1.2-.18-1.38-.72-.18-.6.18-1.2.72-1.38 4.26-1.26 11.28-1.02 15.72 1.62.54.3.72 1.02.42 1.56-.3.42-1.02.6-1.56.3z"/></svg>
+        Spotify
+      </a>
+      <a href="https://podcasts.apple.com/search?term=the%20numbers%20game" target="_blank" rel="noopener" aria-label="Listen on Apple Podcasts">
+        <svg viewBox="0 0 24 24"><path d="M5.34 0A5.328 5.328 0 000 5.34v13.32A5.328 5.328 0 005.34 24h13.32A5.328 5.328 0 0024 18.66V5.34A5.328 5.328 0 0018.66 0H5.34zm6.525 2.568c2.336 0 4.448.902 6.056 2.587 1.224 1.272 1.912 2.619 2.264 4.392l.04.23c.04.272-.16.527-.432.567a.505.505 0 01-.567-.431l-.04-.213c-.312-1.57-.92-2.747-2.004-3.867-1.428-1.496-3.293-2.294-5.393-2.294-2.1 0-3.966.798-5.394 2.294-1.084 1.12-1.692 2.298-2.004 3.867l-.04.213a.507.507 0 01-.567.431.504.504 0 01-.432-.567l.04-.23c.352-1.773 1.04-3.12 2.264-4.392 1.608-1.685 3.72-2.587 6.056-2.587h.153zm.136 3.033c1.74 0 3.312.67 4.527 1.934.883.916 1.394 1.93 1.663 3.253l.04.23a.505.505 0 01-.431.567.503.503 0 01-.567-.432l-.04-.212c-.23-1.112-.659-1.97-1.396-2.732-1.052-1.1-2.404-1.672-3.9-1.672s-2.849.572-3.901 1.672c-.737.762-1.167 1.62-1.396 2.732l-.04.212a.503.503 0 01-.567.432.505.505 0 01-.432-.567l.04-.23c.27-1.323.78-2.337 1.664-3.253 1.215-1.264 2.787-1.934 4.527-1.934h.21zm-.078 3.05c1.092 0 2.091.424 2.89 1.22.582.58.924 1.245 1.107 2.15l.04.218a.501.501 0 01-.424.568.499.499 0 01-.568-.424l-.04-.198c-.146-.724-.413-1.253-.871-1.716-.63-.63-1.398-.957-2.226-.957s-1.595.328-2.225.957c-.459.463-.726.992-.871 1.716l-.04.198a.499.499 0 01-.568.424.501.501 0 01-.424-.568l.04-.219c.183-.904.525-1.569 1.106-2.149.8-.796 1.799-1.22 2.89-1.22h.184zM12 14.07a2.477 2.477 0 012.48 2.478A2.477 2.477 0 0112 19.024a2.477 2.477 0 01-2.48-2.477A2.477 2.477 0 0112 14.07z"/></svg>
+        Apple
+      </a>
+      <a class="yt-pill" href="https://www.youtube.com/@thenumbersgamepodcast?sub_confirmation=1" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.12-2.14C19.5 3.55 12 3.55 12 3.55s-7.5 0-9.38.51A3 3 0 0 0 .5 6.2 31.4 31.4 0 0 0 0 12a31.4 31.4 0 0 0 .5 5.8 3 3 0 0 0 2.12 2.14c1.88.51 9.38.51 9.38.51s7.5 0 9.38-.51a3 3 0 0 0 2.12-2.14A31.4 31.4 0 0 0 24 12a31.4 31.4 0 0 0-.5-5.8zM9.55 15.57V8.43L15.82 12z"/></svg>
+        Subscribe
+      </a>
+    </div>
+
+    <div class="relsec">
+      <span class="rtitle">Discover more</span>
+      <div class="relgrid">
+        <a class="relcard" href="episode-261.html">
+          <img src="https://i.ytimg.com/vi/bM7PFcSZj6Q/hqdefault.jpg" alt="EP 261 thumbnail">
+          <span class="rt">The Numbers Game of Life</span>
+          <span class="rfoot"><span class="rwhy">Also covers: systems</span><span class="rtag">EP 261</span></span>
+        </a>
+        <a class="relcard" href="episode-277.html">
+          <img src="https://i.ytimg.com/vi/owBCnFLV_vM/hqdefault.jpg" alt="EP 277 thumbnail">
+          <span class="rt">The 5-Day Week Is 100 Years Old</span>
+          <span class="rfoot"><span class="rwhy">Also covers: systems</span><span class="rtag">EP 277</span></span>
+        </a>
+        <a class="relcard" href="episode-267.html">
+          <img src="https://i.ytimg.com/vi/ubSyFEJEohE/hqdefault.jpg" alt="EP 267 thumbnail">
+          <span class="rt">10 Lessons from an F1 Boss.</span>
+          <span class="rfoot"><span class="rwhy">Also covers: systems</span><span class="rtag">EP 267</span></span>
+        </a>
+        <a class="relcard" href="episode-260.html">
+          <img src="https://i.ytimg.com/vi/uVX0eJd05vI/hqdefault.jpg" alt="EP 260 thumbnail">
+          <span class="rt">Why Young Aussies Are Buying "Boring" Businesses Instead of Property</span>
+          <span class="rfoot"><span class="rwhy">Also covers: systems</span><span class="rtag">EP 260</span></span>
+        </a>
+        <a class="relcard" href="episode-246.html">
+          <img src="https://i.ytimg.com/vi/OMLSIds1ofI/hqdefault.jpg" alt="EP 246 thumbnail">
+          <span class="rt">Joel Wermut - Reinventing Real Estate Tech With Prop App</span>
+          <span class="rfoot"><span class="rwhy">Also covers: systems</span><span class="rtag">EP 246</span></span>
+        </a>
+        <a class="relcard" href="episode-284.html">
+          <img src="https://i.ytimg.com/vi/V-10kMQrsDM/hqdefault.jpg" alt="EP 284 thumbnail">
+          <span class="rt">The Most Expensive Day in Aussie Small Business History</span>
+          <span class="rfoot"><span class="rwhy">6 July 2026</span><span class="rtag">EP 284</span></span>
+        </a>
+      </div>
+      <div class="reldots" id="reldots"></div>
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="footgrid">
+      <div class="fcol">
+        <div class="foot-label">Brought to you by</div>
+        <div class="sponsors">
+          <a href="https://www.inovayt.com.au/" target="_blank" rel="noopener"><img src="assets/inovayt-white.png" alt="Inovayt"></a>
+          <a href="https://futureadvisory.com.au/" target="_blank" rel="noopener"><img src="assets/future-advisory-white.png" alt="Future Advisory"></a>
+        </div>
+      </div>
+      <div class="fcol produced">
+        <div class="foot-label">Produced by</div>
+        <a href="https://www.vidpod.com.au/" target="_blank" rel="noopener"><img src="assets/vidpod-white.png" alt="VIDPOD"></a>
+      </div>
+    </div>
+    <nav class="footnav">
+      <a href="index.html">Home</a><a href="episodes.html">Every episode</a><a href="adventure.html">Choose your own adventure</a><a href="about.html">About the show</a><a href="nick-reilly.html">Nick Reilly</a><a href="jason-robinson.html">Jason Robinson</a><a href="contact.html">Contact</a>
+    </nav>
+    <div class="copyright">© 2026 The Numbers Game</div>
+  </footer>
+
+  <script>
+    var VIDEO='FUf4XcRx-w0';
+    var CHAPTERS=[
+      {t:"00:00",s:0,title:"Intro"},
+      {t:"01:03",s:63,title:"What If Your Biggest Client Is Costing You Money?"},
+      {t:"01:42",s:102,title:"Why Profit Per Hour Beats Revenue As A Metric"},
+      {t:"04:33",s:273,title:"How Smaller Clients Can Deliver Bigger Returns"},
+      {t:"07:49",s:469,title:"Building A Valuable Business, Not Just A Profitable One"},
+      {t:"08:17",s:497,title:"The Risk Of Having All Your Wealth Locked In Your Business"},
+      {t:"12:11",s:731,title:"Valuing Your Business Every Month"},
+      {t:"15:28",s:928,title:"Why Business Owners Overvalue Their Business"},
+      {t:"18:13",s:1093,title:"The Danger Of Relying On The Founder For Revenue"},
+      {t:"20:00",s:1200,title:"Showing Strong Upward Trends Before Selling"},
+      {t:"22:42",s:1362,title:"Build A Business You Don't Want To Sell"},
+      {t:"23:23",s:1403,title:"Staying Focused On Key Quarterly Objectives"},
+      {t:"25:46",s:1546,title:"Why Every Business Should Be Built To Be Worth Owning And Selling"}
+    ];
+    var QUESTIONS=[
+      {q:"What metric should you track instead of revenue?",s:102},
+      {q:"Why choose the simpler path?",s:180},
+      {q:"Are high net worth clients the most profitable?",s:392},
+      {q:"Is a profitable business a valuable one?",s:469},
+      {q:"Are profitable and valuable the same?",s:480},
+      {q:"How much wealth is locked in a business?",s:497},
+      {q:"How many businesses successfully sell?",s:516},
+      {q:"Should you build wealth outside your business?",s:595},
+      {q:"What business is worth the most?",s:1362},
+      {q:"What should business owners focus on?",s:1454}
+    ];
+
+    var chEl=document.getElementById('chapters');
+    CHAPTERS.forEach(function(c){var b=document.createElement('button');b.className='chapter';b.onclick=function(){startAt(c.s)};b.innerHTML='<span class="tc">'+c.t+'</span><span class="cx">'+c.title+'</span>';chEl.appendChild(b);});
+    document.getElementById('chcount').textContent=CHAPTERS.length;
+    var qEl=document.getElementById('qa');
+    QUESTIONS.forEach(function(q){var b=document.createElement('button');b.className='q';b.onclick=function(){startAt(q.s)};b.innerHTML='<span class="qm">?</span><span class="qx">'+q.q+'</span><span class="go">›</span>';qEl.appendChild(b);});
+    document.getElementById('qcount').textContent=QUESTIONS.length;
+
+    /* Mobile nav dropdown. */
+    var burger=document.getElementById('navburger'), navdrop=document.getElementById('navdrop');
+    if(burger&&navdrop){burger.addEventListener('click',function(){
+      navdrop.hidden=!navdrop.hidden;
+      burger.setAttribute('aria-expanded', navdrop.hidden?'false':'true');
+    });}
+
+    /* Voice-note button reveals the recorder; × tucks it away. */
+    var vbtn=document.getElementById('vbtn'), vslot=document.getElementById('vslot'), vclose=document.getElementById('vclose');
+    if(vbtn&&vslot){vbtn.addEventListener('click',function(){vslot.hidden=!vslot.hidden;});}
+    if(vclose&&vslot){vclose.addEventListener('click',function(){vslot.hidden=true;});}
+
+    /* Keep-exploring dots: only shown when the strip actually scrolls (mobile). */
+    var rg=document.querySelector('.relgrid'), rd=document.getElementById('reldots');
+    if(rg&&rd){
+      var relCards=rg.querySelectorAll('.relcard');
+      relCards.forEach(function(){rd.appendChild(document.createElement('span'))});
+      var updDots=function(){
+        var scrollable=rg.scrollWidth>rg.clientWidth+4;
+        rd.style.display=scrollable?'flex':'none';
+        if(!scrollable)return;
+        var i=Math.round(rg.scrollLeft/(rg.scrollWidth-rg.clientWidth)*(relCards.length-1));
+        rd.querySelectorAll('span').forEach(function(s,n){s.classList.toggle('on',n===i)});
+      };
+      rg.addEventListener('scroll',updDots,{passive:true});
+      window.addEventListener('resize',updDots);
+      updDots();
+    }
+
+    /* Explore tabs: swap the visible panel; the row stays put so you never lose your place. */
+    var tabBtns=document.querySelectorAll('.tabbtn');
+    tabBtns.forEach(function(b){
+      b.addEventListener('click',function(){
+        tabBtns.forEach(function(o){o.classList.remove('on')});
+        document.querySelectorAll('.tpanel').forEach(function(p){p.hidden=true});
+        b.classList.add('on');
+        document.getElementById(b.getAttribute('data-panel')).hidden=false;
+      });
+    });
+
+    /* YouTube: clean facade, then real player on demand. Seek without yanking to top. */
+    var player=null, ready=false, apiReady=false, pending=null;
+    window.onYouTubeIframeAPIReady=function(){apiReady=true; if(pending!=null){var s=pending;pending=null;createPlayer(s);}};
+    function createPlayer(sec){
+      var wrap=document.getElementById('player'); wrap.innerHTML='<div id="yt"></div>';
+      player=new YT.Player('yt',{videoId:VIDEO,playerVars:{autoplay:1,rel:0,modestbranding:1,playsinline:1,start:Math.floor(sec||0)},events:{onReady:function(){ready=true;}}});
+    }
+    function nudge(){
+      var p=document.getElementById('player-wrap'), r=p.getBoundingClientRect();
+      if(r.bottom<80 || r.top>window.innerHeight-90){ p.scrollIntoView({behavior:'smooth',block:'start'}); }
+    }
+    function startAt(sec){
+      nudge();
+      if(player&&ready){ player.seekTo(sec,true); player.playVideo(); return; }
+      if(apiReady){ createPlayer(sec); } else { pending=sec; }
+    }
+    document.getElementById('facade').addEventListener('click',function(){startAt(0);});
+    (function(){var s=document.createElement('script');s.src='https://www.youtube.com/iframe_api';document.head.appendChild(s);})();
+  </script>
+</body>
+</html>
