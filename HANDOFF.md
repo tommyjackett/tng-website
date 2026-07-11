@@ -33,6 +33,15 @@ Sticky navbar (logo + "All episodes") → **carousel-exact hook title** (purple 
 - **Deploys run through OUR workflow** `.github/workflows/deploy-pages.yml` (Pages build_type=workflow since 5 Jul 2026). It queues deploys and auto-retries transient failures inside the run — the old branch-based pipeline's "Deployment failed, try again later" emails are gone. The site always keeps the last good deploy (never goes down).
 - **Preview:** `preview_start "tng-site"` (config in `Brain/Vidpod/clients/TNG/.claude/launch.json`, serves the repo on :8137) → open `/episode-263.html`. Or Tommy's `Tools/Desktop Phone Preview/preview.html` (paste the live URL; shows desktop + iPhone).
 
+## PLATFORM LINKS — Apple + Spotify player/buttons (added 11 Jul 2026)
+Each episode page has a full-width **Spotify audio embed player** above the Listen pills, and the **Spotify + Apple pills point at the exact episode** (not a generic search). Everything derives from data in `data/catalogue.json`.
+
+- **Source of truth:** `data/catalogue.json` carries `appleUrl` / `spotifyUrl` / `spotifyEmbedUrl` per episode. `data/platform-links.json` is the verified manifest (links + ready-to-paste embed code + verification status); `PLATFORM-LINKS.md` is the human-readable table.
+- **To source links for episodes** (e.g. after mining a new one): `python3 scripts/enrich_platform_links.py --write` (writes catalogue.json), or `python3 scripts/source_platform_links.py` (writes the verified manifest). Both scripts are in `scripts/` (gitignored, local). Apple = iTunes lookup (no auth). Spotify = the `spotifyscraper` pip lib (official API is Premium-gated and unusable). **Matching is by release DATE (±2-day window), NEVER by title** — TNG rewords titles across platforms.
+- **Template:** the listen section lives in `episode-263.html` between `<!-- LISTEN:START --> / <!-- LISTEN:END -->` (+ `.listen-now`/`.audio-embed` CSS). `build_episode.py` injects each episode's 3 URLs from catalogue.json on build, so NEW episodes get the player automatically. Embed must be the AUDIO form `open.spotify.com/embed/episode/{id}?utm_source=generator` (no `/video`) at `height="152"`.
+- **Notion mirror:** each episode page in the "The Numbers Game episodes" DB has 3 URL properties — `Apple episode URL`, `Spotify episode URL`, `Spotify embed URL`. Populate from the same values.
+- **STATUS:** 42 episodes (243–284) sourced + verified; player LIVE on 263 + 284 only. **40 pages still to roll out** — surgical patch of the listen block only, NOT a full rebuild (rebuild refuses on the speaker-gate eps and churns "Discover more"). 285/286 not yet published. Full detail in memory `project_tng_platform_links`.
+
 ## OPEN / NEXT
 **⚡ ACTIVE WORK QUEUE (8 Jul): `BUILD-PLAN-8-JUL.md` — Stages 0-3 SHIPPED (all pages live, site structurally complete). REMAINING: Stage 4 polish (sitemap/robots/JSON-LD, footer quick-links, email-capture pending Tommy's Web3Forms yes/no, Instagram feed parked) + Tommy's Spotify/Apple show URLs. The list below is the older backdrop.**
 
