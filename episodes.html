@@ -160,6 +160,20 @@
   .footnav a{font-size:12px;font-weight:600;letter-spacing:.04em;color:var(--dim);text-decoration:none;transition:.15s}
   .footnav a:hover{color:var(--mint)}
   .copyright{margin-top:40px;font-size:12px;color:var(--dim);text-align:center}
+  /* ── Filter cluster: Year + Sort (segmented) + Guests chip ── */
+  .filtrow{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+  .toolbar .searchbox{flex:0 1 440px;min-width:200px}
+  .segctl{display:inline-flex;border:1px solid rgba(255,255,255,.3);border-radius:999px;overflow:hidden}
+  .segctl button{background:none;border:0;border-right:1px solid rgba(255,255,255,.15);color:rgba(255,255,255,.85);
+    font-family:var(--display);text-transform:uppercase;letter-spacing:.5px;font-size:12.5px;padding:11px 15px 9px;
+    cursor:pointer;transition:.15s;font-variant-numeric:tabular-nums}
+  .segctl button:last-child{border-right:0}
+  .segctl button:hover{color:var(--mint)}
+  .segctl button.on{background:var(--purple);color:#fff}
+  .chipdiv{width:1px;align-self:stretch;min-height:26px;background:rgba(255,255,255,.22);margin:0 6px}
+  .chip.guestchip{background:none;border:1px solid rgba(122,217,168,.6);color:var(--mint)}
+  .chip.guestchip.on{background:var(--purple);border-color:var(--purple);color:#fff}
+  @media(max-width:720px){.filtrow{width:100%}}
 </style>
 </head>
 <body>
@@ -217,7 +231,17 @@
       <svg viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27a6.5 6.5 0 1 0-.7.7l.27.28v.79l5 4.99L20.49 19zm-6 0A4.5 4.5 0 1 1 14 9.5 4.5 4.5 0 0 1 9.5 14z"/></svg>
       <input type="search" id="q" placeholder="Search episodes, topics, or the questions they answer" autocomplete="off">
     </div>
-    <button class="sortbtn" id="sortbtn" type="button">Newest first</button>
+    <div class="filtrow">
+      <div class="segctl" id="yearseg" role="group" aria-label="Filter by year">
+        <button class="on" data-year="" type="button">All years</button>
+        <button data-year="2026" type="button">2026</button>
+        <button data-year="2025" type="button">2025</button>
+      </div>
+      <div class="segctl" id="sortseg" role="group" aria-label="Sort order">
+        <button class="on" data-newest="1" type="button">Newest</button>
+        <button data-newest="0" type="button">Oldest</button>
+      </div>
+    </div>
   </div>
 
   <div class="chips" id="chips"></div>
@@ -261,7 +285,7 @@
      tier 1 = primary topic (catalogue), tier 2 = genuine moment coverage (search-index, >=2 moments).
      Search matches title -> topic -> the questions answered inside episodes. All client-side. ── */
   var PAGE=12, COVER_MIN=2;
-  var EPS=[], byEp={}, state={q:'', topic:'', newest:true, shown:PAGE};
+  var EPS=[], byEp={}, state={q:'', topic:'', newest:true, year:'', guestsOnly:false, shown:PAGE};
 
   function fmtDate(iso){var d=new Date(iso+'T00:00:00');return d.getDate()+' '+d.toLocaleString('en-AU',{month:'long'})+' '+d.getFullYear();}
 
@@ -307,6 +331,13 @@
       box.appendChild(b);
     });
 
+    /* Guests: a mutually-exclusive filter chip (not combined with topics); shows guest EPISODES */
+    var gdiv=document.createElement('span'); gdiv.className='chipdiv'; box.appendChild(gdiv);
+    var guestCount=EPS.filter(isGuest).length;
+    var gchip=document.createElement('button'); gchip.type='button'; gchip.className='chip guestchip'; gchip.id='guestchip';
+    gchip.innerHTML='Guests <span class="ct">'+guestCount+'</span>'; box.appendChild(gchip);
+    gchip.addEventListener('click',function(){ setGuests(!state.guestsOnly); });
+
     /* deep-link support: ?topic=Property / ?q=guarantor */
     var p=new URLSearchParams(location.search);
     if(p.get('topic')&&counts[p.get('topic')]) state.topic=p.get('topic');
@@ -314,25 +345,34 @@
     syncChips(); render();
   });
 
-  function setTopic(t){state.topic=t; state.shown=PAGE; syncChips(); render();}
+  function isGuest(e){return (e.format||[]).indexOf('Guest Interview')>=0;}
+  function setGuests(on){state.guestsOnly=on; if(on){state.topic='';} state.shown=PAGE; syncChips(); render();}
+  function setTopic(t){state.topic=t; state.guestsOnly=false; state.shown=PAGE; syncChips(); render();}
   function syncChips(){
     [].forEach.call(document.querySelectorAll('.chips .chip'),function(c){
-      c.classList.toggle('on', c.classList.contains('all') ? !state.topic : c.dataset.t===state.topic);
+      if(c.id==='guestchip'){c.classList.toggle('on', state.guestsOnly); return;}
+      var on = c.classList.contains('all') ? (!state.topic && !state.guestsOnly) : (c.dataset.t===state.topic && !state.guestsOnly);
+      c.classList.toggle('on', on);
     });
   }
 
   document.getElementById('q').addEventListener('input',function(){
     state.q=this.value.trim().toLowerCase(); state.shown=PAGE; render();
   });
-  document.getElementById('sortbtn').addEventListener('click',function(){
-    state.newest=!state.newest; this.textContent=state.newest?'Newest first':'Oldest first';
-    state.shown=PAGE; render();
-  });
+  function segPick(seg,b){seg.querySelectorAll('button').forEach(function(x){x.classList.remove('on')});b.classList.add('on');}
+  document.querySelectorAll('#sortseg button').forEach(function(b){b.addEventListener('click',function(){
+    segPick(document.getElementById('sortseg'),b); state.newest=b.dataset.newest==='1'; state.shown=PAGE; render();
+  })});
+  document.querySelectorAll('#yearseg button').forEach(function(b){b.addEventListener('click',function(){
+    segPick(document.getElementById('yearseg'),b); state.year=b.dataset.year; state.shown=PAGE; render();
+  })});
   document.getElementById('more').addEventListener('click',function(){state.shown+=PAGE; render();});
 
   function results(){
     var list=EPS.slice();
     if(!state.newest) list.reverse();
+    if(state.year) list=list.filter(function(e){return String(e.date).slice(0,4)===state.year});
+    if(state.guestsOnly) list=list.filter(isGuest);
 
     /* topic filter: tier 1 primary, then tier 2 genuine coverage (>= COVER_MIN moments) by depth */
     if(state.topic){
