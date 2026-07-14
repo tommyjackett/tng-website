@@ -67,7 +67,11 @@ A "skill" here = a small instruction file (like the existing `tng-shownotes`, `v
 - **`sync-episode-links`** *(Phase 2, needs internet)* — "Episode N is live (or: check what's newly live). Source Apple + Spotify + embed → write to Notion → drop into the page → push live." **This is the Monday-8am scheduled-sweep candidate** (purely date-driven: an episode is either public or not).
 - **`refresh-homepage`** — "Point the homepage at the latest live episode."
 
-**Built as a template for OTHER CLIENTS:** every client is the same shape (a podcast + a Notion episodes DB + a website repo + the same schema & link-sourcing). Each skill takes a few per-client settings (Spotify show ID, Apple podcast ID, Notion DB, repo path); the rest is identical. Get it clean once for TNG → cloning for client #2 = filling in a settings file.
+**Built as a template for OTHER CLIENTS — KEY ARCHITECTURE (Tommy's call):** the reusable tools live ONCE in a shared, git-backed location and are pointed at a **per-client config** — NOT copied or rebuilt per client. Three tiers:
+1. **Fully client-agnostic tools** (link-sourcing: Apple/Spotify/amp-api/matcher; future: audio-download, transcription) → **shared toolkit** (candidate home: root `Tools/` or a dedicated `podcast-tooling` repo, git-backed). Never rebuilt — client #2 just calls them.
+2. **Reusable engine + per-client template** → the page builder (same logic, each client's own design/template).
+3. **Per-client output** → pages, data, brand → stays in that client's website repo.
+So a new client = a small **config file** (Spotify show ID, Apple podcast ID, Notion DB, brand, repo path) + their website repo; the machinery already exists. To make the tools reusable, **split LOGIC from CONFIG** (they currently hardcode TNG IDs + old scratch paths). This means the "make tooling durable" job (Part 7) should MOVE the reusable tools to the shared home — not just un-ignore them inside the TNG repo.
 
 **Notion writing:** the Notion MCP connector is already connected — links are written straight through it, no manual clicking, no separate API key needed. (Only caveat: a fully-headless scheduled run with nobody present may not inherit that live connection — revisit if/when we automate the Monday sweep.)
 
