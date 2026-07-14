@@ -90,9 +90,14 @@ Everything derives from two IDs per episode: an Apple `trackId` and a Spotify 22
 
 **Matching (the "never wrong" rule):** join platform episodes to the Notion/catalogue episode by **exact release date** (each episode has a unique date, so even the old twice-weekly stretches match cleanly). If dates are off by the usual ±1 day (AU vs UTC), fall back to a ±1-day window only when it's unique; disambiguate crowded windows by title similarity; flag anything ambiguous rather than guess. TNG rewords titles across platforms, so never match on title alone.
 
-**Where the sourcing tools currently sit (LOCAL/temporary — to be made durable):**
-- `scripts/enrich_platform_links.py`, `scripts/source_platform_links.py` (local, gitignored).
-- Scratch tools built this week (Apple amp-api pull, full Spotify pull, matchers, Notion payload builders) — in the session scratchpad, **these vanish**; logic is documented here + in Claude memory so it's rebuildable.
+**Where the sourcing tools sit (LOCAL — `scripts/` is gitignored, so on the Mac but not GitHub-backed yet; that's the "make tooling durable" job in Part 7):**
+- `scripts/podcast-link-sourcing/` (rescued from the vanishing scratchpad; has its own README):
+  - `fetch-spotify-and-apple-episode-lists.py` — pull the full episode lists from both platforms.
+  - `apple-deep-episode-pull-ampapi.py` — pull ALL Apple episodes via amp-api (reaches the old pre-Dec-2022 ones the iTunes API can't).
+  - `match-episodes-to-platform-links.py` — match episodes to platform pulls by exact date; produce the links; flag anything uncertain.
+- `scripts/enrich_platform_links.py`, `scripts/source_platform_links.py` — earlier sourcing versions (used for 243+).
+
+**Script naming convention:** name every script by what it DOES — verb-first, domain-clear, hyphenated, understandable from the filename alone. ✅ `apple-deep-episode-pull-ampapi.py`  ❌ `apple_deep_pull.py`. (Example of a future one: `download-episode-audio-files.py` to fetch audio for ep 1–138 so they can be transcribed.)
 
 **Spotify creds:** `.secrets/spotify-api_tng.txt` (only needed for the dead official-API path; the scraper needs nothing). **Never commit secrets.**
 
