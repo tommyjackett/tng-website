@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Guests — The Numbers Game</title>
+<meta name="description" content="Every guest who's joined The Numbers Game — founders, CEOs and operators sharing how they really run the numbers. Browse the guests and their episodes.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="canonical" href="https://thenumbersgamepodcast.com.au/guests.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="The Numbers Game">
+<meta property="og:title" content="Guests — The Numbers Game">
+<meta property="og:description" content="Every guest who's joined The Numbers Game — founders, CEOs and operators sharing how they really run the numbers.">
+<style>
+  :root{
+    --purple:#585af3; --purple-dark:#2c1b8a; --mint:#7ad9a8;
+    --white:#fff; --muted:rgba(255,255,255,.60); --dim:rgba(255,255,255,.42);
+    --line:rgba(255,255,255,.12); --card:rgba(255,255,255,.05); --card-hi:rgba(255,255,255,.09);
+    --display:'Anton',Impact,'Helvetica Neue',sans-serif;
+    --sans:'Inter',system-ui,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif;
+    --wrap:1280px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:var(--sans);color:var(--white);line-height:1.6;-webkit-font-smoothing:antialiased;
+    background:#12093a;background-image:
+      radial-gradient(1200px 600px at 82% -6%, rgba(88,90,243,.45) 0%, transparent 55%),
+      radial-gradient(900px 700px at 5% 8%, rgba(122,217,168,.10) 0%, transparent 50%),
+      linear-gradient(180deg,#2c1b8a 0%,#1a1150 28%,#100b34 62%,#0b0820 100%);
+    background-attachment:fixed;}
+  a{color:inherit}
+
+  /* nav (site standard) */
+  .nav{position:sticky;top:0;z-index:50;background:linear-gradient(180deg,rgba(24,15,74,.92),rgba(24,15,74,.72));backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+  .nav-in{max-width:var(--wrap);margin:0 auto;padding:11px 36px;display:flex;align-items:center;justify-content:space-between}
+  @media(max-width:720px){.nav-in{padding:11px 22px}}
+  .brand{display:block;line-height:0}.brand img{height:36px;width:auto;display:block}
+  .navlinks{display:flex;gap:28px;align-items:center}
+  .navlinks a{text-decoration:none;font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);transition:.15s}
+  .navlinks a:hover{color:var(--white)}.navlinks a.navtop{cursor:default}
+  .navgroup{position:relative;display:flex;align-items:center}
+  .navgroup .subnav{display:none;position:absolute;top:100%;left:50%;transform:translateX(-50%);padding-top:14px;min-width:180px;z-index:60}
+  .navgroup:hover .subnav,.navgroup:focus-within .subnav{display:block}
+  .navgroup .subnav a{display:block;background:#180f4a;border:1px solid var(--line);border-top:0;padding:12px 16px;font-size:12px;color:rgba(255,255,255,.85)}
+  .navgroup .subnav a:first-child{border-top:1px solid var(--line)}
+  .navgroup .subnav a:hover{background:#221768;color:var(--white)}
+  .navgroup .subnav a.on{color:var(--mint)}
+  .navburger{display:none;background:none;border:1px solid var(--line);padding:8px 10px;cursor:pointer;color:var(--white)}
+  .navburger svg{width:20px;height:20px;fill:currentColor;display:block}
+  .navdrop{display:none}
+  @media(max-width:720px){
+    .navlinks{display:none}.navburger{display:block}
+    .navdrop{display:block;position:absolute;left:0;right:0;top:100%;background:#180f4a;border-bottom:1px solid var(--line);box-shadow:0 24px 50px rgba(0,0,0,.45)}
+    .navdrop[hidden]{display:none}
+    .navdrop a{display:block;padding:15px 22px;text-decoration:none;font-size:14px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:rgba(255,255,255,.9);border-bottom:1px solid rgba(255,255,255,.06)}
+    .navdrop a.sub{padding-left:42px;font-size:13px;color:rgba(255,255,255,.72)}
+    .navdrop .navlabel{display:block;padding:15px 22px 6px;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.4)}
+  }
+
+  /* hero */
+  .ghead{max-width:1080px;margin:0 auto;padding:52px 36px 6px}
+  @media(max-width:720px){.ghead{padding:30px 22px 4px}}
+  .gtitle{display:flex;flex-direction:column;align-items:flex-start;gap:5px;margin-bottom:20px}
+  .gtitle .tb{font-family:var(--display);font-weight:400;text-transform:uppercase;line-height:1;padding:.16em .48em .08em;box-shadow:0 10px 30px rgba(0,0,0,.35);font-size:clamp(30px,5vw,52px)}
+  .gtitle .tb-p{background:var(--purple);color:var(--white)}
+  .gtitle .tb-m{background:var(--mint);color:#0a0a0a}
+  .gintro{color:var(--muted);font-size:16.5px;line-height:1.7;max-width:62ch}
+  .gintro b{color:var(--white);font-weight:600}
+
+  /* grid */
+  .ggrid{max-width:1080px;margin:0 auto;padding:34px 36px 0;display:grid;grid-template-columns:repeat(auto-fill,minmax(196px,1fr));gap:26px 24px}
+  @media(max-width:720px){.ggrid{padding:26px 22px 0;grid-template-columns:repeat(2,1fr);gap:22px 16px}}
+  .gcard{display:flex;flex-direction:column;text-decoration:none;color:inherit;transition:.16s}
+  .gportrait{position:relative;aspect-ratio:4/5;border-radius:16px;overflow:hidden;border:1px solid var(--line);
+    display:grid;place-items:center;transition:.16s}
+  .gportrait .init{font-family:var(--display);font-size:clamp(40px,7vw,58px);color:rgba(255,255,255,.92);letter-spacing:.03em}
+  .gportrait::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(9,5,28,.55))}
+  .gcard:hover .gportrait{border-color:rgba(122,217,168,.65);transform:translateY(-3px)}
+  .gtag{position:absolute;left:10px;bottom:10px;z-index:2;background:#0a0a0a;color:#fff;font-family:var(--display);
+    font-size:10px;letter-spacing:1px;text-transform:uppercase;padding:4px 8px 3px}
+  .gname{font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.3px;font-size:20px;margin-top:16px;line-height:1.1}
+  .grole{color:var(--mint);font-size:12.5px;line-height:1.45;margin-top:7px}
+  .gview{color:var(--dim);font-size:11.5px;margin-top:9px;text-transform:uppercase;letter-spacing:.07em;transition:.15s}
+  .gcard:hover .gview{color:var(--mint)}
+
+  .gnote{max-width:1080px;margin:40px auto 0;padding:0 36px}
+  .gnote div{border:1px dashed var(--line);border-radius:12px;padding:16px 18px;color:var(--dim);font-size:13px;line-height:1.6}
+  .gnote b{color:var(--muted)}
+
+  /* footer (site standard) */
+  footer{border-top:1px solid var(--line);margin-top:64px;padding:36px 20px 38px}
+  .footgrid{max-width:var(--wrap);margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:start}
+  @media(max-width:720px){.footgrid{grid-template-columns:1fr;gap:40px}}
+  .fcol{text-align:center}
+  .foot-label{font-size:11px;font-weight:700;letter-spacing:.26em;text-transform:uppercase;color:var(--dim);margin-bottom:16px}
+  .sponsors{display:flex;justify-content:center;align-items:center;gap:38px;flex-wrap:wrap}
+  .sponsors img{height:34px;width:auto;opacity:.92}.produced img{height:30px;width:auto;opacity:.95}
+  .footnav{margin-top:36px;display:flex;justify-content:center;flex-wrap:wrap;gap:6px 26px}
+  .footnav a{font-size:12px;font-weight:600;letter-spacing:.04em;color:var(--dim);text-decoration:none}
+  .footnav a:hover{color:var(--mint)}
+  .copyright{margin-top:26px;font-size:12px;color:var(--dim);text-align:center}
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CollectionPage","name":"Guests — The Numbers Game","description":"Guests who have appeared on The Numbers Game podcast.","mainEntity":{"@type":"ItemList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@type":"Person","name":"Cameron Schwab","jobTitle":"Founder of Design CEO, former AFL CEO","url":"https://thenumbersgamepodcast.com.au/guests/cameron-schwab.html"}},{"@type":"ListItem","position":2,"item":{"@type":"Person","name":"Joel Wermut","jobTitle":"Co-founder of Prop App","url":"https://thenumbersgamepodcast.com.au/guests/joel-wermut.html"}}]}}</script>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-in">
+      <a class="brand" href="index.html" aria-label="The Numbers Game home"><img src="assets/tng-logo.png" alt="The Numbers Game"></a>
+      <div class="navlinks">
+        <a href="index.html">Home</a>
+        <div class="navgroup">
+          <a class="navtop">Episodes</a>
+          <div class="subnav">
+            <a href="episodes.html">All episodes</a>
+            <a href="adventure.html">Find moments</a>
+            <a class="on" href="_mock-guests.html">Guests</a>
+          </div>
+        </div>
+        <div class="navgroup">
+          <a class="navtop">About</a>
+          <div class="subnav">
+            <a href="about.html">The show</a>
+            <a href="nick-reilly.html">Nick Reilly</a>
+            <a href="jason-robinson.html">Jason Robinson</a>
+          </div>
+        </div>
+        <a href="contact.html">Contact</a>
+      </div>
+      <button class="navburger" id="navburger" type="button" aria-label="Menu" aria-expanded="false"><svg viewBox="0 0 24 24"><path d="M3 6h18v2H3zM3 11h18v2H3zM3 16h18v2H3z"/></svg></button>
+    </div>
+    <div class="navdrop" id="navdrop" hidden>
+      <a href="index.html">Home</a>
+      <span class="navlabel">Episodes</span>
+      <a class="sub" href="episodes.html">All episodes</a>
+      <a class="sub" href="adventure.html">Find moments</a>
+      <a class="sub" href="_mock-guests.html">Guests</a>
+      <span class="navlabel">About</span>
+      <a class="sub" href="about.html">The show</a>
+      <a class="sub" href="nick-reilly.html">Nick Reilly</a>
+      <a class="sub" href="jason-robinson.html">Jason Robinson</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+
+  <main>
+    <header class="ghead">
+      <h1 class="gtitle"><span class="tb tb-p">The people</span><span class="tb tb-m">who've joined us</span></h1>
+      <p class="gintro"><b>Founders, CEOs and operators who came in to talk numbers.</b> Every guest who's sat down with Jason and Nick — tap any face to read their story and jump to their episode.</p>
+    </header>
+
+    <div class="ggrid">
+      <a class="gcard" href="_mock-guest-cameron-schwab.html">
+        <div class="gportrait" style="background:linear-gradient(155deg,#4a3ba8,#241465)"><span class="init">CS</span><span class="gtag">EP 249</span></div>
+        <div class="gname">Cameron Schwab</div>
+        <div class="grole">Founder, Design CEO · Former AFL CEO</div>
+        <div class="gview">View profile &rarr;</div>
+      </a>
+      <a class="gcard" href="episode-246.html">
+        <div class="gportrait" style="background:linear-gradient(155deg,#2a6f7a,#123a44)"><span class="init">JW</span><span class="gtag">EP 246</span></div>
+        <div class="gname">Joel Wermut</div>
+        <div class="grole">Co-founder, Prop App</div>
+        <div class="gview">View profile &rarr;</div>
+      </a>
+    </div>
+
+    <div class="gnote">
+      <div><b>Mock note:</b> portraits are initial-placeholders until real headshots are added. <b>Cameron Schwab</b> links to a full <b>guest profile page</b>; <b>Joel Wermut</b> is wired straight to his <b>episode</b> — so you can compare the two options side by side.</div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footgrid">
+      <div class="fcol"><div class="foot-label">Brought to you by</div>
+        <div class="sponsors">
+          <a href="https://www.inovayt.com.au/" target="_blank" rel="noopener"><img src="assets/inovayt-white.png" alt="Inovayt"></a>
+          <a href="https://futureadvisory.com.au/" target="_blank" rel="noopener"><img src="assets/future-advisory-white.png" alt="Future Advisory"></a>
+        </div>
+      </div>
+      <div class="fcol produced"><div class="foot-label">Produced by</div>
+        <a href="https://www.vidpod.com.au/" target="_blank" rel="noopener"><img src="assets/vidpod-white.png" alt="VIDPOD"></a>
+      </div>
+    </div>
+    <nav class="footnav">
+      <a href="index.html">Home</a><a href="episodes.html">Every episode</a><a href="_mock-guests.html">Guests</a><a href="adventure.html">Choose your own adventure</a><a href="about.html">About the show</a><a href="contact.html">Contact</a>
+    </nav>
+    <div class="copyright">© 2026 The Numbers Game</div>
+  </footer>
+
+  <script>
+  var burger=document.getElementById('navburger'), navdrop=document.getElementById('navdrop');
+  if(burger&&navdrop){burger.addEventListener('click',function(){navdrop.hidden=!navdrop.hidden;burger.setAttribute('aria-expanded',navdrop.hidden?'false':'true');});}
+  </script>
+</body>
+</html>
