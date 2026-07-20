@@ -10,12 +10,12 @@
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="icon" type="image/png" sizes="64x64" href="assets/favicon.png">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
-<link rel="canonical" href="https://thenumbersgamepodcast.com.au/episodes.html">
+<link rel="canonical" href="https://thenumbersgamepodcast.com.au/episodes">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="The Numbers Game">
 <meta property="og:title" content="Every Episode — The Numbers Game">
 <meta property="og:description" content="Browse every episode of The Numbers Game. Filter by topic, search what's actually said inside episodes, and find whole conversations on business, property, tax and money.">
-<meta property="og:url" content="https://thenumbersgamepodcast.com.au/episodes.html">
+<meta property="og:url" content="https://thenumbersgamepodcast.com.au/episodes">
 <meta property="og:image" content="https://thenumbersgamepodcast.com.au/assets/og-image.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <style>
@@ -189,40 +189,40 @@
 
   <nav class="nav">
     <div class="nav-in">
-      <a class="brand" href="index.html" aria-label="The Numbers Game home"><img src="assets/tng-logo.png" alt="The Numbers Game"></a>
+      <a class="brand" href="/" aria-label="The Numbers Game home"><img src="assets/tng-logo.png" alt="The Numbers Game"></a>
       <div class="navlinks">
-        <a href="index.html">Home</a>
+        <a href="/">Home</a>
         <div class="navgroup">
           <a class="navtop">Episodes</a>
           <div class="subnav">
-            <a href="episodes.html">All episodes</a>
-            <a href="adventure.html">Find moments</a>
+            <a href="/episodes">All episodes</a>
+            <a href="/adventure">Find moments</a>
           </div>
         </div>
         <div class="navgroup">
           <a class="navtop">About</a>
           <div class="subnav">
-            <a href="about.html">The show</a>
-            <a href="nick-reilly.html">Nick Reilly</a>
-            <a href="jason-robinson.html">Jason Robinson</a>
+            <a href="/about">The show</a>
+            <a href="/nick-reilly">Nick Reilly</a>
+            <a href="/jason-robinson">Jason Robinson</a>
           </div>
         </div>
-        <a href="contact.html">Contact</a>
+        <a href="/contact">Contact</a>
       </div>
       <button class="navburger" id="navburger" type="button" aria-label="Menu" aria-expanded="false">
         <svg viewBox="0 0 24 24"><path d="M3 6h18v2H3zM3 11h18v2H3zM3 16h18v2H3z"/></svg>
       </button>
     </div>
     <div class="navdrop" id="navdrop" hidden>
-      <a href="index.html">Home</a>
+      <a href="/">Home</a>
       <span class="navlabel">Episodes</span>
-      <a class="sub" href="episodes.html">All episodes</a>
-      <a class="sub" href="adventure.html">Find moments</a>
+      <a class="sub" href="/episodes">All episodes</a>
+      <a class="sub" href="/adventure">Find moments</a>
       <span class="navlabel">About</span>
-      <a class="sub" href="about.html">The show</a>
-      <a class="sub" href="nick-reilly.html">Nick Reilly</a>
-      <a class="sub" href="jason-robinson.html">Jason Robinson</a>
-      <a href="contact.html">Contact</a>
+      <a class="sub" href="/about">The show</a>
+      <a class="sub" href="/nick-reilly">Nick Reilly</a>
+      <a class="sub" href="/jason-robinson">Jason Robinson</a>
+      <a href="/contact">Contact</a>
     </div>
   </nav>
 
@@ -232,7 +232,7 @@
       <span class="tb tb-m">in your hands</span>
     </h1>
     <p class="libline" id="libline">Tap a topic to line up every episode that covers it, or type anything into the search: a topic, a question, even a word you remember from an episode.</p>
-    <a class="advlink" href="adventure.html">After the best bits instead? Choose your own adventure &rarr;</a>
+    <a class="advlink" href="/adventure">After the best bits instead? Choose your own adventure &rarr;</a>
   </div>
 
   <div class="toolbar">
@@ -258,7 +258,7 @@
   <div class="libwrap">
     <p class="count" id="count"></p>
     <div class="epgrid" id="grid"></div>
-    <p class="nores" id="nores" hidden>Nothing matches that yet. Try another word, or <a href="adventure.html">let the adventure page find you the exact moments</a>.</p>
+    <p class="nores" id="nores" hidden>Nothing matches that yet. Try another word, or <a href="/adventure">let the adventure page find you the exact moments</a>.</p>
     <div class="moreline"><button class="morebtn" id="more" type="button" hidden>Show more</button></div>
   </div>
 
@@ -290,7 +290,7 @@
       <details class="footnav-dd">
         <summary><svg class="ham" viewBox="0 0 24 24"><path d="M3 6h18v2H3zM3 11h18v2H3zM3 16h18v2H3z"/></svg> Menu</summary>
         <div class="dd-links">
-          <a href="index.html">Home</a><a href="episodes.html">Every episode</a><a href="adventure.html">Choose your own adventure</a><a href="about.html">About the show</a><a href="nick-reilly.html">Nick Reilly</a><a href="jason-robinson.html">Jason Robinson</a><a href="marty-vidakovic.html">Marty Vidakovic</a><a href="contact.html">Contact</a>
+          <a href="/">Home</a><a href="/episodes">Every episode</a><a href="/adventure">Choose your own adventure</a><a href="/about">About the show</a><a href="/nick-reilly">Nick Reilly</a><a href="/jason-robinson">Jason Robinson</a><a href="/marty-vidakovic">Marty Vidakovic</a><a href="/contact">Contact</a>
         </div>
       </details>
       <div class="copyright">© 2026 The Numbers Game</div>
@@ -460,7 +460,7 @@
     }
     list.slice(0,state.shown).forEach(function(e){
       if(grouping&&e._tier&&!labelled[e._tier]) addLabel(e._tier);
-      var a=document.createElement('a'); a.className='ecard'; a.href=(e.slug?e.slug:'episode-'+e.episodeNumber)+'.html';
+      var a=document.createElement('a'); a.className='ecard'; a.href='/'+(e.slug||('episode-'+e.episodeNumber));
       var im=document.createElement('img'); im.loading='lazy'; im.alt='';
       im.src=e.thumbnail||('https://i.ytimg.com/vi/'+e.youtubeId+'/hqdefault.jpg');
       var t=document.createElement('span'); t.className='et'; t.textContent=e.title;

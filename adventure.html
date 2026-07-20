@@ -10,12 +10,12 @@
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="icon" type="image/png" sizes="64x64" href="assets/favicon.png">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
-<link rel="canonical" href="https://thenumbersgamepodcast.com.au/adventure.html">
+<link rel="canonical" href="https://thenumbersgamepodcast.com.au/adventure">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="The Numbers Game">
 <meta property="og:title" content="Choose Your Own Adventure — The Numbers Game">
 <meta property="og:description" content="Pick the topics you're into and The Numbers Game will play you the standout moments. Not whole episodes, the exact bits inside them.">
-<meta property="og:url" content="https://thenumbersgamepodcast.com.au/adventure.html">
+<meta property="og:url" content="https://thenumbersgamepodcast.com.au/adventure">
 <meta property="og:image" content="https://thenumbersgamepodcast.com.au/assets/og-image.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <style>
@@ -201,40 +201,40 @@
 
   <nav class="nav">
     <div class="nav-in">
-      <a class="brand" href="index.html" aria-label="The Numbers Game home"><img src="assets/tng-logo.png" alt="The Numbers Game"></a>
+      <a class="brand" href="/" aria-label="The Numbers Game home"><img src="assets/tng-logo.png" alt="The Numbers Game"></a>
       <div class="navlinks">
-        <a href="index.html">Home</a>
+        <a href="/">Home</a>
         <div class="navgroup">
           <a class="navtop">Episodes</a>
           <div class="subnav">
-            <a href="episodes.html">All episodes</a>
-            <a href="adventure.html">Find moments</a>
+            <a href="/episodes">All episodes</a>
+            <a href="/adventure">Find moments</a>
           </div>
         </div>
         <div class="navgroup">
           <a class="navtop">About</a>
           <div class="subnav">
-            <a href="about.html">The show</a>
-            <a href="nick-reilly.html">Nick Reilly</a>
-            <a href="jason-robinson.html">Jason Robinson</a>
+            <a href="/about">The show</a>
+            <a href="/nick-reilly">Nick Reilly</a>
+            <a href="/jason-robinson">Jason Robinson</a>
           </div>
         </div>
-        <a href="contact.html">Contact</a>
+        <a href="/contact">Contact</a>
       </div>
       <button class="navburger" id="navburger" type="button" aria-label="Menu" aria-expanded="false">
         <svg viewBox="0 0 24 24"><path d="M3 6h18v2H3zM3 11h18v2H3zM3 16h18v2H3z"/></svg>
       </button>
     </div>
     <div class="navdrop" id="navdrop" hidden>
-      <a href="index.html">Home</a>
+      <a href="/">Home</a>
       <span class="navlabel">Episodes</span>
-      <a class="sub" href="episodes.html">All episodes</a>
-      <a class="sub" href="adventure.html">Find moments</a>
+      <a class="sub" href="/episodes">All episodes</a>
+      <a class="sub" href="/adventure">Find moments</a>
       <span class="navlabel">About</span>
-      <a class="sub" href="about.html">The show</a>
-      <a class="sub" href="nick-reilly.html">Nick Reilly</a>
-      <a class="sub" href="jason-robinson.html">Jason Robinson</a>
-      <a href="contact.html">Contact</a>
+      <a class="sub" href="/about">The show</a>
+      <a class="sub" href="/nick-reilly">Nick Reilly</a>
+      <a class="sub" href="/jason-robinson">Jason Robinson</a>
+      <a href="/contact">Contact</a>
     </div>
   </nav>
 
@@ -315,7 +315,7 @@
       <details class="footnav-dd">
         <summary><svg class="ham" viewBox="0 0 24 24"><path d="M3 6h18v2H3zM3 11h18v2H3zM3 16h18v2H3z"/></svg> Menu</summary>
         <div class="dd-links">
-          <a href="index.html">Home</a><a href="episodes.html">Every episode</a><a href="adventure.html">Choose your own adventure</a><a href="about.html">About the show</a><a href="nick-reilly.html">Nick Reilly</a><a href="jason-robinson.html">Jason Robinson</a><a href="marty-vidakovic.html">Marty Vidakovic</a><a href="contact.html">Contact</a>
+          <a href="/">Home</a><a href="/episodes">Every episode</a><a href="/adventure">Choose your own adventure</a><a href="/about">About the show</a><a href="/nick-reilly">Nick Reilly</a><a href="/jason-robinson">Jason Robinson</a><a href="/marty-vidakovic">Marty Vidakovic</a><a href="/contact">Contact</a>
         </div>
       </details>
       <div class="copyright">© 2026 The Numbers Game</div>
@@ -360,7 +360,7 @@
     var today=new Date(); today.setHours(23,59,59);
     CAT=res[0].filter(function(e){return new Date(e.date+'T00:00:00')<=today});
     CAT.sort(function(a,b){return a.date<b.date?1:-1});
-    var released={}; CAT.forEach(function(e){released[e.episodeNumber]=true});
+    var released={}, slugByEp={}; CAT.forEach(function(e){released[e.episodeNumber]=true; slugByEp[e.episodeNumber]=e.slug;});
     /* Score every released moment, then build the pool as a HYBRID union so the
        topic->subtopic browse actually works AND no episode vanishes:
          - each EPISODE's top TOP_PER_EP by value  -> guarantees every episode appears
@@ -498,7 +498,7 @@
     var fac=document.getElementById('mfacade');
     if(!fac.hidden) fac.style.backgroundImage="linear-gradient(rgba(10,6,30,.35),rgba(10,6,30,.35)),url('https://i.ytimg.com/vi/"+m.youtubeId+"/maxresdefault.jpg')";
     var np=document.getElementById('nowplaying');
-    np.innerHTML=fmtDur(m.endSec-m.startSec)+' &nbsp; <a href="episode-'+m.episodeNumber+'.html">From EP '+m.episodeNumber+' →</a><span class="npdesc"></span>';
+    np.innerHTML=fmtDur(m.endSec-m.startSec)+' &nbsp; <a href="/'+(slugByEp[m.episodeNumber]||('episode-'+m.episodeNumber))+'">From EP '+m.episodeNumber+' →</a><span class="npdesc"></span>';
     np.querySelector('.npdesc').textContent=m.description||m.questionAsked||'';
     [].forEach.call(document.querySelectorAll('.mcard'),function(c,i){c.classList.toggle('playing',currentQueue[i]===m)});
   }

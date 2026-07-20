@@ -1,0 +1,728 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EP 246 · Joel Wermut - Reinventing Real Estate Tech With Prop App | The Numbers Game</title>
+<meta name="description" content="">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" sizes="64x64" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="canonical" href="https://thenumbersgamepodcast.com.au/joel-wermut-reinventing-real-estate-tech-with-prop-app">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="The Numbers Game">
+<meta property="og:title" content="EP 246 · Joel Wermut - Reinventing Real Estate Tech With Prop App | The Numbers Game">
+<meta property="og:description" content="">
+<meta property="og:url" content="https://thenumbersgamepodcast.com.au/joel-wermut-reinventing-real-estate-tech-with-prop-app">
+<meta property="og:image" content="https://i.ytimg.com/vi/OMLSIds1ofI/maxresdefault.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+  :root{
+    --purple:#585af3; --purple-dark:#2c1b8a; --mint:#7ad9a8;
+    --white:#ffffff; --muted:rgba(255,255,255,.60); --dim:rgba(255,255,255,.42);
+    --line:rgba(255,255,255,.12); --card:rgba(255,255,255,.05); --card-hi:rgba(255,255,255,.09);
+    --display:'Anton',Impact,'Helvetica Neue',sans-serif;
+    --sans:'Inter',system-ui,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif;
+    --wrap:1280px;   /* page frame (nav spans this) */
+    --col:960px;     /* content column (player, tabs, text) */
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:var(--sans); color:var(--white); line-height:1.6; -webkit-font-smoothing:antialiased;
+    background:#12093a;
+    background-image:
+      radial-gradient(1200px 600px at 82% -6%, rgba(88,90,243,.45) 0%, transparent 55%),
+      radial-gradient(900px 700px at 5% 8%, rgba(122,217,168,.10) 0%, transparent 50%),
+      linear-gradient(180deg,#2c1b8a 0%,#1a1150 28%,#100b34 62%,#0b0820 100%);
+    background-attachment:fixed;
+  }
+  a{color:inherit}
+  .wrap{max-width:var(--wrap);margin:0 auto;padding:0 36px}
+  main.wrap{max-width:var(--col)}
+  @media(max-width:720px){.wrap{padding:0 22px}}
+
+  /* ── Navbar ── */
+  .nav{position:sticky;top:0;z-index:50;background:linear-gradient(180deg,rgba(24,15,74,.92),rgba(24,15,74,.72));backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+  .nav-in{max-width:var(--wrap);margin:0 auto;padding:11px 36px;display:flex;align-items:center;justify-content:space-between}
+  @media(max-width:720px){.nav-in{padding:11px 22px}}
+  .brand{display:block;line-height:0}
+  .brand img{height:36px;width:auto;display:block}
+  .navlinks{display:flex;gap:28px;align-items:center}
+  .navlinks a{text-decoration:none;font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);transition:.15s}
+  .navlinks a:hover{color:var(--white)}
+  .navlinks a.navtop{cursor:default}
+  .navgroup{position:relative;display:flex;align-items:center}
+  .navgroup .subnav{display:none;position:absolute;top:100%;left:50%;transform:translateX(-50%);padding-top:14px;min-width:180px}
+  .navgroup:hover .subnav,.navgroup:focus-within .subnav{display:block}
+  .subnav-in,.navgroup .subnav{z-index:60}
+  .navgroup .subnav a{display:block;background:#180f4a;border:1px solid var(--line);border-top:0;padding:12px 16px;font-size:12px;color:rgba(255,255,255,.85)}
+  .navgroup .subnav a:first-child{border-top:1px solid var(--line)}
+  .navgroup .subnav a:hover{background:#221768;color:var(--white)}
+  .navburger{display:none;background:none;border:1px solid var(--line);padding:8px 10px;cursor:pointer;color:var(--white);transition:.15s}
+  .navburger:hover{border-color:rgba(122,217,168,.6)}
+  .navburger svg{width:20px;height:20px;fill:currentColor;display:block}
+  .navdrop{display:none}
+  @media(max-width:720px){
+    .navlinks{display:none}
+    .navburger{display:block}
+    .navdrop{display:block;position:absolute;left:0;right:0;top:100%;
+      background:#180f4a;border-bottom:1px solid var(--line);box-shadow:0 24px 50px rgba(0,0,0,.45)}
+    .navdrop[hidden]{display:none}
+    .navdrop a{display:block;padding:15px 22px;text-decoration:none;font-size:14px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:rgba(255,255,255,.9);border-bottom:1px solid rgba(255,255,255,.06)}
+    .navdrop a:last-child{border-bottom:0}
+    .navdrop a.sub{padding-left:42px;font-size:13px;color:rgba(255,255,255,.72)}
+    .navdrop .navlabel{display:block;padding:15px 22px 6px;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.4)}
+  }
+
+  /* ── Hero / hook (marker-highlight system: purple hook wraps naturally, mint payoff below)
+     Rules: title splits at its natural break (colon/pipe/question mark). Front = hook (purple,
+     big), back = payoff (mint, smaller). No break in title = purple hook only. Highlights hug
+     the text (tight em padding tuned to Anton) and wrap via box-decoration-break — never
+     hand-pick line breaks or mint words. ── */
+  header.hero{padding:34px 0 6px}
+  .hook{--inx:clamp(8.4px,2.1vw,15.6px)} /* one shared text inset so hook + payoff first letters align */
+  .hook .hk{font-family:var(--display);font-weight:400;text-transform:uppercase;
+    font-size:clamp(28px,7vw,52px);line-height:1.3;letter-spacing:-.5px;text-wrap:balance}
+  .hook .hk span{color:var(--white);padding:.04em var(--inx) .02em;
+    background:linear-gradient(var(--purple),var(--purple)) 0 50%/100% 87% no-repeat;
+    -webkit-box-decoration-break:clone;box-decoration-break:clone}
+  .hook .pay{font-family:var(--display);font-weight:400;text-transform:uppercase;
+    font-size:clamp(16px,4vw,24px);line-height:1.5;letter-spacing:.6px;margin-top:8px;text-wrap:balance}
+  .hook .pay span{color:#0a0a0a;padding:.08em var(--inx) .04em;
+    background:linear-gradient(var(--mint),var(--mint)) 0 50%/100% 88% no-repeat;
+    -webkit-box-decoration-break:clone;box-decoration-break:clone}
+  /* no-hook titles: mid-split into two full-size rows, purple then mint */
+  .hook .hk span.hkrow{display:block;background:none;padding:0}
+  .hook .hk .hkrow+.hkrow{margin-top:8px}
+  .hook .hk span.mintseg{color:#0a0a0a;
+    background:linear-gradient(var(--mint),var(--mint)) 0 50%/100% 87% no-repeat}
+
+  /* ── Player (clean facade → real player on tap) ── */
+  .player-wrap{margin:24px 0 4px;scroll-margin-top:76px}
+  .player{position:relative;width:100%;padding-top:56.25%;border-radius:0;overflow:hidden;background:#000;box-shadow:0 30px 70px rgba(0,0,0,.5),0 0 0 1px rgba(255,255,255,.06)}
+  .facade{position:absolute;inset:0;border:0;cursor:pointer;background-size:cover;background-position:center;display:flex;align-items:center;justify-content:center;padding:0}
+  .facade .play{width:74px;height:74px;border-radius:50%;background:rgba(10,6,30,.40);border:2px solid rgba(255,255,255,.72);display:flex;align-items:center;justify-content:center;transition:.18s;-webkit-backdrop-filter:blur(1px);backdrop-filter:blur(1px)}
+  .facade:hover .play{background:rgba(88,90,243,.62);transform:scale(1.07);border-color:#fff}
+  .facade .play::after{content:"";border-style:solid;border-width:11px 0 11px 19px;border-color:transparent transparent transparent #fff;margin-left:5px}
+  .player iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+
+  /* ── Episode facts (bottom of the Summary panel — templated per episode) ── */
+  .sumfacts{margin:14px 10px 4px;padding-top:13px;border-top:1px solid rgba(255,255,255,.08);display:flex;flex-direction:column;gap:8px}
+  .fact{display:flex;gap:12px;font-size:13.5px}
+  .fact .fl{flex:none;width:104px;color:var(--dim);font-weight:600;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;padding-top:2px}
+  .fact .fv{color:rgba(255,255,255,.9);font-weight:500}
+  .fact .fv a{color:var(--mint);text-decoration:none;border-bottom:1px solid rgba(122,217,168,.4);transition:.15s}
+  .fact .fv a:hover{border-bottom-color:var(--mint)}
+
+  /* ── Episode tag (identity: black label hanging off the title corner) ── */
+  .eptag{display:inline-block;position:relative;left:-6px;margin-bottom:-7px;z-index:2;
+    background:#0a0a0a;color:var(--white);font-family:var(--display);font-weight:400;
+    font-size:13.5px;letter-spacing:1.5px;text-transform:uppercase;padding:6px 11px 4px}
+
+  /* ── Explore tabs (sticky mode switcher; one panel swaps below, nothing shoves) ── */
+  .explore{margin-top:22px}
+  .tabs{position:sticky;top:58px;z-index:40;display:flex;flex-wrap:wrap;gap:8px;padding:10px 0;
+    background:linear-gradient(180deg,rgba(18,10,55,.96),rgba(18,10,55,.86));
+    backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+  .tabbtn{font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.5px;
+    font-size:14.5px;color:var(--white);background:var(--purple);border:1px solid var(--purple);
+    padding:9px 13px 7px;cursor:pointer;transition:.15s}
+  .tabbtn:hover{filter:brightness(1.12)}
+  .tabbtn.on{background:var(--mint);border-color:var(--mint);color:#0a0a0a}
+  .tabbtn.on:hover{filter:none}
+  .tabbtn .ct{font-size:12px;opacity:.75;font-variant-numeric:tabular-nums}
+  .tabbtn .ct::before{content:" · "}
+  .tpanel{border:1px solid var(--line);background:var(--card);padding:12px 10px 14px}
+  .hint{font-size:12.5px;color:var(--muted);padding:2px 10px 10px;border-bottom:1px solid rgba(255,255,255,.08);margin-bottom:6px}
+
+  /* ── Listen row (no box: label left, service pills follow) ── */
+  .listen{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:12px 16px;margin-top:34px}
+  .listen .lname{font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--dim)}
+  .listen a{display:inline-flex;align-items:center;gap:9px;padding:11px 18px;border-radius:999px;
+    background:var(--mint);color:#08210f;text-decoration:none;font-weight:800;font-size:12.5px;
+    letter-spacing:.04em;text-transform:uppercase;transition:.15s}
+  .listen a:hover{filter:brightness(1.06);transform:translateY(-1px);box-shadow:0 12px 30px rgba(122,217,168,.25)}
+  .listen svg{width:20px;height:20px;fill:currentColor;flex:none}
+  /* ── Listen-now Spotify audio embed (full column width, above the pills) ── */
+  .listen-now{margin-top:40px}
+  .listen-now .ln-head{display:flex;align-items:baseline;justify-content:space-between;gap:14px;margin-bottom:13px}
+  .listen-now .ln-title{font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--dim)}
+  .audio-embed{border-radius:12px;overflow:hidden;box-shadow:0 20px 50px rgba(0,0,0,.4),0 0 0 1px rgba(255,255,255,.06)}
+  .audio-embed iframe{display:block;width:100%;border:0}
+  @media(max-width:720px){.listen-now{margin-top:32px}}
+
+  /* ── Keep exploring (thumbnails link to other episode PAGES, never timecodes).
+     Swipeable strip on mobile, fits three-up on desktop. Variant rule: claim
+     "similar ground" + reason lines ONLY when moment-level topic overlap is
+     genuinely strong; otherwise show the latest released episodes with dates —
+     never invent a connection. ── */
+  .relsec{margin-top:60px;padding-top:58px;border-top:1px solid var(--line)} /* line = end of this episode's info */
+  .reldots{display:flex;justify-content:center;gap:7px;margin-top:12px}
+  .reldots span{width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.25);transition:.2s}
+  .reldots span.on{background:var(--mint)}
+  .relsec .rtitle{display:inline-block;font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.5px;font-size:14.5px;background:var(--mint);color:#0a0a0a;padding:9px 13px 7px;margin-bottom:18px}
+  .relgrid{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding-bottom:6px;scrollbar-width:none}
+  .relgrid::-webkit-scrollbar{display:none}
+  .relcard{flex:0 0 56%;max-width:232px;scroll-snap-align:start;display:flex;flex-direction:column;text-decoration:none;background:var(--card);border:1px solid var(--line);transition:.15s}
+  .relcard:hover{background:var(--card-hi);border-color:rgba(122,217,168,.55)}
+  .relcard img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block}
+  .relcard .rt{display:block;font-size:12.5px;font-weight:600;color:rgba(255,255,255,.92);line-height:1.4;padding:8px 8px 0}
+  .relcard .rfoot{margin-top:auto;display:flex;justify-content:space-between;align-items:flex-end;gap:8px;padding:10px 8px 9px}
+  .relcard .rwhy{font-size:11.5px;color:var(--mint)}
+  .relcard .rtag{display:inline-block;background:#0a0a0a;color:var(--white);font-family:var(--display);font-size:10px;letter-spacing:1.2px;text-transform:uppercase;padding:3px 7px 2px;white-space:nowrap;flex:0 0 auto}
+
+  /* ── Dropdown sections (accordion under the player) ── */
+  .drops{margin-top:34px;display:flex;flex-direction:column;gap:11px}
+  .drop{border:1px solid var(--line);border-radius:0;background:var(--card);overflow:hidden;transition:border-color .15s}
+  .drop[open]{border-color:rgba(122,217,168,.35)}
+  .drop>summary{list-style:none;cursor:pointer;padding:16px 18px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+  .drop>summary::-webkit-details-marker{display:none}
+  .drop>summary .st{font-weight:700;font-size:15.5px;letter-spacing:.005em}
+  .drop>summary .ct{margin-left:auto;font-size:12px;color:var(--dim);font-weight:600;font-variant-numeric:tabular-nums}
+  .drop>summary .chev{flex:none;width:22px;height:22px;border-radius:50%;background:rgba(122,217,168,.14);color:var(--mint);display:flex;align-items:center;justify-content:center;font-family:var(--display);font-size:15px;line-height:1;transition:.2s;transform:translateY(-1px)}
+  .drop[open]>summary .chev{transform:rotate(45deg)}
+  .drop-body{padding:2px 12px 12px}
+
+  /* chapters */
+  .chapter{display:flex;align-items:baseline;gap:14px;width:100%;text-align:left;cursor:pointer;background:none;border:0;color:inherit;font-family:inherit;padding:11px 10px;border-radius:10px;transition:.13s}
+  .chapter:hover{background:var(--card-hi)}
+  .chapter .tc{font-variant-numeric:tabular-nums;font-weight:700;font-size:14px;color:var(--mint);flex:none;width:48px}
+  .chapter .cx{font-size:15px;font-weight:500;color:rgba(255,255,255,.9)}
+  .chapter:hover .cx{color:#fff}
+
+  /* questions */
+  .q{display:flex;align-items:center;gap:12px;width:100%;text-align:left;cursor:pointer;background:none;border:0;border-radius:11px;color:inherit;font-family:inherit;padding:12px 10px;transition:.14s}
+  .q+.q{border-top:1px solid rgba(255,255,255,.05)}
+  .q:hover{background:var(--card-hi)}
+  .q .qm{font-family:var(--display);font-size:15px;color:var(--mint);flex:none;line-height:1;transform:translateY(1px)}
+  .q .qx{font-size:15px;font-weight:500;color:rgba(255,255,255,.92)}
+  .q .go{margin-left:auto;flex:none;color:var(--dim);font-size:18px;transition:.15s}
+  .q:hover .go{color:var(--mint);transform:translateX(2px)}
+
+  /* summary + transcript bodies */
+  .summary-body p{font-size:16.5px;line-height:1.62;color:rgba(255,255,255,.9);padding:6px 10px 4px}
+  .tbody{padding:2px 10px 8px}
+  .tbody p{font-size:14.5px;line-height:1.7;color:rgba(255,255,255,.78);margin-top:15px;max-width:64ch}
+  .tbody .spk{display:block;font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--mint);margin-bottom:2px}
+
+  /* ── Voice note ask (lives at the bottom of the Summary panel) ── */
+  .vask{margin:16px 10px 4px}
+  .vbtn{display:inline-flex;align-items:center;gap:9px;padding:12px 20px;border-radius:999px;border:0;cursor:pointer;
+    background:var(--mint);color:#08210f;font-family:inherit;font-weight:800;font-size:12.5px;
+    letter-spacing:.04em;text-transform:uppercase;transition:.15s}
+  .vbtn:hover{filter:brightness(1.06);transform:translateY(-1px);box-shadow:0 12px 30px rgba(122,217,168,.25)}
+  .vbtn svg{width:18px;height:18px;fill:currentColor;flex:none}
+  .vslot{background:var(--purple);padding:12px 10px 10px;margin:14px 0 4px;box-shadow:0 18px 40px rgba(0,0,0,.35)}
+  .vslot[hidden]{display:none}
+  .vhead{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;margin-bottom:10px}
+  .vhead .vmsg{font-family:var(--sans);font-size:13px;line-height:1.55;color:rgba(255,255,255,.92);margin:2px 0 0;padding:0 2px}
+  .vclose{background:none;border:0;color:rgba(255,255,255,.85);font-size:22px;line-height:1;cursor:pointer;padding:0 2px}
+  .vclose:hover{color:var(--white)}
+  .vslot iframe{display:block}
+
+  /* ── YouTube subscribe pill (sits in the listen row; outranks .listen a's mint) ── */
+  .listen a.yt-pill{background:var(--purple);color:var(--white)}
+  .listen a.yt-pill:hover{filter:brightness(1.1);transform:translateY(-1px)}
+  @media(max-width:720px){ /* mobile: no label, three compact pills on one row */
+    .listen .lname{display:none}
+    .listen{gap:8px}
+    .listen a{padding:10px 13px;font-size:11px;gap:6px}
+    .listen svg{width:16px;height:16px}
+  }
+
+  /* ── Footer: Follow us on | Brought to you by | Produced by, + Menu dropdown ── */
+  footer{border-top:1px solid var(--line);margin-top:68px;padding:52px 20px 58px}
+  .footgrid{max-width:var(--wrap);margin:0 auto;display:grid;grid-template-columns:1fr 1.15fr .8fr;gap:44px;align-items:start}
+  .fcol{text-align:center;display:flex;flex-direction:column;align-items:center}
+  .foot-label{font-size:11px;font-weight:700;letter-spacing:.26em;text-transform:uppercase;color:var(--dim);margin-bottom:18px}
+  .sponsors{display:flex;justify-content:center;align-items:center;gap:34px;flex-wrap:wrap}
+  .sponsors a,.produced a{display:inline-flex;transition:.15s}
+  .sponsors a:hover,.produced a:hover{transform:translateY(-1px)}
+  .sponsors img{height:32px;width:auto;opacity:.92}
+  .produced img{height:30px;width:auto;opacity:.95}
+  .sponsors a:hover img,.produced a:hover img{opacity:1}
+  footer .socials{display:flex;gap:11px;justify-content:center;flex-wrap:wrap;margin:0}
+  footer .socials a{width:40px;height:40px;border-radius:50%;border:1.5px solid rgba(122,217,168,.5);display:flex;align-items:center;justify-content:center;transition:.15s}
+  footer .socials a svg{width:18px;height:18px;fill:var(--mint);transition:.15s}
+  footer .socials a:hover{background:var(--mint);border-color:var(--mint);transform:translateY(-2px)}
+  footer .socials a:hover svg{fill:#0a0a0a}
+  .footbar{max-width:var(--wrap);margin:34px auto 0;border-top:1px solid var(--line);padding-top:20px;display:flex;flex-direction:column;align-items:center;gap:14px}
+  .footnav-dd{display:block;width:100%;max-width:var(--wrap);margin:0 auto;text-align:center}
+  .footnav-dd>summary{list-style:none;cursor:pointer;display:inline-flex;align-items:center;gap:9px;font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.5px;font-size:13px;color:var(--muted);background:transparent;border:1px solid var(--line);padding:8px 16px 6px;transition:.15s}
+  .footnav-dd>summary::-webkit-details-marker{display:none}
+  .footnav-dd>summary:hover{color:var(--mint);border-color:rgba(122,217,168,.45)}
+  .footnav-dd>summary .ham{width:15px;height:15px;fill:currentColor;transform:translateY(-1px)}
+  .footnav-dd .dd-links{display:flex;flex-direction:row;flex-wrap:wrap;justify-content:center;gap:12px 24px;padding:24px 0 4px}
+  .footnav-dd .dd-links a{font-size:11.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:.15s}
+  .footnav-dd .dd-links a:hover{color:var(--mint)}
+  .copyright{font-size:12px;color:var(--dim);text-align:center}
+  @media(max-width:720px){.footgrid{grid-template-columns:1fr;gap:34px}footer{padding:40px 16px 20px}.footbar{margin-top:34px;padding-top:24px;gap:20px}.footnav-dd .dd-links{flex-direction:column;align-items:center;gap:15px}}
+
+  @media(min-width:720px){header.hero{padding:48px 0 6px}}
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "PodcastEpisode", "name": "Joel Wermut - Reinventing Real Estate Tech With Prop App", "url": "https://thenumbersgamepodcast.com.au/joel-wermut-reinventing-real-estate-tech-with-prop-app", "datePublished": "2025-08-25", "episodeNumber": 246, "image": "https://i.ytimg.com/vi/OMLSIds1ofI/maxresdefault.jpg", "partOfSeries": {"@type": "PodcastSeries", "name": "The Numbers Game", "url": "https://thenumbersgamepodcast.com.au/"}}</script>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-in">
+      <a class="brand" href="/" aria-label="The Numbers Game home"><img src="assets/tng-logo.png" alt="The Numbers Game"></a>
+      <div class="navlinks">
+        <a href="/">Home</a>
+        <div class="navgroup">
+          <a class="navtop">Episodes</a>
+          <div class="subnav">
+            <a href="/episodes">All episodes</a>
+            <a href="/adventure">Find moments</a>
+          </div>
+        </div>
+        <div class="navgroup">
+          <a class="navtop">About</a>
+          <div class="subnav">
+            <a href="/about">The show</a>
+            <a href="/nick-reilly">Nick Reilly</a>
+            <a href="/jason-robinson">Jason Robinson</a>
+          </div>
+        </div>
+        <a href="/contact">Contact</a>
+      </div>
+      <button class="navburger" id="navburger" type="button" aria-label="Menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24"><path d="M3 6h18v2H3zM3 11h18v2H3zM3 16h18v2H3z"/></svg>
+      </button>
+    </div>
+    <div class="navdrop" id="navdrop" hidden>
+      <a href="/">Home</a>
+      <span class="navlabel">Episodes</span>
+      <a class="sub" href="/episodes">All episodes</a>
+      <a class="sub" href="/adventure">Find moments</a>
+      <span class="navlabel">About</span>
+      <a class="sub" href="/about">The show</a>
+      <a class="sub" href="/nick-reilly">Nick Reilly</a>
+      <a class="sub" href="/jason-robinson">Jason Robinson</a>
+      <a href="/contact">Contact</a>
+    </div>
+  </nav>
+
+  <main class="wrap">
+
+    <header class="hero">
+      <div class="hook">
+        <span class="eptag">EP 246</span>
+        <h1 class="hk"><span class="hkrow"><span>Joel Wermut - Reinventing Real</span></span>
+        <span class="hkrow"><span class="mintseg">Estate Tech With Prop App</span></span></h1>
+      </div>
+    </header>
+
+    <div class="player-wrap" id="player-wrap">
+      <div class="player" id="player">
+        <button class="facade" id="facade" style="background-image:url('https://i.ytimg.com/vi/OMLSIds1ofI/maxresdefault.jpg')" aria-label="Play episode">
+          <span class="play"></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="explore">
+      <div class="tabs" role="tablist">
+        <button class="tabbtn on" data-panel="p-summary">Summary</button>
+        <button class="tabbtn" data-panel="p-chapters">Chapters<span class="ct" id="chcount"></span></button>
+        <button class="tabbtn" data-panel="p-questions">Questions<span class="ct" id="qcount"></span></button>
+      </div>
+      <section class="tpanel" id="p-summary">
+        <div class="summary-body">
+          <p>Prop App co-founder Joel Wermut joins Jason and Nick to explain the app they call the Tinder for real estate, matching buyers and sellers with vetted agents through a localised tender. He walks through the rise of buyer's agents from 2 to 7 percent, the cost versus value of using one, the human check-in call behind the tech, and the bootstrapped startup journey. They close on runaway REA listing fees, with real examples of 4,500 and 15,000 dollar marketing bills, and why getting eyeballs on a property no longer needs to cost thousands.</p>
+        </div>
+        <div class="vask">
+          <button class="vbtn" id="vbtn" type="button">
+            <svg viewBox="0 0 24 24"><path d="M12 14a3 3 0 0 0 3-3V6a3 3 0 1 0-6 0v5a3 3 0 0 0 3 3zm5-3a5 5 0 0 1-10 0H5a7 7 0 0 0 6 6.92V21h2v-3.08A7 7 0 0 0 19 11h-2z"/></svg>
+            Send us a voice note
+          </button>
+          <div class="vslot" id="vslot" hidden>
+            <div class="vhead">
+              <p class="vmsg">We'd love to hear from you. You can leave up to a 90 second voice note for us to play on the show: a question, some feedback, or a topic you want covered.</p>
+              <button class="vclose" id="vclose" type="button" aria-label="Close">&times;</button>
+            </div>
+            <iframe src="https://www.speakpipe.com/widget/inline/hhq6kzggsx7zpcsvakgxfrzun3zidpde" allow="microphone" width="100%" height="200" frameborder="0" title="Leave The Numbers Game a voice note"></iframe>
+          </div>
+          <script async src="https://www.speakpipe.com/widget/loader.js" charset="utf-8"></script>
+        </div>
+        <div class="sumfacts">
+          <div class="fact"><span class="fl">Release date</span><span class="fv">25 August 2025</span></div>
+          <div class="fact"><span class="fl">Hosts</span><span class="fv"><a href="/nick-reilly">Nick Reilly</a> &amp; <a href="/jason-robinson">Jason Robinson</a></span></div>
+          <div class="fact"><span class="fl">Guest</span><span class="fv">Joel Wermut</span></div>
+
+        </div>
+      </section>
+      <section class="tpanel" id="p-chapters" hidden>
+        <p class="hint">Jump straight to the part you need.</p>
+        <div id="chapters"></div>
+      </section>
+      <section class="tpanel" id="p-questions" hidden>
+        <p class="hint">Real questions this episode answers. Tap one to hear the answer.</p>
+        <div id="qa"></div>
+      </section>
+    </div>
+
+    <div class="drops">
+
+      <details class="drop">
+        <summary><span class="st">Episode transcript</span><span class="chev">+</span></summary>
+        <div class="drop-body tbody">
+          <p><span class="spk">Jason · 00:00</span>Welcome back to the Numbers Game. I'm Jace. I'm here with Nick, and we don't have Marty joining us today. We have a special guest episode. Nick, why don't you tell us a bit about what's happening today?</p>
+          <p><span class="spk">Nick · 00:09</span>Oh, well, firstly, I'll let you know why Marty's not here, um, because we had a deep conversation about this yesterday, but he's, um, he has a new hairdresser and that hairdresser is charging him $88, uh, for a haircut.</p>
+          <p><span class="spk">Nick · 00:22</span>So we had a pretty deep conversation about it yesterday. He sent me a photo. I wanted to know if the extra 58 that he was paying was worth it. Uh. My immediate response was no. Um, and um, I think he was booked in there today too. So, you know, given that it's $88, he hangs around, has a coffee, makes sure he gets his value, gets his full value.</p>
+          <p><span class="spk">Jason · 00:43</span>Yeah.</p>
+          <p><span class="spk">Nick · 00:43</span>So, uh, there you go mate. So you'll be looking forward to seeing him next time and, um. Yeah, I dunno. I'd be keen to see if you notice any changes, but, um, uh, moving on. Yeah. So today we have Joel from, from Prop App. So Prop app, um, look in Transparency Innovate's. Been doing some work with Prop App. We love what we're doing.</p>
+          <p><span class="spk">Nick · 01:02</span>Oh, by what they're doing. Uh, we think they're, they're going to change the way that property, uh, is transacted in Australia, particularly in the way that, um, vendors and purchases deal with real estate agents. So I thought it'd be a great opportunity to get Joel on. And tell us a little bit more about himself and Prop app.</p>
+          <p><span class="spk">Jason · 01:19</span>Joel, how are you mate?</p>
+          <p><span class="spk">Joel Wermut · 01:20</span>Super, very, uh, very excited to be here. Been looking forward to doing this with you boys, so thanks for having me.</p>
+          <p><span class="spk">Jason · 01:26</span>Awesome, Joel. Well, Nick's, Nick's given us a bit of a, uh, Nick's version of the elevator pitch. I'd love to know from your words, just as we get started, what is Prop app to you?</p>
+          <p><span class="spk">Jason · 01:34</span>Like, like how would you reel it off when you try and describe it to your mates at a barbecue?</p>
+          <p><span class="spk">Joel Wermut · 01:38</span>We basically describe it as the app that we wish we had when we were, uh, in the property game or personally trying to buy or sell property. So. You'd be surprised to hear there's about 65,000 agents across Australia, and obviously there's not that many locals where you live.</p>
+          <p><span class="spk">Joel Wermut · 01:51</span>But the choice is still pretty sparse. And trying to decipher whether you are buying or selling, who the best person to connect to, um, isn't actually that straightforward. Um, so we sort of felt like it should be, and so we sort of joke, we built the Tinder for real estate and that's kind of how it is. You, you know, you, you, you, you, you get a way to connect that you otherwise didn't have before and.</p>
+          <p><span class="spk">Joel Wermut · 02:13</span>Rather than admiring the problem, we set about to build it and, uh, build the solution. So that's, that's prop app.</p>
+          <p><span class="spk">Jason · 02:18</span>Uh, I love anytime that you can bring in like describing it as Uber, Tinder, OnlyFans, anything like that, that people can go, oh yeah, okay, cool. You know, it's the Uber of this or Airbnb. Sorry, did I say OnlyFans?</p>
+          <p><span class="spk">Jason · 02:29</span>Airbnb. Sorry Nick.</p>
+          <p><span class="spk">Joel Wermut · 02:30</span>It's not quite OnlyFans. Um, that would be a bit awkward for us, but, uh. Yeah.</p>
+          <p><span class="spk">Jason · 02:35</span>In in, in transparency for anyone who did hear that slip up, uh, OnlyFans is now available on the pre-fill reports for accountants. Um, so if you go to get your tax done, just gonna throw in a warning there as to why that word came outta my mouth.</p>
+          <p><span class="spk">Jason · 02:46</span>It's on the mind due to accountants. Now get OnlyFans data on a pre-fill report to be discussed later. Sorry, Nick, back to you.</p>
+          <p><span class="spk">Nick · 02:53</span>No, it's awesome. Look, um. Looks obviously gonna be a big part of your business moving forward, mate, so I understand how you'd wanna plug the fact that you will look after OnlyFans people.</p>
+          <p><span class="spk">Nick · 03:03</span>So well done for getting that in. Um, where's this going? So Joel, I've, I've got a, yeah. Um, so Joel, I've, I've, I've got a really good understanding of what you guys do and, um, logistically how that works. But maybe if you could just dig into the weeds a little bit. Because I think it's, um, it's definitely worth explaining.</p>
+          <p><span class="spk">Nick · 03:23</span>Okay, if I'm a vendor or a purchaser, uh, what is different and what is my actual experience on Prop app compared to traditional, uh, methods such as, you know, [realestate.com](http://realestate.com), ring a few agents, go through properties, or if you wanna sell your property, have probably three or four agents come through your house and tell you what it's worth, how's the experience different and what does it look like for someone going through proper app?</p>
+          <p><span class="spk">Joel Wermut · 03:45</span>Yeah, so I mean. Traditionally in, in, before we existed, you would do just that. You'd pretty much try and work out maybe by asking a mate, or you've got a cousin or someone who sold the property to you. Uh, when you look at a cell, um, and you'd sort of try and piece together that one. Uh, and it would be a little bit of potluck, uh, as to how you'd go on the day.</p>
+          <p><span class="spk">Joel Wermut · 04:08</span>Um, but we prop out. You don't have to do that, especially if you are, you know, sort of like all of us busy. Uh, you got kids, you're on the, on the way to work it. All the hustle and bustle. Life's pretty noisy on the app. You just jump on, you literally. Press a couple of buttons and tell us about the property.</p>
+          <p><span class="spk">Joel Wermut · 04:25</span>You get all the information for the best agents that we've gone and validated in advance, put on the app. They've signed up, uh, they've shared all the information around their performance, and from there, you pretty much run like a localized tender. So a little bit like when you get a high page as a rare tasker and you wanna get a job done.</p>
+          <p><span class="spk">Joel Wermut · 04:41</span>So this is the same thing, except that in the real estate industry, you wanna know, uh, which agent you should invite. That's best for your property and your circumstances. And so that's pretty much it. That's what people do. So we had, um, exactly that circumstance this morning. They jumped on the app, didn't know who to choose, and he ran the process.</p>
+          <p><span class="spk">Joel Wermut · 04:59</span>So that's gonna cover things like, okay, this is what I think your house is worth. Mr. And Mrs. Smith, uh, this is what we charge from a fee point of view. This is your marketing costs. So it's almost like what we do with mortgage broking. I think we kind of, um, vet the banks, take the bank to the client and say, Hey, they waste your time here.</p>
+          <p><span class="spk">Jason · 05:20</span>This is the bank you need to go to, and this is why. So it's kind of similar, similar to mortgage broking in a way. Um,</p>
+          <p><span class="spk">Joel Wermut · 05:26</span>yeah. Correct. Yeah. I mean, when people come to you, right? We said we, we, we, we obviously have, um. Uh, mutual customers that we, we work with in common who, who look to you for trusted advice on the best finance options and, and, and where to go next in their circumstances and in real estate.</p>
+          <p><span class="spk">Joel Wermut · 05:42</span>Like who, who provides that current service? I. And it's, there is no trusted advisor in that space. Sure, you can go to a, you can go to a vendor advocate, um, in that sense, but we kind of provide that vendor advocacy in a self-service fashion. You jump on the app, it's your private, um, account. It's your personal information that you have only to yourself and you just, it's sort of DIY.</p>
+          <p><span class="spk">Joel Wermut · 06:01</span>Uh, it's all there for you.</p>
+          <p><span class="spk">Jason · 06:03</span>This is buying and selling, just so I'm clear as well. Yep. 'cause I think, uh, I, I, in transparency, signed up to the app as well. You did. And was very impressed Joel, uh, when I got a phone call. So is that part of the standard process as well? When somebody signs up to the app, they start punching in their details.</p>
+          <p><span class="spk">Joel Wermut · 06:16</span>At some point in the early part of their journey, there is a check in call to, to talk them through. So. Are you dealing with a human as well, not just kind of using an app and not having any human intervention? Yeah. Correct.</p>
+          <p><span class="spk">Joel Wermut · 06:26</span>Yeah. Correct. So we, we, we really wanted to make sure that people that jump on the app understand there's a local presence and that there's a local team here.</p>
+          <p><span class="spk">Joel Wermut · 06:33</span>Uh, sure we use like lots of AI and robots under the hood to make the tech as amazing as it needs to be. So you get a great experience. Above that there's a, a great 10 people that sit in Melbourne and yeah, Jason, you've had that experience firsthand when you were looking to purchase property. We call you, we speak to you, and we make sure that you've got everything you need and you're comfortable with it.</p>
+          <p><span class="spk">Jason · 06:51</span>And to be honest, I I was pretty blown away and pretty impressed by it. Like, I mean, I, I'm, I'm a fan of innovation and technology and automation, so any of that stuff, like the initial text message I got and the way it kind of flowed me through, but I was. Pleasantly surprised by the human intervention of just a check and call saying Good day to, to learn about me and my journey too, which I think we can lose sight of that in this new age, technology focused world, that there is still a human element.</p>
+          <p><span class="spk">Jason · 07:18</span>There's empathy, there's decision making, there's feeling and emotion that, you know, punching things into a computer system doesn't necessarily translate that through to talking to a human and go, this is what I need, this is what I want, actually being steered in the right direction. So. Yeah, just an early kudos to you and the team for, for adding that in rather than trying to go totally no human involvement.</p>
+          <p><span class="spk">Jason · 07:36</span>I think that's been a, a brilliant step.</p>
+          <p><span class="spk">Joel Wermut · 07:38</span>Thanks, pat. That's great. That's great feedback. I mean, at the end of the day, we sort of recognize that. It's property. Most people only buy and sell once or twice in their lifetime if they're lucky. And it is a very emotional experience. Um, and it means a lot. It means a lot.</p>
+          <p><span class="spk">Joel Wermut · 07:51</span>It's probably the most important financial decision you'll make. So it needs to be that human element attached.</p>
+          <p><span class="spk">Joel Wermut · 07:55</span>So, and Jay, you could probably chime in here too, so that we talk through a vendors experience, but from a buyer'ss experience, 'cause a lot of our listeners out there and good chunk of the market, particularly at the moment, it's a pretty buoyant market from a buyer's point of view.</p>
+          <p><span class="spk">Jason · 08:08</span>Um. If I'm a buyer, why am I going to prop app? Am I going there to use it as a replacement for [realestate.com](http://realestate.com)? Are you keeping me, keeping me updated? What's actually happening there?</p>
+          <p><span class="spk">Joel Wermut · 08:18</span>Yeah, so the byproduct we're really, we're really proud of, of, uh, what we're trying to achieve in this one. It's, it's an emerging market and, and basically we're doing the same thing as we did with connecting to experts or the best on the sales agent side.</p>
+          <p><span class="spk">Joel Wermut · 08:30</span>But this, I'm in an emerging market with buyer's agents. I'm sure many of the people that listen to this podcast will be quite familiar with what a buyer's agent does. But for most Australians, it's actually quite novel. It's an emerging market. So a couple of years ago, uh, 2% of every purchase was done through a buyer's agent.</p>
+          <p><span class="spk">Joel Wermut · 08:46</span>Fast forward to today, it's closer to 7% and it's growing. So in a lot of overseas markets, uh, people, um, buy through buyer's agents. In some countries, it's, it's actually mandated. It's, it's a legal requirement. In Australia, that's not the case. The, the, the argument for having a buyer's agent is, it's a little bit hard to describe the power disadvantage for a buyer when going and, and trying to buy a property off a sales agent with the full knowledge that a sales agent is acting in on behalf of the vendor.</p>
+          <p><span class="spk">Joel Wermut · 09:18</span>And we work with many of those great sales agents who's acting on behalf of, of the buyer. Uh, and in that situation, um, it's not really an even contest. And so a buyer's agent helps. Exactly in that fashion, they are effectively bringing to you a level of expertise in dealing with the sale of properties.</p>
+          <p><span class="spk">Nick · 09:35</span>Both on market and obviously pre-market or describes off market, um, for, for buyers and acting in their favor?</p>
+          <p><span class="spk">Joel Wermut · 09:41</span>Yeah, so it's, you're doing exactly the same. You're vetting the buyer's agent. The buyer's agent is coming in and you know, if it's Jace for example, and he's putting his details as to where he wants to purchase, some buyer's agents will tender for that role.</p>
+          <p><span class="spk">Jason · 09:54</span>And then Jace will get a good understanding of where he needs to go. Correct. Yeah. I love that because, you know, I'm actually baffled by what you just said there on the buyer's agent percentage at 7%. To me it feels like more like when we're obviously a mortgage business and we've got a, a reasonable I.</p>
+          <p><span class="spk">Jason · 10:10</span>Um, reasonably big mortgage business. So what we see is a pretty good indication of trends, particularly in Melbourne. Um, and I just feel like so much more of our work and our lead flow in the last probably six months is coming from buyer agents and then we're talking to these businesses and they just want to grow, grow, grow.</p>
+          <p><span class="spk">Jason · 10:28</span>So. I think it's just gonna become the norm to your point earlier, um, that people use buyer's agents, um, for sure. So, yeah, I love that because, you know, and Jace will, um, can respond here, but you know, Jace is busy enough in his own business to then try and vet a buyer's agent, let alone then go through the process, uh, of looking for property.</p>
+          <p><span class="spk">Nick · 10:49</span>Um, everyone's time poor and people's time is generally better spent in their business or at work, you know? Yeah.</p>
+          <p><span class="spk">Jason · 10:55</span>And it's, it's very true, Nick. I mean, part of, you know, KC and I on our personal journey to buying a property, one, one big part of it is that every time we go to think about it or go to action on the weekend or go looking, there is that energy level that's required.</p>
+          <p><span class="spk">Jason · 11:08</span>The knowledge and you know, of where we're going and what we're doing. And if it's just two of us, you know, we have to hold each other accountable and then. Most of the time it's like, well, we're too busy doing other things. Something else pops up. So actually engaging a professional, giving them a brief and letting them do what they're paid to do and do a great job at it obviously makes a lot of sense.</p>
+          <p><span class="spk">Jason · 11:25</span>But the, the numbers were very surprising. Um, I think it's probably some more awareness and education and, and marketing advertising, you know, to the, to the greater Australian population that if you are in. Buying a property or even an investment property, if it's your first time getting into the investing market, that a buyer's agent isn't a bad thing or you know, it's not something you should steer away from using because it might cost you 10 grand or 15 grand when a lot of the time the perceived value of that is that if you get the property at the right price, you're gonna get that back in value in inequity that you've saved or that you're gonna make by buying in the right area at the right time by somebody's knowledge.</p>
+          <p><span class="spk">Nick · 12:00</span>So yeah, very surprised by that too. And uh, yeah. Very good. Good one to bring up to discuss.</p>
+          <p><span class="spk">Joel Wermut · 12:05</span>I was speaking to a customer yesterday, um, you know, with regard to timing and the fact that it does cost your point 10, 15 K to, to, to get that service or that value add. And he was sort of saying, well, why, why would you do that?</p>
+          <p><span class="spk">Joel Wermut · 12:16</span>And I said, well, how long have you been searching for a property for? Because he's been gonna auction after auction and being under bidder or you know, you can imagine that experience. We've all heard plenty of horror stories and he is been trying to buy property for about, you know, a year, year and a half now, depending on where you're trying to buy, you know, the capital growth in that area is gonna fast outpace the 15 K you're gonna spend on the property anyway.</p>
+          <p><span class="spk">Joel Wermut · 12:36</span>So. You've really gotta look at it from a strategic perspective, um, uh, to understand the true value. And I, and I think it just makes sense in, in, in, in more, more scenarios than other.</p>
+          <p><span class="spk">Jason · 12:46</span>Yeah. Even, even if you bought a, a half million dollar property, 5% for a year, you've got 25 grand back, uh, pretty quickly or 25 recouped over your 10 or 15 you spent.</p>
+          <p><span class="spk">Jason · 12:56</span>So yeah, absolute no brainer. And I think that. That definitely is something that sticks in my head is just the time to get into market if you are doing it yourself. Um, you know, decision paralysis, you know, case and I are the first property we walked into all those years ago, starting the search. We went, man, this is awesome.</p>
+          <p><span class="spk">Jason · 13:12</span>Like this ticks all the boxes, but we went, oh, but it's the first one we've looked at. Like, surely we can't buy the first one we look at, and we went and saw maybe another five or six over a couple of weeks. Kept on thinking back to that first one and it had sold. Just as we kind of made our decision that yes, that's the one we should go back for.</p>
+          <p><span class="spk">Jason · 13:28</span>And it was gone. And, and to this day, we've still been devastated about it the whole time. We have to drive past it every week basically when we go to a friend's house on a Wednesday night for an ice bath and yeah, it's, it still sits there. So, yeah, I mean, to those who, who think, you know, should I use a buyer's agent?</p>
+          <p><span class="spk">Jason · 13:41</span>Should I, you know, jump on and use an app like Prop app? I mean, this is the examples of. Anything that can help you get to that decision and make an informed decision faster and start to present new properties that, that are what you're after. I think it makes absolutely perfect sense.</p>
+          <p><span class="spk">Joel Wermut · 13:55</span>I, I think the other important thing to note too, with buyer's agents is there is a lot of properties that don't hit the market, particularly in that middle and upper level, like, um, yeah, the family home market.</p>
+          <p><span class="spk">Joel Wermut · 14:07</span>Properties that are, um, you know, that are high in demand. A lot of the times we have clients transact with properties that weren't even listed. Um, so yeah, you actually will find, you'll get access to more properties as well at the same time. So, yeah, I think, um, I think it's just gonna become, um, the done thing, particularly for certain price brackets.</p>
+          <p><span class="spk">Nick · 14:27</span>Um. For sure. Obviously there's a bit of thought that's gone into this, but, um, yourself and your business partner, s Zach, are the co-founders. Talk us through the, the aha moment where you went, you know what? Holy shit, we've got an idea here and this could really change the game. Was there, was there something that happened?</p>
+          <p><span class="spk">Nick · 14:45</span>Were you going through the process yourself? Um. Talk us through. Yeah. How, how'd you come up with the idea?</p>
+          <p><span class="spk">Joel Wermut · 14:50</span>Zach was at the time, um, and, uh, we were, we were chatting and I was, I was, uh, I, I've, I've been my background's tech. So, um, when he and I were speaking about his experience and his journey, trying to sell property and get access to a great agent, find out the information, the experience we currently offer, I was kind of like pretty, um.</p>
+          <p><span class="spk">Joel Wermut · 15:10</span>Critical or like, I just didn't believe it fundamentally. Like, I was like, nah, surely that's, that's gotta be a thing already. I mean, REA and domain are massive. Surely this is an experience you can just get access to right now. Um, and I, my, my background again is not in property and most of the tech that I've done has been in banking and finance, so I just assumed that it existed.</p>
+          <p><span class="spk">Joel Wermut · 15:29</span>And so, yeah, when I realized that it didn't, that was it. It was kinda like. That was the moment where we said, well, why wouldn't it? And then we did the usual thing. You test, you know, you, we bootstrapped it ourselves. So, uh, we didn't seek funding. Um, and we, we sort of just went out ourselves and did lots of testing to make sure that it was not just us saying that it was a good I idea.</p>
+          <p><span class="spk">Joel Wermut · 15:49</span>And, um, yeah, that, that, that was kind of it.</p>
+          <p><span class="spk">Jason · 15:51</span>What, what's the timeline from that idea inception or the aha moment that Nick talked about? What's the timeline between then and now? What's, how long has it taken and was there any moments where you thought. This is, this is too hard. It can't be done. Or, you know?</p>
+          <p><span class="spk">Jason · 16:04</span>Yeah. Just take us through a bit of the mindset of the startup journey and some of the challenges you might have come up against.</p>
+          <p><span class="spk">Joel Wermut · 16:09</span>Yeah, and I'll, I'll be completely, I mean, yeah, Nick, you, you've known me for a little while now. I'll be a hundred percent transparent, I feel like in the startup space. You have those moments all the time, no matter how good you're going.</p>
+          <p><span class="spk">Joel Wermut · 16:20</span>So, um, you know, I could tell you right now, whilst we're having some amazing, uh, uh, experiences, I, I'd be lying if I said it's all smooth sailing and you still have those questions all the time, right? Because that's just the nature of the startup journey. Uh, that's why not many people do it, and that's why not many of them that do do it.</p>
+          <p><span class="spk">Joel Wermut · 16:36</span>Come off. Um, that being said, to answer your first question, we, um, from the time we had the idea, we sort of went through that phase where we tested it, validated that it, that it resonated with enough people. Uh, and we sort of got our first release out within, I'd say six to nine months. Um, yeah, that, that, that, that's obviously crawling through.</p>
+          <p><span class="spk">Joel Wermut · 16:54</span>The fact that we bootstrapped it ourselves. Could you go faster? Possibly. Would you want to go faster? Maybe not. Yeah, maybe not, because there's a lot of pitfalls in, in that process as well. So yeah, about about nine months to our first release. And then, um, where, where are we now? We're about. Two, two and a half, two to two and a half years in.</p>
+          <p><span class="spk">Joel Wermut · 17:10</span>So</p>
+          <p><span class="spk">Joel Wermut · 17:11</span>doesn't matter if you're a startup or established, you never, you never stop questioning. Yeah, we still have those, we still have those moments every second day. 17 years in,</p>
+          <p><span class="spk">Nick · 17:19</span>I was thinking the same thing. So say, um, for, for Prop app, you know, what, what do you envision is, is the big, the big picture, the mission, the vision, you know, is there a kind of a target in the, you know, short to medium or long term of how many people you want to help, how big you want to get?</p>
+          <p><span class="spk">Nick · 17:32</span>Like is there a bit of a goal?</p>
+          <p><span class="spk">Joel Wermut · 17:33</span>I I, I try to keep it pretty simple. I, I think we just wanna help as many people. Um, as we can. I mean, that sounds a bit cliche, but, uh, I have, I have conversation. So the classic, the classic person that we helped, for example, is the first home seller. People that haven't sold a property before or potentially the first home buyer.</p>
+          <p><span class="spk">Joel Wermut · 17:51</span>But then having said that, you know, a lot of, a lot of people like, um, in the previous generation have owned their home and they're sort of in their sixties, seventies looking to downsize, and that is their first home sale. So, uh, our, our, our personas are, are unusual in that sense. We've gotta appeal to.</p>
+          <p><span class="spk">Joel Wermut · 18:06</span>People that are of different age brackets, still doing the first time sell and still doing the first time buy unusually. So we just wanna honestly just help as many people as as, as we can and provide an alternative to just jumping on. The, the, the portals and jumping in the market, which is already crowded and contested.</p>
+          <p><span class="spk">Joel Wermut · 18:24</span>That's pretty much, that's pretty much our, our, our, our ambition.</p>
+          <p><span class="spk">Jason · 18:27</span>Yeah. I'm picturing, uh, grandkids or kids getting a call from their elderly parents saying, I'm trying to, I'm on this app. I'm trying to sell my property. Can you come around and help? And someone's sitting there going. Man, you can't sell your property on an app, don't do that.</p>
+          <p><span class="spk">Jason · 18:39</span>Not understanding that this is something that, that now exists. So, um, as you, you know, you come up with the idea, you start to develop it. Do you start to identify that there's something in the market that was trying to do this? Did something like this exist? Is there something worldwide that you kind of looked at and were able to kind of study to replicate, um, from a com competition or competitor's point of view, or, or is it basically that unique.</p>
+          <p><span class="spk">Jason · 19:01</span>That, that there wasn't anything you could really look at to, to benchmark or, you know, compare against,</p>
+          <p><span class="spk">Joel Wermut · 19:06</span>there's plenty of comparison sites and it's kind of shiting shit out. So you sort of, you, you can jump online, you can um, you can have your data mind by them with no security applied whatsoever, and then all of a sudden you'll get tons of phone calls come back your way.</p>
+          <p><span class="spk">Joel Wermut · 19:21</span>So there's that experience. And No worries. And then, um, beyond that, there's the overseas experience. Um, they have a little bit of a different, uh, little bit of a different scenario where the companies that are doing something of this nature are effectively hard negotiating all the rates of all the agents that they onboard to the platform.</p>
+          <p><span class="spk">Joel Wermut · 19:39</span>We, we didn't think then Australia, that was a good idea. Um, and certainly. With regards to people that are using the platform, it's not the case that our customers are going for the agents on the selling side that have the lowest rates and the lowest fees. That's not the way that, that's not the way that the data leads us.</p>
+          <p><span class="spk">Joel Wermut · 19:55</span>So we didn't think that that was suitable for our. Our environment. And so we haven't pursued that. But there are, there are examples out there that are, um, that operate in other countries as well.</p>
+          <p><span class="spk">Jason · 20:04</span>And if, if I'm thinking the, the competitor for you, um, here that comes to mind is, um, probably rate my, my agent.</p>
+          <p><span class="spk">Jason · 20:12</span>Um, and I believe, correct me if I'm wrong, but all that really does is give the agent, um, a, a rating. Um, via some kind of, almost like a Google review where you can go on and look at, uh, what they've sold, um, and the reviews, but it doesn't necessarily, there's no connection to your transaction, right? So it's almost like checking a business and looking at their Google reviews online.</p>
+          <p><span class="spk">Jason · 20:35</span>That's what rate my agent does, if I'm correct, but you, yours goes a step further.</p>
+          <p><span class="spk">Joel Wermut · 20:40</span>Look, I mean, they've got, they've built a, they've built a good, I can't knock them for the business they've built and they've got plenty of, um, plenty of adoption countrywide. It's not our business model. Um. So. Uh, you know, far, far better for me to sort of throw stones, but yeah, I mean, there's, there's questions to look at on that one as well.</p>
+          <p><span class="spk">Joel Wermut · 20:55</span>Yeah, and I, I guess, um, the reason I went down that path was, you know, anyone who's thinking about, okay, geez, do I use use prop app or should I use Prop app? It's really anyone that would be, you know, going to something like Rate My Agent, um, can then divert to you guys. And, uh, and there's no cost to the.</p>
+          <p><span class="spk">Joel Wermut · 21:11</span>To the user, right. The cost is to the agent to be subscribed to your platform and have the op or the opportunity to use your platform and the opportunity to, to, to quote on products. Yep. But a vendor or a purchaser doesn't actually pay anything. No. Is that correct? That's correct. Yeah. Yeah, yeah. Yeah. We,</p>
+          <p><span class="spk">Joel Wermut · 21:25</span>we we're, we're, we're pretty keen from day one not to, like, this experience should be a value add for all customers.</p>
+          <p><span class="spk">Nick · 21:31</span>Yep.</p>
+          <p><span class="spk">Nick · 21:31</span>How are you, uh, finding that people are. Hearing about Prop app?</p>
+          <p><span class="spk">Joel Wermut · 21:36</span>Uh, yeah, so lots of word of mouth, which you need in, um, in whenever you're, when you're sort of a small business and starting up. So thank you to to everyone for that. Um, and we've launched a pretty, um, adventurous, um, I'll use that word, social media strategy.</p>
+          <p><span class="spk">Joel Wermut · 21:52</span>You know, we really wanted to make property, uh, something that was worth stopping to scroll for. So we've got a. Uh, a bunch of very creative people. That's not me. Um, who in-house, um, yeah, just produce some amazing content and it's stuff that you wanna watch. It's educational, but it's lighthearted. Uh, and it, and it encourages you to learn a bit about, a bit, a bit about the property process from afar.</p>
+          <p><span class="spk">Joel Wermut · 22:17</span>And then as you get a bit deeper into the process, you, you sort of get a bit, uh, a bit more into, um, to the ins and outs of the, of, of the way that it all works. So, yeah, that's. That's been it. And some, and some great partnerships. Of course.</p>
+          <p><span class="spk">Jason · 22:28</span>Yeah. I must admit, when I saw the, the, um, Instagram or the reel or whatever, which was the partnership with Innovate, I was like, oh, come on.</p>
+          <p><span class="spk">Jason · 22:35</span>This, this is, this is pretty good. Like, you know, the, you know, Nick was in there and you had the logos and the, you know, um. Headings and titles and everything. I'm like, this, this is cool, this is fun. Like, it didn't look and it wasn't overly produced, but at the same time it was very slick and professional, which I, I kind of liked.</p>
+          <p><span class="spk">Jason · 22:51</span>And obviously, you know, Nick is a male model on any, uh, advertisement he does, uh, makes, makes things look pretty good. He said it</p>
+          <p><span class="spk">Joel Wermut · 22:58</span>full transparency. Uh, when that video came out, I shot it straight to our GM and I said, why aren't we doing this kind of stuff on our social media? So, um. It does look really good.</p>
+          <p><span class="spk">Joel Wermut · 23:11</span>Um, it's actually made us rethink how we're presenting ourselves, um, on social media and, and marketing in general. So, um. Hopefully it yields the results you're looking for. Obviously you are pretty new as far as a, a product goes, but you've got, you've got data flowing in, whether they be vendors or properties.</p>
+          <p><span class="spk">Nick · 23:32</span>Anything that's surprising you, um, on what you're seeing come in just in the, the general real estate market or type of client, or is there anything that the data's telling you that's interesting? Um, since, since, since you've kicked off,</p>
+          <p><span class="spk">Joel Wermut · 23:46</span>I wasn't expecting as many. Um, people in Melbourne to be buying outside of Melbourne initially through the service.</p>
+          <p><span class="spk">Joel Wermut · 23:52</span>I thought it would be more of a localized, a, a localized data set that we would be operating in. And that's, and I kind of mean that more on the buy side than the sell side, which is interesting. People looking to buy outside of Melbourne, but from Melbourne. Uh, I guess that makes sense when you boil it down.</p>
+          <p><span class="spk">Joel Wermut · 24:05</span>Like, if you're not coming to us with a buy, how do you, how do you purchase property outside of, outside of a network you haven't got access to? So that, that kind of makes sense. Um. Yeah, I think the fees was another one. We had a hypothesis that people would probably choose some of the lower fees for our, for our customer base.</p>
+          <p><span class="spk">Joel Wermut · 24:20</span>That's not the case either. People are far more motivated by performance. They want agents that have a proven record that they can relate to, that they'll work well with. Um, yeah, I think that's, those are probably the two Yeah. Interesting points we've observed so far.</p>
+          <p><span class="spk">Jason · 24:35</span>That's such a great correlation right around the, the percentage fee you pay for performance based on getting a, getting a deal or paying the lowest amount.</p>
+          <p><span class="spk">Jason · 24:43</span>And I remember a younger me, I. When selling a property, I was that person who was like, oh, you know, X percent, you know, I'm not gonna pay that. This, you know, the house is gonna sell itself anyway. Right. Run. And you know, now with experience and you know, working more around these kind of industries and professionals, I can go, oh, hang on a minute.</p>
+          <p><span class="spk">Jason · 25:02</span>Like the awareness around a good operator with a good brand, with a good presence in the market can command a more premium price than. The house would've just sold itself anyway. And look, I'm sure there is some hot markets where a property might just sell itself, but again, you know, there's a time and a place where paying the right value or the right amount for performance makes a big difference.</p>
+          <p><span class="spk">Jason · 25:21</span>So that was very well said, mate.</p>
+          <p><span class="spk">Nick · 25:23</span>What's next, mate? Obviously you've got the, you've started with vendors, you've got the buyers agents now coming through, or that's the, um, phase two, maybe you'd call it. Um. Just looking at, um, looking at who you're bringing on from an agent point of view. Look, I've got a pretty good understanding of who's who in Melbourne.</p>
+          <p><span class="spk">Nick · 25:43</span>You, you, you're signing up plenty of agents onto the system, which is fantastic because if you're a vendor, you wanna make sure the best agents are on there. And I can see the people you're signing up and they are, um, top. Top agents in Melbourne. What's next for you guys? Like what are you focusing on at the moment?</p>
+          <p><span class="spk">Nick · 26:00</span>Is there anything, you know, without telling us too much that you can't?</p>
+          <p><span class="spk">Joel Wermut · 26:03</span>Oh, there's no, there, there's a couple of obvious things. Um, so, uh, I think you know this, Nick. I, I grew up in Sydney the first 23 years of my life, so. Um, we're, we're looking to, we're looking to go back to Mel Stomping ground, um, and, um, leverage the network we've got there on the selling side.</p>
+          <p><span class="spk">Joel Wermut · 26:19</span>So, um, that's, that's a big, it's a big focus for us to extend what's working in Melbourne, but into other, other parts of Australia. Um, and beyond that, um, there is a very exciting opportunity. We, so we don't wanna be a listings portal. That's, we exist to be an alternative to that, which means we don't, we just wanna have everyone jump on and see all the listings, however.</p>
+          <p><span class="spk">Joel Wermut · 26:40</span>We are doing something pretty cool and exciting. Um, I'll say related to that space, I don't wanna give too much of a spoiler away. Uh, so when you jump on the app, you'll be able to see some pretty cool content soon in and around that space, but it won't be listings as you know it. Um, I'm gonna shut up there before I get in trouble,</p>
+          <p><span class="spk">Jason · 26:56</span>so I'm glad you brought that up because I wanna ask you a question, maybe not quite related, but um, obviously we know from a listings platform.</p>
+          <p><span class="spk">Jason · 27:04</span>Point of view, REA is the dominant force. Um, [realestate.com](http://realestate.com). Everyone's got that app, including me. I'm one of those people. We know that Domain is a competitor. Um, I don't even have the domain app. Um, don't ask me why. I just don't. And I think a lot of people would have the same answer. Uh, domain, I believe has just been bought out by a big American.</p>
+          <p><span class="spk">Jason · 27:25</span>Business. Um, so it'd be interesting to see there what happens with domain. But from what I understand too, REA has just significantly increased their marketing fees. Um, and those marketing fees get passed on to, uh, the, the vendor, not the agent. So to have your property listed on, uh, a platform like [rre.com](http://rre.com), I'm going through the process now of selling a couple of investment properties.</p>
+          <p><span class="spk">Jason · 27:50</span>'cause I need to buy a new house. I need to get on your app. Um. And I think the last one, the marketing fee was four and half thousand dollars. And that was to list my property on [re.com](http://re.com). That that doesn't include the agent. Um, it just includes the listing on REA and that's a fee outta my pocket as the vendor.</p>
+          <p><span class="spk">Jason · 28:09</span>So do you see. Uh, what you are doing in any way can we disrupt that? Because it is getting outta hand and, um, you've only gotta look at re's. Um, for anyone who's interested, have a look at re's numbers. They're publicly listed business, so it's out there and they are making cash on cash, on cash, on cash.</p>
+          <p><span class="spk">Jason · 28:29</span>They're buying everyone because they've got so much money, they dunno what to do with it. Um, they wanna buy the mortgage market at the same time, so. Do you think there's, you know, obviously initiatives like your, like what you are doing, is there any chance that some market share can be taken away there?</p>
+          <p><span class="spk">Jason · 28:45</span>Um, purely just to get, you know, get the fees down to, to market your property or to list your property. Um, on a listing platform, four and a half thousand seems crazy. Given how easy it is now to access data, um, to take photos, I would suggest re's efforts to list the properties probably gone back, gone backwards while their fees continue to go up.</p>
+          <p><span class="spk">Jason · 29:07</span>So probably more of a holistic industry tech question, but, um, I think a lot of people would be thinking it because when they, when they go to sell their property, they think about the agent fee. I don't think they think about the fact that RE a's gonna want. A significant amount of money for them to list it there.</p>
+          <p><span class="spk">Joel Wermut · 29:25</span>Yeah, I mean, as weird as this might sound, your story is a good story. I know someone recently whose marketing fees were $15,000 and then I, and then I said, oh, but that includes things like styling and god knows what else was chucked in. And they said, no, no, no, no, that's on top. And I said, really? Okay. I kind of left it there 'cause I didn't want to, you know, that was kind of the end of that, that that discussion.</p>
+          <p><span class="spk">Joel Wermut · 29:50</span>But yeah, it's getting outta control and it goes by the value. Yeah. Is that right? Uh, I don't know how this wasn't a transaction done through Prop app, so, um, I, I don't actually know the ins and outs of how that agent did that, but yeah, I, I mean, I was, I was pretty blown away by that example. What. So come back to your question.</p>
+          <p><span class="spk">Joel Wermut · 30:09</span>Yes, there absolutely is. It doesn't cost 15,000 or $5,000 to get an audience to view your property, particularly when most of the audience that's coming to buy a property tends to be local. The data all supports that. So you're putting on a, on a, on a, on a, on a, on an app that needs it. I mean, EA needs that, right?</p>
+          <p><span class="spk">Joel Wermut · 30:25</span>That's, that's how they, that's their business model is eyeballs on a, on a property. So it's a, there's, there's, there's certainly that, and the feedback from the agency is consistent that year on year, they're being asked to increase their fees and they. And they obviously passed that on. That's, that's, that's the nature of all, um, service providers.</p>
+          <p><span class="spk">Joel Wermut · 30:40</span>You, you can't wear all the fees. Some of it you can, but some of it you can't. Um, so yeah, there's definitely an opportunity for us to do something in that space. I'll just say we are and watch that space because we are, we are doing something very cool. So, yeah,</p>
+          <p><span class="spk">Jason · 30:53</span>I love it. That's, uh, super exciting, especially as, as you're now ingrained in this space or living and breathing it every day, you are seeing more of the problems or more of the challenges for all of the different parties that are involved.</p>
+          <p><span class="spk">Jason · 31:04</span>So, nah, love, love the mindset. Uh, it</p>
+          <p><span class="spk">Joel Wermut · 31:06</span>just doesn't cost that much to be able to produce content about a property to then broadcast that in an appealing way to an audience. It, it just doesn't, in 2025, so. I won't go too fur. I won't go too much further than that, but it just doesn't, it's just not the way of the world anymore.</p>
+          <p><span class="spk">Nick · 31:19</span>I would recommend that if you love a good Instagram, uh, page to follow with some great videos, go and have a look at Prop app au. Um, mate, Joel, anywhere else we should find you, contact you if anyone's interested, obviously downloading the prop app from their, you know, Google Store app stores one thing, but can anyone reach out or get in contact with you if they need to?</p>
+          <p><span class="spk">Nick · 31:37</span>Where can we find your details or you</p>
+          <p><span class="spk">Joel Wermut · 31:38</span>a, a absolutely. Uh, I believe my details on the website, if not. Um, there's a, there's a, there's a bunch of forms on the site. You can press it. I man that with, uh, Zach, our business partner, so we'll always see it. And, uh, yeah, I mean, happy to, happy to have a conversation or a coffee.</p>
+          <p><span class="spk">Joel Wermut · 31:52</span>We're still local. We're still, uh, we're still keen to connect face to face, so whatever, whatever helps.</p>
+          <p><span class="spk">Nick · 31:57</span>Awesome mate. Well appreciate you coming on. Appreciate you sharing the journey of Prop app so far. It's definitely been, uh, a great lesson for us to learn what's happened behind the scenes and to learn more about the market.</p>
+          <p><span class="spk">Nick · 32:07</span>Great for me to get a phone call from you earlier in the week, so I appreciate that mate, and look forward to continuing the journey myself into buying a property on Prop app. And, uh, excited then to be synced up with the Innovate team that are doing amazing things as well. Um, if you've listened so far, please like, subscribe, share, tell a friend about the Numbers Game podcast.</p>
+          <p><span class="spk">Nick · 32:23</span>We love having you listen to our show. Until next time.</p>
+          <p><span class="spk">Jason · 32:27</span>When it's broke, fix it. And that's what Prop app are doing. Game over</p>
+          <p><span class="spk">Jason · 32:32</span>this podcast is for educational and informational purposes only. The conversations are of general nature and do not qualify as financial or tax advice. We recommend before you make any financial decisions, you consult a licensed professional.</p>
+          <p><span class="spk">Jason · 32:45</span>Individuals on the podcast may hold positions in the companies discussed. ---</p>
+        </div>
+      </details>
+
+    </div>
+
+    <!-- LISTEN:START -->
+    <section class="listen-now">
+      <div class="ln-head">
+        <span class="ln-title">Listen now</span>
+      </div>
+      <div class="audio-embed">
+        <iframe src="https://open.spotify.com/embed/episode/6Y0AnhdZSJ6F6XiiGLHsDl?utm_source=generator"
+          width="100%" height="152" loading="lazy" allowfullscreen
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+          title="Spotify — Joel Wermut - Reinventing Real Estate Tech With Prop App"></iframe>
+      </div>
+    </section>
+
+    <div class="listen">
+      <a href="https://open.spotify.com/episode/6Y0AnhdZSJ6F6XiiGLHsDl" target="_blank" rel="noopener" aria-label="Listen to this episode on Spotify">
+        <svg viewBox="0 0 24 24"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.52 17.34c-.24.36-.66.48-1.02.24-2.82-1.74-6.36-2.1-10.56-1.14-.42.12-.78-.18-.9-.54-.12-.42.18-.78.54-.9 4.56-1.02 8.52-.6 11.64 1.32.42.18.48.66.3 1.02zm1.44-3.3c-.3.42-.84.6-1.26.3-3.24-1.98-8.16-2.58-11.94-1.38-.48.12-1.02-.12-1.14-.6-.12-.48.12-1.02.6-1.14 4.32-1.32 9.72-.66 13.44 1.62.36.18.54.78.3 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.3c-.6.18-1.2-.18-1.38-.72-.18-.6.18-1.2.72-1.38 4.26-1.26 11.28-1.02 15.72 1.62.54.3.72 1.02.42 1.56-.3.42-1.02.6-1.56.3z"/></svg>
+        Spotify
+      </a>
+      <a href="https://podcasts.apple.com/au/podcast/id1555566088?i=1000723310046" target="_blank" rel="noopener" aria-label="Listen to this episode on Apple Podcasts">
+        <svg viewBox="0 0 24 24"><path d="M5.34 0A5.328 5.328 0 000 5.34v13.32A5.328 5.328 0 005.34 24h13.32A5.328 5.328 0 0024 18.66V5.34A5.328 5.328 0 0018.66 0H5.34zm6.525 2.568c2.336 0 4.448.902 6.056 2.587 1.224 1.272 1.912 2.619 2.264 4.392l.04.23c.04.272-.16.527-.432.567a.505.505 0 01-.567-.431l-.04-.213c-.312-1.57-.92-2.747-2.004-3.867-1.428-1.496-3.293-2.294-5.393-2.294-2.1 0-3.966.798-5.394 2.294-1.084 1.12-1.692 2.298-2.004 3.867l-.04.213a.507.507 0 01-.567.431.504.504 0 01-.432-.567l.04-.23c.352-1.773 1.04-3.12 2.264-4.392 1.608-1.685 3.72-2.587 6.056-2.587h.153zm.136 3.033c1.74 0 3.312.67 4.527 1.934.883.916 1.394 1.93 1.663 3.253l.04.23a.505.505 0 01-.431.567.503.503 0 01-.567-.432l-.04-.212c-.23-1.112-.659-1.97-1.396-2.732-1.052-1.1-2.404-1.672-3.9-1.672s-2.849.572-3.901 1.672c-.737.762-1.167 1.62-1.396 2.732l-.04.212a.503.503 0 01-.567.432.505.505 0 01-.432-.567l.04-.23c.27-1.323.78-2.337 1.664-3.253 1.215-1.264 2.787-1.934 4.527-1.934h.21zm-.078 3.05c1.092 0 2.091.424 2.89 1.22.582.58.924 1.245 1.107 2.15l.04.218a.501.501 0 01-.424.568.499.499 0 01-.568-.424l-.04-.198c-.146-.724-.413-1.253-.871-1.716-.63-.63-1.398-.957-2.226-.957s-1.595.328-2.225.957c-.459.463-.726.992-.871 1.716l-.04.198a.499.499 0 01-.568.424.501.501 0 01-.424-.568l.04-.219c.183-.904.525-1.569 1.106-2.149.8-.796 1.799-1.22 2.89-1.22h.184zM12 14.07a2.477 2.477 0 012.48 2.478A2.477 2.477 0 0112 19.024a2.477 2.477 0 01-2.48-2.477A2.477 2.477 0 0112 14.07z"/></svg>
+        Apple
+      </a>
+      <a class="yt-pill" href="https://www.youtube.com/@thenumbersgamepodcast?sub_confirmation=1" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.12-2.14C19.5 3.55 12 3.55 12 3.55s-7.5 0-9.38.51A3 3 0 0 0 .5 6.2 31.4 31.4 0 0 0 0 12a31.4 31.4 0 0 0 .5 5.8 3 3 0 0 0 2.12 2.14c1.88.51 9.38.51 9.38.51s7.5 0 9.38-.51a3 3 0 0 0 2.12-2.14A31.4 31.4 0 0 0 24 12a31.4 31.4 0 0 0-.5-5.8zM9.55 15.57V8.43L15.82 12z"/></svg>
+        Subscribe
+      </a>
+    </div>
+    <!-- LISTEN:END -->
+
+    <div class="relsec">
+      <span class="rtitle">Discover more</span>
+      <div class="relgrid">
+        <a class="relcard" href="/property-vs-shares-which-is-the-better-investment-in-2025">
+          <img src="https://i.ytimg.com/vi/hV6HrIYGNlM/hqdefault.jpg" alt="EP 248 thumbnail">
+          <span class="rt">Property vs Shares</span>
+          <span class="rfoot"><span class="rwhy">Also covers: investment property</span><span class="rtag">EP 248</span></span>
+        </a>
+        <a class="relcard" href="/melbourne-property-boom-why-2025-could-spark-a-gold-rush">
+          <img src="https://i.ytimg.com/vi/rT4U4nQ1H08/hqdefault.jpg" alt="EP 247 thumbnail">
+          <span class="rt">Melbourne Property Boom?</span>
+          <span class="rfoot"><span class="rwhy">Also covers: investment property</span><span class="rtag">EP 247</span></span>
+        </a>
+        <a class="relcard" href="/why-you-should-track-profit-per-hour-vs-revenue">
+          <img src="https://i.ytimg.com/vi/FUf4XcRx-w0/hqdefault.jpg" alt="EP 245 thumbnail">
+          <span class="rt">Why You Should Track Profit Per Hour vs Revenue</span>
+          <span class="rfoot"><span class="rwhy">Also covers: systems</span><span class="rtag">EP 245</span></span>
+        </a>
+        <a class="relcard" href="/the-most-expensive-day-in-aussie-small-business-history">
+          <img src="https://i.ytimg.com/vi/V-10kMQrsDM/hqdefault.jpg" alt="EP 284 thumbnail">
+          <span class="rt">The Most Expensive Day in Aussie Small Business History</span>
+          <span class="rfoot"><span class="rwhy">6 July 2026</span><span class="rtag">EP 284</span></span>
+        </a>
+        <a class="relcard" href="/what-real-budget-reform-for-young-australians-would-actually-look-like">
+          <img src="https://i.ytimg.com/vi/le7HuIBq6Ow/hqdefault.jpg" alt="EP 283 thumbnail">
+          <span class="rt">What Real Budget Reform for Young Australians Would Actually Look Like</span>
+          <span class="rfoot"><span class="rwhy">29 June 2026</span><span class="rtag">EP 283</span></span>
+        </a>
+        <a class="relcard" href="/the-business-of-gift-cards">
+          <img src="https://i.ytimg.com/vi/nC_JkW320Tw/hqdefault.jpg" alt="EP 282 thumbnail">
+          <span class="rt">The Business of Gift Cards</span>
+          <span class="rfoot"><span class="rwhy">22 June 2026</span><span class="rtag">EP 282</span></span>
+        </a>
+      </div>
+      <div class="reldots" id="reldots"></div>
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="footgrid">
+      <div class="fcol">
+        <div class="foot-label">Follow us on</div>
+        <div class="socials">
+          <a href="https://www.instagram.com/thenumbersgamepodcast/" target="_blank" rel="noopener" aria-label="The Numbers Game on Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.8.2 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1 .4 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .4-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1-.4-2.2-.1-1.3-.1-1.7-.1-4.9s0-3.6.1-4.9c.1-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.4 2.2-.4 1.3-.1 1.7-.1 4.9-.1zm0 2c-3.1 0-3.5 0-4.8.1-1.1.1-1.5.2-1.8.3-.4.2-.7.3-1 .6-.3.3-.5.6-.6 1-.1.3-.3.7-.3 1.8-.1 1.3-.1 1.7-.1 4.8s0 3.5.1 4.8c.1 1.1.2 1.5.3 1.8.2.4.3.7.6 1 .3.3.6.5 1 .6.3.1.7.3 1.8.3 1.3.1 1.7.1 4.8.1s3.5 0 4.8-.1c1.1-.1 1.5-.2 1.8-.3.4-.2.7-.3 1-.6.3-.3.5-.6.6-1 .1-.3.3-.7.3-1.8.1-1.3.1-1.7.1-4.8s0-3.5-.1-4.8c-.1-1.1-.2-1.5-.3-1.8-.2-.4-.3-.7-.6-1-.3-.3-.6-.5-1-.6-.3-.1-.7-.3-1.8-.3-1.3-.1-1.7-.1-4.8-.1zm0 3.4a5.4 5.4 0 1 1 0 10.8 5.4 5.4 0 0 1 0-10.8zm0 2a3.4 3.4 0 1 0 0 6.8 3.4 3.4 0 0 0 0-6.8zm5.6-2.3a1.3 1.3 0 1 1-2.6 0 1.3 1.3 0 0 1 2.6 0z"/></svg></a>
+          <a href="https://www.tiktok.com/@thenumbersgamepodcast" target="_blank" rel="noopener" aria-label="The Numbers Game on TikTok"><svg viewBox="0 0 24 24"><path d="M12.53.02C13.84 0 15.14.01 16.44 0c.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg></a>
+          <a href="https://www.linkedin.com/company/the-numbers-game-podcast/" target="_blank" rel="noopener" aria-label="The Numbers Game on LinkedIn"><svg viewBox="0 0 24 24"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.24 8.25h4.52V23H.24V8.25zM8.34 8.25h4.33v2.01h.06c.6-1.14 2.08-2.34 4.28-2.34 4.58 0 5.42 3.01 5.42 6.92V23h-4.51v-7.16c0-1.71-.03-3.91-2.38-3.91-2.39 0-2.75 1.86-2.75 3.78V23H8.34V8.25z"/></svg></a>
+          <a href="https://www.facebook.com/profile.php?id=100071290388343" target="_blank" rel="noopener" aria-label="The Numbers Game on Facebook"><svg viewBox="0 0 24 24"><path d="M24 12.07C24 5.41 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.04V9.41c0-3.02 1.8-4.7 4.54-4.7 1.31 0 2.68.24 2.68.24v2.97h-1.5c-1.5 0-1.96.93-1.96 1.89v2.26h3.32l-.53 3.5h-2.8V24C19.62 23.1 24 18.1 24 12.07z"/></svg></a>
+          <a href="https://www.youtube.com/@thenumbersgamepodcast" target="_blank" rel="noopener" aria-label="The Numbers Game on YouTube"><svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.2C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31.7 31.7 0 0 0 0 12a31.7 31.7 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.2A31.7 31.7 0 0 0 24 12a31.7 31.7 0 0 0-.5-5.8zM9.6 15.6V8.4L15.8 12z"/></svg></a>
+        </div>
+      </div>
+      <div class="fcol">
+        <div class="foot-label">Brought to you by</div>
+        <div class="sponsors">
+          <a href="https://www.inovayt.com.au/" target="_blank" rel="noopener"><img src="assets/inovayt-white.png" alt="Inovayt"></a>
+          <a href="https://futureadvisory.com.au/" target="_blank" rel="noopener"><img src="assets/future-advisory-white.png" alt="Future Advisory"></a>
+        </div>
+      </div>
+      <div class="fcol produced">
+        <div class="foot-label">Produced by</div>
+        <a href="https://www.vidpod.com.au/" target="_blank" rel="noopener"><img src="assets/vidpod-white.png" alt="VIDPOD"></a>
+      </div>
+    </div>
+    <div class="footbar">
+      <details class="footnav-dd">
+        <summary><svg class="ham" viewBox="0 0 24 24"><path d="M3 6h18v2H3zM3 11h18v2H3zM3 16h18v2H3z"/></svg> Menu</summary>
+        <div class="dd-links">
+          <a href="/">Home</a><a href="/episodes">Every episode</a><a href="/adventure">Choose your own adventure</a><a href="/about">About the show</a><a href="/nick-reilly">Nick Reilly</a><a href="/jason-robinson">Jason Robinson</a><a href="/marty-vidakovic">Marty Vidakovic</a><a href="/contact">Contact</a>
+        </div>
+      </details>
+      <div class="copyright">© 2026 The Numbers Game</div>
+    </div>
+  </footer>
+
+  <script>
+    var VIDEO='OMLSIds1ofI';
+    var CHAPTERS=[
+      {t:"00:00",s:0,title:"Intro"},
+      {t:"01:38",s:98,title:"What Is Prop App? The Tinder For Real Estate"},
+      {t:"06:26",s:386,title:"Why Human Connection Still Matters In Property Tech"},
+      {t:"08:30",s:510,title:"The Rise Of Buyer's Agents In Australia"},
+      {t:"12:16",s:736,title:"Cost Vs Value When Buying Property"},
+      {t:"15:10",s:910,title:"The Aha Moment Behind Prop App"},
+      {t:"16:36",s:996,title:"Startup Challenges And Building From Scratch"},
+      {t:"17:33",s:1053,title:"Prop App's Mission To Help Buyers And Sellers"},
+      {t:"20:55",s:1255,title:"Rate My Agent Vs Prop App: Key Differences"},
+      {t:"21:52",s:1312,title:"How Social Media Is Driving Growth For Prop App"},
+      {t:"24:20",s:1460,title:"Surprising Trends Emerging In Property Data"},
+      {t:"27:50",s:1670,title:"Are REA And Domain Fees Out Of Control?"},
+      {t:"29:25",s:1765,title:"Why Listing Property Doesn't Need To Cost Thousands"}
+    ];
+    var QUESTIONS=[
+      {q:"What is Prop App?",s:98},
+      {q:"Why keep a human in property tech?",s:471},
+      {q:"How common are buyer's agents now?",s:510},
+      {q:"Does a buyer's agent pay for itself?",s:736},
+      {q:"How quickly do you recoup an agent fee?",s:766},
+      {q:"What is the startup journey really like?",s:969},
+      {q:"How does Prop App grow on social media?",s:1312},
+      {q:"Do sellers choose the cheapest agent?",s:1460},
+      {q:"How much does it cost to list on REA?",s:1670},
+      {q:"Does marketing a property really cost thousands?",s:1866}
+    ];
+
+    var chEl=document.getElementById('chapters');
+    CHAPTERS.forEach(function(c){var b=document.createElement('button');b.className='chapter';b.onclick=function(){startAt(c.s)};b.innerHTML='<span class="tc">'+c.t+'</span><span class="cx">'+c.title+'</span>';chEl.appendChild(b);});
+    document.getElementById('chcount').textContent=CHAPTERS.length;
+    var qEl=document.getElementById('qa');
+    QUESTIONS.forEach(function(q){var b=document.createElement('button');b.className='q';b.onclick=function(){startAt(q.s)};b.innerHTML='<span class="qm">?</span><span class="qx">'+q.q+'</span><span class="go">›</span>';qEl.appendChild(b);});
+    document.getElementById('qcount').textContent=QUESTIONS.length;
+
+    /* Mobile nav dropdown. */
+    var burger=document.getElementById('navburger'), navdrop=document.getElementById('navdrop');
+    if(burger&&navdrop){burger.addEventListener('click',function(){
+      navdrop.hidden=!navdrop.hidden;
+      burger.setAttribute('aria-expanded', navdrop.hidden?'false':'true');
+    });}
+
+    /* Voice-note button reveals the recorder; × tucks it away. */
+    var vbtn=document.getElementById('vbtn'), vslot=document.getElementById('vslot'), vclose=document.getElementById('vclose');
+    if(vbtn&&vslot){vbtn.addEventListener('click',function(){vslot.hidden=!vslot.hidden;});}
+    if(vclose&&vslot){vclose.addEventListener('click',function(){vslot.hidden=true;});}
+
+    /* Keep-exploring dots: only shown when the strip actually scrolls (mobile). */
+    var rg=document.querySelector('.relgrid'), rd=document.getElementById('reldots');
+    if(rg&&rd){
+      var relCards=rg.querySelectorAll('.relcard');
+      relCards.forEach(function(){rd.appendChild(document.createElement('span'))});
+      var updDots=function(){
+        var scrollable=rg.scrollWidth>rg.clientWidth+4;
+        rd.style.display=scrollable?'flex':'none';
+        if(!scrollable)return;
+        var i=Math.round(rg.scrollLeft/(rg.scrollWidth-rg.clientWidth)*(relCards.length-1));
+        rd.querySelectorAll('span').forEach(function(s,n){s.classList.toggle('on',n===i)});
+      };
+      rg.addEventListener('scroll',updDots,{passive:true});
+      window.addEventListener('resize',updDots);
+      updDots();
+    }
+
+    /* Explore tabs: swap the visible panel; the row stays put so you never lose your place. */
+    var tabBtns=document.querySelectorAll('.tabbtn');
+    tabBtns.forEach(function(b){
+      b.addEventListener('click',function(){
+        tabBtns.forEach(function(o){o.classList.remove('on')});
+        document.querySelectorAll('.tpanel').forEach(function(p){p.hidden=true});
+        b.classList.add('on');
+        document.getElementById(b.getAttribute('data-panel')).hidden=false;
+      });
+    });
+
+    /* YouTube: clean facade, then real player on demand. Seek without yanking to top. */
+    var player=null, ready=false, apiReady=false, pending=null;
+    window.onYouTubeIframeAPIReady=function(){apiReady=true; if(pending!=null){var s=pending;pending=null;createPlayer(s);}};
+    function createPlayer(sec){
+      var wrap=document.getElementById('player'); wrap.innerHTML='<div id="yt"></div>';
+      player=new YT.Player('yt',{videoId:VIDEO,playerVars:{autoplay:1,rel:0,modestbranding:1,playsinline:1,start:Math.floor(sec||0)},events:{onReady:function(){ready=true;}}});
+    }
+    function nudge(){
+      var p=document.getElementById('player-wrap'), r=p.getBoundingClientRect();
+      if(r.bottom<80 || r.top>window.innerHeight-90){ p.scrollIntoView({behavior:'smooth',block:'start'}); }
+    }
+    function startAt(sec){
+      nudge();
+      if(player&&ready){ player.seekTo(sec,true); player.playVideo(); return; }
+      if(apiReady){ createPlayer(sec); } else { pending=sec; }
+    }
+    document.getElementById('facade').addEventListener('click',function(){startAt(0);});
+    (function(){var s=document.createElement('script');s.src='https://www.youtube.com/iframe_api';document.head.appendChild(s);})();
+  </script>
+</body>
+</html>

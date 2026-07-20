@@ -1,0 +1,619 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EP 264 · The 3 Numbers Every Business Owner Must Track | The Numbers Game</title>
+<meta name="description" content="A business can be busy, growing revenue, and still be going backwards.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" sizes="64x64" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="canonical" href="https://thenumbersgamepodcast.com.au/the-3-numbers-every-business-owner-must-track">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="The Numbers Game">
+<meta property="og:title" content="EP 264 · The 3 Numbers Every Business Owner Must Track | The Numbers Game">
+<meta property="og:description" content="A business can be busy, growing revenue, and still be going backwards.">
+<meta property="og:url" content="https://thenumbersgamepodcast.com.au/the-3-numbers-every-business-owner-must-track">
+<meta property="og:image" content="https://i.ytimg.com/vi/DM_b95zERsI/maxresdefault.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+  :root{
+    --purple:#585af3; --purple-dark:#2c1b8a; --mint:#7ad9a8;
+    --white:#ffffff; --muted:rgba(255,255,255,.60); --dim:rgba(255,255,255,.42);
+    --line:rgba(255,255,255,.12); --card:rgba(255,255,255,.05); --card-hi:rgba(255,255,255,.09);
+    --display:'Anton',Impact,'Helvetica Neue',sans-serif;
+    --sans:'Inter',system-ui,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif;
+    --wrap:1280px;   /* page frame (nav spans this) */
+    --col:960px;     /* content column (player, tabs, text) */
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:var(--sans); color:var(--white); line-height:1.6; -webkit-font-smoothing:antialiased;
+    background:#12093a;
+    background-image:
+      radial-gradient(1200px 600px at 82% -6%, rgba(88,90,243,.45) 0%, transparent 55%),
+      radial-gradient(900px 700px at 5% 8%, rgba(122,217,168,.10) 0%, transparent 50%),
+      linear-gradient(180deg,#2c1b8a 0%,#1a1150 28%,#100b34 62%,#0b0820 100%);
+    background-attachment:fixed;
+  }
+  a{color:inherit}
+  .wrap{max-width:var(--wrap);margin:0 auto;padding:0 36px}
+  main.wrap{max-width:var(--col)}
+  @media(max-width:720px){.wrap{padding:0 22px}}
+
+  /* ── Navbar ── */
+  .nav{position:sticky;top:0;z-index:50;background:linear-gradient(180deg,rgba(24,15,74,.92),rgba(24,15,74,.72));backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+  .nav-in{max-width:var(--wrap);margin:0 auto;padding:11px 36px;display:flex;align-items:center;justify-content:space-between}
+  @media(max-width:720px){.nav-in{padding:11px 22px}}
+  .brand{display:block;line-height:0}
+  .brand img{height:36px;width:auto;display:block}
+  .navlinks{display:flex;gap:28px;align-items:center}
+  .navlinks a{text-decoration:none;font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);transition:.15s}
+  .navlinks a:hover{color:var(--white)}
+  .navlinks a.navtop{cursor:default}
+  .navgroup{position:relative;display:flex;align-items:center}
+  .navgroup .subnav{display:none;position:absolute;top:100%;left:50%;transform:translateX(-50%);padding-top:14px;min-width:180px}
+  .navgroup:hover .subnav,.navgroup:focus-within .subnav{display:block}
+  .subnav-in,.navgroup .subnav{z-index:60}
+  .navgroup .subnav a{display:block;background:#180f4a;border:1px solid var(--line);border-top:0;padding:12px 16px;font-size:12px;color:rgba(255,255,255,.85)}
+  .navgroup .subnav a:first-child{border-top:1px solid var(--line)}
+  .navgroup .subnav a:hover{background:#221768;color:var(--white)}
+  .navburger{display:none;background:none;border:1px solid var(--line);padding:8px 10px;cursor:pointer;color:var(--white);transition:.15s}
+  .navburger:hover{border-color:rgba(122,217,168,.6)}
+  .navburger svg{width:20px;height:20px;fill:currentColor;display:block}
+  .navdrop{display:none}
+  @media(max-width:720px){
+    .navlinks{display:none}
+    .navburger{display:block}
+    .navdrop{display:block;position:absolute;left:0;right:0;top:100%;
+      background:#180f4a;border-bottom:1px solid var(--line);box-shadow:0 24px 50px rgba(0,0,0,.45)}
+    .navdrop[hidden]{display:none}
+    .navdrop a{display:block;padding:15px 22px;text-decoration:none;font-size:14px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:rgba(255,255,255,.9);border-bottom:1px solid rgba(255,255,255,.06)}
+    .navdrop a:last-child{border-bottom:0}
+    .navdrop a.sub{padding-left:42px;font-size:13px;color:rgba(255,255,255,.72)}
+    .navdrop .navlabel{display:block;padding:15px 22px 6px;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.4)}
+  }
+
+  /* ── Hero / hook (marker-highlight system: purple hook wraps naturally, mint payoff below)
+     Rules: title splits at its natural break (colon/pipe/question mark). Front = hook (purple,
+     big), back = payoff (mint, smaller). No break in title = purple hook only. Highlights hug
+     the text (tight em padding tuned to Anton) and wrap via box-decoration-break — never
+     hand-pick line breaks or mint words. ── */
+  header.hero{padding:34px 0 6px}
+  .hook{--inx:clamp(8.4px,2.1vw,15.6px)} /* one shared text inset so hook + payoff first letters align */
+  .hook .hk{font-family:var(--display);font-weight:400;text-transform:uppercase;
+    font-size:clamp(28px,7vw,52px);line-height:1.3;letter-spacing:-.5px;text-wrap:balance}
+  .hook .hk span{color:var(--white);padding:.04em var(--inx) .02em;
+    background:linear-gradient(var(--purple),var(--purple)) 0 50%/100% 87% no-repeat;
+    -webkit-box-decoration-break:clone;box-decoration-break:clone}
+  .hook .pay{font-family:var(--display);font-weight:400;text-transform:uppercase;
+    font-size:clamp(16px,4vw,24px);line-height:1.5;letter-spacing:.6px;margin-top:8px;text-wrap:balance}
+  .hook .pay span{color:#0a0a0a;padding:.08em var(--inx) .04em;
+    background:linear-gradient(var(--mint),var(--mint)) 0 50%/100% 88% no-repeat;
+    -webkit-box-decoration-break:clone;box-decoration-break:clone}
+  /* no-hook titles: mid-split into two full-size rows, purple then mint */
+  .hook .hk span.hkrow{display:block;background:none;padding:0}
+  .hook .hk .hkrow+.hkrow{margin-top:8px}
+  .hook .hk span.mintseg{color:#0a0a0a;
+    background:linear-gradient(var(--mint),var(--mint)) 0 50%/100% 87% no-repeat}
+
+  /* ── Player (clean facade → real player on tap) ── */
+  .player-wrap{margin:24px 0 4px;scroll-margin-top:76px}
+  .player{position:relative;width:100%;padding-top:56.25%;border-radius:0;overflow:hidden;background:#000;box-shadow:0 30px 70px rgba(0,0,0,.5),0 0 0 1px rgba(255,255,255,.06)}
+  .facade{position:absolute;inset:0;border:0;cursor:pointer;background-size:cover;background-position:center;display:flex;align-items:center;justify-content:center;padding:0}
+  .facade .play{width:74px;height:74px;border-radius:50%;background:rgba(10,6,30,.40);border:2px solid rgba(255,255,255,.72);display:flex;align-items:center;justify-content:center;transition:.18s;-webkit-backdrop-filter:blur(1px);backdrop-filter:blur(1px)}
+  .facade:hover .play{background:rgba(88,90,243,.62);transform:scale(1.07);border-color:#fff}
+  .facade .play::after{content:"";border-style:solid;border-width:11px 0 11px 19px;border-color:transparent transparent transparent #fff;margin-left:5px}
+  .player iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+
+  /* ── Episode facts (bottom of the Summary panel — templated per episode) ── */
+  .sumfacts{margin:14px 10px 4px;padding-top:13px;border-top:1px solid rgba(255,255,255,.08);display:flex;flex-direction:column;gap:8px}
+  .fact{display:flex;gap:12px;font-size:13.5px}
+  .fact .fl{flex:none;width:104px;color:var(--dim);font-weight:600;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;padding-top:2px}
+  .fact .fv{color:rgba(255,255,255,.9);font-weight:500}
+  .fact .fv a{color:var(--mint);text-decoration:none;border-bottom:1px solid rgba(122,217,168,.4);transition:.15s}
+  .fact .fv a:hover{border-bottom-color:var(--mint)}
+
+  /* ── Episode tag (identity: black label hanging off the title corner) ── */
+  .eptag{display:inline-block;position:relative;left:-6px;margin-bottom:-7px;z-index:2;
+    background:#0a0a0a;color:var(--white);font-family:var(--display);font-weight:400;
+    font-size:13.5px;letter-spacing:1.5px;text-transform:uppercase;padding:6px 11px 4px}
+
+  /* ── Explore tabs (sticky mode switcher; one panel swaps below, nothing shoves) ── */
+  .explore{margin-top:22px}
+  .tabs{position:sticky;top:58px;z-index:40;display:flex;flex-wrap:wrap;gap:8px;padding:10px 0;
+    background:linear-gradient(180deg,rgba(18,10,55,.96),rgba(18,10,55,.86));
+    backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+  .tabbtn{font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.5px;
+    font-size:14.5px;color:var(--white);background:var(--purple);border:1px solid var(--purple);
+    padding:9px 13px 7px;cursor:pointer;transition:.15s}
+  .tabbtn:hover{filter:brightness(1.12)}
+  .tabbtn.on{background:var(--mint);border-color:var(--mint);color:#0a0a0a}
+  .tabbtn.on:hover{filter:none}
+  .tabbtn .ct{font-size:12px;opacity:.75;font-variant-numeric:tabular-nums}
+  .tabbtn .ct::before{content:" · "}
+  .tpanel{border:1px solid var(--line);background:var(--card);padding:12px 10px 14px}
+  .hint{font-size:12.5px;color:var(--muted);padding:2px 10px 10px;border-bottom:1px solid rgba(255,255,255,.08);margin-bottom:6px}
+
+  /* ── Listen row (no box: label left, service pills follow) ── */
+  .listen{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:12px 16px;margin-top:34px}
+  .listen .lname{font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--dim)}
+  .listen a{display:inline-flex;align-items:center;gap:9px;padding:11px 18px;border-radius:999px;
+    background:var(--mint);color:#08210f;text-decoration:none;font-weight:800;font-size:12.5px;
+    letter-spacing:.04em;text-transform:uppercase;transition:.15s}
+  .listen a:hover{filter:brightness(1.06);transform:translateY(-1px);box-shadow:0 12px 30px rgba(122,217,168,.25)}
+  .listen svg{width:20px;height:20px;fill:currentColor;flex:none}
+  /* ── Listen-now Spotify audio embed (full column width, above the pills) ── */
+  .listen-now{margin-top:40px}
+  .listen-now .ln-head{display:flex;align-items:baseline;justify-content:space-between;gap:14px;margin-bottom:13px}
+  .listen-now .ln-title{font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--dim)}
+  .audio-embed{border-radius:12px;overflow:hidden;box-shadow:0 20px 50px rgba(0,0,0,.4),0 0 0 1px rgba(255,255,255,.06)}
+  .audio-embed iframe{display:block;width:100%;border:0}
+  @media(max-width:720px){.listen-now{margin-top:32px}}
+
+  /* ── Keep exploring (thumbnails link to other episode PAGES, never timecodes).
+     Swipeable strip on mobile, fits three-up on desktop. Variant rule: claim
+     "similar ground" + reason lines ONLY when moment-level topic overlap is
+     genuinely strong; otherwise show the latest released episodes with dates —
+     never invent a connection. ── */
+  .relsec{margin-top:60px;padding-top:58px;border-top:1px solid var(--line)} /* line = end of this episode's info */
+  .reldots{display:flex;justify-content:center;gap:7px;margin-top:12px}
+  .reldots span{width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.25);transition:.2s}
+  .reldots span.on{background:var(--mint)}
+  .relsec .rtitle{display:inline-block;font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.5px;font-size:14.5px;background:var(--mint);color:#0a0a0a;padding:9px 13px 7px;margin-bottom:18px}
+  .relgrid{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding-bottom:6px;scrollbar-width:none}
+  .relgrid::-webkit-scrollbar{display:none}
+  .relcard{flex:0 0 56%;max-width:232px;scroll-snap-align:start;display:flex;flex-direction:column;text-decoration:none;background:var(--card);border:1px solid var(--line);transition:.15s}
+  .relcard:hover{background:var(--card-hi);border-color:rgba(122,217,168,.55)}
+  .relcard img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block}
+  .relcard .rt{display:block;font-size:12.5px;font-weight:600;color:rgba(255,255,255,.92);line-height:1.4;padding:8px 8px 0}
+  .relcard .rfoot{margin-top:auto;display:flex;justify-content:space-between;align-items:flex-end;gap:8px;padding:10px 8px 9px}
+  .relcard .rwhy{font-size:11.5px;color:var(--mint)}
+  .relcard .rtag{display:inline-block;background:#0a0a0a;color:var(--white);font-family:var(--display);font-size:10px;letter-spacing:1.2px;text-transform:uppercase;padding:3px 7px 2px;white-space:nowrap;flex:0 0 auto}
+
+  /* ── Dropdown sections (accordion under the player) ── */
+  .drops{margin-top:34px;display:flex;flex-direction:column;gap:11px}
+  .drop{border:1px solid var(--line);border-radius:0;background:var(--card);overflow:hidden;transition:border-color .15s}
+  .drop[open]{border-color:rgba(122,217,168,.35)}
+  .drop>summary{list-style:none;cursor:pointer;padding:16px 18px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+  .drop>summary::-webkit-details-marker{display:none}
+  .drop>summary .st{font-weight:700;font-size:15.5px;letter-spacing:.005em}
+  .drop>summary .ct{margin-left:auto;font-size:12px;color:var(--dim);font-weight:600;font-variant-numeric:tabular-nums}
+  .drop>summary .chev{flex:none;width:22px;height:22px;border-radius:50%;background:rgba(122,217,168,.14);color:var(--mint);display:flex;align-items:center;justify-content:center;font-family:var(--display);font-size:15px;line-height:1;transition:.2s;transform:translateY(-1px)}
+  .drop[open]>summary .chev{transform:rotate(45deg)}
+  .drop-body{padding:2px 12px 12px}
+
+  /* chapters */
+  .chapter{display:flex;align-items:baseline;gap:14px;width:100%;text-align:left;cursor:pointer;background:none;border:0;color:inherit;font-family:inherit;padding:11px 10px;border-radius:10px;transition:.13s}
+  .chapter:hover{background:var(--card-hi)}
+  .chapter .tc{font-variant-numeric:tabular-nums;font-weight:700;font-size:14px;color:var(--mint);flex:none;width:48px}
+  .chapter .cx{font-size:15px;font-weight:500;color:rgba(255,255,255,.9)}
+  .chapter:hover .cx{color:#fff}
+
+  /* questions */
+  .q{display:flex;align-items:center;gap:12px;width:100%;text-align:left;cursor:pointer;background:none;border:0;border-radius:11px;color:inherit;font-family:inherit;padding:12px 10px;transition:.14s}
+  .q+.q{border-top:1px solid rgba(255,255,255,.05)}
+  .q:hover{background:var(--card-hi)}
+  .q .qm{font-family:var(--display);font-size:15px;color:var(--mint);flex:none;line-height:1;transform:translateY(1px)}
+  .q .qx{font-size:15px;font-weight:500;color:rgba(255,255,255,.92)}
+  .q .go{margin-left:auto;flex:none;color:var(--dim);font-size:18px;transition:.15s}
+  .q:hover .go{color:var(--mint);transform:translateX(2px)}
+
+  /* summary + transcript bodies */
+  .summary-body p{font-size:16.5px;line-height:1.62;color:rgba(255,255,255,.9);padding:6px 10px 4px}
+  .tbody{padding:2px 10px 8px}
+  .tbody p{font-size:14.5px;line-height:1.7;color:rgba(255,255,255,.78);margin-top:15px;max-width:64ch}
+  .tbody .spk{display:block;font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--mint);margin-bottom:2px}
+
+  /* ── Voice note ask (lives at the bottom of the Summary panel) ── */
+  .vask{margin:16px 10px 4px}
+  .vbtn{display:inline-flex;align-items:center;gap:9px;padding:12px 20px;border-radius:999px;border:0;cursor:pointer;
+    background:var(--mint);color:#08210f;font-family:inherit;font-weight:800;font-size:12.5px;
+    letter-spacing:.04em;text-transform:uppercase;transition:.15s}
+  .vbtn:hover{filter:brightness(1.06);transform:translateY(-1px);box-shadow:0 12px 30px rgba(122,217,168,.25)}
+  .vbtn svg{width:18px;height:18px;fill:currentColor;flex:none}
+  .vslot{background:var(--purple);padding:12px 10px 10px;margin:14px 0 4px;box-shadow:0 18px 40px rgba(0,0,0,.35)}
+  .vslot[hidden]{display:none}
+  .vhead{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;margin-bottom:10px}
+  .vhead .vmsg{font-family:var(--sans);font-size:13px;line-height:1.55;color:rgba(255,255,255,.92);margin:2px 0 0;padding:0 2px}
+  .vclose{background:none;border:0;color:rgba(255,255,255,.85);font-size:22px;line-height:1;cursor:pointer;padding:0 2px}
+  .vclose:hover{color:var(--white)}
+  .vslot iframe{display:block}
+
+  /* ── YouTube subscribe pill (sits in the listen row; outranks .listen a's mint) ── */
+  .listen a.yt-pill{background:var(--purple);color:var(--white)}
+  .listen a.yt-pill:hover{filter:brightness(1.1);transform:translateY(-1px)}
+  @media(max-width:720px){ /* mobile: no label, three compact pills on one row */
+    .listen .lname{display:none}
+    .listen{gap:8px}
+    .listen a{padding:10px 13px;font-size:11px;gap:6px}
+    .listen svg{width:16px;height:16px}
+  }
+
+  /* ── Footer: Follow us on | Brought to you by | Produced by, + Menu dropdown ── */
+  footer{border-top:1px solid var(--line);margin-top:68px;padding:52px 20px 58px}
+  .footgrid{max-width:var(--wrap);margin:0 auto;display:grid;grid-template-columns:1fr 1.15fr .8fr;gap:44px;align-items:start}
+  .fcol{text-align:center;display:flex;flex-direction:column;align-items:center}
+  .foot-label{font-size:11px;font-weight:700;letter-spacing:.26em;text-transform:uppercase;color:var(--dim);margin-bottom:18px}
+  .sponsors{display:flex;justify-content:center;align-items:center;gap:34px;flex-wrap:wrap}
+  .sponsors a,.produced a{display:inline-flex;transition:.15s}
+  .sponsors a:hover,.produced a:hover{transform:translateY(-1px)}
+  .sponsors img{height:32px;width:auto;opacity:.92}
+  .produced img{height:30px;width:auto;opacity:.95}
+  .sponsors a:hover img,.produced a:hover img{opacity:1}
+  footer .socials{display:flex;gap:11px;justify-content:center;flex-wrap:wrap;margin:0}
+  footer .socials a{width:40px;height:40px;border-radius:50%;border:1.5px solid rgba(122,217,168,.5);display:flex;align-items:center;justify-content:center;transition:.15s}
+  footer .socials a svg{width:18px;height:18px;fill:var(--mint);transition:.15s}
+  footer .socials a:hover{background:var(--mint);border-color:var(--mint);transform:translateY(-2px)}
+  footer .socials a:hover svg{fill:#0a0a0a}
+  .footbar{max-width:var(--wrap);margin:34px auto 0;border-top:1px solid var(--line);padding-top:20px;display:flex;flex-direction:column;align-items:center;gap:14px}
+  .footnav-dd{display:block;width:100%;max-width:var(--wrap);margin:0 auto;text-align:center}
+  .footnav-dd>summary{list-style:none;cursor:pointer;display:inline-flex;align-items:center;gap:9px;font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.5px;font-size:13px;color:var(--muted);background:transparent;border:1px solid var(--line);padding:8px 16px 6px;transition:.15s}
+  .footnav-dd>summary::-webkit-details-marker{display:none}
+  .footnav-dd>summary:hover{color:var(--mint);border-color:rgba(122,217,168,.45)}
+  .footnav-dd>summary .ham{width:15px;height:15px;fill:currentColor;transform:translateY(-1px)}
+  .footnav-dd .dd-links{display:flex;flex-direction:row;flex-wrap:wrap;justify-content:center;gap:12px 24px;padding:24px 0 4px}
+  .footnav-dd .dd-links a{font-size:11.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:.15s}
+  .footnav-dd .dd-links a:hover{color:var(--mint)}
+  .copyright{font-size:12px;color:var(--dim);text-align:center}
+  @media(max-width:720px){.footgrid{grid-template-columns:1fr;gap:34px}footer{padding:40px 16px 20px}.footbar{margin-top:34px;padding-top:24px;gap:20px}.footnav-dd .dd-links{flex-direction:column;align-items:center;gap:15px}}
+
+  @media(min-width:720px){header.hero{padding:48px 0 6px}}
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "PodcastEpisode", "name": "The 3 Numbers Every Business Owner Must Track", "url": "https://thenumbersgamepodcast.com.au/the-3-numbers-every-business-owner-must-track", "datePublished": "2026-02-16", "episodeNumber": 264, "image": "https://i.ytimg.com/vi/DM_b95zERsI/maxresdefault.jpg", "partOfSeries": {"@type": "PodcastSeries", "name": "The Numbers Game", "url": "https://thenumbersgamepodcast.com.au/"}}</script>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-in">
+      <a class="brand" href="/" aria-label="The Numbers Game home"><img src="assets/tng-logo.png" alt="The Numbers Game"></a>
+      <div class="navlinks">
+        <a href="/">Home</a>
+        <div class="navgroup">
+          <a class="navtop">Episodes</a>
+          <div class="subnav">
+            <a href="/episodes">All episodes</a>
+            <a href="/adventure">Find moments</a>
+          </div>
+        </div>
+        <div class="navgroup">
+          <a class="navtop">About</a>
+          <div class="subnav">
+            <a href="/about">The show</a>
+            <a href="/nick-reilly">Nick Reilly</a>
+            <a href="/jason-robinson">Jason Robinson</a>
+          </div>
+        </div>
+        <a href="/contact">Contact</a>
+      </div>
+      <button class="navburger" id="navburger" type="button" aria-label="Menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24"><path d="M3 6h18v2H3zM3 11h18v2H3zM3 16h18v2H3z"/></svg>
+      </button>
+    </div>
+    <div class="navdrop" id="navdrop" hidden>
+      <a href="/">Home</a>
+      <span class="navlabel">Episodes</span>
+      <a class="sub" href="/episodes">All episodes</a>
+      <a class="sub" href="/adventure">Find moments</a>
+      <span class="navlabel">About</span>
+      <a class="sub" href="/about">The show</a>
+      <a class="sub" href="/nick-reilly">Nick Reilly</a>
+      <a class="sub" href="/jason-robinson">Jason Robinson</a>
+      <a href="/contact">Contact</a>
+    </div>
+  </nav>
+
+  <main class="wrap">
+
+    <header class="hero">
+      <div class="hook">
+        <span class="eptag">EP 264</span>
+        <h1 class="hk"><span class="hkrow"><span>The 3 Numbers Every</span></span>
+        <span class="hkrow"><span class="mintseg">Business Owner Must Track</span></span></h1>
+      </div>
+    </header>
+
+    <div class="player-wrap" id="player-wrap">
+      <div class="player" id="player">
+        <button class="facade" id="facade" style="background-image:url('https://i.ytimg.com/vi/DM_b95zERsI/maxresdefault.jpg')" aria-label="Play episode">
+          <span class="play"></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="explore">
+      <div class="tabs" role="tablist">
+        <button class="tabbtn on" data-panel="p-summary">Summary</button>
+        <button class="tabbtn" data-panel="p-chapters">Chapters<span class="ct" id="chcount"></span></button>
+        <button class="tabbtn" data-panel="p-questions">Questions<span class="ct" id="qcount"></span></button>
+      </div>
+      <section class="tpanel" id="p-summary">
+        <div class="summary-body">
+          <p>A business can be busy, growing revenue, and still be going backwards. Today we share a framework we use to judge business health properly, covering cash flow, profit margins, and the personal wealth piece most owners ignore. It's a clearer way to tell what's working, what's not, and what matters next.</p>
+        </div>
+        <div class="vask">
+          <button class="vbtn" id="vbtn" type="button">
+            <svg viewBox="0 0 24 24"><path d="M12 14a3 3 0 0 0 3-3V6a3 3 0 1 0-6 0v5a3 3 0 0 0 3 3zm5-3a5 5 0 0 1-10 0H5a7 7 0 0 0 6 6.92V21h2v-3.08A7 7 0 0 0 19 11h-2z"/></svg>
+            Send us a voice note
+          </button>
+          <div class="vslot" id="vslot" hidden>
+            <div class="vhead">
+              <p class="vmsg">We'd love to hear from you. You can leave up to a 90 second voice note for us to play on the show: a question, some feedback, or a topic you want covered.</p>
+              <button class="vclose" id="vclose" type="button" aria-label="Close">&times;</button>
+            </div>
+            <iframe src="https://www.speakpipe.com/widget/inline/hhq6kzggsx7zpcsvakgxfrzun3zidpde" allow="microphone" width="100%" height="200" frameborder="0" title="Leave The Numbers Game a voice note"></iframe>
+          </div>
+          <script async src="https://www.speakpipe.com/widget/loader.js" charset="utf-8"></script>
+        </div>
+        <div class="sumfacts">
+          <div class="fact"><span class="fl">Release date</span><span class="fv">16 February 2026</span></div>
+          <div class="fact"><span class="fl">Hosts</span><span class="fv"><a href="/nick-reilly">Nick Reilly</a> &amp; <a href="/jason-robinson">Jason Robinson</a></span></div>
+          <!-- template: add <div class="fact"><span class="fl">Guest</span>...</div> only when the episode has one -->
+
+        </div>
+      </section>
+      <section class="tpanel" id="p-chapters" hidden>
+        <p class="hint">Jump straight to the part you need.</p>
+        <div id="chapters"></div>
+      </section>
+      <section class="tpanel" id="p-questions" hidden>
+        <p class="hint">Real questions this episode answers. Tap one to hear the answer.</p>
+        <div id="qa"></div>
+      </section>
+    </div>
+
+    <div class="drops">
+
+      <details class="drop">
+        <summary><span class="st">Episode transcript</span><span class="chev">+</span></summary>
+        <div class="drop-body tbody">
+          <p><span class="spk">Jason · 00:00</span>Welcome to the numbers game. We're here at the Innovate Headquarters where dreams come true and I'm Jason and I'm joined with Nick. How are you buddy?</p>
+          <p><span class="spk">Nick · 00:07</span>Good mate, look dreams come true, but you have to follow the plan. You don't follow the plan, we can't help you. Um just wanted to make sure there was a uh Um some inverted commas around that. Not all dreams come true after follow the plan we set. But great news, just following on from last episode stumble around the game over and had a c close the episode out. I I took some time and I reached out to our good friends at New Chapter Legal, in particular um your beautiful partner Casey. Yes. Just to look up this game over trademark. Um see if Marty was smart enough to get that done. So no doubt, Casey has a system she looks up. Application was lodged, but fee was never paid. Marty, come on. So unfortunately, um we've now trademarked game over to the numbers game and we're back. So I don't have the dulcet tones of Marty, but I'm gonna do my best. Um and yeah, well quite clearly the the impact of not getting paid from this show is definitely there for Marty. Um I think it's only a $300 fee um and it was outstanding. So we've taken over that and Game Over is back.</p>
+          <p><span class="spk">Jason · 01:12</span>I have heard in the Yarrow Valley the Nespresso pods uh there's a shortage. Uh there's no more buying coffees out and about. It's uh back on the pod machine. I think if you listen to the first ten episodes of the numbers game, the uh how to save money on an espresso pod machine might have been in there. That was uh going back a good five years ago, I think, almost, mate. So uh there's quite a back catalogue. If you are new to the show, we weren't always in a fancy, uh, you know, innovate head queue HQ studio, so Plenty to go back along if you are joining us. But for now, let's uh have a bit of a chat, Nick. I've got something I wanted to chat to you about. It is, you know, early parts of 2026 and one of the things that we often have happen um in accounting land or at Future Advisory. is we start to open up our books for new business. We you know we we plan pretty rigidly around July to December, getting our lodgments sorted. We work with other clients on retainers. We know the work we have to get through. We've actually hired a few new people, so we've had increased capacity and you know things cruising along nicely. So the team often turn to me and tap me on the shoulder and go, Jace, go out and get some uh new business for future advisory and In this process, what's ended up happening is I'm having a lot of conversations where I'm talking to potential new customers who are coming on board I thought what would be great to talk about is three particular numbers that that we look at to identify when a business owner says we're doing well. And often, you know, you'll you'll talk to someone and say, how's business? You know, yep, yeah, things are really good, things are going well. And then sometimes you'll open the books and you'll start to dig in and you'll ask some questions and Sometimes the what the PL says or what the balance sheet says doesn't necessarily reflect that the business really is going that well. So I think uh it'd be good to kind of dive into a little bit of that, but before we do, I mean you also see business owners' books from your point of view. Um, is it surprising that some business owners say they're going well when they're not? And do you guys kind of see the other side of that from a loan or or lending perspective?</p>
+          <p><span class="spk">Nick · 03:06</span>Uh definitely, yeah. And it's it's just misunderstanding. And It could be as simple as I'm super busy. So if I'm super busy, things are flying, I'm I'm doing well. Um it could be just sales. If I look at our own business. Uh you it's all about settlements and talking about the mortgage business now. It's how much have we settled? How much have we settled? But that's gross revenue. So how much of that are you paying out to salespeople? How much of that are you paying out to referers? What do you what's your cost base? So I think people can just feel like they're busy and that without even looking at numbers or revenue. Let alone, you know, going down to the other um the other key points you're going to talk about. But just they feel like they're busier of just sign a new contract, they've got a lot of work. I need this, I need that, I'm gearing up and so okay, but that's just the front end. What do you actually how's the business? performing outside of you being able to sign up a lot of work, you know?</p>
+          <p><span class="spk">Jason · 04:03</span>Yeah, we often see that too is that as revenue grows, people see revenue growth as a sign of being healthy. I think uh, you know, always like channel a bit of Marty there, but the old revenue is vanity, profit is sanity, but cash is king. And if you always can kind of remember that saying, cash is king It is no surprise that of the three things that I want to share today, the first one we're going to hit hard with is that cash. Cash is number one. Um, you can have a growing revenue number, you can feel like business is good, business is booming, but if you're always finding that the bank account is emptying out, the Bass comes along and all of a sudden, you know, money goes out the door It You get a reminder from your accountant that your superannuation's due. So superannuation goes out the door. Um, the rent direct debit comes out. You know, there's all these things, the car payment, and all of a sudden Cool, the PL saying that revenue's growing, but all of a sudden because you get busy and you're making decisions on the fly, maybe not with um some intentional deliberateness to it. You've committed to things that have taken your outgoings from a cash perspective above and beyond where you kind of understood. So I think the The cash runway or a cash flow forecast is probably the number one thing that a small business owner lacks these days. And when you look at statistics from ASIC, the ATO, the ABR, Always reported the number one reason a business goes into liquidation or goes out of business is cash flow. It's the number one thing reported. Um, the statistics are like three in five businesses fail in the first couple of years. And most of them are saying we ran out of cash. And quite simply, if you run out of cash. You know, it's very hard to get a lender to give you money if you can't show why you ran out of cash and what you're gonna do. So you know, we sit back and go You Or my message right now to to all business owners out there is if you don't have a cash runway or an idea of your cash flow forecast, one of the questions we love to ask is, do you have an understanding of what will be your in your bank in three months? Yeah. And you know, I'd throw that to you, Nick, uh, as a savvy business owner, you know, I'd love to kind of get a bit of a from your point of view, how important understanding your cash is for you as a business owner.</p>
+          <p><span class="spk">Nick · 06:07</span>It's actually really um relevant at the moment because we've got uh some younger managers coming through. the business um and you know educating themselves on on PLs and and cash flows and we did have a conversation the other day Around, okay, that's the profit and loss. And it was a dividend quarter. Yep. Um how I'm happy to share this. Why are we not paying out? Let's just pick a number. If the profit was 300,000 for the quarter, why are we not paying out to the shareholders 300,000 as a di as a dividend? So we actually had to I knew the answer without knowing all the dollars. I was like in my own head, well, there's this, there's this, there's this, there's this, that's not counted. But the exercise we went through was really good because the the younger shareholders actually showed them the things that you know, weren't calculated and you know, you know all this, but it can be as simple as, well, your superannuation. So we're holding back superannuation. Um there could it it could be timing. So based on the timing, there's more super that quarter than next quarter. Um P A Y G tax uh wasn't on there. your um paying your income tax in advance wasn't on there. Yep. For us that's significant. Page installment for those at home, yeah. P O Y G instalment. Um the other one was, you know, we've got debt in this business from acquisitions. So principal reductions on loan repayments if you've got a car in the business.</p>
+          <p><span class="spk">Jason · 07:32</span>Balance shared item not on the PL, yeah. Correct.</p>
+          <p><span class="spk">Nick · 07:34</span>So it was a really good exercise even for me to go through just to explain to the younger team that Hey, just because the profit's that, that doesn't mean we're paying out that in cash. But the principal reductions in the uh on the debt have increased the value of the business. Um where yeah we're holding back money for PAY or for income tax, which is going to be payable anyway, where it's it's for savings. So That was a really good exercise to go through. So I'll just um yeah, just resonating with that. Yep. Perfect. And then we're very fortunate in our business that a good chunk of our income is recurring revenue and I would encourage any business that's got the ability to do that. Um, you don't have to be in the industry that we're in. You, for example, you You you're an accounting business, but you probably have clients on retainers that pay you.</p>
+          <p><span class="spk">Jason · 08:23</span>Monthly monthly direct debits, there's always X amount of cash that comes in, which is is a fantastic buffer to have. Like you we always know that that amount of cash is going to come in and then the chase becomes a much smaller number from a project work or or anything additional on top of that number. And And for us, one of our KPIs and metrics that we're working on between January and June is to increase our retainer number.</p>
+          <p><span class="spk">Nick · 08:44</span>Yeah.</p>
+          <p><span class="spk">Jason · 08:45</span>Um it's it's a really simple metric and number that our whole team can get behind because it's identifying a client that might have been a legacy client from years ago that's been happy just paying in full at year end to have their financials, tax returns, tax planning, you know, whatever else in their package. Yeah. And then it's our job to go, hey, cool. Like, yep, you're paying five grand at year end, but we're going to put you on 500 bucks a month. Yep. And we're going to include This, this, this. So yeah, cool. We've uh uh we've also just grown our revenue from five grand to six thousand dollars annually. We've got regular cash flow rather than waiting for year end. And that client may have received some services that they weren't getting that are actually of value. I mean, that's what it's all about too, is never selling a service that's not of value, but it might be taking away a pain point. You know, that that particular customer lodged their single touch payroll wrong, or they didn't file their work cover remuneration, or they went over for payroll tax and they didn't know. All of a sudden we've taken a pain point away. But recurring revenue. So yeah, fantastic point.</p>
+          <p><span class="spk">Nick · 09:45</span>Yeah, so that that helps us a lot. And I think any business should think about is there a way that they can make that happen? Yeah. Um, so for us, and then what it does, it reduces our need to have a cash balance. Yep. Um, so we uh we have a minimum amount that we need to keep for expenses. And then above that we keep any any aged payable, so anything that's that's got to go out and be paid that's already in the system, any GST payable, any super payable. Um then we look at what's left and that's what gets distributed on a quarterly basis as a dividend. And on on the revenue side, and I encourage people to do this, and I'm I'll solo out our mortgage business here. But we basically know what our revenue is going to be six months prior. So we know that if we get A certain amount of opportunities into our business, call them leads. So we need to sit at about 500 a month. We know of those opportunities that come in, we capture as best we can every single opportunity. we know that we're going to convert at roughly 50% of all those opportunities in that relevant time period. 500 deals come in in a month or opportunities, 250 of those are going to turn into deals. Yeah. So we know that every deal we lodge. is then gonna settle at 75%. So we know we're gonna settle, we're gonna lodge 50% of opportunities. And then what's lodged, we're gonna settle 70 to 75% of that in that same time period. We'll probably settle settle 90%, but it could be in a different</p>
+          <p><span class="spk">Jason · 11:14</span>Yeah, you're leaving you're leaving a buffer for for that. Yeah.</p>
+          <p><span class="spk">Nick · 11:17</span>If you look at the the the lag time for a mortgage, it's anywhere from, you know, a a month that could be opportunity to settle, or it could be three to four months. So we know we're hitting five out five hundred opportunities a month. We pretty much got a read on what our revenue is gonna be for the next six months because we also know what our average loan amount is. And that's a live you like we use HubSpot. We've got a live um read on what our average loan amount is at any given time based on as things are lodged. Yeah. So I know I'm gonna how many deals I'm gonna lodge based on the leads that come in. I know what volume that's gonna be because I know what our average loan amount is. And we also get paid sort of a month after settlement. So we've really got a six month read. So we know now in February, as long as March does what we need it to be, uh to do, our fin year is sorted.</p>
+          <p><span class="spk">Jason · 12:05</span>Yeah.</p>
+          <p><span class="spk">Nick · 12:06</span>We're gonna hit budget. So that's our particular business, but that's what you can think about. It's still data.</p>
+          <p><span class="spk">Jason · 12:11</span>And what like straight away I'm going, what a weight off the shoulders to know those numbers. Unbelievable. Like it doesn't solve all the problems of a business owner, but that's a big one to have resolved that from a cash perspective and you know, you know your revenue, but you also know the timing of that cash settlement. So I think for business owners out there and even for accountants who, you know, are interviewing their clients, the questions that we would go through are How many months of cash runway do you have? So actually knowing I've got enough money in the bank for one month. Whoa, okay. The the conversation changes straight away that if you think you're going to run out of money in a month, Sh you're bringing up some like danger conversations. You know, before you run out of money, you're having conversations with people like in your team going, can we get an overdraft? But there's more numbers you want to understand before you just try and throw a band-aid solution over it. Beyond that though, if they've already got an overdraft, it's understanding are they regular diving into it and why isn't the cash buffer growing It's asking a client, do tax bills cause you stress and do they seem like they're unplanned? Because straight away as well, if you know the numbers of your business, you can also forecast your GST, your pay as you go withholding, your instalments, um, as well as superannuation payments. And then the other thing, are you using your GST and Page You Go to float your business? So if we're getting those questions answered up front, it's giving us a really good kind of starting platform to launch into coaching, mentoring, and guiding a client. to treat cash in a very different um lens and to and to apply it the way you do to actually have like a real solid understanding and plan around it. So quick one on from a lending side as well. I mean, and and often we will work together on these, but we we see profitable businesses that don't have cash. And then we end up, you know, working with your team to try and do some lending to kind of bridge that gap. Do you see that a lot as well from your side that business owners fail to have that understanding of the timing of their own cash? Yeah, definitely.</p>
+          <p><span class="spk">Nick · 14:03</span>And you've got to like it's data, right? Like what's measured is managed. And I think Where I've been lucky is I've got other people in the business who are good at that stuff. So I think quite a lot of times business owners fall into business because they're good at what they do. We've spoken about before. You're a good salesperson, you sell a lot. But you've got to get outside of what you do and understand your data. And if you're doing that, then you can help uh you can understand your cash flow. So Yeah, if you don't if you're not good at it, um in you can engage someone like yourself or you know you get a business partner that's that's good at that.</p>
+          <p><span class="spk">Jason · 14:36</span>Like I know you and Greg are different and Greg Greggy Gregg's the numbers man for sure.</p>
+          <p><span class="spk">Nick · 14:41</span>Yeah, he's the analytical one. So you're out there bringing the business in. So Yeah, I think um quite often it's just because people are so good at what they do, they think that that stuff, not that it doesn't matter, but they think everything will be okay because I'm out You know, I'm on I'm on the ground, I'm running hard, I'm I'm doing heaps of deals, I'm getting heaps of clients in. Yeah. I don't need to worry about that. It'll sort itself out. Um but you absolutely do need to worry about that.</p>
+          <p><span class="spk">Jason · 15:04</span>Yeah. And if you don't have a cash flow forecast It's not an expensive thing to go out and get. Like meet with your accountant, meet with an advisor, and actually just reverse engineer. Like you take your PL and your balance sheet. And often in tools like Zero, there is a cash summary. And it's actually quite interesting the first time you take a client through that to go, here's your profit and loss and it shows you made this much money. But you go and run the cash summary and it's the bank account's gone back 50 grand. And like, well, hang on a minute, the P&lt;unk&gt;L says I'm profitable. How have I gone backwards 50 grand? And then it's that discovery of the loan repayment, the car repayment, the BAST, the GST, the whatever it is. Or the other one they're just noting. Often a lot of cash stress comes from a business owner treating their company like it's their personal cash buffer as well. So you see the director drawings coming out without a real solid plan around the owner remuneration. So actually nailing that bit to go. You're running a business, how much should you be paid consistently and regularly and worked into your cash flow? rather than saying money in the bank and taking out some bigger chunks willy-nilly because you're the owner and you've got some expenses that come up personally. So That's often where there's a bit of hand in hand around understanding your personal finances and understanding the business.</p>
+          <p><span class="spk">Nick · 16:14</span>So it's it's double-edged swords because you've got not only are you not across your cash flow um and you don't you know, you're pulling money out of the business that you possibly shouldn't have or couldn't afford to. But you're also in in most of these cases creating a tax issue. So you You're you're taking the money out of the business when the b business couldn't afford to pay you, and then you've got the ATO chasing you. Yep. Um because it's classed as an income because at the end of the day you put it in your own pocket. So it's just um Yeah, it just comes back to education.</p>
+          <p><span class="spk">Jason · 16:42</span>Yep, spot on. The uh second number to talk about, we've only got three, so we'll make this uh easy for people to walk away and go and check their numbers. But the second number is margin. Now I've kind of focused on gross margin, but I also think, you know, the net margin is is equally as important. We touched on the fact that a business owner will talk about their growing revenue and you know e each year we've added a million dollars revenue or you know we're growing Um, you know, we're a seven-figure business. But at the end of the day, what it comes down to is are you retaining enough of your revenue as profit? So you've got a gross margin and a net margin or gross profit margin and a net profit margin. Essentially a gross margin is your, you know, the total revenue bring you bring in. less direct costs to have earned that revenue. So for us it might be we're very we're a professional services business where you basically selling people's time for money. So we've got our revenue coming in, less our employment wage costs on people directly Doing the task, selling, you know, making the plan, doing the tax return, getting the loan, leaves our gross margin left behind. In a goods business, it might be, you know, the sale of the pri the sale price of a widget was $100. It costs $50 to make the widget and $20 worth of labor equals your gross margin. So you're always kind of just taking out the direct cost to get. that top bit left over. Your net profit margin, take out all the other operating expenses below that. So rent, advertising, um Bank fees, whatever, everything else, subscriptions, depending on whether they're, you know, some can be cogs, but we won't go into that. Direct costs. And then you've got your net profit margin. So the example we see in making it a real easy number would be a million dollar turnover business that's got a 10% profit margin or net profit. Um, and they might have a 60% gross margin, but we'll just go to the bottom line so it's easy. Million dollars turnover, 10% net profit. They've got 100 grand left over at the end of the year. Great. Awesome. Depending on the industry, that can be an okay kind of measure. One thing to always look at is benchmarking your industry because otherwise you've got nothing to kind of match it against. You might be trading going, man, hell yeah, got a hundred grand left over. But every other business doing what you do might be making 20% or 30%. So then you've got some levers to pull to understand why your business isn't as profitable as somebody else doing the same in your industry. I've seen multiple times where someone in that example doing a million dollars turnover grows and the next year they come back to me and like, Jace, two million turnover, how good? It's like great. Maybe it's 150,000 profit. So their actual net profit margin has reduced. They're not making the same amount of money to have doubled their revenue because they've taken on more costs beyond their ability to grow their revenue. So it's one that you should always track. And it's one that you need to measure quite often. And if you don't have an understanding of it, it's probably the next thing aside from understanding your cash flow forecast. It's going and understanding the product or the service you're selling and truly figuring out those two numbers, your gross margin and your net margin.</p>
+          <p><span class="spk">Nick · 19:45</span>And just on the benchmarking, where can you source um that information? Yeah, good question.</p>
+          <p><span class="spk">Jason · 19:51</span>Ibis World is a fantastic source of source of benchmarking. but you often have to pay um to get the full report. There's some free versions depending on um the industry you're in. Your accountant is also a great source of benchmarking. We use tools like SIFT Analytics um and different bits of software that will benchmark. And then also if you're in quite a common industry, the ATO website has benchmarking. Why the ATO is really interesting from a benchmarking point of view is It's often how the ATO will look for outliers to decide on an audit or a review of someone. So let's say you are a plumber and every other plumber in the industry, based on the ATO's data, is making 12% net margin, but for some reason you are 3% net margin because maybe there's some cash jobs or maybe you've run some extra materials through for a home renovation, not targeting plumbers, just hypothetical, let's say trades. Also don't want to target trades, but you know what I mean? It's an easy one to kind of relate to. Accountants, yep, we're running lots of cash running through accountants' books or not through their books. So yeah, so the ATO benchmarks as a starting point, um, you know, cafes, restaurants, plumbers, all different trades. accounting firms, mortgage broking, those real common kind of professions and industries, you'll easily find them on ATO benchmarking. If you're in a bit of a more unique niche industry, you might have to kind of do a little bit of digging. That's where Ibis World comes in really handy. Like We had um a baby goods retailing um business. But then, for example, like Ibis World will go and do a deep dive on baby bunting to truly understand like the margins, the gross profit, the costs and everything else that goes into it for a company like that that might be making three percent net profit margin to go, well, geez, what's what's the point in doing these? millions and billions of turnover to have such a slim little amount left over and what can be done different. So yeah, they're they're kind of Ibersword if you can get it is phenomenal as well. Like I just think about some of the way some of the way the detail they go into that report. It'll tell you in your particular industry or profession. What are the upcoming trends to look out for? What cycle is your industry in? Are you going to be under any pressures from this and that? Like definitely one to look out for.</p>
+          <p><span class="spk">Nick · 22:05</span>So would you suggest it's not a silly idea to Almost start at that net profit. So as in reverse engineer, it's okay. Well, if I'm in accounting and you know IBIS says it's 20% is the benchmark, and I'm turning over a million dollars. I need to find a way to net 200K from that. So that's how I'm I'm gonna work backwards. So okay, well uh the the office we're looking at's ninety grand a year. Well, can't be. It's gotta be sixty. Yep. Gotta find a way to make that work.</p>
+          <p><span class="spk">Jason · 22:35</span>Yeah, but there's been the benchmarks show all that too. Like what everyone's what everyone based on your revenue would spend on rent or motor vehicles or direct costs, um, materials. So When you have all of that and you do reverse engineer, just run your last 12 months PL or however you want to look at it. Uh we've we've done it and the straight away there's just glaring outliers that you can look at as a business to go, we We aren't as profitable as we need to be. We've we're kind of heavy on on human resource. Yep. And we look at it and go, the other firms that are more profitable than us. They've truly used more more automation, more technology. They charge more than we do. Um, they're doing more boutique consulting, higher like some higher-end project work. Or some government projects where there's high margin, we don't get into that stuff. So while you can benchmark against it, you also know need to know how to tweak it. But straight away I go, we we spend too much on employment costs. So if we can either tap in more revenue and get our team to be more productive, we'll then have a bigger bottom line. If our team can't be more productive, Well, then we need to look at what costs can we save. Like, you know, so and they're they're a great place for a business owner to start to understand those numbers.</p>
+          <p><span class="spk">Nick · 23:47</span>Yeah, and and particularly the fee side and one of the things that we worked out a couple of years ago in our planning business is we were too cheap. And we worked that out through through reverse engineering and Increasing fees was not a problem. Yeah. Like there was a hurdle that we were creating ourselves, particularly when you've got a bigger business and you've got scale, you don't need to increase your fees much to have an impact. Correct. Um and if you've got good loyal clients, they just they actually do not care because they've been with you for two or three years, they see the value you add, and if you're charging them another five or ten percent. That doesn't really mean anything to them, but on scale, it means a lot for us. Yep. Um, so resonate with that. The the thing I was gonna ask, and is there benchmarking on this? But let's say I'm I've I've got a growth plan or you know, it's time to you know, there's an uh th there's an opportunity in my industry to grow based on um a cycle. Yeah. So Is there benchmarking around, all right, Jace, I'm your client, I don't care about net profit, I want to grow by 50% next year. Um, is there benchmarking to understand what impact that should on have on your profitability or is that what Something you can help with because their their net profit might be five percent, but they might have three X their business in the last twelve months, which costs a lot of money, as we know.</p>
+          <p><span class="spk">Jason · 25:08</span>Yeah. And that's where like um the what if scenario analysis. So the the idea that you can have smaller net profit margin, but then you need to be able to understand what impacted that as a business. So the growth cycle, what was happening in that particular industry or profession, where was the investment made? And if you model it forward and then go What if we actually strip out the one-off costs? What if we get rid of the things that if we acquired the business or if we bought it, like what would we do to change it? And that's where you need to kind of have the ability to kind of maneuver the numbers to to deep dive into that analysis. But yeah, that's more definitely doable. And it comes down to that forecasting three-way budgets, three-way forecasts and and stripping it back. But again, if you start with the the margins and know what you're working towards as well. When you do those what if analysis, you go, well, if we move this number up or down and you model it out, how does that change our net profit margin six months from now by putting the average hourly rate of every team member up ten dollars. If you've got twenty team members billing X amount of hours per week and you get an extra $10 per team member per hour times 20. Yeah. If you model that out and kind of let it flow through, all of a sudden you're going, Whoa. You know, we did it with the plumbing example. Um, we had a plumbing client that put their fees up from, you know, 170 an hour to 180 an hour, and all of a sudden there was 200 grand of extra pr proper net profit at the end of the year on the bottom line just from changing their hourly rates. Everything else stayed the same.</p>
+          <p><span class="spk">Nick · 26:36</span>And the other thing that keeps um coming to mind is the data. So if you don't have that data, how do you know? And how how many people that that scenario just went through, you know They're charging at this how many hours. This is the this is what they're charging. This is what the output increase could be. If you don't have that data, how can you make those strategic decisions? And I there's so many tools out there now to collect that data. There's no excuse for for not knowing it.</p>
+          <p><span class="spk">Jason · 27:02</span>And and it's honestly where so many small business owners get it wrong because they keep doing the same thing. It's, you know, refer back to the previous episode where you get into that habit and routine of doing the same thing every year and before you know You might have had the intentions to review your pricing, grow your revenue, grow your profit, but then the year gets by and it's gone and you didn't have the meeting with the accountant or engage the strategic advisor or the virtual CFO or whatever the fancy words and names are these days. But at the end of the day, I think step one is actually Sit down with your accountant and ask some questions around, you know, what if you don't know it yourself and you don't have the skills to do it yourself, it's someone like your accountant to go, what is my net profit? What is my gross profit margin? Should I change my prices? How much money does everyone else in my profession or industry make? And all of a sudden then you've got something to measure against and go, okay, cool. I've always felt like I I should have charged more, or I felt like I'm not doing enough, or You know, and then it's harder, not smarter.</p>
+          <p><span class="spk">Nick · 27:55</span>As a business owner, make sure you've got a platform or a tool or um s part of your tech stack is being able to get a read on that stuff.</p>
+          <p><span class="spk">Jason · 28:03</span>And and and these days it's it's you know plugging it into a KPI dashboard or even Zero these days. Um SIFT Analytics was an acquisition by Zero. um you'll start to see it pop up like review these analytic reports and they're just beautiful graphs and you know different analytics on the business that you can unpack and you kind of keep clicking in and go further and deeper, but you've got to take an interest.</p>
+          <p><span class="spk">Nick · 28:25</span>And that's the thing.</p>
+          <p><span class="spk">Jason · 28:25</span>Most people kind of it's overwhelming. It's stressful. You know, it's not it's not their strong suits. They go, oh It doesn't matter. It's all good. Like, you know.</p>
+          <p><span class="spk">Nick · 28:33</span>Not as stressful with liquidation.</p>
+          <p><span class="spk">Jason · 28:35</span>Well, 100%. So uh number one was cash. Number two is your margins. Understand your gross profit and your net profit, depending on the profession you're in. Um and definitely a good tip is to look at benchmarking and and talk to an advisor. And the third one, Nick, uh, I actually think this is something that you referred to as well and have talked about at the start of a year, and and I think uh it's another great one. But it's the personal wealth outside of business. Now, it's all good and well to have a business and start a business and grow a business, but if you pour everything into this one nest egg without thinking about your personal wealth strategy outside of work, so You know, a lot of business owners skip paying themselves super in the early days. You know, it's uh have they then caught up their super? Do they have the right insurances in place? Do they have they bought an investment property? Are they paying down their mortgage on their family home? Or is that the expense of running a business costing them measuring and monitoring their personal wealth and their personal wealth growth? So I think um a personal wealth tracker where you actually measure these things to go what is happening outside the business. Because for some be for some business owners, the business is their whole world and they put everything into it. and their personal finances fall by the wayside a little bit. So I'd like to open up to that uh from your side of what it means to track your personal wealth. and have a bit of a tracker.</p>
+          <p><span class="spk">Nick · 29:58</span>Yeah, well it's something I'd definitely do and I I get um particularly our sales team to do it as well. I suggest they do it because they They're super busy and they work so hard. Um I do it biannually. Yep. It's as simple as a spreadsheet. Doesn't need to be, you know, um war and peace. And uh we talked about in the last episode on um goals but it just creates momentum so it's it just um validates that what you're doing is working Or the opposite. It validates what you're doing is not working because your personal wealth isn't growing, growing. And so it can renew your energy when you feel like you're burnt out or you're stressed or cheese, is this actually working? It can either do that or it can, you know, point out the glaring obvious that I need to change something. Yeah. Um so for me it uh the main benefit I get out of it is that momentum. So okay, yeah, that this is working and keep going and it it is all worth it. Um and yeah, it helps you understand there's any serious issues. And you mentioned something there that um that was really important and that is business owners being so wedded to their business, not just from a time point of view, but a net wealth point of view. Yeah. So you need to look at things like, well, is my business sellable? Number one. So if I was to pass away and my partner need to realize need to realize the um the equity in that business or the value of that business, is that possible? If it's not, do you have things like buy-sell insurance? So if you've got business partners they can pay you out for your portion of the business. Or it might be as simple as saying, well, I'm a I've got a business with three people in it. I know I'm going to sell this one day, but I know this business is not sellable if I'm not here. Yeah. So have I just got life insurance? So, you know, if I'm for me, for example, I'm just pi picking a um picking numbers, but I've got a debt of a if I've got a debt of a million dollars, I know my wife needs two million dollars if my income's not here. So that's three million dollars my wife needs if my income's not there. The business is worth three million. Happy days.</p>
+          <p><span class="spk">Jason · 32:10</span>Yep.</p>
+          <p><span class="spk">Nick · 32:10</span>Now if I pass away tomorrow, suddenly, what's the chance of my wife getting three million dollars out of that business? It's probably zero. And if it does happen, it's going to take years for it to happen. So you probably should have a life insurance premium that gets your wife paid straight away. Now, if She earns that money and that business sells, then happy day she's got more. So things like that you need to be across because you you do get so wedded to your business.</p>
+          <p><span class="spk">Jason · 32:35</span>But like how big's that though, right? Like you've reeled that off. And I sit there just going like phoa like it It and the this is the conversations that make business owners feel uneasy, right? They've built something and so much is tied to it. And then it's an example like that of what happens if you're gone or you know, can you actually sell your business? So obviously the you know a reel off the number three is know your personal have a personal wealth tracker. But it's the reason that you've just talked about of why this personal wealth tracker is so important because it opens up so many conversations around, you know, the risks that happen with business risk and personal risk, you know. Um, you know, yeah, what happens if someone dies? Is their insurance in place? Can I sell my business? And what's it actually worth? I think often people will come up with a number in their heads of what their business is worth and then you go to market and it's a very, very different number. Um, you know, so I think it's being realistic on the wealth tracker as well and then having a a way to measure it. Um You know, and and valuation methods are all very different, whether it's multiple of profit, you know, net net asset balance of the balance sheet. Um, you know, each each industry has its own multiplier as well. But again, if you have nothing at all and you're a blank canvas, it is starting this process. And as you said, keep it simple on a spreadsheet. What are my assets? What are my liabilities? What's left over if all is said and done?</p>
+          <p><span class="spk">Nick · 33:54</span>Yep.</p>
+          <p><span class="spk">Jason · 33:54</span>Um and then You know, working with someone like like a Luke and going, where do I want to be? Not just ninety days, not just one year, but what is that bigger picture plan, you know, especially It does lead to retirement planning. And a lot of people are so far away from retirement that this is an afterthought or this isn't even a thought at all.</p>
+          <p><span class="spk">Nick · 34:13</span>Well, you you you drop the retirement word and you call it financial freedom. Yeah. But that's so I think There's a stigma with retirement because it's you know, it's when I'm older. It's ages away, I don't need to worry about it. But it's not really we're not we're not trying to get to a point where we don't have to work again, most people. We're trying to get to a point where we're financially free.</p>
+        </div>
+      </details>
+
+    </div>
+
+    <!-- LISTEN:START -->
+    <section class="listen-now">
+      <div class="ln-head">
+        <span class="ln-title">Listen now</span>
+      </div>
+      <div class="audio-embed">
+        <iframe src="https://open.spotify.com/embed/episode/3AzweNgizNh9VszrSclE4P?utm_source=generator"
+          width="100%" height="152" loading="lazy" allowfullscreen
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+          title="Spotify — The 3 Numbers Every Business Owner Must Track"></iframe>
+      </div>
+    </section>
+
+    <div class="listen">
+      <a href="https://open.spotify.com/episode/3AzweNgizNh9VszrSclE4P" target="_blank" rel="noopener" aria-label="Listen to this episode on Spotify">
+        <svg viewBox="0 0 24 24"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.52 17.34c-.24.36-.66.48-1.02.24-2.82-1.74-6.36-2.1-10.56-1.14-.42.12-.78-.18-.9-.54-.12-.42.18-.78.54-.9 4.56-1.02 8.52-.6 11.64 1.32.42.18.48.66.3 1.02zm1.44-3.3c-.3.42-.84.6-1.26.3-3.24-1.98-8.16-2.58-11.94-1.38-.48.12-1.02-.12-1.14-.6-.12-.48.12-1.02.6-1.14 4.32-1.32 9.72-.66 13.44 1.62.36.18.54.78.3 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.3c-.6.18-1.2-.18-1.38-.72-.18-.6.18-1.2.72-1.38 4.26-1.26 11.28-1.02 15.72 1.62.54.3.72 1.02.42 1.56-.3.42-1.02.6-1.56.3z"/></svg>
+        Spotify
+      </a>
+      <a href="https://podcasts.apple.com/au/podcast/id1555566088?i=1000749831277" target="_blank" rel="noopener" aria-label="Listen to this episode on Apple Podcasts">
+        <svg viewBox="0 0 24 24"><path d="M5.34 0A5.328 5.328 0 000 5.34v13.32A5.328 5.328 0 005.34 24h13.32A5.328 5.328 0 0024 18.66V5.34A5.328 5.328 0 0018.66 0H5.34zm6.525 2.568c2.336 0 4.448.902 6.056 2.587 1.224 1.272 1.912 2.619 2.264 4.392l.04.23c.04.272-.16.527-.432.567a.505.505 0 01-.567-.431l-.04-.213c-.312-1.57-.92-2.747-2.004-3.867-1.428-1.496-3.293-2.294-5.393-2.294-2.1 0-3.966.798-5.394 2.294-1.084 1.12-1.692 2.298-2.004 3.867l-.04.213a.507.507 0 01-.567.431.504.504 0 01-.432-.567l.04-.23c.352-1.773 1.04-3.12 2.264-4.392 1.608-1.685 3.72-2.587 6.056-2.587h.153zm.136 3.033c1.74 0 3.312.67 4.527 1.934.883.916 1.394 1.93 1.663 3.253l.04.23a.505.505 0 01-.431.567.503.503 0 01-.567-.432l-.04-.212c-.23-1.112-.659-1.97-1.396-2.732-1.052-1.1-2.404-1.672-3.9-1.672s-2.849.572-3.901 1.672c-.737.762-1.167 1.62-1.396 2.732l-.04.212a.503.503 0 01-.567.432.505.505 0 01-.432-.567l.04-.23c.27-1.323.78-2.337 1.664-3.253 1.215-1.264 2.787-1.934 4.527-1.934h.21zm-.078 3.05c1.092 0 2.091.424 2.89 1.22.582.58.924 1.245 1.107 2.15l.04.218a.501.501 0 01-.424.568.499.499 0 01-.568-.424l-.04-.198c-.146-.724-.413-1.253-.871-1.716-.63-.63-1.398-.957-2.226-.957s-1.595.328-2.225.957c-.459.463-.726.992-.871 1.716l-.04.198a.499.499 0 01-.568.424.501.501 0 01-.424-.568l.04-.219c.183-.904.525-1.569 1.106-2.149.8-.796 1.799-1.22 2.89-1.22h.184zM12 14.07a2.477 2.477 0 012.48 2.478A2.477 2.477 0 0112 19.024a2.477 2.477 0 01-2.48-2.477A2.477 2.477 0 0112 14.07z"/></svg>
+        Apple
+      </a>
+      <a class="yt-pill" href="https://www.youtube.com/@thenumbersgamepodcast?sub_confirmation=1" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.12-2.14C19.5 3.55 12 3.55 12 3.55s-7.5 0-9.38.51A3 3 0 0 0 .5 6.2 31.4 31.4 0 0 0 0 12a31.4 31.4 0 0 0 .5 5.8 3 3 0 0 0 2.12 2.14c1.88.51 9.38.51 9.38.51s7.5 0 9.38-.51a3 3 0 0 0 2.12-2.14A31.4 31.4 0 0 0 24 12a31.4 31.4 0 0 0-.5-5.8zM9.55 15.57V8.43L15.82 12z"/></svg>
+        Subscribe
+      </a>
+    </div>
+    <!-- LISTEN:END -->
+
+    <div class="relsec">
+      <span class="rtitle">Discover more</span>
+      <div class="relgrid">
+        <a class="relcard" href="/the-business-of-gift-cards">
+          <img src="https://i.ytimg.com/vi/nC_JkW320Tw/hqdefault.jpg" alt="EP 282 thumbnail">
+          <span class="rt">The Business of Gift Cards</span>
+          <span class="rfoot"><span class="rwhy">Also covers: cash flow</span><span class="rtag">EP 282</span></span>
+        </a>
+        <a class="relcard" href="/what-real-budget-reform-for-young-australians-would-actually-look-like">
+          <img src="https://i.ytimg.com/vi/le7HuIBq6Ow/hqdefault.jpg" alt="EP 283 thumbnail">
+          <span class="rt">What Real Budget Reform for Young Australians Would Actually Look Like</span>
+          <span class="rfoot"><span class="rwhy">29 June 2026</span><span class="rtag">EP 283</span></span>
+        </a>
+        <a class="relcard" href="/how-to-know-if-your-skills-transfer-in-an-ai-world">
+          <img src="https://i.ytimg.com/vi/X-sSC-WROOQ/hqdefault.jpg" alt="EP 281 thumbnail">
+          <span class="rt">How to Know If Your Skills Transfer in an AI World</span>
+          <span class="rfoot"><span class="rwhy">15 June 2026</span><span class="rtag">EP 281</span></span>
+        </a>
+        <a class="relcard" href="/victoria-owes-199-billion">
+          <img src="https://i.ytimg.com/vi/sppkdu-w5jU/hqdefault.jpg" alt="EP 280 thumbnail">
+          <span class="rt">Victoria Owes $199 Billion</span>
+          <span class="rfoot"><span class="rwhy">8 June 2026</span><span class="rtag">EP 280</span></span>
+        </a>
+        <a class="relcard" href="/the-bank-of-mum-and-dad-a-financial-disaster-waiting-to-happen">
+          <img src="https://i.ytimg.com/vi/SkVVJ7VzjuI/hqdefault.jpg" alt="EP 279 thumbnail">
+          <span class="rt">The Bank of Mum and Dad</span>
+          <span class="rfoot"><span class="rwhy">1 June 2026</span><span class="rtag">EP 279</span></span>
+        </a>
+        <a class="relcard" href="/the-1-000-ato-tax-deduction-explained">
+          <img src="https://i.ytimg.com/vi/XyMngctwpGs/hqdefault.jpg" alt="EP 278 thumbnail">
+          <span class="rt">The $1,000 ATO Tax Deduction Explained</span>
+          <span class="rfoot"><span class="rwhy">25 May 2026</span><span class="rtag">EP 278</span></span>
+        </a>
+      </div>
+      <div class="reldots" id="reldots"></div>
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="footgrid">
+      <div class="fcol">
+        <div class="foot-label">Follow us on</div>
+        <div class="socials">
+          <a href="https://www.instagram.com/thenumbersgamepodcast/" target="_blank" rel="noopener" aria-label="The Numbers Game on Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.8.2 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1 .4 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .4-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1-.4-2.2-.1-1.3-.1-1.7-.1-4.9s0-3.6.1-4.9c.1-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.4 2.2-.4 1.3-.1 1.7-.1 4.9-.1zm0 2c-3.1 0-3.5 0-4.8.1-1.1.1-1.5.2-1.8.3-.4.2-.7.3-1 .6-.3.3-.5.6-.6 1-.1.3-.3.7-.3 1.8-.1 1.3-.1 1.7-.1 4.8s0 3.5.1 4.8c.1 1.1.2 1.5.3 1.8.2.4.3.7.6 1 .3.3.6.5 1 .6.3.1.7.3 1.8.3 1.3.1 1.7.1 4.8.1s3.5 0 4.8-.1c1.1-.1 1.5-.2 1.8-.3.4-.2.7-.3 1-.6.3-.3.5-.6.6-1 .1-.3.3-.7.3-1.8.1-1.3.1-1.7.1-4.8s0-3.5-.1-4.8c-.1-1.1-.2-1.5-.3-1.8-.2-.4-.3-.7-.6-1-.3-.3-.6-.5-1-.6-.3-.1-.7-.3-1.8-.3-1.3-.1-1.7-.1-4.8-.1zm0 3.4a5.4 5.4 0 1 1 0 10.8 5.4 5.4 0 0 1 0-10.8zm0 2a3.4 3.4 0 1 0 0 6.8 3.4 3.4 0 0 0 0-6.8zm5.6-2.3a1.3 1.3 0 1 1-2.6 0 1.3 1.3 0 0 1 2.6 0z"/></svg></a>
+          <a href="https://www.tiktok.com/@thenumbersgamepodcast" target="_blank" rel="noopener" aria-label="The Numbers Game on TikTok"><svg viewBox="0 0 24 24"><path d="M12.53.02C13.84 0 15.14.01 16.44 0c.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg></a>
+          <a href="https://www.linkedin.com/company/the-numbers-game-podcast/" target="_blank" rel="noopener" aria-label="The Numbers Game on LinkedIn"><svg viewBox="0 0 24 24"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.24 8.25h4.52V23H.24V8.25zM8.34 8.25h4.33v2.01h.06c.6-1.14 2.08-2.34 4.28-2.34 4.58 0 5.42 3.01 5.42 6.92V23h-4.51v-7.16c0-1.71-.03-3.91-2.38-3.91-2.39 0-2.75 1.86-2.75 3.78V23H8.34V8.25z"/></svg></a>
+          <a href="https://www.facebook.com/profile.php?id=100071290388343" target="_blank" rel="noopener" aria-label="The Numbers Game on Facebook"><svg viewBox="0 0 24 24"><path d="M24 12.07C24 5.41 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.04V9.41c0-3.02 1.8-4.7 4.54-4.7 1.31 0 2.68.24 2.68.24v2.97h-1.5c-1.5 0-1.96.93-1.96 1.89v2.26h3.32l-.53 3.5h-2.8V24C19.62 23.1 24 18.1 24 12.07z"/></svg></a>
+          <a href="https://www.youtube.com/@thenumbersgamepodcast" target="_blank" rel="noopener" aria-label="The Numbers Game on YouTube"><svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.2C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31.7 31.7 0 0 0 0 12a31.7 31.7 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.2A31.7 31.7 0 0 0 24 12a31.7 31.7 0 0 0-.5-5.8zM9.6 15.6V8.4L15.8 12z"/></svg></a>
+        </div>
+      </div>
+      <div class="fcol">
+        <div class="foot-label">Brought to you by</div>
+        <div class="sponsors">
+          <a href="https://www.inovayt.com.au/" target="_blank" rel="noopener"><img src="assets/inovayt-white.png" alt="Inovayt"></a>
+          <a href="https://futureadvisory.com.au/" target="_blank" rel="noopener"><img src="assets/future-advisory-white.png" alt="Future Advisory"></a>
+        </div>
+      </div>
+      <div class="fcol produced">
+        <div class="foot-label">Produced by</div>
+        <a href="https://www.vidpod.com.au/" target="_blank" rel="noopener"><img src="assets/vidpod-white.png" alt="VIDPOD"></a>
+      </div>
+    </div>
+    <div class="footbar">
+      <details class="footnav-dd">
+        <summary><svg class="ham" viewBox="0 0 24 24"><path d="M3 6h18v2H3zM3 11h18v2H3zM3 16h18v2H3z"/></svg> Menu</summary>
+        <div class="dd-links">
+          <a href="/">Home</a><a href="/episodes">Every episode</a><a href="/adventure">Choose your own adventure</a><a href="/about">About the show</a><a href="/nick-reilly">Nick Reilly</a><a href="/jason-robinson">Jason Robinson</a><a href="/marty-vidakovic">Marty Vidakovic</a><a href="/contact">Contact</a>
+        </div>
+      </details>
+      <div class="copyright">© 2026 The Numbers Game</div>
+    </div>
+  </footer>
+
+  <script>
+    var VIDEO='DM_b95zERsI';
+    var CHAPTERS=[
+      {t:"00:00",s:0,title:"Intro"},
+      {t:"02:34",s:154,title:"Three Key Numbers Every Business Owner Must Watch"},
+      {t:"04:03",s:243,title:"Revenue Is Vanity, Profit Is Sanity: The Cash Is King Rule"},
+      {t:"06:07",s:367,title:"Profit vs Cash Flow: Understanding Dividend Payouts"},
+      {t:"08:23",s:503,title:"The Power Of Recurring Revenue And Retainer Models"},
+      {t:"09:45",s:585,title:"Data-Driven Sales: Using Lead Conversion To Predict Revenue"},
+      {t:"16:42",s:1002,title:"Decoding Margins: Gross Profit vs Net Profit Margins"},
+      {t:"19:51",s:1191,title:"Benchmarking Your Business: How Do You Compare To Competitors?"},
+      {t:"23:47",s:1427,title:"When To Increase Your Fees Without Losing Customers"},
+      {t:"28:35",s:1715,title:"Personal Wealth Strategy: Building Assets Outside Your Business"}
+    ];
+    var QUESTIONS=[
+      {q:"Does being busy mean my business is doing well?",s:186},
+      {q:"What does revenue is vanity, profit is sanity, cash is king mean?",s:243},
+      {q:"What is the number one reason businesses fail?",s:300},
+      {q:"Why is recurring revenue valuable for a business?",s:503},
+      {q:"How many months of cash runway should a business have?",s:731},
+      {q:"What if I'm not good with numbers in my business?",s:843},
+      {q:"Why can revenue grow while profit margin shrinks?",s:1080},
+      {q:"How does the ATO use benchmarking to trigger audits?",s:1250},
+      {q:"When should I increase my prices?",s:1427},
+      {q:"How much does a small price rise change my profit?",s:1508}
+    ];
+
+    var chEl=document.getElementById('chapters');
+    CHAPTERS.forEach(function(c){var b=document.createElement('button');b.className='chapter';b.onclick=function(){startAt(c.s)};b.innerHTML='<span class="tc">'+c.t+'</span><span class="cx">'+c.title+'</span>';chEl.appendChild(b);});
+    document.getElementById('chcount').textContent=CHAPTERS.length;
+    var qEl=document.getElementById('qa');
+    QUESTIONS.forEach(function(q){var b=document.createElement('button');b.className='q';b.onclick=function(){startAt(q.s)};b.innerHTML='<span class="qm">?</span><span class="qx">'+q.q+'</span><span class="go">›</span>';qEl.appendChild(b);});
+    document.getElementById('qcount').textContent=QUESTIONS.length;
+
+    /* Mobile nav dropdown. */
+    var burger=document.getElementById('navburger'), navdrop=document.getElementById('navdrop');
+    if(burger&&navdrop){burger.addEventListener('click',function(){
+      navdrop.hidden=!navdrop.hidden;
+      burger.setAttribute('aria-expanded', navdrop.hidden?'false':'true');
+    });}
+
+    /* Voice-note button reveals the recorder; × tucks it away. */
+    var vbtn=document.getElementById('vbtn'), vslot=document.getElementById('vslot'), vclose=document.getElementById('vclose');
+    if(vbtn&&vslot){vbtn.addEventListener('click',function(){vslot.hidden=!vslot.hidden;});}
+    if(vclose&&vslot){vclose.addEventListener('click',function(){vslot.hidden=true;});}
+
+    /* Keep-exploring dots: only shown when the strip actually scrolls (mobile). */
+    var rg=document.querySelector('.relgrid'), rd=document.getElementById('reldots');
+    if(rg&&rd){
+      var relCards=rg.querySelectorAll('.relcard');
+      relCards.forEach(function(){rd.appendChild(document.createElement('span'))});
+      var updDots=function(){
+        var scrollable=rg.scrollWidth>rg.clientWidth+4;
+        rd.style.display=scrollable?'flex':'none';
+        if(!scrollable)return;
+        var i=Math.round(rg.scrollLeft/(rg.scrollWidth-rg.clientWidth)*(relCards.length-1));
+        rd.querySelectorAll('span').forEach(function(s,n){s.classList.toggle('on',n===i)});
+      };
+      rg.addEventListener('scroll',updDots,{passive:true});
+      window.addEventListener('resize',updDots);
+      updDots();
+    }
+
+    /* Explore tabs: swap the visible panel; the row stays put so you never lose your place. */
+    var tabBtns=document.querySelectorAll('.tabbtn');
+    tabBtns.forEach(function(b){
+      b.addEventListener('click',function(){
+        tabBtns.forEach(function(o){o.classList.remove('on')});
+        document.querySelectorAll('.tpanel').forEach(function(p){p.hidden=true});
+        b.classList.add('on');
+        document.getElementById(b.getAttribute('data-panel')).hidden=false;
+      });
+    });
+
+    /* YouTube: clean facade, then real player on demand. Seek without yanking to top. */
+    var player=null, ready=false, apiReady=false, pending=null;
+    window.onYouTubeIframeAPIReady=function(){apiReady=true; if(pending!=null){var s=pending;pending=null;createPlayer(s);}};
+    function createPlayer(sec){
+      var wrap=document.getElementById('player'); wrap.innerHTML='<div id="yt"></div>';
+      player=new YT.Player('yt',{videoId:VIDEO,playerVars:{autoplay:1,rel:0,modestbranding:1,playsinline:1,start:Math.floor(sec||0)},events:{onReady:function(){ready=true;}}});
+    }
+    function nudge(){
+      var p=document.getElementById('player-wrap'), r=p.getBoundingClientRect();
+      if(r.bottom<80 || r.top>window.innerHeight-90){ p.scrollIntoView({behavior:'smooth',block:'start'}); }
+    }
+    function startAt(sec){
+      nudge();
+      if(player&&ready){ player.seekTo(sec,true); player.playVideo(); return; }
+      if(apiReady){ createPlayer(sec); } else { pending=sec; }
+    }
+    document.getElementById('facade').addEventListener('click',function(){startAt(0);});
+    (function(){var s=document.createElement('script');s.src='https://www.youtube.com/iframe_api';document.head.appendChild(s);})();
+  </script>
+</body>
+</html>

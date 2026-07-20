@@ -319,24 +319,24 @@
 
   <nav class="nav">
     <div class="nav-in">
-      <a class="brand" href="index.html" aria-label="The Numbers Game home"><img src="assets/tng-logo.png" alt="The Numbers Game"></a>
+      <a class="brand" href="/" aria-label="The Numbers Game home"><img src="assets/tng-logo.png" alt="The Numbers Game"></a>
       <div class="navlinks">
         <div class="navgroup">
           <a class="navtop">Episodes</a>
           <div class="subnav">
-            <a href="episodes.html">All episodes</a>
-            <a href="adventure.html">Find moments</a>
+            <a href="/episodes">All episodes</a>
+            <a href="/adventure">Find moments</a>
           </div>
         </div>
         <div class="navgroup">
           <a class="navtop">About</a>
           <div class="subnav">
-            <a href="about.html">The show</a>
-            <a href="nick-reilly.html">Nick Reilly</a>
-            <a href="jason-robinson.html">Jason Robinson</a>
+            <a href="/about">The show</a>
+            <a href="/nick-reilly">Nick Reilly</a>
+            <a href="/jason-robinson">Jason Robinson</a>
           </div>
         </div>
-        <a href="contact.html">Contact</a>
+        <a href="/contact">Contact</a>
       </div>
       <button class="navburger" id="navburger" type="button" aria-label="Menu" aria-expanded="false">
         <svg viewBox="0 0 24 24"><path d="M3 6h18v2H3zM3 11h18v2H3zM3 16h18v2H3z"/></svg>
@@ -344,13 +344,13 @@
     </div>
     <div class="navdrop" id="navdrop" hidden>
       <span class="navlabel">Episodes</span>
-      <a class="sub" href="episodes.html">All episodes</a>
-      <a class="sub" href="adventure.html">Find moments</a>
+      <a class="sub" href="/episodes">All episodes</a>
+      <a class="sub" href="/adventure">Find moments</a>
       <span class="navlabel">About</span>
-      <a class="sub" href="about.html">The show</a>
-      <a class="sub" href="nick-reilly.html">Nick Reilly</a>
-      <a class="sub" href="jason-robinson.html">Jason Robinson</a>
-      <a href="contact.html">Contact</a>
+      <a class="sub" href="/about">The show</a>
+      <a class="sub" href="/nick-reilly">Nick Reilly</a>
+      <a class="sub" href="/jason-robinson">Jason Robinson</a>
+      <a href="/contact">Contact</a>
     </div>
   </nav>
 
@@ -383,7 +383,7 @@
         <span class="pv pv-latest"><img id="latest-thumb" src="" alt=""></span>
         <span class="pgo" id="latest-go">Watch now</span>
       </a>
-      <a class="pcard purplec" href="adventure.html">
+      <a class="pcard purplec" href="/adventure">
         <span class="ph">Choose your own adventure</span>
         <p class="pd">Pick the topics you're into and we'll play you the standout moments. Not whole episodes, the exact bits inside them.</p>
         <span class="pv pv-adv" aria-hidden="true">
@@ -402,7 +402,7 @@
         </span>
         <span class="pgo">Pick your topics</span>
       </a>
-      <a class="pcard blackc" href="episodes.html">
+      <a class="pcard blackc" href="/episodes">
         <span class="ph">Explore every episode</span>
         <p class="pd">Browse the full library and find whole episodes on the stuff you care about.</p>
         <span class="pv pv-lib" aria-hidden="true"><span class="wall" id="wall"></span></span>
@@ -419,7 +419,7 @@
         <svg viewBox="0 0 24 24"><path d="M12 14a3 3 0 0 0 3-3V6a3 3 0 1 0-6 0v5a3 3 0 0 0 3 3zm5-3a5 5 0 0 1-10 0H5a7 7 0 0 0 6 6.92V21h2v-3.08A7 7 0 0 0 19 11h-2z"/></svg>
         Leave us a voice note
       </button>
-      <a class="vbtn vpurple" href="contact.html">Send us a message</a>
+      <a class="vbtn vpurple" href="/contact">Send us a message</a>
       <a class="vbtn" href="https://www.youtube.com/@thenumbersgamepodcast?sub_confirmation=1" target="_blank" rel="noopener">Subscribe on YouTube</a>
     </div>
     <div class="vslot" id="vslot" hidden>
@@ -460,7 +460,7 @@
       <details class="footnav-dd">
         <summary><svg class="ham" viewBox="0 0 24 24"><path d="M3 6h18v2H3zM3 11h18v2H3zM3 16h18v2H3z"/></svg> Menu</summary>
         <div class="dd-links">
-          <a href="index.html">Home</a><a href="episodes.html">Every episode</a><a href="adventure.html">Choose your own adventure</a><a href="about.html">About the show</a><a href="nick-reilly.html">Nick Reilly</a><a href="jason-robinson.html">Jason Robinson</a><a href="marty-vidakovic.html">Marty Vidakovic</a><a href="contact.html">Contact</a>
+          <a href="/">Home</a><a href="/episodes">Every episode</a><a href="/adventure">Choose your own adventure</a><a href="/about">About the show</a><a href="/nick-reilly">Nick Reilly</a><a href="/jason-robinson">Jason Robinson</a><a href="/marty-vidakovic">Marty Vidakovic</a><a href="/contact">Contact</a>
         </div>
       </details>
       <div class="copyright">© 2026 The Numbers Game</div>
@@ -498,7 +498,7 @@
     if(!rel.length) return;
 
     /* latest: link, full thumbnail, button carries the episode number */
-    document.getElementById('banner-latest').href='episode-'+rel[0].episodeNumber+'.html';
+    document.getElementById('banner-latest').href='/'+(rel[0].slug||('episode-'+rel[0].episodeNumber));
     document.getElementById('latest-thumb').src='https://i.ytimg.com/vi/'+rel[0].youtubeId+'/mqdefault.jpg';
     document.getElementById('latest-go').textContent='Watch EP '+rel[0].episodeNumber;
 

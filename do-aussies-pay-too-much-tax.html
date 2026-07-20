@@ -1,0 +1,709 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EP 254 · Do Aussies Pay Too Much Tax? | The Numbers Game</title>
+<meta name="description" content="Jason unpacks whether Australians really are over-taxed.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" sizes="64x64" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="canonical" href="https://thenumbersgamepodcast.com.au/do-aussies-pay-too-much-tax">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="The Numbers Game">
+<meta property="og:title" content="EP 254 · Do Aussies Pay Too Much Tax? | The Numbers Game">
+<meta property="og:description" content="Jason unpacks whether Australians really are over-taxed.">
+<meta property="og:url" content="https://thenumbersgamepodcast.com.au/do-aussies-pay-too-much-tax">
+<meta property="og:image" content="https://i.ytimg.com/vi/lP86BXU1Sgw/maxresdefault.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+  :root{
+    --purple:#585af3; --purple-dark:#2c1b8a; --mint:#7ad9a8;
+    --white:#ffffff; --muted:rgba(255,255,255,.60); --dim:rgba(255,255,255,.42);
+    --line:rgba(255,255,255,.12); --card:rgba(255,255,255,.05); --card-hi:rgba(255,255,255,.09);
+    --display:'Anton',Impact,'Helvetica Neue',sans-serif;
+    --sans:'Inter',system-ui,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif;
+    --wrap:1280px;   /* page frame (nav spans this) */
+    --col:960px;     /* content column (player, tabs, text) */
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:var(--sans); color:var(--white); line-height:1.6; -webkit-font-smoothing:antialiased;
+    background:#12093a;
+    background-image:
+      radial-gradient(1200px 600px at 82% -6%, rgba(88,90,243,.45) 0%, transparent 55%),
+      radial-gradient(900px 700px at 5% 8%, rgba(122,217,168,.10) 0%, transparent 50%),
+      linear-gradient(180deg,#2c1b8a 0%,#1a1150 28%,#100b34 62%,#0b0820 100%);
+    background-attachment:fixed;
+  }
+  a{color:inherit}
+  .wrap{max-width:var(--wrap);margin:0 auto;padding:0 36px}
+  main.wrap{max-width:var(--col)}
+  @media(max-width:720px){.wrap{padding:0 22px}}
+
+  /* ── Navbar ── */
+  .nav{position:sticky;top:0;z-index:50;background:linear-gradient(180deg,rgba(24,15,74,.92),rgba(24,15,74,.72));backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+  .nav-in{max-width:var(--wrap);margin:0 auto;padding:11px 36px;display:flex;align-items:center;justify-content:space-between}
+  @media(max-width:720px){.nav-in{padding:11px 22px}}
+  .brand{display:block;line-height:0}
+  .brand img{height:36px;width:auto;display:block}
+  .navlinks{display:flex;gap:28px;align-items:center}
+  .navlinks a{text-decoration:none;font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);transition:.15s}
+  .navlinks a:hover{color:var(--white)}
+  .navlinks a.navtop{cursor:default}
+  .navgroup{position:relative;display:flex;align-items:center}
+  .navgroup .subnav{display:none;position:absolute;top:100%;left:50%;transform:translateX(-50%);padding-top:14px;min-width:180px}
+  .navgroup:hover .subnav,.navgroup:focus-within .subnav{display:block}
+  .subnav-in,.navgroup .subnav{z-index:60}
+  .navgroup .subnav a{display:block;background:#180f4a;border:1px solid var(--line);border-top:0;padding:12px 16px;font-size:12px;color:rgba(255,255,255,.85)}
+  .navgroup .subnav a:first-child{border-top:1px solid var(--line)}
+  .navgroup .subnav a:hover{background:#221768;color:var(--white)}
+  .navburger{display:none;background:none;border:1px solid var(--line);padding:8px 10px;cursor:pointer;color:var(--white);transition:.15s}
+  .navburger:hover{border-color:rgba(122,217,168,.6)}
+  .navburger svg{width:20px;height:20px;fill:currentColor;display:block}
+  .navdrop{display:none}
+  @media(max-width:720px){
+    .navlinks{display:none}
+    .navburger{display:block}
+    .navdrop{display:block;position:absolute;left:0;right:0;top:100%;
+      background:#180f4a;border-bottom:1px solid var(--line);box-shadow:0 24px 50px rgba(0,0,0,.45)}
+    .navdrop[hidden]{display:none}
+    .navdrop a{display:block;padding:15px 22px;text-decoration:none;font-size:14px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:rgba(255,255,255,.9);border-bottom:1px solid rgba(255,255,255,.06)}
+    .navdrop a:last-child{border-bottom:0}
+    .navdrop a.sub{padding-left:42px;font-size:13px;color:rgba(255,255,255,.72)}
+    .navdrop .navlabel{display:block;padding:15px 22px 6px;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.4)}
+  }
+
+  /* ── Hero / hook (marker-highlight system: purple hook wraps naturally, mint payoff below)
+     Rules: title splits at its natural break (colon/pipe/question mark). Front = hook (purple,
+     big), back = payoff (mint, smaller). No break in title = purple hook only. Highlights hug
+     the text (tight em padding tuned to Anton) and wrap via box-decoration-break — never
+     hand-pick line breaks or mint words. ── */
+  header.hero{padding:34px 0 6px}
+  .hook{--inx:clamp(8.4px,2.1vw,15.6px)} /* one shared text inset so hook + payoff first letters align */
+  .hook .hk{font-family:var(--display);font-weight:400;text-transform:uppercase;
+    font-size:clamp(28px,7vw,52px);line-height:1.3;letter-spacing:-.5px;text-wrap:balance}
+  .hook .hk span{color:var(--white);padding:.04em var(--inx) .02em;
+    background:linear-gradient(var(--purple),var(--purple)) 0 50%/100% 87% no-repeat;
+    -webkit-box-decoration-break:clone;box-decoration-break:clone}
+  .hook .pay{font-family:var(--display);font-weight:400;text-transform:uppercase;
+    font-size:clamp(16px,4vw,24px);line-height:1.5;letter-spacing:.6px;margin-top:8px;text-wrap:balance}
+  .hook .pay span{color:#0a0a0a;padding:.08em var(--inx) .04em;
+    background:linear-gradient(var(--mint),var(--mint)) 0 50%/100% 88% no-repeat;
+    -webkit-box-decoration-break:clone;box-decoration-break:clone}
+  /* no-hook titles: mid-split into two full-size rows, purple then mint */
+  .hook .hk span.hkrow{display:block;background:none;padding:0}
+  .hook .hk .hkrow+.hkrow{margin-top:8px}
+  .hook .hk span.mintseg{color:#0a0a0a;
+    background:linear-gradient(var(--mint),var(--mint)) 0 50%/100% 87% no-repeat}
+
+  /* ── Player (clean facade → real player on tap) ── */
+  .player-wrap{margin:24px 0 4px;scroll-margin-top:76px}
+  .player{position:relative;width:100%;padding-top:56.25%;border-radius:0;overflow:hidden;background:#000;box-shadow:0 30px 70px rgba(0,0,0,.5),0 0 0 1px rgba(255,255,255,.06)}
+  .facade{position:absolute;inset:0;border:0;cursor:pointer;background-size:cover;background-position:center;display:flex;align-items:center;justify-content:center;padding:0}
+  .facade .play{width:74px;height:74px;border-radius:50%;background:rgba(10,6,30,.40);border:2px solid rgba(255,255,255,.72);display:flex;align-items:center;justify-content:center;transition:.18s;-webkit-backdrop-filter:blur(1px);backdrop-filter:blur(1px)}
+  .facade:hover .play{background:rgba(88,90,243,.62);transform:scale(1.07);border-color:#fff}
+  .facade .play::after{content:"";border-style:solid;border-width:11px 0 11px 19px;border-color:transparent transparent transparent #fff;margin-left:5px}
+  .player iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+
+  /* ── Episode facts (bottom of the Summary panel — templated per episode) ── */
+  .sumfacts{margin:14px 10px 4px;padding-top:13px;border-top:1px solid rgba(255,255,255,.08);display:flex;flex-direction:column;gap:8px}
+  .fact{display:flex;gap:12px;font-size:13.5px}
+  .fact .fl{flex:none;width:104px;color:var(--dim);font-weight:600;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;padding-top:2px}
+  .fact .fv{color:rgba(255,255,255,.9);font-weight:500}
+  .fact .fv a{color:var(--mint);text-decoration:none;border-bottom:1px solid rgba(122,217,168,.4);transition:.15s}
+  .fact .fv a:hover{border-bottom-color:var(--mint)}
+
+  /* ── Episode tag (identity: black label hanging off the title corner) ── */
+  .eptag{display:inline-block;position:relative;left:-6px;margin-bottom:-7px;z-index:2;
+    background:#0a0a0a;color:var(--white);font-family:var(--display);font-weight:400;
+    font-size:13.5px;letter-spacing:1.5px;text-transform:uppercase;padding:6px 11px 4px}
+
+  /* ── Explore tabs (sticky mode switcher; one panel swaps below, nothing shoves) ── */
+  .explore{margin-top:22px}
+  .tabs{position:sticky;top:58px;z-index:40;display:flex;flex-wrap:wrap;gap:8px;padding:10px 0;
+    background:linear-gradient(180deg,rgba(18,10,55,.96),rgba(18,10,55,.86));
+    backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+  .tabbtn{font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.5px;
+    font-size:14.5px;color:var(--white);background:var(--purple);border:1px solid var(--purple);
+    padding:9px 13px 7px;cursor:pointer;transition:.15s}
+  .tabbtn:hover{filter:brightness(1.12)}
+  .tabbtn.on{background:var(--mint);border-color:var(--mint);color:#0a0a0a}
+  .tabbtn.on:hover{filter:none}
+  .tabbtn .ct{font-size:12px;opacity:.75;font-variant-numeric:tabular-nums}
+  .tabbtn .ct::before{content:" · "}
+  .tpanel{border:1px solid var(--line);background:var(--card);padding:12px 10px 14px}
+  .hint{font-size:12.5px;color:var(--muted);padding:2px 10px 10px;border-bottom:1px solid rgba(255,255,255,.08);margin-bottom:6px}
+
+  /* ── Listen row (no box: label left, service pills follow) ── */
+  .listen{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:12px 16px;margin-top:34px}
+  .listen .lname{font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--dim)}
+  .listen a{display:inline-flex;align-items:center;gap:9px;padding:11px 18px;border-radius:999px;
+    background:var(--mint);color:#08210f;text-decoration:none;font-weight:800;font-size:12.5px;
+    letter-spacing:.04em;text-transform:uppercase;transition:.15s}
+  .listen a:hover{filter:brightness(1.06);transform:translateY(-1px);box-shadow:0 12px 30px rgba(122,217,168,.25)}
+  .listen svg{width:20px;height:20px;fill:currentColor;flex:none}
+  /* ── Listen-now Spotify audio embed (full column width, above the pills) ── */
+  .listen-now{margin-top:40px}
+  .listen-now .ln-head{display:flex;align-items:baseline;justify-content:space-between;gap:14px;margin-bottom:13px}
+  .listen-now .ln-title{font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--dim)}
+  .audio-embed{border-radius:12px;overflow:hidden;box-shadow:0 20px 50px rgba(0,0,0,.4),0 0 0 1px rgba(255,255,255,.06)}
+  .audio-embed iframe{display:block;width:100%;border:0}
+  @media(max-width:720px){.listen-now{margin-top:32px}}
+
+  /* ── Keep exploring (thumbnails link to other episode PAGES, never timecodes).
+     Swipeable strip on mobile, fits three-up on desktop. Variant rule: claim
+     "similar ground" + reason lines ONLY when moment-level topic overlap is
+     genuinely strong; otherwise show the latest released episodes with dates —
+     never invent a connection. ── */
+  .relsec{margin-top:60px;padding-top:58px;border-top:1px solid var(--line)} /* line = end of this episode's info */
+  .reldots{display:flex;justify-content:center;gap:7px;margin-top:12px}
+  .reldots span{width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.25);transition:.2s}
+  .reldots span.on{background:var(--mint)}
+  .relsec .rtitle{display:inline-block;font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.5px;font-size:14.5px;background:var(--mint);color:#0a0a0a;padding:9px 13px 7px;margin-bottom:18px}
+  .relgrid{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding-bottom:6px;scrollbar-width:none}
+  .relgrid::-webkit-scrollbar{display:none}
+  .relcard{flex:0 0 56%;max-width:232px;scroll-snap-align:start;display:flex;flex-direction:column;text-decoration:none;background:var(--card);border:1px solid var(--line);transition:.15s}
+  .relcard:hover{background:var(--card-hi);border-color:rgba(122,217,168,.55)}
+  .relcard img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block}
+  .relcard .rt{display:block;font-size:12.5px;font-weight:600;color:rgba(255,255,255,.92);line-height:1.4;padding:8px 8px 0}
+  .relcard .rfoot{margin-top:auto;display:flex;justify-content:space-between;align-items:flex-end;gap:8px;padding:10px 8px 9px}
+  .relcard .rwhy{font-size:11.5px;color:var(--mint)}
+  .relcard .rtag{display:inline-block;background:#0a0a0a;color:var(--white);font-family:var(--display);font-size:10px;letter-spacing:1.2px;text-transform:uppercase;padding:3px 7px 2px;white-space:nowrap;flex:0 0 auto}
+
+  /* ── Dropdown sections (accordion under the player) ── */
+  .drops{margin-top:34px;display:flex;flex-direction:column;gap:11px}
+  .drop{border:1px solid var(--line);border-radius:0;background:var(--card);overflow:hidden;transition:border-color .15s}
+  .drop[open]{border-color:rgba(122,217,168,.35)}
+  .drop>summary{list-style:none;cursor:pointer;padding:16px 18px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+  .drop>summary::-webkit-details-marker{display:none}
+  .drop>summary .st{font-weight:700;font-size:15.5px;letter-spacing:.005em}
+  .drop>summary .ct{margin-left:auto;font-size:12px;color:var(--dim);font-weight:600;font-variant-numeric:tabular-nums}
+  .drop>summary .chev{flex:none;width:22px;height:22px;border-radius:50%;background:rgba(122,217,168,.14);color:var(--mint);display:flex;align-items:center;justify-content:center;font-family:var(--display);font-size:15px;line-height:1;transition:.2s;transform:translateY(-1px)}
+  .drop[open]>summary .chev{transform:rotate(45deg)}
+  .drop-body{padding:2px 12px 12px}
+
+  /* chapters */
+  .chapter{display:flex;align-items:baseline;gap:14px;width:100%;text-align:left;cursor:pointer;background:none;border:0;color:inherit;font-family:inherit;padding:11px 10px;border-radius:10px;transition:.13s}
+  .chapter:hover{background:var(--card-hi)}
+  .chapter .tc{font-variant-numeric:tabular-nums;font-weight:700;font-size:14px;color:var(--mint);flex:none;width:48px}
+  .chapter .cx{font-size:15px;font-weight:500;color:rgba(255,255,255,.9)}
+  .chapter:hover .cx{color:#fff}
+
+  /* questions */
+  .q{display:flex;align-items:center;gap:12px;width:100%;text-align:left;cursor:pointer;background:none;border:0;border-radius:11px;color:inherit;font-family:inherit;padding:12px 10px;transition:.14s}
+  .q+.q{border-top:1px solid rgba(255,255,255,.05)}
+  .q:hover{background:var(--card-hi)}
+  .q .qm{font-family:var(--display);font-size:15px;color:var(--mint);flex:none;line-height:1;transform:translateY(1px)}
+  .q .qx{font-size:15px;font-weight:500;color:rgba(255,255,255,.92)}
+  .q .go{margin-left:auto;flex:none;color:var(--dim);font-size:18px;transition:.15s}
+  .q:hover .go{color:var(--mint);transform:translateX(2px)}
+
+  /* summary + transcript bodies */
+  .summary-body p{font-size:16.5px;line-height:1.62;color:rgba(255,255,255,.9);padding:6px 10px 4px}
+  .tbody{padding:2px 10px 8px}
+  .tbody p{font-size:14.5px;line-height:1.7;color:rgba(255,255,255,.78);margin-top:15px;max-width:64ch}
+  .tbody .spk{display:block;font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--mint);margin-bottom:2px}
+
+  /* ── Voice note ask (lives at the bottom of the Summary panel) ── */
+  .vask{margin:16px 10px 4px}
+  .vbtn{display:inline-flex;align-items:center;gap:9px;padding:12px 20px;border-radius:999px;border:0;cursor:pointer;
+    background:var(--mint);color:#08210f;font-family:inherit;font-weight:800;font-size:12.5px;
+    letter-spacing:.04em;text-transform:uppercase;transition:.15s}
+  .vbtn:hover{filter:brightness(1.06);transform:translateY(-1px);box-shadow:0 12px 30px rgba(122,217,168,.25)}
+  .vbtn svg{width:18px;height:18px;fill:currentColor;flex:none}
+  .vslot{background:var(--purple);padding:12px 10px 10px;margin:14px 0 4px;box-shadow:0 18px 40px rgba(0,0,0,.35)}
+  .vslot[hidden]{display:none}
+  .vhead{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;margin-bottom:10px}
+  .vhead .vmsg{font-family:var(--sans);font-size:13px;line-height:1.55;color:rgba(255,255,255,.92);margin:2px 0 0;padding:0 2px}
+  .vclose{background:none;border:0;color:rgba(255,255,255,.85);font-size:22px;line-height:1;cursor:pointer;padding:0 2px}
+  .vclose:hover{color:var(--white)}
+  .vslot iframe{display:block}
+
+  /* ── YouTube subscribe pill (sits in the listen row; outranks .listen a's mint) ── */
+  .listen a.yt-pill{background:var(--purple);color:var(--white)}
+  .listen a.yt-pill:hover{filter:brightness(1.1);transform:translateY(-1px)}
+  @media(max-width:720px){ /* mobile: no label, three compact pills on one row */
+    .listen .lname{display:none}
+    .listen{gap:8px}
+    .listen a{padding:10px 13px;font-size:11px;gap:6px}
+    .listen svg{width:16px;height:16px}
+  }
+
+  /* ── Footer: Follow us on | Brought to you by | Produced by, + Menu dropdown ── */
+  footer{border-top:1px solid var(--line);margin-top:68px;padding:52px 20px 58px}
+  .footgrid{max-width:var(--wrap);margin:0 auto;display:grid;grid-template-columns:1fr 1.15fr .8fr;gap:44px;align-items:start}
+  .fcol{text-align:center;display:flex;flex-direction:column;align-items:center}
+  .foot-label{font-size:11px;font-weight:700;letter-spacing:.26em;text-transform:uppercase;color:var(--dim);margin-bottom:18px}
+  .sponsors{display:flex;justify-content:center;align-items:center;gap:34px;flex-wrap:wrap}
+  .sponsors a,.produced a{display:inline-flex;transition:.15s}
+  .sponsors a:hover,.produced a:hover{transform:translateY(-1px)}
+  .sponsors img{height:32px;width:auto;opacity:.92}
+  .produced img{height:30px;width:auto;opacity:.95}
+  .sponsors a:hover img,.produced a:hover img{opacity:1}
+  footer .socials{display:flex;gap:11px;justify-content:center;flex-wrap:wrap;margin:0}
+  footer .socials a{width:40px;height:40px;border-radius:50%;border:1.5px solid rgba(122,217,168,.5);display:flex;align-items:center;justify-content:center;transition:.15s}
+  footer .socials a svg{width:18px;height:18px;fill:var(--mint);transition:.15s}
+  footer .socials a:hover{background:var(--mint);border-color:var(--mint);transform:translateY(-2px)}
+  footer .socials a:hover svg{fill:#0a0a0a}
+  .footbar{max-width:var(--wrap);margin:34px auto 0;border-top:1px solid var(--line);padding-top:20px;display:flex;flex-direction:column;align-items:center;gap:14px}
+  .footnav-dd{display:block;width:100%;max-width:var(--wrap);margin:0 auto;text-align:center}
+  .footnav-dd>summary{list-style:none;cursor:pointer;display:inline-flex;align-items:center;gap:9px;font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.5px;font-size:13px;color:var(--muted);background:transparent;border:1px solid var(--line);padding:8px 16px 6px;transition:.15s}
+  .footnav-dd>summary::-webkit-details-marker{display:none}
+  .footnav-dd>summary:hover{color:var(--mint);border-color:rgba(122,217,168,.45)}
+  .footnav-dd>summary .ham{width:15px;height:15px;fill:currentColor;transform:translateY(-1px)}
+  .footnav-dd .dd-links{display:flex;flex-direction:row;flex-wrap:wrap;justify-content:center;gap:12px 24px;padding:24px 0 4px}
+  .footnav-dd .dd-links a{font-size:11.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:.15s}
+  .footnav-dd .dd-links a:hover{color:var(--mint)}
+  .copyright{font-size:12px;color:var(--dim);text-align:center}
+  @media(max-width:720px){.footgrid{grid-template-columns:1fr;gap:34px}footer{padding:40px 16px 20px}.footbar{margin-top:34px;padding-top:24px;gap:20px}.footnav-dd .dd-links{flex-direction:column;align-items:center;gap:15px}}
+
+  @media(min-width:720px){header.hero{padding:48px 0 6px}}
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "PodcastEpisode", "name": "Do Aussies Pay Too Much Tax?", "url": "https://thenumbersgamepodcast.com.au/do-aussies-pay-too-much-tax", "datePublished": "2025-10-20", "episodeNumber": 254, "image": "https://i.ytimg.com/vi/lP86BXU1Sgw/maxresdefault.jpg", "partOfSeries": {"@type": "PodcastSeries", "name": "The Numbers Game", "url": "https://thenumbersgamepodcast.com.au/"}}</script>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-in">
+      <a class="brand" href="/" aria-label="The Numbers Game home"><img src="assets/tng-logo.png" alt="The Numbers Game"></a>
+      <div class="navlinks">
+        <a href="/">Home</a>
+        <div class="navgroup">
+          <a class="navtop">Episodes</a>
+          <div class="subnav">
+            <a href="/episodes">All episodes</a>
+            <a href="/adventure">Find moments</a>
+          </div>
+        </div>
+        <div class="navgroup">
+          <a class="navtop">About</a>
+          <div class="subnav">
+            <a href="/about">The show</a>
+            <a href="/nick-reilly">Nick Reilly</a>
+            <a href="/jason-robinson">Jason Robinson</a>
+          </div>
+        </div>
+        <a href="/contact">Contact</a>
+      </div>
+      <button class="navburger" id="navburger" type="button" aria-label="Menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24"><path d="M3 6h18v2H3zM3 11h18v2H3zM3 16h18v2H3z"/></svg>
+      </button>
+    </div>
+    <div class="navdrop" id="navdrop" hidden>
+      <a href="/">Home</a>
+      <span class="navlabel">Episodes</span>
+      <a class="sub" href="/episodes">All episodes</a>
+      <a class="sub" href="/adventure">Find moments</a>
+      <span class="navlabel">About</span>
+      <a class="sub" href="/about">The show</a>
+      <a class="sub" href="/nick-reilly">Nick Reilly</a>
+      <a class="sub" href="/jason-robinson">Jason Robinson</a>
+      <a href="/contact">Contact</a>
+    </div>
+  </nav>
+
+  <main class="wrap">
+
+    <header class="hero">
+      <div class="hook">
+        <span class="eptag">EP 254</span>
+        <h1 class="hk"><span class="hkrow"><span>Do Aussies Pay</span></span>
+        <span class="hkrow"><span class="mintseg">Too Much Tax?</span></span></h1>
+      </div>
+    </header>
+
+    <div class="player-wrap" id="player-wrap">
+      <div class="player" id="player">
+        <button class="facade" id="facade" style="background-image:url('https://i.ytimg.com/vi/lP86BXU1Sgw/maxresdefault.jpg')" aria-label="Play episode">
+          <span class="play"></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="explore">
+      <div class="tabs" role="tablist">
+        <button class="tabbtn on" data-panel="p-summary">Summary</button>
+        <button class="tabbtn" data-panel="p-chapters">Chapters<span class="ct" id="chcount"></span></button>
+        <button class="tabbtn" data-panel="p-questions">Questions<span class="ct" id="qcount"></span></button>
+      </div>
+      <section class="tpanel" id="p-summary">
+        <div class="summary-body">
+          <p>Jason unpacks whether Australians really are over-taxed. He works through the effective tax at different incomes once GST, super and fuel are added, the beer analogy for who pays, the wildest reform ideas being floated, where the 800 billion in revenue actually goes, and the NDIS blowout, landing on the view that we are taxed the wrong way rather than too much.</p>
+        </div>
+        <div class="vask">
+          <button class="vbtn" id="vbtn" type="button">
+            <svg viewBox="0 0 24 24"><path d="M12 14a3 3 0 0 0 3-3V6a3 3 0 1 0-6 0v5a3 3 0 0 0 3 3zm5-3a5 5 0 0 1-10 0H5a7 7 0 0 0 6 6.92V21h2v-3.08A7 7 0 0 0 19 11h-2z"/></svg>
+            Send us a voice note
+          </button>
+          <div class="vslot" id="vslot" hidden>
+            <div class="vhead">
+              <p class="vmsg">We'd love to hear from you. You can leave up to a 90 second voice note for us to play on the show: a question, some feedback, or a topic you want covered.</p>
+              <button class="vclose" id="vclose" type="button" aria-label="Close">&times;</button>
+            </div>
+            <iframe src="https://www.speakpipe.com/widget/inline/hhq6kzggsx7zpcsvakgxfrzun3zidpde" allow="microphone" width="100%" height="200" frameborder="0" title="Leave The Numbers Game a voice note"></iframe>
+          </div>
+          <script async src="https://www.speakpipe.com/widget/loader.js" charset="utf-8"></script>
+        </div>
+        <div class="sumfacts">
+          <div class="fact"><span class="fl">Release date</span><span class="fv">20 October 2025</span></div>
+          <div class="fact"><span class="fl">Hosts</span><span class="fv"><a href="/nick-reilly">Nick Reilly</a>, <a href="/jason-robinson">Jason Robinson</a> &amp; Martin Vidakovic</span></div>
+
+        </div>
+      </section>
+      <section class="tpanel" id="p-chapters" hidden>
+        <p class="hint">Jump straight to the part you need.</p>
+        <div id="chapters"></div>
+      </section>
+      <section class="tpanel" id="p-questions" hidden>
+        <p class="hint">Real questions this episode answers. Tap one to hear the answer.</p>
+        <div id="qa"></div>
+      </section>
+    </div>
+
+    <div class="drops">
+
+      <details class="drop">
+        <summary><span class="st">Episode transcript</span><span class="chev">+</span></summary>
+        <div class="drop-body tbody">
+          <p><span class="spk">Jason · 00:00</span>Welcome to</p>
+          <p><span class="spk">Marty · 00:00</span>episode</p>
+          <p><span class="spk">Jason · 00:01</span>254 of the Numbers Game. I'm Jace. I'm here with Nick and Marty. How are fellas</p>
+          <p><span class="spk">Marty · 00:05</span>going? Well, thanks Ja. Uh, please help me out mate. I was at a family function on the weekend. I was copping so many tax questions. What do I do when this happens? What do I do when this happens? Government's taking it all.</p>
+          <p><span class="spk">Marty · 00:17</span>How do I protect my money? How do I protect my property? Land tax, payroll, tax? I was just getting bombarded. I'm just a simple coach, you know, it's just a simple coach. Jace, help me.</p>
+          <p><span class="spk">Jason · 00:28</span>You. You are bang on on the topic, Marty. It is tax and I saw this video I wanna share with you just quickly just to kind of get the idea of how silly is the Aussie tax system.</p>
+          <p><span class="spk">Jason · 00:36</span>Here's the video.</p>
+          <p><span class="spk">VIDEO · 00:37</span>Aussies are doing it tough right now, but we need to get our revenue up. So let's come up with some new taxes. What do you got? How about we raise income tax? No, leave that. It's already at 45%. They're practically working for free. How about anytime they invest their money to an asset? We tax 'em on half when they sell.</p>
+          <p><span class="spk">VIDEO · 00:49</span>Yeah, we already do that. It's called capital gains tax. Come on, we need something original. What about money they make in a business company? Tax already got that. What about when they pay their employees? Can we stink? 'em there. That's payroll tax and we've been stinging them since 2007. What if their boss gives them perks?</p>
+          <p><span class="spk">VIDEO · 01:00</span>Like a company cut? Yeah. Fringe benefits tax. We're already getting that. Come on. Think. What about petrol? They can't drive without it. Yeah. Fuel. Excise. Tax. Every leader. What about super? Can we tax their retirement savings? That's super tax. We tax that coming in. We tax it coming out. We've got that covered.</p>
+          <p><span class="spk">VIDEO · 01:13</span>Alright, hear me out. How about we raise GST to 15%? Now we're talking. I'll write that down. We'll circle back to it. 15%. What if they just wanna buy a nice car? Can we get some of that? LCT Baby Luxury Car Tax. Stamp duty. Got it. Council rates every bloody quarter. More toll roads. Yeah, we're milking tolls, alcohol and cigarettes.</p>
+          <p><span class="spk">VIDEO · 01:27</span>Why can't we tax it more? Yeah. We're taxing that to the mood imports. That's customs tax. Guys, you're not getting me. I want to tax them on everything. Something that won't never let 'em get ahead or even enjoy life anymore. What about we reintroduce the death tax? Someone dies. They wanna pass something down to their kids.</p>
+          <p><span class="spk">VIDEO · 01:40</span>We take a cut. That's absolutely genius. Let's put it on the list and draft it up.</p>
+          <p><span class="spk">Jason · 01:43</span>So, boys, that, that video got me kind of thinking about the Aussie tax system now, you know, just, just hearing how ridiculous that is, how many taxes there were, how many things they're trying to kind of bring in. And then we have some of these new tax reform ideas that are coming.</p>
+          <p><span class="spk">Jason · 01:57</span>So, you know, the 15% GST, the inheritance tax, the, you know, the higher, uh, wealth, uh, tax if you've got assets over a certain amount. Um. You know, so you've got all of these things that are coming in there. And it had me asking the question, you know, as, as a tax accountant who sits there dealing with people every day talking about tax, the question I asked myself was, do Aussies pay too much tax?</p>
+          <p><span class="spk">Jason · 02:19</span>Now, you know, Nick, Marty, after hearing all of that, I'd love to know your kind of, you know, straight off the head. What do you feel about how much tax you guys are paying? Oh, it's always too much, isn't it? Because,</p>
+          <p><span class="spk">Nick · 02:31</span>yeah, I don't know, like. Seems like a lot, um, on that though, like looking into this of late, I see as a country we're not actually taxed overly high compared to others, which is interesting.</p>
+          <p><span class="spk">Nick · 02:45</span>Yeah. So that's got me rethinking a little bit. Um, for me it's more about, and that was a really good video. It's more about how, um, uh, convoluted it is or confusing it is. Um, that's what gets me so.</p>
+          <p><span class="spk">Marty · 02:59</span>Yeah, and my cortisol levels are going through the roof after hearing that, uh. There'll be a breathing tax next.</p>
+          <p><span class="spk">Marty · 03:06</span>It's, uh, just amazing. But, uh, Ja changed my perspective on it because I feel like I look, can I, can I just give it to charity? What</p>
+          <p><span class="spk">Jason · 03:18</span>can I do? A hundred percent mate? Well look, yeah, so to talk you through, I'll give you a couple of examples of different tax brackets and the actual amount of tax they pay.</p>
+          <p><span class="spk">Jason · 03:26</span>And then I, I've, you know, changed the numbers a little bit to add in kind of the more common ones that we all pay. You know, Marty, you are driving from the Yarra Valley, you know, into the city to meet. You know, you're paying fuel tax or fuel excise tax. Um, you know, Nick, you've talked about, you know, selling an investment property recently, capital gains tax is coming your way.</p>
+          <p><span class="spk">Jason · 03:42</span>So what I've done is built in a few of the, the regular ones that are normal, everyday worker would cop. So the example I've got here is around the, you know, example of a hundred K income earner. I'm just gonna give you a bit of a spread of the different earners. So I'll start with 60 k. If, if you're on 60 K, you are losing.</p>
+          <p><span class="spk">Jason · 04:02</span>16 and half thousand dollars in taxes per year, about 28 cents to the dollar. Now, that's actually higher than the marginal rate because what I've done there is build in the extra amount you lose on GST when you have to spend money to live. And then also the amount you lose to the tax man through superannuation as well.</p>
+          <p><span class="spk">Jason · 04:21</span>28 cents in the dollar. So 28%? Yep. 28% for 60.</p>
+          <p><span class="spk">Nick · 04:27</span>Okay. 60 K I'm. I just wanna make sure I understand all this. So if you are earning 60, hypothetically, I'm spending this amount on my living expenses. Mm-hmm. So you are calculating what you'd pay as income tax? Mm-hmm. What you'd possibly pay as GST along the way.</p>
+          <p><span class="spk">Nick · 04:44</span>Yep. And then super. Okay, it's 28%. Yep. Yep.</p>
+          <p><span class="spk">Jason · 04:47</span>Spot on. So on the 60 K salary, that was nearly 10 K in income tax, 1200 in Medicare levy 1,080 on super tax GST about three and a half thousand dollars on your spending, assuming you spend 80% of your take home pay. 'cause not a lot of people have got much left over.</p>
+          <p><span class="spk">Jason · 05:02</span>Um, you know, most people spend about 80% of their take home pay fuel excise of 620 and then GST on your fuel isano a fuel of another 227. So that's how you get to your 16 and 5,000. Outta your 60, losing 28%. As you go up $80,000 salary, you lose 31%. I'll save you all the numbers, but it's the same across Medicare Super GST Fuel excise.</p>
+          <p><span class="spk">Jason · 05:24</span>On a hundred K salary, you lose 33%. So you know, it's gradually kind of going up, but then it's when you get to the 250 K salary, you're losing 44%. So what you gotta remember here is generally the more money you earn, the more money you spend. You've got a more expensive car, you know, you've, you've got extra taxes like Diviv 2, 9, 3, um, you've then got extra money going into super, so you're paying more tax through super.</p>
+          <p><span class="spk">Jason · 05:50</span>So all of a sudden when you look at all of that, a 250 K salary, losing $110,000 to the tax amount, or 44%. So a lot of people that, you know, kind of sit there and go, you know, tax, the high income earners. Actually, you know, proportionately as an, as an economy and as a country, high income earners make up the very large share of the amount of taxes that are paid.</p>
+          <p><span class="spk">Jason · 06:10</span>Now, I won't bore you guys with the actual video, but, uh, if anyone's listening going, geez, I, I don't really understand how that works. There is a video called the Tax System Explained in Beer. Essentially it goes into a story about 10 mates that are at a pub, and they pay their bar tab based on their marginal tax rates.</p>
+          <p><span class="spk">Jason · 06:29</span>Um, of, you know, the average person across Australia. So on a on a hundred dollars bar tab, the first four people generally drink for free. They're not paying any tax in that story. And then from that, there's the next guy pays a dollar. The next guy pays three. The next guy pays seven, and the highest income out of the 10th mate actually pays closer to 50% of the bill.</p>
+          <p><span class="spk">Jason · 06:49</span>Then the story goes on as actually epic to kind of watch the whole thing through. It's about four minutes. The the 10th mate cracks it. He's sick of paying ta, he's, he's sick of paying too much tax or too much beer tap. Every week he's paying more than half the beer tap. So one week he decides not to turn up.</p>
+          <p><span class="spk">Jason · 07:03</span>And you, what do you imagine? Here is a story saying if that person leaves Australia and decides to go pay taxes somewhere else where there's less taxes, it puts a strain on our economy. So we have to be careful not to continue to. Punish the high income earners and, and you know, try and say tax them more because we should, you've gotta make sure that there's an even playing field and that we're actually thinking outside the box of, of how to improve our tax system.</p>
+          <p><span class="spk">Jason · 07:24</span>Which then comes into what, you know, all these stories about tax reform that is going around Australia at the moment. So. Nick Marty, have you, what's the most crazy tax reform you've heard so far? Have you got any, any that are jumping outta you, whether it's the GST to 15% or, um, spare bedroom tax. Um, what are the ones you guys have heard before?</p>
+          <p><span class="spk">Jason · 07:45</span>I go through my little list of the ones that are being thrown around the, the, the government rooms at the moment.</p>
+          <p><span class="spk">Nick · 07:51</span>What's the spare bedroom tax for me? Yeah, that's the, that's just ludicrous. Um, yeah. Stood out, didn't it? That's definitely mine. Yep.</p>
+          <p><span class="spk">Jason · 07:58</span>Yeah, they, we, they, they want us, they wanna mandate that we have to let employees work from home a few days a week.</p>
+          <p><span class="spk">Jason · 08:04</span>But then also if you've got a spare bedroom, you're gonna pay tax for that to, you know, so you need a spare bedroom to work from home, but we're gonna tax you out. So figure that one out.</p>
+          <p><span class="spk">Marty · 08:11</span>Mm. Marty what have you got? Uh, the main one I worry about is, um. Putting capital gains tax on owner occupied homes. Yep.</p>
+          <p><span class="spk">Marty · 08:20</span>That, that's the one I worry about. 'cause I go, it's the last bastion of people being able to build, you know, some, some wealth if you're not getting charged per bedroom too. So, so yeah. So just stay away from that. Could you give us something.</p>
+          <p><span class="spk">Jason · 08:34</span>Which is a very Americanized thing. So, you know, American, um, in the tax system generally doesn't have the main residence exemption, you know, but they're claiming a tax deduction for the interest on their homes as well.</p>
+          <p><span class="spk">Jason · 08:43</span>That's right, yeah. And then paying tax when they sell their homes. So, you know, very different systems around the world. Um, I will run you through some of the tax reform ideas and, and if anything jumps out at you, feel free to stop me, but we've got the GST increase to 15%. Now we've got a whole episode on, on that.</p>
+          <p><span class="spk">Jason · 08:57</span>I'm actually a big believer in, in tax reform, and before I get slammed in the comments again. If GST goes up to 15%, what I'd love to see is that the marginal income taxes come down for everyone. 'cause generally put more money in people's pockets and if you choose to spend it, that's how the government's getting their 15% share of the GST back.</p>
+          <p><span class="spk">Jason · 09:15</span>Obviously, yes, you have to live, but it should be balanced out that way. Uh, inheritance and wealth tax. So inheritance tax on passing over of inheritance. And then also there's an idea that if you've got more than $5 million in assets, you should be taxed an extra 2% annually on your value of your assets.</p>
+          <p><span class="spk">Jason · 09:32</span>Thoughts on that one, Marty?</p>
+          <p><span class="spk">Marty · 09:33</span>Yeah, Jace. I speak to everyday people and they've got so many questions. They dunno what to do. They dunno how they're being ripped off and they dunno what to do next. So. Very frustrating.</p>
+          <p><span class="spk">Jason · 09:45</span>I think that's the hard part is the decisions you make today based on a certain tax system may not be the one that you are actually playing in a few years down the track.</p>
+          <p><span class="spk">Jason · 09:52</span>And the example there, um, is one of the next ones I've got EV road user charges. So you might have gone out and bought an electric vehicle 'cause you said, I. Yeah, the environment. I'm gonna get some concessions for having an ev. I'm gonna avoid some, you know, luxury car taxes and other bits and pieces, or I'm gonna avoid fringe benefits tax by having an ev, um, which is exempt from FBT for a certain period of time.</p>
+          <p><span class="spk">Jason · 10:12</span>But then government's going, oof, we're missing out on fuel excise revenue. We better bring in a new tax. So the EV road user charges come in. So, again, that's another example where, you know, the person who got the EV thinking that, you know, they're gonna avoid paying some taxes and and whatnot, it changes again.</p>
+          <p><span class="spk">Jason · 10:28</span>So</p>
+          <p><span class="spk">Nick · 10:28</span>they're copying tax and they're copying a significant decline in the value of their vehicle. So are you telling me EV's not the way to go? Jace, are we going back to diesel v eights? What are we doing</p>
+          <p><span class="spk">Jason · 10:40</span>here? I, I did go for a ride and my friend's new, uh, my mate's new defender and it's a diesel. 900 Ks to a tank here is pretty happy with the, uh, the new defender.</p>
+          <p><span class="spk">Jason · 10:49</span>So, uh, this isn't an ad for a Land Rover though, so we will keep moving through the tax list 'cause it is pretty heavy. Um. You know, you guys may be familiar with the Diviv 2 93 tax. Again, that's a, that's an extra tax for higher income earners. So if you earn 250,000 or above the money that goes into Super Cops, an extra 15% tax on it.</p>
+          <p><span class="spk">Jason · 11:08</span>So, for example, you may do your tax return. You see that you've given 40, 45% of everything you earn to the A TO through your normal tax return. Um, but then lucky you a couple of weeks later, you get another bill from the a TO for div 2 9 3, and you can elect, obviously pay that from super, um, or you pay it outta your own pocket, so yay for taxes.</p>
+          <p><span class="spk">Marty · 11:27</span>So, so Jace, when you say, um, that, when does that tax kick in? Is that two 50 plus super or is it all inclusive? So</p>
+          <p><span class="spk">Jason · 11:34</span>combined. So you combined 250 K, um, you know, if you're super. Sorry if your taxable income is over 250 K, they then combine your super on top of that to work out the Diviv 2, 9 3. Okay. Charge.</p>
+          <p><span class="spk">Jason · 11:46</span>But the reason I bring that up is they're looking to expand that they wanna capture more people in that Diviv 2 9 3 kind of tax. So whether it's, you know, reducing the, the kind of threshold, um, but it's been listed as one of their tax reform ideas. Obviously we talked about the spare bedroom tax. Um, so you know what that what's, sorry, one of my notes there is politically toxic.</p>
+          <p><span class="spk">Marty · 12:07</span>Uh, Jas before you go on. Just say, so this is income dependent, so if people want to, um, put in extra super, you know how you can put it in Nick? What is it? You can put a certain amount in over five years as a Yep. Uh, well, you can put in,</p>
+          <p><span class="spk">Nick · 12:23</span>uh, 30 KA year in climate tax deduction for that. And then if you haven't, I think we thinking about the five years?</p>
+          <p><span class="spk">Nick · 12:29</span>Yeah, the five years. Any, anything you haven't used at that 30 k, you can then, uh, accumulate that into one financial year. So if</p>
+          <p><span class="spk">Marty · 12:35</span>you load it up on that. Um, in one year and that got to two 50. Even if you were on, let's say 180, that could still impact you. Is that right or no?</p>
+          <p><span class="spk">Jason · 12:46</span>It's, it's only for your concessional contributions of that year, that cap that year.</p>
+          <p><span class="spk">Jason · 12:49</span>Okay. So because, sorry, that's not an</p>
+          <p><span class="spk">Marty · 12:51</span>earning</p>
+          <p><span class="spk">Jason · 12:52</span>No. Yeah, that's right.</p>
+          <p><span class="spk">Marty · 12:53</span>That's what I mean, but I, yeah, couldn't surprised. It's, it is</p>
+          <p><span class="spk">Jason · 12:55</span>actually your combined income and concessional contributions if more than two 50. So if you're on two 30 and you've had 30 grand go into super. You're now at two 60, you're gonna cop the extra tax.</p>
+          <p><span class="spk">Jason · 13:07</span>So it's one of those ones that sometimes people don't realize that if their work is, is contributing super and they've got some reportable employer super contributions or, you know, di different bonuses at different parts of the year, um, it can, it can definitely cook that, uh, extra tax for them, which is a bit of a surprise the first time you get the Div 2, 9 3, uh, bill.</p>
+          <p><span class="spk">Jason · 13:26</span>So we did touch on spare bedroom tax, which is basically suggesting that it's gonna force people to downsize, puts more properties back on the market, um, you know, for families to be able to buy, let's say you've got somebody who needs to downsize with spare bedrooms. That was the idea there. I think it's bloody stupid.</p>
+          <p><span class="spk">Jason · 13:41</span>Um, you've got negative gearing and CGT essentially wanting to limit negative gearing to one property only, and then scale back the 50% CGT discount. So again, more ideas that are being floated as ways to tax the everyday Aussie that apparently isn't paying enough tax yet. Another Bri brilliant one is the stamp duty.</p>
+          <p><span class="spk">Jason · 13:57</span>I say brilliant, a lot of sarcasm here. Stamp duty and land tax swap. So basically saying that stamp duty one-off is inefficient, but if we had an annual broad based land tax on everything, that would be better for the government. And you know, trying to phrase it as better for individuals as well. It also talks about corporate tax reform.</p>
+          <p><span class="spk">Jason · 14:16</span>So, which this, this one I can get behind part of it, which is to reduce small business tax rate to flat 20%. I think again, if you're running a company, you are hiring people, you're paying payroll tax, you've got GST, you got everything else. If we drop it to 20%, it encourages more businesses to form and set up here in Australia and do good, do good business in Australia.</p>
+          <p><span class="spk">Jason · 14:36</span>You always hear the stories of the big corporates, um, you know, your Googles, your Facebooks, um. You know, I, I won't go into a further list, but how they're structured offshore in Ireland or Jersey UK or Hong Kong or BVI and they pay, or you know, a lot of people are gonna Dubai these days, but much lower tax brackets, even Singapore.</p>
+          <p><span class="spk">Jason · 14:55</span>People are not structuring in Australia and leaving the money here, they're finding a way to send it to other jurisdictions where the tax bracket is more friendly. So if we can have a better tax bracket system here for business owners, all of a sudden there's more incentive to pay tax in Australia.</p>
+          <p><span class="spk">Jason · 15:09</span>Again, go back to the beer video of how the tax system works there. Um, outside of corporate tax numbers, the ones I don't like is a, a trial of a new 5% net cash flow tax on large businesses. So they wanna work out the positive net cash flow. I'll a large business and then tax them 5% on that. So again, it's like, well, what are we trying to do here?</p>
+          <p><span class="spk">Jason · 15:29</span>Why are we discouraging businesses from being good and having good cash flows and paying their bills on time? Um, that's probably the main ones. I won't, there's another list of 10, but I, you know, I've waffled on about the tax reform, but just in hearing. All of those ideas for tax reform, you know, how does that make you guys feel about, uh, where we're at at the moment?</p>
+          <p><span class="spk">Marty · 15:47</span>Well, you can get rid of that 5% on the cash. Like, can you imagine people in general savings that had general savings and we say, oh, you got 50 grand in savings. Let's, uh, let's take 5% of it for the sake of it. I mean, come on. You know, put, put it into wages. Yeah. Company owners gonna put it into wages, into expansion.</p>
+          <p><span class="spk">Marty · 16:06</span>Let the damn businesses grow. You know, that's, that's innovation. This is what I don't understand is going, do we want to be an innovative country where we're actually putting capital towards things that are gonna grow and create more opportunity? Or are we just gonna fleece everyone for the hard work they're doing?</p>
+          <p><span class="spk">Marty · 16:23</span>Get get your head around it. It's just, come on</p>
+          <p><span class="spk">Jason · 16:28</span>a hundred percent now. Maybe, maybe this is what the government has, has got the access to the data and this is the narrative that they wanna build on. Um, but just sharing, again, we use it, use it properly. Yeah, we use it properly. And, and again, I think tax reform, you know, our system is, is probably pretty complex and for the sheer amount of taxes to end up.</p>
+          <p><span class="spk">Jason · 16:47</span>Yeah. I think we're about the 29th, lowest out of the 38 OECD countries around the world. So if we're, if we're in the bottom. Layer there and we have all these complicated systems. And this is why, you know, I'm not saying just keep accountants out of a job here, but it is super complicated year on year.</p>
+          <p><span class="spk">Jason · 17:06</span>You know, the training we have to do everything else and the pressure put back on the accounting profession to keep up with everything. And even, you know, remember through COVID job keeper and job seeker and government grants, it was all, go see your accountant. It's all your accountant will sort this out, but it's not really the most efficient way to run an economy.</p>
+          <p><span class="spk">Jason · 17:22</span>Now the, they call it a tax wedge. Um, and it's the amount of tax, you know, across all those things that I talked about. So Australia's tax wedge, on average, the average amount of tax across the board is 29.6%. So if you think about it, you made it to the barbecue, Marty, most people there, if you just assume that everyone was losing about 29 to 30% of every dollar they earn, the OECD average is close to 35%.</p>
+          <p><span class="spk">Jason · 17:47</span>So it's not a big swing between 35 and 30 to get from. You know, to, to, to be in the lowest, the highest is actually Belgium. Do you wanna hazard a guess as the tax wedge in Belgium? This is the, the, the wedge or the average 50. Very good Nick. 52.6%. So you imagine, you know, you wanna go live in Belgium and work in Belgium, you know, you've only got 48, 40 8 cents left of every dollar you earn.</p>
+          <p><span class="spk">Marty · 18:11</span>Mm-hmm. So good chocolate though.</p>
+          <p><span class="spk">Jason · 18:12</span>Good</p>
+          <p><span class="spk">Marty · 18:13</span>chocolate.</p>
+          <p><span class="spk">Jason · 18:13</span>Great chocolate. Great chocolate. The only reason</p>
+          <p><span class="spk">Marty · 18:15</span>Yeah.</p>
+          <p><span class="spk">Jason · 18:16</span>So, you know, I, and look, I don't share that to say that Aussies shouldn't feel like they're getting, you know, a bit of an unfair stick with the tax because, you know, again, it's complicated. There's so many things coming at you and you know, again, we've always talked about how much we hate payroll tax.</p>
+          <p><span class="spk">Jason · 18:28</span>I think there's a simpler tax system with a bit of tax reform that gets better. Then we think about, well, where, where does all the tax money go? If, you know, there's, there's a sheer amount of money that goes to the government. I think it's around 800 billion in revenue. Marty, do you wanna hazard a guess as to where that money gets spent and where it goes?</p>
+          <p><span class="spk">Marty · 18:46</span>Well, I'd just load up on machete bins. That's, that's probably, that's where I'd probably start to drive the refugees. Oh God, I don't have a hazard, a guess 'cause I'm gonna be, uh, city, oh God,</p>
+          <p><span class="spk">Jason · 18:59</span>if</p>
+          <p><span class="spk">Marty · 18:59</span>any, a</p>
+          <p><span class="spk">Nick · 19:00</span>hundred, 180,000</p>
+          <p><span class="spk">Jason · 19:00</span>isn't it? For a machete bin that was 300,000 per bin. Sorry. 300,000 per bin</p>
+          <p><span class="spk">Marty · 19:05</span>for criminals.</p>
+          <p><span class="spk">Marty · 19:06</span>To have face cam recognition to drop off their machete's. Great.</p>
+          <p><span class="spk">Jason · 19:09</span>Yeah. I, I wonder, oh, I don't wanna go there, but brilliant. I, I did see, uh, on the weekend, like a little doco or story about fire trucks. We've got real, like an old firetruck, um, portfolio that need to be replaced and the fire trucks are breaking down and there's a big issue.</p>
+          <p><span class="spk">Jason · 19:24</span>So a firetruck can cost about 450,000 to get the truck and fit it out. And then I just pictured a firetruck fully fitted out next to a machete bin and just thought, how, how is that even possible? Won't go there. 'cause this episode will get outta control if we start talking about machete bins.</p>
+          <p><span class="spk">Nick · 19:40</span>Yeah, I know.</p>
+          <p><span class="spk">Jason · 19:40</span>I'll tell you where the money goes. 37% of the 800 billion goes to welfare or social security. So think pensions, NDIS and family support, family tax benefits. So you know, that's, that's a giant chunk of the revenue collected being redistributed. 16% goes to healthcare. We do have a great healthcare system here in Australia.</p>
+          <p><span class="spk">Jason · 20:01</span>I think Medicare people's access to hospitals, you know, it's not like that around the world. Some people cop really huge medical bills when they go to a hospital, let's say in the States. So that is one thing here where we do have a fantastic healthcare system, 7% on education, about 7% on defense, and then we need 3% of that to service the interest or the interest on the debt that our um, uh, government has.</p>
+          <p><span class="spk">Jason · 20:25</span>Take it on. So pretty quick, pretty quickly that gets spent. One thing I do wanna highlight though, which I think is another episode in itself and becoming a bit of a problem, and you know, if anyone's out there that has some, um, expert knowledge on this, please reach out. 'cause I'd love to discuss it. NDIS now, the growth in how much NDIS is costing the government to maintain and, and continue with.</p>
+          <p><span class="spk">Jason · 20:47</span>In 2223, it was a $37 billion bill. 2324 was a $42 billion bill. It's estimated to become a $52 billion bill this year between 25 26, and as high as 64 60 5 billion by 2029. Now that is bigger than what we spend on education and defense going towards NDIS, which has been well known to be rotted, left, right, and center.</p>
+          <p><span class="spk">Jason · 21:11</span>So any comments, Marty? Nick on. Where the money goes. Um, and would you like to see it used in any other way?</p>
+          <p><span class="spk">Nick · 21:19</span>Uh, look, it's just, I watched, I actually watched a four corner story the other night on, um, NDIS and I don't know if anyone saw it, but building the building of N-D-I-S-N-D-I-S houses in, uh, they'll focusing on the western of Melbourne and basically these places are empty because they're not near.</p>
+          <p><span class="spk">Nick · 21:38</span>Hospitals, you know, basic healthcare needs, which people with disabilities need. Yeah. And um, what blew me away was just the lack of regulation from the government. Um, the two or one particular business in question, uh, I can't remember the guy's name, but. Ex solicitor who had liquidated his past business, um, hadn't paid staff in his past business.</p>
+          <p><span class="spk">Nick · 22:02</span>Somehow he's allowed to, to get involved in building NDIS, um, uh, properties. And then there's another guy on the Gold Coast who, you know, was a, um. Yeah, took all this investment from people and basically didn't do anything with the money, just use it personally. And again, it's just the regulation that really is frustrating.</p>
+          <p><span class="spk">Nick · 22:22</span>Like how are you even letting these people involved in these schemes? Um, the government's got a lot to answer for. And, you know, again, talking about Belgium, I, I don't mind paying 50% tax if it's, if there's, if I see value in it. Mm-hmm. And that's, that's the biggest issue at the moment. Um. And our government.</p>
+          <p><span class="spk">Nick · 22:42</span>Yeah. It's just got a lot to answer for, you know,</p>
+          <p><span class="spk">Marty · 22:44</span>well, I won't say where it was, but it was in a neighborhood that I might've lived around. There was a NDS scheme going on in one of the residential properties, so about nine kids coming to every day residential house, and it was, it was watered and shut down.</p>
+          <p><span class="spk">Marty · 23:00</span>So it was, it was interesting what was going, you know, the funding that's going towards it's being Yeah. Utilized, which is disappointing because there would be. You know, people and kids that actually really need it, right? So it's always the cowboys that hurt, you know, the real people that need. But Ja, I wanna throw a question to you.</p>
+          <p><span class="spk">Marty · 23:16</span>What do you think, in regards to Australia being more innovative, what would you like to see? Like we talk about simplified tax systems. What would you like to see for more innovative investment from Australia? What would help us, you know, from, from you being in the trenches every day.</p>
+          <p><span class="spk">Jason · 23:33</span>Uh, look, I definitely think the, the reform around the corporate tax rates, corporate tax rates are prohibitive.</p>
+          <p><span class="spk">Jason · 23:38</span>It doesn't encourage investment here in Australia to grow good Aussie companies, and then even the, the new startups that start and they get onto something special very quickly. You know, there's tax specialists here in Australia that are talking to them about how to restructure and sell their IP or their goodwill or their whatever, you know, asset they're building, sell it into a company.</p>
+          <p><span class="spk">Jason · 23:58</span>Holding company in Singapore or somewhere offshore. Um, these schemes exist, it's legal. They dot i's they cross t's. If the HO asic or anyone comes along and looks at it, it's, oh, well what can we do? And it's, you know, so I think encouraging investment into Australia by having lower corporate tax rates is, is the biggest thing I can say that would encourage innovation and development of new technology and, and leaving it here in Australia.</p>
+          <p><span class="spk">Jason · 24:20</span>Um, you know, you don't hear about too many good Aussie tech companies. Um, you know, when you compare to. Other places in the world, or especially like America, the top four or five big ones over there. Um, the ones here in Australia are, you know, falling behind. And I think it's because we are so prohibited by tax in that corporate, corporate environment.</p>
+          <p><span class="spk">Jason · 24:38</span>Um, yes, we've got the r and d grant, but even then when it comes to some technology development. They're getting really, really hard and strict on, on what constitutes, you know, new innovative technology versus, you know, reworking and rewiring things to work better. So again, you're looking for efficiencies and yes, it's innovation, but maybe it doesn't quite meet the strict parameters of how to receive the RD grant, which, if you can pull it off, the RD grant is a, is a fantastic, um, so, you know.</p>
+          <p><span class="spk">Jason · 25:07</span>Cash flow tax offset helps boost a business in that startup phase while they're developing something. But again, it's also one of the most highest, uh, audited and regulated area where the a TO come back after you to say, you know, you didn't do that properly. We want that money back. So, you know, it puts extra stress and extra strain on people that are just trying to do good things and, and grow and develop good new technology and good business.</p>
+          <p><span class="spk">Marty · 25:29</span>Yeah. Good answer. Thanks.</p>
+          <p><span class="spk">Jason · 25:30</span>No, no, my pleasure. Anything from your end? What, what would you like to see? We haven't</p>
+          <p><span class="spk">Marty · 25:34</span>got a long enough podcast. For me, it's like, just, just in regards to, like you said there, there's stuff that's unregulated that's getting, you know, just getting abused really. And then, you know, where we probably need to have more of a balance into you, like you said, good technologies and good innovation.</p>
+          <p><span class="spk">Marty · 25:50</span>Um, I think, I think maybe the public's skeptical, uh, uh, in regards to business owners getting any, you know. Tax benefits or any sort of support. Um, but I think it's really important because go our, um, small to medium businesses do well, creates more jobs, creates more income, creates more opportunity, creates more taxes.</p>
+          <p><span class="spk">Marty · 26:10</span>And I think, um, I was having this, this discussion on the weekend, you know, they said, oh, business owners always win out. Well, no, they, they carry a lot of pressures and they're trying to strive ahead and they give people jobs and, you know, really help the economy. And I think there's still a bit of a. Us against them type of thing, which is not the case.</p>
+          <p><span class="spk">Marty · 26:29</span>I, I think, yeah, it's gotta change.</p>
+          <p><span class="spk">Jason · 26:31</span>No, a hundred percent. Well, uh, appreciate you guys listening to me ramble on about, uh, the new tax reforms and the different things that are being suggested. Um, and just to put a bit of a spin on, you know, do everyday Aussies pay too much tax and while the data suggests that we don't pay too much tax compared to the rest of the world, I would say that we're taxed.</p>
+          <p><span class="spk">Jason · 26:49</span>The wrong way in the wrong areas, rather than kind of making it a simpler system to understand. Um, I think we do need tax reform. I think there's a debate out there that's worth having. Uh, but we just need to make sure that, you know, people are getting involved in, in these decisions, um, that aren't just driven by, you know, government, government people that don't have an idea how the everyday Australian.</p>
+          <p><span class="spk">Jason · 27:08</span>Needs this system to work. Um, appreciate you listening guys. Uh, give the Numbers Game podcast a subscribe. If you're on YouTube, give us a follow. If you're on Spotify or Apple Podcast, appreciate you tuning in and listening. And until next time,</p>
+          <p><span class="spk">Marty · 27:22</span>let's get innovative. Tax me outta here. Game over</p>
+          <p><span class="spk">Jason · 27:28</span>this podcast is for educational and informational purposes only.</p>
+          <p><span class="spk">Jason · 27:31</span>The conversations are of a general nature and do not qualify as financial or tax advice. We recommend before you make any financial decisions, you consult a licensed professional. Individuals on the podcast may hold positions in the companies discussed. ---</p>
+        </div>
+      </details>
+
+    </div>
+
+    <!-- LISTEN:START -->
+    <section class="listen-now">
+      <div class="ln-head">
+        <span class="ln-title">Listen now</span>
+      </div>
+      <div class="audio-embed">
+        <iframe src="https://open.spotify.com/embed/episode/40YZTdYwwvZhe0G2rTWOnZ?utm_source=generator"
+          width="100%" height="152" loading="lazy" allowfullscreen
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+          title="Spotify — Do Aussies Pay Too Much Tax?"></iframe>
+      </div>
+    </section>
+
+    <div class="listen">
+      <a href="https://open.spotify.com/episode/40YZTdYwwvZhe0G2rTWOnZ" target="_blank" rel="noopener" aria-label="Listen to this episode on Spotify">
+        <svg viewBox="0 0 24 24"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.52 17.34c-.24.36-.66.48-1.02.24-2.82-1.74-6.36-2.1-10.56-1.14-.42.12-.78-.18-.9-.54-.12-.42.18-.78.54-.9 4.56-1.02 8.52-.6 11.64 1.32.42.18.48.66.3 1.02zm1.44-3.3c-.3.42-.84.6-1.26.3-3.24-1.98-8.16-2.58-11.94-1.38-.48.12-1.02-.12-1.14-.6-.12-.48.12-1.02.6-1.14 4.32-1.32 9.72-.66 13.44 1.62.36.18.54.78.3 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.3c-.6.18-1.2-.18-1.38-.72-.18-.6.18-1.2.72-1.38 4.26-1.26 11.28-1.02 15.72 1.62.54.3.72 1.02.42 1.56-.3.42-1.02.6-1.56.3z"/></svg>
+        Spotify
+      </a>
+      <a href="https://podcasts.apple.com/au/podcast/id1555566088?i=1000732517039" target="_blank" rel="noopener" aria-label="Listen to this episode on Apple Podcasts">
+        <svg viewBox="0 0 24 24"><path d="M5.34 0A5.328 5.328 0 000 5.34v13.32A5.328 5.328 0 005.34 24h13.32A5.328 5.328 0 0024 18.66V5.34A5.328 5.328 0 0018.66 0H5.34zm6.525 2.568c2.336 0 4.448.902 6.056 2.587 1.224 1.272 1.912 2.619 2.264 4.392l.04.23c.04.272-.16.527-.432.567a.505.505 0 01-.567-.431l-.04-.213c-.312-1.57-.92-2.747-2.004-3.867-1.428-1.496-3.293-2.294-5.393-2.294-2.1 0-3.966.798-5.394 2.294-1.084 1.12-1.692 2.298-2.004 3.867l-.04.213a.507.507 0 01-.567.431.504.504 0 01-.432-.567l.04-.23c.352-1.773 1.04-3.12 2.264-4.392 1.608-1.685 3.72-2.587 6.056-2.587h.153zm.136 3.033c1.74 0 3.312.67 4.527 1.934.883.916 1.394 1.93 1.663 3.253l.04.23a.505.505 0 01-.431.567.503.503 0 01-.567-.432l-.04-.212c-.23-1.112-.659-1.97-1.396-2.732-1.052-1.1-2.404-1.672-3.9-1.672s-2.849.572-3.901 1.672c-.737.762-1.167 1.62-1.396 2.732l-.04.212a.503.503 0 01-.567.432.505.505 0 01-.432-.567l.04-.23c.27-1.323.78-2.337 1.664-3.253 1.215-1.264 2.787-1.934 4.527-1.934h.21zm-.078 3.05c1.092 0 2.091.424 2.89 1.22.582.58.924 1.245 1.107 2.15l.04.218a.501.501 0 01-.424.568.499.499 0 01-.568-.424l-.04-.198c-.146-.724-.413-1.253-.871-1.716-.63-.63-1.398-.957-2.226-.957s-1.595.328-2.225.957c-.459.463-.726.992-.871 1.716l-.04.198a.499.499 0 01-.568.424.501.501 0 01-.424-.568l.04-.219c.183-.904.525-1.569 1.106-2.149.8-.796 1.799-1.22 2.89-1.22h.184zM12 14.07a2.477 2.477 0 012.48 2.478A2.477 2.477 0 0112 19.024a2.477 2.477 0 01-2.48-2.477A2.477 2.477 0 0112 14.07z"/></svg>
+        Apple
+      </a>
+      <a class="yt-pill" href="https://www.youtube.com/@thenumbersgamepodcast?sub_confirmation=1" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.12-2.14C19.5 3.55 12 3.55 12 3.55s-7.5 0-9.38.51A3 3 0 0 0 .5 6.2 31.4 31.4 0 0 0 0 12a31.4 31.4 0 0 0 .5 5.8 3 3 0 0 0 2.12 2.14c1.88.51 9.38.51 9.38.51s7.5 0 9.38-.51a3 3 0 0 0 2.12-2.14A31.4 31.4 0 0 0 24 12a31.4 31.4 0 0 0-.5-5.8zM9.55 15.57V8.43L15.82 12z"/></svg>
+        Subscribe
+      </a>
+    </div>
+    <!-- LISTEN:END -->
+
+    <div class="relsec">
+      <span class="rtitle">Discover more</span>
+      <div class="relgrid">
+        <a class="relcard" href="/the-1-000-ato-tax-deduction-explained">
+          <img src="https://i.ytimg.com/vi/XyMngctwpGs/hqdefault.jpg" alt="EP 278 thumbnail">
+          <span class="rt">The $1,000 ATO Tax Deduction Explained</span>
+          <span class="rfoot"><span class="rwhy">Also covers: tax planning</span><span class="rtag">EP 278</span></span>
+        </a>
+        <a class="relcard" href="/what-real-budget-reform-for-young-australians-would-actually-look-like">
+          <img src="https://i.ytimg.com/vi/le7HuIBq6Ow/hqdefault.jpg" alt="EP 283 thumbnail">
+          <span class="rt">What Real Budget Reform for Young Australians Would Actually Look Like</span>
+          <span class="rfoot"><span class="rwhy">Also covers: tax planning</span><span class="rtag">EP 283</span></span>
+        </a>
+        <a class="relcard" href="/singapore-vs-australia-which-tax-system-actually-works">
+          <img src="https://i.ytimg.com/vi/0scsuAZ3Uys/hqdefault.jpg" alt="EP 259 thumbnail">
+          <span class="rt">Singapore vs Australia</span>
+          <span class="rfoot"><span class="rwhy">Also covers: tax planning</span><span class="rtag">EP 259</span></span>
+        </a>
+        <a class="relcard" href="/petrol-vs-electric-cars-how-much-you-actually-save-in-2026">
+          <img src="https://i.ytimg.com/vi/2vYQ6HlHtgA/hqdefault.jpg" alt="EP 276 thumbnail">
+          <span class="rt">Petrol vs Electric Cars</span>
+          <span class="rfoot"><span class="rwhy">Also covers: tax planning</span><span class="rtag">EP 276</span></span>
+        </a>
+        <a class="relcard" href="/the-great-australia-wealth-transfer">
+          <img src="https://i.ytimg.com/vi/RWYoT4w-d7k/hqdefault.jpg" alt="EP 273 thumbnail">
+          <span class="rt">The Great Australia Wealth Transfer</span>
+          <span class="rfoot"><span class="rwhy">Also covers: tax planning</span><span class="rtag">EP 273</span></span>
+        </a>
+        <a class="relcard" href="/2026-predictions-and-marty-s-final-episode">
+          <img src="https://i.ytimg.com/vi/kpLzFX5dS88/hqdefault.jpg" alt="EP 262 thumbnail">
+          <span class="rt">2026 Predictions And Marty's Final Episode</span>
+          <span class="rfoot"><span class="rwhy">Also covers: tax planning</span><span class="rtag">EP 262</span></span>
+        </a>
+      </div>
+      <div class="reldots" id="reldots"></div>
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="footgrid">
+      <div class="fcol">
+        <div class="foot-label">Follow us on</div>
+        <div class="socials">
+          <a href="https://www.instagram.com/thenumbersgamepodcast/" target="_blank" rel="noopener" aria-label="The Numbers Game on Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.8.2 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1 .4 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .4-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1-.4-2.2-.1-1.3-.1-1.7-.1-4.9s0-3.6.1-4.9c.1-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.4 2.2-.4 1.3-.1 1.7-.1 4.9-.1zm0 2c-3.1 0-3.5 0-4.8.1-1.1.1-1.5.2-1.8.3-.4.2-.7.3-1 .6-.3.3-.5.6-.6 1-.1.3-.3.7-.3 1.8-.1 1.3-.1 1.7-.1 4.8s0 3.5.1 4.8c.1 1.1.2 1.5.3 1.8.2.4.3.7.6 1 .3.3.6.5 1 .6.3.1.7.3 1.8.3 1.3.1 1.7.1 4.8.1s3.5 0 4.8-.1c1.1-.1 1.5-.2 1.8-.3.4-.2.7-.3 1-.6.3-.3.5-.6.6-1 .1-.3.3-.7.3-1.8.1-1.3.1-1.7.1-4.8s0-3.5-.1-4.8c-.1-1.1-.2-1.5-.3-1.8-.2-.4-.3-.7-.6-1-.3-.3-.6-.5-1-.6-.3-.1-.7-.3-1.8-.3-1.3-.1-1.7-.1-4.8-.1zm0 3.4a5.4 5.4 0 1 1 0 10.8 5.4 5.4 0 0 1 0-10.8zm0 2a3.4 3.4 0 1 0 0 6.8 3.4 3.4 0 0 0 0-6.8zm5.6-2.3a1.3 1.3 0 1 1-2.6 0 1.3 1.3 0 0 1 2.6 0z"/></svg></a>
+          <a href="https://www.tiktok.com/@thenumbersgamepodcast" target="_blank" rel="noopener" aria-label="The Numbers Game on TikTok"><svg viewBox="0 0 24 24"><path d="M12.53.02C13.84 0 15.14.01 16.44 0c.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg></a>
+          <a href="https://www.linkedin.com/company/the-numbers-game-podcast/" target="_blank" rel="noopener" aria-label="The Numbers Game on LinkedIn"><svg viewBox="0 0 24 24"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.24 8.25h4.52V23H.24V8.25zM8.34 8.25h4.33v2.01h.06c.6-1.14 2.08-2.34 4.28-2.34 4.58 0 5.42 3.01 5.42 6.92V23h-4.51v-7.16c0-1.71-.03-3.91-2.38-3.91-2.39 0-2.75 1.86-2.75 3.78V23H8.34V8.25z"/></svg></a>
+          <a href="https://www.facebook.com/profile.php?id=100071290388343" target="_blank" rel="noopener" aria-label="The Numbers Game on Facebook"><svg viewBox="0 0 24 24"><path d="M24 12.07C24 5.41 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.04V9.41c0-3.02 1.8-4.7 4.54-4.7 1.31 0 2.68.24 2.68.24v2.97h-1.5c-1.5 0-1.96.93-1.96 1.89v2.26h3.32l-.53 3.5h-2.8V24C19.62 23.1 24 18.1 24 12.07z"/></svg></a>
+          <a href="https://www.youtube.com/@thenumbersgamepodcast" target="_blank" rel="noopener" aria-label="The Numbers Game on YouTube"><svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.2C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31.7 31.7 0 0 0 0 12a31.7 31.7 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.2A31.7 31.7 0 0 0 24 12a31.7 31.7 0 0 0-.5-5.8zM9.6 15.6V8.4L15.8 12z"/></svg></a>
+        </div>
+      </div>
+      <div class="fcol">
+        <div class="foot-label">Brought to you by</div>
+        <div class="sponsors">
+          <a href="https://www.inovayt.com.au/" target="_blank" rel="noopener"><img src="assets/inovayt-white.png" alt="Inovayt"></a>
+          <a href="https://futureadvisory.com.au/" target="_blank" rel="noopener"><img src="assets/future-advisory-white.png" alt="Future Advisory"></a>
+        </div>
+      </div>
+      <div class="fcol produced">
+        <div class="foot-label">Produced by</div>
+        <a href="https://www.vidpod.com.au/" target="_blank" rel="noopener"><img src="assets/vidpod-white.png" alt="VIDPOD"></a>
+      </div>
+    </div>
+    <div class="footbar">
+      <details class="footnav-dd">
+        <summary><svg class="ham" viewBox="0 0 24 24"><path d="M3 6h18v2H3zM3 11h18v2H3zM3 16h18v2H3z"/></svg> Menu</summary>
+        <div class="dd-links">
+          <a href="/">Home</a><a href="/episodes">Every episode</a><a href="/adventure">Choose your own adventure</a><a href="/about">About the show</a><a href="/nick-reilly">Nick Reilly</a><a href="/jason-robinson">Jason Robinson</a><a href="/marty-vidakovic">Marty Vidakovic</a><a href="/contact">Contact</a>
+        </div>
+      </details>
+      <div class="copyright">© 2026 The Numbers Game</div>
+    </div>
+  </footer>
+
+  <script>
+    var VIDEO='lP86BXU1Sgw';
+    var CHAPTERS=[
+      {t:"00:00",s:0,title:"Intro"},
+      {t:"00:36",s:36,title:"The Viral Video That Exposes Australia's Endless Taxes"},
+      {t:"01:43",s:103,title:"Do Aussies Really Pay Too Much Tax?"},
+      {t:"04:02",s:242,title:"How Much Tax You Actually Pay on $60K, $80K, $100K, and $250K"},
+      {t:"06:10",s:370,title:"The Beer Analogy That Explains Our Tax System"},
+      {t:"07:58",s:478,title:"The Wildest Tax Reform Ideas Being Floated"},
+      {t:"10:49",s:649,title:"EV Taxes, Super Surcharges, and the Never-Ending Grab"},
+      {t:"14:16",s:856,title:"Why Business Tax Reform Could Boost Innovation"},
+      {t:"19:40",s:1180,title:"Where Australia's $800 Billion in Tax Money Goes"},
+      {t:"20:47",s:1247,title:"The NDIS Blowout and How It's Hurting Those Who Need It Most"},
+      {t:"23:33",s:1413,title:"Can Lower Taxes Spark Aussie Innovation and Growth?"}
+    ];
+    var QUESTIONS=[
+      {q:"Is Australia a high-tax country?",s:151},
+      {q:"How much tax do you really pay on 60k?",s:242},
+      {q:"How much tax do you pay on 100k or 250k?",s:302},
+      {q:"Should GST go up to 15 percent?",s:537},
+      {q:"What is Division 293 tax?",s:649},
+      {q:"How could business tax reform help?",s:856},
+      {q:"What is Australia's tax wedge?",s:1042},
+      {q:"Where does Australia's tax money go?",s:1180},
+      {q:"How fast is NDIS spending growing?",s:1247},
+      {q:"So do Aussies pay too much tax?",s:1591}
+    ];
+
+    var chEl=document.getElementById('chapters');
+    CHAPTERS.forEach(function(c){var b=document.createElement('button');b.className='chapter';b.onclick=function(){startAt(c.s)};b.innerHTML='<span class="tc">'+c.t+'</span><span class="cx">'+c.title+'</span>';chEl.appendChild(b);});
+    document.getElementById('chcount').textContent=CHAPTERS.length;
+    var qEl=document.getElementById('qa');
+    QUESTIONS.forEach(function(q){var b=document.createElement('button');b.className='q';b.onclick=function(){startAt(q.s)};b.innerHTML='<span class="qm">?</span><span class="qx">'+q.q+'</span><span class="go">›</span>';qEl.appendChild(b);});
+    document.getElementById('qcount').textContent=QUESTIONS.length;
+
+    /* Mobile nav dropdown. */
+    var burger=document.getElementById('navburger'), navdrop=document.getElementById('navdrop');
+    if(burger&&navdrop){burger.addEventListener('click',function(){
+      navdrop.hidden=!navdrop.hidden;
+      burger.setAttribute('aria-expanded', navdrop.hidden?'false':'true');
+    });}
+
+    /* Voice-note button reveals the recorder; × tucks it away. */
+    var vbtn=document.getElementById('vbtn'), vslot=document.getElementById('vslot'), vclose=document.getElementById('vclose');
+    if(vbtn&&vslot){vbtn.addEventListener('click',function(){vslot.hidden=!vslot.hidden;});}
+    if(vclose&&vslot){vclose.addEventListener('click',function(){vslot.hidden=true;});}
+
+    /* Keep-exploring dots: only shown when the strip actually scrolls (mobile). */
+    var rg=document.querySelector('.relgrid'), rd=document.getElementById('reldots');
+    if(rg&&rd){
+      var relCards=rg.querySelectorAll('.relcard');
+      relCards.forEach(function(){rd.appendChild(document.createElement('span'))});
+      var updDots=function(){
+        var scrollable=rg.scrollWidth>rg.clientWidth+4;
+        rd.style.display=scrollable?'flex':'none';
+        if(!scrollable)return;
+        var i=Math.round(rg.scrollLeft/(rg.scrollWidth-rg.clientWidth)*(relCards.length-1));
+        rd.querySelectorAll('span').forEach(function(s,n){s.classList.toggle('on',n===i)});
+      };
+      rg.addEventListener('scroll',updDots,{passive:true});
+      window.addEventListener('resize',updDots);
+      updDots();
+    }
+
+    /* Explore tabs: swap the visible panel; the row stays put so you never lose your place. */
+    var tabBtns=document.querySelectorAll('.tabbtn');
+    tabBtns.forEach(function(b){
+      b.addEventListener('click',function(){
+        tabBtns.forEach(function(o){o.classList.remove('on')});
+        document.querySelectorAll('.tpanel').forEach(function(p){p.hidden=true});
+        b.classList.add('on');
+        document.getElementById(b.getAttribute('data-panel')).hidden=false;
+      });
+    });
+
+    /* YouTube: clean facade, then real player on demand. Seek without yanking to top. */
+    var player=null, ready=false, apiReady=false, pending=null;
+    window.onYouTubeIframeAPIReady=function(){apiReady=true; if(pending!=null){var s=pending;pending=null;createPlayer(s);}};
+    function createPlayer(sec){
+      var wrap=document.getElementById('player'); wrap.innerHTML='<div id="yt"></div>';
+      player=new YT.Player('yt',{videoId:VIDEO,playerVars:{autoplay:1,rel:0,modestbranding:1,playsinline:1,start:Math.floor(sec||0)},events:{onReady:function(){ready=true;}}});
+    }
+    function nudge(){
+      var p=document.getElementById('player-wrap'), r=p.getBoundingClientRect();
+      if(r.bottom<80 || r.top>window.innerHeight-90){ p.scrollIntoView({behavior:'smooth',block:'start'}); }
+    }
+    function startAt(sec){
+      nudge();
+      if(player&&ready){ player.seekTo(sec,true); player.playVideo(); return; }
+      if(apiReady){ createPlayer(sec); } else { pending=sec; }
+    }
+    document.getElementById('facade').addEventListener('click',function(){startAt(0);});
+    (function(){var s=document.createElement('script');s.src='https://www.youtube.com/iframe_api';document.head.appendChild(s);})();
+  </script>
+</body>
+</html>
