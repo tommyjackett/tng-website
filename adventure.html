@@ -360,7 +360,7 @@
     var today=new Date(); today.setHours(23,59,59);
     CAT=res[0].filter(function(e){return new Date(e.date+'T00:00:00')<=today});
     CAT.sort(function(a,b){return a.date<b.date?1:-1});
-    var released={}, slugByEp={}; CAT.forEach(function(e){released[e.episodeNumber]=true; slugByEp[e.episodeNumber]=e.slug;});
+    var released={}, slugByEp={}, audioOnlyEp={}; CAT.forEach(function(e){released[e.episodeNumber]=true; slugByEp[e.episodeNumber]=e.slug; if(e.audioOnly)audioOnlyEp[e.episodeNumber]=true;});
     /* Score every released moment, then build the pool as a HYBRID union so the
        topic->subtopic browse actually works AND no episode vanishes:
          - each EPISODE's top TOP_PER_EP by value  -> guarantees every episode appears
@@ -369,7 +369,11 @@
            Company Setup + Bucket Companies, not just its single highest-value subtopic).
        Both selections are by value, so quality stays led. Full search index
        (episodes.html) still covers all moments — nothing is lost, only curated here. */
-    var scored=res[1].filter(function(m){return released[m.episodeNumber]});
+    /* RULE: audio-only episodes are EXCLUDED from the moments / Choose Your Own
+       Adventure pool (Tommy, 20 Jul 2026). Published audio eps still appear in the
+       episodes library + have their own page, but none of their moments enter here.
+       May be re-enabled later — drop the !audioOnlyEp guard to turn back on. */
+    var scored=res[1].filter(function(m){return released[m.episodeNumber] && !audioOnlyEp[m.episodeNumber]});
     scored.forEach(function(m){m._v=momentValue(m)});
     function topBy(keyFn,n){
       var g={}; scored.forEach(function(m){var k=keyFn(m);(g[k]=g[k]||[]).push(m)});
