@@ -126,6 +126,8 @@
   .ecard .et{font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.2px;
     font-size:15px;line-height:1.35;color:var(--white);padding:12px 12px 0;text-wrap:balance}
   .ecard .ew{font-size:11.5px;color:var(--mint);padding:8px 12px 0;line-height:1.4}
+  .ecard .eg{font-size:11.5px;color:var(--muted);padding:4px 12px 0;line-height:1.35}
+  .ecard .eg b{color:var(--white);font-weight:600}
   .ecard .ef{margin-top:auto;display:flex;justify-content:space-between;align-items:flex-end;gap:8px;padding:12px}
   .ecard .ed{font-size:12px;color:var(--mint)}
   .ecard .ee{display:inline-block;background:#0a0a0a;color:var(--white);font-family:var(--display);
@@ -435,6 +437,9 @@
         var inTitle=rx.test(e.title);
         if(inTitle) s+=100;
         if(rx.test(e.topic+' '+(e.subtopic||''))) s+=50;
+        var guestStr=(e.guests||[]).join(' ');
+        var inGuest=guestStr&&rx.test(guestStr);
+        if(inGuest) s+=80;                       // guest name is a strong, deliberate match
         var qMatches=b.qs.filter(function(t){return rx.test(t)});
         var dMatches=b.ds.filter(function(t){return rx.test(t)});
         var hits=qMatches.length+dMatches.length;
@@ -474,6 +479,7 @@
       im.src=e.thumbnail||('https://i.ytimg.com/vi/'+e.youtubeId+'/hqdefault.jpg');
       var t=document.createElement('span'); t.className='et'; t.textContent=e.title;
       a.appendChild(im); a.appendChild(t);
+      if(e.guests&&e.guests.length){var g=document.createElement('span'); g.className='eg'; g.appendChild(document.createTextNode('With ')); e.guests.forEach(function(nm,i){if(i)g.appendChild(document.createTextNode(' & ')); var bb=document.createElement('b'); bb.textContent=nm; g.appendChild(bb);}); a.appendChild(g);}
       if(e._why){var w=document.createElement('span'); w.className='ew'; w.textContent=e._why; a.appendChild(w);}
       var f=document.createElement('span'); f.className='ef';
       var d=document.createElement('span'); d.className='ed'; d.textContent=fmtDate(e.date);
