@@ -1,0 +1,731 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EP 224 · Hunter vs. Farmer and Fixing Your Sales Strategy | The Numbers Game</title>
+<meta name="description" content="">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" sizes="64x64" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="canonical" href="https://thenumbersgamepodcast.com.au/hunter-vs-farmer-and-fixing-your-sales-strategy">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="The Numbers Game">
+<meta property="og:title" content="EP 224 · Hunter vs. Farmer and Fixing Your Sales Strategy | The Numbers Game">
+<meta property="og:description" content="">
+<meta property="og:url" content="https://thenumbersgamepodcast.com.au/hunter-vs-farmer-and-fixing-your-sales-strategy">
+<meta property="og:image" content="https://i.ytimg.com/vi/_qzRCuvzt3g/maxresdefault.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+  :root{
+    --purple:#585af3; --purple-dark:#2c1b8a; --mint:#7ad9a8;
+    --white:#ffffff; --muted:rgba(255,255,255,.60); --dim:rgba(255,255,255,.42);
+    --line:rgba(255,255,255,.12); --card:rgba(255,255,255,.05); --card-hi:rgba(255,255,255,.09);
+    --display:'Anton',Impact,'Helvetica Neue',sans-serif;
+    --sans:'Inter',system-ui,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif;
+    --wrap:1280px;   /* page frame (nav spans this) */
+    --col:960px;     /* content column (player, tabs, text) */
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:var(--sans); color:var(--white); line-height:1.6; -webkit-font-smoothing:antialiased;
+    background:#12093a;
+    background-image:
+      radial-gradient(1200px 600px at 82% -6%, rgba(88,90,243,.45) 0%, transparent 55%),
+      radial-gradient(900px 700px at 5% 8%, rgba(122,217,168,.10) 0%, transparent 50%),
+      linear-gradient(180deg,#2c1b8a 0%,#1a1150 28%,#100b34 62%,#0b0820 100%);
+    background-attachment:fixed;
+  }
+  a{color:inherit}
+  .wrap{max-width:var(--wrap);margin:0 auto;padding:0 36px}
+  main.wrap{max-width:var(--col)}
+  @media(max-width:720px){.wrap{padding:0 22px}}
+
+  /* ── Navbar ── */
+  .nav{position:sticky;top:0;z-index:50;background:linear-gradient(180deg,rgba(24,15,74,.92),rgba(24,15,74,.72));backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+  .nav-in{max-width:var(--wrap);margin:0 auto;padding:11px 36px;display:flex;align-items:center;justify-content:space-between}
+  @media(max-width:720px){.nav-in{padding:11px 22px}}
+  .brand{display:block;line-height:0}
+  .brand img{height:36px;width:auto;display:block}
+  .navlinks{display:flex;gap:28px;align-items:center}
+  .navlinks a{text-decoration:none;font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);transition:.15s}
+  .navlinks a:hover{color:var(--white)}
+  .navlinks a.navtop{cursor:default}
+  .navgroup{position:relative;display:flex;align-items:center}
+  .navgroup .subnav{display:none;position:absolute;top:100%;left:50%;transform:translateX(-50%);padding-top:14px;min-width:180px}
+  .navgroup:hover .subnav,.navgroup:focus-within .subnav{display:block}
+  .subnav-in,.navgroup .subnav{z-index:60}
+  .navgroup .subnav a{display:block;background:#180f4a;border:1px solid var(--line);border-top:0;padding:12px 16px;font-size:12px;color:rgba(255,255,255,.85)}
+  .navgroup .subnav a:first-child{border-top:1px solid var(--line)}
+  .navgroup .subnav a:hover{background:#221768;color:var(--white)}
+  .navburger{display:none;background:none;border:1px solid var(--line);padding:8px 10px;cursor:pointer;color:var(--white);transition:.15s}
+  .navburger:hover{border-color:rgba(122,217,168,.6)}
+  .navburger svg{width:20px;height:20px;fill:currentColor;display:block}
+  .navdrop{display:none}
+  @media(max-width:720px){
+    .navlinks{display:none}
+    .navburger{display:block}
+    .navdrop{display:block;position:absolute;left:0;right:0;top:100%;
+      background:#180f4a;border-bottom:1px solid var(--line);box-shadow:0 24px 50px rgba(0,0,0,.45)}
+    .navdrop[hidden]{display:none}
+    .navdrop a{display:block;padding:15px 22px;text-decoration:none;font-size:14px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:rgba(255,255,255,.9);border-bottom:1px solid rgba(255,255,255,.06)}
+    .navdrop a:last-child{border-bottom:0}
+    .navdrop a.sub{padding-left:42px;font-size:13px;color:rgba(255,255,255,.72)}
+    .navdrop .navlabel{display:block;padding:15px 22px 6px;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.4)}
+  }
+
+  /* ── Hero / hook (marker-highlight system: purple hook wraps naturally, mint payoff below)
+     Rules: title splits at its natural break (colon/pipe/question mark). Front = hook (purple,
+     big), back = payoff (mint, smaller). No break in title = purple hook only. Highlights hug
+     the text (tight em padding tuned to Anton) and wrap via box-decoration-break — never
+     hand-pick line breaks or mint words. ── */
+  header.hero{padding:34px 0 6px}
+  .hook{--inx:clamp(8.4px,2.1vw,15.6px)} /* one shared text inset so hook + payoff first letters align */
+  .hook .hk{font-family:var(--display);font-weight:400;text-transform:uppercase;
+    font-size:clamp(28px,7vw,52px);line-height:1.3;letter-spacing:-.5px;text-wrap:balance}
+  .hook .hk span{color:var(--white);padding:.04em var(--inx) .02em;
+    background:linear-gradient(var(--purple),var(--purple)) 0 50%/100% 87% no-repeat;
+    -webkit-box-decoration-break:clone;box-decoration-break:clone}
+  .hook .pay{font-family:var(--display);font-weight:400;text-transform:uppercase;
+    font-size:clamp(16px,4vw,24px);line-height:1.5;letter-spacing:.6px;margin-top:8px;text-wrap:balance}
+  .hook .pay span{color:#0a0a0a;padding:.08em var(--inx) .04em;
+    background:linear-gradient(var(--mint),var(--mint)) 0 50%/100% 88% no-repeat;
+    -webkit-box-decoration-break:clone;box-decoration-break:clone}
+  /* no-hook titles: mid-split into two full-size rows, purple then mint */
+  .hook .hk span.hkrow{display:block;background:none;padding:0}
+  .hook .hk .hkrow+.hkrow{margin-top:8px}
+  .hook .hk span.mintseg{color:#0a0a0a;
+    background:linear-gradient(var(--mint),var(--mint)) 0 50%/100% 87% no-repeat}
+
+  /* ── Player (clean facade → real player on tap) ── */
+  .player-wrap{margin:24px 0 4px;scroll-margin-top:76px}
+  .player{position:relative;width:100%;padding-top:56.25%;border-radius:0;overflow:hidden;background:#000;box-shadow:0 30px 70px rgba(0,0,0,.5),0 0 0 1px rgba(255,255,255,.06)}
+  .facade{position:absolute;inset:0;border:0;cursor:pointer;background-size:cover;background-position:center;display:flex;align-items:center;justify-content:center;padding:0}
+  .facade .play{width:74px;height:74px;border-radius:50%;background:rgba(10,6,30,.40);border:2px solid rgba(255,255,255,.72);display:flex;align-items:center;justify-content:center;transition:.18s;-webkit-backdrop-filter:blur(1px);backdrop-filter:blur(1px)}
+  .facade:hover .play{background:rgba(88,90,243,.62);transform:scale(1.07);border-color:#fff}
+  .facade .play::after{content:"";border-style:solid;border-width:11px 0 11px 19px;border-color:transparent transparent transparent #fff;margin-left:5px}
+  .player iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+
+  /* ── Episode facts (bottom of the Summary panel — templated per episode) ── */
+  .sumfacts{margin:14px 10px 4px;padding-top:13px;border-top:1px solid rgba(255,255,255,.08);display:flex;flex-direction:column;gap:8px}
+  .fact{display:flex;gap:12px;font-size:13.5px}
+  .fact .fl{flex:none;width:104px;color:var(--dim);font-weight:600;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;padding-top:2px}
+  .fact .fv{color:rgba(255,255,255,.9);font-weight:500}
+  .fact .fv a{color:var(--mint);text-decoration:none;border-bottom:1px solid rgba(122,217,168,.4);transition:.15s}
+  .fact .fv a:hover{border-bottom-color:var(--mint)}
+
+  /* ── Episode tag (identity: black label hanging off the title corner) ── */
+  .eptag{display:inline-block;position:relative;left:-6px;margin-bottom:-7px;z-index:2;
+    background:#0a0a0a;color:var(--white);font-family:var(--display);font-weight:400;
+    font-size:13.5px;letter-spacing:1.5px;text-transform:uppercase;padding:6px 11px 4px}
+
+  /* ── Explore tabs (sticky mode switcher; one panel swaps below, nothing shoves) ── */
+  .explore{margin-top:22px}
+  .tabs{position:sticky;top:58px;z-index:40;display:flex;flex-wrap:wrap;gap:8px;padding:10px 0;
+    background:linear-gradient(180deg,rgba(18,10,55,.96),rgba(18,10,55,.86));
+    backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+  .tabbtn{font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.5px;
+    font-size:14.5px;color:var(--white);background:var(--purple);border:1px solid var(--purple);
+    padding:9px 13px 7px;cursor:pointer;transition:.15s}
+  .tabbtn:hover{filter:brightness(1.12)}
+  .tabbtn.on{background:var(--mint);border-color:var(--mint);color:#0a0a0a}
+  .tabbtn.on:hover{filter:none}
+  .tabbtn .ct{font-size:12px;opacity:.75;font-variant-numeric:tabular-nums}
+  .tabbtn .ct::before{content:" · "}
+  .tpanel{border:1px solid var(--line);background:var(--card);padding:12px 10px 14px}
+  .hint{font-size:12.5px;color:var(--muted);padding:2px 10px 10px;border-bottom:1px solid rgba(255,255,255,.08);margin-bottom:6px}
+
+  /* ── Listen row (no box: label left, service pills follow) ── */
+  .listen{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:12px 16px;margin-top:34px}
+  .listen .lname{font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--dim)}
+  .listen a{display:inline-flex;align-items:center;gap:9px;padding:11px 18px;border-radius:999px;
+    background:var(--mint);color:#08210f;text-decoration:none;font-weight:800;font-size:12.5px;
+    letter-spacing:.04em;text-transform:uppercase;transition:.15s}
+  .listen a:hover{filter:brightness(1.06);transform:translateY(-1px);box-shadow:0 12px 30px rgba(122,217,168,.25)}
+  .listen svg{width:20px;height:20px;fill:currentColor;flex:none}
+  /* ── Listen-now Spotify audio embed (full column width, above the pills) ── */
+  .listen-now{margin-top:40px}
+  .listen-now .ln-head{display:flex;align-items:baseline;justify-content:space-between;gap:14px;margin-bottom:13px}
+  .listen-now .ln-title{font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--dim)}
+  .audio-embed{border-radius:12px;overflow:hidden;box-shadow:0 20px 50px rgba(0,0,0,.4),0 0 0 1px rgba(255,255,255,.06)}
+  .audio-embed iframe{display:block;width:100%;border:0}
+  @media(max-width:720px){.listen-now{margin-top:32px}}
+
+  /* ── Keep exploring (thumbnails link to other episode PAGES, never timecodes).
+     Swipeable strip on mobile, fits three-up on desktop. Variant rule: claim
+     "similar ground" + reason lines ONLY when moment-level topic overlap is
+     genuinely strong; otherwise show the latest released episodes with dates —
+     never invent a connection. ── */
+  .relsec{margin-top:60px;padding-top:58px;border-top:1px solid var(--line)} /* line = end of this episode's info */
+  .reldots{display:flex;justify-content:center;gap:7px;margin-top:12px}
+  .reldots span{width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.25);transition:.2s}
+  .reldots span.on{background:var(--mint)}
+  .relsec .rtitle{display:inline-block;font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.5px;font-size:14.5px;background:var(--mint);color:#0a0a0a;padding:9px 13px 7px;margin-bottom:18px}
+  .relgrid{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding-bottom:6px;scrollbar-width:none}
+  .relgrid::-webkit-scrollbar{display:none}
+  .relcard{flex:0 0 56%;max-width:232px;scroll-snap-align:start;display:flex;flex-direction:column;text-decoration:none;background:var(--card);border:1px solid var(--line);transition:.15s}
+  .relcard:hover{background:var(--card-hi);border-color:rgba(122,217,168,.55)}
+  .relcard img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block}
+  .relcard .rt{display:block;font-size:12.5px;font-weight:600;color:rgba(255,255,255,.92);line-height:1.4;padding:8px 8px 0}
+  .relcard .rfoot{margin-top:auto;display:flex;justify-content:space-between;align-items:flex-end;gap:8px;padding:10px 8px 9px}
+  .relcard .rwhy{font-size:11.5px;color:var(--mint)}
+  .relcard .rtag{display:inline-block;background:#0a0a0a;color:var(--white);font-family:var(--display);font-size:10px;letter-spacing:1.2px;text-transform:uppercase;padding:3px 7px 2px;white-space:nowrap;flex:0 0 auto}
+
+  /* ── Dropdown sections (accordion under the player) ── */
+  .drops{margin-top:34px;display:flex;flex-direction:column;gap:11px}
+  .drop{border:1px solid var(--line);border-radius:0;background:var(--card);overflow:hidden;transition:border-color .15s}
+  .drop[open]{border-color:rgba(122,217,168,.35)}
+  .drop>summary{list-style:none;cursor:pointer;padding:16px 18px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+  .drop>summary::-webkit-details-marker{display:none}
+  .drop>summary .st{font-weight:700;font-size:15.5px;letter-spacing:.005em}
+  .drop>summary .ct{margin-left:auto;font-size:12px;color:var(--dim);font-weight:600;font-variant-numeric:tabular-nums}
+  .drop>summary .chev{flex:none;width:22px;height:22px;border-radius:50%;background:rgba(122,217,168,.14);color:var(--mint);display:flex;align-items:center;justify-content:center;font-family:var(--display);font-size:15px;line-height:1;transition:.2s;transform:translateY(-1px)}
+  .drop[open]>summary .chev{transform:rotate(45deg)}
+  .drop-body{padding:2px 12px 12px}
+
+  /* chapters */
+  .chapter{display:flex;align-items:baseline;gap:14px;width:100%;text-align:left;cursor:pointer;background:none;border:0;color:inherit;font-family:inherit;padding:11px 10px;border-radius:10px;transition:.13s}
+  .chapter:hover{background:var(--card-hi)}
+  .chapter .tc{font-variant-numeric:tabular-nums;font-weight:700;font-size:14px;color:var(--mint);flex:none;width:48px}
+  .chapter .cx{font-size:15px;font-weight:500;color:rgba(255,255,255,.9)}
+  .chapter:hover .cx{color:#fff}
+
+  /* questions */
+  .q{display:flex;align-items:center;gap:12px;width:100%;text-align:left;cursor:pointer;background:none;border:0;border-radius:11px;color:inherit;font-family:inherit;padding:12px 10px;transition:.14s}
+  .q+.q{border-top:1px solid rgba(255,255,255,.05)}
+  .q:hover{background:var(--card-hi)}
+  .q .qm{font-family:var(--display);font-size:15px;color:var(--mint);flex:none;line-height:1;transform:translateY(1px)}
+  .q .qx{font-size:15px;font-weight:500;color:rgba(255,255,255,.92)}
+  .q .go{margin-left:auto;flex:none;color:var(--dim);font-size:18px;transition:.15s}
+  .q:hover .go{color:var(--mint);transform:translateX(2px)}
+
+  /* summary + transcript bodies */
+  .summary-body p{font-size:16.5px;line-height:1.62;color:rgba(255,255,255,.9);padding:6px 10px 4px}
+  .tbody{padding:2px 10px 8px}
+  .tbody p{font-size:14.5px;line-height:1.7;color:rgba(255,255,255,.78);margin-top:15px;max-width:64ch}
+  .tbody .spk{display:block;font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--mint);margin-bottom:2px}
+
+  /* ── Voice note ask (lives at the bottom of the Summary panel) ── */
+  .vask{margin:16px 10px 4px}
+  .vbtn{display:inline-flex;align-items:center;gap:9px;padding:12px 20px;border-radius:999px;border:0;cursor:pointer;
+    background:var(--mint);color:#08210f;font-family:inherit;font-weight:800;font-size:12.5px;
+    letter-spacing:.04em;text-transform:uppercase;transition:.15s}
+  .vbtn:hover{filter:brightness(1.06);transform:translateY(-1px);box-shadow:0 12px 30px rgba(122,217,168,.25)}
+  .vbtn svg{width:18px;height:18px;fill:currentColor;flex:none}
+  .vslot{background:var(--purple);padding:12px 10px 10px;margin:14px 0 4px;box-shadow:0 18px 40px rgba(0,0,0,.35)}
+  .vslot[hidden]{display:none}
+  .vhead{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;margin-bottom:10px}
+  .vhead .vmsg{font-family:var(--sans);font-size:13px;line-height:1.55;color:rgba(255,255,255,.92);margin:2px 0 0;padding:0 2px}
+  .vclose{background:none;border:0;color:rgba(255,255,255,.85);font-size:22px;line-height:1;cursor:pointer;padding:0 2px}
+  .vclose:hover{color:var(--white)}
+  .vslot iframe{display:block}
+
+  /* ── YouTube subscribe pill (sits in the listen row; outranks .listen a's mint) ── */
+  .listen a.yt-pill{background:var(--purple);color:var(--white)}
+  .listen a.yt-pill:hover{filter:brightness(1.1);transform:translateY(-1px)}
+  @media(max-width:720px){ /* mobile: no label, three compact pills on one row */
+    .listen .lname{display:none}
+    .listen{gap:8px}
+    .listen a{padding:10px 13px;font-size:11px;gap:6px}
+    .listen svg{width:16px;height:16px}
+  }
+
+  /* ── Footer: Follow us on | Brought to you by | Produced by, + Menu dropdown ── */
+  footer{border-top:1px solid var(--line);margin-top:68px;padding:52px 20px 58px}
+  .footgrid{max-width:var(--wrap);margin:0 auto;display:grid;grid-template-columns:1fr 1.15fr .8fr;gap:44px;align-items:start}
+  .fcol{text-align:center;display:flex;flex-direction:column;align-items:center}
+  .foot-label{font-size:11px;font-weight:700;letter-spacing:.26em;text-transform:uppercase;color:var(--dim);margin-bottom:18px}
+  .sponsors{display:flex;justify-content:center;align-items:center;gap:34px;flex-wrap:wrap}
+  .sponsors a,.produced a{display:inline-flex;transition:.15s}
+  .sponsors a:hover,.produced a:hover{transform:translateY(-1px)}
+  .sponsors img{height:32px;width:auto;opacity:.92}
+  .produced img{height:30px;width:auto;opacity:.95}
+  .sponsors a:hover img,.produced a:hover img{opacity:1}
+  footer .socials{display:flex;gap:11px;justify-content:center;flex-wrap:wrap;margin:0}
+  footer .socials a{width:40px;height:40px;border-radius:50%;border:1.5px solid rgba(122,217,168,.5);display:flex;align-items:center;justify-content:center;transition:.15s}
+  footer .socials a svg{width:18px;height:18px;fill:var(--mint);transition:.15s}
+  footer .socials a:hover{background:var(--mint);border-color:var(--mint);transform:translateY(-2px)}
+  footer .socials a:hover svg{fill:#0a0a0a}
+  .footbar{max-width:var(--wrap);margin:34px auto 0;border-top:1px solid var(--line);padding-top:20px;display:flex;flex-direction:column;align-items:center;gap:14px}
+  .footnav-dd{display:block;width:100%;max-width:var(--wrap);margin:0 auto;text-align:center}
+  .footnav-dd>summary{list-style:none;cursor:pointer;display:inline-flex;align-items:center;gap:9px;font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.5px;font-size:13px;color:var(--muted);background:transparent;border:1px solid var(--line);padding:8px 16px 6px;transition:.15s}
+  .footnav-dd>summary::-webkit-details-marker{display:none}
+  .footnav-dd>summary:hover{color:var(--mint);border-color:rgba(122,217,168,.45)}
+  .footnav-dd>summary .ham{width:15px;height:15px;fill:currentColor;transform:translateY(-1px)}
+  .footnav-dd .dd-links{display:flex;flex-direction:row;flex-wrap:wrap;justify-content:center;gap:12px 24px;padding:24px 0 4px}
+  .footnav-dd .dd-links a{font-size:11.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:.15s}
+  .footnav-dd .dd-links a:hover{color:var(--mint)}
+  .copyright{font-size:12px;color:var(--dim);text-align:center}
+  @media(max-width:720px){.footgrid{grid-template-columns:1fr;gap:34px}footer{padding:40px 16px 20px}.footbar{margin-top:34px;padding-top:24px;gap:20px}.footnav-dd .dd-links{flex-direction:column;align-items:center;gap:15px}}
+
+  @media(min-width:720px){header.hero{padding:48px 0 6px}}
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "PodcastEpisode", "name": "Hunter vs. Farmer and Fixing Your Sales Strategy", "url": "https://thenumbersgamepodcast.com.au/hunter-vs-farmer-and-fixing-your-sales-strategy", "datePublished": "2025-03-24", "episodeNumber": 224, "image": "https://i.ytimg.com/vi/_qzRCuvzt3g/maxresdefault.jpg", "partOfSeries": {"@type": "PodcastSeries", "name": "The Numbers Game", "url": "https://thenumbersgamepodcast.com.au/"}}</script>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-in">
+      <a class="brand" href="/" aria-label="The Numbers Game home"><img src="assets/tng-logo.png" alt="The Numbers Game"></a>
+      <div class="navlinks">
+        <a href="/">Home</a>
+        <div class="navgroup">
+          <a class="navtop">Episodes</a>
+          <div class="subnav">
+            <a href="/episodes">All episodes</a>
+            <a href="/adventure">Find moments</a>
+          </div>
+        </div>
+        <div class="navgroup">
+          <a class="navtop">About</a>
+          <div class="subnav">
+            <a href="/about">The show</a>
+            <a href="/nick-reilly">Nick Reilly</a>
+            <a href="/jason-robinson">Jason Robinson</a>
+          </div>
+        </div>
+        <a href="/contact">Contact</a>
+      </div>
+      <button class="navburger" id="navburger" type="button" aria-label="Menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24"><path d="M3 6h18v2H3zM3 11h18v2H3zM3 16h18v2H3z"/></svg>
+      </button>
+    </div>
+    <div class="navdrop" id="navdrop" hidden>
+      <a href="/">Home</a>
+      <span class="navlabel">Episodes</span>
+      <a class="sub" href="/episodes">All episodes</a>
+      <a class="sub" href="/adventure">Find moments</a>
+      <span class="navlabel">About</span>
+      <a class="sub" href="/about">The show</a>
+      <a class="sub" href="/nick-reilly">Nick Reilly</a>
+      <a class="sub" href="/jason-robinson">Jason Robinson</a>
+      <a href="/contact">Contact</a>
+    </div>
+  </nav>
+
+  <main class="wrap">
+
+    <header class="hero">
+      <div class="hook">
+        <span class="eptag">EP 224</span>
+        <h1 class="hk"><span>Hunter vs.</span></h1>
+        <p class="pay"><span>Farmer and Fixing Your Sales Strategy</span></p>
+      </div>
+    </header>
+
+    <div class="player-wrap" id="player-wrap">
+      <div class="player" id="player">
+        <button class="facade" id="facade" style="background-image:url('https://i.ytimg.com/vi/_qzRCuvzt3g/maxresdefault.jpg')" aria-label="Play episode">
+          <span class="play"></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="explore">
+      <div class="tabs" role="tablist">
+        <button class="tabbtn on" data-panel="p-summary">Summary</button>
+        <button class="tabbtn" data-panel="p-chapters">Chapters<span class="ct" id="chcount"></span></button>
+        <button class="tabbtn" data-panel="p-questions">Questions<span class="ct" id="qcount"></span></button>
+      </div>
+      <section class="tpanel" id="p-summary">
+        <div class="summary-body">
+          <p>Marty brings the hunter versus farmer sales framework, where a hunter chases and closes new deals and a farmer nurtures a client portfolio for referrals and organic growth. The trio place themselves as hunters by default, then work out why a business needs both, how the mix shifts by profession and career stage, and why hiring the wrong type for your sales model can hurt the business. They cover developing hunters into farmers, not burying hunters in admin, focusing on high return activities over raw call volume, and reframing the upsell as a transference of value. Jason maps it onto accountants, who tend to be farmers by default and win clients through proactive advice.</p>
+        </div>
+        <div class="vask">
+          <button class="vbtn" id="vbtn" type="button">
+            <svg viewBox="0 0 24 24"><path d="M12 14a3 3 0 0 0 3-3V6a3 3 0 1 0-6 0v5a3 3 0 0 0 3 3zm5-3a5 5 0 0 1-10 0H5a7 7 0 0 0 6 6.92V21h2v-3.08A7 7 0 0 0 19 11h-2z"/></svg>
+            Send us a voice note
+          </button>
+          <div class="vslot" id="vslot" hidden>
+            <div class="vhead">
+              <p class="vmsg">We'd love to hear from you. You can leave up to a 90 second voice note for us to play on the show: a question, some feedback, or a topic you want covered.</p>
+              <button class="vclose" id="vclose" type="button" aria-label="Close">&times;</button>
+            </div>
+            <iframe src="https://www.speakpipe.com/widget/inline/hhq6kzggsx7zpcsvakgxfrzun3zidpde" allow="microphone" width="100%" height="200" frameborder="0" title="Leave The Numbers Game a voice note"></iframe>
+          </div>
+          <script async src="https://www.speakpipe.com/widget/loader.js" charset="utf-8"></script>
+        </div>
+        <div class="sumfacts">
+          <div class="fact"><span class="fl">Release date</span><span class="fv">24 March 2025</span></div>
+          <div class="fact"><span class="fl">Hosts</span><span class="fv"><a href="/nick-reilly">Nick Reilly</a>, <a href="/jason-robinson">Jason Robinson</a> &amp; <a href="/marty-vidakovic">Marty Vidakovic</a></span></div>
+
+        </div>
+      </section>
+      <section class="tpanel" id="p-chapters" hidden>
+        <p class="hint">Jump straight to the part you need.</p>
+        <div id="chapters"></div>
+      </section>
+      <section class="tpanel" id="p-questions" hidden>
+        <p class="hint">Real questions this episode answers. Tap one to hear the answer.</p>
+        <div id="qa"></div>
+      </section>
+    </div>
+
+    <div class="drops">
+
+      <details class="drop">
+        <summary><span class="st">Episode transcript</span><span class="chev">+</span></summary>
+        <div class="drop-body tbody">
+          <p><span class="spk">Jason · 00:00</span>Welcome to episode 224 of The Numbers Game. I'm Jase, I'm here with Nick and Marty. Marty, you are on the horse today, mate. What have you got?</p>
+          <p><span class="spk">Marty · 00:08</span>Yeah, I'm on the horse, mate, but you like, look like you've dropped about 20 kilos. What's going on there, Jase? What's,</p>
+          <p><span class="spk">Jason · 00:14</span>what's happened? Mate, just a, uh, ran the Tokyo Marathon the other week, a couple of weeks back, and um, managed to get food poisoning the day before the marathon, so it was, uh, quite a brutal experience, pushing the body to a 42 kilometre run, I think it was one of the hottest Tokyo marathons on record, and then I spent the next two to three days bedridden, and a ten hour flight home, feeling quite miserable and sorry for myself, so, uh Bad piece of sushi or something, mate?</p>
+          <p><span class="spk">Jason · 00:41</span>You wouldn't believe it. It was pizza, like I, I, you know, you know, when you try and stick to what, you know, so all the, all the other marathons I've ran, it's like pizza and pasta the night before, just stick to what, you know, I should have had like a katsu and some rice or something or, or some, you know, or some sashimi, but no, I went, I want pizza and pasta and</p>
+          <p><span class="spk">Jason · 01:00</span>went past about three or four different restaurants that were full, fully booked, couldn't get in the pizza, pasta restaurants night before the marathon.</p>
+          <p><span class="spk">Jason · 01:07</span>That makes sense. And then I saw one that was empty and I thought, Oh, This is me, E Ripper, and there's a reason that restaurant was empty, I'll tell you that much. And, uh, yeah, so, I think the raw egg and the raw meat that was on the pizza might have got the better of me, and So, did you get through the marathon and get crook afterwards, or?</p>
+          <p><span class="spk">Jason · 01:25</span>I, I did. Casey met me, was at the 15 kilometre mark, and then she texted me saying, I'm no good, I've had to go back to the hotel room, I'm violently ill, hopefully you're okay, thumbs up, good luck, and that was the last I heard from her at the 15 kilometre mark. Um And so she went back to the hotel room and was out.</p>
+          <p><span class="spk">Jason · 01:41</span>She, it hit her sooner than it hit me. We both ate the same thing. And then kilometre 30, I just felt my stomach basically just turn on itself. It was just this big churn moment. And you know, when you can like in a crowd of people running, if you can hear your own stomach from outside the body, like there's a problem.</p>
+          <p><span class="spk">Jason · 01:59</span>So yeah,</p>
+          <p><span class="spk">Jason · 02:00</span>from kilometre 30 to 42. was horrible. I've never had a cramp before, but I got a cramp at the 36 kilometre mark. Um, just a sign of the dehydration and the mess my body was in. But, um, yeah, don't recommend it.</p>
+          <p><span class="spk">Marty · 02:12</span>Anyway, enough of your weight loss, Jase. Today, I want to talk about, uh, funnily enough, hunting and farming, which, uh, you could, uh, you could use some of this.</p>
+          <p><span class="spk">Marty · 02:21</span>But, uh, but more from a sales perspective, uh, You know, over 30 years being in sort of leadership positions and managing sales teams, uh, you certainly learn a few things along the way. And I come across this sort of, uh, this sort of scenario probably in the U. S. probably in 2007. And it sort of made sense to me in regards to how you could.</p>
+          <p><span class="spk">Marty · 02:45</span>decimate almost your business by choosing the wrong person for your sales model in your business. And, uh, and I'll explain like a hunter is a person that just goes out there, gets deals, finds deals,</p>
+          <p><span class="spk">Marty · 03:00</span>makes things happen. They're out on the road. Um, they can bring a deal into port. They just have this knack of going out there and making things happen and finding opportunity.</p>
+          <p><span class="spk">Marty · 03:09</span>Where a farmer Uh, might be looking after a portfolio and their whole role is to look after that portfolio, make sure the clients are very, very happy, and then opportunity extends off that service as well. And, um, but it just gives you a good demonstration of the two, uh, different scenarios there. And I can relate to this, uh, coming out of the bank.</p>
+          <p><span class="spk">Marty · 03:33</span>When I was 27, I was put into a portfolio of business clients, and my whole role was just make sure you grow the portfolio, more revenue on the clients in there, make sure they're happy, they will refer more people to you, and we, you know, obviously the bank wins. Um, so that was good. And then when I stepped out into my own business, uh, not only did I not know how to hunt at this stage, I didn't even have a block of land to work.</p>
+          <p><span class="spk">Marty · 03:59</span>So</p>
+          <p><span class="spk">Marty · 04:00</span>it's like, you know, and I remember turning to my business partner at the time going, if we don't do something here, we're going to all be going hungry and, uh, you know, losing deals and weight like Jase has. So, so it was a real, it was a real eye opener. And fortunately You know, I had had some experience with door to door sales when I was 18 and I had a premise of what needed to happen to go and create value out there in the market, have conversations and that was the spark of going, okay, well, that's what I need to do.</p>
+          <p><span class="spk">Marty · 04:34</span>What value am I going to put out there? Um, Nick, what would you say, Hunter or Farmer or a bit of both for you?</p>
+          <p><span class="spk">Nick · 04:42</span>The default answer is a bit of both, but let's be honest, that's, that's boring. Um, yeah, I think I'm a hunter thinking about it for the whole 10 seconds, but I'd, I'd say a hunter because I, I, uh, well, you would probably attest to this, I'm not just saying this, but my strength is probably</p>
+          <p><span class="spk">Nick · 05:00</span>bringing work in, managing relationships I can, I get bored.</p>
+          <p><span class="spk">Nick · 05:06</span>So that to me means hunter.</p>
+          <p><span class="spk">Marty · 05:09</span>Yeah,</p>
+          <p><span class="spk">Nick · 05:10</span>because I, I don't get bored. That's probably the wrong way to say it, but I don't find excitement in managing relationships. And if you look at my role at the moment, it's a combination of a few things, but one of the big ones is bringing in new opportunity. So I'm a hunter.</p>
+          <p><span class="spk">Nick · 05:23</span>Jase, what are you? The</p>
+          <p><span class="spk">Jason · 05:24</span>thrill of the chase. You know, you've got your prey, you're going after it like hunter by default. I think, you know, again, the same thing applied the 10 second logic of being asked the question and I'd say hunter. And I, I agree with you as well. Even when you said the word boring, I'm like, ah, don't have.</p>
+          <p><span class="spk">Jason · 05:39</span>If it's the word, but I don't know what other word to use. Like I'm a relationship guy. Like I've got plenty of great relationships with my clients and the portfolio of people that, you know, come to future advisory and call it home for their accounting, bookkeeping advisory. But while it's. I'm good at it.</p>
+          <p><span class="spk">Jason · 05:56</span>And I, and I like having a lot of great relationships with clients. What gets me really excited is the</p>
+          <p><span class="spk">Jason · 06:00</span>hunt, like, you know, bringing in new business, getting excited about something new and exciting and being able to deliver, you know, some fantastic results by bringing somebody new on board. So Hunter by default.</p>
+          <p><span class="spk">Nick · 06:10</span>And I think depending. But as a business owner, you probably need to have an element of both. Whether you enjoy them or not. I think about staff, you know, you've got to have a relationship with your staff and when you're when you're leading a business or a team, you'd, or, you've got your own clients, you need to have that farmer element.</p>
+          <p><span class="spk">Nick · 06:28</span>Don't you? But I think, um, I think what Marty's going to talk about is specific sales roles. But yeah, I think any good business owner has a, has an element of both. But you both</p>
+          <p><span class="spk">Marty · 06:39</span>make good points because in context. Nick, you would be a farmer in the business, within the business, in regards to your team. Uh, you'd have, you know, you'd have that element of developing relationships so people can perform.</p>
+          <p><span class="spk">Marty · 06:52</span>So, but from a pure sales mechanism, definitely a hunter, bringing on opportunities, same with yourself, Jase. And I would say now.</p>
+          <p><span class="spk">Marty · 07:00</span>You know, I'm, I'm probably more the farmer making sure, you know, the staff are doing what they need to do and fostering them in order to get growth. So there's pros and cons for each.</p>
+          <p><span class="spk">Marty · 07:09</span>And I think, um, you know, a lot of the times people can discount one or the other. Like sometimes people can say the hunt is too transactional and that's all it is. So they can get an opportunity and then. You know, shoot the opportunity in the foot by not looking after them as well. And then they have to find more and more opportunities, right?</p>
+          <p><span class="spk">Marty · 07:27</span>Whereas the farmer, you know, can expand upon those opportunities by, you know, really good customer service and fostering that relationship and then generating. More self generated opportunities, uh, through that process and, and I was thinking about it in time and I think the scales can tip one way or the other depending on what's needed.</p>
+          <p><span class="spk">Marty · 07:47</span>But definitely from a, like in a mortgage broking sense. Uh, I always think you need 50 50. You have to be able to hunt, and I know that might seem like the boring answer,</p>
+          <p><span class="spk">Marty · 08:00</span>but I go, you have to foster that relationship in order to grow, uh, that client and the opportunities from that client as well. Um, so I definitely think you need both.</p>
+          <p><span class="spk">Marty · 08:10</span>But again, when you're coming into a new profession, You might have to be 90 percent hunter originally because if you haven't got anything to farm, well, hey, what's the point spending time there if there's nothing there? So it's really interesting as to the scale of where that sits depending on where you're at in your career, what role you play, but it's important to acknowledge it, that what is your sales model need, like when you're bringing someone in, that's the connection point in regards to recruitment.</p>
+          <p><span class="spk">Marty · 08:37</span>Yeah,</p>
+          <p><span class="spk">Nick · 08:38</span>you've actually just made me think because we're going through a, uh, Um, but you're just making me realize how important it is to have both because as a client or a consumer, um, or being on the other end, there is nothing worse when you get hunted. In inverted commas</p>
+          <p><span class="spk">Nick · 09:00</span>and then the services in their post, post executing an agreement hypothetically.</p>
+          <p><span class="spk">Nick · 09:05</span>So yeah, we've got, we've got a bit of an issue now with a, um, external provider where the front end sales is brilliant, but then maintaining the relationship and, um, what, what we require as customers probably hasn't been great. So when the shoe's on the other foot, there's nothing worse than getting sold to is the wrong word, but there's nothing worse than getting sold a dream.</p>
+          <p><span class="spk">Nick · 09:27</span>And then you sign on and then you don't get the service that you were sold. So as a business owner, it's, it's absolutely vital that your business has whether both farmers and hunters, or, you know, people stay in their own lanes, but you've got to have both of those things covered, or you can continue hunting, which is pretty costly in most circumstances versus being a good farmer.</p>
+          <p><span class="spk">Nick · 09:51</span>which is retaining your clients, uh, which is a much healthier business and bottom line in, in most cases. Good</p>
+          <p><span class="spk">Marty · 09:56</span>point. You get a lot of organic growth through farming,</p>
+          <p><span class="spk">Marty · 10:00</span>um, as well. And people, a lot of people discredit that, um, in, in sales, which, uh, yeah, we certainly don't.</p>
+          <p><span class="spk">Nick · 10:06</span>Well, Marty, I'll ask you a question.</p>
+          <p><span class="spk">Nick · 10:08</span>What's, is it more important to find new clients or is it more important to retain?</p>
+          <p><span class="spk">Marty · 10:16</span>Well, I definitely think both. Because you have to have the ability to put value out in the market, whether you're an individual or a business itself. And you've got to decide, even though we say it's Hunter, and it sounds pretty abrupt, right?</p>
+          <p><span class="spk">Marty · 10:29</span>But you've got to outvalue your competition. You've got to move people towards you. You've got to connect and engage, and be in front of the next person sharing the value and your point of difference that you're bringing to the table. Once that person is onboarded, Then you've got to deliver on your expectations that you've set and you've got to foster them and look at it from a 10 year relationship that that's going to keep producing not only for the client but for the business as well.</p>
+          <p><span class="spk">Marty · 10:57</span>But that one opportunity</p>
+          <p><span class="spk">Marty · 11:00</span>in on a value hunt that the client actually appreciates could be a 10 to 15 year client that produces um, vegetables year on year on year. And that's, you know, that's a really, really important. So I, I started as a farmer in banking. Um, because that's what was required. An organic sort of referral happened because of good job, good service.</p>
+          <p><span class="spk">Marty · 11:25</span>But I really, I'm like yourselves, I love the opportunity to put value in the market and see someone, um, reciprocate to that and want to be a part of your service, but then you want to actually heighten the experience for that person so they will not only. Tell their friends and be a billboard for your business out there in the general market So you don't have to pay for that advertising if you wow them and meet and exceed expectation Then they're going to be your billboard they're going to share the great things that you've done in the business with them and</p>
+          <p><span class="spk">Marty · 12:00</span>And that's very low cost acquisition and high conversion acquisition.</p>
+          <p><span class="spk">Marty · 12:05</span>So it just spins everything And that's why in business I've always been one to say, okay, well, if it's a value hunt and you're creating value in the market, the U curve of growth is exponential. If you're really doing a great job with that client and we see that Nick in our business, we see some people, um, Simon's a great example of a.</p>
+          <p><span class="spk">Marty · 12:26</span>incredible farmer that he, he's not one to go out there and hunt very often, but he has his own portfolio of clients. He looks after, he gets referral after referral. It's all self generated because of what he brings to the table as a unique point of difference. So to me, um, yeah, it's, uh, It's vital. It's vital.</p>
+          <p><span class="spk">Marty · 12:47</span>And I think sometimes you can exhaust your lead opportunities too, right? So you go, otherwise you've got to be hunting 24 7. Whereas if you can capture a good amount of value leads</p>
+          <p><span class="spk">Marty · 13:00</span>that people want to be a part of, you can turn them into five, six, seven opportunities. So to me, the exponential growth comes out of the farming, but you need the hunting because otherwise you've got nothing to start with.</p>
+          <p><span class="spk">Marty · 13:12</span>So you've got to be able to do it. Absolutely. Jace, make sense?</p>
+          <p><span class="spk">Jason · 13:17</span>Big time. I love it. I'm just thinking like how I can get some training set up for, you know, a team of accountants that, well, you know, my, our accountants are advisors actually end up being salespeople for our business. So this has just got me really, you know.</p>
+          <p><span class="spk">Jason · 13:29</span>The everything's tinkering around in the brain going, okay, that mindset of a hunter, you know, wanting to bring on, you know, close new deals and bring on new work versus the farmer. Like what can we do with our existing clients and relationships? How can we go deeper and do more work with existing clients and how much easier is it to service the existing?</p>
+          <p><span class="spk">Jason · 13:47</span>And as you said, Marty, that balance of having to have both, like how do we make sure that our existing clients are getting everything that they need before we. Worry about onboarding new clients and it, it really is a hard juggle. 'cause I know our team,</p>
+          <p><span class="spk">Jason · 14:00</span>we kind of have a bit of a, you know, lead your own, you know, life by design or lead your own kind of way.</p>
+          <p><span class="spk">Jason · 14:06</span>Like our team is self-sufficient. They mapped their own work for the next, you know, 90 to 180 days. They can see their own pipeline. And for example, one of the team turned early on in January and said, Jace, I've got a 90 K target for the quarter. But I've only got 68 K worth of work in my pipeline at the moment, you know, can you help me close another 22 grand worth of work?</p>
+          <p><span class="spk">Jason · 14:26</span>And like knowing that in advance means if I'm the hunter and I really like to get out there and hunt, look, I can go out there and do that. So there's a fair bit of planning that goes on in the background, but I also, yeah, be interested in your take on from a training perspective, you know, you train salespeople the same way, or are you having specific hunter versus farmer?</p>
+          <p><span class="spk">Marty · 14:45</span>Oh, definitely. It's, um, you've got to come from the individual. Like that, that's the unique, that's the unique subtlety of it. And you've got to work the person's strength as well. Cause some people are great hunters, right? So you're developing the</p>
+          <p><span class="spk">Marty · 15:00</span>farmer part in them to try and generate more value within that transactional relationship that might be in the beginning, right?</p>
+          <p><span class="spk">Marty · 15:07</span>So, whereas the farmer, you're sort of guiding them on how to hunt because you know, that they can create great rewards on the relationship. So it's teaching them, and it might be just one step at a time, right? You're not, you're not trying to eat the whole elephant at once. You might just say, go and have a conversation with the agent, see what you find, you know, share your value prop, see what the response is, ask them what they want.</p>
+          <p><span class="spk">Marty · 15:32</span>So you use some of the farming skills, even in the hunter mentality. Jase, is going. What would you want that client to say about your business, um, in regards to the experience they have? Because I always see the clients as the potential sales force when you're the farmer. So if that person has 22 grand they still have to find.</p>
+          <p><span class="spk">Marty · 15:56</span>Like, what could they do in regards to the current</p>
+          <p><span class="spk">Marty · 16:00</span>interactions that they have with clients that would wow those clients to the point where those clients would be talking about your business? And I know you guys are strategic, you know, beyond, you know, tax, right? It's a lot of advisory, but what would you want your client saying about your business because of the interaction with that accountant?</p>
+          <p><span class="spk">Jason · 16:19</span>Yeah, look, great question. Um, I think anytime a client raves about their accountant, it's when they're getting proactive advice. So when they're being led something or given something in advance without even asking for it. So, you know, a big one's always our tax planning strategy sessions where we're booking people in a room between March, April, May, June.</p>
+          <p><span class="spk">Jason · 16:38</span>So pre end of financial year, and then sitting down talking about the opportunities of, you know, money into super pre paying some bills. Maneuvering some things around to be able to legally reduce tax or it's having the conversations proactively to go, well, hang on, you're looking to buy a house in the next six months, which means your taxable income.</p>
+          <p><span class="spk">Jason · 16:55</span>You know, if we can make sure that you've got the appropriate taxable income, your borrowing capacity will be higher,</p>
+          <p><span class="spk">Jason · 17:00</span>so on and so forth. So, yeah, I think it'd be more around driving more proactive conversations or, you know, doing an. You know, a free business assessment kind of thing. And then going in with recommendations to say, Hey, we've actually had a look at your 90 day cashflow and you know, there's a bit of a squeeze coming into May.</p>
+          <p><span class="spk">Jason · 17:16</span>Should we have a look at a line of credit right now? So it's those kinds of things, um, which then leads to clients being raving fans. They go to the barbecue on the weekend and go, geez, my accountant called me out of nowhere and just told me this about my business and I wasn't expecting it. So it's those little, little wins.</p>
+          <p><span class="spk">Marty · 17:30</span>Big difference between we're going to do your tax instead of going. Tell me where you want to go and we'll help you get there. Yeah. And this is how we're going to get, help you get there. Very, very powerful. That's what you want going out in the market. These are not just accountants. You know, these are, these are sort of lifestyle advisors almost for the business.</p>
+          <p><span class="spk">Marty · 17:51</span>It's, it's a unique proposition. And, and like you said, and then the flip on that, Nick, is financial planning. Where you go, you don't</p>
+          <p><span class="spk">Marty · 18:00</span>necessarily want 50 50 hunting on that. Because they are looking after people at a different level, but you want some element of hunting. I would think that profession in general would usually be 95 percent farmer.</p>
+          <p><span class="spk">Marty · 18:13</span>You know, in looking after people and there's reoccurring revenue that comes with that. You mostly get referrals from the existing database. But the element here is, 5 percent hunt? And how, you know, how would you get them to, to take that first step into that being proactive? And sometimes it'd be anti intuitive, but you don't want extreme hunter in that field, I wouldn't think.</p>
+          <p><span class="spk">Nick · 18:37</span>Uh, no, in most cases you want, you want a farmer. I'm not saying hunters don't work because they definitely do. Um, but a lot of the times you have to, um, compliment them with maybe a farmer that's supporting them, hypothetically. Um, So, yeah, I think, um, and I'm, I'm just thinking as I talk</p>
+          <p><span class="spk">Nick · 19:00</span>about the planners that have come through our business, most of them are farmers, most of them are farmers, but they're very good at, uh, closing.</p>
+          <p><span class="spk">Nick · 19:08</span>So when I say closing, um, you know, presenting their value. So, people in our business on the planning side, they're not expected to go out and find business. We generally supply lead flow for them, but what they need to be good at is positioning their value proposition and then signing people on. And that to me isn't really hunting, that's closing, but then the farming aspect really comes into play with the, the quality advisors who get to a point where they don't need any more lead flow from us because they're existing clients.</p>
+          <p><span class="spk">Nick · 19:42</span>supply all of their leads. So yeah, as I'm talking, I'm thinking, well, no, financial planners are definitely farmers. Um, and yeah, but they close through value, but they close, but they close, but I don't see that as a hunter. You get, get.</p>
+          <p><span class="spk">Nick · 20:00</span>Get me in front of you, and I'll demonstrate my value to you. Yeah. Um, and, you know, get you on board to at least want to give our service a try.</p>
+          <p><span class="spk">Nick · 20:08</span>Um, but it's all about that ongoing relationship. Um, it's all about that because, you know, when you're dealing with someone's, um, financial well being, um, they need to be 110 percent certain that you're the right person, and the minute they think you might not be, they're gone. So, um, definitely pharma. And, um, I was just thinking about your, um, some of your, um, points, Jase, but, you know, I thought, how do you farm?</p>
+          <p><span class="spk">Nick · 20:36</span>Well, for me, it's, you just got to ask questions and the best farmers. We've been talking business sense now in our business have been people that ask questions and just really understand their clients. So their client's goals and objectives, and I'm sort of reverting to financial planning talk here, but what is it your clients want to achieve?</p>
+          <p><span class="spk">Nick · 20:53</span>Do they want to grow their business by 20 or 30%? You know, the best</p>
+          <p><span class="spk">Nick · 21:00</span>farmers really have an in depth knowledge of what's happening in their client's life. And then organically. They have deeper conversations and then organically, it's a better experience for the client, which means the client will then refer you on because they're having a really good experience versus a hunter who doesn't want to know you once you've signed, you know, maybe, maybe that's a stereotype.</p>
+          <p><span class="spk">Marty · 21:22</span>You see that in our industry too, even in mortgage broking, you see the hunters out there will get you a great rate. That's it, we'll get the deal done, it's done, you know, they'll see as many people as they can, which, you know, works to a degree, but those farmers, they think about how do people save money off their mortgage, how do they put people into a better position, how do they buy their first investment, they talk about their goals, they create a strategy around their goals, so yeah, that's it.</p>
+          <p><span class="spk">Marty · 21:47</span>They make the numbers dance and that's, you know, they're bringing value beyond the transaction and that's the skill. And a lot of hunters turn into farmers with good training over time, but that's the development. If you can</p>
+          <p><span class="spk">Marty · 22:00</span>get that mix right and in context to different industries require different things, it's really important.</p>
+          <p><span class="spk">Marty · 22:06</span>But the hunter farmer dilemma, I think this is. Interesting. You know, many leaders misinterpret the specific roles of what they're hiring for, and it can be dangerous. Like if you need a hunter and you're hiring a farmer and going, what the hell's going on? Then it's really the business's fault, right?</p>
+          <p><span class="spk">Marty · 22:23</span>You've got to develop very, very quickly or, you know, hire differently from the front end. And the other thing with a hunter, the last thing you want to do to a hunter is overwhelm them with administrative tasks. So say, you know, do all this, uh, paperwork, make sure your process is a hundred percent right.</p>
+          <p><span class="spk">Marty · 22:40</span>Make sure you're doing all this overwhelmed to the point where they can't hunt. So if you need a hunter, let them hunt, let them do what they do. Well, it's like you said, Nick, Oh, I want to win the dealings, but you know, at that stage I'm delegating the rest of it. Because there's better people to deal with that at this point.</p>
+          <p><span class="spk">Marty · 22:58</span>If we make you deal with</p>
+          <p><span class="spk">Marty · 23:00</span>that, you're not going to have your best high leveraged activities that's the highest level for the business. So it's, it's really important that it's role specific. And um, yeah, ultimately you don't want your top people to be frustrated and ultimately get angry and, and then leave.</p>
+          <p><span class="spk">Marty · 23:18</span>So you have to try and really work the balance for what you need. So just have a think about it. You know, when you're hiring people, understand what the role needs and are you looking to look after a portfolio of clients and extend that benefit for the business, or are you looking for someone to hit the ground running and to create opportunity in the business?</p>
+          <p><span class="spk">Marty · 23:38</span>You know, it's, um, you know, you, you want them to fit your culture and your sales model, whatever that is, you know, the wrong approach is. Here's our product, now just go and sell it, because they can do damage in doing that if you have more of a farmer mentality. Uh, the right approach is, here's how our best people win, and what they do, look to</p>
+          <p><span class="spk">Marty · 24:00</span>duplicate that.</p>
+          <p><span class="spk">Marty · 24:00</span>Like, train through what's working well and what represents your business at the higher level. So if you've got three or four people that you consider role models in the business, and they've got the balance right between hunter and farmer, you know, let them understudy that. to really bring their development forward as well.</p>
+          <p><span class="spk">Marty · 24:18</span>I'm just</p>
+          <p><span class="spk">Nick · 24:18</span>thinking the challenges, and you could probably answer this better than anyone else, but the challenge of turning a hunter into a farmer.</p>
+          <p><span class="spk">Marty · 24:26</span>Yeah.</p>
+          <p><span class="spk">Nick · 24:27</span>Is it, is it worth even trying to do it?</p>
+          <p><span class="spk">Marty · 24:29</span>That's the thing you got to, you got to work out, but everyone has unique abilities. So Nick, I think you've got to.</p>
+          <p><span class="spk">Marty · 24:36</span>Like I was just talking to, um, one of our new guys this morning, Peter, great guy, he's definite hunter, like definite hunter, but farming qualities, like he deals with investors. He likes to have people building wealth through property, which Caleb, who's one of our, and Justin deals in the investment space, who are role models in the business as well.</p>
+          <p><span class="spk">Marty · 24:59</span>And I</p>
+          <p><span class="spk">Marty · 25:00</span>can see those seeds of the farmer coming through. So. He's a hunter, which is fantastic because he needs to get out there and meet people. He has high values. He wants to put that value out in the market, but his main role starting up is to see as many people as he can and represent that value. So, no problem with that hunter mentality, but he has farming traits.</p>
+          <p><span class="spk">Marty · 25:23</span>So, once he gets that portfolio established, he can quickly then 10X the opportunities because of those traits as well. So, I quite like that. It sits in well for where we're at and, um, and he's a value add to the So I also like, I like the, um, I like this little methodology as well. Like people in real estate say this all the time, which, which works in real estate.</p>
+          <p><span class="spk">Marty · 25:48</span>Make a hundred calls a day. Now that's not always necessarily the right or wrong approach. Sometimes you've got to make a hundred calls a day. But a better approach is what are the high</p>
+          <p><span class="spk">Marty · 26:00</span>valued activities? that create real pipeline and execute into sales. Like where are those calls? Maybe there's 40 of them, you know, maybe you've got to hit the hundred to find the 40, whatever the case may be.</p>
+          <p><span class="spk">Marty · 26:13</span>But it's like, again, what are the metrics that get the results and how do you do more of those activities? It might be calls. In this type of area instead of that type of area, you know, where are you getting traction? And what's giving you the highest return on your efforts as well? Because doing more, if it's a time suck, and it's not necessarily getting you a result, is not necessarily smart business, too.</p>
+          <p><span class="spk">Marty · 26:39</span>So it's, that's That's a strategy approach. Um, I'm thinking how are you going to apply this as accountants, Jase? Who's your hunters and how do you, how do you bring the farmer into the hunter?</p>
+          <p><span class="spk">Jason · 26:53</span>But look, honestly, the, I think by default accountants are probably more likely to be farmers. Like once, once they've got a client, they</p>
+          <p><span class="spk">Jason · 27:00</span>start working on, you know, even if you start with the basics, right.</p>
+          <p><span class="spk">Jason · 27:02</span>You have to lodge the bass and do the tax returns. Like accountants are driven by making sure things are lodged on time. Things are done properly. We're compliant. And if you're doing all of that in the background, looking after a client, you know, you're keeping, you're nurturing that relationship organically anyway.</p>
+          <p><span class="spk">Jason · 27:18</span>It's what's not probably upsell. Like the, the would you like fries with that? The, Hey, you could benefit from a cashflow forecast. Would it help you to know? You know, what's happening in the next 90 to, you know, three months to six months about your business, actually being able to then sell that into an, you know, a tangible product and take more money off a client.</p>
+          <p><span class="spk">Jason · 27:38</span>If you know, it's going to provide value. That's the bit that's probably not, you know, natural for an accountant, like, you know, again, being stereotypical of accountants generally. Um, so I think the challenge is always, you know, if you've got farmers doing a great job and they don't want to be hunters. How do you make sure that, you know, they're geared for success and that somebody else is hunting and then providing them the work to be able to continue to nurture those</p>
+          <p><span class="spk">Jason · 28:00</span>relationships.</p>
+          <p><span class="spk">Jason · 28:00</span>And then if you do, then, I mean, I've noticed a couple of the team that are organically like really, really good at the upsell or identifying opportunities. And, you know, they're the ones that go, well, you know, Marty, you touched on it before and I go, you know, it felt a bit. I felt it, you know, you're saying, Oh, you know, if Nick had to do all of his own admin and all of this and all of that, and I'm going, Oh, geez, well, actually it makes me think of a few people in the team that are really good advisors, talkers, you know, getting in a room and meeting someone and talking about, you know, their future and how to help them get there, but executing it on the other side becomes a bit of a roadblock when you've got to go back and do the nitty gritty kind of step by step stuff that maybe somebody else is actually better suited to that.</p>
+          <p><span class="spk">Jason · 28:38</span>So, you know, you've given me a lot to think about here, Marty. I really. Yeah. Really appreciate the conversation.</p>
+          <p><span class="spk">Marty · 28:42</span>You called it well there. And I think that natural, I don't see as. As an upsell, as a transference of continued value to the business. So it's just making the person or getting the person or training them, whatever the case may be, being comfortable with that.</p>
+          <p><span class="spk">Marty · 28:57</span>Like we, we, you know, we were referring to</p>
+          <p><span class="spk">Marty · 29:00</span>financial planning, not because we have to, but because someone's taken out a mortgage and it's a duty of care to have a conversation around that. For, to protect the family or the person that's taken out the debt. Now, does that seem like a sell? It's not. It's actually a transference of value, um, that we're looking after our people.</p>
+          <p><span class="spk">Marty · 29:19</span>That's the big difference. People think it's an upsell, and yes, it's called an upsell in business, but technically what you're doing is strengthening the person's position. And sometimes they're just not aware of what's available to them. Sometimes they're getting screwed on fees on their super. They have no understanding.</p>
+          <p><span class="spk">Marty · 29:35</span>But if we. If we help them out and get them a great price on their mortgage and a great strategy, why wouldn't we introduce them to someone else in the business that's going to give them that same impact point? It just makes total sense. To me, that's not an upsell, even though that's technically what we're doing.</p>
+          <p><span class="spk">Jason · 29:52</span>No, I agree. And it's even when our team, you know, you know, future advisory works really closely with the team at innovate. So it's even that thought process going, Oh, geez, you know, their, their</p>
+          <p><span class="spk">Jason · 30:00</span>interest rate, their paying's not probably the best in the market. Let's, let's get a review. Let's get, let's get that looked at by the innovate team.</p>
+          <p><span class="spk">Jason · 30:06</span>And even though realistically, like if we do more work together and our clients use us both, like there's a bigger pool of, you know, of the pie for us, but end of the day, our client ends up with less money out of their pocket on their. interest rate for their mortgage, or they end up with a better deal on the car loan or, you know, superannuations managed better with less fees, so on and so forth.</p>
+          <p><span class="spk">Jason · 30:25</span>So yeah, you're right. It's, it's, even though behind, behind the doors, you may use the terms upsell, um, but yeah, that, that value, value transfer and, you know, just giving the clients the things that they need, that they value, it won't feel like selling. And naturally people are also geared to be sold to.</p>
+          <p><span class="spk">Jason · 30:41</span>People want to be sold something that they need and they value. But that's where the difference is. If you're trying to sell someone something that they don't see any value in, you're going to ruin the relationship pretty fast. There has to be, there has to be the perceived value exchange. Otherwise you're wasting your time.</p>
+          <p><span class="spk">Jason · 30:55</span>And you</p>
+          <p><span class="spk">Marty · 30:55</span>got to get that through salespeople heads is like, you know,</p>
+          <p><span class="spk">Marty · 31:00</span>you're when you sells an interesting word, it's something you do for people, not to people. And it's like, if you can get the transition. to, that you're doing it for people and giving them value and ascertaining what that value is to them.</p>
+          <p><span class="spk">Marty · 31:14</span>You've sort of cracked the code on it. So it's really important. And that's the shift, you know, and this is the thing when you're hiring or you're developing people in your team, you've got to acknowledge, you know, where the, where the areas of development need to go. But the shift is, you know, good sales leaders hire.</p>
+          <p><span class="spk">Marty · 31:29</span>you know, relevant talent for the role that they're, that they're hiring them for, you know, great sales leaders create a culture where winners thrive. And you just got to decide that. And it can be different, like a football team. You know, there's different players that have different strengths in different areas that make up a team.</p>
+          <p><span class="spk">Marty · 31:46</span>So diversity of qualities is actually good. within a team that you can cross across a team. Uh, very, very powerful. Um, good sales leaders hope for success, whereas great sales leaders build predictable, scalable</p>
+          <p><span class="spk">Marty · 32:00</span>success and results. And again, that's all through the development and training of your people and understanding their weaknesses, leveraging their strengths and adding to the cross, uh, cross sector of people you have to really, um, yeah, build great teams and great businesses.</p>
+          <p><span class="spk">Marty · 32:16</span>So I hope that's been of use to people.</p>
+          <p><span class="spk">Jason · 32:19</span>Now, 100 percent mate, even like when I saw the start of the episode, hunters versus farms, like what are we getting into? And, um, even as we unpacked it, I thought, you know, this applies way beyond, you know, mortgage brokers or accountants or just sales team. I mean, sales teams, you can apply that to the electrician that's on site doing something on site and notices something else, like just how that can be applied.</p>
+          <p><span class="spk">Jason · 32:37</span>in any industry. So Marty, once again, you're, uh, there's a reason you are the most favorite co host of The Numbers Game. We thank you for what you brought to the table today. If you've listened and loved this episode, subscribe to YouTube, like, and do everything else that you do on Apple and Spotify and all the different bloody podcast channels these days.</p>
+          <p><span class="spk">Jason · 32:54</span>Uh, we've absolutely loved you joining us and until next time.</p>
+          <p><span class="spk">Marty · 32:58</span>Make it happen and keep it</p>
+          <p><span class="spk">Marty · 33:00</span>happening. Game over.</p>
+          <p><span class="spk">Jason · 33:02</span>This podcast is for educational and informational purposes only. The conversations are of a general nature and do not qualify as financial or tax advice. We recommend before you make any financial decisions, you consult a licensed professional.</p>
+          <p><span class="spk">Jason · 33:15</span>Individuals on the podcast may hold positions in the companies discussed. ---</p>
+        </div>
+      </details>
+
+    </div>
+
+    <!-- LISTEN:START (build_episode.py rewrites the 3 URLs + iframe title per episode; player dropped if no spotifyEmbedUrl) -->
+    <section class="listen-now">
+      <div class="ln-head">
+        <span class="ln-title">Listen now</span>
+      </div>
+      <div class="audio-embed">
+        <iframe src="https://open.spotify.com/embed/episode/3SdygYdJN183SQ6DcW7bhG?utm_source=generator"
+          width="100%" height="152" loading="lazy" allowfullscreen
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+          title="Spotify — Hunter vs. Farmer and Fixing Your Sales Strategy"></iframe>
+      </div>
+    </section>
+
+    <div class="listen">
+      <a href="https://open.spotify.com/episode/3SdygYdJN183SQ6DcW7bhG" target="_blank" rel="noopener" aria-label="Listen to this episode on Spotify">
+        <svg viewBox="0 0 24 24"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.52 17.34c-.24.36-.66.48-1.02.24-2.82-1.74-6.36-2.1-10.56-1.14-.42.12-.78-.18-.9-.54-.12-.42.18-.78.54-.9 4.56-1.02 8.52-.6 11.64 1.32.42.18.48.66.3 1.02zm1.44-3.3c-.3.42-.84.6-1.26.3-3.24-1.98-8.16-2.58-11.94-1.38-.48.12-1.02-.12-1.14-.6-.12-.48.12-1.02.6-1.14 4.32-1.32 9.72-.66 13.44 1.62.36.18.54.78.3 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.3c-.6.18-1.2-.18-1.38-.72-.18-.6.18-1.2.72-1.38 4.26-1.26 11.28-1.02 15.72 1.62.54.3.72 1.02.42 1.56-.3.42-1.02.6-1.56.3z"/></svg>
+        Spotify
+      </a>
+      <a href="https://podcasts.apple.com/au/podcast/id1555566088?i=1000700471176" target="_blank" rel="noopener" aria-label="Listen to this episode on Apple Podcasts">
+        <svg viewBox="0 0 24 24"><path d="M5.34 0A5.328 5.328 0 000 5.34v13.32A5.328 5.328 0 005.34 24h13.32A5.328 5.328 0 0024 18.66V5.34A5.328 5.328 0 0018.66 0H5.34zm6.525 2.568c2.336 0 4.448.902 6.056 2.587 1.224 1.272 1.912 2.619 2.264 4.392l.04.23c.04.272-.16.527-.432.567a.505.505 0 01-.567-.431l-.04-.213c-.312-1.57-.92-2.747-2.004-3.867-1.428-1.496-3.293-2.294-5.393-2.294-2.1 0-3.966.798-5.394 2.294-1.084 1.12-1.692 2.298-2.004 3.867l-.04.213a.507.507 0 01-.567.431.504.504 0 01-.432-.567l.04-.23c.352-1.773 1.04-3.12 2.264-4.392 1.608-1.685 3.72-2.587 6.056-2.587h.153zm.136 3.033c1.74 0 3.312.67 4.527 1.934.883.916 1.394 1.93 1.663 3.253l.04.23a.505.505 0 01-.431.567.503.503 0 01-.567-.432l-.04-.212c-.23-1.112-.659-1.97-1.396-2.732-1.052-1.1-2.404-1.672-3.9-1.672s-2.849.572-3.901 1.672c-.737.762-1.167 1.62-1.396 2.732l-.04.212a.503.503 0 01-.567.432.505.505 0 01-.432-.567l.04-.23c.27-1.323.78-2.337 1.664-3.253 1.215-1.264 2.787-1.934 4.527-1.934h.21zm-.078 3.05c1.092 0 2.091.424 2.89 1.22.582.58.924 1.245 1.107 2.15l.04.218a.501.501 0 01-.424.568.499.499 0 01-.568-.424l-.04-.198c-.146-.724-.413-1.253-.871-1.716-.63-.63-1.398-.957-2.226-.957s-1.595.328-2.225.957c-.459.463-.726.992-.871 1.716l-.04.198a.499.499 0 01-.568.424.501.501 0 01-.424-.568l.04-.219c.183-.904.525-1.569 1.106-2.149.8-.796 1.799-1.22 2.89-1.22h.184zM12 14.07a2.477 2.477 0 012.48 2.478A2.477 2.477 0 0112 19.024a2.477 2.477 0 01-2.48-2.477A2.477 2.477 0 0112 14.07z"/></svg>
+        Apple
+      </a>
+      <a class="yt-pill" href="https://www.youtube.com/@thenumbersgamepodcast?sub_confirmation=1" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.12-2.14C19.5 3.55 12 3.55 12 3.55s-7.5 0-9.38.51A3 3 0 0 0 .5 6.2 31.4 31.4 0 0 0 0 12a31.4 31.4 0 0 0 .5 5.8 3 3 0 0 0 2.12 2.14c1.88.51 9.38.51 9.38.51s7.5 0 9.38-.51a3 3 0 0 0 2.12-2.14A31.4 31.4 0 0 0 24 12a31.4 31.4 0 0 0-.5-5.8zM9.55 15.57V8.43L15.82 12z"/></svg>
+        Subscribe
+      </a>
+    </div>
+    <!-- LISTEN:END -->
+
+    <div class="relsec">
+      <span class="rtitle">Discover more</span>
+      <div class="relgrid">
+        <a class="relcard" href="/how-to-win-on-social-media-vanity-metrics-vs-real-results">
+          <img src="https://i.ytimg.com/vi/lPdaCst3SL4/hqdefault.jpg" alt="EP 250 thumbnail">
+          <span class="rt">How to Win on Social Media</span>
+          <span class="rfoot"><span class="rwhy">Also covers: marketing</span><span class="rtag">EP 250</span></span>
+        </a>
+        <a class="relcard" href="/cut-through-in-a-noisy-market">
+          <img src="https://i.ytimg.com/vi/c8AxkyOW0EQ/hqdefault.jpg" alt="EP 190 thumbnail">
+          <span class="rt">Cut Through In A Noisy Market</span>
+          <span class="rfoot"><span class="rwhy">Also covers: marketing</span><span class="rtag">EP 190</span></span>
+        </a>
+        <a class="relcard" href="/standing-out-in-a-dry-industry-lessons-from-liquid-death">
+          <img src="https://i.ytimg.com/vi/LvodNi2qNSw/hqdefault.jpg" alt="EP 221 thumbnail">
+          <span class="rt">Standing Out in a Dry Industry - Lessons from Liquid Death</span>
+          <span class="rfoot"><span class="rwhy">Also covers: marketing</span><span class="rtag">EP 221</span></span>
+        </a>
+        <a class="relcard" href="/crafting-your-business-edge">
+          <img src="https://i.ytimg.com/vi/hnUeiudZfso/hqdefault.jpg" alt="EP 207 thumbnail">
+          <span class="rt">Crafting Your Business Edge</span>
+          <span class="rfoot"><span class="rwhy">Also covers: marketing</span><span class="rtag">EP 207</span></span>
+        </a>
+        <a class="relcard" href="/how-businesses-can-do-good-and-still-make-money">
+          <img src="https://i.ytimg.com/vi/YY4GGftWiuU/hqdefault.jpg" alt="EP 256 thumbnail">
+          <span class="rt">How Businesses Can Do Good and Still Make Money</span>
+          <span class="rfoot"><span class="rwhy">Also covers: marketing</span><span class="rtag">EP 256</span></span>
+        </a>
+        <a class="relcard" href="/clementine-boshevski-the-highs-and-lows-of-building-salt-lab">
+          <img src="https://i.ytimg.com/vi/f9UgxUuL-6g/hqdefault.jpg" alt="EP 193 thumbnail">
+          <span class="rt">Clementine Boshevski - The Highs and Lows of Building Salt Lab</span>
+          <span class="rfoot"><span class="rwhy">Also covers: marketing</span><span class="rtag">EP 193</span></span>
+        </a>
+      </div>
+      <div class="reldots" id="reldots"></div>
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="footgrid">
+      <div class="fcol">
+        <div class="foot-label">Follow us on</div>
+        <div class="socials">
+          <a href="https://www.instagram.com/thenumbersgamepodcast/" target="_blank" rel="noopener" aria-label="The Numbers Game on Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.8.2 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1 .4 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .4-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1-.4-2.2-.1-1.3-.1-1.7-.1-4.9s0-3.6.1-4.9c.1-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.4 2.2-.4 1.3-.1 1.7-.1 4.9-.1zm0 2c-3.1 0-3.5 0-4.8.1-1.1.1-1.5.2-1.8.3-.4.2-.7.3-1 .6-.3.3-.5.6-.6 1-.1.3-.3.7-.3 1.8-.1 1.3-.1 1.7-.1 4.8s0 3.5.1 4.8c.1 1.1.2 1.5.3 1.8.2.4.3.7.6 1 .3.3.6.5 1 .6.3.1.7.3 1.8.3 1.3.1 1.7.1 4.8.1s3.5 0 4.8-.1c1.1-.1 1.5-.2 1.8-.3.4-.2.7-.3 1-.6.3-.3.5-.6.6-1 .1-.3.3-.7.3-1.8.1-1.3.1-1.7.1-4.8s0-3.5-.1-4.8c-.1-1.1-.2-1.5-.3-1.8-.2-.4-.3-.7-.6-1-.3-.3-.6-.5-1-.6-.3-.1-.7-.3-1.8-.3-1.3-.1-1.7-.1-4.8-.1zm0 3.4a5.4 5.4 0 1 1 0 10.8 5.4 5.4 0 0 1 0-10.8zm0 2a3.4 3.4 0 1 0 0 6.8 3.4 3.4 0 0 0 0-6.8zm5.6-2.3a1.3 1.3 0 1 1-2.6 0 1.3 1.3 0 0 1 2.6 0z"/></svg></a>
+          <a href="https://www.tiktok.com/@thenumbersgamepodcast" target="_blank" rel="noopener" aria-label="The Numbers Game on TikTok"><svg viewBox="0 0 24 24"><path d="M12.53.02C13.84 0 15.14.01 16.44 0c.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg></a>
+          <a href="https://www.linkedin.com/company/the-numbers-game-podcast/" target="_blank" rel="noopener" aria-label="The Numbers Game on LinkedIn"><svg viewBox="0 0 24 24"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.24 8.25h4.52V23H.24V8.25zM8.34 8.25h4.33v2.01h.06c.6-1.14 2.08-2.34 4.28-2.34 4.58 0 5.42 3.01 5.42 6.92V23h-4.51v-7.16c0-1.71-.03-3.91-2.38-3.91-2.39 0-2.75 1.86-2.75 3.78V23H8.34V8.25z"/></svg></a>
+          <a href="https://www.facebook.com/profile.php?id=100071290388343" target="_blank" rel="noopener" aria-label="The Numbers Game on Facebook"><svg viewBox="0 0 24 24"><path d="M24 12.07C24 5.41 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.04V9.41c0-3.02 1.8-4.7 4.54-4.7 1.31 0 2.68.24 2.68.24v2.97h-1.5c-1.5 0-1.96.93-1.96 1.89v2.26h3.32l-.53 3.5h-2.8V24C19.62 23.1 24 18.1 24 12.07z"/></svg></a>
+          <a href="https://www.youtube.com/@thenumbersgamepodcast" target="_blank" rel="noopener" aria-label="The Numbers Game on YouTube"><svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.2C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31.7 31.7 0 0 0 0 12a31.7 31.7 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.2A31.7 31.7 0 0 0 24 12a31.7 31.7 0 0 0-.5-5.8zM9.6 15.6V8.4L15.8 12z"/></svg></a>
+        </div>
+      </div>
+      <div class="fcol">
+        <div class="foot-label">Brought to you by</div>
+        <div class="sponsors">
+          <a href="https://www.inovayt.com.au/" target="_blank" rel="noopener"><img src="assets/inovayt-white.png" alt="Inovayt"></a>
+          <a href="https://futureadvisory.com.au/" target="_blank" rel="noopener"><img src="assets/future-advisory-white.png" alt="Future Advisory"></a>
+        </div>
+      </div>
+      <div class="fcol produced">
+        <div class="foot-label">Produced by</div>
+        <a href="https://www.vidpod.com.au/" target="_blank" rel="noopener"><img src="assets/vidpod-white.png" alt="VIDPOD"></a>
+      </div>
+    </div>
+    <div class="footbar">
+      <details class="footnav-dd">
+        <summary><svg class="ham" viewBox="0 0 24 24"><path d="M3 6h18v2H3zM3 11h18v2H3zM3 16h18v2H3z"/></svg> Menu</summary>
+        <div class="dd-links">
+          <a href="/">Home</a><a href="/episodes">Every episode</a><a href="/adventure">Choose your own adventure</a><a href="/about">About the show</a><a href="/nick-reilly">Nick Reilly</a><a href="/jason-robinson">Jason Robinson</a><a href="/contact">Contact</a>
+        </div>
+      </details>
+      <div class="copyright">© 2026 The Numbers Game</div>
+    </div>
+  </footer>
+
+  <script>
+    var VIDEO='_qzRCuvzt3g';
+    var CHAPTERS=[
+      {t:"00:00",s:0,title:"Intro"},
+      {t:"02:45",s:165,title:"Hunter Vs Farmer Defined"},
+      {t:"03:33",s:213,title:"Marty's Path From Banker To Business Owner"},
+      {t:"05:24",s:324,title:"Which One Are You"},
+      {t:"06:10",s:370,title:"Why A Business Needs Both"},
+      {t:"09:05",s:545,title:"The Cost Of Pure Hunting"},
+      {t:"11:25",s:685,title:"Farming Drives Organic Growth"},
+      {t:"14:06",s:846,title:"Applying It To Accountants"},
+      {t:"16:19",s:979,title:"Proactive Advice Wins Clients"},
+      {t:"19:08",s:1148,title:"Different Professions Different Mix"},
+      {t:"20:08",s:1208,title:"How To Farm"},
+      {t:"21:22",s:1282,title:"Value Beyond The Transaction"},
+      {t:"21:47",s:1307,title:"Developing Your People"},
+      {t:"22:06",s:1326,title:"Hire For The Role You Need"},
+      {t:"24:36",s:1476,title:"Developing A Hunter With Farming Traits"},
+      {t:"25:48",s:1548,title:"High Value Activities Over Volume"},
+      {t:"29:19",s:1759,title:"The Upsell Is A Transference Of Value"},
+      {t:"30:41",s:1841,title:"Sell For People Not To People"},
+      {t:"31:14",s:1874,title:"Good Vs Great Sales Leaders"}
+    ];
+    var QUESTIONS=[
+      {q:"What is a hunter in sales?",s:175},
+      {q:"What is a farmer in sales?",s:189},
+      {q:"What sales mix do you need when starting out?",s:490},
+      {q:"Is it cheaper to find new clients or keep them?",s:567},
+      {q:"How do happy clients help you grow?",s:685},
+      {q:"Why do sales hires fail?",s:1326},
+      {q:"When does selling damage the relationship?",s:1841},
+      {q:"What is the right mindset for selling?",s:1860},
+      {q:"What separates a good sales leader from a great one?",s:1874},
+      {q:"How do great sales leaders get consistent results?",s:1906}
+    ];
+
+    var chEl=document.getElementById('chapters');
+    CHAPTERS.forEach(function(c){var b=document.createElement('button');b.className='chapter';b.onclick=function(){startAt(c.s)};b.innerHTML='<span class="tc">'+c.t+'</span><span class="cx">'+c.title+'</span>';chEl.appendChild(b);});
+    document.getElementById('chcount').textContent=CHAPTERS.length;
+    var qEl=document.getElementById('qa');
+    QUESTIONS.forEach(function(q){var b=document.createElement('button');b.className='q';b.onclick=function(){startAt(q.s)};b.innerHTML='<span class="qm">?</span><span class="qx">'+q.q+'</span><span class="go">›</span>';qEl.appendChild(b);});
+    document.getElementById('qcount').textContent=QUESTIONS.length;
+
+    /* Mobile nav dropdown. */
+    var burger=document.getElementById('navburger'), navdrop=document.getElementById('navdrop');
+    if(burger&&navdrop){burger.addEventListener('click',function(){
+      navdrop.hidden=!navdrop.hidden;
+      burger.setAttribute('aria-expanded', navdrop.hidden?'false':'true');
+    });}
+
+    /* Voice-note button reveals the recorder; × tucks it away. */
+    var vbtn=document.getElementById('vbtn'), vslot=document.getElementById('vslot'), vclose=document.getElementById('vclose');
+    if(vbtn&&vslot){vbtn.addEventListener('click',function(){vslot.hidden=!vslot.hidden;});}
+    if(vclose&&vslot){vclose.addEventListener('click',function(){vslot.hidden=true;});}
+
+    /* Keep-exploring dots: only shown when the strip actually scrolls (mobile). */
+    var rg=document.querySelector('.relgrid'), rd=document.getElementById('reldots');
+    if(rg&&rd){
+      var relCards=rg.querySelectorAll('.relcard');
+      relCards.forEach(function(){rd.appendChild(document.createElement('span'))});
+      var updDots=function(){
+        var scrollable=rg.scrollWidth>rg.clientWidth+4;
+        rd.style.display=scrollable?'flex':'none';
+        if(!scrollable)return;
+        var i=Math.round(rg.scrollLeft/(rg.scrollWidth-rg.clientWidth)*(relCards.length-1));
+        rd.querySelectorAll('span').forEach(function(s,n){s.classList.toggle('on',n===i)});
+      };
+      rg.addEventListener('scroll',updDots,{passive:true});
+      window.addEventListener('resize',updDots);
+      updDots();
+    }
+
+    /* Explore tabs: swap the visible panel; the row stays put so you never lose your place. */
+    var tabBtns=document.querySelectorAll('.tabbtn');
+    tabBtns.forEach(function(b){
+      b.addEventListener('click',function(){
+        tabBtns.forEach(function(o){o.classList.remove('on')});
+        document.querySelectorAll('.tpanel').forEach(function(p){p.hidden=true});
+        b.classList.add('on');
+        document.getElementById(b.getAttribute('data-panel')).hidden=false;
+      });
+    });
+
+    /* YouTube: clean facade, then real player on demand. Seek without yanking to top. */
+    var player=null, ready=false, apiReady=false, pending=null;
+    window.onYouTubeIframeAPIReady=function(){apiReady=true; if(pending!=null){var s=pending;pending=null;createPlayer(s);}};
+    function createPlayer(sec){
+      var wrap=document.getElementById('player'); wrap.innerHTML='<div id="yt"></div>';
+      player=new YT.Player('yt',{videoId:VIDEO,playerVars:{autoplay:1,rel:0,modestbranding:1,playsinline:1,start:Math.floor(sec||0)},events:{onReady:function(){ready=true;}}});
+    }
+    function nudge(){
+      var p=document.getElementById('player-wrap'), r=p.getBoundingClientRect();
+      if(r.bottom<80 || r.top>window.innerHeight-90){ p.scrollIntoView({behavior:'smooth',block:'start'}); }
+    }
+    function startAt(sec){
+      nudge();
+      if(player&&ready){ player.seekTo(sec,true); player.playVideo(); return; }
+      if(apiReady){ createPlayer(sec); } else { pending=sec; }
+    }
+    document.getElementById('facade').addEventListener('click',function(){startAt(0);});
+    (function(){var s=document.createElement('script');s.src='https://www.youtube.com/iframe_api';document.head.appendChild(s);})();
+  </script>
+</body>
+</html>
