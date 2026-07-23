@@ -1,0 +1,707 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EP 211 · Understanding Financial Wellbeing | The Numbers Game</title>
+<meta name="description" content="Nick leads a conversation on financial wellbeing, arguing it means being across your finances and comfortable with where you are, not how much money you have.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" sizes="64x64" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="canonical" href="https://thenumbersgamepodcast.com.au/understanding-financial-wellbeing">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="The Numbers Game">
+<meta property="og:title" content="EP 211 · Understanding Financial Wellbeing | The Numbers Game">
+<meta property="og:description" content="Nick leads a conversation on financial wellbeing, arguing it means being across your finances and comfortable with where you are, not how much money you have.">
+<meta property="og:url" content="https://thenumbersgamepodcast.com.au/understanding-financial-wellbeing">
+<meta property="og:image" content="https://i.ytimg.com/vi/tAEoyV7Bj4A/maxresdefault.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+  :root{
+    --purple:#585af3; --purple-dark:#2c1b8a; --mint:#7ad9a8;
+    --white:#ffffff; --muted:rgba(255,255,255,.60); --dim:rgba(255,255,255,.42);
+    --line:rgba(255,255,255,.12); --card:rgba(255,255,255,.05); --card-hi:rgba(255,255,255,.09);
+    --display:'Anton',Impact,'Helvetica Neue',sans-serif;
+    --sans:'Inter',system-ui,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif;
+    --wrap:1280px;   /* page frame (nav spans this) */
+    --col:960px;     /* content column (player, tabs, text) */
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:var(--sans); color:var(--white); line-height:1.6; -webkit-font-smoothing:antialiased;
+    background:#12093a;
+    background-image:
+      radial-gradient(1200px 600px at 82% -6%, rgba(88,90,243,.45) 0%, transparent 55%),
+      radial-gradient(900px 700px at 5% 8%, rgba(122,217,168,.10) 0%, transparent 50%),
+      linear-gradient(180deg,#2c1b8a 0%,#1a1150 28%,#100b34 62%,#0b0820 100%);
+    background-attachment:fixed;
+  }
+  a{color:inherit}
+  .wrap{max-width:var(--wrap);margin:0 auto;padding:0 36px}
+  main.wrap{max-width:var(--col)}
+  @media(max-width:720px){.wrap{padding:0 22px}}
+
+  /* ── Navbar ── */
+  .nav{position:sticky;top:0;z-index:50;background:linear-gradient(180deg,rgba(24,15,74,.92),rgba(24,15,74,.72));backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+  .nav-in{max-width:var(--wrap);margin:0 auto;padding:11px 36px;display:flex;align-items:center;justify-content:space-between}
+  @media(max-width:720px){.nav-in{padding:11px 22px}}
+  .brand{display:block;line-height:0}
+  .brand img{height:36px;width:auto;display:block}
+  .navlinks{display:flex;gap:28px;align-items:center}
+  .navlinks a{text-decoration:none;font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);transition:.15s}
+  .navlinks a:hover{color:var(--white)}
+  .navlinks a.navtop{cursor:default}
+  .navgroup{position:relative;display:flex;align-items:center}
+  .navgroup .subnav{display:none;position:absolute;top:100%;left:50%;transform:translateX(-50%);padding-top:14px;min-width:180px}
+  .navgroup:hover .subnav,.navgroup:focus-within .subnav{display:block}
+  .subnav-in,.navgroup .subnav{z-index:60}
+  .navgroup .subnav a{display:block;background:#180f4a;border:1px solid var(--line);border-top:0;padding:12px 16px;font-size:12px;color:rgba(255,255,255,.85)}
+  .navgroup .subnav a:first-child{border-top:1px solid var(--line)}
+  .navgroup .subnav a:hover{background:#221768;color:var(--white)}
+  .navburger{display:none;background:none;border:1px solid var(--line);padding:8px 10px;cursor:pointer;color:var(--white);transition:.15s}
+  .navburger:hover{border-color:rgba(122,217,168,.6)}
+  .navburger svg{width:20px;height:20px;fill:currentColor;display:block}
+  .navdrop{display:none}
+  @media(max-width:720px){
+    .navlinks{display:none}
+    .navburger{display:block}
+    .navdrop{display:block;position:absolute;left:0;right:0;top:100%;
+      background:#180f4a;border-bottom:1px solid var(--line);box-shadow:0 24px 50px rgba(0,0,0,.45)}
+    .navdrop[hidden]{display:none}
+    .navdrop a{display:block;padding:15px 22px;text-decoration:none;font-size:14px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:rgba(255,255,255,.9);border-bottom:1px solid rgba(255,255,255,.06)}
+    .navdrop a:last-child{border-bottom:0}
+    .navdrop a.sub{padding-left:42px;font-size:13px;color:rgba(255,255,255,.72)}
+    .navdrop .navlabel{display:block;padding:15px 22px 6px;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.4)}
+  }
+
+  /* ── Hero / hook (marker-highlight system: purple hook wraps naturally, mint payoff below)
+     Rules: title splits at its natural break (colon/pipe/question mark). Front = hook (purple,
+     big), back = payoff (mint, smaller). No break in title = purple hook only. Highlights hug
+     the text (tight em padding tuned to Anton) and wrap via box-decoration-break — never
+     hand-pick line breaks or mint words. ── */
+  header.hero{padding:34px 0 6px}
+  .hook{--inx:clamp(8.4px,2.1vw,15.6px)} /* one shared text inset so hook + payoff first letters align */
+  .hook .hk{font-family:var(--display);font-weight:400;text-transform:uppercase;
+    font-size:clamp(28px,7vw,52px);line-height:1.3;letter-spacing:-.5px;text-wrap:balance}
+  .hook .hk span{color:var(--white);padding:.04em var(--inx) .02em;
+    background:linear-gradient(var(--purple),var(--purple)) 0 50%/100% 87% no-repeat;
+    -webkit-box-decoration-break:clone;box-decoration-break:clone}
+  .hook .pay{font-family:var(--display);font-weight:400;text-transform:uppercase;
+    font-size:clamp(16px,4vw,24px);line-height:1.5;letter-spacing:.6px;margin-top:8px;text-wrap:balance}
+  .hook .pay span{color:#0a0a0a;padding:.08em var(--inx) .04em;
+    background:linear-gradient(var(--mint),var(--mint)) 0 50%/100% 88% no-repeat;
+    -webkit-box-decoration-break:clone;box-decoration-break:clone}
+  /* no-hook titles: mid-split into two full-size rows, purple then mint */
+  .hook .hk span.hkrow{display:block;background:none;padding:0}
+  .hook .hk .hkrow+.hkrow{margin-top:8px}
+  .hook .hk span.mintseg{color:#0a0a0a;
+    background:linear-gradient(var(--mint),var(--mint)) 0 50%/100% 87% no-repeat}
+
+  /* ── Player (clean facade → real player on tap) ── */
+  .player-wrap{margin:24px 0 4px;scroll-margin-top:76px}
+  .player{position:relative;width:100%;padding-top:56.25%;border-radius:0;overflow:hidden;background:#000;box-shadow:0 30px 70px rgba(0,0,0,.5),0 0 0 1px rgba(255,255,255,.06)}
+  .facade{position:absolute;inset:0;border:0;cursor:pointer;background-size:cover;background-position:center;display:flex;align-items:center;justify-content:center;padding:0}
+  .facade .play{width:74px;height:74px;border-radius:50%;background:rgba(10,6,30,.40);border:2px solid rgba(255,255,255,.72);display:flex;align-items:center;justify-content:center;transition:.18s;-webkit-backdrop-filter:blur(1px);backdrop-filter:blur(1px)}
+  .facade:hover .play{background:rgba(88,90,243,.62);transform:scale(1.07);border-color:#fff}
+  .facade .play::after{content:"";border-style:solid;border-width:11px 0 11px 19px;border-color:transparent transparent transparent #fff;margin-left:5px}
+  .player iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+
+  /* ── Episode facts (bottom of the Summary panel — templated per episode) ── */
+  .sumfacts{margin:14px 10px 4px;padding-top:13px;border-top:1px solid rgba(255,255,255,.08);display:flex;flex-direction:column;gap:8px}
+  .fact{display:flex;gap:12px;font-size:13.5px}
+  .fact .fl{flex:none;width:104px;color:var(--dim);font-weight:600;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;padding-top:2px}
+  .fact .fv{color:rgba(255,255,255,.9);font-weight:500}
+  .fact .fv a{color:var(--mint);text-decoration:none;border-bottom:1px solid rgba(122,217,168,.4);transition:.15s}
+  .fact .fv a:hover{border-bottom-color:var(--mint)}
+
+  /* ── Episode tag (identity: black label hanging off the title corner) ── */
+  .eptag{display:inline-block;position:relative;left:-6px;margin-bottom:-7px;z-index:2;
+    background:#0a0a0a;color:var(--white);font-family:var(--display);font-weight:400;
+    font-size:13.5px;letter-spacing:1.5px;text-transform:uppercase;padding:6px 11px 4px}
+
+  /* ── Explore tabs (sticky mode switcher; one panel swaps below, nothing shoves) ── */
+  .explore{margin-top:22px}
+  .tabs{position:sticky;top:58px;z-index:40;display:flex;flex-wrap:wrap;gap:8px;padding:10px 0;
+    background:linear-gradient(180deg,rgba(18,10,55,.96),rgba(18,10,55,.86));
+    backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+  .tabbtn{font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.5px;
+    font-size:14.5px;color:var(--white);background:var(--purple);border:1px solid var(--purple);
+    padding:9px 13px 7px;cursor:pointer;transition:.15s}
+  .tabbtn:hover{filter:brightness(1.12)}
+  .tabbtn.on{background:var(--mint);border-color:var(--mint);color:#0a0a0a}
+  .tabbtn.on:hover{filter:none}
+  .tabbtn .ct{font-size:12px;opacity:.75;font-variant-numeric:tabular-nums}
+  .tabbtn .ct::before{content:" · "}
+  .tpanel{border:1px solid var(--line);background:var(--card);padding:12px 10px 14px}
+  .hint{font-size:12.5px;color:var(--muted);padding:2px 10px 10px;border-bottom:1px solid rgba(255,255,255,.08);margin-bottom:6px}
+
+  /* ── Listen row (no box: label left, service pills follow) ── */
+  .listen{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:12px 16px;margin-top:34px}
+  .listen .lname{font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--dim)}
+  .listen a{display:inline-flex;align-items:center;gap:9px;padding:11px 18px;border-radius:999px;
+    background:var(--mint);color:#08210f;text-decoration:none;font-weight:800;font-size:12.5px;
+    letter-spacing:.04em;text-transform:uppercase;transition:.15s}
+  .listen a:hover{filter:brightness(1.06);transform:translateY(-1px);box-shadow:0 12px 30px rgba(122,217,168,.25)}
+  .listen svg{width:20px;height:20px;fill:currentColor;flex:none}
+  /* ── Listen-now Spotify audio embed (full column width, above the pills) ── */
+  .listen-now{margin-top:40px}
+  .listen-now .ln-head{display:flex;align-items:baseline;justify-content:space-between;gap:14px;margin-bottom:13px}
+  .listen-now .ln-title{font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--dim)}
+  .audio-embed{border-radius:12px;overflow:hidden;box-shadow:0 20px 50px rgba(0,0,0,.4),0 0 0 1px rgba(255,255,255,.06)}
+  .audio-embed iframe{display:block;width:100%;border:0}
+  @media(max-width:720px){.listen-now{margin-top:32px}}
+
+  /* ── Keep exploring (thumbnails link to other episode PAGES, never timecodes).
+     Swipeable strip on mobile, fits three-up on desktop. Variant rule: claim
+     "similar ground" + reason lines ONLY when moment-level topic overlap is
+     genuinely strong; otherwise show the latest released episodes with dates —
+     never invent a connection. ── */
+  .relsec{margin-top:60px;padding-top:58px;border-top:1px solid var(--line)} /* line = end of this episode's info */
+  .reldots{display:flex;justify-content:center;gap:7px;margin-top:12px}
+  .reldots span{width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.25);transition:.2s}
+  .reldots span.on{background:var(--mint)}
+  .relsec .rtitle{display:inline-block;font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.5px;font-size:14.5px;background:var(--mint);color:#0a0a0a;padding:9px 13px 7px;margin-bottom:18px}
+  .relgrid{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding-bottom:6px;scrollbar-width:none}
+  .relgrid::-webkit-scrollbar{display:none}
+  .relcard{flex:0 0 56%;max-width:232px;scroll-snap-align:start;display:flex;flex-direction:column;text-decoration:none;background:var(--card);border:1px solid var(--line);transition:.15s}
+  .relcard:hover{background:var(--card-hi);border-color:rgba(122,217,168,.55)}
+  .relcard img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block}
+  .relcard .rt{display:block;font-size:12.5px;font-weight:600;color:rgba(255,255,255,.92);line-height:1.4;padding:8px 8px 0}
+  .relcard .rfoot{margin-top:auto;display:flex;justify-content:space-between;align-items:flex-end;gap:8px;padding:10px 8px 9px}
+  .relcard .rwhy{font-size:11.5px;color:var(--mint)}
+  .relcard .rtag{display:inline-block;background:#0a0a0a;color:var(--white);font-family:var(--display);font-size:10px;letter-spacing:1.2px;text-transform:uppercase;padding:3px 7px 2px;white-space:nowrap;flex:0 0 auto}
+
+  /* ── Dropdown sections (accordion under the player) ── */
+  .drops{margin-top:34px;display:flex;flex-direction:column;gap:11px}
+  .drop{border:1px solid var(--line);border-radius:0;background:var(--card);overflow:hidden;transition:border-color .15s}
+  .drop[open]{border-color:rgba(122,217,168,.35)}
+  .drop>summary{list-style:none;cursor:pointer;padding:16px 18px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+  .drop>summary::-webkit-details-marker{display:none}
+  .drop>summary .st{font-weight:700;font-size:15.5px;letter-spacing:.005em}
+  .drop>summary .ct{margin-left:auto;font-size:12px;color:var(--dim);font-weight:600;font-variant-numeric:tabular-nums}
+  .drop>summary .chev{flex:none;width:22px;height:22px;border-radius:50%;background:rgba(122,217,168,.14);color:var(--mint);display:flex;align-items:center;justify-content:center;font-family:var(--display);font-size:15px;line-height:1;transition:.2s;transform:translateY(-1px)}
+  .drop[open]>summary .chev{transform:rotate(45deg)}
+  .drop-body{padding:2px 12px 12px}
+
+  /* chapters */
+  .chapter{display:flex;align-items:baseline;gap:14px;width:100%;text-align:left;cursor:pointer;background:none;border:0;color:inherit;font-family:inherit;padding:11px 10px;border-radius:10px;transition:.13s}
+  .chapter:hover{background:var(--card-hi)}
+  .chapter .tc{font-variant-numeric:tabular-nums;font-weight:700;font-size:14px;color:var(--mint);flex:none;width:48px}
+  .chapter .cx{font-size:15px;font-weight:500;color:rgba(255,255,255,.9)}
+  .chapter:hover .cx{color:#fff}
+
+  /* questions */
+  .q{display:flex;align-items:center;gap:12px;width:100%;text-align:left;cursor:pointer;background:none;border:0;border-radius:11px;color:inherit;font-family:inherit;padding:12px 10px;transition:.14s}
+  .q+.q{border-top:1px solid rgba(255,255,255,.05)}
+  .q:hover{background:var(--card-hi)}
+  .q .qm{font-family:var(--display);font-size:15px;color:var(--mint);flex:none;line-height:1;transform:translateY(1px)}
+  .q .qx{font-size:15px;font-weight:500;color:rgba(255,255,255,.92)}
+  .q .go{margin-left:auto;flex:none;color:var(--dim);font-size:18px;transition:.15s}
+  .q:hover .go{color:var(--mint);transform:translateX(2px)}
+
+  /* summary + transcript bodies */
+  .summary-body p{font-size:16.5px;line-height:1.62;color:rgba(255,255,255,.9);padding:6px 10px 4px}
+  .tbody{padding:2px 10px 8px}
+  .tbody p{font-size:14.5px;line-height:1.7;color:rgba(255,255,255,.78);margin-top:15px;max-width:64ch}
+  .tbody .spk{display:block;font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--mint);margin-bottom:2px}
+
+  /* ── Voice note ask (lives at the bottom of the Summary panel) ── */
+  .vask{margin:16px 10px 4px}
+  .vbtn{display:inline-flex;align-items:center;gap:9px;padding:12px 20px;border-radius:999px;border:0;cursor:pointer;
+    background:var(--mint);color:#08210f;font-family:inherit;font-weight:800;font-size:12.5px;
+    letter-spacing:.04em;text-transform:uppercase;transition:.15s}
+  .vbtn:hover{filter:brightness(1.06);transform:translateY(-1px);box-shadow:0 12px 30px rgba(122,217,168,.25)}
+  .vbtn svg{width:18px;height:18px;fill:currentColor;flex:none}
+  .vslot{background:var(--purple);padding:12px 10px 10px;margin:14px 0 4px;box-shadow:0 18px 40px rgba(0,0,0,.35)}
+  .vslot[hidden]{display:none}
+  .vhead{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;margin-bottom:10px}
+  .vhead .vmsg{font-family:var(--sans);font-size:13px;line-height:1.55;color:rgba(255,255,255,.92);margin:2px 0 0;padding:0 2px}
+  .vclose{background:none;border:0;color:rgba(255,255,255,.85);font-size:22px;line-height:1;cursor:pointer;padding:0 2px}
+  .vclose:hover{color:var(--white)}
+  .vslot iframe{display:block}
+
+  /* ── YouTube subscribe pill (sits in the listen row; outranks .listen a's mint) ── */
+  .listen a.yt-pill{background:var(--purple);color:var(--white)}
+  .listen a.yt-pill:hover{filter:brightness(1.1);transform:translateY(-1px)}
+  @media(max-width:720px){ /* mobile: no label, three compact pills on one row */
+    .listen .lname{display:none}
+    .listen{gap:8px}
+    .listen a{padding:10px 13px;font-size:11px;gap:6px}
+    .listen svg{width:16px;height:16px}
+  }
+
+  /* ── Footer: Follow us on | Brought to you by | Produced by, + Menu dropdown ── */
+  footer{border-top:1px solid var(--line);margin-top:68px;padding:52px 20px 58px}
+  .footgrid{max-width:var(--wrap);margin:0 auto;display:grid;grid-template-columns:1fr 1.15fr .8fr;gap:44px;align-items:start}
+  .fcol{text-align:center;display:flex;flex-direction:column;align-items:center}
+  .foot-label{font-size:11px;font-weight:700;letter-spacing:.26em;text-transform:uppercase;color:var(--dim);margin-bottom:18px}
+  .sponsors{display:flex;justify-content:center;align-items:center;gap:34px;flex-wrap:wrap}
+  .sponsors a,.produced a{display:inline-flex;transition:.15s}
+  .sponsors a:hover,.produced a:hover{transform:translateY(-1px)}
+  .sponsors img{height:32px;width:auto;opacity:.92}
+  .produced img{height:30px;width:auto;opacity:.95}
+  .sponsors a:hover img,.produced a:hover img{opacity:1}
+  footer .socials{display:flex;gap:11px;justify-content:center;flex-wrap:wrap;margin:0}
+  footer .socials a{width:40px;height:40px;border-radius:50%;border:1.5px solid rgba(122,217,168,.5);display:flex;align-items:center;justify-content:center;transition:.15s}
+  footer .socials a svg{width:18px;height:18px;fill:var(--mint);transition:.15s}
+  footer .socials a:hover{background:var(--mint);border-color:var(--mint);transform:translateY(-2px)}
+  footer .socials a:hover svg{fill:#0a0a0a}
+  .footbar{max-width:var(--wrap);margin:34px auto 0;border-top:1px solid var(--line);padding-top:20px;display:flex;flex-direction:column;align-items:center;gap:14px}
+  .footnav-dd{display:block;width:100%;max-width:var(--wrap);margin:0 auto;text-align:center}
+  .footnav-dd>summary{list-style:none;cursor:pointer;display:inline-flex;align-items:center;gap:9px;font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.5px;font-size:13px;color:var(--muted);background:transparent;border:1px solid var(--line);padding:8px 16px 6px;transition:.15s}
+  .footnav-dd>summary::-webkit-details-marker{display:none}
+  .footnav-dd>summary:hover{color:var(--mint);border-color:rgba(122,217,168,.45)}
+  .footnav-dd>summary .ham{width:15px;height:15px;fill:currentColor;transform:translateY(-1px)}
+  .footnav-dd .dd-links{display:flex;flex-direction:row;flex-wrap:wrap;justify-content:center;gap:12px 24px;padding:24px 0 4px}
+  .footnav-dd .dd-links a{font-size:11.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:.15s}
+  .footnav-dd .dd-links a:hover{color:var(--mint)}
+  .copyright{font-size:12px;color:var(--dim);text-align:center}
+  @media(max-width:720px){.footgrid{grid-template-columns:1fr;gap:34px}footer{padding:40px 16px 20px}.footbar{margin-top:34px;padding-top:24px;gap:20px}.footnav-dd .dd-links{flex-direction:column;align-items:center;gap:15px}}
+
+  @media(min-width:720px){header.hero{padding:48px 0 6px}}
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "PodcastEpisode", "name": "Understanding Financial Wellbeing", "url": "https://thenumbersgamepodcast.com.au/understanding-financial-wellbeing", "datePublished": "2024-11-11", "episodeNumber": 211, "image": "https://i.ytimg.com/vi/tAEoyV7Bj4A/maxresdefault.jpg", "partOfSeries": {"@type": "PodcastSeries", "name": "The Numbers Game", "url": "https://thenumbersgamepodcast.com.au/"}}</script>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-in">
+      <a class="brand" href="/" aria-label="The Numbers Game home"><img src="assets/tng-logo.png" alt="The Numbers Game"></a>
+      <div class="navlinks">
+        <a href="/">Home</a>
+        <div class="navgroup">
+          <a class="navtop">Episodes</a>
+          <div class="subnav">
+            <a href="/episodes">All episodes</a>
+            <a href="/adventure">Find moments</a>
+          </div>
+        </div>
+        <div class="navgroup">
+          <a class="navtop">About</a>
+          <div class="subnav">
+            <a href="/about">The show</a>
+            <a href="/nick-reilly">Nick Reilly</a>
+            <a href="/jason-robinson">Jason Robinson</a>
+          </div>
+        </div>
+        <a href="/contact">Contact</a>
+      </div>
+      <button class="navburger" id="navburger" type="button" aria-label="Menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24"><path d="M3 6h18v2H3zM3 11h18v2H3zM3 16h18v2H3z"/></svg>
+      </button>
+    </div>
+    <div class="navdrop" id="navdrop" hidden>
+      <a href="/">Home</a>
+      <span class="navlabel">Episodes</span>
+      <a class="sub" href="/episodes">All episodes</a>
+      <a class="sub" href="/adventure">Find moments</a>
+      <span class="navlabel">About</span>
+      <a class="sub" href="/about">The show</a>
+      <a class="sub" href="/nick-reilly">Nick Reilly</a>
+      <a class="sub" href="/jason-robinson">Jason Robinson</a>
+      <a href="/contact">Contact</a>
+    </div>
+  </nav>
+
+  <main class="wrap">
+
+    <header class="hero">
+      <div class="hook">
+        <span class="eptag">EP 211</span>
+        <h1 class="hk"><span class="hkrow"><span>Understanding</span></span>
+        <span class="hkrow"><span class="mintseg">Financial Wellbeing</span></span></h1>
+      </div>
+    </header>
+
+    <div class="player-wrap" id="player-wrap">
+      <div class="player" id="player">
+        <button class="facade" id="facade" style="background-image:url('https://i.ytimg.com/vi/tAEoyV7Bj4A/maxresdefault.jpg')" aria-label="Play episode">
+          <span class="play"></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="explore">
+      <div class="tabs" role="tablist">
+        <button class="tabbtn on" data-panel="p-summary">Summary</button>
+        <button class="tabbtn" data-panel="p-chapters">Chapters<span class="ct" id="chcount"></span></button>
+        <button class="tabbtn" data-panel="p-questions">Questions<span class="ct" id="qcount"></span></button>
+      </div>
+      <section class="tpanel" id="p-summary">
+        <div class="summary-body">
+          <p>Nick leads a conversation on financial wellbeing, arguing it means being across your finances and comfortable with where you are, not how much money you have. The trio cover budgeting, emergency savings to absorb a shock, insurance as a fallback, and setting short, medium and long term goals. Nick maps three stages, financial turmoil, financial understanding and financial flourishing, and describes a six factor score that rates where you sit. They land on one starting point, know your numbers, and doing a budget to find where you can pull levers.</p>
+        </div>
+        <div class="vask">
+          <button class="vbtn" id="vbtn" type="button">
+            <svg viewBox="0 0 24 24"><path d="M12 14a3 3 0 0 0 3-3V6a3 3 0 1 0-6 0v5a3 3 0 0 0 3 3zm5-3a5 5 0 0 1-10 0H5a7 7 0 0 0 6 6.92V21h2v-3.08A7 7 0 0 0 19 11h-2z"/></svg>
+            Send us a voice note
+          </button>
+          <div class="vslot" id="vslot" hidden>
+            <div class="vhead">
+              <p class="vmsg">We'd love to hear from you. You can leave up to a 90 second voice note for us to play on the show: a question, some feedback, or a topic you want covered.</p>
+              <button class="vclose" id="vclose" type="button" aria-label="Close">&times;</button>
+            </div>
+            <iframe src="https://www.speakpipe.com/widget/inline/hhq6kzggsx7zpcsvakgxfrzun3zidpde" allow="microphone" width="100%" height="200" frameborder="0" title="Leave The Numbers Game a voice note"></iframe>
+          </div>
+          <script async src="https://www.speakpipe.com/widget/loader.js" charset="utf-8"></script>
+        </div>
+        <div class="sumfacts">
+          <div class="fact"><span class="fl">Release date</span><span class="fv">11 November 2024</span></div>
+          <div class="fact"><span class="fl">Hosts</span><span class="fv"><a href="/nick-reilly">Nick Reilly</a>, <a href="/jason-robinson">Jason Robinson</a> &amp; <a href="/marty-vidakovic">Marty Vidakovic</a></span></div>
+
+        </div>
+      </section>
+      <section class="tpanel" id="p-chapters" hidden>
+        <p class="hint">Jump straight to the part you need.</p>
+        <div id="chapters"></div>
+      </section>
+      <section class="tpanel" id="p-questions" hidden>
+        <p class="hint">Real questions this episode answers. Tap one to hear the answer.</p>
+        <div id="qa"></div>
+      </section>
+    </div>
+
+    <div class="drops">
+
+      <details class="drop">
+        <summary><span class="st">Episode transcript</span><span class="chev">+</span></summary>
+        <div class="drop-body tbody">
+          <p><span class="spk">Jason · 00:00</span>Welcome to episode 211 of The Numbers Game. I'm Jase, I'm here with Nick and Marty. How are we, guys?</p>
+          <p><span class="spk">Marty · 00:06</span>I'm up and about, Jase, you know me. It's, uh, if there's a deal to be done, I want to be all over it. Uh, kid's good, wife's good, business partners are good. What can I say? Happy days. Nick, how are you?</p>
+          <p><span class="spk">Nick · 00:19</span>Well, you're happy, I'm happy.</p>
+          <p><span class="spk">Nick · 00:20</span>So yeah, no, I'm, I'm good. Um, nah, going well, mate. Just, yeah, things are good at the moment. Just kind of ducking and weaving, waiting for a crisis, to be honest. We're due. We're due. Isn't it crazy though? That's how we think. Jeez, everything's, everything's pretty good at the moment. Start looking over your shoulder.</p>
+          <p><span class="spk">Nick · 00:39</span>Look under the table. I</p>
+          <p><span class="spk">Marty · 00:41</span>was, I was talking to you about that this morning. I feel like I need a crisis just to spark another level. It's like funny what we do. We're so used to being under challenge when things are going nicely. You kind of go, Oh, you're just looking for that. You just know business is business.</p>
+          <p><span class="spk">Marty · 00:57</span>There's always something around the corner.</p>
+          <p><span class="spk">Marty · 01:00</span>Yeah, but, um, paranoia to this week's good. This week's good. Jace, how, how, how's your week?</p>
+          <p><span class="spk">Jason · 01:06</span>Hey, good. Yeah, look, I think, um, there must be something in the water, something in the air. I don't know. It's just, uh, life's good. Business is good. And, uh, things that the numbers game podcast are good.</p>
+          <p><span class="spk">Jason · 01:15</span>I mean, yeah, the countdown to episode 300, I've just, I've got it up on the walls. I think, I think I'm still high off the back of the, uh, the live, the live at 200, um, from a little, little while back, but you know, it's, um, You know, vibes are good. We we're energized. Um, it doesn't feel like we've done 210 episodes.</p>
+          <p><span class="spk">Jason · 01:36</span>It feels like, you know, this is still fresh, fun, exciting. And, uh, you know, obviously the listeners are coming back for more, more value from, uh, especially, you know, Marty as the, the key influencer of the podcast. No, no, no. All right. All right. I'll give you a break. I'll give you a break. Um, you know, the, the, the views must be well in the way to a million views of your famous, uh, reel that's on Instagram though.</p>
+          <p><span class="spk">Jason · 01:58</span>So, you know, that's, that's</p>
+          <p><span class="spk">Jason · 02:00</span>happening. Uh, but focusing on, uh, you know, the, the valuable content that happens here at the numbers game, Nick, I think, uh, we're excited to have you lead the way today. Yeah, thanks. I thought I'd take,</p>
+          <p><span class="spk">Nick · 02:11</span>take the spotlight off Marty just for half an hour. So Marty, I hope you don't mind.</p>
+          <p><span class="spk">Nick · 02:14</span>Um, I'll make sure that, I'll ask you a few questions mate, so we'll still get our ratings up for the episode. Um, I want to just have a chat about financial wellbeing and it's, um, it's a term that's, uh, I guess thrown around is the wrong, uh, way to describe it, but it's, it's something we're seeing more and more now.</p>
+          <p><span class="spk">Nick · 02:35</span>So. I thought it'd be really good to unpack what it actually means, um, because it's, it can be the center of, it can be the cause of so many issues, um, in your life if you, if you don't have financial well being. And I think we need to move away from the, um, from the definition of Uh, financial wellbeing being someone who's a lot of money or who's wealthy or</p>
+          <p><span class="spk">Nick · 03:00</span>doesn't have any money problems, um, of course that's where we're trying to get to and financial freedom and whatnot, but financial wellbeing, when I think about it, it's, it's more about just being across where you're at and your current situation and being comfortable with that, being happy that you're, you've got, um, a safety net if something goes wrong, and be happy that you're.</p>
+          <p><span class="spk">Nick · 03:23</span>You're heading towards a particular, to achieving a particular goal. And that word wellbeing isn't necessarily, um, linked to wealthy. It's just being okay with where your finances are up to. And, you know, that could be different for people, um, depending on what they earn, where they live, um, their demographic, um, particularly their age or whatnot.</p>
+          <p><span class="spk">Nick · 03:44</span>So, um, Yeah. Jason, I might throw it to you. If, if I was to ask you to define financial wellbeing, how would you define it?</p>
+          <p><span class="spk">Jason · 03:54</span>The word comfortable. Like I think that's, that's the word that comes to my mind is that you're comfortable. Um,</p>
+          <p><span class="spk">Jason · 04:00</span>you know, you've, you've got the option to make decisions around, you know, your finances and you've got an understanding of your finances.</p>
+          <p><span class="spk">Jason · 04:07</span>Um, you know, so I think the only way to feel comfortable in anything is to, to have a bit of an understanding of, of the ins and outs of. How it's made up and what the important factors are.</p>
+          <p><span class="spk">Nick · 04:17</span>Good answer, Marty.</p>
+          <p><span class="spk">Marty · 04:18</span>Yeah. I think for me, it's, um, having a plan that I believe in and that, you know, that I believe can work.</p>
+          <p><span class="spk">Marty · 04:28</span>Uh, and I think it comes back to what Jace was saying. It gives me comfort that I don't have to worry about my financial circumstances. I think that's the key. But again, if. I don't know what it looks like in the future. That's where the stress arises. So for me, a plan that makes sense is, um, is really paramount for, you know, my life now and into the future.</p>
+          <p><span class="spk">Nick · 04:51</span>Yeah. And look, managing for the future, you can only deal with the information that's at hand. Right. So I think you also need to be, uh, we'll have a level</p>
+          <p><span class="spk">Nick · 05:00</span>of, um, fear is the wrong word, but you have to also be prepared, you know, for things to change, um, because we don't have a crystal ball. You can only deal with what you've got, um, at the moment or what you're Level of knowledge you've got at the moment about what the future might look like, uh, might look like, but both really great answers and both spot on really.</p>
+          <p><span class="spk">Nick · 05:20</span>Um, yeah, I would say it's about, okay, how will you manage your finances? Not so much how much money you've got in the bank, but how are you managing that? And managing means how is that in line with your cost of living with where you're at in life? Not so much a particular figure. Um, so. A couple of things to explain that a little bit deeper.</p>
+          <p><span class="spk">Nick · 05:43</span>Um, but why is it important? Well, it allows you to maintain control or, or remain in control of your finances. Um, so, you know, are you meeting your debt payments? on a weekly basis or a monthly basis. Uh,</p>
+          <p><span class="spk">Nick · 06:00</span>are you putting food on the table? Are you paying your bills when your rego comes up and it's, you know, 700 bucks.</p>
+          <p><span class="spk">Nick · 06:05</span>Plus you get your insurance at the same time. Generally I'm referring to your car now, which, you know, these days could be anywhere from a thousand to 4, 000, depending on what you're driving. If you're like Marty, maybe eight to 10 K. So it's, um, it just, it's, it's having control over those things. So it's having, An understanding of when they're due, having understanding of what you need to do to make sure you've got the funds, uh, to make those payments when they come in.</p>
+          <p><span class="spk">Nick · 06:31</span>And then what that does is it gives you a sense of, um, security is the wrong word, but it just releases stress. If you look at one of the biggest stresses and the biggest causes of mental health, it's a lack of financial wellbeing or not being able to meet, um, general day to day commitments. So it's, it's having control and understanding, okay, what's coming in, When's it due?</p>
+          <p><span class="spk">Nick · 06:53</span>This is the income, uh, flow for me. This is the, the expense, um, flow. I know that I can handle</p>
+          <p><span class="spk">Nick · 07:00</span>those payments. I know what I need to put in a bill, in a bills account every month to make sure that, uh, those, those payments can be met. I'm saving every month for my annual insurance or I've set up an account where the annual insurance goes into, or I've got it in a diary.</p>
+          <p><span class="spk">Nick · 07:15</span>So I know exactly when it's due. So little things like this mean you're in control of your finances. Um, the other thing it does, and this is, um, talking about what you mentioned, Marty, but it gives you the ability to absorb a shock. So again, you can only. You, you can only deal with the information you have to hand.</p>
+          <p><span class="spk">Nick · 07:36</span>So what is a shock for you? So Marty, a shock for you might be, um, you know, something, and I hate saying this, but something goes really bad with, with your business. Or let's say you're a business owner and you go, you know what? The worst thing that can happen with my business is I've got to take myself off the payroll for six months.</p>
+          <p><span class="spk">Nick · 07:56</span>So what does that look like? Like that's a shock that you wouldn't be expecting, but</p>
+          <p><span class="spk">Nick · 08:00</span>that's a shock that could happen in your world. Um, if Jase, if, if Case is working, um, you know, and you guys have bought a house and, um, something happens with Case's job and she can't work for, for nine months, that's a shock for you, but that's something that could well and truly happen in your world.</p>
+          <p><span class="spk">Nick · 08:17</span>Same, same for me, similar kind of circumstance. So looking at the financial shocks that could occur, occur based on your life, um, you know, Sickness is another one, um, you know, that would cause time off work. Helping a family member. Jeez, what if a family member needs, um, needs help because they're in trouble?</p>
+          <p><span class="spk">Nick · 08:35</span>So think about the financial shocks that could happen in your world and have some savings or put some money aside to be able to accommodate for those. Um, And Marty, you know, you've, you've dealt with a lot of people over a lot of time, you've probably seen a lot of that stuff, um, occur and the stress it puts on people when they're not prepared for it.</p>
+          <p><span class="spk">Marty · 08:55</span>Oh, a hundred percent. And like we've talked about in previous episodes,</p>
+          <p><span class="spk">Marty · 09:00</span>Jace being an advisor to business owners to optimize their business, to me, a good financial planner. Um, is a mentor financially to you as a person. And I think, um, and I've, I've seen it time and time again, where someone unfortunately falls ill and when they are protected, the, the, the sense of relief to know that they're okay in that situation, it's probably like, you just feel like you've done an incredible job in that circumstance because it provides so much security at a time when they're most vulnerable.</p>
+          <p><span class="spk">Marty · 09:32</span>Uh, but other times that even like, I think from the finance side. How often people were poor at budgeting to the point where we just say, well, let's put some money across into the mortgage to make additional repayments, to pay down debt because they couldn't budget effectively. And then there's other people that could, that really optimize their offset accounts and pay down debt.</p>
+          <p><span class="spk">Marty · 09:53</span>But you would see the majority of people not doing those budgets and living day to day. Having chaos</p>
+          <p><span class="spk">Marty · 10:00</span>spending whenever the emotional need arises. And yeah, I was one of them in my early thirties as well. You know, imagine how much I could have saved if I was a little bit more disciplined. And the great thing about a plan of attack, not only to the upside, but having a budget for now is you make greater decisions in your day because you're excited about that plan and you know where you're heading.</p>
+          <p><span class="spk">Marty · 10:22</span>And once you have that as a motivator, you. You might, you might decide, here's an example, you might go to a great restaurant that you really like once every three weeks. But you won't spend crap on takeaway throughout those three weeks. And you're actually spending less having this remarkable experience that you really love instead of blowing money on stuff that really doesn't make much out of your day.</p>
+          <p><span class="spk">Marty · 10:49</span>And they're the sort of differences that you can make personally that actually create a more enriching life and also an expanding life into things that</p>
+          <p><span class="spk">Marty · 11:00</span>really Provide nourishment, encouragement, and enrichment. And people don't think about that all the time, but it means a lot. And why do you think a lot of divorces end up out of financial problems?</p>
+          <p><span class="spk">Marty · 11:10</span>And it's like, and these are the things that are not taken into account, that it has such a significant impact of your life when you get it wrong, you can go very wrong, yes, there can be a shock, but you can plan for these things in advance and, and you got it. Sometimes you got to let you. Your ego go a little bit.</p>
+          <p><span class="spk">Marty · 11:26</span>You always think you're making the best decision for the household. And let me tell you, you know, if you think of that, you, you're gonna blow something up somewhere. So to actually have a financial mentor almost with you along for the journey, the whole family gets involved and it's a win-win win. And it's really powerful.</p>
+          <p><span class="spk">Marty · 11:44</span>But you gotta get to that point, you know, you gotta get to that point to do it.</p>
+          <p><span class="spk">Nick · 11:47</span>Yeah, I like how you mentioned chaotic spending because that was actually one of my next points, um, you know, financial freedom gives you, um, the ability to make, um, purchases or</p>
+          <p><span class="spk">Nick · 12:00</span>choices that you desire. So, you know, I think, um, it's almost a guilty pleasure.</p>
+          <p><span class="spk">Nick · 12:06</span>Whether it's a handbag, um, whether it's a new Polo chase or whether it's a, um, I don't know, a new car or a motorbike. I think if you've, if you've got control of your financial wellbeing and you're putting money aside for these things, the chaotic spending is no longer chaotic because you've put the money away.</p>
+          <p><span class="spk">Nick · 12:26</span>And then it becomes more of a pleasure for the hard work that you've done versus, Oh, it's all too hard. So I'm just going to spend the money anyway. Um, so I like what you said about chaotic spending. And I think the last one, and this is what I think is the most important and that really gives you the most joy is you're, you're on track for your goals.</p>
+          <p><span class="spk">Nick · 12:48</span>So. You know, if we look at financial planning and when people come into the office, and I've spoken about this before, but the first thing we talk about before we talk about budget or anything, what are you trying to achieve short,</p>
+          <p><span class="spk">Nick · 13:00</span>medium and long term? What are you trying to achieve in the next two years?</p>
+          <p><span class="spk">Nick · 13:02</span>What are you trying to achieve in the next five years and then five years and beyond? And If we understand what those are, then we can build plans around it, and then we can understand what those goals are, or we can make sure those goals are in line with what your current, um, ability to earn income is, for example, and make sure they're realistic.</p>
+          <p><span class="spk">Nick · 13:21</span>And when you know that you're tracking towards those goals and you're doing the right things, um, To, to put you on a path to achieve that goals, those goals. There's an amazing sense of achievement there, even when you're not there, even when you're only 30 percent there or 50 or 60 percent there, whatever it is, but just the fact that you've got the plan, you've got the goal set up and you're across your finances and you have financial wellbeing.</p>
+          <p><span class="spk">Nick · 13:44</span>Um, that. gives you a big spring in your step and makes you feel really good about yourself and about, um, life and, and, and where you're heading.</p>
+          <p><span class="spk">Marty · 13:53</span>The point that you're making here is in my mind is you've already become the person that's going</p>
+          <p><span class="spk">Marty · 14:00</span>to achieve that goal. So the sense of fulfillment is now in the execution of these great plans, but you've, you've made the adjustment to now be the person that's going to accomplish this.</p>
+          <p><span class="spk">Marty · 14:11</span>So, like you said, it's, it's, you know, you don't, you You don't eat an elephant with one bite, right? But you got to know what those bites are. Not that we should be eating elephants, I don't think. But, but it's, uh, but that's, but it's more so in regards to, it's like, um, when you change any behavior, this can be outside of financial.</p>
+          <p><span class="spk">Marty · 14:30</span>You know, when you've made that decision that that's what you want to accomplish and you map out the steps, it's where it mostly falls down is people haven't mapped out enough steps. They go, I want to accomplish this. They start, they get a motive and fall back into bad habits and they stop, right? And they don't accomplish it.</p>
+          <p><span class="spk">Marty · 14:47</span>But when you have the plan mapped out, you can take on all those steps and celebrate each of those steps as you achieve them. And that's pretty fair. If you get everyone on board with that, even</p>
+          <p><span class="spk">Marty · 15:00</span>yourself as an individual, it's a very fulfilling thing to accomplish.</p>
+          <p><span class="spk">Jason · 15:04</span>And unfortunately, I feel like financial goals or, you know, having that, that long term vision of that is one of the things that falls to the end of the priorities.</p>
+          <p><span class="spk">Jason · 15:11</span>Like, you know, we've talked many times on the show around business goals and your business strategy, and then you've got health and fitness goals. You know, you want to run a marathon or you go to the gym, but you know, so many people, you know, we get through all the questions, or we onboard a new business owner, or you guys would be onboarding mortgages and financial planning clients, but generally the financial goals.</p>
+          <p><span class="spk">Jason · 15:32</span>They're not really defined. They're not really thought of. I mean, yeah, so it's hard to kind of go, I want to get there and achieve that goal when it's not defined. So I think that's, um, you know, it's a great one to need to know what are we tracking towards and what does success or, you know, what does, what does it look like and whether right or wrong, Nick, another one that kind of popped into my head as you're unpacking it.</p>
+          <p><span class="spk">Jason · 15:52</span>Um, you know, I said the word financial wellbeing to me is, you know, to be able to feel comfortable, um, in lieu of</p>
+          <p><span class="spk">Jason · 16:00</span>maybe having, you know, The, the biggest emergency fund ever. There's also insurances that I know that I've got, you know, through, through working with you guys that I can fall back on, you know, trauma life, um, TPD income protection, you know, if there is something that goes pear shaped, knowing that, that those are part of my, I guess my financial war chest or, you know, my tool belt.</p>
+          <p><span class="spk">Nick · 16:20</span>No, you're spot on because it's well being. It's not, and as I said at the start, well being doesn't necessarily mean I've got a certain amount of money in the bank. It's I'm across my finances and I know that I can manage them, um, good times and, and bad times. Um, so yeah, no, a hundred percent that's part of it, you know.</p>
+          <p><span class="spk">Marty · 16:40</span>It's almost a duty of care, like we, you know, we, you're protecting your life, your lifestyle and your future. And, um, a lot of people don't think about it in that way. But I think it's, uh, paramount that we do. And look, sometimes, you know, people always say, Oh, it's never too late. But sometimes it can be as well, if you think about the opportunity cost of not</p>
+          <p><span class="spk">Marty · 17:00</span>doing it.</p>
+          <p><span class="spk">Marty · 17:00</span>And I think it's really important that, um, you know, like I think about people my age, I think, Oh, geez, I'm 52. And I've got no plan of attack, am I sure? But the thing is, once you know, You can make clear cut decisions for what the next 10 years look like. And you hear it in business all the time. There's it's sometimes hard to achieve in three months, but it's incredible what you can achieve in 10 years.</p>
+          <p><span class="spk">Marty · 17:22</span>And you can make different decisions based on where you're at for the future. That's to get you where you want to get to the 10, 15 years is still a long time, but. If you don't take any action, you're giving up that 10 or 15 years opportunity, even when you're 30, you're 25, you're 45. So it's really, when you look at it in that light, it's, it's amazing what can be accomplished even in 10, 15 years.</p>
+          <p><span class="spk">Marty · 17:47</span>Yeah.</p>
+          <p><span class="spk">Jason · 17:47</span>What's that saying that the best time to plant a tree was 20 years ago and the next best day is today or the next best time is today. So absolutely.</p>
+          <p><span class="spk">Nick · 17:55</span>It's going to say that's a good lead into the next. I guess the different stages that, that, that we think about,</p>
+          <p><span class="spk">Nick · 18:00</span>um, you know, if we're looking at, okay, financial wellbeing and where are you, um, as far as your financial wellbeing goes.</p>
+          <p><span class="spk">Nick · 18:08</span>But the first one is turmoil. Um, so financial turmoil. So at this stage, you're, you're struggling to debt repayments, you're stressed about money, you don't really have a good lens on cash flows in and out, um, and as, you know, the biggest thing for me when I think about wellbeing is I just link it back to that word stress.</p>
+          <p><span class="spk">Nick · 18:30</span>You're stressed about money and you're not sure if there's a way forward or if you're okay, so to speak. So if you are in financial turmoil, you want to get to financial understanding, which is the next step. So, okay, I'm in turmoil, but am I really in turmoil? Have I actually sat down and had a look at this, whether you need help with this or not?</p>
+          <p><span class="spk">Nick · 18:49</span>Do I understand, as I said, those inflows and outflows? Is there a journey out of this or if there's a way out of turmoil? Uh, what do I need to do? You know, do I need to earn another 10, 000 a year? Do</p>
+          <p><span class="spk">Nick · 19:00</span>I need to get a second job and maybe do a couple of nights a week? Um, do I need to get rid of some subscriptions?</p>
+          <p><span class="spk">Nick · 19:06</span>Does my home loan need refinancing? Cause that's, that's, that, that's wrong and I need to clear some other debts up. So if you're in turmoil, the next thing for you to progress is to get into financial understanding. And once you're in financial understanding, you then get into what we call financial flourishing.</p>
+          <p><span class="spk">Nick · 19:21</span>And that's not, I've got a million dollars in the bank, I'm flourishing. That's being on a journey to get to where you know you need to be. Um, that's being in a position where you're not stressed about it. As I keep harping on, you've got money in the bank for a rainy day, whatever that means for you, or you might not even have that money in the bank for a rainy day yet.</p>
+          <p><span class="spk">Nick · 19:42</span>But you're doing what you need to, to get there. And that alone will give you an immense amount of, um, positivity and also drive to continue on the journey. This is the other thing that's really important with this. Once you start to see inroads and you get comfortable and you get to a</p>
+          <p><span class="spk">Nick · 20:00</span>level of financial wellbeing, most people we see.</p>
+          <p><span class="spk">Nick · 20:03</span>They get an increased drive to be better and continue to do more because it's like anything, the fitter you, the fitter you are, the fitter you want to get, the fitter you are, the healthier you want to eat. Once you, once you make that, uh, that switch and that decision and then you start to see improvement and you start to see results from your efforts, then you actually want to put more in.</p>
+          <p><span class="spk">Nick · 20:23</span>I think we can all relate to that, whether it's business or health and your finances are absolutely no different.</p>
+          <p><span class="spk">Marty · 20:28</span>It's a powerful point. Yeah. Very powerful point. Thank you.</p>
+          <p><span class="spk">Jason · 20:32</span>Yeah, they're kind of having, having just three simple steps to go, okay, where am I? And, and what are the next steps along the way? So it's a nice way to analyze it.</p>
+          <p><span class="spk">Nick · 20:41</span>Yeah. And, um, so we actually have a little, uh, financial wellbeing score calculator in, in our office. Um, I'm not going to tell you how we do that. It's our IP, and it's high. It's like, it's like the KFC, the KFC recipe, it just cannot get out. Um, if it does, and,</p>
+          <p><span class="spk">Nick · 21:00</span>um, Marty will be out for blood. So, um, but when we look at, um, financial wellbeing and how do we calculate someone's score?</p>
+          <p><span class="spk">Nick · 21:08</span>So if someone comes into our business, so we can actually say, well, you know, you're, you're a financial. Out of a hundred percent, you're, you're, you're at 70 or 75%. Um, based on the way that you've, um, you, you've answered the questions that, that we ask, but the things we are looking at, um, are, are your age.</p>
+          <p><span class="spk">Nick · 21:23</span>So where, where, where are you at in life? Um, your incomes, um, versus your expenses. Uh, where are your debt levels? Link those back to your age. Um, do you have emergency funds put aside, um. And that's pretty much it. So what do we got there? 6. So there's six things that we ask questions around and how you answer those questions will, I guess, give you a financial wellbeing score.</p>
+          <p><span class="spk">Nick · 21:48</span>And that's been really powerful for us because, um, as long as people answer those questions, uh, honestly, which most people do because it's very important and they want to make sure that they get the right answer, um,</p>
+          <p><span class="spk">Nick · 22:00</span>It gives us areas that we can work with people on to improve. Um, and at the same time it gives people comfort in a lot of circumstances where they think, geez, I actually am okay.</p>
+          <p><span class="spk">Nick · 22:10</span>You know, I was worried because, you know, I'm not driving as nice a car as the person down the road, but based on everything I'm doing, um, Uh, for, for my life, I'm, I've got a really good financial World Bank score. So that's, that's been really powerful, but for us, and it's been something, um, that's starting to yield some results as well.</p>
+          <p><span class="spk">Marty · 22:29</span>It's nice to have a scorecard on things and, you know, know what your starting point is, isn't it? And then, uh, yeah, you can optimize from there. And I, I think again, Don't be embarrassed if it's toxic at the moment, you know, it can be turned around pretty quickly. Like I say, a lot of people that earn great money with toxic behavior, like over the time you go, how the hell are these people getting into strife?</p>
+          <p><span class="spk">Marty · 22:52</span>And, uh, but don't be embarrassed about it. Cause what you said is important. It's understanding. And I guess, you know, the hard part is changing</p>
+          <p><span class="spk">Marty · 23:00</span>the habit, but unless you, Have a plan of attack and, and approach it head on, then you're never going to be able to change. So don't be ashamed or embarrassed. It happens and it's about being accountable and being personally responsible and working with a professional to really set a new foundation and then striving from that foundation.</p>
+          <p><span class="spk">Marty · 23:19</span>And the turnaround can be very quickly, uh, happen when the habits are set, you know, in a new way. And, and. A lot of people forget about that, so it's um, it's not what's happening now, it's what's gonna happen tomorrow based upon this.</p>
+          <p><span class="spk">Nick · 23:31</span>Yeah, awesome Marty. And look, if I can just leave everyone with one thing, it's, you know, where, where do you start with this?</p>
+          <p><span class="spk">Nick · 23:38</span>And the number one thing is, know your numbers. And Jase, you would see this time and time again in business, when people go wrong, they Whether it's because of ATO issues or, you know, they don't pay wages or their business goes, um, down the gurgler. It's because they do not know their numbers and your, your household is no different.</p>
+          <p><span class="spk">Nick · 23:58</span>Understand your</p>
+          <p><span class="spk">Nick · 24:00</span>numbers. You cannot make changes and fix things or even get to anywhere. Um, near financial, uh, flourish, flourishing if you do not know your numbers and understand what is actually going on. You can't fix things, um, when you don't know what's happening and generally when things are difficult, people put their head in the sand and don't want to know about it.</p>
+          <p><span class="spk">Nick · 24:19</span>So, the most important thing you can do is do a budget, have a look at your income coming in. There's so many tools online now to work this out. Work out if you can get the budget where you need to get it to. When you see the income come in and the outflows go out, can you actually make it work? Do you have levers to pull?</p>
+          <p><span class="spk">Nick · 24:37</span>Some people look at this stuff and go, you know what, there's actually nothing that we can save money on. Like we're, we're actually being quite, um, quite stringent in our spending. So maybe then you got to look Further income or look at taking a second job as, as harsh as that might sound. So if you don't know your numbers, you're never gonna be able to fix anything.</p>
+          <p><span class="spk">Nick · 24:55</span>So that's where you absolutely need to, to start. Um, and then</p>
+          <p><span class="spk">Nick · 25:00</span>from there, you can make the changes you need, whether you do that alone or with help. Um, we're always happy to help. But, um, most people, once they know their numbers, they know what the answer is and they've just gotta, um, they've just gotta commit to a plane.</p>
+          <p><span class="spk">Jason · 25:11</span>Is there somewhere they can go to get some, uh, tools for this, Nick?</p>
+          <p><span class="spk">Nick · 25:14</span>Yeah, we have an awesome budget, um, on our website. So www. innovate. com. au and everyone will know that website. Um, if you look at our tools, there's a budget calculator in there, which is really cool. There's a huge amount of blogs on, um, just being better financially that people can sift through.</p>
+          <p><span class="spk">Nick · 25:33</span>Um, so yeah, just head straight to our website.</p>
+          <p><span class="spk">Jason · 25:35</span>And I, uh, I googled the Innovate Financial Health score, um, and I, and I rated my financial wellbeing. Um, yeah, I'm pretty, pretty, it was, it was quick and easy. Um, I think it was 13 questions. Took me the couple of minutes that I, I forgot that Nick and Marty were on a podcast talking to me.</p>
+          <p><span class="spk">Jason · 25:52</span>And, um, yeah, so, um, that's probably another tool that they can access through the website as well. If they wanna, we could probably put that in the show notes too,</p>
+          <p><span class="spk">Nick · 25:58</span>that, uh,</p>
+          <p><span class="spk">Nick · 26:00</span>financial wellbeing calculator.</p>
+          <p><span class="spk">Jason · 26:01</span>Yep. Sounds like a</p>
+          <p><span class="spk">Marty · 26:02</span>plan. And it is a skill. The numbers are a skill. And like you said, understanding is absolute key to getting better results.</p>
+          <p><span class="spk">Jason · 26:10</span>Well, I think as well, you know, Nick touched on it, the knowing your numbers is the most important place to start. And you've almost got to like peel back some of those layers and, and confront yourself or confront your situation to go, because if, if you're turning a blind eye or burying your head in the sand.</p>
+          <p><span class="spk">Jason · 26:25</span>It's, it's where it's where a lot of Australian, the Australian public find themselves right now, um, just flying blind and just hoping that it'll just miraculously get better, but it's going to be, you know, understanding where you're at in, in those stages of financial wellbeing. And yeah, starting with step one of unpacking your numbers and you know, go and find that budget template on the innovate website and fill it out.</p>
+          <p><span class="spk">Jason · 26:48</span>And that will then empower you to start making some of your own changes. Um, so, you know, to help yourself how to have a better future.</p>
+          <p><span class="spk">Marty · 26:55</span>Absolutely.</p>
+          <p><span class="spk">Jason · 26:56</span>And on that note, it's that time of the show again, where I say like, rate,</p>
+          <p><span class="spk">Jason · 27:00</span>subscribe, go and follow us, jump onto YouTube. Um, if you haven't watched us there.</p>
+          <p><span class="spk">Jason · 27:03</span>there before. Um, obviously you probably jumped on and watched the 200th episode, which is a live recording in studio. And then now you're a subscriber and you're watching everything on YouTube. Um, but if not, thank you for listening on Spotify and Apple podcasts as well, or wherever you get your podcasts.</p>
+          <p><span class="spk">Jason · 27:17</span>Um, until next time,</p>
+          <p><span class="spk">Marty · 27:19</span>it's a numbers game. The serendipity, eh? Game over.</p>
+          <p><span class="spk">Jason · 27:24</span>This podcast is for educational and informational purposes only. The conversations are of a general nature and do not qualify as financial or tax advice. We recommend before you make any financial decisions, you consult a licensed professional.</p>
+          <p><span class="spk">Jason · 27:37</span>Individuals on the podcast may hold positions in the companies discussed. ---</p>
+        </div>
+      </details>
+
+    </div>
+
+    <!-- LISTEN:START (build_episode.py rewrites the 3 URLs + iframe title per episode; player dropped if no spotifyEmbedUrl) -->
+    <section class="listen-now">
+      <div class="ln-head">
+        <span class="ln-title">Listen now</span>
+      </div>
+      <div class="audio-embed">
+        <iframe src="https://open.spotify.com/embed/episode/40UT7me049cWFk8Qj8VN8l?utm_source=generator"
+          width="100%" height="152" loading="lazy" allowfullscreen
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+          title="Spotify — Understanding Financial Wellbeing"></iframe>
+      </div>
+    </section>
+
+    <div class="listen">
+      <a href="https://open.spotify.com/episode/40UT7me049cWFk8Qj8VN8l" target="_blank" rel="noopener" aria-label="Listen to this episode on Spotify">
+        <svg viewBox="0 0 24 24"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.52 17.34c-.24.36-.66.48-1.02.24-2.82-1.74-6.36-2.1-10.56-1.14-.42.12-.78-.18-.9-.54-.12-.42.18-.78.54-.9 4.56-1.02 8.52-.6 11.64 1.32.42.18.48.66.3 1.02zm1.44-3.3c-.3.42-.84.6-1.26.3-3.24-1.98-8.16-2.58-11.94-1.38-.48.12-1.02-.12-1.14-.6-.12-.48.12-1.02.6-1.14 4.32-1.32 9.72-.66 13.44 1.62.36.18.54.78.3 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.3c-.6.18-1.2-.18-1.38-.72-.18-.6.18-1.2.72-1.38 4.26-1.26 11.28-1.02 15.72 1.62.54.3.72 1.02.42 1.56-.3.42-1.02.6-1.56.3z"/></svg>
+        Spotify
+      </a>
+      <a href="https://podcasts.apple.com/au/podcast/id1555566088?i=1000676363372" target="_blank" rel="noopener" aria-label="Listen to this episode on Apple Podcasts">
+        <svg viewBox="0 0 24 24"><path d="M5.34 0A5.328 5.328 0 000 5.34v13.32A5.328 5.328 0 005.34 24h13.32A5.328 5.328 0 0024 18.66V5.34A5.328 5.328 0 0018.66 0H5.34zm6.525 2.568c2.336 0 4.448.902 6.056 2.587 1.224 1.272 1.912 2.619 2.264 4.392l.04.23c.04.272-.16.527-.432.567a.505.505 0 01-.567-.431l-.04-.213c-.312-1.57-.92-2.747-2.004-3.867-1.428-1.496-3.293-2.294-5.393-2.294-2.1 0-3.966.798-5.394 2.294-1.084 1.12-1.692 2.298-2.004 3.867l-.04.213a.507.507 0 01-.567.431.504.504 0 01-.432-.567l.04-.23c.352-1.773 1.04-3.12 2.264-4.392 1.608-1.685 3.72-2.587 6.056-2.587h.153zm.136 3.033c1.74 0 3.312.67 4.527 1.934.883.916 1.394 1.93 1.663 3.253l.04.23a.505.505 0 01-.431.567.503.503 0 01-.567-.432l-.04-.212c-.23-1.112-.659-1.97-1.396-2.732-1.052-1.1-2.404-1.672-3.9-1.672s-2.849.572-3.901 1.672c-.737.762-1.167 1.62-1.396 2.732l-.04.212a.503.503 0 01-.567.432.505.505 0 01-.432-.567l.04-.23c.27-1.323.78-2.337 1.664-3.253 1.215-1.264 2.787-1.934 4.527-1.934h.21zm-.078 3.05c1.092 0 2.091.424 2.89 1.22.582.58.924 1.245 1.107 2.15l.04.218a.501.501 0 01-.424.568.499.499 0 01-.568-.424l-.04-.198c-.146-.724-.413-1.253-.871-1.716-.63-.63-1.398-.957-2.226-.957s-1.595.328-2.225.957c-.459.463-.726.992-.871 1.716l-.04.198a.499.499 0 01-.568.424.501.501 0 01-.424-.568l.04-.219c.183-.904.525-1.569 1.106-2.149.8-.796 1.799-1.22 2.89-1.22h.184zM12 14.07a2.477 2.477 0 012.48 2.478A2.477 2.477 0 0112 19.024a2.477 2.477 0 01-2.48-2.477A2.477 2.477 0 0112 14.07z"/></svg>
+        Apple
+      </a>
+      <a class="yt-pill" href="https://www.youtube.com/@thenumbersgamepodcast?sub_confirmation=1" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.12-2.14C19.5 3.55 12 3.55 12 3.55s-7.5 0-9.38.51A3 3 0 0 0 .5 6.2 31.4 31.4 0 0 0 0 12a31.4 31.4 0 0 0 .5 5.8 3 3 0 0 0 2.12 2.14c1.88.51 9.38.51 9.38.51s7.5 0 9.38-.51a3 3 0 0 0 2.12-2.14A31.4 31.4 0 0 0 24 12a31.4 31.4 0 0 0-.5-5.8zM9.55 15.57V8.43L15.82 12z"/></svg>
+        Subscribe
+      </a>
+    </div>
+    <!-- LISTEN:END -->
+
+    <div class="relsec">
+      <span class="rtitle">Discover more</span>
+      <div class="relgrid">
+        <a class="relcard" href="/petrol-vs-electric-cars-how-much-you-actually-save-in-2026">
+          <img src="https://i.ytimg.com/vi/2vYQ6HlHtgA/hqdefault.jpg" alt="EP 276 thumbnail">
+          <span class="rt">Petrol vs Electric Cars</span>
+          <span class="rfoot"><span class="rwhy">Also covers: budgeting</span><span class="rtag">EP 276</span></span>
+        </a>
+        <a class="relcard" href="/pokemon-cards-vs-bitcoin-gold-and-the-asx">
+          <img src="https://i.ytimg.com/vi/7PHS9HCqNvM/hqdefault.jpg" alt="EP 286 thumbnail">
+          <span class="rt">Pokemon Cards vs Bitcoin, Gold and the ASX</span>
+          <span class="rfoot"><span class="rwhy">20 July 2026</span><span class="rtag">EP 286</span></span>
+        </a>
+        <a class="relcard" href="/buying-commercial-property-with-your-super-in-2026">
+          <img src="https://i.ytimg.com/vi/RAQ80ecsDq0/hqdefault.jpg" alt="EP 285 thumbnail">
+          <span class="rt">Buying Commercial Property With Your Super in 2026</span>
+          <span class="rfoot"><span class="rwhy">13 July 2026</span><span class="rtag">EP 285</span></span>
+        </a>
+        <a class="relcard" href="/the-most-expensive-day-in-aussie-small-business-history">
+          <img src="https://i.ytimg.com/vi/V-10kMQrsDM/hqdefault.jpg" alt="EP 284 thumbnail">
+          <span class="rt">The Most Expensive Day in Aussie Small Business History</span>
+          <span class="rfoot"><span class="rwhy">6 July 2026</span><span class="rtag">EP 284</span></span>
+        </a>
+        <a class="relcard" href="/what-real-budget-reform-for-young-australians-would-actually-look-like">
+          <img src="https://i.ytimg.com/vi/le7HuIBq6Ow/hqdefault.jpg" alt="EP 283 thumbnail">
+          <span class="rt">What Real Budget Reform for Young Australians Would Actually Look Like</span>
+          <span class="rfoot"><span class="rwhy">29 June 2026</span><span class="rtag">EP 283</span></span>
+        </a>
+        <a class="relcard" href="/the-business-of-gift-cards">
+          <img src="https://i.ytimg.com/vi/nC_JkW320Tw/hqdefault.jpg" alt="EP 282 thumbnail">
+          <span class="rt">The Business of Gift Cards</span>
+          <span class="rfoot"><span class="rwhy">22 June 2026</span><span class="rtag">EP 282</span></span>
+        </a>
+      </div>
+      <div class="reldots" id="reldots"></div>
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="footgrid">
+      <div class="fcol">
+        <div class="foot-label">Follow us on</div>
+        <div class="socials">
+          <a href="https://www.instagram.com/thenumbersgamepodcast/" target="_blank" rel="noopener" aria-label="The Numbers Game on Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.8.2 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1 .4 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .4-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1-.4-2.2-.1-1.3-.1-1.7-.1-4.9s0-3.6.1-4.9c.1-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.4 2.2-.4 1.3-.1 1.7-.1 4.9-.1zm0 2c-3.1 0-3.5 0-4.8.1-1.1.1-1.5.2-1.8.3-.4.2-.7.3-1 .6-.3.3-.5.6-.6 1-.1.3-.3.7-.3 1.8-.1 1.3-.1 1.7-.1 4.8s0 3.5.1 4.8c.1 1.1.2 1.5.3 1.8.2.4.3.7.6 1 .3.3.6.5 1 .6.3.1.7.3 1.8.3 1.3.1 1.7.1 4.8.1s3.5 0 4.8-.1c1.1-.1 1.5-.2 1.8-.3.4-.2.7-.3 1-.6.3-.3.5-.6.6-1 .1-.3.3-.7.3-1.8.1-1.3.1-1.7.1-4.8s0-3.5-.1-4.8c-.1-1.1-.2-1.5-.3-1.8-.2-.4-.3-.7-.6-1-.3-.3-.6-.5-1-.6-.3-.1-.7-.3-1.8-.3-1.3-.1-1.7-.1-4.8-.1zm0 3.4a5.4 5.4 0 1 1 0 10.8 5.4 5.4 0 0 1 0-10.8zm0 2a3.4 3.4 0 1 0 0 6.8 3.4 3.4 0 0 0 0-6.8zm5.6-2.3a1.3 1.3 0 1 1-2.6 0 1.3 1.3 0 0 1 2.6 0z"/></svg></a>
+          <a href="https://www.tiktok.com/@thenumbersgamepodcast" target="_blank" rel="noopener" aria-label="The Numbers Game on TikTok"><svg viewBox="0 0 24 24"><path d="M12.53.02C13.84 0 15.14.01 16.44 0c.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg></a>
+          <a href="https://www.linkedin.com/company/the-numbers-game-podcast/" target="_blank" rel="noopener" aria-label="The Numbers Game on LinkedIn"><svg viewBox="0 0 24 24"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.24 8.25h4.52V23H.24V8.25zM8.34 8.25h4.33v2.01h.06c.6-1.14 2.08-2.34 4.28-2.34 4.58 0 5.42 3.01 5.42 6.92V23h-4.51v-7.16c0-1.71-.03-3.91-2.38-3.91-2.39 0-2.75 1.86-2.75 3.78V23H8.34V8.25z"/></svg></a>
+          <a href="https://www.facebook.com/profile.php?id=100071290388343" target="_blank" rel="noopener" aria-label="The Numbers Game on Facebook"><svg viewBox="0 0 24 24"><path d="M24 12.07C24 5.41 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.04V9.41c0-3.02 1.8-4.7 4.54-4.7 1.31 0 2.68.24 2.68.24v2.97h-1.5c-1.5 0-1.96.93-1.96 1.89v2.26h3.32l-.53 3.5h-2.8V24C19.62 23.1 24 18.1 24 12.07z"/></svg></a>
+          <a href="https://www.youtube.com/@thenumbersgamepodcast" target="_blank" rel="noopener" aria-label="The Numbers Game on YouTube"><svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.2C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31.7 31.7 0 0 0 0 12a31.7 31.7 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.2A31.7 31.7 0 0 0 24 12a31.7 31.7 0 0 0-.5-5.8zM9.6 15.6V8.4L15.8 12z"/></svg></a>
+        </div>
+      </div>
+      <div class="fcol">
+        <div class="foot-label">Brought to you by</div>
+        <div class="sponsors">
+          <a href="https://www.inovayt.com.au/" target="_blank" rel="noopener"><img src="assets/inovayt-white.png" alt="Inovayt"></a>
+          <a href="https://futureadvisory.com.au/" target="_blank" rel="noopener"><img src="assets/future-advisory-white.png" alt="Future Advisory"></a>
+        </div>
+      </div>
+      <div class="fcol produced">
+        <div class="foot-label">Produced by</div>
+        <a href="https://www.vidpod.com.au/" target="_blank" rel="noopener"><img src="assets/vidpod-white.png" alt="VIDPOD"></a>
+      </div>
+    </div>
+    <div class="footbar">
+      <details class="footnav-dd">
+        <summary><svg class="ham" viewBox="0 0 24 24"><path d="M3 6h18v2H3zM3 11h18v2H3zM3 16h18v2H3z"/></svg> Menu</summary>
+        <div class="dd-links">
+          <a href="/">Home</a><a href="/episodes">Every episode</a><a href="/adventure">Choose your own adventure</a><a href="/about">About the show</a><a href="/nick-reilly">Nick Reilly</a><a href="/jason-robinson">Jason Robinson</a><a href="/contact">Contact</a>
+        </div>
+      </details>
+      <div class="copyright">© 2026 The Numbers Game</div>
+    </div>
+  </footer>
+
+  <script>
+    var VIDEO='tAEoyV7Bj4A';
+    var CHAPTERS=[
+      {t:"00:00",s:0,title:"Intro"},
+      {t:"02:35",s:155,title:"What Financial Wellbeing Actually Means"},
+      {t:"05:20",s:320,title:"Managing Money And Staying In Control"},
+      {t:"07:15",s:435,title:"Absorbing A Shock And The Value Of A Planner"},
+      {t:"09:32",s:572,title:"Budgeting Habits And Chaotic Spending"},
+      {t:"12:26",s:746,title:"Setting Goals You Can Actually Track"},
+      {t:"15:52",s:952,title:"Insurance As A Financial Safety Net"},
+      {t:"17:00",s:1020,title:"It Is Never Too Late To Start"},
+      {t:"17:55",s:1075,title:"The Three Stages Of Financial Wellbeing"},
+      {t:"20:41",s:1241,title:"Scoring Your Financial Wellbeing"},
+      {t:"22:29",s:1349,title:"Do Not Be Ashamed, Be Accountable"},
+      {t:"23:31",s:1411,title:"Know Your Numbers And Do A Budget"}
+    ];
+    var QUESTIONS=[
+      {q:"What does financial wellbeing actually mean?",s:155},
+      {q:"How do you feel comfortable about your finances?",s:234},
+      {q:"What gives you confidence about your financial future?",s:258},
+      {q:"Is financial wellbeing about how much money you have?",s:320},
+      {q:"How does money affect mental health?",s:391},
+      {q:"Why do you need an emergency fund?",s:435},
+      {q:"How does a budget improve your spending?",s:622},
+      {q:"Why do people fail to reach their goals?",s:851},
+      {q:"When is the best time to start planning?",s:1067},
+      {q:"Where do you start with financial wellbeing?",s:1411}
+    ];
+
+    var chEl=document.getElementById('chapters');
+    CHAPTERS.forEach(function(c){var b=document.createElement('button');b.className='chapter';b.onclick=function(){startAt(c.s)};b.innerHTML='<span class="tc">'+c.t+'</span><span class="cx">'+c.title+'</span>';chEl.appendChild(b);});
+    document.getElementById('chcount').textContent=CHAPTERS.length;
+    var qEl=document.getElementById('qa');
+    QUESTIONS.forEach(function(q){var b=document.createElement('button');b.className='q';b.onclick=function(){startAt(q.s)};b.innerHTML='<span class="qm">?</span><span class="qx">'+q.q+'</span><span class="go">›</span>';qEl.appendChild(b);});
+    document.getElementById('qcount').textContent=QUESTIONS.length;
+
+    /* Mobile nav dropdown. */
+    var burger=document.getElementById('navburger'), navdrop=document.getElementById('navdrop');
+    if(burger&&navdrop){burger.addEventListener('click',function(){
+      navdrop.hidden=!navdrop.hidden;
+      burger.setAttribute('aria-expanded', navdrop.hidden?'false':'true');
+    });}
+
+    /* Voice-note button reveals the recorder; × tucks it away. */
+    var vbtn=document.getElementById('vbtn'), vslot=document.getElementById('vslot'), vclose=document.getElementById('vclose');
+    if(vbtn&&vslot){vbtn.addEventListener('click',function(){vslot.hidden=!vslot.hidden;});}
+    if(vclose&&vslot){vclose.addEventListener('click',function(){vslot.hidden=true;});}
+
+    /* Keep-exploring dots: only shown when the strip actually scrolls (mobile). */
+    var rg=document.querySelector('.relgrid'), rd=document.getElementById('reldots');
+    if(rg&&rd){
+      var relCards=rg.querySelectorAll('.relcard');
+      relCards.forEach(function(){rd.appendChild(document.createElement('span'))});
+      var updDots=function(){
+        var scrollable=rg.scrollWidth>rg.clientWidth+4;
+        rd.style.display=scrollable?'flex':'none';
+        if(!scrollable)return;
+        var i=Math.round(rg.scrollLeft/(rg.scrollWidth-rg.clientWidth)*(relCards.length-1));
+        rd.querySelectorAll('span').forEach(function(s,n){s.classList.toggle('on',n===i)});
+      };
+      rg.addEventListener('scroll',updDots,{passive:true});
+      window.addEventListener('resize',updDots);
+      updDots();
+    }
+
+    /* Explore tabs: swap the visible panel; the row stays put so you never lose your place. */
+    var tabBtns=document.querySelectorAll('.tabbtn');
+    tabBtns.forEach(function(b){
+      b.addEventListener('click',function(){
+        tabBtns.forEach(function(o){o.classList.remove('on')});
+        document.querySelectorAll('.tpanel').forEach(function(p){p.hidden=true});
+        b.classList.add('on');
+        document.getElementById(b.getAttribute('data-panel')).hidden=false;
+      });
+    });
+
+    /* YouTube: clean facade, then real player on demand. Seek without yanking to top. */
+    var player=null, ready=false, apiReady=false, pending=null;
+    window.onYouTubeIframeAPIReady=function(){apiReady=true; if(pending!=null){var s=pending;pending=null;createPlayer(s);}};
+    function createPlayer(sec){
+      var wrap=document.getElementById('player'); wrap.innerHTML='<div id="yt"></div>';
+      player=new YT.Player('yt',{videoId:VIDEO,playerVars:{autoplay:1,rel:0,modestbranding:1,playsinline:1,start:Math.floor(sec||0)},events:{onReady:function(){ready=true;}}});
+    }
+    function nudge(){
+      var p=document.getElementById('player-wrap'), r=p.getBoundingClientRect();
+      if(r.bottom<80 || r.top>window.innerHeight-90){ p.scrollIntoView({behavior:'smooth',block:'start'}); }
+    }
+    function startAt(sec){
+      nudge();
+      if(player&&ready){ player.seekTo(sec,true); player.playVideo(); return; }
+      if(apiReady){ createPlayer(sec); } else { pending=sec; }
+    }
+    document.getElementById('facade').addEventListener('click',function(){startAt(0);});
+    (function(){var s=document.createElement('script');s.src='https://www.youtube.com/iframe_api';document.head.appendChild(s);})();
+  </script>
+</body>
+</html>

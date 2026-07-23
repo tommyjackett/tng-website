@@ -1,0 +1,734 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EP 209 · The Art of Strategic Framework | The Numbers Game</title>
+<meta name="description" content="">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" sizes="64x64" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="canonical" href="https://thenumbersgamepodcast.com.au/the-art-of-strategic-framework">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="The Numbers Game">
+<meta property="og:title" content="EP 209 · The Art of Strategic Framework | The Numbers Game">
+<meta property="og:description" content="">
+<meta property="og:url" content="https://thenumbersgamepodcast.com.au/the-art-of-strategic-framework">
+<meta property="og:image" content="https://i.ytimg.com/vi/IUKi9wuKquE/maxresdefault.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+  :root{
+    --purple:#585af3; --purple-dark:#2c1b8a; --mint:#7ad9a8;
+    --white:#ffffff; --muted:rgba(255,255,255,.60); --dim:rgba(255,255,255,.42);
+    --line:rgba(255,255,255,.12); --card:rgba(255,255,255,.05); --card-hi:rgba(255,255,255,.09);
+    --display:'Anton',Impact,'Helvetica Neue',sans-serif;
+    --sans:'Inter',system-ui,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif;
+    --wrap:1280px;   /* page frame (nav spans this) */
+    --col:960px;     /* content column (player, tabs, text) */
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:var(--sans); color:var(--white); line-height:1.6; -webkit-font-smoothing:antialiased;
+    background:#12093a;
+    background-image:
+      radial-gradient(1200px 600px at 82% -6%, rgba(88,90,243,.45) 0%, transparent 55%),
+      radial-gradient(900px 700px at 5% 8%, rgba(122,217,168,.10) 0%, transparent 50%),
+      linear-gradient(180deg,#2c1b8a 0%,#1a1150 28%,#100b34 62%,#0b0820 100%);
+    background-attachment:fixed;
+  }
+  a{color:inherit}
+  .wrap{max-width:var(--wrap);margin:0 auto;padding:0 36px}
+  main.wrap{max-width:var(--col)}
+  @media(max-width:720px){.wrap{padding:0 22px}}
+
+  /* ── Navbar ── */
+  .nav{position:sticky;top:0;z-index:50;background:linear-gradient(180deg,rgba(24,15,74,.92),rgba(24,15,74,.72));backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+  .nav-in{max-width:var(--wrap);margin:0 auto;padding:11px 36px;display:flex;align-items:center;justify-content:space-between}
+  @media(max-width:720px){.nav-in{padding:11px 22px}}
+  .brand{display:block;line-height:0}
+  .brand img{height:36px;width:auto;display:block}
+  .navlinks{display:flex;gap:28px;align-items:center}
+  .navlinks a{text-decoration:none;font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);transition:.15s}
+  .navlinks a:hover{color:var(--white)}
+  .navlinks a.navtop{cursor:default}
+  .navgroup{position:relative;display:flex;align-items:center}
+  .navgroup .subnav{display:none;position:absolute;top:100%;left:50%;transform:translateX(-50%);padding-top:14px;min-width:180px}
+  .navgroup:hover .subnav,.navgroup:focus-within .subnav{display:block}
+  .subnav-in,.navgroup .subnav{z-index:60}
+  .navgroup .subnav a{display:block;background:#180f4a;border:1px solid var(--line);border-top:0;padding:12px 16px;font-size:12px;color:rgba(255,255,255,.85)}
+  .navgroup .subnav a:first-child{border-top:1px solid var(--line)}
+  .navgroup .subnav a:hover{background:#221768;color:var(--white)}
+  .navburger{display:none;background:none;border:1px solid var(--line);padding:8px 10px;cursor:pointer;color:var(--white);transition:.15s}
+  .navburger:hover{border-color:rgba(122,217,168,.6)}
+  .navburger svg{width:20px;height:20px;fill:currentColor;display:block}
+  .navdrop{display:none}
+  @media(max-width:720px){
+    .navlinks{display:none}
+    .navburger{display:block}
+    .navdrop{display:block;position:absolute;left:0;right:0;top:100%;
+      background:#180f4a;border-bottom:1px solid var(--line);box-shadow:0 24px 50px rgba(0,0,0,.45)}
+    .navdrop[hidden]{display:none}
+    .navdrop a{display:block;padding:15px 22px;text-decoration:none;font-size:14px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:rgba(255,255,255,.9);border-bottom:1px solid rgba(255,255,255,.06)}
+    .navdrop a:last-child{border-bottom:0}
+    .navdrop a.sub{padding-left:42px;font-size:13px;color:rgba(255,255,255,.72)}
+    .navdrop .navlabel{display:block;padding:15px 22px 6px;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.4)}
+  }
+
+  /* ── Hero / hook (marker-highlight system: purple hook wraps naturally, mint payoff below)
+     Rules: title splits at its natural break (colon/pipe/question mark). Front = hook (purple,
+     big), back = payoff (mint, smaller). No break in title = purple hook only. Highlights hug
+     the text (tight em padding tuned to Anton) and wrap via box-decoration-break — never
+     hand-pick line breaks or mint words. ── */
+  header.hero{padding:34px 0 6px}
+  .hook{--inx:clamp(8.4px,2.1vw,15.6px)} /* one shared text inset so hook + payoff first letters align */
+  .hook .hk{font-family:var(--display);font-weight:400;text-transform:uppercase;
+    font-size:clamp(28px,7vw,52px);line-height:1.3;letter-spacing:-.5px;text-wrap:balance}
+  .hook .hk span{color:var(--white);padding:.04em var(--inx) .02em;
+    background:linear-gradient(var(--purple),var(--purple)) 0 50%/100% 87% no-repeat;
+    -webkit-box-decoration-break:clone;box-decoration-break:clone}
+  .hook .pay{font-family:var(--display);font-weight:400;text-transform:uppercase;
+    font-size:clamp(16px,4vw,24px);line-height:1.5;letter-spacing:.6px;margin-top:8px;text-wrap:balance}
+  .hook .pay span{color:#0a0a0a;padding:.08em var(--inx) .04em;
+    background:linear-gradient(var(--mint),var(--mint)) 0 50%/100% 88% no-repeat;
+    -webkit-box-decoration-break:clone;box-decoration-break:clone}
+  /* no-hook titles: mid-split into two full-size rows, purple then mint */
+  .hook .hk span.hkrow{display:block;background:none;padding:0}
+  .hook .hk .hkrow+.hkrow{margin-top:8px}
+  .hook .hk span.mintseg{color:#0a0a0a;
+    background:linear-gradient(var(--mint),var(--mint)) 0 50%/100% 87% no-repeat}
+
+  /* ── Player (clean facade → real player on tap) ── */
+  .player-wrap{margin:24px 0 4px;scroll-margin-top:76px}
+  .player{position:relative;width:100%;padding-top:56.25%;border-radius:0;overflow:hidden;background:#000;box-shadow:0 30px 70px rgba(0,0,0,.5),0 0 0 1px rgba(255,255,255,.06)}
+  .facade{position:absolute;inset:0;border:0;cursor:pointer;background-size:cover;background-position:center;display:flex;align-items:center;justify-content:center;padding:0}
+  .facade .play{width:74px;height:74px;border-radius:50%;background:rgba(10,6,30,.40);border:2px solid rgba(255,255,255,.72);display:flex;align-items:center;justify-content:center;transition:.18s;-webkit-backdrop-filter:blur(1px);backdrop-filter:blur(1px)}
+  .facade:hover .play{background:rgba(88,90,243,.62);transform:scale(1.07);border-color:#fff}
+  .facade .play::after{content:"";border-style:solid;border-width:11px 0 11px 19px;border-color:transparent transparent transparent #fff;margin-left:5px}
+  .player iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+
+  /* ── Episode facts (bottom of the Summary panel — templated per episode) ── */
+  .sumfacts{margin:14px 10px 4px;padding-top:13px;border-top:1px solid rgba(255,255,255,.08);display:flex;flex-direction:column;gap:8px}
+  .fact{display:flex;gap:12px;font-size:13.5px}
+  .fact .fl{flex:none;width:104px;color:var(--dim);font-weight:600;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;padding-top:2px}
+  .fact .fv{color:rgba(255,255,255,.9);font-weight:500}
+  .fact .fv a{color:var(--mint);text-decoration:none;border-bottom:1px solid rgba(122,217,168,.4);transition:.15s}
+  .fact .fv a:hover{border-bottom-color:var(--mint)}
+
+  /* ── Episode tag (identity: black label hanging off the title corner) ── */
+  .eptag{display:inline-block;position:relative;left:-6px;margin-bottom:-7px;z-index:2;
+    background:#0a0a0a;color:var(--white);font-family:var(--display);font-weight:400;
+    font-size:13.5px;letter-spacing:1.5px;text-transform:uppercase;padding:6px 11px 4px}
+
+  /* ── Explore tabs (sticky mode switcher; one panel swaps below, nothing shoves) ── */
+  .explore{margin-top:22px}
+  .tabs{position:sticky;top:58px;z-index:40;display:flex;flex-wrap:wrap;gap:8px;padding:10px 0;
+    background:linear-gradient(180deg,rgba(18,10,55,.96),rgba(18,10,55,.86));
+    backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+  .tabbtn{font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.5px;
+    font-size:14.5px;color:var(--white);background:var(--purple);border:1px solid var(--purple);
+    padding:9px 13px 7px;cursor:pointer;transition:.15s}
+  .tabbtn:hover{filter:brightness(1.12)}
+  .tabbtn.on{background:var(--mint);border-color:var(--mint);color:#0a0a0a}
+  .tabbtn.on:hover{filter:none}
+  .tabbtn .ct{font-size:12px;opacity:.75;font-variant-numeric:tabular-nums}
+  .tabbtn .ct::before{content:" · "}
+  .tpanel{border:1px solid var(--line);background:var(--card);padding:12px 10px 14px}
+  .hint{font-size:12.5px;color:var(--muted);padding:2px 10px 10px;border-bottom:1px solid rgba(255,255,255,.08);margin-bottom:6px}
+
+  /* ── Listen row (no box: label left, service pills follow) ── */
+  .listen{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:12px 16px;margin-top:34px}
+  .listen .lname{font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--dim)}
+  .listen a{display:inline-flex;align-items:center;gap:9px;padding:11px 18px;border-radius:999px;
+    background:var(--mint);color:#08210f;text-decoration:none;font-weight:800;font-size:12.5px;
+    letter-spacing:.04em;text-transform:uppercase;transition:.15s}
+  .listen a:hover{filter:brightness(1.06);transform:translateY(-1px);box-shadow:0 12px 30px rgba(122,217,168,.25)}
+  .listen svg{width:20px;height:20px;fill:currentColor;flex:none}
+  /* ── Listen-now Spotify audio embed (full column width, above the pills) ── */
+  .listen-now{margin-top:40px}
+  .listen-now .ln-head{display:flex;align-items:baseline;justify-content:space-between;gap:14px;margin-bottom:13px}
+  .listen-now .ln-title{font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--dim)}
+  .audio-embed{border-radius:12px;overflow:hidden;box-shadow:0 20px 50px rgba(0,0,0,.4),0 0 0 1px rgba(255,255,255,.06)}
+  .audio-embed iframe{display:block;width:100%;border:0}
+  @media(max-width:720px){.listen-now{margin-top:32px}}
+
+  /* ── Keep exploring (thumbnails link to other episode PAGES, never timecodes).
+     Swipeable strip on mobile, fits three-up on desktop. Variant rule: claim
+     "similar ground" + reason lines ONLY when moment-level topic overlap is
+     genuinely strong; otherwise show the latest released episodes with dates —
+     never invent a connection. ── */
+  .relsec{margin-top:60px;padding-top:58px;border-top:1px solid var(--line)} /* line = end of this episode's info */
+  .reldots{display:flex;justify-content:center;gap:7px;margin-top:12px}
+  .reldots span{width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.25);transition:.2s}
+  .reldots span.on{background:var(--mint)}
+  .relsec .rtitle{display:inline-block;font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.5px;font-size:14.5px;background:var(--mint);color:#0a0a0a;padding:9px 13px 7px;margin-bottom:18px}
+  .relgrid{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding-bottom:6px;scrollbar-width:none}
+  .relgrid::-webkit-scrollbar{display:none}
+  .relcard{flex:0 0 56%;max-width:232px;scroll-snap-align:start;display:flex;flex-direction:column;text-decoration:none;background:var(--card);border:1px solid var(--line);transition:.15s}
+  .relcard:hover{background:var(--card-hi);border-color:rgba(122,217,168,.55)}
+  .relcard img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block}
+  .relcard .rt{display:block;font-size:12.5px;font-weight:600;color:rgba(255,255,255,.92);line-height:1.4;padding:8px 8px 0}
+  .relcard .rfoot{margin-top:auto;display:flex;justify-content:space-between;align-items:flex-end;gap:8px;padding:10px 8px 9px}
+  .relcard .rwhy{font-size:11.5px;color:var(--mint)}
+  .relcard .rtag{display:inline-block;background:#0a0a0a;color:var(--white);font-family:var(--display);font-size:10px;letter-spacing:1.2px;text-transform:uppercase;padding:3px 7px 2px;white-space:nowrap;flex:0 0 auto}
+
+  /* ── Dropdown sections (accordion under the player) ── */
+  .drops{margin-top:34px;display:flex;flex-direction:column;gap:11px}
+  .drop{border:1px solid var(--line);border-radius:0;background:var(--card);overflow:hidden;transition:border-color .15s}
+  .drop[open]{border-color:rgba(122,217,168,.35)}
+  .drop>summary{list-style:none;cursor:pointer;padding:16px 18px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+  .drop>summary::-webkit-details-marker{display:none}
+  .drop>summary .st{font-weight:700;font-size:15.5px;letter-spacing:.005em}
+  .drop>summary .ct{margin-left:auto;font-size:12px;color:var(--dim);font-weight:600;font-variant-numeric:tabular-nums}
+  .drop>summary .chev{flex:none;width:22px;height:22px;border-radius:50%;background:rgba(122,217,168,.14);color:var(--mint);display:flex;align-items:center;justify-content:center;font-family:var(--display);font-size:15px;line-height:1;transition:.2s;transform:translateY(-1px)}
+  .drop[open]>summary .chev{transform:rotate(45deg)}
+  .drop-body{padding:2px 12px 12px}
+
+  /* chapters */
+  .chapter{display:flex;align-items:baseline;gap:14px;width:100%;text-align:left;cursor:pointer;background:none;border:0;color:inherit;font-family:inherit;padding:11px 10px;border-radius:10px;transition:.13s}
+  .chapter:hover{background:var(--card-hi)}
+  .chapter .tc{font-variant-numeric:tabular-nums;font-weight:700;font-size:14px;color:var(--mint);flex:none;width:48px}
+  .chapter .cx{font-size:15px;font-weight:500;color:rgba(255,255,255,.9)}
+  .chapter:hover .cx{color:#fff}
+
+  /* questions */
+  .q{display:flex;align-items:center;gap:12px;width:100%;text-align:left;cursor:pointer;background:none;border:0;border-radius:11px;color:inherit;font-family:inherit;padding:12px 10px;transition:.14s}
+  .q+.q{border-top:1px solid rgba(255,255,255,.05)}
+  .q:hover{background:var(--card-hi)}
+  .q .qm{font-family:var(--display);font-size:15px;color:var(--mint);flex:none;line-height:1;transform:translateY(1px)}
+  .q .qx{font-size:15px;font-weight:500;color:rgba(255,255,255,.92)}
+  .q .go{margin-left:auto;flex:none;color:var(--dim);font-size:18px;transition:.15s}
+  .q:hover .go{color:var(--mint);transform:translateX(2px)}
+
+  /* summary + transcript bodies */
+  .summary-body p{font-size:16.5px;line-height:1.62;color:rgba(255,255,255,.9);padding:6px 10px 4px}
+  .tbody{padding:2px 10px 8px}
+  .tbody p{font-size:14.5px;line-height:1.7;color:rgba(255,255,255,.78);margin-top:15px;max-width:64ch}
+  .tbody .spk{display:block;font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--mint);margin-bottom:2px}
+
+  /* ── Voice note ask (lives at the bottom of the Summary panel) ── */
+  .vask{margin:16px 10px 4px}
+  .vbtn{display:inline-flex;align-items:center;gap:9px;padding:12px 20px;border-radius:999px;border:0;cursor:pointer;
+    background:var(--mint);color:#08210f;font-family:inherit;font-weight:800;font-size:12.5px;
+    letter-spacing:.04em;text-transform:uppercase;transition:.15s}
+  .vbtn:hover{filter:brightness(1.06);transform:translateY(-1px);box-shadow:0 12px 30px rgba(122,217,168,.25)}
+  .vbtn svg{width:18px;height:18px;fill:currentColor;flex:none}
+  .vslot{background:var(--purple);padding:12px 10px 10px;margin:14px 0 4px;box-shadow:0 18px 40px rgba(0,0,0,.35)}
+  .vslot[hidden]{display:none}
+  .vhead{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;margin-bottom:10px}
+  .vhead .vmsg{font-family:var(--sans);font-size:13px;line-height:1.55;color:rgba(255,255,255,.92);margin:2px 0 0;padding:0 2px}
+  .vclose{background:none;border:0;color:rgba(255,255,255,.85);font-size:22px;line-height:1;cursor:pointer;padding:0 2px}
+  .vclose:hover{color:var(--white)}
+  .vslot iframe{display:block}
+
+  /* ── YouTube subscribe pill (sits in the listen row; outranks .listen a's mint) ── */
+  .listen a.yt-pill{background:var(--purple);color:var(--white)}
+  .listen a.yt-pill:hover{filter:brightness(1.1);transform:translateY(-1px)}
+  @media(max-width:720px){ /* mobile: no label, three compact pills on one row */
+    .listen .lname{display:none}
+    .listen{gap:8px}
+    .listen a{padding:10px 13px;font-size:11px;gap:6px}
+    .listen svg{width:16px;height:16px}
+  }
+
+  /* ── Footer: Follow us on | Brought to you by | Produced by, + Menu dropdown ── */
+  footer{border-top:1px solid var(--line);margin-top:68px;padding:52px 20px 58px}
+  .footgrid{max-width:var(--wrap);margin:0 auto;display:grid;grid-template-columns:1fr 1.15fr .8fr;gap:44px;align-items:start}
+  .fcol{text-align:center;display:flex;flex-direction:column;align-items:center}
+  .foot-label{font-size:11px;font-weight:700;letter-spacing:.26em;text-transform:uppercase;color:var(--dim);margin-bottom:18px}
+  .sponsors{display:flex;justify-content:center;align-items:center;gap:34px;flex-wrap:wrap}
+  .sponsors a,.produced a{display:inline-flex;transition:.15s}
+  .sponsors a:hover,.produced a:hover{transform:translateY(-1px)}
+  .sponsors img{height:32px;width:auto;opacity:.92}
+  .produced img{height:30px;width:auto;opacity:.95}
+  .sponsors a:hover img,.produced a:hover img{opacity:1}
+  footer .socials{display:flex;gap:11px;justify-content:center;flex-wrap:wrap;margin:0}
+  footer .socials a{width:40px;height:40px;border-radius:50%;border:1.5px solid rgba(122,217,168,.5);display:flex;align-items:center;justify-content:center;transition:.15s}
+  footer .socials a svg{width:18px;height:18px;fill:var(--mint);transition:.15s}
+  footer .socials a:hover{background:var(--mint);border-color:var(--mint);transform:translateY(-2px)}
+  footer .socials a:hover svg{fill:#0a0a0a}
+  .footbar{max-width:var(--wrap);margin:34px auto 0;border-top:1px solid var(--line);padding-top:20px;display:flex;flex-direction:column;align-items:center;gap:14px}
+  .footnav-dd{display:block;width:100%;max-width:var(--wrap);margin:0 auto;text-align:center}
+  .footnav-dd>summary{list-style:none;cursor:pointer;display:inline-flex;align-items:center;gap:9px;font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.5px;font-size:13px;color:var(--muted);background:transparent;border:1px solid var(--line);padding:8px 16px 6px;transition:.15s}
+  .footnav-dd>summary::-webkit-details-marker{display:none}
+  .footnav-dd>summary:hover{color:var(--mint);border-color:rgba(122,217,168,.45)}
+  .footnav-dd>summary .ham{width:15px;height:15px;fill:currentColor;transform:translateY(-1px)}
+  .footnav-dd .dd-links{display:flex;flex-direction:row;flex-wrap:wrap;justify-content:center;gap:12px 24px;padding:24px 0 4px}
+  .footnav-dd .dd-links a{font-size:11.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:.15s}
+  .footnav-dd .dd-links a:hover{color:var(--mint)}
+  .copyright{font-size:12px;color:var(--dim);text-align:center}
+  @media(max-width:720px){.footgrid{grid-template-columns:1fr;gap:34px}footer{padding:40px 16px 20px}.footbar{margin-top:34px;padding-top:24px;gap:20px}.footnav-dd .dd-links{flex-direction:column;align-items:center;gap:15px}}
+
+  @media(min-width:720px){header.hero{padding:48px 0 6px}}
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "PodcastEpisode", "name": "The Art of Strategic Framework", "url": "https://thenumbersgamepodcast.com.au/the-art-of-strategic-framework", "datePublished": "2024-10-28", "episodeNumber": 209, "image": "https://i.ytimg.com/vi/IUKi9wuKquE/maxresdefault.jpg", "partOfSeries": {"@type": "PodcastSeries", "name": "The Numbers Game", "url": "https://thenumbersgamepodcast.com.au/"}}</script>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-in">
+      <a class="brand" href="/" aria-label="The Numbers Game home"><img src="assets/tng-logo.png" alt="The Numbers Game"></a>
+      <div class="navlinks">
+        <a href="/">Home</a>
+        <div class="navgroup">
+          <a class="navtop">Episodes</a>
+          <div class="subnav">
+            <a href="/episodes">All episodes</a>
+            <a href="/adventure">Find moments</a>
+          </div>
+        </div>
+        <div class="navgroup">
+          <a class="navtop">About</a>
+          <div class="subnav">
+            <a href="/about">The show</a>
+            <a href="/nick-reilly">Nick Reilly</a>
+            <a href="/jason-robinson">Jason Robinson</a>
+          </div>
+        </div>
+        <a href="/contact">Contact</a>
+      </div>
+      <button class="navburger" id="navburger" type="button" aria-label="Menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24"><path d="M3 6h18v2H3zM3 11h18v2H3zM3 16h18v2H3z"/></svg>
+      </button>
+    </div>
+    <div class="navdrop" id="navdrop" hidden>
+      <a href="/">Home</a>
+      <span class="navlabel">Episodes</span>
+      <a class="sub" href="/episodes">All episodes</a>
+      <a class="sub" href="/adventure">Find moments</a>
+      <span class="navlabel">About</span>
+      <a class="sub" href="/about">The show</a>
+      <a class="sub" href="/nick-reilly">Nick Reilly</a>
+      <a class="sub" href="/jason-robinson">Jason Robinson</a>
+      <a href="/contact">Contact</a>
+    </div>
+  </nav>
+
+  <main class="wrap">
+
+    <header class="hero">
+      <div class="hook">
+        <span class="eptag">EP 209</span>
+        <h1 class="hk"><span class="hkrow"><span>The Art of</span></span>
+        <span class="hkrow"><span class="mintseg">Strategic Framework</span></span></h1>
+      </div>
+    </header>
+
+    <div class="player-wrap" id="player-wrap">
+      <div class="player" id="player">
+        <button class="facade" id="facade" style="background-image:url('https://i.ytimg.com/vi/IUKi9wuKquE/maxresdefault.jpg')" aria-label="Play episode">
+          <span class="play"></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="explore">
+      <div class="tabs" role="tablist">
+        <button class="tabbtn on" data-panel="p-summary">Summary</button>
+        <button class="tabbtn" data-panel="p-chapters">Chapters<span class="ct" id="chcount"></span></button>
+        <button class="tabbtn" data-panel="p-questions">Questions<span class="ct" id="qcount"></span></button>
+      </div>
+      <section class="tpanel" id="p-summary">
+        <div class="summary-body">
+          <p>Jason reports back from a three day business advisory course run by his old boss Brent Saleh and the Leaders in Business program, and the trio work through its five step strategic framework. They cover the small business survival statistics, why purpose comes first, and the steps from the ideal business through SWOT analysis, new strategies and a one page strategy document. The back half turns to leadership, covering delegation and burnout, the seven percent words model of communication, and reading each individual to get the best result. Jason also shares the gap between his firm Future Advisory as a compliance heavy accounting practice and the advisory business he wants to build.</p>
+        </div>
+        <div class="vask">
+          <button class="vbtn" id="vbtn" type="button">
+            <svg viewBox="0 0 24 24"><path d="M12 14a3 3 0 0 0 3-3V6a3 3 0 1 0-6 0v5a3 3 0 0 0 3 3zm5-3a5 5 0 0 1-10 0H5a7 7 0 0 0 6 6.92V21h2v-3.08A7 7 0 0 0 19 11h-2z"/></svg>
+            Send us a voice note
+          </button>
+          <div class="vslot" id="vslot" hidden>
+            <div class="vhead">
+              <p class="vmsg">We'd love to hear from you. You can leave up to a 90 second voice note for us to play on the show: a question, some feedback, or a topic you want covered.</p>
+              <button class="vclose" id="vclose" type="button" aria-label="Close">&times;</button>
+            </div>
+            <iframe src="https://www.speakpipe.com/widget/inline/hhq6kzggsx7zpcsvakgxfrzun3zidpde" allow="microphone" width="100%" height="200" frameborder="0" title="Leave The Numbers Game a voice note"></iframe>
+          </div>
+          <script async src="https://www.speakpipe.com/widget/loader.js" charset="utf-8"></script>
+        </div>
+        <div class="sumfacts">
+          <div class="fact"><span class="fl">Release date</span><span class="fv">28 October 2024</span></div>
+          <div class="fact"><span class="fl">Hosts</span><span class="fv"><a href="/nick-reilly">Nick Reilly</a>, <a href="/jason-robinson">Jason Robinson</a> &amp; <a href="/marty-vidakovic">Marty Vidakovic</a></span></div>
+
+        </div>
+      </section>
+      <section class="tpanel" id="p-chapters" hidden>
+        <p class="hint">Jump straight to the part you need.</p>
+        <div id="chapters"></div>
+      </section>
+      <section class="tpanel" id="p-questions" hidden>
+        <p class="hint">Real questions this episode answers. Tap one to hear the answer.</p>
+        <div id="qa"></div>
+      </section>
+    </div>
+
+    <div class="drops">
+
+      <details class="drop">
+        <summary><span class="st">Episode transcript</span><span class="chev">+</span></summary>
+        <div class="drop-body tbody">
+          <p><span class="spk">Jason · 00:00</span>Welcome to episode 209 of The Numbers Game. I'm Jase. I'm here with Nick and</p>
+          <p><span class="spk">Marty · 00:04</span>Marty. How are you fellas? Doing well, thanks, Jase. Great to be back. And um, you're looking a bit disheveled, mate. What's, what's going on with you? What's, what's happening, Jase? It looks like there's a lot of motion on your face.</p>
+          <p><span class="spk">Marty · 00:17</span>Before I introduce Nick, what are you going</p>
+          <p><span class="spk">Jason · 00:20</span>through? Mate, it's just the, the You know, one of those things you learn is like, you need to know how to say the word no. I have still not mastered the art of saying no, so, uh, I bit off more than I can chew. I'm chewing damn hard. I'm, uh, at this point in time, meant to be going on a two week road show around the country presenting in all different states all over the country.</p>
+          <p><span class="spk">Jason · 00:40</span>So, um, just juggling all of the different responsibilities between business ownership, CPA, Xero. Life. Oh, good day, mate. We'll, I'll, I'll get there. We'll get through it. And um, maybe a few lessons to learn from some of the episode stuff that I'll talk about today.</p>
+          <p><span class="spk">Marty · 00:55</span>Oh, well you are a chewer mate, so keep, keep chewing.</p>
+          <p><span class="spk">Marty · 00:58</span>How are you Nick?</p>
+          <p><span class="spk">Nick · 00:58</span>I'm good. Yeah, no, good.</p>
+          <p><span class="spk">Nick · 01:00</span>Good. Look, I won't tell you my problems because someone told you all theirs. So let's just, uh, let's, let's crack on. I can see Jase is keen. He's come prepared today too, which is even better.</p>
+          <p><span class="spk">Jason · 01:12</span>Oh God, you guys. I love it. Um, I do, I do have some fun stuff to share with you today and, and I'm excited to get into a little bit of a chat around, uh, business strategy and strategic framework.</p>
+          <p><span class="spk">Jason · 01:24</span>So if we've just lost most of the listeners that did tune in up to that point, uh, thank you for joining us so far. Um, I swear there is some value to come from this. So, um, boys last week, uh, I attended a course. Um, so I'd like to throw back to each of you guys and just ask the question from an education point of view.</p>
+          <p><span class="spk">Jason · 01:41</span>I know we do podcasts and things like that, but, um, Nick, when was the last time you got out of the business and attended a course and did some training?</p>
+          <p><span class="spk">Nick · 01:48</span>Yeah, yeah. It's a good question because it's been quite, quite some time. I think, um, I think we've had some training come internally when I say internally, I</p>
+          <p><span class="spk">Nick · 02:00</span>mean, we're obviously going through a lot ourselves and just seeking external parties to help us.</p>
+          <p><span class="spk">Nick · 02:05</span>But, uh, that's probably as far as my, my training's gone, mate, to be honest, in the last couple of years. Yep. There you go, Marty.</p>
+          <p><span class="spk">Marty · 02:11</span>Well, I think most of my training is coming every minute to minute, hour to hour, uh, as a 52 year old, everything's an adventure, but I, I'm glad you're doing what you're doing.</p>
+          <p><span class="spk">Marty · 02:21</span>Cause it is good sometimes to get out of your business and actually just do some strategic, uh, thinking at a different level away from the business. So I've certainly have done that in the past, but, uh, I haven't found anything that's intrigued me as yet. So what do you got?</p>
+          <p><span class="spk">Jason · 02:36</span>Uh, it's a good question. And I'll, I'll set the scene a little bit, just, um.</p>
+          <p><span class="spk">Jason · 02:39</span>You know, and also start by saying, you know, this is just, I wanted to share a bit of the experience because it was my first time getting out of the business and especially three days back to back. Um, I think often, you know, you might attend a webinar, you might do a podcast, you might go away somewhere, but to, to spend three days back to back out of my business with, and with my business partner too.</p>
+          <p><span class="spk">Jason · 03:00</span>So Greg and I both attended a course together, which yeah, would have felt like the first time in a couple of years. And I guess the background of it, we were away, uh, back in May. Um, 2024 and we went to the CPA conference down in lawn and my old boss, uh, Brent Saleh, uh, was an exhibitor at the CPA conference and, and he had a stand and, you know, he runs an accounting practice, but this, this stand was around a business called leaders in business.</p>
+          <p><span class="spk">Jason · 03:26</span>And it was all about business education, basically empowering business owners to run better businesses. But then another byproduct is training accountants to be better advisors. So one of the things, and you know, the big statistics that are thrown around is that in our country, 97 percent of registered businesses are small business.</p>
+          <p><span class="spk">Jason · 03:45</span>Um, more than half of our country are employed. By a small business. So 50 percent of employees are employed by small business, but then there's the, the downside of, um, the statistics, which is like eight and 10 of these businesses don't exist five years later, you know,</p>
+          <p><span class="spk">Jason · 04:00</span>and when majority of these businesses go under, end up in liquidation and don't survive.</p>
+          <p><span class="spk">Jason · 04:05</span>That, that, you know, that negative effect on our economy, um, you know, is, is devastating. You know, people don't get their super paid, taxes aren't collected by the government and so on and so forth. So the, my old boss, you know, I worked with him nearly 10 years ago and, and a big part of what he was focusing on was, was how advisory.</p>
+          <p><span class="spk">Jason · 04:22</span>Was a big part of the future and something that we all needed to do more of. So basically spent the last 10 years creating this course, which is what we went on. And, um, yeah, basically just want to run through today was, uh, a few of the different modules that we went through and more so to share that even as a, I see myself as a pretty decent business advisor, but what I think was lacking was structure.</p>
+          <p><span class="spk">Jason · 04:46</span>around business advisory. So, I mean, you know, Marty, you, you probably deal with a lot of business owners and, and, you know, just think about the problems that you face. You know, if you were, had to put together a bit of a, uh, uh, for yourself, what's a bit of</p>
+          <p><span class="spk">Jason · 05:00</span>a structure you go through when you meet with a business owner and the types of questions you ask to get to know them?</p>
+          <p><span class="spk">Marty · 05:05</span>Uh, for me, it's about, Just understanding the business at a high level and then working back down through that in regards to management, in regards to how they make their money, how much of their money do they keep? Uh, you know, you look at culture, you look at various different components and, and it's, it's really interesting.</p>
+          <p><span class="spk">Marty · 05:24</span>Like I think about starting a business, even at 29 years of age and how naive I was coming out of the bank. Um, And, um, just the lack of mentorship. And we've talked about this on other episodes. Uh, but there's a really, I've always admired, uh, there's a group in the US called Iron Sharpens and it's a business mastermind group where all business owners get together once a week.</p>
+          <p><span class="spk">Marty · 05:47</span>I think they're groups of eight to 10 and they have quarterly retreats. And it's all about creating. Uh, better relationships, but also better structures with various different experience levels of</p>
+          <p><span class="spk">Marty · 06:00</span>entrepreneur as well. And I haven't seen that really in Australia. I think, you know, I think accountants, you know, at the front end, right, that, that, that this could be happening.</p>
+          <p><span class="spk">Marty · 06:08</span>But when I see clients, the biggest struggle, Is that even when they're buying a business is they look at the revenues, but they really just don't understand the many complexities around business and different categories they've got to get their head around. And even to delegate effectively into those categories, it really, A lot of the time, business owners will just go through the process of building the business and sort of do it reactively.</p>
+          <p><span class="spk">Marty · 06:35</span>And the opportunity cost of that is huge, but you don't know it at the time. So I think advice around good structure is really, really vital as there's so many elements we'll be here all day talking about it, but, but that to me is a critical, you must get good people to give you a leg up in regards to building your business, otherwise you'd be gone and you won't even know why.</p>
+          <p><span class="spk">Marty · 06:58</span>A hundred percent.</p>
+          <p><span class="spk">Jason · 06:59</span>Yeah, Nick,</p>
+          <p><span class="spk">Jason · 07:00</span>anything on that?</p>
+          <p><span class="spk">Nick · 07:00</span>Uh, no, I think you're spot on. I think most people that go into business only see the good side externally. Um, whether it's because their friends are in business and drive nice cars or have nice houses. Um, so yeah, I think where people do come unstuck is all the little things that you don't see.</p>
+          <p><span class="spk">Nick · 07:17</span>Um, the other, the other thing that comes to mind for me is, You know, really going into business with, uh, a purpose. So what is it that you want that, what you want out of that business or what do you want that business to do for you? Because I think a lot of people don't think about that. Um, and I think that can drive a lot of your decisions.</p>
+          <p><span class="spk">Nick · 07:36</span>Um, that's probably the only other thing, but Marty, yeah, spot on.</p>
+          <p><span class="spk">Jason · 07:39</span>Beautiful. Well, it's no surprise that, that purpose is number one thing that actually gets worked on in this course and through the strategic framework and business strategy. Yeah. You know, we've talked about it before on the app, but you know, if you can't understand why you're doing it and your purpose for it, it's very unlikely that success is going to be on the roadmap for you.</p>
+          <p><span class="spk">Jason · 08:00</span>Um, so, you know, that's, that's absolutely pivotal and by far the first thing that, that people need to understand is the purpose. I'm glad you did mention that. Um, part of, you know, this, this thing was around, you know, the four levers that we have to, to help business, small business be better. And again, something we've talked about before, which will be no surprise, but anyone can start a business.</p>
+          <p><span class="spk">Jason · 08:20</span>There's no formal qualification. Um, you know, everyone has the power to basically jump onto the ABN register and register an ABN. And all of a sudden you're, you're a business owner and you can start doing something that makes you running a business. But it doesn't mean that you've got the tools or the knowledge and understanding to do it.</p>
+          <p><span class="spk">Jason · 08:36</span>Um, so, you know, getting clarity in purpose and direction is, is the first thing. The part of this that, that I did enjoy myself was, you know, knowledge. I mean, just, just doing a course for a couple of days and, and refilling some of the things that, that I hadn't visited or thought about in a long time. Um, being in the thick of it, um, you know, we work with business owners all day, every day in this stuff, but it was putting around some, some thought process into.</p>
+          <p><span class="spk">Jason · 09:00</span>How we ask questions as well, rather than doing all the talking all the time, but some of the overarching goals we talked about for a business owner might be they want to grow. They want to sell, they want to improve, they want to get time back, they want more meaning in their life, or they're a startup and they're starting.</p>
+          <p><span class="spk">Jason · 09:17</span>Um, do any of them resonate with you, Nick? Do you have anything where you want to grow, sell, improve, get time back? You know, what do you think about innovate and your journey? Is there a particular area where you're at at the moment?</p>
+          <p><span class="spk">Nick · 09:27</span>Uh, it's definitely grow, um, for us and that's, you know, if I'm, if I'm not giving it too much thought, that's the first thing that comes to mind.</p>
+          <p><span class="spk">Nick · 09:34</span>Yep. Yep. I'd say grow. And you got</p>
+          <p><span class="spk">Jason · 09:36</span>synergies with that, Marty?</p>
+          <p><span class="spk">Marty · 09:38</span>Yeah, definitely. I think one of the things is, uh, and Nick does this, this well, and something I didn't do as well, certainly, uh, is to carry, because there's so many different components of business, you feel almost obligated as a small business owner to be over every part of that business, and that can really lead to burnout.</p>
+          <p><span class="spk">Marty · 10:00</span>And just time away from family and important things. So I think the quicker you could sort of delegate to the point where you're doing what you're good at and what gives you energy and put people that are even more effective in the areas, um, that, that are doing their role. It's, um, it's amazing how you can create a rising tide, but I think that's the thing I say, most business owners, they either can't make the money and they don't do well and they, they have stress around that or they do well and take on too much responsibility and don't delegate effectively and then cook themselves that way.</p>
+          <p><span class="spk">Marty · 10:35</span>So I think that's a, but for me, growth is always a necessity. I love growth and I love getting a result and then. strategizing more, even more effectively based off the result rather than trying to get everything right up front and then never getting an initial result. I've seen business owners do that.</p>
+          <p><span class="spk">Marty · 10:55</span>So I'm sure there's a halfway point here.</p>
+          <p><span class="spk">Jason · 10:57</span>100%. And, uh, before I get into a little bit</p>
+          <p><span class="spk">Jason · 11:00</span>more detail of some of the modules and some of the points, uh, interesting question that were asked up front, which, which is a bit thought provoking in the room, but, um, Nick, I'll start with you and you don't know this question before I'm asking it.</p>
+          <p><span class="spk">Jason · 11:10</span>So putting it on the spot here, but What would you do with one extra hour every day for 365 days? So if you had an extra 365 hours, one a day for the next year, what would you do with it? Uh, are we talking business or personal? Up to you. This is, this is why the question's a fun and interesting one. How would you spend it if you were given an extra hour a day?</p>
+          <p><span class="spk">Nick · 11:33</span>I'll just bend it on my golf game and that's been completely transparent. Um, that's, that's where I am at life in life at the moment, the listeners may or may not know, but you know, we're expecting a baby soon. So I think that that answer will thank you, but that answer will change. Um, so I would imagine if I had a family and I will very soon, it'll be spending time with family.</p>
+          <p><span class="spk">Nick · 11:57</span>A hundred percent.</p>
+          <p><span class="spk">Jason · 11:58</span>Okay, well, we might not</p>
+          <p><span class="spk">Jason · 12:00</span>come back and ask you that episode, uh, that question a couple of months, uh,</p>
+          <p><span class="spk">Nick · 12:03</span>He's trying to work out how to get away.</p>
+          <p><span class="spk">Jason · 12:06</span>And, uh, you know, Marty, if you had the one extra hour per day, what would you do with it? Oh, Nick</p>
+          <p><span class="spk">Marty · 12:11</span>answered my question. He futurized, uh, you'd spend it with, uh, your son and your family and you'd do something fun in it.</p>
+          <p><span class="spk">Marty · 12:19</span>But from a, uh, From a profession interest, I always love learning. I'm curious about just consistently learning. So I'm really interested in options training at the moment, just for the sake of not to particularly do it yet, but I just fascinates me how they do it. So again, just following the curiosity, I probably put a little bit extra time into that.</p>
+          <p><span class="spk">Nick · 12:40</span>I'd just go back to, and just, because I think this is an important, um, comment to make. If we were talking business, um, and I had an extra hour in the business, I would probably sit down and just think alone time, just thinking about the business because I find, and the only reason I say that</p>
+          <p><span class="spk">Nick · 13:00</span>is because, um, I've recently been on a tour.</p>
+          <p><span class="spk">Nick · 13:03</span>on a reasonably busy week of travel, so a bit of air, a bit of airport time and, uh, time on the planes. And it's the, it's where you do your best work when you're on a plane and you've got no distractions. Although these days it's quite easy to get distracted, um, with the various apps that you can download, but I try and use that as thinking time.</p>
+          <p><span class="spk">Nick · 13:20</span>So from a business perspective, I'd almost do nothing with it. Except just sit down and think about the business and almost meditate or digest on the business. So I think that is huge.</p>
+          <p><span class="spk">Marty · 13:31</span>I just had an awareness shift as Nick was talking on that. The reason why I want to do the options trading is it challenges my thinking and thought process.</p>
+          <p><span class="spk">Marty · 13:40</span>So it takes me out of the business so I can. Think differently about something and use that pattern in a way in the business. That's interesting. It might not even be related to finance as such, but it's more a strategic game of chess in my head. So from that point of view as a professional development</p>
+          <p><span class="spk">Marty · 14:00</span>thing, I just find I learn a lot more from different industries that I'm, you know, that I'm in or different structures.</p>
+          <p><span class="spk">Marty · 14:06</span>So, but like what Nick says, just to have that hour professionally, I, I Do something like that just to challenge myself. So, yeah, but I like the, I like the contemplation. I don't think we do enough of that strategic thinking and give ourselves that time as well.</p>
+          <p><span class="spk">Jason · 14:24</span>Perfect. Love, love the answers. Um, and look very similar resonating around the room.</p>
+          <p><span class="spk">Jason · 14:28</span>There was nearly a dozen people that were doing the course last week, um, you know, that had, had varying answers. And. Think somebody else in the room also said golf and then reverted back to family and then business and all sorts. So, um, it's in these things were like brought up to kind of challenge our thought, you know, thought process at the time and where we're at.</p>
+          <p><span class="spk">Jason · 14:45</span>Um, and basically that we flowed into, you know, as I said over three days, very hard to cover it in, in one podcast. Um, but for people who are, you know, business owners or thinking about being business owners, you know, the, the, the. where to start, how to do it, what to do over</p>
+          <p><span class="spk">Jason · 15:00</span>five different areas. Um, it was structured in the way that, you know, the, the part ones, you know, dreaming up your ideal business and whether you're in business now, starting a business, um, you know, that is something that you can, you can do today.</p>
+          <p><span class="spk">Jason · 15:13</span>So it's, what does your ideal business look like? And this can be the dream version of it. So it doesn't have to be innovate today or future advisory today, or, you know, if you're whatever business you're running, but even if it's drawing, some people are visual and it helps to, you know, get out a whiteboard and draw.</p>
+          <p><span class="spk">Jason · 15:27</span>If I was running my dream business today, what would that look like? And then as you start to mind map this out, you start to go into all different areas without even starting to reel about, you know, what number of employees, how many locations, what's our brand known for? What are we, what are we known for in the market?</p>
+          <p><span class="spk">Jason · 15:44</span>What's our unique selling proposition? But again, That's kind of part one. So, you know, the, the part one is your ideal business. Now, the, the main components that are purpose, vision, and values. So it's the big picture stuff. As, as you started on Nick, what was the purpose of why you had the business? So that's</p>
+          <p><span class="spk">Jason · 16:00</span>realistically what you focus on when you mind map and draw your, your ideal business.</p>
+          <p><span class="spk">Jason · 16:04</span>And obviously that's extremely big picture. You might have problems day to day that you're trying to resolve, but if you can't. Visualize what the dream business looks like. How, what are you working towards? You know, what are you trying to achieve and how are you going to get there if you don't know what the end result looks like?</p>
+          <p><span class="spk">Jason · 16:19</span>And that's going to be different for everyone. So, uh, any comments on step one?</p>
+          <p><span class="spk">Marty · 16:23</span>Yeah, I think, um, it's interesting if you were to clear the slate and have to start again, it might be a bit more confronting, but I go, I look at all the elements of what I get to do, you know, and innovate. And I go, I'm on a podcast, so I foster my creative side.</p>
+          <p><span class="spk">Marty · 16:39</span>I like numbers, you know, so, you know, we do finance, right? And then I also like helping people. And I think you, you have to be very, you have to be very careful in regards to jumping to a whole different context and You know, sometimes people will do that and not</p>
+          <p><span class="spk">Marty · 17:00</span>recognize the value and enjoyment of where they're at because they get bored.</p>
+          <p><span class="spk">Marty · 17:04</span>And I said, you could really find all those great components of what connects you as to where you're at as well. So sure. If you haven't got a business. You know, go and, go and explore that. And I've talked to many business owners that have been in their businesses for 20 years, and they've just got flat and bored, even though the business is doing okay.</p>
+          <p><span class="spk">Marty · 17:22</span>And I go, and every time I said, you've got to find what invigorates you within your business at another level, instead of thinking, Just jump ship and do something else. Cause that's the, the propensity is I need to do something else elsewhere. So it's like, you gotta find that enjoyment. And I think that subtlety is really, really important.</p>
+          <p><span class="spk">Marty · 17:42</span>Cause it's very easy to go, ah, bored and do something else. You know what I mean? It's like I've been doing this, but you know, you're good at it too. So you go find the enjoyment. And challenge yourself within the business you're at to find different levels of curiosity within yourself as well that adds value.</p>
+          <p><span class="spk">Marty · 17:59</span>So I</p>
+          <p><span class="spk">Marty · 18:00</span>think, I think that's just important to stipulate as well.</p>
+          <p><span class="spk">Jason · 18:02</span>Yep. 100%. Uh, part two, which is probably a more interesting area if you have an existing business, it's, it's analyzed. So it's looking at your current situation. Now having a real good, I guess, unpack of where you're at today, um, versus that big journey or the big picture that you've just kind of painted before of, you know, how far off your ideal business are you and what that might involve, you know, is, is doing your SWOT analysis, whether it's yourself or with some of your team, analyzing your client base.</p>
+          <p><span class="spk">Jason · 18:28</span>Are you working with the right clients that you should be working with or do you find yourself starting to work with people that, you know, aren't your ideal clients? Looking at your brand, how's your brand perceived in the market and have you built the brand that, that, you know, you thought you'd have, or does it need some work, your products and services, your people and culture finances.</p>
+          <p><span class="spk">Jason · 18:47</span>So, you know, they're, they're, you know, looking at your current situation, they're all things that we should constantly evaluate. Um, you know, whether it's once a quarter, at least once a year when you're kind of setting your vision and goals each year, but they're all some kind of like</p>
+          <p><span class="spk">Jason · 19:00</span>really good place to, if you haven't done a strategic plan for a long time or revisited, you know, it's.</p>
+          <p><span class="spk">Jason · 19:05</span>What's the ideal business step one. What is your current situation? Step two.</p>
+          <p><span class="spk">Marty · 19:08</span>Jayce, can I ask you a question? Of course you can. With the, um, with what your vision for the business is and where you're at, was there a big discrepancy and what is that vision in comparison, like just out of interest from, you know, having done the course, you've done it for, done it for a reason.</p>
+          <p><span class="spk">Marty · 19:28</span>Um, so where would you love it to be given your thought process, where are you at and what, what's the bridge?</p>
+          <p><span class="spk">Jason · 19:36</span>Love turning it around back on me. I like it. Um, to be, to be completely transparent and honest with you. Uh, we did a SWOT not long ago. We have a lot of work to do on, on a lot of the SWOT responses that came from us and our team.</p>
+          <p><span class="spk">Jason · 19:48</span>Um, you know, and part of that, which, you know, the, the step five of this is, you know, your execution plan. We need to properly set up an execution plan to work on. some of</p>
+          <p><span class="spk">Jason · 20:00</span>the things in our business. So when talking about our current situation of where we are at future advisory today, compared to the ideal business of what I want to be, or where, what I want to be known for and where we want to get to the biggest discrepancy there, Marty is, you know, as a brand we're called future advisory.</p>
+          <p><span class="spk">Jason · 20:16</span>Oh, and I want to be known and respected in, in our, in, in the profession of accounting and beyond that we are one of the go to destinations for advisory work. And we're talking about helping people achieve their future goals. When I assess where we are today, you know, as an accounting firm that does a lot of taxing compliance, we're probably still quite heavy in looking at historic data and going, here's your tax bill, you know, catch up with you next time.</p>
+          <p><span class="spk">Jason · 20:42</span>So what, what I'm trying to create a space for us to work on way more advisory work, which is more impactful, helping more people achieve, you know, the things they want to achieve in their lives, whether, you know, it's making money, more time with family, selling businesses. So that's the biggest discrepancy that I kind of look at of, of where we are.</p>
+          <p><span class="spk">Jason · 20:59</span>And that means, you know,</p>
+          <p><span class="spk">Jason · 21:00</span>analyzing our clients, you know, are we working with too many clients or not the right kind of clients? You know, I know the clients we do magic with and I, and I want to work with more of them, but I also need to make sure we're doing more work for our existing clients. So yeah, there's, and you know, looking at our products and services, you know, we're still doing the same thing accounting firms are doing five to 10 years ago.</p>
+          <p><span class="spk">Jason · 21:18</span>And, and am I okay with that? Or should we be setting the way and paving a path for a new way of doing things with more business owners?</p>
+          <p><span class="spk">Marty · 21:25</span>I think that's a great answer because to me, I see you as that advisor already. And it's like, I'm just interested. Would you outsource? Would you bring someone in to do that component?</p>
+          <p><span class="spk">Marty · 21:35</span>Would you do that yourself? Given what you learned?</p>
+          <p><span class="spk">Jason · 21:37</span>Yep. And. Great question. Again, I think part of the step one of Greg and I doing the course was that Greg and I know this is the high value stuff that we really love doing with our clients, and we're already doing it with our clients. But what this, the whole idea of this was to create a strategic framework and structure.</p>
+          <p><span class="spk">Jason · 21:54</span>Yeah. So then once Greg and I do a few more of them, we also bring our team members along for the</p>
+          <p><span class="spk">Jason · 22:00</span>ride to, to, to train, educate, and mentor our existing team to deliver these valuable strategic sessions with our clients. Um, you know, cause there's only so many hours in a day that Greg and I can get in a room.</p>
+          <p><span class="spk">Jason · 22:11</span>But if we then empower our, you know, our good senior managers and our good advisors to become not just good senior accountants or not just good accountants, but they become business advisors. And again, you know, not everybody is naturally able to become a business advisor. They need some structure, some training, some education.</p>
+          <p><span class="spk">Jason · 22:29</span>And I think that's, you know, part of what this course was, was in power, you know, set up to do was to create more business advisors rather than, you know, and I think the accounting profession is, is ripe for that. I think, you know, accountants, as you said, Marty, we're, we're privy to the numbers. And if you can, you know, start to make business decisions off rock solid numbers, good financial forecasts, and an understanding of, of what a business should look like from a margins and profitability point of view.</p>
+          <p><span class="spk">Jason · 22:56</span>Accountants are actually in a pretty good hot seat to become</p>
+          <p><span class="spk">Jason · 23:00</span>the advisor. There's a lot of business coaches out there, you know, that, that aren't necessarily making decisions with numbers. We've got a pretty good combination of understanding a client's business really in really good detail and having the numbers to back up our decisions as well.</p>
+          <p><span class="spk">Marty · 23:14</span>Love it.</p>
+          <p><span class="spk">Jason · 23:14</span>Awesome. Won't go on too much longer. I mean, there's plenty we can unpack here. Um, you know, the next couple of, uh, modules or areas across the five steps, um, we've looked at our ideal business. We've reviewed our current situation. Um, the next one was our strategies, our strategies, you know, once we've looked at our current situation, if it's not where we want to be, you look at your strategies of your clients, your brand, your products and services.</p>
+          <p><span class="spk">Jason · 23:37</span>Your systems and processes, your people and culture, and your sales and marketing. Now, most of them are exactly what I told you in module two, but it's looking at the strategies of how you're going to change it. In step three, if you're not happy with where your clients were or your brand was, um, and that's all about establishing the growth part of the next stage of the plan, you know, in the business strategy, we've started</p>
+          <p><span class="spk">Jason · 24:00</span>off with basically leadership part one is, you know, the purpose, vision, values, and then we've moved into, you know, The review of the current situation, which is your current strategy.</p>
+          <p><span class="spk">Jason · 24:09</span>Step three, what's the new strategy. If you're not happy with where you are, how are you going to do something different to, to pull the levers, to get you where you want to be. And I think that's what a lot of business owners do is they, they get complacent. We keep doing the same thing over and over again and expect different results.</p>
+          <p><span class="spk">Jason · 24:24</span>From your point of view, I mean, you guys look at this stuff as well. Quite often each year, do you come up with different strategies or something? You know, is there any kind of major. Major wins or major changes year to year. I guess after being around for 15 years, maybe there's not, um, not as. Uh,</p>
+          <p><span class="spk">Nick · 24:40</span>no, it definitely changes, but I, but I think the overall, uh, strategy, which I think needs to be simplified, stays pretty constant.</p>
+          <p><span class="spk">Nick · 24:50</span>It's just the, the small things that, that drive towards that strategy that change or, you know, the roads to getting there. Um, but no, there's, there's no doubt.</p>
+          <p><span class="spk">Nick · 25:00</span>And, you know, if I look at our strategy, 10 years ago, probably was almost non existent. So I think we've gotten better at, okay, what is our strategy and what are we trying to achieve, but it's definitely involved and as, as it should, I think you should be, um, re you know, looking at your business every 12 months and, you know, are we on the right path?</p>
+          <p><span class="spk">Nick · 25:17</span>And this is where we're going. Is it the right way or do we need to deviate based on a few things? So.</p>
+          <p><span class="spk">Jason · 25:22</span>And look, it's, it's going to be very hard to, to get a whole, the whole point of a strategic framework across in, you know, a 30 minute podcast, but you know, once we've gone through those first three things, the fourth one, um, that I want to say here, I mean, do you think back to our, if you haven't listened to it, the Adrian Hondros, um, episode of soap strategy on a page, realistically, once you've kind of, you've painted the picture of your ideal business, looked at your current situation, looked at where you want to be, Part of one of the documents that you need to create as part of step four is your strategy on a page.</p>
+          <p><span class="spk">Jason · 25:52</span>What is that one pager that encapsulates all of, you know, the mission, vision, values, um, your key objectives and some of the</p>
+          <p><span class="spk">Jason · 26:00</span>work streams that you're going to do to achieve those objectives. If it's not on a one pager that your whole team understand, you probably got a bit of a missed opportunity there.</p>
+          <p><span class="spk">Jason · 26:07</span>Um, you know, and then part of rolling that out is also the KPIs and the measurement tools that help you to know what success and define what success looks like. So, and then lastly, guys is leadership. You know, when you think about the, the leadership and, you know, if it's not just the business owners, the other thing you need to look into, um, you know, if you're going to roll all this stuff out, you need to know who's in charge, how are we measuring and monitoring, who's the management team and leadership team.</p>
+          <p><span class="spk">Jason · 26:35</span>And what, I guess, what skills do they have as well? I mean, if they're not trained to be great leaders, it's one thing to be a good manager, but there's another thing to be a good leader. And, uh, you know, one of the really interesting kind of stats or numbers that I'll share with you guys that came out of it, you know, part of it was mindset training over this three days.</p>
+          <p><span class="spk">Jason · 26:52</span>And it was that 7 percent of communication is verbal. And that blew my mind. The other part of it, you know, was, was</p>
+          <p><span class="spk">Jason · 27:00</span>around your physical, what your body's doing when you're talking. And then, um, the, you know, I guess the tone and, and how we're coming across. So, um, you guys heard that as well, that, um,</p>
+          <p><span class="spk">Marty · 27:11</span>Definitely.</p>
+          <p><span class="spk">Marty · 27:12</span>I've done a lot of work around 2008 on that stuff, just in regards to the impact of tone in regards to building confidence, simplifying. Effective strategy that works like you can overwhelm and overcomplicate things that really don't need to be. So how do you put it into a simpler format that people can take action on?</p>
+          <p><span class="spk">Marty · 27:31</span>And, um, and yeah, even physicality, you can come across threatening in your physicality. So how do you have an open stance and, um, and even your tone? Like, is it encouraging? Is it, it can still be directive when needs to be and you can use it to advantage, um, in collaboration with someone. And vice versa, you could start to read these signals as well and know when to pull them out of a rut.</p>
+          <p><span class="spk">Marty · 27:56</span>Um, if they're walking off the edge of a, of a cliff, which happens sometimes in</p>
+          <p><span class="spk">Marty · 28:00</span>business and it's, um, you know, it's, it's very, very powerful. So I did a lot of work around three years on that and that's, that's been very helpful to me. Very helpful. Yeah.</p>
+          <p><span class="spk">Jason · 28:10</span>7 percent words, 55 percent body language, 38 percent tone of voice.</p>
+          <p><span class="spk">Jason · 28:15</span>So, and you know, and when we, we, we experimented in the room, the lady, um, who took us through that was called Dr. Marley, what, um, so, you know, if you look up Dr. Marley, what I'm sure she'll have some stuff online, um, that will train and educate around that. But that was mind blowing, um, trying to understand all that.</p>
+          <p><span class="spk">Marty · 28:33</span>Yeah. Well, we're just in the midst of a hail storm here. So if you hear anything going on, it's just absolutely gone berserk. But it's, uh, Yeah, I'm very conscious of my communication to people and at different stages of their careers as well. And understanding the person as to who you can be direct with, sometimes who you need to build some confidence before being direct with.</p>
+          <p><span class="spk">Marty · 28:56</span>And other times, you know, you can have more open discussions,</p>
+          <p><span class="spk">Marty · 29:00</span>but it depends on the individual that's across from you. And I always remembered, uh, An activity standing in the other person's shoes, where you would actually have a scenario that you'd play out, you'd have the person across from you, you, and then a third position, and you had to, you had to move throughout the chairs, and have a conversation, and then work out what that person was feeling, listening to you, and you got so much enrichment from going, Far out, am I really that blunt?</p>
+          <p><span class="spk">Marty · 29:30</span>Or, you know, you'd pick up a lot and then you'd sit in a third position where you'd see how the conversation could be optimised. Like, what could both individuals be doing? So it just took you out of yourself in regards to dealing with people and I found that to be a really powerful exercise and you should always even with, you know, Business partners, your own, you know, life partners, you always want to understand the other person's position, even though you might have your own, it's, it's, uh, you usually come to a better</p>
+          <p><span class="spk">Marty · 30:00</span>result, ultimately,</p>
+          <p><span class="spk">Jason · 30:01</span>and the deeper, the more deeply you can understand the people you're working with, whether that's your business partner, your employees, even your partner at home, um, you know, if you haven't done a disk Profile or a Myers Briggs, I definitely say go and have a look at some personality profiling as part of the leadership plan.</p>
+          <p><span class="spk">Jason · 30:15</span>When you do kind of get across those five modules of, of how to work on your strategic plan and your business improvement.</p>
+          <p><span class="spk">Marty · 30:21</span>Chase, this is not work, right? This is like, you know, when you look at it, you go for me. And it always has been the numbers directional lies, what the business expectations are, right?</p>
+          <p><span class="spk">Marty · 30:32</span>So there are KPIs that need to be met. There are performance that needs to be met, but how you get to that performance with an individual changes per individual. And that's, that's the subtlety that most miss. And you go, if you can, if you can. Build confidence, inspire action, and for that person to get a result, they might get a result in a totally different way.</p>
+          <p><span class="spk">Marty · 30:54</span>'cause different people have different attributes and they have different capabilities too. But you need to</p>
+          <p><span class="spk">Marty · 31:00</span>understand that and foster that to, to get an expansion on the result with them. They're ultimately gonna do it. You, you can't do it for them, but you have to have understanding as to what drives, you know, each person within the, and that takes time and effort, but uh, it's, uh, it's very important.</p>
+          <p><span class="spk">Jason · 31:17</span>And the thing is, at the end of the day, you can have done all of this work on the business, but if you have poor leadership and a poor mindset, it's going to be very hard to lead and inspire a team to be on the same page and help you achieve the goals that you've set out in that plan. So yeah, I just thought I'd share that with you guys.</p>
+          <p><span class="spk">Jason · 31:33</span>I mean, it was hot off a couple of days of it being out of the business and I just thought, you know what, it's nice to put some structure into where you are now, how to analyze it, where you want to get to, and then rolling that out with a, with a good plan and, and good guidance. Thanks guys. And, um, you know what, as I said on the end of episode 200, which is a little while ago now, we must be, we're pretty much nearly at 300 episodes.</p>
+          <p><span class="spk">Jason · 31:53</span>Uh, you know, um, but, you know, um, Nick, Marty and myself are here. If anyone</p>
+          <p><span class="spk">Jason · 32:00</span>ever wants to, you know, debrief on these kinds of things, uh, any episode content that you hear. If you think should, I'd love to pick Nick, Marty, or Jace's brain on that. Um, please do reach out to us, connect with us on LinkedIn, send us a message on Instagram at the numbers game podcast.</p>
+          <p><span class="spk">Jason · 32:14</span>Uh, we absolutely love your feedback and ongoing support. Um, continue to like follow, subscribe and until next time</p>
+          <p><span class="spk">Marty · 32:21</span>plan to win. We plan to fail. Game over.</p>
+          <p><span class="spk">Jason · 32:26</span>This podcast is for educational and informational purposes only. The conversations are of a general nature and do not qualify as financial or tax advice.</p>
+          <p><span class="spk">Jason · 32:34</span>We recommend before you make any financial decisions, you consult a licensed professional. Individuals on the podcast may hold positions in the companies discussed. ---</p>
+        </div>
+      </details>
+
+    </div>
+
+    <!-- LISTEN:START (build_episode.py rewrites the 3 URLs + iframe title per episode; player dropped if no spotifyEmbedUrl) -->
+    <section class="listen-now">
+      <div class="ln-head">
+        <span class="ln-title">Listen now</span>
+      </div>
+      <div class="audio-embed">
+        <iframe src="https://open.spotify.com/embed/episode/6Oc6jM6YHBVH0IcxXIzepW?utm_source=generator"
+          width="100%" height="152" loading="lazy" allowfullscreen
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+          title="Spotify — The Art of Strategic Framework"></iframe>
+      </div>
+    </section>
+
+    <div class="listen">
+      <a href="https://open.spotify.com/episode/6Oc6jM6YHBVH0IcxXIzepW" target="_blank" rel="noopener" aria-label="Listen to this episode on Spotify">
+        <svg viewBox="0 0 24 24"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.52 17.34c-.24.36-.66.48-1.02.24-2.82-1.74-6.36-2.1-10.56-1.14-.42.12-.78-.18-.9-.54-.12-.42.18-.78.54-.9 4.56-1.02 8.52-.6 11.64 1.32.42.18.48.66.3 1.02zm1.44-3.3c-.3.42-.84.6-1.26.3-3.24-1.98-8.16-2.58-11.94-1.38-.48.12-1.02-.12-1.14-.6-.12-.48.12-1.02.6-1.14 4.32-1.32 9.72-.66 13.44 1.62.36.18.54.78.3 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.3c-.6.18-1.2-.18-1.38-.72-.18-.6.18-1.2.72-1.38 4.26-1.26 11.28-1.02 15.72 1.62.54.3.72 1.02.42 1.56-.3.42-1.02.6-1.56.3z"/></svg>
+        Spotify
+      </a>
+      <a href="https://podcasts.apple.com/au/podcast/id1555566088?i=1000674607661" target="_blank" rel="noopener" aria-label="Listen to this episode on Apple Podcasts">
+        <svg viewBox="0 0 24 24"><path d="M5.34 0A5.328 5.328 0 000 5.34v13.32A5.328 5.328 0 005.34 24h13.32A5.328 5.328 0 0024 18.66V5.34A5.328 5.328 0 0018.66 0H5.34zm6.525 2.568c2.336 0 4.448.902 6.056 2.587 1.224 1.272 1.912 2.619 2.264 4.392l.04.23c.04.272-.16.527-.432.567a.505.505 0 01-.567-.431l-.04-.213c-.312-1.57-.92-2.747-2.004-3.867-1.428-1.496-3.293-2.294-5.393-2.294-2.1 0-3.966.798-5.394 2.294-1.084 1.12-1.692 2.298-2.004 3.867l-.04.213a.507.507 0 01-.567.431.504.504 0 01-.432-.567l.04-.23c.352-1.773 1.04-3.12 2.264-4.392 1.608-1.685 3.72-2.587 6.056-2.587h.153zm.136 3.033c1.74 0 3.312.67 4.527 1.934.883.916 1.394 1.93 1.663 3.253l.04.23a.505.505 0 01-.431.567.503.503 0 01-.567-.432l-.04-.212c-.23-1.112-.659-1.97-1.396-2.732-1.052-1.1-2.404-1.672-3.9-1.672s-2.849.572-3.901 1.672c-.737.762-1.167 1.62-1.396 2.732l-.04.212a.503.503 0 01-.567.432.505.505 0 01-.432-.567l.04-.23c.27-1.323.78-2.337 1.664-3.253 1.215-1.264 2.787-1.934 4.527-1.934h.21zm-.078 3.05c1.092 0 2.091.424 2.89 1.22.582.58.924 1.245 1.107 2.15l.04.218a.501.501 0 01-.424.568.499.499 0 01-.568-.424l-.04-.198c-.146-.724-.413-1.253-.871-1.716-.63-.63-1.398-.957-2.226-.957s-1.595.328-2.225.957c-.459.463-.726.992-.871 1.716l-.04.198a.499.499 0 01-.568.424.501.501 0 01-.424-.568l.04-.219c.183-.904.525-1.569 1.106-2.149.8-.796 1.799-1.22 2.89-1.22h.184zM12 14.07a2.477 2.477 0 012.48 2.478A2.477 2.477 0 0112 19.024a2.477 2.477 0 01-2.48-2.477A2.477 2.477 0 0112 14.07z"/></svg>
+        Apple
+      </a>
+      <a class="yt-pill" href="https://www.youtube.com/@thenumbersgamepodcast?sub_confirmation=1" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.12-2.14C19.5 3.55 12 3.55 12 3.55s-7.5 0-9.38.51A3 3 0 0 0 .5 6.2 31.4 31.4 0 0 0 0 12a31.4 31.4 0 0 0 .5 5.8 3 3 0 0 0 2.12 2.14c1.88.51 9.38.51 9.38.51s7.5 0 9.38-.51a3 3 0 0 0 2.12-2.14A31.4 31.4 0 0 0 24 12a31.4 31.4 0 0 0-.5-5.8zM9.55 15.57V8.43L15.82 12z"/></svg>
+        Subscribe
+      </a>
+    </div>
+    <!-- LISTEN:END -->
+
+    <div class="relsec">
+      <span class="rtitle">Discover more</span>
+      <div class="relgrid">
+        <a class="relcard" href="/adam-diamond-change-your-business-change-your-life">
+          <img src="https://i.ytimg.com/vi/l-qwFf9g5Rg/hqdefault.jpg" alt="EP 206 thumbnail">
+          <span class="rt">Adam Diamond - Change Your Business, Change Your Life</span>
+          <span class="rfoot"><span class="rwhy">Also covers: systems</span><span class="rtag">EP 206</span></span>
+        </a>
+        <a class="relcard" href="/why-you-should-track-profit-per-hour-vs-revenue">
+          <img src="https://i.ytimg.com/vi/FUf4XcRx-w0/hqdefault.jpg" alt="EP 245 thumbnail">
+          <span class="rt">Why You Should Track Profit Per Hour vs Revenue</span>
+          <span class="rfoot"><span class="rwhy">Also covers: systems</span><span class="rtag">EP 245</span></span>
+        </a>
+        <a class="relcard" href="/the-5-day-week-is-100-years-old">
+          <img src="https://i.ytimg.com/vi/owBCnFLV_vM/hqdefault.jpg" alt="EP 277 thumbnail">
+          <span class="rt">The 5-Day Week Is 100 Years Old</span>
+          <span class="rfoot"><span class="rwhy">Also covers: systems</span><span class="rtag">EP 277</span></span>
+        </a>
+        <a class="relcard" href="/10-lessons-from-an-f1-boss-do-any-actually-apply-to-small-business">
+          <img src="https://i.ytimg.com/vi/ubSyFEJEohE/hqdefault.jpg" alt="EP 267 thumbnail">
+          <span class="rt">10 Lessons from an F1 Boss.</span>
+          <span class="rfoot"><span class="rwhy">Also covers: systems</span><span class="rtag">EP 267</span></span>
+        </a>
+        <a class="relcard" href="/the-numbers-game-of-life-marty-s-5-biggest-lessons">
+          <img src="https://i.ytimg.com/vi/bM7PFcSZj6Q/hqdefault.jpg" alt="EP 261 thumbnail">
+          <span class="rt">The Numbers Game of Life</span>
+          <span class="rfoot"><span class="rwhy">Also covers: systems</span><span class="rtag">EP 261</span></span>
+        </a>
+        <a class="relcard" href="/joel-wermut-reinventing-real-estate-tech-with-prop-app">
+          <img src="https://i.ytimg.com/vi/OMLSIds1ofI/hqdefault.jpg" alt="EP 246 thumbnail">
+          <span class="rt">Joel Wermut - Reinventing Real Estate Tech With Prop App</span>
+          <span class="rfoot"><span class="rwhy">Also covers: systems</span><span class="rtag">EP 246</span></span>
+        </a>
+      </div>
+      <div class="reldots" id="reldots"></div>
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="footgrid">
+      <div class="fcol">
+        <div class="foot-label">Follow us on</div>
+        <div class="socials">
+          <a href="https://www.instagram.com/thenumbersgamepodcast/" target="_blank" rel="noopener" aria-label="The Numbers Game on Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.8.2 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1 .4 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .4-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1-.4-2.2-.1-1.3-.1-1.7-.1-4.9s0-3.6.1-4.9c.1-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.4 2.2-.4 1.3-.1 1.7-.1 4.9-.1zm0 2c-3.1 0-3.5 0-4.8.1-1.1.1-1.5.2-1.8.3-.4.2-.7.3-1 .6-.3.3-.5.6-.6 1-.1.3-.3.7-.3 1.8-.1 1.3-.1 1.7-.1 4.8s0 3.5.1 4.8c.1 1.1.2 1.5.3 1.8.2.4.3.7.6 1 .3.3.6.5 1 .6.3.1.7.3 1.8.3 1.3.1 1.7.1 4.8.1s3.5 0 4.8-.1c1.1-.1 1.5-.2 1.8-.3.4-.2.7-.3 1-.6.3-.3.5-.6.6-1 .1-.3.3-.7.3-1.8.1-1.3.1-1.7.1-4.8s0-3.5-.1-4.8c-.1-1.1-.2-1.5-.3-1.8-.2-.4-.3-.7-.6-1-.3-.3-.6-.5-1-.6-.3-.1-.7-.3-1.8-.3-1.3-.1-1.7-.1-4.8-.1zm0 3.4a5.4 5.4 0 1 1 0 10.8 5.4 5.4 0 0 1 0-10.8zm0 2a3.4 3.4 0 1 0 0 6.8 3.4 3.4 0 0 0 0-6.8zm5.6-2.3a1.3 1.3 0 1 1-2.6 0 1.3 1.3 0 0 1 2.6 0z"/></svg></a>
+          <a href="https://www.tiktok.com/@thenumbersgamepodcast" target="_blank" rel="noopener" aria-label="The Numbers Game on TikTok"><svg viewBox="0 0 24 24"><path d="M12.53.02C13.84 0 15.14.01 16.44 0c.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg></a>
+          <a href="https://www.linkedin.com/company/the-numbers-game-podcast/" target="_blank" rel="noopener" aria-label="The Numbers Game on LinkedIn"><svg viewBox="0 0 24 24"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.24 8.25h4.52V23H.24V8.25zM8.34 8.25h4.33v2.01h.06c.6-1.14 2.08-2.34 4.28-2.34 4.58 0 5.42 3.01 5.42 6.92V23h-4.51v-7.16c0-1.71-.03-3.91-2.38-3.91-2.39 0-2.75 1.86-2.75 3.78V23H8.34V8.25z"/></svg></a>
+          <a href="https://www.facebook.com/profile.php?id=100071290388343" target="_blank" rel="noopener" aria-label="The Numbers Game on Facebook"><svg viewBox="0 0 24 24"><path d="M24 12.07C24 5.41 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.04V9.41c0-3.02 1.8-4.7 4.54-4.7 1.31 0 2.68.24 2.68.24v2.97h-1.5c-1.5 0-1.96.93-1.96 1.89v2.26h3.32l-.53 3.5h-2.8V24C19.62 23.1 24 18.1 24 12.07z"/></svg></a>
+          <a href="https://www.youtube.com/@thenumbersgamepodcast" target="_blank" rel="noopener" aria-label="The Numbers Game on YouTube"><svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.2C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31.7 31.7 0 0 0 0 12a31.7 31.7 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.2A31.7 31.7 0 0 0 24 12a31.7 31.7 0 0 0-.5-5.8zM9.6 15.6V8.4L15.8 12z"/></svg></a>
+        </div>
+      </div>
+      <div class="fcol">
+        <div class="foot-label">Brought to you by</div>
+        <div class="sponsors">
+          <a href="https://www.inovayt.com.au/" target="_blank" rel="noopener"><img src="assets/inovayt-white.png" alt="Inovayt"></a>
+          <a href="https://futureadvisory.com.au/" target="_blank" rel="noopener"><img src="assets/future-advisory-white.png" alt="Future Advisory"></a>
+        </div>
+      </div>
+      <div class="fcol produced">
+        <div class="foot-label">Produced by</div>
+        <a href="https://www.vidpod.com.au/" target="_blank" rel="noopener"><img src="assets/vidpod-white.png" alt="VIDPOD"></a>
+      </div>
+    </div>
+    <div class="footbar">
+      <details class="footnav-dd">
+        <summary><svg class="ham" viewBox="0 0 24 24"><path d="M3 6h18v2H3zM3 11h18v2H3zM3 16h18v2H3z"/></svg> Menu</summary>
+        <div class="dd-links">
+          <a href="/">Home</a><a href="/episodes">Every episode</a><a href="/adventure">Choose your own adventure</a><a href="/about">About the show</a><a href="/nick-reilly">Nick Reilly</a><a href="/jason-robinson">Jason Robinson</a><a href="/contact">Contact</a>
+        </div>
+      </details>
+      <div class="copyright">© 2026 The Numbers Game</div>
+    </div>
+  </footer>
+
+  <script>
+    var VIDEO='IUKi9wuKquE';
+    var CHAPTERS=[
+      {t:"00:00",s:0,title:"Intro"},
+      {t:"00:20",s:20,title:"Getting Out Of The Business To Learn"},
+      {t:"02:59",s:179,title:"The Strategic Framework Course Backstory"},
+      {t:"05:05",s:305,title:"How To Assess And Structure A Business"},
+      {t:"07:00",s:420,title:"Why You Go Into Business"},
+      {t:"09:00",s:540,title:"What Business Owners Want"},
+      {t:"09:38",s:578,title:"Delegation, Burnout And Growth"},
+      {t:"11:10",s:670,title:"What You Would Do With One Extra Hour"},
+      {t:"14:45",s:885,title:"Step One: Your Ideal Business"},
+      {t:"18:02",s:1082,title:"Step Two: Analyse Your Current Situation"},
+      {t:"22:11",s:1331,title:"Scaling Advisory Through Your Team"},
+      {t:"24:09",s:1449,title:"Step Three: New Strategies"},
+      {t:"25:22",s:1522,title:"Step Four: Strategy On A Page"},
+      {t:"26:35",s:1595,title:"Step Five: Leadership And Communication"}
+    ];
+    var QUESTIONS=[
+      {q:"What percentage of small businesses fail within five years?",s:225},
+      {q:"Why do business owners need good advisors?",s:395},
+      {q:"Why do you need a purpose for your business?",s:437},
+      {q:"What do business owners want from their business?",s:540},
+      {q:"How do you avoid business owner burnout?",s:578},
+      {q:"When do business owners do their best thinking?",s:760},
+      {q:"Why do business owners fail to change?",s:1449},
+      {q:"What is the difference between a manager and a leader?",s:1595},
+      {q:"How much of communication is body language and tone?",s:1690},
+      {q:"How do you understand the people you work with?",s:1801}
+    ];
+
+    var chEl=document.getElementById('chapters');
+    CHAPTERS.forEach(function(c){var b=document.createElement('button');b.className='chapter';b.onclick=function(){startAt(c.s)};b.innerHTML='<span class="tc">'+c.t+'</span><span class="cx">'+c.title+'</span>';chEl.appendChild(b);});
+    document.getElementById('chcount').textContent=CHAPTERS.length;
+    var qEl=document.getElementById('qa');
+    QUESTIONS.forEach(function(q){var b=document.createElement('button');b.className='q';b.onclick=function(){startAt(q.s)};b.innerHTML='<span class="qm">?</span><span class="qx">'+q.q+'</span><span class="go">›</span>';qEl.appendChild(b);});
+    document.getElementById('qcount').textContent=QUESTIONS.length;
+
+    /* Mobile nav dropdown. */
+    var burger=document.getElementById('navburger'), navdrop=document.getElementById('navdrop');
+    if(burger&&navdrop){burger.addEventListener('click',function(){
+      navdrop.hidden=!navdrop.hidden;
+      burger.setAttribute('aria-expanded', navdrop.hidden?'false':'true');
+    });}
+
+    /* Voice-note button reveals the recorder; × tucks it away. */
+    var vbtn=document.getElementById('vbtn'), vslot=document.getElementById('vslot'), vclose=document.getElementById('vclose');
+    if(vbtn&&vslot){vbtn.addEventListener('click',function(){vslot.hidden=!vslot.hidden;});}
+    if(vclose&&vslot){vclose.addEventListener('click',function(){vslot.hidden=true;});}
+
+    /* Keep-exploring dots: only shown when the strip actually scrolls (mobile). */
+    var rg=document.querySelector('.relgrid'), rd=document.getElementById('reldots');
+    if(rg&&rd){
+      var relCards=rg.querySelectorAll('.relcard');
+      relCards.forEach(function(){rd.appendChild(document.createElement('span'))});
+      var updDots=function(){
+        var scrollable=rg.scrollWidth>rg.clientWidth+4;
+        rd.style.display=scrollable?'flex':'none';
+        if(!scrollable)return;
+        var i=Math.round(rg.scrollLeft/(rg.scrollWidth-rg.clientWidth)*(relCards.length-1));
+        rd.querySelectorAll('span').forEach(function(s,n){s.classList.toggle('on',n===i)});
+      };
+      rg.addEventListener('scroll',updDots,{passive:true});
+      window.addEventListener('resize',updDots);
+      updDots();
+    }
+
+    /* Explore tabs: swap the visible panel; the row stays put so you never lose your place. */
+    var tabBtns=document.querySelectorAll('.tabbtn');
+    tabBtns.forEach(function(b){
+      b.addEventListener('click',function(){
+        tabBtns.forEach(function(o){o.classList.remove('on')});
+        document.querySelectorAll('.tpanel').forEach(function(p){p.hidden=true});
+        b.classList.add('on');
+        document.getElementById(b.getAttribute('data-panel')).hidden=false;
+      });
+    });
+
+    /* YouTube: clean facade, then real player on demand. Seek without yanking to top. */
+    var player=null, ready=false, apiReady=false, pending=null;
+    window.onYouTubeIframeAPIReady=function(){apiReady=true; if(pending!=null){var s=pending;pending=null;createPlayer(s);}};
+    function createPlayer(sec){
+      var wrap=document.getElementById('player'); wrap.innerHTML='<div id="yt"></div>';
+      player=new YT.Player('yt',{videoId:VIDEO,playerVars:{autoplay:1,rel:0,modestbranding:1,playsinline:1,start:Math.floor(sec||0)},events:{onReady:function(){ready=true;}}});
+    }
+    function nudge(){
+      var p=document.getElementById('player-wrap'), r=p.getBoundingClientRect();
+      if(r.bottom<80 || r.top>window.innerHeight-90){ p.scrollIntoView({behavior:'smooth',block:'start'}); }
+    }
+    function startAt(sec){
+      nudge();
+      if(player&&ready){ player.seekTo(sec,true); player.playVideo(); return; }
+      if(apiReady){ createPlayer(sec); } else { pending=sec; }
+    }
+    document.getElementById('facade').addEventListener('click',function(){startAt(0);});
+    (function(){var s=document.createElement('script');s.src='https://www.youtube.com/iframe_api';document.head.appendChild(s);})();
+  </script>
+</body>
+</html>

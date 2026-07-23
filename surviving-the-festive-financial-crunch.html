@@ -1,0 +1,682 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EP 215 · Surviving the Festive Financial Crunch | The Numbers Game</title>
+<meta name="description" content="">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" sizes="64x64" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="canonical" href="https://thenumbersgamepodcast.com.au/surviving-the-festive-financial-crunch">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="The Numbers Game">
+<meta property="og:title" content="EP 215 · Surviving the Festive Financial Crunch | The Numbers Game">
+<meta property="og:description" content="">
+<meta property="og:url" content="https://thenumbersgamepodcast.com.au/surviving-the-festive-financial-crunch">
+<meta property="og:image" content="https://i.ytimg.com/vi/t-Bk74vD1yg/maxresdefault.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+  :root{
+    --purple:#585af3; --purple-dark:#2c1b8a; --mint:#7ad9a8;
+    --white:#ffffff; --muted:rgba(255,255,255,.60); --dim:rgba(255,255,255,.42);
+    --line:rgba(255,255,255,.12); --card:rgba(255,255,255,.05); --card-hi:rgba(255,255,255,.09);
+    --display:'Anton',Impact,'Helvetica Neue',sans-serif;
+    --sans:'Inter',system-ui,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif;
+    --wrap:1280px;   /* page frame (nav spans this) */
+    --col:960px;     /* content column (player, tabs, text) */
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:var(--sans); color:var(--white); line-height:1.6; -webkit-font-smoothing:antialiased;
+    background:#12093a;
+    background-image:
+      radial-gradient(1200px 600px at 82% -6%, rgba(88,90,243,.45) 0%, transparent 55%),
+      radial-gradient(900px 700px at 5% 8%, rgba(122,217,168,.10) 0%, transparent 50%),
+      linear-gradient(180deg,#2c1b8a 0%,#1a1150 28%,#100b34 62%,#0b0820 100%);
+    background-attachment:fixed;
+  }
+  a{color:inherit}
+  .wrap{max-width:var(--wrap);margin:0 auto;padding:0 36px}
+  main.wrap{max-width:var(--col)}
+  @media(max-width:720px){.wrap{padding:0 22px}}
+
+  /* ── Navbar ── */
+  .nav{position:sticky;top:0;z-index:50;background:linear-gradient(180deg,rgba(24,15,74,.92),rgba(24,15,74,.72));backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+  .nav-in{max-width:var(--wrap);margin:0 auto;padding:11px 36px;display:flex;align-items:center;justify-content:space-between}
+  @media(max-width:720px){.nav-in{padding:11px 22px}}
+  .brand{display:block;line-height:0}
+  .brand img{height:36px;width:auto;display:block}
+  .navlinks{display:flex;gap:28px;align-items:center}
+  .navlinks a{text-decoration:none;font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);transition:.15s}
+  .navlinks a:hover{color:var(--white)}
+  .navlinks a.navtop{cursor:default}
+  .navgroup{position:relative;display:flex;align-items:center}
+  .navgroup .subnav{display:none;position:absolute;top:100%;left:50%;transform:translateX(-50%);padding-top:14px;min-width:180px}
+  .navgroup:hover .subnav,.navgroup:focus-within .subnav{display:block}
+  .subnav-in,.navgroup .subnav{z-index:60}
+  .navgroup .subnav a{display:block;background:#180f4a;border:1px solid var(--line);border-top:0;padding:12px 16px;font-size:12px;color:rgba(255,255,255,.85)}
+  .navgroup .subnav a:first-child{border-top:1px solid var(--line)}
+  .navgroup .subnav a:hover{background:#221768;color:var(--white)}
+  .navburger{display:none;background:none;border:1px solid var(--line);padding:8px 10px;cursor:pointer;color:var(--white);transition:.15s}
+  .navburger:hover{border-color:rgba(122,217,168,.6)}
+  .navburger svg{width:20px;height:20px;fill:currentColor;display:block}
+  .navdrop{display:none}
+  @media(max-width:720px){
+    .navlinks{display:none}
+    .navburger{display:block}
+    .navdrop{display:block;position:absolute;left:0;right:0;top:100%;
+      background:#180f4a;border-bottom:1px solid var(--line);box-shadow:0 24px 50px rgba(0,0,0,.45)}
+    .navdrop[hidden]{display:none}
+    .navdrop a{display:block;padding:15px 22px;text-decoration:none;font-size:14px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:rgba(255,255,255,.9);border-bottom:1px solid rgba(255,255,255,.06)}
+    .navdrop a:last-child{border-bottom:0}
+    .navdrop a.sub{padding-left:42px;font-size:13px;color:rgba(255,255,255,.72)}
+    .navdrop .navlabel{display:block;padding:15px 22px 6px;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.4)}
+  }
+
+  /* ── Hero / hook (marker-highlight system: purple hook wraps naturally, mint payoff below)
+     Rules: title splits at its natural break (colon/pipe/question mark). Front = hook (purple,
+     big), back = payoff (mint, smaller). No break in title = purple hook only. Highlights hug
+     the text (tight em padding tuned to Anton) and wrap via box-decoration-break — never
+     hand-pick line breaks or mint words. ── */
+  header.hero{padding:34px 0 6px}
+  .hook{--inx:clamp(8.4px,2.1vw,15.6px)} /* one shared text inset so hook + payoff first letters align */
+  .hook .hk{font-family:var(--display);font-weight:400;text-transform:uppercase;
+    font-size:clamp(28px,7vw,52px);line-height:1.3;letter-spacing:-.5px;text-wrap:balance}
+  .hook .hk span{color:var(--white);padding:.04em var(--inx) .02em;
+    background:linear-gradient(var(--purple),var(--purple)) 0 50%/100% 87% no-repeat;
+    -webkit-box-decoration-break:clone;box-decoration-break:clone}
+  .hook .pay{font-family:var(--display);font-weight:400;text-transform:uppercase;
+    font-size:clamp(16px,4vw,24px);line-height:1.5;letter-spacing:.6px;margin-top:8px;text-wrap:balance}
+  .hook .pay span{color:#0a0a0a;padding:.08em var(--inx) .04em;
+    background:linear-gradient(var(--mint),var(--mint)) 0 50%/100% 88% no-repeat;
+    -webkit-box-decoration-break:clone;box-decoration-break:clone}
+  /* no-hook titles: mid-split into two full-size rows, purple then mint */
+  .hook .hk span.hkrow{display:block;background:none;padding:0}
+  .hook .hk .hkrow+.hkrow{margin-top:8px}
+  .hook .hk span.mintseg{color:#0a0a0a;
+    background:linear-gradient(var(--mint),var(--mint)) 0 50%/100% 87% no-repeat}
+
+  /* ── Player (clean facade → real player on tap) ── */
+  .player-wrap{margin:24px 0 4px;scroll-margin-top:76px}
+  .player{position:relative;width:100%;padding-top:56.25%;border-radius:0;overflow:hidden;background:#000;box-shadow:0 30px 70px rgba(0,0,0,.5),0 0 0 1px rgba(255,255,255,.06)}
+  .facade{position:absolute;inset:0;border:0;cursor:pointer;background-size:cover;background-position:center;display:flex;align-items:center;justify-content:center;padding:0}
+  .facade .play{width:74px;height:74px;border-radius:50%;background:rgba(10,6,30,.40);border:2px solid rgba(255,255,255,.72);display:flex;align-items:center;justify-content:center;transition:.18s;-webkit-backdrop-filter:blur(1px);backdrop-filter:blur(1px)}
+  .facade:hover .play{background:rgba(88,90,243,.62);transform:scale(1.07);border-color:#fff}
+  .facade .play::after{content:"";border-style:solid;border-width:11px 0 11px 19px;border-color:transparent transparent transparent #fff;margin-left:5px}
+  .player iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+
+  /* ── Episode facts (bottom of the Summary panel — templated per episode) ── */
+  .sumfacts{margin:14px 10px 4px;padding-top:13px;border-top:1px solid rgba(255,255,255,.08);display:flex;flex-direction:column;gap:8px}
+  .fact{display:flex;gap:12px;font-size:13.5px}
+  .fact .fl{flex:none;width:104px;color:var(--dim);font-weight:600;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;padding-top:2px}
+  .fact .fv{color:rgba(255,255,255,.9);font-weight:500}
+  .fact .fv a{color:var(--mint);text-decoration:none;border-bottom:1px solid rgba(122,217,168,.4);transition:.15s}
+  .fact .fv a:hover{border-bottom-color:var(--mint)}
+
+  /* ── Episode tag (identity: black label hanging off the title corner) ── */
+  .eptag{display:inline-block;position:relative;left:-6px;margin-bottom:-7px;z-index:2;
+    background:#0a0a0a;color:var(--white);font-family:var(--display);font-weight:400;
+    font-size:13.5px;letter-spacing:1.5px;text-transform:uppercase;padding:6px 11px 4px}
+
+  /* ── Explore tabs (sticky mode switcher; one panel swaps below, nothing shoves) ── */
+  .explore{margin-top:22px}
+  .tabs{position:sticky;top:58px;z-index:40;display:flex;flex-wrap:wrap;gap:8px;padding:10px 0;
+    background:linear-gradient(180deg,rgba(18,10,55,.96),rgba(18,10,55,.86));
+    backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+  .tabbtn{font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.5px;
+    font-size:14.5px;color:var(--white);background:var(--purple);border:1px solid var(--purple);
+    padding:9px 13px 7px;cursor:pointer;transition:.15s}
+  .tabbtn:hover{filter:brightness(1.12)}
+  .tabbtn.on{background:var(--mint);border-color:var(--mint);color:#0a0a0a}
+  .tabbtn.on:hover{filter:none}
+  .tabbtn .ct{font-size:12px;opacity:.75;font-variant-numeric:tabular-nums}
+  .tabbtn .ct::before{content:" · "}
+  .tpanel{border:1px solid var(--line);background:var(--card);padding:12px 10px 14px}
+  .hint{font-size:12.5px;color:var(--muted);padding:2px 10px 10px;border-bottom:1px solid rgba(255,255,255,.08);margin-bottom:6px}
+
+  /* ── Listen row (no box: label left, service pills follow) ── */
+  .listen{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:12px 16px;margin-top:34px}
+  .listen .lname{font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--dim)}
+  .listen a{display:inline-flex;align-items:center;gap:9px;padding:11px 18px;border-radius:999px;
+    background:var(--mint);color:#08210f;text-decoration:none;font-weight:800;font-size:12.5px;
+    letter-spacing:.04em;text-transform:uppercase;transition:.15s}
+  .listen a:hover{filter:brightness(1.06);transform:translateY(-1px);box-shadow:0 12px 30px rgba(122,217,168,.25)}
+  .listen svg{width:20px;height:20px;fill:currentColor;flex:none}
+  /* ── Listen-now Spotify audio embed (full column width, above the pills) ── */
+  .listen-now{margin-top:40px}
+  .listen-now .ln-head{display:flex;align-items:baseline;justify-content:space-between;gap:14px;margin-bottom:13px}
+  .listen-now .ln-title{font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--dim)}
+  .audio-embed{border-radius:12px;overflow:hidden;box-shadow:0 20px 50px rgba(0,0,0,.4),0 0 0 1px rgba(255,255,255,.06)}
+  .audio-embed iframe{display:block;width:100%;border:0}
+  @media(max-width:720px){.listen-now{margin-top:32px}}
+
+  /* ── Keep exploring (thumbnails link to other episode PAGES, never timecodes).
+     Swipeable strip on mobile, fits three-up on desktop. Variant rule: claim
+     "similar ground" + reason lines ONLY when moment-level topic overlap is
+     genuinely strong; otherwise show the latest released episodes with dates —
+     never invent a connection. ── */
+  .relsec{margin-top:60px;padding-top:58px;border-top:1px solid var(--line)} /* line = end of this episode's info */
+  .reldots{display:flex;justify-content:center;gap:7px;margin-top:12px}
+  .reldots span{width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.25);transition:.2s}
+  .reldots span.on{background:var(--mint)}
+  .relsec .rtitle{display:inline-block;font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.5px;font-size:14.5px;background:var(--mint);color:#0a0a0a;padding:9px 13px 7px;margin-bottom:18px}
+  .relgrid{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding-bottom:6px;scrollbar-width:none}
+  .relgrid::-webkit-scrollbar{display:none}
+  .relcard{flex:0 0 56%;max-width:232px;scroll-snap-align:start;display:flex;flex-direction:column;text-decoration:none;background:var(--card);border:1px solid var(--line);transition:.15s}
+  .relcard:hover{background:var(--card-hi);border-color:rgba(122,217,168,.55)}
+  .relcard img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block}
+  .relcard .rt{display:block;font-size:12.5px;font-weight:600;color:rgba(255,255,255,.92);line-height:1.4;padding:8px 8px 0}
+  .relcard .rfoot{margin-top:auto;display:flex;justify-content:space-between;align-items:flex-end;gap:8px;padding:10px 8px 9px}
+  .relcard .rwhy{font-size:11.5px;color:var(--mint)}
+  .relcard .rtag{display:inline-block;background:#0a0a0a;color:var(--white);font-family:var(--display);font-size:10px;letter-spacing:1.2px;text-transform:uppercase;padding:3px 7px 2px;white-space:nowrap;flex:0 0 auto}
+
+  /* ── Dropdown sections (accordion under the player) ── */
+  .drops{margin-top:34px;display:flex;flex-direction:column;gap:11px}
+  .drop{border:1px solid var(--line);border-radius:0;background:var(--card);overflow:hidden;transition:border-color .15s}
+  .drop[open]{border-color:rgba(122,217,168,.35)}
+  .drop>summary{list-style:none;cursor:pointer;padding:16px 18px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+  .drop>summary::-webkit-details-marker{display:none}
+  .drop>summary .st{font-weight:700;font-size:15.5px;letter-spacing:.005em}
+  .drop>summary .ct{margin-left:auto;font-size:12px;color:var(--dim);font-weight:600;font-variant-numeric:tabular-nums}
+  .drop>summary .chev{flex:none;width:22px;height:22px;border-radius:50%;background:rgba(122,217,168,.14);color:var(--mint);display:flex;align-items:center;justify-content:center;font-family:var(--display);font-size:15px;line-height:1;transition:.2s;transform:translateY(-1px)}
+  .drop[open]>summary .chev{transform:rotate(45deg)}
+  .drop-body{padding:2px 12px 12px}
+
+  /* chapters */
+  .chapter{display:flex;align-items:baseline;gap:14px;width:100%;text-align:left;cursor:pointer;background:none;border:0;color:inherit;font-family:inherit;padding:11px 10px;border-radius:10px;transition:.13s}
+  .chapter:hover{background:var(--card-hi)}
+  .chapter .tc{font-variant-numeric:tabular-nums;font-weight:700;font-size:14px;color:var(--mint);flex:none;width:48px}
+  .chapter .cx{font-size:15px;font-weight:500;color:rgba(255,255,255,.9)}
+  .chapter:hover .cx{color:#fff}
+
+  /* questions */
+  .q{display:flex;align-items:center;gap:12px;width:100%;text-align:left;cursor:pointer;background:none;border:0;border-radius:11px;color:inherit;font-family:inherit;padding:12px 10px;transition:.14s}
+  .q+.q{border-top:1px solid rgba(255,255,255,.05)}
+  .q:hover{background:var(--card-hi)}
+  .q .qm{font-family:var(--display);font-size:15px;color:var(--mint);flex:none;line-height:1;transform:translateY(1px)}
+  .q .qx{font-size:15px;font-weight:500;color:rgba(255,255,255,.92)}
+  .q .go{margin-left:auto;flex:none;color:var(--dim);font-size:18px;transition:.15s}
+  .q:hover .go{color:var(--mint);transform:translateX(2px)}
+
+  /* summary + transcript bodies */
+  .summary-body p{font-size:16.5px;line-height:1.62;color:rgba(255,255,255,.9);padding:6px 10px 4px}
+  .tbody{padding:2px 10px 8px}
+  .tbody p{font-size:14.5px;line-height:1.7;color:rgba(255,255,255,.78);margin-top:15px;max-width:64ch}
+  .tbody .spk{display:block;font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--mint);margin-bottom:2px}
+
+  /* ── Voice note ask (lives at the bottom of the Summary panel) ── */
+  .vask{margin:16px 10px 4px}
+  .vbtn{display:inline-flex;align-items:center;gap:9px;padding:12px 20px;border-radius:999px;border:0;cursor:pointer;
+    background:var(--mint);color:#08210f;font-family:inherit;font-weight:800;font-size:12.5px;
+    letter-spacing:.04em;text-transform:uppercase;transition:.15s}
+  .vbtn:hover{filter:brightness(1.06);transform:translateY(-1px);box-shadow:0 12px 30px rgba(122,217,168,.25)}
+  .vbtn svg{width:18px;height:18px;fill:currentColor;flex:none}
+  .vslot{background:var(--purple);padding:12px 10px 10px;margin:14px 0 4px;box-shadow:0 18px 40px rgba(0,0,0,.35)}
+  .vslot[hidden]{display:none}
+  .vhead{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;margin-bottom:10px}
+  .vhead .vmsg{font-family:var(--sans);font-size:13px;line-height:1.55;color:rgba(255,255,255,.92);margin:2px 0 0;padding:0 2px}
+  .vclose{background:none;border:0;color:rgba(255,255,255,.85);font-size:22px;line-height:1;cursor:pointer;padding:0 2px}
+  .vclose:hover{color:var(--white)}
+  .vslot iframe{display:block}
+
+  /* ── YouTube subscribe pill (sits in the listen row; outranks .listen a's mint) ── */
+  .listen a.yt-pill{background:var(--purple);color:var(--white)}
+  .listen a.yt-pill:hover{filter:brightness(1.1);transform:translateY(-1px)}
+  @media(max-width:720px){ /* mobile: no label, three compact pills on one row */
+    .listen .lname{display:none}
+    .listen{gap:8px}
+    .listen a{padding:10px 13px;font-size:11px;gap:6px}
+    .listen svg{width:16px;height:16px}
+  }
+
+  /* ── Footer: Follow us on | Brought to you by | Produced by, + Menu dropdown ── */
+  footer{border-top:1px solid var(--line);margin-top:68px;padding:52px 20px 58px}
+  .footgrid{max-width:var(--wrap);margin:0 auto;display:grid;grid-template-columns:1fr 1.15fr .8fr;gap:44px;align-items:start}
+  .fcol{text-align:center;display:flex;flex-direction:column;align-items:center}
+  .foot-label{font-size:11px;font-weight:700;letter-spacing:.26em;text-transform:uppercase;color:var(--dim);margin-bottom:18px}
+  .sponsors{display:flex;justify-content:center;align-items:center;gap:34px;flex-wrap:wrap}
+  .sponsors a,.produced a{display:inline-flex;transition:.15s}
+  .sponsors a:hover,.produced a:hover{transform:translateY(-1px)}
+  .sponsors img{height:32px;width:auto;opacity:.92}
+  .produced img{height:30px;width:auto;opacity:.95}
+  .sponsors a:hover img,.produced a:hover img{opacity:1}
+  footer .socials{display:flex;gap:11px;justify-content:center;flex-wrap:wrap;margin:0}
+  footer .socials a{width:40px;height:40px;border-radius:50%;border:1.5px solid rgba(122,217,168,.5);display:flex;align-items:center;justify-content:center;transition:.15s}
+  footer .socials a svg{width:18px;height:18px;fill:var(--mint);transition:.15s}
+  footer .socials a:hover{background:var(--mint);border-color:var(--mint);transform:translateY(-2px)}
+  footer .socials a:hover svg{fill:#0a0a0a}
+  .footbar{max-width:var(--wrap);margin:34px auto 0;border-top:1px solid var(--line);padding-top:20px;display:flex;flex-direction:column;align-items:center;gap:14px}
+  .footnav-dd{display:block;width:100%;max-width:var(--wrap);margin:0 auto;text-align:center}
+  .footnav-dd>summary{list-style:none;cursor:pointer;display:inline-flex;align-items:center;gap:9px;font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.5px;font-size:13px;color:var(--muted);background:transparent;border:1px solid var(--line);padding:8px 16px 6px;transition:.15s}
+  .footnav-dd>summary::-webkit-details-marker{display:none}
+  .footnav-dd>summary:hover{color:var(--mint);border-color:rgba(122,217,168,.45)}
+  .footnav-dd>summary .ham{width:15px;height:15px;fill:currentColor;transform:translateY(-1px)}
+  .footnav-dd .dd-links{display:flex;flex-direction:row;flex-wrap:wrap;justify-content:center;gap:12px 24px;padding:24px 0 4px}
+  .footnav-dd .dd-links a{font-size:11.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:.15s}
+  .footnav-dd .dd-links a:hover{color:var(--mint)}
+  .copyright{font-size:12px;color:var(--dim);text-align:center}
+  @media(max-width:720px){.footgrid{grid-template-columns:1fr;gap:34px}footer{padding:40px 16px 20px}.footbar{margin-top:34px;padding-top:24px;gap:20px}.footnav-dd .dd-links{flex-direction:column;align-items:center;gap:15px}}
+
+  @media(min-width:720px){header.hero{padding:48px 0 6px}}
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "PodcastEpisode", "name": "Surviving the Festive Financial Crunch", "url": "https://thenumbersgamepodcast.com.au/surviving-the-festive-financial-crunch", "datePublished": "2024-12-09", "episodeNumber": 215, "image": "https://i.ytimg.com/vi/t-Bk74vD1yg/maxresdefault.jpg", "partOfSeries": {"@type": "PodcastSeries", "name": "The Numbers Game", "url": "https://thenumbersgamepodcast.com.au/"}}</script>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-in">
+      <a class="brand" href="/" aria-label="The Numbers Game home"><img src="assets/tng-logo.png" alt="The Numbers Game"></a>
+      <div class="navlinks">
+        <a href="/">Home</a>
+        <div class="navgroup">
+          <a class="navtop">Episodes</a>
+          <div class="subnav">
+            <a href="/episodes">All episodes</a>
+            <a href="/adventure">Find moments</a>
+          </div>
+        </div>
+        <div class="navgroup">
+          <a class="navtop">About</a>
+          <div class="subnav">
+            <a href="/about">The show</a>
+            <a href="/nick-reilly">Nick Reilly</a>
+            <a href="/jason-robinson">Jason Robinson</a>
+          </div>
+        </div>
+        <a href="/contact">Contact</a>
+      </div>
+      <button class="navburger" id="navburger" type="button" aria-label="Menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24"><path d="M3 6h18v2H3zM3 11h18v2H3zM3 16h18v2H3z"/></svg>
+      </button>
+    </div>
+    <div class="navdrop" id="navdrop" hidden>
+      <a href="/">Home</a>
+      <span class="navlabel">Episodes</span>
+      <a class="sub" href="/episodes">All episodes</a>
+      <a class="sub" href="/adventure">Find moments</a>
+      <span class="navlabel">About</span>
+      <a class="sub" href="/about">The show</a>
+      <a class="sub" href="/nick-reilly">Nick Reilly</a>
+      <a class="sub" href="/jason-robinson">Jason Robinson</a>
+      <a href="/contact">Contact</a>
+    </div>
+  </nav>
+
+  <main class="wrap">
+
+    <header class="hero">
+      <div class="hook">
+        <span class="eptag">EP 215</span>
+        <h1 class="hk"><span class="hkrow"><span>Surviving the Festive</span></span>
+        <span class="hkrow"><span class="mintseg">Financial Crunch</span></span></h1>
+      </div>
+    </header>
+
+    <div class="player-wrap" id="player-wrap">
+      <div class="player" id="player">
+        <button class="facade" id="facade" style="background-image:url('https://i.ytimg.com/vi/t-Bk74vD1yg/maxresdefault.jpg')" aria-label="Play episode">
+          <span class="play"></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="explore">
+      <div class="tabs" role="tablist">
+        <button class="tabbtn on" data-panel="p-summary">Summary</button>
+        <button class="tabbtn" data-panel="p-chapters">Chapters<span class="ct" id="chcount"></span></button>
+        <button class="tabbtn" data-panel="p-questions">Questions<span class="ct" id="qcount"></span></button>
+      </div>
+      <section class="tpanel" id="p-summary">
+        <div class="summary-body">
+          <p>Marty raises the festive cash flow squeeze facing small business owners and shares his own 2012 scare, when a growth pivot left him fearing he would close by January until an overdraft gave him breathing room. The trio walk through research showing many owners hold no cash reserves, have cut their own income, or are feeling personal stress, and why cash flow remains the top reason businesses fail. They cover proactive funding, seasonal planning, the building ATO balances after the September BAS, and short term overdrafts as a bridge over the holidays. Jason warns against going it alone with high interest funders, after a client took that path into liquidation.</p>
+        </div>
+        <div class="vask">
+          <button class="vbtn" id="vbtn" type="button">
+            <svg viewBox="0 0 24 24"><path d="M12 14a3 3 0 0 0 3-3V6a3 3 0 1 0-6 0v5a3 3 0 0 0 3 3zm5-3a5 5 0 0 1-10 0H5a7 7 0 0 0 6 6.92V21h2v-3.08A7 7 0 0 0 19 11h-2z"/></svg>
+            Send us a voice note
+          </button>
+          <div class="vslot" id="vslot" hidden>
+            <div class="vhead">
+              <p class="vmsg">We'd love to hear from you. You can leave up to a 90 second voice note for us to play on the show: a question, some feedback, or a topic you want covered.</p>
+              <button class="vclose" id="vclose" type="button" aria-label="Close">&times;</button>
+            </div>
+            <iframe src="https://www.speakpipe.com/widget/inline/hhq6kzggsx7zpcsvakgxfrzun3zidpde" allow="microphone" width="100%" height="200" frameborder="0" title="Leave The Numbers Game a voice note"></iframe>
+          </div>
+          <script async src="https://www.speakpipe.com/widget/loader.js" charset="utf-8"></script>
+        </div>
+        <div class="sumfacts">
+          <div class="fact"><span class="fl">Release date</span><span class="fv">9 December 2024</span></div>
+          <div class="fact"><span class="fl">Hosts</span><span class="fv"><a href="/nick-reilly">Nick Reilly</a>, <a href="/jason-robinson">Jason Robinson</a> &amp; <a href="/marty-vidakovic">Marty Vidakovic</a></span></div>
+
+        </div>
+      </section>
+      <section class="tpanel" id="p-chapters" hidden>
+        <p class="hint">Jump straight to the part you need.</p>
+        <div id="chapters"></div>
+      </section>
+      <section class="tpanel" id="p-questions" hidden>
+        <p class="hint">Real questions this episode answers. Tap one to hear the answer.</p>
+        <div id="qa"></div>
+      </section>
+    </div>
+
+    <div class="drops">
+
+      <details class="drop">
+        <summary><span class="st">Episode transcript</span><span class="chev">+</span></summary>
+        <div class="drop-body tbody">
+          <p><span class="spk">Jason · 00:00</span>Welcome to episode 215 of The Numbers Game. I'm Jason. I'm here with Nick and Marty. How are we, fellas?</p>
+          <p><span class="spk">Marty · 00:06</span>Ah, the Christmas trees are up, Jason. It's, uh, it's getting exciting time of the year. What am I getting for Christmas? Well, that's what I'm hearing from my kid anyway. But, uh, yeah, good time of year. Been a lot of hustle until that time.</p>
+          <p><span class="spk">Marty · 00:21</span>So, yeah, going good. Nick, how are you?</p>
+          <p><span class="spk">Nick · 00:23</span>Mate, going good, going good. It's funny you say that. We've um, we've never really been Christmas tree people, but now that we have a Have a daughter even though she's got no idea what Christmas is. Um, It's it's it's a thing. It's a thing. So we've got to sort that out in the next couple of days</p>
+          <p><span class="spk">Marty · 00:39</span>So real tree or just No, no, no, no, no.</p>
+          <p><span class="spk">Jason · 00:43</span>Not not with a cat. God.</p>
+          <p><span class="spk">Nick · 00:45</span>No, no, no, no, no, no. Look, I get the romance, but, uh, no. Happy with a fake one. I think you can even get ones now that have got the lights built in. Um, oh, that's good. Clever. Yeah. Clever.</p>
+          <p><span class="spk">Marty · 00:57</span>Where do you get them from? Do you know where you get them from? I'll let you know, mate.</p>
+          <p><span class="spk">Nick · 01:00</span>I've got no idea.</p>
+          <p><span class="spk">Nick · 01:00</span>I've just been told about them, but, um, I will let you know.</p>
+          <p><span class="spk">Jason · 01:03</span>If, if you are in the Southeast suburbs, shout out to Hardware Hub. Um, they have a huge Christmas range. I had to go through, I was going through their inventory items with them in a recent meeting. Uh, so yeah, that's, uh, out in Pakenham. Big, huge warehouse, heaps of Christmas stuff.</p>
+          <p><span class="spk">Jason · 01:18</span>They always have mega deals on Christmas stuff at this time of year. Do</p>
+          <p><span class="spk">Nick · 01:22</span>we have a numbers game</p>
+          <p><span class="spk">Jason · 01:22</span>code or? Yeah, we can get one. Yeah, I'll tell them TNG at checkout. Yeah. Punch that into check out on the, uh, on the online store, we'll, we'll get that going. Uh, so by the time you listen to this, go over to hardware hub.</p>
+          <p><span class="spk">Jason · 01:33</span>com. au and we'll get you the numbers game special, um, Christmas tree, Marty, look, if Casey is listening and you know, I'll, I'll probably cop a bit of that bit for this, but she is the Christmas Grinch. Um, I've, I've been at, I've been advocating for a Christmas tree for seven plus years. And I think. We, in the early days, we lived with one of her, um, lawyer mates, Cassie and Cassie and I ganged up and went, no, we're having</p>
+          <p><span class="spk">Jason · 02:00</span>a Christmas tree.</p>
+          <p><span class="spk">Jason · 02:00</span>And it was the only year I got a Christmas tree because it was two on one. Um, since then, you know, grown up, got married, have our, you know, have a place of our own and a cat. Um, and Casey's excuses. No, the cat will destroy, the cat is like a little terror and it will destroy the Christmas tree. Whereas I'm just like, let the cat have fun, but let me have a Christmas tree.</p>
+          <p><span class="spk">Jason · 02:18</span>Like, you know,</p>
+          <p><span class="spk">Marty · 02:19</span>Well, my dad is absolutely devastated because he's obviously Catholic and Charlie's, I don't know what he's going to be, but he's certainly not into religion. And, uh, but he still wants the tree and the presents. So we've got, We've got some big philosophical issues we've got to deal through.</p>
+          <p><span class="spk">Marty · 02:33</span>So</p>
+          <p><span class="spk">Nick · 02:34</span>very funny. There's something nice about it. There's something nice. There is something nice about it. In</p>
+          <p><span class="spk">Jason · 02:38</span>saying that though, I'll just quickly touch on, I felt like this year was the first time I really noticed like a lot of people going for Christmas trees on November the 1st. So it's actually Christmas trees and the decorations and the shops.</p>
+          <p><span class="spk">Jason · 02:50</span>I reckon November 1, things just escalated so much. And I don't know if I've just never noticed it before. No, it definitely went</p>
+          <p><span class="spk">Marty · 02:57</span>early. Yeah, I thought</p>
+          <p><span class="spk">Jason · 02:58</span>so. I don't know if</p>
+          <p><span class="spk">Jason · 03:00</span>they're trying to beat the, the cyber, you know, the black Friday cyber Monday because all those online sales move forward so much to the start of November.</p>
+          <p><span class="spk">Jason · 03:07</span>Now maybe they're just trying to, to build the momentum around Christmas so that people start to think about their Christmas shopping while all the black Friday deals were on. I don't know.</p>
+          <p><span class="spk">Nick · 03:17</span>Maybe it's just a, uh, you know, retail's in a bit of strife. So let's try and bring those Christmas numbers forward.</p>
+          <p><span class="spk">Jason · 03:23</span>Yep. Bang on next speaking a bit of strife, Marty, what have you got for us today? How do we stay out of strife? He's always</p>
+          <p><span class="spk">Nick · 03:28</span>in strife, Marty Bids.</p>
+          <p><span class="spk">Marty · 03:31</span>Uh, look, I wanted to talk about just, uh, small business owners again. And, uh, It has been a challenging economic climate. And I think it's across the board. And I always, I take myself back to 2012, where, um, you know, I was making a pivot in the business and growing my business.</p>
+          <p><span class="spk">Marty · 03:51</span>And it got to the point of around October, November, where I'd made some big investments in people. growth. And</p>
+          <p><span class="spk">Marty · 04:00</span>then all of a sudden I'm going, cash flows are really tight. I hadn't seen the upswing of the revenues off that investment. And I'd never been in a situation where I'm going, holy crap, I might not be here in January.</p>
+          <p><span class="spk">Marty · 04:13</span>And, um, and I just wonder given that these challenging climates are sort of possibly worse than the JFC at the time as to what business owners are going through. And what I wanted to share with the audience is. that it's okay and there is a way through. And one of the things that happened to me in 2012, I was very fortunate, um, to secure an overdraft.</p>
+          <p><span class="spk">Marty · 04:37</span>Now, interestingly enough, I got more than I needed on the limit on that overdraft, uh, during that Christmas period. And I only chipped into it, like I had about 250 grand limit, but I only ended up chipping into it about 60 grand. And it just provided so much sanctuary and peace of mind in my head because I knew everyone was going to get</p>
+          <p><span class="spk">Marty · 05:00</span>paid and I knew we were going to trade out of it.</p>
+          <p><span class="spk">Marty · 05:02</span>But I remember at the time that the stress that it caused, and I just remember coming home to Cole one night going, far out, I might have to actually close this down in, in Jan. Just to that, to that level. Now, fortunately we had commissions rolled through in January. It wasn't as big a problem as I thought.</p>
+          <p><span class="spk">Marty · 05:24</span>However, it was significant call to action. And then I see an article this week that, uh, was, I think it was YouGov, uh, did the research as well as Prosper, uh, that was saying that. Nearly 18 percent of small business owners are not operating with any cash reserves at all. And 77 percent of leaders are reporting subsequent personal impacts due to rising costs, including their personal finance.</p>
+          <p><span class="spk">Marty · 05:52</span>So, and 43 percent of people in those positions are experiencing emotional stress. So when I</p>
+          <p><span class="spk">Marty · 06:00</span>read that, I just thought I was in that position and I remember how terrible it felt. And. But it's amazing what you can do if you get the right people around you to find a way through to the other side and then you trade out of it.</p>
+          <p><span class="spk">Marty · 06:14</span>Um, yeah, I'll just throw that up as an experience. But have you ever experienced that in your own businesses and lives or known of clients that have, uh, been through it?</p>
+          <p><span class="spk">Nick · 06:25</span>Yep, yep, yep is the answer, um, I'm just trying to, I'm just trying to rattle off all the times, um, no, no, I think, um, no, mate, definitely, and I think it's all relative too, right, like, I think the one thing that I've realized is it doesn't matter what size your business is, um, there's, if you want to To your point, you said you wanted to pivot and grow, there's all, there's going to be those moments.</p>
+          <p><span class="spk">Nick · 06:53</span>Um, and you know, yours I think was for a good reason, it was growth. Uh, but I think what's</p>
+          <p><span class="spk">Nick · 07:00</span>happening now is, you know, it's possibly, uh, economic conditions that are impacting people, but it is, it is amazing, um, the peace of mind that can be created, you know, with something such as a, such as an overdraft and it actually goes further than giving you.</p>
+          <p><span class="spk">Nick · 07:19</span>A cash surplus or a cash, um, uh, or some capital behind you. But you know, you talk about stress, um, the ability to, to focus on actually what you're trying to achieve. If you're losing sight of what you're trying to achieve because you're focused on the bank account all the time, then It actually takes you away from doing what you need to be doing, which is, you know, bringing in revenue and, you know, sticking to a plan or your, your growth plan.</p>
+          <p><span class="spk">Nick · 07:45</span>Um, if you do have the growth plan, you run out of money. Sometimes you've got to deviate from that plan, which means you don't get the ultimate outcome that you were trying to achieve. So, you know, and I think back to some of the stuff that you've done with some of our business clients, um, the</p>
+          <p><span class="spk">Nick · 08:00</span>funding piece is not.</p>
+          <p><span class="spk">Nick · 08:01</span>It shouldn't be reactive. It should be proactive. So, okay. What are you trying to do? Are you trying to grow your business? Okay. That's great. Have you thought about the costs associated? Have you done some cash flows for the next 12 months? You know, because you don't, in most cases, particularly in our business and Jason's business was the same.</p>
+          <p><span class="spk">Nick · 08:19</span>You don't get immediate ROI. It takes time to get that ROI. So how do you get through that difficult period? Yeah. Do you have a business that needs, you You know, you need to do seasonable, uh, seasonal adjustments on, even we've done that in our business and we've gotten way better at that. And Geordie has been awesome.</p>
+          <p><span class="spk">Nick · 08:34</span>Just understanding, okay, based on our historic numbers, where are our peaks and troughs? So where are we going to run into, uh, lower cash, um, Lower cash than other times in the year and being ultimately prepared for that and then, you know, understanding what we need to do each month to compensate for maybe January and February being down.</p>
+          <p><span class="spk">Nick · 08:56</span>So it all comes back to really good planning with your accountant, number</p>
+          <p><span class="spk">Nick · 09:00</span>one, and number two, you know, if you've got a broker, um, or a business advisor such as yourself, Marty, that can you know, really set up a strategy around the funding instead of reactively like most people do.</p>
+          <p><span class="spk">Marty · 09:13</span>And like you say, sometimes that's just not what happens though, because people do get busy.</p>
+          <p><span class="spk">Marty · 09:18</span>So even if you are needing to be reactive, like in this situation, it's sage advice, what Nick was talking about, but I go, that's okay too, because I just go in the retail space. particularly this year as consumer sentiment drops a bit and spending is not guaranteed compared to previous years, you're going, here they are, these business owners having to buy stock in advance with uncertainty as to the outflow of that stock.</p>
+          <p><span class="spk">Marty · 09:47</span>So it might be a short term positioning where you go, or I have to secure what the next two or three months look like. And then you obviously trade out of it on the back end. And then you might</p>
+          <p><span class="spk">Marty · 10:00</span>formalize more distinct plan for the following year as well. But I just remember being in that situation at the, and I remember having that moment going, fuck, I just don't know.</p>
+          <p><span class="spk">Marty · 10:13</span>I feel like I know I'm going to get out of it, but what do I do in this next two, three months? And just going, just not having the answers at that point in time, it was pretty scary until I went and got the answers. And just to let people know. That those, those solutions are available.</p>
+          <p><span class="spk">Nick · 10:29</span>So Marty, question for you then.</p>
+          <p><span class="spk">Nick · 10:31</span>So you said you went, you went and got the answers. So if this is. You know, if someone's thinking about this stuff, what, what do they do? Like, how did you get the answers?</p>
+          <p><span class="spk">Marty · 10:40</span>Well, firstly, talk to me, but, but secondly, as well, I was very fortunate that I, the very person that I'd hired in the business role actually had the solution for the business because I went to that person directly and said, You know, this is</p>
+          <p><span class="spk">Marty · 11:00</span>what I'm concerned about.</p>
+          <p><span class="spk">Marty · 11:00</span>And there was a bit of embarrassment around that too, because I'd, yeah, I'd hired the bloke and now I'm asking him for help, but it was, it was really good. He goes, actually there's, you know, the business is doing really well overall. And there's a short term solution here that we'll be able to get you through.</p>
+          <p><span class="spk">Marty · 11:16</span>So I had the right person. But even if you were like, if you had an existing business banking contact, obviously, you know, you can talk to them and just say, look, cause sometimes you can do a temporary overdraft. So it might not even be a full blown overdraft, but sometimes if you've got a good history with a lender, they might say, all right, here's a temporary limit for three months.</p>
+          <p><span class="spk">Marty · 11:37</span>And that's it. And then, you know, it falls away, but that still creates a stress on the back end of it because it has to be cleared. Um, secondary, I would say definitely, you know, look to establish something long term because even if it is 20 percent and it's unsecured and there's no guarantees around it, um, that's tying in the director's properties and stuff, it's</p>
+          <p><span class="spk">Marty · 12:00</span>interesting how, you know, Once people trade through these situations, how they find an upside in the business of use for that money anyway, which is really fascinating.</p>
+          <p><span class="spk">Marty · 12:10</span>And, and that's what I've found. People have utilized these things effectively in managing their business going forward as a backup, um, for opportunity as well as, you know, a discomfort. So it's been, yeah, it's been interesting on that, but definitely talk to, if they have a banker, uh, They can talk to their business banker, but the preference is come to, come to innovate, of course, because at least we can, you know, provide choice around that opportunity and give direction as what's, what do you need now, but also what's good for the future and work with you long term on that.</p>
+          <p><span class="spk">Marty · 12:44</span>Um, that's, that's the key. That's the key message there, Nick.</p>
+          <p><span class="spk">Jason · 12:47</span>I, uh, actually can't remember a time when I've had so many conversations with people feeling the pinch at the moment. Um, you know, I think when COVID hit and everything else that was going on and, you know,</p>
+          <p><span class="spk">Jason · 13:00</span>obviously a long time, it's been a long time since the global financial crisis, but basically, you know, business analysts are looking at the current stage of business cycle saying that this is the harshest business conditions and business environment since the GFC.</p>
+          <p><span class="spk">Jason · 13:15</span>Um, And then, you know, see the data and see the stats zero to a small business insights website where you can see all the data of wage growth, sales growth, cash balances, you know, debtor days, you know, how long is it taking to get paid. But it's more when you actually have real life conversations with, with humans on the other side of the meetings that we're having.</p>
+          <p><span class="spk">Jason · 13:34</span>Um, actually everything in that article, Marty, that you went through around, you know, business owners aren't paying themselves, you know, at the moment going on. No,</p>
+          <p><span class="spk">Marty · 13:41</span>46%. Of business owners have reduced their income to back their business. It's an incredible stat.</p>
+          <p><span class="spk">Jason · 13:48</span>And then, yeah, I think it was nearly a quarter of business owners are actually putting some of their own personal funds back into the business to keep it afloat at the moment.</p>
+          <p><span class="spk">Jason · 13:56</span>So when you start to look at that and go, you know, the failure rates of business, the</p>
+          <p><span class="spk">Jason · 14:00</span>number one reason a business fails is due to managing cash flow. So if you've got one in five businesses that are going to shut down over the coming couple of years, the stats are worse than that. Cashflow is the number one reason that a business fails.</p>
+          <p><span class="spk">Jason · 14:14</span>And the other one that we're getting right now is the ATO payments. We're coming up to, you know, the, the September bass was lodged recently. It was due end of November, a couple of weeks ago. Um, all of a sudden there's this big ATO balance that's built up. And people are making the decision to go, Oh, do I pay the ATO and have no money left over for December, January, or do I need to sit on it and kind of work out a payment plan?</p>
+          <p><span class="spk">Jason · 14:39</span>So I think, you know, statistically speaking to a whole bunch of other accounting firm owners as well, the amount of payment plans that are happening at the moment, because people are just going, Who can I rob, you know, rob Peter to pay Paul or just spread out some stuff and go, just kind of sit tight because of the uncertainty that's happening over December, January.</p>
+          <p><span class="spk">Jason · 14:56</span>And I mean, even from, from a personal point of view, same,</p>
+          <p><span class="spk">Jason · 15:00</span>you know, same as what Nick said, yes, on all fronts, you know, from a cashflow point of view. Sometimes what's the saying, the mechanics car is the worst car on the road. You're so busy worried about everyone else's cashflow that sometimes you then at the last minute go, shit, let's have a look at ours.</p>
+          <p><span class="spk">Jason · 15:11</span>And fortunately we run pretty good forecasts and pretty good projections. So we can pretty quickly figure out if we're going to have a bit of a cashflow crunch, which is usually a timing thing with December and January. Cause in professional services, you pay out a truckload of annual leave for everyone to have a couple of weeks off over Christmas, New Year's.</p>
+          <p><span class="spk">Jason · 15:28</span>It takes a little bit of time for the wheels to start turning again in January. So it's all these things though, that like now hearing it, it's just, you know, we obviously share that on this, this show just to go, if you, if this is resonating with you that, you know, cashflow is looking tight, ATO debt's building up, um, you know, you're thinking about how to, how do you maybe tipping some of your own personal money back in?</p>
+          <p><span class="spk">Jason · 15:49</span>This is the time to talk to Marty. And, you know, we've had great success with our clients that have worked with you, Marty, um, in this space. And, and I know that they're better for it. They're, they're a bit more stress free, you know, the weights off the</p>
+          <p><span class="spk">Jason · 16:00</span>shoulders, knowing there's a buffer or like, you know, that, you know, something to fall back on when you know, Hey, look, I've got money coming in, in a few weeks, but I feel safe and secure that payroll's going out or super's going out because of that buffer that's there.</p>
+          <p><span class="spk">Marty · 16:13</span>Yeah. And like I said, 43% Um, business owners are experiencing high stress levels at the moment. That's a, that's a very high number and there's other alternatives. Even when you have tax debt, there are still ways through, right? In regards to might be short term business loans. Um, it might be overdrafts, but there's lots of different opportunities, but look, the three impact points that can make a difference before Christmas.</p>
+          <p><span class="spk">Marty · 16:37</span>We want you to have your Christmas turkey still. Um, so. Again, explore business overdrafts or short term debt, you're gonna trade out of it, but it's a short term solution to get you through over the holiday period. Um, more organic stuff that you can do, which is interesting is, um, think about, Controlling expense.</p>
+          <p><span class="spk">Marty · 16:57</span>You might be able to control some legitimate</p>
+          <p><span class="spk">Marty · 17:00</span>expense that sort of, uh, overrun on your business that you could bring back in and create some cashflow through that. And again, even with marketing, um, people spend so much on marketing and trying to grow. Think about organic growth. Think about ways we can get word of mouth out there and actually do organic stuff that doesn't cost anything in order to get some value out of it.</p>
+          <p><span class="spk">Marty · 17:22</span>Back instead of just having that patron, that can sometimes happen. So there's some levers you can quickly pull and that's what I've always found. Organic type of marketing, if it works well, could work really, really well and at, and it's cost efficient, but also in regards to um, just, just minimizing cost in the short term as well.</p>
+          <p><span class="spk">Marty · 17:41</span>So hope that's helpful to the listeners out there.</p>
+          <p><span class="spk">Nick · 17:44</span>I think, yeah, I think that's super helpful, Marty in it. But I think the other thing too, as much as Jason has said, come see you, I think. Um, at the same time, you need to be sitting with your accountant because quite often, um, I think one of the things that you would see doing what you do, Marty, is repeat</p>
+          <p><span class="spk">Nick · 18:00</span>offenders.</p>
+          <p><span class="spk">Nick · 18:00</span>So people that come for short term funds, um, or overdrafts generally keep coming back because they don't have a plan, um, to exit those funds or they don't have a, you know, an underlying strategy. So you don't just go borrow money, um, because you need to get through, uh, through a period. It's Okay, well, if we're doing this, is there, is there a way out of this or, you know, is there something else we need to be thinking about?</p>
+          <p><span class="spk">Nick · 18:26</span>Why is this business not viable? Why am I, am I in this position just a few, um, just through circumstance and I'll definitely trade out of it or is there a chance I won't trade out of it? So, I think both of you guys can add. You know, it's an immense amount of value for sure. Yeah,</p>
+          <p><span class="spk">Jason · 18:42</span>not going at a loan is probably the absolute most pivotal, smartest piece of advice there.</p>
+          <p><span class="spk">Jason · 18:48</span>Um, you know, your accountant, your financial advisor, your broker, all of those areas, uh, are super crucial. And, you know, in, in a real life story, you know, we've seen, um, business owner</p>
+          <p><span class="spk">Jason · 19:00</span>that has not, not buried their head in the sand, but, you know, They, they just kind of try to sort it out themselves. They, they went direct to a funder and got some really high interest funding.</p>
+          <p><span class="spk">Jason · 19:12</span>There was meant to be short term, you know, it was going to pay, pay a bill that kind of got the next job finished and you know, so on and so forth, but whatever happening, Because there wasn't the advice sought, there was no thought to the next bit of cash flow, how high the interest rate was, how big their repayments were, that short term funding ended up crippling this business and it went into liquidation and now the business has gone shut down, you know, failed.</p>
+          <p><span class="spk">Jason · 19:37</span>Um, so that's the other, the other side to, you know, yeah, sure, you can get some short term funding, Make sure you've got your advisors on board. You've talked with, you've spoken to your accountant, the broker's always going to make sure they're dotting eyes and crossing T's to show affordability and to show that this is a good, clear plan.</p>
+          <p><span class="spk">Jason · 19:53</span>Um, but if you go it alone, there's some sharks out there that may give you the money knowing full well that. You know, they've got some security over your</p>
+          <p><span class="spk">Jason · 20:00</span>home, um, or some personal assets and you don't pay it back. They're coming after your house. And, you know, the last thing we want to see here at the numbers game is our, our great listeners and, and business owners out there that have done the hard yards lose the property that they've worked their asses off for.</p>
+          <p><span class="spk">Marty · 20:14</span>Yeah, and Jase, a better plan ultimately provides better financial opportunities and finance opportunities as well for the business to grow sustainably in the future. And again, so today I just wanted to bring that up because I just feel like there's there's people stressful in the short term that we can resolve and provide a solution for.</p>
+          <p><span class="spk">Marty · 20:35</span>And then coming out the back end of that, we have a longer term opportunity to really support business owners and, uh, You know, talk to Jace, talk to your accountant, talk to your broker, your banker, whatever the case may be. It's, um, everyone's here for you. So utilize it.</p>
+          <p><span class="spk">Jason · 20:52</span>Beautiful mate. Well, well wrapped up Marty and a great episode for you to bring to our audience and such a timely thing for them to hear.</p>
+          <p><span class="spk">Jason · 20:59</span>If you do want to reach</p>
+          <p><span class="spk">Jason · 21:00</span>out, obviously the team at Future Advisory is always happy to help, and then again, you know, the experts. Experts to innovate, whether it's financial planning, mortgage broking, business funding, assets, the whole deal. Uh, go and check out Innovate I-N-O-V-A-Y [t.com](http://t.com) au. You can find Marty's details there.</p>
+          <p><span class="spk">Jason · 21:15</span>His personal mobile number is on the site. So if you wanna call Marty, who happens to be the number one rated host of the show, he will be available. He'll answer your call. He's a great man. And so next time</p>
+          <p><span class="spk">Marty · 21:28</span>cashflow is king, cashflow is oxygen. 0 4 3 9 double 0 2 1. Double nine. There it is. It's out of the universe.</p>
+          <p><span class="spk">Marty · 21:36</span>Game over.</p>
+          <p><span class="spk">Jason · 21:39</span>This podcast is for educational and informational purposes only. The conversations are of a general nature and do not qualify as financial or tax advice. We recommend before you make any financial decisions, you consult a licensed professional. Individuals on the podcast may hold positions in the companies discussed. ---</p>
+        </div>
+      </details>
+
+    </div>
+
+    <!-- LISTEN:START (build_episode.py rewrites the 3 URLs + iframe title per episode; player dropped if no spotifyEmbedUrl) -->
+    <section class="listen-now">
+      <div class="ln-head">
+        <span class="ln-title">Listen now</span>
+      </div>
+      <div class="audio-embed">
+        <iframe src="https://open.spotify.com/embed/episode/6HnxPGDz7p72p6vSfN9SYy?utm_source=generator"
+          width="100%" height="152" loading="lazy" allowfullscreen
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+          title="Spotify — Surviving the Festive Financial Crunch"></iframe>
+      </div>
+    </section>
+
+    <div class="listen">
+      <a href="https://open.spotify.com/episode/6HnxPGDz7p72p6vSfN9SYy" target="_blank" rel="noopener" aria-label="Listen to this episode on Spotify">
+        <svg viewBox="0 0 24 24"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.52 17.34c-.24.36-.66.48-1.02.24-2.82-1.74-6.36-2.1-10.56-1.14-.42.12-.78-.18-.9-.54-.12-.42.18-.78.54-.9 4.56-1.02 8.52-.6 11.64 1.32.42.18.48.66.3 1.02zm1.44-3.3c-.3.42-.84.6-1.26.3-3.24-1.98-8.16-2.58-11.94-1.38-.48.12-1.02-.12-1.14-.6-.12-.48.12-1.02.6-1.14 4.32-1.32 9.72-.66 13.44 1.62.36.18.54.78.3 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.3c-.6.18-1.2-.18-1.38-.72-.18-.6.18-1.2.72-1.38 4.26-1.26 11.28-1.02 15.72 1.62.54.3.72 1.02.42 1.56-.3.42-1.02.6-1.56.3z"/></svg>
+        Spotify
+      </a>
+      <a href="https://podcasts.apple.com/au/podcast/id1555566088?i=1000679651340" target="_blank" rel="noopener" aria-label="Listen to this episode on Apple Podcasts">
+        <svg viewBox="0 0 24 24"><path d="M5.34 0A5.328 5.328 0 000 5.34v13.32A5.328 5.328 0 005.34 24h13.32A5.328 5.328 0 0024 18.66V5.34A5.328 5.328 0 0018.66 0H5.34zm6.525 2.568c2.336 0 4.448.902 6.056 2.587 1.224 1.272 1.912 2.619 2.264 4.392l.04.23c.04.272-.16.527-.432.567a.505.505 0 01-.567-.431l-.04-.213c-.312-1.57-.92-2.747-2.004-3.867-1.428-1.496-3.293-2.294-5.393-2.294-2.1 0-3.966.798-5.394 2.294-1.084 1.12-1.692 2.298-2.004 3.867l-.04.213a.507.507 0 01-.567.431.504.504 0 01-.432-.567l.04-.23c.352-1.773 1.04-3.12 2.264-4.392 1.608-1.685 3.72-2.587 6.056-2.587h.153zm.136 3.033c1.74 0 3.312.67 4.527 1.934.883.916 1.394 1.93 1.663 3.253l.04.23a.505.505 0 01-.431.567.503.503 0 01-.567-.432l-.04-.212c-.23-1.112-.659-1.97-1.396-2.732-1.052-1.1-2.404-1.672-3.9-1.672s-2.849.572-3.901 1.672c-.737.762-1.167 1.62-1.396 2.732l-.04.212a.503.503 0 01-.567.432.505.505 0 01-.432-.567l.04-.23c.27-1.323.78-2.337 1.664-3.253 1.215-1.264 2.787-1.934 4.527-1.934h.21zm-.078 3.05c1.092 0 2.091.424 2.89 1.22.582.58.924 1.245 1.107 2.15l.04.218a.501.501 0 01-.424.568.499.499 0 01-.568-.424l-.04-.198c-.146-.724-.413-1.253-.871-1.716-.63-.63-1.398-.957-2.226-.957s-1.595.328-2.225.957c-.459.463-.726.992-.871 1.716l-.04.198a.499.499 0 01-.568.424.501.501 0 01-.424-.568l.04-.219c.183-.904.525-1.569 1.106-2.149.8-.796 1.799-1.22 2.89-1.22h.184zM12 14.07a2.477 2.477 0 012.48 2.478A2.477 2.477 0 0112 19.024a2.477 2.477 0 01-2.48-2.477A2.477 2.477 0 0112 14.07z"/></svg>
+        Apple
+      </a>
+      <a class="yt-pill" href="https://www.youtube.com/@thenumbersgamepodcast?sub_confirmation=1" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.12-2.14C19.5 3.55 12 3.55 12 3.55s-7.5 0-9.38.51A3 3 0 0 0 .5 6.2 31.4 31.4 0 0 0 0 12a31.4 31.4 0 0 0 .5 5.8 3 3 0 0 0 2.12 2.14c1.88.51 9.38.51 9.38.51s7.5 0 9.38-.51a3 3 0 0 0 2.12-2.14A31.4 31.4 0 0 0 24 12a31.4 31.4 0 0 0-.5-5.8zM9.55 15.57V8.43L15.82 12z"/></svg>
+        Subscribe
+      </a>
+    </div>
+    <!-- LISTEN:END -->
+
+    <div class="relsec">
+      <span class="rtitle">Discover more</span>
+      <div class="relgrid">
+        <a class="relcard" href="/the-3-numbers-every-business-owner-must-track">
+          <img src="https://i.ytimg.com/vi/DM_b95zERsI/hqdefault.jpg" alt="EP 264 thumbnail">
+          <span class="rt">The 3 Numbers Every Business Owner Must Track</span>
+          <span class="rfoot"><span class="rwhy">Also covers: cash flow</span><span class="rtag">EP 264</span></span>
+        </a>
+        <a class="relcard" href="/7-financial-red-flags-every-business-owner-needs-to-know">
+          <img src="https://i.ytimg.com/vi/SXouFdviIsk/hqdefault.jpg" alt="EP 244 thumbnail">
+          <span class="rt">7 Financial Red Flags Every Business Owner Needs to Know</span>
+          <span class="rfoot"><span class="rwhy">Also covers: cash flow</span><span class="rtag">EP 244</span></span>
+        </a>
+        <a class="relcard" href="/the-most-expensive-day-in-aussie-small-business-history">
+          <img src="https://i.ytimg.com/vi/V-10kMQrsDM/hqdefault.jpg" alt="EP 284 thumbnail">
+          <span class="rt">The Most Expensive Day in Aussie Small Business History</span>
+          <span class="rfoot"><span class="rwhy">Also covers: cash flow</span><span class="rtag">EP 284</span></span>
+        </a>
+        <a class="relcard" href="/mastering-the-new-financial-year">
+          <img src="https://i.ytimg.com/vi/sc6m1WxdRbI/hqdefault.jpg" alt="EP 197 thumbnail">
+          <span class="rt">Mastering the New Financial Year</span>
+          <span class="rfoot"><span class="rwhy">Also covers: cash flow</span><span class="rtag">EP 197</span></span>
+        </a>
+        <a class="relcard" href="/the-business-of-gift-cards">
+          <img src="https://i.ytimg.com/vi/nC_JkW320Tw/hqdefault.jpg" alt="EP 282 thumbnail">
+          <span class="rt">The Business of Gift Cards</span>
+          <span class="rfoot"><span class="rwhy">Also covers: cash flow</span><span class="rtag">EP 282</span></span>
+        </a>
+        <a class="relcard" href="/pokemon-cards-vs-bitcoin-gold-and-the-asx">
+          <img src="https://i.ytimg.com/vi/7PHS9HCqNvM/hqdefault.jpg" alt="EP 286 thumbnail">
+          <span class="rt">Pokemon Cards vs Bitcoin, Gold and the ASX</span>
+          <span class="rfoot"><span class="rwhy">20 July 2026</span><span class="rtag">EP 286</span></span>
+        </a>
+      </div>
+      <div class="reldots" id="reldots"></div>
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="footgrid">
+      <div class="fcol">
+        <div class="foot-label">Follow us on</div>
+        <div class="socials">
+          <a href="https://www.instagram.com/thenumbersgamepodcast/" target="_blank" rel="noopener" aria-label="The Numbers Game on Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.8.2 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1 .4 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .4-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1-.4-2.2-.1-1.3-.1-1.7-.1-4.9s0-3.6.1-4.9c.1-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.4 2.2-.4 1.3-.1 1.7-.1 4.9-.1zm0 2c-3.1 0-3.5 0-4.8.1-1.1.1-1.5.2-1.8.3-.4.2-.7.3-1 .6-.3.3-.5.6-.6 1-.1.3-.3.7-.3 1.8-.1 1.3-.1 1.7-.1 4.8s0 3.5.1 4.8c.1 1.1.2 1.5.3 1.8.2.4.3.7.6 1 .3.3.6.5 1 .6.3.1.7.3 1.8.3 1.3.1 1.7.1 4.8.1s3.5 0 4.8-.1c1.1-.1 1.5-.2 1.8-.3.4-.2.7-.3 1-.6.3-.3.5-.6.6-1 .1-.3.3-.7.3-1.8.1-1.3.1-1.7.1-4.8s0-3.5-.1-4.8c-.1-1.1-.2-1.5-.3-1.8-.2-.4-.3-.7-.6-1-.3-.3-.6-.5-1-.6-.3-.1-.7-.3-1.8-.3-1.3-.1-1.7-.1-4.8-.1zm0 3.4a5.4 5.4 0 1 1 0 10.8 5.4 5.4 0 0 1 0-10.8zm0 2a3.4 3.4 0 1 0 0 6.8 3.4 3.4 0 0 0 0-6.8zm5.6-2.3a1.3 1.3 0 1 1-2.6 0 1.3 1.3 0 0 1 2.6 0z"/></svg></a>
+          <a href="https://www.tiktok.com/@thenumbersgamepodcast" target="_blank" rel="noopener" aria-label="The Numbers Game on TikTok"><svg viewBox="0 0 24 24"><path d="M12.53.02C13.84 0 15.14.01 16.44 0c.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg></a>
+          <a href="https://www.linkedin.com/company/the-numbers-game-podcast/" target="_blank" rel="noopener" aria-label="The Numbers Game on LinkedIn"><svg viewBox="0 0 24 24"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.24 8.25h4.52V23H.24V8.25zM8.34 8.25h4.33v2.01h.06c.6-1.14 2.08-2.34 4.28-2.34 4.58 0 5.42 3.01 5.42 6.92V23h-4.51v-7.16c0-1.71-.03-3.91-2.38-3.91-2.39 0-2.75 1.86-2.75 3.78V23H8.34V8.25z"/></svg></a>
+          <a href="https://www.facebook.com/profile.php?id=100071290388343" target="_blank" rel="noopener" aria-label="The Numbers Game on Facebook"><svg viewBox="0 0 24 24"><path d="M24 12.07C24 5.41 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.04V9.41c0-3.02 1.8-4.7 4.54-4.7 1.31 0 2.68.24 2.68.24v2.97h-1.5c-1.5 0-1.96.93-1.96 1.89v2.26h3.32l-.53 3.5h-2.8V24C19.62 23.1 24 18.1 24 12.07z"/></svg></a>
+          <a href="https://www.youtube.com/@thenumbersgamepodcast" target="_blank" rel="noopener" aria-label="The Numbers Game on YouTube"><svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.2C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31.7 31.7 0 0 0 0 12a31.7 31.7 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.2A31.7 31.7 0 0 0 24 12a31.7 31.7 0 0 0-.5-5.8zM9.6 15.6V8.4L15.8 12z"/></svg></a>
+        </div>
+      </div>
+      <div class="fcol">
+        <div class="foot-label">Brought to you by</div>
+        <div class="sponsors">
+          <a href="https://www.inovayt.com.au/" target="_blank" rel="noopener"><img src="assets/inovayt-white.png" alt="Inovayt"></a>
+          <a href="https://futureadvisory.com.au/" target="_blank" rel="noopener"><img src="assets/future-advisory-white.png" alt="Future Advisory"></a>
+        </div>
+      </div>
+      <div class="fcol produced">
+        <div class="foot-label">Produced by</div>
+        <a href="https://www.vidpod.com.au/" target="_blank" rel="noopener"><img src="assets/vidpod-white.png" alt="VIDPOD"></a>
+      </div>
+    </div>
+    <div class="footbar">
+      <details class="footnav-dd">
+        <summary><svg class="ham" viewBox="0 0 24 24"><path d="M3 6h18v2H3zM3 11h18v2H3zM3 16h18v2H3z"/></svg> Menu</summary>
+        <div class="dd-links">
+          <a href="/">Home</a><a href="/episodes">Every episode</a><a href="/adventure">Choose your own adventure</a><a href="/about">About the show</a><a href="/nick-reilly">Nick Reilly</a><a href="/jason-robinson">Jason Robinson</a><a href="/contact">Contact</a>
+        </div>
+      </details>
+      <div class="copyright">© 2026 The Numbers Game</div>
+    </div>
+  </footer>
+
+  <script>
+    var VIDEO='t-Bk74vD1yg';
+    var CHAPTERS=[
+      {t:"00:00",s:0,title:"Intro"},
+      {t:"03:31",s:211,title:"Marty's 2012 Cash Flow Scare"},
+      {t:"05:24",s:324,title:"The Stats On Small Business Financial Stress"},
+      {t:"07:19",s:439,title:"Why Cash Buffers And Proactive Planning Matter"},
+      {t:"10:29",s:629,title:"How To Get The Right Funding Answers"},
+      {t:"12:47",s:767,title:"The Harshest Business Conditions Since The GFC"},
+      {t:"13:56",s:836,title:"Cash Flow, The ATO And The Christmas Crunch"},
+      {t:"16:37",s:997,title:"Three Levers To Pull Before Christmas"},
+      {t:"17:44",s:1064,title:"Do Not Go It Alone On Funding"}
+    ];
+    var QUESTIONS=[
+      {q:"How can an overdraft help a business through a cash flow crunch?",s:277},
+      {q:"How many small businesses have no cash reserves?",s:324},
+      {q:"Why does a cash buffer reduce business stress?",s:439},
+      {q:"Should business funding be arranged before you need it?",s:481},
+      {q:"How tough are current business conditions?",s:767},
+      {q:"How many business owners cut their own pay to survive?",s:821},
+      {q:"What is the top reason businesses fail?",s:836},
+      {q:"What short term funding gets a business through Christmas?",s:997},
+      {q:"Why do businesses keep needing short term loans?",s:1064},
+      {q:"What happens if you take high interest funding without advice?",s:1122}
+    ];
+
+    var chEl=document.getElementById('chapters');
+    CHAPTERS.forEach(function(c){var b=document.createElement('button');b.className='chapter';b.onclick=function(){startAt(c.s)};b.innerHTML='<span class="tc">'+c.t+'</span><span class="cx">'+c.title+'</span>';chEl.appendChild(b);});
+    document.getElementById('chcount').textContent=CHAPTERS.length;
+    var qEl=document.getElementById('qa');
+    QUESTIONS.forEach(function(q){var b=document.createElement('button');b.className='q';b.onclick=function(){startAt(q.s)};b.innerHTML='<span class="qm">?</span><span class="qx">'+q.q+'</span><span class="go">›</span>';qEl.appendChild(b);});
+    document.getElementById('qcount').textContent=QUESTIONS.length;
+
+    /* Mobile nav dropdown. */
+    var burger=document.getElementById('navburger'), navdrop=document.getElementById('navdrop');
+    if(burger&&navdrop){burger.addEventListener('click',function(){
+      navdrop.hidden=!navdrop.hidden;
+      burger.setAttribute('aria-expanded', navdrop.hidden?'false':'true');
+    });}
+
+    /* Voice-note button reveals the recorder; × tucks it away. */
+    var vbtn=document.getElementById('vbtn'), vslot=document.getElementById('vslot'), vclose=document.getElementById('vclose');
+    if(vbtn&&vslot){vbtn.addEventListener('click',function(){vslot.hidden=!vslot.hidden;});}
+    if(vclose&&vslot){vclose.addEventListener('click',function(){vslot.hidden=true;});}
+
+    /* Keep-exploring dots: only shown when the strip actually scrolls (mobile). */
+    var rg=document.querySelector('.relgrid'), rd=document.getElementById('reldots');
+    if(rg&&rd){
+      var relCards=rg.querySelectorAll('.relcard');
+      relCards.forEach(function(){rd.appendChild(document.createElement('span'))});
+      var updDots=function(){
+        var scrollable=rg.scrollWidth>rg.clientWidth+4;
+        rd.style.display=scrollable?'flex':'none';
+        if(!scrollable)return;
+        var i=Math.round(rg.scrollLeft/(rg.scrollWidth-rg.clientWidth)*(relCards.length-1));
+        rd.querySelectorAll('span').forEach(function(s,n){s.classList.toggle('on',n===i)});
+      };
+      rg.addEventListener('scroll',updDots,{passive:true});
+      window.addEventListener('resize',updDots);
+      updDots();
+    }
+
+    /* Explore tabs: swap the visible panel; the row stays put so you never lose your place. */
+    var tabBtns=document.querySelectorAll('.tabbtn');
+    tabBtns.forEach(function(b){
+      b.addEventListener('click',function(){
+        tabBtns.forEach(function(o){o.classList.remove('on')});
+        document.querySelectorAll('.tpanel').forEach(function(p){p.hidden=true});
+        b.classList.add('on');
+        document.getElementById(b.getAttribute('data-panel')).hidden=false;
+      });
+    });
+
+    /* YouTube: clean facade, then real player on demand. Seek without yanking to top. */
+    var player=null, ready=false, apiReady=false, pending=null;
+    window.onYouTubeIframeAPIReady=function(){apiReady=true; if(pending!=null){var s=pending;pending=null;createPlayer(s);}};
+    function createPlayer(sec){
+      var wrap=document.getElementById('player'); wrap.innerHTML='<div id="yt"></div>';
+      player=new YT.Player('yt',{videoId:VIDEO,playerVars:{autoplay:1,rel:0,modestbranding:1,playsinline:1,start:Math.floor(sec||0)},events:{onReady:function(){ready=true;}}});
+    }
+    function nudge(){
+      var p=document.getElementById('player-wrap'), r=p.getBoundingClientRect();
+      if(r.bottom<80 || r.top>window.innerHeight-90){ p.scrollIntoView({behavior:'smooth',block:'start'}); }
+    }
+    function startAt(sec){
+      nudge();
+      if(player&&ready){ player.seekTo(sec,true); player.playVideo(); return; }
+      if(apiReady){ createPlayer(sec); } else { pending=sec; }
+    }
+    document.getElementById('facade').addEventListener('click',function(){startAt(0);});
+    (function(){var s=document.createElement('script');s.src='https://www.youtube.com/iframe_api';document.head.appendChild(s);})();
+  </script>
+</body>
+</html>
