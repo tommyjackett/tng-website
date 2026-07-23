@@ -1,0 +1,697 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EP 242 · Enhanced Games - Can The Olympics Keep Up? | The Numbers Game</title>
+<meta name="description" content="">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" sizes="64x64" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="canonical" href="https://thenumbersgamepodcast.com.au/enhanced-games-can-the-olympics-keep-up">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="The Numbers Game">
+<meta property="og:title" content="EP 242 · Enhanced Games - Can The Olympics Keep Up? | The Numbers Game">
+<meta property="og:description" content="">
+<meta property="og:url" content="https://thenumbersgamepodcast.com.au/enhanced-games-can-the-olympics-keep-up">
+<meta property="og:image" content="https://i.ytimg.com/vi/Ndgcpcg_TAw/maxresdefault.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+  :root{
+    --purple:#585af3; --purple-dark:#2c1b8a; --mint:#7ad9a8;
+    --white:#ffffff; --muted:rgba(255,255,255,.60); --dim:rgba(255,255,255,.42);
+    --line:rgba(255,255,255,.12); --card:rgba(255,255,255,.05); --card-hi:rgba(255,255,255,.09);
+    --display:'Anton',Impact,'Helvetica Neue',sans-serif;
+    --sans:'Inter',system-ui,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif;
+    --wrap:1280px;   /* page frame (nav spans this) */
+    --col:960px;     /* content column (player, tabs, text) */
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:var(--sans); color:var(--white); line-height:1.6; -webkit-font-smoothing:antialiased;
+    background:#12093a;
+    background-image:
+      radial-gradient(1200px 600px at 82% -6%, rgba(88,90,243,.45) 0%, transparent 55%),
+      radial-gradient(900px 700px at 5% 8%, rgba(122,217,168,.10) 0%, transparent 50%),
+      linear-gradient(180deg,#2c1b8a 0%,#1a1150 28%,#100b34 62%,#0b0820 100%);
+    background-attachment:fixed;
+  }
+  a{color:inherit}
+  .wrap{max-width:var(--wrap);margin:0 auto;padding:0 36px}
+  main.wrap{max-width:var(--col)}
+  @media(max-width:720px){.wrap{padding:0 22px}}
+
+  /* ── Navbar ── */
+  .nav{position:sticky;top:0;z-index:50;background:linear-gradient(180deg,rgba(24,15,74,.92),rgba(24,15,74,.72));backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+  .nav-in{max-width:var(--wrap);margin:0 auto;padding:11px 36px;display:flex;align-items:center;justify-content:space-between}
+  @media(max-width:720px){.nav-in{padding:11px 22px}}
+  .brand{display:block;line-height:0}
+  .brand img{height:36px;width:auto;display:block}
+  .navlinks{display:flex;gap:28px;align-items:center}
+  .navlinks a{text-decoration:none;font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);transition:.15s}
+  .navlinks a:hover{color:var(--white)}
+  .navlinks a.navtop{cursor:default}
+  .navgroup{position:relative;display:flex;align-items:center}
+  .navgroup .subnav{display:none;position:absolute;top:100%;left:50%;transform:translateX(-50%);padding-top:14px;min-width:180px}
+  .navgroup:hover .subnav,.navgroup:focus-within .subnav{display:block}
+  .subnav-in,.navgroup .subnav{z-index:60}
+  .navgroup .subnav a{display:block;background:#180f4a;border:1px solid var(--line);border-top:0;padding:12px 16px;font-size:12px;color:rgba(255,255,255,.85)}
+  .navgroup .subnav a:first-child{border-top:1px solid var(--line)}
+  .navgroup .subnav a:hover{background:#221768;color:var(--white)}
+  .navburger{display:none;background:none;border:1px solid var(--line);padding:8px 10px;cursor:pointer;color:var(--white);transition:.15s}
+  .navburger:hover{border-color:rgba(122,217,168,.6)}
+  .navburger svg{width:20px;height:20px;fill:currentColor;display:block}
+  .navdrop{display:none}
+  @media(max-width:720px){
+    .navlinks{display:none}
+    .navburger{display:block}
+    .navdrop{display:block;position:absolute;left:0;right:0;top:100%;
+      background:#180f4a;border-bottom:1px solid var(--line);box-shadow:0 24px 50px rgba(0,0,0,.45)}
+    .navdrop[hidden]{display:none}
+    .navdrop a{display:block;padding:15px 22px;text-decoration:none;font-size:14px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:rgba(255,255,255,.9);border-bottom:1px solid rgba(255,255,255,.06)}
+    .navdrop a:last-child{border-bottom:0}
+    .navdrop a.sub{padding-left:42px;font-size:13px;color:rgba(255,255,255,.72)}
+    .navdrop .navlabel{display:block;padding:15px 22px 6px;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.4)}
+  }
+
+  /* ── Hero / hook (marker-highlight system: purple hook wraps naturally, mint payoff below)
+     Rules: title splits at its natural break (colon/pipe/question mark). Front = hook (purple,
+     big), back = payoff (mint, smaller). No break in title = purple hook only. Highlights hug
+     the text (tight em padding tuned to Anton) and wrap via box-decoration-break — never
+     hand-pick line breaks or mint words. ── */
+  header.hero{padding:34px 0 6px}
+  .hook{--inx:clamp(8.4px,2.1vw,15.6px)} /* one shared text inset so hook + payoff first letters align */
+  .hook .hk{font-family:var(--display);font-weight:400;text-transform:uppercase;
+    font-size:clamp(28px,7vw,52px);line-height:1.3;letter-spacing:-.5px;text-wrap:balance}
+  .hook .hk span{color:var(--white);padding:.04em var(--inx) .02em;
+    background:linear-gradient(var(--purple),var(--purple)) 0 50%/100% 87% no-repeat;
+    -webkit-box-decoration-break:clone;box-decoration-break:clone}
+  .hook .pay{font-family:var(--display);font-weight:400;text-transform:uppercase;
+    font-size:clamp(16px,4vw,24px);line-height:1.5;letter-spacing:.6px;margin-top:8px;text-wrap:balance}
+  .hook .pay span{color:#0a0a0a;padding:.08em var(--inx) .04em;
+    background:linear-gradient(var(--mint),var(--mint)) 0 50%/100% 88% no-repeat;
+    -webkit-box-decoration-break:clone;box-decoration-break:clone}
+  /* no-hook titles: mid-split into two full-size rows, purple then mint */
+  .hook .hk span.hkrow{display:block;background:none;padding:0}
+  .hook .hk .hkrow+.hkrow{margin-top:8px}
+  .hook .hk span.mintseg{color:#0a0a0a;
+    background:linear-gradient(var(--mint),var(--mint)) 0 50%/100% 87% no-repeat}
+
+  /* ── Player (clean facade → real player on tap) ── */
+  .player-wrap{margin:24px 0 4px;scroll-margin-top:76px}
+  .player{position:relative;width:100%;padding-top:56.25%;border-radius:0;overflow:hidden;background:#000;box-shadow:0 30px 70px rgba(0,0,0,.5),0 0 0 1px rgba(255,255,255,.06)}
+  .facade{position:absolute;inset:0;border:0;cursor:pointer;background-size:cover;background-position:center;display:flex;align-items:center;justify-content:center;padding:0}
+  .facade .play{width:74px;height:74px;border-radius:50%;background:rgba(10,6,30,.40);border:2px solid rgba(255,255,255,.72);display:flex;align-items:center;justify-content:center;transition:.18s;-webkit-backdrop-filter:blur(1px);backdrop-filter:blur(1px)}
+  .facade:hover .play{background:rgba(88,90,243,.62);transform:scale(1.07);border-color:#fff}
+  .facade .play::after{content:"";border-style:solid;border-width:11px 0 11px 19px;border-color:transparent transparent transparent #fff;margin-left:5px}
+  .player iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+
+  /* ── Episode facts (bottom of the Summary panel — templated per episode) ── */
+  .sumfacts{margin:14px 10px 4px;padding-top:13px;border-top:1px solid rgba(255,255,255,.08);display:flex;flex-direction:column;gap:8px}
+  .fact{display:flex;gap:12px;font-size:13.5px}
+  .fact .fl{flex:none;width:104px;color:var(--dim);font-weight:600;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;padding-top:2px}
+  .fact .fv{color:rgba(255,255,255,.9);font-weight:500}
+  .fact .fv a{color:var(--mint);text-decoration:none;border-bottom:1px solid rgba(122,217,168,.4);transition:.15s}
+  .fact .fv a:hover{border-bottom-color:var(--mint)}
+
+  /* ── Episode tag (identity: black label hanging off the title corner) ── */
+  .eptag{display:inline-block;position:relative;left:-6px;margin-bottom:-7px;z-index:2;
+    background:#0a0a0a;color:var(--white);font-family:var(--display);font-weight:400;
+    font-size:13.5px;letter-spacing:1.5px;text-transform:uppercase;padding:6px 11px 4px}
+
+  /* ── Explore tabs (sticky mode switcher; one panel swaps below, nothing shoves) ── */
+  .explore{margin-top:22px}
+  .tabs{position:sticky;top:58px;z-index:40;display:flex;flex-wrap:wrap;gap:8px;padding:10px 0;
+    background:linear-gradient(180deg,rgba(18,10,55,.96),rgba(18,10,55,.86));
+    backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+  .tabbtn{font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.5px;
+    font-size:14.5px;color:var(--white);background:var(--purple);border:1px solid var(--purple);
+    padding:9px 13px 7px;cursor:pointer;transition:.15s}
+  .tabbtn:hover{filter:brightness(1.12)}
+  .tabbtn.on{background:var(--mint);border-color:var(--mint);color:#0a0a0a}
+  .tabbtn.on:hover{filter:none}
+  .tabbtn .ct{font-size:12px;opacity:.75;font-variant-numeric:tabular-nums}
+  .tabbtn .ct::before{content:" · "}
+  .tpanel{border:1px solid var(--line);background:var(--card);padding:12px 10px 14px}
+  .hint{font-size:12.5px;color:var(--muted);padding:2px 10px 10px;border-bottom:1px solid rgba(255,255,255,.08);margin-bottom:6px}
+
+  /* ── Listen row (no box: label left, service pills follow) ── */
+  .listen{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:12px 16px;margin-top:34px}
+  .listen .lname{font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--dim)}
+  .listen a{display:inline-flex;align-items:center;gap:9px;padding:11px 18px;border-radius:999px;
+    background:var(--mint);color:#08210f;text-decoration:none;font-weight:800;font-size:12.5px;
+    letter-spacing:.04em;text-transform:uppercase;transition:.15s}
+  .listen a:hover{filter:brightness(1.06);transform:translateY(-1px);box-shadow:0 12px 30px rgba(122,217,168,.25)}
+  .listen svg{width:20px;height:20px;fill:currentColor;flex:none}
+  /* ── Listen-now Spotify audio embed (full column width, above the pills) ── */
+  .listen-now{margin-top:40px}
+  .listen-now .ln-head{display:flex;align-items:baseline;justify-content:space-between;gap:14px;margin-bottom:13px}
+  .listen-now .ln-title{font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--dim)}
+  .audio-embed{border-radius:12px;overflow:hidden;box-shadow:0 20px 50px rgba(0,0,0,.4),0 0 0 1px rgba(255,255,255,.06)}
+  .audio-embed iframe{display:block;width:100%;border:0}
+  @media(max-width:720px){.listen-now{margin-top:32px}}
+
+  /* ── Keep exploring (thumbnails link to other episode PAGES, never timecodes).
+     Swipeable strip on mobile, fits three-up on desktop. Variant rule: claim
+     "similar ground" + reason lines ONLY when moment-level topic overlap is
+     genuinely strong; otherwise show the latest released episodes with dates —
+     never invent a connection. ── */
+  .relsec{margin-top:60px;padding-top:58px;border-top:1px solid var(--line)} /* line = end of this episode's info */
+  .reldots{display:flex;justify-content:center;gap:7px;margin-top:12px}
+  .reldots span{width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.25);transition:.2s}
+  .reldots span.on{background:var(--mint)}
+  .relsec .rtitle{display:inline-block;font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.5px;font-size:14.5px;background:var(--mint);color:#0a0a0a;padding:9px 13px 7px;margin-bottom:18px}
+  .relgrid{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding-bottom:6px;scrollbar-width:none}
+  .relgrid::-webkit-scrollbar{display:none}
+  .relcard{flex:0 0 56%;max-width:232px;scroll-snap-align:start;display:flex;flex-direction:column;text-decoration:none;background:var(--card);border:1px solid var(--line);transition:.15s}
+  .relcard:hover{background:var(--card-hi);border-color:rgba(122,217,168,.55)}
+  .relcard img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block}
+  .relcard .rt{display:block;font-size:12.5px;font-weight:600;color:rgba(255,255,255,.92);line-height:1.4;padding:8px 8px 0}
+  .relcard .rfoot{margin-top:auto;display:flex;justify-content:space-between;align-items:flex-end;gap:8px;padding:10px 8px 9px}
+  .relcard .rwhy{font-size:11.5px;color:var(--mint)}
+  .relcard .rtag{display:inline-block;background:#0a0a0a;color:var(--white);font-family:var(--display);font-size:10px;letter-spacing:1.2px;text-transform:uppercase;padding:3px 7px 2px;white-space:nowrap;flex:0 0 auto}
+
+  /* ── Dropdown sections (accordion under the player) ── */
+  .drops{margin-top:34px;display:flex;flex-direction:column;gap:11px}
+  .drop{border:1px solid var(--line);border-radius:0;background:var(--card);overflow:hidden;transition:border-color .15s}
+  .drop[open]{border-color:rgba(122,217,168,.35)}
+  .drop>summary{list-style:none;cursor:pointer;padding:16px 18px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+  .drop>summary::-webkit-details-marker{display:none}
+  .drop>summary .st{font-weight:700;font-size:15.5px;letter-spacing:.005em}
+  .drop>summary .ct{margin-left:auto;font-size:12px;color:var(--dim);font-weight:600;font-variant-numeric:tabular-nums}
+  .drop>summary .chev{flex:none;width:22px;height:22px;border-radius:50%;background:rgba(122,217,168,.14);color:var(--mint);display:flex;align-items:center;justify-content:center;font-family:var(--display);font-size:15px;line-height:1;transition:.2s;transform:translateY(-1px)}
+  .drop[open]>summary .chev{transform:rotate(45deg)}
+  .drop-body{padding:2px 12px 12px}
+
+  /* chapters */
+  .chapter{display:flex;align-items:baseline;gap:14px;width:100%;text-align:left;cursor:pointer;background:none;border:0;color:inherit;font-family:inherit;padding:11px 10px;border-radius:10px;transition:.13s}
+  .chapter:hover{background:var(--card-hi)}
+  .chapter .tc{font-variant-numeric:tabular-nums;font-weight:700;font-size:14px;color:var(--mint);flex:none;width:48px}
+  .chapter .cx{font-size:15px;font-weight:500;color:rgba(255,255,255,.9)}
+  .chapter:hover .cx{color:#fff}
+
+  /* questions */
+  .q{display:flex;align-items:center;gap:12px;width:100%;text-align:left;cursor:pointer;background:none;border:0;border-radius:11px;color:inherit;font-family:inherit;padding:12px 10px;transition:.14s}
+  .q+.q{border-top:1px solid rgba(255,255,255,.05)}
+  .q:hover{background:var(--card-hi)}
+  .q .qm{font-family:var(--display);font-size:15px;color:var(--mint);flex:none;line-height:1;transform:translateY(1px)}
+  .q .qx{font-size:15px;font-weight:500;color:rgba(255,255,255,.92)}
+  .q .go{margin-left:auto;flex:none;color:var(--dim);font-size:18px;transition:.15s}
+  .q:hover .go{color:var(--mint);transform:translateX(2px)}
+
+  /* summary + transcript bodies */
+  .summary-body p{font-size:16.5px;line-height:1.62;color:rgba(255,255,255,.9);padding:6px 10px 4px}
+  .tbody{padding:2px 10px 8px}
+  .tbody p{font-size:14.5px;line-height:1.7;color:rgba(255,255,255,.78);margin-top:15px;max-width:64ch}
+  .tbody .spk{display:block;font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--mint);margin-bottom:2px}
+
+  /* ── Voice note ask (lives at the bottom of the Summary panel) ── */
+  .vask{margin:16px 10px 4px}
+  .vbtn{display:inline-flex;align-items:center;gap:9px;padding:12px 20px;border-radius:999px;border:0;cursor:pointer;
+    background:var(--mint);color:#08210f;font-family:inherit;font-weight:800;font-size:12.5px;
+    letter-spacing:.04em;text-transform:uppercase;transition:.15s}
+  .vbtn:hover{filter:brightness(1.06);transform:translateY(-1px);box-shadow:0 12px 30px rgba(122,217,168,.25)}
+  .vbtn svg{width:18px;height:18px;fill:currentColor;flex:none}
+  .vslot{background:var(--purple);padding:12px 10px 10px;margin:14px 0 4px;box-shadow:0 18px 40px rgba(0,0,0,.35)}
+  .vslot[hidden]{display:none}
+  .vhead{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;margin-bottom:10px}
+  .vhead .vmsg{font-family:var(--sans);font-size:13px;line-height:1.55;color:rgba(255,255,255,.92);margin:2px 0 0;padding:0 2px}
+  .vclose{background:none;border:0;color:rgba(255,255,255,.85);font-size:22px;line-height:1;cursor:pointer;padding:0 2px}
+  .vclose:hover{color:var(--white)}
+  .vslot iframe{display:block}
+
+  /* ── YouTube subscribe pill (sits in the listen row; outranks .listen a's mint) ── */
+  .listen a.yt-pill{background:var(--purple);color:var(--white)}
+  .listen a.yt-pill:hover{filter:brightness(1.1);transform:translateY(-1px)}
+  @media(max-width:720px){ /* mobile: no label, three compact pills on one row */
+    .listen .lname{display:none}
+    .listen{gap:8px}
+    .listen a{padding:10px 13px;font-size:11px;gap:6px}
+    .listen svg{width:16px;height:16px}
+  }
+
+  /* ── Footer: Follow us on | Brought to you by | Produced by, + Menu dropdown ── */
+  footer{border-top:1px solid var(--line);margin-top:68px;padding:52px 20px 58px}
+  .footgrid{max-width:var(--wrap);margin:0 auto;display:grid;grid-template-columns:1fr 1.15fr .8fr;gap:44px;align-items:start}
+  .fcol{text-align:center;display:flex;flex-direction:column;align-items:center}
+  .foot-label{font-size:11px;font-weight:700;letter-spacing:.26em;text-transform:uppercase;color:var(--dim);margin-bottom:18px}
+  .sponsors{display:flex;justify-content:center;align-items:center;gap:34px;flex-wrap:wrap}
+  .sponsors a,.produced a{display:inline-flex;transition:.15s}
+  .sponsors a:hover,.produced a:hover{transform:translateY(-1px)}
+  .sponsors img{height:32px;width:auto;opacity:.92}
+  .produced img{height:30px;width:auto;opacity:.95}
+  .sponsors a:hover img,.produced a:hover img{opacity:1}
+  footer .socials{display:flex;gap:11px;justify-content:center;flex-wrap:wrap;margin:0}
+  footer .socials a{width:40px;height:40px;border-radius:50%;border:1.5px solid rgba(122,217,168,.5);display:flex;align-items:center;justify-content:center;transition:.15s}
+  footer .socials a svg{width:18px;height:18px;fill:var(--mint);transition:.15s}
+  footer .socials a:hover{background:var(--mint);border-color:var(--mint);transform:translateY(-2px)}
+  footer .socials a:hover svg{fill:#0a0a0a}
+  .footbar{max-width:var(--wrap);margin:34px auto 0;border-top:1px solid var(--line);padding-top:20px;display:flex;flex-direction:column;align-items:center;gap:14px}
+  .footnav-dd{display:block;width:100%;max-width:var(--wrap);margin:0 auto;text-align:center}
+  .footnav-dd>summary{list-style:none;cursor:pointer;display:inline-flex;align-items:center;gap:9px;font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.5px;font-size:13px;color:var(--muted);background:transparent;border:1px solid var(--line);padding:8px 16px 6px;transition:.15s}
+  .footnav-dd>summary::-webkit-details-marker{display:none}
+  .footnav-dd>summary:hover{color:var(--mint);border-color:rgba(122,217,168,.45)}
+  .footnav-dd>summary .ham{width:15px;height:15px;fill:currentColor;transform:translateY(-1px)}
+  .footnav-dd .dd-links{display:flex;flex-direction:row;flex-wrap:wrap;justify-content:center;gap:12px 24px;padding:24px 0 4px}
+  .footnav-dd .dd-links a{font-size:11.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:.15s}
+  .footnav-dd .dd-links a:hover{color:var(--mint)}
+  .copyright{font-size:12px;color:var(--dim);text-align:center}
+  @media(max-width:720px){.footgrid{grid-template-columns:1fr;gap:34px}footer{padding:40px 16px 20px}.footbar{margin-top:34px;padding-top:24px;gap:20px}.footnav-dd .dd-links{flex-direction:column;align-items:center;gap:15px}}
+
+  @media(min-width:720px){header.hero{padding:48px 0 6px}}
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "PodcastEpisode", "name": "Enhanced Games - Can The Olympics Keep Up?", "url": "https://thenumbersgamepodcast.com.au/enhanced-games-can-the-olympics-keep-up", "datePublished": "2025-07-28", "episodeNumber": 242, "image": "https://i.ytimg.com/vi/Ndgcpcg_TAw/maxresdefault.jpg", "partOfSeries": {"@type": "PodcastSeries", "name": "The Numbers Game", "url": "https://thenumbersgamepodcast.com.au/"}}</script>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-in">
+      <a class="brand" href="/" aria-label="The Numbers Game home"><img src="assets/tng-logo.png" alt="The Numbers Game"></a>
+      <div class="navlinks">
+        <a href="/">Home</a>
+        <div class="navgroup">
+          <a class="navtop">Episodes</a>
+          <div class="subnav">
+            <a href="/episodes">All episodes</a>
+            <a href="/adventure">Find moments</a>
+          </div>
+        </div>
+        <div class="navgroup">
+          <a class="navtop">About</a>
+          <div class="subnav">
+            <a href="/about">The show</a>
+            <a href="/nick-reilly">Nick Reilly</a>
+            <a href="/jason-robinson">Jason Robinson</a>
+          </div>
+        </div>
+        <a href="/contact">Contact</a>
+      </div>
+      <button class="navburger" id="navburger" type="button" aria-label="Menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24"><path d="M3 6h18v2H3zM3 11h18v2H3zM3 16h18v2H3z"/></svg>
+      </button>
+    </div>
+    <div class="navdrop" id="navdrop" hidden>
+      <a href="/">Home</a>
+      <span class="navlabel">Episodes</span>
+      <a class="sub" href="/episodes">All episodes</a>
+      <a class="sub" href="/adventure">Find moments</a>
+      <span class="navlabel">About</span>
+      <a class="sub" href="/about">The show</a>
+      <a class="sub" href="/nick-reilly">Nick Reilly</a>
+      <a class="sub" href="/jason-robinson">Jason Robinson</a>
+      <a href="/contact">Contact</a>
+    </div>
+  </nav>
+
+  <main class="wrap">
+
+    <header class="hero">
+      <div class="hook">
+        <span class="eptag">EP 242</span>
+        <h1 class="hk"><span class="hkrow"><span>Enhanced Games - Can</span></span>
+        <span class="hkrow"><span class="mintseg">The Olympics Keep Up?</span></span></h1>
+      </div>
+    </header>
+
+    <div class="player-wrap" id="player-wrap">
+      <div class="player" id="player">
+        <button class="facade" id="facade" style="background-image:url('https://i.ytimg.com/vi/Ndgcpcg_TAw/maxresdefault.jpg')" aria-label="Play episode">
+          <span class="play"></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="explore">
+      <div class="tabs" role="tablist">
+        <button class="tabbtn on" data-panel="p-summary">Summary</button>
+        <button class="tabbtn" data-panel="p-chapters">Chapters<span class="ct" id="chcount"></span></button>
+        <button class="tabbtn" data-panel="p-questions">Questions<span class="ct" id="qcount"></span></button>
+      </div>
+      <section class="tpanel" id="p-summary">
+        <div class="summary-body">
+          <p>Nick raises the Enhanced Games, a competition that lets athletes use performance drugs, and the trio ask why Olympians earn so little despite the billions the Games generate. They walk through Paris Olympics revenue, the twenty thousand dollars Australia pays for a gold medal versus a million in Singapore, and the sponsorship gap between runners and swimmers. Marty weighs the ethics of altering body chemistry against backing equipment like super suits, while Jason argues the real problem is broken athlete pay that money will eventually disrupt. They land on the Olympics needing to reform incentives, from a players association to Drive to Survive style documentary revenue.</p>
+        </div>
+        <div class="vask">
+          <button class="vbtn" id="vbtn" type="button">
+            <svg viewBox="0 0 24 24"><path d="M12 14a3 3 0 0 0 3-3V6a3 3 0 1 0-6 0v5a3 3 0 0 0 3 3zm5-3a5 5 0 0 1-10 0H5a7 7 0 0 0 6 6.92V21h2v-3.08A7 7 0 0 0 19 11h-2z"/></svg>
+            Send us a voice note
+          </button>
+          <div class="vslot" id="vslot" hidden>
+            <div class="vhead">
+              <p class="vmsg">We'd love to hear from you. You can leave up to a 90 second voice note for us to play on the show: a question, some feedback, or a topic you want covered.</p>
+              <button class="vclose" id="vclose" type="button" aria-label="Close">&times;</button>
+            </div>
+            <iframe src="https://www.speakpipe.com/widget/inline/hhq6kzggsx7zpcsvakgxfrzun3zidpde" allow="microphone" width="100%" height="200" frameborder="0" title="Leave The Numbers Game a voice note"></iframe>
+          </div>
+          <script async src="https://www.speakpipe.com/widget/loader.js" charset="utf-8"></script>
+        </div>
+        <div class="sumfacts">
+          <div class="fact"><span class="fl">Release date</span><span class="fv">28 July 2025</span></div>
+          <div class="fact"><span class="fl">Hosts</span><span class="fv"><a href="/nick-reilly">Nick Reilly</a>, <a href="/jason-robinson">Jason Robinson</a> &amp; <a href="/marty-vidakovic">Marty Vidakovic</a></span></div>
+
+        </div>
+      </section>
+      <section class="tpanel" id="p-chapters" hidden>
+        <p class="hint">Jump straight to the part you need.</p>
+        <div id="chapters"></div>
+      </section>
+      <section class="tpanel" id="p-questions" hidden>
+        <p class="hint">Real questions this episode answers. Tap one to hear the answer.</p>
+        <div id="qa"></div>
+      </section>
+    </div>
+
+    <div class="drops">
+
+      <details class="drop">
+        <summary><span class="st">Episode transcript</span><span class="chev">+</span></summary>
+        <div class="drop-body tbody">
+          <p><span class="spk">Jason · 00:00</span>Welcome to episode 242 of the Numbers Game. It's Jason, Nick, and Marty here. And Nick, I'm gonna just go straight to it. I need to know why your search history, when we saw your computer before had hot guys, big muscles and steroids. What is going on?</p>
+          <p><span class="spk">Nick · 00:16</span>Um. Well, you haven't looked that closely 'cause it was hot swimmers is what I, uh, ah, hot swimmers had.</p>
+          <p><span class="spk">Nick · 00:22</span>And in particular, um, James Magnusson, if you haven't seen a photo of him in the last few months, you've been living under a rock. But, um, question for you, Jace, before I go into this. Um, would you take drugs if it mate, don't nod your head. Sorry for the whole question. Would you take drugs if it meant winning a million dollars?</p>
+          <p><span class="spk">Jason · 00:46</span>Yes.</p>
+          <p><span class="spk">Nick · 00:47</span>Yes. Marty. Yeah. How are you Marty? Um, I, sorry, I'm on moment. Should've thought about that for longer. I got</p>
+          <p><span class="spk">Marty · 00:54</span>no, I want my Marty's on. No, I, I wouldn't because it's a, it's a,</p>
+          <p><span class="spk">Marty · 01:00</span>a values misalignment, so I, I wouldn't do that.</p>
+          <p><span class="spk">Jason · 01:04</span>Okay. You don't value your money.</p>
+          <p><span class="spk">Marty · 01:05</span>Okay. Uh, Jason, I run with the rest of this</p>
+          <p><span class="spk">Nick · 01:07</span>episode then,</p>
+          <p><span class="spk">Marty · 01:09</span>but I'm keen, I'm keen</p>
+          <p><span class="spk">Nick · 01:11</span>to</p>
+          <p><span class="spk">Marty · 01:11</span>hear, uh, you know, I'm, I'm willing to be</p>
+          <p><span class="spk">Nick · 01:12</span>turned around.</p>
+          <p><span class="spk">Nick · 01:14</span>Okay. Look, well, where I'm going with all this, if people haven't worked it out, is this, um, this enhanced games phenomenon that's happening at the moment. And to, to explain that, I guess what they're doing is they're taking a bunch of athletes. And they are, uh, letting them, uh, enhance themselves via drugs.</p>
+          <p><span class="spk">Nick · 01:34</span>Obviously not illegal drugs, but, um, sports enhancing drugs and seeing how quick these guys and girls can actually go, or how heavy they can lift. What can the human body actually achieve if there was no boundaries? So this is happening at the moment. What's, uh, I think it's, I think it's in, um, early 2026, roughly when the games are happening.</p>
+          <p><span class="spk">Nick · 01:58</span>Um, I</p>
+          <p><span class="spk">Nick · 02:00</span>guess where it's raising eyebrows. And what I wanna talk about today is, um, ethics and, you know, the Olympic Games, uh, has been, is being referred to a lot and what's developed from this is. How, how can athletes, uh, spend their whole life training and dedicating themselves to sports like swimming?</p>
+          <p><span class="spk">Nick · 02:23</span>That's probably one everyone's seeing the most. Um, compet in Olympic Games at the highest level, so many eyeballs on it, so much, uh, revenue in the Olympic game, um, arena. And the athletes really don't have any money for these kind of sports because, you know, it's not like boxing or, or whatnot where they're looked after or football or basketball.</p>
+          <p><span class="spk">Nick · 02:45</span>So. I think for me, the conversation started around ethics. Um, and then what I'm seeing now is, well, okay, well maybe we need to rethink how the Olympics works because what's driving these athletes to actually wanna do this.</p>
+          <p><span class="spk">Nick · 03:00</span>And the reality is you can have all the pride in your, in, in the world as being, you know, the number one athlete.</p>
+          <p><span class="spk">Nick · 03:06</span>And of course that could, uh, then move into other. Um, opportunities such as sponsorships and, um, ambassador roles or whatever that might be. But when you look at the numbers, and I've got some numbers here from the um, Paris Olympics, so some of the numbers from a revenue point of view that are generated, to think that the athletes get little to, none of that is just crazy.</p>
+          <p><span class="spk">Nick · 03:27</span>So for Paris. We had, uh, 4.49 billion pounds, oh, sorry, euros, uh, in revenue. Um, we had a profit of 76 million euros. Um, over 12 million ticket sales were sold, exceeding, um, estimates by 348. Um, million, uh, euros, a 60% increase in sponsorship revenue compared to the Tokyo 2020, uh, 2020 Olympics. Um,</p>
+          <p><span class="spk">Nick · 04:00</span>just crazy stuff, right?</p>
+          <p><span class="spk">Nick · 04:01</span>So, and you look at everyone around the world, including myself, who's not even into these sports, but it's the one time that you sit down and you actually watch TV and you take all this in. And if you look at sports like the NBA, the NFL baseball. Even now, um, NRL and a FL in this country, most of the revenue and how these payers, uh, players can get paid so much is TV rights.</p>
+          <p><span class="spk">Nick · 04:27</span>So I just think how are these athletes dedicating their lives to, uh, the pinnacle, the Olympic games and just not getting rewarded for it. Of course, if something like the Enhanced Games comes up, you're gonna have a think about it now. James Magnusson is the one that everyone's seeing the most, and, um. As I said, if you've, unless you've been living under a rock, you've probably seen a picture of him in a swimsuit.</p>
+          <p><span class="spk">Nick · 04:51</span>He at those la he looks like an animal, right? And ridiculous. He's, he's obviously swimming very fast, uh, ex Olympian. And I think,</p>
+          <p><span class="spk">Nick · 05:00</span>well, why, why wouldn't you do that? Particularly if you were, you were outside of, um, your peak without being assisted, why wouldn't you focus on something like this, um, and try and make some money?</p>
+          <p><span class="spk">Nick · 05:12</span>For your family, um, security, all this kind of stuff. So I guess I wanted to open the floor to you guys, see what you think. Do you like it? Uh, do you think it's a good idea? Do you struggle with the ethics? Um, is it even an ethical issue? I don't think it is because you're not putting these athletes in the same arena.</p>
+          <p><span class="spk">Nick · 05:30</span>It's a different arena. You're not recognizing their world records. So to me, there is no ethical issue. That's what they wanna do, and someone's willing to pay them to see how fast they can go. Then let them do it and keep the Olympic games to where it is. I think the issue is if the Olympic Games don't change the way that they support their athletes.</p>
+          <p><span class="spk">Nick · 05:49</span>Does something like this, which could be more exciting, um, start to pull good, you know, good athletes away. Yeah. That's, uh,</p>
+          <p><span class="spk">Marty · 05:57</span>that's, it's, it's a challenging,</p>
+          <p><span class="spk">Marty · 06:00</span>uh, concept for me because I go to resolve the issue. You pay the Olympians, um, you know, great prize money, and I mean, people that qualify to go to the Olympics ride through to people that win medals.</p>
+          <p><span class="spk">Marty · 06:12</span>Because like you said, that's the pinnacle of sport around the world in regards to the, the highest, the highest thing you can achieve. So to me, that would resolve a lot of issues. And I, I, I think, I think the other like always show me the incentive and I'll show you the behaviors right, in order to to, to get the money a lot of the time.</p>
+          <p><span class="spk">Marty · 06:34</span>So if you can have all the great attributes of the current Olympics and just add great reward to that. For the athletes then I don't think it would open the door to this. And, and the thing I think about, like, I think about kids coming through in the next generation in regards to what are we. Inspiring them to watch and to emulate.</p>
+          <p><span class="spk">Marty · 06:57</span>And I go, like, I know</p>
+          <p><span class="spk">Marty · 07:00</span>when Van Deha came to Pasco Vale Primary School at Esan, he kicked a 50 meter top. I barrack for Esan right now. I didn't know how many slabs he was drinking, little how many drugs he was taking. I'm gonna emulate, you know, I'm gonna emulate that. I, that is my team, you know, in one moment and.</p>
+          <p><span class="spk">Marty · 07:18</span>If this becomes, and, and here's, here's the thing I want you to think about. Lads, I'd be interested in your thoughts on this. Like, I go, I'm now, am I the hypocrite here? Or does this make sense where I go? I'm all for scientific, um, support. Like if you've got the super suits and you know, that enhance what the human is capable of, you know, great runners, you know, si aerodynamic things that you, you can utilize.</p>
+          <p><span class="spk">Marty · 07:47</span>To expand performance. I, you, you can see my quandary here because I go, I'm interested in that, but once you start putting chemicals in your body to alter your</p>
+          <p><span class="spk">Marty · 08:00</span>chemistry. Yeah, and, and like I said, I'd want 10 years of evidence that it's not hurting the person, first of all, even to come to that, you know, come to that conclusion, let alone people just, you know, deciding yes, this is the way forward.</p>
+          <p><span class="spk">Marty · 08:14</span>And you've got people that then are usually not even qualifying from the Olympics and then breaking the world record. But, but this is the, this is the real challenging thing. 'cause there's a. There's a Kenyan runner, I forget her name, but she's won three Olympic events and she's going to break. She wants to break the four minute mile, first female to do it, and Nike have jumped all over it, right?</p>
+          <p><span class="spk">Marty · 08:37</span>They said, all right, we're gonna give you all this aerodynamics things, these runners, it's not gonna be a legitimate event because you know, we're giving you all this support. So they're backing, they're providing her. We are funding to represent their, you know, represent their brand. So what happens here with the enhanced games?</p>
+          <p><span class="spk">Marty · 08:54</span>Do we get pharmaceuticals now sponsoring you? You know, there's so many interesting</p>
+          <p><span class="spk">Marty · 09:00</span>dilemmas here. I'm not ke, I'm not ruling it out, but something doesn't feel I. Right in adjusting someone's internal mechanisms, um, to perform at this heightened level. I feel there's something Yeah. That feels very uncomfortable about that.</p>
+          <p><span class="spk">Nick · 09:15</span>And look, you, you, you raised a good point around the Kenyan runner and the, the thing that got me there was well. I guess runners can make, still make a lot of money. They might not make money from performing at the games, but what are runners wear shoes, what's really popular shoes? So from an ambassador point of view, um, I think a runner can make a lot of money.</p>
+          <p><span class="spk">Nick · 09:39</span>They're sprinting, they're sprint runners, you know, they're full athletes.</p>
+          <p><span class="spk">Jason · 09:42</span>Given the TV shows now on Netflix, the Correct, like, yeah, there's, there's a bit more going on,</p>
+          <p><span class="spk">Nick · 09:47</span>but you think about a swimmer. Now</p>
+          <p><span class="spk">Marty · 09:50</span>her name's, uh, faith. Faith Kipi Ki Kipi Young. Yeah. Yeah, that's that. She's doing it. The first woman that's gonna potentially break the four minute mark.</p>
+          <p><span class="spk">Marty · 09:58</span>She,</p>
+          <p><span class="spk">Jason · 09:58</span>she has the existing record at 4</p>
+          <p><span class="spk">Jason · 10:00</span>0 7. Yeah, 4 0 7. She's trying to break back in 2023, so she's trying to break her own record, which says,</p>
+          <p><span class="spk">Nick · 10:05</span>I was just gonna say, so I, I don't think we're, you know, when, when we're looking at certain sports, I think. Runners are probably, probably one of the ones that are okay.</p>
+          <p><span class="spk">Nick · 10:16</span>Mm-hmm. And I'm not saying they get paid well from the uh, oly, the IOC, but the. They can promote something that's in high demand. You know, people love runners, you know, um, whereas if you look at a swimmer, you look at the Aussie swimmers, this is not to downplay anything that they do there. They're probably one of the most dedicated athletes on the planet.</p>
+          <p><span class="spk">Nick · 10:36</span>And, you know, I go back in ERA and most of the Aussie athletes, the, the sponsorships they had were, were. With like Uncle Toby's, you know, so how much money are they making versus a runner being able to put their name on a pair of ices. And, um, the, uh, the guy that, uh, recently broke the record in the enhanced games, Christian Glock is his name.</p>
+          <p><span class="spk">Nick · 10:59</span>I. Um,</p>
+          <p><span class="spk">Nick · 11:00</span>so he took peds. Jay can probably explain what they are under medical supervision. Comes out and smashes the world record 50 meter freestyle, I believe it was. Uh, and gets a million dollars for his troubles. So he's probably looking at it saying, well, I'm taking PED under medical, um, supervision, which is all the science we know about as much as we can know.</p>
+          <p><span class="spk">Nick · 11:21</span>We know what we dunno. We dunno, to your point before Marty, um, but for him, he's been battling his whole life to fund a swimming career and surely he's probably got some ambassador roles or some sponsorships. But it's not with, probably not with Nike and it's probably not with Adidas, um, like some of the other athletes would, runners I'm referring to, but he can make a million bucks by doing this and, you know.</p>
+          <p><span class="spk">Nick · 11:44</span>No doubt. Get a lot of eyeballs on his Instagram page and start to promote more things</p>
+          <p><span class="spk">Jason · 11:48</span>and peds for you. Marty's performance enhancing drugs like anabolic steroids.</p>
+          <p><span class="spk">Nick · 11:52</span>Yep. Yep.</p>
+          <p><span class="spk">Jason · 11:53</span>Yeah. So, yeah. Wow. To, to weigh in before we get too far off it. I mean, you know, the question around</p>
+          <p><span class="spk">Jason · 12:00</span>ethical, uh, the whole side of it, you know, all, all it points to me is when something, when something is broken, people will look for some other way to kind of fix it.</p>
+          <p><span class="spk">Jason · 12:07</span>And what for me is broken is the, the earnings of an Olympian. Um, you know, looking at, for those Olympic Olympic gold medalists that came back from the last Olympic games for Australia, they got $20,000 for a gold medal. Now when, when you think about dedicating your life to your craft or your sport, you know, training, it's an event that happens once every four years and based on, you know, your age, the travesty, the right time of your body tra and you know everything going right around hormones.</p>
+          <p><span class="spk">Jason · 12:35</span>And if you're female, on that particular day, if you were in your cycle and you weren't performing at your best, like all the things that happen. For you to have the chance to win $20,000 versus, as an example. And this, this is the bit, you know, that gets interesting as you look into it. Like all the gold medal and the prize monies are done on your home country, not the International Olympic Committee or the host country.</p>
+          <p><span class="spk">Jason · 12:57</span>Um, so, you know, think about where Nick, that, you</p>
+          <p><span class="spk">Jason · 13:00</span>know, billions of revenue that you said goes how that doesn't then flow back to the Olympians then in, in itself. But then also you look at, if you were in Singapore and you won a gold medal. The prize was a million dollars when you went home to your, your home country.</p>
+          <p><span class="spk">Jason · 13:15</span>So something's broken in the way these Olympians are remunerated for dedicating their craft. Definitely. And where, where something is broken in traditional sport, you know, it's someone with money can come along and then there's, you know, there's a way to disrupt it and change it. And look, all I say is, you know, from an ethical point of view.</p>
+          <p><span class="spk">Jason · 13:34</span>If I was really good at something and I could make myself a little bit better by taking something that has been tried and tested and we know the, the data around it, um, would I wanna break the record by 0.01 of a second or 0.1 of a second and, and get the million, Hey, cool, million dollars is a million dollars.</p>
+          <p><span class="spk">Jason · 13:48</span>But I would've thought there could've been some more drastic record breaking.</p>
+          <p><span class="spk">Marty · 13:53</span>Let me ask you both a question just to, to, to challenge like, would you.</p>
+          <p><span class="spk">Marty · 14:00</span>Scientifically medicate your staff in business if you thought you could get. Three times the performance out of them. Um, is</p>
+          <p><span class="spk">Jason · 14:07</span>it legal? Wait, legally?</p>
+          <p><span class="spk">Marty · 14:10</span>Well, it'd have to be if, if, yeah.</p>
+          <p><span class="spk">Marty · 14:11</span>No, so,</p>
+          <p><span class="spk">Jason · 14:12</span>so, you know, I, I think of the movie Limitless where, you know, it's kind of this movie around, uh, Brad, it's, it's a movie. Great movie. If, if science got to a point where there was a pill that got you to unlock more use of your brain and perform at, at a better level. Absolutely. It'd be a no brainer if you can get access to that and have more productivity, better brain power, better results, better value for customers.</p>
+          <p><span class="spk">Jason · 14:34</span>Like, yeah, a hundred percent. I think it's</p>
+          <p><span class="spk">Marty · 14:36</span>so, so the argument, the argument could be, I'm just trying to challenge my own beliefs on it, right? But I go, the argument could be that there's doping happening in legitimate sport anyway. Right. So, and that's been proven. Fact, fact, fact and proven time and time again, the bomb has gone away with it, right?</p>
+          <p><span class="spk">Marty · 14:53</span>So if there are strict parameters around it. Does it make it fairer at a certain</p>
+          <p><span class="spk">Marty · 15:00</span>level as long as people are operating within the boundaries of what that is and, and, and these are all the nuances that, you know what I mean? It, it's, yeah. All,</p>
+          <p><span class="spk">Nick · 15:09</span>all they're doing is they're creating envi an environment and they're saying, this is what we wanna see.</p>
+          <p><span class="spk">Nick · 15:14</span>If you are prepared to come and do it, you're gonna get paid in a healthy way. So to your, to your answer, your question, would I do it to staff? No, but if it was legal and I said to the staff, Hey, you can take this and I'm gonna pay you triple, then that's a different story. Yeah. As long as they're making a choice.</p>
+          <p><span class="spk">Nick · 15:31</span>I don't see how it's any different. Um, you know, the, um, brain issues with sport at the moment, it's huge. Like it's, and you know, particularly with rugby league and a f, all these new people are coming to the surface, um, with CTE issues. Yeah. So how's any, any different and. I love boxing and I love the UFC.</p>
+          <p><span class="spk">Nick · 15:53</span>How's it any different to saying, Hey, if you are willing to put yourself in the ring and get punched in the head 30 times, there's a chance you're gonna</p>
+          <p><span class="spk">Nick · 16:00</span>take a, a purse of $3 million, depending on the pay-per-view. To me, it's no different. Like, here is, here is the rules. This is, you choose to get in there and if you choose to get in there, this could be the reward.</p>
+          <p><span class="spk">Nick · 16:13</span>Now you make that choice whether you wanna do that or not. No one's saying to James Mag, James Magnusson, he has to go and swim. It's purely a choice and I don't see how it's any different to, um, boxing U-F-C-A-F-L running flat out at another individual. Um. You know, skydiving, you know, for Red Bull, getting in an F1 car, driving at 300 Ks an hour because you can earn 30 million bucks a year.</p>
+          <p><span class="spk">Nick · 16:38</span>Like you're putting yourself into high risk sports because people wanna see it, and for that you get rewarded. Um, so for me, I think, of course there's an, there's an ethical issue as in are you promoting that? It's okay. To take drugs</p>
+          <p><span class="spk">Marty · 16:54</span>and to me it's the rabbit hole of going, knowing what people are like and people want to get that edge.</p>
+          <p><span class="spk">Marty · 17:00</span>They want to get more money. Like those boundaries will have to be really strict in what they're medically pumping into themselves too. Because again, there'll be people testing the limits and that could. Produce a whole different problem. And, and that I agree with and, and this is, this is the thing that concerns, it's like ai, will they take their our jobs in the end?</p>
+          <p><span class="spk">Marty · 17:21</span>You know, will they, robots come? We don't know yet, you know, but, but there's, there's gotta be parameters around it, safety parameters to make sure it's okay. So it's interesting 'cause I, you know, you always want to be curious and test what's coming, but it's, um, yeah, I just think about, you know, what. We are gonna be inspired through the actions we see, and then we're gonna ask how did they do it?</p>
+          <p><span class="spk">Marty · 17:44</span>And if this is something that people are gonna do, is that necessarily healthy to people, you know, for the money? And like you said, but you, you negated that to a certain degree. A boxer gets into a ring, gets the lights beaten out of them, so it's, yeah. Yeah. It's such</p>
+          <p><span class="spk">Marty · 18:00</span>a, it's a interesting dance</p>
+          <p><span class="spk">Jason · 18:01</span>and it, it is a.</p>
+          <p><span class="spk">Jason · 18:03</span>A bigger issue overall when it comes to, you know, we've, we've used the word ethics or integrity. Um, one of the biggest parts of the Olympic, the Olympics is human potential. Um, when I think about all the guest speakers that have ever been, um, either on great podcast episodes or guest speakers on stage at, at retreats or, or, um, events that we go to have been.</p>
+          <p><span class="spk">Jason · 18:28</span>Like a lot of the times, they're Olympians who share their story of the effort, their energy, the struggles, how they got back up against all, all, you know, everything was against them and they managed to win that gold or do something amazing. Are we as impressed with that? If the person who gets on stage.</p>
+          <p><span class="spk">Jason · 18:47</span>Was taking drugs to achieve some kind of achievement, you know? And then the message is, you know, if I'm sending, well, yeah, my team, or if it's primary school or high school kids that are hearing this guest speaker talk, is that the message that we want</p>
+          <p><span class="spk">Jason · 19:00</span>send? Is that something that we can Yeah. Um, promote, or,</p>
+          <p><span class="spk">Marty · 19:03</span>because you'll normalize it.</p>
+          <p><span class="spk">Marty · 19:04</span>In the end, once we get through a couple of decades, it'll be normalized. So it's, it's like, do we as a human race want that to happen and for that to be normalized? And I think, you know, people struggling to be themselves as it is, you know, so you give, you give people, give them the blue pill, they're gonna take it if they can get recognition and advancement, so.</p>
+          <p><span class="spk">Marty · 19:26</span>And I think I'm, I'm not discounting it, I'm just saying I think we gotta be really careful in the way it's done, um, to make sure that, you know, just. Us as people don't, uh, you know, sort of destroy ourselves too. Yeah. I, 'cause people will take advantage of us as humans. A hundred percent pharmaceuticals, everything.</p>
+          <p><span class="spk">Nick · 19:45</span>Yeah. And look, I, I totally agree with all of that. Um, everything you're saying, does it create, um, a theory that it's okay? Um. You know, and are we using these people as science experiments? Um, is the other, you know, ethical</p>
+          <p><span class="spk">Nick · 20:00</span>issue. But as I said, they're making their own choice. But I'll tell you what it does do.</p>
+          <p><span class="spk">Nick · 20:03</span>It gives the, uh, the IOC or um, any similar kind of organization where athletes aren't getting paid what, not what they should be, but the fair share of their fair share is how I put it, of the revenue. If this is an opportunity to stand up and say, look, we need to be better and this is what it's gonna look like.</p>
+          <p><span class="spk">Nick · 20:21</span>At no point should it rely on your country to give you a bonus because you won a medal. Mm-hmm. I get why they do that, and I think that's cool, but that shouldn't be how you are, you know, hoping to survive or the expectation, um, as to how you would make money. So this is a really good opportunity for, um.</p>
+          <p><span class="spk">Nick · 20:40</span>You know, the Olympic Games Committee to, to stand up and say, absolutely we need to change this. Just as you see this happen all the time in other sports where, you know, they've got players associations for reasons to make sure the players are protected, um, whether it's from health, um, uh, for health reasons, or to make sure they get their share of the pie.</p>
+          <p><span class="spk">Nick · 20:58</span>So.</p>
+          <p><span class="spk">Nick · 21:00</span>Yeah. Um, obviously a provoke provoking, um, conversation.</p>
+          <p><span class="spk">Marty · 21:04</span>Yeah, great topic to have a chat about actually.</p>
+          <p><span class="spk">Jason · 21:07</span>Yeah. And, and it's, it's that incentive, right? Like this, this will actually be, give a bit of kick up the bum or the institute, you know, for the traditional sports organizations to go, how can we better incentivize to keep people doing it this way rather than being tempted by money and, you know, taking drugs or whatever else is on the other side.</p>
+          <p><span class="spk">Jason · 21:26</span>What can we do better? And, you know, you think about. Like, like a business. How does a business make more revenue or what does it open up? You know, the Olympic games, I look at the potential for, you know, we've had some golf documentaries where they follow a play around, they've done it with tennis, um, they've done it with the F1.</p>
+          <p><span class="spk">Jason · 21:41</span>Look at drive to survive, how that revolutionized the Formula one and increase the golf. The live. Yeah. Yeah. Live. You say so. So if this is just an opportunity for the Olympic Games to turn something around and have documentary revenue mm-hmm. And different sponsorship opportunities and bring in more revenue to give more share to these Olympians that are</p>
+          <p><span class="spk">Jason · 22:00</span>creating such an.</p>
+          <p><span class="spk">Jason · 22:01</span>Epic event once every four years that the whole world tunes into, then hopefully this is the motivation they need to reinvent and rethink how they, how they incentivize.</p>
+          <p><span class="spk">Marty · 22:11</span>Absolutely. And I'm all for disruption externally. Um, but once you have internal disruption, it's um, it's a different ballgame. So yeah, a lot work.</p>
+          <p><span class="spk">Marty · 22:19</span>A lot of work needs to be done around it. But interesting.</p>
+          <p><span class="spk">Jason · 22:22</span>A hundred percent. Well, it's, uh, yeah, definitely interesting for us to unpack and, uh, love to hear your thoughts. If you've listened to this and thought, oh geez, I didn't think of it like that, you know, what's your take on it? Would you, uh, take the drugs to try and win a million dollars?</p>
+          <p><span class="spk">Jason · 22:33</span>Or you think, uh, ethics and integrity's important in sports like the Olympics? Drop us a thought. Connect with Js. Nick and Marty, you know, LinkedIn, Instagram, apparently we're on TikTok now, which is blowing up thanks to our producer, Tommy. Uh, check it out if you haven't already. Have a look up for the Numbers Game podcast.</p>
+          <p><span class="spk">Jason · 22:49</span>Um, until next time though,</p>
+          <p><span class="spk">Marty · 22:51</span>go for gold. But what price are you willing to pay? Game over</p>
+          <p><span class="spk">Jason · 22:57</span>this podcast is for educational and informational</p>
+          <p><span class="spk">Jason · 23:00</span>purposes only. The conversations are over general nature and do not qualify as financial or tax advice. We recommend before you make any financial decisions, you consult a licensed professional.</p>
+          <p><span class="spk">Jason · 23:09</span>Individuals on the podcast may hold positions in the companies discussed. ---</p>
+        </div>
+      </details>
+
+    </div>
+
+    <!-- LISTEN:START (build_episode.py rewrites the 3 URLs + iframe title per episode; player dropped if no spotifyEmbedUrl) -->
+    <section class="listen-now">
+      <div class="ln-head">
+        <span class="ln-title">Listen now</span>
+      </div>
+      <div class="audio-embed">
+        <iframe src="https://open.spotify.com/embed/episode/5V69kWLeK3aIcBntIZYMXz?utm_source=generator"
+          width="100%" height="152" loading="lazy" allowfullscreen
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+          title="Spotify — Enhanced Games - Can The Olympics Keep Up?"></iframe>
+      </div>
+    </section>
+
+    <div class="listen">
+      <a href="https://open.spotify.com/episode/5V69kWLeK3aIcBntIZYMXz" target="_blank" rel="noopener" aria-label="Listen to this episode on Spotify">
+        <svg viewBox="0 0 24 24"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.52 17.34c-.24.36-.66.48-1.02.24-2.82-1.74-6.36-2.1-10.56-1.14-.42.12-.78-.18-.9-.54-.12-.42.18-.78.54-.9 4.56-1.02 8.52-.6 11.64 1.32.42.18.48.66.3 1.02zm1.44-3.3c-.3.42-.84.6-1.26.3-3.24-1.98-8.16-2.58-11.94-1.38-.48.12-1.02-.12-1.14-.6-.12-.48.12-1.02.6-1.14 4.32-1.32 9.72-.66 13.44 1.62.36.18.54.78.3 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.3c-.6.18-1.2-.18-1.38-.72-.18-.6.18-1.2.72-1.38 4.26-1.26 11.28-1.02 15.72 1.62.54.3.72 1.02.42 1.56-.3.42-1.02.6-1.56.3z"/></svg>
+        Spotify
+      </a>
+      <a href="https://podcasts.apple.com/au/podcast/id1555566088?i=1000719370249" target="_blank" rel="noopener" aria-label="Listen to this episode on Apple Podcasts">
+        <svg viewBox="0 0 24 24"><path d="M5.34 0A5.328 5.328 0 000 5.34v13.32A5.328 5.328 0 005.34 24h13.32A5.328 5.328 0 0024 18.66V5.34A5.328 5.328 0 0018.66 0H5.34zm6.525 2.568c2.336 0 4.448.902 6.056 2.587 1.224 1.272 1.912 2.619 2.264 4.392l.04.23c.04.272-.16.527-.432.567a.505.505 0 01-.567-.431l-.04-.213c-.312-1.57-.92-2.747-2.004-3.867-1.428-1.496-3.293-2.294-5.393-2.294-2.1 0-3.966.798-5.394 2.294-1.084 1.12-1.692 2.298-2.004 3.867l-.04.213a.507.507 0 01-.567.431.504.504 0 01-.432-.567l.04-.23c.352-1.773 1.04-3.12 2.264-4.392 1.608-1.685 3.72-2.587 6.056-2.587h.153zm.136 3.033c1.74 0 3.312.67 4.527 1.934.883.916 1.394 1.93 1.663 3.253l.04.23a.505.505 0 01-.431.567.503.503 0 01-.567-.432l-.04-.212c-.23-1.112-.659-1.97-1.396-2.732-1.052-1.1-2.404-1.672-3.9-1.672s-2.849.572-3.901 1.672c-.737.762-1.167 1.62-1.396 2.732l-.04.212a.503.503 0 01-.567.432.505.505 0 01-.432-.567l.04-.23c.27-1.323.78-2.337 1.664-3.253 1.215-1.264 2.787-1.934 4.527-1.934h.21zm-.078 3.05c1.092 0 2.091.424 2.89 1.22.582.58.924 1.245 1.107 2.15l.04.218a.501.501 0 01-.424.568.499.499 0 01-.568-.424l-.04-.198c-.146-.724-.413-1.253-.871-1.716-.63-.63-1.398-.957-2.226-.957s-1.595.328-2.225.957c-.459.463-.726.992-.871 1.716l-.04.198a.499.499 0 01-.568.424.501.501 0 01-.424-.568l.04-.219c.183-.904.525-1.569 1.106-2.149.8-.796 1.799-1.22 2.89-1.22h.184zM12 14.07a2.477 2.477 0 012.48 2.478A2.477 2.477 0 0112 19.024a2.477 2.477 0 01-2.48-2.477A2.477 2.477 0 0112 14.07z"/></svg>
+        Apple
+      </a>
+      <a class="yt-pill" href="https://www.youtube.com/@thenumbersgamepodcast?sub_confirmation=1" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.12-2.14C19.5 3.55 12 3.55 12 3.55s-7.5 0-9.38.51A3 3 0 0 0 .5 6.2 31.4 31.4 0 0 0 0 12a31.4 31.4 0 0 0 .5 5.8 3 3 0 0 0 2.12 2.14c1.88.51 9.38.51 9.38.51s7.5 0 9.38-.51a3 3 0 0 0 2.12-2.14A31.4 31.4 0 0 0 24 12a31.4 31.4 0 0 0-.5-5.8zM9.55 15.57V8.43L15.82 12z"/></svg>
+        Subscribe
+      </a>
+    </div>
+    <!-- LISTEN:END -->
+
+    <div class="relsec">
+      <span class="rtitle">Discover more</span>
+      <div class="relgrid">
+        <a class="relcard" href="/australia-s-migration-numbers-explained-the-winners-losers-and-myths">
+          <img src="https://i.ytimg.com/vi/jwyuLdaWpKA/hqdefault.jpg" alt="EP 257 thumbnail">
+          <span class="rt">Australia's Migration Numbers Explained</span>
+          <span class="rfoot"><span class="rwhy">Also covers: global economy</span><span class="rtag">EP 257</span></span>
+        </a>
+        <a class="relcard" href="/raising-gst-in-australia-and-why-it-would-work">
+          <img src="https://i.ytimg.com/vi/k1NVsiBc7JY/hqdefault.jpg" alt="EP 222 thumbnail">
+          <span class="rt">Raising GST in Australia and Why it Would Work</span>
+          <span class="rfoot"><span class="rwhy">Also covers: policy &amp; reform</span><span class="rtag">EP 222</span></span>
+        </a>
+        <a class="relcard" href="/stop-the-yearly-burnout-cycle-stay-consistent-in-2026">
+          <img src="https://i.ytimg.com/vi/dDY0Eg3wP6o/hqdefault.jpg" alt="EP 263 thumbnail">
+          <span class="rt">Stop The Yearly Burnout Cycle</span>
+          <span class="rfoot"><span class="rwhy">Also covers: mindset</span><span class="rtag">EP 263</span></span>
+        </a>
+        <a class="relcard" href="/your-beer-is-taxed-more-than-our-gas-exports">
+          <img src="https://i.ytimg.com/vi/JbWmJhmkaP0/hqdefault.jpg" alt="EP 268 thumbnail">
+          <span class="rt">Your Beer Is Taxed More Than Our Gas Exports</span>
+          <span class="rfoot"><span class="rwhy">Also covers: policy &amp; reform</span><span class="rtag">EP 268</span></span>
+        </a>
+        <a class="relcard" href="/how-money-beliefs-undermine-confidence-and-lead-to-self-sabotage">
+          <img src="https://i.ytimg.com/vi/8krYXDGj_m0/hqdefault.jpg" alt="EP 240 thumbnail">
+          <span class="rt">How Money Beliefs Undermine Confidence and Lead to Self-Sabotage</span>
+          <span class="rfoot"><span class="rwhy">Also covers: mindset</span><span class="rtag">EP 240</span></span>
+        </a>
+        <a class="relcard" href="/the-luck-factor">
+          <img src="https://i.ytimg.com/vi/EsohMUk-TtQ/hqdefault.jpg" alt="EP 188 thumbnail">
+          <span class="rt">The Luck Factor</span>
+          <span class="rfoot"><span class="rwhy">Also covers: mindset</span><span class="rtag">EP 188</span></span>
+        </a>
+      </div>
+      <div class="reldots" id="reldots"></div>
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="footgrid">
+      <div class="fcol">
+        <div class="foot-label">Follow us on</div>
+        <div class="socials">
+          <a href="https://www.instagram.com/thenumbersgamepodcast/" target="_blank" rel="noopener" aria-label="The Numbers Game on Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.8.2 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1 .4 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .4-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1-.4-2.2-.1-1.3-.1-1.7-.1-4.9s0-3.6.1-4.9c.1-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.4 2.2-.4 1.3-.1 1.7-.1 4.9-.1zm0 2c-3.1 0-3.5 0-4.8.1-1.1.1-1.5.2-1.8.3-.4.2-.7.3-1 .6-.3.3-.5.6-.6 1-.1.3-.3.7-.3 1.8-.1 1.3-.1 1.7-.1 4.8s0 3.5.1 4.8c.1 1.1.2 1.5.3 1.8.2.4.3.7.6 1 .3.3.6.5 1 .6.3.1.7.3 1.8.3 1.3.1 1.7.1 4.8.1s3.5 0 4.8-.1c1.1-.1 1.5-.2 1.8-.3.4-.2.7-.3 1-.6.3-.3.5-.6.6-1 .1-.3.3-.7.3-1.8.1-1.3.1-1.7.1-4.8s0-3.5-.1-4.8c-.1-1.1-.2-1.5-.3-1.8-.2-.4-.3-.7-.6-1-.3-.3-.6-.5-1-.6-.3-.1-.7-.3-1.8-.3-1.3-.1-1.7-.1-4.8-.1zm0 3.4a5.4 5.4 0 1 1 0 10.8 5.4 5.4 0 0 1 0-10.8zm0 2a3.4 3.4 0 1 0 0 6.8 3.4 3.4 0 0 0 0-6.8zm5.6-2.3a1.3 1.3 0 1 1-2.6 0 1.3 1.3 0 0 1 2.6 0z"/></svg></a>
+          <a href="https://www.tiktok.com/@thenumbersgamepodcast" target="_blank" rel="noopener" aria-label="The Numbers Game on TikTok"><svg viewBox="0 0 24 24"><path d="M12.53.02C13.84 0 15.14.01 16.44 0c.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg></a>
+          <a href="https://www.linkedin.com/company/the-numbers-game-podcast/" target="_blank" rel="noopener" aria-label="The Numbers Game on LinkedIn"><svg viewBox="0 0 24 24"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.24 8.25h4.52V23H.24V8.25zM8.34 8.25h4.33v2.01h.06c.6-1.14 2.08-2.34 4.28-2.34 4.58 0 5.42 3.01 5.42 6.92V23h-4.51v-7.16c0-1.71-.03-3.91-2.38-3.91-2.39 0-2.75 1.86-2.75 3.78V23H8.34V8.25z"/></svg></a>
+          <a href="https://www.facebook.com/profile.php?id=100071290388343" target="_blank" rel="noopener" aria-label="The Numbers Game on Facebook"><svg viewBox="0 0 24 24"><path d="M24 12.07C24 5.41 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.04V9.41c0-3.02 1.8-4.7 4.54-4.7 1.31 0 2.68.24 2.68.24v2.97h-1.5c-1.5 0-1.96.93-1.96 1.89v2.26h3.32l-.53 3.5h-2.8V24C19.62 23.1 24 18.1 24 12.07z"/></svg></a>
+          <a href="https://www.youtube.com/@thenumbersgamepodcast" target="_blank" rel="noopener" aria-label="The Numbers Game on YouTube"><svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.2C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31.7 31.7 0 0 0 0 12a31.7 31.7 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.2A31.7 31.7 0 0 0 24 12a31.7 31.7 0 0 0-.5-5.8zM9.6 15.6V8.4L15.8 12z"/></svg></a>
+        </div>
+      </div>
+      <div class="fcol">
+        <div class="foot-label">Brought to you by</div>
+        <div class="sponsors">
+          <a href="https://www.inovayt.com.au/" target="_blank" rel="noopener"><img src="assets/inovayt-white.png" alt="Inovayt"></a>
+          <a href="https://futureadvisory.com.au/" target="_blank" rel="noopener"><img src="assets/future-advisory-white.png" alt="Future Advisory"></a>
+        </div>
+      </div>
+      <div class="fcol produced">
+        <div class="foot-label">Produced by</div>
+        <a href="https://www.vidpod.com.au/" target="_blank" rel="noopener"><img src="assets/vidpod-white.png" alt="VIDPOD"></a>
+      </div>
+    </div>
+    <div class="footbar">
+      <details class="footnav-dd">
+        <summary><svg class="ham" viewBox="0 0 24 24"><path d="M3 6h18v2H3zM3 11h18v2H3zM3 16h18v2H3z"/></svg> Menu</summary>
+        <div class="dd-links">
+          <a href="/">Home</a><a href="/episodes">Every episode</a><a href="/adventure">Choose your own adventure</a><a href="/about">About the show</a><a href="/nick-reilly">Nick Reilly</a><a href="/jason-robinson">Jason Robinson</a><a href="/contact">Contact</a>
+        </div>
+      </details>
+      <div class="copyright">© 2026 The Numbers Game</div>
+    </div>
+  </footer>
+
+  <script>
+    var VIDEO='Ndgcpcg_TAw';
+    var CHAPTERS=[
+      {t:"00:00",s:0,title:"Intro"},
+      {t:"00:22",s:22,title:"The Enhanced Games Explained"},
+      {t:"02:23",s:143,title:"The Money Behind The Olympics"},
+      {t:"05:20",s:320,title:"The Ethics And The Risk"},
+      {t:"06:12",s:372,title:"Pay The Athletes"},
+      {t:"07:30",s:450,title:"Science, Suits And Sponsorship"},
+      {t:"09:15",s:555,title:"Who Actually Gets Paid"},
+      {t:"11:53",s:713,title:"What A Gold Medal Is Worth"},
+      {t:"13:53",s:833,title:"Would You Medicate For Performance"},
+      {t:"18:22",s:1102,title:"Human Potential And Normalisation"},
+      {t:"20:03",s:1203,title:"How The Olympics Could Reform"}
+    ];
+    var QUESTIONS=[
+      {q:"Would you take drugs to win a million dollars?",s:22},
+      {q:"What are the Enhanced Games?",s:74},
+      {q:"Why do Olympic athletes earn so little?",s:143},
+      {q:"How much revenue did the Paris Olympics make?",s:207},
+      {q:"Why are pro athletes paid so much?",s:241},
+      {q:"Is there an ethical problem with the Enhanced Games?",s:320},
+      {q:"What did the Enhanced Games swimmer win?",s:660},
+      {q:"How much does Australia pay for an Olympic gold?",s:735},
+      {q:"How much does Singapore pay for a gold medal?",s:777},
+      {q:"Would you medicate staff for more performance?",s:833}
+    ];
+
+    var chEl=document.getElementById('chapters');
+    CHAPTERS.forEach(function(c){var b=document.createElement('button');b.className='chapter';b.onclick=function(){startAt(c.s)};b.innerHTML='<span class="tc">'+c.t+'</span><span class="cx">'+c.title+'</span>';chEl.appendChild(b);});
+    document.getElementById('chcount').textContent=CHAPTERS.length;
+    var qEl=document.getElementById('qa');
+    QUESTIONS.forEach(function(q){var b=document.createElement('button');b.className='q';b.onclick=function(){startAt(q.s)};b.innerHTML='<span class="qm">?</span><span class="qx">'+q.q+'</span><span class="go">›</span>';qEl.appendChild(b);});
+    document.getElementById('qcount').textContent=QUESTIONS.length;
+
+    /* Mobile nav dropdown. */
+    var burger=document.getElementById('navburger'), navdrop=document.getElementById('navdrop');
+    if(burger&&navdrop){burger.addEventListener('click',function(){
+      navdrop.hidden=!navdrop.hidden;
+      burger.setAttribute('aria-expanded', navdrop.hidden?'false':'true');
+    });}
+
+    /* Voice-note button reveals the recorder; × tucks it away. */
+    var vbtn=document.getElementById('vbtn'), vslot=document.getElementById('vslot'), vclose=document.getElementById('vclose');
+    if(vbtn&&vslot){vbtn.addEventListener('click',function(){vslot.hidden=!vslot.hidden;});}
+    if(vclose&&vslot){vclose.addEventListener('click',function(){vslot.hidden=true;});}
+
+    /* Keep-exploring dots: only shown when the strip actually scrolls (mobile). */
+    var rg=document.querySelector('.relgrid'), rd=document.getElementById('reldots');
+    if(rg&&rd){
+      var relCards=rg.querySelectorAll('.relcard');
+      relCards.forEach(function(){rd.appendChild(document.createElement('span'))});
+      var updDots=function(){
+        var scrollable=rg.scrollWidth>rg.clientWidth+4;
+        rd.style.display=scrollable?'flex':'none';
+        if(!scrollable)return;
+        var i=Math.round(rg.scrollLeft/(rg.scrollWidth-rg.clientWidth)*(relCards.length-1));
+        rd.querySelectorAll('span').forEach(function(s,n){s.classList.toggle('on',n===i)});
+      };
+      rg.addEventListener('scroll',updDots,{passive:true});
+      window.addEventListener('resize',updDots);
+      updDots();
+    }
+
+    /* Explore tabs: swap the visible panel; the row stays put so you never lose your place. */
+    var tabBtns=document.querySelectorAll('.tabbtn');
+    tabBtns.forEach(function(b){
+      b.addEventListener('click',function(){
+        tabBtns.forEach(function(o){o.classList.remove('on')});
+        document.querySelectorAll('.tpanel').forEach(function(p){p.hidden=true});
+        b.classList.add('on');
+        document.getElementById(b.getAttribute('data-panel')).hidden=false;
+      });
+    });
+
+    /* YouTube: clean facade, then real player on demand. Seek without yanking to top. */
+    var player=null, ready=false, apiReady=false, pending=null;
+    window.onYouTubeIframeAPIReady=function(){apiReady=true; if(pending!=null){var s=pending;pending=null;createPlayer(s);}};
+    function createPlayer(sec){
+      var wrap=document.getElementById('player'); wrap.innerHTML='<div id="yt"></div>';
+      player=new YT.Player('yt',{videoId:VIDEO,playerVars:{autoplay:1,rel:0,modestbranding:1,playsinline:1,start:Math.floor(sec||0)},events:{onReady:function(){ready=true;}}});
+    }
+    function nudge(){
+      var p=document.getElementById('player-wrap'), r=p.getBoundingClientRect();
+      if(r.bottom<80 || r.top>window.innerHeight-90){ p.scrollIntoView({behavior:'smooth',block:'start'}); }
+    }
+    function startAt(sec){
+      nudge();
+      if(player&&ready){ player.seekTo(sec,true); player.playVideo(); return; }
+      if(apiReady){ createPlayer(sec); } else { pending=sec; }
+    }
+    document.getElementById('facade').addEventListener('click',function(){startAt(0);});
+    (function(){var s=document.createElement('script');s.src='https://www.youtube.com/iframe_api';document.head.appendChild(s);})();
+  </script>
+</body>
+</html>
