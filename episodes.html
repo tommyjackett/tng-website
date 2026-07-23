@@ -243,8 +243,7 @@
     <div class="filtrow">
       <div class="segctl" id="yearseg" role="group" aria-label="Filter by year">
         <button class="on" data-year="" type="button">All years</button>
-        <button data-year="2026" type="button">2026</button>
-        <button data-year="2025" type="button">2025</button>
+        <!-- year buttons injected dynamically from catalogue.json (see JS) -->
       </div>
       <div class="segctl" id="sortseg" role="group" aria-label="Sort order">
         <button class="on" data-newest="1" type="button">Newest</button>
@@ -290,7 +289,7 @@
       <details class="footnav-dd">
         <summary><svg class="ham" viewBox="0 0 24 24"><path d="M3 6h18v2H3zM3 11h18v2H3zM3 16h18v2H3z"/></svg> Menu</summary>
         <div class="dd-links">
-          <a href="/">Home</a><a href="/episodes">Every episode</a><a href="/adventure">Choose your own adventure</a><a href="/about">About the show</a><a href="/nick-reilly">Nick Reilly</a><a href="/jason-robinson">Jason Robinson</a><a href="/marty-vidakovic">Marty Vidakovic</a><a href="/contact">Contact</a>
+          <a href="/">Home</a><a href="/episodes">Every episode</a><a href="/adventure">Choose your own adventure</a><a href="/about">About the show</a><a href="/nick-reilly">Nick Reilly</a><a href="/jason-robinson">Jason Robinson</a><a href="/contact">Contact</a>
         </div>
       </details>
       <div class="copyright">© 2026 The Numbers Game</div>
@@ -362,6 +361,15 @@
     gchip.innerHTML='Guests <span class="ct">'+guestCount+'</span>'; box.appendChild(gchip);
     gchip.addEventListener('click',function(){ setGuests(!state.guestsOnly); });
 
+    /* year filter — dynamic from catalogue dates, so every new year self-populates (no hardcoding) */
+    var yseg=document.getElementById('yearseg'), years=[];
+    EPS.forEach(function(e){var y=String(e.date).slice(0,4); if(y.length===4 && years.indexOf(y)<0) years.push(y);});
+    years.sort(function(a,b){return b-a;}); /* newest year first */
+    years.forEach(function(y){
+      var b=document.createElement('button'); b.type='button'; b.dataset.year=y; b.textContent=y;
+      yseg.appendChild(b);
+    });
+
     /* deep-link support: ?topic=Property / ?q=guarantor */
     var p=new URLSearchParams(location.search);
     if(p.get('topic')&&counts[p.get('topic')]) state.topic=p.get('topic');
@@ -387,9 +395,10 @@
   document.querySelectorAll('#sortseg button').forEach(function(b){b.addEventListener('click',function(){
     segPick(document.getElementById('sortseg'),b); state.newest=b.dataset.newest==='1'; state.shown=PAGE; render();
   })});
-  document.querySelectorAll('#yearseg button').forEach(function(b){b.addEventListener('click',function(){
-    segPick(document.getElementById('yearseg'),b); state.year=b.dataset.year; state.shown=PAGE; render();
-  })});
+  document.getElementById('yearseg').addEventListener('click',function(ev){
+    var b=ev.target.closest('button'); if(!b) return;
+    segPick(this,b); state.year=b.dataset.year||''; state.shown=PAGE; render();
+  });
   document.getElementById('more').addEventListener('click',function(){state.shown+=PAGE; render();});
 
   function results(){
