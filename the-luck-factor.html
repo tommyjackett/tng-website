@@ -1,0 +1,749 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EP 188 · The Luck Factor | The Numbers Game</title>
+<meta name="description" content="Marty leads a discussion on luck, arguing it is far more controllable than people assume.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" sizes="64x64" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="canonical" href="https://thenumbersgamepodcast.com.au/the-luck-factor">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="The Numbers Game">
+<meta property="og:title" content="EP 188 · The Luck Factor | The Numbers Game">
+<meta property="og:description" content="Marty leads a discussion on luck, arguing it is far more controllable than people assume.">
+<meta property="og:url" content="https://thenumbersgamepodcast.com.au/the-luck-factor">
+<meta property="og:image" content="https://i.ytimg.com/vi/EsohMUk-TtQ/maxresdefault.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+  :root{
+    --purple:#585af3; --purple-dark:#2c1b8a; --mint:#7ad9a8;
+    --white:#ffffff; --muted:rgba(255,255,255,.60); --dim:rgba(255,255,255,.42);
+    --line:rgba(255,255,255,.12); --card:rgba(255,255,255,.05); --card-hi:rgba(255,255,255,.09);
+    --display:'Anton',Impact,'Helvetica Neue',sans-serif;
+    --sans:'Inter',system-ui,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif;
+    --wrap:1280px;   /* page frame (nav spans this) */
+    --col:960px;     /* content column (player, tabs, text) */
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:var(--sans); color:var(--white); line-height:1.6; -webkit-font-smoothing:antialiased;
+    background:#12093a;
+    background-image:
+      radial-gradient(1200px 600px at 82% -6%, rgba(88,90,243,.45) 0%, transparent 55%),
+      radial-gradient(900px 700px at 5% 8%, rgba(122,217,168,.10) 0%, transparent 50%),
+      linear-gradient(180deg,#2c1b8a 0%,#1a1150 28%,#100b34 62%,#0b0820 100%);
+    background-attachment:fixed;
+  }
+  a{color:inherit}
+  .wrap{max-width:var(--wrap);margin:0 auto;padding:0 36px}
+  main.wrap{max-width:var(--col)}
+  @media(max-width:720px){.wrap{padding:0 22px}}
+
+  /* ── Navbar ── */
+  .nav{position:sticky;top:0;z-index:50;background:linear-gradient(180deg,rgba(24,15,74,.92),rgba(24,15,74,.72));backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+  .nav-in{max-width:var(--wrap);margin:0 auto;padding:11px 36px;display:flex;align-items:center;justify-content:space-between}
+  @media(max-width:720px){.nav-in{padding:11px 22px}}
+  .brand{display:block;line-height:0}
+  .brand img{height:36px;width:auto;display:block}
+  .navlinks{display:flex;gap:28px;align-items:center}
+  .navlinks a{text-decoration:none;font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);transition:.15s}
+  .navlinks a:hover{color:var(--white)}
+  .navlinks a.navtop{cursor:default}
+  .navgroup{position:relative;display:flex;align-items:center}
+  .navgroup .subnav{display:none;position:absolute;top:100%;left:50%;transform:translateX(-50%);padding-top:14px;min-width:180px}
+  .navgroup:hover .subnav,.navgroup:focus-within .subnav{display:block}
+  .subnav-in,.navgroup .subnav{z-index:60}
+  .navgroup .subnav a{display:block;background:#180f4a;border:1px solid var(--line);border-top:0;padding:12px 16px;font-size:12px;color:rgba(255,255,255,.85)}
+  .navgroup .subnav a:first-child{border-top:1px solid var(--line)}
+  .navgroup .subnav a:hover{background:#221768;color:var(--white)}
+  .navburger{display:none;background:none;border:1px solid var(--line);padding:8px 10px;cursor:pointer;color:var(--white);transition:.15s}
+  .navburger:hover{border-color:rgba(122,217,168,.6)}
+  .navburger svg{width:20px;height:20px;fill:currentColor;display:block}
+  .navdrop{display:none}
+  @media(max-width:720px){
+    .navlinks{display:none}
+    .navburger{display:block}
+    .navdrop{display:block;position:absolute;left:0;right:0;top:100%;
+      background:#180f4a;border-bottom:1px solid var(--line);box-shadow:0 24px 50px rgba(0,0,0,.45)}
+    .navdrop[hidden]{display:none}
+    .navdrop a{display:block;padding:15px 22px;text-decoration:none;font-size:14px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:rgba(255,255,255,.9);border-bottom:1px solid rgba(255,255,255,.06)}
+    .navdrop a:last-child{border-bottom:0}
+    .navdrop a.sub{padding-left:42px;font-size:13px;color:rgba(255,255,255,.72)}
+    .navdrop .navlabel{display:block;padding:15px 22px 6px;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.4)}
+  }
+
+  /* ── Hero / hook (marker-highlight system: purple hook wraps naturally, mint payoff below)
+     Rules: title splits at its natural break (colon/pipe/question mark). Front = hook (purple,
+     big), back = payoff (mint, smaller). No break in title = purple hook only. Highlights hug
+     the text (tight em padding tuned to Anton) and wrap via box-decoration-break — never
+     hand-pick line breaks or mint words. ── */
+  header.hero{padding:34px 0 6px}
+  .hook{--inx:clamp(8.4px,2.1vw,15.6px)} /* one shared text inset so hook + payoff first letters align */
+  .hook .hk{font-family:var(--display);font-weight:400;text-transform:uppercase;
+    font-size:clamp(28px,7vw,52px);line-height:1.3;letter-spacing:-.5px;text-wrap:balance}
+  .hook .hk span{color:var(--white);padding:.04em var(--inx) .02em;
+    background:linear-gradient(var(--purple),var(--purple)) 0 50%/100% 87% no-repeat;
+    -webkit-box-decoration-break:clone;box-decoration-break:clone}
+  .hook .pay{font-family:var(--display);font-weight:400;text-transform:uppercase;
+    font-size:clamp(16px,4vw,24px);line-height:1.5;letter-spacing:.6px;margin-top:8px;text-wrap:balance}
+  .hook .pay span{color:#0a0a0a;padding:.08em var(--inx) .04em;
+    background:linear-gradient(var(--mint),var(--mint)) 0 50%/100% 88% no-repeat;
+    -webkit-box-decoration-break:clone;box-decoration-break:clone}
+  /* no-hook titles: mid-split into two full-size rows, purple then mint */
+  .hook .hk span.hkrow{display:block;background:none;padding:0}
+  .hook .hk .hkrow+.hkrow{margin-top:8px}
+  .hook .hk span.mintseg{color:#0a0a0a;
+    background:linear-gradient(var(--mint),var(--mint)) 0 50%/100% 87% no-repeat}
+
+  /* ── Player (clean facade → real player on tap) ── */
+  .player-wrap{margin:24px 0 4px;scroll-margin-top:76px}
+  .player{position:relative;width:100%;padding-top:56.25%;border-radius:0;overflow:hidden;background:#000;box-shadow:0 30px 70px rgba(0,0,0,.5),0 0 0 1px rgba(255,255,255,.06)}
+  .facade{position:absolute;inset:0;border:0;cursor:pointer;background-size:cover;background-position:center;display:flex;align-items:center;justify-content:center;padding:0}
+  .facade .play{width:74px;height:74px;border-radius:50%;background:rgba(10,6,30,.40);border:2px solid rgba(255,255,255,.72);display:flex;align-items:center;justify-content:center;transition:.18s;-webkit-backdrop-filter:blur(1px);backdrop-filter:blur(1px)}
+  .facade:hover .play{background:rgba(88,90,243,.62);transform:scale(1.07);border-color:#fff}
+  .facade .play::after{content:"";border-style:solid;border-width:11px 0 11px 19px;border-color:transparent transparent transparent #fff;margin-left:5px}
+  .player iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+
+  /* ── Episode facts (bottom of the Summary panel — templated per episode) ── */
+  .sumfacts{margin:14px 10px 4px;padding-top:13px;border-top:1px solid rgba(255,255,255,.08);display:flex;flex-direction:column;gap:8px}
+  .fact{display:flex;gap:12px;font-size:13.5px}
+  .fact .fl{flex:none;width:104px;color:var(--dim);font-weight:600;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;padding-top:2px}
+  .fact .fv{color:rgba(255,255,255,.9);font-weight:500}
+  .fact .fv a{color:var(--mint);text-decoration:none;border-bottom:1px solid rgba(122,217,168,.4);transition:.15s}
+  .fact .fv a:hover{border-bottom-color:var(--mint)}
+
+  /* ── Episode tag (identity: black label hanging off the title corner) ── */
+  .eptag{display:inline-block;position:relative;left:-6px;margin-bottom:-7px;z-index:2;
+    background:#0a0a0a;color:var(--white);font-family:var(--display);font-weight:400;
+    font-size:13.5px;letter-spacing:1.5px;text-transform:uppercase;padding:6px 11px 4px}
+
+  /* ── Explore tabs (sticky mode switcher; one panel swaps below, nothing shoves) ── */
+  .explore{margin-top:22px}
+  .tabs{position:sticky;top:58px;z-index:40;display:flex;flex-wrap:wrap;gap:8px;padding:10px 0;
+    background:linear-gradient(180deg,rgba(18,10,55,.96),rgba(18,10,55,.86));
+    backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+  .tabbtn{font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.5px;
+    font-size:14.5px;color:var(--white);background:var(--purple);border:1px solid var(--purple);
+    padding:9px 13px 7px;cursor:pointer;transition:.15s}
+  .tabbtn:hover{filter:brightness(1.12)}
+  .tabbtn.on{background:var(--mint);border-color:var(--mint);color:#0a0a0a}
+  .tabbtn.on:hover{filter:none}
+  .tabbtn .ct{font-size:12px;opacity:.75;font-variant-numeric:tabular-nums}
+  .tabbtn .ct::before{content:" · "}
+  .tpanel{border:1px solid var(--line);background:var(--card);padding:12px 10px 14px}
+  .hint{font-size:12.5px;color:var(--muted);padding:2px 10px 10px;border-bottom:1px solid rgba(255,255,255,.08);margin-bottom:6px}
+
+  /* ── Listen row (no box: label left, service pills follow) ── */
+  .listen{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:12px 16px;margin-top:34px}
+  .listen .lname{font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--dim)}
+  .listen a{display:inline-flex;align-items:center;gap:9px;padding:11px 18px;border-radius:999px;
+    background:var(--mint);color:#08210f;text-decoration:none;font-weight:800;font-size:12.5px;
+    letter-spacing:.04em;text-transform:uppercase;transition:.15s}
+  .listen a:hover{filter:brightness(1.06);transform:translateY(-1px);box-shadow:0 12px 30px rgba(122,217,168,.25)}
+  .listen svg{width:20px;height:20px;fill:currentColor;flex:none}
+  /* ── Listen-now Spotify audio embed (full column width, above the pills) ── */
+  .listen-now{margin-top:40px}
+  .listen-now .ln-head{display:flex;align-items:baseline;justify-content:space-between;gap:14px;margin-bottom:13px}
+  .listen-now .ln-title{font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--dim)}
+  .audio-embed{border-radius:12px;overflow:hidden;box-shadow:0 20px 50px rgba(0,0,0,.4),0 0 0 1px rgba(255,255,255,.06)}
+  .audio-embed iframe{display:block;width:100%;border:0}
+  @media(max-width:720px){.listen-now{margin-top:32px}}
+
+  /* ── Keep exploring (thumbnails link to other episode PAGES, never timecodes).
+     Swipeable strip on mobile, fits three-up on desktop. Variant rule: claim
+     "similar ground" + reason lines ONLY when moment-level topic overlap is
+     genuinely strong; otherwise show the latest released episodes with dates —
+     never invent a connection. ── */
+  .relsec{margin-top:60px;padding-top:58px;border-top:1px solid var(--line)} /* line = end of this episode's info */
+  .reldots{display:flex;justify-content:center;gap:7px;margin-top:12px}
+  .reldots span{width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.25);transition:.2s}
+  .reldots span.on{background:var(--mint)}
+  .relsec .rtitle{display:inline-block;font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.5px;font-size:14.5px;background:var(--mint);color:#0a0a0a;padding:9px 13px 7px;margin-bottom:18px}
+  .relgrid{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding-bottom:6px;scrollbar-width:none}
+  .relgrid::-webkit-scrollbar{display:none}
+  .relcard{flex:0 0 56%;max-width:232px;scroll-snap-align:start;display:flex;flex-direction:column;text-decoration:none;background:var(--card);border:1px solid var(--line);transition:.15s}
+  .relcard:hover{background:var(--card-hi);border-color:rgba(122,217,168,.55)}
+  .relcard img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block}
+  .relcard .rt{display:block;font-size:12.5px;font-weight:600;color:rgba(255,255,255,.92);line-height:1.4;padding:8px 8px 0}
+  .relcard .rfoot{margin-top:auto;display:flex;justify-content:space-between;align-items:flex-end;gap:8px;padding:10px 8px 9px}
+  .relcard .rwhy{font-size:11.5px;color:var(--mint)}
+  .relcard .rtag{display:inline-block;background:#0a0a0a;color:var(--white);font-family:var(--display);font-size:10px;letter-spacing:1.2px;text-transform:uppercase;padding:3px 7px 2px;white-space:nowrap;flex:0 0 auto}
+
+  /* ── Dropdown sections (accordion under the player) ── */
+  .drops{margin-top:34px;display:flex;flex-direction:column;gap:11px}
+  .drop{border:1px solid var(--line);border-radius:0;background:var(--card);overflow:hidden;transition:border-color .15s}
+  .drop[open]{border-color:rgba(122,217,168,.35)}
+  .drop>summary{list-style:none;cursor:pointer;padding:16px 18px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+  .drop>summary::-webkit-details-marker{display:none}
+  .drop>summary .st{font-weight:700;font-size:15.5px;letter-spacing:.005em}
+  .drop>summary .ct{margin-left:auto;font-size:12px;color:var(--dim);font-weight:600;font-variant-numeric:tabular-nums}
+  .drop>summary .chev{flex:none;width:22px;height:22px;border-radius:50%;background:rgba(122,217,168,.14);color:var(--mint);display:flex;align-items:center;justify-content:center;font-family:var(--display);font-size:15px;line-height:1;transition:.2s;transform:translateY(-1px)}
+  .drop[open]>summary .chev{transform:rotate(45deg)}
+  .drop-body{padding:2px 12px 12px}
+
+  /* chapters */
+  .chapter{display:flex;align-items:baseline;gap:14px;width:100%;text-align:left;cursor:pointer;background:none;border:0;color:inherit;font-family:inherit;padding:11px 10px;border-radius:10px;transition:.13s}
+  .chapter:hover{background:var(--card-hi)}
+  .chapter .tc{font-variant-numeric:tabular-nums;font-weight:700;font-size:14px;color:var(--mint);flex:none;width:48px}
+  .chapter .cx{font-size:15px;font-weight:500;color:rgba(255,255,255,.9)}
+  .chapter:hover .cx{color:#fff}
+
+  /* questions */
+  .q{display:flex;align-items:center;gap:12px;width:100%;text-align:left;cursor:pointer;background:none;border:0;border-radius:11px;color:inherit;font-family:inherit;padding:12px 10px;transition:.14s}
+  .q+.q{border-top:1px solid rgba(255,255,255,.05)}
+  .q:hover{background:var(--card-hi)}
+  .q .qm{font-family:var(--display);font-size:15px;color:var(--mint);flex:none;line-height:1;transform:translateY(1px)}
+  .q .qx{font-size:15px;font-weight:500;color:rgba(255,255,255,.92)}
+  .q .go{margin-left:auto;flex:none;color:var(--dim);font-size:18px;transition:.15s}
+  .q:hover .go{color:var(--mint);transform:translateX(2px)}
+
+  /* summary + transcript bodies */
+  .summary-body p{font-size:16.5px;line-height:1.62;color:rgba(255,255,255,.9);padding:6px 10px 4px}
+  .tbody{padding:2px 10px 8px}
+  .tbody p{font-size:14.5px;line-height:1.7;color:rgba(255,255,255,.78);margin-top:15px;max-width:64ch}
+  .tbody .spk{display:block;font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--mint);margin-bottom:2px}
+
+  /* ── Voice note ask (lives at the bottom of the Summary panel) ── */
+  .vask{margin:16px 10px 4px}
+  .vbtn{display:inline-flex;align-items:center;gap:9px;padding:12px 20px;border-radius:999px;border:0;cursor:pointer;
+    background:var(--mint);color:#08210f;font-family:inherit;font-weight:800;font-size:12.5px;
+    letter-spacing:.04em;text-transform:uppercase;transition:.15s}
+  .vbtn:hover{filter:brightness(1.06);transform:translateY(-1px);box-shadow:0 12px 30px rgba(122,217,168,.25)}
+  .vbtn svg{width:18px;height:18px;fill:currentColor;flex:none}
+  .vslot{background:var(--purple);padding:12px 10px 10px;margin:14px 0 4px;box-shadow:0 18px 40px rgba(0,0,0,.35)}
+  .vslot[hidden]{display:none}
+  .vhead{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;margin-bottom:10px}
+  .vhead .vmsg{font-family:var(--sans);font-size:13px;line-height:1.55;color:rgba(255,255,255,.92);margin:2px 0 0;padding:0 2px}
+  .vclose{background:none;border:0;color:rgba(255,255,255,.85);font-size:22px;line-height:1;cursor:pointer;padding:0 2px}
+  .vclose:hover{color:var(--white)}
+  .vslot iframe{display:block}
+
+  /* ── YouTube subscribe pill (sits in the listen row; outranks .listen a's mint) ── */
+  .listen a.yt-pill{background:var(--purple);color:var(--white)}
+  .listen a.yt-pill:hover{filter:brightness(1.1);transform:translateY(-1px)}
+  @media(max-width:720px){ /* mobile: no label, three compact pills on one row */
+    .listen .lname{display:none}
+    .listen{gap:8px}
+    .listen a{padding:10px 13px;font-size:11px;gap:6px}
+    .listen svg{width:16px;height:16px}
+  }
+
+  /* ── Footer: Follow us on | Brought to you by | Produced by, + Menu dropdown ── */
+  footer{border-top:1px solid var(--line);margin-top:68px;padding:52px 20px 58px}
+  .footgrid{max-width:var(--wrap);margin:0 auto;display:grid;grid-template-columns:1fr 1.15fr .8fr;gap:44px;align-items:start}
+  .fcol{text-align:center;display:flex;flex-direction:column;align-items:center}
+  .foot-label{font-size:11px;font-weight:700;letter-spacing:.26em;text-transform:uppercase;color:var(--dim);margin-bottom:18px}
+  .sponsors{display:flex;justify-content:center;align-items:center;gap:34px;flex-wrap:wrap}
+  .sponsors a,.produced a{display:inline-flex;transition:.15s}
+  .sponsors a:hover,.produced a:hover{transform:translateY(-1px)}
+  .sponsors img{height:32px;width:auto;opacity:.92}
+  .produced img{height:30px;width:auto;opacity:.95}
+  .sponsors a:hover img,.produced a:hover img{opacity:1}
+  footer .socials{display:flex;gap:11px;justify-content:center;flex-wrap:wrap;margin:0}
+  footer .socials a{width:40px;height:40px;border-radius:50%;border:1.5px solid rgba(122,217,168,.5);display:flex;align-items:center;justify-content:center;transition:.15s}
+  footer .socials a svg{width:18px;height:18px;fill:var(--mint);transition:.15s}
+  footer .socials a:hover{background:var(--mint);border-color:var(--mint);transform:translateY(-2px)}
+  footer .socials a:hover svg{fill:#0a0a0a}
+  .footbar{max-width:var(--wrap);margin:34px auto 0;border-top:1px solid var(--line);padding-top:20px;display:flex;flex-direction:column;align-items:center;gap:14px}
+  .footnav-dd{display:block;width:100%;max-width:var(--wrap);margin:0 auto;text-align:center}
+  .footnav-dd>summary{list-style:none;cursor:pointer;display:inline-flex;align-items:center;gap:9px;font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.5px;font-size:13px;color:var(--muted);background:transparent;border:1px solid var(--line);padding:8px 16px 6px;transition:.15s}
+  .footnav-dd>summary::-webkit-details-marker{display:none}
+  .footnav-dd>summary:hover{color:var(--mint);border-color:rgba(122,217,168,.45)}
+  .footnav-dd>summary .ham{width:15px;height:15px;fill:currentColor;transform:translateY(-1px)}
+  .footnav-dd .dd-links{display:flex;flex-direction:row;flex-wrap:wrap;justify-content:center;gap:12px 24px;padding:24px 0 4px}
+  .footnav-dd .dd-links a{font-size:11.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:.15s}
+  .footnav-dd .dd-links a:hover{color:var(--mint)}
+  .copyright{font-size:12px;color:var(--dim);text-align:center}
+  @media(max-width:720px){.footgrid{grid-template-columns:1fr;gap:34px}footer{padding:40px 16px 20px}.footbar{margin-top:34px;padding-top:24px;gap:20px}.footnav-dd .dd-links{flex-direction:column;align-items:center;gap:15px}}
+
+  @media(min-width:720px){header.hero{padding:48px 0 6px}}
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "PodcastEpisode", "name": "The Luck Factor", "url": "https://thenumbersgamepodcast.com.au/the-luck-factor", "datePublished": "2024-06-27", "episodeNumber": 188, "image": "https://i.ytimg.com/vi/EsohMUk-TtQ/maxresdefault.jpg", "partOfSeries": {"@type": "PodcastSeries", "name": "The Numbers Game", "url": "https://thenumbersgamepodcast.com.au/"}}</script>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-in">
+      <a class="brand" href="/" aria-label="The Numbers Game home"><img src="assets/tng-logo.png" alt="The Numbers Game"></a>
+      <div class="navlinks">
+        <a href="/">Home</a>
+        <div class="navgroup">
+          <a class="navtop">Episodes</a>
+          <div class="subnav">
+            <a href="/episodes">All episodes</a>
+            <a href="/adventure">Find moments</a>
+          </div>
+        </div>
+        <div class="navgroup">
+          <a class="navtop">About</a>
+          <div class="subnav">
+            <a href="/about">The show</a>
+            <a href="/nick-reilly">Nick Reilly</a>
+            <a href="/jason-robinson">Jason Robinson</a>
+          </div>
+        </div>
+        <a href="/contact">Contact</a>
+      </div>
+      <button class="navburger" id="navburger" type="button" aria-label="Menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24"><path d="M3 6h18v2H3zM3 11h18v2H3zM3 16h18v2H3z"/></svg>
+      </button>
+    </div>
+    <div class="navdrop" id="navdrop" hidden>
+      <a href="/">Home</a>
+      <span class="navlabel">Episodes</span>
+      <a class="sub" href="/episodes">All episodes</a>
+      <a class="sub" href="/adventure">Find moments</a>
+      <span class="navlabel">About</span>
+      <a class="sub" href="/about">The show</a>
+      <a class="sub" href="/nick-reilly">Nick Reilly</a>
+      <a class="sub" href="/jason-robinson">Jason Robinson</a>
+      <a href="/contact">Contact</a>
+    </div>
+  </nav>
+
+  <main class="wrap">
+
+    <header class="hero">
+      <div class="hook">
+        <span class="eptag">EP 188</span>
+        <h1 class="hk"><span class="hkrow"><span>The Luck</span></span>
+        <span class="hkrow"><span class="mintseg">Factor</span></span></h1>
+      </div>
+    </header>
+
+    <div class="player-wrap" id="player-wrap">
+      <div class="player" id="player">
+        <button class="facade" id="facade" style="background-image:url('https://i.ytimg.com/vi/EsohMUk-TtQ/maxresdefault.jpg')" aria-label="Play episode">
+          <span class="play"></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="explore">
+      <div class="tabs" role="tablist">
+        <button class="tabbtn on" data-panel="p-summary">Summary</button>
+        <button class="tabbtn" data-panel="p-chapters">Chapters<span class="ct" id="chcount"></span></button>
+        <button class="tabbtn" data-panel="p-questions">Questions<span class="ct" id="qcount"></span></button>
+      </div>
+      <section class="tpanel" id="p-summary">
+        <div class="summary-body">
+          <p>Marty leads a discussion on luck, arguing it is far more controllable than people assume. Jason shares how he fell into accounting without ever choosing it and how a chance meeting sent him to a Bali conference that changed his path, while Nick separates life luck, being born in a safe country, from business results that are earned through effort. Marty lays out categories of controllable luck, young luck in how you conduct yourself, skill luck from being coachable and taking action, performance luck where the top twenty percent produce most of the results, team luck from A graders raising each other, and partnership luck from meeting complementary people. They land on the idea that behaviour, habits and the people around you create most of what looks like luck, and that life does not just happen to you, you can make it happen.</p>
+        </div>
+        <div class="vask">
+          <button class="vbtn" id="vbtn" type="button">
+            <svg viewBox="0 0 24 24"><path d="M12 14a3 3 0 0 0 3-3V6a3 3 0 1 0-6 0v5a3 3 0 0 0 3 3zm5-3a5 5 0 0 1-10 0H5a7 7 0 0 0 6 6.92V21h2v-3.08A7 7 0 0 0 19 11h-2z"/></svg>
+            Send us a voice note
+          </button>
+          <div class="vslot" id="vslot" hidden>
+            <div class="vhead">
+              <p class="vmsg">We'd love to hear from you. You can leave up to a 90 second voice note for us to play on the show: a question, some feedback, or a topic you want covered.</p>
+              <button class="vclose" id="vclose" type="button" aria-label="Close">&times;</button>
+            </div>
+            <iframe src="https://www.speakpipe.com/widget/inline/hhq6kzggsx7zpcsvakgxfrzun3zidpde" allow="microphone" width="100%" height="200" frameborder="0" title="Leave The Numbers Game a voice note"></iframe>
+          </div>
+          <script async src="https://www.speakpipe.com/widget/loader.js" charset="utf-8"></script>
+        </div>
+        <div class="sumfacts">
+          <div class="fact"><span class="fl">Release date</span><span class="fv">27 June 2024</span></div>
+          <div class="fact"><span class="fl">Hosts</span><span class="fv"><a href="/nick-reilly">Nick Reilly</a>, <a href="/jason-robinson">Jason Robinson</a> &amp; <a href="/marty-vidakovic">Marty Vidakovic</a></span></div>
+
+        </div>
+      </section>
+      <section class="tpanel" id="p-chapters" hidden>
+        <p class="hint">Jump straight to the part you need.</p>
+        <div id="chapters"></div>
+      </section>
+      <section class="tpanel" id="p-questions" hidden>
+        <p class="hint">Real questions this episode answers. Tap one to hear the answer.</p>
+        <div id="qa"></div>
+      </section>
+    </div>
+
+    <div class="drops">
+
+      <details class="drop">
+        <summary><span class="st">Episode transcript</span><span class="chev">+</span></summary>
+        <div class="drop-body tbody">
+          <p><span class="spk">Jason · 00:00</span>Welcome to episode 188 of The Numbers Game. I'm Jase. I'm joined by Nick and Marty. How are we fellas?</p>
+          <p><span class="spk">Marty · 00:07</span>Going well, thanks Jase. Got a bit of dilemma down at the dog park at the moment. Since, since we left Penny at dog days, which she's obviously turned from a pup into a woman, I don't know what went on there.</p>
+          <p><span class="spk">Marty · 00:20</span>But, uh, but any time another dog tries to sniff her in any way, it's full blown attack. So Talk about setting boundaries, so yeah, so basically disgruntled most of my community now that we're in there, so big issues, but you know, dealing with the real issues in life, so yeah, apart from that, good. How are you, Nick?</p>
+          <p><span class="spk">Nick · 00:44</span>I'm going well, still, still trying to locate the one last jar of honey.</p>
+          <p><span class="spk">Nick · 00:52</span>Probably the most important one too, the one I really want, so I will, I won't stop, I won't stop until I find it.</p>
+          <p><span class="spk">Marty · 00:59</span>Just</p>
+          <p><span class="spk">Marty · 01:00</span>don't look at my drawer.</p>
+          <p><span class="spk">Nick · 01:02</span>Uh, I don't want to look in your drawer mate, to be honest, who knows what'll come out of there. Um, nah, look I'm good, I'm good, look it's only honey. I'm sure, um, I'm sure one day in some life I'll be able to find the same kind of honey again.</p>
+          <p><span class="spk">Nick · 01:16</span>Not sure, I'll keep hoping, but. How</p>
+          <p><span class="spk">Marty · 01:18</span>are you</p>
+          <p><span class="spk">Nick · 01:20</span>Jase? Looking, uh, looking good mate.</p>
+          <p><span class="spk">Jason · 01:23</span>I'm feeling tired, Nick. I've bitten off more than I can chew if I'm going to be going to be real and honest with you, beyond end of financial year, tax planning, all the madness that is the accounting world, I decided to do Gold Coast Marathon and the week before I have to do High Rocks, so I signed up for High Rocks, which, um, for anyone out there who's heard of High Rocks, it's kind of like.</p>
+          <p><span class="spk">Jason · 01:45</span>It's not like the CrossFit games, but it's like a CrossFit games for like people who do BFT or F45 and all those kinds of, um, bootcamp style gyms. There's a competition called Hirox, and it's basically, you do</p>
+          <p><span class="spk">Jason · 02:00</span>eight kilometers of running, but between every kilometer of running, you have to do an exercise.</p>
+          <p><span class="spk">Jason · 02:06</span>Like there's a thousand meters on the ski erg, a sled push, wall balls, farmers carry burpees. Anyway, so I had that on the weekend, like doing marathon training and training for that. I've decided it's probably, you know, when the wife tells you you're making the wrong decision to do things like high rocks and a marathon.</p>
+          <p><span class="spk">Jason · 02:27</span>I think that's what made me want to do it even more when Casey told me that I was being an idiot for signing up to both within a week of each other. But I think I'm going to, I'm going to live to regret this one. I think she's going to be right</p>
+          <p><span class="spk">Nick · 02:37</span>again. I've had the wrong decision comment a few times, but not, uh, not fitness related.</p>
+          <p><span class="spk">Nick · 02:43</span>Yeah. Um, I was good. Well, you are, there you go. You're looking fit. So</p>
+          <p><span class="spk">Jason · 02:48</span>I'll try my luck anyway. Hopefully there's a bit of luck when it comes to my ability to get through High Rocks and then seven days later, I'll need some extra luck to be able to run the Gold Coast Marathon, but, um,</p>
+          <p><span class="spk">Jason · 03:00</span>Marty. While I'm talking about luck, uh, does that have anything to do with what you've brought to the table today?</p>
+          <p><span class="spk">Marty · 03:04</span>Oh, look, I thought I'd, uh, glad you mentioned it, Jase. Lovely, uh, tie in really. Uh, I wanted to, I wanted to talk a little bit about, uh, luck and the controllables within it, uh, you know, as opposed to what people think luck is, which, uh, sometimes people just think it's dumb luck, which, uh, is not always the case, but, uh, would you consider yourself?</p>
+          <p><span class="spk">Marty · 03:28</span>Lucky in your careers and in your health and fitness. Uh, Jace?</p>
+          <p><span class="spk">Jason · 03:33</span>Oh, good question. Wish I'd read the show notes and was prepared for this one to come through.</p>
+          <p><span class="spk">Marty · 03:38</span>Just asking. Do you feel lucky?</p>
+          <p><span class="spk">Jason · 03:39</span>Yes. Yes. I feel lucky. I feel like, and this is an interesting one or a hard one to answer. Uh, I think I've said it before on other shows, but I never wanted to be an accountant.</p>
+          <p><span class="spk">Jason · 03:49</span>Like I never deliberately chose the path to be an accountant and by whether by some dumb luck. all of the different events and things that have happened throughout getting to</p>
+          <p><span class="spk">Jason · 04:00</span>where I am now hasn't necessarily felt like a deliberate decision to pursue a certain path in life. Um, it's been having, I guess, some kind of trust in the universe, um, which sounds a bit wanky in itself, but, um, a lot of things have fallen my way that have allowed me to continue to express myself and go down this path.</p>
+          <p><span class="spk">Jason · 04:18</span>And yeah, even right up to before I took the job as an accountant, I was, you know, doing the police. Um, course, and I was doing the fitness test to become a police officer and, you know, even saying that out loud sounds crazy. The fact that I'd now ended up, you know, having an accounting firm working with zero being on CPAs public practice committee, I'm as like ingrained in the accounting community as ever at more than anyone, more than most people that I know who actually wanted to become an accountant.</p>
+          <p><span class="spk">Jason · 04:49</span>And yeah, I was the guy who was like accounting stuff that how boring.</p>
+          <p><span class="spk">Marty · 04:53</span>So, so would you say any of your behaviors. allowed you to be lucky in the, what you,</p>
+          <p><span class="spk">Marty · 05:00</span>how you pursued life and how you, you know, how you, your attitudes towards it?</p>
+          <p><span class="spk">Jason · 05:05</span>Hmm. I was curious. I was curious and always open to learning. And I think being curious and open to learning kind of probably pulled me to continue to, not necessarily, I didn't make the decision to do that, but if, if a, If something presented itself to me, I would dive into it and have a crack.</p>
+          <p><span class="spk">Jason · 05:21</span>Um, so, you know, for example, Greg saying, I got you the job in accounting, just give it a go first. And then by giving it a go, I was able to continue to, to pursue things in that area with, you know, and things fell my way. Like I met a guy who. Bought me a trip to Bali to go to an accounting conference in Bali, which changed the course of my life.</p>
+          <p><span class="spk">Jason · 05:40</span>But it was what, what is the chance encounter to be at an event? Because I think I wanted to see the comedian that was presenting at this depreciation report event at crown, like again, how boring the decision to go to a depreciation report, Christmas party. But I think Huey's like, well, there was a comedian who was like doing a show.</p>
+          <p><span class="spk">Jason · 05:57</span>And I was like, Oh yeah, I'll go along to hear the comedienne and like,</p>
+          <p><span class="spk">Jason · 06:00</span>that'll be funny. But met a guy who was in the industry who said. You know what, there's something about you. I'm going to buy flights and accommodation and take you to Bali because you should attend this accounting conference because I think it'll help you learn more about yourself and your career.</p>
+          <p><span class="spk">Jason · 06:14</span>But if I didn't meet that guy on that particular night. Which I think was quite lucky that I did. Maybe I wouldn't be where I am today.</p>
+          <p><span class="spk">Marty · 06:21</span>I'm, uh, glad you've actually, uh, communicated, uh, how you were lucky in that, because I feel like we have a little bit more control that we realized just in attitudes and actions.</p>
+          <p><span class="spk">Marty · 06:32</span>And, uh, Nick, what about yourself? If you think about your career and you know, you're like, cause I look personally, I, I think we can be lucky and unlucky all at once, but I think part of its attitude as well, would you consider yourself a lucky person?</p>
+          <p><span class="spk">Nick · 06:47</span>In business, no, I think in life. Yes. So, um, I'm lucky that I was born in this country and, you know, a roof over your head and food to eat is fairly</p>
+          <p><span class="spk">Nick · 07:00</span>accessible for 99 percent of the population.</p>
+          <p><span class="spk">Nick · 07:02</span>So that's luck. Um, business, I think you create your own luck, um, for sure. You know, and Jason, you're talking about lucky, but you keep putting yourself in these situations. You keep saying yes to things. You keep going to events. Um, you do create your own luck. Um, for sure, and I think, you know, if you take two individuals that, um, you know, on the same day started doing tats lotto every day and did mystery numbers, and at some stage one of them wins 10 million and one of them wins zero, I think the one that won 10 million was lucky.</p>
+          <p><span class="spk">Nick · 07:34</span>Um, but I don't think in business you can say you're lucky. I think you get breaks for sure. And I think sometimes the right things happen and you're in the right place at the right time. But it's generally a reward for the work that you do, uh, leading up to that. Um, Of course some people have bigger windfalls than others that might have done the same amount of work.</p>
+          <p><span class="spk">Nick · 07:55</span>You know, I think that's just life. But I, I, I wouldn't, I wouldn't call that luck, so I</p>
+          <p><span class="spk">Nick · 08:00</span>don't, I don't think I'm lucky in business, Marty. No, I think it's, it's, it's a reward for the, for the time and effort put in.</p>
+          <p><span class="spk">Marty · 08:06</span>Well answered. I, um, I had something happen to me on the weekend where I was chatting to someone that I went to school with.</p>
+          <p><span class="spk">Marty · 08:13</span>And they said, geez, you're just a lucky person, aren't you? In regards to what has happened in business and in life. And, and I, I just reflected on it. And at first I thought, well, yeah, maybe, maybe I am lucky, but I think, I think in life circumstances can work in your favor and circumstances can work against you, but it's all in regards to what you do with that situation that matters the most.</p>
+          <p><span class="spk">Marty · 08:39</span>And I was reflecting on it on the weekend and. know, the old saying, people say, you know, you're the five people you hang around most, um, which is, yeah, it's a saying, but I would, I would say your success as a person is defined by the five people you allow to influence you most. And that's a, that's a.</p>
+          <p><span class="spk">Marty · 08:58</span>That's a different, different mess</p>
+          <p><span class="spk">Marty · 09:00</span>methodology. And it's interesting when I think about my friendship group, how they seem to be luckier people than some. And I think there's a big difference between dumb luck, which can, everyone can categorize as just, you know, someone wins the lotto or, you know, the, the one in a million chance, right.</p>
+          <p><span class="spk">Marty · 09:20</span>The same as you would being hit by lightning. Um, but I think there's luck. And Nick touched upon it, and I realized that over the journey, it's, it's uniquely interesting that it can start very young and it can develop through your professional career. So let's talk about professional and business career for now.</p>
+          <p><span class="spk">Marty · 09:41</span>But I think there's different categories, and the first category I want to bring up is young luck. Like when you're young, how do you, how you conduct yourself matters? Like I see people getting pissed on social media and putting it out there and just doing some crazy stuff that they're putting</p>
+          <p><span class="spk">Marty · 10:00</span>out there.</p>
+          <p><span class="spk">Marty · 10:00</span>And I don't think that's bringing luck to you. You know, there's, there's probably a way you want to present yourself to the world. I know people want to fit in, but you got to decide. You know, who you are, you know, sports circles, you know, you can, you can be lucky in regards to the people you meet in sports, uh, your circles of interest.</p>
+          <p><span class="spk">Marty · 10:18</span>Like for me, it was very, um, it was very much about doing stand up and what works business course when I was 17 years of age and that moved the needle for me. in testing out my courage. And like, you're talking about having a goal at things that others might not have been prepared to do. Some were doing it better and that's fine as well.</p>
+          <p><span class="spk">Marty · 10:38</span>You know, your family and friends, opportunities that come out of that because of how you conduct yourself as a young person, you know, friends. Like for me, when I was young, I met a lady by the name of Ann Merriman, who was a girlfriend of one of my best mates that, um, we got to know each other, she came to the standup gigs.</p>
+          <p><span class="spk">Marty · 10:58</span>She knew I had an interest in</p>
+          <p><span class="spk">Marty · 11:00</span>business and got me the opportunity at the bank. Now that happened nowhere in regards to my background of the education piece or anything. It was only, I was very connected to business and she could see that and got me an opportunity. That was lucky, but I had to be conducting myself in a certain way and my attitudes at the time to be able to get that opportunity and adding value.</p>
+          <p><span class="spk">Marty · 11:24</span>to people. So I think as a young person coming through the first category, it's really about, you know, understanding of how you can be the person you want to be for your future at this time. And you're still finding your feet, but you certainly don't want to be putting your worst self out there as a young person.</p>
+          <p><span class="spk">Marty · 11:42</span>Uh, any</p>
+          <p><span class="spk">Jason · 11:42</span>comments</p>
+          <p><span class="spk">Marty · 11:43</span>to that Gents?</p>
+          <p><span class="spk">Jason · 11:44</span>As you were talking, you know, thinking about being young and young luck and how you conduct yourself and then sport circles, all of those then threw back this Big, you know, flashback from a memory that getting my first job, the fact that I played, I played</p>
+          <p><span class="spk">Jason · 12:00</span>juniors cricket at Endeavor Hills.</p>
+          <p><span class="spk">Jason · 12:02</span>I was going for a job at Dufton McDonald's. And I think before I ended up taking the job, somebody let me know, Oh, the guy who's interviewing you really loves cricket. So as a young person who wanted this job really badly, I knew that my connection with sport and the sport circles allowed me to have this conversation and conduct myself in a way to be a little bit more confident than how I would have usually felt.</p>
+          <p><span class="spk">Jason · 12:26</span>And McDonald's was definitely something that, you know, again, um, you know, as you said, Nick, you, you know, where you position yourself and how open you are to learning and everything else that, that job. And the lessons that I learned, the people I met have influenced my entire life and whether lucky or, you know, meant to be all those things.</p>
+          <p><span class="spk">Jason · 12:47</span>But yeah, there's just, it was interesting to go. If I didn't play sport and I'd sat down and have a conversation with this guy and had nothing to say, would I have been, you know, would I have been the right candidate for the job? You know? Yeah. So not saying you have to play sport to be a good</p>
+          <p><span class="spk">Jason · 13:00</span>job candidate, but for that, for me in that moment, at that point in time, this guy was scary as shit.</p>
+          <p><span class="spk">Jason · 13:05</span>He was a huge unit. He was like six foot six and a meter wide. I was shitting myself, but when I got told, just talk to you about cricket, it'll all be fine. I reckon without that, I would have sat there absolutely just crapping my dacks and instead I had a great conversation and got the job.</p>
+          <p><span class="spk">Marty · 13:20</span>Yeah. Perfect example.</p>
+          <p><span class="spk">Nick · 13:22</span>Nick. I just think about sport. And I think. This is not to say everyone should say sport, but in what other circumstances can you get such a, a large community of people, uh, in a short period and different, different types of people from all walks of life that come together. Yeah. Outside of, I'm just thinking of some other examples.</p>
+          <p><span class="spk">Nick · 13:44</span>Um, religion would be one. Um, I'm not religious personally, but if I look at religious communities, Circles and groups, um, it brings people together and gives you access to a lot of different people, um, pretty efficiently, I guess is the word I'm looking for,</p>
+          <p><span class="spk">Nick · 14:00</span>um, I'm not sure, there'd be some other examples where communities come together, but yeah, for me, I look at most of the, um, events that have happened to me in life.</p>
+          <p><span class="spk">Nick · 14:09</span>And I'd say 90 percent of them are connected to sport and people that I've met through sport. And that's just, that, that was my method of community, um, everyone else will, people will have different methods, but it's, it's, it's engaging with people in big groups and meeting all walks of life.</p>
+          <p><span class="spk">Marty · 14:25</span>I had exactly the same with sport, you know, I still see clients today based out of those early days.</p>
+          <p><span class="spk">Marty · 14:31</span>through sport. Now, do you think you would have warranted respect in your actions and behaviours in those sporting circles that brought opportunity to you?</p>
+          <p><span class="spk">Nick · 14:40</span>Not knowingly, but um, looking back now, yes. Uh, I think you are who you are, right? And, and the type of people you are comes out in, and again, I'll keep saying sport, but in any community.</p>
+          <p><span class="spk">Nick · 14:52</span>Um, so I'd say yes, yes is the answer.</p>
+          <p><span class="spk">Marty · 14:55</span>Could be netball, could be, could be, um, could be drama, could be theatre.</p>
+          <p><span class="spk">Marty · 15:00</span>It's like, it's how you show up, you know, it's how you show up in those circles that draw people towards you and people want to, you know, there's usually collaboration or people want to get to know you a little bit more and opportunities and doors open through it.</p>
+          <p><span class="spk">Marty · 15:15</span>So even at that very young point in life, you know, you can set the standards that people are drawn to. So it's a great foundation piece. Definitely. Um, the second one is you get an opportunity. Definitely. The door opens and it's now what I call skill luck. So we have young luck and now skill luck. Like how do people advance their skills to their own performance?</p>
+          <p><span class="spk">Marty · 15:41</span>You know, that they're coachable. They'll look to learn things outside of the job itself. They're hungry to accelerate their learning and capability. You know, they focus on one focus. And become a lead at it. Like how many times do you say people be very general across different things? And sometimes as you get older, you need to be right as</p>
+          <p><span class="spk">Marty · 16:00</span>well.</p>
+          <p><span class="spk">Marty · 16:00</span>But, but to have one focus and set yourself apart from, from everyone else as a point of difference, um, and they apply what they learned. You know, so they learn something and they apply it. I've seen a lot of knowledgeable failures that said, I have to learn this before I apply it. And then they get to the point of application and they don't take the actions and go, I have to learn this and then I'll be successful.</p>
+          <p><span class="spk">Marty · 16:25</span>And the same thing happens. So they just keep acquiring knowledge without taking action on the knowledge and they don't get this real, real benefit. Ripple effective opportunity based on behavior around the learnings is really cool, and they show courage in the actions like they earn almost demand respect in regards to bringing on a skill and putting it out there in the market, and I think This is really somewhere as a young person coming through that you can really set yourself apart in regards to acquiring skills that give you a point of</p>
+          <p><span class="spk">Marty · 17:00</span>difference in your focus on what you pursue.</p>
+          <p><span class="spk">Jason · 17:02</span>I love it. I mean, there's so, there's so many areas where you can look at that and apply the logic of, you know, the more you advance your skills or your education or your performance and your ability, um, You know, you even look at the, you know, famous basketball players, like, you know, you're Michael Jordan's or the Ron James, how many, how many practice shots they would have taken in the 17, 18 years before they played their first game, you know, that, that, those things make a difference.</p>
+          <p><span class="spk">Jason · 17:29</span>Um, and then taking it back out of sport to. you know, job level, you know, the people that are doing the extra courses and putting in the extra effort, um, you know, rising through my career. I didn't just finish my accounting degree. I then went on to do three or four years of CPA studies. Beyond that, I was doing business advisory courses.</p>
+          <p><span class="spk">Jason · 17:51</span>Um, there was a course called business blueprint. I'd travel to Sydney every quarter to sit in a room with a hundred or 200 business owners and hear about their</p>
+          <p><span class="spk">Jason · 18:00</span>problems and be educated. By this business program on how to solve problems for business owners, and I was the only person in the room who was sitting there as an employee.</p>
+          <p><span class="spk">Jason · 18:09</span>I worked for an accounting firm at the time, and I was surrounded by, you know, anywhere from 100 to 200 business owners at a time. And I had this like insider. Kind of, I was like a spy, right? Like my own little weird game that I was playing, but I just sat there and sponge. I listened to all of the business owners would talk about their problems.</p>
+          <p><span class="spk">Jason · 18:28</span>It was round table style and that all talk about their problems. And I'd sit there as an accountant going, I can solve that problem. I can help that person with that. But at the time, because I was a 20 something year old employee. They wouldn't, they wouldn't listen to me. They didn't want to borrow what I had to say because I was too young and perceived not to have the skills needed to have helped these people at that time.</p>
+          <p><span class="spk">Jason · 18:50</span>But 10 years on people in that room now reach out to me and ask me to become their accountant, their advisor. Having remembered meeting me in that room.</p>
+          <p><span class="spk">Jason · 19:00</span>10 years ago. So I've got clients to this day and some of them have been with me for a long lot longer than just recently. But, you know, again, the skills, the skill, luck of putting yourself in an environment where you care about your performance and your knowledge or your education or your physical or mental skills.</p>
+          <p><span class="spk">Jason · 19:16</span>Um, yeah, it's, it's real and there's a real tangible outcome to, to doing that.</p>
+          <p><span class="spk">Marty · 19:22</span>So I would say luck is 90 percent controllable. When you hear that, you're always going to become a business owner. And years later, the people in that room, um, saw value at a whole different level given the actions that you took over that 10 years.</p>
+          <p><span class="spk">Marty · 19:39</span>And I, I mean, that's just incredible, Jase. When you hear that out, if people really listened to what you said there, to what, where you are at now, um, You know, that's pretty inspirational and you were in control of that because you, you, you had a focus. You didn't. But</p>
+          <p><span class="spk">Jason · 19:55</span>interestingly, the luck side of that, my boss actually signed up to that course.</p>
+          <p><span class="spk">Jason · 19:59</span>So</p>
+          <p><span class="spk">Jason · 20:00</span>the business owner of the accounting firm was meant to do that course and he went to the first, the first quarterly meeting and he actually met a lot of those people as the business owner. Um, but I think, I believe he, he got a new girlfriend. Um, and I don't know whether she was pregnant, became pregnant at the time, or I think he just was more interested in rather than going away on the weekends.</p>
+          <p><span class="spk">Jason · 20:20</span>I think he wanted to, um, spend more time with his new partner and he went, Jace, you know, I want you to be trained in this anyway. So</p>
+          <p><span class="spk">Nick · 20:27</span>I'm going to interrupt there. He chose you, right? You knew</p>
+          <p><span class="spk">Jason · 20:30</span>where that was going. I knew it was coming. I knew I was not going to get away with saying the luck, you know, it was just luck that, you know, my, the business owner decided to give me the course.</p>
+          <p><span class="spk">Jason · 20:39</span>Of course. Well, maybe you were lucky that he</p>
+          <p><span class="spk">Nick · 20:40</span>met a new partner. Yes. Maybe thats where the luck was. Yeah. .</p>
+          <p><span class="spk">Marty · 20:45</span>No, but you were the choice. So I was</p>
+          <p><span class="spk">Jason · 20:48</span>the chosen one.</p>
+          <p><span class="spk">Marty · 20:49</span>Yeah. But it fascinating that that was the case. So there's doors opening here with the right behaviors that you can't even see. You know, where you're at in the future.</p>
+          <p><span class="spk">Marty · 20:59</span>And this</p>
+          <p><span class="spk">Marty · 21:00</span>is what I, you know, what I really like about this. Uh, and then I, you know, move on to the next one, Nick, you'll like this one. Uh, performance Luck. Like people just go, that person's lucky getting that performance. Not really. Uh, high performers generally see similar attributes of themselves in others.</p>
+          <p><span class="spk">Marty · 21:18</span>So a lot of people say to me, particularly the younger, um, team members say, uh, why, why do clients, you know, like me when they can have more experienced people at 40 or, you know, 50 years of age that have been around forever, it's like those types of clients that are, you know, see similar attributes in themselves when they see you operating at a younger age.</p>
+          <p><span class="spk">Marty · 21:43</span>So they want to foster that. It's natural. They want people to do well that when there's that, when they can see that, that similar sort of track that they've had, or they see you transcending their own performance beyond their own in a similar timeframe. and</p>
+          <p><span class="spk">Marty · 22:00</span>actually admire and inspired by it. So the right people will open doors more aggressively with the right behaviors that you're doing.</p>
+          <p><span class="spk">Marty · 22:08</span>And, um, and like I said before, you know, generally you'll see people utilizing their learn skills to advantage in the market. And if you do the best and you get a result best you can, you get a result. Someone will present you with better opportunities down the line. Don't always know when it's going to happen, but if you're consistent on that.</p>
+          <p><span class="spk">Marty · 22:29</span>You will be presented with opportunities and you always have to remember this is layering young luck, skill luck, now into performance luck, that the top 20 percent of industry, and I don't care what industry that is, generate 80 percent of the performance. So you want to really, within that top echelon of performance, work towards that type of result, upskill yourself to that level, And if a market contracts, so let's say it's a bit of</p>
+          <p><span class="spk">Marty · 23:00</span>a slower market out there, you then have a higher skill level, a better work ethic, you've got better relationships, greater cut through and you'll have a distinct advantage.</p>
+          <p><span class="spk">Marty · 23:10</span>I love challenging markets for this reason because the cream rises to the top and the gap widens. And you always got to think whether you're dealing with an employer or a client, how difficult. Is it to replace you? You know, if you're in the top 20%, um, you are always going to be a required person and that goes beyond just, uh, you know, a financial performance that's in regards to your values in regards to a lot of different attributes there, but it's the same as a client.</p>
+          <p><span class="spk">Marty · 23:42</span>How easy is it for that client to replace you as a professional? If you're bringing that skill to the table, we worked out, we talked about earlier. Then you're really setting your apart. And the more challenging environment, the more you'll get cut through and find a way to do well, Nick.</p>
+          <p><span class="spk">Marty · 24:00</span>Performance luck or just earned luck?</p>
+          <p><span class="spk">Nick · 24:02</span>No, earned luck. And you know, two, two words that come to mind, um, when I'm reading through those points, um, uh, effort number one, and the second one is habits. And, you know, I think about. Uh, the people in our business who, who outperform, particularly now because there's no doubt, uh, it's a quieter market for us being in, um, mortgages, um, financial planning is biggy busy, but mortgages is quiet.</p>
+          <p><span class="spk">Nick · 24:29</span>Why is it quiet? Well, the market's down, uh, traditionally this time of year, a lot of real estate agents take time off so that, so the market does go quite, quite, quite in winter and, but the busy guys or the busy brokers are still busy. They're still busy because they've got a good pipeline of clients, they're doing the same things, they're still making the calls.</p>
+          <p><span class="spk">Nick · 24:47</span>If anything, they're making more calls because they're not as busy. So, I think about, um, yeah, not just our business, but all businesses. Real, in real estate's a good example, really, um, really</p>
+          <p><span class="spk">Nick · 25:00</span>difficult at the moment and you're seeing contraction in that market. And we're actually, one of the good indicators for us is when we put an ad on seek, um, whether it's for a mortgage broker or a lending analyst that we're looking for at the moment, a real good barometer for what's happening out there is how many resumes you get.</p>
+          <p><span class="spk">Nick · 25:19</span>And at the moment we're getting a lot of quality resumes, which means other businesses out there are really struggling because people are looking for an opportunity elsewhere. Um, so, you know, I put that back to. I know we're talking about individuals, but even our business, Marty, you look at the things that we do repetitively to make sure that we are not quiet in a down market.</p>
+          <p><span class="spk">Nick · 25:40</span>Now, you know, one of the things we do is we catch up every 30 days at the start or the end of the month and we look at market conditions and we look at what's happening at the moment in our market. Where are the busy areas? Where are the not so busy areas? Where can we extract opportunity, uh, that we might not have had in the last month?</p>
+          <p><span class="spk">Nick · 25:57</span>And let's go all in on that</p>
+          <p><span class="spk">Nick · 26:00</span>for the next 30 days to make sure that our volumes don't drop. So, that's habitual. That's something that we do all the time. Um, and it means that we stay busy in, in quite a period. So, yeah. Lucky you do that. Lucky we do that. Lucky we met someone who taught us to do that. I don't know.</p>
+          <p><span class="spk">Nick · 26:16</span>So, um, yeah, for me, performance, like effort and habits, um, are the key words that come that come to the surface for me.</p>
+          <p><span class="spk">Marty · 26:26</span>Absolutely. And when you're performing at a higher level, then, you know, you'll be attractive in the market and opportunities will, you know, work for you and people will want to have you on board.</p>
+          <p><span class="spk">Marty · 26:38</span>And that's where team luck becomes involved. And you touched on it there. Nick, in regards to the benefits where you increase the gap further. So finding the right team is critical to your ultimate success because you learn from each other's mistakes. You get wider perspective on opportunity. You collaborate, you become stronger.</p>
+          <p><span class="spk">Marty · 26:58</span>So this is all going back to that</p>
+          <p><span class="spk">Marty · 27:00</span>sports team or theater group you're a part of in the younger days, but this is now at a superseded level. But you've got to earn the right to play in that top team. And for me, great teams are a rising tide that continue to grow and develop together and support each other and really, you know, see what the best is they can do.</p>
+          <p><span class="spk">Marty · 27:21</span>And it's like sport again, sorry to bring sport into it, uh, to our audience, but hopefully they can relate. Yeah. A grade players. Inspire A grade players, you know, you can carry a couple of B grade players that are coming through, but you can't carry the C grade players that just want to have a bit of fun and have a hit.</p>
+          <p><span class="spk">Marty · 27:40</span>That's fine if they want to do that, but they can't live in A grade teams. And it's actually a detriment if they stick around A grade teams. So with wider perspective of A grades, A graders, it's like a superpower. You create a point of difference in the market. That's very, very hard to duplicate</p>
+          <p><span class="spk">Marty · 28:00</span>and the poor, poorer performers, the C graders, as I called them, feel like they're hard done by, by not being given an opportunity, you know, When there's poor performance out there in the market, course, correct.</p>
+          <p><span class="spk">Marty · 28:13</span>Like Nick says, get together, find a way, um, readjust and continue performing. So there's no excuses. They love to win. They love their clients to win. They love their team to win. And ultimately they win. Whereas sometimes poor performers are happy to win at the expense of everyone else for a while, but it's not sustainable and eventually be found out.</p>
+          <p><span class="spk">Marty · 28:35</span>And then ultimately, you know, they'll suffer at the hands of the team. But, uh, team luck again. It's like anything, a great plan for a team, how you can bring your best to that team in order for everyone to win a premiership and ultimately produce something greater to the market. Um, huge, huge, ultimate advantage.</p>
+          <p><span class="spk">Marty · 28:57</span>Uh, Jase, got anything on that?</p>
+          <p><span class="spk">Jason · 29:00</span>Uh, again, working with business owners, we talk about, you know, documenting mission, vision, values, and crafting a team culture. And, um, you know, we've seen fantastic businesses that are performing above benchmark that have no documentation on this stuff. And then what you could argue would be.</p>
+          <p><span class="spk">Jason · 29:19</span>Luck that they've just got a great culture and a great team, but ultimately what it comes down to is, you know, the business owner or the senior leadership team have created a culture, even though they don't know that they've, it's not documented or it's not kind of written on the wall or a set of rules, but the actions of the top performers lead the way for everybody else to follow the actions in the team.</p>
+          <p><span class="spk">Jason · 29:39</span>And you either get found out really fast. If you're not performing the same way as the top performers, if you don't. Act like them, look like them, talk like them and follow in their footsteps. You find your way out of a business pretty fast. When you realize that you don't form part of the cohesive culture that exists, the DNA or the core of a business that you go and work for.</p>
+          <p><span class="spk">Jason · 30:00</span>And that's something that, that is unwritten. It's, it's, you know, as I said, it's in the DNA, it's stitched into the cloth that people wear to work every day. Nick, you're on edge to get involved. No, no,</p>
+          <p><span class="spk">Nick · 30:11</span>no, no. Just what you said then on. You can't, you can't go and design a great culture or a high performance culture.</p>
+          <p><span class="spk">Nick · 30:22</span>It's in the DNA and it just happens. You know, you can try and design it and, you know, talking about the business that's got it, but hasn't, uh, hasn't written it down. Doesn't matter. They're doing what they have to do, um, to create that culture. And that's probably because they're, you know, they're, they've got good.</p>
+          <p><span class="spk">Nick · 30:39</span>And, you know, they're putting, they're putting effort in as we spoke about before. And I think the other thing too, is don't be guilty about having a high performance culture. And I think these days sometimes, um, we're, we're thrown into guilt for having a high performance culture. Um, so that's, you know, if, if you only want A and B graders to Marty's</p>
+          <p><span class="spk">Nick · 31:00</span>point, and you don't want C graders, then there's absolutely nothing wrong with that.</p>
+          <p><span class="spk">Nick · 31:04</span>And again, to your point, C graders will be found out, uh, in a, in a, in a high performing team. And, you know, we, we can definitely relate to that.</p>
+          <p><span class="spk">Marty · 31:11</span>You put the right people in a room together, it, it almost transcends the culture beyond what your expectation is as well. So, which is another You know, that, that's a, another benefit.</p>
+          <p><span class="spk">Marty · 31:23</span>Uh, okay. So we have a great team. Now, when you transcend it to a business level, then there's partnership luck as well. So you meet people on a business to business level, um, that are complimentary to your own strengths. Now this again, It might seem a little bit lucky, but it's designed by who you are as a person and who that other person is as well.</p>
+          <p><span class="spk">Marty · 31:48</span>Um, so again, you know, we, we all think a little bit differently. We all have our own unique personalities, but even us three coming together. Is like a long track back to when we</p>
+          <p><span class="spk">Marty · 32:00</span>played in sports as young people and the attitudes we brought to the table. We developed skill, we developed teams, we grew, we did learnings outside of our work roles in order to improve and get better.</p>
+          <p><span class="spk">Marty · 32:13</span>And again, that's a lot of hard work. That's a lot of 18 hour days. And then you get to a point where you meet people on a similar path that are complimentary because no one knows everything and everyone has strengths and weaknesses, but there's an aligned vision and you bring that together and that compounds at a whole different level yet again at a business level.</p>
+          <p><span class="spk">Marty · 32:36</span>So again, You as a person, you want to be the best partner you can be, you want to be the best associate you can be in that situation. There are merger and acquisition opportunities that come through that in alignment. Doors open to unique investment opportunities. So again, is it luck or is it the path you've chosen?</p>
+          <p><span class="spk">Marty · 32:57</span>There are good and bad things that happen to</p>
+          <p><span class="spk">Marty · 33:00</span>everyone. But it's what you make of it that really counts. And that's, um, you know, that's, uh, and I'm sure there might be, this would evolve to even more, but for today, that's, uh, I think that's where it can get to in your professional career and in your business career, if you're looking for it.</p>
+          <p><span class="spk">Marty · 33:16</span>So.</p>
+          <p><span class="spk">Jason · 33:18</span>Um, I feel very lucky that Greg was my crew trainer when I got that job at McDonald's. Greg was the person who taught me back in those days, you did used to, you know, you're cooking 10 cheeseburgers at a time. You were scraping the meat off the grill and doing all that. And Greg, Greg taught me how to make Big Macs and McChicken burgers.</p>
+          <p><span class="spk">Jason · 33:35</span>And. Who would have thought that 18 years on that guy's been put, Oh, maybe more shit. 20, 21 years this year that Greg's been putting up with me since he decided to teach me at McDonald's. What, how much, how much luck's been involved in my career, Nick? I love it.</p>
+          <p><span class="spk">Nick · 33:54</span>But you know, you made the choice to go and flip burgers and you know, not many people will do that.</p>
+          <p><span class="spk">Nick · 33:58</span>So</p>
+          <p><span class="spk">Nick · 34:00</span>I'll say it again. And how lucky</p>
+          <p><span class="spk">Jason · 34:02</span>that Julian put us in a room together to have a coffee together and here's the numbers game.</p>
+          <p><span class="spk">Nick · 34:06</span>You know, Marty and I met, I engaged Marty's services externally. I paid him a bit of cash, wasn't cheap either by the way, but you know, it was a worthy investment and look where we are today.</p>
+          <p><span class="spk">Nick · 34:17</span>So you know, it was, um, yeah, I would have, I would have paid triple.</p>
+          <p><span class="spk">Jason · 34:21</span>If this episode's got you thinking about your luck versus what you've earned and where you've positioned yourself in life from all different areas of team luck, performance, partnership, skills, sports circles, and young luck, we'd love to hear about it.</p>
+          <p><span class="spk">Jason · 34:34</span>If you have thought about it, Post in the comments, YouTube, Spotify, wherever you get your podcasts, or even on Instagram. We'd love to hear, uh, your version of luck and where it's led you in life. Um, we've really enjoyed what you've shared with us today, Marty, and you've definitely brought up some memories and some nostalgic, uh, yeah, thoughts and feelings, so thank you for sharing and, uh, until next time.</p>
+          <p><span class="spk">Marty · 34:53</span>Life can happen to you or you can make it happen. Game over.</p>
+          <p><span class="spk">Jason · 34:59</span>This</p>
+          <p><span class="spk">Jason · 35:00</span>podcast is for educational and informational purposes only. The conversations are of a general nature and do not qualify as financial or tax advice. We recommend before you make any financial decisions, you consult a licensed professional.</p>
+          <p><span class="spk">Jason · 35:12</span>Individuals on the podcast may hold positions in the companies discussed. ---</p>
+        </div>
+      </details>
+
+    </div>
+
+    <!-- LISTEN:START (build_episode.py rewrites the 3 URLs + iframe title per episode; player dropped if no spotifyEmbedUrl) -->
+    <section class="listen-now">
+      <div class="ln-head">
+        <span class="ln-title">Listen now</span>
+      </div>
+      <div class="audio-embed">
+        <iframe src="https://open.spotify.com/embed/episode/1IZADUihXtiTGeoR7K8m9n?utm_source=generator"
+          width="100%" height="152" loading="lazy" allowfullscreen
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+          title="Spotify — The Luck Factor"></iframe>
+      </div>
+    </section>
+
+    <div class="listen">
+      <a href="https://open.spotify.com/episode/1IZADUihXtiTGeoR7K8m9n" target="_blank" rel="noopener" aria-label="Listen to this episode on Spotify">
+        <svg viewBox="0 0 24 24"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.52 17.34c-.24.36-.66.48-1.02.24-2.82-1.74-6.36-2.1-10.56-1.14-.42.12-.78-.18-.9-.54-.12-.42.18-.78.54-.9 4.56-1.02 8.52-.6 11.64 1.32.42.18.48.66.3 1.02zm1.44-3.3c-.3.42-.84.6-1.26.3-3.24-1.98-8.16-2.58-11.94-1.38-.48.12-1.02-.12-1.14-.6-.12-.48.12-1.02.6-1.14 4.32-1.32 9.72-.66 13.44 1.62.36.18.54.78.3 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.3c-.6.18-1.2-.18-1.38-.72-.18-.6.18-1.2.72-1.38 4.26-1.26 11.28-1.02 15.72 1.62.54.3.72 1.02.42 1.56-.3.42-1.02.6-1.56.3z"/></svg>
+        Spotify
+      </a>
+      <a href="https://podcasts.apple.com/au/podcast/id1555566088?i=1000660323832" target="_blank" rel="noopener" aria-label="Listen to this episode on Apple Podcasts">
+        <svg viewBox="0 0 24 24"><path d="M5.34 0A5.328 5.328 0 000 5.34v13.32A5.328 5.328 0 005.34 24h13.32A5.328 5.328 0 0024 18.66V5.34A5.328 5.328 0 0018.66 0H5.34zm6.525 2.568c2.336 0 4.448.902 6.056 2.587 1.224 1.272 1.912 2.619 2.264 4.392l.04.23c.04.272-.16.527-.432.567a.505.505 0 01-.567-.431l-.04-.213c-.312-1.57-.92-2.747-2.004-3.867-1.428-1.496-3.293-2.294-5.393-2.294-2.1 0-3.966.798-5.394 2.294-1.084 1.12-1.692 2.298-2.004 3.867l-.04.213a.507.507 0 01-.567.431.504.504 0 01-.432-.567l.04-.23c.352-1.773 1.04-3.12 2.264-4.392 1.608-1.685 3.72-2.587 6.056-2.587h.153zm.136 3.033c1.74 0 3.312.67 4.527 1.934.883.916 1.394 1.93 1.663 3.253l.04.23a.505.505 0 01-.431.567.503.503 0 01-.567-.432l-.04-.212c-.23-1.112-.659-1.97-1.396-2.732-1.052-1.1-2.404-1.672-3.9-1.672s-2.849.572-3.901 1.672c-.737.762-1.167 1.62-1.396 2.732l-.04.212a.503.503 0 01-.567.432.505.505 0 01-.432-.567l.04-.23c.27-1.323.78-2.337 1.664-3.253 1.215-1.264 2.787-1.934 4.527-1.934h.21zm-.078 3.05c1.092 0 2.091.424 2.89 1.22.582.58.924 1.245 1.107 2.15l.04.218a.501.501 0 01-.424.568.499.499 0 01-.568-.424l-.04-.198c-.146-.724-.413-1.253-.871-1.716-.63-.63-1.398-.957-2.226-.957s-1.595.328-2.225.957c-.459.463-.726.992-.871 1.716l-.04.198a.499.499 0 01-.568.424.501.501 0 01-.424-.568l.04-.219c.183-.904.525-1.569 1.106-2.149.8-.796 1.799-1.22 2.89-1.22h.184zM12 14.07a2.477 2.477 0 012.48 2.478A2.477 2.477 0 0112 19.024a2.477 2.477 0 01-2.48-2.477A2.477 2.477 0 0112 14.07z"/></svg>
+        Apple
+      </a>
+      <a class="yt-pill" href="https://www.youtube.com/@thenumbersgamepodcast?sub_confirmation=1" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.12-2.14C19.5 3.55 12 3.55 12 3.55s-7.5 0-9.38.51A3 3 0 0 0 .5 6.2 31.4 31.4 0 0 0 0 12a31.4 31.4 0 0 0 .5 5.8 3 3 0 0 0 2.12 2.14c1.88.51 9.38.51 9.38.51s7.5 0 9.38-.51a3 3 0 0 0 2.12-2.14A31.4 31.4 0 0 0 24 12a31.4 31.4 0 0 0-.5-5.8zM9.55 15.57V8.43L15.82 12z"/></svg>
+        Subscribe
+      </a>
+    </div>
+    <!-- LISTEN:END -->
+
+    <div class="relsec">
+      <span class="rtitle">Discover more</span>
+      <div class="relgrid">
+        <a class="relcard" href="/stop-the-yearly-burnout-cycle-stay-consistent-in-2026">
+          <img src="https://i.ytimg.com/vi/dDY0Eg3wP6o/hqdefault.jpg" alt="EP 263 thumbnail">
+          <span class="rt">Stop The Yearly Burnout Cycle</span>
+          <span class="rfoot"><span class="rwhy">Also covers: mindset</span><span class="rtag">EP 263</span></span>
+        </a>
+        <a class="relcard" href="/the-numbers-game-of-life-marty-s-5-biggest-lessons">
+          <img src="https://i.ytimg.com/vi/bM7PFcSZj6Q/hqdefault.jpg" alt="EP 261 thumbnail">
+          <span class="rt">The Numbers Game of Life</span>
+          <span class="rfoot"><span class="rwhy">Also covers: mindset</span><span class="rtag">EP 261</span></span>
+        </a>
+        <a class="relcard" href="/courage-culture-tough-calls-cameron-schwab-on-redefining-leadership">
+          <img src="https://i.ytimg.com/vi/SXCEAyoLobo/hqdefault.jpg" alt="EP 249 thumbnail">
+          <span class="rt">Courage, Culture &amp; Tough Calls</span>
+          <span class="rfoot"><span class="rwhy">Also covers: mindset</span><span class="rtag">EP 249</span></span>
+        </a>
+        <a class="relcard" href="/pokemon-cards-vs-bitcoin-gold-and-the-asx">
+          <img src="https://i.ytimg.com/vi/7PHS9HCqNvM/hqdefault.jpg" alt="EP 286 thumbnail">
+          <span class="rt">Pokemon Cards vs Bitcoin, Gold and the ASX</span>
+          <span class="rfoot"><span class="rwhy">20 July 2026</span><span class="rtag">EP 286</span></span>
+        </a>
+        <a class="relcard" href="/buying-commercial-property-with-your-super-in-2026">
+          <img src="https://i.ytimg.com/vi/RAQ80ecsDq0/hqdefault.jpg" alt="EP 285 thumbnail">
+          <span class="rt">Buying Commercial Property With Your Super in 2026</span>
+          <span class="rfoot"><span class="rwhy">13 July 2026</span><span class="rtag">EP 285</span></span>
+        </a>
+        <a class="relcard" href="/the-most-expensive-day-in-aussie-small-business-history">
+          <img src="https://i.ytimg.com/vi/V-10kMQrsDM/hqdefault.jpg" alt="EP 284 thumbnail">
+          <span class="rt">The Most Expensive Day in Aussie Small Business History</span>
+          <span class="rfoot"><span class="rwhy">6 July 2026</span><span class="rtag">EP 284</span></span>
+        </a>
+      </div>
+      <div class="reldots" id="reldots"></div>
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="footgrid">
+      <div class="fcol">
+        <div class="foot-label">Follow us on</div>
+        <div class="socials">
+          <a href="https://www.instagram.com/thenumbersgamepodcast/" target="_blank" rel="noopener" aria-label="The Numbers Game on Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.8.2 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1 .4 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .4-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1-.4-2.2-.1-1.3-.1-1.7-.1-4.9s0-3.6.1-4.9c.1-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.4 2.2-.4 1.3-.1 1.7-.1 4.9-.1zm0 2c-3.1 0-3.5 0-4.8.1-1.1.1-1.5.2-1.8.3-.4.2-.7.3-1 .6-.3.3-.5.6-.6 1-.1.3-.3.7-.3 1.8-.1 1.3-.1 1.7-.1 4.8s0 3.5.1 4.8c.1 1.1.2 1.5.3 1.8.2.4.3.7.6 1 .3.3.6.5 1 .6.3.1.7.3 1.8.3 1.3.1 1.7.1 4.8.1s3.5 0 4.8-.1c1.1-.1 1.5-.2 1.8-.3.4-.2.7-.3 1-.6.3-.3.5-.6.6-1 .1-.3.3-.7.3-1.8.1-1.3.1-1.7.1-4.8s0-3.5-.1-4.8c-.1-1.1-.2-1.5-.3-1.8-.2-.4-.3-.7-.6-1-.3-.3-.6-.5-1-.6-.3-.1-.7-.3-1.8-.3-1.3-.1-1.7-.1-4.8-.1zm0 3.4a5.4 5.4 0 1 1 0 10.8 5.4 5.4 0 0 1 0-10.8zm0 2a3.4 3.4 0 1 0 0 6.8 3.4 3.4 0 0 0 0-6.8zm5.6-2.3a1.3 1.3 0 1 1-2.6 0 1.3 1.3 0 0 1 2.6 0z"/></svg></a>
+          <a href="https://www.tiktok.com/@thenumbersgamepodcast" target="_blank" rel="noopener" aria-label="The Numbers Game on TikTok"><svg viewBox="0 0 24 24"><path d="M12.53.02C13.84 0 15.14.01 16.44 0c.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg></a>
+          <a href="https://www.linkedin.com/company/the-numbers-game-podcast/" target="_blank" rel="noopener" aria-label="The Numbers Game on LinkedIn"><svg viewBox="0 0 24 24"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.24 8.25h4.52V23H.24V8.25zM8.34 8.25h4.33v2.01h.06c.6-1.14 2.08-2.34 4.28-2.34 4.58 0 5.42 3.01 5.42 6.92V23h-4.51v-7.16c0-1.71-.03-3.91-2.38-3.91-2.39 0-2.75 1.86-2.75 3.78V23H8.34V8.25z"/></svg></a>
+          <a href="https://www.facebook.com/profile.php?id=100071290388343" target="_blank" rel="noopener" aria-label="The Numbers Game on Facebook"><svg viewBox="0 0 24 24"><path d="M24 12.07C24 5.41 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.04V9.41c0-3.02 1.8-4.7 4.54-4.7 1.31 0 2.68.24 2.68.24v2.97h-1.5c-1.5 0-1.96.93-1.96 1.89v2.26h3.32l-.53 3.5h-2.8V24C19.62 23.1 24 18.1 24 12.07z"/></svg></a>
+          <a href="https://www.youtube.com/@thenumbersgamepodcast" target="_blank" rel="noopener" aria-label="The Numbers Game on YouTube"><svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.2C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31.7 31.7 0 0 0 0 12a31.7 31.7 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.2A31.7 31.7 0 0 0 24 12a31.7 31.7 0 0 0-.5-5.8zM9.6 15.6V8.4L15.8 12z"/></svg></a>
+        </div>
+      </div>
+      <div class="fcol">
+        <div class="foot-label">Brought to you by</div>
+        <div class="sponsors">
+          <a href="https://www.inovayt.com.au/" target="_blank" rel="noopener"><img src="assets/inovayt-white.png" alt="Inovayt"></a>
+          <a href="https://futureadvisory.com.au/" target="_blank" rel="noopener"><img src="assets/future-advisory-white.png" alt="Future Advisory"></a>
+        </div>
+      </div>
+      <div class="fcol produced">
+        <div class="foot-label">Produced by</div>
+        <a href="https://www.vidpod.com.au/" target="_blank" rel="noopener"><img src="assets/vidpod-white.png" alt="VIDPOD"></a>
+      </div>
+    </div>
+    <div class="footbar">
+      <details class="footnav-dd">
+        <summary><svg class="ham" viewBox="0 0 24 24"><path d="M3 6h18v2H3zM3 11h18v2H3zM3 16h18v2H3z"/></svg> Menu</summary>
+        <div class="dd-links">
+          <a href="/">Home</a><a href="/episodes">Every episode</a><a href="/adventure">Choose your own adventure</a><a href="/about">About the show</a><a href="/nick-reilly">Nick Reilly</a><a href="/jason-robinson">Jason Robinson</a><a href="/contact">Contact</a>
+        </div>
+      </details>
+      <div class="copyright">© 2026 The Numbers Game</div>
+    </div>
+  </footer>
+
+  <script>
+    var VIDEO='EsohMUk-TtQ';
+    var CHAPTERS=[
+      {t:"00:00",s:0,title:"Intro"},
+      {t:"03:04",s:184,title:"What Luck Really Is"},
+      {t:"03:49",s:229,title:"Jason On Falling Into Accounting"},
+      {t:"06:21",s:381,title:"How Much Control We Have"},
+      {t:"06:47",s:407,title:"Nick On Life Versus Business Luck"},
+      {t:"08:39",s:519,title:"The Five People Around You"},
+      {t:"09:41",s:581,title:"Young Luck"},
+      {t:"13:22",s:802,title:"Sport As Community"},
+      {t:"15:32",s:932,title:"Skill Luck"},
+      {t:"19:22",s:1162,title:"Luck Is Ninety Percent Controllable"},
+      {t:"21:00",s:1260,title:"Performance Luck"},
+      {t:"24:29",s:1469,title:"Earned Luck In A Quiet Market"},
+      {t:"26:38",s:1598,title:"Team Luck"},
+      {t:"31:23",s:1883,title:"Partnership Luck"},
+      {t:"33:18",s:1998,title:"Closing Reflections"}
+    ];
+    var QUESTIONS=[
+      {q:"Is luck just random chance or something you can control?",s:184},
+      {q:"Can one chance meeting change the course of your career?",s:340},
+      {q:"How do you create your own luck in business?",s:422},
+      {q:"How do the people around you affect your success?",s:519},
+      {q:"Why does knowledge without action fail?",s:960},
+      {q:"How much hidden practice sits behind top performance?",s:1037},
+      {q:"Can early effort pay off years later?",s:1130},
+      {q:"How much of luck is actually controllable?",s:1162},
+      {q:"How does the eighty twenty rule apply to performers?",s:1340},
+      {q:"Why do the best teams avoid carrying weak performers?",s:1641}
+    ];
+
+    var chEl=document.getElementById('chapters');
+    CHAPTERS.forEach(function(c){var b=document.createElement('button');b.className='chapter';b.onclick=function(){startAt(c.s)};b.innerHTML='<span class="tc">'+c.t+'</span><span class="cx">'+c.title+'</span>';chEl.appendChild(b);});
+    document.getElementById('chcount').textContent=CHAPTERS.length;
+    var qEl=document.getElementById('qa');
+    QUESTIONS.forEach(function(q){var b=document.createElement('button');b.className='q';b.onclick=function(){startAt(q.s)};b.innerHTML='<span class="qm">?</span><span class="qx">'+q.q+'</span><span class="go">›</span>';qEl.appendChild(b);});
+    document.getElementById('qcount').textContent=QUESTIONS.length;
+
+    /* Mobile nav dropdown. */
+    var burger=document.getElementById('navburger'), navdrop=document.getElementById('navdrop');
+    if(burger&&navdrop){burger.addEventListener('click',function(){
+      navdrop.hidden=!navdrop.hidden;
+      burger.setAttribute('aria-expanded', navdrop.hidden?'false':'true');
+    });}
+
+    /* Voice-note button reveals the recorder; × tucks it away. */
+    var vbtn=document.getElementById('vbtn'), vslot=document.getElementById('vslot'), vclose=document.getElementById('vclose');
+    if(vbtn&&vslot){vbtn.addEventListener('click',function(){vslot.hidden=!vslot.hidden;});}
+    if(vclose&&vslot){vclose.addEventListener('click',function(){vslot.hidden=true;});}
+
+    /* Keep-exploring dots: only shown when the strip actually scrolls (mobile). */
+    var rg=document.querySelector('.relgrid'), rd=document.getElementById('reldots');
+    if(rg&&rd){
+      var relCards=rg.querySelectorAll('.relcard');
+      relCards.forEach(function(){rd.appendChild(document.createElement('span'))});
+      var updDots=function(){
+        var scrollable=rg.scrollWidth>rg.clientWidth+4;
+        rd.style.display=scrollable?'flex':'none';
+        if(!scrollable)return;
+        var i=Math.round(rg.scrollLeft/(rg.scrollWidth-rg.clientWidth)*(relCards.length-1));
+        rd.querySelectorAll('span').forEach(function(s,n){s.classList.toggle('on',n===i)});
+      };
+      rg.addEventListener('scroll',updDots,{passive:true});
+      window.addEventListener('resize',updDots);
+      updDots();
+    }
+
+    /* Explore tabs: swap the visible panel; the row stays put so you never lose your place. */
+    var tabBtns=document.querySelectorAll('.tabbtn');
+    tabBtns.forEach(function(b){
+      b.addEventListener('click',function(){
+        tabBtns.forEach(function(o){o.classList.remove('on')});
+        document.querySelectorAll('.tpanel').forEach(function(p){p.hidden=true});
+        b.classList.add('on');
+        document.getElementById(b.getAttribute('data-panel')).hidden=false;
+      });
+    });
+
+    /* YouTube: clean facade, then real player on demand. Seek without yanking to top. */
+    var player=null, ready=false, apiReady=false, pending=null;
+    window.onYouTubeIframeAPIReady=function(){apiReady=true; if(pending!=null){var s=pending;pending=null;createPlayer(s);}};
+    function createPlayer(sec){
+      var wrap=document.getElementById('player'); wrap.innerHTML='<div id="yt"></div>';
+      player=new YT.Player('yt',{videoId:VIDEO,playerVars:{autoplay:1,rel:0,modestbranding:1,playsinline:1,start:Math.floor(sec||0)},events:{onReady:function(){ready=true;}}});
+    }
+    function nudge(){
+      var p=document.getElementById('player-wrap'), r=p.getBoundingClientRect();
+      if(r.bottom<80 || r.top>window.innerHeight-90){ p.scrollIntoView({behavior:'smooth',block:'start'}); }
+    }
+    function startAt(sec){
+      nudge();
+      if(player&&ready){ player.seekTo(sec,true); player.playVideo(); return; }
+      if(apiReady){ createPlayer(sec); } else { pending=sec; }
+    }
+    document.getElementById('facade').addEventListener('click',function(){startAt(0);});
+    (function(){var s=document.createElement('script');s.src='https://www.youtube.com/iframe_api';document.head.appendChild(s);})();
+  </script>
+</body>
+</html>
