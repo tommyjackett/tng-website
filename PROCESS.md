@@ -1,8 +1,13 @@
 # FULL PROCESS — from new episode to live page
 
-*The end-to-end pipeline, so it never lives only in anyone's head. Last updated: 6 July 2026.*
+*The end-to-end pipeline, so it never lives only in anyone's head. Source+mine stages current; **publish half rewritten 23 Jul 2026** (now additive / clean-URL — see `PUBLISH-EPISODE-RUNBOOK.md`).*
 
-**Where the engine docs live:** in `Brain/Vidpod/clients/TNG/Website Build/` — **`README.md` is the map (start there)**, **`ENGINE-STATE.md` is the engine's state and rules** (formerly RESUME.md), and per-episode mining steps live in `schema/EPISODE-PROCESSING-GUIDE.md`.
+**Docs:** front door + state + §8 tooling = **`Website Build/TNG-MASTER-STATUS.md`**. Mining = `schema/EPISODE-PROCESSING-GUIDE.md` + `ENGINE-STATE.md`. Publishing = **`PUBLISH-EPISODE-RUNBOOK.md`**.
+
+## TWO FLOWS — new episode vs. old back-catalogue (this is the confusion, resolved)
+- **NEW episode (the weekly drop):** run the FULL pipeline — **Stage 1** (source: show notes + transcript) → **Stage 2** (mine through the schema → `episode-N-DEEP.json`, gated green) → **Stage 3** (publish, additive).
+- **OLD / back-catalogue episode:** the transcript + DEEP are ALREADY mined → **SKIP Stages 1–2, go straight to Stage 3** (publish). That's the back-catalogue batching (56/60 done this way).
+- **Both share the identical Stage 3.** The only extra for a new episode: Stages 1–2 first, plus sourcing its platform links (old eps' links were already logged).
 
 ---
 
@@ -24,27 +29,25 @@ Follow `schema/EPISODE-PROCESSING-GUIDE.md` + `schema/EXTRACTION-RULES.md`. In s
    - `schema/health_check.py` (report card + taxonomy health + tag integrity)
 3. Go-live gate: 0 homeless, 0 invented tags, 0 doppelgängers, coherence flags reviewed.
 
-## Stage 3 — Compile site data
+## Stage 3 — Publish to the live site (ADDITIVE — REPLACES the old "compile + generate + ship")
 
-1. `python3 schema/build_site_data.py` → regenerates `site-data/catalogue.json`, `search-index.json`, `entities.json`.
-2. Copy the three JSONs into this repo's `data/` folder.
+⛔ The old approach (`build_site_data.py` → copy all 3 JSONs → `episode-N.html`) is **BANNED against live** now: `build_site_data.py` recompiles EVERY episode and 404s the library. Publishing is **per-episode additive**. Follow **`PUBLISH-EPISODE-RUNBOOK.md`** — in short:
 
-## Stage 4 — Generate the page (this repo)
+1. `scripts/check_transcript.py N` — transcript-quality GATE (coarse timecodes ≥45s median / >15% Unknown → re-transcribe, don't publish).
+2. `scripts/merge_episode.py N` — **ADDITIVE** merge of just N into `data/catalogue.json` + `search-index.json` + `entities.json` (preserves every other episode; NEVER `build_site_data.py`).
+3. `scripts/enrich_platform_links.py --ep N --write` — source N's Spotify+Apple links onto the catalogue (new episodes only — old eps' links auto-attach; skip for the "publish fast, backfill later" speed play).
+4. `scripts/build_episode.py N` — builds **`{slug}.html`** (clean URL) + `episode-N.html` redirect stub from the master template (`episode-master-template.html`); hosts auto-link; validates + refuses on violation.
+5. `scripts/verify_episode.py N` → `scripts/link_check.py` → `scripts/push-live.sh {slug}.html`.
 
-1. `python3 scripts/build_episode.py N` — builds `episode-N.html` from the master template (`episode-263.html`) applying every rule in `EPISODE-PAGE-TEMPLATE.md` (title modes, chapters, questions, discover-more selection, transcript). It validates before writing and refuses on any violation.
-2. `python3 scripts/verify_episode.py N` — independent audit: re-derives everything from source data and confirms the finished HTML matches, incl. no master-template leakage. Must print VERIFIED.
-3. Quick local preview if the change warrants it.
+**Automatic (no extra steps) — these all derive from the Stage-3 data merge:**
+- **Choose-Your-Own-Adventure** — `adventure.html` pools the episode's top moments from `search-index.json`. Nothing to do.
+- **Topic/subtopic filters + Guests filter + guest byline + SEO entity pages** — all data-driven from the merge.
 
-## Stage 5 — Ship
+## Stage 4 — Review + record
 
-1. `git add episode-N.html && git commit`
-2. `./scripts/push-live.sh episode-N.html` — pushes, waits for the Actions deploy (auto-retries), verifies live == local byte-for-byte.
-
-## Stage 6 — Review
-
-1. Add the page to `LIVE-PAGES.md` (with today's date) and give Tommy the live link.
-2. Tommy's ten-second spot-check: tap the FIRST and LAST chapter — the video must land on the right words (catches transcript-vs-upload offset, the one failure automation can't see).
+1. Tommy's spot-check: tap the FIRST and LAST chapter — the video must land on the right words (catches transcript-vs-upload offset, the one failure automation can't see).
+2. Update `TNG-MASTER-STATUS.md` §2 (count + `origin/main` hash) and tick the episode in `PUBLISH-TRACKER.md`.
 
 ---
 
-**Key repo files:** `EPISODE-PAGE-TEMPLATE.md` (the locked page spec) · `scripts/build_episode.py` (generator) · `scripts/push-live.sh` (ship + verify) · `LIVE-PAGES.md` (review list) · `HANDOFF.md` (session pickup).
+**Key files:** `PUBLISH-EPISODE-RUNBOOK.md` (publish how-to) · `TNG-MASTER-STATUS.md` §8 (every tool, verified) · `EPISODE-PAGE-TEMPLATE.md` (page spec) · `schema/EPISODE-PROCESSING-GUIDE.md` (mining).
