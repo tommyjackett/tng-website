@@ -1,0 +1,996 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EP 200 · Celebrating 200 Episodes (Live Show) | The Numbers Game</title>
+<meta name="description" content="A live milestone show recorded in front of an audience, with all three hosts in the room for the first time in three years.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" sizes="64x64" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="canonical" href="https://thenumbersgamepodcast.com.au/celebrating-200-episodes-live-show">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="The Numbers Game">
+<meta property="og:title" content="EP 200 · Celebrating 200 Episodes (Live Show) | The Numbers Game">
+<meta property="og:description" content="A live milestone show recorded in front of an audience, with all three hosts in the room for the first time in three years.">
+<meta property="og:url" content="https://thenumbersgamepodcast.com.au/celebrating-200-episodes-live-show">
+<meta property="og:image" content="https://i.ytimg.com/vi/iE2yLkW30k0/maxresdefault.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+  :root{
+    --purple:#585af3; --purple-dark:#2c1b8a; --mint:#7ad9a8;
+    --white:#ffffff; --muted:rgba(255,255,255,.60); --dim:rgba(255,255,255,.42);
+    --line:rgba(255,255,255,.12); --card:rgba(255,255,255,.05); --card-hi:rgba(255,255,255,.09);
+    --display:'Anton',Impact,'Helvetica Neue',sans-serif;
+    --sans:'Inter',system-ui,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif;
+    --wrap:1280px;   /* page frame (nav spans this) */
+    --col:960px;     /* content column (player, tabs, text) */
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:var(--sans); color:var(--white); line-height:1.6; -webkit-font-smoothing:antialiased;
+    background:#12093a;
+    background-image:
+      radial-gradient(1200px 600px at 82% -6%, rgba(88,90,243,.45) 0%, transparent 55%),
+      radial-gradient(900px 700px at 5% 8%, rgba(122,217,168,.10) 0%, transparent 50%),
+      linear-gradient(180deg,#2c1b8a 0%,#1a1150 28%,#100b34 62%,#0b0820 100%);
+    background-attachment:fixed;
+  }
+  a{color:inherit}
+  .wrap{max-width:var(--wrap);margin:0 auto;padding:0 36px}
+  main.wrap{max-width:var(--col)}
+  @media(max-width:720px){.wrap{padding:0 22px}}
+
+  /* ── Navbar ── */
+  .nav{position:sticky;top:0;z-index:50;background:linear-gradient(180deg,rgba(24,15,74,.92),rgba(24,15,74,.72));backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+  .nav-in{max-width:var(--wrap);margin:0 auto;padding:11px 36px;display:flex;align-items:center;justify-content:space-between}
+  @media(max-width:720px){.nav-in{padding:11px 22px}}
+  .brand{display:block;line-height:0}
+  .brand img{height:36px;width:auto;display:block}
+  .navlinks{display:flex;gap:28px;align-items:center}
+  .navlinks a{text-decoration:none;font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);transition:.15s}
+  .navlinks a:hover{color:var(--white)}
+  .navlinks a.navtop{cursor:default}
+  .navgroup{position:relative;display:flex;align-items:center}
+  .navgroup .subnav{display:none;position:absolute;top:100%;left:50%;transform:translateX(-50%);padding-top:14px;min-width:180px}
+  .navgroup:hover .subnav,.navgroup:focus-within .subnav{display:block}
+  .subnav-in,.navgroup .subnav{z-index:60}
+  .navgroup .subnav a{display:block;background:#180f4a;border:1px solid var(--line);border-top:0;padding:12px 16px;font-size:12px;color:rgba(255,255,255,.85)}
+  .navgroup .subnav a:first-child{border-top:1px solid var(--line)}
+  .navgroup .subnav a:hover{background:#221768;color:var(--white)}
+  .navburger{display:none;background:none;border:1px solid var(--line);padding:8px 10px;cursor:pointer;color:var(--white);transition:.15s}
+  .navburger:hover{border-color:rgba(122,217,168,.6)}
+  .navburger svg{width:20px;height:20px;fill:currentColor;display:block}
+  .navdrop{display:none}
+  @media(max-width:720px){
+    .navlinks{display:none}
+    .navburger{display:block}
+    .navdrop{display:block;position:absolute;left:0;right:0;top:100%;
+      background:#180f4a;border-bottom:1px solid var(--line);box-shadow:0 24px 50px rgba(0,0,0,.45)}
+    .navdrop[hidden]{display:none}
+    .navdrop a{display:block;padding:15px 22px;text-decoration:none;font-size:14px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:rgba(255,255,255,.9);border-bottom:1px solid rgba(255,255,255,.06)}
+    .navdrop a:last-child{border-bottom:0}
+    .navdrop a.sub{padding-left:42px;font-size:13px;color:rgba(255,255,255,.72)}
+    .navdrop .navlabel{display:block;padding:15px 22px 6px;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.4)}
+  }
+
+  /* ── Hero / hook (marker-highlight system: purple hook wraps naturally, mint payoff below)
+     Rules: title splits at its natural break (colon/pipe/question mark). Front = hook (purple,
+     big), back = payoff (mint, smaller). No break in title = purple hook only. Highlights hug
+     the text (tight em padding tuned to Anton) and wrap via box-decoration-break — never
+     hand-pick line breaks or mint words. ── */
+  header.hero{padding:34px 0 6px}
+  .hook{--inx:clamp(8.4px,2.1vw,15.6px)} /* one shared text inset so hook + payoff first letters align */
+  .hook .hk{font-family:var(--display);font-weight:400;text-transform:uppercase;
+    font-size:clamp(28px,7vw,52px);line-height:1.3;letter-spacing:-.5px;text-wrap:balance}
+  .hook .hk span{color:var(--white);padding:.04em var(--inx) .02em;
+    background:linear-gradient(var(--purple),var(--purple)) 0 50%/100% 87% no-repeat;
+    -webkit-box-decoration-break:clone;box-decoration-break:clone}
+  .hook .pay{font-family:var(--display);font-weight:400;text-transform:uppercase;
+    font-size:clamp(16px,4vw,24px);line-height:1.5;letter-spacing:.6px;margin-top:8px;text-wrap:balance}
+  .hook .pay span{color:#0a0a0a;padding:.08em var(--inx) .04em;
+    background:linear-gradient(var(--mint),var(--mint)) 0 50%/100% 88% no-repeat;
+    -webkit-box-decoration-break:clone;box-decoration-break:clone}
+  /* no-hook titles: mid-split into two full-size rows, purple then mint */
+  .hook .hk span.hkrow{display:block;background:none;padding:0}
+  .hook .hk .hkrow+.hkrow{margin-top:8px}
+  .hook .hk span.mintseg{color:#0a0a0a;
+    background:linear-gradient(var(--mint),var(--mint)) 0 50%/100% 87% no-repeat}
+
+  /* ── Player (clean facade → real player on tap) ── */
+  .player-wrap{margin:24px 0 4px;scroll-margin-top:76px}
+  .player{position:relative;width:100%;padding-top:56.25%;border-radius:0;overflow:hidden;background:#000;box-shadow:0 30px 70px rgba(0,0,0,.5),0 0 0 1px rgba(255,255,255,.06)}
+  .facade{position:absolute;inset:0;border:0;cursor:pointer;background-size:cover;background-position:center;display:flex;align-items:center;justify-content:center;padding:0}
+  .facade .play{width:74px;height:74px;border-radius:50%;background:rgba(10,6,30,.40);border:2px solid rgba(255,255,255,.72);display:flex;align-items:center;justify-content:center;transition:.18s;-webkit-backdrop-filter:blur(1px);backdrop-filter:blur(1px)}
+  .facade:hover .play{background:rgba(88,90,243,.62);transform:scale(1.07);border-color:#fff}
+  .facade .play::after{content:"";border-style:solid;border-width:11px 0 11px 19px;border-color:transparent transparent transparent #fff;margin-left:5px}
+  .player iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+
+  /* ── Episode facts (bottom of the Summary panel — templated per episode) ── */
+  .sumfacts{margin:14px 10px 4px;padding-top:13px;border-top:1px solid rgba(255,255,255,.08);display:flex;flex-direction:column;gap:8px}
+  .fact{display:flex;gap:12px;font-size:13.5px}
+  .fact .fl{flex:none;width:104px;color:var(--dim);font-weight:600;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;padding-top:2px}
+  .fact .fv{color:rgba(255,255,255,.9);font-weight:500}
+  .fact .fv a{color:var(--mint);text-decoration:none;border-bottom:1px solid rgba(122,217,168,.4);transition:.15s}
+  .fact .fv a:hover{border-bottom-color:var(--mint)}
+
+  /* ── Episode tag (identity: black label hanging off the title corner) ── */
+  .eptag{display:inline-block;position:relative;left:-6px;margin-bottom:-7px;z-index:2;
+    background:#0a0a0a;color:var(--white);font-family:var(--display);font-weight:400;
+    font-size:13.5px;letter-spacing:1.5px;text-transform:uppercase;padding:6px 11px 4px}
+
+  /* ── Explore tabs (sticky mode switcher; one panel swaps below, nothing shoves) ── */
+  .explore{margin-top:22px}
+  .tabs{position:sticky;top:58px;z-index:40;display:flex;flex-wrap:wrap;gap:8px;padding:10px 0;
+    background:linear-gradient(180deg,rgba(18,10,55,.96),rgba(18,10,55,.86));
+    backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+  .tabbtn{font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.5px;
+    font-size:14.5px;color:var(--white);background:var(--purple);border:1px solid var(--purple);
+    padding:9px 13px 7px;cursor:pointer;transition:.15s}
+  .tabbtn:hover{filter:brightness(1.12)}
+  .tabbtn.on{background:var(--mint);border-color:var(--mint);color:#0a0a0a}
+  .tabbtn.on:hover{filter:none}
+  .tabbtn .ct{font-size:12px;opacity:.75;font-variant-numeric:tabular-nums}
+  .tabbtn .ct::before{content:" · "}
+  .tpanel{border:1px solid var(--line);background:var(--card);padding:12px 10px 14px}
+  .hint{font-size:12.5px;color:var(--muted);padding:2px 10px 10px;border-bottom:1px solid rgba(255,255,255,.08);margin-bottom:6px}
+
+  /* ── Listen row (no box: label left, service pills follow) ── */
+  .listen{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:12px 16px;margin-top:34px}
+  .listen .lname{font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--dim)}
+  .listen a{display:inline-flex;align-items:center;gap:9px;padding:11px 18px;border-radius:999px;
+    background:var(--mint);color:#08210f;text-decoration:none;font-weight:800;font-size:12.5px;
+    letter-spacing:.04em;text-transform:uppercase;transition:.15s}
+  .listen a:hover{filter:brightness(1.06);transform:translateY(-1px);box-shadow:0 12px 30px rgba(122,217,168,.25)}
+  .listen svg{width:20px;height:20px;fill:currentColor;flex:none}
+  /* ── Listen-now Spotify audio embed (full column width, above the pills) ── */
+  .listen-now{margin-top:40px}
+  .listen-now .ln-head{display:flex;align-items:baseline;justify-content:space-between;gap:14px;margin-bottom:13px}
+  .listen-now .ln-title{font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--dim)}
+  .audio-embed{border-radius:12px;overflow:hidden;box-shadow:0 20px 50px rgba(0,0,0,.4),0 0 0 1px rgba(255,255,255,.06)}
+  .audio-embed iframe{display:block;width:100%;border:0}
+  @media(max-width:720px){.listen-now{margin-top:32px}}
+
+  /* ── Keep exploring (thumbnails link to other episode PAGES, never timecodes).
+     Swipeable strip on mobile, fits three-up on desktop. Variant rule: claim
+     "similar ground" + reason lines ONLY when moment-level topic overlap is
+     genuinely strong; otherwise show the latest released episodes with dates —
+     never invent a connection. ── */
+  .relsec{margin-top:60px;padding-top:58px;border-top:1px solid var(--line)} /* line = end of this episode's info */
+  .reldots{display:flex;justify-content:center;gap:7px;margin-top:12px}
+  .reldots span{width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.25);transition:.2s}
+  .reldots span.on{background:var(--mint)}
+  .relsec .rtitle{display:inline-block;font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.5px;font-size:14.5px;background:var(--mint);color:#0a0a0a;padding:9px 13px 7px;margin-bottom:18px}
+  .relgrid{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding-bottom:6px;scrollbar-width:none}
+  .relgrid::-webkit-scrollbar{display:none}
+  .relcard{flex:0 0 56%;max-width:232px;scroll-snap-align:start;display:flex;flex-direction:column;text-decoration:none;background:var(--card);border:1px solid var(--line);transition:.15s}
+  .relcard:hover{background:var(--card-hi);border-color:rgba(122,217,168,.55)}
+  .relcard img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block}
+  .relcard .rt{display:block;font-size:12.5px;font-weight:600;color:rgba(255,255,255,.92);line-height:1.4;padding:8px 8px 0}
+  .relcard .rfoot{margin-top:auto;display:flex;justify-content:space-between;align-items:flex-end;gap:8px;padding:10px 8px 9px}
+  .relcard .rwhy{font-size:11.5px;color:var(--mint)}
+  .relcard .rtag{display:inline-block;background:#0a0a0a;color:var(--white);font-family:var(--display);font-size:10px;letter-spacing:1.2px;text-transform:uppercase;padding:3px 7px 2px;white-space:nowrap;flex:0 0 auto}
+
+  /* ── Dropdown sections (accordion under the player) ── */
+  .drops{margin-top:34px;display:flex;flex-direction:column;gap:11px}
+  .drop{border:1px solid var(--line);border-radius:0;background:var(--card);overflow:hidden;transition:border-color .15s}
+  .drop[open]{border-color:rgba(122,217,168,.35)}
+  .drop>summary{list-style:none;cursor:pointer;padding:16px 18px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+  .drop>summary::-webkit-details-marker{display:none}
+  .drop>summary .st{font-weight:700;font-size:15.5px;letter-spacing:.005em}
+  .drop>summary .ct{margin-left:auto;font-size:12px;color:var(--dim);font-weight:600;font-variant-numeric:tabular-nums}
+  .drop>summary .chev{flex:none;width:22px;height:22px;border-radius:50%;background:rgba(122,217,168,.14);color:var(--mint);display:flex;align-items:center;justify-content:center;font-family:var(--display);font-size:15px;line-height:1;transition:.2s;transform:translateY(-1px)}
+  .drop[open]>summary .chev{transform:rotate(45deg)}
+  .drop-body{padding:2px 12px 12px}
+
+  /* chapters */
+  .chapter{display:flex;align-items:baseline;gap:14px;width:100%;text-align:left;cursor:pointer;background:none;border:0;color:inherit;font-family:inherit;padding:11px 10px;border-radius:10px;transition:.13s}
+  .chapter:hover{background:var(--card-hi)}
+  .chapter .tc{font-variant-numeric:tabular-nums;font-weight:700;font-size:14px;color:var(--mint);flex:none;width:48px}
+  .chapter .cx{font-size:15px;font-weight:500;color:rgba(255,255,255,.9)}
+  .chapter:hover .cx{color:#fff}
+
+  /* questions */
+  .q{display:flex;align-items:center;gap:12px;width:100%;text-align:left;cursor:pointer;background:none;border:0;border-radius:11px;color:inherit;font-family:inherit;padding:12px 10px;transition:.14s}
+  .q+.q{border-top:1px solid rgba(255,255,255,.05)}
+  .q:hover{background:var(--card-hi)}
+  .q .qm{font-family:var(--display);font-size:15px;color:var(--mint);flex:none;line-height:1;transform:translateY(1px)}
+  .q .qx{font-size:15px;font-weight:500;color:rgba(255,255,255,.92)}
+  .q .go{margin-left:auto;flex:none;color:var(--dim);font-size:18px;transition:.15s}
+  .q:hover .go{color:var(--mint);transform:translateX(2px)}
+
+  /* summary + transcript bodies */
+  .summary-body p{font-size:16.5px;line-height:1.62;color:rgba(255,255,255,.9);padding:6px 10px 4px}
+  .tbody{padding:2px 10px 8px}
+  .tbody p{font-size:14.5px;line-height:1.7;color:rgba(255,255,255,.78);margin-top:15px;max-width:64ch}
+  .tbody .spk{display:block;font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--mint);margin-bottom:2px}
+
+  /* ── Voice note ask (lives at the bottom of the Summary panel) ── */
+  .vask{margin:16px 10px 4px}
+  .vbtn{display:inline-flex;align-items:center;gap:9px;padding:12px 20px;border-radius:999px;border:0;cursor:pointer;
+    background:var(--mint);color:#08210f;font-family:inherit;font-weight:800;font-size:12.5px;
+    letter-spacing:.04em;text-transform:uppercase;transition:.15s}
+  .vbtn:hover{filter:brightness(1.06);transform:translateY(-1px);box-shadow:0 12px 30px rgba(122,217,168,.25)}
+  .vbtn svg{width:18px;height:18px;fill:currentColor;flex:none}
+  .vslot{background:var(--purple);padding:12px 10px 10px;margin:14px 0 4px;box-shadow:0 18px 40px rgba(0,0,0,.35)}
+  .vslot[hidden]{display:none}
+  .vhead{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;margin-bottom:10px}
+  .vhead .vmsg{font-family:var(--sans);font-size:13px;line-height:1.55;color:rgba(255,255,255,.92);margin:2px 0 0;padding:0 2px}
+  .vclose{background:none;border:0;color:rgba(255,255,255,.85);font-size:22px;line-height:1;cursor:pointer;padding:0 2px}
+  .vclose:hover{color:var(--white)}
+  .vslot iframe{display:block}
+
+  /* ── YouTube subscribe pill (sits in the listen row; outranks .listen a's mint) ── */
+  .listen a.yt-pill{background:var(--purple);color:var(--white)}
+  .listen a.yt-pill:hover{filter:brightness(1.1);transform:translateY(-1px)}
+  @media(max-width:720px){ /* mobile: no label, three compact pills on one row */
+    .listen .lname{display:none}
+    .listen{gap:8px}
+    .listen a{padding:10px 13px;font-size:11px;gap:6px}
+    .listen svg{width:16px;height:16px}
+  }
+
+  /* ── Footer: Follow us on | Brought to you by | Produced by, + Menu dropdown ── */
+  footer{border-top:1px solid var(--line);margin-top:68px;padding:52px 20px 58px}
+  .footgrid{max-width:var(--wrap);margin:0 auto;display:grid;grid-template-columns:1fr 1.15fr .8fr;gap:44px;align-items:start}
+  .fcol{text-align:center;display:flex;flex-direction:column;align-items:center}
+  .foot-label{font-size:11px;font-weight:700;letter-spacing:.26em;text-transform:uppercase;color:var(--dim);margin-bottom:18px}
+  .sponsors{display:flex;justify-content:center;align-items:center;gap:34px;flex-wrap:wrap}
+  .sponsors a,.produced a{display:inline-flex;transition:.15s}
+  .sponsors a:hover,.produced a:hover{transform:translateY(-1px)}
+  .sponsors img{height:32px;width:auto;opacity:.92}
+  .produced img{height:30px;width:auto;opacity:.95}
+  .sponsors a:hover img,.produced a:hover img{opacity:1}
+  footer .socials{display:flex;gap:11px;justify-content:center;flex-wrap:wrap;margin:0}
+  footer .socials a{width:40px;height:40px;border-radius:50%;border:1.5px solid rgba(122,217,168,.5);display:flex;align-items:center;justify-content:center;transition:.15s}
+  footer .socials a svg{width:18px;height:18px;fill:var(--mint);transition:.15s}
+  footer .socials a:hover{background:var(--mint);border-color:var(--mint);transform:translateY(-2px)}
+  footer .socials a:hover svg{fill:#0a0a0a}
+  .footbar{max-width:var(--wrap);margin:34px auto 0;border-top:1px solid var(--line);padding-top:20px;display:flex;flex-direction:column;align-items:center;gap:14px}
+  .footnav-dd{display:block;width:100%;max-width:var(--wrap);margin:0 auto;text-align:center}
+  .footnav-dd>summary{list-style:none;cursor:pointer;display:inline-flex;align-items:center;gap:9px;font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.5px;font-size:13px;color:var(--muted);background:transparent;border:1px solid var(--line);padding:8px 16px 6px;transition:.15s}
+  .footnav-dd>summary::-webkit-details-marker{display:none}
+  .footnav-dd>summary:hover{color:var(--mint);border-color:rgba(122,217,168,.45)}
+  .footnav-dd>summary .ham{width:15px;height:15px;fill:currentColor;transform:translateY(-1px)}
+  .footnav-dd .dd-links{display:flex;flex-direction:row;flex-wrap:wrap;justify-content:center;gap:12px 24px;padding:24px 0 4px}
+  .footnav-dd .dd-links a{font-size:11.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:.15s}
+  .footnav-dd .dd-links a:hover{color:var(--mint)}
+  .copyright{font-size:12px;color:var(--dim);text-align:center}
+  @media(max-width:720px){.footgrid{grid-template-columns:1fr;gap:34px}footer{padding:40px 16px 20px}.footbar{margin-top:34px;padding-top:24px;gap:20px}.footnav-dd .dd-links{flex-direction:column;align-items:center;gap:15px}}
+
+  @media(min-width:720px){header.hero{padding:48px 0 6px}}
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "PodcastEpisode", "name": "Celebrating 200 Episodes (Live Show)", "url": "https://thenumbersgamepodcast.com.au/celebrating-200-episodes-live-show", "datePublished": "2024-08-26", "episodeNumber": 200, "image": "https://i.ytimg.com/vi/iE2yLkW30k0/maxresdefault.jpg", "partOfSeries": {"@type": "PodcastSeries", "name": "The Numbers Game", "url": "https://thenumbersgamepodcast.com.au/"}}</script>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-in">
+      <a class="brand" href="/" aria-label="The Numbers Game home"><img src="assets/tng-logo.png" alt="The Numbers Game"></a>
+      <div class="navlinks">
+        <a href="/">Home</a>
+        <div class="navgroup">
+          <a class="navtop">Episodes</a>
+          <div class="subnav">
+            <a href="/episodes">All episodes</a>
+            <a href="/adventure">Find moments</a>
+          </div>
+        </div>
+        <div class="navgroup">
+          <a class="navtop">About</a>
+          <div class="subnav">
+            <a href="/about">The show</a>
+            <a href="/nick-reilly">Nick Reilly</a>
+            <a href="/jason-robinson">Jason Robinson</a>
+          </div>
+        </div>
+        <a href="/contact">Contact</a>
+      </div>
+      <button class="navburger" id="navburger" type="button" aria-label="Menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24"><path d="M3 6h18v2H3zM3 11h18v2H3zM3 16h18v2H3z"/></svg>
+      </button>
+    </div>
+    <div class="navdrop" id="navdrop" hidden>
+      <a href="/">Home</a>
+      <span class="navlabel">Episodes</span>
+      <a class="sub" href="/episodes">All episodes</a>
+      <a class="sub" href="/adventure">Find moments</a>
+      <span class="navlabel">About</span>
+      <a class="sub" href="/about">The show</a>
+      <a class="sub" href="/nick-reilly">Nick Reilly</a>
+      <a class="sub" href="/jason-robinson">Jason Robinson</a>
+      <a href="/contact">Contact</a>
+    </div>
+  </nav>
+
+  <main class="wrap">
+
+    <header class="hero">
+      <div class="hook">
+        <span class="eptag">EP 200</span>
+        <h1 class="hk"><span class="hkrow"><span>Celebrating 200</span></span>
+        <span class="hkrow"><span class="mintseg">Episodes (Live Show)</span></span></h1>
+      </div>
+    </header>
+
+    <div class="player-wrap" id="player-wrap">
+      <div class="player" id="player">
+        <button class="facade" id="facade" style="background-image:url('https://i.ytimg.com/vi/iE2yLkW30k0/maxresdefault.jpg')" aria-label="Play episode">
+          <span class="play"></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="explore">
+      <div class="tabs" role="tablist">
+        <button class="tabbtn on" data-panel="p-summary">Summary</button>
+        <button class="tabbtn" data-panel="p-chapters">Chapters<span class="ct" id="chcount"></span></button>
+        <button class="tabbtn" data-panel="p-questions">Questions<span class="ct" id="qcount"></span></button>
+      </div>
+      <section class="tpanel" id="p-summary">
+        <div class="summary-body">
+          <p>A live milestone show recorded in front of an audience, with all three hosts in the room for the first time in three years. Marty opens with a state-of-play on 2021 versus 2024: cost of living, house prices by city, the jump in mortgage repayments, and rents. The three trade rate-cut predictions and Jason argues the RBA acts on delayed data. Jason then gives a long read on AI, from exponential growth and AI agents like Just Ask Xero to designing work around what AI cannot do and protecting human time and relationships. Nick roasts Jason's old share picks and the Mr Yum investment that got away, they cover Victorian state debt and the GST carve-up, then close on a reflective stretch about consistency, what the podcast has taught them, and the road to 300.</p>
+        </div>
+        <div class="vask">
+          <button class="vbtn" id="vbtn" type="button">
+            <svg viewBox="0 0 24 24"><path d="M12 14a3 3 0 0 0 3-3V6a3 3 0 1 0-6 0v5a3 3 0 0 0 3 3zm5-3a5 5 0 0 1-10 0H5a7 7 0 0 0 6 6.92V21h2v-3.08A7 7 0 0 0 19 11h-2z"/></svg>
+            Send us a voice note
+          </button>
+          <div class="vslot" id="vslot" hidden>
+            <div class="vhead">
+              <p class="vmsg">We'd love to hear from you. You can leave up to a 90 second voice note for us to play on the show: a question, some feedback, or a topic you want covered.</p>
+              <button class="vclose" id="vclose" type="button" aria-label="Close">&times;</button>
+            </div>
+            <iframe src="https://www.speakpipe.com/widget/inline/hhq6kzggsx7zpcsvakgxfrzun3zidpde" allow="microphone" width="100%" height="200" frameborder="0" title="Leave The Numbers Game a voice note"></iframe>
+          </div>
+          <script async src="https://www.speakpipe.com/widget/loader.js" charset="utf-8"></script>
+        </div>
+        <div class="sumfacts">
+          <div class="fact"><span class="fl">Release date</span><span class="fv">26 August 2024</span></div>
+          <div class="fact"><span class="fl">Hosts</span><span class="fv"><a href="/nick-reilly">Nick Reilly</a>, <a href="/jason-robinson">Jason Robinson</a> &amp; <a href="/marty-vidakovic">Marty Vidakovic</a></span></div>
+
+        </div>
+      </section>
+      <section class="tpanel" id="p-chapters" hidden>
+        <p class="hint">Jump straight to the part you need.</p>
+        <div id="chapters"></div>
+      </section>
+      <section class="tpanel" id="p-questions" hidden>
+        <p class="hint">Real questions this episode answers. Tap one to hear the answer.</p>
+        <div id="qa"></div>
+      </section>
+    </div>
+
+    <div class="drops">
+
+      <details class="drop">
+        <summary><span class="st">Episode transcript</span><span class="chev">+</span></summary>
+        <div class="drop-body tbody">
+          <p><span class="spk">Jason · 00:00</span>Welcome to episode 200 of The Numbers Game. I'm Jase, I'm here with Nick and Marty, and it's time to raise the bat. Not that I brought one in, but episode 200. Guys, how are we feeling? Up and about?</p>
+          <p><span class="spk">Nick · 00:11</span>Well, the normal order is you go to Marty, so I'm just gonna step out of the way and, uh</p>
+          <p><span class="spk">Marty · 00:14</span>Uh, I'm just saying, that applause just there, like, that's I usually get that when I come home from work, but that is, uh, amazing to get that in a podcast.</p>
+          <p><span class="spk">Marty · 00:23</span>Jase, we have been on about episode 100, episode 200, I think since episode 23. Yep. You get that excited about Milestone, so how are you feeling?</p>
+          <p><span class="spk">Jason · 00:33</span>Mate, I've I haven't slept all week. Nothing to do with the time zone change from Nashville back to Melbourne. I've just been in anticipation for this moment to be with you guys in person.</p>
+          <p><span class="spk">Jason · 00:41</span>I think it was episode 52, maybe? Or no, not even maybe. Episode 17, sorry. We went from live recording in the studio, COVID had hit, the world was a different place three years ago. Three? It must be about that. And then we went to remote. I haven't seen you guys for three years. So it's been brilliant to get back in a room with you guys and uh,</p>
+          <p><span class="spk">Jason · 01:00</span>yeah, pretty excited about it.</p>
+          <p><span class="spk">Nick · 01:01</span>And hasn't changed a bit, Marty. No, no, no. He's great. Nick, you're well? I'm good, yeah. Happy to be here in the jungle. Feel like it's, uh, we're on set. I don't know, what's a reality show in the jungle? Survivor, I feel like we're on Survivor. I'm a podcaster, get me out of here. What's the jungle,</p>
+          <p><span class="spk">Jason · 01:16</span>get me out of here?</p>
+          <p><span class="spk">Jason · 01:16</span>Yeah, something jungle, get me out of here. Yeah, look,</p>
+          <p><span class="spk">Nick · 01:19</span>we're kind of D grade celebrities, so I guess we fit. Oh, D grade, D grade's going on. Speaking</p>
+          <p><span class="spk">Jason · 01:25</span>of clapping, I actually thought That that was what you taught the whole innovate team to do. Every time you entered work every day, Marty, you've taught the team.</p>
+          <p><span class="spk">Jason · 01:32</span>They have to clap if they want to get there. I'm</p>
+          <p><span class="spk">Marty · 01:33</span>very insecure, Jayce. So for me, any form of validation or edification just lets me go the extra mile. So yeah, I enjoyed that.</p>
+          <p><span class="spk">Jason · 01:42</span>Well, look, just before we get cracked in, I know, uh, you guys have got heaps of stuff that, you know, I'm a bit, I'm actually a bit concerned.</p>
+          <p><span class="spk">Jason · 01:48</span>I feel like I'm being set up here, but before we get cracked in. I'd like to do a massive shout out and a thank you to Vidpod. Um, they've been amazing support of the Numbers Game podcast. So we couldn't do what we do without the support of our amazing</p>
+          <p><span class="spk">Jason · 02:00</span>Tommy, um, our production team at Vidpod. So thank you very much.</p>
+          <p><span class="spk">Marty · 02:04</span>We'll</p>
+          <p><span class="spk">Jason · 02:04</span>insert a really loud episode, audience clap into this moment here. Um, Tommy can do that back at the studio. And then beyond that quick, thank you. Obviously. Um, the team at future advisory who aren't here, obviously they were really busy and couldn't make it to this recording, but thank you to future advisory for their support of allowing us to do this and the amazing team at Innovate.</p>
+          <p><span class="spk">Jason · 02:24</span>So we couldn't be here without the support of our teams and a quick announcement straight off the bat, um, of the success of our great man, Marty V. Um, there's an announcement where, where are we going? There is an announcement to make that we've decided that after episode 200, we're gonna do a rebrand of the podcast back to the Marty Vids Show.</p>
+          <p><span class="spk">Jason · 02:45</span>Oh, wow. Um, here's the star. Who's that guy? Here's the influencer. Who's bloke</p>
+          <p><span class="spk">Marty · 02:49</span>that that bloke was? That's 2000. Can't remember. 2015, before people really knew about podcasts in Australia. Well,</p>
+          <p><span class="spk">Jason · 02:57</span>you know, I feel like anyone who listens to the numbers game,</p>
+          <p><span class="spk">Jason · 03:00</span>just look up the Marty Wicks show, that's how you'll find us now.</p>
+          <p><span class="spk">Nick · 03:03</span>What</p>
+          <p><span class="spk">Jason · 03:03</span>have I done</p>
+          <p><span class="spk">Nick · 03:03</span>to myself? I'm starting to think a lot because of one of those AI corporate picks.</p>
+          <p><span class="spk">Jason · 03:08</span>Yeah, I was, I tried to put it through AI and say, can you, can you just, you know, try and get this to look more like Marty. So we get that back on the website. No, but it's been great. How Marty, how are you, mate?</p>
+          <p><span class="spk">Jason · 03:18</span>You must be up and about.</p>
+          <p><span class="spk">Marty · 03:19</span>No, I am. And I think, you know, like doing the Marty vid show originally, I learned a lot about podcasting, but I never thought it would actually play out in the finance game. So it's been great. And doing it on your own with guests were, you know, it was always interesting week to week, but actually doing it with two mates.</p>
+          <p><span class="spk">Marty · 03:36</span>That didn't come across good. But doing a podcast with two mates is, um, fantastic. Just the, I guess we have a lot of jokes that we throw in, you know, when we're on the podcast, but also when we're behind the scenes too, we have a good laugh. And, and as we know, we just want to give great information out there to our audience.</p>
+          <p><span class="spk">Marty · 03:54</span>So. Uh, but again, a big, uh, well done to you two, because</p>
+          <p><span class="spk">Marty · 04:00</span>I still remember the edginess of the first podcast. You're all a little bit nervous, and it was a new frontier, but they just went head on into it. So I had a bit of a flying start, because I'd been through it. But these guys just took to it like water.</p>
+          <p><span class="spk">Marty · 04:13</span>So. It's been good to have that camaraderie to bounce off as well, so.</p>
+          <p><span class="spk">Nick · 04:17</span>Not to mention your, uh, comedian, uh, career, which we're hoping to see some of tonight.</p>
+          <p><span class="spk">Marty · 04:21</span>Yeah, well, that's sort of after the podcast we might let loose, so we'll see how we go, but, uh, no, it's been very enjoyable, so I've loved it, guys.</p>
+          <p><span class="spk">Jason · 04:29</span>Oh, very good.</p>
+          <p><span class="spk">Jason · 04:30</span>Well, again, exciting to be here. Um, I think what we're going to crack into first is a bit of an opener from you, Marty. You've got some numbers that you wanted to go through with us. Yeah.</p>
+          <p><span class="spk">Marty · 04:38</span>Well, I thought it's been three years. So I was thinking back to where were we in 2021? And, um, and this might ring a few bells, like the RBA said no rate increases until 2024.</p>
+          <p><span class="spk">Marty · 04:52</span>So didn't that just hold up? I think we had 12, about 4 percent higher. Not so good. Uh, so incredible. Now Berkshire</p>
+          <p><span class="spk">Marty · 05:00</span>Hathaway. I've been, you know, not that I'm giving any financial advice, but it was 250 back in March when we started 2021, now 446. So 78 percent increase. Like I said, don't do what I do, but take note.</p>
+          <p><span class="spk">Marty · 05:16</span>Elon Musk was worth 219 billion and is now worth 248 billion and he's still not in jail, Nick. That was a bold prediction. Was that Jase or? No, that wasn't a prediction. That's just the reality of the situation. He is not in jail. You thought he'd be in jail. Do you think, is this sort of coming into your predictions for next year?</p>
+          <p><span class="spk">Marty · 05:38</span>I think there's more</p>
+          <p><span class="spk">Nick · 05:39</span>chance now than ever that he could be in jail. He's threatening Mark Zuckerberg with</p>
+          <p><span class="spk">Jason · 05:44</span>violence. I know we're, we're close. I think we're close. I think we're at a point where we're going to have to come in with a rule that you can't keep rolling the same prediction every year. So I'm actually going to change my, my, Marty and I have had a similar prediction for the last 20 years.</p>
+          <p><span class="spk">Jason · 05:56</span>And that was that the bombers would win a final. Um, so I think.</p>
+          <p><span class="spk">Jason · 06:00</span>Marty and I might go with a bold new prediction that the Bombers won't win a final and maybe we'll get lucky. Uh, cause I'm, I'm feeling pretty depressed. It's funny you brought that</p>
+          <p><span class="spk">Marty · 06:07</span>up. I said for 17 years we hadn't won a final when we started the podcast and I think that could be the next 30 years the way we're going.</p>
+          <p><span class="spk">Marty · 06:14</span>So now, but this is, this is an eye opener. Average petrol price, 1. 29 when we started the podcast. Now on average 1. 86.</p>
+          <p><span class="spk">Nick · 06:24</span>Wow.</p>
+          <p><span class="spk">Marty · 06:25</span>So, you know, just shorten. That's why people are working from home. That's what I'm thinking here. And eggs, a dozen eggs in 2021, 4 and now 7 to 8. So I don't understand that because they're saying people aren't eating as much chicken.</p>
+          <p><span class="spk">Marty · 06:39</span>There should be more eggs. Yes. So I don't understand. Is there some sort of bird</p>
+          <p><span class="spk">Nick · 06:43</span>flu? I don't know. Are you sure you haven't just slipped in the organic aisle and free range maybe? Well, do I look organic?</p>
+          <p><span class="spk">Marty · 06:50</span>I mean really. So yeah, it just takes you back to 2021 and how times have changed and we went through a pandemic.</p>
+          <p><span class="spk">Marty · 06:59</span>We've</p>
+          <p><span class="spk">Marty · 07:00</span>come through the other side and feeling good about things I think.</p>
+          <p><span class="spk">Jason · 07:05</span>Yeah, 100%. No, I like it, Marty. I think, um, those stats, I mean, I don't know if now's the time you want to make some bold predictions for the future, but there are very eye opening. I also, you know, turning it back on the Numbers Game podcast, you had some awesome numbers that, um, you know, cause if I haven't talked about getting to episode 200 for the last 150 to 170 episodes, I'm now going to start talking about getting to episode 300.</p>
+          <p><span class="spk">Jason · 07:27</span>Um, only 3 percent of podcasters ever make it to the 300th episode. That's right.</p>
+          <p><span class="spk">Marty · 07:34</span>15 percent to 200, which is, you know, small amount, but 3 percent to 300. So we should start really getting excited about that at 202, I think, Jase. I'm not going to say it. No, don't start. Don't start. Not going</p>
+          <p><span class="spk">Nick · 07:46</span>to start. Not going to start.</p>
+          <p><span class="spk">Nick · 07:47</span>I know where you're going with that. Oh, do you? Yeah, I think I do. You've been quiet, Nick. How are you, mate? Uh, I'm just, I'm just gonna get off the serious stuff. If you boys would hurry up and I'll, I've got some funny stuff. Well, you go,</p>
+          <p><span class="spk">Marty · 07:58</span>you go with your</p>
+          <p><span class="spk">Marty · 08:00</span>stuff.</p>
+          <p><span class="spk">Jason · 08:00</span>I feel like Nick, Nick, Nick's, Nick's on edge.</p>
+          <p><span class="spk">Jason · 08:02</span>For those playing at home, Nick's on edge. I've seen him just kind of get edgier to the closer, closer to the edge of his chair. Nick has been working</p>
+          <p><span class="spk">Marty · 08:08</span>very hard on this all day, so I'm interested to see what he comes up with. Now you, now you've made me nervous. I'm</p>
+          <p><span class="spk">Jason · 08:13</span>out of here. I'm</p>
+          <p><span class="spk">Nick · 08:15</span>going. Go. Um. What have you got?</p>
+          <p><span class="spk">Nick · 08:18</span>What have I done? Well, just to get away. We break the numbers up, I reckon. Okay. And, um, so Tommy, our fabulous producer, I said, Oh, what content? What do we do? He said, Oh, just go back through the past reels and, you know, see what you were suggesting in 2021 and 2022. And I couldn't help but notice the demise of your dress sense from episode one as, as I rolled in.</p>
+          <p><span class="spk">Nick · 08:41</span>Yeah. Okay. Yeah. You've actually, I feel like maybe you've. The bottom and you're starting to go back up. I think you're on the way back up with this, so Just don't,</p>
+          <p><span class="spk">Jason · 08:51</span>don't pan</p>
+          <p><span class="spk">Nick · 08:51</span>down. I was just flicking through the rules of the reels and I couldn't help but notice, but, um, so</p>
+          <p><span class="spk">Nick · 09:00</span>this is early days in the podcast studio.</p>
+          <p><span class="spk">Marty · 09:03</span>For our listeners. Jason</p>
+          <p><span class="spk">Nick · 09:05</span>Robinson. A suit, an open neck shirt. So, that's a pocket square if anyone doesn't know. So that's, you know, if, if, if you're not wearing a tie, then the next best thing is a pocket square. So. Probably the, the best dressed guy on set.</p>
+          <p><span class="spk">Marty · 09:19</span>Yeah, you could see why his business got off to a flyer.</p>
+          <p><span class="spk">Marty · 09:22</span>Yeah. Like beautifully dressed. Yeah. You know, met the market. Oh,</p>
+          <p><span class="spk">Nick · 09:26</span>uh, what year is this? 2022. So this would have been, uh, 12 months in.</p>
+          <p><span class="spk">Marty · 09:32</span>Wow. Pretty</p>
+          <p><span class="spk">Nick · 09:33</span>professional.</p>
+          <p><span class="spk">Marty · 09:34</span>Yeah. That's</p>
+          <p><span class="spk">Nick · 09:35</span>home office vibes. Jacket's gone.</p>
+          <p><span class="spk">Marty · 09:37</span>Yep.</p>
+          <p><span class="spk">Nick · 09:37</span>Pocket square's gone. Collar. Uh, buttons. Uh, not too bad. Yeah. That's probably what I'll wear in most episodes.</p>
+          <p><span class="spk">Nick · 09:43</span>Yeah. So I can't say too much about that. Down,</p>
+          <p><span class="spk">Marty · 09:45</span>down a level. Down a level. But good. But good. So</p>
+          <p><span class="spk">Nick · 09:48</span>probably somewhere in between Marty and I, I would have thought. Professional. Smart,</p>
+          <p><span class="spk">Marty · 09:51</span>smart. Pretty good. Smart sort of casual professional, I'd say.</p>
+          <p><span class="spk">Nick · 09:54</span>Uh, fast forward 12 months and just starts, we start seeing branding</p>
+          <p><span class="spk">Nick · 10:00</span>everywhere from Jackson.</p>
+          <p><span class="spk">Nick · 10:01</span>So whether it's um, whether it's Dashboard Insights or Future or Zero or someone else he's promoting, uh, one of these. Numerous liquor brands or pay. com, but, um, Coffco if you need some coffee for those parts. So, but still okay, it's probably what you'd expect in this office on a Friday. No collar, but nice jumper, ready to go.</p>
+          <p><span class="spk">Jason · 10:21</span>Um, can I just also throw in, I'm still upset that you wear the Future Advisory jumper for gardening, uh, for, when, when, when you, when you make meat, when you go to the family meat day and you're making meat. I've seen the Future Advisory jumper on and, uh, Greg also messaged me, Greg, Greg messaged, he goes, Why did we give Nick a jumper if all he does is do the gardening with it?</p>
+          <p><span class="spk">Jason · 10:40</span>So. It's versatile. Have you got any idea what the next photo is? Nah, I feel like there could be, I don't know, a hangover, a hat. Um, I don't know, just hit me with it. This is</p>
+          <p><span class="spk">Nick · 10:53</span>the most recent one I could find. So this is 2024. Is that a flanny? So this is, this</p>
+          <p><span class="spk">Nick · 11:00</span>is Jase's lumberjack look. I think it's lumberjack.</p>
+          <p><span class="spk">Nick · 11:02</span>It could be surfy. You did grow up in, uh, surf stores. So yeah,</p>
+          <p><span class="spk">Jason · 11:07</span>working at a surf shop. I, I bought that in Bansdale at the, uh, the surf shop there. Um, Bansdale, I'm saying that. All right. So I think, I don't know what we're out there for, but I just, I don't know. I wanted to, I wanted to find, it was, it was the Nashville vibe, but then I realized Nashville was 35 degrees every day and that thing's thick as all hell.</p>
+          <p><span class="spk">Jason · 11:25</span>So I'm like, couldn't take it there. So the Nashville vibe with an LA cap. Yeah. Well, I flew into LA. So, you know, there's a thought process behind all this, Nick. I like, I like</p>
+          <p><span class="spk">Marty · 11:35</span>how you've gone the brand Nike underneath with the lumberjack on top. I think that</p>
+          <p><span class="spk">Jason · 11:40</span>Another sponsorship opportunity if, uh That</p>
+          <p><span class="spk">Marty · 11:42</span>was, uh, you know, it's sort of smooth and unique to you.</p>
+          <p><span class="spk">Jason · 11:46</span>Shoe Dog is one of my favorite books, if we're going to come back. It is a great book. A bit of value add for those playing at home. Shoe</p>
+          <p><span class="spk">Nick · 11:50</span>Dog.</p>
+          <p><span class="spk">Marty · 11:51</span>Great</p>
+          <p><span class="spk">Nick · 11:51</span>book. So anyway, that's all I've got. But, uh, looking forward to seeing what 2025 brings. But, um, I can definitely say you've You've hit the</p>
+          <p><span class="spk">Nick · 12:00</span>bottom and you're on your way back up.</p>
+          <p><span class="spk">Nick · 12:01</span>So I think this is the start of you know, the bottom. I think the lumberjack looks not In 2025,</p>
+          <p><span class="spk">Marty · 12:10</span>it'll be just jocks and a necklace while you're gone. So just make sure you, you know, it keeps up. You</p>
+          <p><span class="spk">Nick · 12:14</span>look like you've gone back to Morty surf and asked for another job</p>
+          <p><span class="spk">Marty · 12:20</span>Anyway, i'm just upset because i'm not as trendy No 100 percent.</p>
+          <p><span class="spk">Marty · 12:25</span>Um Well, let's, let's get into some, uh, property prices in 2021 and just see what's happened on the medium house price, just to give you some perspective. So Perth, medium house price, 525 up to 680 up by 29%. Brisbane house prices up from 678 to 937 up 38%. Melbourne house price. 1. 022 mil to 1. 02032 that's 0.</p>
+          <p><span class="spk">Marty · 12:56</span>97 percent increase Sydney</p>
+          <p><span class="spk">Marty · 13:00</span>1. 6 mil to 1. 66 mil so 3. 75 increase Adelaide 520 to 785 that's a 50 percent increase and Tasmania 460 to 680 47 percent increase so incredible I'm going to</p>
+          <p><span class="spk">Jason · 13:16</span>get in there straight away. I looked at some numbers before the show as well. So on YouTube, which we've got some data around that.</p>
+          <p><span class="spk">Jason · 13:22</span>We love our numbers. It'll come later. But one of the most watched episodes on there at the moment is, is Melbourne's house price about to boom. So looking at those numbers, you've said, you know, 29 percent up in Perth, 38 percent up in Brisbane, 50 percent up in Adelaide, 48 percent up in Tassie, 0. 1 percent in Melbourne over that time.</p>
+          <p><span class="spk">Jason · 13:41</span>So all of a sudden, when you unpack the numbers, we're numbers people, we like our data, That starts to actually make a lot of sense that maybe Melbourne is due for a bit of a run on the property prices.</p>
+          <p><span class="spk">Marty · 13:51</span>Well, I think the other number that's interesting is the average home loan that's out. In 2021, it was 596, and now in 2024, it's</p>
+          <p><span class="spk">Marty · 14:00</span>627.</p>
+          <p><span class="spk">Marty · 14:00</span>So, there's only a 5. 2 percent increase. So, what you've found is people are buying where they can afford, and they've gone to Brisbane, they've gone to Perth, they've gone to Adelaide. So we've had these spikes, but now that they've all risen, you know, if we get a right reduction and a bit more buoyancy in the market, there's definitely demand on what we see at the front end of people wanting to buy and they will get back into Melbourne.</p>
+          <p><span class="spk">Marty · 14:23</span>So I'm, I'm expecting a really good, uh, increase in property prices in Melbourne.</p>
+          <p><span class="spk">Nick · 14:28</span>I'll give you another stat that I read yesterday that Melbourne, uh, is the only state where the housing affordability has gone, um, up since COVID, or since the pandemic.</p>
+          <p><span class="spk">Jason · 14:38</span>Yeah. Wow.</p>
+          <p><span class="spk">Nick · 14:38</span>So. When you bring in rent, uh, mortgage repayments and whatnot, it's actually cheaper to be from a percentage point of view.</p>
+          <p><span class="spk">Nick · 14:47</span>Um, in comparison to your income, Melbourne's cheaper than what it was pre pandemic. Every other state is more expensive. Yeah. They said it's becoming more</p>
+          <p><span class="spk">Jason · 14:54</span>from a cost of living point of view, Melbourne is the most affordable city. So who would have thought? Yeah.</p>
+          <p><span class="spk">Marty · 14:59</span>The other</p>
+          <p><span class="spk">Marty · 15:00</span>thing that I wanted to bring up is mortgage.</p>
+          <p><span class="spk">Marty · 15:02</span>In 2021 on a 750 grand mortgage at 2%, your repayment over 30 years was 2,782. In 2024, it's at 6.2% at 4,000 5 94. So that's an increase on repayments, monthly repayments of 1,812, 65% increase. That is enormous. It's enormous. And if I sort of look at the trend of rents, you're looking at rents in 2021, 437 per week.</p>
+          <p><span class="spk">Marty · 15:37</span>So annualized, that's 22, 700. Um, and the medium rent value has ticked up to 610 per week as of last month. So that's 31, 720 a year. So rents are up around about 8, 996 on average. So that's a 22 percent increase over the last three years. But when you look at the mortgages at,</p>
+          <p><span class="spk">Marty · 16:00</span>you at 65 percent increase compared to rents at 22, but people are going.</p>
+          <p><span class="spk">Marty · 16:05</span>Rents are really high, but when you think of landlords, you go, well, they've virtually gone up triple to that increase on rents as well. So it's certainly gone up, but again, pressure on landlords and why a lot of investors are selling in Melbourne as well recently. So it's a fascinating number.</p>
+          <p><span class="spk">Jason · 16:20</span>Yeah. And we'll probably, um, ask for the prediction before, but do you see rate reductions or you think they're going to hold still?</p>
+          <p><span class="spk">Marty · 16:25</span>I'm going rate reduction first one in Feb, 2025, and then one in May. Yeah. Absolutely. But that's the only two for the year. So,</p>
+          <p><span class="spk">Nick · 16:35</span>uh, there's some shaking heads in the audience. Yeah,</p>
+          <p><span class="spk">Marty · 16:37</span>I'm going This is purely opinion. This is purely opinion. But I think the, you know And this</p>
+          <p><span class="spk">Jason · 16:42</span>comes from the same guy who said, no rate rises until 2024.</p>
+          <p><span class="spk">Jason · 16:46</span>We had 12, so</p>
+          <p><span class="spk">Nick · 16:48</span>Uh, okay, so just on that, I'm going to butt in here because, uh, you're picking on my mate Marty. I felt, I felt targeted. Um, I've got my back up a bit, but go on. So again, I went back through the,</p>
+          <p><span class="spk">Nick · 17:00</span>um, numbers game archives. Don't worry, you're safe at the moment. I'm not for long though. Um, and recently Marty broke the internet.</p>
+          <p><span class="spk">Nick · 17:09</span>I can't remember what it was for. What was the topic? It</p>
+          <p><span class="spk">Jason · 17:11</span>was talking about the cost of living, but then it was the average income earners are around 80, 000 and it was about how much you could afford. 2021. Yeah. Based on a salary of 80 versus now. So yeah, it absolutely broke the internet. You're right. So you say</p>
+          <p><span class="spk">Nick · 17:26</span>just massive influence on society?</p>
+          <p><span class="spk">Nick · 17:28</span>Massive influence. Well, you may not remember this, but in It's bloody antagonist. In 2021, um, 26th of April. So Tommy, I don't know what that episode that was, but it was pretty early days. Marty stated that people should seriously consider renovating their homes instead of incurring transaction costs to move.</p>
+          <p><span class="spk">Nick · 17:49</span>So I'm not sure if you remember the episode we were talking about netting bigger homes. Um, you said don't move. Everyone should renovate. This was 2021. So what we saw in 2022</p>
+          <p><span class="spk">Nick · 18:00</span>was 12. 3 billion in Australia going to the renovation market in Australia. Um, so that's an annual annual increase of 34%. So Marty comes out in 2021 and says, don't move, renovate 2022.</p>
+          <p><span class="spk">Nick · 18:13</span>There's a 34 percent increase in people renovating in this country. And then what we've seen since then is an absolute frenzy in renovations, only just dying down now. So I think Marty round of applause single handedly has. Really</p>
+          <p><span class="spk">Nick · 18:31</span>bolstered the, uh, renovation market for the last four years. This is the influence this man has. I'm glad</p>
+          <p><span class="spk">Marty · 18:35</span>you, we only had 38 listeners back then too, so that, that's an extraordinary result. But, um, again, I think, I think with that sort of prediction, I don't think, yeah, statement, I think it just made logical sense given where we were at.</p>
+          <p><span class="spk">Marty · 18:50</span>So, yeah. But you picked out one prediction that went well over 200 episodes. So I really appreciate that Nick. Well, it's not a prediction.</p>
+          <p><span class="spk">Nick · 18:57</span>I think you made it come true.</p>
+          <p><span class="spk">Nick · 19:00</span>It's the people taking your advice. It's a bit, uh, anyway, magical. And you look at the</p>
+          <p><span class="spk">Jason · 19:05</span>data of everyone watching the Will Melbourne property prices boom.</p>
+          <p><span class="spk">Jason · 19:08</span>In a year's time when Melbourne prices are up 30%, Nick's going to be sitting here with a bit of a head wobble doing the same thing. So the</p>
+          <p><span class="spk">Marty · 19:14</span>Sniggers have only two rate cuts that we just had before, but yeah, I've got some, I've got some runs on the board.</p>
+          <p><span class="spk">Jason · 19:20</span>Yeah. Nick, you got a prediction for rates?</p>
+          <p><span class="spk">Nick · 19:22</span>Uh, definitely going down.</p>
+          <p><span class="spk">Nick · 19:24</span>Um, I think we'll get over the next, well in 2025 calendar year, I think we'll get 1%. Um, and I think it'll start late this year. Nice. Yep. Micey's saying no again.</p>
+          <p><span class="spk">Jason · 19:38</span>Yeah, um,</p>
+          <p><span class="spk">Nick · 19:40</span>We're about bold predictions here. I'm gonna go with</p>
+          <p><span class="spk">Jason · 19:42</span>nothing. Put that out there. Nothing until June 25.</p>
+          <p><span class="spk">Nick · 19:45</span>Yeah.</p>
+          <p><span class="spk">Jason · 19:46</span>Well, I think, I think the pain, they, they, they, they just, what they've got wrong is, they think, or, I'm just gonna say, they think that this rate, rate, increase has made an impact on inflation.</p>
+          <p><span class="spk">Jason · 19:59</span>I sit there and go</p>
+          <p><span class="spk">Jason · 20:00</span>like what Macy probably thinks all the baby boomers that are retiring are cashed up. They're getting their super, 50, 000 they'll paid off. They're cashed up. So when you increase rates, they got more interest income, they got more money to spend. So the rate rises haven't actually stopped people from spending money.</p>
+          <p><span class="spk">Jason · 20:20</span>So inflation is not going to be impacted, but the RBA sit there going, These, these rates being high is doing a great thing. We're going to curb inflation. So they're just going to sit on it and hold. I don't think they've got the balls to another rate rise to really inflict the pain. If they really wanted to put us in recession, inflict the pain, they won't.</p>
+          <p><span class="spk">Jason · 20:37</span>They'll just hold.</p>
+          <p><span class="spk">Marty · 20:38</span>Do you, did you pick up anything in the U S cause they, there was talk that they were going to my doctor.</p>
+          <p><span class="spk">Marty · 20:48</span>That's why you're scratching,</p>
+          <p><span class="spk">Jason · 20:50</span>but, but it's, um, It's even worse when your wife's in the audience, when you crack a joke like that. She usually doesn't listen to the podcast, so I can get away with those jokes, but no, sorry, Marty. But</p>
+          <p><span class="spk">Marty · 21:00</span>they're predicting 0. 5 percent drop in September, and then New Zealand have come back 0.</p>
+          <p><span class="spk">Marty · 21:05</span>25. People are not buying chickens. People are not buying McDonald's, you know, the consumer is holding back their spending. Yeah. So what, what makes you think that, like, I think we'll get a really rough Christmas where, you know, people are struggling and the everyday person is certainly feeling it, but what makes you think that extended period to June, um, I think there's some hardship earlier, but I</p>
+          <p><span class="spk">Jason · 21:26</span>just think there's a disconnect between what's happening at RBA land versus the real people on the ground in Australia.</p>
+          <p><span class="spk">Jason · 21:32</span>So you're thinking</p>
+          <p><span class="spk">Marty · 21:33</span>the hindsight data won't get through to them. Yeah, and I think that is that</p>
+          <p><span class="spk">Jason · 21:36</span>delay in data where we get through from now to Christmas, um, you know, the travel, the spend, the credit card debt, the default rate. It's all delayed data that they work on what was happening a couple of months ago and they make their decisions.</p>
+          <p><span class="spk">Jason · 21:48</span>So, yeah, I think, yeah, I don't know. June 25th for me, um, maybe a little bit earlier and the influence of Marty will get it right, but That's, yeah,</p>
+          <p><span class="spk">Nick · 21:55</span>that's, uh, very pessimistic. Yeah. Anyway, we'll see. Well, we</p>
+          <p><span class="spk">Nick · 22:00</span>can always go back, it's been recorded. What do you think,</p>
+          <p><span class="spk">Marty · 22:01</span>Jase? What's your prediction for next year in regards to, have you got a bold prediction for 2025?</p>
+          <p><span class="spk">Jason · 22:07</span>I already said it. The bombers won't, won't win a final. No, no, no. I think, um,</p>
+          <p><span class="spk">Nick · 22:12</span>what's that? Anything serious? Uh, no, no,</p>
+          <p><span class="spk">Jason · 22:16</span>no. Um, to be honest, look, the, the week in Nashville last week, um, a guy from open AI, he'd finished up, um, I don't know. I did AI last time, but, um, Since we're allowed to roll with the same stuff as last time, I'm going to bring it back.</p>
+          <p><span class="spk">Jason · 22:28</span>But I've got, I've got something behind as to why. So OpenAI, he worked there when Elon Musk was there, talked about the ethical issues and things going on in the background. But he also shared this whole bunch of data, which I can send through some stuff and maybe chuck it on the show notes for some links.</p>
+          <p><span class="spk">Jason · 22:43</span>But it was around the power of AI, how fast it's happened between November 21 and where we are today. And just, you know, you imagine when the first car came out. versus the car technology where we are today. We're talking 60, 70, you know, long, long time before the technology got to the increase where we are now.</p>
+          <p><span class="spk">Jason · 23:00</span>AI, yes, it's been around for 10, 14, 20 years, but the generative AI that's available publicly, how fast that has got better and better. We've never seen any product launch that has grown as exponentially as it has and then got smarter and better. So he talked about, where we're at with AI and how it's going to impact businesses.</p>
+          <p><span class="spk">Jason · 23:19</span>So I sat there going, I still think, you know, from a delay point of view of business owners embracing AI and the general public, it's the bit now where it starts to get embedded and built into everything we use anyway. You know, our phone operating system, our cars, you know, our computers at work, there's just going to be more and more capability of AI getting turned on at all times to where We're not going to be able to ignore it because it's just going to become second nature again, you know, sometimes you drive from A to B and you don't remember how you got there.</p>
+          <p><span class="spk">Jason · 23:47</span>Soon we'll be using AI in the same way where it's a part of something that we use. And it's just going to feel natural and normal that instead of typing something out, we will talk to our assistant that we'll be able to do a whole bunch of functionality.</p>
+          <p><span class="spk">Jason · 24:00</span>And that comes down to. It's called an agent.</p>
+          <p><span class="spk">Jason · 24:02</span>There's an agent that can do things on your behalf where, you know, for example, you know, Xero's talks about a new bit of software called Just Ask Xero or Jax is the nickname. Um, and that will be, you know, from WhatsApp, you could message your Xero file and say, raise an invoice and send it to Marty. And the AI will get in, raise an invoice, you'll give it a descript, you might say what's the invoice for, it'll be, you know, my time appearing on the numbers game show, thanks guys, and then you get the invoice, so, all without you logging into your Xero file, you know, so think about, that's a basic example in accounting land, but soon, if that's going to come out in your Xero file, think about just how all these little things continue to get turned on, where it's just going to become second nature, so.</p>
+          <p><span class="spk">Jason · 24:41</span>I think so, yeah, that's a good way of explaining it.</p>
+          <p><span class="spk">Nick · 24:43</span>Yeah, I think about how many times I log into Xero every day.</p>
+          <p><span class="spk">Jason · 24:46</span>Yeah, well imagine when you don't have to and you can just go, you know, I mean, look, this is a future world like that, but it's like run payroll. It's the same as last month. Nothing's changed.</p>
+          <p><span class="spk">Jason · 24:54</span>And I approve the payment to superannuation and boom, boom, boom. All that stuff just goes.</p>
+          <p><span class="spk">Jason · 25:00</span>Could be on a beach somewhere, sipping a pina colada and you haven't had to log into your laptop or your phone. You're just talking direct through the device, whether it's, yeah. And I guess the thought process for them as well as going, where are people spending their time?</p>
+          <p><span class="spk">Jason · 25:11</span>I'll ditch that for a second. And what they talked about as well as the rise of mobile. So if we're talking predictions beyond AI, you think about a business owner. I mean, we work on computers with accounting, finance, um, you know, financial planning, mortgage, broking day to day we're used to being on a computer.</p>
+          <p><span class="spk">Jason · 25:27</span>But when you think about how much. time people spend on their phones, the better phones become at being able to do the tasks that we think we need a computer for. And then what they kind of got us to think about is the tradie, the tradie or the people out there who aren't on their computers all day every day.</p>
+          <p><span class="spk">Jason · 25:42</span>I think we forget there's a world where people aren't attached to a computer, but their ability to be able to use a phone for everything that they need to be able to do. So, you know, we've got things we'll send to a client like a checklist and they go, Oh, got to go home after five, open up the computer, download a statement, do this, send it to my accountant.</p>
+          <p><span class="spk">Jason · 26:00</span>There's a world coming soon where the phone has the capability to do everything you think you need a desktop for. And not just over there, it's also voice activated to be able to do what you know you can do on a desktop. So there's a bit of a thought process around, um, If I don't need to log into my computer and use my laptop and I can talk to my phone to do everything, how much more are we using our phones?</p>
+          <p><span class="spk">Jason · 26:20</span>And then also, you know, we've talked about it going, what's the, the negative side of that, where if we're attached to our phones all day again. Which was the second speaker that I raved, um, about over in Nashville. So they opened with the AI and they closed with Dr. Saunders, who talked about, um, rest and restorative health.</p>
+          <p><span class="spk">Jason · 26:38</span>But looking down like that, the pressure on the neck and the damage being done to people's neck and back issues because we're on our phones like this all day every day.</p>
+          <p><span class="spk">Marty · 26:46</span>Yeah, not to mention children, you know, not getting out and about, but it reminds me like back in 2000, they talked about the internet coming through and they said, Yeah, you got to go with it or it goes without you.</p>
+          <p><span class="spk">Marty · 26:56</span>And they said, Oh, look, it's going to cost people jobs because of the</p>
+          <p><span class="spk">Marty · 27:00</span>fact that, you know, we're going to be able to do so much online now. But in the end, people ended up just working harder. We just had technology to use. Whereas I think we've, this is like, that was the evolution. I think this is now the revolution.</p>
+          <p><span class="spk">Marty · 27:13</span>We're like the industrial age coming through in the twenties when I was only young, uh, compared to, you know, compared to like now days, I think we, we won't recognize what business looks like in about three years. Yeah. You know, and that's, that's, The thing we, we like, we have to adapt with it, but maybe just maybe with all that technical and digital capability, maybe we get back to connecting with people at a different level as well, because that's what's going to be important as advisors, consultants, as people in general, because we've lost a bit of that just with mindless scrolling.</p>
+          <p><span class="spk">Marty · 27:45</span>So I think if they can get that balance right, we get more time back doing the things we really enjoy as human beings, then that could be a good thing, but it has to be monitored really carefully.</p>
+          <p><span class="spk">Jason · 27:56</span>So I've just brought up a picture from the conference. It was around</p>
+          <p><span class="spk">Jason · 28:00</span>time. So the one thing that we have a finite amount of in our lives is time.</p>
+          <p><span class="spk">Jason · 28:04</span>You know, we've got a set amount of time on the planet, and then we have to choose how to spend our time wisely. So his whole presentation ended up being around, if we do have this capability to make our lives, you know, easier, more efficient, better, If something else is doing some of the tasks that we weren't anymore, we get back time.</p>
+          <p><span class="spk">Jason · 28:21</span>And then when we choose how to use that time, that becomes a real important, um, aspect of that.</p>
+          <p><span class="spk">Nick · 28:26</span>But, but</p>
+          <p><span class="spk">Jason · 28:26</span>where's</p>
+          <p><span class="spk">Nick · 28:27</span>So how do you explain in the last 10 years when we've lost a lot of time, but we're so much more efficient. Uh, are we efficient though? Because there's that productivity thing. The episode we talked about we're more efficient than what we were.</p>
+          <p><span class="spk">Nick · 28:39</span>And see the hypothetically back then, we were more. Connected to other people,</p>
+          <p><span class="spk">Jason · 28:45</span>but things were so inefficient. So what they're talking about now is that we think we're more efficient. But we're more distracted and less efficient in real, in realistic, you know, you're doing a task, but your phone goes off, you get an email, you get a phone call the task that if you were just focusing</p>
+          <p><span class="spk">Jason · 29:00</span>on that one task, you'd do so much faster, but we live in a distracted world now where there's so many things going on that we don't actually focus on doing one thing at a time.</p>
+          <p><span class="spk">Jason · 29:08</span>And we're not wired to be multitaskers. We think we can multitask, but. We definitely can't.</p>
+          <p><span class="spk">Nick · 29:13</span>Not even the females?</p>
+          <p><span class="spk">Jason · 29:14</span>Yeah, well, there was a few, there was a few heads shaking in the room. Some are better than others. Um, you know, and some of the things that I liked, you know, design your life and work around things that AI cannot do.</p>
+          <p><span class="spk">Jason · 29:25</span>So in a world where people are talking about, Oh, you know, AI is going to take this or AI might take my job. That's fine. But it's all about thinking ahead to go, well, if AI is going to change what I do. So if I'm a bookkeeper and I reconcile zero files. There's a world where that doesn't happen anymore because the technology is going to get in and reconcile it for you.</p>
+          <p><span class="spk">Jason · 29:42</span>You create an AI agent, you tell it to reconcile things to certain areas in the books. It's not gonna happen anymore. So if you think design your my life around the work that AI can't do. So then that's, you know, your challenge. Now, the people out there and us is to go, well, I think 5 years ahead, as we do.</p>
+          <p><span class="spk">Jason · 29:59</span>We</p>
+          <p><span class="spk">Jason · 30:00</span>like our business planning and our strategy sessions. That was, you know, that's our, that's our next challenge as AI becomes more, more and more prevalent in the work that we do. Optimized for human skills. Optimized for humanistic qualities and skills. Human. So it's all going to come back to, how do we connect with humans more?</p>
+          <p><span class="spk">Jason · 30:19</span>If AI is doing everything in the background, the most valuable thing we're going to have is the ability to have a great relationship with someone and trade that off as a value.</p>
+          <p><span class="spk">Marty · 30:27</span>Yeah, that presents a lot of hope actually, because I think we've certainly, uh, We've lost that with the technology that's come in, even though we've been more efficient and like living in the eighties and nineties, there were no mobile phones.</p>
+          <p><span class="spk">Marty · 30:40</span>You really had to engage with people and your network was actually physical, you know, you had a physical network. And so I think I loved it when technology came in because it would make us more efficient. So I was happy with that. But I really feel like we've, we've almost lost ourselves as people in that coming in.</p>
+          <p><span class="spk">Marty · 30:57</span>So if we can get that balance right, and like</p>
+          <p><span class="spk">Marty · 31:00</span>you said, we're engaging as people, maybe as advisors, as friends, as, uh, you know, family, then we've got this, this back end that's working really, really well for us, that we're sort of the orchestra of our own show all of a sudden, as opposed to being intertwined with it.</p>
+          <p><span class="spk">Marty · 31:15</span>So it's, um, yeah. Yeah. So I'm interested to see how it happens, but I would like that to happen because that's sort of a coming together of all worlds that I understand. Yeah. You know, so</p>
+          <p><span class="spk">Nick · 31:24</span>the challenge still remains on how do you choose then to spend your time? Because do we not then just fall into the trap of still wanting to do more and more of the wrong thing, you know, instead of connecting with humans.</p>
+          <p><span class="spk">Nick · 31:35</span>Again, so's good. Point. Point. We still need to make the choice that we want to utilize our time in the right way or that time that we've saved, because the reality is now you could do. That now. Yep. Because we are more efficient than we were 15 years ago, but people choose to just do more. All the time. So you've still got that issue of, well, how do you want to spend your time?</p>
+          <p><span class="spk">Nick · 31:54</span>And are you spending in the right way? But yeah, I agree. Like if you, if you can give</p>
+          <p><span class="spk">Nick · 32:00</span>yourself the opportunity to make the choice and hopefully we make the right choice.</p>
+          <p><span class="spk">Jason · 32:03</span>It might be about, you know, if you're still going to spend that time anyway, cause we're inherently wired to spend our time doing something, you know, chase that next goal.</p>
+          <p><span class="spk">Jason · 32:10</span>It'll be about then the trade off of what was, what was the thing I really love doing with my time? How do I do more of that? Like right now, I might be doing tasks that, you know, it's not really the best use of my time, but I've got to do it because, you know, I haven't automated it yet, or I haven't found a way to get AI to do it.</p>
+          <p><span class="spk">Jason · 32:25</span>But at some point in the future, when that happens, I'll spend more time with my business partner, with my team, with my wife, you know, the people, the human side of spending time with people that I really enjoy doing, even if that still is work related and doing, you know, the value add tasks with clients.</p>
+          <p><span class="spk">Jason · 32:39</span>But By getting on the phone to him and having a chat to him. None of this, uh, face mask, uh, Well, you can follow,</p>
+          <p><span class="spk">Marty · 32:45</span>follow your curiosities in a more accelerated manner. I feel like, I feel like, you know, whatever you want to do, you're going to have an accelerated pathway to execute on. So I think that's, that's healthy.</p>
+          <p><span class="spk">Marty · 32:57</span>And like you said, it's the thing that, you know, we've,</p>
+          <p><span class="spk">Marty · 33:00</span>we've talked about at home too, is going, we can't have two people sitting on the couch, texting each other. In a relationship. You mean it's not okay to</p>
+          <p><span class="spk">Jason · 33:09</span>flick through reels and then send the reel to you? Yeah, send the</p>
+          <p><span class="spk">Marty · 33:11</span>reel. It's not even look at this anymore, like showing the phone across.</p>
+          <p><span class="spk">Marty · 33:15</span>It's just sending it. The best part is</p>
+          <p><span class="spk">Jason · 33:17</span>then when you, you know, you can tell your wife sent you a reel. And you're sitting there going, you don't really find it funny, but you can see that the pressure's on, that you need to react, otherwise you're in trouble. And then you get the question, have, have you watched that yet?</p>
+          <p><span class="spk">Jason · 33:30</span>It's like, yeah.</p>
+          <p><span class="spk">Nick · 33:31</span>Have you ever got the reel twice? And then you go back and like the first one?</p>
+          <p><span class="spk">Jason · 33:37</span>I've sent the reel that I've already received back to a said person in the audience. And, uh, yeah, copped a bit of strife. But that's the</p>
+          <p><span class="spk">Marty · 33:43</span>thing. I've said it in previous episodes. If, if it's getting to the point where you have to.</p>
+          <p><span class="spk">Marty · 33:49</span>switch your phone off to make an appointment with a loved one. That's not right. You know, you go, that's, you know, you have to physically put your phone</p>
+          <p><span class="spk">Marty · 34:00</span>away so you don't jump on it at the, you know, at the, yeah, as, as a thing, instead of having human connection like that to me coming out of, you know, the generations I've come out of just seems almost crazy, but I'm doing it right.</p>
+          <p><span class="spk">Marty · 34:13</span>Yeah. And yeah, so are the kids and yeah, and that, and that, I think, I think it's good because wellbeing, mental health is such a big thing. Big topic of conversation at the moment, like we talk about getting more human and I think people and young people are aware of that. So I think there's going to be a shift in mentality around it and we'll still, Nick brought up a good point, you're going, if we get more time, are we going to utilize that effectively?</p>
+          <p><span class="spk">Marty · 34:38</span>But that's like a changing of a habit, you know, and that's, that's a habit we all have to get to changing at some point in time. And I think it would be really healthy to do that. Do you have</p>
+          <p><span class="spk">Jason · 34:48</span>a Do you want to go into, I've already had a bit of a glimpse of what's happening, so I might turn the subject. No, no, I've got one more rewind.</p>
+          <p><span class="spk">Jason · 34:54</span>No, you got a prediction? Uh, yeah, it's a serious one though, so. You want to, you want to do that first? Go</p>
+          <p><span class="spk">Jason · 35:00</span>on, go on, give it to me. You're the, you're the host. Nah, give it to me. I'm just in the middle because I'm typing, but. I've, I've, I've looked ahead and seen what Nick's prepared, so I continue to. Well,</p>
+          <p><span class="spk">Nick · 35:08</span>again, I said, Tommy asked me to go back and bring in, bring a couple of things, you know.</p>
+          <p><span class="spk">Nick · 35:13</span>Uh, into the future. So, um, I'm not picking on you, but, I don't know, I'm, this guy breaks the</p>
+          <p><span class="spk">Jason · 35:22</span>internet,</p>
+          <p><span class="spk">Nick · 35:23</span>so it's hard to pick on him. It's true, and he's</p>
+          <p><span class="spk">Jason · 35:25</span>actually funny. No, no, no. This is pretty, you</p>
+          <p><span class="spk">Marty · 35:29</span>guys are just.</p>
+          <p><span class="spk">Nick · 35:30</span>So, um, some interesting information. So Jase's first, um, Share purchases. Uh, he took us through in 2021.</p>
+          <p><span class="spk">Nick · 35:41</span>Does anyone remember what they are? Macy? Can't remember. Um, first one was Hills Hoist. Hills Hoist. Second one was Meijer. I must've been having a lot of fun at university. So I just thought we'd get an update on the share prices just so you could see. Do you still have them? That's what I</p>
+          <p><span class="spk">Nick · 36:00</span>wasn't sure. Okay.</p>
+          <p><span class="spk">Nick · 36:01</span>Maybe you should have kept one of them. Meijer. Um, um, Yeah. So Maya originally purchased for 3 per share. Yep. Um, in 2021, it was 30 cents.</p>
+          <p><span class="spk">Jason · 36:12</span>Sold for yep.</p>
+          <p><span class="spk">Nick · 36:12</span>Yep. Worth 80 cents now. So you held them to 30. And then sold them. That hurts. Okay. Worth 80 now. But, opportunity cost, no doubt, you've probably turned that 80 in other areas.</p>
+          <p><span class="spk">Nick · 36:25</span>So don't stress. Thanks to Xero. Um, Hills Hoist, purchased for three, you said 3 to 4 per share. Let's assume 3. Um, in 2021, they were worth 0. 14. Today, they are worth 0. 02. But the big one, the one that really hurts, and the one that got away. So for anyone that doesn't know, um, am I allowed to say this? Yeah, yeah, yeah.</p>
+          <p><span class="spk">Nick · 36:52</span>Um,</p>
+          <p><span class="spk">Nick · 36:55</span>well, they're not listed, are they? They're not listed because I couldn't find their valuation. They're not</p>
+          <p><span class="spk">Jason · 36:58</span>listed. We don't talk</p>
+          <p><span class="spk">Jason · 37:00</span>valuations, but we can talk, we can talk what I could have got in at. Well, I googled the valuation. Okay, go. Actually, no, go for it.</p>
+          <p><span class="spk">Nick · 37:05</span>Yeah.</p>
+          <p><span class="spk">Jason · 37:05</span>So. This, and this is a valuable lesson in, you know, Life will throw you opportunities.</p>
+          <p><span class="spk">Nick · 37:12</span>Yes.</p>
+          <p><span class="spk">Jason · 37:13</span>Don't buy a racehorse.</p>
+          <p><span class="spk">Nick · 37:14</span>Yes, but go on. So for those that don't know, um, and I'm not sure if you can disclose what you could have got in at, but Jase was offered to be one of the first investors in Mr. Yum. Um, for anyone who doesn't know what Mr. Yum is, it's, you know, scan your QR code,</p>
+          <p><span class="spk">Jason · 37:30</span>order at your table and then COVID came along.</p>
+          <p><span class="spk">Nick · 37:33</span>Yeah. So Jase said, stupid idea. That'll never go anywhere.</p>
+          <p><span class="spk">Jason · 37:36</span>No, no, no, no, no. No.</p>
+          <p><span class="spk">Nick · 37:38</span>First explain it to me. For</p>
+          <p><span class="spk">Jason · 37:39</span>context and clarity, the, the, you know, the MVP of the product was QR code on a menu. So it was around pitched around the idea of you go to a restaurant and you read the menu. And your friend orders the Smash Davo and you order chili scrambled eggs, but the Smash Davo comes out and it looks phenomenal!</p>
+          <p><span class="spk">Jason · 37:57</span>And you wished you could have seen how good it looked before</p>
+          <p><span class="spk">Jason · 38:00</span>you ordered your chili scrambled eggs that you love. So the idea was you scan the QR code, it'll pop up a picture menu, if the restaurant didn't already have a picture menu. Cool, you can order the Smash Davo because it looks great. And, and win.</p>
+          <p><span class="spk">Jason · 38:12</span>So I sat there going, as an accountant, going, uh, not that creative about how we then turned that into, you know, there's pictures are cool, but It makes me want to invest, to be blatantly honest. No, no, no, no, no.</p>
+          <p><span class="spk">Nick · 38:24</span>I was, I was about to back him up and say, I, I wouldn't have went near it. So, I'm actually with you here.</p>
+          <p><span class="spk">Nick · 38:29</span>Yeah. Um, so anyway, so You don't,</p>
+          <p><span class="spk">Jason · 38:31</span>you don't know what you don't know. Mr.</p>
+          <p><span class="spk">Nick · 38:32</span>Yamarks for an investment, um, Really just a startup. So you can pretty much say valuation zero.</p>
+          <p><span class="spk">Jason · 38:38</span>Yeah. Yeah. It was this, this was like product didn't</p>
+          <p><span class="spk">Nick · 38:40</span>exist. It was an idea. Does anyone have a clue what Mr. Yum is worth roughly today? So it was very hard to find their valuation, um, because they're not listed.</p>
+          <p><span class="spk">Nick · 38:52</span>But, um, my estimate is they're worth around 300 million now at a guess.</p>
+          <p><span class="spk">Nick · 39:00</span>Um, they acquired me and you, who was probably one of their biggest competitors. Yeah. It's kind of a merger. Yeah. But this is the real kicker. I'm not sure if you know this. Should be. I didn't know this until I started researching yesterday.</p>
+          <p><span class="spk">Nick · 39:12</span>That Mr. Yum have been selected in a state government program called LAUNCH. Um, and</p>
+          <p><span class="spk">Jason · 39:19</span>I don't know. It's just buried that deep, deep in the dark. He's going to have</p>
+          <p><span class="spk">Nick · 39:23</span>a stroke,</p>
+          <p><span class="spk">Jason · 39:24</span>Nick. So, the um I was only going to have one beer, but it might turn into ten at this rate.</p>
+          <p><span class="spk">Nick · 39:30</span>The, what, what the launch program is looking to do is find 30, um, 30 startups in Victoria.</p>
+          <p><span class="spk">Nick · 39:38</span>Um, and by 2030, they want to take 30 startups to a valuation of a billion dollars. Oh, is that all? So I'm not sure how much of Mr. Yum you've could have taken from a percentage point of view. I'll never tell you. You would never tell us. But anyway, I thought that was, it was interesting. It</p>
+          <p><span class="spk">Jason · 39:58</span>would be</p>
+          <p><span class="spk">Nick · 39:59</span>life changing.</p>
+          <p><span class="spk">Nick · 39:59</span>We'll</p>
+          <p><span class="spk">Nick · 40:00</span>put it, we'll put it at that. Okay. Well, again, I can say I wouldn't have invested at the time, who knew that we were going to have a pandemic and what was going to happen happened.</p>
+          <p><span class="spk">Jason · 40:08</span>And uh, to Kim and Adrian, if it ever gets to Kim and Adrian, great job, love what you've done and uh, stoked for, stoked for you guys.</p>
+          <p><span class="spk">Marty · 40:15</span>Absolutely. And, and Jase, and for our audience, if, uh, you could share what you're not investing in now.</p>
+          <p><span class="spk">Nick · 40:22</span>Yeah. Yeah.</p>
+          <p><span class="spk">Marty · 40:23</span>Just. So we could jump on board.</p>
+          <p><span class="spk">Jason · 40:29</span>I would be. Yeah. Okay. I'll make that, we'll make that a whole, you know, the whole follow up episode. Maybe I'll start taking down notes between now and episode 250 or 300.</p>
+          <p><span class="spk">Jason · 40:40</span>It'll be all the things I didn't invest in that then ended up blowing up. We've all done it. We've</p>
+          <p><span class="spk">Nick · 40:45</span>all done it once. Yeah. That's it. I'm done. I'm done. But then. Marty's full of shit really. He said he would invest in it, but he's never invested in anything, but Charlie Munger. So, and mind you, it was a really good mood, but,</p>
+          <p><span class="spk">Nick · 41:00</span>um, he would never have touched me.</p>
+          <p><span class="spk">Nick · 41:01</span>And I wouldn't have either. So don't feel so bad. Absolutely not. No. It's just a</p>
+          <p><span class="spk">Marty · 41:05</span>cool story. Yeah. No. I bought a little bit of NVIDIA and I'm stressing because the results come out on the 28th and I think there goes my one buck that I put in, or two bucks, like I, I'm very conservative. Anyway.</p>
+          <p><span class="spk">Jason · 41:19</span>Well to give you a break Nick, have we heard your prediction Marty?</p>
+          <p><span class="spk">Jason · 41:22</span>On what? 20, the next year 2025 and beyond, just, just the general, like mine was the, the continued rise of AI and how it will sneak into our lives in the ways that we don't actually expect it to, and we'll just be using it every day. I</p>
+          <p><span class="spk">Marty · 41:34</span>think the Victorian state debt will jump from 165 billion to 229 billion.</p>
+          <p><span class="spk">Marty · 41:41</span>So I think it's,</p>
+          <p><span class="spk">Jason · 41:44</span>So is it still a great time to invest in Victoria? Yes, yes, because I</p>
+          <p><span class="spk">Marty · 41:48</span>think Nick's going to do a little bit of, in his prediction, I think it'll mix in a little bit. This</p>
+          <p><span class="spk">Nick · 41:52</span>could be bold, and I think Marty's right with his prediction. Um, I think Victoria is going to get a big chop out from federal government in the</p>
+          <p><span class="spk">Nick · 42:00</span>next year or so.</p>
+          <p><span class="spk">Nick · 42:00</span>They already had a small one, which was the GST allocation, which you'd be across, but um, Oh, which, which</p>
+          <p><span class="spk">Jason · 42:08</span>WA absolutely hates that, by the way. They just, Okay,</p>
+          <p><span class="spk">Nick · 42:10</span>what happened</p>
+          <p><span class="spk">Jason · 42:11</span>there? I didn't, WA basically want to split off and be a separate country. That's how much they hate the allocation of, you know, the, basically they collect a whole bunch of GST income from WA and a whole bunch of everything else.</p>
+          <p><span class="spk">Jason · 42:24</span>At federal level, they go, Oh, where are we going to give this? New South Wales, Victoria, every time get the biggest slice of the pie. And WA sits over there cracking the sads, going, well, why are we contributing to, you know, They're also lucky that they happen</p>
+          <p><span class="spk">Nick · 42:36</span>to be where they are despite chance. But why is WA?</p>
+          <p><span class="spk">Nick · 42:41</span>Cause, uh, Have we got any</p>
+          <p><span class="spk">Marty · 42:43</span>listeners in WA? We do have a WA listener. Anyway. Okay.</p>
+          <p><span class="spk">Nick · 42:46</span>Um, Victoria needs a catalyst. It's, um, it's not going to turn around organically. Just the debt is too high. And I think New South Wales debt's actually higher, but we're 25 percent smaller than New South Wales from</p>
+          <p><span class="spk">Nick · 43:00</span>population point of view.</p>
+          <p><span class="spk">Nick · 43:00</span>So they need Victoria to grow. Um, and it's not going to happen organically. Something needs to change. So I think there'll be some kind of boost from federal government. Cash wise however that however they make that happen. It'll get us back on track</p>
+          <p><span class="spk">Jason · 43:15</span>good predictions. I like it One of your recent predictions in an early episode was Donald Trump being back in power You want to make a call on the u.</p>
+          <p><span class="spk">Jason · 43:22</span>s. Election?</p>
+          <p><span class="spk">Nick · 43:23</span>I Still think he's gonna win. I still think he's gonna win. I think Did it assassination? Yeah, that was or was not. Did you make a call on whether that was real? Uh, I don't think that was real. No. Really? No, I don't. And the reason I don't is, um, because we don't know anything about it and, um, I don't think we'll ever find out what really went on.</p>
+          <p><span class="spk">Nick · 43:48</span>So, I don't know, I don't actually believe anything that goes on over there anymore, to be honest. Yeah. Is that bold? No? No? Bold? Surely, if you're going to assassinate the</p>
+          <p><span class="spk">Nick · 44:00</span>President, you can, you can shoot a rifle and hit him. Yeah. Like, that's what I don't get.</p>
+          <p><span class="spk">Marty · 44:06</span>Like, but yet again, yet again, Nick, you're coming from your efficiencies and your confidence.</p>
+          <p><span class="spk">Marty · 44:12</span>Yeah. If you were going to do something like that, not that you ever would, you'd make sure it happened. Yeah. But not everyone's as good. Yeah, not everyone's as good. Yeah.</p>
+          <p><span class="spk">Nick · 44:19</span>Um, I don't know. I just, I just can't. The whole story, it scrapes his ear, and it just doesn't seem real. And I think, um, if it was real, we'd know more about it, but we don't.</p>
+          <p><span class="spk">Nick · 44:31</span>Yeah, if that was me, I'd be dead,</p>
+          <p><span class="spk">Marty · 44:33</span>a hundred percent, because my head's a bit larger and shorter. But we'll never know. This is the thing. We'll never know. No,</p>
+          <p><span class="spk">Jason · 44:41</span>very true. Very true. No, well, uh. Sorry, Marty. Well,</p>
+          <p><span class="spk">Marty · 44:44</span>Jason, I was going to say, I changed the tone a little bit here, but over 200 episodes and not throwing you on the spot, but, but again, what's some of the more memorable times that you've had in regards to doing a podcast because you've come, you know, you've never done a podcast before.</p>
+          <p><span class="spk">Marty · 45:00</span>What have you enjoyed most about doing a podcast? The numbers game.</p>
+          <p><span class="spk">Jason · 45:03</span>Good question. Look, I think,</p>
+          <p><span class="spk">Marty · 45:04</span>um, so we've been through some times, you know, be careful. He's emotional. Yeah, well, we've, we've, we've both lost people, you know, during that time and support each other,</p>
+          <p><span class="spk">Jason · 45:13</span>that definitely was like, you know, without that being the thing, that was definitely something that I thought, you know, there was only a few episodes at the start where mum was around and then all of a sudden there's that journey of, you know, losing mum and going through all that.</p>
+          <p><span class="spk">Jason · 45:25</span>So while that's not the point of getting emotional on that, um, you know, it's, it's, Life goes by so fast, but the podcast has given the ability to go back and get all these weird little snapshots in time. Um, completely, you know, not taking it from mum passing to something silly, but you know, I've read something about, you know, In the notes, Nick staining his deck every year, you know, it comes out of, uh, winter, you know, yep.</p>
+          <p><span class="spk">Jason · 45:47</span>So that one of my questions was when, when's the annual deck staining happening at Nick's place? So no, and that's, that's not the one I'm going to go with. Look, I think over the journey. There's not that many guest episodes. So I think in the</p>
+          <p><span class="spk">Jason · 46:00</span>200, you know, what we've been able to do is our own consistency of getting in a room and sharing content with each other, where I feel like what I've learned over three years from spending time with both of you has made me a totally different, business owner, um, partner, family member to my, the rest of my family.</p>
+          <p><span class="spk">Jason · 46:16</span>Like I, I've changed as a person through the time I get to spend with you guys</p>
+          <p><span class="spk">Marty · 46:20</span>in a room. And I think your authenticity is remarkable. Like just your, you know, you got, you have a kind nature. You're very good at what you do, but just even talking about, you know, spending up on credit cards in the early days and things and actually sharing that with the audience.</p>
+          <p><span class="spk">Marty · 46:34</span>Like, At the end of the day, we're all people. We all have highlight reels. We all make mistakes and that is life where we lose people we love. We find people we love and that's, um, you know, that's life and to get to share that in a, you know, in a group setting is, has been remarked and even to share that with the audience.</p>
+          <p><span class="spk">Marty · 46:51</span>That's not always easy to do. Yeah. So I think, um, you know, I think people get a lot of value out of that, Jason, um, I think,</p>
+          <p><span class="spk">Jason · 46:59</span>um,</p>
+          <p><span class="spk">Jason · 47:00</span>one of the other things beyond that, and I'm just trying to find the text that came through yesterday that was random, but beyond the guest episode stuff as well, like, I think because guest episodes are quite limited, there's that ability to sit in a room with somebody else and just pick away at their life or their journey and take that in.</p>
+          <p><span class="spk">Jason · 47:14</span>You know, Clementine recently was great way back to Tom Boyd talking about mental health and the post footy career. Um, they're, you know, journeys and stories that, you know, it's quite, quite a privilege to sit in a room with someone and have them actually feel like they want to be on the podcast with us.</p>
+          <p><span class="spk">Jason · 47:29</span>Um, you know, I also do enjoy listening to the episodes where I haven't been on and get to hear you guys rip into me about being late and now it'll be about what I'm wearing. Um, as a side bit of funny, you know, case was saying that she enjoyed finding out about the cat vomit. Uh, off the podcast episode rather than me telling her about the vomit that was under the table.</p>
+          <p><span class="spk">Marty · 47:46</span>But I still remember even before the podcast, you and Greg, um, which is Jase's business partner, sitting in the boardroom talking about going into business. And again, you hear a lot of people and you see a lot of people in life. Talk up a</p>
+          <p><span class="spk">Marty · 48:00</span>big game, but for you to then go and execute as you have in your business, and no doubt, like all of us, there's challenges that you have to work through, people leave, people come again, but it's, um, it's remarkable what you've done with Future Advisor, and you and Greg and the team should be very, very proud because that is a, You know, that, that is a quick rise in regards to what you've done.</p>
+          <p><span class="spk">Marty · 48:19</span>You've been very bullish, but obviously delivering a great service to clients consistently to have that impact. Um, so well done to you, man. I know, I know we unroasted you, unroasted you a little bit here, but it's, uh, we'll get back to roasting. I like the unroasting. This is good. It looks uncomfortable, doesn't it?</p>
+          <p><span class="spk">Marty · 48:34</span>But it's, uh, yeah. Oh yeah, I've</p>
+          <p><span class="spk">Jason · 48:35</span>gone from uncomfortable at the start, so, you know, it's fine.</p>
+          <p><span class="spk">Marty · 48:37</span>And like I said, we all make investment mistakes personally, and we all, you know, some more than others, of course. Yeah. Yeah. Yeah. But no, but again, these are things that happen, but just well done, mate, really fantastic effort.</p>
+          <p><span class="spk">Marty · 48:49</span>And, you know,</p>
+          <p><span class="spk">Jason · 48:50</span>and for, you know, we, we are missed it at the start, but we are recording this episode with, with some people in the room that we love and adore. And, you know, again, I wouldn't get to do this without</p>
+          <p><span class="spk">Jason · 49:00</span>Greg, who's up the back there. Um, you know, and again, think back to when the show started, Greg had ran for maybe 200 days straight.</p>
+          <p><span class="spk">Jason · 49:06</span>Um, you know, he'd maybe lost his first couple of kilos and now, Three years on, he's at 1400 days of running or exercise. He's just lost a further couple of kilos. I thought he was wasting away today when I saw him. He's, he's dropped some weight. And</p>
+          <p><span class="spk">Marty · 49:20</span>I thought it was a mic stand. It's great. Hi Greg.</p>
+          <p><span class="spk">Jason · 49:27</span>Yeah, there you go.</p>
+          <p><span class="spk">Jason · 49:27</span>So, you know, that, that journey, this, this stuff doesn't happen without the support of, you know, loved ones, business partners, our teams, um, you know, And, and also the support of you guys. So thank you to both of you for showing up and continuing. I mean, I think, I don't know whether I called you with this idea of, uh, you know, throwing a podcast together, but the, the ultimate thing overall was we wanted to help people, you know, that there was this purpose or passion behind it that go, if we can get some value ourselves in the room of sharing ideas and learning, but also share that with not just our, you know, our clients, but anyone in the audience who can listen, um,</p>
+          <p><span class="spk">Jason · 50:00</span>you know, had a great day.</p>
+          <p><span class="spk">Jason · 50:01</span>Conversation with some guys the other day. They're in country, New South Wales. This guy who goes out running at 5 a. m. before he starts work listens to the numbers game every week and they've got a business transaction going on. And the first person they thought to call was future advisory, not their accountant.</p>
+          <p><span class="spk">Jason · 50:16</span>They go, you know, we don't think our accountants are quip, but we've listened to the way you go about it on the podcast. We called you. So there's these really cool moments that through consistency and doing this, you know, for 200 episodes or three years,</p>
+          <p><span class="spk">Marty · 50:29</span>People's business lives. We could easily</p>
+          <p><span class="spk">Jason · 50:30</span>have pulled up sumps at 50 and gone, you know, even though I was still talking about episode 200 back at 50 and wanted to raise the fake bat that I didn't bring in.</p>
+          <p><span class="spk">Jason · 50:37</span>But we could have, and we could have stopped and missed out on. All the stuff that's happened now recently, but there's still a whole journey to come between, you know, 200 and 300. And this is just a random one yesterday, but. Out of nowhere, this guy didn't know, he might have been listening to 198, 199, and he goes, Not sure if I've told you, but I love listening to the numbers game.</p>
+          <p><span class="spk">Jason · 50:56</span>It's so informative and helpful. Episode 200 around</p>
+          <p><span class="spk">Jason · 51:00</span>the corner. How exciting, mate. Well done to you and the boys.</p>
+          <p><span class="spk">Marty · 51:02</span>How good's that? It's</p>
+          <p><span class="spk">Jason · 51:03</span>just, you know, and there's a couple of examples of that. Um, you know, the, the reviews, if we're ever going to Apple Podcasts or Spotify and read what people write, like, there is people out there that, actually getting a lot of value.</p>
+          <p><span class="spk">Jason · 51:14</span>Not that we don't believe that people get value, but sometimes I think we might walk away and go, I hope that was good. I hope somebody</p>
+          <p><span class="spk">Marty · 51:20</span>likes it. Even the homeschooling episode with Charlie, when I went through that, like I had many people reach out and give me resources as to what to do. That was amazing.</p>
+          <p><span class="spk">Marty · 51:29</span>Like I couldn't believe it. Like literally floored me.</p>
+          <p><span class="spk">Nick · 51:31</span>Yeah. And, um, Theos, uh, he'd just gone into business. Um, It would have been one of our first guests, I think, and we also brought John Pearl on. Um, so what I can tell you, I don't think you know this, but those two are working together now. Yep. And, um, really good results.</p>
+          <p><span class="spk">Nick · 51:47</span>So that's two people we've brought together. Yeah. Um, yeah. For me, just listening to what you said around, um, learning, like, I've learned so much in the last three or four years. And I remember when we started doing this, the content was a bit of a</p>
+          <p><span class="spk">Nick · 52:00</span>drag. I was like, Oh shit, I've got to find some content. And then we used to have conversations all the time.</p>
+          <p><span class="spk">Nick · 52:04</span>Um, is it worth it? You know, should we be doing it? But I think now, um, it's actually become a really important part, uh, of our week or our month. Yep. Um, Because of what we learn, and we don't, I don't even try and get content anymore really, like I just think of something to come and talk about, and it just becomes easier and easier, and it almost becomes like a therapy session, to be honest, and we kind of walk away from the podcast feeling good, because you know, we've, to you and whether it's about business, but at the same time we get to help people.</p>
+          <p><span class="spk">Nick · 52:35</span>So for me, I think I've definitely learned so much, um, from finding content and then also just coming and talking to you about what you're finding. Cause Marty and I talk all day, but we don't get exposure to, you know, to what you're saying. So.</p>
+          <p><span class="spk">Jason · 52:48</span>No, you're right about the therapy session though. And I did look back at the early couple of episodes where it was very structured around, you know, reading the play, we had to go find an article.</p>
+          <p><span class="spk">Jason · 52:56</span>And then it was losing it, which I do miss that, that, um, that segment. So</p>
+          <p><span class="spk">Jason · 53:00</span>maybe we bring back losing it. Cause Marty could always come in and just go, Oh, I'm, you know, I'm losing it. This is going on. And I think the first one was about, it was about coffee prices or something, but you know, it officially lost it and then, and then there was the 1%.</p>
+          <p><span class="spk">Jason · 53:13</span>So while in theory, like all of that, that's a really cool structure and it works, but now the way we kind of roll in. Get into it, rip into Marty, mostly for his big head, not being able to get through the office. I don't know if you've heard that episode yet, but that'll be coming out soon. I haven't heard it</p>
+          <p><span class="spk">Marty · 53:26</span>yet, but I'm, yeah, I know what to expect.</p>
+          <p><span class="spk">Marty · 53:28</span>So I know I deserve, everything I copped today,</p>
+          <p><span class="spk">Jason · 53:31</span>I deserved off the back of what we said about you in some of the upcoming episodes. So, you know, that's what excites me. The future is</p>
+          <p><span class="spk">Marty · 53:38</span>always. Yeah. Interesting. So, but no, it's been, for me, it's been a tremendous journey. Cause again, I learned so much through, cause again, coming from a different generation again.</p>
+          <p><span class="spk">Marty · 53:50</span>It's like, I'm learning so much from Nick, you know, yourself, Jase, as well, as I do from the younger people in the teams as well. Because it's a whole different dynamic. So for</p>
+          <p><span class="spk">Marty · 54:00</span>me, every day I get to learn more as a 52 year old that's been around forever and a day. But it's exhilarating, and that's the thing I hope when I'm 82, I'm still in these type of environments having fun.</p>
+          <p><span class="spk">Marty · 54:11</span>And, uh. You know, getting to roast, uh, Chase occasionally, and Hank, and yeah, it's all up from here. But it's, it's been an absolute pleasure and it's, uh, yeah, I've, I've really enjoyed it. You know, more so than the Marty Vid show, even though that was great. To me, this was, this was real fun. Yeah.</p>
+          <p><span class="spk">Nick · 54:30</span>Yeah.</p>
+          <p><span class="spk">Jason · 54:30</span>Well, you, I still think we should consider rebranding the Marty Vid Show, just given that all of the good stuff that happens on socials, it's all about Marty Vids.</p>
+          <p><span class="spk">Jason · 54:37</span>So, you know, there's</p>
+          <p><span class="spk">Marty · 54:39</span>serious consideration there. I think that you're being very, very kind. I think it just resonated with 300, 000 people on one post, on one post.</p>
+          <p><span class="spk">Jason · 54:50</span>374, 000 at last check. Is that what it's up to? Yep. Geez, and I went to reply to every</p>
+          <p><span class="spk">Marty · 54:53</span>comment. It's if you didn't know. What?</p>
+          <p><span class="spk">Jason · 54:56</span>He knew, he knew, he was testing us to see if</p>
+          <p><span class="spk">Jason · 55:00</span>we're still looking.</p>
+          <p><span class="spk">Jason · 55:00</span>At</p>
+          <p><span class="spk">Marty · 55:00</span>300, 000 I thought, do I take a photo and send it to him? And then I go, no, no, no. But, uh, but that's, yeah, that's pretty cool. But I, I started commenting to every comment and I'm going, I just got out of control. If,</p>
+          <p><span class="spk">Jason · 55:12</span>if you've listened to some episodes and you're not on Instagram and you're wondering what we're talking about, I've All the way up to the 200th.</p>
+          <p><span class="spk">Jason · 55:17</span>Go to Instagram. I think it's the third pinned post at the top. Get him a few more views. Because obviously it fuels this big, uh, ego of Marty's and that big head of his. And my looks, my</p>
+          <p><span class="spk">Marty · 55:27</span>looks are declining. You guys are in your prime. And my looks are just going downscale now over 50. So, you know, it's good for my ego.</p>
+          <p><span class="spk">Marty · 55:35</span>So. Well, I actually,</p>
+          <p><span class="spk">Jason · 55:38</span>I actually tried to do the photo thing that Nick did, but Nick looks identical for three years. He doesn't age. The guy doesn't age. He does not age. He's beautiful. It's, uh, it's ridiculous. But I'm</p>
+          <p><span class="spk">Nick · 55:49</span>going to give you some credit here. If you look, I'll just think maybe it's just the whole lumberjack thing that let you down, but there's not that much difference.</p>
+          <p><span class="spk">Nick · 55:57</span>I would say there's hardly any difference. Case?</p>
+          <p><span class="spk">Nick · 56:00</span>I know you see him every day, but. Pretty good. So, well done to you. All right. Thank you. And if</p>
+          <p><span class="spk">Jason · 56:06</span>you put my picture up again,</p>
+          <p><span class="spk">Marty · 56:08</span>it looks like a different person.</p>
+          <p><span class="spk">Jason · 56:11</span>No, the AI picture. Yeah, the AI picture. Look, in nature of, uh, we'll get to a certain point in the show where I have to stop these two from rambling on and I do the big wrap up.</p>
+          <p><span class="spk">Jason · 56:19</span>But, um, again, huge thank you from the bottom of our hearts to everyone who supported the numbers game and listened. Um, look, I won't get emotional, but there's a verge of some stuff going on here. I love you guys. I love what we do here. I love our listeners, our audience, and the people have supported us.</p>
+          <p><span class="spk">Jason · 56:33</span>And that extends beyond the numbers game. Again, Future Advisory, Innovate, Vidpod, and even Dashboard Insights, who came on board as a sponsor. So, you know, we've got another, you know, hundreds of episodes ahead. If you have listened along the journey and you think, look, I want to get involved, we are open to people reaching out to Nick, Marty, and I.</p>
+          <p><span class="spk">Jason · 56:50</span>Um, Instagram page, LinkedIn, wherever you find us, wherever you get your, uh, podcast from, and even YouTube. Um, I won't go into the stats now, we can do that another</p>
+          <p><span class="spk">Jason · 57:00</span>time, but, you know, YouTube is a huge growing platform for us. We've had thousands of, uh, hours of people watching the content on there as well, which I think's a really big opportunity.</p>
+          <p><span class="spk">Jason · 57:08</span>Um, and again, this has been a learning curve for us to, to learn all these different things. Um, so that's, uh, You know, we're probably at 120 hours of content now. I had, uh, somebody total up the total episode time of what's available for people to catch up. So if you haven't gone through it all, it'll take five days with no sleep to go through all 200 episodes.</p>
+          <p><span class="spk">Jason · 57:29</span>Um, I don't recommend it, um, but there you go. So thank you very much. Like, subscribe, follow. Until next time.</p>
+          <p><span class="spk">Marty · 57:36</span>Jase, love you. Nick, love you. Our audience, love you too. Road to 300 game over.</p>
+          <p><span class="spk">Jason · 57:48</span>This podcast is for educational and informational purposes only. The conversations are of general nature and do not qualify as financial or tax advice. We recommend before you make any financial decisions, you consult a</p>
+          <p><span class="spk">Jason · 58:00</span>licensed professional. Individuals on the podcast may hold positions in the company's discuss. &lt;aside&gt; 🍿 **EPISODE LINKS** | **ASSET NAME** | **LINK** | | --- | --- | | Episode Audio | [https://drive.google.com/file/d/1OfMdfbKJjZn5eA74FtFhKwXHhBckpTlH/view?usp=sharing](https://drive.google.com/file/d/1OfMdfbKJjZn5eA74FtFhKwXHhBckpTlH/view?usp=sharing) | | Video Snippets | [https://drive.google.com/drive/folders/18-6jb5037AGUi4SSC2qXR6zSBxzf6MvO?usp=sharing](https://drive.google.com/drive/folders/18-6jb5037AGUi4SSC2qXR6zSBxzf6MvO?usp=sharing) | | Youtube Link | [https://youtu.be/iE2yLkW30k0](https://youtu.be/iE2yLkW30k0) | | Youtube Embed | | | Simplecast Embed | | &lt;/aside&gt; ---</p>
+        </div>
+      </details>
+
+    </div>
+
+    <!-- LISTEN:START (build_episode.py rewrites the 3 URLs + iframe title per episode; player dropped if no spotifyEmbedUrl) -->
+    <section class="listen-now">
+      <div class="ln-head">
+        <span class="ln-title">Listen now</span>
+      </div>
+      <div class="audio-embed">
+        <iframe src="https://open.spotify.com/embed/episode/0LgarZvkHkr4bFpakbFj3z?utm_source=generator"
+          width="100%" height="152" loading="lazy" allowfullscreen
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+          title="Spotify — Celebrating 200 Episodes (Live Show)"></iframe>
+      </div>
+    </section>
+
+    <div class="listen">
+      <a href="https://open.spotify.com/episode/0LgarZvkHkr4bFpakbFj3z" target="_blank" rel="noopener" aria-label="Listen to this episode on Spotify">
+        <svg viewBox="0 0 24 24"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.52 17.34c-.24.36-.66.48-1.02.24-2.82-1.74-6.36-2.1-10.56-1.14-.42.12-.78-.18-.9-.54-.12-.42.18-.78.54-.9 4.56-1.02 8.52-.6 11.64 1.32.42.18.48.66.3 1.02zm1.44-3.3c-.3.42-.84.6-1.26.3-3.24-1.98-8.16-2.58-11.94-1.38-.48.12-1.02-.12-1.14-.6-.12-.48.12-1.02.6-1.14 4.32-1.32 9.72-.66 13.44 1.62.36.18.54.78.3 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.3c-.6.18-1.2-.18-1.38-.72-.18-.6.18-1.2.72-1.38 4.26-1.26 11.28-1.02 15.72 1.62.54.3.72 1.02.42 1.56-.3.42-1.02.6-1.56.3z"/></svg>
+        Spotify
+      </a>
+      <a href="https://podcasts.apple.com/au/podcast/id1555566088?i=1000666541802" target="_blank" rel="noopener" aria-label="Listen to this episode on Apple Podcasts">
+        <svg viewBox="0 0 24 24"><path d="M5.34 0A5.328 5.328 0 000 5.34v13.32A5.328 5.328 0 005.34 24h13.32A5.328 5.328 0 0024 18.66V5.34A5.328 5.328 0 0018.66 0H5.34zm6.525 2.568c2.336 0 4.448.902 6.056 2.587 1.224 1.272 1.912 2.619 2.264 4.392l.04.23c.04.272-.16.527-.432.567a.505.505 0 01-.567-.431l-.04-.213c-.312-1.57-.92-2.747-2.004-3.867-1.428-1.496-3.293-2.294-5.393-2.294-2.1 0-3.966.798-5.394 2.294-1.084 1.12-1.692 2.298-2.004 3.867l-.04.213a.507.507 0 01-.567.431.504.504 0 01-.432-.567l.04-.23c.352-1.773 1.04-3.12 2.264-4.392 1.608-1.685 3.72-2.587 6.056-2.587h.153zm.136 3.033c1.74 0 3.312.67 4.527 1.934.883.916 1.394 1.93 1.663 3.253l.04.23a.505.505 0 01-.431.567.503.503 0 01-.567-.432l-.04-.212c-.23-1.112-.659-1.97-1.396-2.732-1.052-1.1-2.404-1.672-3.9-1.672s-2.849.572-3.901 1.672c-.737.762-1.167 1.62-1.396 2.732l-.04.212a.503.503 0 01-.567.432.505.505 0 01-.432-.567l.04-.23c.27-1.323.78-2.337 1.664-3.253 1.215-1.264 2.787-1.934 4.527-1.934h.21zm-.078 3.05c1.092 0 2.091.424 2.89 1.22.582.58.924 1.245 1.107 2.15l.04.218a.501.501 0 01-.424.568.499.499 0 01-.568-.424l-.04-.198c-.146-.724-.413-1.253-.871-1.716-.63-.63-1.398-.957-2.226-.957s-1.595.328-2.225.957c-.459.463-.726.992-.871 1.716l-.04.198a.499.499 0 01-.568.424.501.501 0 01-.424-.568l.04-.219c.183-.904.525-1.569 1.106-2.149.8-.796 1.799-1.22 2.89-1.22h.184zM12 14.07a2.477 2.477 0 012.48 2.478A2.477 2.477 0 0112 19.024a2.477 2.477 0 01-2.48-2.477A2.477 2.477 0 0112 14.07z"/></svg>
+        Apple
+      </a>
+      <a class="yt-pill" href="https://www.youtube.com/@thenumbersgamepodcast?sub_confirmation=1" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.12-2.14C19.5 3.55 12 3.55 12 3.55s-7.5 0-9.38.51A3 3 0 0 0 .5 6.2 31.4 31.4 0 0 0 0 12a31.4 31.4 0 0 0 .5 5.8 3 3 0 0 0 2.12 2.14c1.88.51 9.38.51 9.38.51s7.5 0 9.38-.51a3 3 0 0 0 2.12-2.14A31.4 31.4 0 0 0 24 12a31.4 31.4 0 0 0-.5-5.8zM9.55 15.57V8.43L15.82 12z"/></svg>
+        Subscribe
+      </a>
+    </div>
+    <!-- LISTEN:END -->
+
+    <div class="relsec">
+      <span class="rtitle">Discover more</span>
+      <div class="relgrid">
+        <a class="relcard" href="/stop-the-yearly-burnout-cycle-stay-consistent-in-2026">
+          <img src="https://i.ytimg.com/vi/dDY0Eg3wP6o/hqdefault.jpg" alt="EP 263 thumbnail">
+          <span class="rt">Stop The Yearly Burnout Cycle</span>
+          <span class="rfoot"><span class="rwhy">Also covers: mindset</span><span class="rtag">EP 263</span></span>
+        </a>
+        <a class="relcard" href="/pokemon-cards-vs-bitcoin-gold-and-the-asx">
+          <img src="https://i.ytimg.com/vi/7PHS9HCqNvM/hqdefault.jpg" alt="EP 286 thumbnail">
+          <span class="rt">Pokemon Cards vs Bitcoin, Gold and the ASX</span>
+          <span class="rfoot"><span class="rwhy">20 July 2026</span><span class="rtag">EP 286</span></span>
+        </a>
+        <a class="relcard" href="/buying-commercial-property-with-your-super-in-2026">
+          <img src="https://i.ytimg.com/vi/RAQ80ecsDq0/hqdefault.jpg" alt="EP 285 thumbnail">
+          <span class="rt">Buying Commercial Property With Your Super in 2026</span>
+          <span class="rfoot"><span class="rwhy">13 July 2026</span><span class="rtag">EP 285</span></span>
+        </a>
+        <a class="relcard" href="/the-most-expensive-day-in-aussie-small-business-history">
+          <img src="https://i.ytimg.com/vi/V-10kMQrsDM/hqdefault.jpg" alt="EP 284 thumbnail">
+          <span class="rt">The Most Expensive Day in Aussie Small Business History</span>
+          <span class="rfoot"><span class="rwhy">6 July 2026</span><span class="rtag">EP 284</span></span>
+        </a>
+        <a class="relcard" href="/what-real-budget-reform-for-young-australians-would-actually-look-like">
+          <img src="https://i.ytimg.com/vi/le7HuIBq6Ow/hqdefault.jpg" alt="EP 283 thumbnail">
+          <span class="rt">What Real Budget Reform for Young Australians Would Actually Look Like</span>
+          <span class="rfoot"><span class="rwhy">29 June 2026</span><span class="rtag">EP 283</span></span>
+        </a>
+        <a class="relcard" href="/the-business-of-gift-cards">
+          <img src="https://i.ytimg.com/vi/nC_JkW320Tw/hqdefault.jpg" alt="EP 282 thumbnail">
+          <span class="rt">The Business of Gift Cards</span>
+          <span class="rfoot"><span class="rwhy">22 June 2026</span><span class="rtag">EP 282</span></span>
+        </a>
+      </div>
+      <div class="reldots" id="reldots"></div>
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="footgrid">
+      <div class="fcol">
+        <div class="foot-label">Follow us on</div>
+        <div class="socials">
+          <a href="https://www.instagram.com/thenumbersgamepodcast/" target="_blank" rel="noopener" aria-label="The Numbers Game on Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.8.2 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1 .4 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .4-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1-.4-2.2-.1-1.3-.1-1.7-.1-4.9s0-3.6.1-4.9c.1-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.4 2.2-.4 1.3-.1 1.7-.1 4.9-.1zm0 2c-3.1 0-3.5 0-4.8.1-1.1.1-1.5.2-1.8.3-.4.2-.7.3-1 .6-.3.3-.5.6-.6 1-.1.3-.3.7-.3 1.8-.1 1.3-.1 1.7-.1 4.8s0 3.5.1 4.8c.1 1.1.2 1.5.3 1.8.2.4.3.7.6 1 .3.3.6.5 1 .6.3.1.7.3 1.8.3 1.3.1 1.7.1 4.8.1s3.5 0 4.8-.1c1.1-.1 1.5-.2 1.8-.3.4-.2.7-.3 1-.6.3-.3.5-.6.6-1 .1-.3.3-.7.3-1.8.1-1.3.1-1.7.1-4.8s0-3.5-.1-4.8c-.1-1.1-.2-1.5-.3-1.8-.2-.4-.3-.7-.6-1-.3-.3-.6-.5-1-.6-.3-.1-.7-.3-1.8-.3-1.3-.1-1.7-.1-4.8-.1zm0 3.4a5.4 5.4 0 1 1 0 10.8 5.4 5.4 0 0 1 0-10.8zm0 2a3.4 3.4 0 1 0 0 6.8 3.4 3.4 0 0 0 0-6.8zm5.6-2.3a1.3 1.3 0 1 1-2.6 0 1.3 1.3 0 0 1 2.6 0z"/></svg></a>
+          <a href="https://www.tiktok.com/@thenumbersgamepodcast" target="_blank" rel="noopener" aria-label="The Numbers Game on TikTok"><svg viewBox="0 0 24 24"><path d="M12.53.02C13.84 0 15.14.01 16.44 0c.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg></a>
+          <a href="https://www.linkedin.com/company/the-numbers-game-podcast/" target="_blank" rel="noopener" aria-label="The Numbers Game on LinkedIn"><svg viewBox="0 0 24 24"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.24 8.25h4.52V23H.24V8.25zM8.34 8.25h4.33v2.01h.06c.6-1.14 2.08-2.34 4.28-2.34 4.58 0 5.42 3.01 5.42 6.92V23h-4.51v-7.16c0-1.71-.03-3.91-2.38-3.91-2.39 0-2.75 1.86-2.75 3.78V23H8.34V8.25z"/></svg></a>
+          <a href="https://www.facebook.com/profile.php?id=100071290388343" target="_blank" rel="noopener" aria-label="The Numbers Game on Facebook"><svg viewBox="0 0 24 24"><path d="M24 12.07C24 5.41 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.04V9.41c0-3.02 1.8-4.7 4.54-4.7 1.31 0 2.68.24 2.68.24v2.97h-1.5c-1.5 0-1.96.93-1.96 1.89v2.26h3.32l-.53 3.5h-2.8V24C19.62 23.1 24 18.1 24 12.07z"/></svg></a>
+          <a href="https://www.youtube.com/@thenumbersgamepodcast" target="_blank" rel="noopener" aria-label="The Numbers Game on YouTube"><svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.2C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31.7 31.7 0 0 0 0 12a31.7 31.7 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.2A31.7 31.7 0 0 0 24 12a31.7 31.7 0 0 0-.5-5.8zM9.6 15.6V8.4L15.8 12z"/></svg></a>
+        </div>
+      </div>
+      <div class="fcol">
+        <div class="foot-label">Brought to you by</div>
+        <div class="sponsors">
+          <a href="https://www.inovayt.com.au/" target="_blank" rel="noopener"><img src="assets/inovayt-white.png" alt="Inovayt"></a>
+          <a href="https://futureadvisory.com.au/" target="_blank" rel="noopener"><img src="assets/future-advisory-white.png" alt="Future Advisory"></a>
+        </div>
+      </div>
+      <div class="fcol produced">
+        <div class="foot-label">Produced by</div>
+        <a href="https://www.vidpod.com.au/" target="_blank" rel="noopener"><img src="assets/vidpod-white.png" alt="VIDPOD"></a>
+      </div>
+    </div>
+    <div class="footbar">
+      <details class="footnav-dd">
+        <summary><svg class="ham" viewBox="0 0 24 24"><path d="M3 6h18v2H3zM3 11h18v2H3zM3 16h18v2H3z"/></svg> Menu</summary>
+        <div class="dd-links">
+          <a href="/">Home</a><a href="/episodes">Every episode</a><a href="/adventure">Choose your own adventure</a><a href="/about">About the show</a><a href="/nick-reilly">Nick Reilly</a><a href="/jason-robinson">Jason Robinson</a><a href="/contact">Contact</a>
+        </div>
+      </details>
+      <div class="copyright">© 2026 The Numbers Game</div>
+    </div>
+  </footer>
+
+  <script>
+    var VIDEO='iE2yLkW30k0';
+    var CHAPTERS=[
+      {t:"00:00",s:0,title:"Intro"},
+      {t:"04:38",s:278,title:""}
+    ];
+    var QUESTIONS=[
+      {q:"How much have house prices risen by city since 2021?",s:745},
+      {q:"Is Melbourne property due for a price rise?",s:796},
+      {q:"How much have mortgage repayments risen since 2021?",s:899},
+      {q:"Why are property investors selling in Melbourne?",s:937},
+      {q:"How fast is AI growing compared with past technology?",s:1336},
+      {q:"What can an AI agent do for a business?",s:1442},
+      {q:"Are we actually more productive or just more distracted?",s:1719},
+      {q:"How should you future-proof your job against AI?",s:1754},
+      {q:"What becomes most valuable in an AI world?",s:1800},
+      {q:"What is the risk of passing on an early investment?",s:2215}
+    ];
+
+    var chEl=document.getElementById('chapters');
+    CHAPTERS.forEach(function(c){var b=document.createElement('button');b.className='chapter';b.onclick=function(){startAt(c.s)};b.innerHTML='<span class="tc">'+c.t+'</span><span class="cx">'+c.title+'</span>';chEl.appendChild(b);});
+    document.getElementById('chcount').textContent=CHAPTERS.length;
+    var qEl=document.getElementById('qa');
+    QUESTIONS.forEach(function(q){var b=document.createElement('button');b.className='q';b.onclick=function(){startAt(q.s)};b.innerHTML='<span class="qm">?</span><span class="qx">'+q.q+'</span><span class="go">›</span>';qEl.appendChild(b);});
+    document.getElementById('qcount').textContent=QUESTIONS.length;
+
+    /* Mobile nav dropdown. */
+    var burger=document.getElementById('navburger'), navdrop=document.getElementById('navdrop');
+    if(burger&&navdrop){burger.addEventListener('click',function(){
+      navdrop.hidden=!navdrop.hidden;
+      burger.setAttribute('aria-expanded', navdrop.hidden?'false':'true');
+    });}
+
+    /* Voice-note button reveals the recorder; × tucks it away. */
+    var vbtn=document.getElementById('vbtn'), vslot=document.getElementById('vslot'), vclose=document.getElementById('vclose');
+    if(vbtn&&vslot){vbtn.addEventListener('click',function(){vslot.hidden=!vslot.hidden;});}
+    if(vclose&&vslot){vclose.addEventListener('click',function(){vslot.hidden=true;});}
+
+    /* Keep-exploring dots: only shown when the strip actually scrolls (mobile). */
+    var rg=document.querySelector('.relgrid'), rd=document.getElementById('reldots');
+    if(rg&&rd){
+      var relCards=rg.querySelectorAll('.relcard');
+      relCards.forEach(function(){rd.appendChild(document.createElement('span'))});
+      var updDots=function(){
+        var scrollable=rg.scrollWidth>rg.clientWidth+4;
+        rd.style.display=scrollable?'flex':'none';
+        if(!scrollable)return;
+        var i=Math.round(rg.scrollLeft/(rg.scrollWidth-rg.clientWidth)*(relCards.length-1));
+        rd.querySelectorAll('span').forEach(function(s,n){s.classList.toggle('on',n===i)});
+      };
+      rg.addEventListener('scroll',updDots,{passive:true});
+      window.addEventListener('resize',updDots);
+      updDots();
+    }
+
+    /* Explore tabs: swap the visible panel; the row stays put so you never lose your place. */
+    var tabBtns=document.querySelectorAll('.tabbtn');
+    tabBtns.forEach(function(b){
+      b.addEventListener('click',function(){
+        tabBtns.forEach(function(o){o.classList.remove('on')});
+        document.querySelectorAll('.tpanel').forEach(function(p){p.hidden=true});
+        b.classList.add('on');
+        document.getElementById(b.getAttribute('data-panel')).hidden=false;
+      });
+    });
+
+    /* YouTube: clean facade, then real player on demand. Seek without yanking to top. */
+    var player=null, ready=false, apiReady=false, pending=null;
+    window.onYouTubeIframeAPIReady=function(){apiReady=true; if(pending!=null){var s=pending;pending=null;createPlayer(s);}};
+    function createPlayer(sec){
+      var wrap=document.getElementById('player'); wrap.innerHTML='<div id="yt"></div>';
+      player=new YT.Player('yt',{videoId:VIDEO,playerVars:{autoplay:1,rel:0,modestbranding:1,playsinline:1,start:Math.floor(sec||0)},events:{onReady:function(){ready=true;}}});
+    }
+    function nudge(){
+      var p=document.getElementById('player-wrap'), r=p.getBoundingClientRect();
+      if(r.bottom<80 || r.top>window.innerHeight-90){ p.scrollIntoView({behavior:'smooth',block:'start'}); }
+    }
+    function startAt(sec){
+      nudge();
+      if(player&&ready){ player.seekTo(sec,true); player.playVideo(); return; }
+      if(apiReady){ createPlayer(sec); } else { pending=sec; }
+    }
+    document.getElementById('facade').addEventListener('click',function(){startAt(0);});
+    (function(){var s=document.createElement('script');s.src='https://www.youtube.com/iframe_api';document.head.appendChild(s);})();
+  </script>
+</body>
+</html>

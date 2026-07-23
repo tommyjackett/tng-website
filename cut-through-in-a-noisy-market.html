@@ -1,0 +1,784 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EP 190 · Cut Through In A Noisy Market | The Numbers Game</title>
+<meta name="description" content="">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" sizes="64x64" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="canonical" href="https://thenumbersgamepodcast.com.au/cut-through-in-a-noisy-market">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="The Numbers Game">
+<meta property="og:title" content="EP 190 · Cut Through In A Noisy Market | The Numbers Game">
+<meta property="og:description" content="">
+<meta property="og:url" content="https://thenumbersgamepodcast.com.au/cut-through-in-a-noisy-market">
+<meta property="og:image" content="https://i.ytimg.com/vi/c8AxkyOW0EQ/maxresdefault.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+  :root{
+    --purple:#585af3; --purple-dark:#2c1b8a; --mint:#7ad9a8;
+    --white:#ffffff; --muted:rgba(255,255,255,.60); --dim:rgba(255,255,255,.42);
+    --line:rgba(255,255,255,.12); --card:rgba(255,255,255,.05); --card-hi:rgba(255,255,255,.09);
+    --display:'Anton',Impact,'Helvetica Neue',sans-serif;
+    --sans:'Inter',system-ui,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif;
+    --wrap:1280px;   /* page frame (nav spans this) */
+    --col:960px;     /* content column (player, tabs, text) */
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:var(--sans); color:var(--white); line-height:1.6; -webkit-font-smoothing:antialiased;
+    background:#12093a;
+    background-image:
+      radial-gradient(1200px 600px at 82% -6%, rgba(88,90,243,.45) 0%, transparent 55%),
+      radial-gradient(900px 700px at 5% 8%, rgba(122,217,168,.10) 0%, transparent 50%),
+      linear-gradient(180deg,#2c1b8a 0%,#1a1150 28%,#100b34 62%,#0b0820 100%);
+    background-attachment:fixed;
+  }
+  a{color:inherit}
+  .wrap{max-width:var(--wrap);margin:0 auto;padding:0 36px}
+  main.wrap{max-width:var(--col)}
+  @media(max-width:720px){.wrap{padding:0 22px}}
+
+  /* ── Navbar ── */
+  .nav{position:sticky;top:0;z-index:50;background:linear-gradient(180deg,rgba(24,15,74,.92),rgba(24,15,74,.72));backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+  .nav-in{max-width:var(--wrap);margin:0 auto;padding:11px 36px;display:flex;align-items:center;justify-content:space-between}
+  @media(max-width:720px){.nav-in{padding:11px 22px}}
+  .brand{display:block;line-height:0}
+  .brand img{height:36px;width:auto;display:block}
+  .navlinks{display:flex;gap:28px;align-items:center}
+  .navlinks a{text-decoration:none;font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);transition:.15s}
+  .navlinks a:hover{color:var(--white)}
+  .navlinks a.navtop{cursor:default}
+  .navgroup{position:relative;display:flex;align-items:center}
+  .navgroup .subnav{display:none;position:absolute;top:100%;left:50%;transform:translateX(-50%);padding-top:14px;min-width:180px}
+  .navgroup:hover .subnav,.navgroup:focus-within .subnav{display:block}
+  .subnav-in,.navgroup .subnav{z-index:60}
+  .navgroup .subnav a{display:block;background:#180f4a;border:1px solid var(--line);border-top:0;padding:12px 16px;font-size:12px;color:rgba(255,255,255,.85)}
+  .navgroup .subnav a:first-child{border-top:1px solid var(--line)}
+  .navgroup .subnav a:hover{background:#221768;color:var(--white)}
+  .navburger{display:none;background:none;border:1px solid var(--line);padding:8px 10px;cursor:pointer;color:var(--white);transition:.15s}
+  .navburger:hover{border-color:rgba(122,217,168,.6)}
+  .navburger svg{width:20px;height:20px;fill:currentColor;display:block}
+  .navdrop{display:none}
+  @media(max-width:720px){
+    .navlinks{display:none}
+    .navburger{display:block}
+    .navdrop{display:block;position:absolute;left:0;right:0;top:100%;
+      background:#180f4a;border-bottom:1px solid var(--line);box-shadow:0 24px 50px rgba(0,0,0,.45)}
+    .navdrop[hidden]{display:none}
+    .navdrop a{display:block;padding:15px 22px;text-decoration:none;font-size:14px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:rgba(255,255,255,.9);border-bottom:1px solid rgba(255,255,255,.06)}
+    .navdrop a:last-child{border-bottom:0}
+    .navdrop a.sub{padding-left:42px;font-size:13px;color:rgba(255,255,255,.72)}
+    .navdrop .navlabel{display:block;padding:15px 22px 6px;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.4)}
+  }
+
+  /* ── Hero / hook (marker-highlight system: purple hook wraps naturally, mint payoff below)
+     Rules: title splits at its natural break (colon/pipe/question mark). Front = hook (purple,
+     big), back = payoff (mint, smaller). No break in title = purple hook only. Highlights hug
+     the text (tight em padding tuned to Anton) and wrap via box-decoration-break — never
+     hand-pick line breaks or mint words. ── */
+  header.hero{padding:34px 0 6px}
+  .hook{--inx:clamp(8.4px,2.1vw,15.6px)} /* one shared text inset so hook + payoff first letters align */
+  .hook .hk{font-family:var(--display);font-weight:400;text-transform:uppercase;
+    font-size:clamp(28px,7vw,52px);line-height:1.3;letter-spacing:-.5px;text-wrap:balance}
+  .hook .hk span{color:var(--white);padding:.04em var(--inx) .02em;
+    background:linear-gradient(var(--purple),var(--purple)) 0 50%/100% 87% no-repeat;
+    -webkit-box-decoration-break:clone;box-decoration-break:clone}
+  .hook .pay{font-family:var(--display);font-weight:400;text-transform:uppercase;
+    font-size:clamp(16px,4vw,24px);line-height:1.5;letter-spacing:.6px;margin-top:8px;text-wrap:balance}
+  .hook .pay span{color:#0a0a0a;padding:.08em var(--inx) .04em;
+    background:linear-gradient(var(--mint),var(--mint)) 0 50%/100% 88% no-repeat;
+    -webkit-box-decoration-break:clone;box-decoration-break:clone}
+  /* no-hook titles: mid-split into two full-size rows, purple then mint */
+  .hook .hk span.hkrow{display:block;background:none;padding:0}
+  .hook .hk .hkrow+.hkrow{margin-top:8px}
+  .hook .hk span.mintseg{color:#0a0a0a;
+    background:linear-gradient(var(--mint),var(--mint)) 0 50%/100% 87% no-repeat}
+
+  /* ── Player (clean facade → real player on tap) ── */
+  .player-wrap{margin:24px 0 4px;scroll-margin-top:76px}
+  .player{position:relative;width:100%;padding-top:56.25%;border-radius:0;overflow:hidden;background:#000;box-shadow:0 30px 70px rgba(0,0,0,.5),0 0 0 1px rgba(255,255,255,.06)}
+  .facade{position:absolute;inset:0;border:0;cursor:pointer;background-size:cover;background-position:center;display:flex;align-items:center;justify-content:center;padding:0}
+  .facade .play{width:74px;height:74px;border-radius:50%;background:rgba(10,6,30,.40);border:2px solid rgba(255,255,255,.72);display:flex;align-items:center;justify-content:center;transition:.18s;-webkit-backdrop-filter:blur(1px);backdrop-filter:blur(1px)}
+  .facade:hover .play{background:rgba(88,90,243,.62);transform:scale(1.07);border-color:#fff}
+  .facade .play::after{content:"";border-style:solid;border-width:11px 0 11px 19px;border-color:transparent transparent transparent #fff;margin-left:5px}
+  .player iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+
+  /* ── Episode facts (bottom of the Summary panel — templated per episode) ── */
+  .sumfacts{margin:14px 10px 4px;padding-top:13px;border-top:1px solid rgba(255,255,255,.08);display:flex;flex-direction:column;gap:8px}
+  .fact{display:flex;gap:12px;font-size:13.5px}
+  .fact .fl{flex:none;width:104px;color:var(--dim);font-weight:600;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;padding-top:2px}
+  .fact .fv{color:rgba(255,255,255,.9);font-weight:500}
+  .fact .fv a{color:var(--mint);text-decoration:none;border-bottom:1px solid rgba(122,217,168,.4);transition:.15s}
+  .fact .fv a:hover{border-bottom-color:var(--mint)}
+
+  /* ── Episode tag (identity: black label hanging off the title corner) ── */
+  .eptag{display:inline-block;position:relative;left:-6px;margin-bottom:-7px;z-index:2;
+    background:#0a0a0a;color:var(--white);font-family:var(--display);font-weight:400;
+    font-size:13.5px;letter-spacing:1.5px;text-transform:uppercase;padding:6px 11px 4px}
+
+  /* ── Explore tabs (sticky mode switcher; one panel swaps below, nothing shoves) ── */
+  .explore{margin-top:22px}
+  .tabs{position:sticky;top:58px;z-index:40;display:flex;flex-wrap:wrap;gap:8px;padding:10px 0;
+    background:linear-gradient(180deg,rgba(18,10,55,.96),rgba(18,10,55,.86));
+    backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+  .tabbtn{font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.5px;
+    font-size:14.5px;color:var(--white);background:var(--purple);border:1px solid var(--purple);
+    padding:9px 13px 7px;cursor:pointer;transition:.15s}
+  .tabbtn:hover{filter:brightness(1.12)}
+  .tabbtn.on{background:var(--mint);border-color:var(--mint);color:#0a0a0a}
+  .tabbtn.on:hover{filter:none}
+  .tabbtn .ct{font-size:12px;opacity:.75;font-variant-numeric:tabular-nums}
+  .tabbtn .ct::before{content:" · "}
+  .tpanel{border:1px solid var(--line);background:var(--card);padding:12px 10px 14px}
+  .hint{font-size:12.5px;color:var(--muted);padding:2px 10px 10px;border-bottom:1px solid rgba(255,255,255,.08);margin-bottom:6px}
+
+  /* ── Listen row (no box: label left, service pills follow) ── */
+  .listen{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:12px 16px;margin-top:34px}
+  .listen .lname{font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--dim)}
+  .listen a{display:inline-flex;align-items:center;gap:9px;padding:11px 18px;border-radius:999px;
+    background:var(--mint);color:#08210f;text-decoration:none;font-weight:800;font-size:12.5px;
+    letter-spacing:.04em;text-transform:uppercase;transition:.15s}
+  .listen a:hover{filter:brightness(1.06);transform:translateY(-1px);box-shadow:0 12px 30px rgba(122,217,168,.25)}
+  .listen svg{width:20px;height:20px;fill:currentColor;flex:none}
+  /* ── Listen-now Spotify audio embed (full column width, above the pills) ── */
+  .listen-now{margin-top:40px}
+  .listen-now .ln-head{display:flex;align-items:baseline;justify-content:space-between;gap:14px;margin-bottom:13px}
+  .listen-now .ln-title{font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--dim)}
+  .audio-embed{border-radius:12px;overflow:hidden;box-shadow:0 20px 50px rgba(0,0,0,.4),0 0 0 1px rgba(255,255,255,.06)}
+  .audio-embed iframe{display:block;width:100%;border:0}
+  @media(max-width:720px){.listen-now{margin-top:32px}}
+
+  /* ── Keep exploring (thumbnails link to other episode PAGES, never timecodes).
+     Swipeable strip on mobile, fits three-up on desktop. Variant rule: claim
+     "similar ground" + reason lines ONLY when moment-level topic overlap is
+     genuinely strong; otherwise show the latest released episodes with dates —
+     never invent a connection. ── */
+  .relsec{margin-top:60px;padding-top:58px;border-top:1px solid var(--line)} /* line = end of this episode's info */
+  .reldots{display:flex;justify-content:center;gap:7px;margin-top:12px}
+  .reldots span{width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.25);transition:.2s}
+  .reldots span.on{background:var(--mint)}
+  .relsec .rtitle{display:inline-block;font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.5px;font-size:14.5px;background:var(--mint);color:#0a0a0a;padding:9px 13px 7px;margin-bottom:18px}
+  .relgrid{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding-bottom:6px;scrollbar-width:none}
+  .relgrid::-webkit-scrollbar{display:none}
+  .relcard{flex:0 0 56%;max-width:232px;scroll-snap-align:start;display:flex;flex-direction:column;text-decoration:none;background:var(--card);border:1px solid var(--line);transition:.15s}
+  .relcard:hover{background:var(--card-hi);border-color:rgba(122,217,168,.55)}
+  .relcard img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block}
+  .relcard .rt{display:block;font-size:12.5px;font-weight:600;color:rgba(255,255,255,.92);line-height:1.4;padding:8px 8px 0}
+  .relcard .rfoot{margin-top:auto;display:flex;justify-content:space-between;align-items:flex-end;gap:8px;padding:10px 8px 9px}
+  .relcard .rwhy{font-size:11.5px;color:var(--mint)}
+  .relcard .rtag{display:inline-block;background:#0a0a0a;color:var(--white);font-family:var(--display);font-size:10px;letter-spacing:1.2px;text-transform:uppercase;padding:3px 7px 2px;white-space:nowrap;flex:0 0 auto}
+
+  /* ── Dropdown sections (accordion under the player) ── */
+  .drops{margin-top:34px;display:flex;flex-direction:column;gap:11px}
+  .drop{border:1px solid var(--line);border-radius:0;background:var(--card);overflow:hidden;transition:border-color .15s}
+  .drop[open]{border-color:rgba(122,217,168,.35)}
+  .drop>summary{list-style:none;cursor:pointer;padding:16px 18px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+  .drop>summary::-webkit-details-marker{display:none}
+  .drop>summary .st{font-weight:700;font-size:15.5px;letter-spacing:.005em}
+  .drop>summary .ct{margin-left:auto;font-size:12px;color:var(--dim);font-weight:600;font-variant-numeric:tabular-nums}
+  .drop>summary .chev{flex:none;width:22px;height:22px;border-radius:50%;background:rgba(122,217,168,.14);color:var(--mint);display:flex;align-items:center;justify-content:center;font-family:var(--display);font-size:15px;line-height:1;transition:.2s;transform:translateY(-1px)}
+  .drop[open]>summary .chev{transform:rotate(45deg)}
+  .drop-body{padding:2px 12px 12px}
+
+  /* chapters */
+  .chapter{display:flex;align-items:baseline;gap:14px;width:100%;text-align:left;cursor:pointer;background:none;border:0;color:inherit;font-family:inherit;padding:11px 10px;border-radius:10px;transition:.13s}
+  .chapter:hover{background:var(--card-hi)}
+  .chapter .tc{font-variant-numeric:tabular-nums;font-weight:700;font-size:14px;color:var(--mint);flex:none;width:48px}
+  .chapter .cx{font-size:15px;font-weight:500;color:rgba(255,255,255,.9)}
+  .chapter:hover .cx{color:#fff}
+
+  /* questions */
+  .q{display:flex;align-items:center;gap:12px;width:100%;text-align:left;cursor:pointer;background:none;border:0;border-radius:11px;color:inherit;font-family:inherit;padding:12px 10px;transition:.14s}
+  .q+.q{border-top:1px solid rgba(255,255,255,.05)}
+  .q:hover{background:var(--card-hi)}
+  .q .qm{font-family:var(--display);font-size:15px;color:var(--mint);flex:none;line-height:1;transform:translateY(1px)}
+  .q .qx{font-size:15px;font-weight:500;color:rgba(255,255,255,.92)}
+  .q .go{margin-left:auto;flex:none;color:var(--dim);font-size:18px;transition:.15s}
+  .q:hover .go{color:var(--mint);transform:translateX(2px)}
+
+  /* summary + transcript bodies */
+  .summary-body p{font-size:16.5px;line-height:1.62;color:rgba(255,255,255,.9);padding:6px 10px 4px}
+  .tbody{padding:2px 10px 8px}
+  .tbody p{font-size:14.5px;line-height:1.7;color:rgba(255,255,255,.78);margin-top:15px;max-width:64ch}
+  .tbody .spk{display:block;font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--mint);margin-bottom:2px}
+
+  /* ── Voice note ask (lives at the bottom of the Summary panel) ── */
+  .vask{margin:16px 10px 4px}
+  .vbtn{display:inline-flex;align-items:center;gap:9px;padding:12px 20px;border-radius:999px;border:0;cursor:pointer;
+    background:var(--mint);color:#08210f;font-family:inherit;font-weight:800;font-size:12.5px;
+    letter-spacing:.04em;text-transform:uppercase;transition:.15s}
+  .vbtn:hover{filter:brightness(1.06);transform:translateY(-1px);box-shadow:0 12px 30px rgba(122,217,168,.25)}
+  .vbtn svg{width:18px;height:18px;fill:currentColor;flex:none}
+  .vslot{background:var(--purple);padding:12px 10px 10px;margin:14px 0 4px;box-shadow:0 18px 40px rgba(0,0,0,.35)}
+  .vslot[hidden]{display:none}
+  .vhead{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;margin-bottom:10px}
+  .vhead .vmsg{font-family:var(--sans);font-size:13px;line-height:1.55;color:rgba(255,255,255,.92);margin:2px 0 0;padding:0 2px}
+  .vclose{background:none;border:0;color:rgba(255,255,255,.85);font-size:22px;line-height:1;cursor:pointer;padding:0 2px}
+  .vclose:hover{color:var(--white)}
+  .vslot iframe{display:block}
+
+  /* ── YouTube subscribe pill (sits in the listen row; outranks .listen a's mint) ── */
+  .listen a.yt-pill{background:var(--purple);color:var(--white)}
+  .listen a.yt-pill:hover{filter:brightness(1.1);transform:translateY(-1px)}
+  @media(max-width:720px){ /* mobile: no label, three compact pills on one row */
+    .listen .lname{display:none}
+    .listen{gap:8px}
+    .listen a{padding:10px 13px;font-size:11px;gap:6px}
+    .listen svg{width:16px;height:16px}
+  }
+
+  /* ── Footer: Follow us on | Brought to you by | Produced by, + Menu dropdown ── */
+  footer{border-top:1px solid var(--line);margin-top:68px;padding:52px 20px 58px}
+  .footgrid{max-width:var(--wrap);margin:0 auto;display:grid;grid-template-columns:1fr 1.15fr .8fr;gap:44px;align-items:start}
+  .fcol{text-align:center;display:flex;flex-direction:column;align-items:center}
+  .foot-label{font-size:11px;font-weight:700;letter-spacing:.26em;text-transform:uppercase;color:var(--dim);margin-bottom:18px}
+  .sponsors{display:flex;justify-content:center;align-items:center;gap:34px;flex-wrap:wrap}
+  .sponsors a,.produced a{display:inline-flex;transition:.15s}
+  .sponsors a:hover,.produced a:hover{transform:translateY(-1px)}
+  .sponsors img{height:32px;width:auto;opacity:.92}
+  .produced img{height:30px;width:auto;opacity:.95}
+  .sponsors a:hover img,.produced a:hover img{opacity:1}
+  footer .socials{display:flex;gap:11px;justify-content:center;flex-wrap:wrap;margin:0}
+  footer .socials a{width:40px;height:40px;border-radius:50%;border:1.5px solid rgba(122,217,168,.5);display:flex;align-items:center;justify-content:center;transition:.15s}
+  footer .socials a svg{width:18px;height:18px;fill:var(--mint);transition:.15s}
+  footer .socials a:hover{background:var(--mint);border-color:var(--mint);transform:translateY(-2px)}
+  footer .socials a:hover svg{fill:#0a0a0a}
+  .footbar{max-width:var(--wrap);margin:34px auto 0;border-top:1px solid var(--line);padding-top:20px;display:flex;flex-direction:column;align-items:center;gap:14px}
+  .footnav-dd{display:block;width:100%;max-width:var(--wrap);margin:0 auto;text-align:center}
+  .footnav-dd>summary{list-style:none;cursor:pointer;display:inline-flex;align-items:center;gap:9px;font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.5px;font-size:13px;color:var(--muted);background:transparent;border:1px solid var(--line);padding:8px 16px 6px;transition:.15s}
+  .footnav-dd>summary::-webkit-details-marker{display:none}
+  .footnav-dd>summary:hover{color:var(--mint);border-color:rgba(122,217,168,.45)}
+  .footnav-dd>summary .ham{width:15px;height:15px;fill:currentColor;transform:translateY(-1px)}
+  .footnav-dd .dd-links{display:flex;flex-direction:row;flex-wrap:wrap;justify-content:center;gap:12px 24px;padding:24px 0 4px}
+  .footnav-dd .dd-links a{font-size:11.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:.15s}
+  .footnav-dd .dd-links a:hover{color:var(--mint)}
+  .copyright{font-size:12px;color:var(--dim);text-align:center}
+  @media(max-width:720px){.footgrid{grid-template-columns:1fr;gap:34px}footer{padding:40px 16px 20px}.footbar{margin-top:34px;padding-top:24px;gap:20px}.footnav-dd .dd-links{flex-direction:column;align-items:center;gap:15px}}
+
+  @media(min-width:720px){header.hero{padding:48px 0 6px}}
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "PodcastEpisode", "name": "Cut Through In A Noisy Market", "url": "https://thenumbersgamepodcast.com.au/cut-through-in-a-noisy-market", "datePublished": "2024-07-04", "episodeNumber": 190, "image": "https://i.ytimg.com/vi/c8AxkyOW0EQ/maxresdefault.jpg", "partOfSeries": {"@type": "PodcastSeries", "name": "The Numbers Game", "url": "https://thenumbersgamepodcast.com.au/"}}</script>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-in">
+      <a class="brand" href="/" aria-label="The Numbers Game home"><img src="assets/tng-logo.png" alt="The Numbers Game"></a>
+      <div class="navlinks">
+        <a href="/">Home</a>
+        <div class="navgroup">
+          <a class="navtop">Episodes</a>
+          <div class="subnav">
+            <a href="/episodes">All episodes</a>
+            <a href="/adventure">Find moments</a>
+          </div>
+        </div>
+        <div class="navgroup">
+          <a class="navtop">About</a>
+          <div class="subnav">
+            <a href="/about">The show</a>
+            <a href="/nick-reilly">Nick Reilly</a>
+            <a href="/jason-robinson">Jason Robinson</a>
+          </div>
+        </div>
+        <a href="/contact">Contact</a>
+      </div>
+      <button class="navburger" id="navburger" type="button" aria-label="Menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24"><path d="M3 6h18v2H3zM3 11h18v2H3zM3 16h18v2H3z"/></svg>
+      </button>
+    </div>
+    <div class="navdrop" id="navdrop" hidden>
+      <a href="/">Home</a>
+      <span class="navlabel">Episodes</span>
+      <a class="sub" href="/episodes">All episodes</a>
+      <a class="sub" href="/adventure">Find moments</a>
+      <span class="navlabel">About</span>
+      <a class="sub" href="/about">The show</a>
+      <a class="sub" href="/nick-reilly">Nick Reilly</a>
+      <a class="sub" href="/jason-robinson">Jason Robinson</a>
+      <a href="/contact">Contact</a>
+    </div>
+  </nav>
+
+  <main class="wrap">
+
+    <header class="hero">
+      <div class="hook">
+        <span class="eptag">EP 190</span>
+        <h1 class="hk"><span class="hkrow"><span>Cut Through In</span></span>
+        <span class="hkrow"><span class="mintseg">A Noisy Market</span></span></h1>
+      </div>
+    </header>
+
+    <div class="player-wrap" id="player-wrap">
+      <div class="player" id="player">
+        <button class="facade" id="facade" style="background-image:url('https://i.ytimg.com/vi/c8AxkyOW0EQ/maxresdefault.jpg')" aria-label="Play episode">
+          <span class="play"></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="explore">
+      <div class="tabs" role="tablist">
+        <button class="tabbtn on" data-panel="p-summary">Summary</button>
+        <button class="tabbtn" data-panel="p-chapters">Chapters<span class="ct" id="chcount"></span></button>
+        <button class="tabbtn" data-panel="p-questions">Questions<span class="ct" id="qcount"></span></button>
+      </div>
+      <section class="tpanel" id="p-summary">
+        <div class="summary-body">
+          <p>Jason opens with Mr Beast, tracing how Jimmy Donaldson went from 76 YouTube followers as a teenager to more than 151 million subscribers, and uses his Feastables car giveaway and supermarket stunt to show what makes content cut through: consistency, audience engagement and philanthropy. The hosts then turn it on themselves. Marty recalls buying a hundred coffees to meet school-run mums and argues cut-through has to come from your own personality, while warning against pitch with no punch and vanity metrics. Jason stresses that margins must support the marketing spend and that a plan you stick to beats sporadic posting. Nick makes the case for presenting to a live audience, treating podcast, website and Google reviews as connected social proof, and measuring ROI by asking every caller how they heard about you.</p>
+        </div>
+        <div class="vask">
+          <button class="vbtn" id="vbtn" type="button">
+            <svg viewBox="0 0 24 24"><path d="M12 14a3 3 0 0 0 3-3V6a3 3 0 1 0-6 0v5a3 3 0 0 0 3 3zm5-3a5 5 0 0 1-10 0H5a7 7 0 0 0 6 6.92V21h2v-3.08A7 7 0 0 0 19 11h-2z"/></svg>
+            Send us a voice note
+          </button>
+          <div class="vslot" id="vslot" hidden>
+            <div class="vhead">
+              <p class="vmsg">We'd love to hear from you. You can leave up to a 90 second voice note for us to play on the show: a question, some feedback, or a topic you want covered.</p>
+              <button class="vclose" id="vclose" type="button" aria-label="Close">&times;</button>
+            </div>
+            <iframe src="https://www.speakpipe.com/widget/inline/hhq6kzggsx7zpcsvakgxfrzun3zidpde" allow="microphone" width="100%" height="200" frameborder="0" title="Leave The Numbers Game a voice note"></iframe>
+          </div>
+          <script async src="https://www.speakpipe.com/widget/loader.js" charset="utf-8"></script>
+        </div>
+        <div class="sumfacts">
+          <div class="fact"><span class="fl">Release date</span><span class="fv">4 July 2024</span></div>
+          <div class="fact"><span class="fl">Hosts</span><span class="fv"><a href="/nick-reilly">Nick Reilly</a>, <a href="/jason-robinson">Jason Robinson</a> &amp; <a href="/marty-vidakovic">Marty Vidakovic</a></span></div>
+
+        </div>
+      </section>
+      <section class="tpanel" id="p-chapters" hidden>
+        <p class="hint">Jump straight to the part you need.</p>
+        <div id="chapters"></div>
+      </section>
+      <section class="tpanel" id="p-questions" hidden>
+        <p class="hint">Real questions this episode answers. Tap one to hear the answer.</p>
+        <div id="qa"></div>
+      </section>
+    </div>
+
+    <div class="drops">
+
+      <details class="drop">
+        <summary><span class="st">Episode transcript</span><span class="chev">+</span></summary>
+        <div class="drop-body tbody">
+          <p><span class="spk">Jason · 00:00</span>Welcome to episode 190 of The Numbers Game. I'm Jase. I'm here with Nick and Marty. How are we today, fellas?</p>
+          <p><span class="spk">Marty · 00:07</span>Going well, Jase. The countdown is on. 10 to 200. My goodness. Who would have thought we'd got this far? But we did. A lot of hard work. Uh, continues to be a lot of hard work, but we love it. Uh, feeling good and, uh, looking forward to today's show.</p>
+          <p><span class="spk">Marty · 00:21</span>Nick, how are you, my friend?</p>
+          <p><span class="spk">Nick · 00:23</span>I'm good, mate. I'm good. We are well and truly into winter, so just the countdown is on from my point of view to um, yeah, just get a little bit, a little bit warmer. But, um, Jesus, it's been cold. How are you going out there in the valley, Marty?</p>
+          <p><span class="spk">Marty · 00:40</span>You get a minus one, sometimes minus two degrees, but hey, it's just a coat, you know, nice thick coat.</p>
+          <p><span class="spk">Nick · 00:47</span>Another coat. It's okay. Yeah, it's what they say about, um, cold weather, you can always put more on, but the warm weather, you can only take a certain amount off.</p>
+          <p><span class="spk">Marty · 00:55</span>Very true, very true. What are you putting on, Jase? What are</p>
+          <p><span class="spk">Marty · 01:00</span>you taking off?</p>
+          <p><span class="spk">Jason · 01:00</span>Well, I just actually ordered, uh, funny you're talking about it, I ordered these running sleeves because of the cold weather.</p>
+          <p><span class="spk">Jason · 01:07</span>I, uh, went for a run with Greg last week and it was, yeah, maybe two degrees in the morning. We're, we're still in full marathon training mode. We've got the Gold Coast Marathon coming up and then Chicago later on this year. And tell you what, training for a marathon in the middle of winter is, is no fun at all.</p>
+          <p><span class="spk">Jason · 01:23</span>Um, it's, it's cold.</p>
+          <p><span class="spk">Marty · 01:26</span>What's going on there? You're buying sleeves to keep your arms warm? Yeah, sorry.</p>
+          <p><span class="spk">Jason · 01:30</span>With the sleeves, basically you can pull them on, and gloves. I also bought gloves because Greg, Greg had running gloves and I've rocked up, you know, with not as much, uh, equipment as what Greg has when he goes running.</p>
+          <p><span class="spk">Jason · 01:41</span>This guy owns everything under the sun when it comes to running and probably way too many shoes and he, he lent me a pair of gloves because my fingers were about to fall off and one thing that he does. Cause he doesn't like to overheat. So he wears a t shirt, but then he has the running sleeves. And then once his arms get warm, he rips the sleeves off.</p>
+          <p><span class="spk">Jason · 01:57</span>So his arms are all free to</p>
+          <p><span class="spk">Jason · 02:00</span>enjoy the cool, fresh air. Well, meanwhile, I had a long sleeve on and I ended up overheating and feeling like crap towards the 16 kilometer mark. And</p>
+          <p><span class="spk">Marty · 02:07</span>so much, so much more sophisticated than out in the Yarra Valley. We just put on a duffel coat and if it gets hot, we just throw it away and go to the op shop and grab another one.</p>
+          <p><span class="spk">Marty · 02:16</span>So it's a very, very smart. I like it. Duff.</p>
+          <p><span class="spk">Jason · 02:21</span>Guys, I've, um, want to guide in a bit of a different or interesting conversation today. There's some, uh, news that's come out that's, you know, gets my attention. Sometimes in episode planning, we go to the news and something pops out, but I'll start by this. Um, do you guys know?</p>
+          <p><span class="spk">Jason · 02:38</span>Who has the most popular YouTube channel in the world or is the highest paid YouTuber in the world?</p>
+          <p><span class="spk">Marty · 02:44</span>Well, I only know through Charlie that, um, it could be, you know, as to who you're talking about, but I'm not going to give it away. I'm not going to give it away.</p>
+          <p><span class="spk">Jason · 02:53</span>Well, I'll build up, I'll give a bit of a buildup to the background.</p>
+          <p><span class="spk">Jason · 02:57</span>So when, when this, this person was 12 years</p>
+          <p><span class="spk">Jason · 03:00</span>old, they got their first YouTube follower. By the time they were 15 years old. So three years later. They had 76 YouTube followers. So, you know, it's really building by the time they were 20 though. Another five years on, they had 4. 7 million and at 25 years old, when we're talking about exponential growth here, they had over 151 million YouTube subscribers, followers, and counting.</p>
+          <p><span class="spk">Jason · 03:25</span>And since then, it's even gone even more bonkers since then. And so. Answer. Of course, Charlie would know this, this man is very popular with the younger generation, which is why Nick, you and I potentially would have had no idea who this person was before I've looked into this, but the person's name is Mr.</p>
+          <p><span class="spk">Jason · 03:41</span>Beast or Jimmy Donaldson, Marty. That was, uh, who you had in mind.</p>
+          <p><span class="spk">Marty · 03:46</span>Mr. Beast. And I'm hoping our numbers on our podcast are going to take that trajectory. There's pretty impressive numbers.</p>
+          <p><span class="spk">Jason · 03:52</span>Well, when you think about, you know, we're, we're three years old. So when he had had three years, he had 76 followers. I think we're at 56</p>
+          <p><span class="spk">Jason · 04:00</span>followers.</p>
+          <p><span class="spk">Jason · 04:00</span>So yeah, we, we, we're, we're close. We're close. So give it a few more years and we should be, uh, Hopefully up around that 150 million mark. Um, so Nick, to explain a little bit about, uh, Jimmy Donaldson, uh, yes, he's known as Mr. Beast, his YouTube sensation. And the reason I wanted to kind of start the episode by talking about Mr.</p>
+          <p><span class="spk">Jason · 04:18</span>Beast was to do with his marketing, uh, prowess, I think you'd say. Um. Just the sheer success he's had over the years of putting out content, engaging an audience to, to watch this content, which is what gets him paid through YouTube and other bits and pieces going on. Um, and so, you know, go into those strategies a little bit and then relay it back to, I guess, ourselves.</p>
+          <p><span class="spk">Jason · 04:41</span>Uh, I'd love to ask you guys a little bit about the difference between yourself as a brand versus building, you know, innovate or future advisory as a brand. And so, you know, why do Jason, Nick and Marty. Maybe not do as much as we could do when it comes to YouTube videos about our, our own businesses. Um, yeah.</p>
+          <p><span class="spk">Jason · 04:58</span>Any questions so</p>
+          <p><span class="spk">Jason · 05:00</span>far? All good. All good. Well, I'll start with a bit of a background of how I came across Mr. Beast. Also from today's point of view, he's landed in Sydney. So he's come to Sydney. He has a chocolate brand called Feastables, And he's kind of doing a bit of a, you know, Wonka esque, uh, promotion where if you buy feastables from Woolworths, you go in the drawer to win one of 10 cars that he's giving away at random.</p>
+          <p><span class="spk">Jason · 05:25</span>Um, it's not the golden ticket in the packet style, like what Willy Wonka was. It's a bit more technologically advanced. You've got to scan a QR code on the back of the bar and you go into the drawer. And then basically in order of, as he announces winners, There's a list of 10 cars. If you're the first winner, you get to pick the first car and then so on and so forth.</p>
+          <p><span class="spk">Jason · 05:44</span>But yeah, I think the top car being given away as a Lamborghini, um, valued at about 450, 000. There's a Ford Mustang, a Mercedes convertible, a BMW, a couple of Teslas, uh, right down to a Toyota HiAce valued</p>
+          <p><span class="spk">Jason · 06:00</span>at 22, 000, but that's wrapped to look like the Scooby Doo van. So again, you know, keeping it interesting, um, there's such a very varying degree of cars available for these winners to win.</p>
+          <p><span class="spk">Jason · 06:13</span>And mind you, when you think about it, these chocolates, uh, um, kind of marketed to, to a younger. So hopefully they've got their licenses. If they're scanning the QR code to go into the draw with this. So again, when you think about this kind of marketing and, and the popularity, it's, it's building, if you've got millions of followers to his YouTube channel and he puts out, you know, this video saying, this is what we're doing.</p>
+          <p><span class="spk">Jason · 06:35</span>We're giving away these cars. It's draw building up quite this energy around a product. Um, And, you know, I actually walked into the office before and it was half my team were telling me about this. So the fact that they all follow and they're all engaged by this kind of blows my mind a little bit as well.</p>
+          <p><span class="spk">Jason · 06:52</span>Um, so. Nick, Marty rushing out to buy feastables at the moment, or are you not that worried about winning a car right now?</p>
+          <p><span class="spk">Nick · 06:59</span>Is it any good,</p>
+          <p><span class="spk">Nick · 07:00</span>the chocolate? That's my first question.</p>
+          <p><span class="spk">Jason · 07:02</span>I've heard it's not, um, which is probably why he needs to do so much marketing to sell it. Sorry, Mr. Beast, if you, uh, come across this episode.</p>
+          <p><span class="spk">Jason · 07:08</span>Marty, is Charlie into the chocolate at all?</p>
+          <p><span class="spk">Marty · 07:10</span>No, no, he's gluten free celiacs. He's, uh, he's, he's got a different palette, but, uh, I think, like, why cars? If it's a younger audience, why cars?</p>
+          <p><span class="spk">Jason · 07:22</span>Great question. That's, that's great. I mean, why</p>
+          <p><span class="spk">Marty · 07:24</span>not just, I mean, why not take the Adrian Portelli route and give away 500, 000 for the first 10, you know, people that win the prize?</p>
+          <p><span class="spk">Marty · 07:32</span>I mean, it's just, I'm sure there's rhyme and reason behind it, but I'm just interested as to why cars, that, that's, uh, fascinates me because that's going to appeal to some, but not to everyone.</p>
+          <p><span class="spk">Nick · 07:43</span>Maybe he's chasing a new market.</p>
+          <p><span class="spk">Marty · 07:44</span>Maybe the parents. Yeah. Maybe. If</p>
+          <p><span class="spk">Jason · 07:48</span>the kids win, win a car and give it to mom and dad as a thank you for, uh, buying all the chocolate bars, but, um, or maybe Adrian Portelli has some competition now, Mr.</p>
+          <p><span class="spk">Jason · 07:56</span>Beast is, and this was like one of the only continents in the world that Mr. Beast had</p>
+          <p><span class="spk">Jason · 08:00</span>never been to. So there was a bit of a song and dance about, um, you know, he'd even been to Antarctica for some of these promotions and things that he did. Um, so he made a bit of a, Bit of a noise around coming to Australia.</p>
+          <p><span class="spk">Jason · 08:11</span>So in, in unpacking just quickly, some of the success of why it's successful. It's a bit of where we've come from in the numbers game as well. When you look at, um, consistency, you know, ongoing consistency around engaging with your audience. And posting regular updates, regular episodes, regular content. Um, and one of the other things about building his big loyal fan base has been around listening to his audience feedback.</p>
+          <p><span class="spk">Jason · 08:37</span>So he interacts a lot online with his audience, a bit like the famous Marty V did, um, with our, uh, influencer episode a few weeks ago, where Marty unpacked some of the comments on the Instagram. Um, I think we must be approaching 200, 000 views on that video, by the way, Marty, you are just a, an expert.</p>
+          <p><span class="spk">Jason · 08:53</span>Instagram sensation.</p>
+          <p><span class="spk">Marty · 08:55</span>There's no cars I've given out just to, you know, just to back that up.</p>
+          <p><span class="spk">Jason · 08:58</span>Well, and then, you</p>
+          <p><span class="spk">Jason · 09:00</span>know, beyond, beyond the engagement, I mean, just to share a bit of a story as well, the actual first bit of content I got sucked into from Mr. Beast was around, and a lot of this is going this way when it comes to the algorithm of social media, um, if you are trying to engage.</p>
+          <p><span class="spk">Jason · 09:14</span>Customers through platforms like Instagram, Facebook, YouTube, um, comes around engagement of the amount of time you can keep somebody's eyeballs looking at a piece of content. So the more you can get somebody to engage, comment, um, or watch a video through from start to end, we'll actually kind of game the algorithm to be in, you know, In your favor for your business.</p>
+          <p><span class="spk">Jason · 09:35</span>Now, this one particular video that popped up on it was about either my Instagram or Facebook feed was around a supermarket. Now, Mr. Beast bought a supermarket that was going out of business. It had hundreds of thousands of dollars worth of stock and he bought the entire. business and all the stock included.</p>
+          <p><span class="spk">Jason · 09:53</span>And the promotion was that somebody would apply to live inside that supermarket. And for</p>
+          <p><span class="spk">Jason · 10:00</span>every day they lived inside that supermarket, Mr. Beast would give them 10, 000. And it was all being filmed as part of a documentary to make the content, to get people's eyeballs onto his YouTube channel. Um, you know, there was daily updates and then obviously the big recap video that I watched.</p>
+          <p><span class="spk">Jason · 10:14</span>But so this guy went in, I think Mr. Beast probably didn't expect it to go for as long. There's articles about it. And. Uh, very quickly though, they built in different parameters as to what this guy had to do to be able to stay living in a supermarket. So the guys moved in, it's full of stock and supplies.</p>
+          <p><span class="spk">Jason · 10:28</span>He, he set himself up a bedroom, made, got a microwave, made himself some dinner. And on day two, Mr. Beast rocked up and said, cool. Here's the first kind of T's and C's every day. I'm going to come and you're going to have to give me 10, 000 worth of stock. And that's the exchange. You give me 10, 000 of stock in the supermarket.</p>
+          <p><span class="spk">Jason · 10:46</span>I'll drop, I'll give you 10 grand in cash in a shopping trolley. And you know, he kept on building up the, the amount of cash in these shopping trolleys that he'd drop off each day. And so sure enough, he got, he got rid of the really easy stuff. Some, um,</p>
+          <p><span class="spk">Jason · 11:00</span>TVs and electronics, quick way to, Put 10 grand in a pile.</p>
+          <p><span class="spk">Jason · 11:03</span>Then there was the frozen goods or the fresh food produce. Sorry, he got rid of first and so on and so forth. And this guy ended up living in this supermarket for well over a hundred days. Um, it was, and just watching the, the guy's mind going mental, living by himself inside a supermarket when he knew his wife and kids were.</p>
+          <p><span class="spk">Jason · 11:23</span>at home waiting for him to get out of this, I guess what would have seemed like a silly game. But for him he was talking about how it was life changing. Every day that he stayed there was changing the life of his wife and kids to be able to have money to afford education, paying off debts. debts, paying down their house and their loans and things like that.</p>
+          <p><span class="spk">Jason · 11:42</span>So there's the other part of what Mr. Beast builds into a lot of his content is the philanthropy, um, incorporating, giving, and, you know, making people's lives better. And whether it's one individual or a wider organizational approach, that's something that he's done very,</p>
+          <p><span class="spk">Jason · 12:00</span>very well. To create this engaging content.</p>
+          <p><span class="spk">Jason · 12:02</span>It's not just about Mr. Beast making more money, but it's also about how he gives back to a community or to the environment or to, to something that him and his audience cares about. So I guess taking that and now focusing a bit back towards us. So we don't have to just listen to my voice, Marty and Nick.</p>
+          <p><span class="spk">Jason · 12:19</span>From that point of view, Marty, you know, I'd love to throw to you and start with a bit of a question around Mr. Beast is very much the individual. He is the brand. He is the person behind this money making venture that is his personal YouTube channel. And when it comes to small business marketing, you know, we're kind of trying to apply this logic to how a small business may use it to build a brand and build an awareness of their products.</p>
+          <p><span class="spk">Jason · 12:43</span>Um, can you talk a bit about your experience of, I guess, yourself and how you went about. creating a bit of a, uh, an audience and a focus on Marty V and you had the Marty V show back in the day as well.</p>
+          <p><span class="spk">Marty · 12:55</span>Yeah, I think, and maybe because of the stand up background, it was</p>
+          <p><span class="spk">Marty · 13:00</span>always about understanding, you know, how to pitch yourself and the need to pitch yourself.</p>
+          <p><span class="spk">Marty · 13:05</span>But I think the challenge is sometimes is. You sometimes feel like it's a pitch and it might not come across as authentic as you would want it to be. So you've got to explore that within your own character as well, like as to what you're producing out there in the market. But for me, I was always a front runner on social media because I thought that's where, you know, that's where the audience was spending time.</p>
+          <p><span class="spk">Marty · 13:30</span>So for me, it was like, how do you cut through and get attention to actually You know, the value that you want to produce out there in the market in a way that could be taken in, but I think it's a real, it is a real challenge. Like I've had many people just say to me, Oh, you know, you love the sound of your own voice or you're on a podcast or you're on a video.</p>
+          <p><span class="spk">Marty · 13:50</span>And I go, Yeah, but they're the people not on, um, video or not doing it. So I've always been willing to be on the stage and to</p>
+          <p><span class="spk">Marty · 14:00</span>cop the ridicule and the rewards, but if I feel like that's where the market is and where the market's listening, but I don't think it's a. It's necessarily an easy thing. Like I think about even in the early days in business, like I would, I would go to a coffee shop and I would talk to the business owner and say between nine o'clock and 10 o'clock, I knew all the moms were dropping kids off at school.</p>
+          <p><span class="spk">Marty · 14:24</span>And they're really the decision makers a lot of the time. So I would, I would make, um, I would buy coffees. I'd buy a hundred coffees. And that to me, as long as they came and spoke to me about, So I could introduce myself. So for me, it was a way to engage in the local community, present myself as a point of difference.</p>
+          <p><span class="spk">Marty · 14:44</span>Now, did it work? I got a few deals out of it, but the main thing was it was testing different things and seeing what works. I wouldn't suggest that would be the idea now, but it helped the coffee shop owner out. He had buy in, he was</p>
+          <p><span class="spk">Marty · 15:00</span>making his money regardless, gave a bit of a discount off the price, and it was only for about 45 minutes to an hour.</p>
+          <p><span class="spk">Marty · 15:05</span>So you're constantly thinking as a business owner, how do you get cut through in a noisy market? But it's gotta be. Your personality. I think this podcast is great. Cause we can come across as our genuine, definitely genuine selves in what we do in our careers. But I think if you're going to do something like that, you've got to be all in on it.</p>
+          <p><span class="spk">Marty · 15:26</span>Like at his level, it's just, and he's making billions. So he's millions, whatever. So he is all in on it, but, um, you certainly got to have the personality type to be able to drive that. And, um, sometimes I think you can waste a lot of time if you're not, if you haven't got a direct strategic approach to make it work, you know, but you still got to test it to work it out what that is.</p>
+          <p><span class="spk">Marty · 15:52</span>So, and I've seen people do it. I wouldn't say I'm great at it, but one thing I'll do is I'll have a crack at it. And see</p>
+          <p><span class="spk">Marty · 16:00</span>what catches fire and what doesn't, and I'm hit or miss, like we had that one that went viral on Instagram a few weeks ago, but then there'll be stuff that just won't go anywhere too.</p>
+          <p><span class="spk">Marty · 16:09</span>So you go, it's, it's a constant source of frustration and opportunity for me. Um, what about yourself, Nick? How, how do you, how do you think about it?</p>
+          <p><span class="spk">Nick · 16:19</span>Oh, I like what you said. You've got to be all in on it. And I think, um, to do that, you've got to be a certain type of individual. So you can't, you know, post a few things here or there, or, you know, try this on social media one week, and then you don't do it the next week.</p>
+          <p><span class="spk">Nick · 16:33</span>I think one of the things that we've all learned is it's got to be consistent. And sometimes that consistency doesn't look like it's, uh, yielding results for you, but over time it will. So I think you really need to understand if you're up for the, up for the fight or up for the challenge, number one, because.</p>
+          <p><span class="spk">Nick · 16:49</span>If you're not, and you're not that type of person and you can't commit to it, then there's no point doing it, um, and you can find other methods, like I love the whole coffee story which, which is</p>
+          <p><span class="spk">Nick · 17:00</span>probably groundbreaking really, um, for its time, like, I think that's the kind of stuff, we, we had a bit of a chat off air on this, but.</p>
+          <p><span class="spk">Nick · 17:08</span>What these guys are doing, and I say guys because I'm thinking of, um, Mr. Beast, who I've just learned about today, and also Portelli. They're creating entertainment or they're creating things that create, um, that make you, they make you want to watch and, you know, Marty, you were creating, um, you know, the, People wanting a coffee and I don't know how it worked, but I shouldn't, what'd you have a sign up or something that said free coffee, talk to Marty a bit.</p>
+          <p><span class="spk">Marty · 17:31</span>So talk to Marty for a free coffee, you know? So it's,</p>
+          <p><span class="spk">Nick · 17:35</span>it's, it's interesting, right? And you're, you're attracting people and you're probably attracting some noise and people thinking, what the hell's going on over there? Cause everyone's ordering coffee. So, um, yeah, you've got to, so I think you've got to be creating something that people are, uh, are interested in and want to follow.</p>
+          <p><span class="spk">Nick · 17:53</span>You can't just be pushing a product. Um, and I, you know, I talked about those two guys, but also Jake Paul, the stuff that he</p>
+          <p><span class="spk">Nick · 18:00</span>does around, I think they started doing pranks and then obviously they're doing the boxing stuff now. So, um, but at the same time, if it's not you, that's also okay. Um, and you know, I'm thinking about our SME clients now.</p>
+          <p><span class="spk">Nick · 18:14</span>How do you, How do you go against people that are willing to do this stuff? Because at the end of the day, they're out there everywhere. And the question is, do you, do you have to just suck it up and, and, uh, be the face of the brand yourself or are there other methods that you can, that you can go down or that you can adopt that will also, um, drive business forward?</p>
+          <p><span class="spk">Nick · 18:35</span>So, you know, Jace, I guess you probably deal with a lot of business owners. Not everyone wants to put their face on Instagram and, um, you know, Has the, um, not just the ability, but I think there is a bit of an ability to be able to market yourself. Um, or, or the want to, what are the other methods? Like, what do we do if that's not us?</p>
+          <p><span class="spk">Nick · 18:55</span>And we're looking and going, geez, all these, um, businesses on social media, but</p>
+          <p><span class="spk">Nick · 19:00</span>it's just, just not me.</p>
+          <p><span class="spk">Marty · 19:01</span>Can I just add to that, Nick, there's a lot of pitch and no punch to, for a lot of people, the Mr. Beast, a very small percentage that make it work. So you've got a lot of people. That is the famous and, you know, on LinkedIn that are making no money at all through it.</p>
+          <p><span class="spk">Marty · 19:18</span>And actually in, in desperate need of getting more clients and it's not working. So whatever you do, you just want to make sure it works, you know, and not just, not just do it for a sense of getting attention. And that's a big thing. Big differential when you're in, when you're in business, if it works fantastic, keep doing it.</p>
+          <p><span class="spk">Marty · 19:40</span>If it's not working shift gears, but don't do it just to get eyeballs on you. It's a, that's a vanity play. And that happens. And particularly when I was doing the podcast, when I had a break in the, in the finance realm, I was meeting people that had these huge numbers around their socials. Absolutely dead broke and</p>
+          <p><span class="spk">Marty · 20:00</span>losing money at a rapid rate.</p>
+          <p><span class="spk">Marty · 20:01</span>So you just want to come back to reality and going, if it works, fantastic. Keep doing it. And you've got a clear execution channel for that, for that effort at the front end. Well, that's.</p>
+          <p><span class="spk">Jason · 20:13</span>That's, that's a perfect segue, right? In a sense that there needs to be purpose, like anything in business, there needs to be a purpose as to why you're doing what you're doing.</p>
+          <p><span class="spk">Jason · 20:22</span>Um, and, and like what you said, Marty, unfortunately I've seen brands and business owners pour money into marketing, which looks great and there's heaps of followers, but if the margins in the product or service they're selling don't stack up. To allow for the spend on marketing. Even if you're bringing in heaps of customers due to the spend you're doing on marketing, if the underlying business operations, margins, and profitability doesn't stack up, you're literally going to lose your business goes broke and your business goes under and you lose everything.</p>
+          <p><span class="spk">Jason · 20:52</span>And the whole marketing and advertising has been for a waste anyway. So there's quite a few moving parts to. Getting it</p>
+          <p><span class="spk">Jason · 21:00</span>right for starters. And, and, you know, how many unfortunate stories do you see where the brand went out of business? There's that many, you know, retail brands and even clothing brands and different things on, on, that you can see online every day, there's a new article about a business that goes, goes out, goes bankrupt.</p>
+          <p><span class="spk">Jason · 21:17</span>Um, so, you know, the challenge for small business owner is knowing where to start. And that would also, that would usually come back to the purpose. Who are they targeting? Who do they want to speak to with their ads? And in this day and, you know, realm that we're in, you can actually be quite specific on who you're targeting.</p>
+          <p><span class="spk">Jason · 21:31</span>Now that then Nick, what you said as well, whether it's the personal brand, you know, Jason, the individual gets on the video and tries to say, come and work with Jason, the accountant, or Can anyone get on the video and say, go and work with future advisory. They love to look after business owners to get their tax done and, and their business advisory.</p>
+          <p><span class="spk">Jason · 21:49</span>So I agree that there's a big kind of. focus or differential between, are you building a personal brand for your own sense of satisfactional</p>
+          <p><span class="spk">Jason · 22:00</span>purpose? Or is there a way to build a business brand, but still be a face? Because if I'm the person most comfortable to get in front of a camera and talk about what future advisory does, then it probably makes sense that I can do that and reach an audience in that way.</p>
+          <p><span class="spk">Jason · 22:12</span>Um, you know, the, the biggest thing that I see in small business owners though, is the lack of consistency and the lack of. Creating a plan and sticking to it. It'd be like us if we got 20, 30, 40 episodes into the numbers game, invested thousands of dollars of our time and money to get it set up and then went, Oh, well, you know, maybe, maybe we just do one episode a month or maybe we'll do one season, then we'll have a six month break and maybe we'll turn it back on again and see what happens.</p>
+          <p><span class="spk">Jason · 22:40</span>But instead it was the purpose that we had was to create the plan. A platform like this where we could share education and knowledge with our audience and then even reach more people than just the audience and the clients that we look after to be able to educate and create a platform for that. So we, we knew our purpose and why it keeps going, but</p>
+          <p><span class="spk">Jason · 23:00</span>unfortunately, time and time again, we get business owners that come to us and go, Oh yeah, I've started paying 500 a month for SEO or some kind of marketing.</p>
+          <p><span class="spk">Jason · 23:08</span>And you know, three months later, I didn't have any new customers, so I turned it off. So for me, it's the, that, that length in time as well, it to build a marketing and advertising plan and the amount of investment that needs to go into it. Um, but it's all around, I would always say as well, that once you've figured out what you can afford to spend per month, it's about investing.</p>
+          <p><span class="spk">Jason · 23:29</span>That month in month out and building the steps towards a longer term plan for where you're trying to get your business to, but it all has to tie into the bigger plan and the bigger purpose.</p>
+          <p><span class="spk">Marty · 23:37</span>You nailed the consistency piece too, Jase. Uh, like even when I talk to brokers, you know, they might do spasmodically a few social media posts and go, why am I not getting leads?</p>
+          <p><span class="spk">Marty · 23:47</span>But yeah, digital trust, like real trust in real life takes time. And as long as you've got a methodology, you're putting great content out there and, um, doing it consistently. Then the trigger from the market is</p>
+          <p><span class="spk">Marty · 24:00</span>someone has a need and you're the person to go to. Um, yeah, I had a great example this morning on LinkedIn.</p>
+          <p><span class="spk">Marty · 24:06</span>Uh, one of our young brokers, Nick Rabber, who's a gun, a great, great broker. Um, he was putting. Content out on people saving mortgage, insurance, accountants, paramedics. And, and he has the unique thing that he has in his profile is a meeting link. Like instead of putting the website, he has a meeting link that people can come straight to him and people are booking meetings through that.</p>
+          <p><span class="spk">Marty · 24:30</span>Now he's been doing that for about four months now, and he got a 1. 7 million deal out of that. Um, which is, he's still trying to win that deal over, but he's got an opportunity on that. And that came through consistency. So I think you can be very niche to what you're targeting there to trigger the market, or you have to be niche in strategy as a generalist.</p>
+          <p><span class="spk">Marty · 24:52</span>So, but you need to have some form of strategy in that and a methodology that you can get engagement that it works. So that</p>
+          <p><span class="spk">Marty · 25:00</span>worked for him. He's going to keep doing that a hundred percent, right? Cause he's now got consistently that he's getting a couple of months off that, off that one strategy. So again, it's working out why you're doing it.</p>
+          <p><span class="spk">Marty · 25:12</span>Um, you know, and, and what is the result and is it adding value to the market that it brings that market to you as an expert? So yeah, that's a good example.</p>
+          <p><span class="spk">Jason · 25:20</span>The challenge here, you know, people have limited time, limited budgets, and there's this ever changing digital landscape that people get confused by what works and what doesn't work.</p>
+          <p><span class="spk">Jason · 25:29</span>But part of the challenge is just starting and being consistent, posting that content and learning and adapting as you go. And one thing that I'd build in is if you don't. Have the time to build it yourself. And if you're not going to be consistent, if you're just relying on yourself from an accountability point of view, that is where you engage an expert.</p>
+          <p><span class="spk">Jason · 25:48</span>If, if your business is getting to a certain point and we did it before we really even had the budget too, cause I kind of understood we're an accounting firm, Greg and I were accountants. We were doing tax returns and financials for</p>
+          <p><span class="spk">Jason · 26:00</span>business owners. We were meeting with. Business owners of how to grow their business or do things.</p>
+          <p><span class="spk">Jason · 26:04</span>I didn't have time to write a blog post every week and post it to the website. I didn't have time to make a fancy Instagram tile and stick it on Instagram linked back to the website that had the booking link and so on and so forth. But I knew it was important to our business growth strategy that we developed from day one to say, we want to attract our clients online.</p>
+          <p><span class="spk">Jason · 26:22</span>So when somebody Googles. small business account at Melbourne or zero expert, Nari Warren, whatever the search terms were, we wanted to make sure our website was number one. And we knew at the time to get there involved doing the things like blog posts and you know, some stuff on social media and years and years on, we, we still get wins from businesses.</p>
+          <p><span class="spk">Jason · 26:44</span>Googling certain search terms and landing on our website or finding a video on Instagram or YouTube that lets them connect to who we are as people and see that we are human. So, you know, I'd say create a plan. If you're a small business owner who hasn't delved heavily into this world of</p>
+          <p><span class="spk">Jason · 27:00</span>marketing and you know, you're seeing the Mr.</p>
+          <p><span class="spk">Jason · 27:02</span>Beasts or the other examples, the Adrian Portales, they're at extreme end of the scale. You don't have to be that, but if you're not Out there marketing and showing the world what your business can do and what the purpose of your business is and who you serve. There's probably an opportunity heading into, you know, we're in some interesting times of business with cost of living crisis, um, competitions getting fiercer and fiercer as we go.</p>
+          <p><span class="spk">Jason · 27:25</span>And if you're not playing in that game, you're probably going to miss out on some of these extra clients that you could win or extra, you know, bums on seats in restaurants and, and different places, hotels, whatever you're doing. So create a plan. Have a consistent strategy. And if it's not you engage someone to do it for you.</p>
+          <p><span class="spk">Jason · 27:41</span>So you've got that, you know, accountability.</p>
+          <p><span class="spk">Marty · 27:44</span>Jason, could I add something here in regards to both, both you two? Um, again, let's say you're not doing social media posts, right? Because that's not your shtick, but you are creating opportunities to talk to your</p>
+          <p><span class="spk">Marty · 28:00</span>direct client in regards to presentations. And I think this is an area that is.</p>
+          <p><span class="spk">Marty · 28:07</span>undervalued in the business world. And if you get it right, could really produce big results. So yes, you can do it where all the noise is, or you can present yourself as an expert, as a, as being on a stage, talking to your direct market. Now that to me is an accelerator and always has been. So you talk about.</p>
+          <p><span class="spk">Marty · 28:29</span>The courage of standing, you know, behind a laptop and, and producing content, as opposed to standing directly in front of your audience, um, sharing value with the people that are going to buy from you. Now that is something that is, I think, If you're going to develop a skill and you want to cut through the noise, it's, uh, it's all relevant, but I go, that is a super best.</p>
+          <p><span class="spk">Marty · 28:53</span>So Nick, tell me how you feel about doing that type of work. Cause you do that on teaching</p>
+          <p><span class="spk">Marty · 29:00</span>people financial wellbeing to real estate agents, accountants, like business owners, and you know, you consistently get up there and do that. So. You know, and you seem, I don't know whether you're nervous or not. You don't seem nervous on the surface, but I guess you've done it enough times.</p>
+          <p><span class="spk">Marty · 29:15</span>How do you approach that? Because that is a business owner as a superpower.</p>
+          <p><span class="spk">Nick · 29:20</span>Yeah, it's, it's a really good point because, you know, it's here talking about, well, putting yourself out there, that's not for everyone. Um, but yeah, there's no doubt. Like I'm nervous every time. And of course it gets easier, but I. I wouldn't suggest, uh, the nerves are less.</p>
+          <p><span class="spk">Nick · 29:37</span>I think you just get better at dealing with them and, you know, you know, the content so well that it seems to roll off the tongue and the nerves, um, are not, uh, visual, I guess from the, from the people listening, but yeah, I don't think there's, um, no, that, that, that would be the wrong thing to say. I was going to say, there's no better way to drive businesses, plenty of ways to drive business,</p>
+          <p><span class="spk">Nick · 30:00</span>but.</p>
+          <p><span class="spk">Nick · 30:00</span>It's a really good way to drive business, but I was thinking about what you were talking about there, Marty. And I really think the combination is so important because if I look at, if I look at what we're doing on the podcast, if I look at the stuff that, you know, we promote on LinkedIn, if I look at the website stuff, it's all social proof.</p>
+          <p><span class="spk">Nick · 30:20</span>So it's all just creating that awareness of who you are. And then when people do say you promote or talk, uh, in our case, or someone is referred. Um, they know who you are or they've looked up the website, they've seen the Google reviews, they've jumped on your Instagram page, they can see action there. So I think the combination is really important and the other thing.</p>
+          <p><span class="spk">Nick · 30:44</span>that I, that we've learned is in talking about combination with, um, with online marketing and Instagram is how they all feed into each other. So your website, you know, if someone looks at something on Instagram and sees you presenting, then they're probably going to go to your website. So your</p>
+          <p><span class="spk">Nick · 31:00</span>website's got to be good.</p>
+          <p><span class="spk">Nick · 31:01</span>And then they're probably going to look at your Google reviews. So you've got to make sure that you've got Google reviews. Um, So, these are the things that we've learned in, you know, you can pour all this money into certain areas in the marketing, but you've, you've got to be aware of everything and how it all connects.</p>
+          <p><span class="spk">Nick · 31:17</span>Um, and then for me, you know, presenting to people, yeah, that's, that's really difficult. Um, but at the same time I, I enjoy it. Um, and yeah, we have some really good customers. Con open conversations with people there on the spot, which I really like as well.</p>
+          <p><span class="spk">Jason · 31:31</span>Do you feel like this has been good practice as well?</p>
+          <p><span class="spk">Jason · 31:33</span>Sorry to cut in Nick, the, the getting into a room like this and sharing this content over the years, do you feel more confident in the ability to be able to talk in front of a microphone?</p>
+          <p><span class="spk">Nick · 31:44</span>Yeah, well, definitely. Um, you know, and not that it's, um, obviously there's, I don't feel nervous around YouTube because we talk all the time, but the amount of things that we talk about and the learnings, and, you know, if you look at any presentation or any sales skill</p>
+          <p><span class="spk">Nick · 32:00</span>and your ability to sell, it's all about your knowledge and your confidence in a product.</p>
+          <p><span class="spk">Nick · 32:03</span>So. If you know, and you understand something, it becomes very easy to promote, um, whether that's to 10 people or, or, or a thousand people, that's just my opinion. Um, so yeah, for sure, this has definitely helped, um, and the learnings and, you know, understanding what, what you guys are going through. We've just taken so much knowledge that that's easy to talk about.</p>
+          <p><span class="spk">Nick · 32:24</span>But the last thing I was going to say is you really need to also measure your ROI. So, and that can be really difficult, really difficult with online. Um, how do you measure your ROI? If you, you know, someone rings you and they've seen something online, it could be as if, if you're an SME, it can be as simple as just asking the question to that person that calls you that wants to utilize your services, how'd you hear about us, um, Did you, you know, we, did you see something on Facebook or Instagram, or did you see me present?</p>
+          <p><span class="spk">Nick · 32:55</span>Or were you on LinkedIn? Or was it from a, from a word of mouth, um, situation. And then you</p>
+          <p><span class="spk">Nick · 33:00</span>really understand what's working for you. And we, on our online leads, we can easily track that, but when the phone rings, that's, that's not that easy. You really have to have a conversation and work out what's working for you because to Marty's point.</p>
+          <p><span class="spk">Nick · 33:14</span>around, you know, sometimes just talking to people and asking for deals, that's pretty cheap and that's really just your time. If you start looking at online marketing, Instagram, um, if it's not you and you've got support doing it, it can get really expensive. So you absolutely need to make sure you're getting a return on that stuff.</p>
+          <p><span class="spk">Nick · 33:34</span>So I think it's important to measure the ROI, understand what you want out of your own business. Well, do I need 30 new leads a month? I probably don't. I'm a one or two person band. I really only need one or two good clients a month. So maybe I'm just going to go and talk to my existing clients and ask them who do they think I can help.</p>
+          <p><span class="spk">Nick · 33:53</span>I'm going to have relationships with, you know, people like future advisory. I only need one or two new good clients a month. I don't</p>
+          <p><span class="spk">Nick · 34:00</span>need to worry about the social media stuff. So yeah, understanding your business. And then for me also just It's just measuring it so you can double down on what's working.</p>
+          <p><span class="spk">Marty · 34:09</span>Yeah, well said.</p>
+          <p><span class="spk">Jason · 34:10</span>Couldn't agree more</p>
+          <p><span class="spk">Marty · 34:11</span>Nick. What about yourself, Jason? Regardless of you do a lot of presentations and I, I think if someone's starting out in business and if they're not all over the social media stuff, rather than spending time, who Just trying to create content, hoping to get a client.</p>
+          <p><span class="spk">Marty · 34:25</span>Let's remember, you might have a three to six month lag. You might nail it. You don't know, but what you can do is be in front of your market, present value to a live audience, and you're positioning yourself as an expert, whether that's a small sales team, whether that's a room of 50, whatever the case may be.</p>
+          <p><span class="spk">Marty · 34:42</span>All of a sudden you're giving direct value and it can, it can actually supercharge opportunities in the early days without a lot of cost, right? Straight away. So it's a good, good way to think about it. And then you build the content off the back of it or as you're doing it. Right. So, but what about yourself?</p>
+          <p><span class="spk">Marty · 34:57</span>You've, you've done a lot of presentations, Jase. Do you</p>
+          <p><span class="spk">Marty · 35:00</span>have nerves in doing it? You seem like a natural personality wants to get up there and share value, but I might be wrong. How, how do you go?</p>
+          <p><span class="spk">Jason · 35:07</span>I shit bricks every time. I don't know something about it, but I think it's, it's a good combination of nervous energy.</p>
+          <p><span class="spk">Jason · 35:14</span>Cause I want to get up and deliver value to whatever audience I'm speaking to at the time. Um, I reckon our first half dozen to a dozen podcasts that we did as well. It was the same thing, but in nervous energy, you know, really wanted to make sure we're coming across to our audience in the right way. Um, but you get, there's nothing like.</p>
+          <p><span class="spk">Jason · 35:30</span>The thrill now, it's a bit of an addiction, like the thrill of getting on stage. And you know, whether it was, you know, the MC of the zero summer series in front of 500, you know, peers from my industry. Like I'm, I'm very proud of, of the accounting profession, proud to be part of CPAs, public practice committees, zeros, partner advisory council.</p>
+          <p><span class="spk">Jason · 35:48</span>I want to give back to not just the small business community, but if I could impact the accounting industry in any way, shape or form as well, that's what You know, pretty special and pretty important to me to, you know, drive</p>
+          <p><span class="spk">Jason · 36:00</span>that. Um, so it's a big deal. So every time I'm getting on stage to speak to someone, there's a lot of pressure I put on myself, a lot of nervous energy, and then I always come off the stage and go, man, that was so much easier than I kind of built it up to be.</p>
+          <p><span class="spk">Jason · 36:10</span>Of course that was going to go well. Um, but you're right. I mean, and then it's all the flow on effect from that. If, if. You know, being on, being on a video online, isn't your thing. You can look at other things, but it's all about having a plan and knowing, as Nick said, how do you measure that ROI? Cause you know, those people that constantly go, Oh, I tried marketing, but didn't work.</p>
+          <p><span class="spk">Jason · 36:29</span>What, you know, did you measure it? Did you look at the impact it was having? Did you ask somebody who called you how they heard about you? So yeah, definitely saying this time, um, leading into the next couple of years, um, of interesting small business. Uh, outlook, I think if you don't have a marketing plan or a business plan, time to get ticking and make one.</p>
+          <p><span class="spk">Jason · 36:48</span>Um, but until next time, thank you for joining us. It's been a fun conversation with you boys as always, always get heaps out of it. Um, please like follow, subscribe, comments on our YouTube channel. We're trying to build up from our</p>
+          <p><span class="spk">Jason · 37:00</span>76 YouTube followers to be a bit like Mr. Beast and have, you know, the millions one day would be fantastic.</p>
+          <p><span class="spk">Jason · 37:05</span>Uh, but until next time,</p>
+          <p><span class="spk">Marty · 37:06</span>like Jay said, sometimes you got to shit bricks to build an empire. Get out there. Make it happen. Game over.</p>
+          <p><span class="spk">Jason · 37:14</span>This podcast is for educational and informational purposes only. The conversations are of a general nature and do not qualify as financial or tax advice. We recommend before you make any financial decisions, you consult a licensed professional.</p>
+          <p><span class="spk">Jason · 37:27</span>Individuals on the podcast may hold positions in the companies discussed. ---</p>
+        </div>
+      </details>
+
+    </div>
+
+    <!-- LISTEN:START (build_episode.py rewrites the 3 URLs + iframe title per episode; player dropped if no spotifyEmbedUrl) -->
+    <section class="listen-now">
+      <div class="ln-head">
+        <span class="ln-title">Listen now</span>
+      </div>
+      <div class="audio-embed">
+        <iframe src="https://open.spotify.com/embed/episode/7DSlVxQzYnybDj58Uk0pgr?utm_source=generator"
+          width="100%" height="152" loading="lazy" allowfullscreen
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+          title="Spotify — Cut Through In A Noisy Market"></iframe>
+      </div>
+    </section>
+
+    <div class="listen">
+      <a href="https://open.spotify.com/episode/7DSlVxQzYnybDj58Uk0pgr" target="_blank" rel="noopener" aria-label="Listen to this episode on Spotify">
+        <svg viewBox="0 0 24 24"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.52 17.34c-.24.36-.66.48-1.02.24-2.82-1.74-6.36-2.1-10.56-1.14-.42.12-.78-.18-.9-.54-.12-.42.18-.78.54-.9 4.56-1.02 8.52-.6 11.64 1.32.42.18.48.66.3 1.02zm1.44-3.3c-.3.42-.84.6-1.26.3-3.24-1.98-8.16-2.58-11.94-1.38-.48.12-1.02-.12-1.14-.6-.12-.48.12-1.02.6-1.14 4.32-1.32 9.72-.66 13.44 1.62.36.18.54.78.3 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.3c-.6.18-1.2-.18-1.38-.72-.18-.6.18-1.2.72-1.38 4.26-1.26 11.28-1.02 15.72 1.62.54.3.72 1.02.42 1.56-.3.42-1.02.6-1.56.3z"/></svg>
+        Spotify
+      </a>
+      <a href="https://podcasts.apple.com/au/podcast/id1555566088?i=1000661040424" target="_blank" rel="noopener" aria-label="Listen to this episode on Apple Podcasts">
+        <svg viewBox="0 0 24 24"><path d="M5.34 0A5.328 5.328 0 000 5.34v13.32A5.328 5.328 0 005.34 24h13.32A5.328 5.328 0 0024 18.66V5.34A5.328 5.328 0 0018.66 0H5.34zm6.525 2.568c2.336 0 4.448.902 6.056 2.587 1.224 1.272 1.912 2.619 2.264 4.392l.04.23c.04.272-.16.527-.432.567a.505.505 0 01-.567-.431l-.04-.213c-.312-1.57-.92-2.747-2.004-3.867-1.428-1.496-3.293-2.294-5.393-2.294-2.1 0-3.966.798-5.394 2.294-1.084 1.12-1.692 2.298-2.004 3.867l-.04.213a.507.507 0 01-.567.431.504.504 0 01-.432-.567l.04-.23c.352-1.773 1.04-3.12 2.264-4.392 1.608-1.685 3.72-2.587 6.056-2.587h.153zm.136 3.033c1.74 0 3.312.67 4.527 1.934.883.916 1.394 1.93 1.663 3.253l.04.23a.505.505 0 01-.431.567.503.503 0 01-.567-.432l-.04-.212c-.23-1.112-.659-1.97-1.396-2.732-1.052-1.1-2.404-1.672-3.9-1.672s-2.849.572-3.901 1.672c-.737.762-1.167 1.62-1.396 2.732l-.04.212a.503.503 0 01-.567.432.505.505 0 01-.432-.567l.04-.23c.27-1.323.78-2.337 1.664-3.253 1.215-1.264 2.787-1.934 4.527-1.934h.21zm-.078 3.05c1.092 0 2.091.424 2.89 1.22.582.58.924 1.245 1.107 2.15l.04.218a.501.501 0 01-.424.568.499.499 0 01-.568-.424l-.04-.198c-.146-.724-.413-1.253-.871-1.716-.63-.63-1.398-.957-2.226-.957s-1.595.328-2.225.957c-.459.463-.726.992-.871 1.716l-.04.198a.499.499 0 01-.568.424.501.501 0 01-.424-.568l.04-.219c.183-.904.525-1.569 1.106-2.149.8-.796 1.799-1.22 2.89-1.22h.184zM12 14.07a2.477 2.477 0 012.48 2.478A2.477 2.477 0 0112 19.024a2.477 2.477 0 01-2.48-2.477A2.477 2.477 0 0112 14.07z"/></svg>
+        Apple
+      </a>
+      <a class="yt-pill" href="https://www.youtube.com/@thenumbersgamepodcast?sub_confirmation=1" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.12-2.14C19.5 3.55 12 3.55 12 3.55s-7.5 0-9.38.51A3 3 0 0 0 .5 6.2 31.4 31.4 0 0 0 0 12a31.4 31.4 0 0 0 .5 5.8 3 3 0 0 0 2.12 2.14c1.88.51 9.38.51 9.38.51s7.5 0 9.38-.51a3 3 0 0 0 2.12-2.14A31.4 31.4 0 0 0 24 12a31.4 31.4 0 0 0-.5-5.8zM9.55 15.57V8.43L15.82 12z"/></svg>
+        Subscribe
+      </a>
+    </div>
+    <!-- LISTEN:END -->
+
+    <div class="relsec">
+      <span class="rtitle">Discover more</span>
+      <div class="relgrid">
+        <a class="relcard" href="/how-to-win-on-social-media-vanity-metrics-vs-real-results">
+          <img src="https://i.ytimg.com/vi/lPdaCst3SL4/hqdefault.jpg" alt="EP 250 thumbnail">
+          <span class="rt">How to Win on Social Media</span>
+          <span class="rfoot"><span class="rwhy">Also covers: marketing</span><span class="rtag">EP 250</span></span>
+        </a>
+        <a class="relcard" href="/if-i-could-start-my-business-again-today">
+          <img src="https://i.ytimg.com/vi/fX_EE9bzhc4/hqdefault.jpg" alt="EP 203 thumbnail">
+          <span class="rt">If I Could Start My Business Again Today...</span>
+          <span class="rfoot"><span class="rwhy">Also covers: marketing</span><span class="rtag">EP 203</span></span>
+        </a>
+        <a class="relcard" href="/how-businesses-can-do-good-and-still-make-money">
+          <img src="https://i.ytimg.com/vi/YY4GGftWiuU/hqdefault.jpg" alt="EP 256 thumbnail">
+          <span class="rt">How Businesses Can Do Good and Still Make Money</span>
+          <span class="rfoot"><span class="rwhy">Also covers: marketing</span><span class="rtag">EP 256</span></span>
+        </a>
+        <a class="relcard" href="/pokemon-cards-vs-bitcoin-gold-and-the-asx">
+          <img src="https://i.ytimg.com/vi/7PHS9HCqNvM/hqdefault.jpg" alt="EP 286 thumbnail">
+          <span class="rt">Pokemon Cards vs Bitcoin, Gold and the ASX</span>
+          <span class="rfoot"><span class="rwhy">20 July 2026</span><span class="rtag">EP 286</span></span>
+        </a>
+        <a class="relcard" href="/buying-commercial-property-with-your-super-in-2026">
+          <img src="https://i.ytimg.com/vi/RAQ80ecsDq0/hqdefault.jpg" alt="EP 285 thumbnail">
+          <span class="rt">Buying Commercial Property With Your Super in 2026</span>
+          <span class="rfoot"><span class="rwhy">13 July 2026</span><span class="rtag">EP 285</span></span>
+        </a>
+        <a class="relcard" href="/the-most-expensive-day-in-aussie-small-business-history">
+          <img src="https://i.ytimg.com/vi/V-10kMQrsDM/hqdefault.jpg" alt="EP 284 thumbnail">
+          <span class="rt">The Most Expensive Day in Aussie Small Business History</span>
+          <span class="rfoot"><span class="rwhy">6 July 2026</span><span class="rtag">EP 284</span></span>
+        </a>
+      </div>
+      <div class="reldots" id="reldots"></div>
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="footgrid">
+      <div class="fcol">
+        <div class="foot-label">Follow us on</div>
+        <div class="socials">
+          <a href="https://www.instagram.com/thenumbersgamepodcast/" target="_blank" rel="noopener" aria-label="The Numbers Game on Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.8.2 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1 .4 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .4-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1-.4-2.2-.1-1.3-.1-1.7-.1-4.9s0-3.6.1-4.9c.1-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.4 2.2-.4 1.3-.1 1.7-.1 4.9-.1zm0 2c-3.1 0-3.5 0-4.8.1-1.1.1-1.5.2-1.8.3-.4.2-.7.3-1 .6-.3.3-.5.6-.6 1-.1.3-.3.7-.3 1.8-.1 1.3-.1 1.7-.1 4.8s0 3.5.1 4.8c.1 1.1.2 1.5.3 1.8.2.4.3.7.6 1 .3.3.6.5 1 .6.3.1.7.3 1.8.3 1.3.1 1.7.1 4.8.1s3.5 0 4.8-.1c1.1-.1 1.5-.2 1.8-.3.4-.2.7-.3 1-.6.3-.3.5-.6.6-1 .1-.3.3-.7.3-1.8.1-1.3.1-1.7.1-4.8s0-3.5-.1-4.8c-.1-1.1-.2-1.5-.3-1.8-.2-.4-.3-.7-.6-1-.3-.3-.6-.5-1-.6-.3-.1-.7-.3-1.8-.3-1.3-.1-1.7-.1-4.8-.1zm0 3.4a5.4 5.4 0 1 1 0 10.8 5.4 5.4 0 0 1 0-10.8zm0 2a3.4 3.4 0 1 0 0 6.8 3.4 3.4 0 0 0 0-6.8zm5.6-2.3a1.3 1.3 0 1 1-2.6 0 1.3 1.3 0 0 1 2.6 0z"/></svg></a>
+          <a href="https://www.tiktok.com/@thenumbersgamepodcast" target="_blank" rel="noopener" aria-label="The Numbers Game on TikTok"><svg viewBox="0 0 24 24"><path d="M12.53.02C13.84 0 15.14.01 16.44 0c.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg></a>
+          <a href="https://www.linkedin.com/company/the-numbers-game-podcast/" target="_blank" rel="noopener" aria-label="The Numbers Game on LinkedIn"><svg viewBox="0 0 24 24"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.24 8.25h4.52V23H.24V8.25zM8.34 8.25h4.33v2.01h.06c.6-1.14 2.08-2.34 4.28-2.34 4.58 0 5.42 3.01 5.42 6.92V23h-4.51v-7.16c0-1.71-.03-3.91-2.38-3.91-2.39 0-2.75 1.86-2.75 3.78V23H8.34V8.25z"/></svg></a>
+          <a href="https://www.facebook.com/profile.php?id=100071290388343" target="_blank" rel="noopener" aria-label="The Numbers Game on Facebook"><svg viewBox="0 0 24 24"><path d="M24 12.07C24 5.41 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.04V9.41c0-3.02 1.8-4.7 4.54-4.7 1.31 0 2.68.24 2.68.24v2.97h-1.5c-1.5 0-1.96.93-1.96 1.89v2.26h3.32l-.53 3.5h-2.8V24C19.62 23.1 24 18.1 24 12.07z"/></svg></a>
+          <a href="https://www.youtube.com/@thenumbersgamepodcast" target="_blank" rel="noopener" aria-label="The Numbers Game on YouTube"><svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.2C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31.7 31.7 0 0 0 0 12a31.7 31.7 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.2A31.7 31.7 0 0 0 24 12a31.7 31.7 0 0 0-.5-5.8zM9.6 15.6V8.4L15.8 12z"/></svg></a>
+        </div>
+      </div>
+      <div class="fcol">
+        <div class="foot-label">Brought to you by</div>
+        <div class="sponsors">
+          <a href="https://www.inovayt.com.au/" target="_blank" rel="noopener"><img src="assets/inovayt-white.png" alt="Inovayt"></a>
+          <a href="https://futureadvisory.com.au/" target="_blank" rel="noopener"><img src="assets/future-advisory-white.png" alt="Future Advisory"></a>
+        </div>
+      </div>
+      <div class="fcol produced">
+        <div class="foot-label">Produced by</div>
+        <a href="https://www.vidpod.com.au/" target="_blank" rel="noopener"><img src="assets/vidpod-white.png" alt="VIDPOD"></a>
+      </div>
+    </div>
+    <div class="footbar">
+      <details class="footnav-dd">
+        <summary><svg class="ham" viewBox="0 0 24 24"><path d="M3 6h18v2H3zM3 11h18v2H3zM3 16h18v2H3z"/></svg> Menu</summary>
+        <div class="dd-links">
+          <a href="/">Home</a><a href="/episodes">Every episode</a><a href="/adventure">Choose your own adventure</a><a href="/about">About the show</a><a href="/nick-reilly">Nick Reilly</a><a href="/jason-robinson">Jason Robinson</a><a href="/contact">Contact</a>
+        </div>
+      </details>
+      <div class="copyright">© 2026 The Numbers Game</div>
+    </div>
+  </footer>
+
+  <script>
+    var VIDEO='c8AxkyOW0EQ';
+    var CHAPTERS=[
+      {t:"00:00",s:0,title:"Intro"},
+      {t:"02:57",s:177,title:"Mr Beast's Exponential Growth"},
+      {t:"05:00",s:300,title:"The Feastables Car Giveaway"},
+      {t:"08:11",s:491,title:"Why Mr Beast's Content Works"},
+      {t:"09:14",s:554,title:"How The Algorithm Rewards Engagement"},
+      {t:"09:35",s:575,title:"The Supermarket Giveaway"},
+      {t:"11:42",s:702,title:"Philanthropy As Content Strategy"},
+      {t:"13:05",s:785,title:"Marty On Pitching Yourself"},
+      {t:"13:50",s:830,title:"Marty's Coffee Shop Strategy"},
+      {t:"15:05",s:905,title:"Cut Through With Your Personality"},
+      {t:"15:52",s:952,title:"Test What Catches Fire"},
+      {t:"16:33",s:993,title:"Consistency Beats Sporadic Effort"},
+      {t:"17:35",s:1055,title:"Create Something People Follow"},
+      {t:"18:14",s:1094,title:"What If Being The Face Is Not You"},
+      {t:"19:01",s:1141,title:"Pitch And No Punch"},
+      {t:"20:22",s:1222,title:"Marketing Only Works If Margins Stack Up"},
+      {t:"21:31",s:1291,title:"Personal Brand Versus Business Brand"},
+      {t:"22:12",s:1332,title:"The Plan You Stick To"},
+      {t:"23:08",s:1388,title:"Marketing Takes Time"},
+      {t:"23:47",s:1427,title:"Digital Trust Takes Time"},
+      {t:"24:06",s:1446,title:"The Broker Who Booked A 1.7M Deal"},
+      {t:"25:29",s:1529,title:"If You Cannot Be Consistent, Hire It Out"},
+      {t:"25:48",s:1548,title:"Ranking Number One On Google"},
+      {t:"26:44",s:1604,title:"You Do Not Have To Be Mr Beast"},
+      {t:"27:44",s:1664,title:"Presenting As An Accelerator"},
+      {t:"29:20",s:1760,title:"Nerves Never Fully Go Away"},
+      {t:"30:00",s:1800,title:"It All Feeds Into Each Other"},
+      {t:"30:44",s:1844,title:"Instagram To Website To Google Reviews"},
+      {t:"31:44",s:1904,title:"Selling Is Knowledge And Confidence"},
+      {t:"32:24",s:1944,title:"Measure Your Marketing ROI"},
+      {t:"33:34",s:2014,title:"Right Size Your Marketing"},
+      {t:"34:11",s:2051,title:"Present Value To A Live Audience"},
+      {t:"35:07",s:2107,title:"Nervous Energy Before The Stage"},
+      {t:"36:10",s:2170,title:"Have A Plan And Measure It"}
+    ];
+    var QUESTIONS=[
+      {q:"Why is Mr Beast so successful at content?",s:491},
+      {q:"How do you cut through in a noisy market?",s:905},
+      {q:"Why does marketing need to be consistent?",s:993},
+      {q:"Why does pushing a product on social media not work?",s:1055},
+      {q:"Are social media followers a vanity metric?",s:1141},
+      {q:"Can marketing work if your margins are too thin?",s:1222},
+      {q:"Why do small business marketing efforts fail?",s:1332},
+      {q:"Is public speaking a good way to market a business?",s:1664},
+      {q:"How do your marketing channels work together?",s:1800},
+      {q:"How do you deal with nerves before presenting?",s:2107}
+    ];
+
+    var chEl=document.getElementById('chapters');
+    CHAPTERS.forEach(function(c){var b=document.createElement('button');b.className='chapter';b.onclick=function(){startAt(c.s)};b.innerHTML='<span class="tc">'+c.t+'</span><span class="cx">'+c.title+'</span>';chEl.appendChild(b);});
+    document.getElementById('chcount').textContent=CHAPTERS.length;
+    var qEl=document.getElementById('qa');
+    QUESTIONS.forEach(function(q){var b=document.createElement('button');b.className='q';b.onclick=function(){startAt(q.s)};b.innerHTML='<span class="qm">?</span><span class="qx">'+q.q+'</span><span class="go">›</span>';qEl.appendChild(b);});
+    document.getElementById('qcount').textContent=QUESTIONS.length;
+
+    /* Mobile nav dropdown. */
+    var burger=document.getElementById('navburger'), navdrop=document.getElementById('navdrop');
+    if(burger&&navdrop){burger.addEventListener('click',function(){
+      navdrop.hidden=!navdrop.hidden;
+      burger.setAttribute('aria-expanded', navdrop.hidden?'false':'true');
+    });}
+
+    /* Voice-note button reveals the recorder; × tucks it away. */
+    var vbtn=document.getElementById('vbtn'), vslot=document.getElementById('vslot'), vclose=document.getElementById('vclose');
+    if(vbtn&&vslot){vbtn.addEventListener('click',function(){vslot.hidden=!vslot.hidden;});}
+    if(vclose&&vslot){vclose.addEventListener('click',function(){vslot.hidden=true;});}
+
+    /* Keep-exploring dots: only shown when the strip actually scrolls (mobile). */
+    var rg=document.querySelector('.relgrid'), rd=document.getElementById('reldots');
+    if(rg&&rd){
+      var relCards=rg.querySelectorAll('.relcard');
+      relCards.forEach(function(){rd.appendChild(document.createElement('span'))});
+      var updDots=function(){
+        var scrollable=rg.scrollWidth>rg.clientWidth+4;
+        rd.style.display=scrollable?'flex':'none';
+        if(!scrollable)return;
+        var i=Math.round(rg.scrollLeft/(rg.scrollWidth-rg.clientWidth)*(relCards.length-1));
+        rd.querySelectorAll('span').forEach(function(s,n){s.classList.toggle('on',n===i)});
+      };
+      rg.addEventListener('scroll',updDots,{passive:true});
+      window.addEventListener('resize',updDots);
+      updDots();
+    }
+
+    /* Explore tabs: swap the visible panel; the row stays put so you never lose your place. */
+    var tabBtns=document.querySelectorAll('.tabbtn');
+    tabBtns.forEach(function(b){
+      b.addEventListener('click',function(){
+        tabBtns.forEach(function(o){o.classList.remove('on')});
+        document.querySelectorAll('.tpanel').forEach(function(p){p.hidden=true});
+        b.classList.add('on');
+        document.getElementById(b.getAttribute('data-panel')).hidden=false;
+      });
+    });
+
+    /* YouTube: clean facade, then real player on demand. Seek without yanking to top. */
+    var player=null, ready=false, apiReady=false, pending=null;
+    window.onYouTubeIframeAPIReady=function(){apiReady=true; if(pending!=null){var s=pending;pending=null;createPlayer(s);}};
+    function createPlayer(sec){
+      var wrap=document.getElementById('player'); wrap.innerHTML='<div id="yt"></div>';
+      player=new YT.Player('yt',{videoId:VIDEO,playerVars:{autoplay:1,rel:0,modestbranding:1,playsinline:1,start:Math.floor(sec||0)},events:{onReady:function(){ready=true;}}});
+    }
+    function nudge(){
+      var p=document.getElementById('player-wrap'), r=p.getBoundingClientRect();
+      if(r.bottom<80 || r.top>window.innerHeight-90){ p.scrollIntoView({behavior:'smooth',block:'start'}); }
+    }
+    function startAt(sec){
+      nudge();
+      if(player&&ready){ player.seekTo(sec,true); player.playVideo(); return; }
+      if(apiReady){ createPlayer(sec); } else { pending=sec; }
+    }
+    document.getElementById('facade').addEventListener('click',function(){startAt(0);});
+    (function(){var s=document.createElement('script');s.src='https://www.youtube.com/iframe_api';document.head.appendChild(s);})();
+  </script>
+</body>
+</html>

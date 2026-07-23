@@ -1,0 +1,824 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EP 193 · Clementine Boshevski - The Highs and Lows of Building Salt Lab | The Numbers Game</title>
+<meta name="description" content="Jason and Marty host Clementine Boshevski, founder of topical magnesium brand Salt Lab, with Marty co-hosting while Nick is away.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" sizes="64x64" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="canonical" href="https://thenumbersgamepodcast.com.au/clementine-boshevski-the-highs-and-lows-of-building-salt-lab">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="The Numbers Game">
+<meta property="og:title" content="EP 193 · Clementine Boshevski - The Highs and Lows of Building Salt Lab | The Numbers Game">
+<meta property="og:description" content="Jason and Marty host Clementine Boshevski, founder of topical magnesium brand Salt Lab, with Marty co-hosting while Nick is away.">
+<meta property="og:url" content="https://thenumbersgamepodcast.com.au/clementine-boshevski-the-highs-and-lows-of-building-salt-lab">
+<meta property="og:image" content="https://i.ytimg.com/vi/f9UgxUuL-6g/maxresdefault.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+  :root{
+    --purple:#585af3; --purple-dark:#2c1b8a; --mint:#7ad9a8;
+    --white:#ffffff; --muted:rgba(255,255,255,.60); --dim:rgba(255,255,255,.42);
+    --line:rgba(255,255,255,.12); --card:rgba(255,255,255,.05); --card-hi:rgba(255,255,255,.09);
+    --display:'Anton',Impact,'Helvetica Neue',sans-serif;
+    --sans:'Inter',system-ui,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif;
+    --wrap:1280px;   /* page frame (nav spans this) */
+    --col:960px;     /* content column (player, tabs, text) */
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:var(--sans); color:var(--white); line-height:1.6; -webkit-font-smoothing:antialiased;
+    background:#12093a;
+    background-image:
+      radial-gradient(1200px 600px at 82% -6%, rgba(88,90,243,.45) 0%, transparent 55%),
+      radial-gradient(900px 700px at 5% 8%, rgba(122,217,168,.10) 0%, transparent 50%),
+      linear-gradient(180deg,#2c1b8a 0%,#1a1150 28%,#100b34 62%,#0b0820 100%);
+    background-attachment:fixed;
+  }
+  a{color:inherit}
+  .wrap{max-width:var(--wrap);margin:0 auto;padding:0 36px}
+  main.wrap{max-width:var(--col)}
+  @media(max-width:720px){.wrap{padding:0 22px}}
+
+  /* ── Navbar ── */
+  .nav{position:sticky;top:0;z-index:50;background:linear-gradient(180deg,rgba(24,15,74,.92),rgba(24,15,74,.72));backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+  .nav-in{max-width:var(--wrap);margin:0 auto;padding:11px 36px;display:flex;align-items:center;justify-content:space-between}
+  @media(max-width:720px){.nav-in{padding:11px 22px}}
+  .brand{display:block;line-height:0}
+  .brand img{height:36px;width:auto;display:block}
+  .navlinks{display:flex;gap:28px;align-items:center}
+  .navlinks a{text-decoration:none;font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);transition:.15s}
+  .navlinks a:hover{color:var(--white)}
+  .navlinks a.navtop{cursor:default}
+  .navgroup{position:relative;display:flex;align-items:center}
+  .navgroup .subnav{display:none;position:absolute;top:100%;left:50%;transform:translateX(-50%);padding-top:14px;min-width:180px}
+  .navgroup:hover .subnav,.navgroup:focus-within .subnav{display:block}
+  .subnav-in,.navgroup .subnav{z-index:60}
+  .navgroup .subnav a{display:block;background:#180f4a;border:1px solid var(--line);border-top:0;padding:12px 16px;font-size:12px;color:rgba(255,255,255,.85)}
+  .navgroup .subnav a:first-child{border-top:1px solid var(--line)}
+  .navgroup .subnav a:hover{background:#221768;color:var(--white)}
+  .navburger{display:none;background:none;border:1px solid var(--line);padding:8px 10px;cursor:pointer;color:var(--white);transition:.15s}
+  .navburger:hover{border-color:rgba(122,217,168,.6)}
+  .navburger svg{width:20px;height:20px;fill:currentColor;display:block}
+  .navdrop{display:none}
+  @media(max-width:720px){
+    .navlinks{display:none}
+    .navburger{display:block}
+    .navdrop{display:block;position:absolute;left:0;right:0;top:100%;
+      background:#180f4a;border-bottom:1px solid var(--line);box-shadow:0 24px 50px rgba(0,0,0,.45)}
+    .navdrop[hidden]{display:none}
+    .navdrop a{display:block;padding:15px 22px;text-decoration:none;font-size:14px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:rgba(255,255,255,.9);border-bottom:1px solid rgba(255,255,255,.06)}
+    .navdrop a:last-child{border-bottom:0}
+    .navdrop a.sub{padding-left:42px;font-size:13px;color:rgba(255,255,255,.72)}
+    .navdrop .navlabel{display:block;padding:15px 22px 6px;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.4)}
+  }
+
+  /* ── Hero / hook (marker-highlight system: purple hook wraps naturally, mint payoff below)
+     Rules: title splits at its natural break (colon/pipe/question mark). Front = hook (purple,
+     big), back = payoff (mint, smaller). No break in title = purple hook only. Highlights hug
+     the text (tight em padding tuned to Anton) and wrap via box-decoration-break — never
+     hand-pick line breaks or mint words. ── */
+  header.hero{padding:34px 0 6px}
+  .hook{--inx:clamp(8.4px,2.1vw,15.6px)} /* one shared text inset so hook + payoff first letters align */
+  .hook .hk{font-family:var(--display);font-weight:400;text-transform:uppercase;
+    font-size:clamp(28px,7vw,52px);line-height:1.3;letter-spacing:-.5px;text-wrap:balance}
+  .hook .hk span{color:var(--white);padding:.04em var(--inx) .02em;
+    background:linear-gradient(var(--purple),var(--purple)) 0 50%/100% 87% no-repeat;
+    -webkit-box-decoration-break:clone;box-decoration-break:clone}
+  .hook .pay{font-family:var(--display);font-weight:400;text-transform:uppercase;
+    font-size:clamp(16px,4vw,24px);line-height:1.5;letter-spacing:.6px;margin-top:8px;text-wrap:balance}
+  .hook .pay span{color:#0a0a0a;padding:.08em var(--inx) .04em;
+    background:linear-gradient(var(--mint),var(--mint)) 0 50%/100% 88% no-repeat;
+    -webkit-box-decoration-break:clone;box-decoration-break:clone}
+  /* no-hook titles: mid-split into two full-size rows, purple then mint */
+  .hook .hk span.hkrow{display:block;background:none;padding:0}
+  .hook .hk .hkrow+.hkrow{margin-top:8px}
+  .hook .hk span.mintseg{color:#0a0a0a;
+    background:linear-gradient(var(--mint),var(--mint)) 0 50%/100% 87% no-repeat}
+
+  /* ── Player (clean facade → real player on tap) ── */
+  .player-wrap{margin:24px 0 4px;scroll-margin-top:76px}
+  .player{position:relative;width:100%;padding-top:56.25%;border-radius:0;overflow:hidden;background:#000;box-shadow:0 30px 70px rgba(0,0,0,.5),0 0 0 1px rgba(255,255,255,.06)}
+  .facade{position:absolute;inset:0;border:0;cursor:pointer;background-size:cover;background-position:center;display:flex;align-items:center;justify-content:center;padding:0}
+  .facade .play{width:74px;height:74px;border-radius:50%;background:rgba(10,6,30,.40);border:2px solid rgba(255,255,255,.72);display:flex;align-items:center;justify-content:center;transition:.18s;-webkit-backdrop-filter:blur(1px);backdrop-filter:blur(1px)}
+  .facade:hover .play{background:rgba(88,90,243,.62);transform:scale(1.07);border-color:#fff}
+  .facade .play::after{content:"";border-style:solid;border-width:11px 0 11px 19px;border-color:transparent transparent transparent #fff;margin-left:5px}
+  .player iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+
+  /* ── Episode facts (bottom of the Summary panel — templated per episode) ── */
+  .sumfacts{margin:14px 10px 4px;padding-top:13px;border-top:1px solid rgba(255,255,255,.08);display:flex;flex-direction:column;gap:8px}
+  .fact{display:flex;gap:12px;font-size:13.5px}
+  .fact .fl{flex:none;width:104px;color:var(--dim);font-weight:600;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;padding-top:2px}
+  .fact .fv{color:rgba(255,255,255,.9);font-weight:500}
+  .fact .fv a{color:var(--mint);text-decoration:none;border-bottom:1px solid rgba(122,217,168,.4);transition:.15s}
+  .fact .fv a:hover{border-bottom-color:var(--mint)}
+
+  /* ── Episode tag (identity: black label hanging off the title corner) ── */
+  .eptag{display:inline-block;position:relative;left:-6px;margin-bottom:-7px;z-index:2;
+    background:#0a0a0a;color:var(--white);font-family:var(--display);font-weight:400;
+    font-size:13.5px;letter-spacing:1.5px;text-transform:uppercase;padding:6px 11px 4px}
+
+  /* ── Explore tabs (sticky mode switcher; one panel swaps below, nothing shoves) ── */
+  .explore{margin-top:22px}
+  .tabs{position:sticky;top:58px;z-index:40;display:flex;flex-wrap:wrap;gap:8px;padding:10px 0;
+    background:linear-gradient(180deg,rgba(18,10,55,.96),rgba(18,10,55,.86));
+    backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+  .tabbtn{font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.5px;
+    font-size:14.5px;color:var(--white);background:var(--purple);border:1px solid var(--purple);
+    padding:9px 13px 7px;cursor:pointer;transition:.15s}
+  .tabbtn:hover{filter:brightness(1.12)}
+  .tabbtn.on{background:var(--mint);border-color:var(--mint);color:#0a0a0a}
+  .tabbtn.on:hover{filter:none}
+  .tabbtn .ct{font-size:12px;opacity:.75;font-variant-numeric:tabular-nums}
+  .tabbtn .ct::before{content:" · "}
+  .tpanel{border:1px solid var(--line);background:var(--card);padding:12px 10px 14px}
+  .hint{font-size:12.5px;color:var(--muted);padding:2px 10px 10px;border-bottom:1px solid rgba(255,255,255,.08);margin-bottom:6px}
+
+  /* ── Listen row (no box: label left, service pills follow) ── */
+  .listen{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:12px 16px;margin-top:34px}
+  .listen .lname{font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--dim)}
+  .listen a{display:inline-flex;align-items:center;gap:9px;padding:11px 18px;border-radius:999px;
+    background:var(--mint);color:#08210f;text-decoration:none;font-weight:800;font-size:12.5px;
+    letter-spacing:.04em;text-transform:uppercase;transition:.15s}
+  .listen a:hover{filter:brightness(1.06);transform:translateY(-1px);box-shadow:0 12px 30px rgba(122,217,168,.25)}
+  .listen svg{width:20px;height:20px;fill:currentColor;flex:none}
+  /* ── Listen-now Spotify audio embed (full column width, above the pills) ── */
+  .listen-now{margin-top:40px}
+  .listen-now .ln-head{display:flex;align-items:baseline;justify-content:space-between;gap:14px;margin-bottom:13px}
+  .listen-now .ln-title{font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--dim)}
+  .audio-embed{border-radius:12px;overflow:hidden;box-shadow:0 20px 50px rgba(0,0,0,.4),0 0 0 1px rgba(255,255,255,.06)}
+  .audio-embed iframe{display:block;width:100%;border:0}
+  @media(max-width:720px){.listen-now{margin-top:32px}}
+
+  /* ── Keep exploring (thumbnails link to other episode PAGES, never timecodes).
+     Swipeable strip on mobile, fits three-up on desktop. Variant rule: claim
+     "similar ground" + reason lines ONLY when moment-level topic overlap is
+     genuinely strong; otherwise show the latest released episodes with dates —
+     never invent a connection. ── */
+  .relsec{margin-top:60px;padding-top:58px;border-top:1px solid var(--line)} /* line = end of this episode's info */
+  .reldots{display:flex;justify-content:center;gap:7px;margin-top:12px}
+  .reldots span{width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.25);transition:.2s}
+  .reldots span.on{background:var(--mint)}
+  .relsec .rtitle{display:inline-block;font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.5px;font-size:14.5px;background:var(--mint);color:#0a0a0a;padding:9px 13px 7px;margin-bottom:18px}
+  .relgrid{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding-bottom:6px;scrollbar-width:none}
+  .relgrid::-webkit-scrollbar{display:none}
+  .relcard{flex:0 0 56%;max-width:232px;scroll-snap-align:start;display:flex;flex-direction:column;text-decoration:none;background:var(--card);border:1px solid var(--line);transition:.15s}
+  .relcard:hover{background:var(--card-hi);border-color:rgba(122,217,168,.55)}
+  .relcard img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block}
+  .relcard .rt{display:block;font-size:12.5px;font-weight:600;color:rgba(255,255,255,.92);line-height:1.4;padding:8px 8px 0}
+  .relcard .rfoot{margin-top:auto;display:flex;justify-content:space-between;align-items:flex-end;gap:8px;padding:10px 8px 9px}
+  .relcard .rwhy{font-size:11.5px;color:var(--mint)}
+  .relcard .rtag{display:inline-block;background:#0a0a0a;color:var(--white);font-family:var(--display);font-size:10px;letter-spacing:1.2px;text-transform:uppercase;padding:3px 7px 2px;white-space:nowrap;flex:0 0 auto}
+
+  /* ── Dropdown sections (accordion under the player) ── */
+  .drops{margin-top:34px;display:flex;flex-direction:column;gap:11px}
+  .drop{border:1px solid var(--line);border-radius:0;background:var(--card);overflow:hidden;transition:border-color .15s}
+  .drop[open]{border-color:rgba(122,217,168,.35)}
+  .drop>summary{list-style:none;cursor:pointer;padding:16px 18px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+  .drop>summary::-webkit-details-marker{display:none}
+  .drop>summary .st{font-weight:700;font-size:15.5px;letter-spacing:.005em}
+  .drop>summary .ct{margin-left:auto;font-size:12px;color:var(--dim);font-weight:600;font-variant-numeric:tabular-nums}
+  .drop>summary .chev{flex:none;width:22px;height:22px;border-radius:50%;background:rgba(122,217,168,.14);color:var(--mint);display:flex;align-items:center;justify-content:center;font-family:var(--display);font-size:15px;line-height:1;transition:.2s;transform:translateY(-1px)}
+  .drop[open]>summary .chev{transform:rotate(45deg)}
+  .drop-body{padding:2px 12px 12px}
+
+  /* chapters */
+  .chapter{display:flex;align-items:baseline;gap:14px;width:100%;text-align:left;cursor:pointer;background:none;border:0;color:inherit;font-family:inherit;padding:11px 10px;border-radius:10px;transition:.13s}
+  .chapter:hover{background:var(--card-hi)}
+  .chapter .tc{font-variant-numeric:tabular-nums;font-weight:700;font-size:14px;color:var(--mint);flex:none;width:48px}
+  .chapter .cx{font-size:15px;font-weight:500;color:rgba(255,255,255,.9)}
+  .chapter:hover .cx{color:#fff}
+
+  /* questions */
+  .q{display:flex;align-items:center;gap:12px;width:100%;text-align:left;cursor:pointer;background:none;border:0;border-radius:11px;color:inherit;font-family:inherit;padding:12px 10px;transition:.14s}
+  .q+.q{border-top:1px solid rgba(255,255,255,.05)}
+  .q:hover{background:var(--card-hi)}
+  .q .qm{font-family:var(--display);font-size:15px;color:var(--mint);flex:none;line-height:1;transform:translateY(1px)}
+  .q .qx{font-size:15px;font-weight:500;color:rgba(255,255,255,.92)}
+  .q .go{margin-left:auto;flex:none;color:var(--dim);font-size:18px;transition:.15s}
+  .q:hover .go{color:var(--mint);transform:translateX(2px)}
+
+  /* summary + transcript bodies */
+  .summary-body p{font-size:16.5px;line-height:1.62;color:rgba(255,255,255,.9);padding:6px 10px 4px}
+  .tbody{padding:2px 10px 8px}
+  .tbody p{font-size:14.5px;line-height:1.7;color:rgba(255,255,255,.78);margin-top:15px;max-width:64ch}
+  .tbody .spk{display:block;font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--mint);margin-bottom:2px}
+
+  /* ── Voice note ask (lives at the bottom of the Summary panel) ── */
+  .vask{margin:16px 10px 4px}
+  .vbtn{display:inline-flex;align-items:center;gap:9px;padding:12px 20px;border-radius:999px;border:0;cursor:pointer;
+    background:var(--mint);color:#08210f;font-family:inherit;font-weight:800;font-size:12.5px;
+    letter-spacing:.04em;text-transform:uppercase;transition:.15s}
+  .vbtn:hover{filter:brightness(1.06);transform:translateY(-1px);box-shadow:0 12px 30px rgba(122,217,168,.25)}
+  .vbtn svg{width:18px;height:18px;fill:currentColor;flex:none}
+  .vslot{background:var(--purple);padding:12px 10px 10px;margin:14px 0 4px;box-shadow:0 18px 40px rgba(0,0,0,.35)}
+  .vslot[hidden]{display:none}
+  .vhead{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;margin-bottom:10px}
+  .vhead .vmsg{font-family:var(--sans);font-size:13px;line-height:1.55;color:rgba(255,255,255,.92);margin:2px 0 0;padding:0 2px}
+  .vclose{background:none;border:0;color:rgba(255,255,255,.85);font-size:22px;line-height:1;cursor:pointer;padding:0 2px}
+  .vclose:hover{color:var(--white)}
+  .vslot iframe{display:block}
+
+  /* ── YouTube subscribe pill (sits in the listen row; outranks .listen a's mint) ── */
+  .listen a.yt-pill{background:var(--purple);color:var(--white)}
+  .listen a.yt-pill:hover{filter:brightness(1.1);transform:translateY(-1px)}
+  @media(max-width:720px){ /* mobile: no label, three compact pills on one row */
+    .listen .lname{display:none}
+    .listen{gap:8px}
+    .listen a{padding:10px 13px;font-size:11px;gap:6px}
+    .listen svg{width:16px;height:16px}
+  }
+
+  /* ── Footer: Follow us on | Brought to you by | Produced by, + Menu dropdown ── */
+  footer{border-top:1px solid var(--line);margin-top:68px;padding:52px 20px 58px}
+  .footgrid{max-width:var(--wrap);margin:0 auto;display:grid;grid-template-columns:1fr 1.15fr .8fr;gap:44px;align-items:start}
+  .fcol{text-align:center;display:flex;flex-direction:column;align-items:center}
+  .foot-label{font-size:11px;font-weight:700;letter-spacing:.26em;text-transform:uppercase;color:var(--dim);margin-bottom:18px}
+  .sponsors{display:flex;justify-content:center;align-items:center;gap:34px;flex-wrap:wrap}
+  .sponsors a,.produced a{display:inline-flex;transition:.15s}
+  .sponsors a:hover,.produced a:hover{transform:translateY(-1px)}
+  .sponsors img{height:32px;width:auto;opacity:.92}
+  .produced img{height:30px;width:auto;opacity:.95}
+  .sponsors a:hover img,.produced a:hover img{opacity:1}
+  footer .socials{display:flex;gap:11px;justify-content:center;flex-wrap:wrap;margin:0}
+  footer .socials a{width:40px;height:40px;border-radius:50%;border:1.5px solid rgba(122,217,168,.5);display:flex;align-items:center;justify-content:center;transition:.15s}
+  footer .socials a svg{width:18px;height:18px;fill:var(--mint);transition:.15s}
+  footer .socials a:hover{background:var(--mint);border-color:var(--mint);transform:translateY(-2px)}
+  footer .socials a:hover svg{fill:#0a0a0a}
+  .footbar{max-width:var(--wrap);margin:34px auto 0;border-top:1px solid var(--line);padding-top:20px;display:flex;flex-direction:column;align-items:center;gap:14px}
+  .footnav-dd{display:block;width:100%;max-width:var(--wrap);margin:0 auto;text-align:center}
+  .footnav-dd>summary{list-style:none;cursor:pointer;display:inline-flex;align-items:center;gap:9px;font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.5px;font-size:13px;color:var(--muted);background:transparent;border:1px solid var(--line);padding:8px 16px 6px;transition:.15s}
+  .footnav-dd>summary::-webkit-details-marker{display:none}
+  .footnav-dd>summary:hover{color:var(--mint);border-color:rgba(122,217,168,.45)}
+  .footnav-dd>summary .ham{width:15px;height:15px;fill:currentColor;transform:translateY(-1px)}
+  .footnav-dd .dd-links{display:flex;flex-direction:row;flex-wrap:wrap;justify-content:center;gap:12px 24px;padding:24px 0 4px}
+  .footnav-dd .dd-links a{font-size:11.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:.15s}
+  .footnav-dd .dd-links a:hover{color:var(--mint)}
+  .copyright{font-size:12px;color:var(--dim);text-align:center}
+  @media(max-width:720px){.footgrid{grid-template-columns:1fr;gap:34px}footer{padding:40px 16px 20px}.footbar{margin-top:34px;padding-top:24px;gap:20px}.footnav-dd .dd-links{flex-direction:column;align-items:center;gap:15px}}
+
+  @media(min-width:720px){header.hero{padding:48px 0 6px}}
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "PodcastEpisode", "name": "Clementine Boshevski - The Highs and Lows of Building Salt Lab", "url": "https://thenumbersgamepodcast.com.au/clementine-boshevski-the-highs-and-lows-of-building-salt-lab", "datePublished": "2024-07-15", "episodeNumber": 193, "image": "https://i.ytimg.com/vi/f9UgxUuL-6g/maxresdefault.jpg", "partOfSeries": {"@type": "PodcastSeries", "name": "The Numbers Game", "url": "https://thenumbersgamepodcast.com.au/"}}</script>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-in">
+      <a class="brand" href="/" aria-label="The Numbers Game home"><img src="assets/tng-logo.png" alt="The Numbers Game"></a>
+      <div class="navlinks">
+        <a href="/">Home</a>
+        <div class="navgroup">
+          <a class="navtop">Episodes</a>
+          <div class="subnav">
+            <a href="/episodes">All episodes</a>
+            <a href="/adventure">Find moments</a>
+          </div>
+        </div>
+        <div class="navgroup">
+          <a class="navtop">About</a>
+          <div class="subnav">
+            <a href="/about">The show</a>
+            <a href="/nick-reilly">Nick Reilly</a>
+            <a href="/jason-robinson">Jason Robinson</a>
+          </div>
+        </div>
+        <a href="/contact">Contact</a>
+      </div>
+      <button class="navburger" id="navburger" type="button" aria-label="Menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24"><path d="M3 6h18v2H3zM3 11h18v2H3zM3 16h18v2H3z"/></svg>
+      </button>
+    </div>
+    <div class="navdrop" id="navdrop" hidden>
+      <a href="/">Home</a>
+      <span class="navlabel">Episodes</span>
+      <a class="sub" href="/episodes">All episodes</a>
+      <a class="sub" href="/adventure">Find moments</a>
+      <span class="navlabel">About</span>
+      <a class="sub" href="/about">The show</a>
+      <a class="sub" href="/nick-reilly">Nick Reilly</a>
+      <a class="sub" href="/jason-robinson">Jason Robinson</a>
+      <a href="/contact">Contact</a>
+    </div>
+  </nav>
+
+  <main class="wrap">
+
+    <header class="hero">
+      <div class="hook">
+        <span class="eptag">EP 193</span>
+        <h1 class="hk"><span class="hkrow"><span>Clementine Boshevski - The Highs</span></span>
+        <span class="hkrow"><span class="mintseg">and Lows of Building Salt Lab</span></span></h1>
+      </div>
+    </header>
+
+    <div class="player-wrap" id="player-wrap">
+      <div class="player" id="player">
+        <button class="facade" id="facade" style="background-image:url('https://i.ytimg.com/vi/f9UgxUuL-6g/maxresdefault.jpg')" aria-label="Play episode">
+          <span class="play"></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="explore">
+      <div class="tabs" role="tablist">
+        <button class="tabbtn on" data-panel="p-summary">Summary</button>
+        <button class="tabbtn" data-panel="p-chapters">Chapters<span class="ct" id="chcount"></span></button>
+        <button class="tabbtn" data-panel="p-questions">Questions<span class="ct" id="qcount"></span></button>
+      </div>
+      <section class="tpanel" id="p-summary">
+        <div class="summary-body">
+          <p>Jason and Marty host Clementine Boshevski, founder of topical magnesium brand Salt Lab, with Marty co-hosting while Nick is away. Clementine tells the full founder story: coming from a wellness gym she bootstrapped on credit cards, spotting a gap left by an untested imported product, and spending eighteen months in R and D before hitting the wall of manufacturer minimum order quantities. She explains the wellness science behind magnesium, why the first five years were all education, and how bringing marketing in house and going founder led made sales explode. The heart of the episode is resilience: an arson warehouse fire wiped out 1.5 million dollars of stock, and the community driven Build Us Back campaign carried the brand to its first million dollar month. She closes on cash flow in rapid growth, supplier terms, buying a farm, work and family boundaries, and expanding internationally.</p>
+        </div>
+        <div class="vask">
+          <button class="vbtn" id="vbtn" type="button">
+            <svg viewBox="0 0 24 24"><path d="M12 14a3 3 0 0 0 3-3V6a3 3 0 1 0-6 0v5a3 3 0 0 0 3 3zm5-3a5 5 0 0 1-10 0H5a7 7 0 0 0 6 6.92V21h2v-3.08A7 7 0 0 0 19 11h-2z"/></svg>
+            Send us a voice note
+          </button>
+          <div class="vslot" id="vslot" hidden>
+            <div class="vhead">
+              <p class="vmsg">We'd love to hear from you. You can leave up to a 90 second voice note for us to play on the show: a question, some feedback, or a topic you want covered.</p>
+              <button class="vclose" id="vclose" type="button" aria-label="Close">&times;</button>
+            </div>
+            <iframe src="https://www.speakpipe.com/widget/inline/hhq6kzggsx7zpcsvakgxfrzun3zidpde" allow="microphone" width="100%" height="200" frameborder="0" title="Leave The Numbers Game a voice note"></iframe>
+          </div>
+          <script async src="https://www.speakpipe.com/widget/loader.js" charset="utf-8"></script>
+        </div>
+        <div class="sumfacts">
+          <div class="fact"><span class="fl">Release date</span><span class="fv">15 July 2024</span></div>
+          <div class="fact"><span class="fl">Hosts</span><span class="fv"><a href="/jason-robinson">Jason Robinson</a> &amp; <a href="/marty-vidakovic">Marty Vidakovic</a></span></div>
+          <div class="fact"><span class="fl">Guest</span><span class="fv">Clementine Boshevski</span></div>
+
+        </div>
+      </section>
+      <section class="tpanel" id="p-chapters" hidden>
+        <p class="hint">Jump straight to the part you need.</p>
+        <div id="chapters"></div>
+      </section>
+      <section class="tpanel" id="p-questions" hidden>
+        <p class="hint">Real questions this episode answers. Tap one to hear the answer.</p>
+        <div id="qa"></div>
+      </section>
+    </div>
+
+    <div class="drops">
+
+      <details class="drop">
+        <summary><span class="st">Episode transcript</span><span class="chev">+</span></summary>
+        <div class="drop-body tbody">
+          <p><span class="spk">Jason · 00:00</span>Welcome to episode 193 of The Numbers Game. I'm Jase and I'm joined by Marty today as we have a special guest episode coming up for you. Marty, how are you going, mate?</p>
+          <p><span class="spk">Marty · 00:09</span>Going well, Jase. Excited about today. Excited about stage 3 tax cuts. Um, you know, just out having breakfast this morning, living large, just trying to get that inflation back up to 5 percent and really ruin people's lives.</p>
+          <p><span class="spk">Marty · 00:23</span>So, but no, feeling good. And, uh, certainly excited about the show. We have got a special guest, like you said. Um, Jase, do you want to set it up? Because, uh. Yeah,</p>
+          <p><span class="spk">Jason · 00:33</span>I'll, I'll set it up. Um, because for me, I was quite excited to start working with this company. Um, this, the guest coming on today, um, uses Future Advisory and Innovate.</p>
+          <p><span class="spk">Jason · 00:42</span>We're very lucky to work closely together outside of the Numbers Game podcast, but I want to take you back a little bit, Marty, to around maybe five, six, seven years ago. I'll need, I'll need to get back. Our special guest to confirm just how many years ago it was, but I went to my osteo, my new osteo in my local area in South Yarra when I just moved there.</p>
+          <p><span class="spk">Jason · 01:00</span>And I said, Oh, my body's sore. I've got aches and pains. You know, I'm always training for something silly like a marathon. I had high rocks on the weekend. I'm actually destroyed right now. Like it's just, I'm physically never been more sore in my life. And anyway, five, six years ago, I went to see my osteo and she pulls out this, this little brown bottle and she's like, Oh my God, Jason.</p>
+          <p><span class="spk">Jason · 01:21</span>You know, lie down and she just starts spraying this oil all over me, rubbing it into my calves and body. And you know what, uh, afterwards I was as good as new and I was walking out the door and she's gone, take this bottle, have it. Like I'm, I'm giving it to anyone that I can get it into their hands and they're raving and swearing by it.</p>
+          <p><span class="spk">Jason · 01:38</span>And this product, Was called Salt Lab and today we are joined by special guest Clementine, who's the founder of Salt Lab. Welcome to the show, Clementine.</p>
+          <p><span class="spk">Clementine · 01:45</span>Thank you so much, Jase. What an intro.</p>
+          <p><span class="spk">Jason · 01:49</span>Well, I don't think I've nailed it as much as I could have. I've come off quite a large weekend after High Rocks.</p>
+          <p><span class="spk">Jason · 01:53</span>And as I said, I'm a little bit kind of all over the place, but I'm glad we've got a guest episode because it's where we get to let you do a lot of the talking.</p>
+          <p><span class="spk">Jason · 02:00</span>Um, why don't we kick in Clementine? I've talked about Salt Lab. Obviously, that's a bit of a product we're going to dive into a bit today. But before we go too deep on Salt Lab, love to know a bit of your background and, um, yeah, how you got to where you are right now.</p>
+          <p><span class="spk">Clementine · 02:12</span>Yeah, cool. So, um, I started Salt Lab seven years ago or nearly eight years ago, but my background is in the health and wellness industry. So actually when I started Salt Lab, I had just opened a gym. Um, in Williamstown. So it was a bit of a wellness center. Um, my background was personal training and nutrition.</p>
+          <p><span class="spk">Clementine · 02:33</span>And I, at the time I was just doing it on the side of a full time, um, a full time job. And I was like, what am I doing? Like, I'm just going to dive head, Head in head first, and I got a warehouse out in Williamstown and decked it out and yes, started group training and nutrition consults. And so I was doing that for a couple of years.</p>
+          <p><span class="spk">Clementine · 02:55</span>And part of that, I obviously saw magnesium deficiency</p>
+          <p><span class="spk">Clementine · 03:00</span>firsthand and the damage it was doing. But I think what really sort of. kicked me into gear to create a product like salt lab was my own burnout, opening a business, working full time. Like I really, um, experienced the hormone disruption, sleep disruption.</p>
+          <p><span class="spk">Clementine · 03:19</span>Like I was all over the place. Um, and so at the time there weren't really any magnesium or topical magnesium products on the market. There was one and it was from America. And so my natural practitioner sort of, um, basically said, try this. So that was sort of the turning point, um, of my journey into salt lab and creating a topical magnesium product.</p>
+          <p><span class="spk">Clementine · 03:42</span>I've always been really passionate about health and fitness and, um, Very, I suppose, um, I've led myself and I've done courses here and there that I've been passionate about. And as I said, I just sort of did it on the side for a long time. Um, so yeah, that's sort of</p>
+          <p><span class="spk">Clementine · 04:00</span>my background and my passions and interests.</p>
+          <p><span class="spk">Marty · 04:02</span>Yeah. I like it Clementine and I've, uh, been using the product myself. Uh, unlike Jase, who does lots of activity, uh, you know, needs to recuperate. I'm just old and, uh, struggling to sleep and yeah. Yeah. The stresses of business as you discussed. So, uh, no, very impressed. And obviously in working with you. Uh, got more impressed during the process of looking at what you wanted to do in the future.</p>
+          <p><span class="spk">Marty · 04:29</span>But now, you know, not only do I utilize it, my son utilizes Salt Lab and my wife does as well. So they rave about it, sleeping better. Um, and like with the idea itself, like how did you come up with a product? Cause there's lots of, lots of people that create products. How did you become so targeted out of your passion, uh, with the idea?</p>
+          <p><span class="spk">Marty · 04:52</span>Because it certainly was in, in impressive to hone in on something so uniquely positive and, and that</p>
+          <p><span class="spk">Marty · 05:00</span>worked. So maybe a little bit of background on that.</p>
+          <p><span class="spk">Clementine · 05:02</span>Yeah, absolutely. So, I mean, I think I've probably always done things differently. Um, I've always done things that my parents are like. What is she doing?</p>
+          <p><span class="spk">Clementine · 05:14</span>Like, you know, they've always questioned my decisions in some way. Like when I launched the gym and I had no money behind me and no one had lent me any money to get it up off the ground. So I went and got three 10, 000 credit cards and maxed them out to get all the equipment. And my mom and dad are going, Oh dear God, like, what are we doing here?</p>
+          <p><span class="spk">Clementine · 05:34</span>Um, and similar with the, with salt lab when I was introduced to topical magnesium, it just wasn't a thing. Like we're talking. Uh, eight and a half years ago was when I got it first introduced to me. And at that point it was all, you know, magnesium was consumed in powder and pill forms. And that was how I started taking it and being so run down and in, in such a burnt out state, my gut just could not take</p>
+          <p><span class="spk">Clementine · 06:00</span>it.</p>
+          <p><span class="spk">Clementine · 06:00</span>absorb it. So it was just going straight through me and making me feel really terrible. Like my gut was hurting. Um, I knew I wasn't absorbing it. So that was sort of when Topical came into place and I had never heard of it myself. And I thought, interesting, tried it, really loved it. But what I didn't like about it was, It was made in America.</p>
+          <p><span class="spk">Clementine · 06:21</span>And when I tried to do the research on the actual source of magnesium and the levels that they went to, to test the purity, because obviously magnesium comes from, you know, salt lakes and as we're aware, pollution is the real thing right now and, and has been for a very long time. So I wanted to know, What, what tests are they doing to ensure the purity of this product?</p>
+          <p><span class="spk">Clementine · 06:44</span>And there was just nothing, as I said, it was sort of the only person on the market, so they probably didn't need to be that thorough. And so that was when I sort of started to go, well, I think that I could do something better here. Like first and foremost, I wanted an Australian product that I was giving,</p>
+          <p><span class="spk">Clementine · 07:00</span>you know, recommending to my customers and to myself, um, And I wanted something that I knew was not doing more harm than good and not exposing my body to more chemicals and pollution and, and, um, you know, that sort of stuff.</p>
+          <p><span class="spk">Clementine · 07:14</span>So yeah, that was sort of where it started. And to be honest, my husband and I were making it on the bed, on the counter at my gym for many years. Like it's like Yeah. Yeah. It's, um, and we were just selling it to my nutrition clients and to my personal training clients. And when I saw the impact that it did to, to me, I was obviously then like, like your osteo, I was like, you've gotta take this to all of my clients.</p>
+          <p><span class="spk">Clementine · 07:40</span>I was like, you know, basically when people signed up for the gym. They got a bottle of magnesium because I just knew how important it was for everyone to be taking it. Um, and then, yeah, it, it sort of really went from there and it was under my gym for a long time. And then I fell pregnant with my first baby and I</p>
+          <p><span class="spk">Clementine · 08:00</span>sold the gym and I thought, Oh, I'll just take the magnesium oil, like product with me and, and see what happens.</p>
+          <p><span class="spk">Clementine · 08:06</span>And, um, here we are.</p>
+          <p><span class="spk">Marty · 08:08</span>What was the timing Clementine in regards to concept of the idea that To getting the product in the gym.</p>
+          <p><span class="spk">Clementine · 08:14</span>Yeah. So we were 18 months in R and D and that was everything from sourcing the different, um, magnesium, like raw materials and testing them and sending them off to labs to get tested for purity, um, right through to compatibility with packaging.</p>
+          <p><span class="spk">Clementine · 08:31</span>Um, and look, to be honest, the first probably, I would probably say it was two years, but we launched at 18 months and learned a lot in that first six months.</p>
+          <p><span class="spk">Marty · 08:41</span>Can I ask the cost that was spent just to get the product? Up, up and as a product, cause sometimes that's a big investment. And if you've got another business rolling, uh, that could, that could deplete resources pretty quickly.</p>
+          <p><span class="spk">Marty · 08:53</span>Sounds like you hit up the credit cards, like all, uh, entrepreneurs starting out trying to find money wherever you</p>
+          <p><span class="spk">Marty · 09:00</span>can get it, but what was the costing to get something like that up? Cause I would think it would be significant.</p>
+          <p><span class="spk">Clementine · 09:05</span>Yeah, look, a lot of the cost was really in the, um, lab costs. So I think it would have been between five and ten grand initially.</p>
+          <p><span class="spk">Clementine · 09:14</span>We were doing very small orders of everything. So, um, but a lot of the cost was in the lab costs to be testing these small amounts. And I was on, I was really relentless. Um, I think if I had have known, You know, naivety was bliss. If I had have known how hard it was going to be to actually like get it up and running, I probably wouldn't have, because, you know, I didn't, I wasn't aware.</p>
+          <p><span class="spk">Clementine · 09:42</span>I didn't come from product. Um, I didn't come from e commerce. I came from a service based industry. So I had no awareness about like what the, the minimum order quantities that you needed to get into a manufacturer. you know, how hard it was to get into a manufacturer and all of those</p>
+          <p><span class="spk">Clementine · 10:00</span>things. And people just, you know, when you're a startup, a lot of companies don't want to know you.</p>
+          <p><span class="spk">Clementine · 10:03</span>So initially it was about five to 10 grand in, in that R and D phase. Um, and then where it really got hard was once we were at a point of, um, okay, we need to transition from making it in my, Jim bench to a manufacturer and minimum order quantities were, you know, 5, 000 units. And I was like, bar out. Um, and that was when it was, you know, jumped from five to 10 grand to, you know, 40 or 50 grand.</p>
+          <p><span class="spk">Clementine · 10:34</span>And you know, that, that was sort of where it got hard and you had to really back yourself. But yeah, the initial phases were really in that, like when you're trying to, um, like, not really, I suppose, stand apart from what's already out there. And, um, do something differently. That's where I found the cost laid.</p>
+          <p><span class="spk">Clementine · 10:55</span>Yeah.</p>
+          <p><span class="spk">Jason · 10:55</span>I think, um, I've, I've, I've drank the magnesium Kool Aid. So I'm a</p>
+          <p><span class="spk">Jason · 11:00</span>converted magnesium user, but you touched on it earlier around how awful it felt in the gut or how it could go straight through if you were taking it orally in tablet form or the powders. And it wasn't until we started using the topical application that you know, then started doing some research as well around, you know, how much is absorbed orally versus topically.</p>
+          <p><span class="spk">Jason · 11:20</span>Um, so maybe hit us with some of the wellness benefits of using salt lab and magnesium in general. Um, because then there's lots of things you've touched on that I want to circle back to around product development, order quantities. Um, yeah, it's, it's a very intriguing business. It's the kind of business that Marty and I get super excited about.</p>
+          <p><span class="spk">Jason · 11:35</span>So wellness benefits first hit us with what's good.</p>
+          <p><span class="spk">Clementine · 11:38</span>Yeah, so I think the biggest thing that people don't realize is we don't actually produce magnesium naturally in our body. So we rely on it from an external source and you know, historically that came from food. Um, obviously with where our food system is at, with the chemicals that go into it, that, you know, the</p>
+          <p><span class="spk">Clementine · 12:00</span>miles that it does, the soils that are so depleted, our food just doesn't hold the same nutrition density that it used to.</p>
+          <p><span class="spk">Clementine · 12:08</span>So often our plate of food is an empty vessel when it comes to nutrition and the, the vitamins and minerals actually in it. So we really do, unfortunately, this day and age, rely on it from a supplement source and I think powders and pills have been well documented and a lot of marketing money has gone into that side of it, um, but actually we can only absorb so much and depending on the type of magnesium you're taking, which a lot of the time people don't actually know what type they're taking, but they just like, Oh yeah, I'm taking magnesium.</p>
+          <p><span class="spk">Clementine · 12:45</span>But there are 11 different types of magnesium and each type of magnesium has a different absorption rate. Um, and also relies on different things. So some magnesium is really need to draw in a lot of water in order to be</p>
+          <p><span class="spk">Clementine · 13:00</span>processed. Whereas topical, you can apply it on your skin, which is the largest organ and your body can really access it easily.</p>
+          <p><span class="spk">Clementine · 13:07</span>It can access it as it needs it. You're not forcing it to get rid of what it doesn't need. So it can be a really gentle approach to magnesium supplementation. Um, there's a lot of, uh, I'll say like gray area, people sort of have, have read articles that it can't be absorbed through your skin and all of that sort of stuff.</p>
+          <p><span class="spk">Clementine · 13:28</span>And it can, there's a lot of really good studies out there now that show that. Um, and I think once you've used it, you can't question it. So, um, but. And I think just to touch on a few, so magnesium is actually essential for 300 reactions in the body. And so it works partnering with so many other, so like calcium can't be absorbed without magnesium.</p>
+          <p><span class="spk">Clementine · 13:53</span>And so there are all of these partnering, um, benefits, but magnesium alone is essential</p>
+          <p><span class="spk">Clementine · 14:00</span>for our, um, basically helping keep us calm or calm us down. So our nervous system, um, keeping us out of that fight or flight mode and letting us hit, like go into rest and digest towards the end of the day. Um, but also as you've touched on, helping your muscles recover, cramps, you know, aches and pains, all of those things, you know, once we are low in magnesium, often we start to see all of these other issues appear and we can get.</p>
+          <p><span class="spk">Clementine · 14:29</span>Fixing all of these other issues when actually if you just had a high enough level of magnesium, you'd notice they go. Um, and that's everything from sleep, um, you know, stress, um, ticks like eye twitches and different little things like that. Um, I think we, the biggest thing we see is sleep for sure.</p>
+          <p><span class="spk">Clementine · 14:50</span>Growing pains in kids is a growing concern. One that I've seen really escalate over the last five years. Yeah.</p>
+          <p><span class="spk">Jason · 14:57</span>Wow.</p>
+          <p><span class="spk">Clementine · 14:58</span>Um, and then, yeah, like sleep</p>
+          <p><span class="spk">Clementine · 15:00</span>disruptions, nightmares with kids, aches and pains, arthritis, all of those things. I think just the list, I could sit here for the whole hour and reel off, like, the list of things that magnesium can help with.</p>
+          <p><span class="spk">Clementine · 15:12</span>But I think if we can understand that it's essential for over 300 reactions in the body, you can get a good gist of how much your body needs it.</p>
+          <p><span class="spk">Marty · 15:21</span>That's really well explained, Clementine, in regards to, I could see, The differential in regards to your product type of magnesium, the way it's being absorbed.</p>
+          <p><span class="spk">Marty · 15:29</span>You know, lots of, you know, multiple benefits, 300 various different, um, the functions of the actual product itself. Now that is a huge education process right there. How do you get that from your head and your understanding of your experience to the market that just says another product on the shelf. Um, and I'd like you to sort of expand upon, even when someone has had an interaction with your product, even to.</p>
+          <p><span class="spk">Marty · 16:00</span>Buying that product repeatedly as well. Cause I think there's a, there's something in that as well.</p>
+          <p><span class="spk">Clementine · 16:05</span>Yeah, absolutely. So it was a really big, you know, I think to be honest, we probably spent the first five years of being in business educating. And that was our biggest focus was like, this is a new product and people are, you know, they're not convinced on it.</p>
+          <p><span class="spk">Clementine · 16:22</span>They're not convinced that powders and pills aren't the way to go because there's been so much money invested into that, that way of supplementing. And as a society, we are big on, I've got a headache, take something and it's a pill. So, So psychologically, the connection between pills and healing are there, um, and I think, yeah, for the first five years, all we did, all we focused on was education.</p>
+          <p><span class="spk">Clementine · 16:49</span>We just wanted to educate people on another way, a gent, more gentle way, a way that could actually see the ailments that they were experiencing and</p>
+          <p><span class="spk">Clementine · 17:00</span>not getting fixed by powders and pills Um, and it's really been the last sort of three years that we've seen a shift in, in the consumer and their behavior with trialing new things and being open to other ways.</p>
+          <p><span class="spk">Clementine · 17:17</span>Um, so, but for the first, yeah, for a long time, we focused on, Not diving too deep into the technicality because I think we found we tried that and a lot of the time it's too much for people. So it was really, um, you'll notice a lot of our content is like the 10 ways magnesium can help, the five ways magnesium can help, you know, it's really calling out ailments in simple form that people connect with and go, Oh, like, yeah, I felt that.</p>
+          <p><span class="spk">Clementine · 17:48</span>So we had to. It was a lot of trialing and trial and error. Um, and we soon realized that if we dived too deep, uh, particularly, you know, a lot of our</p>
+          <p><span class="spk">Clementine · 18:00</span>marketing is social media. And I think social media for a lot of people is an escape from the depth of life. So we had to keep it really, um, top line, relatable, and, you know, Connect with people and how they might be feeling.</p>
+          <p><span class="spk">Jason · 18:14</span>I was going to say that kind of leads into another area that I think you've done absolutely outstanding. It is your online marketing, um, and, and how you connect with your audience or potential new audience. I love the idea behind education being a big focus and that it's more the basic side of it. It's not going into the nitty gritty of like, you know, how magnesium is formed, where it comes from, you know, all the breakdown of it, the 300 things that would be overkill for social media, but connecting on, let's say, you know, a mum with a newborn who, you know, the child, you know, one or two year old child's not sleeping and there's a kid's magnesium that Salt Lab do.</p>
+          <p><span class="spk">Jason · 18:49</span>And it's just that simple kind of showing a mum applying and then a kid having a great night's sleep. That's really easy to connect with, even if I don't have a child, but my brother and his wife might be struggling with their kids. I can go, Hey</p>
+          <p><span class="spk">Jason · 19:00</span>guys, I heard about this. Would you like to try it? So it becomes a really good talking point too.</p>
+          <p><span class="spk">Jason · 19:04</span>When it comes to your years of trial and error with marketing, trying to grow, wholesaling, getting into, you know, other, you know, like Heather from, um, Health Connection, shout out to Heather who got me onto Salt Lab. What's been the biggest thing that moved the needle for you though, over the years? Is there something you can pinpoint to say when it comes to growing the brand?</p>
+          <p><span class="spk">Jason · 19:24</span>This is what really changed the game for salt lab.</p>
+          <p><span class="spk">Clementine · 19:27</span>Yeah, bringing marketing in house. I think no one treats your business or looks at the numbers or spends your money. Like you spend it. There was always for me a time and a place for. Like agencies doing the marketing and, but we were just never able to experience the growth we experienced when I started doing the, the online marketing and, you know, I, I, the only thing I can put that down to is that when you're spending your own money and when you're seeing the return on your own money, no</p>
+          <p><span class="spk">Clementine · 20:00</span>one does it like you do.</p>
+          <p><span class="spk">Clementine · 20:01</span>Um, so, and, and I think as well as a business owner to be able to really like, no, okay, when I do this, this happens like, and I can pull this lever and this happens and like those sort of triggers have just, yeah. We've, I mean, since bringing it in house, we've just grown exponentially, so that's a big one for me.</p>
+          <p><span class="spk">Marty · 20:24</span>I mean, that's street smarts, isn't it Clementine? We've, we've experienced that. Like, it's funny when you outsource something as to. You just think it's a given that that's going to work, uh, and then it doesn't. Uh, but when you have a direct experience, amazing what you learn. Um, have you got one particular strategy of when you bought it in, in house, like an awareness shift of something that worked for you that wasn't working externally?</p>
+          <p><span class="spk">Clementine · 20:49</span>Yeah. Founder, like founder led, so founder led content, people want to know who's behind the brand. People want to connect with you.</p>
+          <p><span class="spk">Clementine · 21:00</span>And again, I think no one does it as well as you. So while UGC and Influencer and all of this is huge and has its place, No one tells your brand story or tells people how to use the product as well as you do.</p>
+          <p><span class="spk">Clementine · 21:14</span>And I think the minute that I really owned my place in front of the brand, and I'm not normally one for speaking in public and, um, being in front of the camera and like that really terrifies me. That's out of my comfort zone massively. Um, but I had to do it. I had to own my place. And the minute I did that, Was when we really saw sales explode.</p>
+          <p><span class="spk">Marty · 21:39</span>Oh, that's outstanding.</p>
+          <p><span class="spk">Jason · 21:41</span>I was gonna say, if you look back at any of your early content, absolutely cringed at like what it was, how it was put out to market. And I guess for you, um, if we can talk about maybe e commerce equation, um, you know, part of that, that program or from an education point of view, not only do you want to educate your audience, but you also.</p>
+          <p><span class="spk">Jason · 21:58</span>Founder led content. You're also</p>
+          <p><span class="spk">Jason · 22:00</span>educating yourself to make sure that you're constantly moving the needle forward to improve your business and your own education. Um, I guess, yeah, maybe touching on that, like how important it is to have external advisors or people working with you and maybe not to segue back to Marty and I coming along into your life as well, but I think.</p>
+          <p><span class="spk">Jason · 22:18</span>The other thing that you said that connects to that is looking at the numbers. Like, I get excited when, when a client talks about looking at their numbers or when a business owner, I should say, talks about looking at their numbers and they truly understand even like a basic P&amp; L or a balance sheet, or even just how customer acquisition costs, if you're going to dumb.</p>
+          <p><span class="spk">Jason · 22:37</span>1, 000 or 10, 000 or 100, 000 into Facebook or Google ads or whatever your, your poison is, what is the ROI? How are you, how are you making sure that translates to sales and there's an appropriate margin in your product? So many small business owners launch without understanding that. So I guess, I'll, I'll rephrase it into two.</p>
+          <p><span class="spk">Jason · 22:55</span>Did you launch without understanding that? And it was a learning curve and lesson along the</p>
+          <p><span class="spk">Jason · 23:00</span>way. And then how have these lessons now impacted you?</p>
+          <p><span class="spk">Clementine · 23:02</span>Two sort of points to that, um, question. First being absolutely educating myself and, and I joined e commerce equation, three and a half years ago. And so e commerce equation is essentially a, um, a group of e commerce founders that we all can learn off each other.</p>
+          <p><span class="spk">Clementine · 23:23</span>We say what other people are doing and we can replicate, we can, yeah. And there's a, there's a board of coaches that you have access to. So that was absolutely pivotal. And I think what was interesting, like I was a part of e commerce equation, but, Two years before I really saw any growth. And so, you know, you have some, you have some businesses that come in and it's literally, you'd think it was an overnight success.</p>
+          <p><span class="spk">Clementine · 23:47</span>Like they've just joined a month to their, you know, million dollar months. And it's like, whoa, that can be quite disheartening at the start. You know, when you say those sort of. Things happening, but you know,</p>
+          <p><span class="spk">Clementine · 24:00</span>I was, I was a part of that for two years and it was really like what the second part of the question, it wasn't until I started to, well, I mean, even when I came on board with you guys, the business was not what it is today.</p>
+          <p><span class="spk">Clementine · 24:12</span>So I think a lot of the growth yet, like knowing your numbers and I never forget when, um, before I came on board with you guys and it was like, I had no idea. Yeah. The true, you know, I sort of knew top line, but it was really based off cash in bank. Um, and like kind of knowing what the product costs me and what we're selling for.</p>
+          <p><span class="spk">Clementine · 24:38</span>But after onboarding with yourself and Marty, it's like, I had, we had to, we had to together dive into the business in a way I've never looked at it. Um, and really like, for me, it was confronting because any cobwebs that were there, we had to clear out and really address. Um, but now I love that there's that ownership there.</p>
+          <p><span class="spk">Clementine · 24:58</span>So, you know, we meet</p>
+          <p><span class="spk">Clementine · 25:00</span>bi monthly and there's like, there's no hiding from it. There's ownership. There's like, you know, I have to sit in front of you and really own the performance, good, bad, or indifferent. Yeah. And just like put a plan together. I think that's the other thing. At least now you're</p>
+          <p><span class="spk">Jason · 25:16</span>coming, coming in with a big head wobble at the moment.</p>
+          <p><span class="spk">Jason · 25:18</span>Cause uh, the business is absolutely doing, doing bonkers numbers. Um, the product is booming. What I will just kind of circle back there is resilience. Everything you've said, there's resilience. Uh, there's so many small business owners that would have started that course and six months in, they would have seen the money leaving their account, paying, uh, coaching program or e commerce equation.</p>
+          <p><span class="spk">Jason · 25:38</span>Six months in going, Oh, well, my business hasn't doubled and theirs is. So I'm going to pull the pin and quit. I'm going to cancel this, this membership and, and, you know, move on to something else. And unfortunately I see it and Marty probably sees it as well. Also often a business owner will quit and go look for something else.</p>
+          <p><span class="spk">Jason · 25:55</span>The quick fix, the quick win, the, you know, the quick, you know, I want to Boom overnight, like</p>
+          <p><span class="spk">Jason · 26:00</span>that business that you see on news. com. au, which is probably a paid article they've paid for themselves to be in any way, actually sticking to it to continue to learn and educate and pivot until you get to the point where you find out what was the bit that you need to do or the thing that was missing.</p>
+          <p><span class="spk">Jason · 26:15</span>And people will come to us and go, Oh, you know, I'm thinking about starting SEO, but I'm going to pay two grand a month. And they said, I might not get any results for six to 12 months. I'm like, cool. I've been paying a couple of grand a month for SEO for seven years. And now when you Google certain search terms, we're number one in Australia for what is VCFO, or, you know, different search terms like that.</p>
+          <p><span class="spk">Jason · 26:34</span>So, you know, that investment into yourself and the resilience to not give up, that is epic. I think you've done a brilliant job there.</p>
+          <p><span class="spk">Marty · 26:40</span>Yeah. I call it the three feet from gold. People start digging, they get three feet and leave and look for another area. They don't, uh, and I think Clementine, when I hear you talk about, uh, the, the group you read, fascinating because you saw people getting those numbers.</p>
+          <p><span class="spk">Marty · 26:57</span>And so there must've been something inside of you. It's going,</p>
+          <p><span class="spk">Marty · 27:00</span>no, I have to stick this out because I'm seeing actually people dominate this and, uh, and it's so true. So often I talk about even building your personal brand with brokers in regards to putting content up consistently a couple of times a week, two or three times.</p>
+          <p><span class="spk">Marty · 27:16</span>And it might be, you get lucky and you get a hit in the first week, or it might be six months where you've developed that digital trust that there's a huge upward curve all of a sudden. And, um, it's like anything perseverance and resilience. Is such an important attribute. And one thing I would say Clementine is the question I want to ask is as business owners, we tend to go through ebbs and flows and battle through it.</p>
+          <p><span class="spk">Marty · 27:42</span>What's been the most challenging thing where you're going, why did I even do this? Or, you know, that moment where you're going, that resilience is most. Tested, uh, can you give the audience an experience if that was the case and, uh, how you moved yourself through that?</p>
+          <p><span class="spk">Clementine · 28:00</span>Okay. I'll, I'll touch on the resilience piece first with, it's like what you touched on Jase, people expect a quick fix and it's exactly the same as the supplementation.</p>
+          <p><span class="spk">Clementine · 28:11</span>They want a pill that fixes it immediately. And I'm so big and, and with salt lab, you need, sometimes you need to use it for six weeks to actually feel the difference. And I think that's life and resilience really on so many different levels pays dividends. I think the good stuff, the best of what life has to offer doesn't happen overnight.</p>
+          <p><span class="spk">Clementine · 28:32</span>And it is a longer grind, whether that's the, the experience and the, and the relief from pain with a supplement or, you know, business. I really believe that. So. Yeah, I am big on that. Um, and Marty, to answer your question, I think, um, January last year, we lost everything in a warehouse fire at a 3PL that we were at.</p>
+          <p><span class="spk">Clementine · 28:56</span>So all of our stock was, um, being held by a third</p>
+          <p><span class="spk">Clementine · 29:00</span>party logistics company. And on Australia Day last year, I got a text message saying there's been an arson attack on the warehouse and we're not sure the damage. And we just had our biggest delivery of stock we'd ever had because we were seeing the growth.</p>
+          <p><span class="spk">Clementine · 29:16</span>So we just had 1. 5 million of stock delivered and we lost everything. So our insurance, there was a loophole, their insurance, there was a loophole and then the logistics company just stopped communicating at all. So I, as you can imagine, I'm like three kids at my feet. My husband doesn't have a separate job.</p>
+          <p><span class="spk">Clementine · 29:42</span>So we rely on salt labs income. And I think at that point, I, that's probably the first time that I've really gone. Do we close the doors? Like, can I, you know, I've been through some tough times with business. you know, court</p>
+          <p><span class="spk">Clementine · 30:00</span>cases and all of that sort of stuff with old business partners. Like I've been through a tough time and this was probably the, the first time that I've really sat down and then I just looked at my kids and I was like, I can't like, I want them to see the grit and I want them to see that when you really love something and you believe in yourself, like you can get through anything.</p>
+          <p><span class="spk">Clementine · 30:24</span>Yeah. And yeah, I think that's, that was the biggest, um, the hardest thing I've ever had to deal with. in business was literally the one thing I think we as founders, um, fear the most is losing everything.</p>
+          <p><span class="spk">Jason · 30:39</span>And you were that close.</p>
+          <p><span class="spk">Clementine · 30:40</span>And we, yeah, and we were living in a caravan at the time traveling around Australia.</p>
+          <p><span class="spk">Clementine · 30:44</span>So we didn't have a home as such. We'd sold everything and we were living in a van. And so in a way it really did felt, feel like I'd lost everything that gave us security. So I was sort of like, we're living in a van, like all we own is a</p>
+          <p><span class="spk">Clementine · 31:00</span>caravan. And I've got three young kids that I've got to, so it really did.</p>
+          <p><span class="spk">Clementine · 31:05</span>So that was the most challenging time of my life and, and of business. But in saying that I look back and I would not change a thing. What that, what that did to my mindset, I don't know. I don't know anything else that could give me what that gave me.</p>
+          <p><span class="spk">Jason · 31:26</span>I think, you know, I'm, I'm privy to behind the scenes of seeing Jan 23 to what June, July, 2024 looks like.</p>
+          <p><span class="spk">Jason · 31:33</span>And just the, the exponential growth, the numbers that also the energy and effort you've put into it, because you are passionate about your product and your brand. And then also the people that you work with as well, you, you go all in and you, you really kind of live and breathe what you do. I then flip it on the head, you know, that was your most challenging kind of moments.</p>
+          <p><span class="spk">Jason · 31:53</span>So far in the last year and a half, is there things that you look back and go like, wow, like this, this feels really good. Like there was certain</p>
+          <p><span class="spk">Jason · 32:00</span>milestones or success factors that you go, that's a big moment for you on the other side.</p>
+          <p><span class="spk">Clementine · 32:03</span>Oh, a hundred percent. And I think that's sort of why. Not why I look back, but I, even just me as a business owner, I'm a different person.</p>
+          <p><span class="spk">Clementine · 32:14</span>I'm, I'm mentally, I'm a different person. Mentally, I'm tougher. I understand my business more. I understand our community more and actually who's behind this brand is not just me. It's my community. And without them, like we, we are no one. And I think going through that and, um, Our community bringing us back from that you, you, you look back and you're like, wow.</p>
+          <p><span class="spk">Clementine · 32:41</span>And then to think less than 12 months later, nine months later, we did, we hit our first million dollar mark, like</p>
+          <p><span class="spk">Jason · 32:49</span>wow. Wild, wild journey. I think the build on that too, like that word community. Like the, seeing the post, it must have been around February 23, where there was reached out to the people</p>
+          <p><span class="spk">Jason · 33:00</span>that had bought your brand or bought your product and trusted your brand and, and got to know you through some of your founder posts.</p>
+          <p><span class="spk">Jason · 33:06</span>And there was a, Marty, you may not have seen it, but there was a, basically a reach out to the whole community to say, Hey, we're in a time of need. This warehouse fire happened. We've lost all of our stock, but if you come back to us and buy from us, you can help us in our journey to get back onto the path of success.</p>
+          <p><span class="spk">Jason · 33:22</span>And, you know, the community rallied and it's rallied ever since and just gets bigger and bigger and better and better. So, massive, massive, uh, part of it is community. So, yeah. Is there something you've done to foster the community or is it just part of the ongoing education and being in front of mind all the time?</p>
+          <p><span class="spk">Jason · 33:40</span>Is there something for you when you think about the community that sticks out?</p>
+          <p><span class="spk">Clementine · 33:43</span>Yeah, look, I think we, to be honest with you, I feel like, well, I felt like up until that fire, I felt like we didn't really do, we didn't have community at the forefront of our mind. And I probably, if you had have asked me in January, 2023, I would have said, Oh, it's probably</p>
+          <p><span class="spk">Clementine · 34:00</span>where we really have room to grow.</p>
+          <p><span class="spk">Clementine · 34:01</span>Okay. Um, but, but to, yeah, to, for that to happen at the end of January and us, we literally just launched a Build Us Back campaign. And again, like it was a lot of me in front of the camera, um, sharing what happened, sharing the journey back to getting us back on the, on our feet. Um, it made me realize that actually we, we have done something right because the community is actually really strong and, and has.</p>
+          <p><span class="spk">Clementine · 34:28</span>Helped us immensely. And I think we do have a very big focus on that constant communication with our community. We are very responsive via social media. Like we, you know, and I think we always. like to let people know that we're a real, we're real people behind this brand. We don't, um, we don't outsource much at all.</p>
+          <p><span class="spk">Clementine · 34:52</span>We actually don't outsource anything anymore now that we've got our own warehouse. But so we are real people. We are a small family business. You</p>
+          <p><span class="spk">Clementine · 35:00</span>know, we, um, do everything in Australia, even though it could be a lot cheaper to be done offshore. So I think that in itself and that, um, you know, we give back to a lot of regenerative agriculture, um, uh, like foundations to help try and improve the soil.</p>
+          <p><span class="spk">Clementine · 35:17</span>So I think just that story and our true, our true mission, like, yes, while it is helping people live a better life and, you know, without pain and sleep better and all of those things, our true mission is that. I'm sitting here closing Salt Lab up in, in 10 years time because our soil is so abundant and people don't need to, um, supplement, you know, and that's, that's why we bought our farm is to be able to, to provide our community with, um, good food.</p>
+          <p><span class="spk">Clementine · 35:48</span>And that's really our mission at Salt Lab is to get the soil back to our food being abundant and our, and, you know, Us not having to supplement, wouldn't that be amazing?</p>
+          <p><span class="spk">Jason · 35:57</span>There's so many founders that would admit they're</p>
+          <p><span class="spk">Jason · 36:00</span>trying to make their product redundant by having better soil and a better, better world where we don't need to rely on supplements, which I think looking at some of the behind the scenes stats, you know, the supplement and vitamin industry in the next couple of years will be a 250 billion industry.</p>
+          <p><span class="spk">Jason · 36:15</span>You know, so it just goes to show, you know, there's almost a, not an effort to make, you know, what you're trying to do, Is meaningful, but there's other people out there that are driven by corporate greed or making money that would go, well, we've got these vitamins and minerals that we make mega bucks off.</p>
+          <p><span class="spk">Jason · 36:32</span>Why would we want to fix the planet? Let's let the good times roll for the, for the corporate greed. So no, love, love that mission. It's amazing.</p>
+          <p><span class="spk">Marty · 36:40</span>Clementine, can I ask a more of a business question? And Jason might be able to jump in on this as well. Like I see, I've seen many businesses over time where they've had a massive ramp up in, um, sales.</p>
+          <p><span class="spk">Marty · 36:52</span>They've almost succeeded themselves out of business on cash flows. Can you maybe, uh, give some strategy around</p>
+          <p><span class="spk">Marty · 37:00</span>how do you manage those cash flows effectively in regards to rapid growth? Cause I know a lot of business owners can really suffer at the hands of their own success. Um, so maybe give some, you know, give some ideas around that.</p>
+          <p><span class="spk">Clementine · 37:12</span>Yeah, absolutely. I think first and foremost, like having Jace and Perry as my right hand man is. I couldn't do what I'm doing without them. The clarity they give, the support they give is just next, like I've never experienced anything like it. So I think first and foremost, a good accountant and, um, you know, like having a team that just know numbers in a way that I don't has been.</p>
+          <p><span class="spk">Clementine · 37:41</span>I couldn't have, I couldn't have scaled the way I have without that. And I think second to that, the relationships I've built with my manufacturers is has really supported, um, that growth. So we were dealing directly with our manufacturers for a long time.</p>
+          <p><span class="spk">Clementine · 38:00</span>Um, and you really, you just, You're another number.</p>
+          <p><span class="spk">Clementine · 38:03</span>You're another brand that's getting their, their stuff, you know, their product manufactured. Um, and then we partnered with an organization that are essentially like our middleman logistics company, but they have incredible relationships with a wide range of manufacturers. And we were able to negotiate very good terms with them.</p>
+          <p><span class="spk">Clementine · 38:24</span>So essentially, That has freed up so much of our cash flow, um, from a payment needed versus stock sell through perspective. And I think, I think terms with suppliers as you grow is one of the most underestimated, um, relationships that businesses have. I think if you can Um, if you can really back yourself to put numbers together to say like, this is what our growth looks like, come on the journey with us, come and win this with us, but</p>
+          <p><span class="spk">Clementine · 39:00</span>in return, I need you to give me X, Y and Z and whatever your numbers look like and what you need is to, is just so important.</p>
+          <p><span class="spk">Clementine · 39:09</span>I know a lot of e commerce brands that actually give their manufacturers access to their um, Shopify account so that they can see the success. They, they feel like they're a part of the team rather than just a manufacturer that, that, you know, doesn't know the vision of the brand. So yeah, I think, uh, the two, the two things that really supported us was Jason Perry, knowing the numbers, you know, really kind of having that, I feel, I feel like it's, there's someone always looking at it and if there were red flags, they would flag it with me and I, it wasn't consuming my brain.</p>
+          <p><span class="spk">Clementine · 39:48</span>Um, and then second to that is the terms with your suppliers.</p>
+          <p><span class="spk">Marty · 39:52</span>Yeah. And we find that in that, um, Sort of that even 1 million to 5 million turnover space where people</p>
+          <p><span class="spk">Marty · 40:00</span>have grown smaller businesses and come through. It's amazing how that advice is just paramount as they start to develop to those, um, next levels.</p>
+          <p><span class="spk">Marty · 40:09</span>And, and look, I was strangely enough, I was watching a movie on the weekend with Charlie, we bought a zoo. And I was thinking about you guys in regards to, you know, you bought a farm, which is really, really cool. But, um, and, and we get some insight as to why you purchased the farm, but how are the kids enjoying it?</p>
+          <p><span class="spk">Marty · 40:28</span>How's the family enjoying the lifestyle and, um, Yeah, give us an insight on that.</p>
+          <p><span class="spk">Clementine · 40:35</span>Yeah, yeah. We have bought a zoo.</p>
+          <p><span class="spk">Clementine · 40:41</span>We, yeah, so we bought a farm. So we traveled for two years in a caravan. We traveled around Australia. We're meant to go for 12 months and, um, 12 months goes very quickly when you're constantly traveling. So, yeah. Um, three kids in a van working was a lot of fun but what I think what it, um,</p>
+          <p><span class="spk">Clementine · 41:00</span>exposed was that we actually just love the outdoors.</p>
+          <p><span class="spk">Clementine · 41:03</span>We love the space. We love the freedom at GIMS and When we decided, well, we had to come back, my husband got an injury, but, um, we sort of went, what are we going to, you know, where are we going to land, because we can't go into the city. So we knew we wanted a farm and we knew that I've always had the mission of farming regeneratively and being able to provide a really, a community base, um, that offers really good food.</p>
+          <p><span class="spk">Clementine · 41:30</span>education, you know, this is my longer term vision of like being able to hold education about where our food comes from, you know, having kids come and learn about where broccoli grows, how it grows, being able to pick it and take it home with them. You know, I just think that is not being exposed to a lot of kids, um, this day and age.</p>
+          <p><span class="spk">Clementine · 41:52</span>So, We, um, yeah, bought a farm November last year, um, with the help of yourself, Marty and Jace. I don't think we could have done it</p>
+          <p><span class="spk">Clementine · 42:00</span>without you. Wasn't an easy feat.</p>
+          <p><span class="spk">Marty · 42:03</span>It was a good project. It's</p>
+          <p><span class="spk">Jason · 42:04</span>good fun. It's good fun.</p>
+          <p><span class="spk">Clementine · 42:06</span>So</p>
+          <p><span class="spk">Marty · 42:06</span>how do you get the balance of running a family, and I know you have high value on family, of course.</p>
+          <p><span class="spk">Marty · 42:12</span>And, and running a business. How do you get that balance right to ensure everyone's taken care of?</p>
+          <p><span class="spk">Clementine · 42:19</span>A very supportive hub, husband. I couldn't do it without Adam and he, um, he's supported, you know, I think there has been seasons in having kids where, you know, I've stepped into primary care and Adam has been working and, you know, Um, you know, then obviously the period we were on the road, we were both very much primary carers and, and you're right, Marty, you know, kids, uh, my kids are my absolute priority.</p>
+          <p><span class="spk">Clementine · 42:43</span>Nothing will, um, will trump that. And it's been definitely tested since we've been home and, and the growth of Salt Lab, and we've really had to step into this season of life. And This current season of life is Adam is the primary</p>
+          <p><span class="spk">Clementine · 43:00</span>carer and that's been a harder one for me to let go of. But, um, we've really been able to own our roles in a sense and me step into really heading up Salt Lab and driving it to where, where we are.</p>
+          <p><span class="spk">Clementine · 43:14</span>See that going and Adam really owning his ownership his role as primary carer Marty as you know and Jase we homeschool our kids. So we've got yeah, three kids We homeschool them and we really do that a lot on the farm and with our everyday tasks that we have to do whether that's milking the cow or moving the cows or You know, feeding the goats or whatever it is, um, they're very much involved in that.</p>
+          <p><span class="spk">Clementine · 43:42</span>And I think what's been important to me is just really carving out the time of like, okay, this is work time. And in that time, I'm, you know, I'm very much, this is my work time, but then making sure that when work's finished for the day, Like everything switches off and works finished for the</p>
+          <p><span class="spk">Clementine · 44:00</span>day. Um, so I think those boundaries, which hasn't been an easy transition to find, but having those boundaries of where family time lays and where work lays has been really essential.</p>
+          <p><span class="spk">Clementine · 44:14</span>Um, and not, not always easy and not, and not always met a hundred percent. And there needs to just be that acceptance of I'm human and Adam's human. And there's, there's blurred lines.</p>
+          <p><span class="spk">Marty · 44:26</span>I love the flexibility in that chase though, isn't it? Like the flexibility to be able to step in. Own roles within the relationships.</p>
+          <p><span class="spk">Marty · 44:34</span>And, and sometimes that changes depending on circumstances, I mean, and even Clementine and Adam to the point have sent me resources in regards to homeschooling as well, because we were going, yeah, we're going through that as well. So very generous, uh, people by nature and wanting to, you know, share what they've learned and even supporting my wife, which was, which was lovely.</p>
+          <p><span class="spk">Marty · 44:54</span>Actually, Clementine, that was really appreciated.</p>
+          <p><span class="spk">Jason · 44:57</span>Oh, pleasure. I like the term seasons as well, like</p>
+          <p><span class="spk">Jason · 45:00</span>moving in and out of the seasons and being adaptable to change with the seasons. I think that's a really unique way of looking at it too. Um, talked a bit about the farm and we can understand a bit of now what, you know, the purpose and what drives you outside of Salt Lab, but what's the future hold for Salt Lab?</p>
+          <p><span class="spk">Jason · 45:15</span>Is it world domination? What are the plans on the horizon?</p>
+          <p><span class="spk">Clementine · 45:18</span>Yeah, I mean, we have up until this year, really, we've been very much Australia focused. Um, and we haven't really expanded internationally. And, and as you'd know, Jason, the last sort of six months, we've expanded internationally in a big way, and it happened very quickly.</p>
+          <p><span class="spk">Clementine · 45:34</span>Um, so really, I think the future for salt lab is that focusing on international, you know, at the moment, we're still shipping everything from Australia. So we're really focusing on just smoothing out that process for customer experience more than anything. Um, and really just finding our feet with where we sit internationally and how we're.</p>
+          <p><span class="spk">Clementine · 45:53</span>How our logistics run, um, and finding the balance of like, you know, we</p>
+          <p><span class="spk">Clementine · 46:00</span>love our life here in Victoria. We don't want to go and move anywhere to make that work. So, um, we're really finding the balance of how to run international from Australia and but we see the growth really coming for salt lab from international.</p>
+          <p><span class="spk">Jason · 46:13</span>Has there been some, uh, lessons learned pretty quickly in expanding internationally or it's so far going relatively smooth?</p>
+          <p><span class="spk">Clementine · 46:19</span>Look, it is going pretty smoothly. Um, I think we're fortunate that we have been in the game for long enough to really understand, you know, how our product product ships and, you know, all of those challenges that I think would be the learning experiences that you would, you would get, but still, of course, there are, there are lots of learning experiences and I think we're just.</p>
+          <p><span class="spk">Clementine · 46:41</span>Um, realizing the natural challenges you face when you're expanding internationally and shipping from Australia, it's a long time and trying to bridge the gap of customer expectation versus what we can actually fulfill and making sure that we're really clear on that and, um, we nurture</p>
+          <p><span class="spk">Clementine · 47:00</span>the journey for the customer.</p>
+          <p><span class="spk">Clementine · 47:01</span>That's probably been the biggest one.</p>
+          <p><span class="spk">Jason · 47:03</span>Marty, anything further from you? Otherwise, I'm going to go into a where to find Salt Lab, big wrap up spiel and, uh, That Clementine to also tell us some, uh, where to go to get, uh, all the products. Well,</p>
+          <p><span class="spk">Marty · 47:13</span>I just want to say congratulations to Clementine, Adam, and the kids as well, because it's, um, it is, it is such a journey of resilience.</p>
+          <p><span class="spk">Marty · 47:24</span>And like they say, you know, sometimes an overnight success. Uh, people think it's an overnight success, but it's a lot of the times it's seven, 10 years in the making and to persevere on something that's not only a great product, but something that has a deeper intention of what you're passionate about as well, um, is, is great testament to you both as a family.</p>
+          <p><span class="spk">Marty · 47:45</span>And entrepreneurs as well. And Australian needs more stories like this to, you know, we get the doom and gloom. Sometimes interest rates go up. We all fall into horror and terror. And, uh, there's a lot of difficult stories in the market, but that is a</p>
+          <p><span class="spk">Marty · 48:00</span>part of business. It's a part of life and it's how we deal with it.</p>
+          <p><span class="spk">Marty · 48:03</span>Uh, effectively move through those moments that make all the difference. So yeah, just for me, a big congratulations, been a privilege, uh, to work with you on, uh, various components of your business. And I thought, I know Jace feels exactly the same, but keep going cause I I'm just excited to see where it ends up.</p>
+          <p><span class="spk">Marty · 48:20</span>So keep up the great work.</p>
+          <p><span class="spk">Clementine · 48:23</span>Thanks so much, Marty. There's so much we couldn't have done without you. So I appreciate your ongoing support.</p>
+          <p><span class="spk">Jason · 48:29</span>I feel the same way, Marty. I feel very blessed and fortunate to be on the journey. Um, we have a, probably a similar mission or vision of future advisory is to help people have a better future.</p>
+          <p><span class="spk">Jason · 48:38</span>It's simple, you know, our team and I rock up each day. And if we can help someone have a better future, we feel successful day to day in what we do. And, and I hope, you know, we can. We get to sit back and look at where Salt Lab and where you were when you joined us. And even just running a P&amp; L on a balance sheet and we're numbers nerds.</p>
+          <p><span class="spk">Jason · 48:53</span>So if we can look at it and go, my God, this makes sense. And it looks great. And we're helping a business owner to get into the nitty gritty,</p>
+          <p><span class="spk">Jason · 49:00</span>then happy days. We're all playing out our, our purposes. Um, where do we find Salt Lab? How do our lovely listeners of the numbers game get their hands on some Salt Lab?</p>
+          <p><span class="spk">Clementine · 49:08</span>Yeah. So you can find us on Instagram at salt underscore lab, um, or www. saltlaboratory. com. Um, and yeah.</p>
+          <p><span class="spk">Jason · 49:19</span>Amazing. Thank you. Thank you. And look, thank you so much for joining us today. Um, Marty and I always go and look, Clementine's going to be an epic guest. And you have not disappointed. So thank you so much for joining us today.</p>
+          <p><span class="spk">Jason · 49:29</span>Uh, for our listeners out there, like subscribe, definitely go and give salt lab a follow, and you'll get heaps of tips and tricks on why you need to get some magnesium onto your body until next time, Marty</p>
+          <p><span class="spk">Marty · 49:40</span>live better, laugh more. Get around, Salt Lab. Game on.</p>
+          <p><span class="spk">Jason · 49:45</span>This podcast is for educational and informational purposes only.</p>
+          <p><span class="spk">Jason · 49:49</span>The conversations are of a general nature and do not qualify as financial or tax advice. We recommend before you make any financial decisions, you consult a licensed professional. Individuals on the podcast</p>
+          <p><span class="spk">Jason · 50:00</span>may hold positions in the companies discussed. ---</p>
+        </div>
+      </details>
+
+    </div>
+
+    <!-- LISTEN:START (build_episode.py rewrites the 3 URLs + iframe title per episode; player dropped if no spotifyEmbedUrl) -->
+    <section class="listen-now">
+      <div class="ln-head">
+        <span class="ln-title">Listen now</span>
+      </div>
+      <div class="audio-embed">
+        <iframe src="https://open.spotify.com/embed/episode/2zyfWQYfufbCPZjKJISoTX?utm_source=generator"
+          width="100%" height="152" loading="lazy" allowfullscreen
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+          title="Spotify — Clementine Boshevski - The Highs and Lows of Building Salt Lab"></iframe>
+      </div>
+    </section>
+
+    <div class="listen">
+      <a href="https://open.spotify.com/episode/2zyfWQYfufbCPZjKJISoTX" target="_blank" rel="noopener" aria-label="Listen to this episode on Spotify">
+        <svg viewBox="0 0 24 24"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.52 17.34c-.24.36-.66.48-1.02.24-2.82-1.74-6.36-2.1-10.56-1.14-.42.12-.78-.18-.9-.54-.12-.42.18-.78.54-.9 4.56-1.02 8.52-.6 11.64 1.32.42.18.48.66.3 1.02zm1.44-3.3c-.3.42-.84.6-1.26.3-3.24-1.98-8.16-2.58-11.94-1.38-.48.12-1.02-.12-1.14-.6-.12-.48.12-1.02.6-1.14 4.32-1.32 9.72-.66 13.44 1.62.36.18.54.78.3 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.3c-.6.18-1.2-.18-1.38-.72-.18-.6.18-1.2.72-1.38 4.26-1.26 11.28-1.02 15.72 1.62.54.3.72 1.02.42 1.56-.3.42-1.02.6-1.56.3z"/></svg>
+        Spotify
+      </a>
+      <a href="https://podcasts.apple.com/au/podcast/id1555566088?i=1000662171475" target="_blank" rel="noopener" aria-label="Listen to this episode on Apple Podcasts">
+        <svg viewBox="0 0 24 24"><path d="M5.34 0A5.328 5.328 0 000 5.34v13.32A5.328 5.328 0 005.34 24h13.32A5.328 5.328 0 0024 18.66V5.34A5.328 5.328 0 0018.66 0H5.34zm6.525 2.568c2.336 0 4.448.902 6.056 2.587 1.224 1.272 1.912 2.619 2.264 4.392l.04.23c.04.272-.16.527-.432.567a.505.505 0 01-.567-.431l-.04-.213c-.312-1.57-.92-2.747-2.004-3.867-1.428-1.496-3.293-2.294-5.393-2.294-2.1 0-3.966.798-5.394 2.294-1.084 1.12-1.692 2.298-2.004 3.867l-.04.213a.507.507 0 01-.567.431.504.504 0 01-.432-.567l.04-.23c.352-1.773 1.04-3.12 2.264-4.392 1.608-1.685 3.72-2.587 6.056-2.587h.153zm.136 3.033c1.74 0 3.312.67 4.527 1.934.883.916 1.394 1.93 1.663 3.253l.04.23a.505.505 0 01-.431.567.503.503 0 01-.567-.432l-.04-.212c-.23-1.112-.659-1.97-1.396-2.732-1.052-1.1-2.404-1.672-3.9-1.672s-2.849.572-3.901 1.672c-.737.762-1.167 1.62-1.396 2.732l-.04.212a.503.503 0 01-.567.432.505.505 0 01-.432-.567l.04-.23c.27-1.323.78-2.337 1.664-3.253 1.215-1.264 2.787-1.934 4.527-1.934h.21zm-.078 3.05c1.092 0 2.091.424 2.89 1.22.582.58.924 1.245 1.107 2.15l.04.218a.501.501 0 01-.424.568.499.499 0 01-.568-.424l-.04-.198c-.146-.724-.413-1.253-.871-1.716-.63-.63-1.398-.957-2.226-.957s-1.595.328-2.225.957c-.459.463-.726.992-.871 1.716l-.04.198a.499.499 0 01-.568.424.501.501 0 01-.424-.568l.04-.219c.183-.904.525-1.569 1.106-2.149.8-.796 1.799-1.22 2.89-1.22h.184zM12 14.07a2.477 2.477 0 012.48 2.478A2.477 2.477 0 0112 19.024a2.477 2.477 0 01-2.48-2.477A2.477 2.477 0 0112 14.07z"/></svg>
+        Apple
+      </a>
+      <a class="yt-pill" href="https://www.youtube.com/@thenumbersgamepodcast?sub_confirmation=1" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.12-2.14C19.5 3.55 12 3.55 12 3.55s-7.5 0-9.38.51A3 3 0 0 0 .5 6.2 31.4 31.4 0 0 0 0 12a31.4 31.4 0 0 0 .5 5.8 3 3 0 0 0 2.12 2.14c1.88.51 9.38.51 9.38.51s7.5 0 9.38-.51a3 3 0 0 0 2.12-2.14A31.4 31.4 0 0 0 24 12a31.4 31.4 0 0 0-.5-5.8zM9.55 15.57V8.43L15.82 12z"/></svg>
+        Subscribe
+      </a>
+    </div>
+    <!-- LISTEN:END -->
+
+    <div class="relsec">
+      <span class="rtitle">Discover more</span>
+      <div class="relgrid">
+        <a class="relcard" href="/if-i-could-start-my-business-again-today">
+          <img src="https://i.ytimg.com/vi/fX_EE9bzhc4/hqdefault.jpg" alt="EP 203 thumbnail">
+          <span class="rt">If I Could Start My Business Again Today...</span>
+          <span class="rfoot"><span class="rwhy">Also covers: marketing</span><span class="rtag">EP 203</span></span>
+        </a>
+        <a class="relcard" href="/cut-through-in-a-noisy-market">
+          <img src="https://i.ytimg.com/vi/c8AxkyOW0EQ/hqdefault.jpg" alt="EP 190 thumbnail">
+          <span class="rt">Cut Through In A Noisy Market</span>
+          <span class="rfoot"><span class="rwhy">Also covers: marketing</span><span class="rtag">EP 190</span></span>
+        </a>
+        <a class="relcard" href="/how-to-win-on-social-media-vanity-metrics-vs-real-results">
+          <img src="https://i.ytimg.com/vi/lPdaCst3SL4/hqdefault.jpg" alt="EP 250 thumbnail">
+          <span class="rt">How to Win on Social Media</span>
+          <span class="rfoot"><span class="rwhy">Also covers: marketing</span><span class="rtag">EP 250</span></span>
+        </a>
+        <a class="relcard" href="/how-businesses-can-do-good-and-still-make-money">
+          <img src="https://i.ytimg.com/vi/YY4GGftWiuU/hqdefault.jpg" alt="EP 256 thumbnail">
+          <span class="rt">How Businesses Can Do Good and Still Make Money</span>
+          <span class="rfoot"><span class="rwhy">Also covers: marketing</span><span class="rtag">EP 256</span></span>
+        </a>
+        <a class="relcard" href="/the-numbers-game-of-life-marty-s-5-biggest-lessons">
+          <img src="https://i.ytimg.com/vi/bM7PFcSZj6Q/hqdefault.jpg" alt="EP 261 thumbnail">
+          <span class="rt">The Numbers Game of Life</span>
+          <span class="rfoot"><span class="rwhy">Also covers: marketing</span><span class="rtag">EP 261</span></span>
+        </a>
+        <a class="relcard" href="/pokemon-cards-vs-bitcoin-gold-and-the-asx">
+          <img src="https://i.ytimg.com/vi/7PHS9HCqNvM/hqdefault.jpg" alt="EP 286 thumbnail">
+          <span class="rt">Pokemon Cards vs Bitcoin, Gold and the ASX</span>
+          <span class="rfoot"><span class="rwhy">20 July 2026</span><span class="rtag">EP 286</span></span>
+        </a>
+      </div>
+      <div class="reldots" id="reldots"></div>
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="footgrid">
+      <div class="fcol">
+        <div class="foot-label">Follow us on</div>
+        <div class="socials">
+          <a href="https://www.instagram.com/thenumbersgamepodcast/" target="_blank" rel="noopener" aria-label="The Numbers Game on Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.8.2 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1 .4 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .4-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1-.4-2.2-.1-1.3-.1-1.7-.1-4.9s0-3.6.1-4.9c.1-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.4 2.2-.4 1.3-.1 1.7-.1 4.9-.1zm0 2c-3.1 0-3.5 0-4.8.1-1.1.1-1.5.2-1.8.3-.4.2-.7.3-1 .6-.3.3-.5.6-.6 1-.1.3-.3.7-.3 1.8-.1 1.3-.1 1.7-.1 4.8s0 3.5.1 4.8c.1 1.1.2 1.5.3 1.8.2.4.3.7.6 1 .3.3.6.5 1 .6.3.1.7.3 1.8.3 1.3.1 1.7.1 4.8.1s3.5 0 4.8-.1c1.1-.1 1.5-.2 1.8-.3.4-.2.7-.3 1-.6.3-.3.5-.6.6-1 .1-.3.3-.7.3-1.8.1-1.3.1-1.7.1-4.8s0-3.5-.1-4.8c-.1-1.1-.2-1.5-.3-1.8-.2-.4-.3-.7-.6-1-.3-.3-.6-.5-1-.6-.3-.1-.7-.3-1.8-.3-1.3-.1-1.7-.1-4.8-.1zm0 3.4a5.4 5.4 0 1 1 0 10.8 5.4 5.4 0 0 1 0-10.8zm0 2a3.4 3.4 0 1 0 0 6.8 3.4 3.4 0 0 0 0-6.8zm5.6-2.3a1.3 1.3 0 1 1-2.6 0 1.3 1.3 0 0 1 2.6 0z"/></svg></a>
+          <a href="https://www.tiktok.com/@thenumbersgamepodcast" target="_blank" rel="noopener" aria-label="The Numbers Game on TikTok"><svg viewBox="0 0 24 24"><path d="M12.53.02C13.84 0 15.14.01 16.44 0c.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg></a>
+          <a href="https://www.linkedin.com/company/the-numbers-game-podcast/" target="_blank" rel="noopener" aria-label="The Numbers Game on LinkedIn"><svg viewBox="0 0 24 24"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.24 8.25h4.52V23H.24V8.25zM8.34 8.25h4.33v2.01h.06c.6-1.14 2.08-2.34 4.28-2.34 4.58 0 5.42 3.01 5.42 6.92V23h-4.51v-7.16c0-1.71-.03-3.91-2.38-3.91-2.39 0-2.75 1.86-2.75 3.78V23H8.34V8.25z"/></svg></a>
+          <a href="https://www.facebook.com/profile.php?id=100071290388343" target="_blank" rel="noopener" aria-label="The Numbers Game on Facebook"><svg viewBox="0 0 24 24"><path d="M24 12.07C24 5.41 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.04V9.41c0-3.02 1.8-4.7 4.54-4.7 1.31 0 2.68.24 2.68.24v2.97h-1.5c-1.5 0-1.96.93-1.96 1.89v2.26h3.32l-.53 3.5h-2.8V24C19.62 23.1 24 18.1 24 12.07z"/></svg></a>
+          <a href="https://www.youtube.com/@thenumbersgamepodcast" target="_blank" rel="noopener" aria-label="The Numbers Game on YouTube"><svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.2C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31.7 31.7 0 0 0 0 12a31.7 31.7 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.2A31.7 31.7 0 0 0 24 12a31.7 31.7 0 0 0-.5-5.8zM9.6 15.6V8.4L15.8 12z"/></svg></a>
+        </div>
+      </div>
+      <div class="fcol">
+        <div class="foot-label">Brought to you by</div>
+        <div class="sponsors">
+          <a href="https://www.inovayt.com.au/" target="_blank" rel="noopener"><img src="assets/inovayt-white.png" alt="Inovayt"></a>
+          <a href="https://futureadvisory.com.au/" target="_blank" rel="noopener"><img src="assets/future-advisory-white.png" alt="Future Advisory"></a>
+        </div>
+      </div>
+      <div class="fcol produced">
+        <div class="foot-label">Produced by</div>
+        <a href="https://www.vidpod.com.au/" target="_blank" rel="noopener"><img src="assets/vidpod-white.png" alt="VIDPOD"></a>
+      </div>
+    </div>
+    <div class="footbar">
+      <details class="footnav-dd">
+        <summary><svg class="ham" viewBox="0 0 24 24"><path d="M3 6h18v2H3zM3 11h18v2H3zM3 16h18v2H3z"/></svg> Menu</summary>
+        <div class="dd-links">
+          <a href="/">Home</a><a href="/episodes">Every episode</a><a href="/adventure">Choose your own adventure</a><a href="/about">About the show</a><a href="/nick-reilly">Nick Reilly</a><a href="/jason-robinson">Jason Robinson</a><a href="/contact">Contact</a>
+        </div>
+      </details>
+      <div class="copyright">© 2026 The Numbers Game</div>
+    </div>
+  </footer>
+
+  <script>
+    var VIDEO='f9UgxUuL-6g';
+    var CHAPTERS=[
+      {t:"00:00",s:0,title:"Intro"},
+      {t:"02:12",s:132,title:"From Wellness Gym To Salt Lab"},
+      {t:"05:14",s:314,title:"Backing Herself With Credit Cards"},
+      {t:"06:44",s:404,title:"Spotting The Gap In The Market"},
+      {t:"07:14",s:434,title:"Making It On The Gym Counter"},
+      {t:"08:14",s:494,title:"Eighteen Months In Product R And D"},
+      {t:"09:05",s:545,title:"What It Cost To Get Started"},
+      {t:"10:03",s:603,title:"The Minimum Order Quantity Wall"},
+      {t:"11:38",s:698,title:"Why Your Body Needs Magnesium"},
+      {t:"12:45",s:765,title:"The Eleven Types Of Magnesium"},
+      {t:"13:28",s:808,title:"Magnesium And 300 Body Reactions"},
+      {t:"16:05",s:965,title:"Five Years Of Educating The Market"},
+      {t:"17:17",s:1037,title:"Keeping The Message Simple"},
+      {t:"19:27",s:1167,title:"Bringing Marketing In House"},
+      {t:"20:49",s:1249,title:"Founder Led Content"},
+      {t:"21:14",s:1274,title:"Owning Her Place In Front Of The Brand"},
+      {t:"23:02",s:1382,title:"Learning From Other Founders"},
+      {t:"24:12",s:1452,title:"Knowing Your Numbers"},
+      {t:"24:58",s:1498,title:"No Hiding From The Numbers"},
+      {t:"26:40",s:1600,title:"Three Feet From Gold"},
+      {t:"28:00",s:1680,title:"The Best Things Are Not Overnight"},
+      {t:"28:32",s:1712,title:"The Warehouse Fire"},
+      {t:"29:42",s:1782,title:"Choosing Grit In Front Of Her Kids"},
+      {t:"32:14",s:1934,title:"The Community Behind The Brand"},
+      {t:"32:41",s:1961,title:"Back To A Million Dollar Month"},
+      {t:"34:01",s:2041,title:"The Build Us Back Campaign"},
+      {t:"34:28",s:2068,title:"A Real Small Family Business"},
+      {t:"35:17",s:2117,title:"The Mission To Become Redundant"},
+      {t:"37:12",s:2232,title:"Managing Cash Flow In Rapid Growth"},
+      {t:"38:03",s:2283,title:"Terms With Suppliers"},
+      {t:"39:09",s:2349,title:"Making Manufacturers Part Of The Team"},
+      {t:"41:03",s:2463,title:"Buying The Farm"},
+      {t:"43:42",s:2622,title:"Boundaries Between Work And Family"},
+      {t:"45:18",s:2718,title:"Expanding Internationally"},
+      {t:"46:19",s:2779,title:"The Challenge Of Shipping From Australia"},
+      {t:"49:08",s:2948,title:"Where To Find Salt Lab"}
+    ];
+    var QUESTIONS=[
+      {q:"How did Clementine fund her first business?",s:314},
+      {q:"What does magnesium do in the body?",s:808},
+      {q:"What changed the game most for growing Salt Lab?",s:1167},
+      {q:"Why is founder led content so effective?",s:1249},
+      {q:"How do you overcome fear of being the face of your brand?",s:1274},
+      {q:"How do small business owners misread their finances?",s:1452},
+      {q:"Why do most people quit just before they succeed?",s:1600},
+      {q:"What was the hardest moment in building Salt Lab?",s:1712},
+      {q:"How do you keep going when you want to quit?",s:1782},
+      {q:"How do supplier payment terms affect cash flow?",s:2283}
+    ];
+
+    var chEl=document.getElementById('chapters');
+    CHAPTERS.forEach(function(c){var b=document.createElement('button');b.className='chapter';b.onclick=function(){startAt(c.s)};b.innerHTML='<span class="tc">'+c.t+'</span><span class="cx">'+c.title+'</span>';chEl.appendChild(b);});
+    document.getElementById('chcount').textContent=CHAPTERS.length;
+    var qEl=document.getElementById('qa');
+    QUESTIONS.forEach(function(q){var b=document.createElement('button');b.className='q';b.onclick=function(){startAt(q.s)};b.innerHTML='<span class="qm">?</span><span class="qx">'+q.q+'</span><span class="go">›</span>';qEl.appendChild(b);});
+    document.getElementById('qcount').textContent=QUESTIONS.length;
+
+    /* Mobile nav dropdown. */
+    var burger=document.getElementById('navburger'), navdrop=document.getElementById('navdrop');
+    if(burger&&navdrop){burger.addEventListener('click',function(){
+      navdrop.hidden=!navdrop.hidden;
+      burger.setAttribute('aria-expanded', navdrop.hidden?'false':'true');
+    });}
+
+    /* Voice-note button reveals the recorder; × tucks it away. */
+    var vbtn=document.getElementById('vbtn'), vslot=document.getElementById('vslot'), vclose=document.getElementById('vclose');
+    if(vbtn&&vslot){vbtn.addEventListener('click',function(){vslot.hidden=!vslot.hidden;});}
+    if(vclose&&vslot){vclose.addEventListener('click',function(){vslot.hidden=true;});}
+
+    /* Keep-exploring dots: only shown when the strip actually scrolls (mobile). */
+    var rg=document.querySelector('.relgrid'), rd=document.getElementById('reldots');
+    if(rg&&rd){
+      var relCards=rg.querySelectorAll('.relcard');
+      relCards.forEach(function(){rd.appendChild(document.createElement('span'))});
+      var updDots=function(){
+        var scrollable=rg.scrollWidth>rg.clientWidth+4;
+        rd.style.display=scrollable?'flex':'none';
+        if(!scrollable)return;
+        var i=Math.round(rg.scrollLeft/(rg.scrollWidth-rg.clientWidth)*(relCards.length-1));
+        rd.querySelectorAll('span').forEach(function(s,n){s.classList.toggle('on',n===i)});
+      };
+      rg.addEventListener('scroll',updDots,{passive:true});
+      window.addEventListener('resize',updDots);
+      updDots();
+    }
+
+    /* Explore tabs: swap the visible panel; the row stays put so you never lose your place. */
+    var tabBtns=document.querySelectorAll('.tabbtn');
+    tabBtns.forEach(function(b){
+      b.addEventListener('click',function(){
+        tabBtns.forEach(function(o){o.classList.remove('on')});
+        document.querySelectorAll('.tpanel').forEach(function(p){p.hidden=true});
+        b.classList.add('on');
+        document.getElementById(b.getAttribute('data-panel')).hidden=false;
+      });
+    });
+
+    /* YouTube: clean facade, then real player on demand. Seek without yanking to top. */
+    var player=null, ready=false, apiReady=false, pending=null;
+    window.onYouTubeIframeAPIReady=function(){apiReady=true; if(pending!=null){var s=pending;pending=null;createPlayer(s);}};
+    function createPlayer(sec){
+      var wrap=document.getElementById('player'); wrap.innerHTML='<div id="yt"></div>';
+      player=new YT.Player('yt',{videoId:VIDEO,playerVars:{autoplay:1,rel:0,modestbranding:1,playsinline:1,start:Math.floor(sec||0)},events:{onReady:function(){ready=true;}}});
+    }
+    function nudge(){
+      var p=document.getElementById('player-wrap'), r=p.getBoundingClientRect();
+      if(r.bottom<80 || r.top>window.innerHeight-90){ p.scrollIntoView({behavior:'smooth',block:'start'}); }
+    }
+    function startAt(sec){
+      nudge();
+      if(player&&ready){ player.seekTo(sec,true); player.playVideo(); return; }
+      if(apiReady){ createPlayer(sec); } else { pending=sec; }
+    }
+    document.getElementById('facade').addEventListener('click',function(){startAt(0);});
+    (function(){var s=document.createElement('script');s.src='https://www.youtube.com/iframe_api';document.head.appendChild(s);})();
+  </script>
+</body>
+</html>

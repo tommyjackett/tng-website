@@ -1,0 +1,698 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EP 198 · The Rise of Private Lending in Australia | The Numbers Game</title>
+<meta name="description" content="">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" sizes="64x64" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="canonical" href="https://thenumbersgamepodcast.com.au/the-rise-of-private-lending-in-australia">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="The Numbers Game">
+<meta property="og:title" content="EP 198 · The Rise of Private Lending in Australia | The Numbers Game">
+<meta property="og:description" content="">
+<meta property="og:url" content="https://thenumbersgamepodcast.com.au/the-rise-of-private-lending-in-australia">
+<meta property="og:image" content="https://i.ytimg.com/vi/N4JHYW2FhuM/maxresdefault.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+  :root{
+    --purple:#585af3; --purple-dark:#2c1b8a; --mint:#7ad9a8;
+    --white:#ffffff; --muted:rgba(255,255,255,.60); --dim:rgba(255,255,255,.42);
+    --line:rgba(255,255,255,.12); --card:rgba(255,255,255,.05); --card-hi:rgba(255,255,255,.09);
+    --display:'Anton',Impact,'Helvetica Neue',sans-serif;
+    --sans:'Inter',system-ui,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif;
+    --wrap:1280px;   /* page frame (nav spans this) */
+    --col:960px;     /* content column (player, tabs, text) */
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:var(--sans); color:var(--white); line-height:1.6; -webkit-font-smoothing:antialiased;
+    background:#12093a;
+    background-image:
+      radial-gradient(1200px 600px at 82% -6%, rgba(88,90,243,.45) 0%, transparent 55%),
+      radial-gradient(900px 700px at 5% 8%, rgba(122,217,168,.10) 0%, transparent 50%),
+      linear-gradient(180deg,#2c1b8a 0%,#1a1150 28%,#100b34 62%,#0b0820 100%);
+    background-attachment:fixed;
+  }
+  a{color:inherit}
+  .wrap{max-width:var(--wrap);margin:0 auto;padding:0 36px}
+  main.wrap{max-width:var(--col)}
+  @media(max-width:720px){.wrap{padding:0 22px}}
+
+  /* ── Navbar ── */
+  .nav{position:sticky;top:0;z-index:50;background:linear-gradient(180deg,rgba(24,15,74,.92),rgba(24,15,74,.72));backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+  .nav-in{max-width:var(--wrap);margin:0 auto;padding:11px 36px;display:flex;align-items:center;justify-content:space-between}
+  @media(max-width:720px){.nav-in{padding:11px 22px}}
+  .brand{display:block;line-height:0}
+  .brand img{height:36px;width:auto;display:block}
+  .navlinks{display:flex;gap:28px;align-items:center}
+  .navlinks a{text-decoration:none;font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);transition:.15s}
+  .navlinks a:hover{color:var(--white)}
+  .navlinks a.navtop{cursor:default}
+  .navgroup{position:relative;display:flex;align-items:center}
+  .navgroup .subnav{display:none;position:absolute;top:100%;left:50%;transform:translateX(-50%);padding-top:14px;min-width:180px}
+  .navgroup:hover .subnav,.navgroup:focus-within .subnav{display:block}
+  .subnav-in,.navgroup .subnav{z-index:60}
+  .navgroup .subnav a{display:block;background:#180f4a;border:1px solid var(--line);border-top:0;padding:12px 16px;font-size:12px;color:rgba(255,255,255,.85)}
+  .navgroup .subnav a:first-child{border-top:1px solid var(--line)}
+  .navgroup .subnav a:hover{background:#221768;color:var(--white)}
+  .navburger{display:none;background:none;border:1px solid var(--line);padding:8px 10px;cursor:pointer;color:var(--white);transition:.15s}
+  .navburger:hover{border-color:rgba(122,217,168,.6)}
+  .navburger svg{width:20px;height:20px;fill:currentColor;display:block}
+  .navdrop{display:none}
+  @media(max-width:720px){
+    .navlinks{display:none}
+    .navburger{display:block}
+    .navdrop{display:block;position:absolute;left:0;right:0;top:100%;
+      background:#180f4a;border-bottom:1px solid var(--line);box-shadow:0 24px 50px rgba(0,0,0,.45)}
+    .navdrop[hidden]{display:none}
+    .navdrop a{display:block;padding:15px 22px;text-decoration:none;font-size:14px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:rgba(255,255,255,.9);border-bottom:1px solid rgba(255,255,255,.06)}
+    .navdrop a:last-child{border-bottom:0}
+    .navdrop a.sub{padding-left:42px;font-size:13px;color:rgba(255,255,255,.72)}
+    .navdrop .navlabel{display:block;padding:15px 22px 6px;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.4)}
+  }
+
+  /* ── Hero / hook (marker-highlight system: purple hook wraps naturally, mint payoff below)
+     Rules: title splits at its natural break (colon/pipe/question mark). Front = hook (purple,
+     big), back = payoff (mint, smaller). No break in title = purple hook only. Highlights hug
+     the text (tight em padding tuned to Anton) and wrap via box-decoration-break — never
+     hand-pick line breaks or mint words. ── */
+  header.hero{padding:34px 0 6px}
+  .hook{--inx:clamp(8.4px,2.1vw,15.6px)} /* one shared text inset so hook + payoff first letters align */
+  .hook .hk{font-family:var(--display);font-weight:400;text-transform:uppercase;
+    font-size:clamp(28px,7vw,52px);line-height:1.3;letter-spacing:-.5px;text-wrap:balance}
+  .hook .hk span{color:var(--white);padding:.04em var(--inx) .02em;
+    background:linear-gradient(var(--purple),var(--purple)) 0 50%/100% 87% no-repeat;
+    -webkit-box-decoration-break:clone;box-decoration-break:clone}
+  .hook .pay{font-family:var(--display);font-weight:400;text-transform:uppercase;
+    font-size:clamp(16px,4vw,24px);line-height:1.5;letter-spacing:.6px;margin-top:8px;text-wrap:balance}
+  .hook .pay span{color:#0a0a0a;padding:.08em var(--inx) .04em;
+    background:linear-gradient(var(--mint),var(--mint)) 0 50%/100% 88% no-repeat;
+    -webkit-box-decoration-break:clone;box-decoration-break:clone}
+  /* no-hook titles: mid-split into two full-size rows, purple then mint */
+  .hook .hk span.hkrow{display:block;background:none;padding:0}
+  .hook .hk .hkrow+.hkrow{margin-top:8px}
+  .hook .hk span.mintseg{color:#0a0a0a;
+    background:linear-gradient(var(--mint),var(--mint)) 0 50%/100% 87% no-repeat}
+
+  /* ── Player (clean facade → real player on tap) ── */
+  .player-wrap{margin:24px 0 4px;scroll-margin-top:76px}
+  .player{position:relative;width:100%;padding-top:56.25%;border-radius:0;overflow:hidden;background:#000;box-shadow:0 30px 70px rgba(0,0,0,.5),0 0 0 1px rgba(255,255,255,.06)}
+  .facade{position:absolute;inset:0;border:0;cursor:pointer;background-size:cover;background-position:center;display:flex;align-items:center;justify-content:center;padding:0}
+  .facade .play{width:74px;height:74px;border-radius:50%;background:rgba(10,6,30,.40);border:2px solid rgba(255,255,255,.72);display:flex;align-items:center;justify-content:center;transition:.18s;-webkit-backdrop-filter:blur(1px);backdrop-filter:blur(1px)}
+  .facade:hover .play{background:rgba(88,90,243,.62);transform:scale(1.07);border-color:#fff}
+  .facade .play::after{content:"";border-style:solid;border-width:11px 0 11px 19px;border-color:transparent transparent transparent #fff;margin-left:5px}
+  .player iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+
+  /* ── Episode facts (bottom of the Summary panel — templated per episode) ── */
+  .sumfacts{margin:14px 10px 4px;padding-top:13px;border-top:1px solid rgba(255,255,255,.08);display:flex;flex-direction:column;gap:8px}
+  .fact{display:flex;gap:12px;font-size:13.5px}
+  .fact .fl{flex:none;width:104px;color:var(--dim);font-weight:600;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;padding-top:2px}
+  .fact .fv{color:rgba(255,255,255,.9);font-weight:500}
+  .fact .fv a{color:var(--mint);text-decoration:none;border-bottom:1px solid rgba(122,217,168,.4);transition:.15s}
+  .fact .fv a:hover{border-bottom-color:var(--mint)}
+
+  /* ── Episode tag (identity: black label hanging off the title corner) ── */
+  .eptag{display:inline-block;position:relative;left:-6px;margin-bottom:-7px;z-index:2;
+    background:#0a0a0a;color:var(--white);font-family:var(--display);font-weight:400;
+    font-size:13.5px;letter-spacing:1.5px;text-transform:uppercase;padding:6px 11px 4px}
+
+  /* ── Explore tabs (sticky mode switcher; one panel swaps below, nothing shoves) ── */
+  .explore{margin-top:22px}
+  .tabs{position:sticky;top:58px;z-index:40;display:flex;flex-wrap:wrap;gap:8px;padding:10px 0;
+    background:linear-gradient(180deg,rgba(18,10,55,.96),rgba(18,10,55,.86));
+    backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+  .tabbtn{font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.5px;
+    font-size:14.5px;color:var(--white);background:var(--purple);border:1px solid var(--purple);
+    padding:9px 13px 7px;cursor:pointer;transition:.15s}
+  .tabbtn:hover{filter:brightness(1.12)}
+  .tabbtn.on{background:var(--mint);border-color:var(--mint);color:#0a0a0a}
+  .tabbtn.on:hover{filter:none}
+  .tabbtn .ct{font-size:12px;opacity:.75;font-variant-numeric:tabular-nums}
+  .tabbtn .ct::before{content:" · "}
+  .tpanel{border:1px solid var(--line);background:var(--card);padding:12px 10px 14px}
+  .hint{font-size:12.5px;color:var(--muted);padding:2px 10px 10px;border-bottom:1px solid rgba(255,255,255,.08);margin-bottom:6px}
+
+  /* ── Listen row (no box: label left, service pills follow) ── */
+  .listen{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:12px 16px;margin-top:34px}
+  .listen .lname{font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--dim)}
+  .listen a{display:inline-flex;align-items:center;gap:9px;padding:11px 18px;border-radius:999px;
+    background:var(--mint);color:#08210f;text-decoration:none;font-weight:800;font-size:12.5px;
+    letter-spacing:.04em;text-transform:uppercase;transition:.15s}
+  .listen a:hover{filter:brightness(1.06);transform:translateY(-1px);box-shadow:0 12px 30px rgba(122,217,168,.25)}
+  .listen svg{width:20px;height:20px;fill:currentColor;flex:none}
+  /* ── Listen-now Spotify audio embed (full column width, above the pills) ── */
+  .listen-now{margin-top:40px}
+  .listen-now .ln-head{display:flex;align-items:baseline;justify-content:space-between;gap:14px;margin-bottom:13px}
+  .listen-now .ln-title{font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--dim)}
+  .audio-embed{border-radius:12px;overflow:hidden;box-shadow:0 20px 50px rgba(0,0,0,.4),0 0 0 1px rgba(255,255,255,.06)}
+  .audio-embed iframe{display:block;width:100%;border:0}
+  @media(max-width:720px){.listen-now{margin-top:32px}}
+
+  /* ── Keep exploring (thumbnails link to other episode PAGES, never timecodes).
+     Swipeable strip on mobile, fits three-up on desktop. Variant rule: claim
+     "similar ground" + reason lines ONLY when moment-level topic overlap is
+     genuinely strong; otherwise show the latest released episodes with dates —
+     never invent a connection. ── */
+  .relsec{margin-top:60px;padding-top:58px;border-top:1px solid var(--line)} /* line = end of this episode's info */
+  .reldots{display:flex;justify-content:center;gap:7px;margin-top:12px}
+  .reldots span{width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.25);transition:.2s}
+  .reldots span.on{background:var(--mint)}
+  .relsec .rtitle{display:inline-block;font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.5px;font-size:14.5px;background:var(--mint);color:#0a0a0a;padding:9px 13px 7px;margin-bottom:18px}
+  .relgrid{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding-bottom:6px;scrollbar-width:none}
+  .relgrid::-webkit-scrollbar{display:none}
+  .relcard{flex:0 0 56%;max-width:232px;scroll-snap-align:start;display:flex;flex-direction:column;text-decoration:none;background:var(--card);border:1px solid var(--line);transition:.15s}
+  .relcard:hover{background:var(--card-hi);border-color:rgba(122,217,168,.55)}
+  .relcard img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block}
+  .relcard .rt{display:block;font-size:12.5px;font-weight:600;color:rgba(255,255,255,.92);line-height:1.4;padding:8px 8px 0}
+  .relcard .rfoot{margin-top:auto;display:flex;justify-content:space-between;align-items:flex-end;gap:8px;padding:10px 8px 9px}
+  .relcard .rwhy{font-size:11.5px;color:var(--mint)}
+  .relcard .rtag{display:inline-block;background:#0a0a0a;color:var(--white);font-family:var(--display);font-size:10px;letter-spacing:1.2px;text-transform:uppercase;padding:3px 7px 2px;white-space:nowrap;flex:0 0 auto}
+
+  /* ── Dropdown sections (accordion under the player) ── */
+  .drops{margin-top:34px;display:flex;flex-direction:column;gap:11px}
+  .drop{border:1px solid var(--line);border-radius:0;background:var(--card);overflow:hidden;transition:border-color .15s}
+  .drop[open]{border-color:rgba(122,217,168,.35)}
+  .drop>summary{list-style:none;cursor:pointer;padding:16px 18px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+  .drop>summary::-webkit-details-marker{display:none}
+  .drop>summary .st{font-weight:700;font-size:15.5px;letter-spacing:.005em}
+  .drop>summary .ct{margin-left:auto;font-size:12px;color:var(--dim);font-weight:600;font-variant-numeric:tabular-nums}
+  .drop>summary .chev{flex:none;width:22px;height:22px;border-radius:50%;background:rgba(122,217,168,.14);color:var(--mint);display:flex;align-items:center;justify-content:center;font-family:var(--display);font-size:15px;line-height:1;transition:.2s;transform:translateY(-1px)}
+  .drop[open]>summary .chev{transform:rotate(45deg)}
+  .drop-body{padding:2px 12px 12px}
+
+  /* chapters */
+  .chapter{display:flex;align-items:baseline;gap:14px;width:100%;text-align:left;cursor:pointer;background:none;border:0;color:inherit;font-family:inherit;padding:11px 10px;border-radius:10px;transition:.13s}
+  .chapter:hover{background:var(--card-hi)}
+  .chapter .tc{font-variant-numeric:tabular-nums;font-weight:700;font-size:14px;color:var(--mint);flex:none;width:48px}
+  .chapter .cx{font-size:15px;font-weight:500;color:rgba(255,255,255,.9)}
+  .chapter:hover .cx{color:#fff}
+
+  /* questions */
+  .q{display:flex;align-items:center;gap:12px;width:100%;text-align:left;cursor:pointer;background:none;border:0;border-radius:11px;color:inherit;font-family:inherit;padding:12px 10px;transition:.14s}
+  .q+.q{border-top:1px solid rgba(255,255,255,.05)}
+  .q:hover{background:var(--card-hi)}
+  .q .qm{font-family:var(--display);font-size:15px;color:var(--mint);flex:none;line-height:1;transform:translateY(1px)}
+  .q .qx{font-size:15px;font-weight:500;color:rgba(255,255,255,.92)}
+  .q .go{margin-left:auto;flex:none;color:var(--dim);font-size:18px;transition:.15s}
+  .q:hover .go{color:var(--mint);transform:translateX(2px)}
+
+  /* summary + transcript bodies */
+  .summary-body p{font-size:16.5px;line-height:1.62;color:rgba(255,255,255,.9);padding:6px 10px 4px}
+  .tbody{padding:2px 10px 8px}
+  .tbody p{font-size:14.5px;line-height:1.7;color:rgba(255,255,255,.78);margin-top:15px;max-width:64ch}
+  .tbody .spk{display:block;font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--mint);margin-bottom:2px}
+
+  /* ── Voice note ask (lives at the bottom of the Summary panel) ── */
+  .vask{margin:16px 10px 4px}
+  .vbtn{display:inline-flex;align-items:center;gap:9px;padding:12px 20px;border-radius:999px;border:0;cursor:pointer;
+    background:var(--mint);color:#08210f;font-family:inherit;font-weight:800;font-size:12.5px;
+    letter-spacing:.04em;text-transform:uppercase;transition:.15s}
+  .vbtn:hover{filter:brightness(1.06);transform:translateY(-1px);box-shadow:0 12px 30px rgba(122,217,168,.25)}
+  .vbtn svg{width:18px;height:18px;fill:currentColor;flex:none}
+  .vslot{background:var(--purple);padding:12px 10px 10px;margin:14px 0 4px;box-shadow:0 18px 40px rgba(0,0,0,.35)}
+  .vslot[hidden]{display:none}
+  .vhead{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;margin-bottom:10px}
+  .vhead .vmsg{font-family:var(--sans);font-size:13px;line-height:1.55;color:rgba(255,255,255,.92);margin:2px 0 0;padding:0 2px}
+  .vclose{background:none;border:0;color:rgba(255,255,255,.85);font-size:22px;line-height:1;cursor:pointer;padding:0 2px}
+  .vclose:hover{color:var(--white)}
+  .vslot iframe{display:block}
+
+  /* ── YouTube subscribe pill (sits in the listen row; outranks .listen a's mint) ── */
+  .listen a.yt-pill{background:var(--purple);color:var(--white)}
+  .listen a.yt-pill:hover{filter:brightness(1.1);transform:translateY(-1px)}
+  @media(max-width:720px){ /* mobile: no label, three compact pills on one row */
+    .listen .lname{display:none}
+    .listen{gap:8px}
+    .listen a{padding:10px 13px;font-size:11px;gap:6px}
+    .listen svg{width:16px;height:16px}
+  }
+
+  /* ── Footer: Follow us on | Brought to you by | Produced by, + Menu dropdown ── */
+  footer{border-top:1px solid var(--line);margin-top:68px;padding:52px 20px 58px}
+  .footgrid{max-width:var(--wrap);margin:0 auto;display:grid;grid-template-columns:1fr 1.15fr .8fr;gap:44px;align-items:start}
+  .fcol{text-align:center;display:flex;flex-direction:column;align-items:center}
+  .foot-label{font-size:11px;font-weight:700;letter-spacing:.26em;text-transform:uppercase;color:var(--dim);margin-bottom:18px}
+  .sponsors{display:flex;justify-content:center;align-items:center;gap:34px;flex-wrap:wrap}
+  .sponsors a,.produced a{display:inline-flex;transition:.15s}
+  .sponsors a:hover,.produced a:hover{transform:translateY(-1px)}
+  .sponsors img{height:32px;width:auto;opacity:.92}
+  .produced img{height:30px;width:auto;opacity:.95}
+  .sponsors a:hover img,.produced a:hover img{opacity:1}
+  footer .socials{display:flex;gap:11px;justify-content:center;flex-wrap:wrap;margin:0}
+  footer .socials a{width:40px;height:40px;border-radius:50%;border:1.5px solid rgba(122,217,168,.5);display:flex;align-items:center;justify-content:center;transition:.15s}
+  footer .socials a svg{width:18px;height:18px;fill:var(--mint);transition:.15s}
+  footer .socials a:hover{background:var(--mint);border-color:var(--mint);transform:translateY(-2px)}
+  footer .socials a:hover svg{fill:#0a0a0a}
+  .footbar{max-width:var(--wrap);margin:34px auto 0;border-top:1px solid var(--line);padding-top:20px;display:flex;flex-direction:column;align-items:center;gap:14px}
+  .footnav-dd{display:block;width:100%;max-width:var(--wrap);margin:0 auto;text-align:center}
+  .footnav-dd>summary{list-style:none;cursor:pointer;display:inline-flex;align-items:center;gap:9px;font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.5px;font-size:13px;color:var(--muted);background:transparent;border:1px solid var(--line);padding:8px 16px 6px;transition:.15s}
+  .footnav-dd>summary::-webkit-details-marker{display:none}
+  .footnav-dd>summary:hover{color:var(--mint);border-color:rgba(122,217,168,.45)}
+  .footnav-dd>summary .ham{width:15px;height:15px;fill:currentColor;transform:translateY(-1px)}
+  .footnav-dd .dd-links{display:flex;flex-direction:row;flex-wrap:wrap;justify-content:center;gap:12px 24px;padding:24px 0 4px}
+  .footnav-dd .dd-links a{font-size:11.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:.15s}
+  .footnav-dd .dd-links a:hover{color:var(--mint)}
+  .copyright{font-size:12px;color:var(--dim);text-align:center}
+  @media(max-width:720px){.footgrid{grid-template-columns:1fr;gap:34px}footer{padding:40px 16px 20px}.footbar{margin-top:34px;padding-top:24px;gap:20px}.footnav-dd .dd-links{flex-direction:column;align-items:center;gap:15px}}
+
+  @media(min-width:720px){header.hero{padding:48px 0 6px}}
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "PodcastEpisode", "name": "The Rise of Private Lending in Australia", "url": "https://thenumbersgamepodcast.com.au/the-rise-of-private-lending-in-australia", "datePublished": "2024-08-12", "episodeNumber": 198, "image": "https://i.ytimg.com/vi/N4JHYW2FhuM/maxresdefault.jpg", "partOfSeries": {"@type": "PodcastSeries", "name": "The Numbers Game", "url": "https://thenumbersgamepodcast.com.au/"}}</script>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-in">
+      <a class="brand" href="/" aria-label="The Numbers Game home"><img src="assets/tng-logo.png" alt="The Numbers Game"></a>
+      <div class="navlinks">
+        <a href="/">Home</a>
+        <div class="navgroup">
+          <a class="navtop">Episodes</a>
+          <div class="subnav">
+            <a href="/episodes">All episodes</a>
+            <a href="/adventure">Find moments</a>
+          </div>
+        </div>
+        <div class="navgroup">
+          <a class="navtop">About</a>
+          <div class="subnav">
+            <a href="/about">The show</a>
+            <a href="/nick-reilly">Nick Reilly</a>
+            <a href="/jason-robinson">Jason Robinson</a>
+          </div>
+        </div>
+        <a href="/contact">Contact</a>
+      </div>
+      <button class="navburger" id="navburger" type="button" aria-label="Menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24"><path d="M3 6h18v2H3zM3 11h18v2H3zM3 16h18v2H3z"/></svg>
+      </button>
+    </div>
+    <div class="navdrop" id="navdrop" hidden>
+      <a href="/">Home</a>
+      <span class="navlabel">Episodes</span>
+      <a class="sub" href="/episodes">All episodes</a>
+      <a class="sub" href="/adventure">Find moments</a>
+      <span class="navlabel">About</span>
+      <a class="sub" href="/about">The show</a>
+      <a class="sub" href="/nick-reilly">Nick Reilly</a>
+      <a class="sub" href="/jason-robinson">Jason Robinson</a>
+      <a href="/contact">Contact</a>
+    </div>
+  </nav>
+
+  <main class="wrap">
+
+    <header class="hero">
+      <div class="hook">
+        <span class="eptag">EP 198</span>
+        <h1 class="hk"><span class="hkrow"><span>The Rise of Private</span></span>
+        <span class="hkrow"><span class="mintseg">Lending in Australia</span></span></h1>
+      </div>
+    </header>
+
+    <div class="player-wrap" id="player-wrap">
+      <div class="player" id="player">
+        <button class="facade" id="facade" style="background-image:url('https://i.ytimg.com/vi/N4JHYW2FhuM/maxresdefault.jpg')" aria-label="Play episode">
+          <span class="play"></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="explore">
+      <div class="tabs" role="tablist">
+        <button class="tabbtn on" data-panel="p-summary">Summary</button>
+        <button class="tabbtn" data-panel="p-chapters">Chapters<span class="ct" id="chcount"></span></button>
+        <button class="tabbtn" data-panel="p-questions">Questions<span class="ct" id="qcount"></span></button>
+      </div>
+      <section class="tpanel" id="p-summary">
+        <div class="summary-body">
+          <p>Marty opens with signs the rate cycle is turning, a major bank cutting three year fixed investment rates, mortgage arrears near one percent and housing price growth plateauing, and a quick take on whether Australia heads into recession. The main segment explains private credit, the fast growing non bank lending market. Marty and Nick cover how it lets asset rich borrowers with weak cash flow access funds for a business acquisition or property deal, the need for a clear exit strategy, the two to three percent higher rates and larger establishment fees, and why the speed suits time sensitive opportunities. They warn about sharky lenders who profit when a deal defaults, stress dealing with an experienced broker, and note banks are competing back with more flexible commercial lending under two million.</p>
+        </div>
+        <div class="vask">
+          <button class="vbtn" id="vbtn" type="button">
+            <svg viewBox="0 0 24 24"><path d="M12 14a3 3 0 0 0 3-3V6a3 3 0 1 0-6 0v5a3 3 0 0 0 3 3zm5-3a5 5 0 0 1-10 0H5a7 7 0 0 0 6 6.92V21h2v-3.08A7 7 0 0 0 19 11h-2z"/></svg>
+            Send us a voice note
+          </button>
+          <div class="vslot" id="vslot" hidden>
+            <div class="vhead">
+              <p class="vmsg">We'd love to hear from you. You can leave up to a 90 second voice note for us to play on the show: a question, some feedback, or a topic you want covered.</p>
+              <button class="vclose" id="vclose" type="button" aria-label="Close">&times;</button>
+            </div>
+            <iframe src="https://www.speakpipe.com/widget/inline/hhq6kzggsx7zpcsvakgxfrzun3zidpde" allow="microphone" width="100%" height="200" frameborder="0" title="Leave The Numbers Game a voice note"></iframe>
+          </div>
+          <script async src="https://www.speakpipe.com/widget/loader.js" charset="utf-8"></script>
+        </div>
+        <div class="sumfacts">
+          <div class="fact"><span class="fl">Release date</span><span class="fv">12 August 2024</span></div>
+          <div class="fact"><span class="fl">Hosts</span><span class="fv"><a href="/nick-reilly">Nick Reilly</a>, <a href="/jason-robinson">Jason Robinson</a> &amp; <a href="/marty-vidakovic">Marty Vidakovic</a></span></div>
+
+        </div>
+      </section>
+      <section class="tpanel" id="p-chapters" hidden>
+        <p class="hint">Jump straight to the part you need.</p>
+        <div id="chapters"></div>
+      </section>
+      <section class="tpanel" id="p-questions" hidden>
+        <p class="hint">Real questions this episode answers. Tap one to hear the answer.</p>
+        <div id="qa"></div>
+      </section>
+    </div>
+
+    <div class="drops">
+
+      <details class="drop">
+        <summary><span class="st">Episode transcript</span><span class="chev">+</span></summary>
+        <div class="drop-body tbody">
+          <p><span class="spk">Jason · 00:00</span>Welcome</p>
+          <p><span class="spk">Marty · 00:00</span>to</p>
+          <p><span class="spk">Jason · 00:01</span>episode 198 of the podcast. I'm Jase. I'm here with Nick and Marty. What's happening today, guys? We well?</p>
+          <p><span class="spk">Marty · 00:07</span>Yeah, going well, Jase. Uh, excited. I think, I think things are turning in regards to rates might be coming down, down the track, and I'm excited about that. And I'll talk a little bit more about investing, uh, in this podcast.</p>
+          <p><span class="spk">Marty · 00:23</span>Nick, how are you? Good, mate.</p>
+          <p><span class="spk">Nick · 00:24</span>How far, how long is the track?</p>
+          <p><span class="spk">Marty · 00:26</span>Yeah, I think US are going to cut rates in September. So I'm happy about that because that just means that, uh, it's a little bit easier for us to release. But what I've seen just recently is, um, one of the major banks cut their three year fixed rate on investment down from 6.</p>
+          <p><span class="spk">Marty · 00:45</span>5%. Uh, 5. 9 to 5. 99. So that's always a good sign when the three year fixed rates start to decline. And it also provides opportunities in the market for people just to secure better rates. So that's the first time</p>
+          <p><span class="spk">Marty · 01:00</span>I've seen the majors do that. I've seen a couple of the smaller banks do that, but it's a good sign with the majors.</p>
+          <p><span class="spk">Marty · 01:06</span>And I think the other thing. That's come out in the news is that, uh, the mortgage arrears rates are up to 1%, which is still very, very healthy. I mean, it's 99 percent of the market of meeting their repayments, but just declining real wages, uh, rising unemployment. You've got, uh, CPI consumer spendings down, and now those arrears rates coming up a little bit more is, um, a really good factor as well.</p>
+          <p><span class="spk">Marty · 01:36</span>So that's another signal that we could be getting some decent times ahead on rates. And the other thing, the third factor. Is that housing price growth has plateaued just in the last month. So it's been increasing by about 0. 7%, uh, month on month. And that's now down to around about 0. 4, 0. 3, 0.</p>
+          <p><span class="spk">Marty · 02:00</span>4%. So this is a good sign because there was limited stock on the market, but still getting, you know, properties that were built with nothing to do, uh, we're still getting.</p>
+          <p><span class="spk">Marty · 02:09</span>exponential prices on those, on those properties. So the pullback in that area is actually quite good as well. So from what I'm seeing, I just feel like we're not too far away. We're in the home stretch and it will still be 2025, but it gives me confidence that we're not going to see a rate rise, which is we, no one wants that.</p>
+          <p><span class="spk">Marty · 02:32</span>And that we're heading into better times ahead. So, uh, does that, any of that info resonate? You're happy about that?</p>
+          <p><span class="spk">Jason · 02:39</span>It resonates. Can I ask you a big question off the bat? Yeah. Do you think we'll go into recession?</p>
+          <p><span class="spk">Marty · 02:47</span>Well, I think the US are very nervous. Very, very nervous. In fact, they need to cut rates sooner rather than later based on their data.</p>
+          <p><span class="spk">Marty · 02:56</span>I think we're a bit more robust in Australia. So</p>
+          <p><span class="spk">Marty · 03:00</span>I'm not sure. I think there's a people recession, but commercially on the historic numbers, that's not showing up yet. But I feel like when you're on the ground talking to everyday people, it's certainly tighter and people are certainly, uh, you know, tightening the belts and they have been for a while, but it's getting to the point.</p>
+          <p><span class="spk">Marty · 03:20</span>Where it's having an impact and declining wages is, uh, not only unemployment, but declining wages is a, is a concern when it links into consumer spending as well. So to me, I'm not sure if I can answer that, that we'll end up in a recession, but we have to, they'll have to monitor it. So we don't, so I don't think we will.</p>
+          <p><span class="spk">Nick · 03:42</span>Does it really matter if we go into a recession?</p>
+          <p><span class="spk">Marty · 03:46</span>I don't think so. I think</p>
+          <p><span class="spk">Jason · 03:47</span>it gives the media something to do. Yeah. I think at the</p>
+          <p><span class="spk">Marty · 03:50</span>end of the day, it's just numbers, right? Yeah. Yeah. I think at the end of the day, a little bit of declining growth, uh, I know on a macro level, that means a lot,</p>
+          <p><span class="spk">Marty · 04:00</span>but I'm always of the opinion that if you're good at what you do, you can, you can actually.</p>
+          <p><span class="spk">Marty · 04:06</span>You can actually do more in challenging markets. And so to me, it's more about, I've always been one to see it as a great opportunity because, you know, the rest of the market can be challenged and it's a chance to step up and do very well in any market. So I think it actually, it sounds terrible, but I kind of get a little bit excited because I think we can actually.</p>
+          <p><span class="spk">Marty · 04:32</span>Have a bigger point of difference in these markets when we do what we do well. And I think business owners that are doing well in these times would feel the same, no doubt. So, so to me, yes, it's just a high level read, but does it affect you in a smaller business? Probably some more than others. Yes. But I think you can always find a way.</p>
+          <p><span class="spk">Marty · 04:53</span>Did I answer that question? You</p>
+          <p><span class="spk">Jason · 04:54</span>did. All right. Okay. And that's, yeah, you've hit some big stuff up front, Marty. So you've got a lot to, uh,</p>
+          <p><span class="spk">Jason · 05:00</span>lots to deliver on now. I'm excited.</p>
+          <p><span class="spk">Marty · 05:02</span>Yeah. Well, I think today I wanted to talk about specifically the rise of private, uh, credit in Australia and, and the potential competitive threat.</p>
+          <p><span class="spk">Marty · 05:12</span>To Australian banks and just to give you a little bit of an in, do you, do you know what private credit is? Uh, have you come across that before Jace? You would have seen it somewhere?</p>
+          <p><span class="spk">Jason · 05:20</span>Yep. Yep, definitely. And, uh, sometimes it scares me when, uh, clients come to me, it's already locked and loaded and in place and we haven't had a chance to see if there was, you know, other options or to make sure that, you know, all the documents, I have dotted T's across and that there's actually, you know, There's some stuff behind it.</p>
+          <p><span class="spk">Jason · 05:38</span>Yeah. Sometimes you see that the sharks, some sharks out there, but anyway, I'm excited to unpack it in more detail than my, uh, loose description.</p>
+          <p><span class="spk">Marty · 05:46</span>Yeah. Well, well, you're, you're on point. Like there was a time going back 20, 30 years ago. That if you are asset rich and you had a great relationship with the bank managers, that you could find a way to take on</p>
+          <p><span class="spk">Marty · 06:00</span>opportunity, right?</p>
+          <p><span class="spk">Marty · 06:00</span>It was an unregulated environment. Doesn't mean it was right, but it was unregulated. And there were a lot of moving parts that could happen within the banking system. Nowadays, things are much more regulated and, you know, a lot of, Eyes need to be dotted and a lot of ticks need to happen for things to go through.</p>
+          <p><span class="spk">Marty · 06:18</span>And that's okay. We want that to happen. But what we're seeing is this massive rise in private lending happening. And, you know, sometimes backed by family funds, sometimes backed by companies raising money from investors. And it is generally more expensive. And the difference between private credit is if you've got an asset, And you're not showing cash flows like usual, like whether it's pay cash flow or whether it's a business returns that the banks would want to see.</p>
+          <p><span class="spk">Marty · 06:49</span>There's still an opportunity to be able to access funds. If you want to take on an opportunity, the difference is you need a clear exit</p>
+          <p><span class="spk">Marty · 07:00</span>strategy on the funds. So for example, Um, let's say someone's asset rich, they've got a property worth a million bucks. They want to buy a business and the business isn't showing returns.</p>
+          <p><span class="spk">Marty · 07:12</span>In fact, it's probably got a slight loss, but the person sees it as a great opportunity, given their background to take that business and make it profitable. So generally the banks are not going to want to do that. If that business isn't as healthy as they would want to see. But because you've got so much equity, you could actually go and buy that business.</p>
+          <p><span class="spk">Marty · 07:33</span>As long as there's a clear exit strategy after two, sometimes three years and an exit strategy in that situation would be, you're going to build that into a profitable business over that time. Um, and then go to a major lender. Whatever the case may be, so you can transition out of that opportunity.</p>
+          <p><span class="spk">Marty · 07:53</span>Someone sees a great commercial property they want to buy, uh, under the same premise and</p>
+          <p><span class="spk">Marty · 08:00</span>they go, all right, well, the numbers aren't stacking up, but they know that there's 40 percent upside for whatever reason in the next 12 months. And they want to take advantage of the opportunity. So again, it's not.</p>
+          <p><span class="spk">Marty · 08:12</span>It would be a very small percentage of the market you would think, but it's growing and the cost of private lending is generally two to 3%, um, more expensive on interest rate, but when you're looking at the opportunity Cost of getting into something, you know, is going to make money. Sometimes people want to take on that opportunity at a higher interest rate in order to secure it.</p>
+          <p><span class="spk">Marty · 08:39</span>Um, Nick, have you come across this at all?</p>
+          <p><span class="spk">Nick · 08:42</span>Well, yeah. And it's, you know, it's, it's opportunity cost. Um, and when you're looking at these, um, these types of funding, it's generally for, for commercial reasons and businesses. And yeah, you just factored the interest rate in as a cost to doing</p>
+          <p><span class="spk">Nick · 09:00</span>business. So, you know, hypothetically, I'm just picking numbers here, but, um, look, we see a lot of property developers do it.</p>
+          <p><span class="spk">Nick · 09:06</span>Um, you've, you've factored the interest in because banks are just way too difficult. So. You know, if you're, if you're a million dollars in profit, you've got a, you've got lending fees of two to 50, so you're 750, 000. Does that still make sense? Well, I guess, depending on the outlay, yes. You know, you'd still making 750 K versus making nothing.</p>
+          <p><span class="spk">Nick · 09:28</span>Um, so yeah, I think you just, you, you accept it for what it is as in, it's a little bit higher in interest because they are asking less questions, which means the lender is definitely bearing more risk. But as long as those numbers work into your over profitability of the transaction or what you're trying to achieve, it's just the cost of doing business.</p>
+          <p><span class="spk">Nick · 09:46</span>We, so we say it a lot.</p>
+          <p><span class="spk">Marty · 09:48</span>And the increase is in private lending activities, 16 percent year on year increase. So you can see that people are looking for opportunities to fund opportunity, which is</p>
+          <p><span class="spk">Marty · 10:00</span>really important. And they say, according to BlackRock, uh, Australia's market is estimated And 188 billion, um, in regards to private funding out there at the moment.</p>
+          <p><span class="spk">Marty · 10:12</span>And the U. S., just to give you a comparison, is 1. 6 trillion under private funding. So it just goes to show you that Big, short, big, short, big, short, but, but it just goes to show you that, um, the opportunity for growth in this space is there. And investors actually putting their money towards private funding and getting decent returns off it as well.</p>
+          <p><span class="spk">Marty · 10:38</span>And I think the major cost difference is, is probably the initial costing to get into it. Like if you went to a bank on, let's say a million dollars of commercial lending, they They generally charge you around about a 0. 5 establishment fee. So it's roughly around about 5, 000, but on a private lend that can be from anywhere between 1.</p>
+          <p><span class="spk">Marty · 11:00</span>5 to 2%. So again, you're paying 20, 000 upfront, but like Nick was saying, you've got to look at the opportunity costs. A lot of times people get into this and have huge upside.</p>
+          <p><span class="spk">Nick · 11:10</span>It's a, it's a good point. And I think what people need to remember is it's a quick transaction. It's genuine. In and out transaction, it might be for one to two years.</p>
+          <p><span class="spk">Nick · 11:19</span>So I think what I've seen in the past is people coming in, they'll want that lending and they'll say, Oh, yeah, it's a one, one, one to 2 percent establishment fee or the application fees are too high. What people need to understand is the borrower is it's not a 30 year loan. You're in and out of that transaction.</p>
+          <p><span class="spk">Nick · 11:36</span>So they're actually not really going to make the money out of you from a interest rate point of view. You're not there long enough. So as the borrower, you need to remember that they're not a bank. Okay. And they're, they're treating their, their lending as a business as well. So if they're giving you the money, they need to get a certain return.</p>
+          <p><span class="spk">Nick · 11:54</span>Otherwise they'll go somewhere else for the return because there's other places they can go. So, you know, don't,</p>
+          <p><span class="spk">Nick · 12:00</span>don't be scared away from establishment fees because you're in and out of that transaction. It's very quick. So. Generally, they're not making the, uh, the long term interest component like a bank would.</p>
+          <p><span class="spk">Marty · 12:10</span>And you make a great point, Dick, you know, the major lenders and, and, you know, just general lenders can take four to six weeks on property deals sometimes. Whereas here on a private land, you can turn that around in a week in some situations. So again, must have. And exit strategy. That's the main point you need to, you need to be able to communicate to lenders.</p>
+          <p><span class="spk">Marty · 12:32</span>The other thing is, uh, you can capitalize the interest repayments if you have enough security. So if you're, the thresholds usually against residential property are around about 70 to 80 percent that you could borrow up to on a straight lend and commercials around that 60, 65%. And there's a lot of private funders out there now.</p>
+          <p><span class="spk">Marty · 12:53</span>And why it's important to come to a broker is to be able to decipher between what, uh, Jase was saying</p>
+          <p><span class="spk">Marty · 13:00</span>is it can get very sharky out there and to make sure you're dealing with legitimately good, good organizations where you're accessing your money from. And there are. You know, the general mainstream media would say it's all sharky, but there are some really good businesses out there doing great things for clients.</p>
+          <p><span class="spk">Marty · 13:19</span>And it's, it's really important to take note of that.</p>
+          <p><span class="spk">Nick · 13:22</span>Yeah. And that's a really good point, Marty, because you don't, without the knowledge, how do you know? So where. Where the sharks do circle, I guess, is when things do, um, go off, go off track a little bit. So, you know, if there's, you talked about an exit strategy, highly important to protect yourself to get out of that funding.</p>
+          <p><span class="spk">Nick · 13:43</span>Um, but sometimes, sometimes that doesn't happen. Um, and sometimes it can be reasons outside of your control. So where the sharkiness comes in is how do those lenders react in that situation? And there are some lenders out there that will see that as an opportunity that you</p>
+          <p><span class="spk">Nick · 14:00</span>haven't met your contract or, uh, your, your contract obligations.</p>
+          <p><span class="spk">Nick · 14:03</span>And they'll see that as an opportunity to swoop and take as much from you as they can. Um, so I think dealing with a broker that's got, um, history with a lender has seen lenders, uh, in those situations, understands how the lender reacts in those situations. Um, is absolutely paramount when you're jumping into this funding, you need to make sure that you're dealing with a good, a good, uh, organization that's going to be reasonable if things happen outside of your control to find a solution that's good for everyone.</p>
+          <p><span class="spk">Nick · 14:36</span>Um, highly important.</p>
+          <p><span class="spk">Marty · 14:38</span>Yeah. You want, you want those organizations to be thinking more in bank terms in regards to that backend. So if something does go wrong, it doesn't go very, very wrong. Cause the, as we say, the sharky ones want you actually to default and then take the asset. So, or, or have costs, you know, heavy costs where they make even more money.</p>
+          <p><span class="spk">Marty · 14:58</span>So the good</p>
+          <p><span class="spk">Marty · 15:00</span>ones, you know, really make sure that there's not that. That, you know, expanded contagion of it getting from bad to worse. So really important. And, and even to be able to capitalize the interest repayments over that period of time of the one or two years, like, and Jason, you know, in businesses as well, if people take on, let's say they're taking on a slightly underperforming business, but they've got the acumen to build that around, it can really help having those interest payments sort of.</p>
+          <p><span class="spk">Marty · 15:29</span>catered for in the first, let's say 12 months, while they really expand that upside. The same if they're buying a property that they want to improve upon, and then the exit is to sell that property in 18 months time, then they don't have the heartache of having to find that capital to pay back the debt.</p>
+          <p><span class="spk">Marty · 15:49</span>Now, of course, that's more costly to be able to do that when you're capitalizing naturally. But if that's all budgeted for, and the upside is there, then It can be very</p>
+          <p><span class="spk">Marty · 16:00</span>beneficial. And, and, um, you would see people wanting to do that. If they were buying a business just in general, anyway, a lot of the times in that first year.</p>
+          <p><span class="spk">Jason · 16:08</span>And that's what you think about, you know, the word capitalize. If you've got the right mindset that you're working on building a capital asset, you're adding capital, you're adding asset value, then it makes sense. That again. To your point, the exit strategy, a couple of years later, if you're able to return that asset into cash, pay back the lender, and there's a win win for everyone involved.</p>
+          <p><span class="spk">Jason · 16:28</span>And, you know, it touched on it earlier when Nick said that that person's running a business as well. They're in it to make money and there's a higher risk factor by doing private lending for everyone involved. So that higher risk factor means a higher interest rate. That means it needs to be more wins for everybody involved.</p>
+          <p><span class="spk">Jason · 16:42</span>If you are the person looking to take out. Uh, money from private lender, you've got to have your ducks lined up. You've got to be working with a good advisor or a team of advisors that know the risks that you're getting into. And it's also about mapping out the what if scenarios, you know, what if the property you're</p>
+          <p><span class="spk">Jason · 17:00</span>developing doesn't sell for X dollars, what if you need to hold it for an extra six months?</p>
+          <p><span class="spk">Jason · 17:05</span>What happens if. You know, X, Y, Z. So it's all mapping out multiple scenarios to go, am I comfortable with all of these potential outcomes? And if everyone's comfortable, go and get the money and crack into that project, whether it's the property development or buying the new business or adding the extra business to your existing, they're all things that, you know, are great examples of how to use private lending.</p>
+          <p><span class="spk">Jason · 17:26</span>Just got to make sure you map out all the scenarios.</p>
+          <p><span class="spk">Marty · 17:28</span>Project based, be very project based and see that project as a business within itself. I think if you're doing it that way, you've done your budgeting around it. You've got your outcomes. And if something does go amiss, let's say you've got a term of 18 months, you can renew it as long as you're being proactive as well.</p>
+          <p><span class="spk">Marty · 17:45</span>Not that you would want to. But you can, you can look to extend as long as you're proactive in your dealings with the private lender. So it's not the end of the road, but you want to be really clear on your exits wherever possible, because it then can</p>
+          <p><span class="spk">Marty · 18:00</span>start to bank up and, and it's, and it's interesting because the banks know that this is happening and there's a space for it and they are trying to come back with their own opportunities, but not quite as aggressive as well.</p>
+          <p><span class="spk">Marty · 18:14</span>So you're seeing, um, You're seeing a lot of different parameters around commercial lending, the, the, in the general market, like particularly under that 2 million of lending space, um, for instance, in some situations, They will look at lending under 2 million. You can have one BAS and they'll annualize that BAS and take 40%, 30 to 40 percent of the revenues as income to service that debt when someone's looking to purchase a property.</p>
+          <p><span class="spk">Marty · 18:45</span>Now, now, even though that can be utilized, you still have to be in a disciplined decision in your own business to go, you know, Can I afford that? But it's really interesting that you can see</p>
+          <p><span class="spk">Marty · 19:00</span>flexibility. Like the other day I had a lender that says we don't do unsecure lending in the commercial space, but then, you know, under two mil.</p>
+          <p><span class="spk">Marty · 19:08</span>And then I said, but what we will do is we will leverage up to 140 percent of the residential property. Or we'll do 120 percent on the commercial property. So we don't want to do pure unsecured lending when we're not putting up any assets, but we will take an asset and leverage out because they see a real opportunity for people to progress forward.</p>
+          <p><span class="spk">Marty · 19:30</span>As long as the lenders have some form of. Property backing on it under two mil over two mil. You can do cashflow lens. You've got, you know, You've got criteria around that as well But that under two mil space there's a lot of flexibility where I think the lenders think they can really compete At that next level under private lending under private credit.</p>
+          <p><span class="spk">Marty · 19:53</span>So I think both can work in coexistence But it's interesting to see How the,</p>
+          <p><span class="spk">Marty · 20:00</span>the, the different types of parameters that are coming out around that. So you, you still got to do your own due diligence though, because just because you can get money, doesn't mean you should.</p>
+          <p><span class="spk">Marty · 20:14</span>You would say that Jase, wouldn't you?</p>
+          <p><span class="spk">Jason · 20:15</span>Yeah. Yeah. A hundred percent. And then, and again, I think we've touched on it time and time again, but another reminder that before you go and get money from anyone, talk to a professional, talk to a finance broker, talk to your accountant, you know, sometimes it's hidden things that you don't see.</p>
+          <p><span class="spk">Jason · 20:31</span>You can get excited by the, the money upfront or the project or the plan you've going to do or how it's going to solve a problem, you know, this week or next week in your business. Um, but think long term. And think about all the different things that can, can happen, talk to a professional first. Um, cause unfortunately, you know, while these.</p>
+          <p><span class="spk">Jason · 20:49</span>loans and short term lending can be a great mechanism to solve a problem and to help get from A to B. There's often things that you don't take into consideration, which</p>
+          <p><span class="spk">Jason · 21:00</span>cause absolute havoc on the other side. And we've seen good businesses go into liquidation due to getting involved or, or Potential liquidation.</p>
+          <p><span class="spk">Jason · 21:07</span>I've seen businesses go under through doing these things. I've seen, um, everyday investors that, that have got involved in some private lending on the other side as well. So yeah, there are a lot of traps that you can get yourself into. Um, so having, you know, a good team of people in your corner is always important as ever.</p>
+          <p><span class="spk">Marty · 21:23</span>And they will take your assets. At the end of the day, you know, if you don't, if you don't perform and, you know, work with them on the exit, um, you're, you're at the, you know, you're vulnerable, you're vulnerable and you don't want to place yourself in that position. Now this would be very, I would say we, we might say five of these a year, but I'm maybe a little bit more in the last couple of years with the restrictions on lenders, but it certainly is a growing area.</p>
+          <p><span class="spk">Marty · 21:52</span>And it is a solution to an opportunity rather than it being, it can be a solution to a problem, but it's better when it's a solution to an</p>
+          <p><span class="spk">Marty · 22:00</span>opportunity. And what you want to exhaust is every other avenue that is mainstream that you might be able to get on a better rate. And that's, you know, that would always be the first point of call is to secure, you know, a mainstream position.</p>
+          <p><span class="spk">Marty · 22:15</span>And it really only be, you know, uh, a backend consideration type of thing. Um, so I hope that gives people some understanding of. What's going on, how it's going on and some alternatives out there as well.</p>
+          <p><span class="spk">Jason · 22:28</span>Well, I think anytime there's, you know, 16 percent year on year growth, um, you know, there, there, there's attraction to the market.</p>
+          <p><span class="spk">Jason · 22:35</span>There, there, it's a solution. Um, and as you said, banks, banks make it so damn difficult. And if anything, the turnaround time where I've seen this work really well is the turnaround time for banks is months and months and months of due diligence and document collection and dot eyes and cross T's and back and whereas I've seen some private lending get done really well.</p>
+          <p><span class="spk">Jason · 22:53</span>Really, really fast, like, you know, super fast. So, you know, if you need a quick</p>
+          <p><span class="spk">Jason · 23:00</span>solution, you know, you've got an opportunity that pops up, you know, let's say, yeah, cause people, these things happen at barbecues where somebody will go, geez, I've got this opportunity to get this property and I reckon we could do this on it.</p>
+          <p><span class="spk">Jason · 23:10</span>And then you go, ah, it takes too long to go through a bank and get that done. But where I've seen great operators who have, you know, who know about private lending, use it to their advantage is when an opportunity comes across their desk, they're not waiting around going, Oh, we can't do it in this short timeframe because of the banks they're going, let's get the short term funding dialed and sorted real fast and we'll refinance down the track.</p>
+          <p><span class="spk">Jason · 23:34</span>Or if it's, if it's a good enough rate and you've structured it right, You can use private lending to your advantage and make some serious money along the way.</p>
+          <p><span class="spk">Marty · 23:41</span>Well, sometimes Jase, you make a great point. You have someone going to private lending and they have like on a business acquisition and two months of good performance and a cashflow forecast and you transition straight out into mainstream.</p>
+          <p><span class="spk">Marty · 23:54</span>So it doesn't have to be a long time. It just serves a purpose for, you know, the greater opportunity in the end.</p>
+          <p><span class="spk">Jason · 24:00</span>Absolutely love it. Well, if this has got your attention and you're interested in talking about private lending, I'm just going to throw this out there and say that Marty, you would be the absolute go to that if any of our listeners, uh, have got, you know, their juices flowing, creative juices flying when it comes to, you know, wanting to kick off a project, buy a business, uh, do a property development, never thought it was going to be possible.</p>
+          <p><span class="spk">Jason · 24:21</span>Should they be coming to talk to you, Marty?</p>
+          <p><span class="spk">Marty · 24:23</span>Well, yep. I'm glad you got the juices flowing and the audience have absolutely they can. And like I said, I'll always look at it fundamentally from a mainstream first, but depends on the situation. And, uh, we've got a lot of, uh, we've got a lot of ways we could support business owners out there in many different terms.</p>
+          <p><span class="spk">Jason · 24:40</span>Now, a hundred percent. Well, appreciate you sharing this one, Marty. It's been an interesting one and it might be something that a lot of our listeners have never thought of that they could get access to. So, um, check out our YouTube channel. We can see Marty's beautiful face. Um, and then Nick and I just adding, you know, off to the side here.</p>
+          <p><span class="spk">Jason · 24:55</span>Uh, we'd love to have you as a follower. Uh, give us a like, give us a subscribe if that's</p>
+          <p><span class="spk">Jason · 25:00</span>the right terminology. Um, thanks again for listening. Reach out to us at the numbers game podcast on Instagram or connect with Nick, Marty and I on LinkedIn, where we love to talk to our audience and, uh, friends and family about businesses.</p>
+          <p><span class="spk">Jason · 25:11</span>Until next time,</p>
+          <p><span class="spk">Marty · 25:12</span>game over.</p>
+          <p><span class="spk">Jason · 25:15</span>This podcast is for educational and informational purposes only. The conversations are of a general nature and do not qualify as financial or tax advice. We recommend before you make any financial decisions, you consult a licensed professional. Individuals on the podcast may hold positions in the companies discussed. ---</p>
+        </div>
+      </details>
+
+    </div>
+
+    <!-- LISTEN:START (build_episode.py rewrites the 3 URLs + iframe title per episode; player dropped if no spotifyEmbedUrl) -->
+    <section class="listen-now">
+      <div class="ln-head">
+        <span class="ln-title">Listen now</span>
+      </div>
+      <div class="audio-embed">
+        <iframe src="https://open.spotify.com/embed/episode/4cMyTHOUrgt6sqjI84tto6?utm_source=generator"
+          width="100%" height="152" loading="lazy" allowfullscreen
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+          title="Spotify — The Rise of Private Lending in Australia"></iframe>
+      </div>
+    </section>
+
+    <div class="listen">
+      <a href="https://open.spotify.com/episode/4cMyTHOUrgt6sqjI84tto6" target="_blank" rel="noopener" aria-label="Listen to this episode on Spotify">
+        <svg viewBox="0 0 24 24"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.52 17.34c-.24.36-.66.48-1.02.24-2.82-1.74-6.36-2.1-10.56-1.14-.42.12-.78-.18-.9-.54-.12-.42.18-.78.54-.9 4.56-1.02 8.52-.6 11.64 1.32.42.18.48.66.3 1.02zm1.44-3.3c-.3.42-.84.6-1.26.3-3.24-1.98-8.16-2.58-11.94-1.38-.48.12-1.02-.12-1.14-.6-.12-.48.12-1.02.6-1.14 4.32-1.32 9.72-.66 13.44 1.62.36.18.54.78.3 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.3c-.6.18-1.2-.18-1.38-.72-.18-.6.18-1.2.72-1.38 4.26-1.26 11.28-1.02 15.72 1.62.54.3.72 1.02.42 1.56-.3.42-1.02.6-1.56.3z"/></svg>
+        Spotify
+      </a>
+      <a href="https://podcasts.apple.com/au/podcast/id1555566088?i=1000664948034" target="_blank" rel="noopener" aria-label="Listen to this episode on Apple Podcasts">
+        <svg viewBox="0 0 24 24"><path d="M5.34 0A5.328 5.328 0 000 5.34v13.32A5.328 5.328 0 005.34 24h13.32A5.328 5.328 0 0024 18.66V5.34A5.328 5.328 0 0018.66 0H5.34zm6.525 2.568c2.336 0 4.448.902 6.056 2.587 1.224 1.272 1.912 2.619 2.264 4.392l.04.23c.04.272-.16.527-.432.567a.505.505 0 01-.567-.431l-.04-.213c-.312-1.57-.92-2.747-2.004-3.867-1.428-1.496-3.293-2.294-5.393-2.294-2.1 0-3.966.798-5.394 2.294-1.084 1.12-1.692 2.298-2.004 3.867l-.04.213a.507.507 0 01-.567.431.504.504 0 01-.432-.567l.04-.23c.352-1.773 1.04-3.12 2.264-4.392 1.608-1.685 3.72-2.587 6.056-2.587h.153zm.136 3.033c1.74 0 3.312.67 4.527 1.934.883.916 1.394 1.93 1.663 3.253l.04.23a.505.505 0 01-.431.567.503.503 0 01-.567-.432l-.04-.212c-.23-1.112-.659-1.97-1.396-2.732-1.052-1.1-2.404-1.672-3.9-1.672s-2.849.572-3.901 1.672c-.737.762-1.167 1.62-1.396 2.732l-.04.212a.503.503 0 01-.567.432.505.505 0 01-.432-.567l.04-.23c.27-1.323.78-2.337 1.664-3.253 1.215-1.264 2.787-1.934 4.527-1.934h.21zm-.078 3.05c1.092 0 2.091.424 2.89 1.22.582.58.924 1.245 1.107 2.15l.04.218a.501.501 0 01-.424.568.499.499 0 01-.568-.424l-.04-.198c-.146-.724-.413-1.253-.871-1.716-.63-.63-1.398-.957-2.226-.957s-1.595.328-2.225.957c-.459.463-.726.992-.871 1.716l-.04.198a.499.499 0 01-.568.424.501.501 0 01-.424-.568l.04-.219c.183-.904.525-1.569 1.106-2.149.8-.796 1.799-1.22 2.89-1.22h.184zM12 14.07a2.477 2.477 0 012.48 2.478A2.477 2.477 0 0112 19.024a2.477 2.477 0 01-2.48-2.477A2.477 2.477 0 0112 14.07z"/></svg>
+        Apple
+      </a>
+      <a class="yt-pill" href="https://www.youtube.com/@thenumbersgamepodcast?sub_confirmation=1" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.12-2.14C19.5 3.55 12 3.55 12 3.55s-7.5 0-9.38.51A3 3 0 0 0 .5 6.2 31.4 31.4 0 0 0 0 12a31.4 31.4 0 0 0 .5 5.8 3 3 0 0 0 2.12 2.14c1.88.51 9.38.51 9.38.51s7.5 0 9.38-.51a3 3 0 0 0 2.12-2.14A31.4 31.4 0 0 0 24 12a31.4 31.4 0 0 0-.5-5.8zM9.55 15.57V8.43L15.82 12z"/></svg>
+        Subscribe
+      </a>
+    </div>
+    <!-- LISTEN:END -->
+
+    <div class="relsec">
+      <span class="rtitle">Discover more</span>
+      <div class="relgrid">
+        <a class="relcard" href="/pokemon-cards-vs-bitcoin-gold-and-the-asx">
+          <img src="https://i.ytimg.com/vi/7PHS9HCqNvM/hqdefault.jpg" alt="EP 286 thumbnail">
+          <span class="rt">Pokemon Cards vs Bitcoin, Gold and the ASX</span>
+          <span class="rfoot"><span class="rwhy">20 July 2026</span><span class="rtag">EP 286</span></span>
+        </a>
+        <a class="relcard" href="/buying-commercial-property-with-your-super-in-2026">
+          <img src="https://i.ytimg.com/vi/RAQ80ecsDq0/hqdefault.jpg" alt="EP 285 thumbnail">
+          <span class="rt">Buying Commercial Property With Your Super in 2026</span>
+          <span class="rfoot"><span class="rwhy">13 July 2026</span><span class="rtag">EP 285</span></span>
+        </a>
+        <a class="relcard" href="/the-most-expensive-day-in-aussie-small-business-history">
+          <img src="https://i.ytimg.com/vi/V-10kMQrsDM/hqdefault.jpg" alt="EP 284 thumbnail">
+          <span class="rt">The Most Expensive Day in Aussie Small Business History</span>
+          <span class="rfoot"><span class="rwhy">6 July 2026</span><span class="rtag">EP 284</span></span>
+        </a>
+        <a class="relcard" href="/what-real-budget-reform-for-young-australians-would-actually-look-like">
+          <img src="https://i.ytimg.com/vi/le7HuIBq6Ow/hqdefault.jpg" alt="EP 283 thumbnail">
+          <span class="rt">What Real Budget Reform for Young Australians Would Actually Look Like</span>
+          <span class="rfoot"><span class="rwhy">29 June 2026</span><span class="rtag">EP 283</span></span>
+        </a>
+        <a class="relcard" href="/the-business-of-gift-cards">
+          <img src="https://i.ytimg.com/vi/nC_JkW320Tw/hqdefault.jpg" alt="EP 282 thumbnail">
+          <span class="rt">The Business of Gift Cards</span>
+          <span class="rfoot"><span class="rwhy">22 June 2026</span><span class="rtag">EP 282</span></span>
+        </a>
+        <a class="relcard" href="/how-to-know-if-your-skills-transfer-in-an-ai-world">
+          <img src="https://i.ytimg.com/vi/X-sSC-WROOQ/hqdefault.jpg" alt="EP 281 thumbnail">
+          <span class="rt">How to Know If Your Skills Transfer in an AI World</span>
+          <span class="rfoot"><span class="rwhy">15 June 2026</span><span class="rtag">EP 281</span></span>
+        </a>
+      </div>
+      <div class="reldots" id="reldots"></div>
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="footgrid">
+      <div class="fcol">
+        <div class="foot-label">Follow us on</div>
+        <div class="socials">
+          <a href="https://www.instagram.com/thenumbersgamepodcast/" target="_blank" rel="noopener" aria-label="The Numbers Game on Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.8.2 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1 .4 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .4-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1-.4-2.2-.1-1.3-.1-1.7-.1-4.9s0-3.6.1-4.9c.1-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.4 2.2-.4 1.3-.1 1.7-.1 4.9-.1zm0 2c-3.1 0-3.5 0-4.8.1-1.1.1-1.5.2-1.8.3-.4.2-.7.3-1 .6-.3.3-.5.6-.6 1-.1.3-.3.7-.3 1.8-.1 1.3-.1 1.7-.1 4.8s0 3.5.1 4.8c.1 1.1.2 1.5.3 1.8.2.4.3.7.6 1 .3.3.6.5 1 .6.3.1.7.3 1.8.3 1.3.1 1.7.1 4.8.1s3.5 0 4.8-.1c1.1-.1 1.5-.2 1.8-.3.4-.2.7-.3 1-.6.3-.3.5-.6.6-1 .1-.3.3-.7.3-1.8.1-1.3.1-1.7.1-4.8s0-3.5-.1-4.8c-.1-1.1-.2-1.5-.3-1.8-.2-.4-.3-.7-.6-1-.3-.3-.6-.5-1-.6-.3-.1-.7-.3-1.8-.3-1.3-.1-1.7-.1-4.8-.1zm0 3.4a5.4 5.4 0 1 1 0 10.8 5.4 5.4 0 0 1 0-10.8zm0 2a3.4 3.4 0 1 0 0 6.8 3.4 3.4 0 0 0 0-6.8zm5.6-2.3a1.3 1.3 0 1 1-2.6 0 1.3 1.3 0 0 1 2.6 0z"/></svg></a>
+          <a href="https://www.tiktok.com/@thenumbersgamepodcast" target="_blank" rel="noopener" aria-label="The Numbers Game on TikTok"><svg viewBox="0 0 24 24"><path d="M12.53.02C13.84 0 15.14.01 16.44 0c.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg></a>
+          <a href="https://www.linkedin.com/company/the-numbers-game-podcast/" target="_blank" rel="noopener" aria-label="The Numbers Game on LinkedIn"><svg viewBox="0 0 24 24"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.24 8.25h4.52V23H.24V8.25zM8.34 8.25h4.33v2.01h.06c.6-1.14 2.08-2.34 4.28-2.34 4.58 0 5.42 3.01 5.42 6.92V23h-4.51v-7.16c0-1.71-.03-3.91-2.38-3.91-2.39 0-2.75 1.86-2.75 3.78V23H8.34V8.25z"/></svg></a>
+          <a href="https://www.facebook.com/profile.php?id=100071290388343" target="_blank" rel="noopener" aria-label="The Numbers Game on Facebook"><svg viewBox="0 0 24 24"><path d="M24 12.07C24 5.41 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.04V9.41c0-3.02 1.8-4.7 4.54-4.7 1.31 0 2.68.24 2.68.24v2.97h-1.5c-1.5 0-1.96.93-1.96 1.89v2.26h3.32l-.53 3.5h-2.8V24C19.62 23.1 24 18.1 24 12.07z"/></svg></a>
+          <a href="https://www.youtube.com/@thenumbersgamepodcast" target="_blank" rel="noopener" aria-label="The Numbers Game on YouTube"><svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.2C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31.7 31.7 0 0 0 0 12a31.7 31.7 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.2A31.7 31.7 0 0 0 24 12a31.7 31.7 0 0 0-.5-5.8zM9.6 15.6V8.4L15.8 12z"/></svg></a>
+        </div>
+      </div>
+      <div class="fcol">
+        <div class="foot-label">Brought to you by</div>
+        <div class="sponsors">
+          <a href="https://www.inovayt.com.au/" target="_blank" rel="noopener"><img src="assets/inovayt-white.png" alt="Inovayt"></a>
+          <a href="https://futureadvisory.com.au/" target="_blank" rel="noopener"><img src="assets/future-advisory-white.png" alt="Future Advisory"></a>
+        </div>
+      </div>
+      <div class="fcol produced">
+        <div class="foot-label">Produced by</div>
+        <a href="https://www.vidpod.com.au/" target="_blank" rel="noopener"><img src="assets/vidpod-white.png" alt="VIDPOD"></a>
+      </div>
+    </div>
+    <div class="footbar">
+      <details class="footnav-dd">
+        <summary><svg class="ham" viewBox="0 0 24 24"><path d="M3 6h18v2H3zM3 11h18v2H3zM3 16h18v2H3z"/></svg> Menu</summary>
+        <div class="dd-links">
+          <a href="/">Home</a><a href="/episodes">Every episode</a><a href="/adventure">Choose your own adventure</a><a href="/about">About the show</a><a href="/nick-reilly">Nick Reilly</a><a href="/jason-robinson">Jason Robinson</a><a href="/contact">Contact</a>
+        </div>
+      </details>
+      <div class="copyright">© 2026 The Numbers Game</div>
+    </div>
+  </footer>
+
+  <script>
+    var VIDEO='N4JHYW2FhuM';
+    var CHAPTERS=[
+      {t:"00:00",s:0,title:"Intro"},
+      {t:"00:26",s:26,title:"Signs The Rate Cycle Is Turning"},
+      {t:"02:47",s:167,title:"Will Australia Go Into Recession"},
+      {t:"05:02",s:302,title:"What Is Private Credit"},
+      {t:"07:00",s:420,title:"How Private Credit Works"},
+      {t:"08:42",s:522,title:"The Cost Of Private Lending"},
+      {t:"09:48",s:588,title:"How Big Is The Private Credit Market"},
+      {t:"12:10",s:730,title:"Speed And Security Of Private Lending"},
+      {t:"12:53",s:773,title:"Watch Out For Sharky Lenders"},
+      {t:"14:58",s:898,title:"Capitalising The Interest"},
+      {t:"16:28",s:988,title:"Map Out Your What If Scenarios"},
+      {t:"18:00",s:1080,title:"Banks Are Competing Back"},
+      {t:"20:05",s:1205,title:"Just Because You Can Doesnt Mean You Should"},
+      {t:"20:15",s:1215,title:"Talk To A Professional First"},
+      {t:"21:23",s:1283,title:"A Solution For Opportunities"}
+    ];
+    var QUESTIONS=[
+      {q:"Does it matter to your business if we go into recession?",s:226},
+      {q:"How is private credit different from a bank loan?",s:378},
+      {q:"How do you use private credit to buy a business?",s:420},
+      {q:"Why do private lenders charge higher interest?",s:568},
+      {q:"How fast is the private credit market growing?",s:588},
+      {q:"How fast can private lending be arranged?",s:730},
+      {q:"How do sharky lenders make money?",s:878},
+      {q:"How do you assess the risk of a private lending deal?",s:1012},
+      {q:"Should you take private lending just because you can?",s:1205},
+      {q:"Who should you consult before taking on private lending?",s:1215}
+    ];
+
+    var chEl=document.getElementById('chapters');
+    CHAPTERS.forEach(function(c){var b=document.createElement('button');b.className='chapter';b.onclick=function(){startAt(c.s)};b.innerHTML='<span class="tc">'+c.t+'</span><span class="cx">'+c.title+'</span>';chEl.appendChild(b);});
+    document.getElementById('chcount').textContent=CHAPTERS.length;
+    var qEl=document.getElementById('qa');
+    QUESTIONS.forEach(function(q){var b=document.createElement('button');b.className='q';b.onclick=function(){startAt(q.s)};b.innerHTML='<span class="qm">?</span><span class="qx">'+q.q+'</span><span class="go">›</span>';qEl.appendChild(b);});
+    document.getElementById('qcount').textContent=QUESTIONS.length;
+
+    /* Mobile nav dropdown. */
+    var burger=document.getElementById('navburger'), navdrop=document.getElementById('navdrop');
+    if(burger&&navdrop){burger.addEventListener('click',function(){
+      navdrop.hidden=!navdrop.hidden;
+      burger.setAttribute('aria-expanded', navdrop.hidden?'false':'true');
+    });}
+
+    /* Voice-note button reveals the recorder; × tucks it away. */
+    var vbtn=document.getElementById('vbtn'), vslot=document.getElementById('vslot'), vclose=document.getElementById('vclose');
+    if(vbtn&&vslot){vbtn.addEventListener('click',function(){vslot.hidden=!vslot.hidden;});}
+    if(vclose&&vslot){vclose.addEventListener('click',function(){vslot.hidden=true;});}
+
+    /* Keep-exploring dots: only shown when the strip actually scrolls (mobile). */
+    var rg=document.querySelector('.relgrid'), rd=document.getElementById('reldots');
+    if(rg&&rd){
+      var relCards=rg.querySelectorAll('.relcard');
+      relCards.forEach(function(){rd.appendChild(document.createElement('span'))});
+      var updDots=function(){
+        var scrollable=rg.scrollWidth>rg.clientWidth+4;
+        rd.style.display=scrollable?'flex':'none';
+        if(!scrollable)return;
+        var i=Math.round(rg.scrollLeft/(rg.scrollWidth-rg.clientWidth)*(relCards.length-1));
+        rd.querySelectorAll('span').forEach(function(s,n){s.classList.toggle('on',n===i)});
+      };
+      rg.addEventListener('scroll',updDots,{passive:true});
+      window.addEventListener('resize',updDots);
+      updDots();
+    }
+
+    /* Explore tabs: swap the visible panel; the row stays put so you never lose your place. */
+    var tabBtns=document.querySelectorAll('.tabbtn');
+    tabBtns.forEach(function(b){
+      b.addEventListener('click',function(){
+        tabBtns.forEach(function(o){o.classList.remove('on')});
+        document.querySelectorAll('.tpanel').forEach(function(p){p.hidden=true});
+        b.classList.add('on');
+        document.getElementById(b.getAttribute('data-panel')).hidden=false;
+      });
+    });
+
+    /* YouTube: clean facade, then real player on demand. Seek without yanking to top. */
+    var player=null, ready=false, apiReady=false, pending=null;
+    window.onYouTubeIframeAPIReady=function(){apiReady=true; if(pending!=null){var s=pending;pending=null;createPlayer(s);}};
+    function createPlayer(sec){
+      var wrap=document.getElementById('player'); wrap.innerHTML='<div id="yt"></div>';
+      player=new YT.Player('yt',{videoId:VIDEO,playerVars:{autoplay:1,rel:0,modestbranding:1,playsinline:1,start:Math.floor(sec||0)},events:{onReady:function(){ready=true;}}});
+    }
+    function nudge(){
+      var p=document.getElementById('player-wrap'), r=p.getBoundingClientRect();
+      if(r.bottom<80 || r.top>window.innerHeight-90){ p.scrollIntoView({behavior:'smooth',block:'start'}); }
+    }
+    function startAt(sec){
+      nudge();
+      if(player&&ready){ player.seekTo(sec,true); player.playVideo(); return; }
+      if(apiReady){ createPlayer(sec); } else { pending=sec; }
+    }
+    document.getElementById('facade').addEventListener('click',function(){startAt(0);});
+    (function(){var s=document.createElement('script');s.src='https://www.youtube.com/iframe_api';document.head.appendChild(s);})();
+  </script>
+</body>
+</html>
