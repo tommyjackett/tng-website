@@ -1,0 +1,764 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EP 237 · Good People, Bad Fit: How One Wrong Hire Can Cost You Millions | The Numbers Game</title>
+<meta name="description" content="">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" sizes="64x64" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="canonical" href="https://thenumbersgamepodcast.com.au/good-people-bad-fit-how-one-wrong-hire-can-cost-you-millions">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="The Numbers Game">
+<meta property="og:title" content="EP 237 · Good People, Bad Fit: How One Wrong Hire Can Cost You Millions | The Numbers Game">
+<meta property="og:description" content="">
+<meta property="og:url" content="https://thenumbersgamepodcast.com.au/good-people-bad-fit-how-one-wrong-hire-can-cost-you-millions">
+<meta property="og:image" content="https://i.ytimg.com/vi/USkVF5bsujM/maxresdefault.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+  :root{
+    --purple:#585af3; --purple-dark:#2c1b8a; --mint:#7ad9a8;
+    --white:#ffffff; --muted:rgba(255,255,255,.60); --dim:rgba(255,255,255,.42);
+    --line:rgba(255,255,255,.12); --card:rgba(255,255,255,.05); --card-hi:rgba(255,255,255,.09);
+    --display:'Anton',Impact,'Helvetica Neue',sans-serif;
+    --sans:'Inter',system-ui,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif;
+    --wrap:1280px;   /* page frame (nav spans this) */
+    --col:960px;     /* content column (player, tabs, text) */
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:var(--sans); color:var(--white); line-height:1.6; -webkit-font-smoothing:antialiased;
+    background:#12093a;
+    background-image:
+      radial-gradient(1200px 600px at 82% -6%, rgba(88,90,243,.45) 0%, transparent 55%),
+      radial-gradient(900px 700px at 5% 8%, rgba(122,217,168,.10) 0%, transparent 50%),
+      linear-gradient(180deg,#2c1b8a 0%,#1a1150 28%,#100b34 62%,#0b0820 100%);
+    background-attachment:fixed;
+  }
+  a{color:inherit}
+  .wrap{max-width:var(--wrap);margin:0 auto;padding:0 36px}
+  main.wrap{max-width:var(--col)}
+  @media(max-width:720px){.wrap{padding:0 22px}}
+
+  /* ── Navbar ── */
+  .nav{position:sticky;top:0;z-index:50;background:linear-gradient(180deg,rgba(24,15,74,.92),rgba(24,15,74,.72));backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+  .nav-in{max-width:var(--wrap);margin:0 auto;padding:11px 36px;display:flex;align-items:center;justify-content:space-between}
+  @media(max-width:720px){.nav-in{padding:11px 22px}}
+  .brand{display:block;line-height:0}
+  .brand img{height:36px;width:auto;display:block}
+  .navlinks{display:flex;gap:28px;align-items:center}
+  .navlinks a{text-decoration:none;font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);transition:.15s}
+  .navlinks a:hover{color:var(--white)}
+  .navlinks a.navtop{cursor:default}
+  .navgroup{position:relative;display:flex;align-items:center}
+  .navgroup .subnav{display:none;position:absolute;top:100%;left:50%;transform:translateX(-50%);padding-top:14px;min-width:180px}
+  .navgroup:hover .subnav,.navgroup:focus-within .subnav{display:block}
+  .subnav-in,.navgroup .subnav{z-index:60}
+  .navgroup .subnav a{display:block;background:#180f4a;border:1px solid var(--line);border-top:0;padding:12px 16px;font-size:12px;color:rgba(255,255,255,.85)}
+  .navgroup .subnav a:first-child{border-top:1px solid var(--line)}
+  .navgroup .subnav a:hover{background:#221768;color:var(--white)}
+  .navburger{display:none;background:none;border:1px solid var(--line);padding:8px 10px;cursor:pointer;color:var(--white);transition:.15s}
+  .navburger:hover{border-color:rgba(122,217,168,.6)}
+  .navburger svg{width:20px;height:20px;fill:currentColor;display:block}
+  .navdrop{display:none}
+  @media(max-width:720px){
+    .navlinks{display:none}
+    .navburger{display:block}
+    .navdrop{display:block;position:absolute;left:0;right:0;top:100%;
+      background:#180f4a;border-bottom:1px solid var(--line);box-shadow:0 24px 50px rgba(0,0,0,.45)}
+    .navdrop[hidden]{display:none}
+    .navdrop a{display:block;padding:15px 22px;text-decoration:none;font-size:14px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:rgba(255,255,255,.9);border-bottom:1px solid rgba(255,255,255,.06)}
+    .navdrop a:last-child{border-bottom:0}
+    .navdrop a.sub{padding-left:42px;font-size:13px;color:rgba(255,255,255,.72)}
+    .navdrop .navlabel{display:block;padding:15px 22px 6px;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.4)}
+  }
+
+  /* ── Hero / hook (marker-highlight system: purple hook wraps naturally, mint payoff below)
+     Rules: title splits at its natural break (colon/pipe/question mark). Front = hook (purple,
+     big), back = payoff (mint, smaller). No break in title = purple hook only. Highlights hug
+     the text (tight em padding tuned to Anton) and wrap via box-decoration-break — never
+     hand-pick line breaks or mint words. ── */
+  header.hero{padding:34px 0 6px}
+  .hook{--inx:clamp(8.4px,2.1vw,15.6px)} /* one shared text inset so hook + payoff first letters align */
+  .hook .hk{font-family:var(--display);font-weight:400;text-transform:uppercase;
+    font-size:clamp(28px,7vw,52px);line-height:1.3;letter-spacing:-.5px;text-wrap:balance}
+  .hook .hk span{color:var(--white);padding:.04em var(--inx) .02em;
+    background:linear-gradient(var(--purple),var(--purple)) 0 50%/100% 87% no-repeat;
+    -webkit-box-decoration-break:clone;box-decoration-break:clone}
+  .hook .pay{font-family:var(--display);font-weight:400;text-transform:uppercase;
+    font-size:clamp(16px,4vw,24px);line-height:1.5;letter-spacing:.6px;margin-top:8px;text-wrap:balance}
+  .hook .pay span{color:#0a0a0a;padding:.08em var(--inx) .04em;
+    background:linear-gradient(var(--mint),var(--mint)) 0 50%/100% 88% no-repeat;
+    -webkit-box-decoration-break:clone;box-decoration-break:clone}
+  /* no-hook titles: mid-split into two full-size rows, purple then mint */
+  .hook .hk span.hkrow{display:block;background:none;padding:0}
+  .hook .hk .hkrow+.hkrow{margin-top:8px}
+  .hook .hk span.mintseg{color:#0a0a0a;
+    background:linear-gradient(var(--mint),var(--mint)) 0 50%/100% 87% no-repeat}
+
+  /* ── Player (clean facade → real player on tap) ── */
+  .player-wrap{margin:24px 0 4px;scroll-margin-top:76px}
+  .player{position:relative;width:100%;padding-top:56.25%;border-radius:0;overflow:hidden;background:#000;box-shadow:0 30px 70px rgba(0,0,0,.5),0 0 0 1px rgba(255,255,255,.06)}
+  .facade{position:absolute;inset:0;border:0;cursor:pointer;background-size:cover;background-position:center;display:flex;align-items:center;justify-content:center;padding:0}
+  .facade .play{width:74px;height:74px;border-radius:50%;background:rgba(10,6,30,.40);border:2px solid rgba(255,255,255,.72);display:flex;align-items:center;justify-content:center;transition:.18s;-webkit-backdrop-filter:blur(1px);backdrop-filter:blur(1px)}
+  .facade:hover .play{background:rgba(88,90,243,.62);transform:scale(1.07);border-color:#fff}
+  .facade .play::after{content:"";border-style:solid;border-width:11px 0 11px 19px;border-color:transparent transparent transparent #fff;margin-left:5px}
+  .player iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+
+  /* ── Episode facts (bottom of the Summary panel — templated per episode) ── */
+  .sumfacts{margin:14px 10px 4px;padding-top:13px;border-top:1px solid rgba(255,255,255,.08);display:flex;flex-direction:column;gap:8px}
+  .fact{display:flex;gap:12px;font-size:13.5px}
+  .fact .fl{flex:none;width:104px;color:var(--dim);font-weight:600;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;padding-top:2px}
+  .fact .fv{color:rgba(255,255,255,.9);font-weight:500}
+  .fact .fv a{color:var(--mint);text-decoration:none;border-bottom:1px solid rgba(122,217,168,.4);transition:.15s}
+  .fact .fv a:hover{border-bottom-color:var(--mint)}
+
+  /* ── Episode tag (identity: black label hanging off the title corner) ── */
+  .eptag{display:inline-block;position:relative;left:-6px;margin-bottom:-7px;z-index:2;
+    background:#0a0a0a;color:var(--white);font-family:var(--display);font-weight:400;
+    font-size:13.5px;letter-spacing:1.5px;text-transform:uppercase;padding:6px 11px 4px}
+
+  /* ── Explore tabs (sticky mode switcher; one panel swaps below, nothing shoves) ── */
+  .explore{margin-top:22px}
+  .tabs{position:sticky;top:58px;z-index:40;display:flex;flex-wrap:wrap;gap:8px;padding:10px 0;
+    background:linear-gradient(180deg,rgba(18,10,55,.96),rgba(18,10,55,.86));
+    backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+  .tabbtn{font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.5px;
+    font-size:14.5px;color:var(--white);background:var(--purple);border:1px solid var(--purple);
+    padding:9px 13px 7px;cursor:pointer;transition:.15s}
+  .tabbtn:hover{filter:brightness(1.12)}
+  .tabbtn.on{background:var(--mint);border-color:var(--mint);color:#0a0a0a}
+  .tabbtn.on:hover{filter:none}
+  .tabbtn .ct{font-size:12px;opacity:.75;font-variant-numeric:tabular-nums}
+  .tabbtn .ct::before{content:" · "}
+  .tpanel{border:1px solid var(--line);background:var(--card);padding:12px 10px 14px}
+  .hint{font-size:12.5px;color:var(--muted);padding:2px 10px 10px;border-bottom:1px solid rgba(255,255,255,.08);margin-bottom:6px}
+
+  /* ── Listen row (no box: label left, service pills follow) ── */
+  .listen{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:12px 16px;margin-top:34px}
+  .listen .lname{font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--dim)}
+  .listen a{display:inline-flex;align-items:center;gap:9px;padding:11px 18px;border-radius:999px;
+    background:var(--mint);color:#08210f;text-decoration:none;font-weight:800;font-size:12.5px;
+    letter-spacing:.04em;text-transform:uppercase;transition:.15s}
+  .listen a:hover{filter:brightness(1.06);transform:translateY(-1px);box-shadow:0 12px 30px rgba(122,217,168,.25)}
+  .listen svg{width:20px;height:20px;fill:currentColor;flex:none}
+  /* ── Listen-now Spotify audio embed (full column width, above the pills) ── */
+  .listen-now{margin-top:40px}
+  .listen-now .ln-head{display:flex;align-items:baseline;justify-content:space-between;gap:14px;margin-bottom:13px}
+  .listen-now .ln-title{font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--dim)}
+  .audio-embed{border-radius:12px;overflow:hidden;box-shadow:0 20px 50px rgba(0,0,0,.4),0 0 0 1px rgba(255,255,255,.06)}
+  .audio-embed iframe{display:block;width:100%;border:0}
+  @media(max-width:720px){.listen-now{margin-top:32px}}
+
+  /* ── Keep exploring (thumbnails link to other episode PAGES, never timecodes).
+     Swipeable strip on mobile, fits three-up on desktop. Variant rule: claim
+     "similar ground" + reason lines ONLY when moment-level topic overlap is
+     genuinely strong; otherwise show the latest released episodes with dates —
+     never invent a connection. ── */
+  .relsec{margin-top:60px;padding-top:58px;border-top:1px solid var(--line)} /* line = end of this episode's info */
+  .reldots{display:flex;justify-content:center;gap:7px;margin-top:12px}
+  .reldots span{width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.25);transition:.2s}
+  .reldots span.on{background:var(--mint)}
+  .relsec .rtitle{display:inline-block;font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.5px;font-size:14.5px;background:var(--mint);color:#0a0a0a;padding:9px 13px 7px;margin-bottom:18px}
+  .relgrid{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding-bottom:6px;scrollbar-width:none}
+  .relgrid::-webkit-scrollbar{display:none}
+  .relcard{flex:0 0 56%;max-width:232px;scroll-snap-align:start;display:flex;flex-direction:column;text-decoration:none;background:var(--card);border:1px solid var(--line);transition:.15s}
+  .relcard:hover{background:var(--card-hi);border-color:rgba(122,217,168,.55)}
+  .relcard img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block}
+  .relcard .rt{display:block;font-size:12.5px;font-weight:600;color:rgba(255,255,255,.92);line-height:1.4;padding:8px 8px 0}
+  .relcard .rfoot{margin-top:auto;display:flex;justify-content:space-between;align-items:flex-end;gap:8px;padding:10px 8px 9px}
+  .relcard .rwhy{font-size:11.5px;color:var(--mint)}
+  .relcard .rtag{display:inline-block;background:#0a0a0a;color:var(--white);font-family:var(--display);font-size:10px;letter-spacing:1.2px;text-transform:uppercase;padding:3px 7px 2px;white-space:nowrap;flex:0 0 auto}
+
+  /* ── Dropdown sections (accordion under the player) ── */
+  .drops{margin-top:34px;display:flex;flex-direction:column;gap:11px}
+  .drop{border:1px solid var(--line);border-radius:0;background:var(--card);overflow:hidden;transition:border-color .15s}
+  .drop[open]{border-color:rgba(122,217,168,.35)}
+  .drop>summary{list-style:none;cursor:pointer;padding:16px 18px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+  .drop>summary::-webkit-details-marker{display:none}
+  .drop>summary .st{font-weight:700;font-size:15.5px;letter-spacing:.005em}
+  .drop>summary .ct{margin-left:auto;font-size:12px;color:var(--dim);font-weight:600;font-variant-numeric:tabular-nums}
+  .drop>summary .chev{flex:none;width:22px;height:22px;border-radius:50%;background:rgba(122,217,168,.14);color:var(--mint);display:flex;align-items:center;justify-content:center;font-family:var(--display);font-size:15px;line-height:1;transition:.2s;transform:translateY(-1px)}
+  .drop[open]>summary .chev{transform:rotate(45deg)}
+  .drop-body{padding:2px 12px 12px}
+
+  /* chapters */
+  .chapter{display:flex;align-items:baseline;gap:14px;width:100%;text-align:left;cursor:pointer;background:none;border:0;color:inherit;font-family:inherit;padding:11px 10px;border-radius:10px;transition:.13s}
+  .chapter:hover{background:var(--card-hi)}
+  .chapter .tc{font-variant-numeric:tabular-nums;font-weight:700;font-size:14px;color:var(--mint);flex:none;width:48px}
+  .chapter .cx{font-size:15px;font-weight:500;color:rgba(255,255,255,.9)}
+  .chapter:hover .cx{color:#fff}
+
+  /* questions */
+  .q{display:flex;align-items:center;gap:12px;width:100%;text-align:left;cursor:pointer;background:none;border:0;border-radius:11px;color:inherit;font-family:inherit;padding:12px 10px;transition:.14s}
+  .q+.q{border-top:1px solid rgba(255,255,255,.05)}
+  .q:hover{background:var(--card-hi)}
+  .q .qm{font-family:var(--display);font-size:15px;color:var(--mint);flex:none;line-height:1;transform:translateY(1px)}
+  .q .qx{font-size:15px;font-weight:500;color:rgba(255,255,255,.92)}
+  .q .go{margin-left:auto;flex:none;color:var(--dim);font-size:18px;transition:.15s}
+  .q:hover .go{color:var(--mint);transform:translateX(2px)}
+
+  /* summary + transcript bodies */
+  .summary-body p{font-size:16.5px;line-height:1.62;color:rgba(255,255,255,.9);padding:6px 10px 4px}
+  .tbody{padding:2px 10px 8px}
+  .tbody p{font-size:14.5px;line-height:1.7;color:rgba(255,255,255,.78);margin-top:15px;max-width:64ch}
+  .tbody .spk{display:block;font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--mint);margin-bottom:2px}
+
+  /* ── Voice note ask (lives at the bottom of the Summary panel) ── */
+  .vask{margin:16px 10px 4px}
+  .vbtn{display:inline-flex;align-items:center;gap:9px;padding:12px 20px;border-radius:999px;border:0;cursor:pointer;
+    background:var(--mint);color:#08210f;font-family:inherit;font-weight:800;font-size:12.5px;
+    letter-spacing:.04em;text-transform:uppercase;transition:.15s}
+  .vbtn:hover{filter:brightness(1.06);transform:translateY(-1px);box-shadow:0 12px 30px rgba(122,217,168,.25)}
+  .vbtn svg{width:18px;height:18px;fill:currentColor;flex:none}
+  .vslot{background:var(--purple);padding:12px 10px 10px;margin:14px 0 4px;box-shadow:0 18px 40px rgba(0,0,0,.35)}
+  .vslot[hidden]{display:none}
+  .vhead{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;margin-bottom:10px}
+  .vhead .vmsg{font-family:var(--sans);font-size:13px;line-height:1.55;color:rgba(255,255,255,.92);margin:2px 0 0;padding:0 2px}
+  .vclose{background:none;border:0;color:rgba(255,255,255,.85);font-size:22px;line-height:1;cursor:pointer;padding:0 2px}
+  .vclose:hover{color:var(--white)}
+  .vslot iframe{display:block}
+
+  /* ── YouTube subscribe pill (sits in the listen row; outranks .listen a's mint) ── */
+  .listen a.yt-pill{background:var(--purple);color:var(--white)}
+  .listen a.yt-pill:hover{filter:brightness(1.1);transform:translateY(-1px)}
+  @media(max-width:720px){ /* mobile: no label, three compact pills on one row */
+    .listen .lname{display:none}
+    .listen{gap:8px}
+    .listen a{padding:10px 13px;font-size:11px;gap:6px}
+    .listen svg{width:16px;height:16px}
+  }
+
+  /* ── Footer: Follow us on | Brought to you by | Produced by, + Menu dropdown ── */
+  footer{border-top:1px solid var(--line);margin-top:68px;padding:52px 20px 58px}
+  .footgrid{max-width:var(--wrap);margin:0 auto;display:grid;grid-template-columns:1fr 1.15fr .8fr;gap:44px;align-items:start}
+  .fcol{text-align:center;display:flex;flex-direction:column;align-items:center}
+  .foot-label{font-size:11px;font-weight:700;letter-spacing:.26em;text-transform:uppercase;color:var(--dim);margin-bottom:18px}
+  .sponsors{display:flex;justify-content:center;align-items:center;gap:34px;flex-wrap:wrap}
+  .sponsors a,.produced a{display:inline-flex;transition:.15s}
+  .sponsors a:hover,.produced a:hover{transform:translateY(-1px)}
+  .sponsors img{height:32px;width:auto;opacity:.92}
+  .produced img{height:30px;width:auto;opacity:.95}
+  .sponsors a:hover img,.produced a:hover img{opacity:1}
+  footer .socials{display:flex;gap:11px;justify-content:center;flex-wrap:wrap;margin:0}
+  footer .socials a{width:40px;height:40px;border-radius:50%;border:1.5px solid rgba(122,217,168,.5);display:flex;align-items:center;justify-content:center;transition:.15s}
+  footer .socials a svg{width:18px;height:18px;fill:var(--mint);transition:.15s}
+  footer .socials a:hover{background:var(--mint);border-color:var(--mint);transform:translateY(-2px)}
+  footer .socials a:hover svg{fill:#0a0a0a}
+  .footbar{max-width:var(--wrap);margin:34px auto 0;border-top:1px solid var(--line);padding-top:20px;display:flex;flex-direction:column;align-items:center;gap:14px}
+  .footnav-dd{display:block;width:100%;max-width:var(--wrap);margin:0 auto;text-align:center}
+  .footnav-dd>summary{list-style:none;cursor:pointer;display:inline-flex;align-items:center;gap:9px;font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.5px;font-size:13px;color:var(--muted);background:transparent;border:1px solid var(--line);padding:8px 16px 6px;transition:.15s}
+  .footnav-dd>summary::-webkit-details-marker{display:none}
+  .footnav-dd>summary:hover{color:var(--mint);border-color:rgba(122,217,168,.45)}
+  .footnav-dd>summary .ham{width:15px;height:15px;fill:currentColor;transform:translateY(-1px)}
+  .footnav-dd .dd-links{display:flex;flex-direction:row;flex-wrap:wrap;justify-content:center;gap:12px 24px;padding:24px 0 4px}
+  .footnav-dd .dd-links a{font-size:11.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:.15s}
+  .footnav-dd .dd-links a:hover{color:var(--mint)}
+  .copyright{font-size:12px;color:var(--dim);text-align:center}
+  @media(max-width:720px){.footgrid{grid-template-columns:1fr;gap:34px}footer{padding:40px 16px 20px}.footbar{margin-top:34px;padding-top:24px;gap:20px}.footnav-dd .dd-links{flex-direction:column;align-items:center;gap:15px}}
+
+  @media(min-width:720px){header.hero{padding:48px 0 6px}}
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "PodcastEpisode", "name": "Good People, Bad Fit: How One Wrong Hire Can Cost You Millions", "url": "https://thenumbersgamepodcast.com.au/good-people-bad-fit-how-one-wrong-hire-can-cost-you-millions", "datePublished": "2025-06-23", "episodeNumber": 237, "image": "https://i.ytimg.com/vi/USkVF5bsujM/maxresdefault.jpg", "partOfSeries": {"@type": "PodcastSeries", "name": "The Numbers Game", "url": "https://thenumbersgamepodcast.com.au/"}}</script>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-in">
+      <a class="brand" href="/" aria-label="The Numbers Game home"><img src="assets/tng-logo.png" alt="The Numbers Game"></a>
+      <div class="navlinks">
+        <a href="/">Home</a>
+        <div class="navgroup">
+          <a class="navtop">Episodes</a>
+          <div class="subnav">
+            <a href="/episodes">All episodes</a>
+            <a href="/adventure">Find moments</a>
+          </div>
+        </div>
+        <div class="navgroup">
+          <a class="navtop">About</a>
+          <div class="subnav">
+            <a href="/about">The show</a>
+            <a href="/nick-reilly">Nick Reilly</a>
+            <a href="/jason-robinson">Jason Robinson</a>
+          </div>
+        </div>
+        <a href="/contact">Contact</a>
+      </div>
+      <button class="navburger" id="navburger" type="button" aria-label="Menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24"><path d="M3 6h18v2H3zM3 11h18v2H3zM3 16h18v2H3z"/></svg>
+      </button>
+    </div>
+    <div class="navdrop" id="navdrop" hidden>
+      <a href="/">Home</a>
+      <span class="navlabel">Episodes</span>
+      <a class="sub" href="/episodes">All episodes</a>
+      <a class="sub" href="/adventure">Find moments</a>
+      <span class="navlabel">About</span>
+      <a class="sub" href="/about">The show</a>
+      <a class="sub" href="/nick-reilly">Nick Reilly</a>
+      <a class="sub" href="/jason-robinson">Jason Robinson</a>
+      <a href="/contact">Contact</a>
+    </div>
+  </nav>
+
+  <main class="wrap">
+
+    <header class="hero">
+      <div class="hook">
+        <span class="eptag">EP 237</span>
+        <h1 class="hk"><span>Good People, Bad Fit</span></h1>
+        <p class="pay"><span>How One Wrong Hire Can Cost You Millions</span></p>
+      </div>
+    </header>
+
+    <div class="player-wrap" id="player-wrap">
+      <div class="player" id="player">
+        <button class="facade" id="facade" style="background-image:url('https://i.ytimg.com/vi/USkVF5bsujM/maxresdefault.jpg')" aria-label="Play episode">
+          <span class="play"></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="explore">
+      <div class="tabs" role="tablist">
+        <button class="tabbtn on" data-panel="p-summary">Summary</button>
+        <button class="tabbtn" data-panel="p-chapters">Chapters<span class="ct" id="chcount"></span></button>
+        <button class="tabbtn" data-panel="p-questions">Questions<span class="ct" id="qcount"></span></button>
+      </div>
+      <section class="tpanel" id="p-summary">
+        <div class="summary-body">
+          <p>Marty, Jason and Nick work through why one wrong hire can quietly cost a business millions, opening on a business owner who admitted poor performance had cost him exactly that. They separate good people from bad culture fits, and cover setting high expectations from the first interview, reading lead indicators inside four to six weeks, and why holding onto underperformers drags down high performers. Marty shares the HR-backed methodology he uses to manage people out with a margin of care, plus the rising tide effect and setting a benchmark at three times industry average. Jason closes on the reminder that your high performers are watching how you handle your low performers.</p>
+        </div>
+        <div class="vask">
+          <button class="vbtn" id="vbtn" type="button">
+            <svg viewBox="0 0 24 24"><path d="M12 14a3 3 0 0 0 3-3V6a3 3 0 1 0-6 0v5a3 3 0 0 0 3 3zm5-3a5 5 0 0 1-10 0H5a7 7 0 0 0 6 6.92V21h2v-3.08A7 7 0 0 0 19 11h-2z"/></svg>
+            Send us a voice note
+          </button>
+          <div class="vslot" id="vslot" hidden>
+            <div class="vhead">
+              <p class="vmsg">We'd love to hear from you. You can leave up to a 90 second voice note for us to play on the show: a question, some feedback, or a topic you want covered.</p>
+              <button class="vclose" id="vclose" type="button" aria-label="Close">&times;</button>
+            </div>
+            <iframe src="https://www.speakpipe.com/widget/inline/hhq6kzggsx7zpcsvakgxfrzun3zidpde" allow="microphone" width="100%" height="200" frameborder="0" title="Leave The Numbers Game a voice note"></iframe>
+          </div>
+          <script async src="https://www.speakpipe.com/widget/loader.js" charset="utf-8"></script>
+        </div>
+        <div class="sumfacts">
+          <div class="fact"><span class="fl">Release date</span><span class="fv">23 June 2025</span></div>
+          <div class="fact"><span class="fl">Hosts</span><span class="fv"><a href="/nick-reilly">Nick Reilly</a>, <a href="/jason-robinson">Jason Robinson</a> &amp; <a href="/marty-vidakovic">Marty Vidakovic</a></span></div>
+
+        </div>
+      </section>
+      <section class="tpanel" id="p-chapters" hidden>
+        <p class="hint">Jump straight to the part you need.</p>
+        <div id="chapters"></div>
+      </section>
+      <section class="tpanel" id="p-questions" hidden>
+        <p class="hint">Real questions this episode answers. Tap one to hear the answer.</p>
+        <div id="qa"></div>
+      </section>
+    </div>
+
+    <div class="drops">
+
+      <details class="drop">
+        <summary><span class="st">Episode transcript</span><span class="chev">+</span></summary>
+        <div class="drop-body tbody">
+          <p><span class="spk">Jason · 00:00</span>Welcome to episode 237 of The Numbers Game. I'm Jace. I'm here with Nick, and we've got Marty back with us today. If you listen to all the episodes in sequence. Marty, great to have you back. How's it going mate? What have you got for us today?</p>
+          <p><span class="spk">Marty · 00:11</span>Going well, mate. Going well, but I have to throw the question out to you.</p>
+          <p><span class="spk">Marty · 00:15</span>Do you feel like you've ever underperformed in your career? Oof. Targeting</p>
+          <p><span class="spk">Jason · 00:20</span>me. I'm straight up. Sorry to do with that. Yep. Yeah. Um. No, no. I've always been a high performer. I'm a,</p>
+          <p><span class="spk">Marty · 00:28</span>I like that</p>
+          <p><span class="spk">Jason · 00:28</span>confidence.</p>
+          <p><span class="spk">Nick · 00:29</span>Oh, no, no. I'm just, I'm astounded that you sat there and thought about it.</p>
+          <p><span class="spk">Jason · 00:33</span>Well, I just, I had to think about all the different jobs I've done and just gone.</p>
+          <p><span class="spk">Jason · 00:36</span>Was there one that I kind of pulled the foot off the accelerator and didn't do properly, but in the quick recap and, and thought then that I had to go through my entire life of work. I, anything that I do, I throw myself into it. I wanna be the best at it.</p>
+          <p><span class="spk">Nick · 00:50</span>Hang on, hang on, hang on, hang on. Oh shit.</p>
+          <p><span class="spk">Jason · 00:50</span>Here we go.</p>
+          <p><span class="spk">Nick · 00:51</span>Alright, give me, what was the first job you had? Mackers. You went in there and gave 110% every day At Mackers</p>
+          <p><span class="spk">Jason · 00:58</span>I, within</p>
+          <p><span class="spk">Jason · 01:00</span>15 to 18, it was, you know, start, become a crew trainer, become a crew training coordinator, become a supervisor, become a manager. And then between 18 and 21 was, you know, absolutely smashing it.</p>
+          <p><span class="spk">Jason · 01:12</span>Great results winning awards had like the best</p>
+          <p><span class="spk">Nick · 01:15</span>ne never let a burger slip by. Its sort of 90% quality because. You know,</p>
+          <p><span class="spk">Marty · 01:20</span>never spat in one just because someone pissed you off</p>
+          <p><span class="spk">Jason · 01:23</span>and look, no, actually this is where it probably came from. Maccas teaches you systems and processes and every burger, every cheeseburger you get around the world should be exactly the same.</p>
+          <p><span class="spk">Jason · 01:32</span>Okay. And that for me was like, and then when you're teaching other people, you know, I had a young team and this becoming a manager and a leader and wanting to be good at. What you do and drive performance, which I think, you know, this is where this conversation's probably going. Um, it was then about teaching the rest of the team.</p>
+          <p><span class="spk">Jason · 01:47</span>The, the better they performed, the more successful we were, then the better outcomes that we got as an entire team. So for me at McDonald's, it might have been letting them know, oh look, I'm not meant to do it. I'll give you a free meal when the shift is over. If you</p>
+          <p><span class="spk">Jason · 02:00</span>absolutely smash it tonight, we get every meal dangling out that window, so it's a great experience through the drive through.</p>
+          <p><span class="spk">Jason · 02:05</span>When you finish your shift, I'll give you a free meal, mate. Tell me. A 15-year-old kid works at Macca's that isn't excited by a free meal. I had them working like you wouldn't</p>
+          <p><span class="spk">Nick · 02:12</span>believe. Well. Marty Jace is a 10 outta 10. So do you wanna ask me the question?</p>
+          <p><span class="spk">Marty · 02:18</span>Well, well, just before we go to, it's like, this is the, the epitome of high performance in action here.</p>
+          <p><span class="spk">Marty · 02:25</span>That even when the high performance is challenged, they're already maneuvering through to, uh, ensure that, uh, you know, they're drawing the dots to high performance in the future. So, very impressive. But, but Nick, I'm sure you've had a day where you've come away from work thinking Plenty. Al I don't know if I got the best out of myself that day.</p>
+          <p><span class="spk">Marty · 02:42</span>Oh, plenty mate.</p>
+          <p><span class="spk">Nick · 02:43</span>Yeah,</p>
+          <p><span class="spk">Marty · 02:43</span>plenty. How do you feel when that happens? Like what do you do about it when it happens?</p>
+          <p><span class="spk">Nick · 02:49</span>Okay, so let's be serious now. How do I feel you? Um, definitely disappointed. Definitely disappointed. Um, I guess you do try and make</p>
+          <p><span class="spk">Nick · 03:00</span>up for it, but I think, um, sometimes you need to accept you're not at your best as well.</p>
+          <p><span class="spk">Nick · 03:07</span>Yeah, and I think that's a big thing, accepting that sometimes you're just not. At your best.</p>
+          <p><span class="spk">Marty · 03:12</span>Well, there's days you just, yeah, you just get frustrated with yourself. Like you try and sometimes you might be trying your best, but things just aren't going to plan. But I think the difference is you're aware of it.</p>
+          <p><span class="spk">Marty · 03:23</span>Yeah. And I think that's the, yeah, that that's the pivotal difference between people that progress and that people sometimes are unaware in poor performance. But I was chatting to another business owner just two days ago, and it was interesting. I said to him, how. How much do you think poor performance has cost you, given your team's poor performance, has cost you over the journey?</p>
+          <p><span class="spk">Marty · 03:44</span>Like bad hires, um, not developing staff, and he goes millions, like literally millions. And I, and, and coming away from that question, asking the question, sometimes you ask the question you need to hear yourself, right? And I thought the same thing. Goodness me, how</p>
+          <p><span class="spk">Marty · 04:00</span>many, how many times have you let. Poor performance just go a long path for the course without really addressing it.</p>
+          <p><span class="spk">Marty · 04:08</span>And there's different reasons why. You know, we all don't address it sometimes, and sometimes when we do, but I go. What is the cost of that to a business? Not only to to, you know, the person that you're dealing with in regards to the poor performance, but just as a business cost in general. It must be, it must be millions if, if you're hiring staff have to be, have to be millions of millions.</p>
+          <p><span class="spk">Marty · 04:28</span>Uh, it actually scares me. It's not sometimes not the money you make, it's the money you don't make because of not taking, you know, strong actions around your own performance culture.</p>
+          <p><span class="spk">Nick · 04:38</span>So why do you think that is? If people know it? And they don't do anything about it, and the ramifications are obviously considerably large.</p>
+          <p><span class="spk">Nick · 04:49</span>Why</p>
+          <p><span class="spk">Marty · 04:50</span>I, I think, I think they get just distracted with busyness. Nick, I think you, like we talked about a couple episodes ago, a few episodes back now, but sometimes the business owners doing</p>
+          <p><span class="spk">Marty · 05:00</span>so much of the work across different areas that they don't really address the problem. That is the real core problem.</p>
+          <p><span class="spk">Marty · 05:08</span>And I think sometimes it could be the fear of addressing it with the individual. I like, I think back to my thirties and go. I really struggled with that. When people were underperforming, I'd get really. Frustrated and angry, but I didn't know how to deal with it effectively. I didn't know how to communicate and, and maneuver them through that poor performance.</p>
+          <p><span class="spk">Marty · 05:30</span>So it ends up in a blowup that really doesn't help anyone. It doesn't help the development of the person, and it doesn't help your own state of mind either. But I think there'd be a bit of that going on, Nick, because again, you know, I'm 53 now and I've pretty much seen most of it. But it's, um, the difference now in dealing with, uh, underperformer.</p>
+          <p><span class="spk">Marty · 05:50</span>Given the skill sets you pick up along the way and, and even, you know, leveraging off HR and, you know, getting inside as to what to do and how to effectively work</p>
+          <p><span class="spk">Marty · 06:00</span>through that, um, is just chalk and cheese and, but I think just people just sweep it under the carpet and hope that it gets better, but it never does.</p>
+          <p><span class="spk">Marty · 06:08</span>Um. Jason, have you come across that? I, I guess we all have Oh,</p>
+          <p><span class="spk">Jason · 06:12</span>it's, it's resonating hard. 'cause we've had probably one of our more challenging years just with, you know, we, we turned over a couple of team members at the start of the year. We then started trying to rehire for the more senior kind of roles and, you know, the, the, not just the financial cost, but the cultural cost of some of the wrong hires that we made.</p>
+          <p><span class="spk">Jason · 06:30</span>And, you know, I'd love to sit on this podcast to pretend that future advisory is perfect and we're having the best year ever and life's good and rosy, but. You know, you can make a few little small choices in business that can have dramatic and huge profound effects on the business. And, and unfortunately for us, you know, we started the first half of this year, um, you know, we landed a couple of wrong hires.</p>
+          <p><span class="spk">Jason · 06:50</span>Um, these, these people weren't bad people, but they weren't necessarily great culture fits. Their performance kind of had an impact on other people's performance, and all of a</p>
+          <p><span class="spk">Jason · 07:00</span>sudden the cost of keeping people around, and we've done it a few times. I mean, this is why, why I'm actually really interested in unpacking this episode, is that cost of keeping people around when you think it's gonna get better or, you know, you, you, oh, give 'em a little bit more of a chance.</p>
+          <p><span class="spk">Jason · 07:13</span>But you know, how long is too long, right? Like, is it three months? Is it six months? Should you know, after 12 months? And unfortunately we've made the mistake of holding onto people. Rather than focusing on what does a high performer look like and how do I make sure I just keep high performers in my business?</p>
+          <p><span class="spk">Jason · 07:29</span>You know, sometimes you make excuses like, oh, it's really hard to hire in our industry. Oh, it's hard to find that particular role. We better just hold on. As opposed to not thinking about the financial and cultural damage it does by holding onto the wrong person.</p>
+          <p><span class="spk">Marty · 07:42</span>It's, it's a great point. 'cause sometimes you'll fill a position rather than think about who's optimal in that position, and you need to know metrics around that.</p>
+          <p><span class="spk">Marty · 07:50</span>I think past performance is always a great indicator of future performance too, in a better environment. Um, they say that's not the case in shares, but I think with</p>
+          <p><span class="spk">Marty · 08:00</span>people it generally is, um, you know, you want, you want some good, a good track record, but I think the systemic problem too is if you allow that to fester, then you very quickly can become an average company.</p>
+          <p><span class="spk">Marty · 08:12</span>Like if that, if the expectation's not set where the bar's high, then all of a sudden you could be in an environment. Of, of a really challenging environment of people just underperforming across the board. And I think we've always, you know, at innovate, held a very high performance culture, and you still get people that slip through the cracks on that too.</p>
+          <p><span class="spk">Marty · 08:31</span>But again, there's an expectation that's set very early days, even in the hiring process of what the expectation is, what's expected to be delivered in the first six months. Uh, even the first week, you know, there's, there's, everything is really. Um, communicated at the early stages, and if for some reason the activity and the trend isn't on that upward spiral, then it enables you to quickly be able to communicate and</p>
+          <p><span class="spk">Marty · 09:00</span>work out the, there might be a problem here and you can, you know, you can take a different course of action, um, to, to alleviate that problem or try and develop further.</p>
+          <p><span class="spk">Marty · 09:09</span>But I, and, and I was thinking about the balance and, and what this guy was talking about was just the. The fine dance about. Improved performance and setting higher metrics, and also then feeling like virtually an asshole for doing it. Right. And um, and I said, yeah, that, that's because the methodology isn't set.</p>
+          <p><span class="spk">Marty · 09:29</span>And I said, the, the interesting thing about it was. If you want someone to get a result for your business, you really gotta get to understand the person beyond the result you want 'em to get. So you gotta really look into their personal drivers. Um, what motivates them? Is it money? Is it like they want to contribute to a team?</p>
+          <p><span class="spk">Marty · 09:49</span>You know, what, what, what gets them going? Do they wanna buy a house? What are they doing in their personal life? Like you really, even though we talk about. Tangible targets and KPIs and</p>
+          <p><span class="spk">Marty · 10:00</span>metrics. The driver of that is a person at the end of the day. So if you can find that alignment between the business values and performance and their own individual values and align those two, then remarkable things can happen.</p>
+          <p><span class="spk">Marty · 10:12</span>But I just don't think, um. And whether it's busyness or whatever the case may be, that that's not always the case. And then you've gotta look out for the people that just, there's a touch of laziness and passiveness about their own performance as well, which is different to being underdeveloped. Right.</p>
+          <p><span class="spk">Jason · 10:30</span>So on, on that, Marty, you know, what, what steps would you put in place to find that out about the person?</p>
+          <p><span class="spk">Jason · 10:35</span>Is it a sim? You know, is it send them a survey? Is it regular one-on-one? Catchups like. Personality profiling. So if you're saying, you know, it's important to get to the root of what drives someone and you're working with 10, 20, 30 different team members, what's the process to actually make that a reality?</p>
+          <p><span class="spk">Jason · 10:52</span>Because you, you know, you've said it a few times that business owners seem to be too busy not focusing on those things. But I'm probably picking up that that is an</p>
+          <p><span class="spk">Jason · 11:00</span>area that needs focus.</p>
+          <p><span class="spk">Marty · 11:01</span>Correct. 'cause it's such an important decision. Right. And that's, that's a. Big financial and cultural decision, but I think the first thing is you have to look at what the performance of that person has been, you know, prior to coming to your business.</p>
+          <p><span class="spk">Marty · 11:14</span>I think that's the best indicator. If they've been successful and they just might not have an environment that's resourcing them as effectively as it could, then they can go from very good to exceptional. That's, that's an easier path than average to good and. I think that's a key, that's a key driver. I think communicate, set expectations from the first interview.</p>
+          <p><span class="spk">Marty · 11:37</span>You know, and, and good, good actual interviewees will say, how would you see me doing well at this business? What would your expectations be as a business owner? You know, that's a great question. You go, well, I would be really pleased if you actually just hit the results I'm putting in front of you. But, but you know, you could have that, you could have that discussion and then you would put.</p>
+          <p><span class="spk">Marty · 11:58</span>Um, you would put a set of minimum</p>
+          <p><span class="spk">Marty · 12:00</span>standards of what the growth curve is in regards to being a high performer within the business and a quality performer in the business. And again, you are not looking to go from A to B overnight, but you're looking for the trend to be going upwards and not to start at ordinary and then just end up plateauing at that point and not seeing any form of development.</p>
+          <p><span class="spk">Marty · 12:22</span>And you can spend a lot of time trying to develop people through. But some people just aren't right for the job at the end of the day. So having those metrics and having key, you know, key discussions early week to week, uh, you can pretty much work out within the first four to six weeks, whether that's gonna be, you know, a, a really good relationship and good performance or not, I reckon.</p>
+          <p><span class="spk">Nick · 12:44</span>I think one of the things that I've learned too, Marty, and you know, we've learn this together in, in, in this business, is being really clear about the, those metrics. Upfront, possibly. Well, definitely in the</p>
+          <p><span class="spk">Nick · 13:00</span>interview process. So this is the expectation in our business. Um, this is the metrics that we'll look at the lead indicators as to whether or not you're gonna perform.</p>
+          <p><span class="spk">Nick · 13:09</span>'cause in our business, um, a result or a return on investment can come a fair way down the path. So there's things that we need to see, call it the first three months that will, that are lead indicators that will determine whether or not. The performance is gonna be there. Um, and being, uh, really clear on that, whether it's in the interview process or whether it's with a recruiter, means you get people that are serious and that can, that think, um, they can make that work.</p>
+          <p><span class="spk">Nick · 13:38</span>And to your point earlier, and people that have already been performed, they'll see those metrics and those expectations and they'll be okay with it. But I think being clear with them up front. Push away anyone who wasn't going to perform in the first place, because that, to them will be scary or a problem.</p>
+          <p><span class="spk">Nick · 13:54</span>And if those metrics are scary, then they're probably not the right person for the role.</p>
+          <p><span class="spk">Marty · 13:58</span>Yeah. And, and they'll actually back</p>
+          <p><span class="spk">Marty · 14:00</span>away. You're right from the interview process at that stage, and that's what you want because you haven't invested, you haven't invested in them yet. So it's a really, it's a key, key way to go about it.</p>
+          <p><span class="spk">Nick · 14:11</span>Yeah. And this is to another extreme, but I had someone tell me one day, um. Talking about sales roles, you should all almost try and push them away from the role. It's as if to say, do you know what you're getting? Self yourself into here? Whether it's high performance culture, our team's, you know best in industry.</p>
+          <p><span class="spk">Nick · 14:30</span>This is the minimum expectation. Almost try and scare them out of the role. And if they say yes, then you've either got a performer or you've got a dreamer. So you're down to kind of 50 50 chance of getting it right, you know?</p>
+          <p><span class="spk">Marty · 14:42</span>Well, it impacts too the high performing people within your business, like if you are carrying a few under performers and you are not addressing it effectively to improve that performance.</p>
+          <p><span class="spk">Marty · 14:53</span>Um. It can have a systemic effect on the high performers because you're spending</p>
+          <p><span class="spk">Marty · 15:00</span>time in the wrong areas. Right. In, in their minds because, and they don't like that either. So.</p>
+          <p><span class="spk">Nick · 15:05</span>Yeah. And you just made me think, you know, obviously referring to our business, um, because I know it, but also calculating the cost of having, uh, underperformance.</p>
+          <p><span class="spk">Nick · 15:15</span>What's the opportunity cost to your point then by not spending time with the, the high performers. But what we've seen in this business is that standard or minimum level performance going to that next level and everyone going with it. So you kind of create this high performance culture where maybe the person that um, you know, was a i'll, I'll use the broking terms, was a 60 mil broker in our business is a 70 mil broker, just because they feel good.</p>
+          <p><span class="spk">Nick · 15:45</span>Someone next to them's doing it, they feed off each other's energy. So it's probably even hard to quantify what that opportunity cost would be. Having performers that, well, people that don't perform versus a high performance culture.</p>
+          <p><span class="spk">Marty · 15:58</span>And I think the,</p>
+          <p><span class="spk">Marty · 16:00</span>the other thing in regards to even leadership is how you manage those people if you need to manage them out, that you do it from a corporate responsibility to the business and the other people into the business.</p>
+          <p><span class="spk">Marty · 16:14</span>A lot of people, you know, obviously will take it personally, but. Ultimately you've got in small to medium business enterprises, you've got other people's jobs on the line. You know, you've got, you've got shareholder value on the line and a lot of people don't think about that. But, but there is a corporate responsibility that if that person is not performing, that, that you're doing them a favor ultimately, because they'll go to another environment where they can.</p>
+          <p><span class="spk">Marty · 16:39</span>Potentially have a better fit, but your, your ultimate responsibility is to make sure that the business is okay and that the jobs in the business are okay as well. So, and, and again, it's, I, I've changed my perspective because in the early days I always felt bad. Like I always felt horrible when you had to do something like that, you had to actually tell people they had to go.</p>
+          <p><span class="spk">Marty · 17:00</span>And I don't love it. Don't get me wrong. I don't, it's not something anyone enjoys, but I have a methodology now and that's thanks to HR and learning from hr, good instruction from them that you actually go, okay, you can follow a course and there's a right way to go about it. You can be cnce in the metrics that you're setting.</p>
+          <p><span class="spk">Marty · 17:17</span>You be, you can be confident in the performance, you know, reviews and improvement programs, and hopefully there's a bounce off those. But if not, you know, there's, there's a way to go about it. So I think that gives a lot of comfort, um, in something that's a very difficult thing to do. And yeah, to me that was a skill gap, and I'm glad I've bridged that skill gap because I could see how vitally important it is for, for, you know, A SME business.</p>
+          <p><span class="spk">Jason · 17:43</span>Yeah. Well, it's super important. I mean, I remember reading Netflix, um, no Rules, rules, the book by Reed, is it Reed Hastings? Um, he talks about. In the early days, he had to let go of 20% of his workforce and they, let's say there was 400 employees, they fired around 80 people,</p>
+          <p><span class="spk">Jason · 18:00</span>and, but they had the same amount of work to do.</p>
+          <p><span class="spk">Jason · 18:02</span>What they ended up finding happening was that the remaining 320 people actually did all of the work of what 400 were doing. But what they found was that because of the, the bottom 80 performers, all of the other really high performers were going, well, don't have to work that hard, like much harder because the person next to me kind of does it at this level.</p>
+          <p><span class="spk">Jason · 18:21</span>So why should I go above and beyond and go any further or any higher and, and, and outperform. So you kind of build this kind of level of like what is okay performance by holding onto people that aren't. High performance. Yeah,</p>
+          <p><span class="spk">Marty · 18:31</span>it's a great link into Nick's point about the rising tide and how important that rising tide of high performance is.</p>
+          <p><span class="spk">Jason · 18:38</span>Yeah. And then the flow on from that is, I mean, I think a lot of business owners will have the human side of going, well that's a good person, right? Like they're actually going, okay. 'cause you've got okay performance and then you've got high performance. So I think it's, you know, as you said, putting in framework or, or levels of acceptable behavior.</p>
+          <p><span class="spk">Jason · 18:56</span>And you know, I guess having some. Some processes</p>
+          <p><span class="spk">Jason · 19:00</span>around it. So you've talked about HR kind of gave you, you know, a bit of a, a roadmap of how to follow it. I mean, what does it look like if you've got someone who you think you can get from an okay performer to a high performer? What is the path that you take with them, and then what's the difference then when it's somebody who you just don't see a hope for, you know, to performance manage them outta the business?</p>
+          <p><span class="spk">Jason · 19:18</span>Is there a different approach or the same approach?</p>
+          <p><span class="spk">Marty · 19:20</span>Great question, because a high performer will bounce off the, uh, off a performance improvement plan. Like they, their ego will be pricked and they want to do well. And you find that next level of performance. And some people actually, that's a motivator.</p>
+          <p><span class="spk">Marty · 19:34</span>The fear of the loss is actually the motivator to kick them into a new gear. And, um, you, you hope that once they get to that gear, they can maintain it, but sometimes they can regress too. But then you understand the style of that person. And it's like at footy, you know, there's some players you can go get the damn ball, pick it up and kick the goal.</p>
+          <p><span class="spk">Marty · 19:53</span>And don't let me see you do that again. Other people, you go, look, I'd prefer you just go into the pack and</p>
+          <p><span class="spk">Marty · 20:00</span>get another possession and find your way through the goal. So, you know, different, uh, different tones and different, different sort of, you know, angles in regards to get there. But I find the, I find if someone's going to be a good performer, they can, they can go up a gear.</p>
+          <p><span class="spk">Marty · 20:14</span>And they'll find something different. And then you also, in fairness to them, have to address the, if there's a skill gap. So is there a skill gap? Do they need development? Do they need resources? Like what do they need in sort of to bridge that performance difference? So. So if you're seeing a trend and you're seeing a great attitude and you're seeing performance start to evolve, then you've got hope.</p>
+          <p><span class="spk">Marty · 20:38</span>But you might be doing the same thing with the poor performer and you just see it, you know, flat lining, like it doesn't matter what you say. Even if they're slightly enthusiastic, you could see that their tone is still a bit downtrodden their. Basically playing for time, um, thinking about what the next move is potentially.</p>
+          <p><span class="spk">Marty · 20:57</span>And then generally they resign. You know, if</p>
+          <p><span class="spk">Marty · 21:00</span>they feel like there's no, there's no way for them to get to where they need to be anyway. So a lot of times people resign prior to, you know, a potential, a potential sacking.</p>
+          <p><span class="spk">Jason · 21:09</span>I love what you said though, like the, the perform if, if you get put on a performance improvement plan and you've got the right attitude, you bounce back and you come back stronger and better than ever.</p>
+          <p><span class="spk">Jason · 21:18</span>Like if, if you are a high performer and that's where you want to be and where you want to get to, that's actually your opportunity to work with the person on, I. How to get you to where you wanna be, hit those goals, be the best you can be. So I absolutely love that. I never thought about that idea of, you know, if, I mean, 'cause I've never been put on a performance improvement plan, you know, obviously.</p>
+          <p><span class="spk">Jason · 21:36</span>No, just kidding. No, no. It's, it's a good, it's a good mindset and the way to look at it to go, you know, and then if, if somebody is, I mean, this is what I see now, you know, we do have some HR assistants and we are trying to, you know, increase performance. I think we're gonna have the strongest. Quarter we've ever had.</p>
+          <p><span class="spk">Jason · 21:51</span>And that's come through a lot of hard work and a lot of energy and effort on getting the team and the mindset to where it needed to be. But you know, part of that, you know, doing a performance improvement plan,</p>
+          <p><span class="spk">Jason · 22:00</span>I've probably been scared to do it in the past. I haven't felt like, geez, I don't wanna piss someone off.</p>
+          <p><span class="spk">Jason · 22:03</span>I don't wanna lose an employee for doing a performance improvement plan when it feels like, you know, I know they're trying. But now actually with that mindset of going. It's good for them, it's good for us. We're both gonna end up somewhere better off in the near short to, near short to medium term future.</p>
+          <p><span class="spk">Jason · 22:18</span>Then why wouldn't we do it? It's silly not to. Yeah.</p>
+          <p><span class="spk">Marty · 22:20</span>Well, well you're gonna get the most amount of resources at that time, you know, moving through that performance plan and, you know, linking it into accountability. As long as the, as long as the accountability on the metrics start to trend and there's improvement.</p>
+          <p><span class="spk">Marty · 22:34</span>And the other thing is that once someone hits a certain level and they break through. It's very rare they regress unless it's attitudinal. Mm-hmm. So it's like once you can get them to a certain level and they, you create a new foundation at that higher level, generally you've got now proof of concept that they can be developed and they can grow, which offers the opportunity for further progression and you can resource them for</p>
+          <p><span class="spk">Marty · 23:00</span>further progression moving forward.</p>
+          <p><span class="spk">Marty · 23:02</span>So that's pretty exciting. Now, whether that takes a. Performance improvement plan, or it happens just in general. Um, but that's what you're looking for. You, and, and I guarantee you Nick will back me up on this, no doubt. When you put someone in a circumstance that really stretches them, initially, they're going, holy crap.</p>
+          <p><span class="spk">Marty · 23:20</span>But then they find something and then they find efficiencies that they didn't know they have, and they find, you know, personal resources that, that start to develop that can handle this new level, and then all of a sudden they find this. You know, they find this, this new level becomes the norm.</p>
+          <p><span class="spk">Nick · 23:36</span>Well, it's, it's, it's your identity, right?</p>
+          <p><span class="spk">Nick · 23:38</span>And we've heard this over and over. I think, um, the Habits, books talks about this, but you've gotta, once you create that new identity, uh, and you know what I, in, in relation to performance, this is, this is who I am. Now, to your point, it just becomes a norm. And then you create more habit. You create habits that, that are more in line with that new identity that, you know, this is the level of</p>
+          <p><span class="spk">Nick · 24:00</span>performance that is just standard for me now.</p>
+          <p><span class="spk">Nick · 24:02</span>Um. Yeah, you're right. They, they don't go backwards. And, um, I think almost people, if, if they have an identity set in their mind that's, um, you know, maybe at 50% capacity of where they could be, they'll almost self-sabotage to, to stay at that identity. So you've gotta get them, get, get them to have a, um, to jump outside, have a look in and say, well, know what.</p>
+          <p><span class="spk">Nick · 24:31</span>That's not me. I'm this person. I'm the, I'm not a 50 mil broker. I'm a hundred mil broker. Um, so I'll just do the activity I've gotta do to get there versus where I, I think a lot of people self-sabotage.</p>
+          <p><span class="spk">Marty · 24:43</span>Oh, you, you've nailed it, Nick. You've absolutely nailed it. You can, and as a leader and as a coach, you can get.</p>
+          <p><span class="spk">Marty · 24:51</span>Higher performance for a period of time, but if the identity is not aligned, it will bounce back to the poorer performance As soon as you, you know, you</p>
+          <p><span class="spk">Marty · 25:00</span>let them go and do their own thing. So it's, um, that's a great observation for people. And that's what you're looking for. You're looking for patterns of behavior in regards to performance.</p>
+          <p><span class="spk">Marty · 25:09</span>It's really, it's, it's understated, but if you can pick up patterns and you can see improvement on improvement, then that's pretty exciting. But if you are seeing, you know, and, and. The other thing you've gotta take into account, if you have had a good performer, consistent, good performer, and they fall away, really have a have a good conversation around it because again, you dunno what goes on in people's lives.</p>
+          <p><span class="spk">Marty · 25:33</span>There might be problems at home. Um, they might be going through a rough patch. Um, so, you know, you, you see that happen as well. And that's where empathy and compassion need to come in because you know, someone's been very loyal and, and and done well for the business and being a great contributor. And that's where you do have a little bit more leeway to say, okay, well do what?</p>
+          <p><span class="spk">Marty · 25:54</span>Do you need to move through this? Do you need a day off? Do you need to go and see someone? Can we back you up</p>
+          <p><span class="spk">Marty · 26:00</span>on that? Um. You know, and, and that's, that's where that, that human element can come in a little bit further</p>
+          <p><span class="spk">Jason · 26:06</span>on, on the human side, right. I think that's where I've also struggled a bit in the past, getting too close, personally, having deep care for someone.</p>
+          <p><span class="spk">Jason · 26:14</span>You know, you talked about, you know, empathy and compassion. How do you balance caring for people and then making tough calls?</p>
+          <p><span class="spk">Marty · 26:21</span>Yeah. Well that, that's an easy one. Now, if it's a friend, I go, can I have a discussion outside our friendship for a moment? Frame, frame it up. 'cause it comes back to the performance, you know?</p>
+          <p><span class="spk">Marty · 26:33</span>So, Marty, you said</p>
+          <p><span class="spk">Nick · 26:34</span>something earlier that just is so spot on. Um, I'm referring to you now, Jace. You've got a responsibility to correct 40 people. So, you know, fir the first thing is. That responsibility is higher than, you know, being nice to an underperformer, but there, the reality is, if they're underperforming in your role, they're not getting the best outta</p>
+          <p><span class="spk">Nick · 27:00</span>themselves anyway.</p>
+          <p><span class="spk">Nick · 27:00</span>So. I think you're actually, this is the one thing I learned that the sooner you can bring it to the surface and talk to them, they either, they either go up a level in performance or they go and find a job that's more, um, that's more suited to them. So I think you're actually doing them a disservice by not hitting it.</p>
+          <p><span class="spk">Nick · 27:21</span>On the head. And I've learned that the hard way too, mate, myself. So</p>
+          <p><span class="spk">Jason · 27:24</span>very helpful. Appreciate</p>
+          <p><span class="spk">Marty · 27:25</span>it. No, it is, it, it's, it's, it's a good point. It, it's always gotta come back to, you know, there, there's two conversations in that. One, there's the business conversation and then it's supporting the person, you know, if something has gone wrong for them, supporting them, the person outside of the metrics.</p>
+          <p><span class="spk">Marty · 27:43</span>But the metrics are still the core on what needs to be achieved. And, and you, you'll pick it up. You'll pick up what's going on in, in the actual metrics. Like we could tell from week to week, you know, whether it's leads, whether it's lodgements, whether it's you settlements, it's,</p>
+          <p><span class="spk">Marty · 28:00</span>um, the, the data never lies.</p>
+          <p><span class="spk">Marty · 28:02</span>It, you, you can torture data and it'll give you, it'll tell you exactly where a person's at and then you can have discussions around it.</p>
+          <p><span class="spk">Jason · 28:09</span>Yeah. Well I think that that other mindset there that you dropped Nick or the, the thought of. Looking after that one person and to the detriment of up to 29 or 30 other people, what is that saying to the rest of the team?</p>
+          <p><span class="spk">Jason · 28:21</span>So that's, that's, yeah. How does that look? Powerful thought, very thought provoking.</p>
+          <p><span class="spk">Marty · 28:25</span>And I lost a friendship over doing that Jace, in, um, in the early days, like, 'cause whether I had the conversation the way it should have been had is, might, might be a different story, but, but again, I had to protect the business, you know, at the end of the day.</p>
+          <p><span class="spk">Marty · 28:40</span>And, you know, lost a good friendship over it. But I could have lost the business and lost everyone's livelihood. And you know, you just have to make those stern calls. And you know, I guess at the end of the day, people will think what they think, but you haven't collapsed the whole entity. Um, by, by letting that sort of behavior foster</p>
+          <p><span class="spk">Nick · 29:00</span>Marty.</p>
+          <p><span class="spk">Nick · 29:00</span>So question, um, if. If someone is running a small business, they're obviously good salespeople, but might lack some business acumen, which is more than, okay, where do you start with this stuff? So obviously we've talked about what you need to do to attack it. How do you, how do you build out the minimum level or minimum expectations?</p>
+          <p><span class="spk">Nick · 29:23</span>Like where does that start? Like how do I even know what those minimum expectations are because I might be. Super sales person at 10, outta 10 working my way up through the macas chain. But that's not, that's, you don't necessarily need 10 of those in your business, for example. So how do I build out those metrics?</p>
+          <p><span class="spk">Nick · 29:43</span>Like if I don't know, can I talk to you? Like where, how do you start?</p>
+          <p><span class="spk">Marty · 29:47</span>Yeah. Well. Street smarts is gonna come from, from my mouth on this, because to me, I looked at, like even in broking, I looked at the industry average was about 1.2 mil, 1.3</p>
+          <p><span class="spk">Marty · 30:00</span>million settlements, which I thought was atrocious. I go, why would you leave?</p>
+          <p><span class="spk">Marty · 30:04</span>Any career to go and do that, but that's the industry average. So I never thought that was a good idea. So to me it had to be three times industry average. 'cause if you want to be average, you do average things, you get average results, well, that's the environment that you're fostering. So, so to me it was always, and there's, there's subtleties in this.</p>
+          <p><span class="spk">Marty · 30:23</span>So let's say you set the benchmark three times higher as to what the expectation is. Now, generally the first response is, holy crap. Like shock. There's no way this is, this is a joke. And you go, well sit with it for a bit because you're coming at it from a business level first. So you're going, what do I want the business to do, you know, and do for me, uh, running this business.</p>
+          <p><span class="spk">Marty · 30:47</span>And then you can work backwards and go, alright, where are we at? What's the gap and what qualities do we need to bring to the table in order to start tr trending towards that result? Now, it's not gonna</p>
+          <p><span class="spk">Marty · 31:00</span>happen overnight, but it's gonna happen in time because you've now set a different benchmark expectation for the business.</p>
+          <p><span class="spk">Marty · 31:08</span>So your, your ideal is that the three times above industry average becomes the norm for your business, becomes the average for your business, right? At a whole different level now. You need to start developing people. How do you give them a point of difference that's separate to what everyone else is doing?</p>
+          <p><span class="spk">Marty · 31:26</span>It might only be something little, but it's something you can deliver to the market. That is a unique point of difference. Now you instill confidence in the sales person, so you develop the sales person, give them confidence to put it out there in the market. Guess what starts to happen as you get momentum?</p>
+          <p><span class="spk">Marty · 31:42</span>As you get momentum, confidence builds. All of a sudden they hear other people in the industry doing that lower performance going, oh, well I'm doubling that, or I'm one and a half times that confidence builds. Then you start drawing good people to your business that want to be a part of that. So you get</p>
+          <p><span class="spk">Marty · 32:00</span>this flywheel effect across a lot of different areas.</p>
+          <p><span class="spk">Marty · 32:03</span>By actually setting the expectation and as leaders of a business and owners of a business, it's up to us. It's confidence in our own selves to be able to set that and then map that journey as to what it looks like. What do we want to be known for in this business? Do we wanna be average? No, and we don't want one person shooting the lights out, no one else, because that's another problem in itself.</p>
+          <p><span class="spk">Marty · 32:26</span>We want that rising tide effect because that's where everyone wins, including the business owner. That's where there's power it. It takes away, you know, the risk of having one person doing all the volumes. It's like you want that rising tide, and then you want to keep building and compounding on that. So that's what I do.</p>
+          <p><span class="spk">Marty · 32:44</span>I'd sit down and just write out. What does this look like? Like scare yourself. Don't terrify yourself, but just scare yourself a little and go, what does this look like? Even if it's double, you know, if you're doing well, what does it look like? Where do we need to be? What resources do we need to put in to</p>
+          <p><span class="spk">Marty · 33:00</span>support our people to get there?</p>
+          <p><span class="spk">Marty · 33:01</span>What's our point of difference in the market? I. You start to, you start to bring different qualities in your thinking and the way you start planning and modeling out the journey to get there. And then you look back in three years time and you go, oh yeah, that's just what we do. It's not, it's, you're at that next foundation where you've probably gotta stretch again, Ray and in a new way, but that's the enjoyment of it.</p>
+          <p><span class="spk">Marty · 33:24</span>That's the enjoyment of progress, and that's what. Nick was talking about you get juiced up talking to other people, doing really well, you know, within the business. And everyone's on that, on that exciting journey together. It's um, it's, it's invigorating really.</p>
+          <p><span class="spk">Jason · 33:38</span>Yeah. Your high performers are watching how you handle your low performers.</p>
+          <p><span class="spk">Jason · 33:41</span>Um, so basically as Marty you're saying either raise the bar or your whole team will just be okay with standard and they'll think that the standards don't matter. Um, for those listening though, I know where I'd be starting. I'd be starting by reaching out to Marty. Um, I know for a fact. That you've put high performing teams in place and uh, yeah, that's what I would be doing.</p>
+          <p><span class="spk">Jason · 33:58</span>And I probably will reach out to you, Marty,</p>
+          <p><span class="spk">Jason · 34:00</span>'cause I've mis chatting to you. And for those listening out there, um, give us a, like, give us a follow, definitely reach out to Marty. He's on LinkedIn. You'd find him on Instagram actually. He's everywhere. He's uh, he's the man of the people. We've absolutely loved this episode from you today, Marty, and until next time,</p>
+          <p><span class="spk">Marty · 34:15</span>do you want fries with that chase?</p>
+          <p><span class="spk">Marty · 34:16</span>Keep performing mate. Keep performing. I love that. Game over</p>
+          <p><span class="spk">Jason · 34:22</span>this podcast is for educational and informational purposes only. The conversations are of general nature and do not qualify as financial or tax advice. We recommend before you make any financial decisions, you consult a licensed professional.</p>
+          <p><span class="spk">Jason · 34:35</span>Individuals on the podcast may hold positions in the companies discussed. ---</p>
+        </div>
+      </details>
+
+    </div>
+
+    <!-- LISTEN:START (build_episode.py rewrites the 3 URLs + iframe title per episode; player dropped if no spotifyEmbedUrl) -->
+    <section class="listen-now">
+      <div class="ln-head">
+        <span class="ln-title">Listen now</span>
+      </div>
+      <div class="audio-embed">
+        <iframe src="https://open.spotify.com/embed/episode/0BgyfbQbtXdzYAiNjs7CNs?utm_source=generator"
+          width="100%" height="152" loading="lazy" allowfullscreen
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+          title="Spotify — Good People, Bad Fit: How One Wrong Hire Can Cost You Millions"></iframe>
+      </div>
+    </section>
+
+    <div class="listen">
+      <a href="https://open.spotify.com/episode/0BgyfbQbtXdzYAiNjs7CNs" target="_blank" rel="noopener" aria-label="Listen to this episode on Spotify">
+        <svg viewBox="0 0 24 24"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.52 17.34c-.24.36-.66.48-1.02.24-2.82-1.74-6.36-2.1-10.56-1.14-.42.12-.78-.18-.9-.54-.12-.42.18-.78.54-.9 4.56-1.02 8.52-.6 11.64 1.32.42.18.48.66.3 1.02zm1.44-3.3c-.3.42-.84.6-1.26.3-3.24-1.98-8.16-2.58-11.94-1.38-.48.12-1.02-.12-1.14-.6-.12-.48.12-1.02.6-1.14 4.32-1.32 9.72-.66 13.44 1.62.36.18.54.78.3 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.3c-.6.18-1.2-.18-1.38-.72-.18-.6.18-1.2.72-1.38 4.26-1.26 11.28-1.02 15.72 1.62.54.3.72 1.02.42 1.56-.3.42-1.02.6-1.56.3z"/></svg>
+        Spotify
+      </a>
+      <a href="https://podcasts.apple.com/au/podcast/id1555566088?i=1000714051128" target="_blank" rel="noopener" aria-label="Listen to this episode on Apple Podcasts">
+        <svg viewBox="0 0 24 24"><path d="M5.34 0A5.328 5.328 0 000 5.34v13.32A5.328 5.328 0 005.34 24h13.32A5.328 5.328 0 0024 18.66V5.34A5.328 5.328 0 0018.66 0H5.34zm6.525 2.568c2.336 0 4.448.902 6.056 2.587 1.224 1.272 1.912 2.619 2.264 4.392l.04.23c.04.272-.16.527-.432.567a.505.505 0 01-.567-.431l-.04-.213c-.312-1.57-.92-2.747-2.004-3.867-1.428-1.496-3.293-2.294-5.393-2.294-2.1 0-3.966.798-5.394 2.294-1.084 1.12-1.692 2.298-2.004 3.867l-.04.213a.507.507 0 01-.567.431.504.504 0 01-.432-.567l.04-.23c.352-1.773 1.04-3.12 2.264-4.392 1.608-1.685 3.72-2.587 6.056-2.587h.153zm.136 3.033c1.74 0 3.312.67 4.527 1.934.883.916 1.394 1.93 1.663 3.253l.04.23a.505.505 0 01-.431.567.503.503 0 01-.567-.432l-.04-.212c-.23-1.112-.659-1.97-1.396-2.732-1.052-1.1-2.404-1.672-3.9-1.672s-2.849.572-3.901 1.672c-.737.762-1.167 1.62-1.396 2.732l-.04.212a.503.503 0 01-.567.432.505.505 0 01-.432-.567l.04-.23c.27-1.323.78-2.337 1.664-3.253 1.215-1.264 2.787-1.934 4.527-1.934h.21zm-.078 3.05c1.092 0 2.091.424 2.89 1.22.582.58.924 1.245 1.107 2.15l.04.218a.501.501 0 01-.424.568.499.499 0 01-.568-.424l-.04-.198c-.146-.724-.413-1.253-.871-1.716-.63-.63-1.398-.957-2.226-.957s-1.595.328-2.225.957c-.459.463-.726.992-.871 1.716l-.04.198a.499.499 0 01-.568.424.501.501 0 01-.424-.568l.04-.219c.183-.904.525-1.569 1.106-2.149.8-.796 1.799-1.22 2.89-1.22h.184zM12 14.07a2.477 2.477 0 012.48 2.478A2.477 2.477 0 0112 19.024a2.477 2.477 0 01-2.48-2.477A2.477 2.477 0 0112 14.07z"/></svg>
+        Apple
+      </a>
+      <a class="yt-pill" href="https://www.youtube.com/@thenumbersgamepodcast?sub_confirmation=1" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.12-2.14C19.5 3.55 12 3.55 12 3.55s-7.5 0-9.38.51A3 3 0 0 0 .5 6.2 31.4 31.4 0 0 0 0 12a31.4 31.4 0 0 0 .5 5.8 3 3 0 0 0 2.12 2.14c1.88.51 9.38.51 9.38.51s7.5 0 9.38-.51a3 3 0 0 0 2.12-2.14A31.4 31.4 0 0 0 24 12a31.4 31.4 0 0 0-.5-5.8zM9.55 15.57V8.43L15.82 12z"/></svg>
+        Subscribe
+      </a>
+    </div>
+    <!-- LISTEN:END -->
+
+    <div class="relsec">
+      <span class="rtitle">Discover more</span>
+      <div class="relgrid">
+        <a class="relcard" href="/courage-culture-tough-calls-cameron-schwab-on-redefining-leadership">
+          <img src="https://i.ytimg.com/vi/SXCEAyoLobo/hqdefault.jpg" alt="EP 249 thumbnail">
+          <span class="rt">Courage, Culture &amp; Tough Calls</span>
+          <span class="rfoot"><span class="rwhy">Also covers: team &amp; culture</span><span class="rtag">EP 249</span></span>
+        </a>
+        <a class="relcard" href="/10-lessons-from-an-f1-boss-do-any-actually-apply-to-small-business">
+          <img src="https://i.ytimg.com/vi/ubSyFEJEohE/hqdefault.jpg" alt="EP 267 thumbnail">
+          <span class="rt">10 Lessons from an F1 Boss.</span>
+          <span class="rfoot"><span class="rwhy">Also covers: team &amp; culture</span><span class="rtag">EP 267</span></span>
+        </a>
+        <a class="relcard" href="/adam-diamond-change-your-business-change-your-life">
+          <img src="https://i.ytimg.com/vi/l-qwFf9g5Rg/hqdefault.jpg" alt="EP 206 thumbnail">
+          <span class="rt">Adam Diamond - Change Your Business, Change Your Life</span>
+          <span class="rfoot"><span class="rwhy">Also covers: team &amp; culture</span><span class="rtag">EP 206</span></span>
+        </a>
+        <a class="relcard" href="/the-5-day-week-is-100-years-old">
+          <img src="https://i.ytimg.com/vi/owBCnFLV_vM/hqdefault.jpg" alt="EP 277 thumbnail">
+          <span class="rt">The 5-Day Week Is 100 Years Old</span>
+          <span class="rfoot"><span class="rwhy">Also covers: team &amp; culture</span><span class="rtag">EP 277</span></span>
+        </a>
+        <a class="relcard" href="/how-to-avoid-burnout-and-still-grow-your-business">
+          <img src="https://i.ytimg.com/vi/kaHCI7VQoA4/hqdefault.jpg" alt="EP 233 thumbnail">
+          <span class="rt">How to Avoid Burnout and Still Grow Your Business</span>
+          <span class="rfoot"><span class="rwhy">Also covers: team &amp; culture</span><span class="rtag">EP 233</span></span>
+        </a>
+        <a class="relcard" href="/the-numbers-game-of-life-marty-s-5-biggest-lessons">
+          <img src="https://i.ytimg.com/vi/bM7PFcSZj6Q/hqdefault.jpg" alt="EP 261 thumbnail">
+          <span class="rt">The Numbers Game of Life</span>
+          <span class="rfoot"><span class="rwhy">Also covers: team &amp; culture</span><span class="rtag">EP 261</span></span>
+        </a>
+      </div>
+      <div class="reldots" id="reldots"></div>
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="footgrid">
+      <div class="fcol">
+        <div class="foot-label">Follow us on</div>
+        <div class="socials">
+          <a href="https://www.instagram.com/thenumbersgamepodcast/" target="_blank" rel="noopener" aria-label="The Numbers Game on Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.8.2 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1 .4 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .4-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1-.4-2.2-.1-1.3-.1-1.7-.1-4.9s0-3.6.1-4.9c.1-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.4 2.2-.4 1.3-.1 1.7-.1 4.9-.1zm0 2c-3.1 0-3.5 0-4.8.1-1.1.1-1.5.2-1.8.3-.4.2-.7.3-1 .6-.3.3-.5.6-.6 1-.1.3-.3.7-.3 1.8-.1 1.3-.1 1.7-.1 4.8s0 3.5.1 4.8c.1 1.1.2 1.5.3 1.8.2.4.3.7.6 1 .3.3.6.5 1 .6.3.1.7.3 1.8.3 1.3.1 1.7.1 4.8.1s3.5 0 4.8-.1c1.1-.1 1.5-.2 1.8-.3.4-.2.7-.3 1-.6.3-.3.5-.6.6-1 .1-.3.3-.7.3-1.8.1-1.3.1-1.7.1-4.8s0-3.5-.1-4.8c-.1-1.1-.2-1.5-.3-1.8-.2-.4-.3-.7-.6-1-.3-.3-.6-.5-1-.6-.3-.1-.7-.3-1.8-.3-1.3-.1-1.7-.1-4.8-.1zm0 3.4a5.4 5.4 0 1 1 0 10.8 5.4 5.4 0 0 1 0-10.8zm0 2a3.4 3.4 0 1 0 0 6.8 3.4 3.4 0 0 0 0-6.8zm5.6-2.3a1.3 1.3 0 1 1-2.6 0 1.3 1.3 0 0 1 2.6 0z"/></svg></a>
+          <a href="https://www.tiktok.com/@thenumbersgamepodcast" target="_blank" rel="noopener" aria-label="The Numbers Game on TikTok"><svg viewBox="0 0 24 24"><path d="M12.53.02C13.84 0 15.14.01 16.44 0c.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg></a>
+          <a href="https://www.linkedin.com/company/the-numbers-game-podcast/" target="_blank" rel="noopener" aria-label="The Numbers Game on LinkedIn"><svg viewBox="0 0 24 24"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.24 8.25h4.52V23H.24V8.25zM8.34 8.25h4.33v2.01h.06c.6-1.14 2.08-2.34 4.28-2.34 4.58 0 5.42 3.01 5.42 6.92V23h-4.51v-7.16c0-1.71-.03-3.91-2.38-3.91-2.39 0-2.75 1.86-2.75 3.78V23H8.34V8.25z"/></svg></a>
+          <a href="https://www.facebook.com/profile.php?id=100071290388343" target="_blank" rel="noopener" aria-label="The Numbers Game on Facebook"><svg viewBox="0 0 24 24"><path d="M24 12.07C24 5.41 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.04V9.41c0-3.02 1.8-4.7 4.54-4.7 1.31 0 2.68.24 2.68.24v2.97h-1.5c-1.5 0-1.96.93-1.96 1.89v2.26h3.32l-.53 3.5h-2.8V24C19.62 23.1 24 18.1 24 12.07z"/></svg></a>
+          <a href="https://www.youtube.com/@thenumbersgamepodcast" target="_blank" rel="noopener" aria-label="The Numbers Game on YouTube"><svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.2C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31.7 31.7 0 0 0 0 12a31.7 31.7 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.2A31.7 31.7 0 0 0 24 12a31.7 31.7 0 0 0-.5-5.8zM9.6 15.6V8.4L15.8 12z"/></svg></a>
+        </div>
+      </div>
+      <div class="fcol">
+        <div class="foot-label">Brought to you by</div>
+        <div class="sponsors">
+          <a href="https://www.inovayt.com.au/" target="_blank" rel="noopener"><img src="assets/inovayt-white.png" alt="Inovayt"></a>
+          <a href="https://futureadvisory.com.au/" target="_blank" rel="noopener"><img src="assets/future-advisory-white.png" alt="Future Advisory"></a>
+        </div>
+      </div>
+      <div class="fcol produced">
+        <div class="foot-label">Produced by</div>
+        <a href="https://www.vidpod.com.au/" target="_blank" rel="noopener"><img src="assets/vidpod-white.png" alt="VIDPOD"></a>
+      </div>
+    </div>
+    <div class="footbar">
+      <details class="footnav-dd">
+        <summary><svg class="ham" viewBox="0 0 24 24"><path d="M3 6h18v2H3zM3 11h18v2H3zM3 16h18v2H3z"/></svg> Menu</summary>
+        <div class="dd-links">
+          <a href="/">Home</a><a href="/episodes">Every episode</a><a href="/adventure">Choose your own adventure</a><a href="/about">About the show</a><a href="/nick-reilly">Nick Reilly</a><a href="/jason-robinson">Jason Robinson</a><a href="/contact">Contact</a>
+        </div>
+      </details>
+      <div class="copyright">© 2026 The Numbers Game</div>
+    </div>
+  </footer>
+
+  <script>
+    var VIDEO='USkVF5bsujM';
+    var CHAPTERS=[
+      {t:"00:00",s:0,title:"Intro"},
+      {t:"00:15",s:15,title:"Have You Ever Underperformed"},
+      {t:"03:44",s:224,title:"The Millions Poor Performance Costs"},
+      {t:"04:50",s:290,title:"Why Owners Avoid The Problem"},
+      {t:"06:12",s:372,title:"Good People, Wrong Culture Fit"},
+      {t:"07:00",s:420,title:"How Long Is Too Long To Hold On"},
+      {t:"07:42",s:462,title:"Fill The Seat Or Find The Right Person"},
+      {t:"08:31",s:511,title:"Setting Expectations From The First Interview"},
+      {t:"09:49",s:589,title:"Understanding The Person Behind The Result"},
+      {t:"13:38",s:818,title:"Scaring The Wrong People Out Of The Role"},
+      {t:"15:15",s:915,title:"The Rising Tide And Corporate Responsibility"},
+      {t:"17:43",s:1063,title:"Netflix And The Cost Of Low Performers"},
+      {t:"19:20",s:1160,title:"Performance Improvement Plans Done Right"},
+      {t:"22:34",s:1354,title:"Breaking Through To A New Level"},
+      {t:"23:38",s:1418,title:"Performance And Identity"},
+      {t:"25:09",s:1509,title:"Empathy When A Good Performer Falls Away"},
+      {t:"26:34",s:1594,title:"Your Responsibility To The Whole Team"},
+      {t:"27:43",s:1663,title:"The Data Never Lies"},
+      {t:"30:04",s:1804,title:"Setting The Benchmark Three Times Higher"},
+      {t:"33:38",s:2018,title:"High Performers Are Watching"}
+    ];
+    var QUESTIONS=[
+      {q:"Have you ever underperformed at work?",s:15},
+      {q:"What did working at McDonald's teach about business systems?",s:83},
+      {q:"How much can poor performance cost a business?",s:224},
+      {q:"Can a good person still be a bad hire?",s:410},
+      {q:"Should you hold onto a struggling employee or replace them?",s:433},
+      {q:"How do you test if a candidate can handle a role?",s:870},
+      {q:"What happened when Netflix cut its low performers?",s:1063},
+      {q:"How high should you set your team's performance benchmark?",s:1804},
+      {q:"Who notices how you deal with underperformers?",s:2018},
+      {q:"What happens if a leader does not raise the bar?",s:2021}
+    ];
+
+    var chEl=document.getElementById('chapters');
+    CHAPTERS.forEach(function(c){var b=document.createElement('button');b.className='chapter';b.onclick=function(){startAt(c.s)};b.innerHTML='<span class="tc">'+c.t+'</span><span class="cx">'+c.title+'</span>';chEl.appendChild(b);});
+    document.getElementById('chcount').textContent=CHAPTERS.length;
+    var qEl=document.getElementById('qa');
+    QUESTIONS.forEach(function(q){var b=document.createElement('button');b.className='q';b.onclick=function(){startAt(q.s)};b.innerHTML='<span class="qm">?</span><span class="qx">'+q.q+'</span><span class="go">›</span>';qEl.appendChild(b);});
+    document.getElementById('qcount').textContent=QUESTIONS.length;
+
+    /* Mobile nav dropdown. */
+    var burger=document.getElementById('navburger'), navdrop=document.getElementById('navdrop');
+    if(burger&&navdrop){burger.addEventListener('click',function(){
+      navdrop.hidden=!navdrop.hidden;
+      burger.setAttribute('aria-expanded', navdrop.hidden?'false':'true');
+    });}
+
+    /* Voice-note button reveals the recorder; × tucks it away. */
+    var vbtn=document.getElementById('vbtn'), vslot=document.getElementById('vslot'), vclose=document.getElementById('vclose');
+    if(vbtn&&vslot){vbtn.addEventListener('click',function(){vslot.hidden=!vslot.hidden;});}
+    if(vclose&&vslot){vclose.addEventListener('click',function(){vslot.hidden=true;});}
+
+    /* Keep-exploring dots: only shown when the strip actually scrolls (mobile). */
+    var rg=document.querySelector('.relgrid'), rd=document.getElementById('reldots');
+    if(rg&&rd){
+      var relCards=rg.querySelectorAll('.relcard');
+      relCards.forEach(function(){rd.appendChild(document.createElement('span'))});
+      var updDots=function(){
+        var scrollable=rg.scrollWidth>rg.clientWidth+4;
+        rd.style.display=scrollable?'flex':'none';
+        if(!scrollable)return;
+        var i=Math.round(rg.scrollLeft/(rg.scrollWidth-rg.clientWidth)*(relCards.length-1));
+        rd.querySelectorAll('span').forEach(function(s,n){s.classList.toggle('on',n===i)});
+      };
+      rg.addEventListener('scroll',updDots,{passive:true});
+      window.addEventListener('resize',updDots);
+      updDots();
+    }
+
+    /* Explore tabs: swap the visible panel; the row stays put so you never lose your place. */
+    var tabBtns=document.querySelectorAll('.tabbtn');
+    tabBtns.forEach(function(b){
+      b.addEventListener('click',function(){
+        tabBtns.forEach(function(o){o.classList.remove('on')});
+        document.querySelectorAll('.tpanel').forEach(function(p){p.hidden=true});
+        b.classList.add('on');
+        document.getElementById(b.getAttribute('data-panel')).hidden=false;
+      });
+    });
+
+    /* YouTube: clean facade, then real player on demand. Seek without yanking to top. */
+    var player=null, ready=false, apiReady=false, pending=null;
+    window.onYouTubeIframeAPIReady=function(){apiReady=true; if(pending!=null){var s=pending;pending=null;createPlayer(s);}};
+    function createPlayer(sec){
+      var wrap=document.getElementById('player'); wrap.innerHTML='<div id="yt"></div>';
+      player=new YT.Player('yt',{videoId:VIDEO,playerVars:{autoplay:1,rel:0,modestbranding:1,playsinline:1,start:Math.floor(sec||0)},events:{onReady:function(){ready=true;}}});
+    }
+    function nudge(){
+      var p=document.getElementById('player-wrap'), r=p.getBoundingClientRect();
+      if(r.bottom<80 || r.top>window.innerHeight-90){ p.scrollIntoView({behavior:'smooth',block:'start'}); }
+    }
+    function startAt(sec){
+      nudge();
+      if(player&&ready){ player.seekTo(sec,true); player.playVideo(); return; }
+      if(apiReady){ createPlayer(sec); } else { pending=sec; }
+    }
+    document.getElementById('facade').addEventListener('click',function(){startAt(0);});
+    (function(){var s=document.createElement('script');s.src='https://www.youtube.com/iframe_api';document.head.appendChild(s);})();
+  </script>
+</body>
+</html>
