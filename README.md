@@ -12,13 +12,13 @@ A smart, searchable **financial-education library** built from *The Numbers Game
 
 ## The data
 
-Season 18 to date — **episodes 263–286 (24 episodes) · 670 moments**. Every moment carries a **verbatim quote** machine-verified against the transcript (zero hallucination), a video deep-link and duration, a clip-readiness score, the questions it answers (for search), a topic/subtopic (13 topics · 37 subtopics), a freshness flag, and the entities it names.
+The live site is a full episode library — the front-end is **live and in active use**. Every moment carries a **verbatim quote** machine-verified against the transcript, a video deep-link + duration, a clip-readiness score, the questions it answers (for search), a topic/subtopic, a freshness flag, and the entities it names.
 
-The data is generated locally by the engine, then compiled to `data/`. This repo is the **product**; the engine that builds the data lives in the VIDPOD working folder.
+The data is generated locally by the engine, then compiled to `data/`. This repo is the **product**; the engine + all publishing tools/docs live in the VIDPOD working folder (`~/Desktop/TOMMY AI/Brain/Vidpod/clients/TNG/Website Build`).
 
-## Status
+## Status & how to work on this
 
-Repo scaffolding. The data layer is complete and web-ready; the front-end is in development.
+⭐ **The single source of truth is `TNG-MASTER-STATUS.md`** in the Website Build folder (current live counts, standards, next actions, and **§8 = the verified tooling inventory**). To publish an episode, follow `PUBLISH-EPISODE-RUNBOOK.md`; live publish queue is `PUBLISH-TRACKER.md`. (Live episode counts drift — read the front-door doc, not this README, for the current number.)
 
 ---
 
