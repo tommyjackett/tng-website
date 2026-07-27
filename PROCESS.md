@@ -38,6 +38,7 @@ Follow `schema/EPISODE-PROCESSING-GUIDE.md` + `schema/EXTRACTION-RULES.md`. In s
 3. `scripts/enrich_platform_links.py --ep N --write` — source N's Spotify+Apple links onto the catalogue (new episodes only — old eps' links auto-attach; skip for the "publish fast, backfill later" speed play).
 4. `scripts/build_episode.py N` — builds **`{slug}.html`** (clean URL) + `episode-N.html` redirect stub from the master template (`episode-master-template.html`); hosts auto-link; validates + refuses on violation.
 5. `scripts/verify_episode.py N` → `scripts/link_check.py` → `scripts/push-live.sh {slug}.html`.
+6. **Notion write-back (NEW episodes only):** write the sourced platform links back onto the episode's Notion page — `Apple episode URL`, `Spotify embed URL`, `Spotify episode URL`, `Website Page URL`. The values come from the catalogue entry (`appleUrl`/`spotifyEmbedUrl`/`spotifyUrl`). See `PUBLISH-EPISODE-RUNBOOK.md` step 6. *(Back-catalogue episodes skip this — their Notion pages predate the site.)*
 
 **Automatic (no extra steps) — these all derive from the Stage-3 data merge:**
 - **Choose-Your-Own-Adventure** — `adventure.html` pools the episode's top moments from `search-index.json`. Nothing to do.
