@@ -240,7 +240,7 @@
   <div class="toolbar">
     <div class="searchbox">
       <svg viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27a6.5 6.5 0 1 0-.7.7l.27.28v.79l5 4.99L20.49 19zm-6 0A4.5 4.5 0 1 1 14 9.5 4.5 4.5 0 0 1 9.5 14z"/></svg>
-      <input type="search" id="q" placeholder="Search episodes, topics, or the questions they answer" autocomplete="off">
+      <input type="search" id="q" placeholder="Search episodes, topics, questions — or an episode number" autocomplete="off">
     </div>
     <div class="filtrow">
       <div class="segctl" id="yearseg" role="group" aria-label="Filter by year">
@@ -431,9 +431,14 @@
     if(state.q.length>=2){
       var esc=state.q.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
       var rx=new RegExp('\\b'+esc+(state.q.length<=3?'\\b':''),'i');
+      /* episode-number lookup: "285", "ep 287", "ep.265" jump straight to that episode.
+         Wins over any coincidental text match; leaves _why unset so the card renders clean. */
+      var epM=state.q.match(/^ep\.?\s*0*(\d{1,4})$/)||state.q.match(/^0*(\d{1,4})$/);
+      var epNum=epM?parseInt(epM[1],10):null;
       var scored=[];
       list.forEach(function(e){
         var b=byEp[e.episodeNumber], s=0;
+        if(epNum!==null&&e.episodeNumber===epNum) s+=1000;
         var inTitle=rx.test(e.title);
         if(inTitle) s+=100;
         if(rx.test(e.topic+' '+(e.subtopic||''))) s+=50;
