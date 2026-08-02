@@ -1,0 +1,820 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EP 145 · Ryan Richardson - Data-driven Decision Making with Dashboard Insights | The Numbers Game</title>
+<meta name="description" content="Jason, Nick and Marty welcome the show's first sponsor, Ryan Richardson, an accountant, partner at T&amp;M Consulting and founder of Dashboard Insights and Synced.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" sizes="64x64" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="canonical" href="https://thenumbersgamepodcast.com.au/ryan-richardson-data-driven-decision-making-with-dashboard-insights">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="The Numbers Game">
+<meta property="og:title" content="EP 145 · Ryan Richardson - Data-driven Decision Making with Dashboard Insights | The Numbers Game">
+<meta property="og:description" content="Jason, Nick and Marty welcome the show's first sponsor, Ryan Richardson, an accountant, partner at T&amp;M Consulting and founder of Dashboard Insights and Synced.">
+<meta property="og:url" content="https://thenumbersgamepodcast.com.au/ryan-richardson-data-driven-decision-making-with-dashboard-insights">
+<meta property="og:image" content="https://i.ytimg.com/vi/1N9PhqFTWBc/maxresdefault.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+  :root{
+    --purple:#585af3; --purple-dark:#2c1b8a; --mint:#7ad9a8;
+    --white:#ffffff; --muted:rgba(255,255,255,.60); --dim:rgba(255,255,255,.42);
+    --line:rgba(255,255,255,.12); --card:rgba(255,255,255,.05); --card-hi:rgba(255,255,255,.09);
+    --display:'Anton',Impact,'Helvetica Neue',sans-serif;
+    --sans:'Inter',system-ui,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif;
+    --wrap:1280px;   /* page frame (nav spans this) */
+    --col:960px;     /* content column (player, tabs, text) */
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:var(--sans); color:var(--white); line-height:1.6; -webkit-font-smoothing:antialiased;
+    background:#12093a;
+    background-image:
+      radial-gradient(1200px 600px at 82% -6%, rgba(88,90,243,.45) 0%, transparent 55%),
+      radial-gradient(900px 700px at 5% 8%, rgba(122,217,168,.10) 0%, transparent 50%),
+      linear-gradient(180deg,#2c1b8a 0%,#1a1150 28%,#100b34 62%,#0b0820 100%);
+    background-attachment:fixed;
+  }
+  a{color:inherit}
+  .wrap{max-width:var(--wrap);margin:0 auto;padding:0 36px}
+  main.wrap{max-width:var(--col)}
+  @media(max-width:720px){.wrap{padding:0 22px}}
+
+  /* ── Navbar ── */
+  .nav{position:sticky;top:0;z-index:50;background:linear-gradient(180deg,rgba(24,15,74,.92),rgba(24,15,74,.72));backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+  .nav-in{max-width:var(--wrap);margin:0 auto;padding:11px 36px;display:flex;align-items:center;justify-content:space-between}
+  @media(max-width:720px){.nav-in{padding:11px 22px}}
+  .brand{display:block;line-height:0}
+  .brand img{height:36px;width:auto;display:block}
+  .navlinks{display:flex;gap:28px;align-items:center}
+  .navlinks a{text-decoration:none;font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);transition:.15s}
+  .navlinks a:hover{color:var(--white)}
+  .navlinks a.navtop{cursor:default}
+  .navgroup{position:relative;display:flex;align-items:center}
+  .navgroup .subnav{display:none;position:absolute;top:100%;left:50%;transform:translateX(-50%);padding-top:14px;min-width:180px}
+  .navgroup:hover .subnav,.navgroup:focus-within .subnav{display:block}
+  .subnav-in,.navgroup .subnav{z-index:60}
+  .navgroup .subnav a{display:block;background:#180f4a;border:1px solid var(--line);border-top:0;padding:12px 16px;font-size:12px;color:rgba(255,255,255,.85)}
+  .navgroup .subnav a:first-child{border-top:1px solid var(--line)}
+  .navgroup .subnav a:hover{background:#221768;color:var(--white)}
+  .navburger{display:none;background:none;border:1px solid var(--line);padding:8px 10px;cursor:pointer;color:var(--white);transition:.15s}
+  .navburger:hover{border-color:rgba(122,217,168,.6)}
+  .navburger svg{width:20px;height:20px;fill:currentColor;display:block}
+  .navdrop{display:none}
+  @media(max-width:720px){
+    .navlinks{display:none}
+    .navburger{display:block}
+    .navdrop{display:block;position:absolute;left:0;right:0;top:100%;
+      background:#180f4a;border-bottom:1px solid var(--line);box-shadow:0 24px 50px rgba(0,0,0,.45)}
+    .navdrop[hidden]{display:none}
+    .navdrop a{display:block;padding:15px 22px;text-decoration:none;font-size:14px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:rgba(255,255,255,.9);border-bottom:1px solid rgba(255,255,255,.06)}
+    .navdrop a:last-child{border-bottom:0}
+    .navdrop a.sub{padding-left:42px;font-size:13px;color:rgba(255,255,255,.72)}
+    .navdrop .navlabel{display:block;padding:15px 22px 6px;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.4)}
+  }
+
+  /* ── Hero / hook (marker-highlight system: purple hook wraps naturally, mint payoff below)
+     Rules: title splits at its natural break (colon/pipe/question mark). Front = hook (purple,
+     big), back = payoff (mint, smaller). No break in title = purple hook only. Highlights hug
+     the text (tight em padding tuned to Anton) and wrap via box-decoration-break — never
+     hand-pick line breaks or mint words. ── */
+  header.hero{padding:34px 0 6px}
+  .hook{--inx:clamp(8.4px,2.1vw,15.6px)} /* one shared text inset so hook + payoff first letters align */
+  .hook .hk{font-family:var(--display);font-weight:400;text-transform:uppercase;
+    font-size:clamp(28px,7vw,52px);line-height:1.3;letter-spacing:-.5px;text-wrap:balance}
+  .hook .hk span{color:var(--white);padding:.04em var(--inx) .02em;
+    background:linear-gradient(var(--purple),var(--purple)) 0 50%/100% 87% no-repeat;
+    -webkit-box-decoration-break:clone;box-decoration-break:clone}
+  .hook .pay{font-family:var(--display);font-weight:400;text-transform:uppercase;
+    font-size:clamp(16px,4vw,24px);line-height:1.5;letter-spacing:.6px;margin-top:8px;text-wrap:balance}
+  .hook .pay span{color:#0a0a0a;padding:.08em var(--inx) .04em;
+    background:linear-gradient(var(--mint),var(--mint)) 0 50%/100% 88% no-repeat;
+    -webkit-box-decoration-break:clone;box-decoration-break:clone}
+  /* no-hook titles: mid-split into two full-size rows, purple then mint */
+  .hook .hk span.hkrow{display:block;background:none;padding:0}
+  .hook .hk .hkrow+.hkrow{margin-top:8px}
+  .hook .hk span.mintseg{color:#0a0a0a;
+    background:linear-gradient(var(--mint),var(--mint)) 0 50%/100% 87% no-repeat}
+
+  /* ── Player (clean facade → real player on tap) ── */
+  .player-wrap{margin:24px 0 4px;scroll-margin-top:76px}
+  .player{position:relative;width:100%;padding-top:56.25%;border-radius:0;overflow:hidden;background:#000;box-shadow:0 30px 70px rgba(0,0,0,.5),0 0 0 1px rgba(255,255,255,.06)}
+  .facade{position:absolute;inset:0;border:0;cursor:pointer;background-size:cover;background-position:center;display:flex;align-items:center;justify-content:center;padding:0}
+  .facade .play{width:74px;height:74px;border-radius:50%;background:rgba(10,6,30,.40);border:2px solid rgba(255,255,255,.72);display:flex;align-items:center;justify-content:center;transition:.18s;-webkit-backdrop-filter:blur(1px);backdrop-filter:blur(1px)}
+  .facade:hover .play{background:rgba(88,90,243,.62);transform:scale(1.07);border-color:#fff}
+  .facade .play::after{content:"";border-style:solid;border-width:11px 0 11px 19px;border-color:transparent transparent transparent #fff;margin-left:5px}
+  .player iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+
+  /* ── Episode facts (bottom of the Summary panel — templated per episode) ── */
+  .sumfacts{margin:14px 10px 4px;padding-top:13px;border-top:1px solid rgba(255,255,255,.08);display:flex;flex-direction:column;gap:8px}
+  .fact{display:flex;gap:12px;font-size:13.5px}
+  .fact .fl{flex:none;width:104px;color:var(--dim);font-weight:600;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;padding-top:2px}
+  .fact .fv{color:rgba(255,255,255,.9);font-weight:500}
+  .fact .fv a{color:var(--mint);text-decoration:none;border-bottom:1px solid rgba(122,217,168,.4);transition:.15s}
+  .fact .fv a:hover{border-bottom-color:var(--mint)}
+
+  /* ── Episode tag (identity: black label hanging off the title corner) ── */
+  .eptag{display:inline-block;position:relative;left:-6px;margin-bottom:-7px;z-index:2;
+    background:#0a0a0a;color:var(--white);font-family:var(--display);font-weight:400;
+    font-size:13.5px;letter-spacing:1.5px;text-transform:uppercase;padding:6px 11px 4px}
+
+  /* ── Explore tabs (sticky mode switcher; one panel swaps below, nothing shoves) ── */
+  .explore{margin-top:22px}
+  .tabs{position:sticky;top:58px;z-index:40;display:flex;flex-wrap:wrap;gap:8px;padding:10px 0;
+    background:linear-gradient(180deg,rgba(18,10,55,.96),rgba(18,10,55,.86));
+    backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+  .tabbtn{font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.5px;
+    font-size:14.5px;color:var(--white);background:var(--purple);border:1px solid var(--purple);
+    padding:9px 13px 7px;cursor:pointer;transition:.15s}
+  .tabbtn:hover{filter:brightness(1.12)}
+  .tabbtn.on{background:var(--mint);border-color:var(--mint);color:#0a0a0a}
+  .tabbtn.on:hover{filter:none}
+  .tabbtn .ct{font-size:12px;opacity:.75;font-variant-numeric:tabular-nums}
+  .tabbtn .ct::before{content:" · "}
+  .tpanel{border:1px solid var(--line);background:var(--card);padding:12px 10px 14px}
+  .hint{font-size:12.5px;color:var(--muted);padding:2px 10px 10px;border-bottom:1px solid rgba(255,255,255,.08);margin-bottom:6px}
+
+  /* ── Listen row (no box: label left, service pills follow) ── */
+  .listen{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:12px 16px;margin-top:34px}
+  .listen .lname{font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--dim)}
+  .listen a{display:inline-flex;align-items:center;gap:9px;padding:11px 18px;border-radius:999px;
+    background:var(--mint);color:#08210f;text-decoration:none;font-weight:800;font-size:12.5px;
+    letter-spacing:.04em;text-transform:uppercase;transition:.15s}
+  .listen a:hover{filter:brightness(1.06);transform:translateY(-1px);box-shadow:0 12px 30px rgba(122,217,168,.25)}
+  .listen svg{width:20px;height:20px;fill:currentColor;flex:none}
+  /* ── Listen-now Spotify audio embed (full column width, above the pills) ── */
+  .listen-now{margin-top:40px}
+  .listen-now .ln-head{display:flex;align-items:baseline;justify-content:space-between;gap:14px;margin-bottom:13px}
+  .listen-now .ln-title{font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--dim)}
+  .audio-embed{border-radius:12px;overflow:hidden;box-shadow:0 20px 50px rgba(0,0,0,.4),0 0 0 1px rgba(255,255,255,.06)}
+  .audio-embed iframe{display:block;width:100%;border:0}
+  @media(max-width:720px){.listen-now{margin-top:32px}}
+
+  /* ── Keep exploring (thumbnails link to other episode PAGES, never timecodes).
+     Swipeable strip on mobile, fits three-up on desktop. Variant rule: claim
+     "similar ground" + reason lines ONLY when moment-level topic overlap is
+     genuinely strong; otherwise show the latest released episodes with dates —
+     never invent a connection. ── */
+  .relsec{margin-top:60px;padding-top:58px;border-top:1px solid var(--line)} /* line = end of this episode's info */
+  .reldots{display:flex;justify-content:center;gap:7px;margin-top:12px}
+  .reldots span{width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.25);transition:.2s}
+  .reldots span.on{background:var(--mint)}
+  .relsec .rtitle{display:inline-block;font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.5px;font-size:14.5px;background:var(--mint);color:#0a0a0a;padding:9px 13px 7px;margin-bottom:18px}
+  .relgrid{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding-bottom:6px;scrollbar-width:none}
+  .relgrid::-webkit-scrollbar{display:none}
+  .relcard{flex:0 0 56%;max-width:232px;scroll-snap-align:start;display:flex;flex-direction:column;text-decoration:none;background:var(--card);border:1px solid var(--line);transition:.15s}
+  .relcard:hover{background:var(--card-hi);border-color:rgba(122,217,168,.55)}
+  .relcard img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block}
+  .relcard .rt{display:block;font-size:12.5px;font-weight:600;color:rgba(255,255,255,.92);line-height:1.4;padding:8px 8px 0}
+  .relcard .rfoot{margin-top:auto;display:flex;justify-content:space-between;align-items:flex-end;gap:8px;padding:10px 8px 9px}
+  .relcard .rwhy{font-size:11.5px;color:var(--mint)}
+  .relcard .rtag{display:inline-block;background:#0a0a0a;color:var(--white);font-family:var(--display);font-size:10px;letter-spacing:1.2px;text-transform:uppercase;padding:3px 7px 2px;white-space:nowrap;flex:0 0 auto}
+
+  /* ── Dropdown sections (accordion under the player) ── */
+  .drops{margin-top:34px;display:flex;flex-direction:column;gap:11px}
+  .drop{border:1px solid var(--line);border-radius:0;background:var(--card);overflow:hidden;transition:border-color .15s}
+  .drop[open]{border-color:rgba(122,217,168,.35)}
+  .drop>summary{list-style:none;cursor:pointer;padding:16px 18px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+  .drop>summary::-webkit-details-marker{display:none}
+  .drop>summary .st{font-weight:700;font-size:15.5px;letter-spacing:.005em}
+  .drop>summary .ct{margin-left:auto;font-size:12px;color:var(--dim);font-weight:600;font-variant-numeric:tabular-nums}
+  .drop>summary .chev{flex:none;width:22px;height:22px;border-radius:50%;background:rgba(122,217,168,.14);color:var(--mint);display:flex;align-items:center;justify-content:center;font-family:var(--display);font-size:15px;line-height:1;transition:.2s;transform:translateY(-1px)}
+  .drop[open]>summary .chev{transform:rotate(45deg)}
+  .drop-body{padding:2px 12px 12px}
+
+  /* chapters */
+  .chapter{display:flex;align-items:baseline;gap:14px;width:100%;text-align:left;cursor:pointer;background:none;border:0;color:inherit;font-family:inherit;padding:11px 10px;border-radius:10px;transition:.13s}
+  .chapter:hover{background:var(--card-hi)}
+  .chapter .tc{font-variant-numeric:tabular-nums;font-weight:700;font-size:14px;color:var(--mint);flex:none;width:48px}
+  .chapter .cx{font-size:15px;font-weight:500;color:rgba(255,255,255,.9)}
+  .chapter:hover .cx{color:#fff}
+
+  /* questions */
+  .q{display:flex;align-items:center;gap:12px;width:100%;text-align:left;cursor:pointer;background:none;border:0;border-radius:11px;color:inherit;font-family:inherit;padding:12px 10px;transition:.14s}
+  .q+.q{border-top:1px solid rgba(255,255,255,.05)}
+  .q:hover{background:var(--card-hi)}
+  .q .qm{font-family:var(--display);font-size:15px;color:var(--mint);flex:none;line-height:1;transform:translateY(1px)}
+  .q .qx{font-size:15px;font-weight:500;color:rgba(255,255,255,.92)}
+  .q .go{margin-left:auto;flex:none;color:var(--dim);font-size:18px;transition:.15s}
+  .q:hover .go{color:var(--mint);transform:translateX(2px)}
+
+  /* summary + transcript bodies */
+  .summary-body p{font-size:16.5px;line-height:1.62;color:rgba(255,255,255,.9);padding:6px 10px 4px}
+  .tbody{padding:2px 10px 8px}
+  .tbody p{font-size:14.5px;line-height:1.7;color:rgba(255,255,255,.78);margin-top:15px;max-width:64ch}
+  .tbody .spk{display:block;font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--mint);margin-bottom:2px}
+
+  /* ── Voice note ask (lives at the bottom of the Summary panel) ── */
+  .vask{margin:16px 10px 4px}
+  .vbtn{display:inline-flex;align-items:center;gap:9px;padding:12px 20px;border-radius:999px;border:0;cursor:pointer;
+    background:var(--mint);color:#08210f;font-family:inherit;font-weight:800;font-size:12.5px;
+    letter-spacing:.04em;text-transform:uppercase;transition:.15s}
+  .vbtn:hover{filter:brightness(1.06);transform:translateY(-1px);box-shadow:0 12px 30px rgba(122,217,168,.25)}
+  .vbtn svg{width:18px;height:18px;fill:currentColor;flex:none}
+  .vslot{background:var(--purple);padding:12px 10px 10px;margin:14px 0 4px;box-shadow:0 18px 40px rgba(0,0,0,.35)}
+  .vslot[hidden]{display:none}
+  .vhead{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;margin-bottom:10px}
+  .vhead .vmsg{font-family:var(--sans);font-size:13px;line-height:1.55;color:rgba(255,255,255,.92);margin:2px 0 0;padding:0 2px}
+  .vclose{background:none;border:0;color:rgba(255,255,255,.85);font-size:22px;line-height:1;cursor:pointer;padding:0 2px}
+  .vclose:hover{color:var(--white)}
+  .vslot iframe{display:block}
+
+  /* ── YouTube subscribe pill (sits in the listen row; outranks .listen a's mint) ── */
+  .listen a.yt-pill{background:var(--purple);color:var(--white)}
+  .listen a.yt-pill:hover{filter:brightness(1.1);transform:translateY(-1px)}
+  @media(max-width:720px){ /* mobile: no label, three compact pills on one row */
+    .listen .lname{display:none}
+    .listen{gap:8px}
+    .listen a{padding:10px 13px;font-size:11px;gap:6px}
+    .listen svg{width:16px;height:16px}
+  }
+
+  /* ── Footer: Follow us on | Brought to you by | Produced by, + Menu dropdown ── */
+  footer{border-top:1px solid var(--line);margin-top:68px;padding:52px 20px 58px}
+  .footgrid{max-width:var(--wrap);margin:0 auto;display:grid;grid-template-columns:1fr 1.15fr .8fr;gap:44px;align-items:start}
+  .fcol{text-align:center;display:flex;flex-direction:column;align-items:center}
+  .foot-label{font-size:11px;font-weight:700;letter-spacing:.26em;text-transform:uppercase;color:var(--dim);margin-bottom:18px}
+  .sponsors{display:flex;justify-content:center;align-items:center;gap:34px;flex-wrap:wrap}
+  .sponsors a,.produced a{display:inline-flex;transition:.15s}
+  .sponsors a:hover,.produced a:hover{transform:translateY(-1px)}
+  .sponsors img{height:32px;width:auto;opacity:.92}
+  .produced img{height:30px;width:auto;opacity:.95}
+  .sponsors a:hover img,.produced a:hover img{opacity:1}
+  footer .socials{display:flex;gap:11px;justify-content:center;flex-wrap:wrap;margin:0}
+  footer .socials a{width:40px;height:40px;border-radius:50%;border:1.5px solid rgba(122,217,168,.5);display:flex;align-items:center;justify-content:center;transition:.15s}
+  footer .socials a svg{width:18px;height:18px;fill:var(--mint);transition:.15s}
+  footer .socials a:hover{background:var(--mint);border-color:var(--mint);transform:translateY(-2px)}
+  footer .socials a:hover svg{fill:#0a0a0a}
+  .footbar{max-width:var(--wrap);margin:34px auto 0;border-top:1px solid var(--line);padding-top:20px;display:flex;flex-direction:column;align-items:center;gap:14px}
+  .footnav-dd{display:block;width:100%;max-width:var(--wrap);margin:0 auto;text-align:center}
+  .footnav-dd>summary{list-style:none;cursor:pointer;display:inline-flex;align-items:center;gap:9px;font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.5px;font-size:13px;color:var(--muted);background:transparent;border:1px solid var(--line);padding:8px 16px 6px;transition:.15s}
+  .footnav-dd>summary::-webkit-details-marker{display:none}
+  .footnav-dd>summary:hover{color:var(--mint);border-color:rgba(122,217,168,.45)}
+  .footnav-dd>summary .ham{width:15px;height:15px;fill:currentColor;transform:translateY(-1px)}
+  .footnav-dd .dd-links{display:flex;flex-direction:row;flex-wrap:wrap;justify-content:center;gap:12px 24px;padding:24px 0 4px}
+  .footnav-dd .dd-links a{font-size:11.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:.15s}
+  .footnav-dd .dd-links a:hover{color:var(--mint)}
+  .copyright{font-size:12px;color:var(--dim);text-align:center}
+  @media(max-width:720px){.footgrid{grid-template-columns:1fr;gap:34px}footer{padding:40px 16px 20px}.footbar{margin-top:34px;padding-top:24px;gap:20px}.footnav-dd .dd-links{flex-direction:column;align-items:center;gap:15px}}
+
+  @media(min-width:720px){header.hero{padding:48px 0 6px}}
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "PodcastEpisode", "name": "Ryan Richardson - Data-driven Decision Making with Dashboard Insights", "url": "https://thenumbersgamepodcast.com.au/ryan-richardson-data-driven-decision-making-with-dashboard-insights", "datePublished": "2023-12-04", "episodeNumber": 145, "image": "https://i.ytimg.com/vi/1N9PhqFTWBc/maxresdefault.jpg", "partOfSeries": {"@type": "PodcastSeries", "name": "The Numbers Game", "url": "https://thenumbersgamepodcast.com.au/"}}</script>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-in">
+      <a class="brand" href="/" aria-label="The Numbers Game home"><img src="assets/tng-logo.png" alt="The Numbers Game"></a>
+      <div class="navlinks">
+        <a href="/">Home</a>
+        <div class="navgroup">
+          <a class="navtop">Episodes</a>
+          <div class="subnav">
+            <a href="/episodes">All episodes</a>
+            <a href="/adventure">Find moments</a>
+          </div>
+        </div>
+        <div class="navgroup">
+          <a class="navtop">About</a>
+          <div class="subnav">
+            <a href="/about">The show</a>
+            <a href="/nick-reilly">Nick Reilly</a>
+            <a href="/jason-robinson">Jason Robinson</a>
+          </div>
+        </div>
+        <a href="/contact">Contact</a>
+      </div>
+      <button class="navburger" id="navburger" type="button" aria-label="Menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24"><path d="M3 6h18v2H3zM3 11h18v2H3zM3 16h18v2H3z"/></svg>
+      </button>
+    </div>
+    <div class="navdrop" id="navdrop" hidden>
+      <a href="/">Home</a>
+      <span class="navlabel">Episodes</span>
+      <a class="sub" href="/episodes">All episodes</a>
+      <a class="sub" href="/adventure">Find moments</a>
+      <span class="navlabel">About</span>
+      <a class="sub" href="/about">The show</a>
+      <a class="sub" href="/nick-reilly">Nick Reilly</a>
+      <a class="sub" href="/jason-robinson">Jason Robinson</a>
+      <a href="/contact">Contact</a>
+    </div>
+  </nav>
+
+  <main class="wrap">
+
+    <header class="hero">
+      <div class="hook">
+        <span class="eptag">EP 145</span>
+        <h1 class="hk"><span class="hkrow"><span>Ryan Richardson - Data-driven Decision</span></span>
+        <span class="hkrow"><span class="mintseg">Making with Dashboard Insights</span></span></h1>
+      </div>
+    </header>
+
+    <div class="player-wrap" id="player-wrap">
+      <div class="player" id="player">
+        <button class="facade" id="facade" style="background-image:url('https://i.ytimg.com/vi/1N9PhqFTWBc/maxresdefault.jpg')" aria-label="Play episode">
+          <span class="play"></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="explore">
+      <div class="tabs" role="tablist">
+        <button class="tabbtn on" data-panel="p-summary">Summary</button>
+        <button class="tabbtn" data-panel="p-chapters">Chapters<span class="ct" id="chcount"></span></button>
+        <button class="tabbtn" data-panel="p-questions">Questions<span class="ct" id="qcount"></span></button>
+      </div>
+      <section class="tpanel" id="p-summary">
+        <div class="summary-body">
+          <p>Jason, Nick and Marty welcome the show's first sponsor, Ryan Richardson, an accountant, partner at T&amp;M Consulting and founder of Dashboard Insights and Synced. Ryan explains how being a slave to a time-based business drove him to build Dashboard Insights, a data analytics product that connects to a business's data to surface the operational activity that drives financial outcomes. He shares his recurring what's-the-worst-that-can-happen mindset, how he empowers his team with authority and control points to avoid being the bottleneck, and his journey into offshoring through Synced after three attempts. The conversation covers innovation, the practical use of AI in professional services and transport logistics, a recycling client that went ten times on profit, and his belief that focusing on people first solves most business problems.</p>
+        </div>
+        <div class="vask">
+          <button class="vbtn" id="vbtn" type="button">
+            <svg viewBox="0 0 24 24"><path d="M12 14a3 3 0 0 0 3-3V6a3 3 0 1 0-6 0v5a3 3 0 0 0 3 3zm5-3a5 5 0 0 1-10 0H5a7 7 0 0 0 6 6.92V21h2v-3.08A7 7 0 0 0 19 11h-2z"/></svg>
+            Send us a voice note
+          </button>
+          <div class="vslot" id="vslot" hidden>
+            <div class="vhead">
+              <p class="vmsg">We'd love to hear from you. You can leave up to a 90 second voice note for us to play on the show: a question, some feedback, or a topic you want covered.</p>
+              <button class="vclose" id="vclose" type="button" aria-label="Close">&times;</button>
+            </div>
+            <iframe src="https://www.speakpipe.com/widget/inline/hhq6kzggsx7zpcsvakgxfrzun3zidpde" allow="microphone" width="100%" height="200" frameborder="0" title="Leave The Numbers Game a voice note"></iframe>
+          </div>
+          <script async src="https://www.speakpipe.com/widget/loader.js" charset="utf-8"></script>
+        </div>
+        <div class="sumfacts">
+          <div class="fact"><span class="fl">Release date</span><span class="fv">4 December 2023</span></div>
+          <div class="fact"><span class="fl">Hosts</span><span class="fv"><a href="/nick-reilly">Nick Reilly</a>, <a href="/jason-robinson">Jason Robinson</a> &amp; <a href="/marty-vidakovic">Marty Vidakovic</a></span></div>
+          <div class="fact"><span class="fl">Guest</span><span class="fv">Ryan Richardson</span></div>
+
+        </div>
+      </section>
+      <section class="tpanel" id="p-chapters" hidden>
+        <p class="hint">Jump straight to the part you need.</p>
+        <div id="chapters"></div>
+      </section>
+      <section class="tpanel" id="p-questions" hidden>
+        <p class="hint">Real questions this episode answers. Tap one to hear the answer.</p>
+        <div id="qa"></div>
+      </section>
+    </div>
+
+    <div class="drops">
+
+      <details class="drop">
+        <summary><span class="st">Episode transcript</span><span class="chev">+</span></summary>
+        <div class="drop-body tbody">
+          <p><span class="spk">Jason · 00:00</span>Welcome to episode 145 of The Numbers Game. I'm Jase. I'm here with Nick and Marty. How are we going today, fellas?</p>
+          <p><span class="spk">Marty · 00:06</span>Going well, thanks, Jase. Australia won the 50-over World Cup in India overnight. So I know this will go out a bit later, but Travis Head, you legend, 137, bowled India out under 250. 110,000 screaming Indian fans that went really, really quiet.</p>
+          <p><span class="spk">Marty · 00:25</span>So Haven't been proud of the— yeah, we want to be proud of our Australian cricket team, and last night I was. So well done, Aussies. Nick, how are you, my friend? You going well?</p>
+          <p><span class="spk">Nick · 00:34</span>I'm well, mate. Yeah, disappointed I couldn't stay up and watch it. I think I fell asleep with about 5 overs to go, um, in India's batting innings. But, um, I don't know anyone who would have stayed up and watched it. I'm tipping it would have finished at about 3 AM.</p>
+          <p><span class="spk">Jason · 00:48</span>Also missed watching the end of the cricket, but I was very happy with the time zone of the Formula 1. So I think that started about 5 PM, which is unusual for the Formula 1. So look at us sports talking all things sport from the weekend and trust Marty to always manage to bring cricket into almost every single episode.</p>
+          <p><span class="spk">Jason · 01:04</span>So yeah, just great. We're all fresh, all ready to crack in and excited to crack in for this episode. And I will launch straight into it because we do have a lot to cover, guys. We're welcoming to the show our sponsor, Ryan Richardson from Dashboard Insights.</p>
+          <p><span class="spk">Jason · 01:20</span>So Ryan and I came across each other in the accounting industry many years ago. We intro'd. It's one of those things where the accounting industry, as big as it is, it's often quite incestuous. Quite small and you kind of get to know the right people at the right times. And Ryan became a partner and a director of T&amp;M Consulting.</p>
+          <p><span class="spk">Jason · 01:37</span>And then through his, the business of T&amp;M Consulting has then founded Dashboard Insights that we know and love at this show. We've always talked about it for the last couple of eps of this season and how Dashboard Insights is empowering business owners to make decisions with their data. And also has another business called Sync Staffing, which are all things that we're going to cover on today's show.</p>
+          <p><span class="spk">Jason · 01:57</span>He's the man behind the first sponsorship as mentioned. So welcome, Ryan. Ryan to The Numbers Game. How you going?</p>
+          <p><span class="spk">Ryan · 02:03</span>Thanks, Chase. Very good to be here and going really well. Thanks for having me.</p>
+          <p><span class="spk">Jason · 02:06</span>Just to give our listeners a bit of an idea about who Ryan is, can you start with a bit of a background of yourself, mate? I've only just scratched the surface. Who is Ryan and what's your background, mate?</p>
+          <p><span class="spk">Ryan · 02:16</span>Yeah, awesome. So first and foremost, I'm actually an accountant by trade. So like you mentioned, Chase, we met, I think it might have been at XeroCon many, many moons ago now. So maybe 2016 or something, something back that far. But an accountant by trade, grew up in country Queensland, father of two, married, that sort of stuff.</p>
+          <p><span class="spk">Ryan · 02:36</span>So, you know, but realistically, business is what drives me. So from a personal perspective, whilst I am a family man and those sorts of things, what I really get a kick out of and what really drives me from a professional perspective is being in business and not only helping other business owners, but also making sure that we're running a really good organization ourselves.</p>
+          <p><span class="spk">Ryan · 03:02</span>So we met over accounting and that was, I guess, my first profession. And beyond that, obviously Dashboard Insights came about and Synced was probably an opportunistic business off the back of that as well, Jay. So that's a little bit about me.</p>
+          <p><span class="spk">Ryan · 03:18</span>And yeah, great to be here and great to be a sponsor of the show in this season, episode 145. Congratulations and well done.</p>
+          <p><span class="spk">Marty · 03:26</span>Thanks for backing us, Ryan, and we're excited to be backing you as well. But give us an indication of what inspired you to start Dashboard Insights and how does it actually help business owners?</p>
+          <p><span class="spk">Ryan · 03:39</span>Yeah, so Marty, probably the best place that I could start is really just to explain a little bit more about my journey. So I've been an accountant now for more than 17 years and I guess from my perspective, I found a real problem as I started to be, or, you know, as a father and as a family man and those sorts of things, I was really a bit of a slave to the business, so to speak.</p>
+          <p><span class="spk">Ryan · 04:04</span>And I don't think that that is too unusual in any sort of profession where you're selling time at the end of the day, whether or not you're an accountant, a lawyer, an engineer, you know, someone in business and in particular those selling time, you end up being somewhat of a slave to the business a little bit.</p>
+          <p><span class="spk">Ryan · 04:22</span>So that was a little bit of a problem for me as my life started to change, you know, kids and those sorts of things. And ultimately as well, from my organization perspective, I entered the organization on my current practice in 2019. I was previously an accountant elsewhere and did my current practice in 2019, T&amp;M Consulting.</p>
+          <p><span class="spk">Ryan · 04:42</span>At that time, we were at about 10 staff. At 10 staff, you know, certainly we're a good organization and everything like that. But what we wanted to do was really create a fair bit of growth and really expand on the service offerings that we were currently offering to our customers.</p>
+          <p><span class="spk">Ryan · 04:59</span>That was really the exciting opportunity for me in joining TNM Consulting. We had a fantastic client base, but we had so much upside in what we could do for our customers. So realistically, Dashboard Insights came about because we started to grow our business. We went from about 10 to 20 staff in about 10 months.</p>
+          <p><span class="spk">Ryan · 05:15</span>And going from 10 to 20 staff, you know, sounds like a lot, but then I guess there is the operational impact that that actually has on your organization. So in our business and on reflection, T&amp;M Consulting in 2019, we got out of control when it came to job flow, out of control when it came to just managing some of the key areas of our organization, including individual KPIs, including our billing.</p>
+          <p><span class="spk">Ryan · 05:40</span>So getting our actual work from the start of the job to completion of the job so that we could get to a billing point. So that created a whole realm of challenges. And Dashboard Insights came about because I was trying to solve my own challenges, not only personally, but also professionally in business, to then empower my team to reduce my key person dependency in the organization and make sure that every individual in our business could make their</p>
+          <p><span class="spk">Ryan · 06:11</span>biggest contribution to the business to make sure that we could continue to run a great organization as we continued to progress. And we're making data-driven decisions to be able to do so. So that's probably the starting point. Why did that really— why did Dashboard Insights and why are we here today really was really to solve my initial problems at a personal level before we started to commercialize it beyond that.</p>
+          <p><span class="spk">Nick · 06:35</span>That's awesome. As a small business owner that's had a growing business, I can I can relate to that. And I think particularly in accounting, like, I look around at the accountants I know, obviously the two on this podcast, um, uh, aside, and that, that thing you said, slave to the business, it just, it just really resonates.</p>
+          <p><span class="spk">Nick · 06:54</span>And I think the challenge is people don't know how to, um, how to do what you've done. Like, how do you do it? Where do you start? I get asked that a lot. Like, how did you get off the tools? So I think what you're doing with Dashboard Insights is awesome.</p>
+          <p><span class="spk">Nick · 07:10</span>So just on that, maybe talk through some of the key features, you know, just to get more granular on it. Some of the key features that Dashboard Insights helps people implement into their business.</p>
+          <p><span class="spk">Ryan · 07:23</span>Yeah, thanks, Nick. At our core, Dashboard Insights, what are we is a data analytics business. So it doesn't really matter the industry that you're in. If you're a business owner, or, and, and you own a business, that business has a whole lot of data. That data is going to be stored somewhere, and our challenges at Dashboard Insights is really to connect to that data and start to understand what the key drivers of that organization is.</p>
+          <p><span class="spk">Ryan · 07:49</span>Now, Dashboard Insights in our first and, or, or our biggest industry that we work with is, are those professional services industries. So think accountants, lawyers, engineers, architects, and those sorts of things. And certainly In the accounting and bookkeeping space, we do a whole lot of work in particular around Xero Practice Manager and those accounting firms running Xero Practice Manager.</p>
+          <p><span class="spk">Ryan · 08:10</span>It's probably our biggest single niche of clients that we work with. But outside of that, we work with all sorts of different industries as well. So think transport and logistics with the huge amount of data that they have in their organizations. Think recycling, think wholesale, retail, sales-focused businesses.</p>
+          <p><span class="spk">Ryan · 08:29</span>We connect to all sorts of data with respect to organizations. So from my perspective, Dashboard Insights is a business that connects to business data and really creates opportunity from that data to make those data-driven, operationally focused decisions to create not only transparency but efficiency in organizations.</p>
+          <p><span class="spk">Ryan · 08:51</span>Whilst yes, there's an element of reporting to it, it's the operational impact that I think is most powerful with Dashboard Insights. So we see what happens in the data when people implement our product. We see the operational impact from all sorts of metrics, but it's usually those operational metrics that drive those ultimate reporting outcomes, which are often financial reporting outcomes and those sorts of things.</p>
+          <p><span class="spk">Ryan · 09:15</span>But the reality is that that positive impact at the financial reporting level will start at an operational impact. Focused on data and making data-driven decisions.</p>
+          <p><span class="spk">Nick · 09:25</span>Just to make it real simple, could you give us an example?</p>
+          <p><span class="spk">Ryan · 09:28</span>Yeah, awesome. So in an accounting, accounting business as an example, it's not just the billing that is driving the accounting business. The billing is a result of doing a whole lot of activity along the way. So as an example, Nick, you'll go and get your taxes done for your business as an example, and your accountant might send you a query list to get your taxes done as an example.</p>
+          <p><span class="spk">Ryan · 09:49</span>It's one of the most common jobs that is done in the accounting practice. So that query list gets sent to you, Nick. You go and provide those queries and then that starts to enter into the production line of the organization. So in the accounting practice, the accounting practice has got to go and do all their checks and balances, apply the appropriate tax laws, create the financial reports and those sorts of things, engage with you along the journey, Nick.</p>
+          <p><span class="spk">Ryan · 10:12</span>And then the final thing that happens is that the job gets completed, delivered to you, and then the accounting practice will probably send you an invoice. Okay. At that point though, that's usually what is tracked at a small business level is that invoicing or that cost from a purchasing perspective.</p>
+          <p><span class="spk">Ryan · 10:29</span>But there's this whole huge amount of activity before that point that is seldom tracked appropriately and seldom communicated within the organization, whether or not it's accounting practice or recycling business, seldom communicated with respect to what is actually driving the organization from an operational level and what are the key control points, what needs to be focused on, what needs to be optimized, and, you know, celebrate the wins and have the tough challenges along the way.</p>
+          <p><span class="spk">Ryan · 10:59</span>That usually though happens at an operational level rather than a financial reporting level, which I think many organizations in Australia and probably the world start with the financial reporting conversation and then try and backfill an operational type conversation after that.</p>
+          <p><span class="spk">Nick · 11:16</span>Yeah, awesome.</p>
+          <p><span class="spk">Jason · 11:17</span>As a, I guess, as a user of dashboards, you know, where we were a year or two ago to what we can now see and analyze now, whether it's individual team level or individual team member level, then at the team size, and then at the client profitability. And I mean, there's just— it's getting that data into one place where it's easy to understand, which for us has been an absolute game changer.</p>
+          <p><span class="spk">Jason · 11:37</span>Ryan, I'm interested in, you know, when I think about needing to solve a problem in, in my business at the moment, and, you know, historically I've gone, cool, I've got this problem, I'm going to go look at the market and find a solution. And that's probably why at Future Advisory we're probably running like 25 different apps in our app stack.</p>
+          <p><span class="spk">Jason · 11:54</span>So for yourself though, you know, you identified a problem at your business that you wanted to solve. I'm interested in what point did you go, okay, we can build that ourselves. And then when did you turn around and go, well, shit, if this is a problem at T&amp;M, whatever I'm building, I can then actually sell that to the broader market.</p>
+          <p><span class="spk">Ryan · 12:13</span>I guess the biggest, the biggest thing from my perspective is I come into a lot of things in business with a mindset of what the, what is the worst that can happen? Okay, so I was probably in a really fortunate position with the way that our business was trading. We were running a good organization.</p>
+          <p><span class="spk">Ryan · 12:29</span>We had a fantastic team. I was starting to alleviate myself from the tools. At a point where I thought, hold on, there's got to be a better way to this. I've got to find efficiency. I've got to free myself up here.</p>
+          <p><span class="spk">Ryan · 12:44</span>So like you, Jace, I probably went out to market, tried to understand what other solutions were out there. There wasn't anything that really ticked all of the boxes that I wanted to tick. So at that point I was thinking, okay, what's the solution here? And I was looking at all sorts of options. And in the end I just thought, you know, what's the worst that can happen is I go and start to build Dashboard Insights as we know it today and I lose a bit of money along the way and it's a loss.</p>
+          <p><span class="spk">Ryan · 13:11</span>It's a business loss. But at the end of the day, that would have been the worst that would have happened. So it was an internal project that we were trying to build to solve our own problems. And if the worst that happened was that we lost a little bit of money trying to solve our problem, then that was really the way that I'd approached it.</p>
+          <p><span class="spk">Ryan · 13:29</span>So it wasn't any more scientific than that. It was just in the back of my mind, okay, well, can we actually solve our problems by throwing a little bit of money at the problem? And that, I guess, was the starting point to getting to a minimum viable product. So that took a fair bit of money.</p>
+          <p><span class="spk">Ryan · 13:45</span>It was inefficient. It was certainly inefficient. Don't get me wrong. I've learned a lot along the way as well.. But our minimum viable product probably took us 6 to 8 months to get to a point where we were able to roll that out internally. And beyond that, what we've been able to do is obviously continue to optimize our product.</p>
+          <p><span class="spk">Ryan · 14:04</span>And we found a need probably just from sharing ideas. You know, I'm a bit of a sharer, Jace, as you know. You and I often share ideas about our industry broadly, but certainly about our businesses as well.. But the reality is that I was trying to share, I was sharing ideas about what was working for us.</p>
+          <p><span class="spk">Ryan · 14:23</span>A couple of other people in the industry wanted us to do a similar thing for them, which is really where the catalyst for the commercialization came of Dashboard Insights. So we started to solve our own problems. We were talking to others about it and realized that there was a real and genuine commercial need in our industry, but also for other industries as well.</p>
+          <p><span class="spk">Marty · 14:46</span>Yeah, I mean, entrepreneurs really are very intuitive in the way they scale initially in their businesses. And you know, you create sales, you create that upside, and you think you just need more and more and more people. But without getting those efficiencies at that early level, I mean, really, it's incredible what you're doing.</p>
+          <p><span class="spk">Marty · 15:05</span>Nick's put me onto a guy by the name of Gary Brecker. In regards to learning about health. And he talks about how a lot of people just like to be seen as being fit. They go to the gym, they eat okay, but they don't understand the methylation of the body and the nutrients and the genetic testing and the specific, you know, the specific things you gotta put in to optimize you as a human being.</p>
+          <p><span class="spk">Marty · 15:31</span>What you are doing here to me is very much like absolutely understanding a business at its core and every, all of its functionality. And really optimizing the performance of that business at a very micro level that a lot of business owners sometimes just don't have the time to think about themselves.</p>
+          <p><span class="spk">Marty · 15:48</span>So to have something like this is quite outstanding in regards to getting the most out of your business regardless of what size. So yeah, well done to you, Ryan. Really, really incredible in what you're doing in our space. My question though next, goes to TNM Consulting.</p>
+          <p><span class="spk">Marty · 16:09</span>How did you become involved in that side of the business with the accounting side? And also I'm interested in regards to your own specializations within the business, because you strike me as the kind of guy that's not just running an accountancy practice here.</p>
+          <p><span class="spk">Marty · 16:25</span>I think there's a few little elements to it that are quite unique. So maybe just share that uniqueness with our audience and how your initial involvement came about.</p>
+          <p><span class="spk">Ryan · 16:36</span>Yeah, well firstly, T&amp;M Consulting has been around prior to 2019 for about 20 years. So we were founded by my business partner Theo in 1998 and the business has always had a fantastic client base.</p>
+          <p><span class="spk">Ryan · 16:51</span>I think we've always worked in the right ways with our clients and I think that's one of the absolutely keys for every business, but certainly for T&amp;M Consulting. Consulting is that T&amp;M has always put its clients first regardless of all else. And I think many businesses forget looking at all of their internal challenges and problems and all the internal noise that at the end of the day, we exist to provide services to a really good quality level to our customer regardless of our industry.</p>
+          <p><span class="spk">Ryan · 17:21</span>So that's something that's been really important to Theo since inception of T&amp;M Consulting. We've been able to expand as an organization to 2019. I was actually the 10th person in the organization at that point. I joined the organization after coming across Theo in some other business-type conversations.</p>
+          <p><span class="spk">Ryan · 17:43</span>It was actually a property conversation that sparked our initial, I guess, interaction with each other. And from there, we were sharing some ideas about being in the accounting industry and being accountants by trade and all of these sorts of things, but having a natural interest in property.</p>
+          <p><span class="spk">Ryan · 18:00</span>So there's a fantastic property person, albeit he's an accountant, but developed property over many years and those sorts of things. And a lot of our client base is in some way, shape, or form connected to property in some avenue.</p>
+          <p><span class="spk">Ryan · 18:16</span>So it might be our medicos who are clients of ours who end up doing a small development of a medical center as an example, or There might be a wholesaling business who ends up doing a small residential property development, a couple of townhouses side by side or something like that.</p>
+          <p><span class="spk">Ryan · 18:33</span>So, and I think that comes a lot from our approach to our customers is that we're not just trying to do the taxes for our customers, you know, as an accounting firm. Yes, you know, that's what people expect from your accountant and all of those sorts of things. And that's a statutory obligation is to keep up to date with your tax and compliance and those sorts of things.</p>
+          <p><span class="spk">Ryan · 18:53</span>But the reality is, is that what we do as an organization is focus on our customers first. So I know in my business, as an example, right now we act for 547 family groups at T&amp;M Consulting. And so it's 547 different families that we've got to understand what their goals are, how they're looking to achieve it.</p>
+          <p><span class="spk">Ryan · 19:12</span>Usually those— the achievement of those goals is dependent on the success of their business first and foremost. Usually the success of their business is not being determined by the lodgement of their tax return, albeit important to a successful business is to keep up to date with compliance.</p>
+          <p><span class="spk">Ryan · 19:29</span>But certainly we look at business strategy and business performance as well as making sure that the compliance piece is being managed and then start to look at those personal family goals. You know, what are they trying to achieve? How can we help them achieve that?</p>
+          <p><span class="spk">Ryan · 19:44</span>Achieve those goals? Who do we need to bring into the network within that family group to be able to achieve those goals? It might be a really good quality financial planner or finance person, someone to look after their estate planning, someone to provide some OH&amp;S consulting, whatever it may be.</p>
+          <p><span class="spk">Ryan · 20:01</span>So really quite broad, but that's a little bit about, I guess, how I joined T&amp;M. It was really off the back of a property conversation. We do work a lot in the property space, but realistically, It's because we focus on business first and creates that opportunity in property.</p>
+          <p><span class="spk">Ryan · 20:17</span>And we work through, we work in all sorts of industries. And so quite a generalist type approach to the industries that we work with, but certainly take a specific approach where we focus on the family groups that we work for. That's at the center of what we do.</p>
+          <p><span class="spk">Nick · 20:32</span>Right. I'm interested how you got into accounting because you come across as such as an entrepreneur and not just come across, you've got numerous businesses. So that classes you as an entrepreneur and accounting. I did accounting accounting as well at university. So I'll say that first. I've got no idea why I did it.</p>
+          <p><span class="spk">Nick · 20:49</span>I just thought it would be somewhere where I could easily get a job. So, and then I didn't do accounting at all. So I'm interested in how'd you fall into accounting given you've got such an entrepreneurial mindset? Is it something that you wanted to be growing up or did you fall into it or talk us through that?</p>
+          <p><span class="spk">Ryan · 21:07</span>Yeah, it's an interesting one, Nick. I don't have the exact answer, I have to admit, as to why accounting other than falling into it is probably probably where I started, but I probably started my first business when I was 13. So I grew up in country Queensland and we didn't have a lot of money growing up.</p>
+          <p><span class="spk">Ryan · 21:24</span>So I wanted a motorbike and went to my parents and asked them for a motorbike and they said, no, we don't have the money for a motorbike. So I thought, okay, well, how am I going to get one? So in the end, I took out a loan from the bank of mum and dad and with a pretty friendly interest rate, which I ended up negotiating at the completion of the loan down to 0% as long as they got their money back.</p>
+          <p><span class="spk">Ryan · 21:43</span>But I built a couple of motorbikes, sold them. That sort of stuff, you know, early on while I was at school. And that was all with a view to make enough money to be able to buy my own motorbike. So that was probably the first business I fell into. I was really passionate about, you know, understanding, you know, how to, you know, create wealth and making money and those sorts of things through business and through that vehicle.</p>
+          <p><span class="spk">Ryan · 22:09</span>And at the same time at school, I was studying accounting and economics and those sorts of things. I did an accounting competition. Where I did all right. I think in year 11, I was written up in the paper and I had a couple of job opportunities. So that was really the starting point, was a couple of job opportunities and saying yes to one of them.</p>
+          <p><span class="spk">Ryan · 22:29</span>So it wasn't, I don't think it was a deep passion of mine about accounting, but certainly I'm quite competitive in nature. And I think that's what drives me a lot professionally is that is that sense of competition. And that really threw me into accounting and wanting to really succeed in the industry.</p>
+          <p><span class="spk">Ryan · 22:50</span>So it's not like I was thinking about being an accountant by the time I was out of nappies or anything like that. It was certainly something that I probably fell into a little bit.</p>
+          <p><span class="spk">Nick · 23:02</span>Unlike Jase who had a ledger on his visionary board from age 6.</p>
+          <p><span class="spk">Ryan · 23:08</span>Does not surprise me.</p>
+          <p><span class="spk">Jason · 23:10</span>It's actually funny like how similar Ryan and I are. I've always sort described myself as the wish.com version of Ryan. And if you go on YouTube and watch this back, you'll see that I've tried to dress like Ryan, I've tried to put my hair across like Ryan. It's just like not quite there.</p>
+          <p><span class="spk">Jason · 23:25</span>Like, it's the, you know, but, you know, I get points for trying. But no, I had a similar, you know, fell into accounting. When you say you fell into accounting, it's like I just go, yeah, I end up doing the same thing. Like, I did really well in Year 11, I topped Year 12 accounting at school and business management.</p>
+          <p><span class="spk">Jason · 23:40</span>And the careers advisor was like, what do you want to do? I'm like, I don't know. He's like, well, just go study accounting. You seem to be really good at it. Here we are today. But I like, I like where our path has landed us. So I'm going to fast forward a little bit, Ryan, to dive into a bit of, you know, some of your intricate skills and time management being one of them.</p>
+          <p><span class="spk">Jason · 23:59</span>So balancing multiple businesses, you know, we, you know, you and I both deal with clients that struggle to sometimes manage one business when it's growing and there's team members and problems and all that going on between Dashboard Insights, T&amp;M Consulting, and Synced, which we'll get to a little bit later on.</p>
+          <p><span class="spk">Jason · 24:15</span>And being a dad and a husband, How are you managing your time across all these different ventures you've got going on?</p>
+          <p><span class="spk">Ryan · 24:22</span>Yeah, the truth is I don't look at work, so to speak, as work. I'm pretty passionate about what I do, which I'm sure you can probably tell from the, from the conversation today. So work to me is not necessarily work. I love being in business. I love what I do. I love helping people and I love creating opportunity for my team as well.</p>
+          <p><span class="spk">Ryan · 24:41</span>And I think that's another thing that really drives me as well. So Certainly, is it easy to juggle one business, let alone three? It's not even easy to juggle one business, and that's the truth of it. But surrounding yourself by really good people and focusing on not only yourself, but focusing on the business first and foremost and everyone within it, all stakeholders, customers, team, and obviously owners and other stakeholders as well, I think is really important.</p>
+          <p><span class="spk">Ryan · 25:10</span>And from my perspective, I implement a couple of different strategies in terms of time management. But probably one of the biggest aspects for me is just empowering my team with the appropriate, I guess, authority to make the right decisions at the right time.</p>
+          <p><span class="spk">Ryan · 25:27</span>So, you know, I don't need to be the bottleneck in everything that we do. I'm not necessarily the best at everything that we do either. You know, I might have some core skill sets, but there's certainly some really capable people that we have across our entire organization. In many instances, they're more capable at certain skill sets or certain skills than I am.</p>
+          <p><span class="spk">Ryan · 25:45</span>So why would I be that roadblock there? So there's certain control points that we have all the way along, which I think are really, really important in organizations. I think the control points are really what make the difference between being a consistent organization which delivers to your customers and protects yourself and those sorts of things appropriately.</p>
+          <p><span class="spk">Ryan · 26:06</span>So the control points are important, but empowering our team is super important as well. And probably the one role for me that makes a huge difference for me is an executive assistant type role, which means that you're not spending a whole lot of time on the unimportant things.</p>
+          <p><span class="spk">Ryan · 26:26</span>So I certainly prioritize being with customers or certainly prioritize making the appropriate decisions at a business level and creating the space to do so rather than doing things like shuffling calendars or working out how long it's going to take me to drive from A to B.</p>
+          <p><span class="spk">Ryan · 26:43</span>So, you know, certainly that's a big piece for me is it's about focus and time while I'm in business. And then, and it enables me to really focus on the family at the same time.</p>
+          <p><span class="spk">Marty · 26:55</span>You certainly answered a question for me, like how do you effectively delegate without abdicating, right? Which can be a problem sometimes as businesses get larger. So the fact is, you're creating opportunities for your team. So you care, you've got your hand on their shoulder, even supporting them, but you're not micromanaging them.</p>
+          <p><span class="spk">Marty · 27:14</span>And you've got control points in order to really enable the business to expand, but you're still influencing that in what you do. So that was a great answer because it brought together a few questions I had in being able to go, because sometimes it can be a distraction for people who are busy enough, right?</p>
+          <p><span class="spk">Marty · 27:33</span>So some, some, I would encourage people to listen to that answer time and time again when they're looking to scale their business because that is absolute gold just in that answer. We have a lot of listeners that actually, that listen to The Numbers Game that have moved from being an employee into a business owner because of the podcast, which is always really exciting when you get those calls, but what sort of strategies and insights could you share just</p>
+          <p><span class="spk">Marty · 28:03</span>something simple and effective for people that are looking to start their own business from what you've been through and what you've seen, Ryan?</p>
+          <p><span class="spk">Ryan · 28:11</span>I think it's really important when looking to do those sorts of things. Obviously, it's a, you know, being an entrepreneur is not always easy. Starting a business is not easy. And if you're prepared to work hard at something, then I think that's the, that's is certainly one of the first pieces is you've got to be prepared for the hard work.</p>
+          <p><span class="spk">Ryan · 28:30</span>If you're not prepared for the hard work, just flat out don't do it. It's not for you. But if you're prepared to work hard along the journey until you get to a point where you've got the right team around you and the right systems and processes around you to then be able to focus up and free your mind on different things, then I think that that's really the key to being an entrepreneur.</p>
+          <p><span class="spk">Ryan · 28:53</span>But in one of those aspects, and I mentioned it before, I go into every business decision, where in the back of my mind, what, what the decision, if I'm sort of on the fence, you know, do I do this or do I do that? At the end of the day, my question to myself is, what's the worst that can happen?</p>
+          <p><span class="spk">Ryan · 29:12</span>And if the worst that can happen is that you, you know, spend 6 months of really hard work and you can't, it doesn't work or whatever it may be, as long as you've protected yourself to the point where the worst that can happen is it's not a disaster for you personally or professionally or from a family perspective or any of those sorts of things.</p>
+          <p><span class="spk">Ryan · 29:30</span>As long as that's the case, then, you know, you're in a position as to starting as long as you're prepared for the hard work.</p>
+          <p><span class="spk">Nick · 29:38</span>That's a great answer. And actually, Marty and I have had conversations about this and we talk about, you know, ensuring that you're safe for a certain period, say 12 months, whether it be savings or whatever. So you can absolutely put everything into the business without stressing about it and always thinking, I've got to fall back into a PAYG job.</p>
+          <p><span class="spk">Nick · 29:57</span>So I think giving yourself that clear air or runway for 12 months to go really hard at it is super important.</p>
+          <p><span class="spk">Marty · 30:04</span>So I love the hard work too. It's like the rewards always follow the efforts, and sometimes those efforts can take time. And a lot of people get into business and go, this is hard and not what I expected. So it's, yeah, it hasn't changed from when I first started.</p>
+          <p><span class="spk">Ryan · 30:21</span>It's like an iceberg a little bit, isn't it, Marty? So A lot of people see just what's on the tip of the surface without seeing the whole body of work that's gone into creating that. And each of you on this call will certainly be in that situation and will have had to work hard and lose sleep and deal with anxiety at certain points along the way.</p>
+          <p><span class="spk">Ryan · 30:40</span>That's what happens with being in business. It's not always easy, but certainly if you enjoy that challenge and enjoy a level of hard work, then certainly you can progress and get the rewards at the end of the day.</p>
+          <p><span class="spk">Marty · 30:52</span>Yeah, and even when you do get a win in the end, people People are quick to jump and say, it's all right for you, right? But they just don't understand the level of work and commitment over years to get to that point. So you really have to understand that value for yourself because people are just not going to understand it if they're not a part of it.</p>
+          <p><span class="spk">Marty · 31:10</span>So business owners will understand what that means, what we've just talked about.</p>
+          <p><span class="spk">Nick · 31:15</span>Ryan, I want to talk to you about Sync, your offshoring business. We've had a lot of experience with offshoring. It took us 3 attempts to get it right. The first 2 didn't work. The third time we'd learned from our mistakes and no doubt we still make them, but we think we've got it right this time.</p>
+          <p><span class="spk">Nick · 31:34</span>But we learned so much and it cost us a lot of money to not do it right the first time. So tell us a bit about Sync. What do you do? And maybe just generally the advantages of offshoring. We actually brought it up a couple of episodes to go offshoring, that our businesses that follow us should really be considering it, especially given, you know, the cost of employment here and just other costs associated with running a business and how they're going up and up.</p>
+          <p><span class="spk">Nick · 32:04</span>So yeah, maybe a little bit about Syncyt and just the general advantages of offshoring.</p>
+          <p><span class="spk">Ryan · 32:11</span>Yeah. So probably like you, Nick, we had a couple of cracks at offshoring. Didn't get it right the first couple of times. And probably just a little bit of my mentality really is held on, you know, I can't get it right when I'm using someone else's service.</p>
+          <p><span class="spk">Ryan · 32:28</span>So why don't I spend a little bit of money and set it all up? And in the end, I underestimated how much it would take to set that up. But really what I was trying to do was solve my own problem again and set up an offshoring solution that would really work and function in the way that I felt would best serve our business, which meant best serve of not only our internal team and create the opportunity for them, but also our customers as well.</p>
+          <p><span class="spk">Ryan · 32:55</span>So I went and set up the appropriate legal structures and all of that sort of stuff. Probably took me 12 or more months to do it and a lot of money to do it. But in the end, started to offshore now about 4 years ago, and that was about my third go at it as well.</p>
+          <p><span class="spk">Ryan · 33:11</span>So in TNM Consulting, we offshore various roles in our accounting practice. And without offshoring, Dashboard Insights wouldn't be here today. Offshoring really created the opportunity for a tech startup to be able to sort of scale our product offering fairly quickly and easily.</p>
+          <p><span class="spk">Ryan · 33:32</span>And even today, the majority of our team in Dashboard Insights, from our client delivery team to our data science and data analytics team to our software developers, are in fact offshore in Dashboard Insights. And it really enables us to provide a solution in data analytics to the small and mid-market at a price that is achievable for the small and mid-market.</p>
+          <p><span class="spk">Ryan · 33:56</span>So there's certainly a lot of benefits from that perspective for an organization, even like a tech company like Dashboard Insights. You mentioned cost, Nick, in offshoring. Obviously, there is a significant difference in costs of employment in various locations around the world.</p>
+          <p><span class="spk">Ryan · 34:13</span>And even different industries will have different price points in different countries across the globe. So it's really important to cost optimize your employment opportunities. And certainly, I guess, from a skill set perspective and from a culture fit perspective, it's important to get that right as well.</p>
+          <p><span class="spk">Ryan · 34:37</span>To me, I look at offshoring not just as a cost. Optimizer. It's really as an opportunity to empower your business to better serve your customers and create a better business outcome across any industry that you're in. So we work, obviously we run an accounting practice.</p>
+          <p><span class="spk">Ryan · 34:55</span>We've got a tech company as well in Dashboard Insights. Synced as well is powered a lot through an offshore team. And outside of that as well, we deliver offshoring solutions to industries such as transport and logistics and wholesaling, etc.</p>
+          <p><span class="spk">Ryan · 35:12</span>And a lot of these industries actually cross over into the industries that Dashboard Insights and T&amp;M Consulting really service. So it was an opportunistic business that we started. Again, I went into it with what's the worst that can happen? I've failed twice in offshoring already.</p>
+          <p><span class="spk">Ryan · 35:28</span>If I fail a third time, I might as well have a crack doing it myself. So I started to really set that up on my own accord before the opportunity really came to start to scale into providing those offshoring services to other organizations. But I think there's really 3 things.</p>
+          <p><span class="spk">Ryan · 35:45</span>It's really empowerment of your team. So offshoring really creates that opportunity to upskill everyone in your team by getting access to the appropriate skill sets at a reasonable price point across the globe.</p>
+          <p><span class="spk">Ryan · 36:01</span>So I think that's one thing. The second thing is obviously cost, but the third thing is it really helps you service your customers far more efficiently and effectively than if you don't have an offshore strategy within your organization.</p>
+          <p><span class="spk">Nick · 36:15</span>Spot on. I'm so glad you said that because I think offshoring is often frowned upon, you know, because you're sending Aussie jobs offshore. Obviously, we don't have that issue at the moment with the way the employment market is, but the two biggest things that we found is empowering of your team onshore.</p>
+          <p><span class="spk">Nick · 36:32</span>So it's made their job a lot better. You know, they're focusing on high-level tasks. So I can definitely relate to that. And yeah, providing a better service to your clients. You know, the financial planning industry, which we are also in at the moment, has gone through a lot of compliance.</p>
+          <p><span class="spk">Nick · 36:50</span>And it's now, you know, you're seeing this in the media, but it's actually getting unaffordable for mum and dads to get a financial plan or to get ongoing financial advice. And I think a lot of traditional firms just continuously increase their, their prices to keep up with the increasing costs.</p>
+          <p><span class="spk">Nick · 37:11</span>Our business, on the other hand, we've looked for efficiencies. So those efficiencies have come through tech and those efficiencies have come through offshore staff, which means we still deliver our product at a reasonable price. And the benefit for us is we get a lot of mum and dads who come on board because it's affordable..</p>
+          <p><span class="spk">Nick · 37:29</span>And then the benefit to the mum and dads is they get advice at a decent price. So, yeah, I'm glad you brought those two up because they're the two biggest things that we've noticed in our own business with offshoring.</p>
+          <p><span class="spk">Jason · 37:42</span>Further to that, a few extra things that I'd love to know. A lot of the offshore companies, they've got big offices in big central hubs like Manila and— can't remember any of the major ones off my head. Is there anything Sync does differently to the others on the market? And then beyond that, I mean, look, again, you're busy running an accounting firm, you've got Dashboard Insights.</p>
+          <p><span class="spk">Jason · 38:01</span>What are the controls or things in place to ensure quality and efficiency with offshore staff?</p>
+          <p><span class="spk">Ryan · 38:07</span>Firstly, what does Cink do differently? I think we've got, or I know we've got industry-leading retention rates first and foremost. So the retention rates in offshore, I think, are absolutely key when you're going into an offshoring strategy. Retention rates really drive that efficiency throughout your organization so that you don't sit there and spin your wheels in in really trying to onboard an offshore team member and then only for a short period of time before they move on.</p>
+          <p><span class="spk">Ryan · 38:33</span>So focusing on retention, I think, is first and foremost one of the keys to offshoring. I think also the internal culture around having an offshore team into your business as well. So I'm a big advocate of having one business regardless of where you're located.</p>
+          <p><span class="spk">Ryan · 38:50</span>So you could be working from home somewhere remotely in Australia, you could be working from home somewhere remotely, offshore, Manila or somewhere like that, Jason. You could be working in the office somewhere in Australia, let's say. So it doesn't really matter where you're working.</p>
+          <p><span class="spk">Ryan · 39:07</span>To me, having a one-business approach really is key to making sure that offshore team members are adequately integrated into the organization. So Syncd is a full-time work from home offshoring solutions provider.</p>
+          <p><span class="spk">Ryan · 39:22</span>So we manage everything from recruitment to ongoing management to HR challenges and all of that sort of stuff. But also we support Australian businesses as well and into New Zealand in making sure that the offshore team members are adequately handled by way of career progression and creating opportunity for those offshore team members.</p>
+          <p><span class="spk">Ryan · 39:44</span>And I think if you've got an offshore team member, treat them no differently to an Australian-based team member. And creating a career progression pathway no different to what you ordinarily would as well. So I think that's a really real key to what we do as an offshoring business is make sure that we're delivering a work from home solution because traffic in some less developed countries, it's bad enough in Australia, let alone in some less developed countries.</p>
+          <p><span class="spk">Ryan · 40:08</span>Yeah, that's really important as well as providing the appropriate support networks around your team members as well. And of course, the legal structures are super important as well. So making sure that everyone's protected, team member as well as organization.</p>
+          <p><span class="spk">Jason · 40:23</span>Also, like Nick, having had past experience with a couple of different providers and all of a sudden, you know, team members are gone, something didn't go right, there wasn't good communication back and forth. And again, like that, I guess, aligning so that we're all one business and one team with the one direction we're headed, you know, maybe it wasn't quite there.</p>
+          <p><span class="spk">Marty · 40:43</span>Ryan, you're a very innovative person and I love that in business. How do you approach innovation and how do you stay so current in technological advancements? Like things change so quickly and you seem to be moving very much in time with those opportunities.</p>
+          <p><span class="spk">Marty · 41:01</span>But what's your approach to innovation and technology just from your own mindset? Also, I want to get—</p>
+          <p><span class="spk">Ryan · 41:08</span>Yeah, I guess, yeah, good question, Marty. And I think from my perspective, I'm probably a fairly inquisitive person. I don't like to just accept things as being done that way just because that's the way they've always been done. So I don't really have a view of just acceptance. I'll look at something if it doesn't sound right or it doesn't seem like it's efficient or something like that.</p>
+          <p><span class="spk">Ryan · 41:29</span>I'll look for a solution. So that's probably the first thing from my personal perspective. But then innovation really for me comes from trying to solve problems and trying to keep up with the with the latest in the industry. So sharing of ideas with other people in the various industries that you're at, whether or not it's a tech business, an accounting practice, or a wholesale business, doesn't really matter.</p>
+          <p><span class="spk">Ryan · 41:50</span>Any industry that you're in, share information with your peers. And that's a two-way street as well. You know, what you share will often come back as well in other fresh ideas. So that's certainly something that I spend a lot of my time doing.</p>
+          <p><span class="spk">Ryan · 42:05</span>And I also have a team as well that I empower to do the same thing. So when it comes to finding innovation, it comes to finding improvements in business, making sure that your team have the appropriate bandwidth or opportunity to be able to identify something as not being quite as efficient or as innovative as it could, and then be able to have the space to be able to create the solution for that, I think is really key.</p>
+          <p><span class="spk">Ryan · 42:34</span>So, you know, they're probably my personal approaches and then that the approach that we take from a business perspective. We constantly create the space for innovation.</p>
+          <p><span class="spk">Marty · 42:45</span>Yeah, I like the idea too. You don't seem to have any hesitation in progress. Some people want to progress in their businesses and in life and they, you know, there's almost a handbrake on that progression. And I think one of the key things I've picked up even talking to you today is the ability to go, what could go wrong?</p>
+          <p><span class="spk">Marty · 43:04</span>What's my worst case scenario? And once you've answered for that for yourself, you're all in. And I, yeah, I really love that even from a mental mechanism of progressing in life personally and in business. But that's, that certainly comes across, Ryan, in chatting to you.</p>
+          <p><span class="spk">Marty · 43:21</span>Yeah.</p>
+          <p><span class="spk">Nick · 43:21</span>And would you say, I guess innovation probably plays a major role in the success of your different businesses. And I, you said they're empowering people. If the people didn't have the power to innovate, then how does it happen? You know, it's just left on your shoulders. So would you say that's played a major role, particularly in Dashboard Insights in in the progress of your organizations and going forward like you have?</p>
+          <p><span class="spk">Ryan · 43:43</span>Yeah, it's played a huge role and certainly that's in my own organizations, but I dare say it's in each of yours. And beyond that, it's in every industry, isn't it? So there is a risk of doing nothing. So, you know, if we talk about what's the worst that can happen, the risk of doing nothing is sometimes the worst that can happen.</p>
+          <p><span class="spk">Ryan · 44:01</span>So, you know, that level of progress and being able to move forward, you know, it's It's, it's, there's a risk of doing nothing and sometimes there's a risk of doing something and you've got to choose the appropriate path from a commercial perspective. But, but again, comes down to hard work, comes down to managing those risks and coming, comes down to identifying a better way of doing things potentially.</p>
+          <p><span class="spk">Nick · 44:24</span>Just to go back on empowering too, I had a meeting this morning. This actually came up. This particular person was a, was a consultant who went into small businesses and helped them grow and bring in structures and stuff. I said, what's your biggest challenge? And he said, getting business owners to empower other people, particularly small business owners.</p>
+          <p><span class="spk">Nick · 44:43</span>And I think that's one thing that we've been good at in this, in, in our business, and you as well. But we constantly give younger people, uh, the power to make decisions or make changes or innovate or, you know, come and challenge us on things. So I think that's probably one of the biggest things I've learned in business is, you know, empower the people around you because there's only so much you can do and there's only so much you're exposed to.</p>
+          <p><span class="spk">Nick · 45:05</span>Um, so yeah, I really like that you brought that up. I think Jase would probably attest to that, bringing some, some young people through his business as well.</p>
+          <p><span class="spk">Jason · 45:13</span>Yeah, 100%. I'm going to follow up, uh, just out of my own curiosity. This one's also off script, uh, a little bit, but AI, what's, what's your take? I mean, we're talking about innovation and dashboard insights, which is, you know, so much data-rich things going on in the background. Does AI, is AI going to play a part in what you're developing and building, or is that kind of a bit of a thing that we can't discuss, a bit of a secret behind the scenes, or?</p>
+          <p><span class="spk">Jason · 45:35</span>What's happening there.</p>
+          <p><span class="spk">Ryan · 45:37</span>No secrets behind the scenes. It's all on the table today. So just in terms of AI, look, we know it's a topic of conversation at the moment. I think the biggest challenge is making sure that AI is very usable from a commercial perspective.</p>
+          <p><span class="spk">Ryan · 45:53</span>So AI can sometimes be this really big, heavy buzzword, just like data. You know, we've been hearing about big data for so long, but no one's known how to use it. And certainly not at the small and mid-market. So I think AI is another key sort of a buzzword that we've really got to understand.</p>
+          <p><span class="spk">Ryan · 46:10</span>Okay, how are we going to actually use this in all sorts of business? And it's not going to be the same in one industry as it is in another. AI is going to have to really find its particular place in different businesses, in different industries.</p>
+          <p><span class="spk">Ryan · 46:26</span>But to give you a little bit of a snippet as to what we're working on, we're working on a couple of things. We have already spoken about how Dashboard Insights works a lot in the professional services space. So what we're doing in the professional services space is really training AI to look at the correlation of data to start to make the operational decisions of someone like a practice manager or operations manager to not, to not make the decision, but focus the individual in</p>
+          <p><span class="spk">Ryan · 46:56</span>that organization on the areas that the AI determines can make the biggest impact on the overall performance of the organization. That'll be an iterative process. We've already got it in beta. It makes better decisions than I do in my accounting practice. I'll give you the heads up.</p>
+          <p><span class="spk">Ryan · 47:11</span>But realistically, it's then those humans that are able to then take that information that they haven't spent, you know, 8 or 10 hours trying to put that together or find it or whatever it may be, and then be able to create that positive impact on organizations. That's in professional services.</p>
+          <p><span class="spk">Ryan · 47:28</span>In transport logistics at the moment, we're actually looking at a lot of rerouting of trucks to more efficiently deliver freight, as an example. So, you know, based on AI, based on traffic data, based on fuel management data, GPS data, all of these sorts of things.</p>
+          <p><span class="spk">Ryan · 47:44</span>So bringing all that together in the transport logistics space, which I think is another really cool application of AI. It doesn't replace the human because people have still got to be able to to do something and make that conscious decision. Does that actually work or does it not? And how are we going to do that? But yeah, a little bit about AI and certainly important at the moment.</p>
+          <p><span class="spk">Ryan · 48:03</span>And risk of doing nothing again is probably one of those things. AI is going to be here at some point. We're all going to be using data in an element of AI. It's probably already happening whether or not you know it or not. So how are we actually going to integrate that into our organizations?</p>
+          <p><span class="spk">Ryan · 48:19</span>And start to deliver better value and better quality services to our customers.</p>
+          <p><span class="spk">Jason · 48:28</span>Ryan, I wonder if there's a case study or a success story you'd be open to sharing when it comes to a business before Dashboard Insights and then a business, how they're operating now, you know, down the track with Dashboard Insights, you know, implemented into the business. Is there a case study you can think of where you're really proud of the results that it's helped achieve?</p>
+          <p><span class="spk">Ryan · 48:46</span>Yeah, well, I could give you a couple of examples, but if I come to a business in the recycling space. Obviously recycling at the moment is quite big business, but this business came to us with a national recycling type business and no real intelligence as to what and how and why they were making money or what was happening at an operational level.</p>
+          <p><span class="spk">Ryan · 49:09</span>So this particular business, we started to connect to all sorts of information from financial information to their repair and maintenance schedules on their machines. As well as things like their weighbridge data. And we were able to really optimize that business to a point where they, within 3 years, were able to go 10 times on their profit.</p>
+          <p><span class="spk">Ryan · 49:29</span>So their profit was, you know, probably laboring a little bit. There were a couple of quick wins there. So sounds impressive. And the reality is it was once you brought all of that data together. But there are a couple of quick wins that really got that to a point where it went 10 times in profit.</p>
+          <p><span class="spk">Ryan · 49:46</span>So that's one example, I guess. Outside of that, in the professional services space, we work a lot in the accounting industry and just being able to understand how you're making money and where you're making money, I guess, is really important and being able to empower teams to just get those incremental upticks in your business performance.</p>
+          <p><span class="spk">Ryan · 50:06</span>So, you know, very typically what you'll see is something like a 22% increase in profit over the first 6 months of using Dashboard Insights. Driven by about a 24% increase in revenue. So when you're thinking about that profit conversion, 24% in revenue, 22% in profits, it's really substantial when you're looking at an industry like accounting.</p>
+          <p><span class="spk">Ryan · 50:27</span>And that's actually based on real-life data. We pulled that recently about firms that are being implemented over a 6-month period and compared 6 months before versus 6 months after.</p>
+          <p><span class="spk">Jason · 50:39</span>Yeah.</p>
+          <p><span class="spk">Marty · 50:39</span>Wow.</p>
+          <p><span class="spk">Nick · 50:39</span>Wow.</p>
+          <p><span class="spk">Marty · 50:40</span>I feel like I nearly need to leave the room. I'm that excited. It's like, these are just honey to my ears. Like people always say, how do I 10x my business? How do I 10x my business? The better question is, how do I 10x my value? And that is, you know, that's the real key fundamental component here that Ryan's just shared.</p>
+          <p><span class="spk">Marty · 51:00</span>So yeah, God, that's incredible. So yeah, anyway, I'll calm myself down. Give me, what's the most valuable lesson you've learned as an entrepreneur so far? So I know there's a lot of subtleties to being a business owner, but if you can give me one key component that is a valuable lesson that you could share with our audience, that'd be great, Ryan.</p>
+          <p><span class="spk">Ryan · 51:28</span>I think it comes down to focusing on people first. So even in tech, it's very easy to focus on tech and those sorts of things. Focus on people first, whether or not that's customers or team members. I think that, that can really, you know, solve a lot of your problems if you're focusing on people first.</p>
+          <p><span class="spk">Ryan · 51:44</span>And certainly, you know, I think from a business perspective, a lot of the problems that you face in business can be solved by, you know, having those open, honest conversations, whether or not that's internal or external stakeholders. I think a lot of those problems can be saved.</p>
+          <p><span class="spk">Ryan · 52:01</span>Or solved. It's always hard work. It's not always easy. But one of the key keys to me is focus on people. Come from an avenue where, you know, trust and be trusted as well.</p>
+          <p><span class="spk">Ryan · 52:16</span>You know, you need to trust others, but you need to create an environment where they can trust in you as well. And I think, you know, to me, I come from that environment. If something's in a contract, that's okay. But if you do what you say and you say what you do, You know, that I think is really important.</p>
+          <p><span class="spk">Ryan · 52:31</span>So that's one of the keys for me.</p>
+          <p><span class="spk">Nick · 52:34</span>So good. I think if I look at what takes up most of our time in our business, Marty, it's definitely people. And getting the right people in the right seat is an absolute game changer for your business. Things just seem seamless when that happens. And when there's issues, it's the wrong people in the wrong seat.</p>
+          <p><span class="spk">Nick · 52:51</span>That's generally what happens. So it's such, it's a solution to a lot of problems, getting the right people. So, and I guess for us, that's probably been the biggest challenge in growing and scaling a business is, you know, people. So what are the challenges that you've seen, either your own challenges or some of the business that you work with, in scaling them, and any tips to overcome those issues?</p>
+          <p><span class="spk">Ryan · 53:19</span>Yeah, I think one of the issues in scale that I think is underrated is always as a business owner having to be on the tools, so to speak. So I think one of the biggest challenges is freeing up your time to getting off the tools and enabling yourself to do that because often people are in business because they've got a skill or they've got an interest or they've got a passion or whatever it may be.</p>
+          <p><span class="spk">Ryan · 53:42</span>And they might often just fall into business as well. We were talking about falling into accounting. The reality is that often happens with business owners too because they're good at something or they've got a passion or a skill. But I think from the perspective of what are the challenges, that's one of the challenges to me is getting off the tools enough so that you're not disconnected from the business, but so that you're able to focus on what's important for the business and create the opportunity not only to upskill your team, but focus on the important things from your business and not lose sight</p>
+          <p><span class="spk">Ryan · 54:12</span>of the opportunity to innovate and improve and those sorts of things as well. Continuous improvement in business is always critical, whether or not you're a traditional business like an accounting practice or a tech company like Dashboard Insights as an example. So that's super important to me. One of the challenges, but also one of the really exciting opportunities for most business owners as well.</p>
+          <p><span class="spk">Jason · 54:32</span>Conscious of time, and I know that the four of us could sit here and definitely power through many more questions for Ryan. It's been a very insightful chat. I might just say, Nick or Marty, any of those questions you really want to get out? Otherwise, that last one that Marty's going to ask I think is a great place to end. And then Ryan can tell us that's how we can find him.</p>
+          <p><span class="spk">Marty · 54:49</span>Well, I have to ask one more. I have to ask one more just in regards to Ryan being so progressive, right? So what's next for you and your businesses? Any projects or goals you'd like to share with our audience in that our audience can support you as well?</p>
+          <p><span class="spk">Ryan · 55:05</span>Yeah, awesome, Marty. So I guess what's next for us, there are a couple of exciting things happening on all three fronts, I guess, with T&amp;M Consulting, Dashboard Insights, and Synced. But from T&amp;M's perspective, we've got an exciting wave of customers coming into our business.</p>
+          <p><span class="spk">Ryan · 55:22</span>That's obviously creating opportunity within our business for our team members as well. So there's a little bit of movement, not only from a client perspective, but also from a team member. So we are a two-partner practice and that's looking to expand as we continue to grow and develop it. So the growth is creating opportunity from within, which is great.</p>
+          <p><span class="spk">Ryan · 55:38</span>In Dashboard Insights, we work a lot in that professional services space, so the accounting and professional services industries as well, but we are going to launch that internationally next year as well as in other industries as well.</p>
+          <p><span class="spk">Ryan · 55:55</span>So we've got a couple of niches that we've got and exciting new partnerships there. So there's always something going on in Dashboard Insights at the moment. It's quite exciting to be part of the team there. And in Synced as well, we are again expanding the roles that we offer.</p>
+          <p><span class="spk">Ryan · 56:11</span>Offering into different markets, both geographically and different industries as well. So that's really exciting for that business as well. But yeah, so they're probably the 3 businesses in a nutshell. So continued improvement, continued progression, and each one of them has a slightly different opportunity ahead of the business at the moment.</p>
+          <p><span class="spk">Marty · 56:32</span>How do we invest? Are we all jumping in here?</p>
+          <p><span class="spk">Jason · 56:35</span>I've asked him that many times, Marty. I've already asked him. He just keeps ignoring me for some reason.</p>
+          <p><span class="spk">Nick · 56:40</span>It's weird.</p>
+          <p><span class="spk">Jason · 56:42</span>Now for all our listeners out there, if you'd like to find Ryan, it's Ryan Richardson. Go and look him up on LinkedIn and connect. Absolute great guy in our industry and doing epic things across all those businesses and many more. So we do thank you, Ryan, for your time on today's episode. And as well, thank our show sponsor that I don't know if you've heard us talk about before, but that's dashboardinsights.com to go and check that out.</p>
+          <p><span class="spk">Jason · 57:04</span>If you want to be a high-performing business and learn from the best or people out there that are just innovating, having a go, and have great ideas and great mindsets, definitely recommend going to check that out and connecting with Ryan. But until next time, mate, Ryan, thank you again.</p>
+          <p><span class="spk">Ryan · 57:20</span>Thanks, Jase. Thanks, Nick. Thanks, Marty.</p>
+          <p><span class="spk">Marty · 57:22</span>And remember the risk of doing nothing. Go and make something happen. Thank you, Ryan. Game over.</p>
+        </div>
+      </details>
+
+    </div>
+
+    <!-- LISTEN:START (build_episode.py rewrites the 3 URLs + iframe title per episode; player dropped if no spotifyEmbedUrl) -->
+    <section class="listen-now">
+      <div class="ln-head">
+        <span class="ln-title">Listen now</span>
+      </div>
+      <div class="audio-embed">
+        <iframe src="https://open.spotify.com/embed/episode/2ypTG1vEZA5s702hUYo4HH?utm_source=generator"
+          width="100%" height="152" loading="lazy" allowfullscreen
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+          title="Spotify — Ryan Richardson - Data-driven Decision Making with Dashboard Insights"></iframe>
+      </div>
+    </section>
+
+    <div class="listen">
+      <a href="https://open.spotify.com/episode/2ypTG1vEZA5s702hUYo4HH" target="_blank" rel="noopener" aria-label="Listen to this episode on Spotify">
+        <svg viewBox="0 0 24 24"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.52 17.34c-.24.36-.66.48-1.02.24-2.82-1.74-6.36-2.1-10.56-1.14-.42.12-.78-.18-.9-.54-.12-.42.18-.78.54-.9 4.56-1.02 8.52-.6 11.64 1.32.42.18.48.66.3 1.02zm1.44-3.3c-.3.42-.84.6-1.26.3-3.24-1.98-8.16-2.58-11.94-1.38-.48.12-1.02-.12-1.14-.6-.12-.48.12-1.02.6-1.14 4.32-1.32 9.72-.66 13.44 1.62.36.18.54.78.3 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.3c-.6.18-1.2-.18-1.38-.72-.18-.6.18-1.2.72-1.38 4.26-1.26 11.28-1.02 15.72 1.62.54.3.72 1.02.42 1.56-.3.42-1.02.6-1.56.3z"/></svg>
+        Spotify
+      </a>
+      <a href="https://podcasts.apple.com/au/podcast/id1555566088?i=1000637328370" target="_blank" rel="noopener" aria-label="Listen to this episode on Apple Podcasts">
+        <svg viewBox="0 0 24 24"><path d="M5.34 0A5.328 5.328 0 000 5.34v13.32A5.328 5.328 0 005.34 24h13.32A5.328 5.328 0 0024 18.66V5.34A5.328 5.328 0 0018.66 0H5.34zm6.525 2.568c2.336 0 4.448.902 6.056 2.587 1.224 1.272 1.912 2.619 2.264 4.392l.04.23c.04.272-.16.527-.432.567a.505.505 0 01-.567-.431l-.04-.213c-.312-1.57-.92-2.747-2.004-3.867-1.428-1.496-3.293-2.294-5.393-2.294-2.1 0-3.966.798-5.394 2.294-1.084 1.12-1.692 2.298-2.004 3.867l-.04.213a.507.507 0 01-.567.431.504.504 0 01-.432-.567l.04-.23c.352-1.773 1.04-3.12 2.264-4.392 1.608-1.685 3.72-2.587 6.056-2.587h.153zm.136 3.033c1.74 0 3.312.67 4.527 1.934.883.916 1.394 1.93 1.663 3.253l.04.23a.505.505 0 01-.431.567.503.503 0 01-.567-.432l-.04-.212c-.23-1.112-.659-1.97-1.396-2.732-1.052-1.1-2.404-1.672-3.9-1.672s-2.849.572-3.901 1.672c-.737.762-1.167 1.62-1.396 2.732l-.04.212a.503.503 0 01-.567.432.505.505 0 01-.432-.567l.04-.23c.27-1.323.78-2.337 1.664-3.253 1.215-1.264 2.787-1.934 4.527-1.934h.21zm-.078 3.05c1.092 0 2.091.424 2.89 1.22.582.58.924 1.245 1.107 2.15l.04.218a.501.501 0 01-.424.568.499.499 0 01-.568-.424l-.04-.198c-.146-.724-.413-1.253-.871-1.716-.63-.63-1.398-.957-2.226-.957s-1.595.328-2.225.957c-.459.463-.726.992-.871 1.716l-.04.198a.499.499 0 01-.568.424.501.501 0 01-.424-.568l.04-.219c.183-.904.525-1.569 1.106-2.149.8-.796 1.799-1.22 2.89-1.22h.184zM12 14.07a2.477 2.477 0 012.48 2.478A2.477 2.477 0 0112 19.024a2.477 2.477 0 01-2.48-2.477A2.477 2.477 0 0112 14.07z"/></svg>
+        Apple
+      </a>
+      <a class="yt-pill" href="https://www.youtube.com/@thenumbersgamepodcast?sub_confirmation=1" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.12-2.14C19.5 3.55 12 3.55 12 3.55s-7.5 0-9.38.51A3 3 0 0 0 .5 6.2 31.4 31.4 0 0 0 0 12a31.4 31.4 0 0 0 .5 5.8 3 3 0 0 0 2.12 2.14c1.88.51 9.38.51 9.38.51s7.5 0 9.38-.51a3 3 0 0 0 2.12-2.14A31.4 31.4 0 0 0 24 12a31.4 31.4 0 0 0-.5-5.8zM9.55 15.57V8.43L15.82 12z"/></svg>
+        Subscribe
+      </a>
+    </div>
+    <!-- LISTEN:END -->
+
+    <div class="relsec">
+      <span class="rtitle">Discover more</span>
+      <div class="relgrid">
+        <a class="relcard" href="/knowing-when-to-quit-in-business">
+          <img src="https://i.ytimg.com/vi/KDQQ5bor1BQ/hqdefault.jpg" alt="EP 231 thumbnail">
+          <span class="rt">Knowing When to Quit in Business</span>
+          <span class="rfoot"><span class="rwhy">Also covers: systems</span><span class="rtag">EP 231</span></span>
+        </a>
+        <a class="relcard" href="/the-numbers-game-of-life-marty-s-5-biggest-lessons">
+          <img src="https://i.ytimg.com/vi/bM7PFcSZj6Q/hqdefault.jpg" alt="EP 261 thumbnail">
+          <span class="rt">The Numbers Game of Life</span>
+          <span class="rfoot"><span class="rwhy">Also covers: systems</span><span class="rtag">EP 261</span></span>
+        </a>
+        <a class="relcard" href="/how-to-avoid-burnout-and-still-grow-your-business">
+          <img src="https://i.ytimg.com/vi/kaHCI7VQoA4/hqdefault.jpg" alt="EP 233 thumbnail">
+          <span class="rt">How to Avoid Burnout and Still Grow Your Business</span>
+          <span class="rfoot"><span class="rwhy">Also covers: mindset</span><span class="rtag">EP 233</span></span>
+        </a>
+        <a class="relcard" href="/adam-diamond-change-your-business-change-your-life">
+          <img src="https://i.ytimg.com/vi/l-qwFf9g5Rg/hqdefault.jpg" alt="EP 206 thumbnail">
+          <span class="rt">Adam Diamond - Change Your Business, Change Your Life</span>
+          <span class="rfoot"><span class="rwhy">Also covers: systems</span><span class="rtag">EP 206</span></span>
+        </a>
+        <a class="relcard" href="/chris-christofi-on-relentless-learning-giving-back-staying-hungry">
+          <img src="https://i.ytimg.com/vi/_rQaU5KCy_E/hqdefault.jpg" alt="EP 236 thumbnail">
+          <span class="rt">Chris Christofi on Relentless Learning, Giving Back &amp; Staying Hungry</span>
+          <span class="rfoot"><span class="rwhy">Also covers: mindset</span><span class="rtag">EP 236</span></span>
+        </a>
+        <a class="relcard" href="/sweat-the-small-stuff">
+          <img src="https://i.ytimg.com/vi/21_5CZ0up-8/hqdefault.jpg" alt="EP 172 thumbnail">
+          <span class="rt">Sweat the Small Stuff</span>
+          <span class="rfoot"><span class="rwhy">Also covers: mindset</span><span class="rtag">EP 172</span></span>
+        </a>
+      </div>
+      <div class="reldots" id="reldots"></div>
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="footgrid">
+      <div class="fcol">
+        <div class="foot-label">Follow us on</div>
+        <div class="socials">
+          <a href="https://www.instagram.com/thenumbersgamepodcast/" target="_blank" rel="noopener" aria-label="The Numbers Game on Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.8.2 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1 .4 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .4-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1-.4-2.2-.1-1.3-.1-1.7-.1-4.9s0-3.6.1-4.9c.1-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.4 2.2-.4 1.3-.1 1.7-.1 4.9-.1zm0 2c-3.1 0-3.5 0-4.8.1-1.1.1-1.5.2-1.8.3-.4.2-.7.3-1 .6-.3.3-.5.6-.6 1-.1.3-.3.7-.3 1.8-.1 1.3-.1 1.7-.1 4.8s0 3.5.1 4.8c.1 1.1.2 1.5.3 1.8.2.4.3.7.6 1 .3.3.6.5 1 .6.3.1.7.3 1.8.3 1.3.1 1.7.1 4.8.1s3.5 0 4.8-.1c1.1-.1 1.5-.2 1.8-.3.4-.2.7-.3 1-.6.3-.3.5-.6.6-1 .1-.3.3-.7.3-1.8.1-1.3.1-1.7.1-4.8s0-3.5-.1-4.8c-.1-1.1-.2-1.5-.3-1.8-.2-.4-.3-.7-.6-1-.3-.3-.6-.5-1-.6-.3-.1-.7-.3-1.8-.3-1.3-.1-1.7-.1-4.8-.1zm0 3.4a5.4 5.4 0 1 1 0 10.8 5.4 5.4 0 0 1 0-10.8zm0 2a3.4 3.4 0 1 0 0 6.8 3.4 3.4 0 0 0 0-6.8zm5.6-2.3a1.3 1.3 0 1 1-2.6 0 1.3 1.3 0 0 1 2.6 0z"/></svg></a>
+          <a href="https://www.tiktok.com/@thenumbersgamepodcast" target="_blank" rel="noopener" aria-label="The Numbers Game on TikTok"><svg viewBox="0 0 24 24"><path d="M12.53.02C13.84 0 15.14.01 16.44 0c.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg></a>
+          <a href="https://www.linkedin.com/company/the-numbers-game-podcast/" target="_blank" rel="noopener" aria-label="The Numbers Game on LinkedIn"><svg viewBox="0 0 24 24"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.24 8.25h4.52V23H.24V8.25zM8.34 8.25h4.33v2.01h.06c.6-1.14 2.08-2.34 4.28-2.34 4.58 0 5.42 3.01 5.42 6.92V23h-4.51v-7.16c0-1.71-.03-3.91-2.38-3.91-2.39 0-2.75 1.86-2.75 3.78V23H8.34V8.25z"/></svg></a>
+          <a href="https://www.facebook.com/profile.php?id=100071290388343" target="_blank" rel="noopener" aria-label="The Numbers Game on Facebook"><svg viewBox="0 0 24 24"><path d="M24 12.07C24 5.41 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.04V9.41c0-3.02 1.8-4.7 4.54-4.7 1.31 0 2.68.24 2.68.24v2.97h-1.5c-1.5 0-1.96.93-1.96 1.89v2.26h3.32l-.53 3.5h-2.8V24C19.62 23.1 24 18.1 24 12.07z"/></svg></a>
+          <a href="https://www.youtube.com/@thenumbersgamepodcast" target="_blank" rel="noopener" aria-label="The Numbers Game on YouTube"><svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.2C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31.7 31.7 0 0 0 0 12a31.7 31.7 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.2A31.7 31.7 0 0 0 24 12a31.7 31.7 0 0 0-.5-5.8zM9.6 15.6V8.4L15.8 12z"/></svg></a>
+        </div>
+      </div>
+      <div class="fcol">
+        <div class="foot-label">Brought to you by</div>
+        <div class="sponsors">
+          <a href="https://www.inovayt.com.au/" target="_blank" rel="noopener"><img src="assets/inovayt-white.png" alt="Inovayt"></a>
+          <a href="https://futureadvisory.com.au/" target="_blank" rel="noopener"><img src="assets/future-advisory-white.png" alt="Future Advisory"></a>
+        </div>
+      </div>
+      <div class="fcol produced">
+        <div class="foot-label">Produced by</div>
+        <a href="https://www.vidpod.com.au/" target="_blank" rel="noopener"><img src="assets/vidpod-white.png" alt="VIDPOD"></a>
+      </div>
+    </div>
+    <div class="footbar">
+      <details class="footnav-dd">
+        <summary><svg class="ham" viewBox="0 0 24 24"><path d="M3 6h18v2H3zM3 11h18v2H3zM3 16h18v2H3z"/></svg> Menu</summary>
+        <div class="dd-links">
+          <a href="/">Home</a><a href="/episodes">Every episode</a><a href="/adventure">Choose your own adventure</a><a href="/about">About the show</a><a href="/nick-reilly">Nick Reilly</a><a href="/jason-robinson">Jason Robinson</a><a href="/contact">Contact</a>
+        </div>
+      </details>
+      <div class="copyright">© 2026 The Numbers Game</div>
+    </div>
+  </footer>
+
+  <script>
+    var VIDEO='1N9PhqFTWBc';
+    var CHAPTERS=[
+      {t:"00:00",s:0,title:"Intro"},
+      {t:"02:36",s:156,title:"Who Is Ryan Richardson"},
+      {t:"03:39",s:219,title:"Slave To The Business"},
+      {t:"04:59",s:299,title:"Growing Ten To Twenty Staff"},
+      {t:"05:15",s:315,title:"Out Of Control On Job Flow"},
+      {t:"05:40",s:340,title:"Solving My Own Problem"},
+      {t:"07:23",s:443,title:"What Dashboard Insights Does"},
+      {t:"08:51",s:531,title:"Operational Impact Over Reporting"},
+      {t:"10:29",s:629,title:"The Activity Before The Invoice"},
+      {t:"11:17",s:677,title:"Data In One Place"},
+      {t:"12:13",s:733,title:"What Is The Worst That Can Happen"},
+      {t:"13:29",s:809,title:"Building The Minimum Viable Product"},
+      {t:"14:23",s:863,title:"From Internal Tool To Product"},
+      {t:"16:51",s:1011,title:"T&M Consulting Puts Clients First"},
+      {t:"18:53",s:1133,title:"Serving 547 Family Groups"},
+      {t:"19:29",s:1169,title:"Beyond Tax And Compliance"},
+      {t:"21:24",s:1284,title:"First Business At Thirteen"},
+      {t:"22:29",s:1349,title:"Competition Drove The Career"},
+      {t:"24:22",s:1462,title:"Work Doesn't Feel Like Work"},
+      {t:"25:10",s:1510,title:"Empowering The Team"},
+      {t:"25:45",s:1545,title:"Control Points In The Business"},
+      {t:"26:06",s:1566,title:"The Executive Assistant Role"},
+      {t:"28:30",s:1710,title:"Be Prepared For Hard Work"},
+      {t:"29:12",s:1752,title:"Protect Your Downside"},
+      {t:"29:38",s:1778,title:"Give Yourself Twelve Months Runway"},
+      {t:"30:21",s:1821,title:"The Iceberg Of Business"},
+      {t:"31:15",s:1875,title:"Offshoring Took Three Attempts"},
+      {t:"32:55",s:1975,title:"Setting Up Offshoring Properly"},
+      {t:"33:11",s:1991,title:"Offshoring Enabled The Tech Startup"},
+      {t:"34:37",s:2077,title:"Offshoring As Opportunity"},
+      {t:"35:45",s:2145,title:"Three Benefits Of Offshoring"},
+      {t:"36:15",s:2175,title:"Offshoring Empowers The Onshore Team"},
+      {t:"36:50",s:2210,title:"Making Advice Affordable"},
+      {t:"38:07",s:2287,title:"Retention Is Key To Offshoring"},
+      {t:"38:33",s:2313,title:"One Business Regardless Of Location"},
+      {t:"39:44",s:2384,title:"Treat Offshore Staff Equally"},
+      {t:"41:08",s:2468,title:"The Innovation Mindset"},
+      {t:"42:05",s:2525,title:"Create Space For Innovation"},
+      {t:"43:43",s:2623,title:"The Risk Of Doing Nothing"},
+      {t:"44:43",s:2683,title:"Empower The People Around You"},
+      {t:"45:53",s:2753,title:"AI Is A Buzzword Like Data"},
+      {t:"46:56",s:2816,title:"AI In Professional Services"},
+      {t:"47:28",s:2848,title:"AI In Transport Logistics"},
+      {t:"47:44",s:2864,title:"AI Does Not Replace The Human"},
+      {t:"49:09",s:2949,title:"Recycling Client Went Ten Times On Profit"},
+      {t:"50:06",s:3006,title:"Typical Results In Accounting Firms"},
+      {t:"50:40",s:3040,title:"Ten X Your Value Not Your Business"},
+      {t:"51:28",s:3088,title:"Focus On People First"},
+      {t:"52:16",s:3136,title:"Do What You Say"},
+      {t:"52:34",s:3154,title:"Right People In The Right Seat"},
+      {t:"53:19",s:3199,title:"Getting Off The Tools To Scale"}
+    ];
+    var QUESTIONS=[
+      {q:"How do you make a big business decision?",s:733},
+      {q:"What was Ryan's first business?",s:1284},
+      {q:"What does it take to start a business?",s:1710},
+      {q:"Why do people underestimate business success?",s:1821},
+      {q:"How should you treat offshore team members?",s:2384},
+      {q:"Is inaction a real business risk?",s:2623},
+      {q:"What results can data-driven decisions deliver?",s:2949},
+      {q:"How do you ten times your business?",s:3040},
+      {q:"What is the most valuable lesson as an entrepreneur?",s:3088},
+      {q:"Why does getting the right people matter?",s:3154}
+    ];
+
+    var chEl=document.getElementById('chapters');
+    CHAPTERS.forEach(function(c){var b=document.createElement('button');b.className='chapter';b.onclick=function(){startAt(c.s)};b.innerHTML='<span class="tc">'+c.t+'</span><span class="cx">'+c.title+'</span>';chEl.appendChild(b);});
+    document.getElementById('chcount').textContent=CHAPTERS.length;
+    var qEl=document.getElementById('qa');
+    QUESTIONS.forEach(function(q){var b=document.createElement('button');b.className='q';b.onclick=function(){startAt(q.s)};b.innerHTML='<span class="qm">?</span><span class="qx">'+q.q+'</span><span class="go">›</span>';qEl.appendChild(b);});
+    document.getElementById('qcount').textContent=QUESTIONS.length;
+
+    /* Mobile nav dropdown. */
+    var burger=document.getElementById('navburger'), navdrop=document.getElementById('navdrop');
+    if(burger&&navdrop){burger.addEventListener('click',function(){
+      navdrop.hidden=!navdrop.hidden;
+      burger.setAttribute('aria-expanded', navdrop.hidden?'false':'true');
+    });}
+
+    /* Voice-note button reveals the recorder; × tucks it away. */
+    var vbtn=document.getElementById('vbtn'), vslot=document.getElementById('vslot'), vclose=document.getElementById('vclose');
+    if(vbtn&&vslot){vbtn.addEventListener('click',function(){vslot.hidden=!vslot.hidden;});}
+    if(vclose&&vslot){vclose.addEventListener('click',function(){vslot.hidden=true;});}
+
+    /* Keep-exploring dots: only shown when the strip actually scrolls (mobile). */
+    var rg=document.querySelector('.relgrid'), rd=document.getElementById('reldots');
+    if(rg&&rd){
+      var relCards=rg.querySelectorAll('.relcard');
+      relCards.forEach(function(){rd.appendChild(document.createElement('span'))});
+      var updDots=function(){
+        var scrollable=rg.scrollWidth>rg.clientWidth+4;
+        rd.style.display=scrollable?'flex':'none';
+        if(!scrollable)return;
+        var i=Math.round(rg.scrollLeft/(rg.scrollWidth-rg.clientWidth)*(relCards.length-1));
+        rd.querySelectorAll('span').forEach(function(s,n){s.classList.toggle('on',n===i)});
+      };
+      rg.addEventListener('scroll',updDots,{passive:true});
+      window.addEventListener('resize',updDots);
+      updDots();
+    }
+
+    /* Explore tabs: swap the visible panel; the row stays put so you never lose your place. */
+    var tabBtns=document.querySelectorAll('.tabbtn');
+    tabBtns.forEach(function(b){
+      b.addEventListener('click',function(){
+        tabBtns.forEach(function(o){o.classList.remove('on')});
+        document.querySelectorAll('.tpanel').forEach(function(p){p.hidden=true});
+        b.classList.add('on');
+        document.getElementById(b.getAttribute('data-panel')).hidden=false;
+      });
+    });
+
+    /* YouTube: clean facade, then real player on demand. Seek without yanking to top. */
+    var player=null, ready=false, apiReady=false, pending=null;
+    window.onYouTubeIframeAPIReady=function(){apiReady=true; if(pending!=null){var s=pending;pending=null;createPlayer(s);}};
+    function createPlayer(sec){
+      var wrap=document.getElementById('player'); wrap.innerHTML='<div id="yt"></div>';
+      player=new YT.Player('yt',{videoId:VIDEO,playerVars:{autoplay:1,rel:0,modestbranding:1,playsinline:1,start:Math.floor(sec||0)},events:{onReady:function(){ready=true;}}});
+    }
+    function nudge(){
+      var p=document.getElementById('player-wrap'), r=p.getBoundingClientRect();
+      if(r.bottom<80 || r.top>window.innerHeight-90){ p.scrollIntoView({behavior:'smooth',block:'start'}); }
+    }
+    function startAt(sec){
+      nudge();
+      if(player&&ready){ player.seekTo(sec,true); player.playVideo(); return; }
+      if(apiReady){ createPlayer(sec); } else { pending=sec; }
+    }
+    document.getElementById('facade').addEventListener('click',function(){startAt(0);});
+    (function(){var s=document.createElement('script');s.src='https://www.youtube.com/iframe_api';document.head.appendChild(s);})();
+  </script>
+</body>
+</html>

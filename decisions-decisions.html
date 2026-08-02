@@ -1,0 +1,683 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EP 154 · Decisions, Decisions | The Numbers Game</title>
+<meta name="description" content="Marty leads on decisions, decisions: the idea that the quality of your decisions determines the quality of your life.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" sizes="64x64" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="canonical" href="https://thenumbersgamepodcast.com.au/decisions-decisions">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="The Numbers Game">
+<meta property="og:title" content="EP 154 · Decisions, Decisions | The Numbers Game">
+<meta property="og:description" content="Marty leads on decisions, decisions: the idea that the quality of your decisions determines the quality of your life.">
+<meta property="og:url" content="https://thenumbersgamepodcast.com.au/decisions-decisions">
+<meta property="og:image" content="https://i.ytimg.com/vi/66OrCLlb1QA/maxresdefault.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+  :root{
+    --purple:#585af3; --purple-dark:#2c1b8a; --mint:#7ad9a8;
+    --white:#ffffff; --muted:rgba(255,255,255,.60); --dim:rgba(255,255,255,.42);
+    --line:rgba(255,255,255,.12); --card:rgba(255,255,255,.05); --card-hi:rgba(255,255,255,.09);
+    --display:'Anton',Impact,'Helvetica Neue',sans-serif;
+    --sans:'Inter',system-ui,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif;
+    --wrap:1280px;   /* page frame (nav spans this) */
+    --col:960px;     /* content column (player, tabs, text) */
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:var(--sans); color:var(--white); line-height:1.6; -webkit-font-smoothing:antialiased;
+    background:#12093a;
+    background-image:
+      radial-gradient(1200px 600px at 82% -6%, rgba(88,90,243,.45) 0%, transparent 55%),
+      radial-gradient(900px 700px at 5% 8%, rgba(122,217,168,.10) 0%, transparent 50%),
+      linear-gradient(180deg,#2c1b8a 0%,#1a1150 28%,#100b34 62%,#0b0820 100%);
+    background-attachment:fixed;
+  }
+  a{color:inherit}
+  .wrap{max-width:var(--wrap);margin:0 auto;padding:0 36px}
+  main.wrap{max-width:var(--col)}
+  @media(max-width:720px){.wrap{padding:0 22px}}
+
+  /* ── Navbar ── */
+  .nav{position:sticky;top:0;z-index:50;background:linear-gradient(180deg,rgba(24,15,74,.92),rgba(24,15,74,.72));backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+  .nav-in{max-width:var(--wrap);margin:0 auto;padding:11px 36px;display:flex;align-items:center;justify-content:space-between}
+  @media(max-width:720px){.nav-in{padding:11px 22px}}
+  .brand{display:block;line-height:0}
+  .brand img{height:36px;width:auto;display:block}
+  .navlinks{display:flex;gap:28px;align-items:center}
+  .navlinks a{text-decoration:none;font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);transition:.15s}
+  .navlinks a:hover{color:var(--white)}
+  .navlinks a.navtop{cursor:default}
+  .navgroup{position:relative;display:flex;align-items:center}
+  .navgroup .subnav{display:none;position:absolute;top:100%;left:50%;transform:translateX(-50%);padding-top:14px;min-width:180px}
+  .navgroup:hover .subnav,.navgroup:focus-within .subnav{display:block}
+  .subnav-in,.navgroup .subnav{z-index:60}
+  .navgroup .subnav a{display:block;background:#180f4a;border:1px solid var(--line);border-top:0;padding:12px 16px;font-size:12px;color:rgba(255,255,255,.85)}
+  .navgroup .subnav a:first-child{border-top:1px solid var(--line)}
+  .navgroup .subnav a:hover{background:#221768;color:var(--white)}
+  .navburger{display:none;background:none;border:1px solid var(--line);padding:8px 10px;cursor:pointer;color:var(--white);transition:.15s}
+  .navburger:hover{border-color:rgba(122,217,168,.6)}
+  .navburger svg{width:20px;height:20px;fill:currentColor;display:block}
+  .navdrop{display:none}
+  @media(max-width:720px){
+    .navlinks{display:none}
+    .navburger{display:block}
+    .navdrop{display:block;position:absolute;left:0;right:0;top:100%;
+      background:#180f4a;border-bottom:1px solid var(--line);box-shadow:0 24px 50px rgba(0,0,0,.45)}
+    .navdrop[hidden]{display:none}
+    .navdrop a{display:block;padding:15px 22px;text-decoration:none;font-size:14px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:rgba(255,255,255,.9);border-bottom:1px solid rgba(255,255,255,.06)}
+    .navdrop a:last-child{border-bottom:0}
+    .navdrop a.sub{padding-left:42px;font-size:13px;color:rgba(255,255,255,.72)}
+    .navdrop .navlabel{display:block;padding:15px 22px 6px;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.4)}
+  }
+
+  /* ── Hero / hook (marker-highlight system: purple hook wraps naturally, mint payoff below)
+     Rules: title splits at its natural break (colon/pipe/question mark). Front = hook (purple,
+     big), back = payoff (mint, smaller). No break in title = purple hook only. Highlights hug
+     the text (tight em padding tuned to Anton) and wrap via box-decoration-break — never
+     hand-pick line breaks or mint words. ── */
+  header.hero{padding:34px 0 6px}
+  .hook{--inx:clamp(8.4px,2.1vw,15.6px)} /* one shared text inset so hook + payoff first letters align */
+  .hook .hk{font-family:var(--display);font-weight:400;text-transform:uppercase;
+    font-size:clamp(28px,7vw,52px);line-height:1.3;letter-spacing:-.5px;text-wrap:balance}
+  .hook .hk span{color:var(--white);padding:.04em var(--inx) .02em;
+    background:linear-gradient(var(--purple),var(--purple)) 0 50%/100% 87% no-repeat;
+    -webkit-box-decoration-break:clone;box-decoration-break:clone}
+  .hook .pay{font-family:var(--display);font-weight:400;text-transform:uppercase;
+    font-size:clamp(16px,4vw,24px);line-height:1.5;letter-spacing:.6px;margin-top:8px;text-wrap:balance}
+  .hook .pay span{color:#0a0a0a;padding:.08em var(--inx) .04em;
+    background:linear-gradient(var(--mint),var(--mint)) 0 50%/100% 88% no-repeat;
+    -webkit-box-decoration-break:clone;box-decoration-break:clone}
+  /* no-hook titles: mid-split into two full-size rows, purple then mint */
+  .hook .hk span.hkrow{display:block;background:none;padding:0}
+  .hook .hk .hkrow+.hkrow{margin-top:8px}
+  .hook .hk span.mintseg{color:#0a0a0a;
+    background:linear-gradient(var(--mint),var(--mint)) 0 50%/100% 87% no-repeat}
+
+  /* ── Player (clean facade → real player on tap) ── */
+  .player-wrap{margin:24px 0 4px;scroll-margin-top:76px}
+  .player{position:relative;width:100%;padding-top:56.25%;border-radius:0;overflow:hidden;background:#000;box-shadow:0 30px 70px rgba(0,0,0,.5),0 0 0 1px rgba(255,255,255,.06)}
+  .facade{position:absolute;inset:0;border:0;cursor:pointer;background-size:cover;background-position:center;display:flex;align-items:center;justify-content:center;padding:0}
+  .facade .play{width:74px;height:74px;border-radius:50%;background:rgba(10,6,30,.40);border:2px solid rgba(255,255,255,.72);display:flex;align-items:center;justify-content:center;transition:.18s;-webkit-backdrop-filter:blur(1px);backdrop-filter:blur(1px)}
+  .facade:hover .play{background:rgba(88,90,243,.62);transform:scale(1.07);border-color:#fff}
+  .facade .play::after{content:"";border-style:solid;border-width:11px 0 11px 19px;border-color:transparent transparent transparent #fff;margin-left:5px}
+  .player iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+
+  /* ── Episode facts (bottom of the Summary panel — templated per episode) ── */
+  .sumfacts{margin:14px 10px 4px;padding-top:13px;border-top:1px solid rgba(255,255,255,.08);display:flex;flex-direction:column;gap:8px}
+  .fact{display:flex;gap:12px;font-size:13.5px}
+  .fact .fl{flex:none;width:104px;color:var(--dim);font-weight:600;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;padding-top:2px}
+  .fact .fv{color:rgba(255,255,255,.9);font-weight:500}
+  .fact .fv a{color:var(--mint);text-decoration:none;border-bottom:1px solid rgba(122,217,168,.4);transition:.15s}
+  .fact .fv a:hover{border-bottom-color:var(--mint)}
+
+  /* ── Episode tag (identity: black label hanging off the title corner) ── */
+  .eptag{display:inline-block;position:relative;left:-6px;margin-bottom:-7px;z-index:2;
+    background:#0a0a0a;color:var(--white);font-family:var(--display);font-weight:400;
+    font-size:13.5px;letter-spacing:1.5px;text-transform:uppercase;padding:6px 11px 4px}
+
+  /* ── Explore tabs (sticky mode switcher; one panel swaps below, nothing shoves) ── */
+  .explore{margin-top:22px}
+  .tabs{position:sticky;top:58px;z-index:40;display:flex;flex-wrap:wrap;gap:8px;padding:10px 0;
+    background:linear-gradient(180deg,rgba(18,10,55,.96),rgba(18,10,55,.86));
+    backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+  .tabbtn{font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.5px;
+    font-size:14.5px;color:var(--white);background:var(--purple);border:1px solid var(--purple);
+    padding:9px 13px 7px;cursor:pointer;transition:.15s}
+  .tabbtn:hover{filter:brightness(1.12)}
+  .tabbtn.on{background:var(--mint);border-color:var(--mint);color:#0a0a0a}
+  .tabbtn.on:hover{filter:none}
+  .tabbtn .ct{font-size:12px;opacity:.75;font-variant-numeric:tabular-nums}
+  .tabbtn .ct::before{content:" · "}
+  .tpanel{border:1px solid var(--line);background:var(--card);padding:12px 10px 14px}
+  .hint{font-size:12.5px;color:var(--muted);padding:2px 10px 10px;border-bottom:1px solid rgba(255,255,255,.08);margin-bottom:6px}
+
+  /* ── Listen row (no box: label left, service pills follow) ── */
+  .listen{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:12px 16px;margin-top:34px}
+  .listen .lname{font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--dim)}
+  .listen a{display:inline-flex;align-items:center;gap:9px;padding:11px 18px;border-radius:999px;
+    background:var(--mint);color:#08210f;text-decoration:none;font-weight:800;font-size:12.5px;
+    letter-spacing:.04em;text-transform:uppercase;transition:.15s}
+  .listen a:hover{filter:brightness(1.06);transform:translateY(-1px);box-shadow:0 12px 30px rgba(122,217,168,.25)}
+  .listen svg{width:20px;height:20px;fill:currentColor;flex:none}
+  /* ── Listen-now Spotify audio embed (full column width, above the pills) ── */
+  .listen-now{margin-top:40px}
+  .listen-now .ln-head{display:flex;align-items:baseline;justify-content:space-between;gap:14px;margin-bottom:13px}
+  .listen-now .ln-title{font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--dim)}
+  .audio-embed{border-radius:12px;overflow:hidden;box-shadow:0 20px 50px rgba(0,0,0,.4),0 0 0 1px rgba(255,255,255,.06)}
+  .audio-embed iframe{display:block;width:100%;border:0}
+  @media(max-width:720px){.listen-now{margin-top:32px}}
+
+  /* ── Keep exploring (thumbnails link to other episode PAGES, never timecodes).
+     Swipeable strip on mobile, fits three-up on desktop. Variant rule: claim
+     "similar ground" + reason lines ONLY when moment-level topic overlap is
+     genuinely strong; otherwise show the latest released episodes with dates —
+     never invent a connection. ── */
+  .relsec{margin-top:60px;padding-top:58px;border-top:1px solid var(--line)} /* line = end of this episode's info */
+  .reldots{display:flex;justify-content:center;gap:7px;margin-top:12px}
+  .reldots span{width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.25);transition:.2s}
+  .reldots span.on{background:var(--mint)}
+  .relsec .rtitle{display:inline-block;font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.5px;font-size:14.5px;background:var(--mint);color:#0a0a0a;padding:9px 13px 7px;margin-bottom:18px}
+  .relgrid{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding-bottom:6px;scrollbar-width:none}
+  .relgrid::-webkit-scrollbar{display:none}
+  .relcard{flex:0 0 56%;max-width:232px;scroll-snap-align:start;display:flex;flex-direction:column;text-decoration:none;background:var(--card);border:1px solid var(--line);transition:.15s}
+  .relcard:hover{background:var(--card-hi);border-color:rgba(122,217,168,.55)}
+  .relcard img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block}
+  .relcard .rt{display:block;font-size:12.5px;font-weight:600;color:rgba(255,255,255,.92);line-height:1.4;padding:8px 8px 0}
+  .relcard .rfoot{margin-top:auto;display:flex;justify-content:space-between;align-items:flex-end;gap:8px;padding:10px 8px 9px}
+  .relcard .rwhy{font-size:11.5px;color:var(--mint)}
+  .relcard .rtag{display:inline-block;background:#0a0a0a;color:var(--white);font-family:var(--display);font-size:10px;letter-spacing:1.2px;text-transform:uppercase;padding:3px 7px 2px;white-space:nowrap;flex:0 0 auto}
+
+  /* ── Dropdown sections (accordion under the player) ── */
+  .drops{margin-top:34px;display:flex;flex-direction:column;gap:11px}
+  .drop{border:1px solid var(--line);border-radius:0;background:var(--card);overflow:hidden;transition:border-color .15s}
+  .drop[open]{border-color:rgba(122,217,168,.35)}
+  .drop>summary{list-style:none;cursor:pointer;padding:16px 18px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+  .drop>summary::-webkit-details-marker{display:none}
+  .drop>summary .st{font-weight:700;font-size:15.5px;letter-spacing:.005em}
+  .drop>summary .ct{margin-left:auto;font-size:12px;color:var(--dim);font-weight:600;font-variant-numeric:tabular-nums}
+  .drop>summary .chev{flex:none;width:22px;height:22px;border-radius:50%;background:rgba(122,217,168,.14);color:var(--mint);display:flex;align-items:center;justify-content:center;font-family:var(--display);font-size:15px;line-height:1;transition:.2s;transform:translateY(-1px)}
+  .drop[open]>summary .chev{transform:rotate(45deg)}
+  .drop-body{padding:2px 12px 12px}
+
+  /* chapters */
+  .chapter{display:flex;align-items:baseline;gap:14px;width:100%;text-align:left;cursor:pointer;background:none;border:0;color:inherit;font-family:inherit;padding:11px 10px;border-radius:10px;transition:.13s}
+  .chapter:hover{background:var(--card-hi)}
+  .chapter .tc{font-variant-numeric:tabular-nums;font-weight:700;font-size:14px;color:var(--mint);flex:none;width:48px}
+  .chapter .cx{font-size:15px;font-weight:500;color:rgba(255,255,255,.9)}
+  .chapter:hover .cx{color:#fff}
+
+  /* questions */
+  .q{display:flex;align-items:center;gap:12px;width:100%;text-align:left;cursor:pointer;background:none;border:0;border-radius:11px;color:inherit;font-family:inherit;padding:12px 10px;transition:.14s}
+  .q+.q{border-top:1px solid rgba(255,255,255,.05)}
+  .q:hover{background:var(--card-hi)}
+  .q .qm{font-family:var(--display);font-size:15px;color:var(--mint);flex:none;line-height:1;transform:translateY(1px)}
+  .q .qx{font-size:15px;font-weight:500;color:rgba(255,255,255,.92)}
+  .q .go{margin-left:auto;flex:none;color:var(--dim);font-size:18px;transition:.15s}
+  .q:hover .go{color:var(--mint);transform:translateX(2px)}
+
+  /* summary + transcript bodies */
+  .summary-body p{font-size:16.5px;line-height:1.62;color:rgba(255,255,255,.9);padding:6px 10px 4px}
+  .tbody{padding:2px 10px 8px}
+  .tbody p{font-size:14.5px;line-height:1.7;color:rgba(255,255,255,.78);margin-top:15px;max-width:64ch}
+  .tbody .spk{display:block;font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--mint);margin-bottom:2px}
+
+  /* ── Voice note ask (lives at the bottom of the Summary panel) ── */
+  .vask{margin:16px 10px 4px}
+  .vbtn{display:inline-flex;align-items:center;gap:9px;padding:12px 20px;border-radius:999px;border:0;cursor:pointer;
+    background:var(--mint);color:#08210f;font-family:inherit;font-weight:800;font-size:12.5px;
+    letter-spacing:.04em;text-transform:uppercase;transition:.15s}
+  .vbtn:hover{filter:brightness(1.06);transform:translateY(-1px);box-shadow:0 12px 30px rgba(122,217,168,.25)}
+  .vbtn svg{width:18px;height:18px;fill:currentColor;flex:none}
+  .vslot{background:var(--purple);padding:12px 10px 10px;margin:14px 0 4px;box-shadow:0 18px 40px rgba(0,0,0,.35)}
+  .vslot[hidden]{display:none}
+  .vhead{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;margin-bottom:10px}
+  .vhead .vmsg{font-family:var(--sans);font-size:13px;line-height:1.55;color:rgba(255,255,255,.92);margin:2px 0 0;padding:0 2px}
+  .vclose{background:none;border:0;color:rgba(255,255,255,.85);font-size:22px;line-height:1;cursor:pointer;padding:0 2px}
+  .vclose:hover{color:var(--white)}
+  .vslot iframe{display:block}
+
+  /* ── YouTube subscribe pill (sits in the listen row; outranks .listen a's mint) ── */
+  .listen a.yt-pill{background:var(--purple);color:var(--white)}
+  .listen a.yt-pill:hover{filter:brightness(1.1);transform:translateY(-1px)}
+  @media(max-width:720px){ /* mobile: no label, three compact pills on one row */
+    .listen .lname{display:none}
+    .listen{gap:8px}
+    .listen a{padding:10px 13px;font-size:11px;gap:6px}
+    .listen svg{width:16px;height:16px}
+  }
+
+  /* ── Footer: Follow us on | Brought to you by | Produced by, + Menu dropdown ── */
+  footer{border-top:1px solid var(--line);margin-top:68px;padding:52px 20px 58px}
+  .footgrid{max-width:var(--wrap);margin:0 auto;display:grid;grid-template-columns:1fr 1.15fr .8fr;gap:44px;align-items:start}
+  .fcol{text-align:center;display:flex;flex-direction:column;align-items:center}
+  .foot-label{font-size:11px;font-weight:700;letter-spacing:.26em;text-transform:uppercase;color:var(--dim);margin-bottom:18px}
+  .sponsors{display:flex;justify-content:center;align-items:center;gap:34px;flex-wrap:wrap}
+  .sponsors a,.produced a{display:inline-flex;transition:.15s}
+  .sponsors a:hover,.produced a:hover{transform:translateY(-1px)}
+  .sponsors img{height:32px;width:auto;opacity:.92}
+  .produced img{height:30px;width:auto;opacity:.95}
+  .sponsors a:hover img,.produced a:hover img{opacity:1}
+  footer .socials{display:flex;gap:11px;justify-content:center;flex-wrap:wrap;margin:0}
+  footer .socials a{width:40px;height:40px;border-radius:50%;border:1.5px solid rgba(122,217,168,.5);display:flex;align-items:center;justify-content:center;transition:.15s}
+  footer .socials a svg{width:18px;height:18px;fill:var(--mint);transition:.15s}
+  footer .socials a:hover{background:var(--mint);border-color:var(--mint);transform:translateY(-2px)}
+  footer .socials a:hover svg{fill:#0a0a0a}
+  .footbar{max-width:var(--wrap);margin:34px auto 0;border-top:1px solid var(--line);padding-top:20px;display:flex;flex-direction:column;align-items:center;gap:14px}
+  .footnav-dd{display:block;width:100%;max-width:var(--wrap);margin:0 auto;text-align:center}
+  .footnav-dd>summary{list-style:none;cursor:pointer;display:inline-flex;align-items:center;gap:9px;font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.5px;font-size:13px;color:var(--muted);background:transparent;border:1px solid var(--line);padding:8px 16px 6px;transition:.15s}
+  .footnav-dd>summary::-webkit-details-marker{display:none}
+  .footnav-dd>summary:hover{color:var(--mint);border-color:rgba(122,217,168,.45)}
+  .footnav-dd>summary .ham{width:15px;height:15px;fill:currentColor;transform:translateY(-1px)}
+  .footnav-dd .dd-links{display:flex;flex-direction:row;flex-wrap:wrap;justify-content:center;gap:12px 24px;padding:24px 0 4px}
+  .footnav-dd .dd-links a{font-size:11.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:.15s}
+  .footnav-dd .dd-links a:hover{color:var(--mint)}
+  .copyright{font-size:12px;color:var(--dim);text-align:center}
+  @media(max-width:720px){.footgrid{grid-template-columns:1fr;gap:34px}footer{padding:40px 16px 20px}.footbar{margin-top:34px;padding-top:24px;gap:20px}.footnav-dd .dd-links{flex-direction:column;align-items:center;gap:15px}}
+
+  @media(min-width:720px){header.hero{padding:48px 0 6px}}
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "PodcastEpisode", "name": "Decisions, Decisions", "url": "https://thenumbersgamepodcast.com.au/decisions-decisions", "datePublished": "2024-02-15", "episodeNumber": 154, "image": "https://i.ytimg.com/vi/66OrCLlb1QA/maxresdefault.jpg", "partOfSeries": {"@type": "PodcastSeries", "name": "The Numbers Game", "url": "https://thenumbersgamepodcast.com.au/"}}</script>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-in">
+      <a class="brand" href="/" aria-label="The Numbers Game home"><img src="assets/tng-logo.png" alt="The Numbers Game"></a>
+      <div class="navlinks">
+        <a href="/">Home</a>
+        <div class="navgroup">
+          <a class="navtop">Episodes</a>
+          <div class="subnav">
+            <a href="/episodes">All episodes</a>
+            <a href="/adventure">Find moments</a>
+          </div>
+        </div>
+        <div class="navgroup">
+          <a class="navtop">About</a>
+          <div class="subnav">
+            <a href="/about">The show</a>
+            <a href="/nick-reilly">Nick Reilly</a>
+            <a href="/jason-robinson">Jason Robinson</a>
+          </div>
+        </div>
+        <a href="/contact">Contact</a>
+      </div>
+      <button class="navburger" id="navburger" type="button" aria-label="Menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24"><path d="M3 6h18v2H3zM3 11h18v2H3zM3 16h18v2H3z"/></svg>
+      </button>
+    </div>
+    <div class="navdrop" id="navdrop" hidden>
+      <a href="/">Home</a>
+      <span class="navlabel">Episodes</span>
+      <a class="sub" href="/episodes">All episodes</a>
+      <a class="sub" href="/adventure">Find moments</a>
+      <span class="navlabel">About</span>
+      <a class="sub" href="/about">The show</a>
+      <a class="sub" href="/nick-reilly">Nick Reilly</a>
+      <a class="sub" href="/jason-robinson">Jason Robinson</a>
+      <a href="/contact">Contact</a>
+    </div>
+  </nav>
+
+  <main class="wrap">
+
+    <header class="hero">
+      <div class="hook">
+        <span class="eptag">EP 154</span>
+        <h1 class="hk"><span class="hkrow"><span>Decisions,</span></span>
+        <span class="hkrow"><span class="mintseg">Decisions</span></span></h1>
+      </div>
+    </header>
+
+    <div class="player-wrap" id="player-wrap">
+      <div class="player" id="player">
+        <button class="facade" id="facade" style="background-image:url('https://i.ytimg.com/vi/66OrCLlb1QA/maxresdefault.jpg')" aria-label="Play episode">
+          <span class="play"></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="explore">
+      <div class="tabs" role="tablist">
+        <button class="tabbtn on" data-panel="p-summary">Summary</button>
+        <button class="tabbtn" data-panel="p-chapters">Chapters<span class="ct" id="chcount"></span></button>
+        <button class="tabbtn" data-panel="p-questions">Questions<span class="ct" id="qcount"></span></button>
+      </div>
+      <section class="tpanel" id="p-summary">
+        <div class="summary-body">
+          <p>Marty leads on decisions, decisions: the idea that the quality of your decisions determines the quality of your life. He walks through a client who bought a 450k franchise turning over 600k with 100k profit, then optimised it to 175k profit and around 300k of created value in six months. Rather than buy an investment property that wouldn't hit their 250k income goal, the client is set up to borrow 50 percent against the existing business and duplicate the play into another franchise without touching the home. The trio unpack the decision framework (where are you at, where do you want to go, what's important), the trade-off of time and family, why business can beat the market on return, and how professionals differentiate by being referable and being the product, not the loan.</p>
+        </div>
+        <div class="vask">
+          <button class="vbtn" id="vbtn" type="button">
+            <svg viewBox="0 0 24 24"><path d="M12 14a3 3 0 0 0 3-3V6a3 3 0 1 0-6 0v5a3 3 0 0 0 3 3zm5-3a5 5 0 0 1-10 0H5a7 7 0 0 0 6 6.92V21h2v-3.08A7 7 0 0 0 19 11h-2z"/></svg>
+            Send us a voice note
+          </button>
+          <div class="vslot" id="vslot" hidden>
+            <div class="vhead">
+              <p class="vmsg">We'd love to hear from you. You can leave up to a 90 second voice note for us to play on the show: a question, some feedback, or a topic you want covered.</p>
+              <button class="vclose" id="vclose" type="button" aria-label="Close">&times;</button>
+            </div>
+            <iframe src="https://www.speakpipe.com/widget/inline/hhq6kzggsx7zpcsvakgxfrzun3zidpde" allow="microphone" width="100%" height="200" frameborder="0" title="Leave The Numbers Game a voice note"></iframe>
+          </div>
+          <script async src="https://www.speakpipe.com/widget/loader.js" charset="utf-8"></script>
+        </div>
+        <div class="sumfacts">
+          <div class="fact"><span class="fl">Release date</span><span class="fv">15 February 2024</span></div>
+          <div class="fact"><span class="fl">Hosts</span><span class="fv"><a href="/nick-reilly">Nick Reilly</a>, <a href="/jason-robinson">Jason Robinson</a> &amp; <a href="/marty-vidakovic">Marty Vidakovic</a></span></div>
+
+        </div>
+      </section>
+      <section class="tpanel" id="p-chapters" hidden>
+        <p class="hint">Jump straight to the part you need.</p>
+        <div id="chapters"></div>
+      </section>
+      <section class="tpanel" id="p-questions" hidden>
+        <p class="hint">Real questions this episode answers. Tap one to hear the answer.</p>
+        <div id="qa"></div>
+      </section>
+    </div>
+
+    <div class="drops">
+
+      <details class="drop">
+        <summary><span class="st">Episode transcript</span><span class="chev">+</span></summary>
+        <div class="drop-body tbody">
+          <p><span class="spk">Jason · 00:00</span>Welcome to episode 154 of The Numbers Game. I'm Jase, and I'm here with Nick and Marty. How are we going today, fellas?</p>
+          <p><span class="spk">Marty · 00:06</span>Going well, Jase. Going well. Just, uh, given the market where it's at, we're just grinding. We're up early, trying to make the market happen. We're trying to turn this market, uh, The Numbers Game.</p>
+          <p><span class="spk">Marty · 00:17</span>So all our efforts going into the start of 24. The results will be proven in the next few months, no doubt. So, Nick, how are you, my friend?</p>
+          <p><span class="spk">Marty · 00:32</span>Hopefully, uh, I'm not popping as much to the audience because I get a bit excited and I tend to pop and, you know, we don't want listeners to have hearing, you know, issues, uh, based on listening to the numbers game. So, hopefully, I'm, uh, a lot smoother, Nick. Oh,</p>
+          <p><span class="spk">Nick · 00:47</span>good. No, I'm very well, um, yeah, just to, just to lock in what you said.</p>
+          <p><span class="spk">Nick · 00:52</span>Yeah, it's been a pretty busy start to the year. I'm pretty bullish about the property market this year. I think prices will, um, will stagnate a little</p>
+          <p><span class="spk">Nick · 01:00</span>bit but there's plenty of activity, so Yeah, it's good to see this early. People are finally back, school holidays is over, uh, Australia Day's over, uh, so it's time for people to, to get real and sort their lives out, which is good for us.</p>
+          <p><span class="spk">Nick · 01:14</span>How are you going,</p>
+          <p><span class="spk">Jason · 01:14</span>Jase? Mate, I'm good, I'm good. It's um, always the way, isn't it? Like, it takes a little bit after Australia Day, we always say it. School goes back, things start to become normal again, clients return your phone calls, the emails start rolling in, so it does really feel like we're back on track, everything's ramped up and fired up, ready to go.</p>
+          <p><span class="spk">Jason · 01:31</span>I am, I'm well, I'm well. Just, um, you know, the, the weather's been up and down over the last couple of weeks in Melbourne. There's the odd hot day here and there, but I, uh, went to just an upfront reminder for everyone out there to go and see your skin specialist. If you haven't had your skin cancer check, I, uh, have a.</p>
+          <p><span class="spk">Jason · 01:47</span>Painful leg at the moment. I had to have an injection, like at the anaesthetic or whatever to kill the pain. And then the doctor was like, I'm just going to take this one. And on the spot, he just lanced my leg. I've got a big square hole in my leg and he sent it off for,</p>
+          <p><span class="spk">Jason · 02:00</span>you know, the biopsy and the check or whatever.</p>
+          <p><span class="spk">Jason · 02:01</span>He doesn't think there's anything to be alarmed about, but for some reason he wanted to cut a big hole in my leg. So I'm just sitting by the phone waiting to see if it rings or not. But if not, there is your reminder. It's. Summer in Melbourne or in Australia, um, go and get your skin check done. If you haven't had that done, there's your annual reminder from Jase.</p>
+          <p><span class="spk">Jason · 02:19</span>Here we are.</p>
+          <p><span class="spk">Nick · 02:20</span>Yeah. We just deliver all types of value</p>
+          <p><span class="spk">Marty · 02:22</span>here. I tell you what, in the eighties, it used to be slip, slop, slap. Now it's slip, slop, slap, shade. And I think there's something else too. Now it's, it's too overwhelming, everything we've got to do. To protect ourselves from this sun, Jayce. So I hope it's all right.</p>
+          <p><span class="spk">Jason · 02:38</span>I hope so too, mate. I hope so too. So anyway, we're here and we're talking decisions, decisions with the great man, Marty, leading us on this episode. So why don't we, uh, get things back on track and ignore, not ignore my skin check, but go out there and get your skin checked. But let's get back to what the numbers game is all about and check in on Marty and the markets.</p>
+          <p><span class="spk">Marty · 02:55</span>What's going on? Well, I think your doctor's made a strong decision, Jayce, to</p>
+          <p><span class="spk">Marty · 03:00</span>I think it's, uh, wise medical, uh, work there, but I always thought that, uh, you know, the quality of decisions you make in your life. Results in the quality life you have. Um, and I've always thought that circumstances happen in life and, you know, good, bad, and indifferent, but it's what you choose to focus on and the decisions you make out of the current circumstance that can really change the game in your favor.</p>
+          <p><span class="spk">Marty · 03:25</span>And a lot of the times when we talk to clients, uh, very often. Uh, business owners in particularly, they're very entrepreneurial. They've got a lot of ideas and they want to advance, but they're not quite sure what decision next to take. And as professionals, we could certainly help give guidance around that with the expertise we have.</p>
+          <p><span class="spk">Marty · 03:46</span>And I wanted to share an example today, um, with a client that I was working with and, and you can see how it sort of. It could become very confusing if they didn't have the advice and they were good enough to own a, well,</p>
+          <p><span class="spk">Marty · 04:00</span>they didn't own a home outright. They had a mortgage on a home, but they had purchased a franchise and I won't go into names and stuff because that's privacy, but, um, They'd got a franchise for about, cost them about 450 grand, and it turned over revenue of around 600 and profited about a hundred grand.</p>
+          <p><span class="spk">Marty · 04:20</span>And they were thinking about, well, what do I do? What do I do? Do I buy an investment property in this type of market or do I look to expand and buy another, another business? And it was really interesting. It all comes down to good questions. You know, where are you at? Where do you want to go? And, um, what's important to you were the three particular questions.</p>
+          <p><span class="spk">Marty · 04:41</span>And, um, the answer to that question was I want to earn 250, 000 a year. So that was the main driver, uh, which makes sense. So buying an investment property. Probably wasn't going to get that person to that point. Um, as their next move now in</p>
+          <p><span class="spk">Marty · 05:00</span>regards to purchasing the franchise, what they had done in the last six months was really optimize the revenues and the profitabilities in that franchise to the point where that hundred grand profit.</p>
+          <p><span class="spk">Marty · 05:12</span>Was now worth 175, 000 in profit, plus their earnings, their wage they were taking went from 60, 000 to 100, 000. So they really had done some great work in optimizing that purchase, which is the most important thing to do when you buy a business is extracting the value that's available to you. And the question I asked him was, um, what upside do you think there's still in the current franchise?</p>
+          <p><span class="spk">Marty · 05:38</span>Like how much, how much further can you go with this franchise? He said, probably only two or 3 percent and I go, okay, that's interesting. But the good thing about it was at 175, 000, all of a sudden he created virtually 300 grand value. So if you're looking at four times profit as the value of that business, now he</p>
+          <p><span class="spk">Marty · 06:00</span>created an upside, not to mention whatever extra he took on the wage as well.</p>
+          <p><span class="spk">Marty · 06:04</span>So for him to get to his target of his income. Really, he, he really had to look at potentially buying another franchise. Now I could pick that up very, very quickly in regards to just the numbers. And that would get him to closer to his goal of what he wanted to earn, which he could then. extend into another investment property at that time.</p>
+          <p><span class="spk">Marty · 06:27</span>And I was just thinking to myself, this is the wonderful thing about business and even buying established businesses or a franchise, where can you create 300 grand worth of value in six months based off your own efforts? I mean, whereas he would have had to wait with the investment market of the market doing what it needed to do for him to get that upswing here, he could just take all his expertise and create 300 grand of profit and 300 grand of value and increase his income, um, in during that process.</p>
+          <p><span class="spk">Marty · 06:58</span>So why wouldn't you</p>
+          <p><span class="spk">Marty · 07:00</span>duplicate that on a similar type purchase yet again? And the good thing was he'd used his home as equity to buy that first franchise. So we had, um, this whole equity play in regards to utilizing the business and borrowing 50 percent of the existing, uh, business to purchase the next business outright.</p>
+          <p><span class="spk">Marty · 07:20</span>We're 50 percent against the next franchise. So we could actually fund without touching his house again, fund that full business purchase on the next move. And then, you know, then we come to choice point in another 12 months, 18 months time, where if he does the right things again, he could have created 600 grand of value.</p>
+          <p><span class="spk">Marty · 07:39</span>His income goes up to 200 grand plus all of a sudden, and he's in a great position to make that choice again. Where are you at? Where do you want to go? What do you want to do? What's the next decision? So instead of being confused and not taking any further action, we could really bring him into focus and with some great questioning, um,</p>
+          <p><span class="spk">Marty · 08:00</span>show him what he could do.</p>
+          <p><span class="spk">Marty · 08:01</span>You know, tell us what you want and we can show you how to get there based off our skill sets. So I thought, um, that was the It was exciting. And that's what I love about what we're able to do in our professions, that we can give relevant guidance to what the, you know, what the person wants to accomplish and achieve.</p>
+          <p><span class="spk">Marty · 08:18</span>So yeah, that's the opening. What do you think about that, Jase?</p>
+          <p><span class="spk">Jason · 08:22</span>Oh, mate, I love it. And, um, Decisions, decisions, like the title of the episode as we will come into it and go, well, how does someone come up with or get themselves into that position to then have to make those decisions and who do they know how to turn to?</p>
+          <p><span class="spk">Jason · 08:35</span>So I love that these are the kinds of conversations you're having, but I wanted to throw back to you just off the top and say, I feel like asking these questions comes naturally to you. So it's one thing about making decisions, but for the person that, you know, is on the other side, how do you know?</p>
+          <p><span class="spk">Jason · 08:50</span>What's the right question to ask? How do you kind of guide yourself when you're in these conversations, Marty? Yeah,</p>
+          <p><span class="spk">Marty · 08:55</span>well, it's very much dependent on the goal. Like even if I have a personal goal,</p>
+          <p><span class="spk">Marty · 09:00</span>it's where am I at? What, you know, and then I link it to where that goal is and what's the gap. And then creating a strategy plan on how to attain the goal.</p>
+          <p><span class="spk">Marty · 09:09</span>So it's still always going to be very realistic and attainable, but you like it to be a stretch because you learn things along the way. So for me, with the questioning to a client, it's very similar. If I can ascertain where they want to go. And I can, I can talk to them about where they're at. Then I can quickly formulate a plan of attack on the steps to take to get there.</p>
+          <p><span class="spk">Marty · 09:31</span>So, and try to simplify it to a point where it's very executable. So I don't want to overwhelm them. It's like, what is the fastest route towards attaining this goal? And given the other thing I look at is where's the skill set of the person at. So. Particularly with that circumstance, that person had given me evidence that they were able to take a franchise that was doing okay and optimize it within a short space of time.</p>
+          <p><span class="spk">Marty · 09:59</span>So why</p>
+          <p><span class="spk">Marty · 10:00</span>wouldn't you duplicate something? And the, the other question I asked was, um, have you got the time to do that given you've got family commitments? Is that something you would entertain? And it was definitely a yes, because the other thing to take into account is, Yes, you want to earn more money and build your wealth, but at what cost on the other side?</p>
+          <p><span class="spk">Marty · 10:20</span>And that's your time. And is that time available to be spent in that direction? So to me, that's the decision point around having a clear goal as to what I want to get to, where am I at? And what's the fastest process and most efficient process to get there. Um, and that's usually where you come to decision point as to what the right strategy is.</p>
+          <p><span class="spk">Marty · 10:41</span>But yeah, decision is important. A lot of people sit in being unsure and confusion for a long, long time. So to have someone just work through that questioning and those questioning, you're right, Jace, that that's quite intuitive to me. Cause I'm sort of progress orientated. And I think that's.</p>
+          <p><span class="spk">Marty · 11:00</span>That's what you, you have to be defensive and aggressive all at the same time.</p>
+          <p><span class="spk">Marty · 11:05</span>So I always think you go take what you've done and use that as a compliment to where you're going, rather than it being too, like, if it's too far a stretch, it might break down pretty quickly. And the person's in a worse position. So I'm always looking at what are the attributes of the person and where have they displayed their ability to do well, and how do I shift that into a context that I know they can take the next step and, you know, duplicate a result.</p>
+          <p><span class="spk">Marty · 11:35</span>Because sometimes you don't have to be smarter, you just have to do what you do well, um, and, and keep adding to the process. So that's, that's the really interesting thing about decisions rather than being just thrown into the water and saying, Hey, swim, good luck. Yeah.</p>
+          <p><span class="spk">Nick · 11:52</span>I really like that Marty. Oh, you and I've had this conversation all the time around.</p>
+          <p><span class="spk">Nick · 11:57</span>Yeah, you can never get a better</p>
+          <p><span class="spk">Nick · 12:00</span>return on your time than in business, as long as you do business well. And I think, I love what you said there about the goals. What are you actually trying to achieve here? Because so many people think, Oh, I need to invest, I need to buy property, or I need to develop, or I I need to do that so I can create wealth.</p>
+          <p><span class="spk">Nick · 12:17</span>Um, but where can you have the most impact is, is really important. And from a personal point of view, I did a small development, um, probably three years ago now, three, four years ago, and going through that process and looking at the money involved and the time taken, I've kind of sat back after it and thought, well, I probably won't do that again, or not.</p>
+          <p><span class="spk">Nick · 12:41</span>Definitely in the medium term, because if I refocus that energy into business, I can actually get much more upside. And this particular client, obviously you've got to buy a, the right business and you're going to have the right skillset and make sure it's in line with your, um, your particular skills. But this particular client has created 300</p>
+          <p><span class="spk">Nick · 13:00</span>grand in, in wealth or added 300 grand to the bottom line of that business in the space of 12 months.</p>
+          <p><span class="spk">Nick · 13:07</span>Now they paid 450, 000 for that business. So, you know, besides the extra income they've created for themselves, they've also increased the value by 66 percent in one year. Now you tell me what, what asset you can buy unless you're, um, you're in a speccy stock, uh, which obviously holds a lot of risk, but you tell me.</p>
+          <p><span class="spk">Nick · 13:29</span>What asset you can buy, um, that would do that. And all you've really done is invest your time. Obviously you've bought money, uh, you spent money on the business, but that was already getting you a return just from a little bit of hard work. You've created sort of 60 percent return on that capital in the first 12</p>
+          <p><span class="spk">Nick · 13:45</span>months.</p>
+          <p><span class="spk">Marty · 13:46</span>I love the fact that you're in control of that result, whereas the market doesn't always allow that. But you're in direct control of that result. It's pretty powerful, really powerful. And can I ask,</p>
+          <p><span class="spk">Nick · 13:56</span>is it easy enough? Um, not sure if you want</p>
+          <p><span class="spk">Nick · 14:00</span>to talk about the industry, cause it might give a few things away as far as who the client is, but is it easy enough for this client to replicate that by another franchise and build up</p>
+          <p><span class="spk">Marty · 14:09</span>that way?</p>
+          <p><span class="spk">Marty · 14:09</span>Yeah, time and time again. So I think, and, and the methodology is maybe a slightly underperforming franchise. And bringing a skillset, which is sort of an engineering skillset, um, to the table in regards to getting the optimization. So they're very high on detail. And very savvy on marketing. Um, and again, if they keep looking at that same sort of segment, which is available, that same sort of performance, which is available and optimized, it's already performing okay.</p>
+          <p><span class="spk">Marty · 14:45</span>Cause the business is generating a profit. But they obviously can take it to the next level time and time again and keep building that value. And again, why I ask, why that's a good question, Nick, is, and the important question to ask is, have you got time and</p>
+          <p><span class="spk">Marty · 15:00</span>energy to put towards this? Is this, is this, and what's important to you personally?</p>
+          <p><span class="spk">Marty · 15:04</span>Because again, I've seen many a person over 20 years go for the money and go for creating value and cook their family. You know, because they haven't spent time there and they end up, you know, doing pretty well in the business, but end up with no one at home. So I always ask that question to say, you know, is this something that matches your lifestyle?</p>
+          <p><span class="spk">Marty · 15:25</span>Is this something where you can delegate effectively with managers in it and still generate that level of income for yourself and value? Um, and. Once I've recognized that that drive is okay, then it's, you know, okay, well, what's the next step? Let's, let's do it because a lot of times I've found like, you know, and I've certainly been in this situation myself in my early 30s is sometimes you can chase the money to the extent where everything else falls away.</p>
+          <p><span class="spk">Marty · 15:54</span>And you've got to be really balanced in regards to, and I think people this day and age do this a</p>
+          <p><span class="spk">Marty · 16:00</span>lot better than back in my day, um, in regards to enjoying that process of building value, um, across all areas of your life and your health and various different things.</p>
+          <p><span class="spk">Jason · 16:12</span>I found it interesting, Marty, that, you know, for somebody less experienced as an advisor or maybe at the barbecue, when you, if somebody asked their mate this question, the initial response may have been, yeah, you should buy a property.</p>
+          <p><span class="spk">Jason · 16:23</span>It's a great decision. You know, nobody ever loses money on property. So I think the other important thing I take away from this is asking the right person the right question. Or at least asking an advisor the question first so that you do have the opportunity to be questioned back about what decision you're making.</p>
+          <p><span class="spk">Jason · 16:40</span>The flow of questions you went through to end up not just that this family wants to grow their wealth but they want to achieve an annual income of a certain amount means that while An initial quick decision to say, yes, buying property is a great idea, may grow their wealth in the long term, but they would have had to forego income per year, potentially to afford to buy</p>
+          <p><span class="spk">Jason · 17:00</span>that property and service that property, which meant it was actually going against their goal of building disposable income year on year, rather</p>
+          <p><span class="spk">Marty · 17:07</span>than the word wealth.</p>
+          <p><span class="spk">Marty · 17:08</span>It would have placed them under stress. You're right. It wasn't, it wouldn't have been the right decision given that goal. So, uh, I think the, you know, that, that's what excites me about that because I think they're doing the right thing for what they want ultimately. So, you're right on point there. It's, um, totally agree with that.</p>
+          <p><span class="spk">Marty · 17:27</span>Um, yeah, it's an interesting one. I just think like there's so many people that go, yeah, buy, buy property. Yeah. It always goes up 8%. Yeah. Negatively gear, get some tax benefits. And again, you've got to be more strategic to that. Where to buy, where are you going to get great value at the moment? Where's there going to be an upswing?</p>
+          <p><span class="spk">Marty · 17:46</span>You know, where can you get a great yield? So you're not putting pressure on yourself. So you have to earn more in order to hold that property. Um, again, you can be much more specific on your decision making, not to say you're always going to get it</p>
+          <p><span class="spk">Marty · 18:00</span>right, but you can be more specific. If you're going into something, get the right professional around you.</p>
+          <p><span class="spk">Marty · 18:05</span>And go all in. So you have to make fewer decisions, but they're more quality decisions. And that's what I always think with, um, there was a great quote. I heard there'll always be another right or wrong decision. However, true leaders do their best to make the decision, right. Using intuition, science and execution.</p>
+          <p><span class="spk">Marty · 18:25</span>So again, yeah. How many times do we say in hindsight, geez, I wish I had known that or bloody hell, why did I do that? A little bit more quality time coming to a strategy for your life, um, and getting the right people around you can make a significant difference when you compound that ability as opposed to going, yep, it'll be all right.</p>
+          <p><span class="spk">Marty · 18:46</span>Just get into crypto, right?</p>
+          <p><span class="spk">Jason · 18:52</span>So Marty, then I guess as well, what I mean, reading between the lines here, that's not what the episode's about, but if you're a business owner and looking at, you know, the</p>
+          <p><span class="spk">Jason · 19:00</span>conversation, like Nick saying that, you know, sometimes the best returns you can get is by being, you know, working in the business and expanding your business and looking at those returns, you're looking now going.</p>
+          <p><span class="spk">Jason · 19:10</span>If you're a business owner, your business is settled, you're going all right. Is this a time to start to look to how you can expand, scale, maybe acquire, start a second version of your business in a different location is now a good time for that. Would</p>
+          <p><span class="spk">Marty · 19:22</span>you feel Marty? Yeah, yeah. I think it would. And I think the other question to ask is, um.</p>
+          <p><span class="spk">Marty · 19:28</span>How else could you optimize revenues? Like the big thing is what's the potential of your business in what it does well. Like sometimes keeping the main thing, the main thing is very powerful. How do you do more of what you do well? And we're talking about that in the sales meeting this morning. Like, um, the, the, I mean, the decision point I want every one of our finance professionals to get to is if you want great referrals, you have to be referable.</p>
+          <p><span class="spk">Marty · 19:56</span>You have to provide great value and what's your point of</p>
+          <p><span class="spk">Marty · 20:00</span>difference like there are people that can get a better interest rate out there in the market. There's 19, 000 mortgage brokers out there, you know, they can come up with a solution for a client, but what they can't do is provide a simple strategy that could save them 180, 000 Yeah, simple strategies that work.</p>
+          <p><span class="spk">Marty · 20:17</span>You need to be out in front of your clients showing it and demonstrating the value and showing the future value of working with you. So it's not the bank or the loan that's the benefit. It's the you as the product. We can provide an ecosystem of credibility in regards to our marketing and attracting people towards us, but at the end of the day, it's the individual to display their value and put that client in a better position for meeting them and putting them in a better position today and in the future and working with them for the next 1, 3, 5 and 10 years.</p>
+          <p><span class="spk">Marty · 20:53</span>But you've got to earn that, right? So it's, you know, if you want to be better, uh, Then the mass market, you have to</p>
+          <p><span class="spk">Marty · 21:00</span>demonstrate that value. Otherwise, you know, otherwise you're susceptible. And again, that's a decision point as a professional. You got to get to, do I be like everyone else in the majority of the market?</p>
+          <p><span class="spk">Marty · 21:12</span>Or do I demonstrate something better that it almost makes it impossible for the person not to want to utilize you because the value you've brought to the table. So it's it's very powerful. Now with that. That brings upside of people going, you've got to talk to this professional. This professional is a point of difference.</p>
+          <p><span class="spk">Marty · 21:32</span>You've got to, you know, friends, referral sources, you know, that, and then that expands the opportunity in regards to generating. More wealth for the business, more opportunities within the business that hindsight goes back into the business as well to make it even better again. So it's like, yeah, that they're the sort of things, decision points that individuals need to make and businesses need to make to go.</p>
+          <p><span class="spk">Marty · 21:56</span>Yeah. Because sometimes you can go way too left all of a sudden and go, I have to find</p>
+          <p><span class="spk">Marty · 22:00</span>it somewhere else. But you got to ask the question, what can I optimize with what we do really well? How do I make that even better? To be able to get a better result ultimately. So that's the sort of thing I'd ask in the business in your own business is to say, what optimization could you bring to the table that extends value beyond the general generalized competition in order for you to get that upscale approach without having to reinvent the whole wheel and potentially causing disruption as well.</p>
+          <p><span class="spk">Marty · 22:29</span>Good to explore, but tell you what, there might be a simple path that could be a big benefit. Well, I think in</p>
+          <p><span class="spk">Nick · 22:35</span>this client's, um, situation, there's also a proven formula, right? Correct. So they've gone into a business that was, I guess, performing okay, not understanding the industry, but, you know, they've more than, they've, they've doubled, they've doubled the profit pretty much, um, and added, as I said, 66 percent of the value in 12 months.</p>
+          <p><span class="spk">Nick · 22:53</span>So whatever this group is doing, they're doing it well. Um, and if it's a franchise model, then there's obviously other</p>
+          <p><span class="spk">Nick · 23:00</span>franchises available. So rinse and repeat. And as, as you said, you do it well. So just, just continue to, to,</p>
+          <p><span class="spk">Marty · 23:06</span>to replicate. So great salespeople do that. As you know, Nick, it's like rinse and repeat.</p>
+          <p><span class="spk">Marty · 23:12</span>If you do something well and you're of great value and you, you know, you put client in great position, do it again, do it again. Yeah, it's um. Yeah, do what works and do more of it, um, rather than get too distracted. So Marty, I dare</p>
+          <p><span class="spk">Jason · 23:25</span>say there's potentially some listeners to our show out there. And then even our listeners might be thinking of their friends who may be in a position like this as well.</p>
+          <p><span class="spk">Jason · 23:33</span>Can they contact you? Is this the place they should start for a conversation? Because Marty, look, I love the way your brain thinks. I love the questions you asked. And I know that a passion of yours is to help business owners get to that next goal. So is it logical for anyone who this. It's a sparked interest too.</p>
+          <p><span class="spk">Jason · 23:48</span>They should contact the great man, Marty V. You cool with that?</p>
+          <p><span class="spk">Marty · 23:50</span>Absolutely. Always happy to help and, uh, guide in the right direction. And, uh, no questions, a silly question if you want to ask it. So, uh, I've heard</p>
+          <p><span class="spk">Marty · 24:00</span>most of them, but hey, entertain me, give me a new one.</p>
+          <p><span class="spk">Jason · 24:03</span>Well guys, if you need to reach out to Marty V, the great man can be found on LinkedIn or just go and check out innovate.</p>
+          <p><span class="spk">Jason · 24:09</span>com. au, I N O V A Y T. com. au and you'll find the great man, Marty. I know many of the clients of Future Advisory that we've referred over that way have just come back raving about the insights, the questions, the care and detail that Marty and the team at Innovate go into in, you know, trying to work out where they want to get to and how to get them there.</p>
+          <p><span class="spk">Jason · 24:29</span>So I appreciate your time on that one, Marty, and I'm sure our listeners will get some epic value from that. Well,</p>
+          <p><span class="spk">Marty · 24:33</span>0 4 3 9 0 0 2 1 9 9. Pretty simple. Just give me a call. I'm ready for action. So look forward to helping out.</p>
+          <p><span class="spk">Jason · 24:43</span>Absolutely. Love your work, Marty. This has been another episode of The Numbers Game.</p>
+          <p><span class="spk">Jason · 24:47</span>I was looking at our reviews the other day. It's been a little while since I've given a shout out to the audience as well. So if you can jump on. Spotify, jump on Apple or wherever you get in your podcast and feel free to leave us a review, obviously five</p>
+          <p><span class="spk">Jason · 25:00</span>star cause we're here and we love giving value to you guys.</p>
+          <p><span class="spk">Jason · 25:02</span>And we'd love that you tune in every week whenever we launch new seasons and new apps. So thank you for listening and until next</p>
+          <p><span class="spk">Marty · 25:08</span>time, keep building game over. ---</p>
+        </div>
+      </details>
+
+    </div>
+
+    <!-- LISTEN:START (build_episode.py rewrites the 3 URLs + iframe title per episode; player dropped if no spotifyEmbedUrl) -->
+    <section class="listen-now">
+      <div class="ln-head">
+        <span class="ln-title">Listen now</span>
+      </div>
+      <div class="audio-embed">
+        <iframe src="https://open.spotify.com/embed/episode/2s6C41XL7kmUtlv5l3tH6d?utm_source=generator"
+          width="100%" height="152" loading="lazy" allowfullscreen
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+          title="Spotify — Decisions, Decisions"></iframe>
+      </div>
+    </section>
+
+    <div class="listen">
+      <a href="https://open.spotify.com/episode/2s6C41XL7kmUtlv5l3tH6d" target="_blank" rel="noopener" aria-label="Listen to this episode on Spotify">
+        <svg viewBox="0 0 24 24"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.52 17.34c-.24.36-.66.48-1.02.24-2.82-1.74-6.36-2.1-10.56-1.14-.42.12-.78-.18-.9-.54-.12-.42.18-.78.54-.9 4.56-1.02 8.52-.6 11.64 1.32.42.18.48.66.3 1.02zm1.44-3.3c-.3.42-.84.6-1.26.3-3.24-1.98-8.16-2.58-11.94-1.38-.48.12-1.02-.12-1.14-.6-.12-.48.12-1.02.6-1.14 4.32-1.32 9.72-.66 13.44 1.62.36.18.54.78.3 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.3c-.6.18-1.2-.18-1.38-.72-.18-.6.18-1.2.72-1.38 4.26-1.26 11.28-1.02 15.72 1.62.54.3.72 1.02.42 1.56-.3.42-1.02.6-1.56.3z"/></svg>
+        Spotify
+      </a>
+      <a href="https://podcasts.apple.com/au/podcast/id1555566088?i=1000645309788" target="_blank" rel="noopener" aria-label="Listen to this episode on Apple Podcasts">
+        <svg viewBox="0 0 24 24"><path d="M5.34 0A5.328 5.328 0 000 5.34v13.32A5.328 5.328 0 005.34 24h13.32A5.328 5.328 0 0024 18.66V5.34A5.328 5.328 0 0018.66 0H5.34zm6.525 2.568c2.336 0 4.448.902 6.056 2.587 1.224 1.272 1.912 2.619 2.264 4.392l.04.23c.04.272-.16.527-.432.567a.505.505 0 01-.567-.431l-.04-.213c-.312-1.57-.92-2.747-2.004-3.867-1.428-1.496-3.293-2.294-5.393-2.294-2.1 0-3.966.798-5.394 2.294-1.084 1.12-1.692 2.298-2.004 3.867l-.04.213a.507.507 0 01-.567.431.504.504 0 01-.432-.567l.04-.23c.352-1.773 1.04-3.12 2.264-4.392 1.608-1.685 3.72-2.587 6.056-2.587h.153zm.136 3.033c1.74 0 3.312.67 4.527 1.934.883.916 1.394 1.93 1.663 3.253l.04.23a.505.505 0 01-.431.567.503.503 0 01-.567-.432l-.04-.212c-.23-1.112-.659-1.97-1.396-2.732-1.052-1.1-2.404-1.672-3.9-1.672s-2.849.572-3.901 1.672c-.737.762-1.167 1.62-1.396 2.732l-.04.212a.503.503 0 01-.567.432.505.505 0 01-.432-.567l.04-.23c.27-1.323.78-2.337 1.664-3.253 1.215-1.264 2.787-1.934 4.527-1.934h.21zm-.078 3.05c1.092 0 2.091.424 2.89 1.22.582.58.924 1.245 1.107 2.15l.04.218a.501.501 0 01-.424.568.499.499 0 01-.568-.424l-.04-.198c-.146-.724-.413-1.253-.871-1.716-.63-.63-1.398-.957-2.226-.957s-1.595.328-2.225.957c-.459.463-.726.992-.871 1.716l-.04.198a.499.499 0 01-.568.424.501.501 0 01-.424-.568l.04-.219c.183-.904.525-1.569 1.106-2.149.8-.796 1.799-1.22 2.89-1.22h.184zM12 14.07a2.477 2.477 0 012.48 2.478A2.477 2.477 0 0112 19.024a2.477 2.477 0 01-2.48-2.477A2.477 2.477 0 0112 14.07z"/></svg>
+        Apple
+      </a>
+      <a class="yt-pill" href="https://www.youtube.com/@thenumbersgamepodcast?sub_confirmation=1" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.12-2.14C19.5 3.55 12 3.55 12 3.55s-7.5 0-9.38.51A3 3 0 0 0 .5 6.2 31.4 31.4 0 0 0 0 12a31.4 31.4 0 0 0 .5 5.8 3 3 0 0 0 2.12 2.14c1.88.51 9.38.51 9.38.51s7.5 0 9.38-.51a3 3 0 0 0 2.12-2.14A31.4 31.4 0 0 0 24 12a31.4 31.4 0 0 0-.5-5.8zM9.55 15.57V8.43L15.82 12z"/></svg>
+        Subscribe
+      </a>
+    </div>
+    <!-- LISTEN:END -->
+
+    <div class="relsec">
+      <span class="rtitle">Discover more</span>
+      <div class="relgrid">
+        <a class="relcard" href="/chris-christofi-on-relentless-learning-giving-back-staying-hungry">
+          <img src="https://i.ytimg.com/vi/_rQaU5KCy_E/hqdefault.jpg" alt="EP 236 thumbnail">
+          <span class="rt">Chris Christofi on Relentless Learning, Giving Back &amp; Staying Hungry</span>
+          <span class="rfoot"><span class="rwhy">Also covers: mindset</span><span class="rtag">EP 236</span></span>
+        </a>
+        <a class="relcard" href="/the-numbers-game-of-life-marty-s-5-biggest-lessons">
+          <img src="https://i.ytimg.com/vi/bM7PFcSZj6Q/hqdefault.jpg" alt="EP 261 thumbnail">
+          <span class="rt">The Numbers Game of Life</span>
+          <span class="rfoot"><span class="rwhy">Also covers: systems</span><span class="rtag">EP 261</span></span>
+        </a>
+        <a class="relcard" href="/if-i-could-start-my-business-again-today">
+          <img src="https://i.ytimg.com/vi/fX_EE9bzhc4/hqdefault.jpg" alt="EP 203 thumbnail">
+          <span class="rt">If I Could Start My Business Again Today...</span>
+          <span class="rfoot"><span class="rwhy">Also covers: marketing</span><span class="rtag">EP 203</span></span>
+        </a>
+        <a class="relcard" href="/the-rise-of-adrian-portelli-and-lmct">
+          <img src="https://i.ytimg.com/vi/T3PkQ7Y8hDY/hqdefault.jpg" alt="EP 139 thumbnail">
+          <span class="rt">The Rise of Adrian Portelli and LMCT+</span>
+          <span class="rfoot"><span class="rwhy">Also covers: marketing</span><span class="rtag">EP 139</span></span>
+        </a>
+        <a class="relcard" href="/knowing-when-to-quit-in-business">
+          <img src="https://i.ytimg.com/vi/KDQQ5bor1BQ/hqdefault.jpg" alt="EP 231 thumbnail">
+          <span class="rt">Knowing When to Quit in Business</span>
+          <span class="rfoot"><span class="rwhy">Also covers: systems</span><span class="rtag">EP 231</span></span>
+        </a>
+        <a class="relcard" href="/crafting-your-business-edge">
+          <img src="https://i.ytimg.com/vi/hnUeiudZfso/hqdefault.jpg" alt="EP 207 thumbnail">
+          <span class="rt">Crafting Your Business Edge</span>
+          <span class="rfoot"><span class="rwhy">Also covers: marketing</span><span class="rtag">EP 207</span></span>
+        </a>
+      </div>
+      <div class="reldots" id="reldots"></div>
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="footgrid">
+      <div class="fcol">
+        <div class="foot-label">Follow us on</div>
+        <div class="socials">
+          <a href="https://www.instagram.com/thenumbersgamepodcast/" target="_blank" rel="noopener" aria-label="The Numbers Game on Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.8.2 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1 .4 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .4-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1-.4-2.2-.1-1.3-.1-1.7-.1-4.9s0-3.6.1-4.9c.1-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.4 2.2-.4 1.3-.1 1.7-.1 4.9-.1zm0 2c-3.1 0-3.5 0-4.8.1-1.1.1-1.5.2-1.8.3-.4.2-.7.3-1 .6-.3.3-.5.6-.6 1-.1.3-.3.7-.3 1.8-.1 1.3-.1 1.7-.1 4.8s0 3.5.1 4.8c.1 1.1.2 1.5.3 1.8.2.4.3.7.6 1 .3.3.6.5 1 .6.3.1.7.3 1.8.3 1.3.1 1.7.1 4.8.1s3.5 0 4.8-.1c1.1-.1 1.5-.2 1.8-.3.4-.2.7-.3 1-.6.3-.3.5-.6.6-1 .1-.3.3-.7.3-1.8.1-1.3.1-1.7.1-4.8s0-3.5-.1-4.8c-.1-1.1-.2-1.5-.3-1.8-.2-.4-.3-.7-.6-1-.3-.3-.6-.5-1-.6-.3-.1-.7-.3-1.8-.3-1.3-.1-1.7-.1-4.8-.1zm0 3.4a5.4 5.4 0 1 1 0 10.8 5.4 5.4 0 0 1 0-10.8zm0 2a3.4 3.4 0 1 0 0 6.8 3.4 3.4 0 0 0 0-6.8zm5.6-2.3a1.3 1.3 0 1 1-2.6 0 1.3 1.3 0 0 1 2.6 0z"/></svg></a>
+          <a href="https://www.tiktok.com/@thenumbersgamepodcast" target="_blank" rel="noopener" aria-label="The Numbers Game on TikTok"><svg viewBox="0 0 24 24"><path d="M12.53.02C13.84 0 15.14.01 16.44 0c.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg></a>
+          <a href="https://www.linkedin.com/company/the-numbers-game-podcast/" target="_blank" rel="noopener" aria-label="The Numbers Game on LinkedIn"><svg viewBox="0 0 24 24"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.24 8.25h4.52V23H.24V8.25zM8.34 8.25h4.33v2.01h.06c.6-1.14 2.08-2.34 4.28-2.34 4.58 0 5.42 3.01 5.42 6.92V23h-4.51v-7.16c0-1.71-.03-3.91-2.38-3.91-2.39 0-2.75 1.86-2.75 3.78V23H8.34V8.25z"/></svg></a>
+          <a href="https://www.facebook.com/profile.php?id=100071290388343" target="_blank" rel="noopener" aria-label="The Numbers Game on Facebook"><svg viewBox="0 0 24 24"><path d="M24 12.07C24 5.41 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.04V9.41c0-3.02 1.8-4.7 4.54-4.7 1.31 0 2.68.24 2.68.24v2.97h-1.5c-1.5 0-1.96.93-1.96 1.89v2.26h3.32l-.53 3.5h-2.8V24C19.62 23.1 24 18.1 24 12.07z"/></svg></a>
+          <a href="https://www.youtube.com/@thenumbersgamepodcast" target="_blank" rel="noopener" aria-label="The Numbers Game on YouTube"><svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.2C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31.7 31.7 0 0 0 0 12a31.7 31.7 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.2A31.7 31.7 0 0 0 24 12a31.7 31.7 0 0 0-.5-5.8zM9.6 15.6V8.4L15.8 12z"/></svg></a>
+        </div>
+      </div>
+      <div class="fcol">
+        <div class="foot-label">Brought to you by</div>
+        <div class="sponsors">
+          <a href="https://www.inovayt.com.au/" target="_blank" rel="noopener"><img src="assets/inovayt-white.png" alt="Inovayt"></a>
+          <a href="https://futureadvisory.com.au/" target="_blank" rel="noopener"><img src="assets/future-advisory-white.png" alt="Future Advisory"></a>
+        </div>
+      </div>
+      <div class="fcol produced">
+        <div class="foot-label">Produced by</div>
+        <a href="https://www.vidpod.com.au/" target="_blank" rel="noopener"><img src="assets/vidpod-white.png" alt="VIDPOD"></a>
+      </div>
+    </div>
+    <div class="footbar">
+      <details class="footnav-dd">
+        <summary><svg class="ham" viewBox="0 0 24 24"><path d="M3 6h18v2H3zM3 11h18v2H3zM3 16h18v2H3z"/></svg> Menu</summary>
+        <div class="dd-links">
+          <a href="/">Home</a><a href="/episodes">Every episode</a><a href="/adventure">Choose your own adventure</a><a href="/about">About the show</a><a href="/nick-reilly">Nick Reilly</a><a href="/jason-robinson">Jason Robinson</a><a href="/contact">Contact</a>
+        </div>
+      </details>
+      <div class="copyright">© 2026 The Numbers Game</div>
+    </div>
+  </footer>
+
+  <script>
+    var VIDEO='66OrCLlb1QA';
+    var CHAPTERS=[
+      {t:"00:00",s:0,title:"Intro"},
+      {t:"03:00",s:180,title:""}
+    ];
+    var QUESTIONS=[
+      {q:"Why do decisions matter so much?",s:180},
+      {q:"What questions should you ask before a big decision?",s:268},
+      {q:"What matters most when buying a business?",s:312},
+      {q:"How do you turn a goal into a plan?",s:540},
+      {q:"Do you need to be smarter to succeed?",s:698},
+      {q:"What gives the best return on your time?",s:720},
+      {q:"Who should you ask for financial decisions?",s:980},
+      {q:"How many decisions should you make?",s:1085},
+      {q:"How do leaders handle decisions?",s:1098},
+      {q:"How do you get more referrals?",s:1185}
+    ];
+
+    var chEl=document.getElementById('chapters');
+    CHAPTERS.forEach(function(c){var b=document.createElement('button');b.className='chapter';b.onclick=function(){startAt(c.s)};b.innerHTML='<span class="tc">'+c.t+'</span><span class="cx">'+c.title+'</span>';chEl.appendChild(b);});
+    document.getElementById('chcount').textContent=CHAPTERS.length;
+    var qEl=document.getElementById('qa');
+    QUESTIONS.forEach(function(q){var b=document.createElement('button');b.className='q';b.onclick=function(){startAt(q.s)};b.innerHTML='<span class="qm">?</span><span class="qx">'+q.q+'</span><span class="go">›</span>';qEl.appendChild(b);});
+    document.getElementById('qcount').textContent=QUESTIONS.length;
+
+    /* Mobile nav dropdown. */
+    var burger=document.getElementById('navburger'), navdrop=document.getElementById('navdrop');
+    if(burger&&navdrop){burger.addEventListener('click',function(){
+      navdrop.hidden=!navdrop.hidden;
+      burger.setAttribute('aria-expanded', navdrop.hidden?'false':'true');
+    });}
+
+    /* Voice-note button reveals the recorder; × tucks it away. */
+    var vbtn=document.getElementById('vbtn'), vslot=document.getElementById('vslot'), vclose=document.getElementById('vclose');
+    if(vbtn&&vslot){vbtn.addEventListener('click',function(){vslot.hidden=!vslot.hidden;});}
+    if(vclose&&vslot){vclose.addEventListener('click',function(){vslot.hidden=true;});}
+
+    /* Keep-exploring dots: only shown when the strip actually scrolls (mobile). */
+    var rg=document.querySelector('.relgrid'), rd=document.getElementById('reldots');
+    if(rg&&rd){
+      var relCards=rg.querySelectorAll('.relcard');
+      relCards.forEach(function(){rd.appendChild(document.createElement('span'))});
+      var updDots=function(){
+        var scrollable=rg.scrollWidth>rg.clientWidth+4;
+        rd.style.display=scrollable?'flex':'none';
+        if(!scrollable)return;
+        var i=Math.round(rg.scrollLeft/(rg.scrollWidth-rg.clientWidth)*(relCards.length-1));
+        rd.querySelectorAll('span').forEach(function(s,n){s.classList.toggle('on',n===i)});
+      };
+      rg.addEventListener('scroll',updDots,{passive:true});
+      window.addEventListener('resize',updDots);
+      updDots();
+    }
+
+    /* Explore tabs: swap the visible panel; the row stays put so you never lose your place. */
+    var tabBtns=document.querySelectorAll('.tabbtn');
+    tabBtns.forEach(function(b){
+      b.addEventListener('click',function(){
+        tabBtns.forEach(function(o){o.classList.remove('on')});
+        document.querySelectorAll('.tpanel').forEach(function(p){p.hidden=true});
+        b.classList.add('on');
+        document.getElementById(b.getAttribute('data-panel')).hidden=false;
+      });
+    });
+
+    /* YouTube: clean facade, then real player on demand. Seek without yanking to top. */
+    var player=null, ready=false, apiReady=false, pending=null;
+    window.onYouTubeIframeAPIReady=function(){apiReady=true; if(pending!=null){var s=pending;pending=null;createPlayer(s);}};
+    function createPlayer(sec){
+      var wrap=document.getElementById('player'); wrap.innerHTML='<div id="yt"></div>';
+      player=new YT.Player('yt',{videoId:VIDEO,playerVars:{autoplay:1,rel:0,modestbranding:1,playsinline:1,start:Math.floor(sec||0)},events:{onReady:function(){ready=true;}}});
+    }
+    function nudge(){
+      var p=document.getElementById('player-wrap'), r=p.getBoundingClientRect();
+      if(r.bottom<80 || r.top>window.innerHeight-90){ p.scrollIntoView({behavior:'smooth',block:'start'}); }
+    }
+    function startAt(sec){
+      nudge();
+      if(player&&ready){ player.seekTo(sec,true); player.playVideo(); return; }
+      if(apiReady){ createPlayer(sec); } else { pending=sec; }
+    }
+    document.getElementById('facade').addEventListener('click',function(){startAt(0);});
+    (function(){var s=document.createElement('script');s.src='https://www.youtube.com/iframe_api';document.head.appendChild(s);})();
+  </script>
+</body>
+</html>

@@ -1,0 +1,681 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EP 171 · Victoria's 50 Billion Dollar Problem | The Numbers Game</title>
+<meta name="description" content="">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" sizes="64x64" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="canonical" href="https://thenumbersgamepodcast.com.au/victoria-s-50-billion-dollar-problem">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="The Numbers Game">
+<meta property="og:title" content="EP 171 · Victoria's 50 Billion Dollar Problem | The Numbers Game">
+<meta property="og:description" content="">
+<meta property="og:url" content="https://thenumbersgamepodcast.com.au/victoria-s-50-billion-dollar-problem">
+<meta property="og:image" content="https://i.ytimg.com/vi/hB8h9aFKk1M/maxresdefault.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+  :root{
+    --purple:#585af3; --purple-dark:#2c1b8a; --mint:#7ad9a8;
+    --white:#ffffff; --muted:rgba(255,255,255,.60); --dim:rgba(255,255,255,.42);
+    --line:rgba(255,255,255,.12); --card:rgba(255,255,255,.05); --card-hi:rgba(255,255,255,.09);
+    --display:'Anton',Impact,'Helvetica Neue',sans-serif;
+    --sans:'Inter',system-ui,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif;
+    --wrap:1280px;   /* page frame (nav spans this) */
+    --col:960px;     /* content column (player, tabs, text) */
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:var(--sans); color:var(--white); line-height:1.6; -webkit-font-smoothing:antialiased;
+    background:#12093a;
+    background-image:
+      radial-gradient(1200px 600px at 82% -6%, rgba(88,90,243,.45) 0%, transparent 55%),
+      radial-gradient(900px 700px at 5% 8%, rgba(122,217,168,.10) 0%, transparent 50%),
+      linear-gradient(180deg,#2c1b8a 0%,#1a1150 28%,#100b34 62%,#0b0820 100%);
+    background-attachment:fixed;
+  }
+  a{color:inherit}
+  .wrap{max-width:var(--wrap);margin:0 auto;padding:0 36px}
+  main.wrap{max-width:var(--col)}
+  @media(max-width:720px){.wrap{padding:0 22px}}
+
+  /* ── Navbar ── */
+  .nav{position:sticky;top:0;z-index:50;background:linear-gradient(180deg,rgba(24,15,74,.92),rgba(24,15,74,.72));backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+  .nav-in{max-width:var(--wrap);margin:0 auto;padding:11px 36px;display:flex;align-items:center;justify-content:space-between}
+  @media(max-width:720px){.nav-in{padding:11px 22px}}
+  .brand{display:block;line-height:0}
+  .brand img{height:36px;width:auto;display:block}
+  .navlinks{display:flex;gap:28px;align-items:center}
+  .navlinks a{text-decoration:none;font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);transition:.15s}
+  .navlinks a:hover{color:var(--white)}
+  .navlinks a.navtop{cursor:default}
+  .navgroup{position:relative;display:flex;align-items:center}
+  .navgroup .subnav{display:none;position:absolute;top:100%;left:50%;transform:translateX(-50%);padding-top:14px;min-width:180px}
+  .navgroup:hover .subnav,.navgroup:focus-within .subnav{display:block}
+  .subnav-in,.navgroup .subnav{z-index:60}
+  .navgroup .subnav a{display:block;background:#180f4a;border:1px solid var(--line);border-top:0;padding:12px 16px;font-size:12px;color:rgba(255,255,255,.85)}
+  .navgroup .subnav a:first-child{border-top:1px solid var(--line)}
+  .navgroup .subnav a:hover{background:#221768;color:var(--white)}
+  .navburger{display:none;background:none;border:1px solid var(--line);padding:8px 10px;cursor:pointer;color:var(--white);transition:.15s}
+  .navburger:hover{border-color:rgba(122,217,168,.6)}
+  .navburger svg{width:20px;height:20px;fill:currentColor;display:block}
+  .navdrop{display:none}
+  @media(max-width:720px){
+    .navlinks{display:none}
+    .navburger{display:block}
+    .navdrop{display:block;position:absolute;left:0;right:0;top:100%;
+      background:#180f4a;border-bottom:1px solid var(--line);box-shadow:0 24px 50px rgba(0,0,0,.45)}
+    .navdrop[hidden]{display:none}
+    .navdrop a{display:block;padding:15px 22px;text-decoration:none;font-size:14px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:rgba(255,255,255,.9);border-bottom:1px solid rgba(255,255,255,.06)}
+    .navdrop a:last-child{border-bottom:0}
+    .navdrop a.sub{padding-left:42px;font-size:13px;color:rgba(255,255,255,.72)}
+    .navdrop .navlabel{display:block;padding:15px 22px 6px;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.4)}
+  }
+
+  /* ── Hero / hook (marker-highlight system: purple hook wraps naturally, mint payoff below)
+     Rules: title splits at its natural break (colon/pipe/question mark). Front = hook (purple,
+     big), back = payoff (mint, smaller). No break in title = purple hook only. Highlights hug
+     the text (tight em padding tuned to Anton) and wrap via box-decoration-break — never
+     hand-pick line breaks or mint words. ── */
+  header.hero{padding:34px 0 6px}
+  .hook{--inx:clamp(8.4px,2.1vw,15.6px)} /* one shared text inset so hook + payoff first letters align */
+  .hook .hk{font-family:var(--display);font-weight:400;text-transform:uppercase;
+    font-size:clamp(28px,7vw,52px);line-height:1.3;letter-spacing:-.5px;text-wrap:balance}
+  .hook .hk span{color:var(--white);padding:.04em var(--inx) .02em;
+    background:linear-gradient(var(--purple),var(--purple)) 0 50%/100% 87% no-repeat;
+    -webkit-box-decoration-break:clone;box-decoration-break:clone}
+  .hook .pay{font-family:var(--display);font-weight:400;text-transform:uppercase;
+    font-size:clamp(16px,4vw,24px);line-height:1.5;letter-spacing:.6px;margin-top:8px;text-wrap:balance}
+  .hook .pay span{color:#0a0a0a;padding:.08em var(--inx) .04em;
+    background:linear-gradient(var(--mint),var(--mint)) 0 50%/100% 88% no-repeat;
+    -webkit-box-decoration-break:clone;box-decoration-break:clone}
+  /* no-hook titles: mid-split into two full-size rows, purple then mint */
+  .hook .hk span.hkrow{display:block;background:none;padding:0}
+  .hook .hk .hkrow+.hkrow{margin-top:8px}
+  .hook .hk span.mintseg{color:#0a0a0a;
+    background:linear-gradient(var(--mint),var(--mint)) 0 50%/100% 87% no-repeat}
+
+  /* ── Player (clean facade → real player on tap) ── */
+  .player-wrap{margin:24px 0 4px;scroll-margin-top:76px}
+  .player{position:relative;width:100%;padding-top:56.25%;border-radius:0;overflow:hidden;background:#000;box-shadow:0 30px 70px rgba(0,0,0,.5),0 0 0 1px rgba(255,255,255,.06)}
+  .facade{position:absolute;inset:0;border:0;cursor:pointer;background-size:cover;background-position:center;display:flex;align-items:center;justify-content:center;padding:0}
+  .facade .play{width:74px;height:74px;border-radius:50%;background:rgba(10,6,30,.40);border:2px solid rgba(255,255,255,.72);display:flex;align-items:center;justify-content:center;transition:.18s;-webkit-backdrop-filter:blur(1px);backdrop-filter:blur(1px)}
+  .facade:hover .play{background:rgba(88,90,243,.62);transform:scale(1.07);border-color:#fff}
+  .facade .play::after{content:"";border-style:solid;border-width:11px 0 11px 19px;border-color:transparent transparent transparent #fff;margin-left:5px}
+  .player iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+
+  /* ── Episode facts (bottom of the Summary panel — templated per episode) ── */
+  .sumfacts{margin:14px 10px 4px;padding-top:13px;border-top:1px solid rgba(255,255,255,.08);display:flex;flex-direction:column;gap:8px}
+  .fact{display:flex;gap:12px;font-size:13.5px}
+  .fact .fl{flex:none;width:104px;color:var(--dim);font-weight:600;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;padding-top:2px}
+  .fact .fv{color:rgba(255,255,255,.9);font-weight:500}
+  .fact .fv a{color:var(--mint);text-decoration:none;border-bottom:1px solid rgba(122,217,168,.4);transition:.15s}
+  .fact .fv a:hover{border-bottom-color:var(--mint)}
+
+  /* ── Episode tag (identity: black label hanging off the title corner) ── */
+  .eptag{display:inline-block;position:relative;left:-6px;margin-bottom:-7px;z-index:2;
+    background:#0a0a0a;color:var(--white);font-family:var(--display);font-weight:400;
+    font-size:13.5px;letter-spacing:1.5px;text-transform:uppercase;padding:6px 11px 4px}
+
+  /* ── Explore tabs (sticky mode switcher; one panel swaps below, nothing shoves) ── */
+  .explore{margin-top:22px}
+  .tabs{position:sticky;top:58px;z-index:40;display:flex;flex-wrap:wrap;gap:8px;padding:10px 0;
+    background:linear-gradient(180deg,rgba(18,10,55,.96),rgba(18,10,55,.86));
+    backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+  .tabbtn{font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.5px;
+    font-size:14.5px;color:var(--white);background:var(--purple);border:1px solid var(--purple);
+    padding:9px 13px 7px;cursor:pointer;transition:.15s}
+  .tabbtn:hover{filter:brightness(1.12)}
+  .tabbtn.on{background:var(--mint);border-color:var(--mint);color:#0a0a0a}
+  .tabbtn.on:hover{filter:none}
+  .tabbtn .ct{font-size:12px;opacity:.75;font-variant-numeric:tabular-nums}
+  .tabbtn .ct::before{content:" · "}
+  .tpanel{border:1px solid var(--line);background:var(--card);padding:12px 10px 14px}
+  .hint{font-size:12.5px;color:var(--muted);padding:2px 10px 10px;border-bottom:1px solid rgba(255,255,255,.08);margin-bottom:6px}
+
+  /* ── Listen row (no box: label left, service pills follow) ── */
+  .listen{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:12px 16px;margin-top:34px}
+  .listen .lname{font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--dim)}
+  .listen a{display:inline-flex;align-items:center;gap:9px;padding:11px 18px;border-radius:999px;
+    background:var(--mint);color:#08210f;text-decoration:none;font-weight:800;font-size:12.5px;
+    letter-spacing:.04em;text-transform:uppercase;transition:.15s}
+  .listen a:hover{filter:brightness(1.06);transform:translateY(-1px);box-shadow:0 12px 30px rgba(122,217,168,.25)}
+  .listen svg{width:20px;height:20px;fill:currentColor;flex:none}
+  /* ── Listen-now Spotify audio embed (full column width, above the pills) ── */
+  .listen-now{margin-top:40px}
+  .listen-now .ln-head{display:flex;align-items:baseline;justify-content:space-between;gap:14px;margin-bottom:13px}
+  .listen-now .ln-title{font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--dim)}
+  .audio-embed{border-radius:12px;overflow:hidden;box-shadow:0 20px 50px rgba(0,0,0,.4),0 0 0 1px rgba(255,255,255,.06)}
+  .audio-embed iframe{display:block;width:100%;border:0}
+  @media(max-width:720px){.listen-now{margin-top:32px}}
+
+  /* ── Keep exploring (thumbnails link to other episode PAGES, never timecodes).
+     Swipeable strip on mobile, fits three-up on desktop. Variant rule: claim
+     "similar ground" + reason lines ONLY when moment-level topic overlap is
+     genuinely strong; otherwise show the latest released episodes with dates —
+     never invent a connection. ── */
+  .relsec{margin-top:60px;padding-top:58px;border-top:1px solid var(--line)} /* line = end of this episode's info */
+  .reldots{display:flex;justify-content:center;gap:7px;margin-top:12px}
+  .reldots span{width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.25);transition:.2s}
+  .reldots span.on{background:var(--mint)}
+  .relsec .rtitle{display:inline-block;font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.5px;font-size:14.5px;background:var(--mint);color:#0a0a0a;padding:9px 13px 7px;margin-bottom:18px}
+  .relgrid{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding-bottom:6px;scrollbar-width:none}
+  .relgrid::-webkit-scrollbar{display:none}
+  .relcard{flex:0 0 56%;max-width:232px;scroll-snap-align:start;display:flex;flex-direction:column;text-decoration:none;background:var(--card);border:1px solid var(--line);transition:.15s}
+  .relcard:hover{background:var(--card-hi);border-color:rgba(122,217,168,.55)}
+  .relcard img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block}
+  .relcard .rt{display:block;font-size:12.5px;font-weight:600;color:rgba(255,255,255,.92);line-height:1.4;padding:8px 8px 0}
+  .relcard .rfoot{margin-top:auto;display:flex;justify-content:space-between;align-items:flex-end;gap:8px;padding:10px 8px 9px}
+  .relcard .rwhy{font-size:11.5px;color:var(--mint)}
+  .relcard .rtag{display:inline-block;background:#0a0a0a;color:var(--white);font-family:var(--display);font-size:10px;letter-spacing:1.2px;text-transform:uppercase;padding:3px 7px 2px;white-space:nowrap;flex:0 0 auto}
+
+  /* ── Dropdown sections (accordion under the player) ── */
+  .drops{margin-top:34px;display:flex;flex-direction:column;gap:11px}
+  .drop{border:1px solid var(--line);border-radius:0;background:var(--card);overflow:hidden;transition:border-color .15s}
+  .drop[open]{border-color:rgba(122,217,168,.35)}
+  .drop>summary{list-style:none;cursor:pointer;padding:16px 18px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+  .drop>summary::-webkit-details-marker{display:none}
+  .drop>summary .st{font-weight:700;font-size:15.5px;letter-spacing:.005em}
+  .drop>summary .ct{margin-left:auto;font-size:12px;color:var(--dim);font-weight:600;font-variant-numeric:tabular-nums}
+  .drop>summary .chev{flex:none;width:22px;height:22px;border-radius:50%;background:rgba(122,217,168,.14);color:var(--mint);display:flex;align-items:center;justify-content:center;font-family:var(--display);font-size:15px;line-height:1;transition:.2s;transform:translateY(-1px)}
+  .drop[open]>summary .chev{transform:rotate(45deg)}
+  .drop-body{padding:2px 12px 12px}
+
+  /* chapters */
+  .chapter{display:flex;align-items:baseline;gap:14px;width:100%;text-align:left;cursor:pointer;background:none;border:0;color:inherit;font-family:inherit;padding:11px 10px;border-radius:10px;transition:.13s}
+  .chapter:hover{background:var(--card-hi)}
+  .chapter .tc{font-variant-numeric:tabular-nums;font-weight:700;font-size:14px;color:var(--mint);flex:none;width:48px}
+  .chapter .cx{font-size:15px;font-weight:500;color:rgba(255,255,255,.9)}
+  .chapter:hover .cx{color:#fff}
+
+  /* questions */
+  .q{display:flex;align-items:center;gap:12px;width:100%;text-align:left;cursor:pointer;background:none;border:0;border-radius:11px;color:inherit;font-family:inherit;padding:12px 10px;transition:.14s}
+  .q+.q{border-top:1px solid rgba(255,255,255,.05)}
+  .q:hover{background:var(--card-hi)}
+  .q .qm{font-family:var(--display);font-size:15px;color:var(--mint);flex:none;line-height:1;transform:translateY(1px)}
+  .q .qx{font-size:15px;font-weight:500;color:rgba(255,255,255,.92)}
+  .q .go{margin-left:auto;flex:none;color:var(--dim);font-size:18px;transition:.15s}
+  .q:hover .go{color:var(--mint);transform:translateX(2px)}
+
+  /* summary + transcript bodies */
+  .summary-body p{font-size:16.5px;line-height:1.62;color:rgba(255,255,255,.9);padding:6px 10px 4px}
+  .tbody{padding:2px 10px 8px}
+  .tbody p{font-size:14.5px;line-height:1.7;color:rgba(255,255,255,.78);margin-top:15px;max-width:64ch}
+  .tbody .spk{display:block;font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--mint);margin-bottom:2px}
+
+  /* ── Voice note ask (lives at the bottom of the Summary panel) ── */
+  .vask{margin:16px 10px 4px}
+  .vbtn{display:inline-flex;align-items:center;gap:9px;padding:12px 20px;border-radius:999px;border:0;cursor:pointer;
+    background:var(--mint);color:#08210f;font-family:inherit;font-weight:800;font-size:12.5px;
+    letter-spacing:.04em;text-transform:uppercase;transition:.15s}
+  .vbtn:hover{filter:brightness(1.06);transform:translateY(-1px);box-shadow:0 12px 30px rgba(122,217,168,.25)}
+  .vbtn svg{width:18px;height:18px;fill:currentColor;flex:none}
+  .vslot{background:var(--purple);padding:12px 10px 10px;margin:14px 0 4px;box-shadow:0 18px 40px rgba(0,0,0,.35)}
+  .vslot[hidden]{display:none}
+  .vhead{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;margin-bottom:10px}
+  .vhead .vmsg{font-family:var(--sans);font-size:13px;line-height:1.55;color:rgba(255,255,255,.92);margin:2px 0 0;padding:0 2px}
+  .vclose{background:none;border:0;color:rgba(255,255,255,.85);font-size:22px;line-height:1;cursor:pointer;padding:0 2px}
+  .vclose:hover{color:var(--white)}
+  .vslot iframe{display:block}
+
+  /* ── YouTube subscribe pill (sits in the listen row; outranks .listen a's mint) ── */
+  .listen a.yt-pill{background:var(--purple);color:var(--white)}
+  .listen a.yt-pill:hover{filter:brightness(1.1);transform:translateY(-1px)}
+  @media(max-width:720px){ /* mobile: no label, three compact pills on one row */
+    .listen .lname{display:none}
+    .listen{gap:8px}
+    .listen a{padding:10px 13px;font-size:11px;gap:6px}
+    .listen svg{width:16px;height:16px}
+  }
+
+  /* ── Footer: Follow us on | Brought to you by | Produced by, + Menu dropdown ── */
+  footer{border-top:1px solid var(--line);margin-top:68px;padding:52px 20px 58px}
+  .footgrid{max-width:var(--wrap);margin:0 auto;display:grid;grid-template-columns:1fr 1.15fr .8fr;gap:44px;align-items:start}
+  .fcol{text-align:center;display:flex;flex-direction:column;align-items:center}
+  .foot-label{font-size:11px;font-weight:700;letter-spacing:.26em;text-transform:uppercase;color:var(--dim);margin-bottom:18px}
+  .sponsors{display:flex;justify-content:center;align-items:center;gap:34px;flex-wrap:wrap}
+  .sponsors a,.produced a{display:inline-flex;transition:.15s}
+  .sponsors a:hover,.produced a:hover{transform:translateY(-1px)}
+  .sponsors img{height:32px;width:auto;opacity:.92}
+  .produced img{height:30px;width:auto;opacity:.95}
+  .sponsors a:hover img,.produced a:hover img{opacity:1}
+  footer .socials{display:flex;gap:11px;justify-content:center;flex-wrap:wrap;margin:0}
+  footer .socials a{width:40px;height:40px;border-radius:50%;border:1.5px solid rgba(122,217,168,.5);display:flex;align-items:center;justify-content:center;transition:.15s}
+  footer .socials a svg{width:18px;height:18px;fill:var(--mint);transition:.15s}
+  footer .socials a:hover{background:var(--mint);border-color:var(--mint);transform:translateY(-2px)}
+  footer .socials a:hover svg{fill:#0a0a0a}
+  .footbar{max-width:var(--wrap);margin:34px auto 0;border-top:1px solid var(--line);padding-top:20px;display:flex;flex-direction:column;align-items:center;gap:14px}
+  .footnav-dd{display:block;width:100%;max-width:var(--wrap);margin:0 auto;text-align:center}
+  .footnav-dd>summary{list-style:none;cursor:pointer;display:inline-flex;align-items:center;gap:9px;font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.5px;font-size:13px;color:var(--muted);background:transparent;border:1px solid var(--line);padding:8px 16px 6px;transition:.15s}
+  .footnav-dd>summary::-webkit-details-marker{display:none}
+  .footnav-dd>summary:hover{color:var(--mint);border-color:rgba(122,217,168,.45)}
+  .footnav-dd>summary .ham{width:15px;height:15px;fill:currentColor;transform:translateY(-1px)}
+  .footnav-dd .dd-links{display:flex;flex-direction:row;flex-wrap:wrap;justify-content:center;gap:12px 24px;padding:24px 0 4px}
+  .footnav-dd .dd-links a{font-size:11.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:.15s}
+  .footnav-dd .dd-links a:hover{color:var(--mint)}
+  .copyright{font-size:12px;color:var(--dim);text-align:center}
+  @media(max-width:720px){.footgrid{grid-template-columns:1fr;gap:34px}footer{padding:40px 16px 20px}.footbar{margin-top:34px;padding-top:24px;gap:20px}.footnav-dd .dd-links{flex-direction:column;align-items:center;gap:15px}}
+
+  @media(min-width:720px){header.hero{padding:48px 0 6px}}
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "PodcastEpisode", "name": "Victoria's 50 Billion Dollar Problem", "url": "https://thenumbersgamepodcast.com.au/victoria-s-50-billion-dollar-problem", "datePublished": "2024-04-22", "episodeNumber": 171, "image": "https://i.ytimg.com/vi/hB8h9aFKk1M/maxresdefault.jpg", "partOfSeries": {"@type": "PodcastSeries", "name": "The Numbers Game", "url": "https://thenumbersgamepodcast.com.au/"}}</script>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-in">
+      <a class="brand" href="/" aria-label="The Numbers Game home"><img src="assets/tng-logo.png" alt="The Numbers Game"></a>
+      <div class="navlinks">
+        <a href="/">Home</a>
+        <div class="navgroup">
+          <a class="navtop">Episodes</a>
+          <div class="subnav">
+            <a href="/episodes">All episodes</a>
+            <a href="/adventure">Find moments</a>
+          </div>
+        </div>
+        <div class="navgroup">
+          <a class="navtop">About</a>
+          <div class="subnav">
+            <a href="/about">The show</a>
+            <a href="/nick-reilly">Nick Reilly</a>
+            <a href="/jason-robinson">Jason Robinson</a>
+          </div>
+        </div>
+        <a href="/contact">Contact</a>
+      </div>
+      <button class="navburger" id="navburger" type="button" aria-label="Menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24"><path d="M3 6h18v2H3zM3 11h18v2H3zM3 16h18v2H3z"/></svg>
+      </button>
+    </div>
+    <div class="navdrop" id="navdrop" hidden>
+      <a href="/">Home</a>
+      <span class="navlabel">Episodes</span>
+      <a class="sub" href="/episodes">All episodes</a>
+      <a class="sub" href="/adventure">Find moments</a>
+      <span class="navlabel">About</span>
+      <a class="sub" href="/about">The show</a>
+      <a class="sub" href="/nick-reilly">Nick Reilly</a>
+      <a class="sub" href="/jason-robinson">Jason Robinson</a>
+      <a href="/contact">Contact</a>
+    </div>
+  </nav>
+
+  <main class="wrap">
+
+    <header class="hero">
+      <div class="hook">
+        <span class="eptag">EP 171</span>
+        <h1 class="hk"><span class="hkrow"><span>Victoria's 50 Billion</span></span>
+        <span class="hkrow"><span class="mintseg">Dollar Problem</span></span></h1>
+      </div>
+    </header>
+
+    <div class="player-wrap" id="player-wrap">
+      <div class="player" id="player">
+        <button class="facade" id="facade" style="background-image:url('https://i.ytimg.com/vi/hB8h9aFKk1M/maxresdefault.jpg')" aria-label="Play episode">
+          <span class="play"></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="explore">
+      <div class="tabs" role="tablist">
+        <button class="tabbtn on" data-panel="p-summary">Summary</button>
+        <button class="tabbtn" data-panel="p-chapters">Chapters<span class="ct" id="chcount"></span></button>
+        <button class="tabbtn" data-panel="p-questions">Questions<span class="ct" id="qcount"></span></button>
+      </div>
+      <section class="tpanel" id="p-summary">
+        <div class="summary-body">
+          <p>Sparked by a viral clip of Marty raging about Victoria's ballooning state debt, Jason pivots to a parallel crisis: business debt owed to the ATO has doubled from 26 billion in 2019 to roughly 52 billion, and the ATO is now coming out swinging with garnishing notices, director penalty notices and frozen accounts. The trio argue the hardest hit are small businesses in construction, hospitality and retail, many of whom used the ATO as a line of credit through COVID and now can't repay on a one-to-two-year plan. Jason walks through the small business restructure as an underused lifeline, letting a good operator pay cents on the dollar and stay director, and the panel debates whose job it is to educate owners on cash flow. They close on practical advice: money set aside for GST, wages, super and tax isn't yours, lodge everything on time, and the ATO will work with you if you're doing the right thing.</p>
+        </div>
+        <div class="vask">
+          <button class="vbtn" id="vbtn" type="button">
+            <svg viewBox="0 0 24 24"><path d="M12 14a3 3 0 0 0 3-3V6a3 3 0 1 0-6 0v5a3 3 0 0 0 3 3zm5-3a5 5 0 0 1-10 0H5a7 7 0 0 0 6 6.92V21h2v-3.08A7 7 0 0 0 19 11h-2z"/></svg>
+            Send us a voice note
+          </button>
+          <div class="vslot" id="vslot" hidden>
+            <div class="vhead">
+              <p class="vmsg">We'd love to hear from you. You can leave up to a 90 second voice note for us to play on the show: a question, some feedback, or a topic you want covered.</p>
+              <button class="vclose" id="vclose" type="button" aria-label="Close">&times;</button>
+            </div>
+            <iframe src="https://www.speakpipe.com/widget/inline/hhq6kzggsx7zpcsvakgxfrzun3zidpde" allow="microphone" width="100%" height="200" frameborder="0" title="Leave The Numbers Game a voice note"></iframe>
+          </div>
+          <script async src="https://www.speakpipe.com/widget/loader.js" charset="utf-8"></script>
+        </div>
+        <div class="sumfacts">
+          <div class="fact"><span class="fl">Release date</span><span class="fv">22 April 2024</span></div>
+          <div class="fact"><span class="fl">Hosts</span><span class="fv"><a href="/nick-reilly">Nick Reilly</a>, <a href="/jason-robinson">Jason Robinson</a> &amp; <a href="/marty-vidakovic">Marty Vidakovic</a></span></div>
+
+        </div>
+      </section>
+      <section class="tpanel" id="p-chapters" hidden>
+        <p class="hint">Jump straight to the part you need.</p>
+        <div id="chapters"></div>
+      </section>
+      <section class="tpanel" id="p-questions" hidden>
+        <p class="hint">Real questions this episode answers. Tap one to hear the answer.</p>
+        <div id="qa"></div>
+      </section>
+    </div>
+
+    <div class="drops">
+
+      <details class="drop">
+        <summary><span class="st">Episode transcript</span><span class="chev">+</span></summary>
+        <div class="drop-body tbody">
+          <p><span class="spk">Jason · 00:00</span>Welcome to episode 171 of The Numbers Game. I'm Jase, I'm here with Nick and Marty. How are you going, fellas?</p>
+          <p><span class="spk">Marty · 00:06</span>Going well, Jase. You know me, saving people money. You know, just helping people with the dream. But feeling good. Yeah, just, I don't know. I like autumn. Leaves are falling. Nick found one in my hair the other day when I came to work.</p>
+          <p><span class="spk">Marty · 00:20</span>I didn't know how that happened. It, uh, I think I park under a tree. I think that was the, uh, but thank you, Nick. Nick's always looking after me with things like that. You You know, when you get older, you just forget that leaves fall in your hair and sometimes your collar's up. He just looks after his old mate.</p>
+          <p><span class="spk">Marty · 00:36</span>How are you going, pal?</p>
+          <p><span class="spk">Nick · 00:37</span>I'm going good. I'm going good. Yeah, that was quite funny, actually. I forgot about that. I was like, I think I said to you, is that what happens when you get old out at the Yarra Valley, you start to grow leaves instead of grey hairs. Um, but no, I'm good. I'm good. Also, uh, don't mind autumn, depending on when people are listening to this, but daylight savings finished, which, you know.</p>
+          <p><span class="spk">Nick · 00:58</span>I think it had to, it goes on</p>
+          <p><span class="spk">Nick · 01:00</span>too long. I think it should finish late Feb. I think you get into March and next thing you know, it's 7 30 before it's light. It's just no good. So it's good to be up in the morning and it's light and you can actually see things. So yeah, we're happy. How are you, Jase?</p>
+          <p><span class="spk">Jason · 01:14</span>Yeah, good, good.</p>
+          <p><span class="spk">Jason · 01:15</span>Feel the same way. I think, uh, you know, we're ready just to continue cracking through the year and it's. It's hard to believe how fast 2024 is disappearing, uh, as we go, but, you know, here we are. And, uh, the numbers game continues to, to crack on as well. We're booming into those numbers, one 71, it feels good as I keep rolling off the numbers as we approach 200.</p>
+          <p><span class="spk">Jason · 01:34</span>And, you know, I've got a couple of years of apps under our belt, but guys, I want to bring something to you because I got excited the other day when I logged onto Instagram and got the notification of a, of a reel that we created. Um, it was a great man, Marty V. It's gone off. Like people have absolutely got around it and it's, it's inspired another episode by me today, uh, that's around, you know, a billion dollar problem or, or 50 billion</p>
+          <p><span class="spk">Jason · 02:00</span>problem, I should say.</p>
+          <p><span class="spk">Jason · 02:00</span>But what we might do is listen to what Marty had to say, and then we'll roll into why I'm pretty pissed off again and fired up. What did you have to say, Marty? Let's play this clip now.</p>
+          <p><span class="spk">Marty · 02:09</span>Well, I'm just. Pissed off with the Victorian debt levels. I just totally pissed off. It's yeah, we're at 55. 2 billion in 2019.</p>
+          <p><span class="spk">Marty · 02:22</span>And yeah, I know COVID cost us 31 bill, but we're going to be at 247 bill in the next year and a half to two years. It's just, it's just out of control. I mean, and the number is we're going to be paying 40 million a day in interest on that debt. And I'm just putting two and two together and trying to work out how the hell do we get out of this as Victorians?</p>
+          <p><span class="spk">Marty · 02:49</span>Like, we're going to be paying this off for generations. And I'm looking at, and I know growth changes, but You know, we're trying to bring inflation down. The growth rate's only looking to be about</p>
+          <p><span class="spk">Marty · 03:00</span>1. 5 percent at a maximum over the next 12, 18 months. And I just don't know how we're going to do it. I mean, you can't take more money off people that don't have it, which is what they're trying to do.</p>
+          <p><span class="spk">Marty · 03:14</span>And then you can't take more money off people that are making the upside because they're going to go and invest somewhere else. Wow. I tell you what. It's weird to get pissed off on being pissed off, but listening to myself got me angry. Well,</p>
+          <p><span class="spk">Jason · 03:30</span>yeah, I'm, I'm, I've let, look, I actually really like listening to that back.</p>
+          <p><span class="spk">Jason · 03:33</span>So sometimes, you know, we make these apps, we get through it, we go shit. We had a good recording sesh there and the content goes out and fortunately we get a lot of great feedback from our audience, but, and then sometimes you see something that just, just gets picked up and run with. So that led me, you know, Marty, you talked about how do we pay it back and where does the money come from to start?</p>
+          <p><span class="spk">Marty · 03:50</span>That's my phone time.</p>
+          <p><span class="spk">Jason · 03:53</span>Oh, you hear it all the time in the office with Marty. That's a good, so, so how do we pay it back? And then, you know, got me thinking as to some of the</p>
+          <p><span class="spk">Jason · 04:00</span>behavior of the ATO as to what's happening. So when I said, we've got a 50 billion problem, what's ended up happening is over the last two, three, four, five years, you know, these, the debts of business owners.</p>
+          <p><span class="spk">Jason · 04:13</span>You know, small, medium, large have ramped up to approximately 52 billion in debt owing to the ATO made up of, you know, GST, pay as you go, withholding all the different taxes and whatnot. Now, before COVID back in 2019, that debt was 26 billion total. Across small and large business. So it's effectively doubled between 2019 and the start of 2024.</p>
+          <p><span class="spk">Jason · 04:36</span>This, that number was the end of December, 2023. So you look at that and go, well, okay, you know, what's the ATO doing and how are we getting that money back into the government's pockets to help eliminate debt and spread that money out elsewhere. And it's only now recently that the ATO has come out swinging.</p>
+          <p><span class="spk">Jason · 04:55</span>Um, they are absolutely going aggressive and going hard</p>
+          <p><span class="spk">Jason · 05:00</span>on debts. And I think, unfortunately, and, and look, this is me, just my opinion. I think, unfortunately, they go hard and they go really, really, you know, just off the charts against small business owners. Now, don't get me wrong. Small business owners make up 65 percent of that debt balance, but they're often the easier ones for the ATO to target.</p>
+          <p><span class="spk">Jason · 05:20</span>Why go after the big ones that own money when we can pick on the small guys that can't defend themselves. And ultimately these small businesses are, you know, the, the biggest industries that we're talking about affected here, uh, construction, hospitality, and retail. And of course, most of them were the hospitality and retail were the hardest hit probably through COVID times of that.</p>
+          <p><span class="spk">Jason · 05:41</span>Now what's ended up happening with the ATO coming out, swinging for these small businesses is they, I mean, they're looking at their options going, well, now what do we do if we can't afford to pay that back, what's going to happen? But the ATO approaches effectively. Um, pay us, go on a payment plan or shut</p>
+          <p><span class="spk">Jason · 06:00</span>down your business.</p>
+          <p><span class="spk">Jason · 06:00</span>So ATO is going really, really hard. Um, I'll pause here for a second, guys, you guys coming across many businesses doing it a bit tough with ATO debt. Um, are you seeing or hearing much of this out in the world?</p>
+          <p><span class="spk">Nick · 06:13</span>Yes, but whether they think they're doing it tough is the question. And this is the, um, I guess I think the issue that the government has created.</p>
+          <p><span class="spk">Nick · 06:20</span>It's people think that it's okay. So now, you know, you say doing it tough. And, you know, we've seen people that have used the ATO as a line of credit facility the last few years. And, you know, Marty's talked about this before with people now who need to repay it. So you say doing it tough, but we see people for whatever reason, um, I don't know, not seem to be too worried about it.</p>
+          <p><span class="spk">Nick · 06:42</span>So, you know, I feel like the ATO has created, created the issue and we know why because of the pandemic, but yeah, damn, damn right. They're doing it tough because. You can't get those debts back on a repayment plan in one to two years without having a significant impact on the</p>
+          <p><span class="spk">Nick · 07:00</span>viability of your business, um, and cashflow.</p>
+          <p><span class="spk">Marty · 07:03</span>I think to add to that, back in the day, probably going back about 15 even 20 years ago, People that had tax debt in small business, it was a real problem and seen as a, you know, almost like a character flaw, um, as a business owner. So, and things have changed dramatically in regards to obviously the ability to not pay back debt as aggressively.</p>
+          <p><span class="spk">Marty · 07:26</span>But the other thing is like what you're saying is that small business owners, at the moment I read some stats that only 42 percent of businesses are actually making, small businesses are making profit. So again, now you're coming with this hard line of saying, yeah, either pay the tax debt back off or payment plan or shut your business down.</p>
+          <p><span class="spk">Marty · 07:47</span>And I'm going, this is the time when the support's needed, you know, so people can transition out and yes, people have done the wrong things in regards to loading up the tax debt. It's very rare now. Like I'm saying,</p>
+          <p><span class="spk">Marty · 08:00</span>One in two has tax debt, which is, it's almost criminal that that can happen. And they're going, but now when people are in trouble, that they've allowed this to happen, like Nick said, it's basically, now we're going to hit them hard when there's not enough profitability out there in the businesses to even be able to pay that back.</p>
+          <p><span class="spk">Marty · 08:18</span>So now you're putting people under pressure, under more pressure from your own stupid practices. It's just so dumb.</p>
+          <p><span class="spk">Jason · 08:25</span>So that that's exactly right, Marty. I think it was the behavior over the last five years and beyond. I mean, there's, it's no accident that we're at 26 billion in debt five years ago as well, because of the practices that were, Oh, well, you owe six figures, chuck it on a payment plan.</p>
+          <p><span class="spk">Jason · 08:39</span>Just make sure you can pay all your future obligations and just pay, you know, 10, 000 a month for 12 months and we'll get 120 grand. But then the next pass falls due. And you go, Oh, shit, actually, let's, let's, let's smush that one in with the last one. And it becomes 150 grand of debt. So we do 15 grand a month for 10 months.</p>
+          <p><span class="spk">Jason · 08:57</span>And then the next one falls due. And this</p>
+          <p><span class="spk">Jason · 09:00</span>problem continues to cycle through. But in the past, Yatesio were kind of pretty happy just to engage a new payment plan, engage a new payment plan. It's getting harder and harder and harder to the, the, amount of info we have to give the ATO in revenue, expenses, balance sheet, position, personal drawings, all these things now mean that simply calling the ATO or clicking a few buttons to set up a payment plan becomes a much more difficult task.</p>
+          <p><span class="spk">Jason · 09:25</span>And with the ATO Coming down really hard with the, the debt collection hammer, you know, garnishing notices, director penalty notices, bank accounts being, you know, frozen. There's all these different new measures or ATO have had in the past, but never used. So when you think about going from 26 billion to 52 billion and the ATO just sat back on their hands going, well, let's just, you know, Let's just write it out.</p>
+          <p><span class="spk">Jason · 09:48</span>You know, we don't want to cause too much stress on the, on the economy or small business or the business landscape. But now effectively what's being forced is all of these debt collection measures the ATO are doing are forcing</p>
+          <p><span class="spk">Jason · 10:00</span>people's hands. So one of the messages that I wanted to kind of get across in, in this little combo with you guys is that rather than sitting on your hands as a business owner, and you've ramped up some ATO debt, and you've And let's say you're in the 42 percent that isn't necessarily making a great profit at the moment.</p>
+          <p><span class="spk">Jason · 10:16</span>Don't bury your head in the sands. Don't sit on your hands and not take action. Now's the time to talk to your accountant. And then get an introduction to a, you know, an insolvency specialist who can do what's called a small business restructure. So, you know, this is something that I think unfortunately is still a very underutilized tool across the accounting and business space.</p>
+          <p><span class="spk">Jason · 10:38</span>Um, but if ultimately to explain to you guys, I think we've talked about it a few times before, but a small business restructure is a. Basically like a baby version of a liquidation event or a voluntary administration, but it's not as scary or nasty as, as the full beauty of one of those things where you might shut down a business and the whole thing disappears.</p>
+          <p><span class="spk">Jason · 10:57</span>Now with a small business restructure, you</p>
+          <p><span class="spk">Jason · 11:00</span>remain the director of your company. Whereas if you liquidate or go into voluntary administration, somebody else becomes the director of your company and takes it over and you've got no control over what happens. So you remain the director. You need to have less than a million of liabilities paid out all your super.</p>
+          <p><span class="spk">Jason · 11:14</span>Um, and be able to trade and show that you can pay off on a payment plan. But what ends up happening is, is you negotiate through the insolvency specialist that you get to pay cents on the dollar to your creditors. Now, nine times out of 10, a lot of these ones that are going through at the moment, the ATO is the biggest creditor.</p>
+          <p><span class="spk">Jason · 11:34</span>So if you imagine that you owed, you know, your business has done it tough. So. And you need a reset. Now, this is the thing where I say, don't sit back and just think that it's going to get better. If you need, you know, a plan to get on top of your ATO debt to be able to trade forward and become profitable, the example here might be you've run yourself up to a 200, 000 debt with the ATO.</p>
+          <p><span class="spk">Jason · 11:55</span>You engage a small business, uh, restructure specialist and they might be able to go to the ATO and</p>
+          <p><span class="spk">Jason · 12:00</span>say, Hey, look, we've run the numbers, done a cashflow forecast and work closely with this small business owner. And they can afford to give you 20 cents to the dollar. And they're going to do that on a payment plan of 4, 000 a month for 10 months.</p>
+          <p><span class="spk">Jason · 12:12</span>So what's going to happen is instead of you, you may have owed the ATO 200 grand, but through this small business restructure, you propose that you'll pay 40, 000 at a Affordable 4, 000 a month over 10 months. Now, if the plan's all worded correctly and done properly, and the ATO looks at your business, goes, you know what, this person's lodged their things on time regularly.</p>
+          <p><span class="spk">Jason · 12:33</span>They've paid their employees. So you have to be running a good, like you have to be a good business owner who's done the right thing. You know, you can't be one of these people that we see in the news every couple of weeks with the liquidation event. And there's all the overdue debts and overdue super.</p>
+          <p><span class="spk">Jason · 12:45</span>Let's just say you're a genuinely good person who's run a good business. Who's just done it tough for a couple of years. The ATO would turn around and say, you know what? Done. We'll accept it. We'll accept 20 cents to the dollar to give your business a chance to keep employing people, keep</p>
+          <p><span class="spk">Jason · 13:00</span>paying its bills, and have a chance at survival moving forward on the other side of what's been a pretty turbulent couple of years.</p>
+          <p><span class="spk">Jason · 13:06</span>Now I sit back and go for all, like, we, we've done quite a few with our clients. We're ramping up the numbers that we do. And even not, not too much, Just our existing clients, the ones that have been referred to us through friends and family, because they wanted to have a crack at, you know, doing this and their accountants weren't familiar with it or confident with it.</p>
+          <p><span class="spk">Jason · 13:24</span>And we have had epic success with so many business owners to be able to get them on the other side of a small business restructure, where they actually feel like they've got a chance at survival and not just survive to thrive on the other side of it, where they're better organized. They know how to read their P and L and balance sheets better.</p>
+          <p><span class="spk">Jason · 13:41</span>They know how to structure their business, moving forward to charge the appropriate price with the appropriate margins. And, you know, I think it's a fantastic thing for. The, the small business owners out there, but they need to know about it. And this is the other thing where we sit back and go, okay, if we're at 52 billion of</p>
+          <p><span class="spk">Jason · 14:00</span>debt and 30 as I said, 34 billion of that is small business debts, why isn't there more done to educate and encourage small business owners to get ahead of it rather than sitting back and waiting for the a TO to come after them?</p>
+          <p><span class="spk">Nick · 14:15</span>Yeah. Well, I, I dunno the answer, to, to be honest. Whose responsibility is it, you know, and this is the thing I think we all know that the, the ATO and the government in general is severely under resourced and it doesn't matter if you're talking about tax or if you're talking about, um, compliance or, you know, things like the Royal Commission, you know, they go where they think they can get a win and they put all the resources into those areas.</p>
+          <p><span class="spk">Nick · 14:40</span>And at the moment that area is getting some of this tax debt back in. So, yeah, it's madness that they don't put some resource into educating and training. But to put it back to you is that the accounting professions, um, responsibility, maybe, maybe that's what the ATO think. This is what I'm thinking. Um, they might say it's</p>
+          <p><span class="spk">Nick · 15:00</span>not our responsibility.</p>
+          <p><span class="spk">Nick · 15:00</span>Accountants should be educating people on that, but at the same time, people can open an ABN by themselves if they like without getting an accountant involved. So that, that is true, isn't it? You can do it online if you really want to. So yeah, it's a resources thing, but yeah, there should be. You know, you opening an ABN.</p>
+          <p><span class="spk">Nick · 15:18</span>Yes. Okay. Well, what do you understand about a BAS statement? What do you understand about GST? Um, you know, where's the, you know, where's Marty's employee checklist or hiring checklist to make sure someone's. Fit enough to, to even run an ABN.</p>
+          <p><span class="spk">Marty · 15:32</span>Uh, I was thinking exactly the same thing. I, I, I think it's part, yeah, responsibility on the business owner.</p>
+          <p><span class="spk">Marty · 15:39</span>And I think, you know, people are generally good at running their business, but have no idea about running their cash flows. Like if for every dollar you make. How much of that dollar do you keep? You know, that it's basic maths, but you need to know that with debt levels, tax debt, and I think like, like with Jace, like I know</p>
+          <p><span class="spk">Marty · 16:00</span>I've put a client onto Jace recently, it's changed his business around because he had a great business.</p>
+          <p><span class="spk">Marty · 16:06</span>It was just, you know, money was going into certain areas, buying stock and, you know, in, in areas where, you know, He just didn't have the cash and you go, and it just wasn't set up well because he's great at running his business, but not necessarily most business owners fall over in regards to the cashflow management side.</p>
+          <p><span class="spk">Marty · 16:24</span>It's always a working capital issue, particularly in, you know, in manufacturing and people buying stock and everything, always, and. They don't get the education piece on that or it's not a strength. And this is where you utilize, you know, someone like Jace or future advisory to come in and be a part of your business and a vital cog in your business in order to build a thriving business and know exactly where your money's going and how to place it effectively within balance sheets and profit and loss and what's hitting the account.</p>
+          <p><span class="spk">Marty · 16:56</span>It is, it is, I think in this day and age, It</p>
+          <p><span class="spk">Marty · 17:00</span>is absolutely paramount that you have someone like Jace, you know, looking after your, your working capital affairs and understanding it. Because this is where people have fallen over for generations on this and usually the only way they, they're either very highly successful at it and they do well, um, Or they just have so high margins that it doesn't matter.</p>
+          <p><span class="spk">Marty · 17:24</span>You know, it's like, how many times do you see people making profit 700 grand in profit yet? They've got a hundred grand cash in the bank or 7 million in profit. And, you know, One million in cash in the bank because they've had to buy stock or they're buying buildings or they've got all sorts of things.</p>
+          <p><span class="spk">Marty · 17:41</span>It is such a common thing. So don't feel bad about it. It's like, it's just the norm. And as business owners, we've got to get better at that. But we need people in our corner that can help us with that sort of stuff.</p>
+          <p><span class="spk">Nick · 17:54</span>I think there has to be some level of support though, from the ATL or the</p>
+          <p><span class="spk">Nick · 18:00</span>government, because the, the reality is people don't go into business because they want to.</p>
+          <p><span class="spk">Nick · 18:04</span>They want to be a business person. People generally fall in the business because they have a particular skillset that, that means that they can create, um, revenue and, uh, and, you know, and, uh, and, uh, and a life. So unfortunately to get that revenue, you need to understand the business side. So, you know, we've talked about the simplifying the tax system.</p>
+          <p><span class="spk">Nick · 18:24</span>There's so many things that could be done to make it, to make it easier. It's it, it is so difficult. So there should be checkpoints that if people are, you know, opening up ABNs They're a good salesperson in it, or they have a skillset. What checkpoints have been done along the way? Um, they may be the first bass.</p>
+          <p><span class="spk">Nick · 18:43</span>What did the first bass look like? Who's the, who's doing that? Well, hang on. There's a problem here. We need to understand this versus what they let happen, which is let it go for one to two years and then try and ruin a business, whereas. I think if most people that had that skill set, if they understood how to manage cash flow, they probably would have done it.</p>
+          <p><span class="spk">Marty · 18:59</span>But, but that's the</p>
+          <p><span class="spk">Marty · 19:00</span>thing, Nick, like, like you go, how are the ATO being helpful up until this point with this stuff? Like as business owners, as soon as the rubber hits the ground, all of a sudden they want to call in the debt at the most vulnerable time of a business owner's life. And I just go, we, business owners have to take responsibility because they will get screwed one way or another on this.</p>
+          <p><span class="spk">Marty · 19:22</span>And I, I. I have no hesitation in being accountable for this as a business owner because what have they done? What have they done except put pressure on and then loosen the boundaries? They're not educating, they're not educating business owners. They're getting their lick or they put people into insolvency.</p>
+          <p><span class="spk">Marty · 19:40</span>You know, it's just rubbish. We, we have to do it as business owners and we got to get support or education to be able to do it. Otherwise we're at the mercy of these people. And, and we, we get sucked in, in order to take advantage of when they open the doors, in order to take any advantage we</p>
+          <p><span class="spk">Marty · 20:00</span>can. So we're, we're still walking through those doors, right?</p>
+          <p><span class="spk">Marty · 20:03</span>When they say, Oh, don't worry about paying your tax back until we, you know, we sort this out and everyone gets on their feet and then, you know, it crashes and burns. And I just think, I just, again, I think we've got to do a lot of education as business owners and. And, and I think, you know, people like Jace is, you know, and people like advisors, you know, business advisors out there.</p>
+          <p><span class="spk">Marty · 20:27</span>Um, there's a great, there's a great niche out there for people that want to help business owners. I've seen them crash and burn for years on end because of this.</p>
+          <p><span class="spk">Jason · 20:35</span>That proactive financial management, right? Like having, having a good advisor, talking to the right people before it gets out of hands. You know, that business owner 101 is, you know, the GST, the tax on wages and the superannuation and tax on profit, it's all money that's not yours.</p>
+          <p><span class="spk">Jason · 20:51</span>So you should never spend it. You know, unless you want to get yourself into trouble. So it's how to put that money aside, how to make sure you're not spending money. That's not yours. You know, that,</p>
+          <p><span class="spk">Jason · 21:00</span>so that, you know, that real simple stuff, correct. But then it's like, okay, let's look at that 52 billion in debt.</p>
+          <p><span class="spk">Jason · 21:08</span>Imagine when it was at 26 billion, the ATO did a mail out to all those people with debt to the ATO and said, Hey, we're concerned about your debt level. We recommend you go and speak to an advisor. You know, and maybe with, you know, could they recommend an advisor in the area? Maybe not, but just go and sit, see an advisor, search for your local accountant and book an appointment.</p>
+          <p><span class="spk">Jason · 21:27</span>Even, even if that, like, I don't know the cost of a mail out or an email, if they've got the, the business owner's email address on file, but a bit of proactive touch to say, we think that you, you need some proactive financial management to help you get on top of your debt, go inspect your accountant. If you've got one, if not.</p>
+          <p><span class="spk">Jason · 21:43</span>Do a local search and book an appointment, something that simple, right? It doesn't seem that far fetched to make that a reality. And maybe when we're at 26 billion of debt, if that was one of the processes, the ATO rolled out, maybe we wouldn't be at 52 billion right now. And there'd be a few more people that maybe were a bit</p>
+          <p><span class="spk">Jason · 22:00</span>better with their money management over that journey.</p>
+          <p><span class="spk">Jason · 22:02</span>And maybe not, that's just an idea from my side. But</p>
+          <p><span class="spk">Marty · 22:04</span>maybe I don't know whether the government can, or it's the ATO or whoever it is, but can provide, you know, it might be courses on financial management, you know, at the, at the interim stage, congratulations, you started a business. Here's a course it's, yeah, it doesn't have to be costly, right?</p>
+          <p><span class="spk">Marty · 22:21</span>You</p>
+          <p><span class="spk">Jason · 22:21</span>say that Marty, example, a couple of years ago. I can't remember exactly, probably was before COVID, but a young lady, um, out in Nariwarrin or, or out our way with the one, our office over there, she received a business grant of 20, 000, but you had the only way that money cleared to her was she had to spend it on, you know, business education, business resources, mentoring, coaching, knowledge to help her start her business.</p>
+          <p><span class="spk">Jason · 22:45</span>She. We'll call it five years old. She's running one of the most successful businesses I've seen in her industry. And the first, and it's not, you know, blowing wind up, up our bums, but step one was a cashflow forecast, budget to variance, understanding her</p>
+          <p><span class="spk">Jason · 23:00</span>P and L balance sheet, setting up zero and giving her tools to map out how she was going to make money in her business.</p>
+          <p><span class="spk">Jason · 23:05</span>First thing that happened. Now, again, if there was more business grants where the business owners who set up a business or like they had to spend the money on going and get business education on how to run a business or how to set up for financial success, maybe again, we'd be in a much better position as an economy and as a country.</p>
+          <p><span class="spk">Jason · 23:22</span>So I think, you know, the underlying message here beyond, you know, proactive financial management and, you know, dealing with the ATO is, you know, Take action, like don't, don't sit back and go, Oh, well, it's too late for me. I've got ATO dead. Or if you start to kind of see debt to the ATO build up, there are options out there, you know, and you don't have to change accountants, you know, if you're with someone else and you listen to the numbers game, you Go and have the conversation, ask how to get on top of your ATO debt.</p>
+          <p><span class="spk">Jason · 23:49</span>You be proactive. If your account is not being proactive, you go and do it. And if you are looking for someone to have a chat to, you can talk to Nick, Marty, and I at any time. Obviously ATO stuff's more specifically me, but you know, we're here for you guys</p>
+          <p><span class="spk">Jason · 24:00</span>and we know we want to be able to help. That's why we do this show.</p>
+          <p><span class="spk">Marty · 24:02</span>Again, how much traction Nick's getting on the financial wellbeing seminars, even in companies to support their employees. I just go, people have a real thirst for their financial future and understanding dynamics and business owners are the same. And I think, um, again, look, people using credit cards and all sorts of things at 18 percent trying to get their business up and running.</p>
+          <p><span class="spk">Marty · 24:27</span>And we've all been there, right? And we all find a way through, but maybe there's a better way we could start, you know, maybe that is financial support, even if it's lights financial support at the front end to educate. And then ultimately dominate because running a business is one of the greatest things that you can be a part of when it's done well.</p>
+          <p><span class="spk">Marty · 24:47</span>But it's also one of the most stressful things if things aren't going your way. So you have to have that resilience regardless. But I think we could do a lot more in the space and I just feel like the</p>
+          <p><span class="spk">Marty · 25:00</span>ATO are shutting the doors just when they, you know, when people are most vulnerable and it's a dangerous game.</p>
+          <p><span class="spk">Marty · 25:07</span>Dangerous game.</p>
+          <p><span class="spk">Jason · 25:08</span>Last little tip from me though, lodge everything on time. Like if, if you are falling behind, don't feel like, Oh, well, I'm already behind. I'll lodge my bass late or, you know, I can't pay super right now. Oh, well, I won't lodge it. Like lodge things on time. You want to be seen as being proactive with the ATO that, you know, if you are trying to do your best and you're not.</p>
+          <p><span class="spk">Jason · 25:26</span>The ATO will work with you if you're trying your best and doing the right thing. It's the ones that kind of go off the radar that the ATO just goes, no mercy. We're, we're going hard. So, um, appreciate you listening. Uh, thank you for joining us. If you've got a mate who you think may need our help, send them our way.</p>
+          <p><span class="spk">Jason · 25:44</span>We love, uh, bringing on new family members to the numbers game crew. Uh, but until next time,</p>
+          <p><span class="spk">Marty · 25:49</span>take responsibility. It's your financial future. Make sure it's a good one. Talk to Jace. Nekomazelf. Game</p>
+          <p><span class="spk">Marty · 26:00</span>over. ---</p>
+        </div>
+      </details>
+
+    </div>
+
+    <!-- LISTEN:START (build_episode.py rewrites the 3 URLs + iframe title per episode; player dropped if no spotifyEmbedUrl) -->
+    <section class="listen-now">
+      <div class="ln-head">
+        <span class="ln-title">Listen now</span>
+      </div>
+      <div class="audio-embed">
+        <iframe src="https://open.spotify.com/embed/episode/5pz3XixgXmGKsa1Zr4bA1t?utm_source=generator"
+          width="100%" height="152" loading="lazy" allowfullscreen
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+          title="Spotify — Victoria's 50 Billion Dollar Problem"></iframe>
+      </div>
+    </section>
+
+    <div class="listen">
+      <a href="https://open.spotify.com/episode/5pz3XixgXmGKsa1Zr4bA1t" target="_blank" rel="noopener" aria-label="Listen to this episode on Spotify">
+        <svg viewBox="0 0 24 24"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.52 17.34c-.24.36-.66.48-1.02.24-2.82-1.74-6.36-2.1-10.56-1.14-.42.12-.78-.18-.9-.54-.12-.42.18-.78.54-.9 4.56-1.02 8.52-.6 11.64 1.32.42.18.48.66.3 1.02zm1.44-3.3c-.3.42-.84.6-1.26.3-3.24-1.98-8.16-2.58-11.94-1.38-.48.12-1.02-.12-1.14-.6-.12-.48.12-1.02.6-1.14 4.32-1.32 9.72-.66 13.44 1.62.36.18.54.78.3 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.3c-.6.18-1.2-.18-1.38-.72-.18-.6.18-1.2.72-1.38 4.26-1.26 11.28-1.02 15.72 1.62.54.3.72 1.02.42 1.56-.3.42-1.02.6-1.56.3z"/></svg>
+        Spotify
+      </a>
+      <a href="https://podcasts.apple.com/au/podcast/id1555566088?i=1000653139983" target="_blank" rel="noopener" aria-label="Listen to this episode on Apple Podcasts">
+        <svg viewBox="0 0 24 24"><path d="M5.34 0A5.328 5.328 0 000 5.34v13.32A5.328 5.328 0 005.34 24h13.32A5.328 5.328 0 0024 18.66V5.34A5.328 5.328 0 0018.66 0H5.34zm6.525 2.568c2.336 0 4.448.902 6.056 2.587 1.224 1.272 1.912 2.619 2.264 4.392l.04.23c.04.272-.16.527-.432.567a.505.505 0 01-.567-.431l-.04-.213c-.312-1.57-.92-2.747-2.004-3.867-1.428-1.496-3.293-2.294-5.393-2.294-2.1 0-3.966.798-5.394 2.294-1.084 1.12-1.692 2.298-2.004 3.867l-.04.213a.507.507 0 01-.567.431.504.504 0 01-.432-.567l.04-.23c.352-1.773 1.04-3.12 2.264-4.392 1.608-1.685 3.72-2.587 6.056-2.587h.153zm.136 3.033c1.74 0 3.312.67 4.527 1.934.883.916 1.394 1.93 1.663 3.253l.04.23a.505.505 0 01-.431.567.503.503 0 01-.567-.432l-.04-.212c-.23-1.112-.659-1.97-1.396-2.732-1.052-1.1-2.404-1.672-3.9-1.672s-2.849.572-3.901 1.672c-.737.762-1.167 1.62-1.396 2.732l-.04.212a.503.503 0 01-.567.432.505.505 0 01-.432-.567l.04-.23c.27-1.323.78-2.337 1.664-3.253 1.215-1.264 2.787-1.934 4.527-1.934h.21zm-.078 3.05c1.092 0 2.091.424 2.89 1.22.582.58.924 1.245 1.107 2.15l.04.218a.501.501 0 01-.424.568.499.499 0 01-.568-.424l-.04-.198c-.146-.724-.413-1.253-.871-1.716-.63-.63-1.398-.957-2.226-.957s-1.595.328-2.225.957c-.459.463-.726.992-.871 1.716l-.04.198a.499.499 0 01-.568.424.501.501 0 01-.424-.568l.04-.219c.183-.904.525-1.569 1.106-2.149.8-.796 1.799-1.22 2.89-1.22h.184zM12 14.07a2.477 2.477 0 012.48 2.478A2.477 2.477 0 0112 19.024a2.477 2.477 0 01-2.48-2.477A2.477 2.477 0 0112 14.07z"/></svg>
+        Apple
+      </a>
+      <a class="yt-pill" href="https://www.youtube.com/@thenumbersgamepodcast?sub_confirmation=1" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.12-2.14C19.5 3.55 12 3.55 12 3.55s-7.5 0-9.38.51A3 3 0 0 0 .5 6.2 31.4 31.4 0 0 0 0 12a31.4 31.4 0 0 0 .5 5.8 3 3 0 0 0 2.12 2.14c1.88.51 9.38.51 9.38.51s7.5 0 9.38-.51a3 3 0 0 0 2.12-2.14A31.4 31.4 0 0 0 24 12a31.4 31.4 0 0 0-.5-5.8zM9.55 15.57V8.43L15.82 12z"/></svg>
+        Subscribe
+      </a>
+    </div>
+    <!-- LISTEN:END -->
+
+    <div class="relsec">
+      <span class="rtitle">Discover more</span>
+      <div class="relgrid">
+        <a class="relcard" href="/tax-fraud-why-is-it-so-easy">
+          <img src="https://i.ytimg.com/vi/iuBCL0-gsdQ/hqdefault.jpg" alt="EP 160 thumbnail">
+          <span class="rt">Tax Fraud - Why Is It So Easy?</span>
+          <span class="rfoot"><span class="rwhy">Also covers: the ato &amp; audits</span><span class="rtag">EP 160</span></span>
+        </a>
+        <a class="relcard" href="/ato-s-600-million-data-points-what-they-really-know-about-you">
+          <img src="https://i.ytimg.com/vi/fEI0BuCpwwU/hqdefault.jpg" alt="EP 251 thumbnail">
+          <span class="rt">ATO's 600 Million Data Points</span>
+          <span class="rfoot"><span class="rwhy">Also covers: the ato &amp; audits</span><span class="rtag">EP 251</span></span>
+        </a>
+        <a class="relcard" href="/are-you-on-the-ato-s-radar">
+          <img src="https://i.ytimg.com/vi/8hXKxqIrOyo/hqdefault.jpg" alt="EP 274 thumbnail">
+          <span class="rt">Are You on the ATO's Radar?</span>
+          <span class="rfoot"><span class="rwhy">Also covers: the ato &amp; audits</span><span class="rtag">EP 274</span></span>
+        </a>
+        <a class="relcard" href="/avoid-these-tax-time-pitfalls">
+          <img src="https://i.ytimg.com/vi/0QbVqLvsKMc/hqdefault.jpg" alt="EP 201 thumbnail">
+          <span class="rt">Avoid These Tax-Time Pitfalls</span>
+          <span class="rfoot"><span class="rwhy">Also covers: the ato &amp; audits</span><span class="rtag">EP 201</span></span>
+        </a>
+        <a class="relcard" href="/victoria-owes-199-billion">
+          <img src="https://i.ytimg.com/vi/sppkdu-w5jU/hqdefault.jpg" alt="EP 280 thumbnail">
+          <span class="rt">Victoria Owes $199 Billion</span>
+          <span class="rfoot"><span class="rwhy">Also covers: policy &amp; reform</span><span class="rtag">EP 280</span></span>
+        </a>
+        <a class="relcard" href="/7-financial-red-flags-every-business-owner-needs-to-know">
+          <img src="https://i.ytimg.com/vi/SXouFdviIsk/hqdefault.jpg" alt="EP 244 thumbnail">
+          <span class="rt">7 Financial Red Flags Every Business Owner Needs to Know</span>
+          <span class="rfoot"><span class="rwhy">Also covers: the ato &amp; audits</span><span class="rtag">EP 244</span></span>
+        </a>
+      </div>
+      <div class="reldots" id="reldots"></div>
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="footgrid">
+      <div class="fcol">
+        <div class="foot-label">Follow us on</div>
+        <div class="socials">
+          <a href="https://www.instagram.com/thenumbersgamepodcast/" target="_blank" rel="noopener" aria-label="The Numbers Game on Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.8.2 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1 .4 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .4-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1-.4-2.2-.1-1.3-.1-1.7-.1-4.9s0-3.6.1-4.9c.1-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.4 2.2-.4 1.3-.1 1.7-.1 4.9-.1zm0 2c-3.1 0-3.5 0-4.8.1-1.1.1-1.5.2-1.8.3-.4.2-.7.3-1 .6-.3.3-.5.6-.6 1-.1.3-.3.7-.3 1.8-.1 1.3-.1 1.7-.1 4.8s0 3.5.1 4.8c.1 1.1.2 1.5.3 1.8.2.4.3.7.6 1 .3.3.6.5 1 .6.3.1.7.3 1.8.3 1.3.1 1.7.1 4.8.1s3.5 0 4.8-.1c1.1-.1 1.5-.2 1.8-.3.4-.2.7-.3 1-.6.3-.3.5-.6.6-1 .1-.3.3-.7.3-1.8.1-1.3.1-1.7.1-4.8s0-3.5-.1-4.8c-.1-1.1-.2-1.5-.3-1.8-.2-.4-.3-.7-.6-1-.3-.3-.6-.5-1-.6-.3-.1-.7-.3-1.8-.3-1.3-.1-1.7-.1-4.8-.1zm0 3.4a5.4 5.4 0 1 1 0 10.8 5.4 5.4 0 0 1 0-10.8zm0 2a3.4 3.4 0 1 0 0 6.8 3.4 3.4 0 0 0 0-6.8zm5.6-2.3a1.3 1.3 0 1 1-2.6 0 1.3 1.3 0 0 1 2.6 0z"/></svg></a>
+          <a href="https://www.tiktok.com/@thenumbersgamepodcast" target="_blank" rel="noopener" aria-label="The Numbers Game on TikTok"><svg viewBox="0 0 24 24"><path d="M12.53.02C13.84 0 15.14.01 16.44 0c.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg></a>
+          <a href="https://www.linkedin.com/company/the-numbers-game-podcast/" target="_blank" rel="noopener" aria-label="The Numbers Game on LinkedIn"><svg viewBox="0 0 24 24"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.24 8.25h4.52V23H.24V8.25zM8.34 8.25h4.33v2.01h.06c.6-1.14 2.08-2.34 4.28-2.34 4.58 0 5.42 3.01 5.42 6.92V23h-4.51v-7.16c0-1.71-.03-3.91-2.38-3.91-2.39 0-2.75 1.86-2.75 3.78V23H8.34V8.25z"/></svg></a>
+          <a href="https://www.facebook.com/profile.php?id=100071290388343" target="_blank" rel="noopener" aria-label="The Numbers Game on Facebook"><svg viewBox="0 0 24 24"><path d="M24 12.07C24 5.41 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.04V9.41c0-3.02 1.8-4.7 4.54-4.7 1.31 0 2.68.24 2.68.24v2.97h-1.5c-1.5 0-1.96.93-1.96 1.89v2.26h3.32l-.53 3.5h-2.8V24C19.62 23.1 24 18.1 24 12.07z"/></svg></a>
+          <a href="https://www.youtube.com/@thenumbersgamepodcast" target="_blank" rel="noopener" aria-label="The Numbers Game on YouTube"><svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.2C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31.7 31.7 0 0 0 0 12a31.7 31.7 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.2A31.7 31.7 0 0 0 24 12a31.7 31.7 0 0 0-.5-5.8zM9.6 15.6V8.4L15.8 12z"/></svg></a>
+        </div>
+      </div>
+      <div class="fcol">
+        <div class="foot-label">Brought to you by</div>
+        <div class="sponsors">
+          <a href="https://www.inovayt.com.au/" target="_blank" rel="noopener"><img src="assets/inovayt-white.png" alt="Inovayt"></a>
+          <a href="https://futureadvisory.com.au/" target="_blank" rel="noopener"><img src="assets/future-advisory-white.png" alt="Future Advisory"></a>
+        </div>
+      </div>
+      <div class="fcol produced">
+        <div class="foot-label">Produced by</div>
+        <a href="https://www.vidpod.com.au/" target="_blank" rel="noopener"><img src="assets/vidpod-white.png" alt="VIDPOD"></a>
+      </div>
+    </div>
+    <div class="footbar">
+      <details class="footnav-dd">
+        <summary><svg class="ham" viewBox="0 0 24 24"><path d="M3 6h18v2H3zM3 11h18v2H3zM3 16h18v2H3z"/></svg> Menu</summary>
+        <div class="dd-links">
+          <a href="/">Home</a><a href="/episodes">Every episode</a><a href="/adventure">Choose your own adventure</a><a href="/about">About the show</a><a href="/nick-reilly">Nick Reilly</a><a href="/jason-robinson">Jason Robinson</a><a href="/contact">Contact</a>
+        </div>
+      </details>
+      <div class="copyright">© 2026 The Numbers Game</div>
+    </div>
+  </footer>
+
+  <script>
+    var VIDEO='hB8h9aFKk1M';
+    var CHAPTERS=[
+      {t:"00:00",s:0,title:"Intro"},
+      {t:"02:09",s:129,title:""}
+    ];
+    var QUESTIONS=[
+      {q:"How much do businesses owe the ATO?",s:253},
+      {q:"Who does the ATO chase hardest for debt?",s:320},
+      {q:"What share of small businesses are profitable?",s:446},
+      {q:"What can the ATO do to collect a business debt?",s:565},
+      {q:"What should you do if you owe the ATO money?",s:600},
+      {q:"How much do you repay in a small business restructure?",s:674},
+      {q:"Why do business owners struggle with cash flow?",s:939},
+      {q:"What money in a business is not yours to spend?",s:1235},
+      {q:"Should you still lodge if you can't pay your tax?",s:1508},
+      {q:"Will the ATO work with you on debt?",s:1526}
+    ];
+
+    var chEl=document.getElementById('chapters');
+    CHAPTERS.forEach(function(c){var b=document.createElement('button');b.className='chapter';b.onclick=function(){startAt(c.s)};b.innerHTML='<span class="tc">'+c.t+'</span><span class="cx">'+c.title+'</span>';chEl.appendChild(b);});
+    document.getElementById('chcount').textContent=CHAPTERS.length;
+    var qEl=document.getElementById('qa');
+    QUESTIONS.forEach(function(q){var b=document.createElement('button');b.className='q';b.onclick=function(){startAt(q.s)};b.innerHTML='<span class="qm">?</span><span class="qx">'+q.q+'</span><span class="go">›</span>';qEl.appendChild(b);});
+    document.getElementById('qcount').textContent=QUESTIONS.length;
+
+    /* Mobile nav dropdown. */
+    var burger=document.getElementById('navburger'), navdrop=document.getElementById('navdrop');
+    if(burger&&navdrop){burger.addEventListener('click',function(){
+      navdrop.hidden=!navdrop.hidden;
+      burger.setAttribute('aria-expanded', navdrop.hidden?'false':'true');
+    });}
+
+    /* Voice-note button reveals the recorder; × tucks it away. */
+    var vbtn=document.getElementById('vbtn'), vslot=document.getElementById('vslot'), vclose=document.getElementById('vclose');
+    if(vbtn&&vslot){vbtn.addEventListener('click',function(){vslot.hidden=!vslot.hidden;});}
+    if(vclose&&vslot){vclose.addEventListener('click',function(){vslot.hidden=true;});}
+
+    /* Keep-exploring dots: only shown when the strip actually scrolls (mobile). */
+    var rg=document.querySelector('.relgrid'), rd=document.getElementById('reldots');
+    if(rg&&rd){
+      var relCards=rg.querySelectorAll('.relcard');
+      relCards.forEach(function(){rd.appendChild(document.createElement('span'))});
+      var updDots=function(){
+        var scrollable=rg.scrollWidth>rg.clientWidth+4;
+        rd.style.display=scrollable?'flex':'none';
+        if(!scrollable)return;
+        var i=Math.round(rg.scrollLeft/(rg.scrollWidth-rg.clientWidth)*(relCards.length-1));
+        rd.querySelectorAll('span').forEach(function(s,n){s.classList.toggle('on',n===i)});
+      };
+      rg.addEventListener('scroll',updDots,{passive:true});
+      window.addEventListener('resize',updDots);
+      updDots();
+    }
+
+    /* Explore tabs: swap the visible panel; the row stays put so you never lose your place. */
+    var tabBtns=document.querySelectorAll('.tabbtn');
+    tabBtns.forEach(function(b){
+      b.addEventListener('click',function(){
+        tabBtns.forEach(function(o){o.classList.remove('on')});
+        document.querySelectorAll('.tpanel').forEach(function(p){p.hidden=true});
+        b.classList.add('on');
+        document.getElementById(b.getAttribute('data-panel')).hidden=false;
+      });
+    });
+
+    /* YouTube: clean facade, then real player on demand. Seek without yanking to top. */
+    var player=null, ready=false, apiReady=false, pending=null;
+    window.onYouTubeIframeAPIReady=function(){apiReady=true; if(pending!=null){var s=pending;pending=null;createPlayer(s);}};
+    function createPlayer(sec){
+      var wrap=document.getElementById('player'); wrap.innerHTML='<div id="yt"></div>';
+      player=new YT.Player('yt',{videoId:VIDEO,playerVars:{autoplay:1,rel:0,modestbranding:1,playsinline:1,start:Math.floor(sec||0)},events:{onReady:function(){ready=true;}}});
+    }
+    function nudge(){
+      var p=document.getElementById('player-wrap'), r=p.getBoundingClientRect();
+      if(r.bottom<80 || r.top>window.innerHeight-90){ p.scrollIntoView({behavior:'smooth',block:'start'}); }
+    }
+    function startAt(sec){
+      nudge();
+      if(player&&ready){ player.seekTo(sec,true); player.playVideo(); return; }
+      if(apiReady){ createPlayer(sec); } else { pending=sec; }
+    }
+    document.getElementById('facade').addEventListener('click',function(){startAt(0);});
+    (function(){var s=document.createElement('script');s.src='https://www.youtube.com/iframe_api';document.head.appendChild(s);})();
+  </script>
+</body>
+</html>

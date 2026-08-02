@@ -1,0 +1,764 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EP 170 · Marty's Hiring Checklist | The Numbers Game</title>
+<meta name="description" content="">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" sizes="64x64" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="canonical" href="https://thenumbersgamepodcast.com.au/marty-s-hiring-checklist">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="The Numbers Game">
+<meta property="og:title" content="EP 170 · Marty's Hiring Checklist | The Numbers Game">
+<meta property="og:description" content="">
+<meta property="og:url" content="https://thenumbersgamepodcast.com.au/marty-s-hiring-checklist">
+<meta property="og:image" content="https://i.ytimg.com/vi/VbhBLRJEGsI/maxresdefault.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+  :root{
+    --purple:#585af3; --purple-dark:#2c1b8a; --mint:#7ad9a8;
+    --white:#ffffff; --muted:rgba(255,255,255,.60); --dim:rgba(255,255,255,.42);
+    --line:rgba(255,255,255,.12); --card:rgba(255,255,255,.05); --card-hi:rgba(255,255,255,.09);
+    --display:'Anton',Impact,'Helvetica Neue',sans-serif;
+    --sans:'Inter',system-ui,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif;
+    --wrap:1280px;   /* page frame (nav spans this) */
+    --col:960px;     /* content column (player, tabs, text) */
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:var(--sans); color:var(--white); line-height:1.6; -webkit-font-smoothing:antialiased;
+    background:#12093a;
+    background-image:
+      radial-gradient(1200px 600px at 82% -6%, rgba(88,90,243,.45) 0%, transparent 55%),
+      radial-gradient(900px 700px at 5% 8%, rgba(122,217,168,.10) 0%, transparent 50%),
+      linear-gradient(180deg,#2c1b8a 0%,#1a1150 28%,#100b34 62%,#0b0820 100%);
+    background-attachment:fixed;
+  }
+  a{color:inherit}
+  .wrap{max-width:var(--wrap);margin:0 auto;padding:0 36px}
+  main.wrap{max-width:var(--col)}
+  @media(max-width:720px){.wrap{padding:0 22px}}
+
+  /* ── Navbar ── */
+  .nav{position:sticky;top:0;z-index:50;background:linear-gradient(180deg,rgba(24,15,74,.92),rgba(24,15,74,.72));backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+  .nav-in{max-width:var(--wrap);margin:0 auto;padding:11px 36px;display:flex;align-items:center;justify-content:space-between}
+  @media(max-width:720px){.nav-in{padding:11px 22px}}
+  .brand{display:block;line-height:0}
+  .brand img{height:36px;width:auto;display:block}
+  .navlinks{display:flex;gap:28px;align-items:center}
+  .navlinks a{text-decoration:none;font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);transition:.15s}
+  .navlinks a:hover{color:var(--white)}
+  .navlinks a.navtop{cursor:default}
+  .navgroup{position:relative;display:flex;align-items:center}
+  .navgroup .subnav{display:none;position:absolute;top:100%;left:50%;transform:translateX(-50%);padding-top:14px;min-width:180px}
+  .navgroup:hover .subnav,.navgroup:focus-within .subnav{display:block}
+  .subnav-in,.navgroup .subnav{z-index:60}
+  .navgroup .subnav a{display:block;background:#180f4a;border:1px solid var(--line);border-top:0;padding:12px 16px;font-size:12px;color:rgba(255,255,255,.85)}
+  .navgroup .subnav a:first-child{border-top:1px solid var(--line)}
+  .navgroup .subnav a:hover{background:#221768;color:var(--white)}
+  .navburger{display:none;background:none;border:1px solid var(--line);padding:8px 10px;cursor:pointer;color:var(--white);transition:.15s}
+  .navburger:hover{border-color:rgba(122,217,168,.6)}
+  .navburger svg{width:20px;height:20px;fill:currentColor;display:block}
+  .navdrop{display:none}
+  @media(max-width:720px){
+    .navlinks{display:none}
+    .navburger{display:block}
+    .navdrop{display:block;position:absolute;left:0;right:0;top:100%;
+      background:#180f4a;border-bottom:1px solid var(--line);box-shadow:0 24px 50px rgba(0,0,0,.45)}
+    .navdrop[hidden]{display:none}
+    .navdrop a{display:block;padding:15px 22px;text-decoration:none;font-size:14px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:rgba(255,255,255,.9);border-bottom:1px solid rgba(255,255,255,.06)}
+    .navdrop a:last-child{border-bottom:0}
+    .navdrop a.sub{padding-left:42px;font-size:13px;color:rgba(255,255,255,.72)}
+    .navdrop .navlabel{display:block;padding:15px 22px 6px;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.4)}
+  }
+
+  /* ── Hero / hook (marker-highlight system: purple hook wraps naturally, mint payoff below)
+     Rules: title splits at its natural break (colon/pipe/question mark). Front = hook (purple,
+     big), back = payoff (mint, smaller). No break in title = purple hook only. Highlights hug
+     the text (tight em padding tuned to Anton) and wrap via box-decoration-break — never
+     hand-pick line breaks or mint words. ── */
+  header.hero{padding:34px 0 6px}
+  .hook{--inx:clamp(8.4px,2.1vw,15.6px)} /* one shared text inset so hook + payoff first letters align */
+  .hook .hk{font-family:var(--display);font-weight:400;text-transform:uppercase;
+    font-size:clamp(28px,7vw,52px);line-height:1.3;letter-spacing:-.5px;text-wrap:balance}
+  .hook .hk span{color:var(--white);padding:.04em var(--inx) .02em;
+    background:linear-gradient(var(--purple),var(--purple)) 0 50%/100% 87% no-repeat;
+    -webkit-box-decoration-break:clone;box-decoration-break:clone}
+  .hook .pay{font-family:var(--display);font-weight:400;text-transform:uppercase;
+    font-size:clamp(16px,4vw,24px);line-height:1.5;letter-spacing:.6px;margin-top:8px;text-wrap:balance}
+  .hook .pay span{color:#0a0a0a;padding:.08em var(--inx) .04em;
+    background:linear-gradient(var(--mint),var(--mint)) 0 50%/100% 88% no-repeat;
+    -webkit-box-decoration-break:clone;box-decoration-break:clone}
+  /* no-hook titles: mid-split into two full-size rows, purple then mint */
+  .hook .hk span.hkrow{display:block;background:none;padding:0}
+  .hook .hk .hkrow+.hkrow{margin-top:8px}
+  .hook .hk span.mintseg{color:#0a0a0a;
+    background:linear-gradient(var(--mint),var(--mint)) 0 50%/100% 87% no-repeat}
+
+  /* ── Player (clean facade → real player on tap) ── */
+  .player-wrap{margin:24px 0 4px;scroll-margin-top:76px}
+  .player{position:relative;width:100%;padding-top:56.25%;border-radius:0;overflow:hidden;background:#000;box-shadow:0 30px 70px rgba(0,0,0,.5),0 0 0 1px rgba(255,255,255,.06)}
+  .facade{position:absolute;inset:0;border:0;cursor:pointer;background-size:cover;background-position:center;display:flex;align-items:center;justify-content:center;padding:0}
+  .facade .play{width:74px;height:74px;border-radius:50%;background:rgba(10,6,30,.40);border:2px solid rgba(255,255,255,.72);display:flex;align-items:center;justify-content:center;transition:.18s;-webkit-backdrop-filter:blur(1px);backdrop-filter:blur(1px)}
+  .facade:hover .play{background:rgba(88,90,243,.62);transform:scale(1.07);border-color:#fff}
+  .facade .play::after{content:"";border-style:solid;border-width:11px 0 11px 19px;border-color:transparent transparent transparent #fff;margin-left:5px}
+  .player iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+
+  /* ── Episode facts (bottom of the Summary panel — templated per episode) ── */
+  .sumfacts{margin:14px 10px 4px;padding-top:13px;border-top:1px solid rgba(255,255,255,.08);display:flex;flex-direction:column;gap:8px}
+  .fact{display:flex;gap:12px;font-size:13.5px}
+  .fact .fl{flex:none;width:104px;color:var(--dim);font-weight:600;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;padding-top:2px}
+  .fact .fv{color:rgba(255,255,255,.9);font-weight:500}
+  .fact .fv a{color:var(--mint);text-decoration:none;border-bottom:1px solid rgba(122,217,168,.4);transition:.15s}
+  .fact .fv a:hover{border-bottom-color:var(--mint)}
+
+  /* ── Episode tag (identity: black label hanging off the title corner) ── */
+  .eptag{display:inline-block;position:relative;left:-6px;margin-bottom:-7px;z-index:2;
+    background:#0a0a0a;color:var(--white);font-family:var(--display);font-weight:400;
+    font-size:13.5px;letter-spacing:1.5px;text-transform:uppercase;padding:6px 11px 4px}
+
+  /* ── Explore tabs (sticky mode switcher; one panel swaps below, nothing shoves) ── */
+  .explore{margin-top:22px}
+  .tabs{position:sticky;top:58px;z-index:40;display:flex;flex-wrap:wrap;gap:8px;padding:10px 0;
+    background:linear-gradient(180deg,rgba(18,10,55,.96),rgba(18,10,55,.86));
+    backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+  .tabbtn{font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.5px;
+    font-size:14.5px;color:var(--white);background:var(--purple);border:1px solid var(--purple);
+    padding:9px 13px 7px;cursor:pointer;transition:.15s}
+  .tabbtn:hover{filter:brightness(1.12)}
+  .tabbtn.on{background:var(--mint);border-color:var(--mint);color:#0a0a0a}
+  .tabbtn.on:hover{filter:none}
+  .tabbtn .ct{font-size:12px;opacity:.75;font-variant-numeric:tabular-nums}
+  .tabbtn .ct::before{content:" · "}
+  .tpanel{border:1px solid var(--line);background:var(--card);padding:12px 10px 14px}
+  .hint{font-size:12.5px;color:var(--muted);padding:2px 10px 10px;border-bottom:1px solid rgba(255,255,255,.08);margin-bottom:6px}
+
+  /* ── Listen row (no box: label left, service pills follow) ── */
+  .listen{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:12px 16px;margin-top:34px}
+  .listen .lname{font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--dim)}
+  .listen a{display:inline-flex;align-items:center;gap:9px;padding:11px 18px;border-radius:999px;
+    background:var(--mint);color:#08210f;text-decoration:none;font-weight:800;font-size:12.5px;
+    letter-spacing:.04em;text-transform:uppercase;transition:.15s}
+  .listen a:hover{filter:brightness(1.06);transform:translateY(-1px);box-shadow:0 12px 30px rgba(122,217,168,.25)}
+  .listen svg{width:20px;height:20px;fill:currentColor;flex:none}
+  /* ── Listen-now Spotify audio embed (full column width, above the pills) ── */
+  .listen-now{margin-top:40px}
+  .listen-now .ln-head{display:flex;align-items:baseline;justify-content:space-between;gap:14px;margin-bottom:13px}
+  .listen-now .ln-title{font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--dim)}
+  .audio-embed{border-radius:12px;overflow:hidden;box-shadow:0 20px 50px rgba(0,0,0,.4),0 0 0 1px rgba(255,255,255,.06)}
+  .audio-embed iframe{display:block;width:100%;border:0}
+  @media(max-width:720px){.listen-now{margin-top:32px}}
+
+  /* ── Keep exploring (thumbnails link to other episode PAGES, never timecodes).
+     Swipeable strip on mobile, fits three-up on desktop. Variant rule: claim
+     "similar ground" + reason lines ONLY when moment-level topic overlap is
+     genuinely strong; otherwise show the latest released episodes with dates —
+     never invent a connection. ── */
+  .relsec{margin-top:60px;padding-top:58px;border-top:1px solid var(--line)} /* line = end of this episode's info */
+  .reldots{display:flex;justify-content:center;gap:7px;margin-top:12px}
+  .reldots span{width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.25);transition:.2s}
+  .reldots span.on{background:var(--mint)}
+  .relsec .rtitle{display:inline-block;font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.5px;font-size:14.5px;background:var(--mint);color:#0a0a0a;padding:9px 13px 7px;margin-bottom:18px}
+  .relgrid{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding-bottom:6px;scrollbar-width:none}
+  .relgrid::-webkit-scrollbar{display:none}
+  .relcard{flex:0 0 56%;max-width:232px;scroll-snap-align:start;display:flex;flex-direction:column;text-decoration:none;background:var(--card);border:1px solid var(--line);transition:.15s}
+  .relcard:hover{background:var(--card-hi);border-color:rgba(122,217,168,.55)}
+  .relcard img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block}
+  .relcard .rt{display:block;font-size:12.5px;font-weight:600;color:rgba(255,255,255,.92);line-height:1.4;padding:8px 8px 0}
+  .relcard .rfoot{margin-top:auto;display:flex;justify-content:space-between;align-items:flex-end;gap:8px;padding:10px 8px 9px}
+  .relcard .rwhy{font-size:11.5px;color:var(--mint)}
+  .relcard .rtag{display:inline-block;background:#0a0a0a;color:var(--white);font-family:var(--display);font-size:10px;letter-spacing:1.2px;text-transform:uppercase;padding:3px 7px 2px;white-space:nowrap;flex:0 0 auto}
+
+  /* ── Dropdown sections (accordion under the player) ── */
+  .drops{margin-top:34px;display:flex;flex-direction:column;gap:11px}
+  .drop{border:1px solid var(--line);border-radius:0;background:var(--card);overflow:hidden;transition:border-color .15s}
+  .drop[open]{border-color:rgba(122,217,168,.35)}
+  .drop>summary{list-style:none;cursor:pointer;padding:16px 18px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+  .drop>summary::-webkit-details-marker{display:none}
+  .drop>summary .st{font-weight:700;font-size:15.5px;letter-spacing:.005em}
+  .drop>summary .ct{margin-left:auto;font-size:12px;color:var(--dim);font-weight:600;font-variant-numeric:tabular-nums}
+  .drop>summary .chev{flex:none;width:22px;height:22px;border-radius:50%;background:rgba(122,217,168,.14);color:var(--mint);display:flex;align-items:center;justify-content:center;font-family:var(--display);font-size:15px;line-height:1;transition:.2s;transform:translateY(-1px)}
+  .drop[open]>summary .chev{transform:rotate(45deg)}
+  .drop-body{padding:2px 12px 12px}
+
+  /* chapters */
+  .chapter{display:flex;align-items:baseline;gap:14px;width:100%;text-align:left;cursor:pointer;background:none;border:0;color:inherit;font-family:inherit;padding:11px 10px;border-radius:10px;transition:.13s}
+  .chapter:hover{background:var(--card-hi)}
+  .chapter .tc{font-variant-numeric:tabular-nums;font-weight:700;font-size:14px;color:var(--mint);flex:none;width:48px}
+  .chapter .cx{font-size:15px;font-weight:500;color:rgba(255,255,255,.9)}
+  .chapter:hover .cx{color:#fff}
+
+  /* questions */
+  .q{display:flex;align-items:center;gap:12px;width:100%;text-align:left;cursor:pointer;background:none;border:0;border-radius:11px;color:inherit;font-family:inherit;padding:12px 10px;transition:.14s}
+  .q+.q{border-top:1px solid rgba(255,255,255,.05)}
+  .q:hover{background:var(--card-hi)}
+  .q .qm{font-family:var(--display);font-size:15px;color:var(--mint);flex:none;line-height:1;transform:translateY(1px)}
+  .q .qx{font-size:15px;font-weight:500;color:rgba(255,255,255,.92)}
+  .q .go{margin-left:auto;flex:none;color:var(--dim);font-size:18px;transition:.15s}
+  .q:hover .go{color:var(--mint);transform:translateX(2px)}
+
+  /* summary + transcript bodies */
+  .summary-body p{font-size:16.5px;line-height:1.62;color:rgba(255,255,255,.9);padding:6px 10px 4px}
+  .tbody{padding:2px 10px 8px}
+  .tbody p{font-size:14.5px;line-height:1.7;color:rgba(255,255,255,.78);margin-top:15px;max-width:64ch}
+  .tbody .spk{display:block;font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--mint);margin-bottom:2px}
+
+  /* ── Voice note ask (lives at the bottom of the Summary panel) ── */
+  .vask{margin:16px 10px 4px}
+  .vbtn{display:inline-flex;align-items:center;gap:9px;padding:12px 20px;border-radius:999px;border:0;cursor:pointer;
+    background:var(--mint);color:#08210f;font-family:inherit;font-weight:800;font-size:12.5px;
+    letter-spacing:.04em;text-transform:uppercase;transition:.15s}
+  .vbtn:hover{filter:brightness(1.06);transform:translateY(-1px);box-shadow:0 12px 30px rgba(122,217,168,.25)}
+  .vbtn svg{width:18px;height:18px;fill:currentColor;flex:none}
+  .vslot{background:var(--purple);padding:12px 10px 10px;margin:14px 0 4px;box-shadow:0 18px 40px rgba(0,0,0,.35)}
+  .vslot[hidden]{display:none}
+  .vhead{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;margin-bottom:10px}
+  .vhead .vmsg{font-family:var(--sans);font-size:13px;line-height:1.55;color:rgba(255,255,255,.92);margin:2px 0 0;padding:0 2px}
+  .vclose{background:none;border:0;color:rgba(255,255,255,.85);font-size:22px;line-height:1;cursor:pointer;padding:0 2px}
+  .vclose:hover{color:var(--white)}
+  .vslot iframe{display:block}
+
+  /* ── YouTube subscribe pill (sits in the listen row; outranks .listen a's mint) ── */
+  .listen a.yt-pill{background:var(--purple);color:var(--white)}
+  .listen a.yt-pill:hover{filter:brightness(1.1);transform:translateY(-1px)}
+  @media(max-width:720px){ /* mobile: no label, three compact pills on one row */
+    .listen .lname{display:none}
+    .listen{gap:8px}
+    .listen a{padding:10px 13px;font-size:11px;gap:6px}
+    .listen svg{width:16px;height:16px}
+  }
+
+  /* ── Footer: Follow us on | Brought to you by | Produced by, + Menu dropdown ── */
+  footer{border-top:1px solid var(--line);margin-top:68px;padding:52px 20px 58px}
+  .footgrid{max-width:var(--wrap);margin:0 auto;display:grid;grid-template-columns:1fr 1.15fr .8fr;gap:44px;align-items:start}
+  .fcol{text-align:center;display:flex;flex-direction:column;align-items:center}
+  .foot-label{font-size:11px;font-weight:700;letter-spacing:.26em;text-transform:uppercase;color:var(--dim);margin-bottom:18px}
+  .sponsors{display:flex;justify-content:center;align-items:center;gap:34px;flex-wrap:wrap}
+  .sponsors a,.produced a{display:inline-flex;transition:.15s}
+  .sponsors a:hover,.produced a:hover{transform:translateY(-1px)}
+  .sponsors img{height:32px;width:auto;opacity:.92}
+  .produced img{height:30px;width:auto;opacity:.95}
+  .sponsors a:hover img,.produced a:hover img{opacity:1}
+  footer .socials{display:flex;gap:11px;justify-content:center;flex-wrap:wrap;margin:0}
+  footer .socials a{width:40px;height:40px;border-radius:50%;border:1.5px solid rgba(122,217,168,.5);display:flex;align-items:center;justify-content:center;transition:.15s}
+  footer .socials a svg{width:18px;height:18px;fill:var(--mint);transition:.15s}
+  footer .socials a:hover{background:var(--mint);border-color:var(--mint);transform:translateY(-2px)}
+  footer .socials a:hover svg{fill:#0a0a0a}
+  .footbar{max-width:var(--wrap);margin:34px auto 0;border-top:1px solid var(--line);padding-top:20px;display:flex;flex-direction:column;align-items:center;gap:14px}
+  .footnav-dd{display:block;width:100%;max-width:var(--wrap);margin:0 auto;text-align:center}
+  .footnav-dd>summary{list-style:none;cursor:pointer;display:inline-flex;align-items:center;gap:9px;font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.5px;font-size:13px;color:var(--muted);background:transparent;border:1px solid var(--line);padding:8px 16px 6px;transition:.15s}
+  .footnav-dd>summary::-webkit-details-marker{display:none}
+  .footnav-dd>summary:hover{color:var(--mint);border-color:rgba(122,217,168,.45)}
+  .footnav-dd>summary .ham{width:15px;height:15px;fill:currentColor;transform:translateY(-1px)}
+  .footnav-dd .dd-links{display:flex;flex-direction:row;flex-wrap:wrap;justify-content:center;gap:12px 24px;padding:24px 0 4px}
+  .footnav-dd .dd-links a{font-size:11.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:.15s}
+  .footnav-dd .dd-links a:hover{color:var(--mint)}
+  .copyright{font-size:12px;color:var(--dim);text-align:center}
+  @media(max-width:720px){.footgrid{grid-template-columns:1fr;gap:34px}footer{padding:40px 16px 20px}.footbar{margin-top:34px;padding-top:24px;gap:20px}.footnav-dd .dd-links{flex-direction:column;align-items:center;gap:15px}}
+
+  @media(min-width:720px){header.hero{padding:48px 0 6px}}
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "PodcastEpisode", "name": "Marty's Hiring Checklist", "url": "https://thenumbersgamepodcast.com.au/marty-s-hiring-checklist", "datePublished": "2024-04-18", "episodeNumber": 170, "image": "https://i.ytimg.com/vi/VbhBLRJEGsI/maxresdefault.jpg", "partOfSeries": {"@type": "PodcastSeries", "name": "The Numbers Game", "url": "https://thenumbersgamepodcast.com.au/"}}</script>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-in">
+      <a class="brand" href="/" aria-label="The Numbers Game home"><img src="assets/tng-logo.png" alt="The Numbers Game"></a>
+      <div class="navlinks">
+        <a href="/">Home</a>
+        <div class="navgroup">
+          <a class="navtop">Episodes</a>
+          <div class="subnav">
+            <a href="/episodes">All episodes</a>
+            <a href="/adventure">Find moments</a>
+          </div>
+        </div>
+        <div class="navgroup">
+          <a class="navtop">About</a>
+          <div class="subnav">
+            <a href="/about">The show</a>
+            <a href="/nick-reilly">Nick Reilly</a>
+            <a href="/jason-robinson">Jason Robinson</a>
+          </div>
+        </div>
+        <a href="/contact">Contact</a>
+      </div>
+      <button class="navburger" id="navburger" type="button" aria-label="Menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24"><path d="M3 6h18v2H3zM3 11h18v2H3zM3 16h18v2H3z"/></svg>
+      </button>
+    </div>
+    <div class="navdrop" id="navdrop" hidden>
+      <a href="/">Home</a>
+      <span class="navlabel">Episodes</span>
+      <a class="sub" href="/episodes">All episodes</a>
+      <a class="sub" href="/adventure">Find moments</a>
+      <span class="navlabel">About</span>
+      <a class="sub" href="/about">The show</a>
+      <a class="sub" href="/nick-reilly">Nick Reilly</a>
+      <a class="sub" href="/jason-robinson">Jason Robinson</a>
+      <a href="/contact">Contact</a>
+    </div>
+  </nav>
+
+  <main class="wrap">
+
+    <header class="hero">
+      <div class="hook">
+        <span class="eptag">EP 170</span>
+        <h1 class="hk"><span class="hkrow"><span>Marty's Hiring</span></span>
+        <span class="hkrow"><span class="mintseg">Checklist</span></span></h1>
+      </div>
+    </header>
+
+    <div class="player-wrap" id="player-wrap">
+      <div class="player" id="player">
+        <button class="facade" id="facade" style="background-image:url('https://i.ytimg.com/vi/VbhBLRJEGsI/maxresdefault.jpg')" aria-label="Play episode">
+          <span class="play"></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="explore">
+      <div class="tabs" role="tablist">
+        <button class="tabbtn on" data-panel="p-summary">Summary</button>
+        <button class="tabbtn" data-panel="p-chapters">Chapters<span class="ct" id="chcount"></span></button>
+        <button class="tabbtn" data-panel="p-questions">Questions<span class="ct" id="qcount"></span></button>
+      </div>
+      <section class="tpanel" id="p-summary">
+        <div class="summary-body">
+          <p>After a run of bonus money hacks - refinancing off 7 percent mortgages, parking spare cash in a high-interest account, and checking your super fund's investment options and fees - Marty walks through the hiring checklist he built to put his 25 years of intuition on a page. He grades candidates out of 130 points on things like job-hopping, whether they blame others, loyalty, proactivity and business fit, and finds clear outliers who score 90-plus. The trio then cover why the wrong hire costs you opportunity, why you should overpay slightly for quality, onboarding and the 30/60/90 day interview, using probation properly, the 'trend is your friend' rule, and how and when to let someone go.</p>
+        </div>
+        <div class="vask">
+          <button class="vbtn" id="vbtn" type="button">
+            <svg viewBox="0 0 24 24"><path d="M12 14a3 3 0 0 0 3-3V6a3 3 0 1 0-6 0v5a3 3 0 0 0 3 3zm5-3a5 5 0 0 1-10 0H5a7 7 0 0 0 6 6.92V21h2v-3.08A7 7 0 0 0 19 11h-2z"/></svg>
+            Send us a voice note
+          </button>
+          <div class="vslot" id="vslot" hidden>
+            <div class="vhead">
+              <p class="vmsg">We'd love to hear from you. You can leave up to a 90 second voice note for us to play on the show: a question, some feedback, or a topic you want covered.</p>
+              <button class="vclose" id="vclose" type="button" aria-label="Close">&times;</button>
+            </div>
+            <iframe src="https://www.speakpipe.com/widget/inline/hhq6kzggsx7zpcsvakgxfrzun3zidpde" allow="microphone" width="100%" height="200" frameborder="0" title="Leave The Numbers Game a voice note"></iframe>
+          </div>
+          <script async src="https://www.speakpipe.com/widget/loader.js" charset="utf-8"></script>
+        </div>
+        <div class="sumfacts">
+          <div class="fact"><span class="fl">Release date</span><span class="fv">18 April 2024</span></div>
+          <div class="fact"><span class="fl">Hosts</span><span class="fv"><a href="/nick-reilly">Nick Reilly</a>, <a href="/jason-robinson">Jason Robinson</a> &amp; <a href="/marty-vidakovic">Marty Vidakovic</a></span></div>
+
+        </div>
+      </section>
+      <section class="tpanel" id="p-chapters" hidden>
+        <p class="hint">Jump straight to the part you need.</p>
+        <div id="chapters"></div>
+      </section>
+      <section class="tpanel" id="p-questions" hidden>
+        <p class="hint">Real questions this episode answers. Tap one to hear the answer.</p>
+        <div id="qa"></div>
+      </section>
+    </div>
+
+    <div class="drops">
+
+      <details class="drop">
+        <summary><span class="st">Episode transcript</span><span class="chev">+</span></summary>
+        <div class="drop-body tbody">
+          <p><span class="spk">Jason · 00:00</span>Welcome to episode 170 of The Numbers Game. I'm Jase. I'm here with Nick and Marty. How you going, fellas?</p>
+          <p><span class="spk">Marty · 00:06</span>I'm going well, Jase. I've just come off a number of calls today. I still can't believe how many people are leaving money on the table. High net worth people, haven't got time, still paying 7 percent on their mortgages.</p>
+          <p><span class="spk">Marty · 00:21</span>Refinance, get a price check with us. We're getting them down to sixes. We're saving people 5, 000, 12, 000. I'm thinking, how am I, how am I Much money are people leaving on their table in accounting, financial planning, by just not getting the right guidance. And these people think they're on good products, and yet they think their bank's looking after them.</p>
+          <p><span class="spk">Marty · 00:44</span>If you're with your bank, give us a call. We'll go back to your bank and get you a better rate than what you're on at your current bank. It's not in their best interest to look at it. So ring us. We won't make anything out of it. It said, we'll get you a better price.</p>
+          <p><span class="spk">Jason · 00:59</span>Just to lead</p>
+          <p><span class="spk">Jason · 01:00</span>straight off the back. I sat with a new client the other day, always keeps three, 400 K in their trading account and like relatively cashed up, that's about the right amount for working capital, but they had a, uh, business savings account.</p>
+          <p><span class="spk">Jason · 01:14</span>Below it that I'd seen had never really had any money transferred into it. I said to the client, I'm like, look, you know, if you move 300 K across and then kind of transfer the money in and out, you know, over the year, but you leave majority that balance in another account said you'd probably make 30.</p>
+          <p><span class="spk">Jason · 01:30</span>What do you, they have 400, 500 K. I was like, you know, you could have extra 20 to 30 K in interest earned on your savings. And he's like, hang on a minute, an extra 20 or 30 K for free, just for transferring money into that other account. I'm like, well, yeah, look, you still got to pay tax on it. You know, it's revenue, but you would have an extra 20 to 30 K in additional dollars added to your bank account purely for moving the money to your second bank account.</p>
+          <p><span class="spk">Jason · 01:53</span>He was like, Oh, I just couldn't, I just never knew it. I just never knew to use it. So.</p>
+          <p><span class="spk">Marty · 01:57</span>Money's just getting burnt because</p>
+          <p><span class="spk">Marty · 02:00</span>people are apathetic on it. And I get it. People are busy and I go, you don't need to always go through a refinance. Like I said, use our expertise. We'll go back to your bank. We'll get you a better rate.</p>
+          <p><span class="spk">Marty · 02:11</span>So as a first point of call, at least that's putting money in your pocket. I just think how much money is just going somewhere it shouldn't because. People are just thinking they're okay. And, and I get it. People haven't got time. They got big loans though. And yeah, we should be, we should be really educating on this because it drives me nuts, this sort of thing.</p>
+          <p><span class="spk">Marty · 02:31</span>Nick, anyway, how are you? Sorry.</p>
+          <p><span class="spk">Nick · 02:33</span>I'm really good. I'm just thinking of all the board games we could make to teach people. Well, I think we should start making some numbers game board games, but it's, I'm glad you brought it up because.</p>
+          <p><span class="spk">Jason · 02:44</span>How's the name of our podcast for making board games? .</p>
+          <p><span class="spk">Nick · 02:50</span>It works. Um, it was in the original strategy three years ago, wasn't it?</p>
+          <p><span class="spk">Nick · 02:53</span>I think it was. I think it was, yeah. 2024 we won our own board game. Yeah. And to see Marty's head as the little one, one of the little</p>
+          <p><span class="spk">Nick · 03:00</span>things around Little</p>
+          <p><span class="spk">Jason · 03:01</span>Bobblehead Marty. Yes.</p>
+          <p><span class="spk">Nick · 03:03</span>Anyway, this morning we had, uh, a client who probably five years away from retirement, so they've come in from, for some re retirement planning.</p>
+          <p><span class="spk">Nick · 03:15</span>The exact same Superfund product that we use, I'm not going to mention the provider, but they had the exact same Superfund that we use already from another financial planner, the way Superfunds work when you move away from industry funds or actually no industry funds have this as well, but you have. You have a fee for the platform.</p>
+          <p><span class="spk">Nick · 03:33</span>So, you know, if you're using an AMP or an MLC fund or even a CBUS fund, you pay to have that platform, but inside of that platform, there's an abundance of investment options that your financial planner can choose. So this particular client had the same fund that we would have recommended, but a very different, um, investment option selection.</p>
+          <p><span class="spk">Nick · 03:56</span>So this particular fund, there's around 200 investments in there that we can choose and we build an</p>
+          <p><span class="spk">Nick · 04:00</span>investment portfolio. So for them to move into the, the investment option that we chose or that we use, Returns were better because we're big believers in index funds. So it was an index fund, um, option, but the annual cost investment cost difference was 4, 000 per year, just on the males fund.</p>
+          <p><span class="spk">Nick · 04:20</span>So you compound that over the next 20 years, you know, these people are only in their fifties. So 20 years is, is under probably 30 years. Exact same super fund, just different investment options, just another way to build it out. Okay. 4, 000 a year difference, um, in fees. So it's the, it's the power of advice.</p>
+          <p><span class="spk">Nick · 04:43</span>It's the power of advice. And a lot of people will think, well, how do you know where to go? What have I got to, you know, this person had been to one advisor and was paying this, but then we're showing them this. You just go to your friends and family and you speak to, we spoke about this</p>
+          <p><span class="spk">Nick · 05:00</span>before, but people that have had a good experience with another broker or another advisor.</p>
+          <p><span class="spk">Nick · 05:05</span>Or another, or another account and that's where you start, but you need to be consistently looking at this stuff because if we look at the three things that we deal with, tax, Uh, super and mortgages. Well, your mortgage is probably the biggest debt you're going to have in your life outside your property.</p>
+          <p><span class="spk">Nick · 05:22</span>For most people, super is going to be the biggest asset you have in your life. And for most people, tax is going to be the biggest expense outside of their kids that they have. So why are you not across it? And you need to be reviewing it and making sure you're in the, you know, the best products possible with the best advisor annually.</p>
+          <p><span class="spk">Marty · 05:39</span>All right. You got me going now, Nick, you got me going Riley. So, investors, one in five people in Victoria are selling their investment properties because they think they, they're coming off interest only, the principal and interest. They think they can't refinance because of the 3 percent buffer. Um, so the buffers</p>
+          <p><span class="spk">Marty · 06:00</span>basically is the interest rate and then the banks put on a buffer on servicing on top of that actual interest rate when they look at servicing your loan.</p>
+          <p><span class="spk">Marty · 06:07</span>Now, for investors, um, people, they have brought out that there's a 1 percent buffer to a certain amount of banks for when you refinance a home loan to enable people to refinance. So it gives you a little bit more leverage as to what you can borrow in order to people get better rates. But for investors, um, that doesn't always apply, that 1 percent buffer, or that's what is the apply in the market, but there's three banks out there that will apply the 1 percent buffer to interest only products in the market on investment.</p>
+          <p><span class="spk">Marty · 06:43</span>Now this is critical because people are actually selling up investments thinking they can't refinance when there's actually avenues to get a better rate. And to be able to refinance those facilities and hold onto those properties because the cost is</p>
+          <p><span class="spk">Marty · 07:00</span>enormous on agents fees and they're getting absolutely screwed on current rates that they're on.</p>
+          <p><span class="spk">Marty · 07:06</span>And some people I'm finding are on not only 7%, 8 percent up to high eights in some situations. And you don't have to jump to a principal and interest just because the existing lender says that you have to. You can actually find. Avenues to refinance on that 1 percent buffer at three lenders that I know of at the moment, interest only.</p>
+          <p><span class="spk">Marty · 07:30</span>So again, before you just burn money, um, for goodness sake, ring and protect your assets, get them at good pricing and at least pressure test where you're at to see if we can save you some good money on your investment portfolio again. So yeah, got a totally different tangent today, but just</p>
+          <p><span class="spk">Jason · 07:52</span>If you've got this far into the episode and thought, you know, what's going on, you've just got yourself some bonus hacks there for sorting out your financial situation.</p>
+          <p><span class="spk">Jason · 08:00</span>Whether that was, you know, using a high interest savings account, refinancing your mortgage to get the best rate or checking out your advisor fees and your super fund. Now that's the bonus knowledge you've learned from this app, but we actually also have another bit of content coming our way from the great Marty V.</p>
+          <p><span class="spk">Jason · 08:15</span>So what have you got for us today, Marty?</p>
+          <p><span class="spk">Marty · 08:17</span>Uh, well today I wanted to talk about, um, Recruitment, recruiting great talent and also when is the right time to let, uh, people go as well because it's always a big topic of conversation with business owners and it's a significant amount of money you're investing.</p>
+          <p><span class="spk">Marty · 08:33</span>Not only in hiring someone, but in the process of hiring someone a lot of the times. And I've just learned so much, um, even over the last couple of years, the do's and don'ts. And I wanted to share with the audience, just some of the things I've learned that I think will be beneficial. So yeah, I hope that, uh, that resonates out there.</p>
+          <p><span class="spk">Jason · 08:56</span>Uh, two, two new, um, client</p>
+          <p><span class="spk">Jason · 09:00</span>services, uh, team members, and probably about to throw the ad out there for a new senior accountant, senior manager type, high end guru to join the, uh, future advisory team. So if you are interested in future advisory. com. au forward slash careers, we'd love to hear from you and, uh, come and join the team.</p>
+          <p><span class="spk">Jason · 09:17</span>So Marty, I'm, I'm definitely interested in, uh, Your advice on what you've learned over the years, because I think it'd be very helpful.</p>
+          <p><span class="spk">Marty · 09:24</span>Yeah, I think initially in the interview process, you're obviously looking to build rapport with a person. But one of the things I'm always looking for in that interview process is whether they've jumped jobs and to the reason why they've jumped jobs.</p>
+          <p><span class="spk">Marty · 09:38</span>So everyone wants to accelerate in their careers. I get that. But if you're looking at a sideways jump movement, And things haven't worked out for the person in, in various different roles that they've been in. That's a massive red flag. And one of the things I always look out for is, I say, if the person is actually saying, I didn't</p>
+          <p><span class="spk">Marty · 10:00</span>achieve it because this employer didn't provide me with this, or I didn't have the circumstances available to hit the targets that I wanted to hit.</p>
+          <p><span class="spk">Marty · 10:09</span>Um, if they're looking to blame market conditions, other people or the business, that's a huge red flag. And some of the good ones that I've seen coming across is the ones that have had some longevity in the role. So I'm generally looking at a couple of years. I want a bit of loyalty, right? Just a couple of years, you know, but when I see them talk about and talk in a way where they go, Uh, I achieved this at my current role because of these initiatives that I did with the employer's help that I'm looking at someone who's immediately collaborative and I'm looking for those things in the interview to go, have we got longevity in this person?</p>
+          <p><span class="spk">Marty · 10:51</span>Are they looking for a place to have a home for the next three to five years? And I'm just looking at attitudinally, like whether</p>
+          <p><span class="spk">Marty · 11:00</span>they're actually going. Okay, the problems of the world is caused by inadequacy, or have I made the best out of the opportunity I've had? So generally if they're jumping to a higher level role, that's always a great indication that they're performing well, and they're being attracted and people want them for that higher role as well.</p>
+          <p><span class="spk">Marty · 11:22</span>So that's a really, just a simple technique up front where I go, Are they doing, are they doing the things that I think they should be doing or are they, are they having problems for reasons, you know, that they're not having that self accountability. The other thing I've done over the course of the last couple of years, um, and particularly in the last probably six months is there's a lot of questions and answers around recruiting people.</p>
+          <p><span class="spk">Marty · 11:48</span>But I've made up my own checklist as well. So we have personality testing, we have science, we have capability testing. I get all that. And I'm going, how do I put my</p>
+          <p><span class="spk">Marty · 12:00</span>intuition on a page? Like I understand my industry for the last 25 years, but a lot of that's intuitively, so you'll come out of an interview going, there's something about that person I really like, or they're saying the things I really like, but I thought, how do I put some science to that where I can actually grade it?</p>
+          <p><span class="spk">Marty · 12:18</span>in my own capacity as a manager as well. And just to give you an example, this is for mortgage brokers, right? So like I had, are they a current broker? So out of 130 points, I start grading different aspects of the principles. Are they a current broker? Because if they're in the current industry, you know, that's, that's a tick.</p>
+          <p><span class="spk">Marty · 12:39</span>Yeah, are they, are they a banker? Yeah, so they still get points, but on a lower grade because we've got a lot of training to do to get them to that point where we need to. Um, proactive attitude, I rate that out of 10. You know, give them a mark. Are they a team player? Do they have leadership qualities? So I'm not only thinking about the role</p>
+          <p><span class="spk">Marty · 13:00</span>now, but I'm thinking about the future and I'll grade them accordingly.</p>
+          <p><span class="spk">Marty · 13:03</span>Relationship building. What are they like in their communication in the interview? You know, how are they building relationships in their previous roles? Are they successfully doing that? Are they finding that difficulty? I, I find that difficult. I'll rate them outta 10 on that loyalty and trustworthiness.</p>
+          <p><span class="spk">Marty · 13:22</span>Like, what's their lawyer? How do they speak about their current employer? Yeah, because again, if they don't speak well of their current employer, then what are they going to talk about, you know, about us? Could it be the same? Could it be habitual that it's, it's always someone else that's the problem? You know, what's their loyalty in regards to family, in regards to friendship groups?</p>
+          <p><span class="spk">Marty · 13:42</span>Um, Yeah. Yeah, I think it's important. Analytical skills. I'll assess that as well. Psychological testing and capability testing. I will take that science and put that into the metric as well. So I'm taking that on board. Likeability and business fit. Do I</p>
+          <p><span class="spk">Marty · 14:00</span>like them? And does someone else in the business like them as well?</p>
+          <p><span class="spk">Marty · 14:03</span>I might draw someone in and say, just give me a read on this person. And I'm thinking, Yeah, what's the age? What do they do in regards to hobbies? Will they fit the dynamic of the business? Can they generate leads on their own accord? You know, do they showcase that they can attract business to them or not?</p>
+          <p><span class="spk">Marty · 14:22</span>Are they actually achieving a result at a minimum standard level That would be very appropriate for our business and we have the chance to scale that up Or are they achieving in excess of that where they will score higher? Um, and that's the sort of thing. Can they settle a certain amount of loans in their first year?</p>
+          <p><span class="spk">Marty · 14:46</span>Is that, is this person the type of person that can do that? And can they settle 50 million in their second year? So I'm looking at key principles about what makes our business successful and they might go</p>
+          <p><span class="spk">Marty · 15:00</span>beyond that, but I'll give them a grading on that. And what's really interesting about that, since I've been doing that on my own level, instead of it being intuitive, There seems to be clear winners.</p>
+          <p><span class="spk">Marty · 15:11</span>So it's interesting how you have people that are sort of good people, don't get me wrong, all good people, but people that are sort of at that average level might be scoring 50 to 60 points, and then you'll get an outlier. That scores 90 plus out of 120, 130 points where you go, oh, there's a, I need to pay attention.</p>
+          <p><span class="spk">Marty · 15:33</span>There's a significant upside in this person. And I just feel like I've cracked a bit of a code on it where I was utilizing intuition and then sort of more the science externally to myself. So if I bring it all together. You know, I feel like I'm getting a better read on the overall picture of that hire.</p>
+          <p><span class="spk">Marty · 15:54</span>Um, because again, you're investing, you're handing over a check of 80, 000, 90,</p>
+          <p><span class="spk">Marty · 16:00</span>000. Sometimes that's, that's big. If you were putting that into shares, you want to know that you're going to get a return on that too. And you want to know that that person in fairness to that person's got longevity in their business for their own sake as well.</p>
+          <p><span class="spk">Marty · 16:13</span>So yeah, that's just an initial, you know, Uh, read on it. But, um, yeah, what do you think lads? I've just come up with that probably in the last three months.</p>
+          <p><span class="spk">Jason · 16:22</span>What I'm liking about it is it's very deliberate, like it's very deliberate. There's a lot of strategy, a lot of depth, a lot of thought that's gone into it.</p>
+          <p><span class="spk">Jason · 16:29</span>So, you know, even hearing you unpack it, I start to think, well, you know, when we're hiring for a particular role, am I going beyond just asking the person about their job experience? You know, why are they looking for a new job or not? You've, you've got some really detailed parameters that fit the certain role you're looking for.</p>
+          <p><span class="spk">Jason · 16:45</span>So, you know, what I'd love an example of from you, Marty is have, have you gone through this process and had somebody score, you know, the 110 out of 120, like the big outlier, but if you also then had the nightmare, somebody who's come in</p>
+          <p><span class="spk">Jason · 17:00</span>and just completely failed the Marty V test and ended up with 20 out of 120.</p>
+          <p><span class="spk">Jason · 17:05</span>And, you know, can you tell us a little bit about those?</p>
+          <p><span class="spk">Marty · 17:07</span>Yeah, well, I think I look at it in hindsight. So the way I was able to come up with the list was to go, all right, who's been successful in our business already. And I want to get similar fits, right? But again, a lot of the time in the past, it might've been more intuitive.</p>
+          <p><span class="spk">Marty · 17:22</span>So it might've been, I really like that person. And then you get burnt on something in the science that wasn't quite, you know, up to scratch. Whereas this hits all the key metrics I look for in a person in what I've seen over 25 years and what I've seen work well. Now, again, nothing's, nothing's perfect.</p>
+          <p><span class="spk">Marty · 17:40</span>Yeah, a hundred percent, a hundred percent, uh, yeah, yeah, right. So, you know, but, but what it does, and Nick and I've been in that situation. How many times do you come out and you go, geez, I really liked that person. It was actually a good person, but then sometimes that works out and other times you're off the mark as well.</p>
+          <p><span class="spk">Marty · 17:58</span>So it's like, this gives</p>
+          <p><span class="spk">Marty · 18:00</span>me just real clear specifics and. Already, I go, even the latest hires we've done, they're gun hires. Like, like I know they're gun hires because of the process. So that's not on, you know, some of the other people we might have hired that mightn't been up to scratch. I'm always asking myself, What should I have done better in that process?</p>
+          <p><span class="spk">Marty · 18:21</span>Cause I've missed on a couple and it hurts the business when I miss and I don't want to miss, right? So I go, it's really important to the business that I don't. So I've created a criteria that's more conducive to what I know and already I'm really, I'm really excited about a couple of hires I've made on this particular principle, and that's nothing against the people that missed out.</p>
+          <p><span class="spk">Marty · 18:44</span>They're all good people, but, but these were definitely elite in comparison to on, on this modeling. So that's, that's what I'm. So I'll be able to tell you more again in 12 months time, but I go, I felt like I needed to do</p>
+          <p><span class="spk">Marty · 19:00</span>this to just take it to another level for myself. So, and for the business, right?</p>
+          <p><span class="spk">Nick · 19:04</span>Yeah, Marty, I love it.</p>
+          <p><span class="spk">Nick · 19:05</span>And, you know, I've obviously made wrong hires myself and it is probably the one biggest cost to your business. Um, and not just the cost as in. you know, the cost of rehiring and whatnot. But the thing I've learned the last couple of years is the opportunity cost. What are you missing out on by not hiring that right person?</p>
+          <p><span class="spk">Nick · 19:27</span>So it actually, it's a, it's, it's a multiplier. So, and I think who better in your business than you to know who's going to suit the role. And I think unfortunately, particularly in the last few years with this, well, and even It's still today, but the shortage of, of labor or skilled labor, um, you've really got a recruiter pushing you someone, and you know, they're obviously going to be pushing them to you and putting that person in, in.</p>
+          <p><span class="spk">Nick · 19:55</span>On a, on a pedestal to a degree and then the individual themselves. So the</p>
+          <p><span class="spk">Nick · 20:00</span>fact that you've actually thought about a methodology I love, and it takes me back to when we first started doing the, um, the personality profiling. And I think every business should do this and you mentioned it briefly, but I just wanted to touch on it a bit more, but we actually looked at the top performers in our business.</p>
+          <p><span class="spk">Nick · 20:16</span>And did a personality profile on them. So it wasn't just us looking at the profile and the numbers going, Oh yeah, that's a good result. They're in the top 10 percentile of their numeric ability in the country or whatnot. It's who are the really good performers in our business. What did, what did their profiling look like?</p>
+          <p><span class="spk">Nick · 20:34</span>We now have a blueprint for everyone that comes in and does that profiling as to what they need to look like. And outside of the personality profiling, it sounds like you've just done that with, you know, someone's background and work history and whatnot. And I think it's brilliant. You look in your own backyard, look at what's working.</p>
+          <p><span class="spk">Nick · 20:50</span>Replicate it. And if they don't tick those boxes, they don't come into the business. So I just think it's, it's really smart. And, um, these two, these two big highs you're talking about, geez,</p>
+          <p><span class="spk">Nick · 21:00</span>I hope they turn out because you've,</p>
+          <p><span class="spk">Nick · 21:04</span>there's a lot, there's a lot riding on this. Otherwise the whole thing's defunct. This could be the numbers game, higher blueprint. You know, we could sell it with the board</p>
+          <p><span class="spk">Marty · 21:13</span>game. It absolutely could be. And it's always easier to direct a racehorse than try and push someone average through the mud. It really is.</p>
+          <p><span class="spk">Marty · 21:22</span>And, and that's no disrespect to people that aren't performing at a high level, but it's such a critical thing because you're also putting resources in training people when you onboard them. Um, and. So, like Nick said, opportunity cost is, as well, and you're happy to overpay slightly. You don't have to, you don't have to pay a lot more, but you do have to, you're better to overpay for someone of quality that you believe in, at another level, if you've got the right methodology up front, including the personality testing, and lock it all in, into all the metrics, that's going to make a</p>
+          <p><span class="spk">Marty · 22:00</span>strong decision.</p>
+          <p><span class="spk">Marty · 22:00</span>And for me, it's all about. I don't like paying more when there's no reason to pay more. And if I haven't got a clear winner or a methodology on a clear winner on the front end, then why would I ever extend a benefit? Like it just doesn't make sense even with the personality capability testing. But if I know as a business person and I look at quality people over the journey and I'm going, and I know what they've been able to accomplish, then I know what the upside is on that person as well.</p>
+          <p><span class="spk">Marty · 22:35</span>So it's not, you know, it's just not throwing money away to get someone on board. It's actually using that methodology strategically to, to get the right person and to get the result from that right person. Because sometimes I've seen an out performance by three to four to one. And that's significant when it comes to business.</p>
+          <p><span class="spk">Nick · 22:55</span>And Marty, we had, we had a brief conversation about this the other day. And I guess there was a</p>
+          <p><span class="spk">Nick · 23:00</span>light bulb moment and I think this is going to sound really basic, but I would, I would suggest that a lot of, uh, small businesses don't think this way, but you know, we were sort of not arguing, but we were having a conversation over, you know, do you give someone that extra 10 K a year, because that's what they've been on and that's what they need.</p>
+          <p><span class="spk">Nick · 23:19</span>Um, and I think a lot of businesses will go. Now, the roll's a hundred, you're not getting a hundred and ten, there's other people out there. We thought this was a good hire, and we just broke it down. We said, well, ten grand, we're, a year, we're going to know if this person's good or not in three months time.</p>
+          <p><span class="spk">Nick · 23:35</span>So, if we get it wrong, and we pay the extra ten, it's an extra eight hundred bucks a month. So we've really only paid an extra two thousand four hundred than we would have paid someone else. After your company tax rate, you really only risking an extra two grand within three months, you get the ultimate rate on someone, whether or not they're the right person.</p>
+          <p><span class="spk">Nick · 23:55</span>And to your point, you could be four X as far as an average</p>
+          <p><span class="spk">Nick · 24:00</span>performer versus a good performer. So don't get caught up on that annual salary. Just think about it. Just think, Oh, I think this is the right person. And they're an outlier. And I'll know in three months. And what's that extra 10 grand a year actually going to cost me to try and find it out.</p>
+          <p><span class="spk">Nick · 24:15</span>So. Yeah, just, just get real granular and we sort of walked away after that and go, okay, we, we get them in, we give them the salary and we'll, you know, we, we back them to perform and if we don't, it's a small cost versus what, um, you know, someone on 10 K a year less.</p>
+          <p><span class="spk">Jason · 24:31</span>I think what's, what's really important there though, Nick is the, the, what happens after you hired, like what's the onboarding process, the probation period, and then the check ins or performance metrics after that.</p>
+          <p><span class="spk">Jason · 24:42</span>So, you know, I think, I think everything, you know, Marty you've covered so far is absolutely brilliant. And if you want the Marty checklists and. Connect with Marty on LinkedIn and send him a message and say, give me the Marty numbers game hiring checklist. Um, but for me, I mean, I think we've had some fantastic hires.</p>
+          <p><span class="spk">Jason · 24:59</span>Likewise,</p>
+          <p><span class="spk">Jason · 25:00</span>at future, our last couple of hires have been brilliant. The process at the moment for the two client services that we're looking to hire, we'll bring on two new at the same time, um, I'm pumped because the process has actually taken a little bit longer than usual. I think back in the day, years ago, Greg and I might've been involved in the interview process, used gut feel and gone.</p>
+          <p><span class="spk">Jason · 25:18</span>Yeah, shit. I like that person. Let's hire him this time round. We've had Amy, who's our practice manager, who's heavily involved in the client services and admin world. Really ask all the detailed questions about the person's role, the person's background, why they want to come to future, how they'll fit, what the role is going to be entitled in entail.</p>
+          <p><span class="spk">Jason · 25:38</span>Way more detail than I would have gone into. So I'm like, these people that we're bringing on, epic. But now for me, the next part is how do we make sure when we onboard them, we, we deliver on everything future advisory said it was going to do to create, like, to allow these people to be as successful as possible in their role.</p>
+          <p><span class="spk">Nick · 25:54</span>Yeah. And when you have people that don't work out, the first thing you need to do, uh, is look</p>
+          <p><span class="spk">Nick · 26:00</span>internally. And, um, yeah, obviously you need to. to, to have a, a blueprint or a structure when people come on board. But I think one of the things I've done, um, when we haven't hired the right people, it's, well, what did we do wrong?</p>
+          <p><span class="spk">Nick · 26:17</span>Why did we not hire them? What weren't we doing as a business? And it's not, it can be a combination of, you know, Marty's checklist. And, you know, did we give them the best opportunity to succeed? Um, and sometimes I think we've been guilty of. Not giving them the best opportunity, but then we give them the opportunity and they do succeed and we might've wasted three to six months.</p>
+          <p><span class="spk">Nick · 26:39</span>Um, so I think it's just as important that, yeah, you, you bring them into your business in the correct way. And. You have to take ownership as well. At the end of the day, they're your employee. So you're there to help them succeed at the same time. So yeah, it's a really good point.</p>
+          <p><span class="spk">Marty · 26:55</span>Well, I'm glad you both brought this up because yeah, what happens once you're</p>
+          <p><span class="spk">Marty · 27:00</span>hired and I think, you know, you've got six months on probation, but I think what you're saying is really critical is, you know, what is the minimum acceptable standard that they need to perform at and what is the timing on that?</p>
+          <p><span class="spk">Marty · 27:16</span>Because you have got six months in order to get them to an optimal level, but they need to know what that expectation is. And even in the front end, it might be the second interview process to have real clarity around that. So there's no second guessing or You know, wondering what I need to do. Um, really they have to know what exactly the job entails and then what is the expectation?</p>
+          <p><span class="spk">Marty · 27:41</span>Is there clear expectation set from the beginning? And then, you know, there's an agreement and generally good people and high performers move towards that. They love that. They love that. It's outlined that this is the expectation. Now you find out what their expectation is because that might far exceed the minimum</p>
+          <p><span class="spk">Marty · 28:00</span>standard, right?</p>
+          <p><span class="spk">Marty · 28:00</span>Um, So it's like, that's, that's even brilliant. They go, absolutely. I could do that. If not more, I'd actually be disappointed if I wasn't doing double that. So great performers give you great insight when you're very clear on the expectations up front. And, um, yeah. And then what you're looking for.</p>
+          <p><span class="spk">Marty · 28:21</span>Obviously, we have one week onboarding, really important, so we outlay what to expect in the first week as well when someone comes on board. I think that's really critical so people feel like, you know, they're in a safe space, they get all the technology, they meet key people, um, they're trained up sufficiently, and that's obviously ongoing.</p>
+          <p><span class="spk">Marty · 28:41</span>But just real, real clear parameters around that first week. Onboarding is really important. And is there effort and commitment to the actions and results, um, communicated and reciprocated? So if you're setting actions in those early days to be accomplished, are</p>
+          <p><span class="spk">Marty · 29:00</span>they moving towards you in achieving those results?</p>
+          <p><span class="spk">Marty · 29:03</span>I think, and trend is your friend. Always say trend is your friend. If you don't see a level of improvement at an appropriate pace. then you have a problem. And that's the sort of thing you're looking for is going, is this person just not Not able to lift from, you know, a slow start, uh, do they need training in order to progress a little bit more here?</p>
+          <p><span class="spk">Marty · 29:28</span>So you need to be really on board in those early days to make sure that you're getting this trend of improvement and it's heading in the right direction. Um, the right direction to the expectations and agreement set. And if you don't see the key front end metrics hit within a couple of months, then the writing could potentially be on the wall.</p>
+          <p><span class="spk">Marty · 29:49</span>You know, this is a business owner. If it's not right, you have this sinking gut feel within a couple of months time going, Oh boy. Okay. Cause we're not seeing the actions.</p>
+          <p><span class="spk">Marty · 30:00</span>We know that the result might come later. But you're not seeing the re the actions that you know, that gets the result, even though they've all been mapped out.</p>
+          <p><span class="spk">Marty · 30:08</span>So this is really important because we talk about six months probation, but it's really in the first two months that the foundations are set and we burn sometimes three or four months for no particular reason, if it's not going to work out.</p>
+          <p><span class="spk">Nick · 30:23</span>I was just going to say one other little hack, and I think this has added a lot of value in our business.</p>
+          <p><span class="spk">Nick · 30:28</span>Um, and this is more around your onboarding. Peace, Jase, but we've introduced the 30 day interview. 30, 60, 90,</p>
+          <p><span class="spk">Marty · 30:37</span>yeah.</p>
+          <p><span class="spk">Nick · 30:37</span>So basically our external HR provider does that interview with the new employee and it's how have you found the onboarding, um, and are you, is there anything that you're, you don't have, um, that's stopping you from doing your job properly?</p>
+          <p><span class="spk">Nick · 30:52</span>For example, any tools you need, any help you need? That's been really good for a couple of things. Number one, um,</p>
+          <p><span class="spk">Nick · 31:00</span>new employees, depending on their level of confidence, they might sit there and they might have something that's not working like from a software point of view or a tech point of view, um, or a hardware point of view, whatever, what, whatever it might be that we didn't know about.</p>
+          <p><span class="spk">Nick · 31:12</span>Um, how'd you find the onboarding process? Is there anything we could have done? It could have got you, you know, up and running quicker. Um, any issues culturally. So that's been really good, not just for that individual and to make sure that individual has everything that they need to perform, but also to, to teach us how to be better.</p>
+          <p><span class="spk">Nick · 31:31</span>Uh, for the, for the next on board, if, if we need to, then we do that at 60 days and we do that at 90 days. And yeah, Marty's nailed it like that probation period. And like, I'm, I'm my own worst enemy here and we continue to learn. But for me, I haven't used it in the right way at times, but. You absolutely need to, to use probation periods, they're there for a reason, but you have to make sure you've got the right read</p>
+          <p><span class="spk">Nick · 32:00</span>on someone within the first six months.</p>
+          <p><span class="spk">Nick · 32:01</span>And I think where I've gone wrong in the past is not doing what I needed to, to be absolutely certain within six months, whether it was going to work or not. Um, and all these little hacks have helped and obviously making the wrong decisions. You're continually, continuously learning. Um, but yeah, those 30, 60, 90 day interviews have been a really good resource for us or tool for us as well.</p>
+          <p><span class="spk">Marty · 32:25</span>Yeah. And Nick's right. It's, it's, it's leadership accountability too, in order to ensure that it's a collaborative approach to. put that person in the best position to perform in that time and you know, the sooner you get those metrics right, um, the better for both parties ultimately. And I think if something is going awry, you know, how big is the gap between the current performance and the accepted performance?</p>
+          <p><span class="spk">Marty · 32:52</span>Um, You really got to note that. And I had a situation where the gap, it was just the wrong person for the role. The</p>
+          <p><span class="spk">Marty · 33:00</span>guy was lovely guy, but just the wrong person for the role in the end. And he's like, he basically said, I'm doing my best. And given the, how resourced he was, I, I basically said, that's what worries me.</p>
+          <p><span class="spk">Marty · 33:14</span>It's the. It's the, the gap is too wide from where we need to be compared to where you're at. And you are doing your best, nothing against the person. It's, um, it was just the wrong, that was the wrong hire. So, um, I've had that before. So again, so you set clear actions, targets, and look to hit the result by a certain date to quickly bridge that gap.</p>
+          <p><span class="spk">Marty · 33:37</span>If there is a gap. Um, Um, but again, if you're monitoring it every couple of weeks, it's, it's, you know, you could, you can come to the conclusion pretty quickly that you need to come to. So yeah, I think that's really important as well, that there's constant communication. Cause again, hard conversations are not easy as a leader sometimes too, you know, it's, you need to have them.</p>
+          <p><span class="spk">Marty · 33:58</span>And a lot of the times,</p>
+          <p><span class="spk">Marty · 34:00</span>you know, people can let things just go and hope that it works out and then it blows up at a later date. So the poor person that you're dealing with is none the wiser. And you're just, you know, you just get upset because it's not working how you want it to work. But that constant communication and working with that person, you generally find you're going to come through to a better result together.</p>
+          <p><span class="spk">Marty · 34:21</span>Um, if, if that, if that hire is the right hire, you know, initially. So really, really important. So, but the question I'll, I'll ask Jace is, um, You know, when should you let someone go?</p>
+          <p><span class="spk">Jason · 34:35</span>What usually ends up happening is when you had the gut feel that it wasn't going to work out, it wasn't right. That's when I feel is the appropriate time that you need to really then spend the time analyzing it, figuring out and make the move.</p>
+          <p><span class="spk">Jason · 34:49</span>Um, unfortunately, you know, a couple of times over the course of six, seven, eight years, whatever we are now running a few different firms and businesses. Um, Greg and I. You know, we,</p>
+          <p><span class="spk">Jason · 35:00</span>we see the best in people, you know, as, as is, you know, sometimes it's the human way you want to see the best in people and you want to see, give people the opportunity to deliver on what they said they could do.</p>
+          <p><span class="spk">Jason · 35:10</span>And, um, on a couple of occasions, Greg and I have continued to try to see the best in people, even though there was, you know, several people around us who told us like, guys, like enough's enough. Come on, you've got to be able to see through the, see through it all. And, um, yeah, had we, had we acted on our gut.</p>
+          <p><span class="spk">Jason · 35:29</span>You know, it would be in a very different place for, you know, and look, you live and learn. Um, and I think through that learning, uh, a couple of years ago, over the last couple of years, we, we had, um, one, unfortunately recently that, you know, we, we reflected and probably made the wrong hire based on. you know, role, office location, the things that we needed.</p>
+          <p><span class="spk">Jason · 35:49</span>Um, and fortunately on this occasion, it was, it was one of the faster ones we turned around, but you know what, rather than letting this drag out, let's, let's, let's just end it as well, while we can all hold our heads high and have a great conversation.</p>
+          <p><span class="spk">Jason · 36:00</span>So, Hey, you know, this isn't working out. Thanks for everything.</p>
+          <p><span class="spk">Jason · 36:02</span>And, and pulled it. So yeah, I think the sooner, the better, if you know, and yes, you can, you know, utilize the whole six month probation period, but make sure that you've got those checking mechanisms or things that you need to know. You know, from a KPIs, measurements, performance, um, you know, compatibility with the colleagues that they're working with, all the different things that make for great culture and great performance.</p>
+          <p><span class="spk">Jason · 36:25</span>Um, and you can get a read on it pretty quick. And I think that's where the gut comes into it. And then gut, gut for me is.</p>
+          <p><span class="spk">Marty · 36:32</span>You've hit the nail on the head, you know, if you're asking yourself, should you let someone go? It's, it's probably time. And like I say, we're all, we're all nice people. And we all know that there's another person on the other side of this that has a family and, you know, has rent to pay or a mortgage to pay.</p>
+          <p><span class="spk">Marty · 36:50</span>So it's not easy, but how much money is burnt by giving the benefit of the doubt? It's like, if I look over 25 years, yeah,</p>
+          <p><span class="spk">Marty · 37:00</span>I could kick myself because I knew three months before it wasn't going to work out and, and you keep going, it'll turn, you know, you'll see a snippet and it'll, it'll be good. But that's why I like the key metrics and the key actions, because if they're not being met, Then the writings on the wall.</p>
+          <p><span class="spk">Marty · 37:18</span>And if that's consistently not trending up, it gives me confidence to know that it's the right decision.</p>
+          <p><span class="spk">Nick · 37:24</span>And you spot on. It just makes me think, because, you know, I've, I've had some recent learnings that the key metrics you end up doing anyway, when you manage someone out, you have to now, right? So these days you can't just, if you go past that probation period, you can't just get rid of people.</p>
+          <p><span class="spk">Nick · 37:42</span>You've got to manage them out and then it all becomes about the key metrics. So do it at the start so you don't, you know, you don't waste the time.</p>
+          <p><span class="spk">Marty · 37:50</span>And the other thing is, is like proven performers as well. What happens if proven performers drop off? Now that's a, that's a uniquely interesting</p>
+          <p><span class="spk">Marty · 38:00</span>one because what you do have to find out is why they have fallen off.</p>
+          <p><span class="spk">Marty · 38:05</span>And that's generally a much easier course correct because a lot of the times it might be a health thing, might be something that's happened in the family. So again, they're proven performers. So, you know, they have more longevity. They've been in the business a lot longer. And again, that's usually, course correct into better performances again.</p>
+          <p><span class="spk">Marty · 38:25</span>So you need to have flexibility and use context in your thinking as well. But if that falls away and the trend continues to fall, then, you know, the same thing applies performance management in the end. The other thing, the other thing that I've learned is never easy to do. Don't, if you need to fire someone, don't do it at the end of the day.</p>
+          <p><span class="spk">Marty · 38:46</span>Cause you sweat on it. Other people sweat on it. It's, um, it's horrible. Do it, do it early in the day in respect to the other person too. Cause they've thought they've had interactions with you on that day, knowing that</p>
+          <p><span class="spk">Marty · 39:00</span>you ultimately were going to fire them. So it's best to have that conversation early and in regards to the premise of the conversation, Be very short and sharp because you don't want open loops all over the place in conversation because it's highly emotive.</p>
+          <p><span class="spk">Marty · 39:18</span>So it's really just, this is not going to be a good conversation. And you generally get a, Oh no. And, um, Going, you know, I need to let you go based on a couple of criterias and look to end the meeting as quickly as possible. Um, if you can put them on course to another employer. Um, if you can help them out, you know, just, just to help that transition across somewhere else.</p>
+          <p><span class="spk">Marty · 39:43</span>Um, generally I've found as long as you're being transparent and honest and you've had good communication, they'll say, look, I'm sorry it didn't work out. Um, And, um, you know, they move on. There's this, yeah, it's, it's an okay ending. Um, sometimes it can get volatile</p>
+          <p><span class="spk">Marty · 40:00</span>and you've got to deal with that in real time too, but you don't want that to be a half an hour, 40 minute conversation.</p>
+          <p><span class="spk">Marty · 40:06</span>Has to be two or three minutes, very directive and, you know, move that person on in the day if that's possible as well. So yeah, there you go. Some interesting tidbits and, uh. Uh, again, I think, uh, business owners will relate to this and, uh, yeah, just what I've found over the last few years and probably over the last 20 years, eventually you get better at it.</p>
+          <p><span class="spk">Marty · 40:29</span>I hate doing it. I hate doing</p>
+          <p><span class="spk">Jason · 40:31</span>it. As much as we're coming to an end of this episode on a bit of a somber note, I mean, the key lesson there is that there's probably so many business owners out there listening or even employees that have been in that situation and just going, you know what, You know, sometimes you've got to make a hard decision.</p>
+          <p><span class="spk">Jason · 40:44</span>Sometimes shit's going to happen. Um, and ultimately the lessons can be learned out of this episode is, is about performances around asking the right questions and, and really tailoring and knowing what you're after and how to get there. So it's been a lot of valuable insights, Marty.</p>
+          <p><span class="spk">Marty · 40:59</span>Can I just say</p>
+          <p><span class="spk">Marty · 41:00</span>like, you know, even good performers move on too.</p>
+          <p><span class="spk">Marty · 41:04</span>So you go, you know, people go for the best circumstance and, you know, we always feel bad about it, you know, in regards to when you do let someone go when it's the right decision, but you get good performers moving on as well. So again, you've, you've still got to keep your business head. Um, you know, uh, over the top of the, you know, over the top of the emotive head as well.</p>
+          <p><span class="spk">Marty · 41:25</span>So, yeah, it just makes sense overall.</p>
+          <p><span class="spk">Jason · 41:28</span>Now, I appreciate your insights, Marty, as always, you're a man of many, many wisdoms to share with people. And, uh, if you've enjoyed this episode, give us a like, subscribe to our YouTube, give us a watch if you're on the YouTube, otherwise it's not worth it. Uh, Spotify and Apple podcast, but we absolutely love having you join the Numbers Game podcast and listening to us rabble on half the time, but until next time,</p>
+          <p><span class="spk">Marty · 41:51</span>hire strong, cut fast, game over. 00:08:17 - Discussion begins on recruitment and the importance of hiring the right talent 00:08:33 - Marty talks about his experiences from hiring and common mistakes 00:09:24 - Marty shares his approach to evaluating potential candidates during the interview process 00:10:09 - Warning signs to look out for during the hiring process 00:10:51 - The importance of seeking longevity and collaboration in potential hires 00:11:48 - Marty talks about the checklist he has developed for hiring 00:13:22 - Marty discusses how he rates candidates on loyalty and trustworthiness 00:14:46 - Discussion on how to predict a candidate's potential success in the role 00:15:11 - How the scoring system helps identify top candidates 00:16:13 - Marty shares his thoughts on the importance of making the right hiring decision 00:17:05 - Jason asks Marty about his experiences with this hiring approach 00:18:21 - Marty talks about the impact of a poor hire on the business 00:19:04 - Nick shares his thoughts on Marty's hiring approach 00:21:13 - Marty talks about the importance of hiring quality people and paying them accordingly 00:22:55 - Nick shares his thoughts on the cost of hiring 00:24:31 - Jason talks about the importance of the onboarding process after hiring 00:25:00 - Jason starts discussing the onboarding process and probation period for new hires 00:25:14 - The importance of checking in with new hires and setting performance metrics 00:25:27 - Marty speaks about the need for a thorough and effective onboarding process 00:26:00 - Discussion on the cost of a poor hire and the benefits of investing in quality hires 00:26:40 - Marty and Nick talk about their experiences with the new hiring approach 00:27:15 - Jason shares his thoughts on the importance of continual evaluation and feedback for new hires 00:27:50 - Marty talks about the importance of providing new hires with clear expectations and goals 00:28:30 - Discussion on the importance of cultural fit in the hiring process 00:29:00 - Marty wraps up the discussion on recruitment, summarizing key points 00:29:30 - Jason and Nick share their final thoughts on the topic of recruitment 00:08:17 - Discussion begins on recruitment and the importance of hiring the right talent 00:11:48 - Marty talks about the checklist he has developed for hiring 00:14:46 - Discussion on how to predict a candidate's potential success in the role 00:17:05 - Jason asks Marty about his experiences with this hiring approach 00:21:13 - Marty talks about the importance of hiring quality people and paying them accordingly 00:25:00 - Jason starts discussing the onboarding process and probation period for new hires 00:27:15 - Jason shares his thoughts on the importance of continual evaluation and feedback for new hires 00:28:30 - Discussion on the importance of cultural fit in the hiring process 00:29:30 - Marty wraps up the discussion on recruitment, summarizing key points ---</p>
+        </div>
+      </details>
+
+    </div>
+
+    <!-- LISTEN:START (build_episode.py rewrites the 3 URLs + iframe title per episode; player dropped if no spotifyEmbedUrl) -->
+    <section class="listen-now">
+      <div class="ln-head">
+        <span class="ln-title">Listen now</span>
+      </div>
+      <div class="audio-embed">
+        <iframe src="https://open.spotify.com/embed/episode/1yapfDhPlY7X6O7f4pkhWf?utm_source=generator"
+          width="100%" height="152" loading="lazy" allowfullscreen
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+          title="Spotify — Marty's Hiring Checklist"></iframe>
+      </div>
+    </section>
+
+    <div class="listen">
+      <a href="https://open.spotify.com/episode/1yapfDhPlY7X6O7f4pkhWf" target="_blank" rel="noopener" aria-label="Listen to this episode on Spotify">
+        <svg viewBox="0 0 24 24"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.52 17.34c-.24.36-.66.48-1.02.24-2.82-1.74-6.36-2.1-10.56-1.14-.42.12-.78-.18-.9-.54-.12-.42.18-.78.54-.9 4.56-1.02 8.52-.6 11.64 1.32.42.18.48.66.3 1.02zm1.44-3.3c-.3.42-.84.6-1.26.3-3.24-1.98-8.16-2.58-11.94-1.38-.48.12-1.02-.12-1.14-.6-.12-.48.12-1.02.6-1.14 4.32-1.32 9.72-.66 13.44 1.62.36.18.54.78.3 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.3c-.6.18-1.2-.18-1.38-.72-.18-.6.18-1.2.72-1.38 4.26-1.26 11.28-1.02 15.72 1.62.54.3.72 1.02.42 1.56-.3.42-1.02.6-1.56.3z"/></svg>
+        Spotify
+      </a>
+      <a href="https://podcasts.apple.com/au/podcast/id1555566088?i=1000652743234" target="_blank" rel="noopener" aria-label="Listen to this episode on Apple Podcasts">
+        <svg viewBox="0 0 24 24"><path d="M5.34 0A5.328 5.328 0 000 5.34v13.32A5.328 5.328 0 005.34 24h13.32A5.328 5.328 0 0024 18.66V5.34A5.328 5.328 0 0018.66 0H5.34zm6.525 2.568c2.336 0 4.448.902 6.056 2.587 1.224 1.272 1.912 2.619 2.264 4.392l.04.23c.04.272-.16.527-.432.567a.505.505 0 01-.567-.431l-.04-.213c-.312-1.57-.92-2.747-2.004-3.867-1.428-1.496-3.293-2.294-5.393-2.294-2.1 0-3.966.798-5.394 2.294-1.084 1.12-1.692 2.298-2.004 3.867l-.04.213a.507.507 0 01-.567.431.504.504 0 01-.432-.567l.04-.23c.352-1.773 1.04-3.12 2.264-4.392 1.608-1.685 3.72-2.587 6.056-2.587h.153zm.136 3.033c1.74 0 3.312.67 4.527 1.934.883.916 1.394 1.93 1.663 3.253l.04.23a.505.505 0 01-.431.567.503.503 0 01-.567-.432l-.04-.212c-.23-1.112-.659-1.97-1.396-2.732-1.052-1.1-2.404-1.672-3.9-1.672s-2.849.572-3.901 1.672c-.737.762-1.167 1.62-1.396 2.732l-.04.212a.503.503 0 01-.567.432.505.505 0 01-.432-.567l.04-.23c.27-1.323.78-2.337 1.664-3.253 1.215-1.264 2.787-1.934 4.527-1.934h.21zm-.078 3.05c1.092 0 2.091.424 2.89 1.22.582.58.924 1.245 1.107 2.15l.04.218a.501.501 0 01-.424.568.499.499 0 01-.568-.424l-.04-.198c-.146-.724-.413-1.253-.871-1.716-.63-.63-1.398-.957-2.226-.957s-1.595.328-2.225.957c-.459.463-.726.992-.871 1.716l-.04.198a.499.499 0 01-.568.424.501.501 0 01-.424-.568l.04-.219c.183-.904.525-1.569 1.106-2.149.8-.796 1.799-1.22 2.89-1.22h.184zM12 14.07a2.477 2.477 0 012.48 2.478A2.477 2.477 0 0112 19.024a2.477 2.477 0 01-2.48-2.477A2.477 2.477 0 0112 14.07z"/></svg>
+        Apple
+      </a>
+      <a class="yt-pill" href="https://www.youtube.com/@thenumbersgamepodcast?sub_confirmation=1" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.12-2.14C19.5 3.55 12 3.55 12 3.55s-7.5 0-9.38.51A3 3 0 0 0 .5 6.2 31.4 31.4 0 0 0 0 12a31.4 31.4 0 0 0 .5 5.8 3 3 0 0 0 2.12 2.14c1.88.51 9.38.51 9.38.51s7.5 0 9.38-.51a3 3 0 0 0 2.12-2.14A31.4 31.4 0 0 0 24 12a31.4 31.4 0 0 0-.5-5.8zM9.55 15.57V8.43L15.82 12z"/></svg>
+        Subscribe
+      </a>
+    </div>
+    <!-- LISTEN:END -->
+
+    <div class="relsec">
+      <span class="rtitle">Discover more</span>
+      <div class="relgrid">
+        <a class="relcard" href="/good-people-bad-fit-how-one-wrong-hire-can-cost-you-millions">
+          <img src="https://i.ytimg.com/vi/USkVF5bsujM/hqdefault.jpg" alt="EP 237 thumbnail">
+          <span class="rt">Good People, Bad Fit</span>
+          <span class="rfoot"><span class="rwhy">Also covers: team &amp; culture</span><span class="rtag">EP 237</span></span>
+        </a>
+        <a class="relcard" href="/our-take-on-gen-z-in-the-workplace">
+          <img src="https://i.ytimg.com/vi/-zzLDns8dhU/hqdefault.jpg" alt="EP 182 thumbnail">
+          <span class="rt">Our Take On Gen Z in the Workplace</span>
+          <span class="rfoot"><span class="rwhy">Also covers: team &amp; culture</span><span class="rtag">EP 182</span></span>
+        </a>
+        <a class="relcard" href="/how-to-avoid-burnout-and-still-grow-your-business">
+          <img src="https://i.ytimg.com/vi/kaHCI7VQoA4/hqdefault.jpg" alt="EP 233 thumbnail">
+          <span class="rt">How to Avoid Burnout and Still Grow Your Business</span>
+          <span class="rfoot"><span class="rwhy">Also covers: hiring</span><span class="rtag">EP 233</span></span>
+        </a>
+        <a class="relcard" href="/should-australia-ditch-super">
+          <img src="https://i.ytimg.com/vi/kaeaiK_FwDg/hqdefault.jpg" alt="EP 287 thumbnail">
+          <span class="rt">Should Australia Ditch Super?</span>
+          <span class="rfoot"><span class="rwhy">27 July 2026</span><span class="rtag">EP 287</span></span>
+        </a>
+        <a class="relcard" href="/pokemon-cards-vs-bitcoin-gold-and-the-asx">
+          <img src="https://i.ytimg.com/vi/7PHS9HCqNvM/hqdefault.jpg" alt="EP 286 thumbnail">
+          <span class="rt">Pokemon Cards vs Bitcoin, Gold and the ASX</span>
+          <span class="rfoot"><span class="rwhy">20 July 2026</span><span class="rtag">EP 286</span></span>
+        </a>
+        <a class="relcard" href="/buying-commercial-property-with-your-super-in-2026">
+          <img src="https://i.ytimg.com/vi/RAQ80ecsDq0/hqdefault.jpg" alt="EP 285 thumbnail">
+          <span class="rt">Buying Commercial Property With Your Super in 2026</span>
+          <span class="rfoot"><span class="rwhy">13 July 2026</span><span class="rtag">EP 285</span></span>
+        </a>
+      </div>
+      <div class="reldots" id="reldots"></div>
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="footgrid">
+      <div class="fcol">
+        <div class="foot-label">Follow us on</div>
+        <div class="socials">
+          <a href="https://www.instagram.com/thenumbersgamepodcast/" target="_blank" rel="noopener" aria-label="The Numbers Game on Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.8.2 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1 .4 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .4-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1-.4-2.2-.1-1.3-.1-1.7-.1-4.9s0-3.6.1-4.9c.1-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.4 2.2-.4 1.3-.1 1.7-.1 4.9-.1zm0 2c-3.1 0-3.5 0-4.8.1-1.1.1-1.5.2-1.8.3-.4.2-.7.3-1 .6-.3.3-.5.6-.6 1-.1.3-.3.7-.3 1.8-.1 1.3-.1 1.7-.1 4.8s0 3.5.1 4.8c.1 1.1.2 1.5.3 1.8.2.4.3.7.6 1 .3.3.6.5 1 .6.3.1.7.3 1.8.3 1.3.1 1.7.1 4.8.1s3.5 0 4.8-.1c1.1-.1 1.5-.2 1.8-.3.4-.2.7-.3 1-.6.3-.3.5-.6.6-1 .1-.3.3-.7.3-1.8.1-1.3.1-1.7.1-4.8s0-3.5-.1-4.8c-.1-1.1-.2-1.5-.3-1.8-.2-.4-.3-.7-.6-1-.3-.3-.6-.5-1-.6-.3-.1-.7-.3-1.8-.3-1.3-.1-1.7-.1-4.8-.1zm0 3.4a5.4 5.4 0 1 1 0 10.8 5.4 5.4 0 0 1 0-10.8zm0 2a3.4 3.4 0 1 0 0 6.8 3.4 3.4 0 0 0 0-6.8zm5.6-2.3a1.3 1.3 0 1 1-2.6 0 1.3 1.3 0 0 1 2.6 0z"/></svg></a>
+          <a href="https://www.tiktok.com/@thenumbersgamepodcast" target="_blank" rel="noopener" aria-label="The Numbers Game on TikTok"><svg viewBox="0 0 24 24"><path d="M12.53.02C13.84 0 15.14.01 16.44 0c.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg></a>
+          <a href="https://www.linkedin.com/company/the-numbers-game-podcast/" target="_blank" rel="noopener" aria-label="The Numbers Game on LinkedIn"><svg viewBox="0 0 24 24"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.24 8.25h4.52V23H.24V8.25zM8.34 8.25h4.33v2.01h.06c.6-1.14 2.08-2.34 4.28-2.34 4.58 0 5.42 3.01 5.42 6.92V23h-4.51v-7.16c0-1.71-.03-3.91-2.38-3.91-2.39 0-2.75 1.86-2.75 3.78V23H8.34V8.25z"/></svg></a>
+          <a href="https://www.facebook.com/profile.php?id=100071290388343" target="_blank" rel="noopener" aria-label="The Numbers Game on Facebook"><svg viewBox="0 0 24 24"><path d="M24 12.07C24 5.41 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.04V9.41c0-3.02 1.8-4.7 4.54-4.7 1.31 0 2.68.24 2.68.24v2.97h-1.5c-1.5 0-1.96.93-1.96 1.89v2.26h3.32l-.53 3.5h-2.8V24C19.62 23.1 24 18.1 24 12.07z"/></svg></a>
+          <a href="https://www.youtube.com/@thenumbersgamepodcast" target="_blank" rel="noopener" aria-label="The Numbers Game on YouTube"><svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.2C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31.7 31.7 0 0 0 0 12a31.7 31.7 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.2A31.7 31.7 0 0 0 24 12a31.7 31.7 0 0 0-.5-5.8zM9.6 15.6V8.4L15.8 12z"/></svg></a>
+        </div>
+      </div>
+      <div class="fcol">
+        <div class="foot-label">Brought to you by</div>
+        <div class="sponsors">
+          <a href="https://www.inovayt.com.au/" target="_blank" rel="noopener"><img src="assets/inovayt-white.png" alt="Inovayt"></a>
+          <a href="https://futureadvisory.com.au/" target="_blank" rel="noopener"><img src="assets/future-advisory-white.png" alt="Future Advisory"></a>
+        </div>
+      </div>
+      <div class="fcol produced">
+        <div class="foot-label">Produced by</div>
+        <a href="https://www.vidpod.com.au/" target="_blank" rel="noopener"><img src="assets/vidpod-white.png" alt="VIDPOD"></a>
+      </div>
+    </div>
+    <div class="footbar">
+      <details class="footnav-dd">
+        <summary><svg class="ham" viewBox="0 0 24 24"><path d="M3 6h18v2H3zM3 11h18v2H3zM3 16h18v2H3z"/></svg> Menu</summary>
+        <div class="dd-links">
+          <a href="/">Home</a><a href="/episodes">Every episode</a><a href="/adventure">Choose your own adventure</a><a href="/about">About the show</a><a href="/nick-reilly">Nick Reilly</a><a href="/jason-robinson">Jason Robinson</a><a href="/contact">Contact</a>
+        </div>
+      </details>
+      <div class="copyright">© 2026 The Numbers Game</div>
+    </div>
+  </footer>
+
+  <script>
+    var VIDEO='VbhBLRJEGsI';
+    var CHAPTERS=[
+      {t:"00:00",s:0,title:"Intro"},
+      {t:"00:06",s:6,title:""},
+      {t:"09:24",s:564,title:"Marty shares his approach to evaluating potential candidates during the interview process"},
+      {t:"10:09",s:609,title:"Warning signs to look out for during the hiring process"},
+      {t:"10:20",s:620,title:"The importance of seeking longevity and collaboration in potential hires"},
+      {t:"11:48",s:708,title:"Marty talks about the checklist he has developed for hiring"},
+      {t:"13:22",s:802,title:"Marty discusses how he rates candidates on loyalty and trustworthiness"},
+      {t:"15:11",s:911,title:"How the scoring system helps identify top candidates"},
+      {t:"15:54",s:954,title:"Marty shares his thoughts on the importance of making the right hiring decision"},
+      {t:"17:07",s:1027,title:"Jason asks Marty about his experiences with this hiring approach"},
+      {t:"19:05",s:1145,title:"Nick shares his thoughts on Marty's hiring approach"},
+      {t:"21:13",s:1273,title:"Marty talks about the importance of hiring quality people and paying them accordingly"},
+      {t:"23:19",s:1399,title:"Nick shares his thoughts on the cost of hiring"},
+      {t:"24:31",s:1471,title:"Jason talks about the importance of the onboarding process after hiring"},
+      {t:"25:18",s:1518,title:"Jason starts discussing the onboarding process and probation period for new hires"},
+      {t:"26:17",s:1577,title:"Discussion on the cost of a poor hire and the benefits of investing in quality hires"},
+      {t:"26:55",s:1615,title:"Marty speaks about the need for a thorough and effective onboarding process"},
+      {t:"27:41",s:1661,title:"Marty talks about the importance of providing new hires with clear expectations and goals"},
+      {t:"28:21",s:1701,title:"Discussion on the importance of cultural fit in the hiring process"},
+      {t:"29:03",s:1743,title:"Marty wraps up the discussion on recruitment, summarizing key points"}
+    ];
+    var QUESTIONS=[
+      {q:"What should you look for in a job interview?",s:564},
+      {q:"What is a red flag in a job interview?",s:609},
+      {q:"What does it mean if a candidate bad-mouths their employer?",s:802},
+      {q:"How do you build a hiring checklist?",s:1027},
+      {q:"What is the real cost of a bad hire?",s:1145},
+      {q:"How do you find the right people to hire?",s:1234},
+      {q:"Is it worth holding out for a top performer?",s:1273},
+      {q:"How do you know if a new hire is working out?",s:1743},
+      {q:"How do you know it is time to let someone go?",s:2192},
+      {q:"When in the day should you fire someone?",s:2305}
+    ];
+
+    var chEl=document.getElementById('chapters');
+    CHAPTERS.forEach(function(c){var b=document.createElement('button');b.className='chapter';b.onclick=function(){startAt(c.s)};b.innerHTML='<span class="tc">'+c.t+'</span><span class="cx">'+c.title+'</span>';chEl.appendChild(b);});
+    document.getElementById('chcount').textContent=CHAPTERS.length;
+    var qEl=document.getElementById('qa');
+    QUESTIONS.forEach(function(q){var b=document.createElement('button');b.className='q';b.onclick=function(){startAt(q.s)};b.innerHTML='<span class="qm">?</span><span class="qx">'+q.q+'</span><span class="go">›</span>';qEl.appendChild(b);});
+    document.getElementById('qcount').textContent=QUESTIONS.length;
+
+    /* Mobile nav dropdown. */
+    var burger=document.getElementById('navburger'), navdrop=document.getElementById('navdrop');
+    if(burger&&navdrop){burger.addEventListener('click',function(){
+      navdrop.hidden=!navdrop.hidden;
+      burger.setAttribute('aria-expanded', navdrop.hidden?'false':'true');
+    });}
+
+    /* Voice-note button reveals the recorder; × tucks it away. */
+    var vbtn=document.getElementById('vbtn'), vslot=document.getElementById('vslot'), vclose=document.getElementById('vclose');
+    if(vbtn&&vslot){vbtn.addEventListener('click',function(){vslot.hidden=!vslot.hidden;});}
+    if(vclose&&vslot){vclose.addEventListener('click',function(){vslot.hidden=true;});}
+
+    /* Keep-exploring dots: only shown when the strip actually scrolls (mobile). */
+    var rg=document.querySelector('.relgrid'), rd=document.getElementById('reldots');
+    if(rg&&rd){
+      var relCards=rg.querySelectorAll('.relcard');
+      relCards.forEach(function(){rd.appendChild(document.createElement('span'))});
+      var updDots=function(){
+        var scrollable=rg.scrollWidth>rg.clientWidth+4;
+        rd.style.display=scrollable?'flex':'none';
+        if(!scrollable)return;
+        var i=Math.round(rg.scrollLeft/(rg.scrollWidth-rg.clientWidth)*(relCards.length-1));
+        rd.querySelectorAll('span').forEach(function(s,n){s.classList.toggle('on',n===i)});
+      };
+      rg.addEventListener('scroll',updDots,{passive:true});
+      window.addEventListener('resize',updDots);
+      updDots();
+    }
+
+    /* Explore tabs: swap the visible panel; the row stays put so you never lose your place. */
+    var tabBtns=document.querySelectorAll('.tabbtn');
+    tabBtns.forEach(function(b){
+      b.addEventListener('click',function(){
+        tabBtns.forEach(function(o){o.classList.remove('on')});
+        document.querySelectorAll('.tpanel').forEach(function(p){p.hidden=true});
+        b.classList.add('on');
+        document.getElementById(b.getAttribute('data-panel')).hidden=false;
+      });
+    });
+
+    /* YouTube: clean facade, then real player on demand. Seek without yanking to top. */
+    var player=null, ready=false, apiReady=false, pending=null;
+    window.onYouTubeIframeAPIReady=function(){apiReady=true; if(pending!=null){var s=pending;pending=null;createPlayer(s);}};
+    function createPlayer(sec){
+      var wrap=document.getElementById('player'); wrap.innerHTML='<div id="yt"></div>';
+      player=new YT.Player('yt',{videoId:VIDEO,playerVars:{autoplay:1,rel:0,modestbranding:1,playsinline:1,start:Math.floor(sec||0)},events:{onReady:function(){ready=true;}}});
+    }
+    function nudge(){
+      var p=document.getElementById('player-wrap'), r=p.getBoundingClientRect();
+      if(r.bottom<80 || r.top>window.innerHeight-90){ p.scrollIntoView({behavior:'smooth',block:'start'}); }
+    }
+    function startAt(sec){
+      nudge();
+      if(player&&ready){ player.seekTo(sec,true); player.playVideo(); return; }
+      if(apiReady){ createPlayer(sec); } else { pending=sec; }
+    }
+    document.getElementById('facade').addEventListener('click',function(){startAt(0);});
+    (function(){var s=document.createElement('script');s.src='https://www.youtube.com/iframe_api';document.head.appendChild(s);})();
+  </script>
+</body>
+</html>

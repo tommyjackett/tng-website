@@ -1,0 +1,689 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EP 182 · Our Take On Gen Z in the Workplace | The Numbers Game</title>
+<meta name="description" content="">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" sizes="64x64" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="canonical" href="https://thenumbersgamepodcast.com.au/our-take-on-gen-z-in-the-workplace">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="The Numbers Game">
+<meta property="og:title" content="EP 182 · Our Take On Gen Z in the Workplace | The Numbers Game">
+<meta property="og:description" content="">
+<meta property="og:url" content="https://thenumbersgamepodcast.com.au/our-take-on-gen-z-in-the-workplace">
+<meta property="og:image" content="https://i.ytimg.com/vi/-zzLDns8dhU/maxresdefault.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+  :root{
+    --purple:#585af3; --purple-dark:#2c1b8a; --mint:#7ad9a8;
+    --white:#ffffff; --muted:rgba(255,255,255,.60); --dim:rgba(255,255,255,.42);
+    --line:rgba(255,255,255,.12); --card:rgba(255,255,255,.05); --card-hi:rgba(255,255,255,.09);
+    --display:'Anton',Impact,'Helvetica Neue',sans-serif;
+    --sans:'Inter',system-ui,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif;
+    --wrap:1280px;   /* page frame (nav spans this) */
+    --col:960px;     /* content column (player, tabs, text) */
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:var(--sans); color:var(--white); line-height:1.6; -webkit-font-smoothing:antialiased;
+    background:#12093a;
+    background-image:
+      radial-gradient(1200px 600px at 82% -6%, rgba(88,90,243,.45) 0%, transparent 55%),
+      radial-gradient(900px 700px at 5% 8%, rgba(122,217,168,.10) 0%, transparent 50%),
+      linear-gradient(180deg,#2c1b8a 0%,#1a1150 28%,#100b34 62%,#0b0820 100%);
+    background-attachment:fixed;
+  }
+  a{color:inherit}
+  .wrap{max-width:var(--wrap);margin:0 auto;padding:0 36px}
+  main.wrap{max-width:var(--col)}
+  @media(max-width:720px){.wrap{padding:0 22px}}
+
+  /* ── Navbar ── */
+  .nav{position:sticky;top:0;z-index:50;background:linear-gradient(180deg,rgba(24,15,74,.92),rgba(24,15,74,.72));backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+  .nav-in{max-width:var(--wrap);margin:0 auto;padding:11px 36px;display:flex;align-items:center;justify-content:space-between}
+  @media(max-width:720px){.nav-in{padding:11px 22px}}
+  .brand{display:block;line-height:0}
+  .brand img{height:36px;width:auto;display:block}
+  .navlinks{display:flex;gap:28px;align-items:center}
+  .navlinks a{text-decoration:none;font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);transition:.15s}
+  .navlinks a:hover{color:var(--white)}
+  .navlinks a.navtop{cursor:default}
+  .navgroup{position:relative;display:flex;align-items:center}
+  .navgroup .subnav{display:none;position:absolute;top:100%;left:50%;transform:translateX(-50%);padding-top:14px;min-width:180px}
+  .navgroup:hover .subnav,.navgroup:focus-within .subnav{display:block}
+  .subnav-in,.navgroup .subnav{z-index:60}
+  .navgroup .subnav a{display:block;background:#180f4a;border:1px solid var(--line);border-top:0;padding:12px 16px;font-size:12px;color:rgba(255,255,255,.85)}
+  .navgroup .subnav a:first-child{border-top:1px solid var(--line)}
+  .navgroup .subnav a:hover{background:#221768;color:var(--white)}
+  .navburger{display:none;background:none;border:1px solid var(--line);padding:8px 10px;cursor:pointer;color:var(--white);transition:.15s}
+  .navburger:hover{border-color:rgba(122,217,168,.6)}
+  .navburger svg{width:20px;height:20px;fill:currentColor;display:block}
+  .navdrop{display:none}
+  @media(max-width:720px){
+    .navlinks{display:none}
+    .navburger{display:block}
+    .navdrop{display:block;position:absolute;left:0;right:0;top:100%;
+      background:#180f4a;border-bottom:1px solid var(--line);box-shadow:0 24px 50px rgba(0,0,0,.45)}
+    .navdrop[hidden]{display:none}
+    .navdrop a{display:block;padding:15px 22px;text-decoration:none;font-size:14px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:rgba(255,255,255,.9);border-bottom:1px solid rgba(255,255,255,.06)}
+    .navdrop a:last-child{border-bottom:0}
+    .navdrop a.sub{padding-left:42px;font-size:13px;color:rgba(255,255,255,.72)}
+    .navdrop .navlabel{display:block;padding:15px 22px 6px;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.4)}
+  }
+
+  /* ── Hero / hook (marker-highlight system: purple hook wraps naturally, mint payoff below)
+     Rules: title splits at its natural break (colon/pipe/question mark). Front = hook (purple,
+     big), back = payoff (mint, smaller). No break in title = purple hook only. Highlights hug
+     the text (tight em padding tuned to Anton) and wrap via box-decoration-break — never
+     hand-pick line breaks or mint words. ── */
+  header.hero{padding:34px 0 6px}
+  .hook{--inx:clamp(8.4px,2.1vw,15.6px)} /* one shared text inset so hook + payoff first letters align */
+  .hook .hk{font-family:var(--display);font-weight:400;text-transform:uppercase;
+    font-size:clamp(28px,7vw,52px);line-height:1.3;letter-spacing:-.5px;text-wrap:balance}
+  .hook .hk span{color:var(--white);padding:.04em var(--inx) .02em;
+    background:linear-gradient(var(--purple),var(--purple)) 0 50%/100% 87% no-repeat;
+    -webkit-box-decoration-break:clone;box-decoration-break:clone}
+  .hook .pay{font-family:var(--display);font-weight:400;text-transform:uppercase;
+    font-size:clamp(16px,4vw,24px);line-height:1.5;letter-spacing:.6px;margin-top:8px;text-wrap:balance}
+  .hook .pay span{color:#0a0a0a;padding:.08em var(--inx) .04em;
+    background:linear-gradient(var(--mint),var(--mint)) 0 50%/100% 88% no-repeat;
+    -webkit-box-decoration-break:clone;box-decoration-break:clone}
+  /* no-hook titles: mid-split into two full-size rows, purple then mint */
+  .hook .hk span.hkrow{display:block;background:none;padding:0}
+  .hook .hk .hkrow+.hkrow{margin-top:8px}
+  .hook .hk span.mintseg{color:#0a0a0a;
+    background:linear-gradient(var(--mint),var(--mint)) 0 50%/100% 87% no-repeat}
+
+  /* ── Player (clean facade → real player on tap) ── */
+  .player-wrap{margin:24px 0 4px;scroll-margin-top:76px}
+  .player{position:relative;width:100%;padding-top:56.25%;border-radius:0;overflow:hidden;background:#000;box-shadow:0 30px 70px rgba(0,0,0,.5),0 0 0 1px rgba(255,255,255,.06)}
+  .facade{position:absolute;inset:0;border:0;cursor:pointer;background-size:cover;background-position:center;display:flex;align-items:center;justify-content:center;padding:0}
+  .facade .play{width:74px;height:74px;border-radius:50%;background:rgba(10,6,30,.40);border:2px solid rgba(255,255,255,.72);display:flex;align-items:center;justify-content:center;transition:.18s;-webkit-backdrop-filter:blur(1px);backdrop-filter:blur(1px)}
+  .facade:hover .play{background:rgba(88,90,243,.62);transform:scale(1.07);border-color:#fff}
+  .facade .play::after{content:"";border-style:solid;border-width:11px 0 11px 19px;border-color:transparent transparent transparent #fff;margin-left:5px}
+  .player iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+
+  /* ── Episode facts (bottom of the Summary panel — templated per episode) ── */
+  .sumfacts{margin:14px 10px 4px;padding-top:13px;border-top:1px solid rgba(255,255,255,.08);display:flex;flex-direction:column;gap:8px}
+  .fact{display:flex;gap:12px;font-size:13.5px}
+  .fact .fl{flex:none;width:104px;color:var(--dim);font-weight:600;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;padding-top:2px}
+  .fact .fv{color:rgba(255,255,255,.9);font-weight:500}
+  .fact .fv a{color:var(--mint);text-decoration:none;border-bottom:1px solid rgba(122,217,168,.4);transition:.15s}
+  .fact .fv a:hover{border-bottom-color:var(--mint)}
+
+  /* ── Episode tag (identity: black label hanging off the title corner) ── */
+  .eptag{display:inline-block;position:relative;left:-6px;margin-bottom:-7px;z-index:2;
+    background:#0a0a0a;color:var(--white);font-family:var(--display);font-weight:400;
+    font-size:13.5px;letter-spacing:1.5px;text-transform:uppercase;padding:6px 11px 4px}
+
+  /* ── Explore tabs (sticky mode switcher; one panel swaps below, nothing shoves) ── */
+  .explore{margin-top:22px}
+  .tabs{position:sticky;top:58px;z-index:40;display:flex;flex-wrap:wrap;gap:8px;padding:10px 0;
+    background:linear-gradient(180deg,rgba(18,10,55,.96),rgba(18,10,55,.86));
+    backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+  .tabbtn{font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.5px;
+    font-size:14.5px;color:var(--white);background:var(--purple);border:1px solid var(--purple);
+    padding:9px 13px 7px;cursor:pointer;transition:.15s}
+  .tabbtn:hover{filter:brightness(1.12)}
+  .tabbtn.on{background:var(--mint);border-color:var(--mint);color:#0a0a0a}
+  .tabbtn.on:hover{filter:none}
+  .tabbtn .ct{font-size:12px;opacity:.75;font-variant-numeric:tabular-nums}
+  .tabbtn .ct::before{content:" · "}
+  .tpanel{border:1px solid var(--line);background:var(--card);padding:12px 10px 14px}
+  .hint{font-size:12.5px;color:var(--muted);padding:2px 10px 10px;border-bottom:1px solid rgba(255,255,255,.08);margin-bottom:6px}
+
+  /* ── Listen row (no box: label left, service pills follow) ── */
+  .listen{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:12px 16px;margin-top:34px}
+  .listen .lname{font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--dim)}
+  .listen a{display:inline-flex;align-items:center;gap:9px;padding:11px 18px;border-radius:999px;
+    background:var(--mint);color:#08210f;text-decoration:none;font-weight:800;font-size:12.5px;
+    letter-spacing:.04em;text-transform:uppercase;transition:.15s}
+  .listen a:hover{filter:brightness(1.06);transform:translateY(-1px);box-shadow:0 12px 30px rgba(122,217,168,.25)}
+  .listen svg{width:20px;height:20px;fill:currentColor;flex:none}
+  /* ── Listen-now Spotify audio embed (full column width, above the pills) ── */
+  .listen-now{margin-top:40px}
+  .listen-now .ln-head{display:flex;align-items:baseline;justify-content:space-between;gap:14px;margin-bottom:13px}
+  .listen-now .ln-title{font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--dim)}
+  .audio-embed{border-radius:12px;overflow:hidden;box-shadow:0 20px 50px rgba(0,0,0,.4),0 0 0 1px rgba(255,255,255,.06)}
+  .audio-embed iframe{display:block;width:100%;border:0}
+  @media(max-width:720px){.listen-now{margin-top:32px}}
+
+  /* ── Keep exploring (thumbnails link to other episode PAGES, never timecodes).
+     Swipeable strip on mobile, fits three-up on desktop. Variant rule: claim
+     "similar ground" + reason lines ONLY when moment-level topic overlap is
+     genuinely strong; otherwise show the latest released episodes with dates —
+     never invent a connection. ── */
+  .relsec{margin-top:60px;padding-top:58px;border-top:1px solid var(--line)} /* line = end of this episode's info */
+  .reldots{display:flex;justify-content:center;gap:7px;margin-top:12px}
+  .reldots span{width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.25);transition:.2s}
+  .reldots span.on{background:var(--mint)}
+  .relsec .rtitle{display:inline-block;font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.5px;font-size:14.5px;background:var(--mint);color:#0a0a0a;padding:9px 13px 7px;margin-bottom:18px}
+  .relgrid{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding-bottom:6px;scrollbar-width:none}
+  .relgrid::-webkit-scrollbar{display:none}
+  .relcard{flex:0 0 56%;max-width:232px;scroll-snap-align:start;display:flex;flex-direction:column;text-decoration:none;background:var(--card);border:1px solid var(--line);transition:.15s}
+  .relcard:hover{background:var(--card-hi);border-color:rgba(122,217,168,.55)}
+  .relcard img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block}
+  .relcard .rt{display:block;font-size:12.5px;font-weight:600;color:rgba(255,255,255,.92);line-height:1.4;padding:8px 8px 0}
+  .relcard .rfoot{margin-top:auto;display:flex;justify-content:space-between;align-items:flex-end;gap:8px;padding:10px 8px 9px}
+  .relcard .rwhy{font-size:11.5px;color:var(--mint)}
+  .relcard .rtag{display:inline-block;background:#0a0a0a;color:var(--white);font-family:var(--display);font-size:10px;letter-spacing:1.2px;text-transform:uppercase;padding:3px 7px 2px;white-space:nowrap;flex:0 0 auto}
+
+  /* ── Dropdown sections (accordion under the player) ── */
+  .drops{margin-top:34px;display:flex;flex-direction:column;gap:11px}
+  .drop{border:1px solid var(--line);border-radius:0;background:var(--card);overflow:hidden;transition:border-color .15s}
+  .drop[open]{border-color:rgba(122,217,168,.35)}
+  .drop>summary{list-style:none;cursor:pointer;padding:16px 18px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+  .drop>summary::-webkit-details-marker{display:none}
+  .drop>summary .st{font-weight:700;font-size:15.5px;letter-spacing:.005em}
+  .drop>summary .ct{margin-left:auto;font-size:12px;color:var(--dim);font-weight:600;font-variant-numeric:tabular-nums}
+  .drop>summary .chev{flex:none;width:22px;height:22px;border-radius:50%;background:rgba(122,217,168,.14);color:var(--mint);display:flex;align-items:center;justify-content:center;font-family:var(--display);font-size:15px;line-height:1;transition:.2s;transform:translateY(-1px)}
+  .drop[open]>summary .chev{transform:rotate(45deg)}
+  .drop-body{padding:2px 12px 12px}
+
+  /* chapters */
+  .chapter{display:flex;align-items:baseline;gap:14px;width:100%;text-align:left;cursor:pointer;background:none;border:0;color:inherit;font-family:inherit;padding:11px 10px;border-radius:10px;transition:.13s}
+  .chapter:hover{background:var(--card-hi)}
+  .chapter .tc{font-variant-numeric:tabular-nums;font-weight:700;font-size:14px;color:var(--mint);flex:none;width:48px}
+  .chapter .cx{font-size:15px;font-weight:500;color:rgba(255,255,255,.9)}
+  .chapter:hover .cx{color:#fff}
+
+  /* questions */
+  .q{display:flex;align-items:center;gap:12px;width:100%;text-align:left;cursor:pointer;background:none;border:0;border-radius:11px;color:inherit;font-family:inherit;padding:12px 10px;transition:.14s}
+  .q+.q{border-top:1px solid rgba(255,255,255,.05)}
+  .q:hover{background:var(--card-hi)}
+  .q .qm{font-family:var(--display);font-size:15px;color:var(--mint);flex:none;line-height:1;transform:translateY(1px)}
+  .q .qx{font-size:15px;font-weight:500;color:rgba(255,255,255,.92)}
+  .q .go{margin-left:auto;flex:none;color:var(--dim);font-size:18px;transition:.15s}
+  .q:hover .go{color:var(--mint);transform:translateX(2px)}
+
+  /* summary + transcript bodies */
+  .summary-body p{font-size:16.5px;line-height:1.62;color:rgba(255,255,255,.9);padding:6px 10px 4px}
+  .tbody{padding:2px 10px 8px}
+  .tbody p{font-size:14.5px;line-height:1.7;color:rgba(255,255,255,.78);margin-top:15px;max-width:64ch}
+  .tbody .spk{display:block;font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--mint);margin-bottom:2px}
+
+  /* ── Voice note ask (lives at the bottom of the Summary panel) ── */
+  .vask{margin:16px 10px 4px}
+  .vbtn{display:inline-flex;align-items:center;gap:9px;padding:12px 20px;border-radius:999px;border:0;cursor:pointer;
+    background:var(--mint);color:#08210f;font-family:inherit;font-weight:800;font-size:12.5px;
+    letter-spacing:.04em;text-transform:uppercase;transition:.15s}
+  .vbtn:hover{filter:brightness(1.06);transform:translateY(-1px);box-shadow:0 12px 30px rgba(122,217,168,.25)}
+  .vbtn svg{width:18px;height:18px;fill:currentColor;flex:none}
+  .vslot{background:var(--purple);padding:12px 10px 10px;margin:14px 0 4px;box-shadow:0 18px 40px rgba(0,0,0,.35)}
+  .vslot[hidden]{display:none}
+  .vhead{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;margin-bottom:10px}
+  .vhead .vmsg{font-family:var(--sans);font-size:13px;line-height:1.55;color:rgba(255,255,255,.92);margin:2px 0 0;padding:0 2px}
+  .vclose{background:none;border:0;color:rgba(255,255,255,.85);font-size:22px;line-height:1;cursor:pointer;padding:0 2px}
+  .vclose:hover{color:var(--white)}
+  .vslot iframe{display:block}
+
+  /* ── YouTube subscribe pill (sits in the listen row; outranks .listen a's mint) ── */
+  .listen a.yt-pill{background:var(--purple);color:var(--white)}
+  .listen a.yt-pill:hover{filter:brightness(1.1);transform:translateY(-1px)}
+  @media(max-width:720px){ /* mobile: no label, three compact pills on one row */
+    .listen .lname{display:none}
+    .listen{gap:8px}
+    .listen a{padding:10px 13px;font-size:11px;gap:6px}
+    .listen svg{width:16px;height:16px}
+  }
+
+  /* ── Footer: Follow us on | Brought to you by | Produced by, + Menu dropdown ── */
+  footer{border-top:1px solid var(--line);margin-top:68px;padding:52px 20px 58px}
+  .footgrid{max-width:var(--wrap);margin:0 auto;display:grid;grid-template-columns:1fr 1.15fr .8fr;gap:44px;align-items:start}
+  .fcol{text-align:center;display:flex;flex-direction:column;align-items:center}
+  .foot-label{font-size:11px;font-weight:700;letter-spacing:.26em;text-transform:uppercase;color:var(--dim);margin-bottom:18px}
+  .sponsors{display:flex;justify-content:center;align-items:center;gap:34px;flex-wrap:wrap}
+  .sponsors a,.produced a{display:inline-flex;transition:.15s}
+  .sponsors a:hover,.produced a:hover{transform:translateY(-1px)}
+  .sponsors img{height:32px;width:auto;opacity:.92}
+  .produced img{height:30px;width:auto;opacity:.95}
+  .sponsors a:hover img,.produced a:hover img{opacity:1}
+  footer .socials{display:flex;gap:11px;justify-content:center;flex-wrap:wrap;margin:0}
+  footer .socials a{width:40px;height:40px;border-radius:50%;border:1.5px solid rgba(122,217,168,.5);display:flex;align-items:center;justify-content:center;transition:.15s}
+  footer .socials a svg{width:18px;height:18px;fill:var(--mint);transition:.15s}
+  footer .socials a:hover{background:var(--mint);border-color:var(--mint);transform:translateY(-2px)}
+  footer .socials a:hover svg{fill:#0a0a0a}
+  .footbar{max-width:var(--wrap);margin:34px auto 0;border-top:1px solid var(--line);padding-top:20px;display:flex;flex-direction:column;align-items:center;gap:14px}
+  .footnav-dd{display:block;width:100%;max-width:var(--wrap);margin:0 auto;text-align:center}
+  .footnav-dd>summary{list-style:none;cursor:pointer;display:inline-flex;align-items:center;gap:9px;font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.5px;font-size:13px;color:var(--muted);background:transparent;border:1px solid var(--line);padding:8px 16px 6px;transition:.15s}
+  .footnav-dd>summary::-webkit-details-marker{display:none}
+  .footnav-dd>summary:hover{color:var(--mint);border-color:rgba(122,217,168,.45)}
+  .footnav-dd>summary .ham{width:15px;height:15px;fill:currentColor;transform:translateY(-1px)}
+  .footnav-dd .dd-links{display:flex;flex-direction:row;flex-wrap:wrap;justify-content:center;gap:12px 24px;padding:24px 0 4px}
+  .footnav-dd .dd-links a{font-size:11.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:.15s}
+  .footnav-dd .dd-links a:hover{color:var(--mint)}
+  .copyright{font-size:12px;color:var(--dim);text-align:center}
+  @media(max-width:720px){.footgrid{grid-template-columns:1fr;gap:34px}footer{padding:40px 16px 20px}.footbar{margin-top:34px;padding-top:24px;gap:20px}.footnav-dd .dd-links{flex-direction:column;align-items:center;gap:15px}}
+
+  @media(min-width:720px){header.hero{padding:48px 0 6px}}
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "PodcastEpisode", "name": "Our Take On Gen Z in the Workplace", "url": "https://thenumbersgamepodcast.com.au/our-take-on-gen-z-in-the-workplace", "datePublished": "2024-06-06", "episodeNumber": 182, "image": "https://i.ytimg.com/vi/-zzLDns8dhU/maxresdefault.jpg", "partOfSeries": {"@type": "PodcastSeries", "name": "The Numbers Game", "url": "https://thenumbersgamepodcast.com.au/"}}</script>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-in">
+      <a class="brand" href="/" aria-label="The Numbers Game home"><img src="assets/tng-logo.png" alt="The Numbers Game"></a>
+      <div class="navlinks">
+        <a href="/">Home</a>
+        <div class="navgroup">
+          <a class="navtop">Episodes</a>
+          <div class="subnav">
+            <a href="/episodes">All episodes</a>
+            <a href="/adventure">Find moments</a>
+          </div>
+        </div>
+        <div class="navgroup">
+          <a class="navtop">About</a>
+          <div class="subnav">
+            <a href="/about">The show</a>
+            <a href="/nick-reilly">Nick Reilly</a>
+            <a href="/jason-robinson">Jason Robinson</a>
+          </div>
+        </div>
+        <a href="/contact">Contact</a>
+      </div>
+      <button class="navburger" id="navburger" type="button" aria-label="Menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24"><path d="M3 6h18v2H3zM3 11h18v2H3zM3 16h18v2H3z"/></svg>
+      </button>
+    </div>
+    <div class="navdrop" id="navdrop" hidden>
+      <a href="/">Home</a>
+      <span class="navlabel">Episodes</span>
+      <a class="sub" href="/episodes">All episodes</a>
+      <a class="sub" href="/adventure">Find moments</a>
+      <span class="navlabel">About</span>
+      <a class="sub" href="/about">The show</a>
+      <a class="sub" href="/nick-reilly">Nick Reilly</a>
+      <a class="sub" href="/jason-robinson">Jason Robinson</a>
+      <a href="/contact">Contact</a>
+    </div>
+  </nav>
+
+  <main class="wrap">
+
+    <header class="hero">
+      <div class="hook">
+        <span class="eptag">EP 182</span>
+        <h1 class="hk"><span class="hkrow"><span>Our Take On Gen Z</span></span>
+        <span class="hkrow"><span class="mintseg">in the Workplace</span></span></h1>
+      </div>
+    </header>
+
+    <div class="player-wrap" id="player-wrap">
+      <div class="player" id="player">
+        <button class="facade" id="facade" style="background-image:url('https://i.ytimg.com/vi/-zzLDns8dhU/maxresdefault.jpg')" aria-label="Play episode">
+          <span class="play"></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="explore">
+      <div class="tabs" role="tablist">
+        <button class="tabbtn on" data-panel="p-summary">Summary</button>
+        <button class="tabbtn" data-panel="p-chapters">Chapters<span class="ct" id="chcount"></span></button>
+        <button class="tabbtn" data-panel="p-questions">Questions<span class="ct" id="qcount"></span></button>
+      </div>
+      <section class="tpanel" id="p-summary">
+        <div class="summary-body">
+          <p>Marty brings a reflection to the table: as a Gen Xer raised to tow the line and never talk about mental health, he has been rethinking how he leads the Gen Z employees now coming through. The trio unpack what is different about the generation born 1997 to 2012, how they crave autonomy inside clear principles, openly discuss mental health in appraisals, prefer phone or Zoom over face to face, and embrace technology as natives. Nick pushes back on entitlement, argues you cannot argue with results, and warns not to lose the bottom line chasing inclusive or environmental initiatives that his own Gen Z workforce ignored. Jason ties it to the accounting profession struggling to attract Gen Z because of its boring image. They land on adapt or die: foster the innovation, empower younger staff, offer mentorship and flexibility, and keep learning across every generation.</p>
+        </div>
+        <div class="vask">
+          <button class="vbtn" id="vbtn" type="button">
+            <svg viewBox="0 0 24 24"><path d="M12 14a3 3 0 0 0 3-3V6a3 3 0 1 0-6 0v5a3 3 0 0 0 3 3zm5-3a5 5 0 0 1-10 0H5a7 7 0 0 0 6 6.92V21h2v-3.08A7 7 0 0 0 19 11h-2z"/></svg>
+            Send us a voice note
+          </button>
+          <div class="vslot" id="vslot" hidden>
+            <div class="vhead">
+              <p class="vmsg">We'd love to hear from you. You can leave up to a 90 second voice note for us to play on the show: a question, some feedback, or a topic you want covered.</p>
+              <button class="vclose" id="vclose" type="button" aria-label="Close">&times;</button>
+            </div>
+            <iframe src="https://www.speakpipe.com/widget/inline/hhq6kzggsx7zpcsvakgxfrzun3zidpde" allow="microphone" width="100%" height="200" frameborder="0" title="Leave The Numbers Game a voice note"></iframe>
+          </div>
+          <script async src="https://www.speakpipe.com/widget/loader.js" charset="utf-8"></script>
+        </div>
+        <div class="sumfacts">
+          <div class="fact"><span class="fl">Release date</span><span class="fv">6 June 2024</span></div>
+          <div class="fact"><span class="fl">Hosts</span><span class="fv"><a href="/nick-reilly">Nick Reilly</a>, <a href="/jason-robinson">Jason Robinson</a> &amp; <a href="/marty-vidakovic">Marty Vidakovic</a></span></div>
+
+        </div>
+      </section>
+      <section class="tpanel" id="p-chapters" hidden>
+        <p class="hint">Jump straight to the part you need.</p>
+        <div id="chapters"></div>
+      </section>
+      <section class="tpanel" id="p-questions" hidden>
+        <p class="hint">Real questions this episode answers. Tap one to hear the answer.</p>
+        <div id="qa"></div>
+      </section>
+    </div>
+
+    <div class="drops">
+
+      <details class="drop">
+        <summary><span class="st">Episode transcript</span><span class="chev">+</span></summary>
+        <div class="drop-body tbody">
+          <p><span class="spk">Jason · 00:00</span>Welcome to episode 182 of The Numbers Game. I'm Jase. I'm joined by Nick and Marty. How are we, fellas?</p>
+          <p><span class="spk">Marty · 00:07</span>Going well, Jase. Uh, been heading down to the dog park after work with about 20 canines, uh, just licking me, attacking me, uh, thinking that, as I get older, I must just smell better than dogs. I don't know what it is.</p>
+          <p><span class="spk">Marty · 00:21</span>I might be deaf. Probably, uh, fermenting or something. I'm not sure, but, uh, giving off some sort of aroma, but, uh, no, it's good fun, good to pat dogs, happy days, uh, feeling good getting out and about. Nick, how are you?</p>
+          <p><span class="spk">Nick · 00:35</span>Oh, good, good. I'm just picturing you fermenting. I can't even, I can't even picture it, which is a good thing, I think.</p>
+          <p><span class="spk">Marty · 00:42</span>I'm thinking, have I given off a stench? Because they've certainly, uh,</p>
+          <p><span class="spk">Nick · 00:47</span>No, I'm going good. I, um, I actually started watching a series the other day that you boys would love. Welcome to Wrexham. Have you been watching that? Oh, no, it's on the list. Unbelievable. Right up your alley, Marty, too.</p>
+          <p><span class="spk">Nick · 01:00</span>It's um</p>
+          <p><span class="spk">Marty · 01:00</span>What's it on?</p>
+          <p><span class="spk">Marty · 01:01</span>What's it streaming? It's on Disney,</p>
+          <p><span class="spk">Nick · 01:02</span>so Being a dog lover, you'd have Disney, I would have thought.</p>
+          <p><span class="spk">Marty · 01:06</span>Yeah, I do. I love all those cartoon things.</p>
+          <p><span class="spk">Nick · 01:09</span>It's about a struggling Welsh football club, and when I say football, I mean soccer. I'm not a soccer fan, but um, I'm really enjoying it. And Ryan Reynolds, the Hollywood movie star, and another guy, Ben, can't remember his surname, um, actually bought the club.</p>
+          <p><span class="spk">Nick · 01:25</span>And, uh, bringing it back to it. So restoring it to its previous glory. Um, it was once right up there as far as, um, uh, the professional league in. In the UK goes and it's just dropped down at, I think I'm only in series one and it's not, they've dropped out of the professional leagues and they've been out for like 14 years and, uh, these guys are coming in and pumping some money into it and rebuilding the whole, the whole club and, but it's a good mix of sport business and, um, culture and the town relating to the club.</p>
+          <p><span class="spk">Nick · 01:58</span>Um, yeah, really,</p>
+          <p><span class="spk">Nick · 02:00</span>really good short episode so you can bang them out, move on next one. It's good. Welcome to Wrexham.</p>
+          <p><span class="spk">Jason · 02:06</span>I should have watched that instead of baby reindeer over the weekend, but that's a conversation for another day. I'll save that. Told not to watch that. Uh. Well, we might leave that there. If you've been watching Baby Reindeer, let Nick know whether you think he should watch it or not.</p>
+          <p><span class="spk">Jason · 02:20</span>Uh, and I love it. Well, Marty, you've, uh, thrown an interesting conversation into the mix for today, and I'm excited to get into it. Cause, uh, you know, as business owners working with all different, uh, you know, generations of, of employees, different ages and different people, it's, uh, often interesting to assess.</p>
+          <p><span class="spk">Jason · 02:38</span>The different ways that we talk, different ways that we treat each other and the different behaviors. So what are you, uh, lead us into what we're going to be unpacking today?</p>
+          <p><span class="spk">Marty · 02:45</span>Yeah. I've just been having some reflection points over the last couple of months. And you know, you tend to, you tend to operate in a way that you operate based on the generations that you've been through.</p>
+          <p><span class="spk">Marty · 02:57</span>And for me, I'm a Gen Xer, but,</p>
+          <p><span class="spk">Marty · 03:00</span>uh, When we were coming through, it was very much, you know, tow the line, uh, do what you're told, get the job done, don't complain and get the result. And, um, it's, and I always thought it was a very sort of, Draconic way of operating like even as a young person coming through and you know You couldn't you weren't allowed to have mental health back then it was You know It was something that just you didn't bring up because you'd be virtually executed and victimized at the time And it's got a hell of a lot better over time and it's great now, but I just thought you know I talked to a lot of And, and managers, even my own age, and they're quick to jump on the Gen Zs, the ones that are coming through.</p>
+          <p><span class="spk">Marty · 03:47</span>So these are the people born between 1997, 2012, and they're jumping on the more so from a point of view. Of I think not understanding them and thinking that things</p>
+          <p><span class="spk">Marty · 04:00</span>should be the way they want it to be as opposed to what the future looks like. And I I'm fortunate enough that I'm a part of innovate and I get to work with people at all ages, but in particular we have Gen X is coming through.</p>
+          <p><span class="spk">Marty · 04:14</span>And I couldn't be more impressed. And I'm I'm. I'm adapting my own style and my own philosophies, my own thought processes in thinking if this is the next generation coming through, you know, how can I even learn from it? And how can I be a leader that fosters that growth for them? And, um, so it's almost, you know, You know, changing my own management style to a certain degree.</p>
+          <p><span class="spk">Marty · 04:44</span>And I think that's what we need to do as leaders, as we go from year to year, you know, sometimes decades a decade to go, how do we get the best of people? And I'm, I'm talking Gen X, Gen Z's here, but that's, I guess, for everyone, right? How do you get the best out of an</p>
+          <p><span class="spk">Marty · 05:00</span>individual person? But I just noticing things that are different, like, Certainly in regards to them being much more entrepreneurial and more autonomous in getting a result.</p>
+          <p><span class="spk">Marty · 05:13</span>So I think you have a set of principles as a business that definitely have to be, uh, followed, but the Gen Z's want to express themselves within those principles. They want to. They definitely want to get the result. They definitely care about their mental health. They're much more open about talking about, I mean, it's incredible.</p>
+          <p><span class="spk">Marty · 05:34</span>Like I'm one on one in an office. And as a part of a quarterly appraisal, we're talking about their mental health and how to optimize their mental health as a part of their performance. That just never would have happened. That just would not have happened 15, 20 years ago. And I think it's really encouraging that people can feel safe enough with a company to have that conversation and then to build strategy</p>
+          <p><span class="spk">Marty · 06:00</span>around what they're doing external to work to make them, you know, really a happy, healthy.</p>
+          <p><span class="spk">Marty · 06:05</span>Achiever and Even in regards to outcomes, you need to be really clear on the metrics that you expect and that they're clear on the metrics that's expected. But sometimes as to how they get to them is uniquely innovative that a Gen Xer would, would just never think about. And it's, um, it's really, um, Encouraging and, and they embrace technology because they haven't had a world without technology being advanced.</p>
+          <p><span class="spk">Marty · 06:35</span>So even efficiencies, and I'll give you, I'll give you an example around this. Like, I mean, most of the dealings we had with clients back in our day was face to face and we had deep rapport with clients. We built a relationship with them. Um, we'd look after them and they'd keep coming back and utilizing you as a trusted resource.</p>
+          <p><span class="spk">Marty · 06:55</span>Now in this day and age. Um, I had one of the brokers here</p>
+          <p><span class="spk">Marty · 07:00</span>have their first face to face meeting with a client and they really enjoyed the meeting. They got a lot out of it. They experienced the rapport. They felt they had a deeper connection. And I said, well, how do you feel about going through that experience to how you feel about it?</p>
+          <p><span class="spk">Marty · 07:15</span>Conduct business. And they said, well, I think it's relevant in the right context, but based on efficiencies, but also expectations, you also have to read the play that some people that are Gen Z's only want to deal on the phone because they don't want to have that. visual representation. It gives, it puts them under pressure, um, because someone's looking at them.</p>
+          <p><span class="spk">Marty · 07:37</span>Then there are others that are happy doing zoom calls, um, that are building digital trust over zoom face to face. But what I really like about this is it's evolving with the future of business. So they can still have the experience of the Gen X and, and take the good out of that experience and learn from it.</p>
+          <p><span class="spk">Marty · 07:56</span>But also. You know, really</p>
+          <p><span class="spk">Marty · 08:00</span>intellectualize what's the best approach given, you know, a set of circumstances and reading the client individually. So I like that entrepreneurial flair and intelligence. I like, I admire those types of things in business owners, right? A lot of the times, but I'm seeing this come through in the younger generation.</p>
+          <p><span class="spk">Marty · 08:18</span>And once you've set the principles and you set the outcomes, they still want to perform, they still want to get their outcome. It's just they're, they're really relevant in finding unique ways to be able to do that. And there are challenge points on it across all generations, no doubt. Um, but it was, I've just come around, you know, I've come around it going, I need to be able to adapt to as a leader.</p>
+          <p><span class="spk">Marty · 08:42</span>Because again, I want to foster this to create greater performance for the business, but also greater performance for them as individuals as well.</p>
+          <p><span class="spk">Nick · 08:50</span>Uh, just as you, uh, and he will know who he is because he listens to this podcast, but, um, just as you were talking about all that, I was watching one of our Gen</p>
+          <p><span class="spk">Nick · 09:00</span>Zeds, uh, laying on the couch where I am, you can see outside laying on the couch in the sun.</p>
+          <p><span class="spk">Nick · 09:07</span>On the phone, legs on the couch, just completely in his element on the phone. So I don't know, I just, I totally agree with you. It just so happened that he was sitting there at that time and I was like, yeah, that's one there. Um, but he's doing good things. He's doing good things. So I think to your point, Marty, you have to, um, for me, it comes back to the results.</p>
+          <p><span class="spk">Nick · 09:29</span>Right. Correct. If the results are there, then how can you really argue about how they get there or what they're thinking when they get there, uh, to a degree? Um, I guess the challenge I have, um, and we've spoken about this in our own businesses, um, and this isn't what you talked about, but we do feel with the younger generations, There is a level of entitlement there, and I, I don't know where that comes from.</p>
+          <p><span class="spk">Nick · 09:57</span>I think it's just a different upbringing. Maybe,</p>
+          <p><span class="spk">Nick · 10:00</span>um, not, you know, don't not saying this is right or wrong, but I think as, as life has evolved, life has got a lot easier. If you look at our parents and what they went through, um, life was tougher. If you go back generations and generations, life was just harder.</p>
+          <p><span class="spk">Nick · 10:17</span>So the acceptance of what was um, available to them or the acceptance of, um, you know, conditions or, you know, pay or whatever it was, I think the older generations felt just happy to have opportunities. Um, whereas the young, the younger generation coming through, I think there, They've been given so much.</p>
+          <p><span class="spk">Nick · 10:39</span>And this is just an example. Like you look at the kids, um, you look at what parents are doing these days for kids with holidays. Like my friends that have got kids are taking them to places that geez, I never went to until my mid twenties. Cause that just wasn't, that just wasn't a possibility. Um, from an affordability point of view, it just wasn't the thing that was done.</p>
+          <p><span class="spk">Nick · 10:58</span>So I</p>
+          <p><span class="spk">Nick · 11:00</span>think the younger generations now are so exposed and, and have, have, you know, can access so much, so many more things that there, there is this level of entitlement that say, I'm not saying it's wrong. It's just, they're just a, um, they're just a product of the upbringing that they've had and their surroundings.</p>
+          <p><span class="spk">Nick · 11:19</span>So I think that's where the main difference is, um, from, from what I can say, I think you just have to remind yourself of that sometimes if you are a business owner and you are getting frustrated because they don't want to You think, geez, they're entitled. You know, you need to understand where they're coming from and the upbringing that they've had.</p>
+          <p><span class="spk">Nick · 11:35</span>Um, very different to the upbringing that we had and then our parents and our grandparents. Well, this</p>
+          <p><span class="spk">Marty · 11:40</span>is, this is my challenge. Cause in a leadership HR meeting, not, I think about two or three weeks ago, Nick, I stated, I hated the word entitlement because I felt like someone wanted something for nothing.</p>
+          <p><span class="spk">Marty · 11:52</span>Right. And knowing how hard you work for what you, you know, anything you accomplished back in the day was,</p>
+          <p><span class="spk">Marty · 12:00</span>um, you know, was the right way to go about it. And I just thought, if I'm thinking that way, then what am I potentially losing in regards to people wanting to push the boundaries of innovation based off coming Out of, out of a better environment.</p>
+          <p><span class="spk">Marty · 12:18</span>And I just, it just hit me like a ton of bricks. And I just thought, how do we foster this in a way that, that actually dramatically drives the business by creating a culture that embraces it, not my, yeah. And I feel now having. Done some reading on it. Like I felt a bit draconic in the statement based on what I feel like I went through.</p>
+          <p><span class="spk">Marty · 12:42</span>Everyone should have to experience, right? Because I went through it and that's the, I think that's the challenge in different generations and I go, but then like you say, you still need boundaries around it where, you know, it's not false expectation too, where. You know, but I think that's the deliverable.</p>
+          <p><span class="spk">Marty · 12:59</span>I think</p>
+          <p><span class="spk">Marty · 13:00</span>that's where the clear communication comes in, going, this is what we're working towards. And if you can accomplish that, then, you know, we're definitely working towards that. And it's, it's coming from a personal driver, because I think this generation, if it doesn't suit them, they'll, they'll spit you out as quick as you'd want to spit them out if they were underperforming.</p>
+          <p><span class="spk">Marty · 13:18</span>It's like this, there's, there's a new way We can operate that can foster it. And like you said, I think I agree as long as the result is attained and they definitely want to get the result. There's no doubt about that. As long as the result is, is attained, then how can we, how can we nourish and actually really foster where this business could actually head because of it?</p>
+          <p><span class="spk">Marty · 13:43</span>Um, Chase, I don't know if you're seeing anything. I don't know if I'm making any sense here, but I'm just expanding my own horizons.</p>
+          <p><span class="spk">Jason · 13:51</span>You are. And I think, I think as a business owner, sometimes when you're tired, you're stressed, you know, you feel like you've worked so hard, you know,</p>
+          <p><span class="spk">Jason · 14:00</span>and you've worked so hard to get to a certain point where maybe you're not getting that much out of the business right now, but you're in it for the long haul.</p>
+          <p><span class="spk">Jason · 14:05</span>And then it comes back to the sense that you can look at a Gen Z and go, they're entitled, you know, they want so much, they want fast career progression. They want quicker pay rises. They need the pay rises because they're seeing what other people are earning on Tik Tok and different careers and professions or industries.</p>
+          <p><span class="spk">Jason · 14:23</span>They got more access to more information than we ever had. And it comes to them faster. Um, you know, their, their attention span is said to be shorter because they've grown up in a world where they're getting pinged with information left, right, and center on Instagram. Facebook.</p>
+          <p><span class="spk">Marty · 14:36</span>Didn't Nick, didn't we want that when we were younger, we were just scared because it was more draconian, you know, you know, you know what I mean?</p>
+          <p><span class="spk">Marty · 14:43</span>Like I go, how can you accelerate? As a collective, you know, in regards to it.</p>
+          <p><span class="spk">Jason · 14:49</span>Correct. And you know, you don't want to let me finish. That's fine. You want to start? Sorry, mate.</p>
+          <p><span class="spk">Marty · 14:52</span>What I was</p>
+          <p><span class="spk">Jason · 14:55</span>building up to was how I initially felt was like this little bit of</p>
+          <p><span class="spk">Jason · 15:00</span>negative, but maybe it comes from a place of jealousy as you touched on, but you know, they, they do have fast information.</p>
+          <p><span class="spk">Jason · 15:05</span>They're jumping around all over the place. They're getting things done and they want to progress and want to push the boundaries, but what we can take from. You know, the benefits of that is they've, they've grown up with technology. They've used technology more than what we have, you know, while we were growing up.</p>
+          <p><span class="spk">Jason · 15:19</span>So if you actually get the most out of your Gen Z employees, you should have a tech savvy environment where the innovation on the culture around innovating or using tech to improve your business systems and processes. If you empower the, you know, the 26, 27 year old and below right now. They know how to do things that we don't know how to do, but maybe they're not being empowered to implement these changes or to talk about how these changes could benefit the business.</p>
+          <p><span class="spk">Jason · 15:43</span>You know, so we need to, you know, as you said, foster a place where the innovation, innovative and creativity that these people have, they're diverse ideas, their ideas of what's right and what's wrong, environmental policies, you know, social justice and social norms. Um, you know, these are all things that maybe we overlook</p>
+          <p><span class="spk">Jason · 16:00</span>as business owners and go, well, you know, what does our environmental policy matter?</p>
+          <p><span class="spk">Jason · 16:03</span>Uh, But maybe it does matter to have something that the next gen of future employees coming through really care about the environment, or they care about the hybrid model of being able to work from home sometimes or work from the office. So, you know, if you don't take this into consideration, you know, as a business owner, you're going to be missing out on.</p>
+          <p><span class="spk">Jason · 16:21</span>All of these potential future employees that won't be looking at your place of employment as a potential suitor for, for what they need.</p>
+          <p><span class="spk">Nick · 16:29</span>I agree. I just think you have to get the balance right. And I'm, I'm, I'm, I'm going to give you a prime example here. We, um, so we actually support a, a business. business or a group called Carbon Landscapes and Carbon Landscapes, what they're basically trying to, um, rejuvenate land and recreate the natural, uh, flora and fauna, um, I guess is the best, best way to describe it.</p>
+          <p><span class="spk">Nick · 16:54</span>So we've actually, um, can contribute to a particular site, which is in the Dandenongs,</p>
+          <p><span class="spk">Nick · 17:00</span>um, that they're working on. Um, and I guess a big push for that from a business point of view was, okay, we'll We need to show people that we're aware of the environment and we want to contribute. Um, we've also got things like trace, you know, about trace where we measure our carbon footprint.</p>
+          <p><span class="spk">Nick · 17:18</span>Um, so what's been interesting is the carbon landscapes. Now I presented it to the group. Um, a few times, a couple of times, um, and we've had Carbon Landscapes come and talk, but the engagement from our group on Carbon Landscapes, even our younger group has been next to zero. And the whole idea of the Carbon Landscapes was to show people that we do care and give people the opportunity to get involved in Carbon Landscapes.</p>
+          <p><span class="spk">Nick · 17:46</span>And yeah, a couple of times we've put the feelers out if people wanted to get involved and, uh, zero response basically. And we're predominantly a Gen Z workforce. I would suggest Marty, give or take.</p>
+          <p><span class="spk">Nick · 18:00</span>Um, so I think you've also got to be careful because you can at times get caught up in this stuff as well.</p>
+          <p><span class="spk">Nick · 18:07</span>You know, you can get caught up in being inclusive. You can get caught up in being, um, all for the environment to the point where it starts to take over what's the most important in the business. Um, And you know, I don't care what anyone says. The most thing, the most important thing in the business is you got more money in the bank, um, at the end of the month than you had the month before and you're making more than you're spending.</p>
+          <p><span class="spk">Nick · 18:29</span>So as long as it fits in those parameters, I'm really okay with anything, but I think we're at times and our business included. Sometimes you get too caught up in that stuff and you don't come back to the raw and the most important thing. So you can, you can be inclusive. You can do those other things, which is you need to still be focusing on the, the bottom line.</p>
+          <p><span class="spk">Marty · 18:49</span>Yeah. And it's a good point because again, testing the theory. It's like, they're much more individual, you know, individual in their</p>
+          <p><span class="spk">Marty · 19:00</span>thinking. So I'm going, what we might do from a company perspective is doing the right things, um, might not relate individually because they're, they're more self driven. So, which is fascinating.</p>
+          <p><span class="spk">Marty · 19:11</span>So I don't know what the answer is, but I go, It's definitely something where, you know, it's, it's a bit of what's in it for them in regards to having meaning from themselves, linking it to the company. So I, like I said, I think the Carbon Footprint is, you know, all that stuff we do is, is good stuff, but it's like, it's almost, you know, Reshaping it as to what is important to the group coming through, um, and is that any different?</p>
+          <p><span class="spk">Marty · 19:38</span>I mean, I haven't asked the question, but it's um, but it certainly opened my mind up just even from the work from home stuff Like I said in the past I grew up in an environment A work environment that you came to work, you generally would sit there 12 hours and get the job done and learn from each other.</p>
+          <p><span class="spk">Marty · 19:58</span>Now again,</p>
+          <p><span class="spk">Marty · 20:00</span>that's still very relevant in learning from your peers and actually having community engagement and connecting. But is it relevant to be on a train for two hours a day when you could be writing up three deals and talking to six clients because you're not going to do that on the train or You Like, like, I mean, there's, there's, there's logic in the thinking in regards to, I love the autonomy, I love the flexibility, I love getting the job done, I don't want to be micromanaged, but I do want to have a set of boundaries and principles that I rise up and be my best self in.</p>
+          <p><span class="spk">Marty · 20:36</span>There's, there's, so it's a, it's a different tapestry and I'm just, um, like I said, I'm just formulating in my own head the different individual drivers in gen, you know, in the In Gen Z compared to even the Millennials, you know, who also, you know, care about mental health and the environment as well. Um, But yeah, it's, it's, it's interesting.</p>
+          <p><span class="spk">Marty · 20:57</span>It's challenging my own thinking.</p>
+          <p><span class="spk">Marty · 21:00</span>And as long as the result is achieved in a, you know, very legal, healthy, and, uh, way that, that grows the business and the business is better for it. Then what can we learn out of that situation to become, continue to, to evolve and become even more dynamic to where we, you know, where we are.</p>
+          <p><span class="spk">Marty · 21:21</span>So that's, that's all I'm sort of throwing up here.</p>
+          <p><span class="spk">Nick · 21:24</span>You just have to adapt though, Marty, to your point earlier, like it's, it's really adapt or die because our, our industry is a great example. The initial pioneers of the industry, our, our industry became an industry, 2000s. So. If you look at early 2000, so 20, 20 odd years ago, 20 to 24 years ago, um, most people that came through that industry were probably in their thirties starting businesses.</p>
+          <p><span class="spk">Nick · 21:49</span>So a lot of people are now 55 to 60 years old and they're, they're moving out of the industry. They're retiring and they're doing other things. So if you don't adapt and have a good</p>
+          <p><span class="spk">Nick · 22:00</span>environment for Gen Z to come through, um, and to prosper, then your business is pretty much dead. So, you know, I get what you're saying and it's.</p>
+          <p><span class="spk">Nick · 22:08</span>It's difficult and it can be hard for people to accept if they're, if they're not Gen Zed and they've, you know. Brought up in the school of hard, not hard knocks. Um, but if you don't, if you don't adapt, your business isn't going to grow. And you know, I'm, I'm one that will, I'm a living example of younger people that have come into this business, particularly from a systems and processes point of view, and taking it to a new level and a level that I couldn't have imagined.</p>
+          <p><span class="spk">Nick · 22:33</span>I've taken it to, and without them, we wouldn't be where we are because I wouldn't have the confidence to continue to grow the business. So definitely, you know, if you're not adapting and you're not giving, or you're not creating environment for those people to prosper, then your business will die.</p>
+          <p><span class="spk">Nick · 22:47</span>There's just no, you know, no two ways about it.</p>
+          <p><span class="spk">Jason · 22:50</span>It's, um, it's something that we talk about as set up on the previous episode, CPA, public practice committee. So I go to meetings with the CPA and talk about, you know, um,</p>
+          <p><span class="spk">Jason · 23:00</span>careers and the future of the accounting industry. And yeah, one of the biggest issues we're facing is the, you know, The attraction of getting Gen Z to be interested in becoming accountants or to be interested in industries that are now becoming, you know, less, less the flavor.</p>
+          <p><span class="spk">Jason · 23:14</span>And, you know, the problem around that was the image of the industry, boring, you know, in an office, long hours, um, you know, falling behind in the use of technology and AI, the benefits of work life balance. Again, like historically being an accountant or working in professional services is not. Being promoted through Gen Z.</p>
+          <p><span class="spk">Jason · 23:34</span>And you know, that's one of the biggest challenges that we're going to have is how to increase visibility that there is a great career pathway in a, in a career, like an accounting career, and what that looks like for the future. So there's definitely some challenges out there and you know, where, where Gen Z are going, they are the future of, of, of.</p>
+          <p><span class="spk">Jason · 23:50</span>Of our workforce, you know, we're going to need to be hiring more of them over the years. So what as an, as a profession for accounting or just in general, if you're a business owner, what are you doing</p>
+          <p><span class="spk">Jason · 24:00</span>to shape your business to be, you know, to be an attractive place for someone who's Gen Z to come and work?</p>
+          <p><span class="spk">Marty · 24:07</span>Yeah, it's a really good point. It's, um, It could revolutionize industries, really, along with technology. You know, it's, uh, I'm, I'm excited to see how it all pans out. And like you said, Nick, it's always an involvement business. And, and I think there's some older, you know, some probably older business owners there that have to think about putting people in senior positions that are younger to foster this.</p>
+          <p><span class="spk">Marty · 24:29</span>And, and why I say that is I go, the beauty of it is they're very open to mentorship. You know, they're very open to growing. Um, but they're not going to suffer fools either too. So it's like they will, they will take what's available and individualize it in their own ways to create a better result because they feel like they're in control of that themselves, which is, which is great.</p>
+          <p><span class="spk">Marty · 24:55</span>That's how you want people to be. You want people to learn and apply to, to keep</p>
+          <p><span class="spk">Marty · 25:00</span>improving. So it's, um, you know, to some of the older business owners out there, I would definitely encourage to think about. You know, people in different generations, you know, coming through that are closer to the next wave coming through to really optimize it and don't leave that opportunity on the table because as we know, life goes on, business goes on and, uh, you keep growing, you keep learning, but it's been really, really good.</p>
+          <p><span class="spk">Marty · 25:24</span>I've, um, I've really been refreshed at the work ethic, um, and also. Just the application of new ideas in new ways that are actually moving the needle out there in the market. And I think even in this type of more challenging environment. Um, the energy of the Gen Z's coming through, uh, finding ways to extract opportunity, build relationships in new ways, um, that, that is really paramount to, you know, growth in business and growth across all businesses.</p>
+          <p><span class="spk">Marty · 25:56</span>So it's, um, so don't, don't just discount it</p>
+          <p><span class="spk">Marty · 26:00</span>and just come with a fixed idea on it. Like, uh, sometimes we can, as we get older, and we like to have things in our certain boundaries that we understand. Uh, be open, because as a, as a leader, and as someone that's, you know, Older and been through different generations.</p>
+          <p><span class="spk">Marty · 26:16</span>I keep learning. I learned from the millennials, the Gen Xs, like I learned throughout the Gen Zs and it's really refreshing and it keeps you sharp too, you know, and it, um, and that's a great level of personal development across, you know, all these generations, which is what perspective is all about. So it's, um, yeah, it's brilliant.</p>
+          <p><span class="spk">Marty · 26:37</span>Pretty exciting.</p>
+          <p><span class="spk">Jason · 26:38</span>I love it. Definitely given us lots to think about and you're always bringing these uh, interesting topics to the table for us to discuss on the numbers game. So, uh, for anyone out there who has listened, if you are working with Gen Z employees, or if you are Gen Z and you've got something you'd love to share with Nick, Marty, and I please connect on LinkedIn.</p>
+          <p><span class="spk">Jason · 26:55</span>Uh, you're probably more likely to be on Instagram or Tik TOK or one of those things, um, if you are the</p>
+          <p><span class="spk">Jason · 27:00</span>Gen Z who wants to reply and send us some things. Uh, Marty, we did teach him how to use Instagram. So if you want to send your messages through there, Marty. We know gets on once a week or tick tock, tick tock, get connected with Marty on tick tock.</p>
+          <p><span class="spk">Jason · 27:13</span>Now we'd love to hear your thoughts and, uh, yeah, look when it comes to Gen Z in the workplace, it's not just about keeping up with the times, but we need to set the pace for the future. So we've got some interesting years ahead. Thank you for joining us on the numbers game, like subscribe, follow, jump on YouTube.</p>
+          <p><span class="spk">Jason · 27:27</span>Nick still looks glorious as always, but until next time,</p>
+          <p><span class="spk">Marty · 27:30</span>Hey, you're keeping me young lads. Keep it up. Game over.</p>
+          <p><span class="spk">Jason · 27:34</span>This podcast is for educational and informational purposes only. The conversations are of a general nature and do not qualify as financial or tax advice. We recommend before you make any financial decisions, you consult a licensed professional.</p>
+          <p><span class="spk">Jason · 27:47</span>Individuals on the podcast may hold positions in the companies discussed. ---</p>
+        </div>
+      </details>
+
+    </div>
+
+    <!-- LISTEN:START (build_episode.py rewrites the 3 URLs + iframe title per episode; player dropped if no spotifyEmbedUrl) -->
+    <section class="listen-now">
+      <div class="ln-head">
+        <span class="ln-title">Listen now</span>
+      </div>
+      <div class="audio-embed">
+        <iframe src="https://open.spotify.com/embed/episode/1Z1qfRzKdeH9XOcYOqJoMH?utm_source=generator"
+          width="100%" height="152" loading="lazy" allowfullscreen
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+          title="Spotify — Our Take On Gen Z in the Workplace"></iframe>
+      </div>
+    </section>
+
+    <div class="listen">
+      <a href="https://open.spotify.com/episode/1Z1qfRzKdeH9XOcYOqJoMH" target="_blank" rel="noopener" aria-label="Listen to this episode on Spotify">
+        <svg viewBox="0 0 24 24"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.52 17.34c-.24.36-.66.48-1.02.24-2.82-1.74-6.36-2.1-10.56-1.14-.42.12-.78-.18-.9-.54-.12-.42.18-.78.54-.9 4.56-1.02 8.52-.6 11.64 1.32.42.18.48.66.3 1.02zm1.44-3.3c-.3.42-.84.6-1.26.3-3.24-1.98-8.16-2.58-11.94-1.38-.48.12-1.02-.12-1.14-.6-.12-.48.12-1.02.6-1.14 4.32-1.32 9.72-.66 13.44 1.62.36.18.54.78.3 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.3c-.6.18-1.2-.18-1.38-.72-.18-.6.18-1.2.72-1.38 4.26-1.26 11.28-1.02 15.72 1.62.54.3.72 1.02.42 1.56-.3.42-1.02.6-1.56.3z"/></svg>
+        Spotify
+      </a>
+      <a href="https://podcasts.apple.com/au/podcast/id1555566088?i=1000657935552" target="_blank" rel="noopener" aria-label="Listen to this episode on Apple Podcasts">
+        <svg viewBox="0 0 24 24"><path d="M5.34 0A5.328 5.328 0 000 5.34v13.32A5.328 5.328 0 005.34 24h13.32A5.328 5.328 0 0024 18.66V5.34A5.328 5.328 0 0018.66 0H5.34zm6.525 2.568c2.336 0 4.448.902 6.056 2.587 1.224 1.272 1.912 2.619 2.264 4.392l.04.23c.04.272-.16.527-.432.567a.505.505 0 01-.567-.431l-.04-.213c-.312-1.57-.92-2.747-2.004-3.867-1.428-1.496-3.293-2.294-5.393-2.294-2.1 0-3.966.798-5.394 2.294-1.084 1.12-1.692 2.298-2.004 3.867l-.04.213a.507.507 0 01-.567.431.504.504 0 01-.432-.567l.04-.23c.352-1.773 1.04-3.12 2.264-4.392 1.608-1.685 3.72-2.587 6.056-2.587h.153zm.136 3.033c1.74 0 3.312.67 4.527 1.934.883.916 1.394 1.93 1.663 3.253l.04.23a.505.505 0 01-.431.567.503.503 0 01-.567-.432l-.04-.212c-.23-1.112-.659-1.97-1.396-2.732-1.052-1.1-2.404-1.672-3.9-1.672s-2.849.572-3.901 1.672c-.737.762-1.167 1.62-1.396 2.732l-.04.212a.503.503 0 01-.567.432.505.505 0 01-.432-.567l.04-.23c.27-1.323.78-2.337 1.664-3.253 1.215-1.264 2.787-1.934 4.527-1.934h.21zm-.078 3.05c1.092 0 2.091.424 2.89 1.22.582.58.924 1.245 1.107 2.15l.04.218a.501.501 0 01-.424.568.499.499 0 01-.568-.424l-.04-.198c-.146-.724-.413-1.253-.871-1.716-.63-.63-1.398-.957-2.226-.957s-1.595.328-2.225.957c-.459.463-.726.992-.871 1.716l-.04.198a.499.499 0 01-.568.424.501.501 0 01-.424-.568l.04-.219c.183-.904.525-1.569 1.106-2.149.8-.796 1.799-1.22 2.89-1.22h.184zM12 14.07a2.477 2.477 0 012.48 2.478A2.477 2.477 0 0112 19.024a2.477 2.477 0 01-2.48-2.477A2.477 2.477 0 0112 14.07z"/></svg>
+        Apple
+      </a>
+      <a class="yt-pill" href="https://www.youtube.com/@thenumbersgamepodcast?sub_confirmation=1" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.12-2.14C19.5 3.55 12 3.55 12 3.55s-7.5 0-9.38.51A3 3 0 0 0 .5 6.2 31.4 31.4 0 0 0 0 12a31.4 31.4 0 0 0 .5 5.8 3 3 0 0 0 2.12 2.14c1.88.51 9.38.51 9.38.51s7.5 0 9.38-.51a3 3 0 0 0 2.12-2.14A31.4 31.4 0 0 0 24 12a31.4 31.4 0 0 0-.5-5.8zM9.55 15.57V8.43L15.82 12z"/></svg>
+        Subscribe
+      </a>
+    </div>
+    <!-- LISTEN:END -->
+
+    <div class="relsec">
+      <span class="rtitle">Discover more</span>
+      <div class="relgrid">
+        <a class="relcard" href="/how-to-win-friends-and-influence-people">
+          <img src="https://i.ytimg.com/vi/__KEwxhVyDo/hqdefault.jpg" alt="EP 156 thumbnail">
+          <span class="rt">How to Win Friends and Influence People</span>
+          <span class="rfoot"><span class="rwhy">Also covers: team &amp; culture</span><span class="rtag">EP 156</span></span>
+        </a>
+        <a class="relcard" href="/good-people-bad-fit-how-one-wrong-hire-can-cost-you-millions">
+          <img src="https://i.ytimg.com/vi/USkVF5bsujM/hqdefault.jpg" alt="EP 237 thumbnail">
+          <span class="rt">Good People, Bad Fit</span>
+          <span class="rfoot"><span class="rwhy">Also covers: team &amp; culture</span><span class="rtag">EP 237</span></span>
+        </a>
+        <a class="relcard" href="/courage-culture-tough-calls-cameron-schwab-on-redefining-leadership">
+          <img src="https://i.ytimg.com/vi/SXCEAyoLobo/hqdefault.jpg" alt="EP 249 thumbnail">
+          <span class="rt">Courage, Culture &amp; Tough Calls</span>
+          <span class="rfoot"><span class="rwhy">Also covers: team &amp; culture</span><span class="rtag">EP 249</span></span>
+        </a>
+        <a class="relcard" href="/the-future-of-working-from-home">
+          <img src="https://i.ytimg.com/vi/CSYAM098AQk/hqdefault.jpg" alt="EP 143 thumbnail">
+          <span class="rt">The Future of Working from Home</span>
+          <span class="rfoot"><span class="rwhy">Also covers: team &amp; culture</span><span class="rtag">EP 143</span></span>
+        </a>
+        <a class="relcard" href="/10-lessons-from-an-f1-boss-do-any-actually-apply-to-small-business">
+          <img src="https://i.ytimg.com/vi/ubSyFEJEohE/hqdefault.jpg" alt="EP 267 thumbnail">
+          <span class="rt">10 Lessons from an F1 Boss.</span>
+          <span class="rfoot"><span class="rwhy">Also covers: team &amp; culture</span><span class="rtag">EP 267</span></span>
+        </a>
+        <a class="relcard" href="/human-advisory-board">
+          <img src="https://i.ytimg.com/vi/ZY2t4W1s5ww/hqdefault.jpg" alt="EP 174 thumbnail">
+          <span class="rt">Human Advisory Board</span>
+          <span class="rfoot"><span class="rwhy">Also covers: team &amp; culture</span><span class="rtag">EP 174</span></span>
+        </a>
+      </div>
+      <div class="reldots" id="reldots"></div>
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="footgrid">
+      <div class="fcol">
+        <div class="foot-label">Follow us on</div>
+        <div class="socials">
+          <a href="https://www.instagram.com/thenumbersgamepodcast/" target="_blank" rel="noopener" aria-label="The Numbers Game on Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.8.2 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1 .4 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .4-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1-.4-2.2-.1-1.3-.1-1.7-.1-4.9s0-3.6.1-4.9c.1-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.4 2.2-.4 1.3-.1 1.7-.1 4.9-.1zm0 2c-3.1 0-3.5 0-4.8.1-1.1.1-1.5.2-1.8.3-.4.2-.7.3-1 .6-.3.3-.5.6-.6 1-.1.3-.3.7-.3 1.8-.1 1.3-.1 1.7-.1 4.8s0 3.5.1 4.8c.1 1.1.2 1.5.3 1.8.2.4.3.7.6 1 .3.3.6.5 1 .6.3.1.7.3 1.8.3 1.3.1 1.7.1 4.8.1s3.5 0 4.8-.1c1.1-.1 1.5-.2 1.8-.3.4-.2.7-.3 1-.6.3-.3.5-.6.6-1 .1-.3.3-.7.3-1.8.1-1.3.1-1.7.1-4.8s0-3.5-.1-4.8c-.1-1.1-.2-1.5-.3-1.8-.2-.4-.3-.7-.6-1-.3-.3-.6-.5-1-.6-.3-.1-.7-.3-1.8-.3-1.3-.1-1.7-.1-4.8-.1zm0 3.4a5.4 5.4 0 1 1 0 10.8 5.4 5.4 0 0 1 0-10.8zm0 2a3.4 3.4 0 1 0 0 6.8 3.4 3.4 0 0 0 0-6.8zm5.6-2.3a1.3 1.3 0 1 1-2.6 0 1.3 1.3 0 0 1 2.6 0z"/></svg></a>
+          <a href="https://www.tiktok.com/@thenumbersgamepodcast" target="_blank" rel="noopener" aria-label="The Numbers Game on TikTok"><svg viewBox="0 0 24 24"><path d="M12.53.02C13.84 0 15.14.01 16.44 0c.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg></a>
+          <a href="https://www.linkedin.com/company/the-numbers-game-podcast/" target="_blank" rel="noopener" aria-label="The Numbers Game on LinkedIn"><svg viewBox="0 0 24 24"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.24 8.25h4.52V23H.24V8.25zM8.34 8.25h4.33v2.01h.06c.6-1.14 2.08-2.34 4.28-2.34 4.58 0 5.42 3.01 5.42 6.92V23h-4.51v-7.16c0-1.71-.03-3.91-2.38-3.91-2.39 0-2.75 1.86-2.75 3.78V23H8.34V8.25z"/></svg></a>
+          <a href="https://www.facebook.com/profile.php?id=100071290388343" target="_blank" rel="noopener" aria-label="The Numbers Game on Facebook"><svg viewBox="0 0 24 24"><path d="M24 12.07C24 5.41 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.04V9.41c0-3.02 1.8-4.7 4.54-4.7 1.31 0 2.68.24 2.68.24v2.97h-1.5c-1.5 0-1.96.93-1.96 1.89v2.26h3.32l-.53 3.5h-2.8V24C19.62 23.1 24 18.1 24 12.07z"/></svg></a>
+          <a href="https://www.youtube.com/@thenumbersgamepodcast" target="_blank" rel="noopener" aria-label="The Numbers Game on YouTube"><svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.2C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31.7 31.7 0 0 0 0 12a31.7 31.7 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.2A31.7 31.7 0 0 0 24 12a31.7 31.7 0 0 0-.5-5.8zM9.6 15.6V8.4L15.8 12z"/></svg></a>
+        </div>
+      </div>
+      <div class="fcol">
+        <div class="foot-label">Brought to you by</div>
+        <div class="sponsors">
+          <a href="https://www.inovayt.com.au/" target="_blank" rel="noopener"><img src="assets/inovayt-white.png" alt="Inovayt"></a>
+          <a href="https://futureadvisory.com.au/" target="_blank" rel="noopener"><img src="assets/future-advisory-white.png" alt="Future Advisory"></a>
+        </div>
+      </div>
+      <div class="fcol produced">
+        <div class="foot-label">Produced by</div>
+        <a href="https://www.vidpod.com.au/" target="_blank" rel="noopener"><img src="assets/vidpod-white.png" alt="VIDPOD"></a>
+      </div>
+    </div>
+    <div class="footbar">
+      <details class="footnav-dd">
+        <summary><svg class="ham" viewBox="0 0 24 24"><path d="M3 6h18v2H3zM3 11h18v2H3zM3 16h18v2H3z"/></svg> Menu</summary>
+        <div class="dd-links">
+          <a href="/">Home</a><a href="/episodes">Every episode</a><a href="/adventure">Choose your own adventure</a><a href="/about">About the show</a><a href="/nick-reilly">Nick Reilly</a><a href="/jason-robinson">Jason Robinson</a><a href="/contact">Contact</a>
+        </div>
+      </details>
+      <div class="copyright">© 2026 The Numbers Game</div>
+    </div>
+  </footer>
+
+  <script>
+    var VIDEO='-zzLDns8dhU';
+    var CHAPTERS=[
+      {t:"00:00",s:0,title:"Intro"},
+      {t:"02:57",s:177,title:""}
+    ];
+    var QUESTIONS=[
+      {q:"What do Gen Z employees want at work?",s:313},
+      {q:"Does it matter how employees get results?",s:569},
+      {q:"How should you handle a Gen Z employee who seems entitled?",s:679},
+      {q:"Will Gen Z leave a job that doesn't suit them?",s:798},
+      {q:"How do you get value from tech-savvy Gen Z staff?",s:919},
+      {q:"What is the most important thing in a business?",s:1087},
+      {q:"What working conditions do Gen Z want?",s:1220},
+      {q:"Why must businesses adapt to Gen Z?",s:1284},
+      {q:"How do you make your business attractive to Gen Z?",s:1430},
+      {q:"How do you stay sharp as an older leader?",s:1576}
+    ];
+
+    var chEl=document.getElementById('chapters');
+    CHAPTERS.forEach(function(c){var b=document.createElement('button');b.className='chapter';b.onclick=function(){startAt(c.s)};b.innerHTML='<span class="tc">'+c.t+'</span><span class="cx">'+c.title+'</span>';chEl.appendChild(b);});
+    document.getElementById('chcount').textContent=CHAPTERS.length;
+    var qEl=document.getElementById('qa');
+    QUESTIONS.forEach(function(q){var b=document.createElement('button');b.className='q';b.onclick=function(){startAt(q.s)};b.innerHTML='<span class="qm">?</span><span class="qx">'+q.q+'</span><span class="go">›</span>';qEl.appendChild(b);});
+    document.getElementById('qcount').textContent=QUESTIONS.length;
+
+    /* Mobile nav dropdown. */
+    var burger=document.getElementById('navburger'), navdrop=document.getElementById('navdrop');
+    if(burger&&navdrop){burger.addEventListener('click',function(){
+      navdrop.hidden=!navdrop.hidden;
+      burger.setAttribute('aria-expanded', navdrop.hidden?'false':'true');
+    });}
+
+    /* Voice-note button reveals the recorder; × tucks it away. */
+    var vbtn=document.getElementById('vbtn'), vslot=document.getElementById('vslot'), vclose=document.getElementById('vclose');
+    if(vbtn&&vslot){vbtn.addEventListener('click',function(){vslot.hidden=!vslot.hidden;});}
+    if(vclose&&vslot){vclose.addEventListener('click',function(){vslot.hidden=true;});}
+
+    /* Keep-exploring dots: only shown when the strip actually scrolls (mobile). */
+    var rg=document.querySelector('.relgrid'), rd=document.getElementById('reldots');
+    if(rg&&rd){
+      var relCards=rg.querySelectorAll('.relcard');
+      relCards.forEach(function(){rd.appendChild(document.createElement('span'))});
+      var updDots=function(){
+        var scrollable=rg.scrollWidth>rg.clientWidth+4;
+        rd.style.display=scrollable?'flex':'none';
+        if(!scrollable)return;
+        var i=Math.round(rg.scrollLeft/(rg.scrollWidth-rg.clientWidth)*(relCards.length-1));
+        rd.querySelectorAll('span').forEach(function(s,n){s.classList.toggle('on',n===i)});
+      };
+      rg.addEventListener('scroll',updDots,{passive:true});
+      window.addEventListener('resize',updDots);
+      updDots();
+    }
+
+    /* Explore tabs: swap the visible panel; the row stays put so you never lose your place. */
+    var tabBtns=document.querySelectorAll('.tabbtn');
+    tabBtns.forEach(function(b){
+      b.addEventListener('click',function(){
+        tabBtns.forEach(function(o){o.classList.remove('on')});
+        document.querySelectorAll('.tpanel').forEach(function(p){p.hidden=true});
+        b.classList.add('on');
+        document.getElementById(b.getAttribute('data-panel')).hidden=false;
+      });
+    });
+
+    /* YouTube: clean facade, then real player on demand. Seek without yanking to top. */
+    var player=null, ready=false, apiReady=false, pending=null;
+    window.onYouTubeIframeAPIReady=function(){apiReady=true; if(pending!=null){var s=pending;pending=null;createPlayer(s);}};
+    function createPlayer(sec){
+      var wrap=document.getElementById('player'); wrap.innerHTML='<div id="yt"></div>';
+      player=new YT.Player('yt',{videoId:VIDEO,playerVars:{autoplay:1,rel:0,modestbranding:1,playsinline:1,start:Math.floor(sec||0)},events:{onReady:function(){ready=true;}}});
+    }
+    function nudge(){
+      var p=document.getElementById('player-wrap'), r=p.getBoundingClientRect();
+      if(r.bottom<80 || r.top>window.innerHeight-90){ p.scrollIntoView({behavior:'smooth',block:'start'}); }
+    }
+    function startAt(sec){
+      nudge();
+      if(player&&ready){ player.seekTo(sec,true); player.playVideo(); return; }
+      if(apiReady){ createPlayer(sec); } else { pending=sec; }
+    }
+    document.getElementById('facade').addEventListener('click',function(){startAt(0);});
+    (function(){var s=document.createElement('script');s.src='https://www.youtube.com/iframe_api';document.head.appendChild(s);})();
+  </script>
+</body>
+</html>

@@ -1,0 +1,686 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EP 169 · Game On - Financial Education for Kids | The Numbers Game</title>
+<meta name="description" content="Nick brings a different topic: teaching kids money through games.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" sizes="64x64" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="canonical" href="https://thenumbersgamepodcast.com.au/game-on-financial-education-for-kids">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="The Numbers Game">
+<meta property="og:title" content="EP 169 · Game On - Financial Education for Kids | The Numbers Game">
+<meta property="og:description" content="Nick brings a different topic: teaching kids money through games.">
+<meta property="og:url" content="https://thenumbersgamepodcast.com.au/game-on-financial-education-for-kids">
+<meta property="og:image" content="https://i.ytimg.com/vi/b-IzA2TFD8Y/maxresdefault.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+  :root{
+    --purple:#585af3; --purple-dark:#2c1b8a; --mint:#7ad9a8;
+    --white:#ffffff; --muted:rgba(255,255,255,.60); --dim:rgba(255,255,255,.42);
+    --line:rgba(255,255,255,.12); --card:rgba(255,255,255,.05); --card-hi:rgba(255,255,255,.09);
+    --display:'Anton',Impact,'Helvetica Neue',sans-serif;
+    --sans:'Inter',system-ui,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif;
+    --wrap:1280px;   /* page frame (nav spans this) */
+    --col:960px;     /* content column (player, tabs, text) */
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:var(--sans); color:var(--white); line-height:1.6; -webkit-font-smoothing:antialiased;
+    background:#12093a;
+    background-image:
+      radial-gradient(1200px 600px at 82% -6%, rgba(88,90,243,.45) 0%, transparent 55%),
+      radial-gradient(900px 700px at 5% 8%, rgba(122,217,168,.10) 0%, transparent 50%),
+      linear-gradient(180deg,#2c1b8a 0%,#1a1150 28%,#100b34 62%,#0b0820 100%);
+    background-attachment:fixed;
+  }
+  a{color:inherit}
+  .wrap{max-width:var(--wrap);margin:0 auto;padding:0 36px}
+  main.wrap{max-width:var(--col)}
+  @media(max-width:720px){.wrap{padding:0 22px}}
+
+  /* ── Navbar ── */
+  .nav{position:sticky;top:0;z-index:50;background:linear-gradient(180deg,rgba(24,15,74,.92),rgba(24,15,74,.72));backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+  .nav-in{max-width:var(--wrap);margin:0 auto;padding:11px 36px;display:flex;align-items:center;justify-content:space-between}
+  @media(max-width:720px){.nav-in{padding:11px 22px}}
+  .brand{display:block;line-height:0}
+  .brand img{height:36px;width:auto;display:block}
+  .navlinks{display:flex;gap:28px;align-items:center}
+  .navlinks a{text-decoration:none;font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);transition:.15s}
+  .navlinks a:hover{color:var(--white)}
+  .navlinks a.navtop{cursor:default}
+  .navgroup{position:relative;display:flex;align-items:center}
+  .navgroup .subnav{display:none;position:absolute;top:100%;left:50%;transform:translateX(-50%);padding-top:14px;min-width:180px}
+  .navgroup:hover .subnav,.navgroup:focus-within .subnav{display:block}
+  .subnav-in,.navgroup .subnav{z-index:60}
+  .navgroup .subnav a{display:block;background:#180f4a;border:1px solid var(--line);border-top:0;padding:12px 16px;font-size:12px;color:rgba(255,255,255,.85)}
+  .navgroup .subnav a:first-child{border-top:1px solid var(--line)}
+  .navgroup .subnav a:hover{background:#221768;color:var(--white)}
+  .navburger{display:none;background:none;border:1px solid var(--line);padding:8px 10px;cursor:pointer;color:var(--white);transition:.15s}
+  .navburger:hover{border-color:rgba(122,217,168,.6)}
+  .navburger svg{width:20px;height:20px;fill:currentColor;display:block}
+  .navdrop{display:none}
+  @media(max-width:720px){
+    .navlinks{display:none}
+    .navburger{display:block}
+    .navdrop{display:block;position:absolute;left:0;right:0;top:100%;
+      background:#180f4a;border-bottom:1px solid var(--line);box-shadow:0 24px 50px rgba(0,0,0,.45)}
+    .navdrop[hidden]{display:none}
+    .navdrop a{display:block;padding:15px 22px;text-decoration:none;font-size:14px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:rgba(255,255,255,.9);border-bottom:1px solid rgba(255,255,255,.06)}
+    .navdrop a:last-child{border-bottom:0}
+    .navdrop a.sub{padding-left:42px;font-size:13px;color:rgba(255,255,255,.72)}
+    .navdrop .navlabel{display:block;padding:15px 22px 6px;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.4)}
+  }
+
+  /* ── Hero / hook (marker-highlight system: purple hook wraps naturally, mint payoff below)
+     Rules: title splits at its natural break (colon/pipe/question mark). Front = hook (purple,
+     big), back = payoff (mint, smaller). No break in title = purple hook only. Highlights hug
+     the text (tight em padding tuned to Anton) and wrap via box-decoration-break — never
+     hand-pick line breaks or mint words. ── */
+  header.hero{padding:34px 0 6px}
+  .hook{--inx:clamp(8.4px,2.1vw,15.6px)} /* one shared text inset so hook + payoff first letters align */
+  .hook .hk{font-family:var(--display);font-weight:400;text-transform:uppercase;
+    font-size:clamp(28px,7vw,52px);line-height:1.3;letter-spacing:-.5px;text-wrap:balance}
+  .hook .hk span{color:var(--white);padding:.04em var(--inx) .02em;
+    background:linear-gradient(var(--purple),var(--purple)) 0 50%/100% 87% no-repeat;
+    -webkit-box-decoration-break:clone;box-decoration-break:clone}
+  .hook .pay{font-family:var(--display);font-weight:400;text-transform:uppercase;
+    font-size:clamp(16px,4vw,24px);line-height:1.5;letter-spacing:.6px;margin-top:8px;text-wrap:balance}
+  .hook .pay span{color:#0a0a0a;padding:.08em var(--inx) .04em;
+    background:linear-gradient(var(--mint),var(--mint)) 0 50%/100% 88% no-repeat;
+    -webkit-box-decoration-break:clone;box-decoration-break:clone}
+  /* no-hook titles: mid-split into two full-size rows, purple then mint */
+  .hook .hk span.hkrow{display:block;background:none;padding:0}
+  .hook .hk .hkrow+.hkrow{margin-top:8px}
+  .hook .hk span.mintseg{color:#0a0a0a;
+    background:linear-gradient(var(--mint),var(--mint)) 0 50%/100% 87% no-repeat}
+
+  /* ── Player (clean facade → real player on tap) ── */
+  .player-wrap{margin:24px 0 4px;scroll-margin-top:76px}
+  .player{position:relative;width:100%;padding-top:56.25%;border-radius:0;overflow:hidden;background:#000;box-shadow:0 30px 70px rgba(0,0,0,.5),0 0 0 1px rgba(255,255,255,.06)}
+  .facade{position:absolute;inset:0;border:0;cursor:pointer;background-size:cover;background-position:center;display:flex;align-items:center;justify-content:center;padding:0}
+  .facade .play{width:74px;height:74px;border-radius:50%;background:rgba(10,6,30,.40);border:2px solid rgba(255,255,255,.72);display:flex;align-items:center;justify-content:center;transition:.18s;-webkit-backdrop-filter:blur(1px);backdrop-filter:blur(1px)}
+  .facade:hover .play{background:rgba(88,90,243,.62);transform:scale(1.07);border-color:#fff}
+  .facade .play::after{content:"";border-style:solid;border-width:11px 0 11px 19px;border-color:transparent transparent transparent #fff;margin-left:5px}
+  .player iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+
+  /* ── Episode facts (bottom of the Summary panel — templated per episode) ── */
+  .sumfacts{margin:14px 10px 4px;padding-top:13px;border-top:1px solid rgba(255,255,255,.08);display:flex;flex-direction:column;gap:8px}
+  .fact{display:flex;gap:12px;font-size:13.5px}
+  .fact .fl{flex:none;width:104px;color:var(--dim);font-weight:600;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;padding-top:2px}
+  .fact .fv{color:rgba(255,255,255,.9);font-weight:500}
+  .fact .fv a{color:var(--mint);text-decoration:none;border-bottom:1px solid rgba(122,217,168,.4);transition:.15s}
+  .fact .fv a:hover{border-bottom-color:var(--mint)}
+
+  /* ── Episode tag (identity: black label hanging off the title corner) ── */
+  .eptag{display:inline-block;position:relative;left:-6px;margin-bottom:-7px;z-index:2;
+    background:#0a0a0a;color:var(--white);font-family:var(--display);font-weight:400;
+    font-size:13.5px;letter-spacing:1.5px;text-transform:uppercase;padding:6px 11px 4px}
+
+  /* ── Explore tabs (sticky mode switcher; one panel swaps below, nothing shoves) ── */
+  .explore{margin-top:22px}
+  .tabs{position:sticky;top:58px;z-index:40;display:flex;flex-wrap:wrap;gap:8px;padding:10px 0;
+    background:linear-gradient(180deg,rgba(18,10,55,.96),rgba(18,10,55,.86));
+    backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+  .tabbtn{font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.5px;
+    font-size:14.5px;color:var(--white);background:var(--purple);border:1px solid var(--purple);
+    padding:9px 13px 7px;cursor:pointer;transition:.15s}
+  .tabbtn:hover{filter:brightness(1.12)}
+  .tabbtn.on{background:var(--mint);border-color:var(--mint);color:#0a0a0a}
+  .tabbtn.on:hover{filter:none}
+  .tabbtn .ct{font-size:12px;opacity:.75;font-variant-numeric:tabular-nums}
+  .tabbtn .ct::before{content:" · "}
+  .tpanel{border:1px solid var(--line);background:var(--card);padding:12px 10px 14px}
+  .hint{font-size:12.5px;color:var(--muted);padding:2px 10px 10px;border-bottom:1px solid rgba(255,255,255,.08);margin-bottom:6px}
+
+  /* ── Listen row (no box: label left, service pills follow) ── */
+  .listen{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:12px 16px;margin-top:34px}
+  .listen .lname{font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--dim)}
+  .listen a{display:inline-flex;align-items:center;gap:9px;padding:11px 18px;border-radius:999px;
+    background:var(--mint);color:#08210f;text-decoration:none;font-weight:800;font-size:12.5px;
+    letter-spacing:.04em;text-transform:uppercase;transition:.15s}
+  .listen a:hover{filter:brightness(1.06);transform:translateY(-1px);box-shadow:0 12px 30px rgba(122,217,168,.25)}
+  .listen svg{width:20px;height:20px;fill:currentColor;flex:none}
+  /* ── Listen-now Spotify audio embed (full column width, above the pills) ── */
+  .listen-now{margin-top:40px}
+  .listen-now .ln-head{display:flex;align-items:baseline;justify-content:space-between;gap:14px;margin-bottom:13px}
+  .listen-now .ln-title{font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--dim)}
+  .audio-embed{border-radius:12px;overflow:hidden;box-shadow:0 20px 50px rgba(0,0,0,.4),0 0 0 1px rgba(255,255,255,.06)}
+  .audio-embed iframe{display:block;width:100%;border:0}
+  @media(max-width:720px){.listen-now{margin-top:32px}}
+
+  /* ── Keep exploring (thumbnails link to other episode PAGES, never timecodes).
+     Swipeable strip on mobile, fits three-up on desktop. Variant rule: claim
+     "similar ground" + reason lines ONLY when moment-level topic overlap is
+     genuinely strong; otherwise show the latest released episodes with dates —
+     never invent a connection. ── */
+  .relsec{margin-top:60px;padding-top:58px;border-top:1px solid var(--line)} /* line = end of this episode's info */
+  .reldots{display:flex;justify-content:center;gap:7px;margin-top:12px}
+  .reldots span{width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.25);transition:.2s}
+  .reldots span.on{background:var(--mint)}
+  .relsec .rtitle{display:inline-block;font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.5px;font-size:14.5px;background:var(--mint);color:#0a0a0a;padding:9px 13px 7px;margin-bottom:18px}
+  .relgrid{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding-bottom:6px;scrollbar-width:none}
+  .relgrid::-webkit-scrollbar{display:none}
+  .relcard{flex:0 0 56%;max-width:232px;scroll-snap-align:start;display:flex;flex-direction:column;text-decoration:none;background:var(--card);border:1px solid var(--line);transition:.15s}
+  .relcard:hover{background:var(--card-hi);border-color:rgba(122,217,168,.55)}
+  .relcard img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block}
+  .relcard .rt{display:block;font-size:12.5px;font-weight:600;color:rgba(255,255,255,.92);line-height:1.4;padding:8px 8px 0}
+  .relcard .rfoot{margin-top:auto;display:flex;justify-content:space-between;align-items:flex-end;gap:8px;padding:10px 8px 9px}
+  .relcard .rwhy{font-size:11.5px;color:var(--mint)}
+  .relcard .rtag{display:inline-block;background:#0a0a0a;color:var(--white);font-family:var(--display);font-size:10px;letter-spacing:1.2px;text-transform:uppercase;padding:3px 7px 2px;white-space:nowrap;flex:0 0 auto}
+
+  /* ── Dropdown sections (accordion under the player) ── */
+  .drops{margin-top:34px;display:flex;flex-direction:column;gap:11px}
+  .drop{border:1px solid var(--line);border-radius:0;background:var(--card);overflow:hidden;transition:border-color .15s}
+  .drop[open]{border-color:rgba(122,217,168,.35)}
+  .drop>summary{list-style:none;cursor:pointer;padding:16px 18px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+  .drop>summary::-webkit-details-marker{display:none}
+  .drop>summary .st{font-weight:700;font-size:15.5px;letter-spacing:.005em}
+  .drop>summary .ct{margin-left:auto;font-size:12px;color:var(--dim);font-weight:600;font-variant-numeric:tabular-nums}
+  .drop>summary .chev{flex:none;width:22px;height:22px;border-radius:50%;background:rgba(122,217,168,.14);color:var(--mint);display:flex;align-items:center;justify-content:center;font-family:var(--display);font-size:15px;line-height:1;transition:.2s;transform:translateY(-1px)}
+  .drop[open]>summary .chev{transform:rotate(45deg)}
+  .drop-body{padding:2px 12px 12px}
+
+  /* chapters */
+  .chapter{display:flex;align-items:baseline;gap:14px;width:100%;text-align:left;cursor:pointer;background:none;border:0;color:inherit;font-family:inherit;padding:11px 10px;border-radius:10px;transition:.13s}
+  .chapter:hover{background:var(--card-hi)}
+  .chapter .tc{font-variant-numeric:tabular-nums;font-weight:700;font-size:14px;color:var(--mint);flex:none;width:48px}
+  .chapter .cx{font-size:15px;font-weight:500;color:rgba(255,255,255,.9)}
+  .chapter:hover .cx{color:#fff}
+
+  /* questions */
+  .q{display:flex;align-items:center;gap:12px;width:100%;text-align:left;cursor:pointer;background:none;border:0;border-radius:11px;color:inherit;font-family:inherit;padding:12px 10px;transition:.14s}
+  .q+.q{border-top:1px solid rgba(255,255,255,.05)}
+  .q:hover{background:var(--card-hi)}
+  .q .qm{font-family:var(--display);font-size:15px;color:var(--mint);flex:none;line-height:1;transform:translateY(1px)}
+  .q .qx{font-size:15px;font-weight:500;color:rgba(255,255,255,.92)}
+  .q .go{margin-left:auto;flex:none;color:var(--dim);font-size:18px;transition:.15s}
+  .q:hover .go{color:var(--mint);transform:translateX(2px)}
+
+  /* summary + transcript bodies */
+  .summary-body p{font-size:16.5px;line-height:1.62;color:rgba(255,255,255,.9);padding:6px 10px 4px}
+  .tbody{padding:2px 10px 8px}
+  .tbody p{font-size:14.5px;line-height:1.7;color:rgba(255,255,255,.78);margin-top:15px;max-width:64ch}
+  .tbody .spk{display:block;font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--mint);margin-bottom:2px}
+
+  /* ── Voice note ask (lives at the bottom of the Summary panel) ── */
+  .vask{margin:16px 10px 4px}
+  .vbtn{display:inline-flex;align-items:center;gap:9px;padding:12px 20px;border-radius:999px;border:0;cursor:pointer;
+    background:var(--mint);color:#08210f;font-family:inherit;font-weight:800;font-size:12.5px;
+    letter-spacing:.04em;text-transform:uppercase;transition:.15s}
+  .vbtn:hover{filter:brightness(1.06);transform:translateY(-1px);box-shadow:0 12px 30px rgba(122,217,168,.25)}
+  .vbtn svg{width:18px;height:18px;fill:currentColor;flex:none}
+  .vslot{background:var(--purple);padding:12px 10px 10px;margin:14px 0 4px;box-shadow:0 18px 40px rgba(0,0,0,.35)}
+  .vslot[hidden]{display:none}
+  .vhead{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;margin-bottom:10px}
+  .vhead .vmsg{font-family:var(--sans);font-size:13px;line-height:1.55;color:rgba(255,255,255,.92);margin:2px 0 0;padding:0 2px}
+  .vclose{background:none;border:0;color:rgba(255,255,255,.85);font-size:22px;line-height:1;cursor:pointer;padding:0 2px}
+  .vclose:hover{color:var(--white)}
+  .vslot iframe{display:block}
+
+  /* ── YouTube subscribe pill (sits in the listen row; outranks .listen a's mint) ── */
+  .listen a.yt-pill{background:var(--purple);color:var(--white)}
+  .listen a.yt-pill:hover{filter:brightness(1.1);transform:translateY(-1px)}
+  @media(max-width:720px){ /* mobile: no label, three compact pills on one row */
+    .listen .lname{display:none}
+    .listen{gap:8px}
+    .listen a{padding:10px 13px;font-size:11px;gap:6px}
+    .listen svg{width:16px;height:16px}
+  }
+
+  /* ── Footer: Follow us on | Brought to you by | Produced by, + Menu dropdown ── */
+  footer{border-top:1px solid var(--line);margin-top:68px;padding:52px 20px 58px}
+  .footgrid{max-width:var(--wrap);margin:0 auto;display:grid;grid-template-columns:1fr 1.15fr .8fr;gap:44px;align-items:start}
+  .fcol{text-align:center;display:flex;flex-direction:column;align-items:center}
+  .foot-label{font-size:11px;font-weight:700;letter-spacing:.26em;text-transform:uppercase;color:var(--dim);margin-bottom:18px}
+  .sponsors{display:flex;justify-content:center;align-items:center;gap:34px;flex-wrap:wrap}
+  .sponsors a,.produced a{display:inline-flex;transition:.15s}
+  .sponsors a:hover,.produced a:hover{transform:translateY(-1px)}
+  .sponsors img{height:32px;width:auto;opacity:.92}
+  .produced img{height:30px;width:auto;opacity:.95}
+  .sponsors a:hover img,.produced a:hover img{opacity:1}
+  footer .socials{display:flex;gap:11px;justify-content:center;flex-wrap:wrap;margin:0}
+  footer .socials a{width:40px;height:40px;border-radius:50%;border:1.5px solid rgba(122,217,168,.5);display:flex;align-items:center;justify-content:center;transition:.15s}
+  footer .socials a svg{width:18px;height:18px;fill:var(--mint);transition:.15s}
+  footer .socials a:hover{background:var(--mint);border-color:var(--mint);transform:translateY(-2px)}
+  footer .socials a:hover svg{fill:#0a0a0a}
+  .footbar{max-width:var(--wrap);margin:34px auto 0;border-top:1px solid var(--line);padding-top:20px;display:flex;flex-direction:column;align-items:center;gap:14px}
+  .footnav-dd{display:block;width:100%;max-width:var(--wrap);margin:0 auto;text-align:center}
+  .footnav-dd>summary{list-style:none;cursor:pointer;display:inline-flex;align-items:center;gap:9px;font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.5px;font-size:13px;color:var(--muted);background:transparent;border:1px solid var(--line);padding:8px 16px 6px;transition:.15s}
+  .footnav-dd>summary::-webkit-details-marker{display:none}
+  .footnav-dd>summary:hover{color:var(--mint);border-color:rgba(122,217,168,.45)}
+  .footnav-dd>summary .ham{width:15px;height:15px;fill:currentColor;transform:translateY(-1px)}
+  .footnav-dd .dd-links{display:flex;flex-direction:row;flex-wrap:wrap;justify-content:center;gap:12px 24px;padding:24px 0 4px}
+  .footnav-dd .dd-links a{font-size:11.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:.15s}
+  .footnav-dd .dd-links a:hover{color:var(--mint)}
+  .copyright{font-size:12px;color:var(--dim);text-align:center}
+  @media(max-width:720px){.footgrid{grid-template-columns:1fr;gap:34px}footer{padding:40px 16px 20px}.footbar{margin-top:34px;padding-top:24px;gap:20px}.footnav-dd .dd-links{flex-direction:column;align-items:center;gap:15px}}
+
+  @media(min-width:720px){header.hero{padding:48px 0 6px}}
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "PodcastEpisode", "name": "Game On - Financial Education for Kids", "url": "https://thenumbersgamepodcast.com.au/game-on-financial-education-for-kids", "datePublished": "2024-04-15", "episodeNumber": 169, "image": "https://i.ytimg.com/vi/b-IzA2TFD8Y/maxresdefault.jpg", "partOfSeries": {"@type": "PodcastSeries", "name": "The Numbers Game", "url": "https://thenumbersgamepodcast.com.au/"}}</script>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-in">
+      <a class="brand" href="/" aria-label="The Numbers Game home"><img src="assets/tng-logo.png" alt="The Numbers Game"></a>
+      <div class="navlinks">
+        <a href="/">Home</a>
+        <div class="navgroup">
+          <a class="navtop">Episodes</a>
+          <div class="subnav">
+            <a href="/episodes">All episodes</a>
+            <a href="/adventure">Find moments</a>
+          </div>
+        </div>
+        <div class="navgroup">
+          <a class="navtop">About</a>
+          <div class="subnav">
+            <a href="/about">The show</a>
+            <a href="/nick-reilly">Nick Reilly</a>
+            <a href="/jason-robinson">Jason Robinson</a>
+          </div>
+        </div>
+        <a href="/contact">Contact</a>
+      </div>
+      <button class="navburger" id="navburger" type="button" aria-label="Menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24"><path d="M3 6h18v2H3zM3 11h18v2H3zM3 16h18v2H3z"/></svg>
+      </button>
+    </div>
+    <div class="navdrop" id="navdrop" hidden>
+      <a href="/">Home</a>
+      <span class="navlabel">Episodes</span>
+      <a class="sub" href="/episodes">All episodes</a>
+      <a class="sub" href="/adventure">Find moments</a>
+      <span class="navlabel">About</span>
+      <a class="sub" href="/about">The show</a>
+      <a class="sub" href="/nick-reilly">Nick Reilly</a>
+      <a class="sub" href="/jason-robinson">Jason Robinson</a>
+      <a href="/contact">Contact</a>
+    </div>
+  </nav>
+
+  <main class="wrap">
+
+    <header class="hero">
+      <div class="hook">
+        <span class="eptag">EP 169</span>
+        <h1 class="hk"><span class="hkrow"><span>Game On - Financial</span></span>
+        <span class="hkrow"><span class="mintseg">Education for Kids</span></span></h1>
+      </div>
+    </header>
+
+    <div class="player-wrap" id="player-wrap">
+      <div class="player" id="player">
+        <button class="facade" id="facade" style="background-image:url('https://i.ytimg.com/vi/b-IzA2TFD8Y/maxresdefault.jpg')" aria-label="Play episode">
+          <span class="play"></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="explore">
+      <div class="tabs" role="tablist">
+        <button class="tabbtn on" data-panel="p-summary">Summary</button>
+        <button class="tabbtn" data-panel="p-chapters">Chapters<span class="ct" id="chcount"></span></button>
+        <button class="tabbtn" data-panel="p-questions">Questions<span class="ct" id="qcount"></span></button>
+      </div>
+      <section class="tpanel" id="p-summary">
+        <div class="summary-body">
+          <p>Nick brings a different topic: teaching kids money through games. Prompted by Robert Kiyosaki on Mark Boris's podcast, the trio dig into the Cashflow 101 board game, which teaches financial statements and the rat race versus fast track, and compare it to Monopoly, chess and the game Life. Marty shares how Monopoly and chess sharpened his son Charlie, who now runs a rare-coin eBay business and knows his cashflow. They land on Kiyosaki's point that it is not how much you earn but how much you keep, retell Kerry Packer's four questions that matter, and champion financial education as one of the best investments a parent can make.</p>
+        </div>
+        <div class="vask">
+          <button class="vbtn" id="vbtn" type="button">
+            <svg viewBox="0 0 24 24"><path d="M12 14a3 3 0 0 0 3-3V6a3 3 0 1 0-6 0v5a3 3 0 0 0 3 3zm5-3a5 5 0 0 1-10 0H5a7 7 0 0 0 6 6.92V21h2v-3.08A7 7 0 0 0 19 11h-2z"/></svg>
+            Send us a voice note
+          </button>
+          <div class="vslot" id="vslot" hidden>
+            <div class="vhead">
+              <p class="vmsg">We'd love to hear from you. You can leave up to a 90 second voice note for us to play on the show: a question, some feedback, or a topic you want covered.</p>
+              <button class="vclose" id="vclose" type="button" aria-label="Close">&times;</button>
+            </div>
+            <iframe src="https://www.speakpipe.com/widget/inline/hhq6kzggsx7zpcsvakgxfrzun3zidpde" allow="microphone" width="100%" height="200" frameborder="0" title="Leave The Numbers Game a voice note"></iframe>
+          </div>
+          <script async src="https://www.speakpipe.com/widget/loader.js" charset="utf-8"></script>
+        </div>
+        <div class="sumfacts">
+          <div class="fact"><span class="fl">Release date</span><span class="fv">15 April 2024</span></div>
+          <div class="fact"><span class="fl">Hosts</span><span class="fv"><a href="/nick-reilly">Nick Reilly</a>, <a href="/jason-robinson">Jason Robinson</a> &amp; <a href="/marty-vidakovic">Marty Vidakovic</a></span></div>
+
+        </div>
+      </section>
+      <section class="tpanel" id="p-chapters" hidden>
+        <p class="hint">Jump straight to the part you need.</p>
+        <div id="chapters"></div>
+      </section>
+      <section class="tpanel" id="p-questions" hidden>
+        <p class="hint">Real questions this episode answers. Tap one to hear the answer.</p>
+        <div id="qa"></div>
+      </section>
+    </div>
+
+    <div class="drops">
+
+      <details class="drop">
+        <summary><span class="st">Episode transcript</span><span class="chev">+</span></summary>
+        <div class="drop-body tbody">
+          <p><span class="spk">Jason · 00:00</span>Welcome to episode 169 of The Numbers Game. I'm Jase and I'm here with Nick and Marty. How are you going fellas?</p>
+          <p><span class="spk">Marty · 00:06</span>Going well, thanks Jase. Been out at the Healesville Farmers Market on the weekend and, uh, amazing what you can buy for 70 bucks out there. Got some great veggies, some squash, some pumpkin, and bought some lovely honey.</p>
+          <p><span class="spk">Marty · 00:21</span>And, uh, I thought it's a good thing to do. Not many, uh, stands out there cause it is Healesville. Bit of fun, but. Uh, for the seven or eight stands that were there, we, uh, got a good bounty. So, yeah, we're feeling very healthy and happy. So how are you, Nick, going</p>
+          <p><span class="spk">Nick · 00:37</span>well? I'm very well, Marty. Yeah. Nice and refreshed, um, a reasonably busy weekend, but nothing too crazy.</p>
+          <p><span class="spk">Nick · 00:44</span>Went to, um, To Crown Casino, Sunday morning for Yum Cha. Haven't done that for quite some time and every time I do that, I'm like, Geez, why don't we do this more often? It's not much better. Uh, but it was buzzing</p>
+          <p><span class="spk">Nick · 01:00</span>there. It was buzzing. Uh, Crown mid, well, just before midday on Sunday. So, people still got cash.</p>
+          <p><span class="spk">Nick · 01:05</span>People are still spending out there.</p>
+          <p><span class="spk">Marty · 01:07</span>What's Yum Cha cost these days?</p>
+          <p><span class="spk">Nick · 01:10</span>Well, I'm glad you asked because, actually, I'll give you a bit of a story. We, we, we were sitting there and I was looking around and, um, Lucky Chan is where we went for anyone that, um, is familiar with Crown and they've got a huge restaurant with two, two levels.</p>
+          <p><span class="spk">Nick · 01:26</span>And I said to my wife, Alicia, I said, do you know what the rent is here? Like, it must be ludicrous and millions of dollars a year. Had no idea. Um, I don't know, Jase, you might have an idea. I don't know, but I was like, where would you even start? The rent here must be huge, so. Anyway, we got to the end, um, no drinks really, yeah, yeah, obviously it was Sunday morning, so we just had um, I think a bottle of sparkling water, and for two people it was 176.</p>
+          <p><span class="spk">Nick · 01:55</span>Now, That's not super expensive for eating out, but it's</p>
+          <p><span class="spk">Nick · 02:00</span>pretty expensive for yum cha. I would guarantee you, we could have went to the city and probably paid 110 or a hundred bucks or maybe 120. Or you know, maybe you had to Springvale somewhere with my could have paid even less. So 40</p>
+          <p><span class="spk">Marty · 02:13</span>bucks</p>
+          <p><span class="spk">Nick · 02:14</span>Yeah, well possibly.</p>
+          <p><span class="spk">Nick · 02:15</span>Yeah so I think there's a there's a there's a crown crown premium on the price, but Just got me thinking what those businesses are paying in rent, you know, I look at the businesses down there. You've got You've got Grady you've got what else is down there? Just the Atlantic You Uh, Lucky Chan, Nobu's there as well.</p>
+          <p><span class="spk">Nick · 02:40</span>Rockpool. Rockpool. That, uh, yeah. Maybe put it on your, uh, put it on your list to do, Marty, but how much are these places paying in rent, do you reckon, on a, on an annual basis at Crown Casino? Be ludicrous. Be huge. Jase,</p>
+          <p><span class="spk">Jason · 02:56</span>Yeah, I'm distracted. I'm a little bit, uh, a little bit nervous. I've</p>
+          <p><span class="spk">Jason · 03:00</span>got the London marathon this weekend coming up.</p>
+          <p><span class="spk">Jason · 03:03</span>Um, so April 21st for anyone playing at home, uh, Greg and I will be over in London running the London marathons. So just trying to keep the body fit and healthy and. Yeah, just getting geared up for that. So it was a bit of a quiet weekends, um, just visiting family and keeping low key, but mate, all good.</p>
+          <p><span class="spk">Jason · 03:21</span>All's good in the, uh, the numbers game world and the, the Jace world. So happy days. It's good.</p>
+          <p><span class="spk">Nick · 03:26</span>How is the body?</p>
+          <p><span class="spk">Jason · 03:27</span>Good. Yeah. I had a, had a few niggles earlier on in the prep. I think I could be a little bit better prepped, but at the same time, just happy to get out there and see the London eye, the big Ben run across tower bridge.</p>
+          <p><span class="spk">Jason · 03:37</span>And we finished in front of Buckingham palace. And, um, by the time I'm done, Greg would have finished about an hour before me. Um, so hopefully he's waiting with a nice ice cold frothy and, um, yeah, we can go and do some sightseeing together with the family and</p>
+          <p><span class="spk">Marty · 03:50</span>are you off the grog? Or are you, are you back on</p>
+          <p><span class="spk">Jason · 03:55</span>what you have to be offered to be back on?</p>
+          <p><span class="spk">Jason · 03:57</span>Is that, is that how it works? Well,</p>
+          <p><span class="spk">Marty · 03:59</span>you, you went</p>
+          <p><span class="spk">Marty · 04:00</span>a little while without having too much to drink. Have you sort of, uh, loaded up again as you get closer or are you still sort of, uh, You</p>
+          <p><span class="spk">Jason · 04:07</span>know, yeah. Say very low key in the couple of weeks prior. So I had a, when I had the injury, I like doubled up the injury by then going out on the weekend and being like, Oh, well, fuck it.</p>
+          <p><span class="spk">Jason · 04:18</span>I'm injured. Like might as well enjoy myself probably wasn't the right attitude. So we'll, we'll learn, we'll adapt, uh, we'll get through this one. And then we've got gold coast marathon and Chicago marathon later in the year. So I think what I'll do is I'll learn from everything that I did wrong this time around and then try and get better for the next one.</p>
+          <p><span class="spk">Jason · 04:35</span>Marathon runners listening. If you have tips, feel free to jump on Instagram, give the numbers game a follow and send me your marathon tips. I'd love to hear them. But in lieu of that, we've got Nick Riley, uh, taking us through an interesting episode today. What have you got, Nick?</p>
+          <p><span class="spk">Nick · 04:48</span>Thanks Chase. Yeah, a little bit of a different topic.</p>
+          <p><span class="spk">Nick · 04:52</span>And the reason I chose this topic was. I feel like we've been building up to something like this, um, this, this is not crazy stuff by the way. The</p>
+          <p><span class="spk">Nick · 05:00</span>topic is board games for kids. But listening to Marty recently talk about the homeschooling and some of the interaction that Marty had post, um, post that, um, interview or that discussion that we had, it seems there are a lot of parents out there that are homeschooling.</p>
+          <p><span class="spk">Nick · 05:17</span>And I guess the issue around school and learning, um, basic money strategies has been a problem for quite some time. Um, you know, the Barefoot Investor has been, um, pushing this agenda for some time, which I think is great. But I listened to a podcast this morning, uh, Mark Boris, uh, Straight Talk, which is a good podcast.</p>
+          <p><span class="spk">Nick · 05:38</span>And he had Robert Kiyosaki on there, who most people will remember him or know him from the book, Rich Dad, Poor Dad. Um, one of the most read books by him. In the world, I'd suggest, and there's not many people that I know, um, that have not read that book or at least heard of it. And he has a board game called Cashflow 101.</p>
+          <p><span class="spk">Nick · 05:59</span>Now, I've</p>
+          <p><span class="spk">Nick · 06:00</span>never heard of this board game. I mentioned it to Marty earlier today and he's, he's heard of it. And the board game teaches you the basics of financial statements. So, you know, based on, um, well, I'll, I'll actually give a brief summary of it, but it teaches you the basics of financial statements.</p>
+          <p><span class="spk">Nick · 06:18</span>And it got me thinking about monopoly and, you know, monopoly teaches you about building wealth. And then I started to think about chess and chess teaches you to strategize and obviously Marty I wanted to get your input here at some stage because I know Charlie's gone down a rapid hole with chess. So I was thinking all these things that are available to parents for kids, um, and particularly games, um, that parents should be across and the Cashflow 101.</p>
+          <p><span class="spk">Nick · 06:45</span>Once I did some research, there's, there's an abundance of games that, that do similar things. But something that, that, that Robert Kiyosaki said, uh, a quote of his really resonated with me and it was, uh, kids learn lessons by playing</p>
+          <p><span class="spk">Nick · 07:00</span>games. It's the best way for them to practice character, uh, character and habits that they'll use later in life.</p>
+          <p><span class="spk">Nick · 07:06</span>Cashflow for Kids helps develop a strong foundation of financial intelligence and encourages kids to use their money wisely. And then I just got thinking about what kids learning. And obviously most people know that I'm addicted to golf at the moment. And I thought about watching kids get golf lessons.</p>
+          <p><span class="spk">Nick · 07:24</span>Cause you often see kids get golf lessons when you go to the golf driving range and with the putting, it's all about putting and putting games and not so much, um, not so much the, um, what do you call it? The putt putt games. But when you see the golf instructors on the putting green with kids, they might have a group of six, seven kids.</p>
+          <p><span class="spk">Nick · 07:44</span>It's all driven by game. It's not how you need to get the ball in the hole. There's some kind of game. And it just got me thinking that, well, you learn as a kid from playing, no matter if it's sport, you know, you learn hand eye, if it's sport, all these things that you learn. So I</p>
+          <p><span class="spk">Nick · 08:00</span>thought we'd maybe unpack these games a little bit more.</p>
+          <p><span class="spk">Nick · 08:03</span>And again, Marty, lean on your experience with Charlie. Cause I'm pretty sure he's into Monopoly too. Well, that's been a big part of his learnings and the impact that this can have, or How these can actually be a really good tool for parents, uh, when they're trying to teach basic money skills, um, versus, you know, maybe a boring general ledger that Jason and I learned in our accounting degree.</p>
+          <p><span class="spk">Nick · 08:23</span>So thoughts, Marty?</p>
+          <p><span class="spk">Marty · 08:24</span>Well, I think it's, it's pivotal. Uh, I think we've, uh, I wanted to buy that Cashflow 101 game a couple of years ago for Charlie, uh, to take him to the next level from Monopoly. Uh, I think it was, couldn't find it in Australia. Like I think it was almost. At the time it was something like 250 bucks or something just to get it over, over to Australia.</p>
+          <p><span class="spk">Marty · 08:45</span>So I didn't end up doing it, but I like the fundamentals of actually, you know, having the relevancy of understanding a balance sheet and having asset, you know, income producing assets. Um, I think it's really good, but even, even monopoly with</p>
+          <p><span class="spk">Marty · 09:00</span>Charlie, it's interesting. When you're playing games, it's not just about learning about the financial disciplines around the game, but it's who you're playing with in the enjoyment of that game.</p>
+          <p><span class="spk">Marty · 09:11</span>And that's in anything in life, whether it's cricket, uh, or, or any type of learning, it's always better together. And when you're getting perspectives from other people in the game, but even off the back of playing Monopoly, I remember Charlie asked me, why would you ever buy a home? Because it doesn't produce any income.</p>
+          <p><span class="spk">Marty · 09:28</span>Yeah. And I thought, wow, what a great response out of playing the game because, you know, again, he wants, you know, he wants to get a bit of yield off his asset. Um, and I thought that was, that was the time where I thought, wow, these, these really do provide an impact, create fun. But allow you to ask better questions.</p>
+          <p><span class="spk">Marty · 09:48</span>And I think it's just transferring those games just into everyday life and finding opportunities to be able to do that. That's a paramount. And I, I agree too, with the chess in regards to</p>
+          <p><span class="spk">Marty · 10:00</span>strategic thinking, um, that's been a real game changer in the way Charlie, like he thinks about five to six moves, uh, ahead of me.</p>
+          <p><span class="spk">Marty · 10:10</span>Like it's, it's ridiculous because the kids mind. So. Flexible and able to take it on board much more aggressively than even I can so it's um It's just wonderful to see these kids get the concept of games But then take it to levels that you're probably stuck at when you played when you were 18 You sort of haven't evolved and they just take it to a whole different level again So but the cash flow 101 I'm very interested to get my hands on because I think that's the next step out of Monopoly and Um, for Charlie personally.</p>
+          <p><span class="spk">Marty · 10:41</span>So yeah,</p>
+          <p><span class="spk">Jason · 10:41</span>just for everyone playing at home, it's been rebranded as just cash flow now, formerly cashflow one on one. So just, just found the new website for that. I'm sure it's still called cashflow one on one everywhere, but rich dad's uh, official website has it coined as just cashflow. Um, but wait, I've just,</p>
+          <p><span class="spk">Jason · 11:00</span>I've never heard of it or seen it before available for around one 50 to 200 bucks on Amazon at the moment or eBay, but, um, it's It's so clever, right?</p>
+          <p><span class="spk">Jason · 11:09</span>Like I think, I think back to childhood, primary school, high school, and go, you know, where are you meant to get those lessons from? Right. And if, and if your parents, you know, aren't necessarily, let's say they weren't financially savvy and stacking the asset column as Rich Dad Poor Dad talks about and going through all those lessons, we learn from when we go to school a lot.</p>
+          <p><span class="spk">Jason · 11:27</span>To learn, but most of the time, this isn't built into the curriculum at school. They're busy teaching Pythagoras theorem, which helps me be a great pool player. I've won a few games of pool yesterday and was lipping off about Pythagoram. Um, but again, my, my asset column could be stacked a little bit better if I'd been better with my money, uh, growing up rather than, you know, uh, I think there's something on the website talks about, you know, it's not.</p>
+          <p><span class="spk">Jason · 11:50</span>How much, it's not about how much income you earn. It's about how much you keep of that money. So if you're busy spending to travel and keep up with the Joneses and the</p>
+          <p><span class="spk">Jason · 12:00</span>latest car and, uh, the latest clothes, when you could have been stuck in the asset column and building, you know, passive income generating assets.</p>
+          <p><span class="spk">Jason · 12:07</span>So you could have all of it down the track, uh, or. You know,</p>
+          <p><span class="spk">Nick · 12:11</span>very interesting. I like it, Nick. I've, I've never played the game. Um, so I just will say that, but I've done a bit of research and I'll, I'll read a few things out, but, um, yeah, to, to Marty's point. I think, um, yeah, well it was, did you just look it up?</p>
+          <p><span class="spk">Nick · 12:26</span>It was still 200 bucks, Jay. So I had a quick look this morning. Yeah, just,</p>
+          <p><span class="spk">Jason · 12:28</span>just looked it up. Yeah. There's websites, websites range between 150 and 200.</p>
+          <p><span class="spk">Nick · 12:35</span>But, uh, I guess how much would you pay for, to, to educate your kids? I guess it's, you know, if you compare it to. Some other costs</p>
+          <p><span class="spk">Jason · 12:42</span>could be one of the best investments you make.</p>
+          <p><span class="spk">Nick · 12:44</span>Yeah. And I guess Kiyosaki has always preached, um, indirectly that the system is the system and you need to know how to work the system. Um, and on the podcast with Boris this morning, he was very much talking about that. It was a bit of a doomsday, so for anyone that's</p>
+          <p><span class="spk">Nick · 13:00</span>a bit of a warning for anyone that is going to listen to it, uh, Kiyosaki is quite opinionated on a few things.</p>
+          <p><span class="spk">Nick · 13:05</span>And, um, but it was, it was good to get a different perspective. Um, so just a couple of things on the board game. Um, so the board game has two tracks, a rat race, um, small circle where you can only roll one dice to advance. And a fast track where you roll two dice to advance. Marty, which track would you be on?</p>
+          <p><span class="spk">Marty · 13:27</span>Oh, Australian the fast track. I already know where this is heading.</p>
+          <p><span class="spk">Nick · 13:30</span>In the rat race, you get paid for passing your paycheck space and then draw from one of the four decks of cards, depending on which space you've landed. Um, some, some of the deals are good. Others are bad. Your main problem in the rat race is shortage of cash in the fast track.</p>
+          <p><span class="spk">Nick · 13:47</span>Your main problem is an excess of cash and finding investments to sink it into before, before you lose it to lawsuits, divorce or tax audits. So it's, this is real life</p>
+          <p><span class="spk">Nick · 14:00</span>stuff, right? Um, in the heart of the game though. Uh, Player Sheets, where players learn how to fill out financial statements. Players choose from a variety of starting careers, such as truck driver, mechanic, lawyer, airline pilot, etc.,</p>
+          <p><span class="spk">Nick · 14:15</span>and fill out their financial sheets appropriately. As they land cards and invest in different deals, they dutifully log each change to their financial sheets as well. After a few games, most people end up using the same financial sheets to fill out their own personal information. With each card event, the drawing player may buy at that price, but all players may sell at that price.</p>
+          <p><span class="spk">Nick · 14:36</span>Also, players make co investments with the drawing player or even buy the deal from him or her, if they agree. So, it's, I'm reading that and it sounds to me it's all about, okay, you're choosing whether you want to be someone who earns money and just pays you away, or someone who creates money and invests.</p>
+          <p><span class="spk">Nick · 14:57</span>And then you're also dealing with life</p>
+          <p><span class="spk">Nick · 15:00</span>problems. So things that could get thrown at you in life, such as divorce and tax. Um, but then you're also looking at different deals and what are good deals and what are bad deals and also dealing with other people in the game. And how to understand what a good deal or a bad deal is.</p>
+          <p><span class="spk">Nick · 15:15</span>Now I look at all of that and I think, well, that is business. That is business in its absolute entirety, because you're in, you're dealing with people. You're looking at good and bad investments, whether that's your people or other investments you might make into your business, chasing a return. But I really loved the rat race versus fast track.</p>
+          <p><span class="spk">Nick · 15:33</span>And that's what Robert Kiyosaki talks about. Don't be in the rat race. Don't be earning money and then someone taking it all off you, whether it's through debt or tax, be someone who's creating, um, cashflow because he's big on cashflow that you can then use to continue to build assets. So yeah, I thought, what better way to teach your kids than through a board game?</p>
+          <p><span class="spk">Marty · 15:53</span>Yeah. There's another board game in Australia called Life. It's a rat race board game</p>
+          <p><span class="spk">Marty · 16:00</span>where you could pick a trade or you could go to uni. But if you go to uni, you actually, it takes longer to get around the board, but you get a higher income off the back end and you got to work out which, whether it in being a trade and starting in work earlier ends up being better.</p>
+          <p><span class="spk">Marty · 16:17</span>And along the way, You get little, um, what would I call them? Little, uh, little pointers that you put into this car when you have kids and that slows you down as well. So you go, so it's this track. But what I, what I liked about it was it was a bit realistic in regards to various different professions, but I didn't like that there was no self employed, uh, route.</p>
+          <p><span class="spk">Marty · 16:39</span>And that's why I stopped playing it. So, but it was actually an interesting game just to give perception as to, you Choice and it was an early entry game, but definitely need the cashflow game. I think that, um, yeah, just again, it's all about choice in life and setting your kids up to have the most amount of choice and letting them move</p>
+          <p><span class="spk">Marty · 17:00</span>towards what they really want to do in the end.</p>
+          <p><span class="spk">Marty · 17:02</span>But I think it's a education 101, that cashflow game from what you're saying there, Nick,</p>
+          <p><span class="spk">Nick · 17:07</span>and there must be an Australian version that's cheaper, um, cheaper and more accessible. I would have thought. Um, but yeah, then there's also monopoly, I guess, and I guess monopoly, I've obviously played a lot of monopoly as most of us would have, but I don't feel like that would have given me, uh, the same education as something like that cashflow game would have.</p>
+          <p><span class="spk">Nick · 17:31</span>Um, it is very much just about beating the person, you know, having more things, I guess, than the, than the people that you're playing against. Um, you know, it doesn't talk about what type of job have you've got and are you in the rat race or the fast track. So. Yeah, it was an interesting one. Jayce, you're going to teach your kids through cashflow</p>
+          <p><span class="spk">Jason · 17:52</span>101.</p>
+          <p><span class="spk">Jason · 17:52</span>Uh, I should play it myself first. I reckon we should get a, we, we should pull together as the numbers game by a</p>
+          <p><span class="spk">Jason · 18:00</span>numbers game owned cashflow board game. And the three of us have a bit of a round and see who comes out on top and maybe we can share some odds with our listeners, get some bets going and, uh.</p>
+          <p><span class="spk">Jason · 18:11</span>See see who comes out on top.</p>
+          <p><span class="spk">Nick · 18:13</span>There's no chance. I'm playing Marty bit of Kovac in a cash flow game Hands down</p>
+          <p><span class="spk">Marty · 18:18</span>Charlie's the real threat He's there like like I've said before previous podcast like he collects rare coins and then sells them You know on eBay and we have to actually run it through an adult account And before we shifted to his account, just purely because it's commerce.</p>
+          <p><span class="spk">Marty · 18:37</span>And it's, um, he goes, dad, where's that 32 that, uh, should have been there, uh, three days ago. He's all over it. He knows his cashflow, this kid, but it's great. Right? So he, he knows his cost. He knows what he sells for. He knows the difference. And even eBay has a fantastic, um, Calculator in regards to</p>
+          <p><span class="spk">Marty · 19:00</span>stripping out all the costs when you, when you actually, someone buys something, like all fees and everything.</p>
+          <p><span class="spk">Marty · 19:05</span>So it really gives you a net figure at the end of that sale. Um, very, very good education piece for kids in regards to if they're doing anything on commerce, um, on that site.</p>
+          <p><span class="spk">Nick · 19:17</span>Just the basics and, and actually, one, there's Burris said. Around he's, um, he's dealings with Kerry Packer and this was in the same podcast.</p>
+          <p><span class="spk">Nick · 19:27</span>And he said he had to present a set of financial statements to Kerry Packer every month when they're in wizard, they were 50, 50. Um, and he, when he first come in, he obviously presented all the things you would think you would present through a profit and loss, you know, EBIT and all these things, EBITDA.</p>
+          <p><span class="spk">Nick · 19:44</span>multiples and whatnot. And Kerry said to him, son, I don't give a shit about multiples and EBIT. I want to know four things. Who do we owe money to? Who owes us money? And how long has it been owing for? How much cash have we got in the bank? And what, what was the</p>
+          <p><span class="spk">Nick · 20:00</span>other one? Um, I think it was just simply how, how much money have we made this month?</p>
+          <p><span class="spk">Nick · 20:04</span>That was it, the four things. And I think about running a business now and, That's it. Who do we owe? Who owes us money? How much money have we got in the bank? And have we made any money this month? And it's funny to think that someone at that level, Kerry Packers level, um, obviously an old school business person, but they were the only four things that mattered.</p>
+          <p><span class="spk">Nick · 20:23</span>Not all the other numbers that can, you know, and Jase, a lot of the numbers that you'd see thrown around. At all. You come back to those four things, um, they're probably the four most important things that determine whether or not you're a success.</p>
+          <p><span class="spk">Marty · 20:36</span>There's a great software called, uh, Cashflow Story and it's the, it's the basics in regards to running a business effectively, exactly what you said there, Nick, is, is covered in that.</p>
+          <p><span class="spk">Marty · 20:48</span>And they say how often they're saying, you know, people look at the profit and loss and that's where they think their business is at. But they don't, like they say, what is it, revenue is, revenue is vanity, you know,</p>
+          <p><span class="spk">Marty · 21:00</span>profit is great, but cash is king. And it's, um, you know, but they're saying, but what is your cash position?</p>
+          <p><span class="spk">Marty · 21:06</span>At the end of the day, if you've got money owing, and you've got, you know, you've got debts and everything, what is the actual cash you're bringing into the business? And this, this software does an analysis on that, as well as, you know, off the balance sheet. And are you reducing debt? You know, is your cash working towards strengthening?</p>
+          <p><span class="spk">Marty · 21:25</span>But it's much more simpler than things I've seen out there in the market, uh, even from an accountancy practice as, as we all look at, but it's, it's relevance is, is really critical to key components on business. So I like that you mentioned that. Because, um, so many business owners get overwhelmed with, you know, jargon, I guess, you know, it happens in the finance world as well.</p>
+          <p><span class="spk">Marty · 21:48</span>But what are those key, those key attributes that mean your business is making money and that you're investing that money successfully? Yeah.</p>
+          <p><span class="spk">Jason · 21:57</span>Ultimately, I mean, the, the cashflow</p>
+          <p><span class="spk">Jason · 22:00</span>board game and, and the things we've talked about there, it comes down to education, like an empowering yourself and your knowledge for success.</p>
+          <p><span class="spk">Jason · 22:05</span>So even Marty talking about cashflow story. You know, I sat there getting a little bit like, Oh, like the amount of times I'll show a business owner their P and L and tell them how much profit they've made and they'll go, but I don't have, I don't have any money. Like, you know, so it's that, you know, what's tied up in age receivables, what's tied up in payables, you know, what's the cash balance and where's the cash gone, how much has been drawn off the balance sheet and gone elsewhere.</p>
+          <p><span class="spk">Jason · 22:31</span>It's um, all those things. Anything that empowers financial education. All for it. So I'm really happy, uh, that you've brought cashflow 1 0 1 or now Cashflow to the table, Nick. So anyone out there, if you do end up picking up a co, a copy of cashflow, please let us know what you think and how you go. Um, just gonna throw in there as well that I just had a quick little research on the side of some interesting board games that encourage education and valuable life lessons.</p>
+          <p><span class="spk">Jason · 22:57</span>Not sure this one should be in the list, but there's a board</p>
+          <p><span class="spk">Jason · 23:00</span>game called Pandemic where you get to be a player. That you work together as a team at requires teamwork and problem solving skills, and you save humanity from pandemics around the globe. Apparently it is thrilling and strategic and suitable for players of all ages.</p>
+          <p><span class="spk">Jason · 23:18</span>So if cashflow one on one doesn't sound like your game, maybe pick up pandemic and also follow us and reach out to us at the numbers game on Instagram or. Uh, email or LinkedIn and let us know, uh, your favorite board game, where you play it, who you play it with, and, uh, if you're the absolute boss at it.</p>
+          <p><span class="spk">Jason · 23:34</span>So thank you for listening and until next time,</p>
+          <p><span class="spk">Marty · 23:37</span>keep rolling the dice. Game</p>
+          <p><span class="spk">Marty · 23:41</span>over. ---</p>
+        </div>
+      </details>
+
+    </div>
+
+    <!-- LISTEN:START (build_episode.py rewrites the 3 URLs + iframe title per episode; player dropped if no spotifyEmbedUrl) -->
+    <section class="listen-now">
+      <div class="ln-head">
+        <span class="ln-title">Listen now</span>
+      </div>
+      <div class="audio-embed">
+        <iframe src="https://open.spotify.com/embed/episode/6HLM38PaUZugwXaHlxXAFD?utm_source=generator"
+          width="100%" height="152" loading="lazy" allowfullscreen
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+          title="Spotify — Game On - Financial Education for Kids"></iframe>
+      </div>
+    </section>
+
+    <div class="listen">
+      <a href="https://open.spotify.com/episode/6HLM38PaUZugwXaHlxXAFD" target="_blank" rel="noopener" aria-label="Listen to this episode on Spotify">
+        <svg viewBox="0 0 24 24"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.52 17.34c-.24.36-.66.48-1.02.24-2.82-1.74-6.36-2.1-10.56-1.14-.42.12-.78-.18-.9-.54-.12-.42.18-.78.54-.9 4.56-1.02 8.52-.6 11.64 1.32.42.18.48.66.3 1.02zm1.44-3.3c-.3.42-.84.6-1.26.3-3.24-1.98-8.16-2.58-11.94-1.38-.48.12-1.02-.12-1.14-.6-.12-.48.12-1.02.6-1.14 4.32-1.32 9.72-.66 13.44 1.62.36.18.54.78.3 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.3c-.6.18-1.2-.18-1.38-.72-.18-.6.18-1.2.72-1.38 4.26-1.26 11.28-1.02 15.72 1.62.54.3.72 1.02.42 1.56-.3.42-1.02.6-1.56.3z"/></svg>
+        Spotify
+      </a>
+      <a href="https://podcasts.apple.com/au/podcast/id1555566088?i=1000652393556" target="_blank" rel="noopener" aria-label="Listen to this episode on Apple Podcasts">
+        <svg viewBox="0 0 24 24"><path d="M5.34 0A5.328 5.328 0 000 5.34v13.32A5.328 5.328 0 005.34 24h13.32A5.328 5.328 0 0024 18.66V5.34A5.328 5.328 0 0018.66 0H5.34zm6.525 2.568c2.336 0 4.448.902 6.056 2.587 1.224 1.272 1.912 2.619 2.264 4.392l.04.23c.04.272-.16.527-.432.567a.505.505 0 01-.567-.431l-.04-.213c-.312-1.57-.92-2.747-2.004-3.867-1.428-1.496-3.293-2.294-5.393-2.294-2.1 0-3.966.798-5.394 2.294-1.084 1.12-1.692 2.298-2.004 3.867l-.04.213a.507.507 0 01-.567.431.504.504 0 01-.432-.567l.04-.23c.352-1.773 1.04-3.12 2.264-4.392 1.608-1.685 3.72-2.587 6.056-2.587h.153zm.136 3.033c1.74 0 3.312.67 4.527 1.934.883.916 1.394 1.93 1.663 3.253l.04.23a.505.505 0 01-.431.567.503.503 0 01-.567-.432l-.04-.212c-.23-1.112-.659-1.97-1.396-2.732-1.052-1.1-2.404-1.672-3.9-1.672s-2.849.572-3.901 1.672c-.737.762-1.167 1.62-1.396 2.732l-.04.212a.503.503 0 01-.567.432.505.505 0 01-.432-.567l.04-.23c.27-1.323.78-2.337 1.664-3.253 1.215-1.264 2.787-1.934 4.527-1.934h.21zm-.078 3.05c1.092 0 2.091.424 2.89 1.22.582.58.924 1.245 1.107 2.15l.04.218a.501.501 0 01-.424.568.499.499 0 01-.568-.424l-.04-.198c-.146-.724-.413-1.253-.871-1.716-.63-.63-1.398-.957-2.226-.957s-1.595.328-2.225.957c-.459.463-.726.992-.871 1.716l-.04.198a.499.499 0 01-.568.424.501.501 0 01-.424-.568l.04-.219c.183-.904.525-1.569 1.106-2.149.8-.796 1.799-1.22 2.89-1.22h.184zM12 14.07a2.477 2.477 0 012.48 2.478A2.477 2.477 0 0112 19.024a2.477 2.477 0 01-2.48-2.477A2.477 2.477 0 0112 14.07z"/></svg>
+        Apple
+      </a>
+      <a class="yt-pill" href="https://www.youtube.com/@thenumbersgamepodcast?sub_confirmation=1" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.12-2.14C19.5 3.55 12 3.55 12 3.55s-7.5 0-9.38.51A3 3 0 0 0 .5 6.2 31.4 31.4 0 0 0 0 12a31.4 31.4 0 0 0 .5 5.8 3 3 0 0 0 2.12 2.14c1.88.51 9.38.51 9.38.51s7.5 0 9.38-.51a3 3 0 0 0 2.12-2.14A31.4 31.4 0 0 0 24 12a31.4 31.4 0 0 0-.5-5.8zM9.55 15.57V8.43L15.82 12z"/></svg>
+        Subscribe
+      </a>
+    </div>
+    <!-- LISTEN:END -->
+
+    <div class="relsec">
+      <span class="rtitle">Discover more</span>
+      <div class="relgrid">
+        <a class="relcard" href="/behind-the-billions-australia-s-rich-list">
+          <img src="https://i.ytimg.com/vi/dbSDOOqI50M/hqdefault.jpg" alt="EP 168 thumbnail">
+          <span class="rt">Behind The Billions - Australia's Rich List</span>
+          <span class="rfoot"><span class="rwhy">Also covers: financial literacy</span><span class="rtag">EP 168</span></span>
+        </a>
+        <a class="relcard" href="/should-australia-ditch-super">
+          <img src="https://i.ytimg.com/vi/kaeaiK_FwDg/hqdefault.jpg" alt="EP 287 thumbnail">
+          <span class="rt">Should Australia Ditch Super?</span>
+          <span class="rfoot"><span class="rwhy">27 July 2026</span><span class="rtag">EP 287</span></span>
+        </a>
+        <a class="relcard" href="/pokemon-cards-vs-bitcoin-gold-and-the-asx">
+          <img src="https://i.ytimg.com/vi/7PHS9HCqNvM/hqdefault.jpg" alt="EP 286 thumbnail">
+          <span class="rt">Pokemon Cards vs Bitcoin, Gold and the ASX</span>
+          <span class="rfoot"><span class="rwhy">20 July 2026</span><span class="rtag">EP 286</span></span>
+        </a>
+        <a class="relcard" href="/buying-commercial-property-with-your-super-in-2026">
+          <img src="https://i.ytimg.com/vi/RAQ80ecsDq0/hqdefault.jpg" alt="EP 285 thumbnail">
+          <span class="rt">Buying Commercial Property With Your Super in 2026</span>
+          <span class="rfoot"><span class="rwhy">13 July 2026</span><span class="rtag">EP 285</span></span>
+        </a>
+        <a class="relcard" href="/the-most-expensive-day-in-aussie-small-business-history">
+          <img src="https://i.ytimg.com/vi/V-10kMQrsDM/hqdefault.jpg" alt="EP 284 thumbnail">
+          <span class="rt">The Most Expensive Day in Aussie Small Business History</span>
+          <span class="rfoot"><span class="rwhy">6 July 2026</span><span class="rtag">EP 284</span></span>
+        </a>
+        <a class="relcard" href="/what-real-budget-reform-for-young-australians-would-actually-look-like">
+          <img src="https://i.ytimg.com/vi/le7HuIBq6Ow/hqdefault.jpg" alt="EP 283 thumbnail">
+          <span class="rt">What Real Budget Reform for Young Australians Would Actually Look Like</span>
+          <span class="rfoot"><span class="rwhy">29 June 2026</span><span class="rtag">EP 283</span></span>
+        </a>
+      </div>
+      <div class="reldots" id="reldots"></div>
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="footgrid">
+      <div class="fcol">
+        <div class="foot-label">Follow us on</div>
+        <div class="socials">
+          <a href="https://www.instagram.com/thenumbersgamepodcast/" target="_blank" rel="noopener" aria-label="The Numbers Game on Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.8.2 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1 .4 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .4-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1-.4-2.2-.1-1.3-.1-1.7-.1-4.9s0-3.6.1-4.9c.1-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.4 2.2-.4 1.3-.1 1.7-.1 4.9-.1zm0 2c-3.1 0-3.5 0-4.8.1-1.1.1-1.5.2-1.8.3-.4.2-.7.3-1 .6-.3.3-.5.6-.6 1-.1.3-.3.7-.3 1.8-.1 1.3-.1 1.7-.1 4.8s0 3.5.1 4.8c.1 1.1.2 1.5.3 1.8.2.4.3.7.6 1 .3.3.6.5 1 .6.3.1.7.3 1.8.3 1.3.1 1.7.1 4.8.1s3.5 0 4.8-.1c1.1-.1 1.5-.2 1.8-.3.4-.2.7-.3 1-.6.3-.3.5-.6.6-1 .1-.3.3-.7.3-1.8.1-1.3.1-1.7.1-4.8s0-3.5-.1-4.8c-.1-1.1-.2-1.5-.3-1.8-.2-.4-.3-.7-.6-1-.3-.3-.6-.5-1-.6-.3-.1-.7-.3-1.8-.3-1.3-.1-1.7-.1-4.8-.1zm0 3.4a5.4 5.4 0 1 1 0 10.8 5.4 5.4 0 0 1 0-10.8zm0 2a3.4 3.4 0 1 0 0 6.8 3.4 3.4 0 0 0 0-6.8zm5.6-2.3a1.3 1.3 0 1 1-2.6 0 1.3 1.3 0 0 1 2.6 0z"/></svg></a>
+          <a href="https://www.tiktok.com/@thenumbersgamepodcast" target="_blank" rel="noopener" aria-label="The Numbers Game on TikTok"><svg viewBox="0 0 24 24"><path d="M12.53.02C13.84 0 15.14.01 16.44 0c.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg></a>
+          <a href="https://www.linkedin.com/company/the-numbers-game-podcast/" target="_blank" rel="noopener" aria-label="The Numbers Game on LinkedIn"><svg viewBox="0 0 24 24"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.24 8.25h4.52V23H.24V8.25zM8.34 8.25h4.33v2.01h.06c.6-1.14 2.08-2.34 4.28-2.34 4.58 0 5.42 3.01 5.42 6.92V23h-4.51v-7.16c0-1.71-.03-3.91-2.38-3.91-2.39 0-2.75 1.86-2.75 3.78V23H8.34V8.25z"/></svg></a>
+          <a href="https://www.facebook.com/profile.php?id=100071290388343" target="_blank" rel="noopener" aria-label="The Numbers Game on Facebook"><svg viewBox="0 0 24 24"><path d="M24 12.07C24 5.41 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.04V9.41c0-3.02 1.8-4.7 4.54-4.7 1.31 0 2.68.24 2.68.24v2.97h-1.5c-1.5 0-1.96.93-1.96 1.89v2.26h3.32l-.53 3.5h-2.8V24C19.62 23.1 24 18.1 24 12.07z"/></svg></a>
+          <a href="https://www.youtube.com/@thenumbersgamepodcast" target="_blank" rel="noopener" aria-label="The Numbers Game on YouTube"><svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.2C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31.7 31.7 0 0 0 0 12a31.7 31.7 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.2A31.7 31.7 0 0 0 24 12a31.7 31.7 0 0 0-.5-5.8zM9.6 15.6V8.4L15.8 12z"/></svg></a>
+        </div>
+      </div>
+      <div class="fcol">
+        <div class="foot-label">Brought to you by</div>
+        <div class="sponsors">
+          <a href="https://www.inovayt.com.au/" target="_blank" rel="noopener"><img src="assets/inovayt-white.png" alt="Inovayt"></a>
+          <a href="https://futureadvisory.com.au/" target="_blank" rel="noopener"><img src="assets/future-advisory-white.png" alt="Future Advisory"></a>
+        </div>
+      </div>
+      <div class="fcol produced">
+        <div class="foot-label">Produced by</div>
+        <a href="https://www.vidpod.com.au/" target="_blank" rel="noopener"><img src="assets/vidpod-white.png" alt="VIDPOD"></a>
+      </div>
+    </div>
+    <div class="footbar">
+      <details class="footnav-dd">
+        <summary><svg class="ham" viewBox="0 0 24 24"><path d="M3 6h18v2H3zM3 11h18v2H3zM3 16h18v2H3z"/></svg> Menu</summary>
+        <div class="dd-links">
+          <a href="/">Home</a><a href="/episodes">Every episode</a><a href="/adventure">Choose your own adventure</a><a href="/about">About the show</a><a href="/nick-reilly">Nick Reilly</a><a href="/jason-robinson">Jason Robinson</a><a href="/contact">Contact</a>
+        </div>
+      </details>
+      <div class="copyright">© 2026 The Numbers Game</div>
+    </div>
+  </footer>
+
+  <script>
+    var VIDEO='b-IzA2TFD8Y';
+    var CHAPTERS=[
+      {t:"00:00",s:0,title:"Intro"},
+      {t:"05:17",s:317,title:""}
+    ];
+    var QUESTIONS=[
+      {q:"What can kids learn from Monopoly and chess?",s:390},
+      {q:"Why are games good for teaching kids?",s:405},
+      {q:"Can games change how kids think about assets?",s:551},
+      {q:"What matters more, earning or keeping money?",s:710},
+      {q:"How much should you spend educating your kids about money?",s:762},
+      {q:"How do you escape the rat race?",s:933},
+      {q:"How can a child learn cashflow through business?",s:1117},
+      {q:"What numbers actually matter in a business?",s:1184},
+      {q:"Why does cash matter more than profit?",s:1248},
+      {q:"Why is my business profitable but has no cash?",s:1325}
+    ];
+
+    var chEl=document.getElementById('chapters');
+    CHAPTERS.forEach(function(c){var b=document.createElement('button');b.className='chapter';b.onclick=function(){startAt(c.s)};b.innerHTML='<span class="tc">'+c.t+'</span><span class="cx">'+c.title+'</span>';chEl.appendChild(b);});
+    document.getElementById('chcount').textContent=CHAPTERS.length;
+    var qEl=document.getElementById('qa');
+    QUESTIONS.forEach(function(q){var b=document.createElement('button');b.className='q';b.onclick=function(){startAt(q.s)};b.innerHTML='<span class="qm">?</span><span class="qx">'+q.q+'</span><span class="go">›</span>';qEl.appendChild(b);});
+    document.getElementById('qcount').textContent=QUESTIONS.length;
+
+    /* Mobile nav dropdown. */
+    var burger=document.getElementById('navburger'), navdrop=document.getElementById('navdrop');
+    if(burger&&navdrop){burger.addEventListener('click',function(){
+      navdrop.hidden=!navdrop.hidden;
+      burger.setAttribute('aria-expanded', navdrop.hidden?'false':'true');
+    });}
+
+    /* Voice-note button reveals the recorder; × tucks it away. */
+    var vbtn=document.getElementById('vbtn'), vslot=document.getElementById('vslot'), vclose=document.getElementById('vclose');
+    if(vbtn&&vslot){vbtn.addEventListener('click',function(){vslot.hidden=!vslot.hidden;});}
+    if(vclose&&vslot){vclose.addEventListener('click',function(){vslot.hidden=true;});}
+
+    /* Keep-exploring dots: only shown when the strip actually scrolls (mobile). */
+    var rg=document.querySelector('.relgrid'), rd=document.getElementById('reldots');
+    if(rg&&rd){
+      var relCards=rg.querySelectorAll('.relcard');
+      relCards.forEach(function(){rd.appendChild(document.createElement('span'))});
+      var updDots=function(){
+        var scrollable=rg.scrollWidth>rg.clientWidth+4;
+        rd.style.display=scrollable?'flex':'none';
+        if(!scrollable)return;
+        var i=Math.round(rg.scrollLeft/(rg.scrollWidth-rg.clientWidth)*(relCards.length-1));
+        rd.querySelectorAll('span').forEach(function(s,n){s.classList.toggle('on',n===i)});
+      };
+      rg.addEventListener('scroll',updDots,{passive:true});
+      window.addEventListener('resize',updDots);
+      updDots();
+    }
+
+    /* Explore tabs: swap the visible panel; the row stays put so you never lose your place. */
+    var tabBtns=document.querySelectorAll('.tabbtn');
+    tabBtns.forEach(function(b){
+      b.addEventListener('click',function(){
+        tabBtns.forEach(function(o){o.classList.remove('on')});
+        document.querySelectorAll('.tpanel').forEach(function(p){p.hidden=true});
+        b.classList.add('on');
+        document.getElementById(b.getAttribute('data-panel')).hidden=false;
+      });
+    });
+
+    /* YouTube: clean facade, then real player on demand. Seek without yanking to top. */
+    var player=null, ready=false, apiReady=false, pending=null;
+    window.onYouTubeIframeAPIReady=function(){apiReady=true; if(pending!=null){var s=pending;pending=null;createPlayer(s);}};
+    function createPlayer(sec){
+      var wrap=document.getElementById('player'); wrap.innerHTML='<div id="yt"></div>';
+      player=new YT.Player('yt',{videoId:VIDEO,playerVars:{autoplay:1,rel:0,modestbranding:1,playsinline:1,start:Math.floor(sec||0)},events:{onReady:function(){ready=true;}}});
+    }
+    function nudge(){
+      var p=document.getElementById('player-wrap'), r=p.getBoundingClientRect();
+      if(r.bottom<80 || r.top>window.innerHeight-90){ p.scrollIntoView({behavior:'smooth',block:'start'}); }
+    }
+    function startAt(sec){
+      nudge();
+      if(player&&ready){ player.seekTo(sec,true); player.playVideo(); return; }
+      if(apiReady){ createPlayer(sec); } else { pending=sec; }
+    }
+    document.getElementById('facade').addEventListener('click',function(){startAt(0);});
+    (function(){var s=document.createElement('script');s.src='https://www.youtube.com/iframe_api';document.head.appendChild(s);})();
+  </script>
+</body>
+</html>

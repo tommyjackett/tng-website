@@ -1,0 +1,767 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EP 181 · Tax time tips | The Numbers Game</title>
+<meta name="description" content="Jason runs through his end-of-financial-year tax and compliance checklist for small business owners, with Nick and Marty.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" sizes="64x64" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="canonical" href="https://thenumbersgamepodcast.com.au/tax-time-tips">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="The Numbers Game">
+<meta property="og:title" content="EP 181 · Tax time tips | The Numbers Game">
+<meta property="og:description" content="Jason runs through his end-of-financial-year tax and compliance checklist for small business owners, with Nick and Marty.">
+<meta property="og:url" content="https://thenumbersgamepodcast.com.au/tax-time-tips">
+<meta property="og:image" content="https://i.ytimg.com/vi/iqDn6ee2FPQ/maxresdefault.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+  :root{
+    --purple:#585af3; --purple-dark:#2c1b8a; --mint:#7ad9a8;
+    --white:#ffffff; --muted:rgba(255,255,255,.60); --dim:rgba(255,255,255,.42);
+    --line:rgba(255,255,255,.12); --card:rgba(255,255,255,.05); --card-hi:rgba(255,255,255,.09);
+    --display:'Anton',Impact,'Helvetica Neue',sans-serif;
+    --sans:'Inter',system-ui,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif;
+    --wrap:1280px;   /* page frame (nav spans this) */
+    --col:960px;     /* content column (player, tabs, text) */
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:var(--sans); color:var(--white); line-height:1.6; -webkit-font-smoothing:antialiased;
+    background:#12093a;
+    background-image:
+      radial-gradient(1200px 600px at 82% -6%, rgba(88,90,243,.45) 0%, transparent 55%),
+      radial-gradient(900px 700px at 5% 8%, rgba(122,217,168,.10) 0%, transparent 50%),
+      linear-gradient(180deg,#2c1b8a 0%,#1a1150 28%,#100b34 62%,#0b0820 100%);
+    background-attachment:fixed;
+  }
+  a{color:inherit}
+  .wrap{max-width:var(--wrap);margin:0 auto;padding:0 36px}
+  main.wrap{max-width:var(--col)}
+  @media(max-width:720px){.wrap{padding:0 22px}}
+
+  /* ── Navbar ── */
+  .nav{position:sticky;top:0;z-index:50;background:linear-gradient(180deg,rgba(24,15,74,.92),rgba(24,15,74,.72));backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+  .nav-in{max-width:var(--wrap);margin:0 auto;padding:11px 36px;display:flex;align-items:center;justify-content:space-between}
+  @media(max-width:720px){.nav-in{padding:11px 22px}}
+  .brand{display:block;line-height:0}
+  .brand img{height:36px;width:auto;display:block}
+  .navlinks{display:flex;gap:28px;align-items:center}
+  .navlinks a{text-decoration:none;font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);transition:.15s}
+  .navlinks a:hover{color:var(--white)}
+  .navlinks a.navtop{cursor:default}
+  .navgroup{position:relative;display:flex;align-items:center}
+  .navgroup .subnav{display:none;position:absolute;top:100%;left:50%;transform:translateX(-50%);padding-top:14px;min-width:180px}
+  .navgroup:hover .subnav,.navgroup:focus-within .subnav{display:block}
+  .subnav-in,.navgroup .subnav{z-index:60}
+  .navgroup .subnav a{display:block;background:#180f4a;border:1px solid var(--line);border-top:0;padding:12px 16px;font-size:12px;color:rgba(255,255,255,.85)}
+  .navgroup .subnav a:first-child{border-top:1px solid var(--line)}
+  .navgroup .subnav a:hover{background:#221768;color:var(--white)}
+  .navburger{display:none;background:none;border:1px solid var(--line);padding:8px 10px;cursor:pointer;color:var(--white);transition:.15s}
+  .navburger:hover{border-color:rgba(122,217,168,.6)}
+  .navburger svg{width:20px;height:20px;fill:currentColor;display:block}
+  .navdrop{display:none}
+  @media(max-width:720px){
+    .navlinks{display:none}
+    .navburger{display:block}
+    .navdrop{display:block;position:absolute;left:0;right:0;top:100%;
+      background:#180f4a;border-bottom:1px solid var(--line);box-shadow:0 24px 50px rgba(0,0,0,.45)}
+    .navdrop[hidden]{display:none}
+    .navdrop a{display:block;padding:15px 22px;text-decoration:none;font-size:14px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:rgba(255,255,255,.9);border-bottom:1px solid rgba(255,255,255,.06)}
+    .navdrop a:last-child{border-bottom:0}
+    .navdrop a.sub{padding-left:42px;font-size:13px;color:rgba(255,255,255,.72)}
+    .navdrop .navlabel{display:block;padding:15px 22px 6px;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.4)}
+  }
+
+  /* ── Hero / hook (marker-highlight system: purple hook wraps naturally, mint payoff below)
+     Rules: title splits at its natural break (colon/pipe/question mark). Front = hook (purple,
+     big), back = payoff (mint, smaller). No break in title = purple hook only. Highlights hug
+     the text (tight em padding tuned to Anton) and wrap via box-decoration-break — never
+     hand-pick line breaks or mint words. ── */
+  header.hero{padding:34px 0 6px}
+  .hook{--inx:clamp(8.4px,2.1vw,15.6px)} /* one shared text inset so hook + payoff first letters align */
+  .hook .hk{font-family:var(--display);font-weight:400;text-transform:uppercase;
+    font-size:clamp(28px,7vw,52px);line-height:1.3;letter-spacing:-.5px;text-wrap:balance}
+  .hook .hk span{color:var(--white);padding:.04em var(--inx) .02em;
+    background:linear-gradient(var(--purple),var(--purple)) 0 50%/100% 87% no-repeat;
+    -webkit-box-decoration-break:clone;box-decoration-break:clone}
+  .hook .pay{font-family:var(--display);font-weight:400;text-transform:uppercase;
+    font-size:clamp(16px,4vw,24px);line-height:1.5;letter-spacing:.6px;margin-top:8px;text-wrap:balance}
+  .hook .pay span{color:#0a0a0a;padding:.08em var(--inx) .04em;
+    background:linear-gradient(var(--mint),var(--mint)) 0 50%/100% 88% no-repeat;
+    -webkit-box-decoration-break:clone;box-decoration-break:clone}
+  /* no-hook titles: mid-split into two full-size rows, purple then mint */
+  .hook .hk span.hkrow{display:block;background:none;padding:0}
+  .hook .hk .hkrow+.hkrow{margin-top:8px}
+  .hook .hk span.mintseg{color:#0a0a0a;
+    background:linear-gradient(var(--mint),var(--mint)) 0 50%/100% 87% no-repeat}
+
+  /* ── Player (clean facade → real player on tap) ── */
+  .player-wrap{margin:24px 0 4px;scroll-margin-top:76px}
+  .player{position:relative;width:100%;padding-top:56.25%;border-radius:0;overflow:hidden;background:#000;box-shadow:0 30px 70px rgba(0,0,0,.5),0 0 0 1px rgba(255,255,255,.06)}
+  .facade{position:absolute;inset:0;border:0;cursor:pointer;background-size:cover;background-position:center;display:flex;align-items:center;justify-content:center;padding:0}
+  .facade .play{width:74px;height:74px;border-radius:50%;background:rgba(10,6,30,.40);border:2px solid rgba(255,255,255,.72);display:flex;align-items:center;justify-content:center;transition:.18s;-webkit-backdrop-filter:blur(1px);backdrop-filter:blur(1px)}
+  .facade:hover .play{background:rgba(88,90,243,.62);transform:scale(1.07);border-color:#fff}
+  .facade .play::after{content:"";border-style:solid;border-width:11px 0 11px 19px;border-color:transparent transparent transparent #fff;margin-left:5px}
+  .player iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+
+  /* ── Episode facts (bottom of the Summary panel — templated per episode) ── */
+  .sumfacts{margin:14px 10px 4px;padding-top:13px;border-top:1px solid rgba(255,255,255,.08);display:flex;flex-direction:column;gap:8px}
+  .fact{display:flex;gap:12px;font-size:13.5px}
+  .fact .fl{flex:none;width:104px;color:var(--dim);font-weight:600;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;padding-top:2px}
+  .fact .fv{color:rgba(255,255,255,.9);font-weight:500}
+  .fact .fv a{color:var(--mint);text-decoration:none;border-bottom:1px solid rgba(122,217,168,.4);transition:.15s}
+  .fact .fv a:hover{border-bottom-color:var(--mint)}
+
+  /* ── Episode tag (identity: black label hanging off the title corner) ── */
+  .eptag{display:inline-block;position:relative;left:-6px;margin-bottom:-7px;z-index:2;
+    background:#0a0a0a;color:var(--white);font-family:var(--display);font-weight:400;
+    font-size:13.5px;letter-spacing:1.5px;text-transform:uppercase;padding:6px 11px 4px}
+
+  /* ── Explore tabs (sticky mode switcher; one panel swaps below, nothing shoves) ── */
+  .explore{margin-top:22px}
+  .tabs{position:sticky;top:58px;z-index:40;display:flex;flex-wrap:wrap;gap:8px;padding:10px 0;
+    background:linear-gradient(180deg,rgba(18,10,55,.96),rgba(18,10,55,.86));
+    backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+  .tabbtn{font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.5px;
+    font-size:14.5px;color:var(--white);background:var(--purple);border:1px solid var(--purple);
+    padding:9px 13px 7px;cursor:pointer;transition:.15s}
+  .tabbtn:hover{filter:brightness(1.12)}
+  .tabbtn.on{background:var(--mint);border-color:var(--mint);color:#0a0a0a}
+  .tabbtn.on:hover{filter:none}
+  .tabbtn .ct{font-size:12px;opacity:.75;font-variant-numeric:tabular-nums}
+  .tabbtn .ct::before{content:" · "}
+  .tpanel{border:1px solid var(--line);background:var(--card);padding:12px 10px 14px}
+  .hint{font-size:12.5px;color:var(--muted);padding:2px 10px 10px;border-bottom:1px solid rgba(255,255,255,.08);margin-bottom:6px}
+
+  /* ── Listen row (no box: label left, service pills follow) ── */
+  .listen{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:12px 16px;margin-top:34px}
+  .listen .lname{font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--dim)}
+  .listen a{display:inline-flex;align-items:center;gap:9px;padding:11px 18px;border-radius:999px;
+    background:var(--mint);color:#08210f;text-decoration:none;font-weight:800;font-size:12.5px;
+    letter-spacing:.04em;text-transform:uppercase;transition:.15s}
+  .listen a:hover{filter:brightness(1.06);transform:translateY(-1px);box-shadow:0 12px 30px rgba(122,217,168,.25)}
+  .listen svg{width:20px;height:20px;fill:currentColor;flex:none}
+  /* ── Listen-now Spotify audio embed (full column width, above the pills) ── */
+  .listen-now{margin-top:40px}
+  .listen-now .ln-head{display:flex;align-items:baseline;justify-content:space-between;gap:14px;margin-bottom:13px}
+  .listen-now .ln-title{font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--dim)}
+  .audio-embed{border-radius:12px;overflow:hidden;box-shadow:0 20px 50px rgba(0,0,0,.4),0 0 0 1px rgba(255,255,255,.06)}
+  .audio-embed iframe{display:block;width:100%;border:0}
+  @media(max-width:720px){.listen-now{margin-top:32px}}
+
+  /* ── Keep exploring (thumbnails link to other episode PAGES, never timecodes).
+     Swipeable strip on mobile, fits three-up on desktop. Variant rule: claim
+     "similar ground" + reason lines ONLY when moment-level topic overlap is
+     genuinely strong; otherwise show the latest released episodes with dates —
+     never invent a connection. ── */
+  .relsec{margin-top:60px;padding-top:58px;border-top:1px solid var(--line)} /* line = end of this episode's info */
+  .reldots{display:flex;justify-content:center;gap:7px;margin-top:12px}
+  .reldots span{width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.25);transition:.2s}
+  .reldots span.on{background:var(--mint)}
+  .relsec .rtitle{display:inline-block;font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.5px;font-size:14.5px;background:var(--mint);color:#0a0a0a;padding:9px 13px 7px;margin-bottom:18px}
+  .relgrid{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding-bottom:6px;scrollbar-width:none}
+  .relgrid::-webkit-scrollbar{display:none}
+  .relcard{flex:0 0 56%;max-width:232px;scroll-snap-align:start;display:flex;flex-direction:column;text-decoration:none;background:var(--card);border:1px solid var(--line);transition:.15s}
+  .relcard:hover{background:var(--card-hi);border-color:rgba(122,217,168,.55)}
+  .relcard img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block}
+  .relcard .rt{display:block;font-size:12.5px;font-weight:600;color:rgba(255,255,255,.92);line-height:1.4;padding:8px 8px 0}
+  .relcard .rfoot{margin-top:auto;display:flex;justify-content:space-between;align-items:flex-end;gap:8px;padding:10px 8px 9px}
+  .relcard .rwhy{font-size:11.5px;color:var(--mint)}
+  .relcard .rtag{display:inline-block;background:#0a0a0a;color:var(--white);font-family:var(--display);font-size:10px;letter-spacing:1.2px;text-transform:uppercase;padding:3px 7px 2px;white-space:nowrap;flex:0 0 auto}
+
+  /* ── Dropdown sections (accordion under the player) ── */
+  .drops{margin-top:34px;display:flex;flex-direction:column;gap:11px}
+  .drop{border:1px solid var(--line);border-radius:0;background:var(--card);overflow:hidden;transition:border-color .15s}
+  .drop[open]{border-color:rgba(122,217,168,.35)}
+  .drop>summary{list-style:none;cursor:pointer;padding:16px 18px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+  .drop>summary::-webkit-details-marker{display:none}
+  .drop>summary .st{font-weight:700;font-size:15.5px;letter-spacing:.005em}
+  .drop>summary .ct{margin-left:auto;font-size:12px;color:var(--dim);font-weight:600;font-variant-numeric:tabular-nums}
+  .drop>summary .chev{flex:none;width:22px;height:22px;border-radius:50%;background:rgba(122,217,168,.14);color:var(--mint);display:flex;align-items:center;justify-content:center;font-family:var(--display);font-size:15px;line-height:1;transition:.2s;transform:translateY(-1px)}
+  .drop[open]>summary .chev{transform:rotate(45deg)}
+  .drop-body{padding:2px 12px 12px}
+
+  /* chapters */
+  .chapter{display:flex;align-items:baseline;gap:14px;width:100%;text-align:left;cursor:pointer;background:none;border:0;color:inherit;font-family:inherit;padding:11px 10px;border-radius:10px;transition:.13s}
+  .chapter:hover{background:var(--card-hi)}
+  .chapter .tc{font-variant-numeric:tabular-nums;font-weight:700;font-size:14px;color:var(--mint);flex:none;width:48px}
+  .chapter .cx{font-size:15px;font-weight:500;color:rgba(255,255,255,.9)}
+  .chapter:hover .cx{color:#fff}
+
+  /* questions */
+  .q{display:flex;align-items:center;gap:12px;width:100%;text-align:left;cursor:pointer;background:none;border:0;border-radius:11px;color:inherit;font-family:inherit;padding:12px 10px;transition:.14s}
+  .q+.q{border-top:1px solid rgba(255,255,255,.05)}
+  .q:hover{background:var(--card-hi)}
+  .q .qm{font-family:var(--display);font-size:15px;color:var(--mint);flex:none;line-height:1;transform:translateY(1px)}
+  .q .qx{font-size:15px;font-weight:500;color:rgba(255,255,255,.92)}
+  .q .go{margin-left:auto;flex:none;color:var(--dim);font-size:18px;transition:.15s}
+  .q:hover .go{color:var(--mint);transform:translateX(2px)}
+
+  /* summary + transcript bodies */
+  .summary-body p{font-size:16.5px;line-height:1.62;color:rgba(255,255,255,.9);padding:6px 10px 4px}
+  .tbody{padding:2px 10px 8px}
+  .tbody p{font-size:14.5px;line-height:1.7;color:rgba(255,255,255,.78);margin-top:15px;max-width:64ch}
+  .tbody .spk{display:block;font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--mint);margin-bottom:2px}
+
+  /* ── Voice note ask (lives at the bottom of the Summary panel) ── */
+  .vask{margin:16px 10px 4px}
+  .vbtn{display:inline-flex;align-items:center;gap:9px;padding:12px 20px;border-radius:999px;border:0;cursor:pointer;
+    background:var(--mint);color:#08210f;font-family:inherit;font-weight:800;font-size:12.5px;
+    letter-spacing:.04em;text-transform:uppercase;transition:.15s}
+  .vbtn:hover{filter:brightness(1.06);transform:translateY(-1px);box-shadow:0 12px 30px rgba(122,217,168,.25)}
+  .vbtn svg{width:18px;height:18px;fill:currentColor;flex:none}
+  .vslot{background:var(--purple);padding:12px 10px 10px;margin:14px 0 4px;box-shadow:0 18px 40px rgba(0,0,0,.35)}
+  .vslot[hidden]{display:none}
+  .vhead{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;margin-bottom:10px}
+  .vhead .vmsg{font-family:var(--sans);font-size:13px;line-height:1.55;color:rgba(255,255,255,.92);margin:2px 0 0;padding:0 2px}
+  .vclose{background:none;border:0;color:rgba(255,255,255,.85);font-size:22px;line-height:1;cursor:pointer;padding:0 2px}
+  .vclose:hover{color:var(--white)}
+  .vslot iframe{display:block}
+
+  /* ── YouTube subscribe pill (sits in the listen row; outranks .listen a's mint) ── */
+  .listen a.yt-pill{background:var(--purple);color:var(--white)}
+  .listen a.yt-pill:hover{filter:brightness(1.1);transform:translateY(-1px)}
+  @media(max-width:720px){ /* mobile: no label, three compact pills on one row */
+    .listen .lname{display:none}
+    .listen{gap:8px}
+    .listen a{padding:10px 13px;font-size:11px;gap:6px}
+    .listen svg{width:16px;height:16px}
+  }
+
+  /* ── Footer: Follow us on | Brought to you by | Produced by, + Menu dropdown ── */
+  footer{border-top:1px solid var(--line);margin-top:68px;padding:52px 20px 58px}
+  .footgrid{max-width:var(--wrap);margin:0 auto;display:grid;grid-template-columns:1fr 1.15fr .8fr;gap:44px;align-items:start}
+  .fcol{text-align:center;display:flex;flex-direction:column;align-items:center}
+  .foot-label{font-size:11px;font-weight:700;letter-spacing:.26em;text-transform:uppercase;color:var(--dim);margin-bottom:18px}
+  .sponsors{display:flex;justify-content:center;align-items:center;gap:34px;flex-wrap:wrap}
+  .sponsors a,.produced a{display:inline-flex;transition:.15s}
+  .sponsors a:hover,.produced a:hover{transform:translateY(-1px)}
+  .sponsors img{height:32px;width:auto;opacity:.92}
+  .produced img{height:30px;width:auto;opacity:.95}
+  .sponsors a:hover img,.produced a:hover img{opacity:1}
+  footer .socials{display:flex;gap:11px;justify-content:center;flex-wrap:wrap;margin:0}
+  footer .socials a{width:40px;height:40px;border-radius:50%;border:1.5px solid rgba(122,217,168,.5);display:flex;align-items:center;justify-content:center;transition:.15s}
+  footer .socials a svg{width:18px;height:18px;fill:var(--mint);transition:.15s}
+  footer .socials a:hover{background:var(--mint);border-color:var(--mint);transform:translateY(-2px)}
+  footer .socials a:hover svg{fill:#0a0a0a}
+  .footbar{max-width:var(--wrap);margin:34px auto 0;border-top:1px solid var(--line);padding-top:20px;display:flex;flex-direction:column;align-items:center;gap:14px}
+  .footnav-dd{display:block;width:100%;max-width:var(--wrap);margin:0 auto;text-align:center}
+  .footnav-dd>summary{list-style:none;cursor:pointer;display:inline-flex;align-items:center;gap:9px;font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.5px;font-size:13px;color:var(--muted);background:transparent;border:1px solid var(--line);padding:8px 16px 6px;transition:.15s}
+  .footnav-dd>summary::-webkit-details-marker{display:none}
+  .footnav-dd>summary:hover{color:var(--mint);border-color:rgba(122,217,168,.45)}
+  .footnav-dd>summary .ham{width:15px;height:15px;fill:currentColor;transform:translateY(-1px)}
+  .footnav-dd .dd-links{display:flex;flex-direction:row;flex-wrap:wrap;justify-content:center;gap:12px 24px;padding:24px 0 4px}
+  .footnav-dd .dd-links a{font-size:11.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:.15s}
+  .footnav-dd .dd-links a:hover{color:var(--mint)}
+  .copyright{font-size:12px;color:var(--dim);text-align:center}
+  @media(max-width:720px){.footgrid{grid-template-columns:1fr;gap:34px}footer{padding:40px 16px 20px}.footbar{margin-top:34px;padding-top:24px;gap:20px}.footnav-dd .dd-links{flex-direction:column;align-items:center;gap:15px}}
+
+  @media(min-width:720px){header.hero{padding:48px 0 6px}}
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "PodcastEpisode", "name": "Tax time tips", "url": "https://thenumbersgamepodcast.com.au/tax-time-tips", "datePublished": "2024-06-03", "episodeNumber": 181, "image": "https://i.ytimg.com/vi/iqDn6ee2FPQ/maxresdefault.jpg", "partOfSeries": {"@type": "PodcastSeries", "name": "The Numbers Game", "url": "https://thenumbersgamepodcast.com.au/"}}</script>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-in">
+      <a class="brand" href="/" aria-label="The Numbers Game home"><img src="assets/tng-logo.png" alt="The Numbers Game"></a>
+      <div class="navlinks">
+        <a href="/">Home</a>
+        <div class="navgroup">
+          <a class="navtop">Episodes</a>
+          <div class="subnav">
+            <a href="/episodes">All episodes</a>
+            <a href="/adventure">Find moments</a>
+          </div>
+        </div>
+        <div class="navgroup">
+          <a class="navtop">About</a>
+          <div class="subnav">
+            <a href="/about">The show</a>
+            <a href="/nick-reilly">Nick Reilly</a>
+            <a href="/jason-robinson">Jason Robinson</a>
+          </div>
+        </div>
+        <a href="/contact">Contact</a>
+      </div>
+      <button class="navburger" id="navburger" type="button" aria-label="Menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24"><path d="M3 6h18v2H3zM3 11h18v2H3zM3 16h18v2H3z"/></svg>
+      </button>
+    </div>
+    <div class="navdrop" id="navdrop" hidden>
+      <a href="/">Home</a>
+      <span class="navlabel">Episodes</span>
+      <a class="sub" href="/episodes">All episodes</a>
+      <a class="sub" href="/adventure">Find moments</a>
+      <span class="navlabel">About</span>
+      <a class="sub" href="/about">The show</a>
+      <a class="sub" href="/nick-reilly">Nick Reilly</a>
+      <a class="sub" href="/jason-robinson">Jason Robinson</a>
+      <a href="/contact">Contact</a>
+    </div>
+  </nav>
+
+  <main class="wrap">
+
+    <header class="hero">
+      <div class="hook">
+        <span class="eptag">EP 181</span>
+        <h1 class="hk"><span class="hkrow"><span>Tax time</span></span>
+        <span class="hkrow"><span class="mintseg">tips</span></span></h1>
+      </div>
+    </header>
+
+    <div class="player-wrap" id="player-wrap">
+      <div class="player" id="player">
+        <button class="facade" id="facade" style="background-image:url('https://i.ytimg.com/vi/iqDn6ee2FPQ/maxresdefault.jpg')" aria-label="Play episode">
+          <span class="play"></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="explore">
+      <div class="tabs" role="tablist">
+        <button class="tabbtn on" data-panel="p-summary">Summary</button>
+        <button class="tabbtn" data-panel="p-chapters">Chapters<span class="ct" id="chcount"></span></button>
+        <button class="tabbtn" data-panel="p-questions">Questions<span class="ct" id="qcount"></span></button>
+      </div>
+      <section class="tpanel" id="p-summary">
+        <div class="summary-body">
+          <p>Jason runs through his end-of-financial-year tax and compliance checklist for small business owners, with Nick and Marty. They cover the payroll tax threshold and surprise bills, WorkCover premium jumps and under-estimated remuneration, superannuation compliance including super guarantee charge forms, the 200 percent penalty and payday super from 2026, restructuring company shares into a family trust, small business CGT concessions on a sale, carry-forward concessional super contributions, HELP debt indexation changes, and the instant asset write-off dropping back to 20,000 with the sting of being taxed when you sell a written-off vehicle. The theme throughout is planning ahead and getting the right advisor in your corner.</p>
+        </div>
+        <div class="vask">
+          <button class="vbtn" id="vbtn" type="button">
+            <svg viewBox="0 0 24 24"><path d="M12 14a3 3 0 0 0 3-3V6a3 3 0 1 0-6 0v5a3 3 0 0 0 3 3zm5-3a5 5 0 0 1-10 0H5a7 7 0 0 0 6 6.92V21h2v-3.08A7 7 0 0 0 19 11h-2z"/></svg>
+            Send us a voice note
+          </button>
+          <div class="vslot" id="vslot" hidden>
+            <div class="vhead">
+              <p class="vmsg">We'd love to hear from you. You can leave up to a 90 second voice note for us to play on the show: a question, some feedback, or a topic you want covered.</p>
+              <button class="vclose" id="vclose" type="button" aria-label="Close">&times;</button>
+            </div>
+            <iframe src="https://www.speakpipe.com/widget/inline/hhq6kzggsx7zpcsvakgxfrzun3zidpde" allow="microphone" width="100%" height="200" frameborder="0" title="Leave The Numbers Game a voice note"></iframe>
+          </div>
+          <script async src="https://www.speakpipe.com/widget/loader.js" charset="utf-8"></script>
+        </div>
+        <div class="sumfacts">
+          <div class="fact"><span class="fl">Release date</span><span class="fv">3 June 2024</span></div>
+          <div class="fact"><span class="fl">Hosts</span><span class="fv"><a href="/nick-reilly">Nick Reilly</a>, <a href="/jason-robinson">Jason Robinson</a> &amp; <a href="/marty-vidakovic">Marty Vidakovic</a></span></div>
+
+        </div>
+      </section>
+      <section class="tpanel" id="p-chapters" hidden>
+        <p class="hint">Jump straight to the part you need.</p>
+        <div id="chapters"></div>
+      </section>
+      <section class="tpanel" id="p-questions" hidden>
+        <p class="hint">Real questions this episode answers. Tap one to hear the answer.</p>
+        <div id="qa"></div>
+      </section>
+    </div>
+
+    <div class="drops">
+
+      <details class="drop">
+        <summary><span class="st">Episode transcript</span><span class="chev">+</span></summary>
+        <div class="drop-body tbody">
+          <p><span class="spk">Jason · 00:00</span>Welcome to episode 181 of The Numbers Game. I'm Jase. I'm here with Nick and Marty. How we going fellas?</p>
+          <p><span class="spk">Marty · 00:07</span>Going well, Jase. Going well. I was at the Acupunctures on the weekend and just lay on a table and A Chinese man put needles in me. I felt better on the back end of it. Um, yeah, logically, I wasn't sure how that was going to help, but, uh, very relaxed, very zen like, and, uh, with some Chinese herbs out the back of it, which don't taste very good, but apparently they're good for me.</p>
+          <p><span class="spk">Marty · 00:29</span>So, doing the right thing, keeping yourself up and about. So, gotta do the right thing, Jason. Gotta do the right thing. Nick, how are you, my friend?</p>
+          <p><span class="spk">Nick · 00:39</span>I'm going well. Um, Obviously, we'll record this at different times, but both of my teams, uh, on the weekend absolutely thrashed the opposition. So I think I might've mentioned on this podcast not long ago that I was just sick of watching close games.</p>
+          <p><span class="spk">Nick · 00:55</span>Um, so yeah, the good Lord delivered it on the weekend,</p>
+          <p><span class="spk">Nick · 01:00</span>um, two thrashings, but Jase, I just saw something on social media, not to discuss today, but maybe we bring it up Uh, soon there's a class action against the Vick government. If you suffer a loss in the 2020 finia due to the second lockdown, have you seen this?</p>
+          <p><span class="spk">Jason · 01:20</span>Yes. The class action, uh, all business owners that would have got, uh, or would have been involved in some way, shape or form should have got a letter from, um, in relation to this and it'd be an opt in. If you'd like to become part of the class action, you were given the opportunity to opt in. So hopefully, uh, Well, for our clients, we sent out an email to our, um, business database and said, keep an eye out for this.</p>
+          <p><span class="spk">Jason · 01:43</span>And if you need to do something about it and then yeah.</p>
+          <p><span class="spk">Nick · 01:46</span>So if you recorded a loss with the ATO, that triggers the letter?</p>
+          <p><span class="spk">Jason · 01:50</span>Uh, no, I think it's just all business owners that were, you know, received some kind of, you know, job keeper, government subsidy, cashflow boost, anything that</p>
+          <p><span class="spk">Jason · 02:00</span>kind of triggered that you're involved.</p>
+          <p><span class="spk">Jason · 02:02</span>And that you may have suffered a loss means you should go. And if you haven't, I mean, yeah, simple Google search of, um, class action, COVID government, and there'll be heaps in relation to it. And you can put your name and details down. Um, there's a fair few T's and C's behind it where we've had some business owners go, you know what, I'm not going to get involved because the scrutiny that may happen on the other side, if you put your name down.</p>
+          <p><span class="spk">Jason · 02:25</span>And then, you know, let's say you thought you made a loss and you had a couple of bad months, but then realistically they strip your business apart. If for some reason you were selected, maybe you didn't go as bad as you thought you did. Um, we all have different memories of what the time was like back then.</p>
+          <p><span class="spk">Jason · 02:41</span>So yeah, approach with caution, read all the details. And if you feel like it's something you want to put your name and number down for, then have a crack.</p>
+          <p><span class="spk">Nick · 02:49</span>That's what we do. Up to date current affairs stories here. People in the loop.</p>
+          <p><span class="spk">Marty · 02:54</span>Jase, how was your weekend?</p>
+          <p><span class="spk">Jason · 02:56</span>Ha ha ha. Yeah, good mate, good. I mean, you know, we, we, again,</p>
+          <p><span class="spk">Jason · 03:00</span>these things come out at different times, but at, at time of recording, Bombers second on the ladder, um, you know, went and attended a few footy games over the weekend, so saw the Swans play the Dogs, or uh, the Bombers, uh, take on Richmond, um, and then yeah, might have had a bit of a boys night out Saturday night, so potentially still feeling the effects, um, um, You know, 24, 48 hours later, but we, we let the show roll on Marty.</p>
+          <p><span class="spk">Jason · 03:23</span>Don't you worry about that. We've got exciting tax things to discuss that are more important than the bombers in my weekend.</p>
+          <p><span class="spk">Marty · 03:29</span>Absolutely. Go Swatties, go bombers.</p>
+          <p><span class="spk">Jason · 03:33</span>Well, and then, yeah, well, since Nick mentioned it, so, you know, nearly a hundred point wind to his crows. So no wonder Nick is just looking glorious with the sun shining on him through the office window.</p>
+          <p><span class="spk">Jason · 03:42</span>Check out our YouTube channel. You'll see Nick, Just sun is pumping on him and you know, we're up and about. So I mentioned it a little bit just then where we're talking to some tax, uh, tax, important tax and business compliance things for small business owners. So, um, if you are, aren't a</p>
+          <p><span class="spk">Jason · 04:00</span>small business owner, listen in, you might be able to help you mate at a barbecue when you hear them talk about something like payroll tax or work cover.</p>
+          <p><span class="spk">Jason · 04:06</span>So stay tuned. Um, we'll make it efficient, punchy. And I mean, realistically, if you are a business owner, the reason I bring this up and to talk about it is. Time and time again, we see mistakes happen. Uh, we see small business owners come to us and, and their business, unfortunately is in a worse shape than where it should be.</p>
+          <p><span class="spk">Jason · 04:25</span>If they had the right idea about what compliance things they needed to be in control of, you know, what things the ATO is looking out for. Um, and look, a lot of people we've talked about it quite a few times in this podcast too, that it's all about compliance. Too easy to set up a company, too easy to register a business and get an ABN.</p>
+          <p><span class="spk">Jason · 04:42</span>And for the everyday Australian who wants to set up a business and have a crack, there's not enough like checking mechanisms between having the idea to start a business and then actually be running a business without an understanding of the consequences of what can go wrong if you don't tick all the boxes you need to tick.</p>
+          <p><span class="spk">Jason · 05:00</span>So, um, you know, it's coming up to the end of the 2024 financial year at time of recording. This is the time of year where You know, every accountant that's worth their, you know, their weight in gold is organizing meetings with their small business clients. You know, they're, they're offering tax planning sessions.</p>
+          <p><span class="spk">Jason · 05:15</span>They're trying to catch up with their clients. Now, not every client makes the time to go and see their accountant or to jump in a zoom or a team's room. Um, but I've put together a bit of a, a list of things that we'd like to review at this time of year from things that we've learned over the years. And then I think, you know, for small business owners out there that do listen to this show, they can go away and either ask the question of.</p>
+          <p><span class="spk">Jason · 05:36</span>Whether they need to be worried or at least do a bit of a self review. So, um, Nick Marty, how's that sound? You guys happy to kind of work through a few scenarios? Excited, mate. Uh, good. Well, um, I might as well start on one that, you know, should get Nick fired up. It's, um, good old payroll tax. So, um, this is one where if business owners have had a bit of a growth year and we say it, you know, business owners, um, you know, for not</p>
+          <p><span class="spk">Jason · 06:00</span>everyone, 23, 24 hasn't been a down year for, for a lot of businesses.</p>
+          <p><span class="spk">Jason · 06:03</span>Some are struggling with rise of cost of living and interest rates, but some businesses in this time are absolutely pumping. And what happens there is you've got an opportunity to hire more people and grow your business. So the payroll tax threshold is unfortunately, you know, we use Victoria as an example, but our future advisory website does have a breakdown of all the different States in Victoria.</p>
+          <p><span class="spk">Jason · 06:24</span>If you go over 700, 000 worth of wages, superannuation, or employee remuneration, you then have to start paying payroll tax. Now. In the first couple of years of business, you may have stayed under the threshold for payroll tax, but it only takes one big year of growth to hire half a dozen or a dozen employees, and then forget about doing something like registering for payroll tax.</p>
+          <p><span class="spk">Jason · 06:46</span>Now, if you do forget to register often at the end of the year, when it gets picked up, you're looking at potentially a 50, 000 bill that you hadn't planned for. Now, you might've given that extra money to the employees you've hired if you'd factored into your budget, but unfortunately that's one of the ones that</p>
+          <p><span class="spk">Jason · 07:00</span>we see.</p>
+          <p><span class="spk">Jason · 07:00</span>Not, not too often. It's one that does hurt, especially when you're a growing business, cashflow can be everything when you're scaling and to then get to the end of the year and be told by your accountant that you neglected to register for payroll tax. That's probably one that stings. Do you guys haven't come across any business owners that have suffered that?</p>
+          <p><span class="spk">Marty · 07:17</span>I, I just think like anything, the first time you go over a threshold is probably the most frightening because it can be unexpected if you're not getting the advice. So again, just for our audience, uh, 700 is the limit, but you're, you're starting to pay payroll tax after the 700 mark. You're not paying, it doesn't trigger that you're paying it on the whole amount.</p>
+          <p><span class="spk">Marty · 07:37</span>It's just. 700.</p>
+          <p><span class="spk">Jason · 07:38</span>Correct Marty. Good one to indicate there. So if you end up with 800, 000 of remuneration, you're paying 4. 85 percent of the 100, 000. So you'd, you'd flick the state of um, state payroll, state revenue office, sorry, you'd flick them 4, 850 for your trouble of having an extra 100, 000 of wages in super over the 700, 000.</p>
+          <p><span class="spk">Marty · 07:59</span>Quite</p>
+          <p><span class="spk">Marty · 08:00</span>significant. Yeah. Quite significant. Yeah, it adds up. It, it</p>
+          <p><span class="spk">Jason · 08:01</span>adds up. It hits you straight away. So it's something to definitely keep in mind and make sure that you're factoring in, especially, you know, again, this time of year, if you're not doing a 24, 25 forecast or budget, I'd ask you why. I mean, it's important to look ahead and see where your business is going and.</p>
+          <p><span class="spk">Jason · 08:19</span>You know, it may be something that you're getting close to. So if you look at your next year and you do have growth aspirations and ambitions to grow your business, these are those extra costs that if you don't factor it in, it could be the difference between enough margin and profit left over for you, the business owner, or ask yourself the question of, Is my pricing strategy, right?</p>
+          <p><span class="spk">Jason · 08:36</span>Do I need to put my prices up? If I, if I do hit payroll tax and there's extra money coming out of my pocket, do I hire two new people to end up with the same amount of money in the bank a year later? So they're the things that by doing a good budget or forecast, you actually start to flesh these ideas out.</p>
+          <p><span class="spk">Jason · 08:51</span>Let's get,</p>
+          <p><span class="spk">Marty · 08:52</span>yeah, 100 grand, 200 grand over and you could pay someone else to come on board. You know, like 9, 700 for 200</p>
+          <p><span class="spk">Marty · 09:00</span>grand over that threshold. That's another employee. Yep. That, um, you know, that would be handy.</p>
+          <p><span class="spk">Jason · 09:06</span>I mean, and look, this is where, you know, some people then, and this is the downside to payroll tax and why You know, people like Nick and I, and you get frustrated going, you know, our business, for example, that'll pay 50 to 70 grand in payroll tax, depending on how the year lands, but it'll be somewhere up around maybe 70 grand this year.</p>
+          <p><span class="spk">Jason · 09:24</span>That is another. entire staff member that, you know, team member that we could hire here if I wasn't paying payroll tax. So I could have a more efficient business. I could have more employees helping service our clients. And then this is why a lot of business owners turn around and go, well, maybe I will hire the VA in the Philippines, you know, and that might cost me 30 grand in offshore wages to the Philippines or Vietnam or somewhere else.</p>
+          <p><span class="spk">Jason · 09:47</span>But these are the considerations that Aussie business going, well, I don't want to pay more tax. Um, I'd love another employee here, but it's going to make it way more expensive. So, and we had that episode with, um, our good friend, Dan Brees to cover</p>
+          <p><span class="spk">Jason · 10:00</span>some of this. Yep. Okay. Yeah, per annum.</p>
+          <p><span class="spk">Nick · 10:02</span>I think it also demonstrates, Jase, the importance of cross checking your, your cash flows in your forecast.</p>
+          <p><span class="spk">Nick · 10:08</span>So if you do create them and if you do create them, absolutely fantastic. Uh, but run it past your accountant to make sure you haven't missed anything. because to your point, particularly if you're growing and you're growing fast, it's all about wages generally. Um, so you can quickly be out of the game. If you're, if you're not, if you're not allowing for payroll tax, you could definitely run them past your accountant.</p>
+          <p><span class="spk">Nick · 10:29</span>So if you've missed anything.</p>
+          <p><span class="spk">Jason · 10:30</span>And that's the other one too. I mean, as a small business owner, you wear a lot of hats, you know, your head of finance, your head of marketing, your head of sales. Um, It's one that I stress, make the time to make that budget or forecast. So you can see in advance, maybe some things that you're going to bump into.</p>
+          <p><span class="spk">Jason · 10:45</span>Maybe your sales forecast for December or January ends up being so far down that you make a big loss. So having an understanding of the seasonality of your business. And the costs, and if you can't do it yourself, do engage an advisor, engage your account and say, Hey, can we get a</p>
+          <p><span class="spk">Jason · 11:00</span>quick, a quick session together to look at my, my forecast for next year and just ask those questions, um, because that, that advisor or accountant may say something that you don't.</p>
+          <p><span class="spk">Jason · 11:08</span>So I'll jump into the next one. And this one, I was a bit, a bit of a quicker one, but it's a bit of a, I've got a story behind it, which is absolutely devastating, but work cover. Between 22, 23 into the 2024 year, work cover costs have gone through the bloody roof. So I think there was an average increase in premiums of something like 42%.</p>
+          <p><span class="spk">Jason · 11:29</span>Every work cover premium on average across the country went up 40%, 40, 42%. Now. If you're in construction, for example, or a higher risk industry teaching, believe it or not, is a high risk industry from a work cover point of view for work cover claims. Um, so if you're in a high risk industry and then, you know, you're paying an extra 40 percent on top of your work cover premium than you were the year before, again, this is eating into the business profitability or the margins that is left over for a business owner.</p>
+          <p><span class="spk">Jason · 11:57</span>The other area to look at with your work</p>
+          <p><span class="spk">Jason · 12:00</span>cover registration is the remuneration. So what happens is for, for each financial year, you tell work cover in advance, what wages you're going to pay, and then you make an estimate of the year after. So let's have that hypothetical of that payroll tax, um, client, um, business.</p>
+          <p><span class="spk">Jason · 12:17</span>Let's say the year before they had about 700 grand worth of wages. And then they estimated, yeah, we're not so sure if we're going to grow. Let's go for 900K in wages the following year. And they get sent a bill from WorkCover and some installments, some premium installments to pay for their WorkCover insurance.</p>
+          <p><span class="spk">Jason · 12:33</span>Now imagine as I talked about that business boomed and they, they grew and they hired and they were so busy worried about growing their business and hiring and paying bills and holy shit, do we register for payroll tax? Let's say they forgot to update work cover to say, Hey, by the way, we've more than doubled our wages.</p>
+          <p><span class="spk">Jason · 12:50</span>It's not 700 to 900. We've gone 700 K to 1. 5 million, for example. The devastating thing we saw a business where they went from 1 million to 3 million.</p>
+          <p><span class="spk">Jason · 13:00</span>The work cover wasn't remunerated. It went from like a 40, 000 bill that they'd received because of the low estimations to a 240, 000 invoice rocked up. In the, in the, in the mail for them to pay for their work cover after that had been updated from a remuneration point of view.</p>
+          <p><span class="spk">Jason · 13:17</span>So you can understand how damaging that is for a small business to cop a 200, 000 bill to pay. I mean, I don't know too many businesses that could survive on the other side of that if it, if it hadn't been factored in in advance.</p>
+          <p><span class="spk">Marty · 13:28</span>Well, you increase the tax on top of that, then you got the work cover again.</p>
+          <p><span class="spk">Marty · 13:31</span>It's, it's just the unawareness of knowing the impact of that on a business. I mean, that's like you said, you need that professional guidance in planning. Cause it's, um, like I said, there isn't anything worse than getting hit with those types of unexpected costs, even though technically you should have expected them.</p>
+          <p><span class="spk">Jason · 13:50</span>Yep. And again, comes down to what, what are your responsibilities as a business owner, as a director of a company, as a trustee of a trust, like these are all things that technically you need to be aware of. And if it's not you,</p>
+          <p><span class="spk">Jason · 14:00</span>you need to make sure someone's engaged to be across all of this. Um, and again, though, as a director of a company, even if you engage someone who's going to be responsible for it.</p>
+          <p><span class="spk">Jason · 14:08</span>If it doesn't happen and something falls apart, it's going to fall back on the director of the company. You can try the blame game and, you know, then it becomes legal things and whatnot, but you're going to want to be across all this stuff. The next one, which is a bit of a, uh, increasing area of compliance and a target area of the ATO is superannuation.</p>
+          <p><span class="spk">Jason · 14:27</span>So obviously paying employees super again, we've talked these numbers on the show before 2 billion in unpaid superannuation per year. Now, when you think about how that 2 billion could be invested in infrastructure, construction, share market, AFTs, anything that, that our super funds and industry funds and SMSFs can do, commercial property, properties.</p>
+          <p><span class="spk">Jason · 14:50</span>If 2 billion a year is not going into our super funds, there's a huge problem for these young Australians and everyday Australians coming up through the ranks that are working for someone and being ripped off.</p>
+          <p><span class="spk">Jason · 15:00</span>So it's a target area, we know that the ATO is talking about going digital, cloud accounting, single touch payroll.</p>
+          <p><span class="spk">Jason · 15:07</span>What this is allowing the ATO to do is have more oversight into what's not being paid by a business owner. They're getting the bank data, they're seeing the single touch payroll transactions, and then they're looking at the super funds waiting for that money to hit the super fund. Now, in the event that money doesn't hit the Superfund, the ATO knows they've got the data.</p>
+          <p><span class="spk">Jason · 15:26</span>And so gone are the days of going, Oh, whoops, I didn't pay it on time. I'll just transfer that money next month or I'll catch up a few months later. What needs to happen is you need to lodge Super Guarantee Charge Forms or SGCs. You have to go to the ATO website, fill in the details to say you paid it late.</p>
+          <p><span class="spk">Jason · 15:43</span>They will create a payment slip or another account in the ATO for you. And instead of you giving the money to the employee Superfunds. You have to give the money to the ATO and then they disperse it to the Superfunds. A few different ways to go about it. If you did indeed make a late payment to the super funds,</p>
+          <p><span class="spk">Jason · 16:00</span>all you'll then end up paying the ATO is an admin fee and a, and a interest fee, which ends up going into the employee super funds for the time that that money wasn't there to be invested.</p>
+          <p><span class="spk">Jason · 16:09</span>Now the big kind of a kicker here as to why I stress to every business owner out there, if you haven't done a review of whether you've paid some super late by accident, or if you know that you've paid some super late. Go and lodge these forms to cover your ass because what ends up happening if you don't do these forms, you can cop a 200 percent penalty of the balance of unpaid super or late super.</p>
+          <p><span class="spk">Jason · 16:33</span>So if you imagine you were 50 grand overdue and you paid 50 grand late at some point in time and it was deemed, or you still haven't paid it, you could cop a 100, 000 penalty. And then you still have to pay the superannuation, which is not tax deductible because it's late. So again, you imagine being hit with 150 grand, um, damage to your cashflow in penalties and fines and overdue super.</p>
+          <p><span class="spk">Jason · 16:58</span>What is</p>
+          <p><span class="spk">Marty · 16:59</span>late?</p>
+          <p><span class="spk">Jason · 16:59</span>Good</p>
+          <p><span class="spk">Jason · 17:00</span>question. So you've got to pay the superannuation within 21 days from the end or 28 days from the end of the quarter. So, you know, if you've got your. April to June superannuation should be cleared, cleared and in the super fund of your employees by the 28th of July. Now that is also a big, a big kind of sticking point and something that I'm advocating for.</p>
+          <p><span class="spk">Jason · 17:20</span>You know, I work with a bit of the ATO Tax Digital Implementation Board and CPA Public Practice Committee and Xero's Advisory Council. I think the timing around superannuation payments is really, really important. damaging and hard. Um, this is why we're moving to payday super in, um, July of 2026. Every time you pay your staff, you'll pay super at the same time.</p>
+          <p><span class="spk">Jason · 17:40</span>So it's coming. I think people should start trying to do that now as, as a bit of a strategy of getting used to that cash, not being yours, implement same day, super. Every time you pay your employees, click the pay super button and the money leaves your account. You don't have to worry about it, but the late means also mighty for everyone else who's playing at home.</p>
+          <p><span class="spk">Jason · 17:58</span>A lot of this stuff is now done by direct</p>
+          <p><span class="spk">Jason · 18:00</span>Direct debit. So you can trigger, let's say you on the 21st of July, the example you used before, you trigger the direct debit for the money to leave your bank account and go to your employee super funds. Um, and that's, that's giving seven days, right? 21st of July through to the 28th of July, all good.</p>
+          <p><span class="spk">Jason · 18:20</span>Sometimes these things, they take time. Sometimes it can take 10 days instead of seven or 14 days instead of, you know, what should be quicker. If, It doesn't clear to the employee super funds in time. It is still technically late and you are still technically liable for lodging super guarantee charge forms, paying the admin fee and paying any of the late interest, even if it's only a couple of days.</p>
+          <p><span class="spk">Jason · 18:41</span>So again, stressing pay super on time, pay it as regularly as possible. If you don't do it weekly or fortnightly, at least do it monthly rather than waiting to the end of the quarter. And if anything, I think it's a bit of an upgrade to your cashflow too, because you're not building up cash that's not yours.</p>
+          <p><span class="spk">Nick · 18:55</span>You've got to pay quarterly it. It should be really not that much difference to your cashflow.</p>
+          <p><span class="spk">Nick · 19:00</span>Like for me, when I pay it quarterly, well, we pay quarterly as a business. Um, it just becomes a bit of a conundrum to be honest, because it's a big lump sum at the end of the quarter. Obviously we plan our cashflow, so we're ready for it.</p>
+          <p><span class="spk">Nick · 19:12</span>Um, but anything that could speed up the process, number one, to get it paid. And then number two, have it give you a better, um, instant view on your cashflow at any given time, I think is a, is a great result. And then. You've gotta think about on the other end, your employees, the sooner that money's in their super account, the sooner it's invested into stocks and the sooner it's earning money for them.</p>
+          <p><span class="spk">Nick · 19:33</span>So the compounding effect of that, although that's not really the reason why it's being implemented, but the compounding effect of that for us as individuals who are getting paid, having our money consistently entering the market on a, I guess a monthly basis, depending on when your pay cycle is. Um, I guess there's another benefit and</p>
+          <p><span class="spk">Jason · 19:50</span>look, I mean, yes, the HL and the government abroad in the rule that by 2026, we will go to same day super, I guess I asked the question of why are we waiting that long or</p>
+          <p><span class="spk">Jason · 20:00</span>what's being done to advertise and market this to, to employers to say, Hey, yes, by 2026, it's going to be compulsory, but start to do it earlier, get in the habit and the routine.</p>
+          <p><span class="spk">Jason · 20:10</span>So I guess. Numbers game here is taking one for the, uh, for the small business economy or small business environment. Now saying, get it happening, start paying it as regularly as you can. And I guess it helps out with your cashflow of knowing that that money's not yours and it's gone. So you start to play a better game overall.</p>
+          <p><span class="spk">Marty · 20:26</span>Yeah, it sounds like a win win across the board. Better for cash flows, better for employee dollar cost averaging across each month instead of even a quarter, let's say. So that sounds like good, good, good. Good commercial principles right there.</p>
+          <p><span class="spk">Jason · 20:39</span>Adds to that dollar cost averaging and employee value proposition as well.</p>
+          <p><span class="spk">Jason · 20:43</span>We pay super every fortnight, every week, every month. So good, good win there. Uh, touched on those probably more than I wanted to, but they're all important things that kind of get under, under, under looked at by employees, employers and under looked at by accountants, um, and advisors out</p>
+          <p><span class="spk">Jason · 21:00</span>there. So, um, be aware, another big one that we look at at this time of year.</p>
+          <p><span class="spk">Jason · 21:05</span>Uh, small business owners who, when they first set up, let's say they started a company. Um, and a lot of the times you don't, business owners don't invest that extra money to set up a family trust and a bucket company and a corporate trustee and all these things. So if you've got a company and you are the individual shareholder of your company at the end of the year or at any point in time, really, but we're saying now's a great time during tax planning to have a look at this is to review whether you've got an opportunity.</p>
+          <p><span class="spk">Jason · 21:31</span>So move your shares from being individually owned to be owned by a family trust. If you can get your shares out of your name into a family trust, what generally has to happen is you have to value your business. You have to sell it on paper from you to your family trust. There will be capital gains tax implications.</p>
+          <p><span class="spk">Jason · 21:48</span>But the reason we say to review this sooner rather than later is Every year, if your business is growing and getting bigger, and you're going to have an exit event one day, and you're working on, you know, the bigger picture, bigger plans, this needs to be a</p>
+          <p><span class="spk">Jason · 22:00</span>stepping stone as early as possible to avoid paying a huge capital gains tax bill when you do think about doing it later</p>
+          <p><span class="spk">Nick · 22:06</span>on.</p>
+          <p><span class="spk">Nick · 22:07</span>Jase, is there any way out of the capital gains? Cause it's same beneficial owner, right?</p>
+          <p><span class="spk">Jason · 22:13</span>Yeah, no. So unfortunately not. And it's a great question. But when, when I say, unfortunately, no way of getting out of it, there are Small business incentives or small business concessions, I should say, to do the move. So if you do it while you're still a small enough business, you can access, um, you get the 50 percent CGT discount because you've helped, hopefully you've had your shares for more than 12 months.</p>
+          <p><span class="spk">Jason · 22:32</span>But then what you can look at is activating the extra incentives. So you might be able to discount that capital gain by another 50 percent due to active assets, um, rollover into superannuation, um, 15 year retirement exemption. There's a few other things. Um, if you want to look into it, small business.</p>
+          <p><span class="spk">Jason · 22:48</span>Concessions, um, small business CGT concessions, but this is why we say, look at it now, look at it early and put that plan in place because let's say, you know, you might've been in your mid twenties</p>
+          <p><span class="spk">Jason · 23:00</span>or late twenties when you started a business and all of a sudden down the track, you might've met the, met your wife or met your husband, had some children.</p>
+          <p><span class="spk">Jason · 23:07</span>And you've still got your shares individually owned. You're missing opportunities for incomes, genuine income splitting with your partner or your spouse, um, for the shared wealth that goes into the family home or the family bank account. Um, and then one day when the kids are old enough, if you've been contributing to their, their board, their schooling, um, so family trust distributions towards paying for children's education or, or their living arrangements.</p>
+          <p><span class="spk">Jason · 23:28</span>So all these things become a reality with a family trust. If you're sitting back and you don't have a family trust and you don't have a bucket company, but you're generating some Some good income and some good wealth. Chances are you're paying too much tax to the ATO above what is legally the required amount.</p>
+          <p><span class="spk">Marty · 23:43</span>I definitely lived that problem in my first business. I had a straight company, uh, two directors, another business partner and myself. And then on the exit of that company, we basically had to come up with a strategy. And I still don't know. How we did this or what happened really into</p>
+          <p><span class="spk">Marty · 24:00</span>some sort of voluntary liquidation in order to get the, the monies out more effectively, but it just seemed a lot more complicated and costly on the back end of getting it, trying to, trying to fix the problem rather than getting it right up front.</p>
+          <p><span class="spk">Marty · 24:14</span>So I've definitely had that direct, uh, annoyance.</p>
+          <p><span class="spk">Jason · 24:17</span>And it's no accident why we called ourselves future advisory. Like when you talk about the future or you make plans for the future, if you're talking about, you know, scaling a business, exiting a business, then you've got to begin with the end in mind. So if those conversations were had with you on day one, Marty to say, you might not have known on day one, but then if you keep revisiting the same question every year, and even if you use tax planning as a, that kind of time to pull the handbrake up and take a deep breath and reassess where you're at and what your plans are, that's the time to always go.</p>
+          <p><span class="spk">Jason · 24:45</span>Where are my shares held? Why are they, why are they owned individually? Is there a benefit to move them now? What's it going to cost? Cause you have to do a valuation to all the ASIC paperwork, the transfer forms, the sale, whatnot. So you've got to do it properly. Um, we see people half assing</p>
+          <p><span class="spk">Jason · 25:00</span>this and trying to get away with not doing evaluation or anything else, but this is the kind of area where.</p>
+          <p><span class="spk">Jason · 25:05</span>You want to do it properly. You want to pay the lowest amount of capital gains tax possible, but you got to do it legally and have all the documents to back that up. So one of those ones where this then rolls into is if we do end up triggering a capital gain for a small business owner, or if we're even, you know, reviewing the profits of a business, one of the biggest things that we look at at the moment when we do our tax planning, and Nick's probably works into your realm as well when it comes to financial advisory or financial planning is the carry forward concessional contributions.</p>
+          <p><span class="spk">Jason · 25:33</span>So, you know, over the last, I think it's five years worth of concessional contributions. So you look at 120 to 130 grand of what could have been contributed to your super fund over five years. Yep. You got the, yep. And then if you didn't use your contributions cap, they kind of accumulate up year on year.</p>
+          <p><span class="spk">Jason · 25:50</span>So then you've got a big, you can pay a big chunk into super and claim a tax deduction for it due to the carry forward cap. So we've had business owners that have had a</p>
+          <p><span class="spk">Jason · 26:00</span>bit of a bumper year, and then we've looked at the cap and going, Hey, you can actually put 100, 000 into super claim that as a tax deduction, and that can save you up to 47, 000 in tax on your personal tax bill.</p>
+          <p><span class="spk">Jason · 26:12</span>So all of a sudden, when you start to talk, well, hang on a minute, I'm Why would I keep the hundred grand in my name to give 47, 000 of it to the ATO, rather than investing it into my future, putting it into my super fund and having 47, 000 wiped off my tax bill. So there's some big round numbers, but, and the numbers work in smaller amounts too.</p>
+          <p><span class="spk">Jason · 26:30</span>If you've got to carry forward cap or even to use up your existing. Cap for the year, even putting 10, 000 in. We're regularly seeing that save our clients 4, 000 in tax on average. So not a bad little strategy to look at how putting some money into super can help you save giving extra money to the tax man for no reason.</p>
+          <p><span class="spk">Jason · 26:47</span>Do you</p>
+          <p><span class="spk">Nick · 26:47</span>say that a</p>
+          <p><span class="spk">Jason · 26:48</span>bit, Nick, on your end?</p>
+          <p><span class="spk">Nick · 26:49</span>Uh, we've seen a lot. It's a very common strategy, particularly at the moment. But, um, And not necessarily for business, but for people that have sold assets. So I</p>
+          <p><span class="spk">Nick · 27:00</span>think we've spoken about this in the past, but at the moment you've got a lot of landlords that are selling just purely because of cash flows and it being really difficult to hold investment properties.</p>
+          <p><span class="spk">Nick · 27:08</span>So they're selling, but a lot of the times they're selling at a gain because the property market has done so well. So if they have triggered a gain, let's say they've got a 200K gain, um, they'll get the 50 percent CGD, CGT discount in most cases, if they've had it for a year. So that brings the gain down to a hundred K.</p>
+          <p><span class="spk">Nick · 27:26</span>Um, if they have the ability to, to contribute super if you've just spoken about, as you've just spoken about, they could put a hundred K into super and pretty much wipe that gain out. So it's a strategy we're using and seeing a lot at the moment, particularly given a lot of the landlords are closer to retirement.</p>
+          <p><span class="spk">Nick · 27:43</span>So they don't care about putting money into super because they're going to get to access it in the next couple of years. You know, hypothetically five to 10 years. I think the only thing I'll add to that is the timing. Um, unfortunately at times we do see people make the mistake of leaving it too late</p>
+          <p><span class="spk">Nick · 28:00</span>and too late is basically the last week of June.</p>
+          <p><span class="spk">Nick · 28:03</span>Um, I've had people in the past that have contributed on the 28th of June. And they've said to me, Oh, I did the contribution on the 28th of June. A lot of the super funds will take three, anywhere from three to five days to actually pick that contribution up. So, simply transferring into Super before the 30th of June doesn't guarantee you're going to get it in that date.</p>
+          <p><span class="spk">Nick · 28:23</span>Um, and it's about when the Super company actually, um, counts it from their end. So, and there's absolutely no There's no gray area on that. If the Superfund doesn't receive it until the 2nd of July, it's game over. You can't go back. You can't unwind things. So I say to people minimum two weeks just to give yourself, um, you know, time for something to go wrong.</p>
+          <p><span class="spk">Nick · 28:48</span>But if you're thinking about doing it, make the payment into your Superfund a couple of weeks before doing it on the 29th of June, I can almost guarantee you it won't count. Um, unless you're</p>
+          <p><span class="spk">Nick · 29:00</span>into a self managed super fund, but that's a different story.</p>
+          <p><span class="spk">Marty · 29:02</span>I was just going to ask too, and this might be a question to both of you, in regards to if someone sells a business and their super annuation is under 500, 000, are there any concessions that you can put the sale of that business into super?</p>
+          <p><span class="spk">Marty · 29:17</span>I've had that asked a number of times of business owners in small businesses, um, selling out and wanting to know whether there was, you know, something more tax effective than the small business concessions.</p>
+          <p><span class="spk">Jason · 29:27</span>Putting the money into super is part of the small business CGT concessions. So as long as you can access the small business CGT concessions, an example might be.</p>
+          <p><span class="spk">Jason · 29:36</span>You sold your small business for, and you qualify for the concession. So you sold your small business for 500 grand. You then half that to 250 grand using the standard 50 percent CGT discount. The small business concessions lets you half that again, if you eligible. So let's say the 250 becomes 125. And with that 125, the option is to put that into superannuation to trigger.</p>
+          <p><span class="spk">Jason · 30:00</span>The small business concession being used. So then that 125, 000 can go into super and basically offset the CGT event for that small business sale. Um, then Nick, you can probably touch on, you know, if your super funds have a certain balance, the extra money, you could probably put it on top of that if you wanted to.</p>
+          <p><span class="spk">Nick · 30:17</span>Yeah, a hundred percent, but it's, I guess we open a can of worms there, but, um, yeah, obviously it comes down to everyone's strategy, but it's a, it's actually an amazing strategy because most people, when they're selling their small business, they're coming to retirement and those funds are only going to be used for retirement anyway.</p>
+          <p><span class="spk">Nick · 30:37</span>Um, so yeah, being able to put into super is, is a huge win and to the point and just, I don't want to put words in your mouth here, but, um, I think most small businesses, once, if they do tick the concessions, they pay next to no tax, you know, unless their business is completely blown up, um, from a size and value point of view.</p>
+          <p><span class="spk">Nick · 30:57</span>But I would suggest most of your small business</p>
+          <p><span class="spk">Nick · 31:00</span>owners, you would almost get them paying next to no tax on the game.</p>
+          <p><span class="spk">Jason · 31:04</span>Yeah, it's, it's, it becomes pretty, you know, Pretty small and pretty, uh, negligible, negligible, whatever the word is. Yeah. So like, and this is why I stress to check it out. You might think, Oh God, I want to pay capital gains tax.</p>
+          <p><span class="spk">Jason · 31:15</span>No point restructuring. I'm done now. I'm stuck in my structure, but you got to ask the question, you got to review, you got to look at it and whether you're retiring and selling or whether you're. Getting ready for an exit event in five or 10 years or 20 years. Now's the time to kind of look at that. And, um, the small business retirement exemption even goes to the point where you don't have to put the money into super, if you're retiring and you sell the business, you, you're eligible to kind of tick the box, say the money that I just sold my business for, I'm going to retire with that.</p>
+          <p><span class="spk">Jason · 31:43</span>And I'm going to walk away and hold onto that money, but not pay tax on it. Like it's a pretty. Bloody insane incentive to get it right and get your structure right and make sure you're talking to your advisor about what's available for you to maximize the cash left in your pocket after so</p>
+          <p><span class="spk">Jason · 32:00</span>many years of hard work running a small business.</p>
+          <p><span class="spk">Marty · 32:02</span>Brilliant advice.</p>
+          <p><span class="spk">Jason · 32:03</span>Love it. Conscious of time. I'll tick over a couple that are just some quick easy wins to think about. Um, you might be looking at your family group and some people have helped debts. Now, there's been a bit in the news about your help debt or your hex debt. Um, previous year went up by 7.</p>
+          <p><span class="spk">Jason · 32:16</span>1 percent under indexation. They've changed the rules to bring that back to whatever's the lower of the wage growth or, um, CPI so that they're going to bring that back to around three, three and a half percent the year before they're going to refund or offset. The increase that they made, they're going to bring it back.</p>
+          <p><span class="spk">Jason · 32:34</span>So a lot of people were confused thinking they're going to get some cold, hard cash back in their pocket, but all it's going to do is reduce your help debt or your hex debt, um, that sits in your ATO accounts. If you did pay your help debt off in full, then you will see some money back in your pocket once they reverse the 7.</p>
+          <p><span class="spk">Jason · 32:50</span>1%, uh, increase. Um, so just a note there to look at help debt repayments as part of your strategy for family wealth with a family trust. You know, if your partner</p>
+          <p><span class="spk">Jason · 33:00</span>has a help debt and you're paying tax at 47%, you might reduce your taxable income to put some money through your partner's return to increase their help debt repayment.</p>
+          <p><span class="spk">Jason · 33:09</span>Again, it's just a shifting of rather than giving the ATO extra money in just standard tax tax payments, you might shift it to a spouse or partner's income or adult children's income to genuinely pay the tax. Shift that give us some cash to them to pay down their help debt, and there's some mechanisms to how that works, but it's just one that's worth, um, having a look at as well, especially there's a lot of young Australians that get these growing help debts every year, and they're not able to knock it down.</p>
+          <p><span class="spk">Jason · 33:33</span>Um, so yeah, I see that as a great strategy to go. Why pay extra tax? That's just going to go over there. If we can help also knock down some help debt in another return. Um, Last one, or the, you know, one of the major big ones, it's probably this hot topic in the news at the moment. Um, Back during COVID, I think you guys remember the immediate asset write offs and the tax deductions for buying assets and equipment.</p>
+          <p><span class="spk">Jason · 33:56</span>Um, it went up as high as 150, 000 at one</p>
+          <p><span class="spk">Jason · 34:00</span>stage, you can go out and buy something for 149, 000 and immediately write that off and that would stop you paying tax on 149, 000 of equipment. Income that all profit that your business had made, then they even went to temporary full expensing, which meant that even if you bought a half million dollar asset, you could write off a huge cost and not pay tax on, you know, another half million dollars of profit or, you know, there was just temporary full expensing.</p>
+          <p><span class="spk">Jason · 34:25</span>Doesn't matter what the value of the asset was as long as it was used by the business to in that way. But now it's gone down to 20, 000 again. The government wants people to stop spending money. Um, they don't want you going out and buying all these new assets to immediately write off. And it means that we're no longer able to get the upfront tax benefit from buying assets unless they're under 20, 000.</p>
+          <p><span class="spk">Jason · 34:46</span>So 19, 999 or less. Um, so this, this has kind of caused a big dint in a lot of tax planning meetings where, you know, clients are used to over the last couple of years going, Hey, I'm I need to get a new car for the business anyway. Or we just</p>
+          <p><span class="spk">Jason · 35:00</span>hired a new guy. I can go out and get a 50, 000 van to put my new Sparky in.</p>
+          <p><span class="spk">Jason · 35:05</span>Should I do it before 30 June, Jace, so I can write off 50 grand? Doesn't exist anymore. So you've got to be a bit more strategic around your, so the 20, 000 exists now, not the, the bigger limits. So you just got to be a bit more strategic around not planning for the huge upfront tax win, but of reducing your taxable income.</p>
+          <p><span class="spk">Jason · 35:23</span>So if you do go out and splash money on new assets, You're going to get the standard depreciation on that. So it might be, you know, for a car, you're claiming that over eight years instead of upfront. And as Nick touched on before, now we're seeing the other side of the damage of this, where somebody might've bought, you know, a trainee might've bought the new Ford Ranger for 70 grand, wrote it off immediately.</p>
+          <p><span class="spk">Jason · 35:43</span>On paper, that car's worth 0. They've got the 70 grand tax benefit last year or the year before in their tax return, but then they've got an offer to sell that car for, you know, 100, 000. 70 grand, 80 grand. They've had it for a year or two, and they now getting exactly what they bought it for, or nearly what they bought it for.</p>
+          <p><span class="spk">Jason · 35:59</span>And they sell it.</p>
+          <p><span class="spk">Jason · 36:00</span>And it comes to tax time. We're saying, cool, you've just made a 70 grand profit. When you sold that car, you replaced it with another car, which now you can only claim, you A small percentage of this year. So let's say they bought another car. They're only going to get a 17, 000 tax deduction for the new Ford Ranger they bought, but they've got to pay tax on 70 grand of additional income for the one they sold.</p>
+          <p><span class="spk">Jason · 36:22</span>And we're seeing people lose their minds at that kind of timing difference of, what do you mean I can't ride off the car? I did it last year. But the tax rules are always changing. That's the one thing you got to be aware of and</p>
+          <p><span class="spk">Nick · 36:32</span>communicate with your advisors. That's crazy actually, because I'm just thinking about that particular market of car, and I think you're alluding to, you know, four wheel drives and whatnot that have held their value and at times gone up, particularly some of them.</p>
+          <p><span class="spk">Nick · 36:45</span>So, You know, I would, I would suggest that 10 people went into those transactions as in claiming the depreciation, not understanding the ramifications on the other end, right? So that's, that must be</p>
+          <p><span class="spk">Nick · 37:00</span>happening everywhere at the moment. And I think, again, that comes back to the super contributions. And so.</p>
+          <p><span class="spk">Nick · 37:05</span>There's again, another opportunity to get some money into super, um, it's the reality is you have profited off that car and off the depreciation. So that that's huge. Actually, are you seeing a lot of that or</p>
+          <p><span class="spk">Jason · 37:19</span>it's, it's, it's massive. It's happening. It happens. I'm getting, we're getting calls or emails every week.</p>
+          <p><span class="spk">Jason · 37:24</span>And, and especially this time of year, like a lot happens in a couple of months. So let's say we've got a quarterly engagement with our clients. You can communicate all the time about these things, but sometimes it's not until you run a tax planning strategy and show them like visually the effect of money in, money out, what's happening with their profit for the year and how much tax I'll pay.</p>
+          <p><span class="spk">Jason · 37:42</span>Like, Whoa, that's, that's more tax than I thought. Jase, what's going on there? Well, you just sold a car for, for more than what you paid for it. And your replacement can't be claimed up front. So there's, there's now the benefit of the tax you didn't pay a few years ago. It's kicking the tax tax can down the road and it's coming back to bite you in the</p>
+          <p><span class="spk">Jason · 38:00</span>ass now, because you've got to pay tax on the vehicle you just sold.</p>
+          <p><span class="spk">Jason · 38:02</span>Cause it was worth 0 on paper. So yeah, it's, it's, it's happening so much. And you know, it's one that I want everyone out there to be aware of that before you go and sell the vehicle, before you go and trade it in, have a chat with your accountant for about the implications of the tax implications. Cause sometimes.</p>
+          <p><span class="spk">Jason · 38:18</span>You'll do the trading. You've still got finance on that car. So you're not actually seeing the 70 grand cash for the whole vehicle. Then you roll it into the next vehicle and you might've made, let's say you made 10 grand profit and you actually get that back in your pocket. But if the tax on the 70 grand sale is.</p>
+          <p><span class="spk">Jason · 38:35</span>You know, 17 and a half grand. You are now out of pocket. You are out of pocket for selling the car that you thought you were making a profit on.</p>
+          <p><span class="spk">Marty · 38:42</span>Most business owners are leveraging up to 90 percent to a hundred percent of that vehicle purchase. So nine out of 10 people will be financed,</p>
+          <p><span class="spk">Nick · 38:51</span>maybe nine and</p>
+          <p><span class="spk">Marty · 38:52</span>a half.</p>
+          <p><span class="spk">Marty · 38:52</span>I see. Yeah. That's, that's uh, pretty remarkable that figure and the need for, the need for a</p>
+          <p><span class="spk">Marty · 39:00</span>financial planner linking in with the accountant to look at, you know, potential ways to just mitigate that profit in, in legal healthy ways is vital in that situation.</p>
+          <p><span class="spk">Jason · 39:09</span>By the nature of time, I've talked a lot about these different tax strategies and boring tax things and tax hacks for year end, but I mean, the biggest thing that I want people to walk away from this is just, you know, That there is so much that can happen.</p>
+          <p><span class="spk">Jason · 39:20</span>There are so many ins and outs of small business shares, CGT. I haven't even touched on fringe benefits tax, which those returns, the year end for fringe benefit is 31 March. They're due in the next couple of weeks. So again, your accountant's probably emailing you asking for the odometer reading of your cars, and you're probably wondering why am I paying this bloody extra weird tax on my vehicles or the entertainment that I provide.</p>
+          <p><span class="spk">Jason · 39:41</span>Um, you know, and the things that I haven't mentioned, you know, franking credits, div 7a loans. Um, Trust distribution minutes, all these things that you need a great relationship with your advisor and your accountant to make sure these things are done right. It doesn't have to be future advisors. It doesn't have to be me, but just ask the right questions to the right people and make sure you're getting looked after.</p>
+          <p><span class="spk">Jason · 39:59</span>And</p>
+          <p><span class="spk">Jason · 40:00</span>yeah, it's a, it's a bloody world out there full of compliance and I's dot and T's to cross. So yeah, look after yourselves and make sure that you've got someone in your corner. Nick and Marty, anything to add?</p>
+          <p><span class="spk">Nick · 40:11</span>Oh, you're just a genius, mate. You are,</p>
+          <p><span class="spk">Marty · 40:14</span>you are. And I was just thinking, you know, just by getting that advice up front, how could you turn that, you know, not only business planning, but that tax into opportunities to create wealth legitimately.</p>
+          <p><span class="spk">Marty · 40:26</span>And it's so vital. We always think about it reactively on the back end because business owners are busy, you know, so they, they generally kick the can down the road, but, um, I certainly learned a lesson on some of that in the first business and really got great advisors around me, uh, from then on. Um, so I could actually, you know, attack things healthily into the future.</p>
+          <p><span class="spk">Marty · 40:47</span>And it was, uh, it was a much better option. No doubt about it.</p>
+          <p><span class="spk">Jason · 40:51</span>100%. Well, if you've listened to all of the episodes of the numbers game, you're already a step ahead of other people that have got their head in the sand or not doing these extra things for their</p>
+          <p><span class="spk">Jason · 41:00</span>business. If you've got a friend out there who runs a business, who doesn't listen to the numbers game, and they might need to hear all this, send them a link, uh, recommend they listen to the show.</p>
+          <p><span class="spk">Jason · 41:07</span>And when it comes to having advisors in your corner, future advisory and innovates, they're going to be there. They're here to support the small business community. Uh, we always love getting in touch and working together as a team with people that are having a crack. They want to build their wealth and they want to build great businesses.</p>
+          <p><span class="spk">Jason · 41:21</span>So please subscribe, rate, like, get around the podcast, jump on YouTube and check out how glorious Nick looks in the sun right now. But until next time, thank you for listening and</p>
+          <p><span class="spk">Marty · 41:31</span>plan for the future. Plan for today. Game over.</p>
+          <p><span class="spk">Jason · 41:36</span>This podcast is for educational and informational purposes only. The conversations are of a general nature and do not qualify as financial or tax advice.</p>
+          <p><span class="spk">Jason · 41:44</span>We recommend before you make any financial decisions, you consult a licensed professional. Individuals on the podcast may hold positions in the companies discussed. &lt;aside&gt; 🍿 **EPISODE LINKS** | **ASSET NAME** | **LINK** | | --- | --- | | Episode Audio | [https://drive.google.com/file/d/1vlSAK9_FWNQpKRN93Ke01scIDH0M7nNf/view?usp=sharing](https://drive.google.com/file/d/1vlSAK9_FWNQpKRN93Ke01scIDH0M7nNf/view?usp=sharing) | | Video Snippets | [https://drive.google.com/drive/folders/160HFqCUcb3T0frej4iyRjykvio6bXwgo?usp=sharing](https://drive.google.com/drive/folders/160HFqCUcb3T0frej4iyRjykvio6bXwgo?usp=sharing) | | Youtube Link | [https://youtu.be/iqDn6ee2FPQ](https://youtu.be/iqDn6ee2FPQ) | | Youtube Embed | | | Simplecast Embed | | &lt;/aside&gt; ---</p>
+        </div>
+      </details>
+
+    </div>
+
+    <!-- LISTEN:START (build_episode.py rewrites the 3 URLs + iframe title per episode; player dropped if no spotifyEmbedUrl) -->
+    <section class="listen-now">
+      <div class="ln-head">
+        <span class="ln-title">Listen now</span>
+      </div>
+      <div class="audio-embed">
+        <iframe src="https://open.spotify.com/embed/episode/2VPvXnc3zAaGspA02MBcaP?utm_source=generator"
+          width="100%" height="152" loading="lazy" allowfullscreen
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+          title="Spotify — Tax time tips"></iframe>
+      </div>
+    </section>
+
+    <div class="listen">
+      <a href="https://open.spotify.com/episode/2VPvXnc3zAaGspA02MBcaP" target="_blank" rel="noopener" aria-label="Listen to this episode on Spotify">
+        <svg viewBox="0 0 24 24"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.52 17.34c-.24.36-.66.48-1.02.24-2.82-1.74-6.36-2.1-10.56-1.14-.42.12-.78-.18-.9-.54-.12-.42.18-.78.54-.9 4.56-1.02 8.52-.6 11.64 1.32.42.18.48.66.3 1.02zm1.44-3.3c-.3.42-.84.6-1.26.3-3.24-1.98-8.16-2.58-11.94-1.38-.48.12-1.02-.12-1.14-.6-.12-.48.12-1.02.6-1.14 4.32-1.32 9.72-.66 13.44 1.62.36.18.54.78.3 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.3c-.6.18-1.2-.18-1.38-.72-.18-.6.18-1.2.72-1.38 4.26-1.26 11.28-1.02 15.72 1.62.54.3.72 1.02.42 1.56-.3.42-1.02.6-1.56.3z"/></svg>
+        Spotify
+      </a>
+      <a href="https://podcasts.apple.com/au/podcast/id1555566088?i=1000657567200" target="_blank" rel="noopener" aria-label="Listen to this episode on Apple Podcasts">
+        <svg viewBox="0 0 24 24"><path d="M5.34 0A5.328 5.328 0 000 5.34v13.32A5.328 5.328 0 005.34 24h13.32A5.328 5.328 0 0024 18.66V5.34A5.328 5.328 0 0018.66 0H5.34zm6.525 2.568c2.336 0 4.448.902 6.056 2.587 1.224 1.272 1.912 2.619 2.264 4.392l.04.23c.04.272-.16.527-.432.567a.505.505 0 01-.567-.431l-.04-.213c-.312-1.57-.92-2.747-2.004-3.867-1.428-1.496-3.293-2.294-5.393-2.294-2.1 0-3.966.798-5.394 2.294-1.084 1.12-1.692 2.298-2.004 3.867l-.04.213a.507.507 0 01-.567.431.504.504 0 01-.432-.567l.04-.23c.352-1.773 1.04-3.12 2.264-4.392 1.608-1.685 3.72-2.587 6.056-2.587h.153zm.136 3.033c1.74 0 3.312.67 4.527 1.934.883.916 1.394 1.93 1.663 3.253l.04.23a.505.505 0 01-.431.567.503.503 0 01-.567-.432l-.04-.212c-.23-1.112-.659-1.97-1.396-2.732-1.052-1.1-2.404-1.672-3.9-1.672s-2.849.572-3.901 1.672c-.737.762-1.167 1.62-1.396 2.732l-.04.212a.503.503 0 01-.567.432.505.505 0 01-.432-.567l.04-.23c.27-1.323.78-2.337 1.664-3.253 1.215-1.264 2.787-1.934 4.527-1.934h.21zm-.078 3.05c1.092 0 2.091.424 2.89 1.22.582.58.924 1.245 1.107 2.15l.04.218a.501.501 0 01-.424.568.499.499 0 01-.568-.424l-.04-.198c-.146-.724-.413-1.253-.871-1.716-.63-.63-1.398-.957-2.226-.957s-1.595.328-2.225.957c-.459.463-.726.992-.871 1.716l-.04.198a.499.499 0 01-.568.424.501.501 0 01-.424-.568l.04-.219c.183-.904.525-1.569 1.106-2.149.8-.796 1.799-1.22 2.89-1.22h.184zM12 14.07a2.477 2.477 0 012.48 2.478A2.477 2.477 0 0112 19.024a2.477 2.477 0 01-2.48-2.477A2.477 2.477 0 0112 14.07z"/></svg>
+        Apple
+      </a>
+      <a class="yt-pill" href="https://www.youtube.com/@thenumbersgamepodcast?sub_confirmation=1" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.12-2.14C19.5 3.55 12 3.55 12 3.55s-7.5 0-9.38.51A3 3 0 0 0 .5 6.2 31.4 31.4 0 0 0 0 12a31.4 31.4 0 0 0 .5 5.8 3 3 0 0 0 2.12 2.14c1.88.51 9.38.51 9.38.51s7.5 0 9.38-.51a3 3 0 0 0 2.12-2.14A31.4 31.4 0 0 0 24 12a31.4 31.4 0 0 0-.5-5.8zM9.55 15.57V8.43L15.82 12z"/></svg>
+        Subscribe
+      </a>
+    </div>
+    <!-- LISTEN:END -->
+
+    <div class="relsec">
+      <span class="rtitle">Discover more</span>
+      <div class="relgrid">
+        <a class="relcard" href="/the-1-000-ato-tax-deduction-explained">
+          <img src="https://i.ytimg.com/vi/XyMngctwpGs/hqdefault.jpg" alt="EP 278 thumbnail">
+          <span class="rt">The $1,000 ATO Tax Deduction Explained</span>
+          <span class="rfoot"><span class="rwhy">Also covers: tax planning</span><span class="rtag">EP 278</span></span>
+        </a>
+        <a class="relcard" href="/why-every-business-owner-needs-a-tax-planning-meeting">
+          <img src="https://i.ytimg.com/vi/N-4IKD5gZVk/hqdefault.jpg" alt="EP 234 thumbnail">
+          <span class="rt">Why Every Business Owner Needs a Tax Planning Meeting</span>
+          <span class="rfoot"><span class="rwhy">Also covers: tax planning</span><span class="rtag">EP 234</span></span>
+        </a>
+        <a class="relcard" href="/do-aussies-pay-too-much-tax">
+          <img src="https://i.ytimg.com/vi/lP86BXU1Sgw/hqdefault.jpg" alt="EP 254 thumbnail">
+          <span class="rt">Do Aussies Pay Too Much Tax?</span>
+          <span class="rfoot"><span class="rwhy">Also covers: tax planning</span><span class="rtag">EP 254</span></span>
+        </a>
+        <a class="relcard" href="/adam-sullivan-s-hard-lessons-division-7a-fbt-avoiding-costly-mistakes-in-business">
+          <img src="https://i.ytimg.com/vi/P9duZaTzc3k/hqdefault.jpg" alt="EP 230 thumbnail">
+          <span class="rt">Adam Sullivan's Hard Lessons</span>
+          <span class="rfoot"><span class="rwhy">Also covers: tax planning</span><span class="rtag">EP 230</span></span>
+        </a>
+        <a class="relcard" href="/the-great-australia-wealth-transfer">
+          <img src="https://i.ytimg.com/vi/RWYoT4w-d7k/hqdefault.jpg" alt="EP 273 thumbnail">
+          <span class="rt">The Great Australia Wealth Transfer</span>
+          <span class="rfoot"><span class="rwhy">Also covers: tax planning</span><span class="rtag">EP 273</span></span>
+        </a>
+        <a class="relcard" href="/7-financial-red-flags-every-business-owner-needs-to-know">
+          <img src="https://i.ytimg.com/vi/SXouFdviIsk/hqdefault.jpg" alt="EP 244 thumbnail">
+          <span class="rt">7 Financial Red Flags Every Business Owner Needs to Know</span>
+          <span class="rfoot"><span class="rwhy">Also covers: tax planning</span><span class="rtag">EP 244</span></span>
+        </a>
+      </div>
+      <div class="reldots" id="reldots"></div>
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="footgrid">
+      <div class="fcol">
+        <div class="foot-label">Follow us on</div>
+        <div class="socials">
+          <a href="https://www.instagram.com/thenumbersgamepodcast/" target="_blank" rel="noopener" aria-label="The Numbers Game on Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.8.2 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1 .4 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .4-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1-.4-2.2-.1-1.3-.1-1.7-.1-4.9s0-3.6.1-4.9c.1-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.4 2.2-.4 1.3-.1 1.7-.1 4.9-.1zm0 2c-3.1 0-3.5 0-4.8.1-1.1.1-1.5.2-1.8.3-.4.2-.7.3-1 .6-.3.3-.5.6-.6 1-.1.3-.3.7-.3 1.8-.1 1.3-.1 1.7-.1 4.8s0 3.5.1 4.8c.1 1.1.2 1.5.3 1.8.2.4.3.7.6 1 .3.3.6.5 1 .6.3.1.7.3 1.8.3 1.3.1 1.7.1 4.8.1s3.5 0 4.8-.1c1.1-.1 1.5-.2 1.8-.3.4-.2.7-.3 1-.6.3-.3.5-.6.6-1 .1-.3.3-.7.3-1.8.1-1.3.1-1.7.1-4.8s0-3.5-.1-4.8c-.1-1.1-.2-1.5-.3-1.8-.2-.4-.3-.7-.6-1-.3-.3-.6-.5-1-.6-.3-.1-.7-.3-1.8-.3-1.3-.1-1.7-.1-4.8-.1zm0 3.4a5.4 5.4 0 1 1 0 10.8 5.4 5.4 0 0 1 0-10.8zm0 2a3.4 3.4 0 1 0 0 6.8 3.4 3.4 0 0 0 0-6.8zm5.6-2.3a1.3 1.3 0 1 1-2.6 0 1.3 1.3 0 0 1 2.6 0z"/></svg></a>
+          <a href="https://www.tiktok.com/@thenumbersgamepodcast" target="_blank" rel="noopener" aria-label="The Numbers Game on TikTok"><svg viewBox="0 0 24 24"><path d="M12.53.02C13.84 0 15.14.01 16.44 0c.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg></a>
+          <a href="https://www.linkedin.com/company/the-numbers-game-podcast/" target="_blank" rel="noopener" aria-label="The Numbers Game on LinkedIn"><svg viewBox="0 0 24 24"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.24 8.25h4.52V23H.24V8.25zM8.34 8.25h4.33v2.01h.06c.6-1.14 2.08-2.34 4.28-2.34 4.58 0 5.42 3.01 5.42 6.92V23h-4.51v-7.16c0-1.71-.03-3.91-2.38-3.91-2.39 0-2.75 1.86-2.75 3.78V23H8.34V8.25z"/></svg></a>
+          <a href="https://www.facebook.com/profile.php?id=100071290388343" target="_blank" rel="noopener" aria-label="The Numbers Game on Facebook"><svg viewBox="0 0 24 24"><path d="M24 12.07C24 5.41 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.04V9.41c0-3.02 1.8-4.7 4.54-4.7 1.31 0 2.68.24 2.68.24v2.97h-1.5c-1.5 0-1.96.93-1.96 1.89v2.26h3.32l-.53 3.5h-2.8V24C19.62 23.1 24 18.1 24 12.07z"/></svg></a>
+          <a href="https://www.youtube.com/@thenumbersgamepodcast" target="_blank" rel="noopener" aria-label="The Numbers Game on YouTube"><svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.2C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31.7 31.7 0 0 0 0 12a31.7 31.7 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.2A31.7 31.7 0 0 0 24 12a31.7 31.7 0 0 0-.5-5.8zM9.6 15.6V8.4L15.8 12z"/></svg></a>
+        </div>
+      </div>
+      <div class="fcol">
+        <div class="foot-label">Brought to you by</div>
+        <div class="sponsors">
+          <a href="https://www.inovayt.com.au/" target="_blank" rel="noopener"><img src="assets/inovayt-white.png" alt="Inovayt"></a>
+          <a href="https://futureadvisory.com.au/" target="_blank" rel="noopener"><img src="assets/future-advisory-white.png" alt="Future Advisory"></a>
+        </div>
+      </div>
+      <div class="fcol produced">
+        <div class="foot-label">Produced by</div>
+        <a href="https://www.vidpod.com.au/" target="_blank" rel="noopener"><img src="assets/vidpod-white.png" alt="VIDPOD"></a>
+      </div>
+    </div>
+    <div class="footbar">
+      <details class="footnav-dd">
+        <summary><svg class="ham" viewBox="0 0 24 24"><path d="M3 6h18v2H3zM3 11h18v2H3zM3 16h18v2H3z"/></svg> Menu</summary>
+        <div class="dd-links">
+          <a href="/">Home</a><a href="/episodes">Every episode</a><a href="/adventure">Choose your own adventure</a><a href="/about">About the show</a><a href="/nick-reilly">Nick Reilly</a><a href="/jason-robinson">Jason Robinson</a><a href="/contact">Contact</a>
+        </div>
+      </details>
+      <div class="copyright">© 2026 The Numbers Game</div>
+    </div>
+  </footer>
+
+  <script>
+    var VIDEO='iqDn6ee2FPQ';
+    var CHAPTERS=[
+      {t:"00:00",s:0,title:"Intro"},
+      {t:"04:25",s:265,title:""}
+    ];
+    var QUESTIONS=[
+      {q:"When do you have to start paying payroll tax?",s:363},
+      {q:"What happens if you forget to register for payroll tax?",s:406},
+      {q:"Do you pay payroll tax on your whole payroll?",s:437},
+      {q:"How much payroll tax do you actually pay?",s:458},
+      {q:"How much have WorkCover premiums risen?",s:668},
+      {q:"What happens if you under-estimate WorkCover wages?",s:770},
+      {q:"What is the penalty for not lodging super late forms?",s:969},
+      {q:"How much tax can a super contribution save?",s:1560},
+      {q:"What is the instant asset write-off limit now?",s:2065},
+      {q:"Do you pay tax when you sell a written-off vehicle?",s:2159}
+    ];
+
+    var chEl=document.getElementById('chapters');
+    CHAPTERS.forEach(function(c){var b=document.createElement('button');b.className='chapter';b.onclick=function(){startAt(c.s)};b.innerHTML='<span class="tc">'+c.t+'</span><span class="cx">'+c.title+'</span>';chEl.appendChild(b);});
+    document.getElementById('chcount').textContent=CHAPTERS.length;
+    var qEl=document.getElementById('qa');
+    QUESTIONS.forEach(function(q){var b=document.createElement('button');b.className='q';b.onclick=function(){startAt(q.s)};b.innerHTML='<span class="qm">?</span><span class="qx">'+q.q+'</span><span class="go">›</span>';qEl.appendChild(b);});
+    document.getElementById('qcount').textContent=QUESTIONS.length;
+
+    /* Mobile nav dropdown. */
+    var burger=document.getElementById('navburger'), navdrop=document.getElementById('navdrop');
+    if(burger&&navdrop){burger.addEventListener('click',function(){
+      navdrop.hidden=!navdrop.hidden;
+      burger.setAttribute('aria-expanded', navdrop.hidden?'false':'true');
+    });}
+
+    /* Voice-note button reveals the recorder; × tucks it away. */
+    var vbtn=document.getElementById('vbtn'), vslot=document.getElementById('vslot'), vclose=document.getElementById('vclose');
+    if(vbtn&&vslot){vbtn.addEventListener('click',function(){vslot.hidden=!vslot.hidden;});}
+    if(vclose&&vslot){vclose.addEventListener('click',function(){vslot.hidden=true;});}
+
+    /* Keep-exploring dots: only shown when the strip actually scrolls (mobile). */
+    var rg=document.querySelector('.relgrid'), rd=document.getElementById('reldots');
+    if(rg&&rd){
+      var relCards=rg.querySelectorAll('.relcard');
+      relCards.forEach(function(){rd.appendChild(document.createElement('span'))});
+      var updDots=function(){
+        var scrollable=rg.scrollWidth>rg.clientWidth+4;
+        rd.style.display=scrollable?'flex':'none';
+        if(!scrollable)return;
+        var i=Math.round(rg.scrollLeft/(rg.scrollWidth-rg.clientWidth)*(relCards.length-1));
+        rd.querySelectorAll('span').forEach(function(s,n){s.classList.toggle('on',n===i)});
+      };
+      rg.addEventListener('scroll',updDots,{passive:true});
+      window.addEventListener('resize',updDots);
+      updDots();
+    }
+
+    /* Explore tabs: swap the visible panel; the row stays put so you never lose your place. */
+    var tabBtns=document.querySelectorAll('.tabbtn');
+    tabBtns.forEach(function(b){
+      b.addEventListener('click',function(){
+        tabBtns.forEach(function(o){o.classList.remove('on')});
+        document.querySelectorAll('.tpanel').forEach(function(p){p.hidden=true});
+        b.classList.add('on');
+        document.getElementById(b.getAttribute('data-panel')).hidden=false;
+      });
+    });
+
+    /* YouTube: clean facade, then real player on demand. Seek without yanking to top. */
+    var player=null, ready=false, apiReady=false, pending=null;
+    window.onYouTubeIframeAPIReady=function(){apiReady=true; if(pending!=null){var s=pending;pending=null;createPlayer(s);}};
+    function createPlayer(sec){
+      var wrap=document.getElementById('player'); wrap.innerHTML='<div id="yt"></div>';
+      player=new YT.Player('yt',{videoId:VIDEO,playerVars:{autoplay:1,rel:0,modestbranding:1,playsinline:1,start:Math.floor(sec||0)},events:{onReady:function(){ready=true;}}});
+    }
+    function nudge(){
+      var p=document.getElementById('player-wrap'), r=p.getBoundingClientRect();
+      if(r.bottom<80 || r.top>window.innerHeight-90){ p.scrollIntoView({behavior:'smooth',block:'start'}); }
+    }
+    function startAt(sec){
+      nudge();
+      if(player&&ready){ player.seekTo(sec,true); player.playVideo(); return; }
+      if(apiReady){ createPlayer(sec); } else { pending=sec; }
+    }
+    document.getElementById('facade').addEventListener('click',function(){startAt(0);});
+    (function(){var s=document.createElement('script');s.src='https://www.youtube.com/iframe_api';document.head.appendChild(s);})();
+  </script>
+</body>
+</html>

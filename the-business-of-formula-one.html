@@ -1,0 +1,708 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EP 162 · The Business of Formula One | The Numbers Game</title>
+<meta name="description" content="With the Melbourne Grand Prix approaching, Jason unpacks the numbers behind the business of Formula One.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" sizes="64x64" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="canonical" href="https://thenumbersgamepodcast.com.au/the-business-of-formula-one">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="The Numbers Game">
+<meta property="og:title" content="EP 162 · The Business of Formula One | The Numbers Game">
+<meta property="og:description" content="With the Melbourne Grand Prix approaching, Jason unpacks the numbers behind the business of Formula One.">
+<meta property="og:url" content="https://thenumbersgamepodcast.com.au/the-business-of-formula-one">
+<meta property="og:image" content="https://i.ytimg.com/vi/uMb4eaYr0WI/maxresdefault.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+  :root{
+    --purple:#585af3; --purple-dark:#2c1b8a; --mint:#7ad9a8;
+    --white:#ffffff; --muted:rgba(255,255,255,.60); --dim:rgba(255,255,255,.42);
+    --line:rgba(255,255,255,.12); --card:rgba(255,255,255,.05); --card-hi:rgba(255,255,255,.09);
+    --display:'Anton',Impact,'Helvetica Neue',sans-serif;
+    --sans:'Inter',system-ui,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif;
+    --wrap:1280px;   /* page frame (nav spans this) */
+    --col:960px;     /* content column (player, tabs, text) */
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:var(--sans); color:var(--white); line-height:1.6; -webkit-font-smoothing:antialiased;
+    background:#12093a;
+    background-image:
+      radial-gradient(1200px 600px at 82% -6%, rgba(88,90,243,.45) 0%, transparent 55%),
+      radial-gradient(900px 700px at 5% 8%, rgba(122,217,168,.10) 0%, transparent 50%),
+      linear-gradient(180deg,#2c1b8a 0%,#1a1150 28%,#100b34 62%,#0b0820 100%);
+    background-attachment:fixed;
+  }
+  a{color:inherit}
+  .wrap{max-width:var(--wrap);margin:0 auto;padding:0 36px}
+  main.wrap{max-width:var(--col)}
+  @media(max-width:720px){.wrap{padding:0 22px}}
+
+  /* ── Navbar ── */
+  .nav{position:sticky;top:0;z-index:50;background:linear-gradient(180deg,rgba(24,15,74,.92),rgba(24,15,74,.72));backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+  .nav-in{max-width:var(--wrap);margin:0 auto;padding:11px 36px;display:flex;align-items:center;justify-content:space-between}
+  @media(max-width:720px){.nav-in{padding:11px 22px}}
+  .brand{display:block;line-height:0}
+  .brand img{height:36px;width:auto;display:block}
+  .navlinks{display:flex;gap:28px;align-items:center}
+  .navlinks a{text-decoration:none;font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);transition:.15s}
+  .navlinks a:hover{color:var(--white)}
+  .navlinks a.navtop{cursor:default}
+  .navgroup{position:relative;display:flex;align-items:center}
+  .navgroup .subnav{display:none;position:absolute;top:100%;left:50%;transform:translateX(-50%);padding-top:14px;min-width:180px}
+  .navgroup:hover .subnav,.navgroup:focus-within .subnav{display:block}
+  .subnav-in,.navgroup .subnav{z-index:60}
+  .navgroup .subnav a{display:block;background:#180f4a;border:1px solid var(--line);border-top:0;padding:12px 16px;font-size:12px;color:rgba(255,255,255,.85)}
+  .navgroup .subnav a:first-child{border-top:1px solid var(--line)}
+  .navgroup .subnav a:hover{background:#221768;color:var(--white)}
+  .navburger{display:none;background:none;border:1px solid var(--line);padding:8px 10px;cursor:pointer;color:var(--white);transition:.15s}
+  .navburger:hover{border-color:rgba(122,217,168,.6)}
+  .navburger svg{width:20px;height:20px;fill:currentColor;display:block}
+  .navdrop{display:none}
+  @media(max-width:720px){
+    .navlinks{display:none}
+    .navburger{display:block}
+    .navdrop{display:block;position:absolute;left:0;right:0;top:100%;
+      background:#180f4a;border-bottom:1px solid var(--line);box-shadow:0 24px 50px rgba(0,0,0,.45)}
+    .navdrop[hidden]{display:none}
+    .navdrop a{display:block;padding:15px 22px;text-decoration:none;font-size:14px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:rgba(255,255,255,.9);border-bottom:1px solid rgba(255,255,255,.06)}
+    .navdrop a:last-child{border-bottom:0}
+    .navdrop a.sub{padding-left:42px;font-size:13px;color:rgba(255,255,255,.72)}
+    .navdrop .navlabel{display:block;padding:15px 22px 6px;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.4)}
+  }
+
+  /* ── Hero / hook (marker-highlight system: purple hook wraps naturally, mint payoff below)
+     Rules: title splits at its natural break (colon/pipe/question mark). Front = hook (purple,
+     big), back = payoff (mint, smaller). No break in title = purple hook only. Highlights hug
+     the text (tight em padding tuned to Anton) and wrap via box-decoration-break — never
+     hand-pick line breaks or mint words. ── */
+  header.hero{padding:34px 0 6px}
+  .hook{--inx:clamp(8.4px,2.1vw,15.6px)} /* one shared text inset so hook + payoff first letters align */
+  .hook .hk{font-family:var(--display);font-weight:400;text-transform:uppercase;
+    font-size:clamp(28px,7vw,52px);line-height:1.3;letter-spacing:-.5px;text-wrap:balance}
+  .hook .hk span{color:var(--white);padding:.04em var(--inx) .02em;
+    background:linear-gradient(var(--purple),var(--purple)) 0 50%/100% 87% no-repeat;
+    -webkit-box-decoration-break:clone;box-decoration-break:clone}
+  .hook .pay{font-family:var(--display);font-weight:400;text-transform:uppercase;
+    font-size:clamp(16px,4vw,24px);line-height:1.5;letter-spacing:.6px;margin-top:8px;text-wrap:balance}
+  .hook .pay span{color:#0a0a0a;padding:.08em var(--inx) .04em;
+    background:linear-gradient(var(--mint),var(--mint)) 0 50%/100% 88% no-repeat;
+    -webkit-box-decoration-break:clone;box-decoration-break:clone}
+  /* no-hook titles: mid-split into two full-size rows, purple then mint */
+  .hook .hk span.hkrow{display:block;background:none;padding:0}
+  .hook .hk .hkrow+.hkrow{margin-top:8px}
+  .hook .hk span.mintseg{color:#0a0a0a;
+    background:linear-gradient(var(--mint),var(--mint)) 0 50%/100% 87% no-repeat}
+
+  /* ── Player (clean facade → real player on tap) ── */
+  .player-wrap{margin:24px 0 4px;scroll-margin-top:76px}
+  .player{position:relative;width:100%;padding-top:56.25%;border-radius:0;overflow:hidden;background:#000;box-shadow:0 30px 70px rgba(0,0,0,.5),0 0 0 1px rgba(255,255,255,.06)}
+  .facade{position:absolute;inset:0;border:0;cursor:pointer;background-size:cover;background-position:center;display:flex;align-items:center;justify-content:center;padding:0}
+  .facade .play{width:74px;height:74px;border-radius:50%;background:rgba(10,6,30,.40);border:2px solid rgba(255,255,255,.72);display:flex;align-items:center;justify-content:center;transition:.18s;-webkit-backdrop-filter:blur(1px);backdrop-filter:blur(1px)}
+  .facade:hover .play{background:rgba(88,90,243,.62);transform:scale(1.07);border-color:#fff}
+  .facade .play::after{content:"";border-style:solid;border-width:11px 0 11px 19px;border-color:transparent transparent transparent #fff;margin-left:5px}
+  .player iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+
+  /* ── Episode facts (bottom of the Summary panel — templated per episode) ── */
+  .sumfacts{margin:14px 10px 4px;padding-top:13px;border-top:1px solid rgba(255,255,255,.08);display:flex;flex-direction:column;gap:8px}
+  .fact{display:flex;gap:12px;font-size:13.5px}
+  .fact .fl{flex:none;width:104px;color:var(--dim);font-weight:600;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;padding-top:2px}
+  .fact .fv{color:rgba(255,255,255,.9);font-weight:500}
+  .fact .fv a{color:var(--mint);text-decoration:none;border-bottom:1px solid rgba(122,217,168,.4);transition:.15s}
+  .fact .fv a:hover{border-bottom-color:var(--mint)}
+
+  /* ── Episode tag (identity: black label hanging off the title corner) ── */
+  .eptag{display:inline-block;position:relative;left:-6px;margin-bottom:-7px;z-index:2;
+    background:#0a0a0a;color:var(--white);font-family:var(--display);font-weight:400;
+    font-size:13.5px;letter-spacing:1.5px;text-transform:uppercase;padding:6px 11px 4px}
+
+  /* ── Explore tabs (sticky mode switcher; one panel swaps below, nothing shoves) ── */
+  .explore{margin-top:22px}
+  .tabs{position:sticky;top:58px;z-index:40;display:flex;flex-wrap:wrap;gap:8px;padding:10px 0;
+    background:linear-gradient(180deg,rgba(18,10,55,.96),rgba(18,10,55,.86));
+    backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+  .tabbtn{font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.5px;
+    font-size:14.5px;color:var(--white);background:var(--purple);border:1px solid var(--purple);
+    padding:9px 13px 7px;cursor:pointer;transition:.15s}
+  .tabbtn:hover{filter:brightness(1.12)}
+  .tabbtn.on{background:var(--mint);border-color:var(--mint);color:#0a0a0a}
+  .tabbtn.on:hover{filter:none}
+  .tabbtn .ct{font-size:12px;opacity:.75;font-variant-numeric:tabular-nums}
+  .tabbtn .ct::before{content:" · "}
+  .tpanel{border:1px solid var(--line);background:var(--card);padding:12px 10px 14px}
+  .hint{font-size:12.5px;color:var(--muted);padding:2px 10px 10px;border-bottom:1px solid rgba(255,255,255,.08);margin-bottom:6px}
+
+  /* ── Listen row (no box: label left, service pills follow) ── */
+  .listen{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:12px 16px;margin-top:34px}
+  .listen .lname{font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--dim)}
+  .listen a{display:inline-flex;align-items:center;gap:9px;padding:11px 18px;border-radius:999px;
+    background:var(--mint);color:#08210f;text-decoration:none;font-weight:800;font-size:12.5px;
+    letter-spacing:.04em;text-transform:uppercase;transition:.15s}
+  .listen a:hover{filter:brightness(1.06);transform:translateY(-1px);box-shadow:0 12px 30px rgba(122,217,168,.25)}
+  .listen svg{width:20px;height:20px;fill:currentColor;flex:none}
+  /* ── Listen-now Spotify audio embed (full column width, above the pills) ── */
+  .listen-now{margin-top:40px}
+  .listen-now .ln-head{display:flex;align-items:baseline;justify-content:space-between;gap:14px;margin-bottom:13px}
+  .listen-now .ln-title{font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--dim)}
+  .audio-embed{border-radius:12px;overflow:hidden;box-shadow:0 20px 50px rgba(0,0,0,.4),0 0 0 1px rgba(255,255,255,.06)}
+  .audio-embed iframe{display:block;width:100%;border:0}
+  @media(max-width:720px){.listen-now{margin-top:32px}}
+
+  /* ── Keep exploring (thumbnails link to other episode PAGES, never timecodes).
+     Swipeable strip on mobile, fits three-up on desktop. Variant rule: claim
+     "similar ground" + reason lines ONLY when moment-level topic overlap is
+     genuinely strong; otherwise show the latest released episodes with dates —
+     never invent a connection. ── */
+  .relsec{margin-top:60px;padding-top:58px;border-top:1px solid var(--line)} /* line = end of this episode's info */
+  .reldots{display:flex;justify-content:center;gap:7px;margin-top:12px}
+  .reldots span{width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.25);transition:.2s}
+  .reldots span.on{background:var(--mint)}
+  .relsec .rtitle{display:inline-block;font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.5px;font-size:14.5px;background:var(--mint);color:#0a0a0a;padding:9px 13px 7px;margin-bottom:18px}
+  .relgrid{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding-bottom:6px;scrollbar-width:none}
+  .relgrid::-webkit-scrollbar{display:none}
+  .relcard{flex:0 0 56%;max-width:232px;scroll-snap-align:start;display:flex;flex-direction:column;text-decoration:none;background:var(--card);border:1px solid var(--line);transition:.15s}
+  .relcard:hover{background:var(--card-hi);border-color:rgba(122,217,168,.55)}
+  .relcard img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block}
+  .relcard .rt{display:block;font-size:12.5px;font-weight:600;color:rgba(255,255,255,.92);line-height:1.4;padding:8px 8px 0}
+  .relcard .rfoot{margin-top:auto;display:flex;justify-content:space-between;align-items:flex-end;gap:8px;padding:10px 8px 9px}
+  .relcard .rwhy{font-size:11.5px;color:var(--mint)}
+  .relcard .rtag{display:inline-block;background:#0a0a0a;color:var(--white);font-family:var(--display);font-size:10px;letter-spacing:1.2px;text-transform:uppercase;padding:3px 7px 2px;white-space:nowrap;flex:0 0 auto}
+
+  /* ── Dropdown sections (accordion under the player) ── */
+  .drops{margin-top:34px;display:flex;flex-direction:column;gap:11px}
+  .drop{border:1px solid var(--line);border-radius:0;background:var(--card);overflow:hidden;transition:border-color .15s}
+  .drop[open]{border-color:rgba(122,217,168,.35)}
+  .drop>summary{list-style:none;cursor:pointer;padding:16px 18px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+  .drop>summary::-webkit-details-marker{display:none}
+  .drop>summary .st{font-weight:700;font-size:15.5px;letter-spacing:.005em}
+  .drop>summary .ct{margin-left:auto;font-size:12px;color:var(--dim);font-weight:600;font-variant-numeric:tabular-nums}
+  .drop>summary .chev{flex:none;width:22px;height:22px;border-radius:50%;background:rgba(122,217,168,.14);color:var(--mint);display:flex;align-items:center;justify-content:center;font-family:var(--display);font-size:15px;line-height:1;transition:.2s;transform:translateY(-1px)}
+  .drop[open]>summary .chev{transform:rotate(45deg)}
+  .drop-body{padding:2px 12px 12px}
+
+  /* chapters */
+  .chapter{display:flex;align-items:baseline;gap:14px;width:100%;text-align:left;cursor:pointer;background:none;border:0;color:inherit;font-family:inherit;padding:11px 10px;border-radius:10px;transition:.13s}
+  .chapter:hover{background:var(--card-hi)}
+  .chapter .tc{font-variant-numeric:tabular-nums;font-weight:700;font-size:14px;color:var(--mint);flex:none;width:48px}
+  .chapter .cx{font-size:15px;font-weight:500;color:rgba(255,255,255,.9)}
+  .chapter:hover .cx{color:#fff}
+
+  /* questions */
+  .q{display:flex;align-items:center;gap:12px;width:100%;text-align:left;cursor:pointer;background:none;border:0;border-radius:11px;color:inherit;font-family:inherit;padding:12px 10px;transition:.14s}
+  .q+.q{border-top:1px solid rgba(255,255,255,.05)}
+  .q:hover{background:var(--card-hi)}
+  .q .qm{font-family:var(--display);font-size:15px;color:var(--mint);flex:none;line-height:1;transform:translateY(1px)}
+  .q .qx{font-size:15px;font-weight:500;color:rgba(255,255,255,.92)}
+  .q .go{margin-left:auto;flex:none;color:var(--dim);font-size:18px;transition:.15s}
+  .q:hover .go{color:var(--mint);transform:translateX(2px)}
+
+  /* summary + transcript bodies */
+  .summary-body p{font-size:16.5px;line-height:1.62;color:rgba(255,255,255,.9);padding:6px 10px 4px}
+  .tbody{padding:2px 10px 8px}
+  .tbody p{font-size:14.5px;line-height:1.7;color:rgba(255,255,255,.78);margin-top:15px;max-width:64ch}
+  .tbody .spk{display:block;font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--mint);margin-bottom:2px}
+
+  /* ── Voice note ask (lives at the bottom of the Summary panel) ── */
+  .vask{margin:16px 10px 4px}
+  .vbtn{display:inline-flex;align-items:center;gap:9px;padding:12px 20px;border-radius:999px;border:0;cursor:pointer;
+    background:var(--mint);color:#08210f;font-family:inherit;font-weight:800;font-size:12.5px;
+    letter-spacing:.04em;text-transform:uppercase;transition:.15s}
+  .vbtn:hover{filter:brightness(1.06);transform:translateY(-1px);box-shadow:0 12px 30px rgba(122,217,168,.25)}
+  .vbtn svg{width:18px;height:18px;fill:currentColor;flex:none}
+  .vslot{background:var(--purple);padding:12px 10px 10px;margin:14px 0 4px;box-shadow:0 18px 40px rgba(0,0,0,.35)}
+  .vslot[hidden]{display:none}
+  .vhead{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;margin-bottom:10px}
+  .vhead .vmsg{font-family:var(--sans);font-size:13px;line-height:1.55;color:rgba(255,255,255,.92);margin:2px 0 0;padding:0 2px}
+  .vclose{background:none;border:0;color:rgba(255,255,255,.85);font-size:22px;line-height:1;cursor:pointer;padding:0 2px}
+  .vclose:hover{color:var(--white)}
+  .vslot iframe{display:block}
+
+  /* ── YouTube subscribe pill (sits in the listen row; outranks .listen a's mint) ── */
+  .listen a.yt-pill{background:var(--purple);color:var(--white)}
+  .listen a.yt-pill:hover{filter:brightness(1.1);transform:translateY(-1px)}
+  @media(max-width:720px){ /* mobile: no label, three compact pills on one row */
+    .listen .lname{display:none}
+    .listen{gap:8px}
+    .listen a{padding:10px 13px;font-size:11px;gap:6px}
+    .listen svg{width:16px;height:16px}
+  }
+
+  /* ── Footer: Follow us on | Brought to you by | Produced by, + Menu dropdown ── */
+  footer{border-top:1px solid var(--line);margin-top:68px;padding:52px 20px 58px}
+  .footgrid{max-width:var(--wrap);margin:0 auto;display:grid;grid-template-columns:1fr 1.15fr .8fr;gap:44px;align-items:start}
+  .fcol{text-align:center;display:flex;flex-direction:column;align-items:center}
+  .foot-label{font-size:11px;font-weight:700;letter-spacing:.26em;text-transform:uppercase;color:var(--dim);margin-bottom:18px}
+  .sponsors{display:flex;justify-content:center;align-items:center;gap:34px;flex-wrap:wrap}
+  .sponsors a,.produced a{display:inline-flex;transition:.15s}
+  .sponsors a:hover,.produced a:hover{transform:translateY(-1px)}
+  .sponsors img{height:32px;width:auto;opacity:.92}
+  .produced img{height:30px;width:auto;opacity:.95}
+  .sponsors a:hover img,.produced a:hover img{opacity:1}
+  footer .socials{display:flex;gap:11px;justify-content:center;flex-wrap:wrap;margin:0}
+  footer .socials a{width:40px;height:40px;border-radius:50%;border:1.5px solid rgba(122,217,168,.5);display:flex;align-items:center;justify-content:center;transition:.15s}
+  footer .socials a svg{width:18px;height:18px;fill:var(--mint);transition:.15s}
+  footer .socials a:hover{background:var(--mint);border-color:var(--mint);transform:translateY(-2px)}
+  footer .socials a:hover svg{fill:#0a0a0a}
+  .footbar{max-width:var(--wrap);margin:34px auto 0;border-top:1px solid var(--line);padding-top:20px;display:flex;flex-direction:column;align-items:center;gap:14px}
+  .footnav-dd{display:block;width:100%;max-width:var(--wrap);margin:0 auto;text-align:center}
+  .footnav-dd>summary{list-style:none;cursor:pointer;display:inline-flex;align-items:center;gap:9px;font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.5px;font-size:13px;color:var(--muted);background:transparent;border:1px solid var(--line);padding:8px 16px 6px;transition:.15s}
+  .footnav-dd>summary::-webkit-details-marker{display:none}
+  .footnav-dd>summary:hover{color:var(--mint);border-color:rgba(122,217,168,.45)}
+  .footnav-dd>summary .ham{width:15px;height:15px;fill:currentColor;transform:translateY(-1px)}
+  .footnav-dd .dd-links{display:flex;flex-direction:row;flex-wrap:wrap;justify-content:center;gap:12px 24px;padding:24px 0 4px}
+  .footnav-dd .dd-links a{font-size:11.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:.15s}
+  .footnav-dd .dd-links a:hover{color:var(--mint)}
+  .copyright{font-size:12px;color:var(--dim);text-align:center}
+  @media(max-width:720px){.footgrid{grid-template-columns:1fr;gap:34px}footer{padding:40px 16px 20px}.footbar{margin-top:34px;padding-top:24px;gap:20px}.footnav-dd .dd-links{flex-direction:column;align-items:center;gap:15px}}
+
+  @media(min-width:720px){header.hero{padding:48px 0 6px}}
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "PodcastEpisode", "name": "The Business of Formula One", "url": "https://thenumbersgamepodcast.com.au/the-business-of-formula-one", "datePublished": "2024-03-14", "episodeNumber": 162, "image": "https://i.ytimg.com/vi/uMb4eaYr0WI/maxresdefault.jpg", "partOfSeries": {"@type": "PodcastSeries", "name": "The Numbers Game", "url": "https://thenumbersgamepodcast.com.au/"}}</script>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-in">
+      <a class="brand" href="/" aria-label="The Numbers Game home"><img src="assets/tng-logo.png" alt="The Numbers Game"></a>
+      <div class="navlinks">
+        <a href="/">Home</a>
+        <div class="navgroup">
+          <a class="navtop">Episodes</a>
+          <div class="subnav">
+            <a href="/episodes">All episodes</a>
+            <a href="/adventure">Find moments</a>
+          </div>
+        </div>
+        <div class="navgroup">
+          <a class="navtop">About</a>
+          <div class="subnav">
+            <a href="/about">The show</a>
+            <a href="/nick-reilly">Nick Reilly</a>
+            <a href="/jason-robinson">Jason Robinson</a>
+          </div>
+        </div>
+        <a href="/contact">Contact</a>
+      </div>
+      <button class="navburger" id="navburger" type="button" aria-label="Menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24"><path d="M3 6h18v2H3zM3 11h18v2H3zM3 16h18v2H3z"/></svg>
+      </button>
+    </div>
+    <div class="navdrop" id="navdrop" hidden>
+      <a href="/">Home</a>
+      <span class="navlabel">Episodes</span>
+      <a class="sub" href="/episodes">All episodes</a>
+      <a class="sub" href="/adventure">Find moments</a>
+      <span class="navlabel">About</span>
+      <a class="sub" href="/about">The show</a>
+      <a class="sub" href="/nick-reilly">Nick Reilly</a>
+      <a class="sub" href="/jason-robinson">Jason Robinson</a>
+      <a href="/contact">Contact</a>
+    </div>
+  </nav>
+
+  <main class="wrap">
+
+    <header class="hero">
+      <div class="hook">
+        <span class="eptag">EP 162</span>
+        <h1 class="hk"><span class="hkrow"><span>The Business</span></span>
+        <span class="hkrow"><span class="mintseg">of Formula One</span></span></h1>
+      </div>
+    </header>
+
+    <div class="player-wrap" id="player-wrap">
+      <div class="player" id="player">
+        <button class="facade" id="facade" style="background-image:url('https://i.ytimg.com/vi/uMb4eaYr0WI/maxresdefault.jpg')" aria-label="Play episode">
+          <span class="play"></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="explore">
+      <div class="tabs" role="tablist">
+        <button class="tabbtn on" data-panel="p-summary">Summary</button>
+        <button class="tabbtn" data-panel="p-chapters">Chapters<span class="ct" id="chcount"></span></button>
+        <button class="tabbtn" data-panel="p-questions">Questions<span class="ct" id="qcount"></span></button>
+      </div>
+      <section class="tpanel" id="p-summary">
+        <div class="summary-body">
+          <p>With the Melbourne Grand Prix approaching, Jason unpacks the numbers behind the business of Formula One. He digs into the 1994 Australian Grand Prix Act and the roughly 100 million dollars of state government money that keeps the event here, the F1's own books running at a 35 million dollar loss, and the flow-on economic benefit to Victoria through hotels, travellers and spending. The trio then trace how Netflix's Drive to Survive transformed the sport, doubling revenue, lifting the company valuation to around 17 billion and pulling in a young, more female audience. They finish on the eye-watering money in the sport, from Max Verstappen and Lewis Hamilton's contracts to the financial backers who decide who gets a seat.</p>
+        </div>
+        <div class="vask">
+          <button class="vbtn" id="vbtn" type="button">
+            <svg viewBox="0 0 24 24"><path d="M12 14a3 3 0 0 0 3-3V6a3 3 0 1 0-6 0v5a3 3 0 0 0 3 3zm5-3a5 5 0 0 1-10 0H5a7 7 0 0 0 6 6.92V21h2v-3.08A7 7 0 0 0 19 11h-2z"/></svg>
+            Send us a voice note
+          </button>
+          <div class="vslot" id="vslot" hidden>
+            <div class="vhead">
+              <p class="vmsg">We'd love to hear from you. You can leave up to a 90 second voice note for us to play on the show: a question, some feedback, or a topic you want covered.</p>
+              <button class="vclose" id="vclose" type="button" aria-label="Close">&times;</button>
+            </div>
+            <iframe src="https://www.speakpipe.com/widget/inline/hhq6kzggsx7zpcsvakgxfrzun3zidpde" allow="microphone" width="100%" height="200" frameborder="0" title="Leave The Numbers Game a voice note"></iframe>
+          </div>
+          <script async src="https://www.speakpipe.com/widget/loader.js" charset="utf-8"></script>
+        </div>
+        <div class="sumfacts">
+          <div class="fact"><span class="fl">Release date</span><span class="fv">14 March 2024</span></div>
+          <div class="fact"><span class="fl">Hosts</span><span class="fv"><a href="/nick-reilly">Nick Reilly</a>, <a href="/jason-robinson">Jason Robinson</a> &amp; <a href="/marty-vidakovic">Marty Vidakovic</a></span></div>
+
+        </div>
+      </section>
+      <section class="tpanel" id="p-chapters" hidden>
+        <p class="hint">Jump straight to the part you need.</p>
+        <div id="chapters"></div>
+      </section>
+      <section class="tpanel" id="p-questions" hidden>
+        <p class="hint">Real questions this episode answers. Tap one to hear the answer.</p>
+        <div id="qa"></div>
+      </section>
+    </div>
+
+    <div class="drops">
+
+      <details class="drop">
+        <summary><span class="st">Episode transcript</span><span class="chev">+</span></summary>
+        <div class="drop-body tbody">
+          <p><span class="spk">Jason · 00:00</span>Welcome to episode 162 of The Numbers Game. I'm Jase, I'm here with Nick and Marty. How are we going today, fellas?</p>
+          <p><span class="spk">Marty · 00:06</span>Going well, Jase. Only 38 episodes before you get very, very, very excited. You know, 38 to 200 is, uh, you know, I know you'd be up and about. No, I'm good, mate. Really good. Uh, looking forward to this one, actually.</p>
+          <p><span class="spk">Marty · 00:22</span>Nick, how are you? You going well?</p>
+          <p><span class="spk">Nick · 00:24</span>Going well, yeah, just, uh, waiting for that, uh, one time of the year that really frustrates me because, um, they shut the driving range down at Albert Park. What? Because the Grand Prix is, um, is being erected, or what is, you know, the stands and what not are being erected, so, it's at that level, I go to Albert Park driving range a lot, it's at that point now where everything's up, I'm like, it's coming, it's coming, and It's always, without fail, it's always me working it out when I get there.</p>
+          <p><span class="spk">Nick · 00:57</span>I get to the range and it's shut and I'm like</p>
+          <p><span class="spk">Nick · 01:00</span>Why don't you look online? So, uh, but yeah, I do love the GP though, so it's all good. And I think, uh, Jase has got some cool stuff to talk about this episode.</p>
+          <p><span class="spk">Jason · 01:09</span>If you haven't guessed it already, we're talking numbers. It's the numbers game. We're talking Formula One, baby.</p>
+          <p><span class="spk">Jason · 01:14</span>Yeah, baby, it's back. And, uh. You know, just to, you know, what, how this all comes about, just going from my usual run on the weekend, marathon training, as we've said over the last few, Case and I doing our little jog around Albert Park, uh, while we still can, just in the, you know, as it approaches, kind of, uh, the Formula One, getting fully fired up, the grandstands are set.</p>
+          <p><span class="spk">Jason · 01:34</span>Set up the bollards are along the side of the road. You know, there's a bit of atmosphere and buzz in Melbourne. It's getting exciting. And, uh, then I got home and noticed, uh, there was another season of drive to survive on Netflix. So I binge that all weekend. So between running and binge watching Netflix, uh, I've been fully immersed in formula one land.</p>
+          <p><span class="spk">Jason · 01:53</span>So that's where we're at today, boys. And, uh, yeah, I'm hoping you're ready for it. Is</p>
+          <p><span class="spk">Nick · 01:57</span>that the latest series? Is that up that</p>
+          <p><span class="spk">Nick · 02:00</span>out? Is it?</p>
+          <p><span class="spk">Jason · 02:00</span>The latest series is out. I saw it pop up as the new season and you know, when you're like, I'm going to spread this out so I don't watch it all in one go. And then I think the danger of Netflix is the ebbs just roll into the next one and the next one and the next one starts.</p>
+          <p><span class="spk">Jason · 02:16</span>And, you know, I'd done like a 30 K run on the weekend and sat on the couch with an ice pack on my knees and ankles just to kind of, you know, chill out a little bit, eat some food. And then before you know it. It was six episodes were done and there was four to go. So it was like, I think I just need to punch out the whole season in a day and call it.</p>
+          <p><span class="spk">Jason · 02:35</span>So, yeah,</p>
+          <p><span class="spk">Marty · 02:36</span>I get excited that you're so close to these major events in Melbourne where you live, whereas out of East, you know, we've got the Lilydale fun run. Uh, just not, not the same excitement as the F 1, I just go, we need, we need to get</p>
+          <p><span class="spk">Nick · 02:51</span>something out of these, surely. The most frustrating thing about the F 1s now, and I don't want to steal your thunder here Jase, but um, at</p>
+          <p><span class="spk">Nick · 03:00</span>last year they didn't have the, the fighter jets go over.</p>
+          <p><span class="spk">Nick · 03:04</span>Did you notice that last year?</p>
+          <p><span class="spk">Jason · 03:05</span>I did. I did.</p>
+          <p><span class="spk">Nick · 03:06</span>You know why?</p>
+          <p><span class="spk">Jason · 03:08</span>Probably money. But you tell me, I haven't got that in my notes. So I'm happy to learn something else. Yeah. It's a couple of things I read. CO2 emissions.</p>
+          <p><span class="spk">Nick · 03:15</span>See, Amish there. It doesn't help them get to their. Net zero. Their net zero. Mm. Really? Um, and you know, it's the absolute highlight.</p>
+          <p><span class="spk">Nick · 03:24</span>I live in Port Melbourne and I've got, um, I've got friends that, you know, I've got houses with balconies and they stand on their balconies with the kids just waiting for it, you know. It's obviously on the Saturday and the Sunday. Bye. Um,</p>
+          <p><span class="spk">Jason · 03:36</span>even, even in South Yarra from our balcony, we see them, see the flyover happening as well.</p>
+          <p><span class="spk">Jason · 03:41</span>If you look out towards our park and the noise is epic and you just, it's, it's the buzz. I reckon, yeah, we're, we're missing out on some economic benefits from the flyover.</p>
+          <p><span class="spk">Marty · 03:49</span>They used to do that over the MCG as well at one point, didn't they? On Australia day and all that, that doesn't happen anymore. Yeah, I think they used to fly the ANZAC day, the ANZAC flyover.</p>
+          <p><span class="spk">Marty · 03:58</span>Yeah, that's right.</p>
+          <p><span class="spk">Marty · 04:00</span>Very</p>
+          <p><span class="spk">Nick · 04:00</span>disappointing.</p>
+          <p><span class="spk">Jason · 04:01</span>Got a bit to go through. I mean, I've really gone deep on the numbers and got really fired up and excited for this one. So I've kind of broken it into a couple of segments. We're going to unpack the economic benefit of the Formula One on Melbourne. Then I've had a bit of a look at the books of the Formula One behind the scenes.</p>
+          <p><span class="spk">Jason · 04:16</span>Um, it is publicly available. So, you know, I'm not sharing anything that I shouldn't be, but. That's also quite interesting. Then the numbers for drive to survive, what that did for the formula one as a business. So numbers galore, special shout out to clients that will be listening, rise scaffold management.</p>
+          <p><span class="spk">Jason · 04:32</span>Uh, so Nick, you just mentioned all the scaffolding and grandstands that are up around Albert park, our clients, uh, and numbers game listeners, uh, rise scaffold. They put up all the grandstands and pack them down. So well done gents. The place is looking immaculate. So the Formula One in Melbourne, uh, over obviously the last couple of years we've touched on drive to survive, but Formula One is booming.</p>
+          <p><span class="spk">Jason · 04:54</span>It is getting busier and busier and more and more popular. Uh, last year, the</p>
+          <p><span class="spk">Jason · 05:00</span>2023 Formula One broke records, crowds with 445,000 people passing through. over the weekend between the Thursday, Friday practice sessions, the Saturday qualifying and the Sunday main race, which was record breaking. They've never had a bigger crowd.</p>
+          <p><span class="spk">Jason · 05:16</span>Uh, the previous biggest crowd was 419, 000 a few years earlier. So, uh, either of you attended the Grand Prix last year?</p>
+          <p><span class="spk">Marty · 05:23</span>Yep. I go most years. I love it. I've been, but not last year. Beautiful.</p>
+          <p><span class="spk">Jason · 05:28</span>Um, I went many, many years ago with an accounting add on called Dext and we were in like a little grandstand and the CEO of the Formula One, who was it at the time, older fella, white grey hair.</p>
+          <p><span class="spk">Jason · 05:41</span>Yeah.</p>
+          <p><span class="spk">Nick · 05:42</span>Um. Yeah. Anyway, he</p>
+          <p><span class="spk">Jason · 05:45</span>looked that up, but he, he came in and I wasn't a big formula one fan back in the 17, 18, 19 years. Then there was this guy, Mark Webber, who was in our, in our stand. And so everyone's getting photos with this Martin. I know who Mark Webber is, but I got a photo with Mark Webber and thought, this</p>
+          <p><span class="spk">Jason · 06:00</span>is pretty cool.</p>
+          <p><span class="spk">Jason · 06:00</span>You know? And afterwards, everyone's like, do you know how big a deal it was that you were in that particular box with the CEO of the Formula One and Mark Webber and so on and so forth? And I had no idea. I was like, you know, didn't really get it. So it wasn't until Drive to Survive that I, like many other people around the world, got into the Formula One.</p>
+          <p><span class="spk">Jason · 06:17</span>Ron Walker. Ron Walker. There you go. So the Formula One Grand Prix has been hotly contested around it being in Melbourne. So in 1994, there was a government, um, The Liberal government strategy basically put together in 1994, a state government act called the Australian Grand Prix Act. And this was formed, this was legislated by the government around attracting major events to Melbourne, including the Grand Prix.</p>
+          <p><span class="spk">Jason · 06:47</span>This, and it's available, you can dig into the PDF and it goes into the ins and outs of how and why the, the Grand Prix can be pulled off, but also what is the government's contribution to making it happen so that the event doesn't run</p>
+          <p><span class="spk">Jason · 07:00</span>at a loss. So for example, last year it was something like 73 million had to be contributed to, I've got the numbers here, no, 101 million was contributed by the Formula One Grand Prix Government Contribution Fund.</p>
+          <p><span class="spk">Jason · 07:15</span>Last year for 2023. So what I kind of thought was an event that has 445, 000 people go through the gates is hugely popular. The Formula One is just booming. How is it that we still need to contribute a hundred million dollars in government money towards making the Grand Prix happen?</p>
+          <p><span class="spk">Nick · 07:36</span>Can I just ask a question?</p>
+          <p><span class="spk">Nick · 07:38</span>So that 101 million, when you say running at a loss, running at a loss for F1. And then the government's got to contribute that. To get F1 here, because F1 don't want to come here and run a loss, is that what you're saying? Yep, so that's part of the</p>
+          <p><span class="spk">Jason · 07:54</span>contract, which has now been extended to 2035 or 2037. So</p>
+          <p><span class="spk">Jason · 08:00</span>effectively, this is where people who maybe aren't into the Formula 1 or don't get around the hype go, What a load of crap that the government's throwing 100 million at the Formula 1 so that they come here to run that event.</p>
+          <p><span class="spk">Jason · 08:12</span>At a break even effectively for the formula one. So from a revenue point of view, the total revenue in for June for the 2023 financial year for the formula one, um, for the Melbourne end was 230. million. The total outflow in expenses to set up the Formula 1 Grand Prix and run the weekend was 265 million.</p>
+          <p><span class="spk">Jason · 08:37</span>So it ran at a 35 million loss. Then after the 35 million loss, well sorry, and that's, that's with the total inflows and everything. So it still runs at a loss. From a government, from a Melbourne perspective, the numbers are probably more impressive to look outside of the Formula 1's books. So they talk about the revenue outside of</p>
+          <p><span class="spk">Jason · 09:00</span>that produces 171 million in gross state product, which is the revenue for the rest of the state.</p>
+          <p><span class="spk">Jason · 09:06</span>We're talking hotel bookings, the occupancy rate of hotels or the book, the booking rate, almost all hotels in Melbourne hit 90 percent peak booking. across Melbourne for the Formula One Grand Prix. We have 73, 000 interstate travellers arrive and up to nearly 10, 000 international travellers will fly in to follow the Formula One Grand Prix.</p>
+          <p><span class="spk">Jason · 09:31</span>So when you think about, you know, restaurant bookings, hotels, Ubers, taxis, travels, Crown Casino, people go there gambling, drinking, all the rest of it, it's this flow on effect of how many people come out in the state and spend money that they may not have usually spent elsewhere. Now sometimes you know EY and these other big accounting firms are contracted to look at the numbers to go, well hang on a minute, would Jason have spent a hundred dollars somewhere else that weekend if the formula one wasn't here?</p>
+          <p><span class="spk">Jason · 09:59</span>Because he's in</p>
+          <p><span class="spk">Jason · 10:00</span>Victoria anyway, so is it just a transfer of where the money was going? Um, so there's a lot of analysis that's done to that. Another interesting, actually, before I dive in, any, anything that you're kind of hearing in those numbers that you're kind of interested in unpacking a little bit more?</p>
+          <p><span class="spk">Marty · 10:15</span>I think Adelaide to be annoyed. They had it originally.</p>
+          <p><span class="spk">Jason · 10:18</span>Yes. Correct. Marty. That was South Australia lost the Grand Prix before 1994. It was in Adelaide. Correct. That's right. I just,</p>
+          <p><span class="spk">Nick · 10:28</span>I just, um, I would question. I hope no one from Adelaide takes this personally, but I would question Adelaide's ability as a city.</p>
+          <p><span class="spk">Nick · 10:36</span>To actually hold the JP now with the, with the, like, look at the hotels that we've got from a numbers point of view, and we're at 90 percent capacity. Could they even hold it now? I don't think they could probably not.</p>
+          <p><span class="spk">Jason · 10:49</span>Uh, and look, I think, I think we'll smash past the 445, 000, um, attendees for 2024, the popularity is just getting more and more.</p>
+          <p><span class="spk">Jason · 10:57</span>Um, even in my runs</p>
+          <p><span class="spk">Jason · 11:00</span>around Albert park, they've built additional, um, Corporate boxes that never, or corporate hospitality venues that never existed before. So if you, if you're doing a lap on the bike, or if you're maybe from the golf course, Nick, you might be able to see, it looks like they've basically stacked 10 white shipping containers on top of each other to build this extra grandstand that never really existed or corporate hospitality venue.</p>
+          <p><span class="spk">Jason · 11:22</span>They've added that on and now selling tickets to that for about 3, 000 a head for the weekend for that particular area that never existed before. So again, as a business model, they're just getting more and more out of this. So, you know, I dare say, well, hopefully, I mean, looking at the 23 numbers, if it ran to a 30 million loss, you'd got to be thinking that this is the year that they're going to turn that into a profitable venture.</p>
+          <p><span class="spk">Jason · 11:44</span>Um, so the numbers are quite interesting to unpack. There's also money that comes from the motorcycle Grand Prix contribution fund. Um, there's another futures grand prix fund, and then another government contribution that kind of goes unnamed on their financials. Um, I might send Tommy a couple of</p>
+          <p><span class="spk">Jason · 12:00</span>links.</p>
+          <p><span class="spk">Jason · 12:00</span>So if you do go to the numbers game. com, the numbers game podcast. com. au website in the show notes, I'll try and make sure there's the link to, again, for the numbers nerds out there. If you want to see the financials for 2023 for the formula one. Um, and the other interesting one is the. Australian Grand Prix Act, which with this government legislation that even talks about how Albert Park and the Crown land gets transferred into the, basically the balance sheet of the business to be used for that point in time.</p>
+          <p><span class="spk">Jason · 12:31</span>And then it gets transferred back. So it's all this kind of convoluted legislation around how This works. Um, yeah, so I went really deep into a rabbit hole to kind of unpack some of this stuff. So, um, outside of the cost of the government contributing, you know, an estimated 70 to 80 to this and a hundred million last year.</p>
+          <p><span class="spk">Jason · 12:50</span>So interesting that that kind of jacked up.</p>
+          <p><span class="spk">Nick · 12:52</span>Quick question. Is it all state government, the federal put any money in? Uh, I believe it's state. All</p>
+          <p><span class="spk">Nick · 13:00</span>state.</p>
+          <p><span class="spk">Jason · 13:00</span>I believe it's state. It was, it was a, it's definitely a state government passed act. So I believe because the state has gone after it, it's the state's responsibility, which I think Dan Andrews, you know, when he was going for the extension to get it extended to 2035 or 2037, he was coming under fire when it came to government spending, um, for an event like that, that was running at a loss.</p>
+          <p><span class="spk">Jason · 13:23</span>So one of the other interesting stats that I will put down to drive to survive, potentially, and maybe I can be challenged here by listeners if they don't think so, before 2019, less than 24 percent of ticket sales were female. It was a male dominated, um, you know, sport. In 2022, or from 2022, 40 percent of tickets have been purchased by females.</p>
+          <p><span class="spk">Marty · 13:49</span>There's absolutely no doubt. So what was the inspiration to that in regards to the drive to survive? What was exposure, exposure, good looking</p>
+          <p><span class="spk">Jason · 14:00</span>drivers, all</p>
+          <p><span class="spk">Nick · 14:02</span>of a sudden you've got this sport that was. Look at Australia, Marty, that was only on at midnight, so unless you really wanted to watch, uh, you were in, in, in, into it, you weren't staying up to midnight on a Sunday to watch it.</p>
+          <p><span class="spk">Nick · 14:16</span>Drive to Survive brought in the, the human element. It was like watching a reality TV show. With these guys that were flying around the country, driving fast cars, um, huge personalities like Daniel Ricciardo, like Daniel Ricciardo has played a massive hand in all of this. I think personally, it just, it just gave the sport personality and then people were all of a sudden exposed to it.</p>
+          <p><span class="spk">Nick · 14:39</span>And when you watch Drive to Survive, you haven't watched it, you should watch it Marty, you'll love it. Particularly the first, um, the first series, you learn about the numbers. And you're just in awe of what goes on with this traveling circus, the money that's involved, the cars, like it really does suck you in.</p>
+          <p><span class="spk">Nick · 14:57</span>So yeah, I think, um,</p>
+          <p><span class="spk">Nick · 15:00</span>it's absolutely no doubt. It's strive to survive because of the exposure that's given to everyone. And, um, particularly the U S like you look at the U S now, I think is it. Two races a year or three Miami</p>
+          <p><span class="spk">Jason · 15:11</span>and Las Vegas. And is it Texas as well? I think it's three in the U S now. So that that's been a big part of the next little bit here to do with the numbers from Netflix and drive to survive.</p>
+          <p><span class="spk">Jason · 15:23</span>So yes, Marty, I think you're going to watch it. You're going to watch drive to survive and report back. Well, they're</p>
+          <p><span class="spk">Marty · 15:27</span>doing it with tennis too. It's interesting marketing play. Um, you know, just getting the inner sanctum of, of tennis across the world. Same as there. You know, drive to survive. So it's an interesting play.</p>
+          <p><span class="spk">Marty · 15:38</span>Yeah. I'm interested in the numbers. I had</p>
+          <p><span class="spk">Jason · 15:41</span>zero interest in formula one. I'd never watched it and never been interested. And I never thought my wife would like absolutely froth the formula one. Like we were, where were we? We were somewhere. And I woke up, Oh, that's it. Gold Coast Marathon last year. So I'd run the Gold Coast Marathon and I was tired.</p>
+          <p><span class="spk">Jason · 16:00</span>So I went to bed early, like 9 PM. I woke up to Case in bed with AirPods in at midnight that night, the Formula One Grand Prix had just started somewhere in the world. And she sat up from midnight till two in the morning with her phone and some AirPods in. When I rolled over and woke up, she pulled one AirPod out, she goes, do you want one as well?</p>
+          <p><span class="spk">Jason · 16:18</span>You want to sit up and watch? And I was like, what the? I'm exhausted. I'm going back to sleep, but I love your dedication. Like I was actually quite impressed with the dedication to the sport. Cause it stopped becoming about the TV show and about the drivers. She was legitimately interested in the, the tactics and you know, was someone going to be able to beat Max Verstappen who was just unstoppable and it was, she was wired.</p>
+          <p><span class="spk">Nick · 16:42</span>I think what the Netflix series did is it, um, it showed the glitz and glamour. So it got people interested via the glitz and glamour. But once you then understand. The complexities of it and, you know, the, the, it's just the millimetres that</p>
+          <p><span class="spk">Nick · 17:00</span>are in the game and, Marty, I watched the tennis one, it's chalk and cheese, like the drama that surrounds Formula One.</p>
+          <p><span class="spk">Nick · 17:10</span>Is just in comparison, like tennis does not compare. So it's just such high drama because of the amount of money that's floating around in the politics. Uh, but it just gets you, it gets you in like it's, yeah. Well, you're getting me, I'll watch it tonight. I'm excited. And</p>
+          <p><span class="spk">Jason · 17:25</span>even when you start to talk about the drivers and changing teams that they race for and how the team politics work, you, you will, Marty, you're going to come in next recording and you're going to have seen like five seasons.</p>
+          <p><span class="spk">Jason · 17:35</span>You're going to be addicted. So</p>
+          <p><span class="spk">Nick · 17:37</span>let's not, let's not. Let's not think, let's not forget about the, what the actual draw card is here. These guys in these go kart like size cars, shooting around at three, two to two, two to 300 Ks an hour. So it's hard not to get excited and just be in absolute awe of what these guys are doing at the same time, you know?</p>
+          <p><span class="spk">Jason · 17:56</span>Yeah. Big time. So Netflix series, uh,</p>
+          <p><span class="spk">Jason · 18:00</span>Drive to Survive, Marty. Um. Huge appeal, numbers skyrocketed. So for example, the attendance figures at the U S Grand Prix, um, the, the one that they had back in 2018, which I think was just, just Texas at the time. Um, they had 264, 000 people attend in 2018. Three years later, they had 400, 000 people attend in 2021.</p>
+          <p><span class="spk">Jason · 18:25</span>They then increased the revenue from 1. 15 billion in 2020. To 2. 14 billion in 2021. So an extra billion dollars in revenue between 2020</p>
+          <p><span class="spk">Jason · 18:38</span>and 2021,</p>
+          <p><span class="spk">Jason · 18:39</span>then you'll love stock price, Marty, from the launch of Netflix. The stock price for Formula One went up 62%. It's now valued as a company at 17 billion, between 16 and 17 billion dollar valuation, I believe it's USD.</p>
+          <p><span class="spk">Jason · 18:56</span>So you can do the translation to AUD and</p>
+          <p><span class="spk">Jason · 19:00</span>a growth in fans globally with 77 percent of new fans between the age of 16</p>
+          <p><span class="spk">Jason · 19:07</span>and 35.</p>
+          <p><span class="spk">Jason · 19:08</span>So really nailing that, that demographic. viewer numbers have gone from 70 million viewer average to as much as 110 million viewers worldwide when it's telecast. So just the sheer numbers that tune in and watch the sport, um, I just think just phenomenal how a TV show has just changed the path of Formula One and the, the sport in that way.</p>
+          <p><span class="spk">Jason · 19:33</span>And then even the driver's lives, like they are rock stars. They already were rock stars, you know, as Formula One drivers, but there is just another element to it now. Um, beyond that, and we won't unpack this now, um, shared a lot of numbers, but just out of maybe for yourself, Marty, as a non Formula One, do you know what a Formula One driver would be paid to spin around in a race car and have a pretty cool life?</p>
+          <p><span class="spk">Marty · 19:56</span>I'm just going to take a guess, but I would say a couple of mil, two,</p>
+          <p><span class="spk">Marty · 20:00</span>three mil.</p>
+          <p><span class="spk">Jason · 20:00</span>Cool. Uh, Max Verstappen, his 2023 contract should have net him about 70 million for cruising around in a car having a pretty good life. Uh, Lewis Hamilton's contract was 55 million. Fernando Alonso got 34 million. And then Perez and Leclerc were next on about 26 million and 19 million.</p>
+          <p><span class="spk">Jason · 20:19</span>So not a bad little salary for spinning around in a car. And if you've followed the story on Lewis Hamilton and his contract after 2025, this man will be 40 years old. I believe, correct me if I'm wrong there, Nick, I'm going off the top of my head here. I reckon he'll be turning 40 by the time he joins Ferrari.</p>
+          <p><span class="spk">Jason · 20:38</span>So Marty Lewis Hamilton, you'd know Lewis Hamilton's name, seven times champion at Mercedes. Um, You know, everyone probably thought he was going to be a Mercedes for life and finish his career there and signed a two year extension with Mercedes, but the second year had a little option clause on it, just in case he, uh, wanted to retire or finish up.</p>
+          <p><span class="spk">Jason · 20:58</span>Little did Mercedes</p>
+          <p><span class="spk">Jason · 21:00</span>expect that he signed a 446 million deal with Ferrari to jump ship and go over to Ferrari from 2025 season onwards. So in an awkward, weird turn of events. Lewis Hamilton drives the whole current season's about to start in Bahrain or that started in Bahrain and you know, we're in Melbourne soon.</p>
+          <p><span class="spk">Jason · 21:19</span>He's gonna spend the whole year awkwardly driving with his mates at Mercedes that he's then turned his back on and he's jumping over to Ferrari at the end of the year. So what a wild sport.</p>
+          <p><span class="spk">Marty · 21:29</span>That's incredible. Yeah, that's just like, Charlie's gonna be very disappointed when I pull him out of cricket tonight and shove him in my car and drive, you know, three times the speed limit.</p>
+          <p><span class="spk">Marty · 21:39</span>So that is That is incredible growth. And I'm actually really looking forward to the show based on the numbers you've given me, because that's exceptional.</p>
+          <p><span class="spk">Nick · 21:48</span>Oh yeah. I reckon Charlie will love it. And the first season's great because it, um, from memory, Jase, I think it's the one that was when Ricardo had all the dramas around going to Renault.</p>
+          <p><span class="spk">Nick · 21:58</span>Yep. Um,</p>
+          <p><span class="spk">Nick · 22:00</span>yeah,</p>
+          <p><span class="spk">Jason · 22:01</span>you know. As, as, as I said, not an F1 person, I didn't know all that. So going kind of back in time and revisiting, you know, the driver politics, leaving Red Bull, like Daniel Ricciardo was at Red Bull that went on, that is now going to be one of the most successful teams ever if they keep going the way they're going with Max.</p>
+          <p><span class="spk">Jason · 22:17</span>And he, he, he screwed up, you know, he, he left and went to Renault, he went to McLaren. If you haven't watched Drive to Survive, I'll stop giving away the whole thing for all those listeners out there that are now thinking like Marty, they've got to go and watch Drive to Survive. Um, but Marty, as well, from a parent and kid's point of view, there's a lot of emotional heart string stuff around.</p>
+          <p><span class="spk">Jason · 22:37</span>The drivers reflect back to the sacrifice their parents made to put them in a go kart to, to give them the opportunity to become race car drivers. And then there's also the tale of wealth versus hardship, where you've got a couple of drivers who came up through their, their parents didn't have a lot of money, they made a lot of sacrifices versus the kids that came from really wealthy, you know,</p>
+          <p><span class="spk">Jason · 23:00</span>backgrounds that, you know, were given these opportunities.</p>
+          <p><span class="spk">Jason · 23:03</span>Lance Stroll, um, is Lance Stroll is the driver. What's his name? Lawrence, Lawrence Stroll. This guy is so rich, he bought Aston Martin and then bought his own Formula One race car team and then rebranded it Aston Martin and then gave his kid a seat in the Formula One, like his kid's talented, but like the sheer wealth and scale of what is going on here in the Formula One.</p>
+          <p><span class="spk">Jason · 23:27</span>And the story behind, and the stories you get to see at Netflix, um, on the Drive to Survive series.</p>
+          <p><span class="spk">Nick · 23:32</span>Without the, like the kids that do get through, like, so Daniel Ricardo is one, but, um, from what I've heard, his parents are very well off and, uh, Hamilton's probably the other, but apart from the absolute freaks of nature who managed to get through.</p>
+          <p><span class="spk">Nick · 23:47</span>Like a Red Bull feeder team or something, if there's no, uh, if there's no money backing drivers, they don't have a chance basically. Um, so I think there's a lot of talk around Perez and</p>
+          <p><span class="spk">Nick · 24:00</span>the main reason Perez gets a seat is because he's got a massive backer, uh, that brings money into the sport. So financial backer.</p>
+          <p><span class="spk">Nick · 24:06</span>Yep. Yeah. So it's, it's pretty crazy. And if you talk to Same as</p>
+          <p><span class="spk">Jason · 24:10</span>I think Yuki, Yuki Sonoda as the Honda family or the, it was a bit of a. Yeah, the Japanese background, bit of money there.</p>
+          <p><span class="spk">Nick · 24:16</span>Same with the Russian guy who's now obviously been, um, who's, who's been punted, but he was the same. He was in there because of the money, the Russian money that he was bringing to the Billions.</p>
+          <p><span class="spk">Nick · 24:26</span>Yeah. So it's, yeah, it's a big business at the end of the day. I reckon</p>
+          <p><span class="spk">Jason · 24:30</span>Marty's, Marty's leaving work now to go home and start streaming. Download it, come</p>
+          <p><span class="spk">Marty · 24:35</span>home. I'm fascinated in regards to your conversion on it though, Jase, and thinking that age group, that 16 to 35 age group. It's usually you're pretty much setting your interests like in sports, but to actually have, like, I'm, I'm just listening to you two talk about it and just hear how engaged and excited you are about it.</p>
+          <p><span class="spk">Marty · 24:55</span>Um, like that's fascinating and what that whole sport has done</p>
+          <p><span class="spk">Marty · 25:00</span>to attract that level of interest and the numbers back that up. So I'll definitely be watching not only because the sports interesting, but yeah, obviously the stories behind it and the numbers behind it. How, how intriguing. To say that, um, and I'm sure once I watch it, I'll have the same feeling, but I've always liked it, but never to the point of being that in depth with it.</p>
+          <p><span class="spk">Marty · 25:20</span>It's just been a sort of a. Third, fourth, fifth sport, really. So I'll be the number one. Yeah. But to be</p>
+          <p><span class="spk">Jason · 25:28</span>the number one, Marty, just like the numbers game about to be the number one podcast on some kind of Apple podcast list or Spotify. I did find us at 23, uh, on Feedspot's small business podcast to watch out for in 2024.</p>
+          <p><span class="spk">Jason · 25:42</span>So we're doing something right, gents. And, uh, thank you to all of our listeners out there who do tune in and, uh, You know, listen to our episodes and provide us feedback, follows, likes, subscribes, five star ratings in the, uh, wherever you get your podcasts from. We do appreciate it. It means a lot to us. If you do have</p>
+          <p><span class="spk">Jason · 26:00</span>any feedback, any thoughts on this, I want to share your thoughts on Drive to Survive.</p>
+          <p><span class="spk">Jason · 26:03</span>Hit us up, hello at the numbers game podcast. com. au. Or find Jase, Nick and Marty on Instagram or LinkedIn, where we're happy to connect and chat with anyone, um, about anything they want to talk about. So, thank you for listening, and until next time</p>
+          <p><span class="spk">Marty · 26:17</span>Look, hook us up on email, we're trying to organize a race back to Lillydale, so, you know, just hit us up.</p>
+          <p><span class="spk">Marty · 26:23</span>We're all out, another two days, let's do it. Game over. ---</p>
+        </div>
+      </details>
+
+    </div>
+
+    <!-- LISTEN:START (build_episode.py rewrites the 3 URLs + iframe title per episode; player dropped if no spotifyEmbedUrl) -->
+    <section class="listen-now">
+      <div class="ln-head">
+        <span class="ln-title">Listen now</span>
+      </div>
+      <div class="audio-embed">
+        <iframe src="https://open.spotify.com/embed/episode/34Sssoae0zSGOxjrV5CDot?utm_source=generator"
+          width="100%" height="152" loading="lazy" allowfullscreen
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+          title="Spotify — The Business of Formula One"></iframe>
+      </div>
+    </section>
+
+    <div class="listen">
+      <a href="https://open.spotify.com/episode/34Sssoae0zSGOxjrV5CDot" target="_blank" rel="noopener" aria-label="Listen to this episode on Spotify">
+        <svg viewBox="0 0 24 24"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.52 17.34c-.24.36-.66.48-1.02.24-2.82-1.74-6.36-2.1-10.56-1.14-.42.12-.78-.18-.9-.54-.12-.42.18-.78.54-.9 4.56-1.02 8.52-.6 11.64 1.32.42.18.48.66.3 1.02zm1.44-3.3c-.3.42-.84.6-1.26.3-3.24-1.98-8.16-2.58-11.94-1.38-.48.12-1.02-.12-1.14-.6-.12-.48.12-1.02.6-1.14 4.32-1.32 9.72-.66 13.44 1.62.36.18.54.78.3 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.3c-.6.18-1.2-.18-1.38-.72-.18-.6.18-1.2.72-1.38 4.26-1.26 11.28-1.02 15.72 1.62.54.3.72 1.02.42 1.56-.3.42-1.02.6-1.56.3z"/></svg>
+        Spotify
+      </a>
+      <a href="https://podcasts.apple.com/au/podcast/id1555566088?i=1000649054448" target="_blank" rel="noopener" aria-label="Listen to this episode on Apple Podcasts">
+        <svg viewBox="0 0 24 24"><path d="M5.34 0A5.328 5.328 0 000 5.34v13.32A5.328 5.328 0 005.34 24h13.32A5.328 5.328 0 0024 18.66V5.34A5.328 5.328 0 0018.66 0H5.34zm6.525 2.568c2.336 0 4.448.902 6.056 2.587 1.224 1.272 1.912 2.619 2.264 4.392l.04.23c.04.272-.16.527-.432.567a.505.505 0 01-.567-.431l-.04-.213c-.312-1.57-.92-2.747-2.004-3.867-1.428-1.496-3.293-2.294-5.393-2.294-2.1 0-3.966.798-5.394 2.294-1.084 1.12-1.692 2.298-2.004 3.867l-.04.213a.507.507 0 01-.567.431.504.504 0 01-.432-.567l.04-.23c.352-1.773 1.04-3.12 2.264-4.392 1.608-1.685 3.72-2.587 6.056-2.587h.153zm.136 3.033c1.74 0 3.312.67 4.527 1.934.883.916 1.394 1.93 1.663 3.253l.04.23a.505.505 0 01-.431.567.503.503 0 01-.567-.432l-.04-.212c-.23-1.112-.659-1.97-1.396-2.732-1.052-1.1-2.404-1.672-3.9-1.672s-2.849.572-3.901 1.672c-.737.762-1.167 1.62-1.396 2.732l-.04.212a.503.503 0 01-.567.432.505.505 0 01-.432-.567l.04-.23c.27-1.323.78-2.337 1.664-3.253 1.215-1.264 2.787-1.934 4.527-1.934h.21zm-.078 3.05c1.092 0 2.091.424 2.89 1.22.582.58.924 1.245 1.107 2.15l.04.218a.501.501 0 01-.424.568.499.499 0 01-.568-.424l-.04-.198c-.146-.724-.413-1.253-.871-1.716-.63-.63-1.398-.957-2.226-.957s-1.595.328-2.225.957c-.459.463-.726.992-.871 1.716l-.04.198a.499.499 0 01-.568.424.501.501 0 01-.424-.568l.04-.219c.183-.904.525-1.569 1.106-2.149.8-.796 1.799-1.22 2.89-1.22h.184zM12 14.07a2.477 2.477 0 012.48 2.478A2.477 2.477 0 0112 19.024a2.477 2.477 0 01-2.48-2.477A2.477 2.477 0 0112 14.07z"/></svg>
+        Apple
+      </a>
+      <a class="yt-pill" href="https://www.youtube.com/@thenumbersgamepodcast?sub_confirmation=1" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.12-2.14C19.5 3.55 12 3.55 12 3.55s-7.5 0-9.38.51A3 3 0 0 0 .5 6.2 31.4 31.4 0 0 0 0 12a31.4 31.4 0 0 0 .5 5.8 3 3 0 0 0 2.12 2.14c1.88.51 9.38.51 9.38.51s7.5 0 9.38-.51a3 3 0 0 0 2.12-2.14A31.4 31.4 0 0 0 24 12a31.4 31.4 0 0 0-.5-5.8zM9.55 15.57V8.43L15.82 12z"/></svg>
+        Subscribe
+      </a>
+    </div>
+    <!-- LISTEN:END -->
+
+    <div class="relsec">
+      <span class="rtitle">Discover more</span>
+      <div class="relgrid">
+        <a class="relcard" href="/has-realestate-com-au-become-too-powerful">
+          <img src="https://i.ytimg.com/vi/xR6nvqgBWmc/hqdefault.jpg" alt="EP 252 thumbnail">
+          <span class="rt">Has Realestate.com.au Become Too Powerful?</span>
+          <span class="rfoot"><span class="rwhy">Also covers: policy &amp; reform</span><span class="rtag">EP 252</span></span>
+        </a>
+        <a class="relcard" href="/unpacking-the-bonza-aviation-bust">
+          <img src="https://i.ytimg.com/vi/f5AP4sEBOR8/hqdefault.jpg" alt="EP 176 thumbnail">
+          <span class="rt">Unpacking the Bonza Aviation Bust</span>
+          <span class="rfoot"><span class="rwhy">Also covers: marketing</span><span class="rtag">EP 176</span></span>
+        </a>
+        <a class="relcard" href="/cut-through-in-a-noisy-market">
+          <img src="https://i.ytimg.com/vi/c8AxkyOW0EQ/hqdefault.jpg" alt="EP 190 thumbnail">
+          <span class="rt">Cut Through In A Noisy Market</span>
+          <span class="rfoot"><span class="rwhy">Also covers: marketing</span><span class="rtag">EP 190</span></span>
+        </a>
+        <a class="relcard" href="/standing-out-in-a-dry-industry-lessons-from-liquid-death">
+          <img src="https://i.ytimg.com/vi/LvodNi2qNSw/hqdefault.jpg" alt="EP 221 thumbnail">
+          <span class="rt">Standing Out in a Dry Industry - Lessons from Liquid Death</span>
+          <span class="rfoot"><span class="rwhy">Also covers: marketing</span><span class="rtag">EP 221</span></span>
+        </a>
+        <a class="relcard" href="/how-to-win-on-social-media-vanity-metrics-vs-real-results">
+          <img src="https://i.ytimg.com/vi/lPdaCst3SL4/hqdefault.jpg" alt="EP 250 thumbnail">
+          <span class="rt">How to Win on Social Media</span>
+          <span class="rfoot"><span class="rwhy">Also covers: marketing</span><span class="rtag">EP 250</span></span>
+        </a>
+        <a class="relcard" href="/six-years-of-zero-growth-786b-spent">
+          <img src="https://i.ytimg.com/vi/H-91xGnsyJA/hqdefault.jpg" alt="EP 275 thumbnail">
+          <span class="rt">Six Years of Zero Growth, $786B Spent</span>
+          <span class="rfoot"><span class="rwhy">Also covers: policy &amp; reform</span><span class="rtag">EP 275</span></span>
+        </a>
+      </div>
+      <div class="reldots" id="reldots"></div>
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="footgrid">
+      <div class="fcol">
+        <div class="foot-label">Follow us on</div>
+        <div class="socials">
+          <a href="https://www.instagram.com/thenumbersgamepodcast/" target="_blank" rel="noopener" aria-label="The Numbers Game on Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.8.2 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1 .4 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .4-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1-.4-2.2-.1-1.3-.1-1.7-.1-4.9s0-3.6.1-4.9c.1-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.4 2.2-.4 1.3-.1 1.7-.1 4.9-.1zm0 2c-3.1 0-3.5 0-4.8.1-1.1.1-1.5.2-1.8.3-.4.2-.7.3-1 .6-.3.3-.5.6-.6 1-.1.3-.3.7-.3 1.8-.1 1.3-.1 1.7-.1 4.8s0 3.5.1 4.8c.1 1.1.2 1.5.3 1.8.2.4.3.7.6 1 .3.3.6.5 1 .6.3.1.7.3 1.8.3 1.3.1 1.7.1 4.8.1s3.5 0 4.8-.1c1.1-.1 1.5-.2 1.8-.3.4-.2.7-.3 1-.6.3-.3.5-.6.6-1 .1-.3.3-.7.3-1.8.1-1.3.1-1.7.1-4.8s0-3.5-.1-4.8c-.1-1.1-.2-1.5-.3-1.8-.2-.4-.3-.7-.6-1-.3-.3-.6-.5-1-.6-.3-.1-.7-.3-1.8-.3-1.3-.1-1.7-.1-4.8-.1zm0 3.4a5.4 5.4 0 1 1 0 10.8 5.4 5.4 0 0 1 0-10.8zm0 2a3.4 3.4 0 1 0 0 6.8 3.4 3.4 0 0 0 0-6.8zm5.6-2.3a1.3 1.3 0 1 1-2.6 0 1.3 1.3 0 0 1 2.6 0z"/></svg></a>
+          <a href="https://www.tiktok.com/@thenumbersgamepodcast" target="_blank" rel="noopener" aria-label="The Numbers Game on TikTok"><svg viewBox="0 0 24 24"><path d="M12.53.02C13.84 0 15.14.01 16.44 0c.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg></a>
+          <a href="https://www.linkedin.com/company/the-numbers-game-podcast/" target="_blank" rel="noopener" aria-label="The Numbers Game on LinkedIn"><svg viewBox="0 0 24 24"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.24 8.25h4.52V23H.24V8.25zM8.34 8.25h4.33v2.01h.06c.6-1.14 2.08-2.34 4.28-2.34 4.58 0 5.42 3.01 5.42 6.92V23h-4.51v-7.16c0-1.71-.03-3.91-2.38-3.91-2.39 0-2.75 1.86-2.75 3.78V23H8.34V8.25z"/></svg></a>
+          <a href="https://www.facebook.com/profile.php?id=100071290388343" target="_blank" rel="noopener" aria-label="The Numbers Game on Facebook"><svg viewBox="0 0 24 24"><path d="M24 12.07C24 5.41 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.04V9.41c0-3.02 1.8-4.7 4.54-4.7 1.31 0 2.68.24 2.68.24v2.97h-1.5c-1.5 0-1.96.93-1.96 1.89v2.26h3.32l-.53 3.5h-2.8V24C19.62 23.1 24 18.1 24 12.07z"/></svg></a>
+          <a href="https://www.youtube.com/@thenumbersgamepodcast" target="_blank" rel="noopener" aria-label="The Numbers Game on YouTube"><svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.2C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31.7 31.7 0 0 0 0 12a31.7 31.7 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.2A31.7 31.7 0 0 0 24 12a31.7 31.7 0 0 0-.5-5.8zM9.6 15.6V8.4L15.8 12z"/></svg></a>
+        </div>
+      </div>
+      <div class="fcol">
+        <div class="foot-label">Brought to you by</div>
+        <div class="sponsors">
+          <a href="https://www.inovayt.com.au/" target="_blank" rel="noopener"><img src="assets/inovayt-white.png" alt="Inovayt"></a>
+          <a href="https://futureadvisory.com.au/" target="_blank" rel="noopener"><img src="assets/future-advisory-white.png" alt="Future Advisory"></a>
+        </div>
+      </div>
+      <div class="fcol produced">
+        <div class="foot-label">Produced by</div>
+        <a href="https://www.vidpod.com.au/" target="_blank" rel="noopener"><img src="assets/vidpod-white.png" alt="VIDPOD"></a>
+      </div>
+    </div>
+    <div class="footbar">
+      <details class="footnav-dd">
+        <summary><svg class="ham" viewBox="0 0 24 24"><path d="M3 6h18v2H3zM3 11h18v2H3zM3 16h18v2H3z"/></svg> Menu</summary>
+        <div class="dd-links">
+          <a href="/">Home</a><a href="/episodes">Every episode</a><a href="/adventure">Choose your own adventure</a><a href="/about">About the show</a><a href="/nick-reilly">Nick Reilly</a><a href="/jason-robinson">Jason Robinson</a><a href="/contact">Contact</a>
+        </div>
+      </details>
+      <div class="copyright">© 2026 The Numbers Game</div>
+    </div>
+  </footer>
+
+  <script>
+    var VIDEO='uMb4eaYr0WI';
+    var CHAPTERS=[
+      {t:"00:00",s:0,title:"Intro"},
+      {t:"04:54",s:294,title:""}
+    ];
+    var QUESTIONS=[
+      {q:"How many people attend the Melbourne Grand Prix?",s:294},
+      {q:"If the Grand Prix is so popular, why does it need government funding?",s:435},
+      {q:"Does the Melbourne Grand Prix make a profit?",s:492},
+      {q:"How has the Formula One audience changed?",s:803},
+      {q:"Why did Drive to Survive make Formula One popular?",s:856},
+      {q:"How much did Formula One revenue grow?",s:1105},
+      {q:"What is Formula One worth as a company?",s:1119},
+      {q:"How many people watch Formula One worldwide?",s:1148},
+      {q:"How much do Formula One drivers get paid?",s:1200},
+      {q:"How much is Lewis Hamilton's Ferrari deal worth?",s:1238}
+    ];
+
+    var chEl=document.getElementById('chapters');
+    CHAPTERS.forEach(function(c){var b=document.createElement('button');b.className='chapter';b.onclick=function(){startAt(c.s)};b.innerHTML='<span class="tc">'+c.t+'</span><span class="cx">'+c.title+'</span>';chEl.appendChild(b);});
+    document.getElementById('chcount').textContent=CHAPTERS.length;
+    var qEl=document.getElementById('qa');
+    QUESTIONS.forEach(function(q){var b=document.createElement('button');b.className='q';b.onclick=function(){startAt(q.s)};b.innerHTML='<span class="qm">?</span><span class="qx">'+q.q+'</span><span class="go">›</span>';qEl.appendChild(b);});
+    document.getElementById('qcount').textContent=QUESTIONS.length;
+
+    /* Mobile nav dropdown. */
+    var burger=document.getElementById('navburger'), navdrop=document.getElementById('navdrop');
+    if(burger&&navdrop){burger.addEventListener('click',function(){
+      navdrop.hidden=!navdrop.hidden;
+      burger.setAttribute('aria-expanded', navdrop.hidden?'false':'true');
+    });}
+
+    /* Voice-note button reveals the recorder; × tucks it away. */
+    var vbtn=document.getElementById('vbtn'), vslot=document.getElementById('vslot'), vclose=document.getElementById('vclose');
+    if(vbtn&&vslot){vbtn.addEventListener('click',function(){vslot.hidden=!vslot.hidden;});}
+    if(vclose&&vslot){vclose.addEventListener('click',function(){vslot.hidden=true;});}
+
+    /* Keep-exploring dots: only shown when the strip actually scrolls (mobile). */
+    var rg=document.querySelector('.relgrid'), rd=document.getElementById('reldots');
+    if(rg&&rd){
+      var relCards=rg.querySelectorAll('.relcard');
+      relCards.forEach(function(){rd.appendChild(document.createElement('span'))});
+      var updDots=function(){
+        var scrollable=rg.scrollWidth>rg.clientWidth+4;
+        rd.style.display=scrollable?'flex':'none';
+        if(!scrollable)return;
+        var i=Math.round(rg.scrollLeft/(rg.scrollWidth-rg.clientWidth)*(relCards.length-1));
+        rd.querySelectorAll('span').forEach(function(s,n){s.classList.toggle('on',n===i)});
+      };
+      rg.addEventListener('scroll',updDots,{passive:true});
+      window.addEventListener('resize',updDots);
+      updDots();
+    }
+
+    /* Explore tabs: swap the visible panel; the row stays put so you never lose your place. */
+    var tabBtns=document.querySelectorAll('.tabbtn');
+    tabBtns.forEach(function(b){
+      b.addEventListener('click',function(){
+        tabBtns.forEach(function(o){o.classList.remove('on')});
+        document.querySelectorAll('.tpanel').forEach(function(p){p.hidden=true});
+        b.classList.add('on');
+        document.getElementById(b.getAttribute('data-panel')).hidden=false;
+      });
+    });
+
+    /* YouTube: clean facade, then real player on demand. Seek without yanking to top. */
+    var player=null, ready=false, apiReady=false, pending=null;
+    window.onYouTubeIframeAPIReady=function(){apiReady=true; if(pending!=null){var s=pending;pending=null;createPlayer(s);}};
+    function createPlayer(sec){
+      var wrap=document.getElementById('player'); wrap.innerHTML='<div id="yt"></div>';
+      player=new YT.Player('yt',{videoId:VIDEO,playerVars:{autoplay:1,rel:0,modestbranding:1,playsinline:1,start:Math.floor(sec||0)},events:{onReady:function(){ready=true;}}});
+    }
+    function nudge(){
+      var p=document.getElementById('player-wrap'), r=p.getBoundingClientRect();
+      if(r.bottom<80 || r.top>window.innerHeight-90){ p.scrollIntoView({behavior:'smooth',block:'start'}); }
+    }
+    function startAt(sec){
+      nudge();
+      if(player&&ready){ player.seekTo(sec,true); player.playVideo(); return; }
+      if(apiReady){ createPlayer(sec); } else { pending=sec; }
+    }
+    document.getElementById('facade').addEventListener('click',function(){startAt(0);});
+    (function(){var s=document.createElement('script');s.src='https://www.youtube.com/iframe_api';document.head.appendChild(s);})();
+  </script>
+</body>
+</html>

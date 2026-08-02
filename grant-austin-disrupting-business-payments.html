@@ -1,0 +1,837 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EP 173 · Grant Austin - Disrupting Business Payments | The Numbers Game</title>
+<meta name="description" content="Jason and Nick host Grant Austin of pay.com.au, with Marty away, to unpack how he built a fast-growing B2B payments and rewards platform.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" sizes="64x64" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="canonical" href="https://thenumbersgamepodcast.com.au/grant-austin-disrupting-business-payments">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="The Numbers Game">
+<meta property="og:title" content="EP 173 · Grant Austin - Disrupting Business Payments | The Numbers Game">
+<meta property="og:description" content="Jason and Nick host Grant Austin of pay.com.au, with Marty away, to unpack how he built a fast-growing B2B payments and rewards platform.">
+<meta property="og:url" content="https://thenumbersgamepodcast.com.au/grant-austin-disrupting-business-payments">
+<meta property="og:image" content="https://i.ytimg.com/vi/iH-GYt8A950/maxresdefault.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+  :root{
+    --purple:#585af3; --purple-dark:#2c1b8a; --mint:#7ad9a8;
+    --white:#ffffff; --muted:rgba(255,255,255,.60); --dim:rgba(255,255,255,.42);
+    --line:rgba(255,255,255,.12); --card:rgba(255,255,255,.05); --card-hi:rgba(255,255,255,.09);
+    --display:'Anton',Impact,'Helvetica Neue',sans-serif;
+    --sans:'Inter',system-ui,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif;
+    --wrap:1280px;   /* page frame (nav spans this) */
+    --col:960px;     /* content column (player, tabs, text) */
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:var(--sans); color:var(--white); line-height:1.6; -webkit-font-smoothing:antialiased;
+    background:#12093a;
+    background-image:
+      radial-gradient(1200px 600px at 82% -6%, rgba(88,90,243,.45) 0%, transparent 55%),
+      radial-gradient(900px 700px at 5% 8%, rgba(122,217,168,.10) 0%, transparent 50%),
+      linear-gradient(180deg,#2c1b8a 0%,#1a1150 28%,#100b34 62%,#0b0820 100%);
+    background-attachment:fixed;
+  }
+  a{color:inherit}
+  .wrap{max-width:var(--wrap);margin:0 auto;padding:0 36px}
+  main.wrap{max-width:var(--col)}
+  @media(max-width:720px){.wrap{padding:0 22px}}
+
+  /* ── Navbar ── */
+  .nav{position:sticky;top:0;z-index:50;background:linear-gradient(180deg,rgba(24,15,74,.92),rgba(24,15,74,.72));backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+  .nav-in{max-width:var(--wrap);margin:0 auto;padding:11px 36px;display:flex;align-items:center;justify-content:space-between}
+  @media(max-width:720px){.nav-in{padding:11px 22px}}
+  .brand{display:block;line-height:0}
+  .brand img{height:36px;width:auto;display:block}
+  .navlinks{display:flex;gap:28px;align-items:center}
+  .navlinks a{text-decoration:none;font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);transition:.15s}
+  .navlinks a:hover{color:var(--white)}
+  .navlinks a.navtop{cursor:default}
+  .navgroup{position:relative;display:flex;align-items:center}
+  .navgroup .subnav{display:none;position:absolute;top:100%;left:50%;transform:translateX(-50%);padding-top:14px;min-width:180px}
+  .navgroup:hover .subnav,.navgroup:focus-within .subnav{display:block}
+  .subnav-in,.navgroup .subnav{z-index:60}
+  .navgroup .subnav a{display:block;background:#180f4a;border:1px solid var(--line);border-top:0;padding:12px 16px;font-size:12px;color:rgba(255,255,255,.85)}
+  .navgroup .subnav a:first-child{border-top:1px solid var(--line)}
+  .navgroup .subnav a:hover{background:#221768;color:var(--white)}
+  .navburger{display:none;background:none;border:1px solid var(--line);padding:8px 10px;cursor:pointer;color:var(--white);transition:.15s}
+  .navburger:hover{border-color:rgba(122,217,168,.6)}
+  .navburger svg{width:20px;height:20px;fill:currentColor;display:block}
+  .navdrop{display:none}
+  @media(max-width:720px){
+    .navlinks{display:none}
+    .navburger{display:block}
+    .navdrop{display:block;position:absolute;left:0;right:0;top:100%;
+      background:#180f4a;border-bottom:1px solid var(--line);box-shadow:0 24px 50px rgba(0,0,0,.45)}
+    .navdrop[hidden]{display:none}
+    .navdrop a{display:block;padding:15px 22px;text-decoration:none;font-size:14px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:rgba(255,255,255,.9);border-bottom:1px solid rgba(255,255,255,.06)}
+    .navdrop a:last-child{border-bottom:0}
+    .navdrop a.sub{padding-left:42px;font-size:13px;color:rgba(255,255,255,.72)}
+    .navdrop .navlabel{display:block;padding:15px 22px 6px;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.4)}
+  }
+
+  /* ── Hero / hook (marker-highlight system: purple hook wraps naturally, mint payoff below)
+     Rules: title splits at its natural break (colon/pipe/question mark). Front = hook (purple,
+     big), back = payoff (mint, smaller). No break in title = purple hook only. Highlights hug
+     the text (tight em padding tuned to Anton) and wrap via box-decoration-break — never
+     hand-pick line breaks or mint words. ── */
+  header.hero{padding:34px 0 6px}
+  .hook{--inx:clamp(8.4px,2.1vw,15.6px)} /* one shared text inset so hook + payoff first letters align */
+  .hook .hk{font-family:var(--display);font-weight:400;text-transform:uppercase;
+    font-size:clamp(28px,7vw,52px);line-height:1.3;letter-spacing:-.5px;text-wrap:balance}
+  .hook .hk span{color:var(--white);padding:.04em var(--inx) .02em;
+    background:linear-gradient(var(--purple),var(--purple)) 0 50%/100% 87% no-repeat;
+    -webkit-box-decoration-break:clone;box-decoration-break:clone}
+  .hook .pay{font-family:var(--display);font-weight:400;text-transform:uppercase;
+    font-size:clamp(16px,4vw,24px);line-height:1.5;letter-spacing:.6px;margin-top:8px;text-wrap:balance}
+  .hook .pay span{color:#0a0a0a;padding:.08em var(--inx) .04em;
+    background:linear-gradient(var(--mint),var(--mint)) 0 50%/100% 88% no-repeat;
+    -webkit-box-decoration-break:clone;box-decoration-break:clone}
+  /* no-hook titles: mid-split into two full-size rows, purple then mint */
+  .hook .hk span.hkrow{display:block;background:none;padding:0}
+  .hook .hk .hkrow+.hkrow{margin-top:8px}
+  .hook .hk span.mintseg{color:#0a0a0a;
+    background:linear-gradient(var(--mint),var(--mint)) 0 50%/100% 87% no-repeat}
+
+  /* ── Player (clean facade → real player on tap) ── */
+  .player-wrap{margin:24px 0 4px;scroll-margin-top:76px}
+  .player{position:relative;width:100%;padding-top:56.25%;border-radius:0;overflow:hidden;background:#000;box-shadow:0 30px 70px rgba(0,0,0,.5),0 0 0 1px rgba(255,255,255,.06)}
+  .facade{position:absolute;inset:0;border:0;cursor:pointer;background-size:cover;background-position:center;display:flex;align-items:center;justify-content:center;padding:0}
+  .facade .play{width:74px;height:74px;border-radius:50%;background:rgba(10,6,30,.40);border:2px solid rgba(255,255,255,.72);display:flex;align-items:center;justify-content:center;transition:.18s;-webkit-backdrop-filter:blur(1px);backdrop-filter:blur(1px)}
+  .facade:hover .play{background:rgba(88,90,243,.62);transform:scale(1.07);border-color:#fff}
+  .facade .play::after{content:"";border-style:solid;border-width:11px 0 11px 19px;border-color:transparent transparent transparent #fff;margin-left:5px}
+  .player iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+
+  /* ── Episode facts (bottom of the Summary panel — templated per episode) ── */
+  .sumfacts{margin:14px 10px 4px;padding-top:13px;border-top:1px solid rgba(255,255,255,.08);display:flex;flex-direction:column;gap:8px}
+  .fact{display:flex;gap:12px;font-size:13.5px}
+  .fact .fl{flex:none;width:104px;color:var(--dim);font-weight:600;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;padding-top:2px}
+  .fact .fv{color:rgba(255,255,255,.9);font-weight:500}
+  .fact .fv a{color:var(--mint);text-decoration:none;border-bottom:1px solid rgba(122,217,168,.4);transition:.15s}
+  .fact .fv a:hover{border-bottom-color:var(--mint)}
+
+  /* ── Episode tag (identity: black label hanging off the title corner) ── */
+  .eptag{display:inline-block;position:relative;left:-6px;margin-bottom:-7px;z-index:2;
+    background:#0a0a0a;color:var(--white);font-family:var(--display);font-weight:400;
+    font-size:13.5px;letter-spacing:1.5px;text-transform:uppercase;padding:6px 11px 4px}
+
+  /* ── Explore tabs (sticky mode switcher; one panel swaps below, nothing shoves) ── */
+  .explore{margin-top:22px}
+  .tabs{position:sticky;top:58px;z-index:40;display:flex;flex-wrap:wrap;gap:8px;padding:10px 0;
+    background:linear-gradient(180deg,rgba(18,10,55,.96),rgba(18,10,55,.86));
+    backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+  .tabbtn{font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.5px;
+    font-size:14.5px;color:var(--white);background:var(--purple);border:1px solid var(--purple);
+    padding:9px 13px 7px;cursor:pointer;transition:.15s}
+  .tabbtn:hover{filter:brightness(1.12)}
+  .tabbtn.on{background:var(--mint);border-color:var(--mint);color:#0a0a0a}
+  .tabbtn.on:hover{filter:none}
+  .tabbtn .ct{font-size:12px;opacity:.75;font-variant-numeric:tabular-nums}
+  .tabbtn .ct::before{content:" · "}
+  .tpanel{border:1px solid var(--line);background:var(--card);padding:12px 10px 14px}
+  .hint{font-size:12.5px;color:var(--muted);padding:2px 10px 10px;border-bottom:1px solid rgba(255,255,255,.08);margin-bottom:6px}
+
+  /* ── Listen row (no box: label left, service pills follow) ── */
+  .listen{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:12px 16px;margin-top:34px}
+  .listen .lname{font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--dim)}
+  .listen a{display:inline-flex;align-items:center;gap:9px;padding:11px 18px;border-radius:999px;
+    background:var(--mint);color:#08210f;text-decoration:none;font-weight:800;font-size:12.5px;
+    letter-spacing:.04em;text-transform:uppercase;transition:.15s}
+  .listen a:hover{filter:brightness(1.06);transform:translateY(-1px);box-shadow:0 12px 30px rgba(122,217,168,.25)}
+  .listen svg{width:20px;height:20px;fill:currentColor;flex:none}
+  /* ── Listen-now Spotify audio embed (full column width, above the pills) ── */
+  .listen-now{margin-top:40px}
+  .listen-now .ln-head{display:flex;align-items:baseline;justify-content:space-between;gap:14px;margin-bottom:13px}
+  .listen-now .ln-title{font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--dim)}
+  .audio-embed{border-radius:12px;overflow:hidden;box-shadow:0 20px 50px rgba(0,0,0,.4),0 0 0 1px rgba(255,255,255,.06)}
+  .audio-embed iframe{display:block;width:100%;border:0}
+  @media(max-width:720px){.listen-now{margin-top:32px}}
+
+  /* ── Keep exploring (thumbnails link to other episode PAGES, never timecodes).
+     Swipeable strip on mobile, fits three-up on desktop. Variant rule: claim
+     "similar ground" + reason lines ONLY when moment-level topic overlap is
+     genuinely strong; otherwise show the latest released episodes with dates —
+     never invent a connection. ── */
+  .relsec{margin-top:60px;padding-top:58px;border-top:1px solid var(--line)} /* line = end of this episode's info */
+  .reldots{display:flex;justify-content:center;gap:7px;margin-top:12px}
+  .reldots span{width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.25);transition:.2s}
+  .reldots span.on{background:var(--mint)}
+  .relsec .rtitle{display:inline-block;font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.5px;font-size:14.5px;background:var(--mint);color:#0a0a0a;padding:9px 13px 7px;margin-bottom:18px}
+  .relgrid{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding-bottom:6px;scrollbar-width:none}
+  .relgrid::-webkit-scrollbar{display:none}
+  .relcard{flex:0 0 56%;max-width:232px;scroll-snap-align:start;display:flex;flex-direction:column;text-decoration:none;background:var(--card);border:1px solid var(--line);transition:.15s}
+  .relcard:hover{background:var(--card-hi);border-color:rgba(122,217,168,.55)}
+  .relcard img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block}
+  .relcard .rt{display:block;font-size:12.5px;font-weight:600;color:rgba(255,255,255,.92);line-height:1.4;padding:8px 8px 0}
+  .relcard .rfoot{margin-top:auto;display:flex;justify-content:space-between;align-items:flex-end;gap:8px;padding:10px 8px 9px}
+  .relcard .rwhy{font-size:11.5px;color:var(--mint)}
+  .relcard .rtag{display:inline-block;background:#0a0a0a;color:var(--white);font-family:var(--display);font-size:10px;letter-spacing:1.2px;text-transform:uppercase;padding:3px 7px 2px;white-space:nowrap;flex:0 0 auto}
+
+  /* ── Dropdown sections (accordion under the player) ── */
+  .drops{margin-top:34px;display:flex;flex-direction:column;gap:11px}
+  .drop{border:1px solid var(--line);border-radius:0;background:var(--card);overflow:hidden;transition:border-color .15s}
+  .drop[open]{border-color:rgba(122,217,168,.35)}
+  .drop>summary{list-style:none;cursor:pointer;padding:16px 18px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+  .drop>summary::-webkit-details-marker{display:none}
+  .drop>summary .st{font-weight:700;font-size:15.5px;letter-spacing:.005em}
+  .drop>summary .ct{margin-left:auto;font-size:12px;color:var(--dim);font-weight:600;font-variant-numeric:tabular-nums}
+  .drop>summary .chev{flex:none;width:22px;height:22px;border-radius:50%;background:rgba(122,217,168,.14);color:var(--mint);display:flex;align-items:center;justify-content:center;font-family:var(--display);font-size:15px;line-height:1;transition:.2s;transform:translateY(-1px)}
+  .drop[open]>summary .chev{transform:rotate(45deg)}
+  .drop-body{padding:2px 12px 12px}
+
+  /* chapters */
+  .chapter{display:flex;align-items:baseline;gap:14px;width:100%;text-align:left;cursor:pointer;background:none;border:0;color:inherit;font-family:inherit;padding:11px 10px;border-radius:10px;transition:.13s}
+  .chapter:hover{background:var(--card-hi)}
+  .chapter .tc{font-variant-numeric:tabular-nums;font-weight:700;font-size:14px;color:var(--mint);flex:none;width:48px}
+  .chapter .cx{font-size:15px;font-weight:500;color:rgba(255,255,255,.9)}
+  .chapter:hover .cx{color:#fff}
+
+  /* questions */
+  .q{display:flex;align-items:center;gap:12px;width:100%;text-align:left;cursor:pointer;background:none;border:0;border-radius:11px;color:inherit;font-family:inherit;padding:12px 10px;transition:.14s}
+  .q+.q{border-top:1px solid rgba(255,255,255,.05)}
+  .q:hover{background:var(--card-hi)}
+  .q .qm{font-family:var(--display);font-size:15px;color:var(--mint);flex:none;line-height:1;transform:translateY(1px)}
+  .q .qx{font-size:15px;font-weight:500;color:rgba(255,255,255,.92)}
+  .q .go{margin-left:auto;flex:none;color:var(--dim);font-size:18px;transition:.15s}
+  .q:hover .go{color:var(--mint);transform:translateX(2px)}
+
+  /* summary + transcript bodies */
+  .summary-body p{font-size:16.5px;line-height:1.62;color:rgba(255,255,255,.9);padding:6px 10px 4px}
+  .tbody{padding:2px 10px 8px}
+  .tbody p{font-size:14.5px;line-height:1.7;color:rgba(255,255,255,.78);margin-top:15px;max-width:64ch}
+  .tbody .spk{display:block;font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--mint);margin-bottom:2px}
+
+  /* ── Voice note ask (lives at the bottom of the Summary panel) ── */
+  .vask{margin:16px 10px 4px}
+  .vbtn{display:inline-flex;align-items:center;gap:9px;padding:12px 20px;border-radius:999px;border:0;cursor:pointer;
+    background:var(--mint);color:#08210f;font-family:inherit;font-weight:800;font-size:12.5px;
+    letter-spacing:.04em;text-transform:uppercase;transition:.15s}
+  .vbtn:hover{filter:brightness(1.06);transform:translateY(-1px);box-shadow:0 12px 30px rgba(122,217,168,.25)}
+  .vbtn svg{width:18px;height:18px;fill:currentColor;flex:none}
+  .vslot{background:var(--purple);padding:12px 10px 10px;margin:14px 0 4px;box-shadow:0 18px 40px rgba(0,0,0,.35)}
+  .vslot[hidden]{display:none}
+  .vhead{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;margin-bottom:10px}
+  .vhead .vmsg{font-family:var(--sans);font-size:13px;line-height:1.55;color:rgba(255,255,255,.92);margin:2px 0 0;padding:0 2px}
+  .vclose{background:none;border:0;color:rgba(255,255,255,.85);font-size:22px;line-height:1;cursor:pointer;padding:0 2px}
+  .vclose:hover{color:var(--white)}
+  .vslot iframe{display:block}
+
+  /* ── YouTube subscribe pill (sits in the listen row; outranks .listen a's mint) ── */
+  .listen a.yt-pill{background:var(--purple);color:var(--white)}
+  .listen a.yt-pill:hover{filter:brightness(1.1);transform:translateY(-1px)}
+  @media(max-width:720px){ /* mobile: no label, three compact pills on one row */
+    .listen .lname{display:none}
+    .listen{gap:8px}
+    .listen a{padding:10px 13px;font-size:11px;gap:6px}
+    .listen svg{width:16px;height:16px}
+  }
+
+  /* ── Footer: Follow us on | Brought to you by | Produced by, + Menu dropdown ── */
+  footer{border-top:1px solid var(--line);margin-top:68px;padding:52px 20px 58px}
+  .footgrid{max-width:var(--wrap);margin:0 auto;display:grid;grid-template-columns:1fr 1.15fr .8fr;gap:44px;align-items:start}
+  .fcol{text-align:center;display:flex;flex-direction:column;align-items:center}
+  .foot-label{font-size:11px;font-weight:700;letter-spacing:.26em;text-transform:uppercase;color:var(--dim);margin-bottom:18px}
+  .sponsors{display:flex;justify-content:center;align-items:center;gap:34px;flex-wrap:wrap}
+  .sponsors a,.produced a{display:inline-flex;transition:.15s}
+  .sponsors a:hover,.produced a:hover{transform:translateY(-1px)}
+  .sponsors img{height:32px;width:auto;opacity:.92}
+  .produced img{height:30px;width:auto;opacity:.95}
+  .sponsors a:hover img,.produced a:hover img{opacity:1}
+  footer .socials{display:flex;gap:11px;justify-content:center;flex-wrap:wrap;margin:0}
+  footer .socials a{width:40px;height:40px;border-radius:50%;border:1.5px solid rgba(122,217,168,.5);display:flex;align-items:center;justify-content:center;transition:.15s}
+  footer .socials a svg{width:18px;height:18px;fill:var(--mint);transition:.15s}
+  footer .socials a:hover{background:var(--mint);border-color:var(--mint);transform:translateY(-2px)}
+  footer .socials a:hover svg{fill:#0a0a0a}
+  .footbar{max-width:var(--wrap);margin:34px auto 0;border-top:1px solid var(--line);padding-top:20px;display:flex;flex-direction:column;align-items:center;gap:14px}
+  .footnav-dd{display:block;width:100%;max-width:var(--wrap);margin:0 auto;text-align:center}
+  .footnav-dd>summary{list-style:none;cursor:pointer;display:inline-flex;align-items:center;gap:9px;font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.5px;font-size:13px;color:var(--muted);background:transparent;border:1px solid var(--line);padding:8px 16px 6px;transition:.15s}
+  .footnav-dd>summary::-webkit-details-marker{display:none}
+  .footnav-dd>summary:hover{color:var(--mint);border-color:rgba(122,217,168,.45)}
+  .footnav-dd>summary .ham{width:15px;height:15px;fill:currentColor;transform:translateY(-1px)}
+  .footnav-dd .dd-links{display:flex;flex-direction:row;flex-wrap:wrap;justify-content:center;gap:12px 24px;padding:24px 0 4px}
+  .footnav-dd .dd-links a{font-size:11.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:.15s}
+  .footnav-dd .dd-links a:hover{color:var(--mint)}
+  .copyright{font-size:12px;color:var(--dim);text-align:center}
+  @media(max-width:720px){.footgrid{grid-template-columns:1fr;gap:34px}footer{padding:40px 16px 20px}.footbar{margin-top:34px;padding-top:24px;gap:20px}.footnav-dd .dd-links{flex-direction:column;align-items:center;gap:15px}}
+
+  @media(min-width:720px){header.hero{padding:48px 0 6px}}
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "PodcastEpisode", "name": "Grant Austin - Disrupting Business Payments", "url": "https://thenumbersgamepodcast.com.au/grant-austin-disrupting-business-payments", "datePublished": "2024-04-29", "episodeNumber": 173, "image": "https://i.ytimg.com/vi/iH-GYt8A950/maxresdefault.jpg", "partOfSeries": {"@type": "PodcastSeries", "name": "The Numbers Game", "url": "https://thenumbersgamepodcast.com.au/"}}</script>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-in">
+      <a class="brand" href="/" aria-label="The Numbers Game home"><img src="assets/tng-logo.png" alt="The Numbers Game"></a>
+      <div class="navlinks">
+        <a href="/">Home</a>
+        <div class="navgroup">
+          <a class="navtop">Episodes</a>
+          <div class="subnav">
+            <a href="/episodes">All episodes</a>
+            <a href="/adventure">Find moments</a>
+          </div>
+        </div>
+        <div class="navgroup">
+          <a class="navtop">About</a>
+          <div class="subnav">
+            <a href="/about">The show</a>
+            <a href="/nick-reilly">Nick Reilly</a>
+            <a href="/jason-robinson">Jason Robinson</a>
+          </div>
+        </div>
+        <a href="/contact">Contact</a>
+      </div>
+      <button class="navburger" id="navburger" type="button" aria-label="Menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24"><path d="M3 6h18v2H3zM3 11h18v2H3zM3 16h18v2H3z"/></svg>
+      </button>
+    </div>
+    <div class="navdrop" id="navdrop" hidden>
+      <a href="/">Home</a>
+      <span class="navlabel">Episodes</span>
+      <a class="sub" href="/episodes">All episodes</a>
+      <a class="sub" href="/adventure">Find moments</a>
+      <span class="navlabel">About</span>
+      <a class="sub" href="/about">The show</a>
+      <a class="sub" href="/nick-reilly">Nick Reilly</a>
+      <a class="sub" href="/jason-robinson">Jason Robinson</a>
+      <a href="/contact">Contact</a>
+    </div>
+  </nav>
+
+  <main class="wrap">
+
+    <header class="hero">
+      <div class="hook">
+        <span class="eptag">EP 173</span>
+        <h1 class="hk"><span class="hkrow"><span>Grant Austin - Disrupting</span></span>
+        <span class="hkrow"><span class="mintseg">Business Payments</span></span></h1>
+      </div>
+    </header>
+
+    <div class="player-wrap" id="player-wrap">
+      <div class="player" id="player">
+        <button class="facade" id="facade" style="background-image:url('https://i.ytimg.com/vi/iH-GYt8A950/maxresdefault.jpg')" aria-label="Play episode">
+          <span class="play"></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="explore">
+      <div class="tabs" role="tablist">
+        <button class="tabbtn on" data-panel="p-summary">Summary</button>
+        <button class="tabbtn" data-panel="p-chapters">Chapters<span class="ct" id="chcount"></span></button>
+        <button class="tabbtn" data-panel="p-questions">Questions<span class="ct" id="qcount"></span></button>
+      </div>
+      <section class="tpanel" id="p-summary">
+        <div class="summary-body">
+          <p>Jason and Nick host Grant Austin of pay.com.au, with Marty away, to unpack how he built a fast-growing B2B payments and rewards platform. Grant walks through his chartered accounting and mergers and acquisitions background, why he wanted to be operational rather than a consultant, and how pay.com.au was spun out after a friend acquired Point Hacks. He explains the product, the Switzerland of payments and rewards positioning, the working capital and points use cases for business owners, and why prioritisation is the key to managing fast growth. The conversation covers winning airline partnerships as a startup with no track record, raising capital from family offices while avoiding venture capital, the weight of shareholder responsibility, when to launch a product, the ATO tax treatment of reward points, using AI in marketing, and exit planning.</p>
+        </div>
+        <div class="vask">
+          <button class="vbtn" id="vbtn" type="button">
+            <svg viewBox="0 0 24 24"><path d="M12 14a3 3 0 0 0 3-3V6a3 3 0 1 0-6 0v5a3 3 0 0 0 3 3zm5-3a5 5 0 0 1-10 0H5a7 7 0 0 0 6 6.92V21h2v-3.08A7 7 0 0 0 19 11h-2z"/></svg>
+            Send us a voice note
+          </button>
+          <div class="vslot" id="vslot" hidden>
+            <div class="vhead">
+              <p class="vmsg">We'd love to hear from you. You can leave up to a 90 second voice note for us to play on the show: a question, some feedback, or a topic you want covered.</p>
+              <button class="vclose" id="vclose" type="button" aria-label="Close">&times;</button>
+            </div>
+            <iframe src="https://www.speakpipe.com/widget/inline/hhq6kzggsx7zpcsvakgxfrzun3zidpde" allow="microphone" width="100%" height="200" frameborder="0" title="Leave The Numbers Game a voice note"></iframe>
+          </div>
+          <script async src="https://www.speakpipe.com/widget/loader.js" charset="utf-8"></script>
+        </div>
+        <div class="sumfacts">
+          <div class="fact"><span class="fl">Release date</span><span class="fv">29 April 2024</span></div>
+          <div class="fact"><span class="fl">Hosts</span><span class="fv"><a href="/nick-reilly">Nick Reilly</a> &amp; <a href="/jason-robinson">Jason Robinson</a></span></div>
+          <div class="fact"><span class="fl">Guest</span><span class="fv">Grant Austin</span></div>
+
+        </div>
+      </section>
+      <section class="tpanel" id="p-chapters" hidden>
+        <p class="hint">Jump straight to the part you need.</p>
+        <div id="chapters"></div>
+      </section>
+      <section class="tpanel" id="p-questions" hidden>
+        <p class="hint">Real questions this episode answers. Tap one to hear the answer.</p>
+        <div id="qa"></div>
+      </section>
+    </div>
+
+    <div class="drops">
+
+      <details class="drop">
+        <summary><span class="st">Episode transcript</span><span class="chev">+</span></summary>
+        <div class="drop-body tbody">
+          <p><span class="spk">Jason · 00:00</span>Welcome to episode 173 of The Numbers Game. I'm Jase and I'm here with Mick. How are you, Nicko?</p>
+          <p><span class="spk">Nick · 00:05</span>I'm good. Feeling lonely? No, Marty? Feel lost? Feel lost. Haven't got the dulcet tones of Marty Vitikovic, but um, we've got someone who I think might just outdo Marty on the IQ, um, stats. So yeah, I'm, I'm, I'm pretty, I'm honey jazzed.</p>
+          <p><span class="spk">Nick · 00:21</span>I'm, I'm pretty pumped for today's episode. How are you, mate?</p>
+          <p><span class="spk">Jason · 00:23</span>Mate, I'm good. I'm good. Uh, Yeah, just depending on when this all goes live, but not long before I fly out to London to get the London marathon coming up. So excited, pumped up and about, but you know what? Excited, more excited for this conversation for now, because I'm just focusing on one hour at a time until I get on that plane.</p>
+          <p><span class="spk">Jason · 00:38</span>And, uh, you've brought in a really interesting guest for us. Why don't you give us a bit of a background and introduction on who our guest is today, Nick?</p>
+          <p><span class="spk">Nick · 00:46</span>Yeah, cool. Well, I'll let him give the background, but we've got Grant Austin from pay. com. au, which is a reasonably new business that's making waves.</p>
+          <p><span class="spk">Nick · 00:57</span>It's an interesting business that, um, I think a lot of</p>
+          <p><span class="spk">Nick · 01:00</span>SMEs will find value in learning more about. So not only about the business, but also just this, just the journey of how the business was created and, um, and, and how they've grown so quickly. So welcome Grant. Austin, uh, how are you, mate? Very well.</p>
+          <p><span class="spk">Nick · 01:15</span>Thanks. Thanks for having me, gents. Great to be on the podcast. No worries. And, um, look, we're obviously going to rip into the business stuff, mate, but, um, keen to just get a bit of background on yourself, um, career wise. Um, And, and, and what not, and how did you end up in, um, in, in the current business, pay.</p>
+          <p><span class="spk">Nick · 01:33</span>com. au?</p>
+          <p><span class="spk">Grant · 01:34</span>I'm a chartered accountant by trade, so Jase, you'll be, uh, happy to hear that, um.</p>
+          <p><span class="spk">Jason · 01:38</span>In great company?</p>
+          <p><span class="spk">Grant · 01:39</span>Yeah, I started off, uh, in the chartered accounting world and, uh, worked in mergers and acquisitions for the first seven years of my career at Grant Thorne and then PricewaterhouseCoopers, uh, after that.</p>
+          <p><span class="spk">Grant · 01:50</span>Love that, that space. Learned a lot. It was all, it was awesome. And, um, but kind of soon realized that, you know, I kind of enjoyed being active in business and, you know, kind of being</p>
+          <p><span class="spk">Grant · 02:00</span>operational and kind of, you know, inputting into business rather than come in and do some consulting, disappear and, um, you know, kind of never see what actually happens after that.</p>
+          <p><span class="spk">Grant · 02:08</span>So, um, after I left that, that kind of consulting space, I moved into West Farmers in their, in their, digital and data area, which would commonly be referred to as flybys. Um, the loyalty space, uh, which was fantastic. I really enjoyed being in that space. Obviously it took me out of my comfort zone. Um, you know, kind of being a numbers, numbers guy, but I worked kind of in the strategy team there on some pretty cool stuff, how to kind of, you know, work with In the digital media world around monetization of data, worked in payments and looking at how we could, uh, you know, the loyalty program of Flybuys could interact in the payment space through digital wallets and, and that sort of stuff.</p>
+          <p><span class="spk">Grant · 02:47</span>And obviously got a really, um, good understanding of, of kind of the loyalty space and how that all works. So, uh, you know, fascinating. Um, experience and love that. Um, and from then, um, kind</p>
+          <p><span class="spk">Grant · 03:00</span>of, I actually ended up working in a digital, uh, uh, marketing startup out of the U S a tech tech business that helps kind of with those loyalty programs, uh, monetizing, um, I guess, data assets into the, you know, into the digital marketing world, um, And, and that again was a fascinating, that was kind of connected to what I did in, in, uh, in the West Farmer space.</p>
+          <p><span class="spk">Grant · 03:21</span>Um, and then interestingly enough, I, um, a friend of mine from the Merchant Acquisitions world back, um, you know, when I was doing that, that stuff had just acquired a business called Point Hacks. Um, so a couple of guys who are ex, uh, iSelect were, were doing that. They'd kind of, rapidly double the size of that business after kind of acquiring it was going gangbusters.</p>
+          <p><span class="spk">Grant · 03:43</span>And, uh, he called me up and knew I had a bit of background in that space and said, Hey, we're looking at how we, how we grow this business, um, which ultimately led into, uh, me doing some kind of strategic consulting work and then, um, you Working with some, some ideas, which pay. com. au was kind of the</p>
+          <p><span class="spk">Grant · 04:00</span>number one recommendation and they were then fortunate enough to seed that opportunity with some capital and kind of separate it out.</p>
+          <p><span class="spk">Grant · 04:06</span>And we ended up building it to kind of where we are today, which is we've signed up over 15, 000 customers, which is pretty exciting. We've done just about 3 billion in payments in the short time we've been around and, um, kind of going from strength to strength, so pretty exciting. But that's the kind of snapshot of, uh.</p>
+          <p><span class="spk">Grant · 04:22</span>I</p>
+          <p><span class="spk">Jason · 04:24</span>think, uh, I've always got this joke about CAs versus CPAs, Grant. I think you're ruining my joke. Cause I usually say that the P in CPA stands for personality and that CAs, usually a lot of great CAs in the world. And you come across as someone with a great personality, definitely got the ability to capture me so far.</p>
+          <p><span class="spk">Jason · 04:43</span>And mate, the journey in the background sounds, you know, I love seeing career progression or the evolution of someone to be able to use what they're learning and continue to evolve into that next space and, you know, highlight ideas or gaps in the market and things like that. So just to go</p>
+          <p><span class="spk">Jason · 05:00</span>back a bit for now, pay.</p>
+          <p><span class="spk">Jason · 05:01</span>com. au for anyone out there who hasn't come across a great catchy name because straight away, I mean, people are going to punch in pay. com. au and go and check it out. How does it work? What exactly is it and what do people use it for?</p>
+          <p><span class="spk">Grant · 05:12</span>Yeah, look, we're a B2B payment platform. Um, you know, predominantly in the kind of payable space, although we're doing a few other things around that.</p>
+          <p><span class="spk">Grant · 05:19</span>Um, and what we do effectively is we make the payables payment experience really seamless. And, uh, we add a rewards element to, to that. So people will be familiar with credit card rewards. A lot of business owners use credit cards to earn rewards. Um, we started off effectively facilitating, uh, payment B2B payments where you otherwise wouldn't be able to use a credit card and then built out a rewards proposition.</p>
+          <p><span class="spk">Grant · 05:43</span>You know, I guess similar to like an American Express rewards, but you know, you don't have to have a credit card. You don't have to have an American Express, um, and you know, I've kind of built out that rewards proposition ourselves. So, you know, we, we, we basically do any payment, um, kind of. across, across all the</p>
+          <p><span class="spk">Grant · 06:00</span>business side of things.</p>
+          <p><span class="spk">Grant · 06:00</span>And we, we would kind of say anyway, so whether you want to pay on a credit card or through a bank payment, we can do all of that. It's all integrated into one seamless platform, uh, integrated into zero. So the reconciliation process is, is quite seamless. Um, and yeah, as I said, we make that payment experience really seamless with that kind of differentiation and mode with the, uh, rewards proposition.</p>
+          <p><span class="spk">Grant · 06:21</span>So we've built out that rewards proposition to, you know, have airline partners, but you can also. You know, redeemed for pretty much anything, um, through our platform at, you know, and we pride ourselves in making sure those redemptions and, you know, the rewards, uh, you know, redeemed for a great value.</p>
+          <p><span class="spk">Nick · 06:36</span>So I guess the, the problem or the, the, yeah, well, I guess the problem you're looking to solve in the market was the only real way, uh, you could get the reward program happening or the existing reward programs were all based around credit cards.</p>
+          <p><span class="spk">Nick · 06:49</span>Whereas with what you do, I don't have to have a credit card. I can just, I guess, log a list of payables, send it to you. You make those payables happen.</p>
+          <p><span class="spk">Nick · 07:00</span>Um, if there's no credit card, I assume you debit a bank account and then there's rewards for how much is spent. Is that around about right?</p>
+          <p><span class="spk">Grant · 07:07</span>Yeah, absolutely.</p>
+          <p><span class="spk">Grant · 07:08</span>So obviously we do all the credit card payments as well. You can make any of those payments, you know, allowed for by their credit card companies, they set certain rules. Um, so you can earn your credit card rewards through us on payments you otherwise wouldn't be able to make. And then, as you said, absolutely.</p>
+          <p><span class="spk">Grant · 07:23</span>You, um, you know, you can make bank payments, upload your ABA file or sync in with Xero, make those payments through a linked bank account, which we perform verification on when you, when you add it into your. Pay. com. au, call it digital wallet for want of a better word, and then earn rewards along the way.</p>
+          <p><span class="spk">Nick · 07:39</span>How, I'm just curious on, you look at the market and you go, okay, well, Amex are doing it and you mentioned maybe some others. Like, what was the moment where you went, no, this is going to work and we'll do it this way. Like, how do you, obviously, apart from the credit card stuff, what, what differentiates you mainly from Amex, um, you know, an</p>
+          <p><span class="spk">Nick · 08:00</span>existing provider out there?</p>
+          <p><span class="spk">Grant · 08:01</span>We call ourselves the Switzerland of, of, you know, payments and, and rewards in that we, you know, we basically work with all payment methods. Um, we, you know, we're not, we're not only Amex and similarly with, from a rewards perspective, we want, you know, we want to work with. Uh, all rewards partners so that people can be redeeming for the things that they want not, you know, we're not specifically tied into, you know, one provider, et cetera.</p>
+          <p><span class="spk">Grant · 08:26</span>So, you know, when you say, you know, there's people out there doing this stuff, well, yeah, there's people doing bits and pieces of what we do. There is a couple of businesses around that do just the credit card piece that I've talked about. We were kind of the first to really do the, you know, rewards with bank payments, um, and obviously bringing that all together.</p>
+          <p><span class="spk">Grant · 08:44</span>And then we've, you know, put our real. kind of differentiation in market is, you know, I guess our rewards proposition, which has taken some time and a long time to build out all these rewards partners. And, you know, kind of the way we, we do that, um, is pretty much unique in market</p>
+          <p><span class="spk">Grant · 09:00</span>to what we do. No one else was doing that on bank payments previously, but yeah, obviously Amex doing bits and pieces around that.</p>
+          <p><span class="spk">Grant · 09:06</span>But again, Amex is a, um, I call it a credit card working capital company that has a good rewards program. We've kind of taken, you know, bits and pieces from different, um, areas and built, put it all together into one seamless ecosystem we call it.</p>
+          <p><span class="spk">Jason · 09:19</span>I definitely do like the idea of like that, that ecosystem, that login point where you can see and choose what you're doing, I mean, Um, go into it a little bit as we keep expanding, but seeing customers or clients and future advisory using pay.</p>
+          <p><span class="spk">Jason · 09:32</span>com. au and how, you know, it could be used to pay wages and then it debits off the Amex and you buy yourself 30 or 60 days, you get some points kind of doubling up here, they're everywhere. And. It could be ATO payment, could be a super fund payment, could just be standard, you know, pay the materials bill, whatever it is, but yeah, it does create some pretty cool flexibility.</p>
+          <p><span class="spk">Jason · 09:51</span>Um, I was going to say, mate, I was doing a bit of LinkedIn stalking, uh, before we jumped on and noticed the, um, AFR fast starter</p>
+          <p><span class="spk">Jason · 10:00</span>list. You came in at 16th, um, which is an absolutely amazing achievement. So congratulations and well done.</p>
+          <p><span class="spk">Grant · 10:05</span>Thank you.</p>
+          <p><span class="spk">Jason · 10:06</span>I'm interested in, you know, the day to day life of a business that grows that fast.</p>
+          <p><span class="spk">Jason · 10:10</span>I mean, Nick, Marty, and I often sit back on the podcast. We hear from our customers that talk about scaling and growth being one of the most difficult things that you can do in business. Um, you know, to be, to be on the fast starter list, I assume growth is manic and crazy and a bit chaotic. Talk to us about, you know, what it is like working in a business that is growing at such a rapid rate.</p>
+          <p><span class="spk">Grant · 10:30</span>Yeah. Absolutely. I think, you know, to be honest, it's one of the things I love about it. It's, um, you know, there's a million things going on all the time. Um, and you know, the biggest thing I think, you know, to be successful with growing fast growth, growth companies is just around prioritization. You know, there's a million things we could be doing the same with our products.</p>
+          <p><span class="spk">Grant · 10:48</span>It's the same with, you know, what we could be focusing from, you know, our sales function, our marketing function. It's, you know, what, what's going to shift the dial the most and make sure we, you know, Um, and then we'll come back to prioritizing, you know, what are the key top three</p>
+          <p><span class="spk">Grant · 11:00</span>things we can be doing to shift the dial.</p>
+          <p><span class="spk">Grant · 11:01</span>But it's an exciting environment. You know, we've been around for a short, short window of, you know, really four years. And, um, you know, we're kind of just pushing up to just over 60, 60 staff now. And, you know, even that in itself is, uh, you know, exciting. You know, it's, it's huge where, you know, last year we had probably 30 staff, now we've got 60, you know, just the infrastructure and the, you know, the change that comes with that and working with all those people who, you know, have their own careers and, and live livelihoods and kind of working with that.</p>
+          <p><span class="spk">Grant · 11:28</span>That's a huge, huge part of it. But it's, yeah, I think it's, you know, being involved in innovation, you know, having an idea and bringing something to life and And making it happen and seeing it have a difference is, is, is um, the exciting part of it. But it's um, yeah, definitely a, a fun, fun, fun thing to do, which I love.</p>
+          <p><span class="spk">Nick · 11:46</span>I love what you said there around the prioritization because you know, we're, we're 16 years into business now and it's only, I think the bigger you get, just the more opportunities that come your way and the</p>
+          <p><span class="spk">Nick · 12:00</span>more, the more things you've got to deal with. And yeah, we're only talking last week around, you know, bringing in a quarterly, um, we've, we've already got a quarterly meeting, but bringing into that.</p>
+          <p><span class="spk">Nick · 12:11</span>with each department. What's the one thing that's not negotiable for you this quarter? Obviously you've got all these other things you're focusing on, but out of all those things, there might be three there, what's the one thing that you have to do to your point to shift the needle? And I'm, I'm kind of only just realizing that now that sometimes we can get caught up in so many things, but.</p>
+          <p><span class="spk">Nick · 12:31</span>We, we, we really can only tick off one or two things in a quarter. So just how do you determine, um, just to get a bit more granular on that, how do you determine what's going to shift the needle from a process point of view? Do you have a leadership meetings where you sit around, you look at all the things that have got to be done in 12 months and you pick two or three of them off?</p>
+          <p><span class="spk">Nick · 12:52</span>I know it's a pretty basic question, but it's something that we've been through ourselves. So</p>
+          <p><span class="spk">Grant · 12:57</span>yeah, he's spot on. It's like, you know, we always trying to</p>
+          <p><span class="spk">Grant · 13:00</span>get down the list of all the things we can. And then it's a function of, you know, filtering those out and, you know, trying to put some, you know, kind of science and thought behind, you know, what's the size of, you know, what's the size of the prize.</p>
+          <p><span class="spk">Grant · 13:12</span>What's the thing that's going to, as I said, move the needle the most, um, kind of getting it down into, you know, we really think this will move the needle. it might not be that sophisticated but, you know, often it requires a bit of a gut feel judgment call, you know, and hopefully the experience and experience you've had helps you make the right call about that.</p>
+          <p><span class="spk">Grant · 13:35</span>But it's never pure. You know, a pure science in my view, but it's um, it's definitely something that, you know, you've got to, got to continually work on and, you know, if you start doing something and you realize it's not going to move the dial, then you got to, you know, be bold enough to pull the pin and not just say, Hey, we chose to do this, follow through.</p>
+          <p><span class="spk">Grant · 13:50</span>It's like, you know, quickly test and learn stuff. If it's working, roll it out and, you know, give it everything. And if it's not working, then say, Hey guys, this isn't working, let's kind of push this</p>
+          <p><span class="spk">Grant · 14:00</span>aside and get onto the, onto the next thing. But it's, yeah, you know, you make mistakes along the way and hopefully you learn every time.</p>
+          <p><span class="spk">Nick · 14:05</span>I know you've got some clients that are using pay. com. au. Um, how's that going for them? And one of the other things I'd like to do as we're talking about this is I know we've kind of talked about what you do, um, grant, but maybe just an actual example. So for all of our business owners at home, you know, I could use, if I've got a GST debt of 30 K, I can pay.</p>
+          <p><span class="spk">Nick · 14:31</span>Um, I can pay that through pay. com. au, I can get this many points and then that means I can go and do whatever I need to do with those points. So yeah, Jase, maybe, yeah, just how are your clients finding it? Cause I know you've got some big clients that are using the system or the business.</p>
+          <p><span class="spk">Jason · 14:47</span>Look, I think the ones that are using it have gone.</p>
+          <p><span class="spk">Jason · 14:49</span>This is awesome for the, like the ease ability of the interface of uploading things, one easy login, um, the ABA file upload sinking into zero to make your accountant's life or your bookkeeper's</p>
+          <p><span class="spk">Jason · 15:00</span>life easy. Um, but like a real life example might be, you know, big businesses often have cashflow crunches where you've got a whole bunch of accounts receivable, whole bunch of accounts payable.</p>
+          <p><span class="spk">Jason · 15:09</span>And you might be at a point where it's like, look, we've got enough cash. We could pay. Wages, or we could pay the ATO in full right now, but we've also got a credit card or a credit, um, what do you call it? Like a working capital, Amex, all these different kinds of car providers do different things to call different things, but you might be able to access money for 30 or 60 days, interest free on your Amex, for example.</p>
+          <p><span class="spk">Jason · 15:31</span>So rather than emptying out your cash from your bank account. You can ease the cashflow crunch. Chuck it through pay. com. au, comes off your Amex. And all of a sudden you got 30 or 60 days to wait for those accounts receivable to come in, almost like the trade finance app we talked about the other day, Nick.</p>
+          <p><span class="spk">Jason · 15:47</span>But it just allows for, for ease ability and making, um, I guess it gives you options and choices as well. And then beyond that, I mean, there's the excitement of, you know, I've got a business partner, Greg, who we've spoken about many times before,</p>
+          <p><span class="spk">Jason · 16:00</span>loves to gamify things, loves points, loves different hacks.</p>
+          <p><span class="spk">Jason · 16:03</span>Um, you know, note, note the name of the other business point hacks, loves to be able to just know that he's getting a little win out of something. So, you know, we do a lot of business trips in, you know, around the country. We've got an office up on the sunny coast. We had a partner over in Perth and often, you know, we'd be digging into our own pocket.</p>
+          <p><span class="spk">Jason · 16:19</span>Um, and paying cash for flights now as part of our day to day business, using future advisory as a real example, if we can be paying for different things, using pay. com. au, running up some points on our account, and then rather than paying cash for the flight to the sunny coast for me to go and work up there and make clients or work with my team member, we can I can book everything on points, which again helps future advisory save on a bit of that cash that I would have otherwise been shelling out to pay for a flight.</p>
+          <p><span class="spk">Jason · 16:46</span>Um, I think there's absolute wins in that way. And we've seen examples where clients have, you know, been able to access different benefits. Um, you know, like I said, a golf clubs and different things like that. So, Um, happy people, happy people that are doing</p>
+          <p><span class="spk">Jason · 17:00</span>it. I mean, of course there's fees and charges and GST and different stuff involved, but when you work out the difference, like what I've paid in some pay.</p>
+          <p><span class="spk">Jason · 17:06</span>com. au fees, I would have been well and truly more out of pocket to pay for the flights up to over to Perth or up to the sunny coast, for example.</p>
+          <p><span class="spk">Grant · 17:13</span>Yeah. It's a good, it's a good point, Jay. So I think, um, you know, economics is key to, to this, you know, as you say, we, we, we charge a fee. You're paying a fee. Um, you know, we have the confidence in our customers are always getting greater value in terms of what they're getting out of it than the, the, the fee they're paying.</p>
+          <p><span class="spk">Grant · 17:28</span>But, you know, making sure you're doing that, um, and making the economics work for you as a business owner and your business is, is absolutely critical, um, to that. And I, you know, the, the working capital example of, of, you know, helping you fund cashflow, etc. Um, et cetera, when times are tough or you're going through a hot, fast growth phase where you, you know, um, sometimes you, you know, you've got payments that are coming quicker and you haven't quite collected the cash yet is a, is a really good, good example too.</p>
+          <p><span class="spk">Grant · 17:53</span>I was talking to a customer on Friday about that exact thing and you know, you know, often you don't hear enough. Some people, you know, are</p>
+          <p><span class="spk">Grant · 18:00</span>doing it because they like the points more and they get the benefit out of that, but you know, working capital is key for, um, for some businesses and it's a great, um, kind of benefit for what, for what we offer to customers.</p>
+          <p><span class="spk">Grant · 18:10</span>Thanks.</p>
+          <p><span class="spk">Nick · 18:10</span>Yeah, we, we did a whole episode, um, I don't know when it was, a couple of weeks ago on trade finance and just trying to, uh, educate people on, on, on what's, what's out there. But, um, yeah, I definitely have spoken to many businesses that use, use the Amex purely for, from a working capital point of view, um, because depending on, on your account, you can, you know, you, you can float costs for sort of 60 to 90 days.</p>
+          <p><span class="spk">Grant · 18:33</span>The, you know, same with the cash flow of, um, you know, when you're buying airline tickets, et cetera. Like I'm going to the U. S. for, uh, the Money 2020 conference later this year and I'm, you know, managed to get business class flights with Qantas, you know, no cash flow out, outflow for the business, but I, you know, get to go over there and go in business class over to the U.</p>
+          <p><span class="spk">Grant · 18:52</span>S. on a, you know, a long haul trip, which is, you know, saving us the cash outflow at the time for an early, early stage business growing rapidly. We know we, we're very conscious of</p>
+          <p><span class="spk">Grant · 19:00</span>how we use our cash, et cetera. So, sorry. That was a great outcome.</p>
+          <p><span class="spk">Jason · 19:02</span>It's, it's super clever and you know, on that, hopefully then there's something you can unpack us to the economies of how it works a little bit behind the scenes, but the partnerships that pay.</p>
+          <p><span class="spk">Jason · 19:12</span>com. au has is obviously absolutely crucial to the success of the business. And I think, you know, we've, we've also done, you know, past steps on partnerships and why partnerships are important. And you know, sometimes in professional services land, we talk about referral partners. Now, when pay. com. au started, I imagined, you know, the first time you walk into a room and ask Qantas to become a points partner.</p>
+          <p><span class="spk">Jason · 19:33</span>I don't know whether that conversation is easy and it happened straight away, but when it comes to getting all those partnerships on board, can you take us through a bit of the journey of, you know, It's a startup three or four years ago. Nobody knew what pay. com. au was. How do you get people to trust you to align their brands with what you were doing?</p>
+          <p><span class="spk">Jason · 19:50</span>And then once that partnership happens, you know, is there kind of behind the scenes ways you monetize it for you guys, monetize it for them, or, you know, where's the win, win, win for</p>
+          <p><span class="spk">Jason · 20:00</span>you, the brand partner, and then the customer.</p>
+          <p><span class="spk">Grant · 20:02</span>Yeah, look, it's a great question. And you hit the nail on the head in terms of, you know, when we started out with this.</p>
+          <p><span class="spk">Grant · 20:07</span>you know, growing this business. Obviously, as I said, we started accepting cards and making payments on, on cards, but we quickly wanted to build out our own rewards proposition. And you can't just turn that on overnight. It's a, you know, you've, as you said, you've got to be banging on the door of Qantas, who's the, you know, the biggest player by far and has the most power in this space, um, you know, and the most adoption in, in the Australian market.</p>
+          <p><span class="spk">Grant · 20:29</span>Everyone knows what a Qantas point is. Everyone's most people are members of Qantas frequent flyer. So, um, you know, you've got to start off with a, you know, a good proposition for customers. And that was critical to, to get us going. And, um, you know, it wasn't an easy journey. As you say, you're a startup, you know, when you're dealing with one of the biggest organizations in corporate organizations in Australia, a startup with no track record is, is, you know, banging on the door saying, Hey, do a partnership with us is, Is a big ask and, you know, we're very obviously very thankful that they, you know,</p>
+          <p><span class="spk">Grant · 21:00</span>took a gamble with us and, you know, I I'm sure they would say this as well, but they are, you know, absolutely blown away by the performance that we've delivered them as a, as a business.</p>
+          <p><span class="spk">Grant · 21:09</span>I think they had no idea that we would grow as quickly as we had and, um, deliver to them what, what, um, you know, because we were, we were preaching at the time when we didn't have a customer on our, on our books. But, you know, it took a long time. It takes these deals with these big corporates when you're a nobody, it takes a long time.</p>
+          <p><span class="spk">Grant · 21:25</span>It's about building trust. I was fortunate enough to have, you A bit of relationship with, um, some of the guys from previous, previous life that I was able to get in, talk to the right people to get the things moving. But, you know, it, it doesn't happen overnight. You've gotta, you know, pitch and pitch and sell, you know, sell the opportunity and, you know, back yourself to, to deliver on that.</p>
+          <p><span class="spk">Grant · 21:44</span>And, you know, we were able to, to get there, but it's been a huge journey starting off with Qantas. But then, you know, we've got Virgin, Qatar, airway Airways, Singapore Airways, like even those international airlines. You know, we, we signed up Singapore, you know, really before we'd</p>
+          <p><span class="spk">Grant · 22:00</span>even kind of launched, um, Qantas.</p>
+          <p><span class="spk">Grant · 22:02</span>So it's not like they said, Oh, Qantas have done the deal, so, you know, they must be okay. You know, we had to work pretty hard to do that, but we knew that Singapore Airlines from in the reward space is a, um, you know, a great proposition for customers who want to redeem points, particularly flying into that European route.</p>
+          <p><span class="spk">Grant · 22:19</span>It's a great airline, great product. Um, but you know, the best thing about Singapore Airlines, typically most people know in this space is that, you know, if you want to book a business class premium cabin seat, they've often got the best availability. You can find the seats, you know, at a time when you want to go.</p>
+          <p><span class="spk">Grant · 22:34</span>Um, and the point, the value of the points are really good. So, you know, we, we knew them, they were a critical kind of pillar to our rewards proposition. And again, you know, we worked pretty hard to get in there, convince them, struck a deal. And I think often it comes down to, you know, you can get them interested and then you've got to, it's the art of negotiating the, the deal that's going to work for both or parties, right?</p>
+          <p><span class="spk">Grant · 22:54</span>So, you know, how can you think about. Or ways to structure arrangement where, you know, that, you know, even</p>
+          <p><span class="spk">Grant · 23:00</span>from a pricing perspective, for example, you might, you know, they might, you know, these airlines basically sell points to partners effectively. That's how it works. So we, you know, we, with some of them, we have a, um, scaling, uh, volume scaled, uh, pricing arrangement.</p>
+          <p><span class="spk">Grant · 23:13</span>So we backed ourselves to get to, you know, high volumes pretty quickly. So we knew that we could make the economics work on our side and, um, you know, things like that. You know, working for them, work for us, etc. So, um, yeah, it's been a huge journey and, um, some of these airlines take a long time to deal with all the, you know, the different layers of management.</p>
+          <p><span class="spk">Grant · 23:31</span>You've got to get it through and a lot of stuff around, you know, cyber security is big for these guys. You know, they got to, you know, uh, make sure they're comfortable in your systems and that, you know, cyber security and privacy are, uh, utmost importance. Put you through the ringer and put, you know, big strong wording in contracts around this.</p>
+          <p><span class="spk">Grant · 23:50</span>So, you know, we were able to, we were able to prove that what we did, um, stacked up in the, on a, you know, in a corporate scale and global scale and they were happy to do the</p>
+          <p><span class="spk">Grant · 24:00</span>deals. But yeah, great question.</p>
+          <p><span class="spk">Nick · 24:01</span>Yeah. You know, I can only, I can only imagine like cyber is a big, uh, a big thing for our business. So, uh, I can only imagine what kind of scrutiny you're under from a, from a business like Qantas.</p>
+          <p><span class="spk">Nick · 24:12</span>And on the other side, if you, if you can talk about it, but I think you've also done deals on the other side where you're dealing with, um, potential businesses, customers as well, where not just the rewards apply, but you're sort of kind of gaining access to SMEs through other groups that are bringing you on as a, um, An approved, I guess, uh, resource, is that, that's happening as well?</p>
+          <p><span class="spk">Nick · 24:34</span>Um, so that you don't have to mention the companies if you don't want to, but you're going into big businesses as a, you know, an accredited, an accredited supplier.</p>
+          <p><span class="spk">Grant · 24:43</span>Yeah, exactly. I think we're trying to do more and more of that. Um, you know, probably a simple version of that is, you know, we've got an arrangement with Xero where we're, we're approved.</p>
+          <p><span class="spk">Grant · 24:51</span>A partner, payment partner for want of a better word and that obviously is a, uh, you know, we work collaboratively around, you know, acquiring customers, et cetera. Um, you</p>
+          <p><span class="spk">Grant · 25:00</span>know, they've got a pretty, you know, standard process of doing that, but you know, there's, we're doing a number of other partnerships, some of them smaller working with associations exactly but, uh, um, as well, but there's, we're starting to do more things with kind of bigger, you know, brand names, as you say, but that are more of a kind of that referral partnership type style of arrangement.</p>
+          <p><span class="spk">Grant · 25:19</span>So, um, yeah. Um, you know, the, the same kind of, uh, rigor goes into those type of deals as well when, you know, these big brands are working with, you know, small business like us, um, you know, needing to make sure that they've got the right, you know, they're not working with a fish and chip shop for want of a better word.</p>
+          <p><span class="spk">Nick · 25:35</span>I guess on the topic of pitching and, you know, getting big businesses on it, I guess at the same time when you're, um, trying to grow as quick as you are and you are growing as quick as you are. I might just mention too, uh, 16th on the AFR. Uh, fast starter list, but you were second on the Deloitte list, um, this year, I think.</p>
+          <p><span class="spk">Nick · 25:53</span>So kudos for mention that</p>
+          <p><span class="spk">Grant · 25:55</span>before when Jason mentioned that. I wasn't sure if he was hiding that for a different reason. But yeah, number two</p>
+          <p><span class="spk">Grant · 26:00</span>on the Deloitte fast,</p>
+          <p><span class="spk">Jason · 26:01</span>fast ticker. I like to let Nick have a few things to throw in too. I mean, sometimes I try and make it all about me, but I've got to let Nick have his time to shine too.</p>
+          <p><span class="spk">Nick · 26:08</span>Thank you. Yeah. Well, yeah, we mentioned 16th. We better mention number two. Um, so you're just on the pitching process. And yeah, growing a business, it takes capital. Um, and I think for a business like yours, unlike a lot, you kind of, it takes a lot of capital to create what you're creating versus someone out there who's, you know, providing a service and getting paid, you're kind of building a lot of infrastructure and whatnot prior to getting the reward for what you're doing.</p>
+          <p><span class="spk">Nick · 26:34</span>Pardon the pun, but, um, so seeking investment, I think you've, you've gone to market a couple of times and raise money, um, keen to unpack that. Like I, I know you present to investors and, um, and, you know, obviously try and sell them where you think the business can go and, and, and get their money, but, um, Anything you can tell us on the mechanics behind that, like, like what does it actually entail?</p>
+          <p><span class="spk">Nick · 26:58</span>You, you're going</p>
+          <p><span class="spk">Nick · 27:00</span>to, to groups that have access to money or you're going to invest it yourself and you know, what do you have to put in front of these businesses? Um, particularly when, what really interests me is, When businesses go back numerous times, so you've obviously got to show metrics you're trying to hit and you need to hit them.</p>
+          <p><span class="spk">Nick · 27:16</span>And then you probably go to the market again for more money. So yeah, just, just your experience around that. And, um, it's gotta be a difficult thing, um, asking people for money and getting by, and I guess, particularly in the early stages without too many runs on the board.</p>
+          <p><span class="spk">Grant · 27:31</span>I'm fortunate enough to have some really good, strong board members who are very good in that space.</p>
+          <p><span class="spk">Grant · 27:36</span>Um, um, A well connected, they've done it many times before. Um, so, you know, some great guidance, um, from them, but it's, you know, as you say, it's, it's, it's a huge process, you know, uh, I can't tell you the number of times we've worked on the pitch deck to investors, you know, that is critical to get that story right and making sure it's a seamless, um, you know, kind of, you know, where pitch or meeting</p>
+          <p><span class="spk">Grant · 28:00</span>or whatever that, you know, you can get the key points across really seamlessly and quickly.</p>
+          <p><span class="spk">Grant · 28:04</span>Obviously we have our, our business. is a little bit complicated to, uh, talk to, you know, in the way we operate, um, versus, you know, more simple businesses. And I guess what they're, what they're doing and how they come, come about. But, um, you know, we've refined that over, over time and, you know, we've spent hours and hours and hours, you know, refining the deck, even the, you know, the number of pages, what's the story is on that.</p>
+          <p><span class="spk">Grant · 28:27</span>Um, and you get better and better as you do it more. So in the early days, um, you know, kind of, we're probably a bit, bit rusty around the edges, but we kind of learned from what resonated, what didn't resonate, and we've been fortunate enough to bring on some really big cornerstone, you know, fairly well known family offices, for want of a better word, or high net worth individuals that have supported us and, you know, I think, you know, so far we've, we've done well.</p>
+          <p><span class="spk">Grant · 28:50</span>Um, we're looking to be very, very happy with kind of the results we've achieved. Um, so yeah, look, it's, it's a huge process. Um, we have a quarterly, um,</p>
+          <p><span class="spk">Grant · 29:00</span>shareholder update, which, uh, we, you know, anyone can dial into as a shareholder and we have a great, um, process for providing information back to those shareholders as well, which is good.</p>
+          <p><span class="spk">Grant · 29:09</span>Um, and look, we've been, you know, as I said, we've kind of, we've, Maybe done a little bit unorthodox in terms of chase, you know, we've got quite a number of investors, but they're that kind of high net worth, um, kind of individuals who can follow on. Uh, we, we've stayed away from the kind of venture capital funds, but we're probably now the, the next phase would be, you know, much larger, You know, kind of capital raise style check, uh, process, which, you know, try and work with one, one or two large, large, um, players who might, you know, kind of come in and take out, you know, a 10, 20 million check, uh, as opposed to kind of smaller amounts for, for a number of investors.</p>
+          <p><span class="spk">Grant · 29:46</span>But, um, yeah, it's been a, it's been a huge journey, but as I said, fortunate enough to have some guys who are absolute gurus in the space and very well connected.</p>
+          <p><span class="spk">Nick · 29:54</span>And just, just one more question on that. Do you feel, um, do you feel like.</p>
+          <p><span class="spk">Nick · 30:00</span>A load of responsibility, like I'm, I'm just thinking about myself and if we ever borrow money, we just go to the bank.</p>
+          <p><span class="spk">Nick · 30:06</span>So I don't, I don't feel that responsible, but, um, I think if I had shareholders, like did that, does that, does that weigh on you? Obviously business is business, but is that something you think about? You know, these people are giving me money or giving us money. We've, we've got to deliver here. Does it. Does it, does it stress you at all?</p>
+          <p><span class="spk">Grant · 30:23</span>Absolutely. Absolutely. It's probably, you know, one of the things, particularly in the early days when, you know, we were just really an idea, obviously we had customers, um, but you know, you're talking about forecast numbers and you question, you look yourself and think, can we hit these, you know, um, you know, the big, big numbers.</p>
+          <p><span class="spk">Grant · 30:41</span>And we look back now and go, geez, we, we, we absolutely blew them out of the, all that, like, All the investor decks we put together, we've basically blown the numbers out of the water. Um, so, you know, you have confidence over time, you go, ah, yeah, he's not easy, but you know what I mean? But in the early days I remember when we were raising capital, the first, you know, early stages, you know, you, you have to</p>
+          <p><span class="spk">Grant · 31:00</span>give people a sign of what you can do in the future.</p>
+          <p><span class="spk">Grant · 31:03</span>Um, and sometimes, you know, when you haven't got the track record or, or run rates to, to prove it, you know, you know, you can do it by doing the right things, but, um, you know, seeing it on paper and as you say, it got around. You know, people put in money and no one likes to go and tell, tell someone that, you know, the investment's not worth as much as they put in.</p>
+          <p><span class="spk">Grant · 31:21</span>Um, you know, thankfully we're nowhere near what we've, you know, having to have those, any of those conversations. Um, you know, it's been a very positive story, uh, for us. But I know, you know, you know, I've been involved in investments myself where You know, you, you invest in things and they don't go to plan and, you know, kind of, you're, you're, you know, they're receiving negative, um, news about that.</p>
+          <p><span class="spk">Grant · 31:41</span>So, you know, it's definitely something that keeps me awake at night. I don't always want to do a good job for the people who have backed us. And, um, yeah, as I said, we're thankful to I think that'd be all our, all our investors investors today would be very happy with, uh, kind of where we're at and what we've achieved.</p>
+          <p><span class="spk">Jason · 31:57</span>Yeah, definitely not complaining there. Grant, uh,</p>
+          <p><span class="spk">Jason · 32:00</span>very, very happy. Uh, Astrid, the little T's and C's there is that, uh, through future, uh, we do have a little shareholding in pay. com. au. Um, just fortunately. Thought you were one</p>
+          <p><span class="spk">Nick · 32:10</span>of the cornerstones, were you? That's what I heard. Yeah, just</p>
+          <p><span class="spk">Jason · 32:13</span>major shareholder. Um, Basically the podcast is just going to be my little hobby now and I don't have to work ever again.</p>
+          <p><span class="spk">Jason · 32:19</span>Just kidding. Oh, we're</p>
+          <p><span class="spk">Grant · 32:20</span>very thankful.</p>
+          <p><span class="spk">Jason · 32:22</span>And I know I like what I do. I like working as, as accountants, uh, absolutely love what we do now, just for a bit of background for those at home, there's the tech fast 50 winners and that's where pay. com. au came second at a growth of 5, 063%. So not a small number there.</p>
+          <p><span class="spk">Jason · 32:38</span>And I bring that into the question to say, You know, with that kind of, maybe it brings on some pressure. There's some huge growth here on year, maybe you raised 20, 30 million, but looking at the product over the last couple of years and thinking about innovation and technology and the speed of how things, you know, can come and go in, in certain tech markets where things get gobbled up, how, how can you</p>
+          <p><span class="spk">Jason · 33:00</span>see the product evolving over the years?</p>
+          <p><span class="spk">Jason · 33:01</span>You know, does it need to stay the same? Do you need to keep innovating and evolving? And, you know, is there anything you can share that gets you excited over the next couple of years for, for the product and innovation?</p>
+          <p><span class="spk">Grant · 33:10</span>Yeah, absolutely. I think, you know, it's probably one of my not biggest frustrations, but, you know, as we were saying before, prioritization, one of the things I struggle with the most is my, you know, trying to work out what of all the things we could be doing, what are, how are we going to try, you know, truncate that down into stuff that's actually achievable with the resources we've got, obviously, you know, if we raise another 20 million of capital, we can build out a kind of development team and do more stuff, which obviously we want to do, but you've got to get the results to, to do that.</p>
+          <p><span class="spk">Grant · 33:38</span>But, um, you know, we. have a huge backlog of both ideas, but also product roadmap and initiatives that we want to, want to, uh, you know, kind of do and achieve. Um, so yeah, we've got a number of exciting things happening. You know, some are just high level ideas, whether they go ahead or not, you know, it's still to be determined, but we're working through kind of, you know, the business cases around</p>
+          <p><span class="spk">Grant · 34:00</span>those, what the returns might be, what the Tech development side of things would look like, um, but they, you know, some of that is in the reward space about, you know, building out an exciting rewards proposition that's more seamless and automated.</p>
+          <p><span class="spk">Grant · 34:13</span>Um, you know, things like, for example, having our own pay card where you could walk into any merchant, um, and redeem your pay reward points at any, you know, kind of Visa, MasterCard, accepting merchant. Merchant, which is pretty cool in real time, you know, be able to check the balance of your points and, you know, buy something in a shop that, you know, you couldn't, couldn't otherwise do with, with some points, which is pretty exciting, you know, a bit of water to go under the bridge in terms of, you know, what that, what that looks like and how that works, et cetera.</p>
+          <p><span class="spk">Grant · 34:41</span>So that's, you know, Not definitive, but it's an exciting thing that we're, we're working on, you know, things like FX payments, um, receivables payments, some, some other kind of big initiatives. And they're the big kind of cool, you know, a couple of step out opportunities that we're working on. And, you know, every day our customers are feeding back information</p>
+          <p><span class="spk">Grant · 35:00</span>around other things that they'd like within the platform, which, you know, don't sound so big and sexy, but you know, the more we build out the proposition to make that.</p>
+          <p><span class="spk">Grant · 35:08</span>Payment experience, seamless, that rewards experience, seamless, we'll get customers using us more and, you know, spread the word more. Um, you know, in the early days, one of the biggest things I was, you know, stressed about was like, you know, you've got to build a product enough to test it and prove out, you know, kind of product market fit, but there's so many things we knew we needed to do and wanted to do.</p>
+          <p><span class="spk">Grant · 35:28</span>And there's the balance of like, well, when do you launch it into market? When's it ready enough to put it in front of a customer. And I was always thinking, Oh, I want to do this, do this and this, but you can spend, you know, years building tech. And then, you know, get it out to customers and might not work.</p>
+          <p><span class="spk">Grant · 35:41</span>So it's always been a fine balance of, you know, kind of getting stuff out to customers, getting them to use it. And then knowing that, you know, you're going to add to that build on it, which will bring in more customers over time. For example, one of the things we're working on at the moment is around dual author authorization.</p>
+          <p><span class="spk">Grant · 35:54</span>Some people, um, you know, with their banking, um, apps have very strict rules in, within</p>
+          <p><span class="spk">Grant · 36:00</span>their businesses around dual authorization, et cetera. Um, Like some, you know, kind of institutional business banks have, you know, we need to start to effectively operate like a bank from that perspective around, A, we already do from a cyber security and security perspective, but, you know, things like features like, you know, making sure dual authority on, on transactions and, and certain things and set people and set rules.</p>
+          <p><span class="spk">Grant · 36:21</span>So, you know, that's a feature that's the guys are working on and will be coming very soon.</p>
+          <p><span class="spk">Jason · 36:25</span>Even, even in my head, I've got like, I'm not in the business and you know, but I sit there going, Oh, like I'd love to be able to like tap and go like my. A card inside my Apple wallet that I could actually go and make a purchase for and have it set up to debit off my Amex, but it goes to my pay.</p>
+          <p><span class="spk">Jason · 36:41</span>com points. So, you know, my brain ticks and I can only imagine if you're immersed in it every day, how many ideas and things people are coming up with in the environment you're working in. So now it's, it's cool.</p>
+          <p><span class="spk">Grant · 36:50</span>And obviously you want to prioritize customer features, but then the other thing is when you're scaling up a tech business as well, you've got to like in the backend, the things that people don't see, you need to automate,</p>
+          <p><span class="spk">Grant · 37:00</span>scale up all those types of things as well.</p>
+          <p><span class="spk">Grant · 37:02</span>And it's a bit of a. You know, chicken and egg thing around how you, how you constantly balancing the development, the resource development into developing customer led features whilst also, you know, making it automated and seamless in the back to scalable in the, in the backend, you know, whether that's operational process, operational, or we've got a separate platform that runs our operations that, you know, our operations team in the background that are reviewing payments, you know, reconciling all that type of stuff.</p>
+          <p><span class="spk">Grant · 37:29</span>That's actually a separate, separate platform, which they got, you know, in the early days that was just. Uh, part of the fronting customer platform.</p>
+          <p><span class="spk">Nick · 37:35</span>It's cool stuff. It's a bit different to what we're, what I'm dealing with every day, making sure a lot of applications get filled in start to finish, but anyway, just, uh, if we could touch just briefly on the ATO stuff on, uh, I know some people question the whole point system and.</p>
+          <p><span class="spk">Nick · 37:50</span>How does the ATO see it? Because you're spending business expenses to get points and then possibly, to Jace's point, using those points for a set</p>
+          <p><span class="spk">Nick · 38:00</span>of golf clubs, which sounds pretty good to me. But, um, so, from what I understand, and Jace, you might chime in here, but the ATO's got some rulings on this, where there's People don't need to worry, I guess is what I'm trying to say.</p>
+          <p><span class="spk">Jason · 38:15</span>I think, uh, Grant, maybe you share your side for pay. com. au, you know, with the private rulings and whatnot, or the previous one that relied on, and then I might expand in a loose way as well.</p>
+          <p><span class="spk">Grant · 38:25</span>Yeah, sure. First and foremost, before I answer that, I mean, there's a couple of things is like, you know, that rewards proposition can be used, you know, and, and is actively by a lot of customers in majority of cases used for, you know, business type expenditure as well.</p>
+          <p><span class="spk">Grant · 38:38</span>So it's not all about, you know, using for personal, um, et cetera. So, so there's, there's that, that aspect, um, of it. I wanted to just highlight as well, but, um, but yeah, as, as you guys said, there's, um, we, we went, We've got a number of tax and legal advices around that just to make sure, you know, as a business and board, we want to make sure we're not,</p>
+          <p><span class="spk">Grant · 39:00</span>you know, doing anything that's, that's not right.</p>
+          <p><span class="spk">Grant · 39:02</span>So we've got a lot of people looking at it from that perspective and giving us the confidence that, you know, what we, what we do and the product we offer customers isn't, you know, you know. Breaking any, um, legislation rules around this type of stuff, but, um, to go directly to your point, I think, you know, there is, um, some tax rulings or guidance that they've talked specifically about rewards points, frequent fly points, et cetera.</p>
+          <p><span class="spk">Grant · 39:23</span>I think it was back in 2004, Jason, you might be able to quote the exact number of, or, or reference, but I don't know it off the top of my head, but, um, there is a guidance that was released around, you know, tax rules. For, uh, for employees, you know, using points, uh, I guess from a personal, in a personal capacity, it was, um, you know, anything, I think they call it the safe harbors, 250, 000 points per year, um, per entity.</p>
+          <p><span class="spk">Grant · 39:50</span>Um, and so, you know, obviously that's back in 2004 you know, index up. You know, kind of 20 years on and there's, you know, there's, there's</p>
+          <p><span class="spk">Grant · 40:00</span>today's number for that. But, um, but that's kind of the, the, the point where, you know, the ATI have said, look, that's just, you know, it's not even something that we'd, we'd look at type thing.</p>
+          <p><span class="spk">Grant · 40:08</span>I think beyond that, obviously that, you know, people who may get audited for this type of stuff may have some, some questions about that. Um, look, when I'm not specifically aware of any, um, customers who had any particular issues on that, but I think if you, you know, kind of generally operate around that, you Um, level you, you know, as I said, you sit within that safe harbor that the AGO is, um, kind of happy with.</p>
+          <p><span class="spk">Grant · 40:28</span>But yeah, look, um, it is an area we understand people have those questions about it when obviously we're not tax advisors. Speak to Jason. He's the man that can answer that and give you some specific guidance. But, um, Yeah, we, we, we know customers have been through tech, you know, FBT audits, et cetera, and it's never been, never been an issue.</p>
+          <p><span class="spk">Grant · 40:46</span>So</p>
+          <p><span class="spk">Jason · 40:47</span>for anyone who's is like full nerd as me and wants to get into it, it's PSLA 2004 slash four. So it's a general, you'd have it. I knew you'd have it. So a bit of a ruling there and ultimately it talks</p>
+          <p><span class="spk">Jason · 41:00</span>about, you know, rewards received under a consumer loyalty program. Um, basically if you can demonstrate the reward is received as part, not as part of income earning activity.</p>
+          <p><span class="spk">Jason · 41:08</span>So you spending money on expenses, then there's basically, there's no connection to it needing to be taxed for FBT purposes. Same thing. If you give, if you give a flight reward to an employee, you know, as long as it's, you know, nice. In lieu of remuneration, again, it's just a, it's kind of like in FBT land, there's always these little things and you got to check through it.</p>
+          <p><span class="spk">Jason · 41:28</span>But if I give someone a 250 gift card for employee of the month, it's under the 300 FBT limit, it's exempt from fringe benefits tax. So you kind of just got to apply some logic to it. If all of a sudden you were probably giving an employee a, you know, 5, 000 round the world, you know, business trip, and it had nothing to do with work.</p>
+          <p><span class="spk">Jason · 41:47</span>Maybe potentially you might need to look into it and just go, you know, is there a tax implication, but again, have a look at the ruling, talk to your accountant, if it's not me and, um, just make sure you're all happy, but if not, um. It's still just a, an absolute</p>
+          <p><span class="spk">Jason · 42:00</span>killer program to be able to get behind and, and get some benefits out of, um, love answering fun tax questions.</p>
+          <p><span class="spk">Jason · 42:05</span>So we always kind of find a way to work into the numbers game. We'll take it back to a couple of fun, a couple of last fun questions for you, Grant, before we wrap up today. Um. Yeah. If I understand this correctly, points hack pay, uh, point hacks pay. com. au and then Zift, which is another startup. Um, I believe you guys all work in the same environment, if that is correct.</p>
+          <p><span class="spk">Grant · 42:25</span>Correct.</p>
+          <p><span class="spk">Jason · 42:25</span>You know, what's that environment like and what's getting you excited for the future? What's kind of something that's, you know, that you know about that you're up and about for?</p>
+          <p><span class="spk">Grant · 42:32</span>Oh, that's a big question. Um, , first and foremost. Yeah, we, we are, we work out of a little hub. Our, um, our major investor and chairperson is the major shareholder in each of those businesses.</p>
+          <p><span class="spk">Grant · 42:43</span>So we've got a really fun environment that we work in our office in, in Elstonwick. Um, so, yeah, no, it's good. I think the thing that excites me about that environment is that, you know. Um, Damien is a huge entrepreneur. He's got a million ideas every day, which is a great thing to be a part of.</p>
+          <p><span class="spk">Grant · 43:00</span>Um, and you know, I think the collaboration across these different startups and, um, businesses is, is, is pretty cool.</p>
+          <p><span class="spk">Grant · 43:07</span>Um, you know, whether that's, you know, marketing, et cetera, there's a lot of. you know, cross collaboration, whether it's data science, where you, you know, we've got a data science resource that kind of is across all the, all the different businesses and, you know, kind of pushing our own resource in that space and, you know, giving some guidance and suggestions.</p>
+          <p><span class="spk">Grant · 43:24</span>And even for me, just, you know, someone to talk, talk to who's a specialist in that, in that space. Um, but yeah, they're all, you know, very techie, very data science driven, et cetera, which is, which is cool. And marketing, you know, we've got some marketing gurus in here you know, big. Part of our success has been the way we've, you know, delivered effective marketing, performance marketing, um, kind of in the, in that space.</p>
+          <p><span class="spk">Grant · 43:46</span>So, um, yeah, I think that's, yeah, generally it's, it's pretty cool. There's what's exciting. I think that, you know, as you guys would know, AI is a big topic, um, you know, Constantly talked about it. You know, we're, we're working on, you know, what extra</p>
+          <p><span class="spk">Grant · 44:00</span>new things we can do to be innovative. And even Nick and I've had separate conversations on, you know, how to, how do we leverage AI and, and what we do there.</p>
+          <p><span class="spk">Grant · 44:08</span>Um, you know, we're working in our marketing and data cloud, um, solution at the moment around how we can bring, you know, AI and automation into, Even just the simple way we kind of create, uh, marketing audiences to automate and push into, you know, the, you know, the digital marketing, um, platforms, et cetera.</p>
+          <p><span class="spk">Grant · 44:28</span>And, um, you know, kind of, uh, use templates, et cetera, to, you know, automate the, the process of building out a, a product. call it a personalized marketing email comms to our customers, um, which is, which is pretty cool, but there's so many different use cases for AI. It's a bit, you know, it's a bit of a minefield and, you know, a new area that everyone's struggling to, you know, battle, battle with, but, you know, we do have some cool resources internally that we, you know, kind of use that.</p>
+          <p><span class="spk">Grant · 44:54</span>You mentioned Zift as a, as a business that's, you know, doing some pretty crazy cool stuff, um,</p>
+          <p><span class="spk">Grant · 45:00</span>around price comparison for consumers, um, Uh, which, you know, they've got some, you know, kind of boffins down there that we, uh, we kind of, you know, leverage off and bounce some ideas off. So, yeah, I think that's, um, you know, some pretty exciting stuff in that space.</p>
+          <p><span class="spk">Jason · 45:14</span>I was at a rooftop party for the Formula One and met Damien and, uh, I was, I was drinking a Corona and he pulled out his phone. He goes, have you seen this? SCAN app and I was like, nah, no idea. And he pulls out his phone, scans the barcode of my Corona and showed me all the air, like near us, where it was the cheapest place to get a slab of Corona's from just from scanning the barcode, I was like, you know what, in a time of like rising inflation, you know, costs going up, rent's going up, everything else.</p>
+          <p><span class="spk">Jason · 45:40</span>I'm like, if, if people are looking for a deal and there are people out there that love looking for a deal, so little, little quiet shout out ZYFT if you haven't heard of it yet. Go and check it out. You can add it to your Google Chrome browser. So if you're an online shopper like Greg, and you're trying to buy the latest set of Nikes, chuck it in there.</p>
+          <p><span class="spk">Jason · 45:56</span>Sorry, Nick, just going all pluggy. Just plugs</p>
+          <p><span class="spk">Nick · 45:59</span>everywhere,</p>
+          <p><span class="spk">Nick · 46:00</span>mate. I love how you've managed to get future advisory in here and no doubt you're invested in that too. So anyway, that's what we're here for.</p>
+          <p><span class="spk">Grant · 46:08</span>We had a customer who redeemed some points for an investment in Zyft.</p>
+          <p><span class="spk">Jason · 46:12</span>They may have been a future advisory client.</p>
+          <p><span class="spk">Jason · 46:14</span>I think so. I wasn't sure I</p>
+          <p><span class="spk">Grant · 46:15</span>should have mentioned that, but that was pretty cool. So that shows the flexibility of our rewards program. You can redeem for anything. Oh, that, that's</p>
+          <p><span class="spk">Jason · 46:21</span>great. That leads well into Nick's question.</p>
+          <p><span class="spk">Nick · 46:23</span>Yeah. So, so I think the final questions for the, for the day and yeah, you're right.</p>
+          <p><span class="spk">Nick · 46:27</span>Perfect leading, but what's the craziest thing you've seen someone use their points for, and you know, there's some suggestions here that maybe someone has used points for gold bullion, golf clubs. Well, that's boring compared to gold bullion or an investment in another business. There's a divorce settlement is listed here.</p>
+          <p><span class="spk">Nick · 46:45</span>So, um, what's the most out there thing you've seen as far as someone redeeming points?</p>
+          <p><span class="spk">Grant · 46:51</span>I'm not aware of a divorce settlement going through, but everything else, everything else you mentioned, I've, uh, you know, I have come across those, so I think you've pretty much, sounds like you've been</p>
+          <p><span class="spk">Grant · 47:00</span>worded up, up there.</p>
+          <p><span class="spk">Grant · 47:01</span>I think, yeah, we have had a gold bullion redeemed, um, we've had private jet flights, um, up in Europe and in America, um, you know, we basically effectively, you know, managed the booking of the, the private jet and obviously the payment was facilitated through the person's Reward points. Um, Yeah, there's some, some cool stuff.</p>
+          <p><span class="spk">Grant · 47:22</span>Obviously the investment we've had golf clubs, um, yeah, 80 percent of our points are probably redeemed through the airline partners. Um, but in terms of those, uh, innovative, cool, different things. Oh, the, the, one of the first things that we ever had, which was, um, Which was pretty cool, which was a customer who had quite a lot of points.</p>
+          <p><span class="spk">Grant · 47:39</span>They, they were deemed for, you know, I think the, you know, round numbers equivalent of something like 80, 000 worth of whiskey, but it was four bottles. So some pretty, uh, I didn't even know that existed to be, I'm not a whiskey guy, but, um, But I was like, when I had to facilitate that, I was like, Ooh, that's interesting.</p>
+          <p><span class="spk">Grant · 47:56</span>That, you know, 25, 000 plus bottles</p>
+          <p><span class="spk">Grant · 48:00</span>of, uh, bottles of whiskey. You didn't want to break them in, uh, in the courier to the customer.</p>
+          <p><span class="spk">Jason · 48:04</span>No, I think as long as they were drunk in the office too, that should be okay. From a, from a tax benefit point of view, just drink them in the office, uh, make sure it was consumed on premises.</p>
+          <p><span class="spk">Jason · 48:12</span>Happy days.</p>
+          <p><span class="spk">Grant · 48:13</span>Yeah, exactly.</p>
+          <p><span class="spk">Jason · 48:14</span>One last major one here for you. And, uh, hopefully. You know, it's not, not too hard to, to digress into, but you start a company like pay. com. au, you got some crazy brains involved, you scaled fast, you know, from day one, was there an exit plan, um, or, or the talk around an exit plan and, you know, the importance of having an exit plan.</p>
+          <p><span class="spk">Jason · 48:33</span>So for you, what does that look like or how important has that been along the way to, to keep an exit plan in mind?</p>
+          <p><span class="spk">Grant · 48:38</span>Yeah, look, it's a, it's a great question. And I think, you know, it's, uh, it's not a primary driver for existing or what we do, but obviously for, you know, myself coming from a mergers and acquisitions background and the guys who are on the board, you know, know all about it.</p>
+          <p><span class="spk">Grant · 48:51</span>They've, you know, exited businesses before, or as I said, you know, being involved in the, in this space. So, you know, it's something that, you know. We have ideas</p>
+          <p><span class="spk">Grant · 49:00</span>and thoughts about, but it's not, you know, we don't make decisions based on, on that obviously. But I think, you know, there's, we have all options always on the table.</p>
+          <p><span class="spk">Grant · 49:08</span>Um, you know, we've got to deliver as a business first and foremost for our shareholders. Um, and we're building something pretty exciting, delivering some great results with, you know, huge growth, et cetera. You know, I'm not going to go into the details of what that might look like, but you know, we, as you know, at some stage our shareholders will expect some sort of, um, exit, I'd imagine.</p>
+          <p><span class="spk">Grant · 49:27</span>Um, and you know, there, there may be one, whether that's, you know, be part of a bigger, bigger thing in a similar space, whether that's in payments or, you know, I mean, we've seen what Afterpay have obviously done with their, how they've kind of evolved. You know, there's obviously the public markets as an option, um, and you know, there's multiple options to be honest.</p>
+          <p><span class="spk">Grant · 49:47</span>It's not something we sit and talk about all day, you know. We know that eventually something, you know, is likely or probably will happen just to, you know, take the business to the next level.</p>
+          <p><span class="spk">Nick · 49:56</span>It's just good to get different businesses on, you know, we're, we're in</p>
+          <p><span class="spk">Nick · 50:00</span>SME land, um, You know, let's not beat around the bush, we're dealing with very different, um, different day to day things and a business like Grant's is so, yeah, I think it's, it's, it's really cool and interesting and at the same time if we, we can add value to our, uh, loyal following of SMEs, um, have a look at pay.</p>
+          <p><span class="spk">Nick · 50:19</span>com. au, uh, I think, um, I think people should definitely do it. And the only other thing I'll mention is there is a business in the States cause I've got confused here called pay. com. So people need to make sure they're looking at pay. com. au I'll sort it on Victor Hovland. Who's a golfer. He's got pay. com sponsoring grants, uh, grants sponsored Victor Hovland.</p>
+          <p><span class="spk">Nick · 50:40</span>But, um, so yeah, just need to clarify to, to put the, the. au in there. If I was sponsored by</p>
+          <p><span class="spk">Grant · 50:45</span>Victor Hovland I would want to be on the Joe Rogan show or the Tim Ferriss show. Very happy to be on the numbers.</p>
+          <p><span class="spk">Jason · 50:52</span>It's pretty similar comparison. I'm sure we're getting similar numbers. Um, everyone. Thanks for tuning in.</p>
+          <p><span class="spk">Jason · 50:58</span>Uh, welcome. Thank you. Grant</p>
+          <p><span class="spk">Jason · 51:00</span>Austin for joining us. Um, as Nick said, if you haven't checked it out, pay. com. au go and have a look, connect with Grant Austin on LinkedIn as well. Grant's probably happy to hear from you. If you want to reach out and have a chat about all things, uh, pay. com. au and business. Uh, but until next time spends money, get rewards game over. ---</p>
+        </div>
+      </details>
+
+    </div>
+
+    <!-- LISTEN:START (build_episode.py rewrites the 3 URLs + iframe title per episode; player dropped if no spotifyEmbedUrl) -->
+    <section class="listen-now">
+      <div class="ln-head">
+        <span class="ln-title">Listen now</span>
+      </div>
+      <div class="audio-embed">
+        <iframe src="https://open.spotify.com/embed/episode/7KLXCGl9r05jtPIfoVgs26?utm_source=generator"
+          width="100%" height="152" loading="lazy" allowfullscreen
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+          title="Spotify — Grant Austin - Disrupting Business Payments"></iframe>
+      </div>
+    </section>
+
+    <div class="listen">
+      <a href="https://open.spotify.com/episode/7KLXCGl9r05jtPIfoVgs26" target="_blank" rel="noopener" aria-label="Listen to this episode on Spotify">
+        <svg viewBox="0 0 24 24"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.52 17.34c-.24.36-.66.48-1.02.24-2.82-1.74-6.36-2.1-10.56-1.14-.42.12-.78-.18-.9-.54-.12-.42.18-.78.54-.9 4.56-1.02 8.52-.6 11.64 1.32.42.18.48.66.3 1.02zm1.44-3.3c-.3.42-.84.6-1.26.3-3.24-1.98-8.16-2.58-11.94-1.38-.48.12-1.02-.12-1.14-.6-.12-.48.12-1.02.6-1.14 4.32-1.32 9.72-.66 13.44 1.62.36.18.54.78.3 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.3c-.6.18-1.2-.18-1.38-.72-.18-.6.18-1.2.72-1.38 4.26-1.26 11.28-1.02 15.72 1.62.54.3.72 1.02.42 1.56-.3.42-1.02.6-1.56.3z"/></svg>
+        Spotify
+      </a>
+      <a href="https://podcasts.apple.com/au/podcast/id1555566088?i=1000653823148" target="_blank" rel="noopener" aria-label="Listen to this episode on Apple Podcasts">
+        <svg viewBox="0 0 24 24"><path d="M5.34 0A5.328 5.328 0 000 5.34v13.32A5.328 5.328 0 005.34 24h13.32A5.328 5.328 0 0024 18.66V5.34A5.328 5.328 0 0018.66 0H5.34zm6.525 2.568c2.336 0 4.448.902 6.056 2.587 1.224 1.272 1.912 2.619 2.264 4.392l.04.23c.04.272-.16.527-.432.567a.505.505 0 01-.567-.431l-.04-.213c-.312-1.57-.92-2.747-2.004-3.867-1.428-1.496-3.293-2.294-5.393-2.294-2.1 0-3.966.798-5.394 2.294-1.084 1.12-1.692 2.298-2.004 3.867l-.04.213a.507.507 0 01-.567.431.504.504 0 01-.432-.567l.04-.23c.352-1.773 1.04-3.12 2.264-4.392 1.608-1.685 3.72-2.587 6.056-2.587h.153zm.136 3.033c1.74 0 3.312.67 4.527 1.934.883.916 1.394 1.93 1.663 3.253l.04.23a.505.505 0 01-.431.567.503.503 0 01-.567-.432l-.04-.212c-.23-1.112-.659-1.97-1.396-2.732-1.052-1.1-2.404-1.672-3.9-1.672s-2.849.572-3.901 1.672c-.737.762-1.167 1.62-1.396 2.732l-.04.212a.503.503 0 01-.567.432.505.505 0 01-.432-.567l.04-.23c.27-1.323.78-2.337 1.664-3.253 1.215-1.264 2.787-1.934 4.527-1.934h.21zm-.078 3.05c1.092 0 2.091.424 2.89 1.22.582.58.924 1.245 1.107 2.15l.04.218a.501.501 0 01-.424.568.499.499 0 01-.568-.424l-.04-.198c-.146-.724-.413-1.253-.871-1.716-.63-.63-1.398-.957-2.226-.957s-1.595.328-2.225.957c-.459.463-.726.992-.871 1.716l-.04.198a.499.499 0 01-.568.424.501.501 0 01-.424-.568l.04-.219c.183-.904.525-1.569 1.106-2.149.8-.796 1.799-1.22 2.89-1.22h.184zM12 14.07a2.477 2.477 0 012.48 2.478A2.477 2.477 0 0112 19.024a2.477 2.477 0 01-2.48-2.477A2.477 2.477 0 0112 14.07z"/></svg>
+        Apple
+      </a>
+      <a class="yt-pill" href="https://www.youtube.com/@thenumbersgamepodcast?sub_confirmation=1" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.12-2.14C19.5 3.55 12 3.55 12 3.55s-7.5 0-9.38.51A3 3 0 0 0 .5 6.2 31.4 31.4 0 0 0 0 12a31.4 31.4 0 0 0 .5 5.8 3 3 0 0 0 2.12 2.14c1.88.51 9.38.51 9.38.51s7.5 0 9.38-.51a3 3 0 0 0 2.12-2.14A31.4 31.4 0 0 0 24 12a31.4 31.4 0 0 0-.5-5.8zM9.55 15.57V8.43L15.82 12z"/></svg>
+        Subscribe
+      </a>
+    </div>
+    <!-- LISTEN:END -->
+
+    <div class="relsec">
+      <span class="rtitle">Discover more</span>
+      <div class="relgrid">
+        <a class="relcard" href="/don-t-fail-to-scale-unpacking-the-challenges-of-business-growth">
+          <img src="https://i.ytimg.com/vi/ZlOYPlLFn8U/hqdefault.jpg" alt="EP 149 thumbnail">
+          <span class="rt">Don't Fail to Scale</span>
+          <span class="rfoot"><span class="rwhy">Also covers: systems</span><span class="rtag">EP 149</span></span>
+        </a>
+        <a class="relcard" href="/the-art-of-strategic-framework">
+          <img src="https://i.ytimg.com/vi/IUKi9wuKquE/hqdefault.jpg" alt="EP 209 thumbnail">
+          <span class="rt">The Art of Strategic Framework</span>
+          <span class="rfoot"><span class="rwhy">Also covers: systems</span><span class="rtag">EP 209</span></span>
+        </a>
+        <a class="relcard" href="/knowing-when-to-quit-in-business">
+          <img src="https://i.ytimg.com/vi/KDQQ5bor1BQ/hqdefault.jpg" alt="EP 231 thumbnail">
+          <span class="rt">Knowing When to Quit in Business</span>
+          <span class="rfoot"><span class="rwhy">Also covers: systems</span><span class="rtag">EP 231</span></span>
+        </a>
+        <a class="relcard" href="/why-you-should-track-profit-per-hour-vs-revenue">
+          <img src="https://i.ytimg.com/vi/FUf4XcRx-w0/hqdefault.jpg" alt="EP 245 thumbnail">
+          <span class="rt">Why You Should Track Profit Per Hour vs Revenue</span>
+          <span class="rfoot"><span class="rwhy">Also covers: systems</span><span class="rtag">EP 245</span></span>
+        </a>
+        <a class="relcard" href="/adam-diamond-change-your-business-change-your-life">
+          <img src="https://i.ytimg.com/vi/l-qwFf9g5Rg/hqdefault.jpg" alt="EP 206 thumbnail">
+          <span class="rt">Adam Diamond - Change Your Business, Change Your Life</span>
+          <span class="rfoot"><span class="rwhy">Also covers: systems</span><span class="rtag">EP 206</span></span>
+        </a>
+        <a class="relcard" href="/the-numbers-game-of-life-marty-s-5-biggest-lessons">
+          <img src="https://i.ytimg.com/vi/bM7PFcSZj6Q/hqdefault.jpg" alt="EP 261 thumbnail">
+          <span class="rt">The Numbers Game of Life</span>
+          <span class="rfoot"><span class="rwhy">Also covers: systems</span><span class="rtag">EP 261</span></span>
+        </a>
+      </div>
+      <div class="reldots" id="reldots"></div>
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="footgrid">
+      <div class="fcol">
+        <div class="foot-label">Follow us on</div>
+        <div class="socials">
+          <a href="https://www.instagram.com/thenumbersgamepodcast/" target="_blank" rel="noopener" aria-label="The Numbers Game on Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.8.2 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1 .4 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .4-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1-.4-2.2-.1-1.3-.1-1.7-.1-4.9s0-3.6.1-4.9c.1-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.4 2.2-.4 1.3-.1 1.7-.1 4.9-.1zm0 2c-3.1 0-3.5 0-4.8.1-1.1.1-1.5.2-1.8.3-.4.2-.7.3-1 .6-.3.3-.5.6-.6 1-.1.3-.3.7-.3 1.8-.1 1.3-.1 1.7-.1 4.8s0 3.5.1 4.8c.1 1.1.2 1.5.3 1.8.2.4.3.7.6 1 .3.3.6.5 1 .6.3.1.7.3 1.8.3 1.3.1 1.7.1 4.8.1s3.5 0 4.8-.1c1.1-.1 1.5-.2 1.8-.3.4-.2.7-.3 1-.6.3-.3.5-.6.6-1 .1-.3.3-.7.3-1.8.1-1.3.1-1.7.1-4.8s0-3.5-.1-4.8c-.1-1.1-.2-1.5-.3-1.8-.2-.4-.3-.7-.6-1-.3-.3-.6-.5-1-.6-.3-.1-.7-.3-1.8-.3-1.3-.1-1.7-.1-4.8-.1zm0 3.4a5.4 5.4 0 1 1 0 10.8 5.4 5.4 0 0 1 0-10.8zm0 2a3.4 3.4 0 1 0 0 6.8 3.4 3.4 0 0 0 0-6.8zm5.6-2.3a1.3 1.3 0 1 1-2.6 0 1.3 1.3 0 0 1 2.6 0z"/></svg></a>
+          <a href="https://www.tiktok.com/@thenumbersgamepodcast" target="_blank" rel="noopener" aria-label="The Numbers Game on TikTok"><svg viewBox="0 0 24 24"><path d="M12.53.02C13.84 0 15.14.01 16.44 0c.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg></a>
+          <a href="https://www.linkedin.com/company/the-numbers-game-podcast/" target="_blank" rel="noopener" aria-label="The Numbers Game on LinkedIn"><svg viewBox="0 0 24 24"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.24 8.25h4.52V23H.24V8.25zM8.34 8.25h4.33v2.01h.06c.6-1.14 2.08-2.34 4.28-2.34 4.58 0 5.42 3.01 5.42 6.92V23h-4.51v-7.16c0-1.71-.03-3.91-2.38-3.91-2.39 0-2.75 1.86-2.75 3.78V23H8.34V8.25z"/></svg></a>
+          <a href="https://www.facebook.com/profile.php?id=100071290388343" target="_blank" rel="noopener" aria-label="The Numbers Game on Facebook"><svg viewBox="0 0 24 24"><path d="M24 12.07C24 5.41 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.04V9.41c0-3.02 1.8-4.7 4.54-4.7 1.31 0 2.68.24 2.68.24v2.97h-1.5c-1.5 0-1.96.93-1.96 1.89v2.26h3.32l-.53 3.5h-2.8V24C19.62 23.1 24 18.1 24 12.07z"/></svg></a>
+          <a href="https://www.youtube.com/@thenumbersgamepodcast" target="_blank" rel="noopener" aria-label="The Numbers Game on YouTube"><svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.2C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31.7 31.7 0 0 0 0 12a31.7 31.7 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.2A31.7 31.7 0 0 0 24 12a31.7 31.7 0 0 0-.5-5.8zM9.6 15.6V8.4L15.8 12z"/></svg></a>
+        </div>
+      </div>
+      <div class="fcol">
+        <div class="foot-label">Brought to you by</div>
+        <div class="sponsors">
+          <a href="https://www.inovayt.com.au/" target="_blank" rel="noopener"><img src="assets/inovayt-white.png" alt="Inovayt"></a>
+          <a href="https://futureadvisory.com.au/" target="_blank" rel="noopener"><img src="assets/future-advisory-white.png" alt="Future Advisory"></a>
+        </div>
+      </div>
+      <div class="fcol produced">
+        <div class="foot-label">Produced by</div>
+        <a href="https://www.vidpod.com.au/" target="_blank" rel="noopener"><img src="assets/vidpod-white.png" alt="VIDPOD"></a>
+      </div>
+    </div>
+    <div class="footbar">
+      <details class="footnav-dd">
+        <summary><svg class="ham" viewBox="0 0 24 24"><path d="M3 6h18v2H3zM3 11h18v2H3zM3 16h18v2H3z"/></svg> Menu</summary>
+        <div class="dd-links">
+          <a href="/">Home</a><a href="/episodes">Every episode</a><a href="/adventure">Choose your own adventure</a><a href="/about">About the show</a><a href="/nick-reilly">Nick Reilly</a><a href="/jason-robinson">Jason Robinson</a><a href="/contact">Contact</a>
+        </div>
+      </details>
+      <div class="copyright">© 2026 The Numbers Game</div>
+    </div>
+  </footer>
+
+  <script>
+    var VIDEO='iH-GYt8A950';
+    var CHAPTERS=[
+      {t:"00:00",s:0,title:"Intro"},
+      {t:"01:39",s:99,title:"Grant Austin's Background"},
+      {t:"03:21",s:201,title:"How pay.com.au Started"},
+      {t:"05:12",s:312,title:"What pay.com.au Does"},
+      {t:"08:01",s:481,title:"How pay.com.au Is Different"},
+      {t:"10:30",s:630,title:"Prioritisation In Fast Growth"},
+      {t:"11:01",s:661,title:"Scaling The Team"},
+      {t:"12:11",s:731,title:"The One Non-Negotiable Each Quarter"},
+      {t:"13:50",s:830,title:"Test And Learn, Pull The Pin"},
+      {t:"15:31",s:931,title:"Working Capital And Cashflow"},
+      {t:"16:19",s:979,title:"Redeeming Points For Business Costs"},
+      {t:"17:13",s:1033,title:"Make The Economics Work"},
+      {t:"20:29",s:1229,title:"Winning Partnerships As A Startup"},
+      {t:"23:31",s:1411,title:"Cyber Security Scrutiny"},
+      {t:"27:31",s:1651,title:"Raising Capital And The Pitch Deck"},
+      {t:"31:03",s:1863,title:"The Weight Of Shareholder Responsibility"},
+      {t:"35:28",s:2128,title:"When To Launch A Product"},
+      {t:"39:23",s:2363,title:"Tax On Reward Points"},
+      {t:"42:43",s:2563,title:"The Startup Hub Model"},
+      {t:"44:08",s:2648,title:"Using AI In The Business"},
+      {t:"47:01",s:2821,title:"The Craziest Points Redemptions"},
+      {t:"49:08",s:2948,title:"Exit Planning"}
+    ];
+    var QUESTIONS=[
+      {q:"How big is pay.com.au?",s:246},
+      {q:"What makes pay.com.au different from Amex?",s:481},
+      {q:"What is the key to managing fast business growth?",s:630},
+      {q:"How do you focus a team on what matters each quarter?",s:731},
+      {q:"How do you decide which initiatives to pursue?",s:830},
+      {q:"How can you ease a business cashflow crunch?",s:931},
+      {q:"How do you decide if a paid service is worth it?",s:1033},
+      {q:"How long do deals with big corporates take?",s:1269},
+      {q:"Does having shareholders weigh on a founder?",s:1863},
+      {q:"What is the most unusual thing people redeem points for?",s:2821}
+    ];
+
+    var chEl=document.getElementById('chapters');
+    CHAPTERS.forEach(function(c){var b=document.createElement('button');b.className='chapter';b.onclick=function(){startAt(c.s)};b.innerHTML='<span class="tc">'+c.t+'</span><span class="cx">'+c.title+'</span>';chEl.appendChild(b);});
+    document.getElementById('chcount').textContent=CHAPTERS.length;
+    var qEl=document.getElementById('qa');
+    QUESTIONS.forEach(function(q){var b=document.createElement('button');b.className='q';b.onclick=function(){startAt(q.s)};b.innerHTML='<span class="qm">?</span><span class="qx">'+q.q+'</span><span class="go">›</span>';qEl.appendChild(b);});
+    document.getElementById('qcount').textContent=QUESTIONS.length;
+
+    /* Mobile nav dropdown. */
+    var burger=document.getElementById('navburger'), navdrop=document.getElementById('navdrop');
+    if(burger&&navdrop){burger.addEventListener('click',function(){
+      navdrop.hidden=!navdrop.hidden;
+      burger.setAttribute('aria-expanded', navdrop.hidden?'false':'true');
+    });}
+
+    /* Voice-note button reveals the recorder; × tucks it away. */
+    var vbtn=document.getElementById('vbtn'), vslot=document.getElementById('vslot'), vclose=document.getElementById('vclose');
+    if(vbtn&&vslot){vbtn.addEventListener('click',function(){vslot.hidden=!vslot.hidden;});}
+    if(vclose&&vslot){vclose.addEventListener('click',function(){vslot.hidden=true;});}
+
+    /* Keep-exploring dots: only shown when the strip actually scrolls (mobile). */
+    var rg=document.querySelector('.relgrid'), rd=document.getElementById('reldots');
+    if(rg&&rd){
+      var relCards=rg.querySelectorAll('.relcard');
+      relCards.forEach(function(){rd.appendChild(document.createElement('span'))});
+      var updDots=function(){
+        var scrollable=rg.scrollWidth>rg.clientWidth+4;
+        rd.style.display=scrollable?'flex':'none';
+        if(!scrollable)return;
+        var i=Math.round(rg.scrollLeft/(rg.scrollWidth-rg.clientWidth)*(relCards.length-1));
+        rd.querySelectorAll('span').forEach(function(s,n){s.classList.toggle('on',n===i)});
+      };
+      rg.addEventListener('scroll',updDots,{passive:true});
+      window.addEventListener('resize',updDots);
+      updDots();
+    }
+
+    /* Explore tabs: swap the visible panel; the row stays put so you never lose your place. */
+    var tabBtns=document.querySelectorAll('.tabbtn');
+    tabBtns.forEach(function(b){
+      b.addEventListener('click',function(){
+        tabBtns.forEach(function(o){o.classList.remove('on')});
+        document.querySelectorAll('.tpanel').forEach(function(p){p.hidden=true});
+        b.classList.add('on');
+        document.getElementById(b.getAttribute('data-panel')).hidden=false;
+      });
+    });
+
+    /* YouTube: clean facade, then real player on demand. Seek without yanking to top. */
+    var player=null, ready=false, apiReady=false, pending=null;
+    window.onYouTubeIframeAPIReady=function(){apiReady=true; if(pending!=null){var s=pending;pending=null;createPlayer(s);}};
+    function createPlayer(sec){
+      var wrap=document.getElementById('player'); wrap.innerHTML='<div id="yt"></div>';
+      player=new YT.Player('yt',{videoId:VIDEO,playerVars:{autoplay:1,rel:0,modestbranding:1,playsinline:1,start:Math.floor(sec||0)},events:{onReady:function(){ready=true;}}});
+    }
+    function nudge(){
+      var p=document.getElementById('player-wrap'), r=p.getBoundingClientRect();
+      if(r.bottom<80 || r.top>window.innerHeight-90){ p.scrollIntoView({behavior:'smooth',block:'start'}); }
+    }
+    function startAt(sec){
+      nudge();
+      if(player&&ready){ player.seekTo(sec,true); player.playVideo(); return; }
+      if(apiReady){ createPlayer(sec); } else { pending=sec; }
+    }
+    document.getElementById('facade').addEventListener('click',function(){startAt(0);});
+    (function(){var s=document.createElement('script');s.src='https://www.youtube.com/iframe_api';document.head.appendChild(s);})();
+  </script>
+</body>
+</html>

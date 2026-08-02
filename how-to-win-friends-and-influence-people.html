@@ -1,0 +1,724 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EP 156 · How to Win Friends and Influence People | The Numbers Game</title>
+<meta name="description" content="">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" sizes="64x64" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="canonical" href="https://thenumbersgamepodcast.com.au/how-to-win-friends-and-influence-people">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="The Numbers Game">
+<meta property="og:title" content="EP 156 · How to Win Friends and Influence People | The Numbers Game">
+<meta property="og:description" content="">
+<meta property="og:url" content="https://thenumbersgamepodcast.com.au/how-to-win-friends-and-influence-people">
+<meta property="og:image" content="https://i.ytimg.com/vi/__KEwxhVyDo/maxresdefault.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+  :root{
+    --purple:#585af3; --purple-dark:#2c1b8a; --mint:#7ad9a8;
+    --white:#ffffff; --muted:rgba(255,255,255,.60); --dim:rgba(255,255,255,.42);
+    --line:rgba(255,255,255,.12); --card:rgba(255,255,255,.05); --card-hi:rgba(255,255,255,.09);
+    --display:'Anton',Impact,'Helvetica Neue',sans-serif;
+    --sans:'Inter',system-ui,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif;
+    --wrap:1280px;   /* page frame (nav spans this) */
+    --col:960px;     /* content column (player, tabs, text) */
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:var(--sans); color:var(--white); line-height:1.6; -webkit-font-smoothing:antialiased;
+    background:#12093a;
+    background-image:
+      radial-gradient(1200px 600px at 82% -6%, rgba(88,90,243,.45) 0%, transparent 55%),
+      radial-gradient(900px 700px at 5% 8%, rgba(122,217,168,.10) 0%, transparent 50%),
+      linear-gradient(180deg,#2c1b8a 0%,#1a1150 28%,#100b34 62%,#0b0820 100%);
+    background-attachment:fixed;
+  }
+  a{color:inherit}
+  .wrap{max-width:var(--wrap);margin:0 auto;padding:0 36px}
+  main.wrap{max-width:var(--col)}
+  @media(max-width:720px){.wrap{padding:0 22px}}
+
+  /* ── Navbar ── */
+  .nav{position:sticky;top:0;z-index:50;background:linear-gradient(180deg,rgba(24,15,74,.92),rgba(24,15,74,.72));backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+  .nav-in{max-width:var(--wrap);margin:0 auto;padding:11px 36px;display:flex;align-items:center;justify-content:space-between}
+  @media(max-width:720px){.nav-in{padding:11px 22px}}
+  .brand{display:block;line-height:0}
+  .brand img{height:36px;width:auto;display:block}
+  .navlinks{display:flex;gap:28px;align-items:center}
+  .navlinks a{text-decoration:none;font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);transition:.15s}
+  .navlinks a:hover{color:var(--white)}
+  .navlinks a.navtop{cursor:default}
+  .navgroup{position:relative;display:flex;align-items:center}
+  .navgroup .subnav{display:none;position:absolute;top:100%;left:50%;transform:translateX(-50%);padding-top:14px;min-width:180px}
+  .navgroup:hover .subnav,.navgroup:focus-within .subnav{display:block}
+  .subnav-in,.navgroup .subnav{z-index:60}
+  .navgroup .subnav a{display:block;background:#180f4a;border:1px solid var(--line);border-top:0;padding:12px 16px;font-size:12px;color:rgba(255,255,255,.85)}
+  .navgroup .subnav a:first-child{border-top:1px solid var(--line)}
+  .navgroup .subnav a:hover{background:#221768;color:var(--white)}
+  .navburger{display:none;background:none;border:1px solid var(--line);padding:8px 10px;cursor:pointer;color:var(--white);transition:.15s}
+  .navburger:hover{border-color:rgba(122,217,168,.6)}
+  .navburger svg{width:20px;height:20px;fill:currentColor;display:block}
+  .navdrop{display:none}
+  @media(max-width:720px){
+    .navlinks{display:none}
+    .navburger{display:block}
+    .navdrop{display:block;position:absolute;left:0;right:0;top:100%;
+      background:#180f4a;border-bottom:1px solid var(--line);box-shadow:0 24px 50px rgba(0,0,0,.45)}
+    .navdrop[hidden]{display:none}
+    .navdrop a{display:block;padding:15px 22px;text-decoration:none;font-size:14px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:rgba(255,255,255,.9);border-bottom:1px solid rgba(255,255,255,.06)}
+    .navdrop a:last-child{border-bottom:0}
+    .navdrop a.sub{padding-left:42px;font-size:13px;color:rgba(255,255,255,.72)}
+    .navdrop .navlabel{display:block;padding:15px 22px 6px;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.4)}
+  }
+
+  /* ── Hero / hook (marker-highlight system: purple hook wraps naturally, mint payoff below)
+     Rules: title splits at its natural break (colon/pipe/question mark). Front = hook (purple,
+     big), back = payoff (mint, smaller). No break in title = purple hook only. Highlights hug
+     the text (tight em padding tuned to Anton) and wrap via box-decoration-break — never
+     hand-pick line breaks or mint words. ── */
+  header.hero{padding:34px 0 6px}
+  .hook{--inx:clamp(8.4px,2.1vw,15.6px)} /* one shared text inset so hook + payoff first letters align */
+  .hook .hk{font-family:var(--display);font-weight:400;text-transform:uppercase;
+    font-size:clamp(28px,7vw,52px);line-height:1.3;letter-spacing:-.5px;text-wrap:balance}
+  .hook .hk span{color:var(--white);padding:.04em var(--inx) .02em;
+    background:linear-gradient(var(--purple),var(--purple)) 0 50%/100% 87% no-repeat;
+    -webkit-box-decoration-break:clone;box-decoration-break:clone}
+  .hook .pay{font-family:var(--display);font-weight:400;text-transform:uppercase;
+    font-size:clamp(16px,4vw,24px);line-height:1.5;letter-spacing:.6px;margin-top:8px;text-wrap:balance}
+  .hook .pay span{color:#0a0a0a;padding:.08em var(--inx) .04em;
+    background:linear-gradient(var(--mint),var(--mint)) 0 50%/100% 88% no-repeat;
+    -webkit-box-decoration-break:clone;box-decoration-break:clone}
+  /* no-hook titles: mid-split into two full-size rows, purple then mint */
+  .hook .hk span.hkrow{display:block;background:none;padding:0}
+  .hook .hk .hkrow+.hkrow{margin-top:8px}
+  .hook .hk span.mintseg{color:#0a0a0a;
+    background:linear-gradient(var(--mint),var(--mint)) 0 50%/100% 87% no-repeat}
+
+  /* ── Player (clean facade → real player on tap) ── */
+  .player-wrap{margin:24px 0 4px;scroll-margin-top:76px}
+  .player{position:relative;width:100%;padding-top:56.25%;border-radius:0;overflow:hidden;background:#000;box-shadow:0 30px 70px rgba(0,0,0,.5),0 0 0 1px rgba(255,255,255,.06)}
+  .facade{position:absolute;inset:0;border:0;cursor:pointer;background-size:cover;background-position:center;display:flex;align-items:center;justify-content:center;padding:0}
+  .facade .play{width:74px;height:74px;border-radius:50%;background:rgba(10,6,30,.40);border:2px solid rgba(255,255,255,.72);display:flex;align-items:center;justify-content:center;transition:.18s;-webkit-backdrop-filter:blur(1px);backdrop-filter:blur(1px)}
+  .facade:hover .play{background:rgba(88,90,243,.62);transform:scale(1.07);border-color:#fff}
+  .facade .play::after{content:"";border-style:solid;border-width:11px 0 11px 19px;border-color:transparent transparent transparent #fff;margin-left:5px}
+  .player iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+
+  /* ── Episode facts (bottom of the Summary panel — templated per episode) ── */
+  .sumfacts{margin:14px 10px 4px;padding-top:13px;border-top:1px solid rgba(255,255,255,.08);display:flex;flex-direction:column;gap:8px}
+  .fact{display:flex;gap:12px;font-size:13.5px}
+  .fact .fl{flex:none;width:104px;color:var(--dim);font-weight:600;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;padding-top:2px}
+  .fact .fv{color:rgba(255,255,255,.9);font-weight:500}
+  .fact .fv a{color:var(--mint);text-decoration:none;border-bottom:1px solid rgba(122,217,168,.4);transition:.15s}
+  .fact .fv a:hover{border-bottom-color:var(--mint)}
+
+  /* ── Episode tag (identity: black label hanging off the title corner) ── */
+  .eptag{display:inline-block;position:relative;left:-6px;margin-bottom:-7px;z-index:2;
+    background:#0a0a0a;color:var(--white);font-family:var(--display);font-weight:400;
+    font-size:13.5px;letter-spacing:1.5px;text-transform:uppercase;padding:6px 11px 4px}
+
+  /* ── Explore tabs (sticky mode switcher; one panel swaps below, nothing shoves) ── */
+  .explore{margin-top:22px}
+  .tabs{position:sticky;top:58px;z-index:40;display:flex;flex-wrap:wrap;gap:8px;padding:10px 0;
+    background:linear-gradient(180deg,rgba(18,10,55,.96),rgba(18,10,55,.86));
+    backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+  .tabbtn{font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.5px;
+    font-size:14.5px;color:var(--white);background:var(--purple);border:1px solid var(--purple);
+    padding:9px 13px 7px;cursor:pointer;transition:.15s}
+  .tabbtn:hover{filter:brightness(1.12)}
+  .tabbtn.on{background:var(--mint);border-color:var(--mint);color:#0a0a0a}
+  .tabbtn.on:hover{filter:none}
+  .tabbtn .ct{font-size:12px;opacity:.75;font-variant-numeric:tabular-nums}
+  .tabbtn .ct::before{content:" · "}
+  .tpanel{border:1px solid var(--line);background:var(--card);padding:12px 10px 14px}
+  .hint{font-size:12.5px;color:var(--muted);padding:2px 10px 10px;border-bottom:1px solid rgba(255,255,255,.08);margin-bottom:6px}
+
+  /* ── Listen row (no box: label left, service pills follow) ── */
+  .listen{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:12px 16px;margin-top:34px}
+  .listen .lname{font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--dim)}
+  .listen a{display:inline-flex;align-items:center;gap:9px;padding:11px 18px;border-radius:999px;
+    background:var(--mint);color:#08210f;text-decoration:none;font-weight:800;font-size:12.5px;
+    letter-spacing:.04em;text-transform:uppercase;transition:.15s}
+  .listen a:hover{filter:brightness(1.06);transform:translateY(-1px);box-shadow:0 12px 30px rgba(122,217,168,.25)}
+  .listen svg{width:20px;height:20px;fill:currentColor;flex:none}
+  /* ── Listen-now Spotify audio embed (full column width, above the pills) ── */
+  .listen-now{margin-top:40px}
+  .listen-now .ln-head{display:flex;align-items:baseline;justify-content:space-between;gap:14px;margin-bottom:13px}
+  .listen-now .ln-title{font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--dim)}
+  .audio-embed{border-radius:12px;overflow:hidden;box-shadow:0 20px 50px rgba(0,0,0,.4),0 0 0 1px rgba(255,255,255,.06)}
+  .audio-embed iframe{display:block;width:100%;border:0}
+  @media(max-width:720px){.listen-now{margin-top:32px}}
+
+  /* ── Keep exploring (thumbnails link to other episode PAGES, never timecodes).
+     Swipeable strip on mobile, fits three-up on desktop. Variant rule: claim
+     "similar ground" + reason lines ONLY when moment-level topic overlap is
+     genuinely strong; otherwise show the latest released episodes with dates —
+     never invent a connection. ── */
+  .relsec{margin-top:60px;padding-top:58px;border-top:1px solid var(--line)} /* line = end of this episode's info */
+  .reldots{display:flex;justify-content:center;gap:7px;margin-top:12px}
+  .reldots span{width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.25);transition:.2s}
+  .reldots span.on{background:var(--mint)}
+  .relsec .rtitle{display:inline-block;font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.5px;font-size:14.5px;background:var(--mint);color:#0a0a0a;padding:9px 13px 7px;margin-bottom:18px}
+  .relgrid{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding-bottom:6px;scrollbar-width:none}
+  .relgrid::-webkit-scrollbar{display:none}
+  .relcard{flex:0 0 56%;max-width:232px;scroll-snap-align:start;display:flex;flex-direction:column;text-decoration:none;background:var(--card);border:1px solid var(--line);transition:.15s}
+  .relcard:hover{background:var(--card-hi);border-color:rgba(122,217,168,.55)}
+  .relcard img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block}
+  .relcard .rt{display:block;font-size:12.5px;font-weight:600;color:rgba(255,255,255,.92);line-height:1.4;padding:8px 8px 0}
+  .relcard .rfoot{margin-top:auto;display:flex;justify-content:space-between;align-items:flex-end;gap:8px;padding:10px 8px 9px}
+  .relcard .rwhy{font-size:11.5px;color:var(--mint)}
+  .relcard .rtag{display:inline-block;background:#0a0a0a;color:var(--white);font-family:var(--display);font-size:10px;letter-spacing:1.2px;text-transform:uppercase;padding:3px 7px 2px;white-space:nowrap;flex:0 0 auto}
+
+  /* ── Dropdown sections (accordion under the player) ── */
+  .drops{margin-top:34px;display:flex;flex-direction:column;gap:11px}
+  .drop{border:1px solid var(--line);border-radius:0;background:var(--card);overflow:hidden;transition:border-color .15s}
+  .drop[open]{border-color:rgba(122,217,168,.35)}
+  .drop>summary{list-style:none;cursor:pointer;padding:16px 18px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+  .drop>summary::-webkit-details-marker{display:none}
+  .drop>summary .st{font-weight:700;font-size:15.5px;letter-spacing:.005em}
+  .drop>summary .ct{margin-left:auto;font-size:12px;color:var(--dim);font-weight:600;font-variant-numeric:tabular-nums}
+  .drop>summary .chev{flex:none;width:22px;height:22px;border-radius:50%;background:rgba(122,217,168,.14);color:var(--mint);display:flex;align-items:center;justify-content:center;font-family:var(--display);font-size:15px;line-height:1;transition:.2s;transform:translateY(-1px)}
+  .drop[open]>summary .chev{transform:rotate(45deg)}
+  .drop-body{padding:2px 12px 12px}
+
+  /* chapters */
+  .chapter{display:flex;align-items:baseline;gap:14px;width:100%;text-align:left;cursor:pointer;background:none;border:0;color:inherit;font-family:inherit;padding:11px 10px;border-radius:10px;transition:.13s}
+  .chapter:hover{background:var(--card-hi)}
+  .chapter .tc{font-variant-numeric:tabular-nums;font-weight:700;font-size:14px;color:var(--mint);flex:none;width:48px}
+  .chapter .cx{font-size:15px;font-weight:500;color:rgba(255,255,255,.9)}
+  .chapter:hover .cx{color:#fff}
+
+  /* questions */
+  .q{display:flex;align-items:center;gap:12px;width:100%;text-align:left;cursor:pointer;background:none;border:0;border-radius:11px;color:inherit;font-family:inherit;padding:12px 10px;transition:.14s}
+  .q+.q{border-top:1px solid rgba(255,255,255,.05)}
+  .q:hover{background:var(--card-hi)}
+  .q .qm{font-family:var(--display);font-size:15px;color:var(--mint);flex:none;line-height:1;transform:translateY(1px)}
+  .q .qx{font-size:15px;font-weight:500;color:rgba(255,255,255,.92)}
+  .q .go{margin-left:auto;flex:none;color:var(--dim);font-size:18px;transition:.15s}
+  .q:hover .go{color:var(--mint);transform:translateX(2px)}
+
+  /* summary + transcript bodies */
+  .summary-body p{font-size:16.5px;line-height:1.62;color:rgba(255,255,255,.9);padding:6px 10px 4px}
+  .tbody{padding:2px 10px 8px}
+  .tbody p{font-size:14.5px;line-height:1.7;color:rgba(255,255,255,.78);margin-top:15px;max-width:64ch}
+  .tbody .spk{display:block;font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--mint);margin-bottom:2px}
+
+  /* ── Voice note ask (lives at the bottom of the Summary panel) ── */
+  .vask{margin:16px 10px 4px}
+  .vbtn{display:inline-flex;align-items:center;gap:9px;padding:12px 20px;border-radius:999px;border:0;cursor:pointer;
+    background:var(--mint);color:#08210f;font-family:inherit;font-weight:800;font-size:12.5px;
+    letter-spacing:.04em;text-transform:uppercase;transition:.15s}
+  .vbtn:hover{filter:brightness(1.06);transform:translateY(-1px);box-shadow:0 12px 30px rgba(122,217,168,.25)}
+  .vbtn svg{width:18px;height:18px;fill:currentColor;flex:none}
+  .vslot{background:var(--purple);padding:12px 10px 10px;margin:14px 0 4px;box-shadow:0 18px 40px rgba(0,0,0,.35)}
+  .vslot[hidden]{display:none}
+  .vhead{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;margin-bottom:10px}
+  .vhead .vmsg{font-family:var(--sans);font-size:13px;line-height:1.55;color:rgba(255,255,255,.92);margin:2px 0 0;padding:0 2px}
+  .vclose{background:none;border:0;color:rgba(255,255,255,.85);font-size:22px;line-height:1;cursor:pointer;padding:0 2px}
+  .vclose:hover{color:var(--white)}
+  .vslot iframe{display:block}
+
+  /* ── YouTube subscribe pill (sits in the listen row; outranks .listen a's mint) ── */
+  .listen a.yt-pill{background:var(--purple);color:var(--white)}
+  .listen a.yt-pill:hover{filter:brightness(1.1);transform:translateY(-1px)}
+  @media(max-width:720px){ /* mobile: no label, three compact pills on one row */
+    .listen .lname{display:none}
+    .listen{gap:8px}
+    .listen a{padding:10px 13px;font-size:11px;gap:6px}
+    .listen svg{width:16px;height:16px}
+  }
+
+  /* ── Footer: Follow us on | Brought to you by | Produced by, + Menu dropdown ── */
+  footer{border-top:1px solid var(--line);margin-top:68px;padding:52px 20px 58px}
+  .footgrid{max-width:var(--wrap);margin:0 auto;display:grid;grid-template-columns:1fr 1.15fr .8fr;gap:44px;align-items:start}
+  .fcol{text-align:center;display:flex;flex-direction:column;align-items:center}
+  .foot-label{font-size:11px;font-weight:700;letter-spacing:.26em;text-transform:uppercase;color:var(--dim);margin-bottom:18px}
+  .sponsors{display:flex;justify-content:center;align-items:center;gap:34px;flex-wrap:wrap}
+  .sponsors a,.produced a{display:inline-flex;transition:.15s}
+  .sponsors a:hover,.produced a:hover{transform:translateY(-1px)}
+  .sponsors img{height:32px;width:auto;opacity:.92}
+  .produced img{height:30px;width:auto;opacity:.95}
+  .sponsors a:hover img,.produced a:hover img{opacity:1}
+  footer .socials{display:flex;gap:11px;justify-content:center;flex-wrap:wrap;margin:0}
+  footer .socials a{width:40px;height:40px;border-radius:50%;border:1.5px solid rgba(122,217,168,.5);display:flex;align-items:center;justify-content:center;transition:.15s}
+  footer .socials a svg{width:18px;height:18px;fill:var(--mint);transition:.15s}
+  footer .socials a:hover{background:var(--mint);border-color:var(--mint);transform:translateY(-2px)}
+  footer .socials a:hover svg{fill:#0a0a0a}
+  .footbar{max-width:var(--wrap);margin:34px auto 0;border-top:1px solid var(--line);padding-top:20px;display:flex;flex-direction:column;align-items:center;gap:14px}
+  .footnav-dd{display:block;width:100%;max-width:var(--wrap);margin:0 auto;text-align:center}
+  .footnav-dd>summary{list-style:none;cursor:pointer;display:inline-flex;align-items:center;gap:9px;font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.5px;font-size:13px;color:var(--muted);background:transparent;border:1px solid var(--line);padding:8px 16px 6px;transition:.15s}
+  .footnav-dd>summary::-webkit-details-marker{display:none}
+  .footnav-dd>summary:hover{color:var(--mint);border-color:rgba(122,217,168,.45)}
+  .footnav-dd>summary .ham{width:15px;height:15px;fill:currentColor;transform:translateY(-1px)}
+  .footnav-dd .dd-links{display:flex;flex-direction:row;flex-wrap:wrap;justify-content:center;gap:12px 24px;padding:24px 0 4px}
+  .footnav-dd .dd-links a{font-size:11.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:.15s}
+  .footnav-dd .dd-links a:hover{color:var(--mint)}
+  .copyright{font-size:12px;color:var(--dim);text-align:center}
+  @media(max-width:720px){.footgrid{grid-template-columns:1fr;gap:34px}footer{padding:40px 16px 20px}.footbar{margin-top:34px;padding-top:24px;gap:20px}.footnav-dd .dd-links{flex-direction:column;align-items:center;gap:15px}}
+
+  @media(min-width:720px){header.hero{padding:48px 0 6px}}
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "PodcastEpisode", "name": "How to Win Friends and Influence People", "url": "https://thenumbersgamepodcast.com.au/how-to-win-friends-and-influence-people", "datePublished": "2024-02-22", "episodeNumber": 156, "image": "https://i.ytimg.com/vi/__KEwxhVyDo/maxresdefault.jpg", "partOfSeries": {"@type": "PodcastSeries", "name": "The Numbers Game", "url": "https://thenumbersgamepodcast.com.au/"}}</script>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-in">
+      <a class="brand" href="/" aria-label="The Numbers Game home"><img src="assets/tng-logo.png" alt="The Numbers Game"></a>
+      <div class="navlinks">
+        <a href="/">Home</a>
+        <div class="navgroup">
+          <a class="navtop">Episodes</a>
+          <div class="subnav">
+            <a href="/episodes">All episodes</a>
+            <a href="/adventure">Find moments</a>
+          </div>
+        </div>
+        <div class="navgroup">
+          <a class="navtop">About</a>
+          <div class="subnav">
+            <a href="/about">The show</a>
+            <a href="/nick-reilly">Nick Reilly</a>
+            <a href="/jason-robinson">Jason Robinson</a>
+          </div>
+        </div>
+        <a href="/contact">Contact</a>
+      </div>
+      <button class="navburger" id="navburger" type="button" aria-label="Menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24"><path d="M3 6h18v2H3zM3 11h18v2H3zM3 16h18v2H3z"/></svg>
+      </button>
+    </div>
+    <div class="navdrop" id="navdrop" hidden>
+      <a href="/">Home</a>
+      <span class="navlabel">Episodes</span>
+      <a class="sub" href="/episodes">All episodes</a>
+      <a class="sub" href="/adventure">Find moments</a>
+      <span class="navlabel">About</span>
+      <a class="sub" href="/about">The show</a>
+      <a class="sub" href="/nick-reilly">Nick Reilly</a>
+      <a class="sub" href="/jason-robinson">Jason Robinson</a>
+      <a href="/contact">Contact</a>
+    </div>
+  </nav>
+
+  <main class="wrap">
+
+    <header class="hero">
+      <div class="hook">
+        <span class="eptag">EP 156</span>
+        <h1 class="hk"><span class="hkrow"><span>How to Win Friends</span></span>
+        <span class="hkrow"><span class="mintseg">and Influence People</span></span></h1>
+      </div>
+    </header>
+
+    <div class="player-wrap" id="player-wrap">
+      <div class="player" id="player">
+        <button class="facade" id="facade" style="background-image:url('https://i.ytimg.com/vi/__KEwxhVyDo/maxresdefault.jpg')" aria-label="Play episode">
+          <span class="play"></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="explore">
+      <div class="tabs" role="tablist">
+        <button class="tabbtn on" data-panel="p-summary">Summary</button>
+        <button class="tabbtn" data-panel="p-chapters">Chapters<span class="ct" id="chcount"></span></button>
+        <button class="tabbtn" data-panel="p-questions">Questions<span class="ct" id="qcount"></span></button>
+      </div>
+      <section class="tpanel" id="p-summary">
+        <div class="summary-body">
+          <p>Nick brings the ten leadership principles from Dale Carnegie's How to Win Friends and Influence People and the trio works through each one for business owners and leaders. They cover beginning with praise, calling out mistakes indirectly, owning your own mistakes first, asking rather than ordering, letting people save face, praising the slightest improvement, giving people a reputation to live up to, and making people happy to do what you suggest. Marty reframes the old shit sandwich, separates vulnerability from victimhood, and argues you earn the right to hard conversations by praising 80 to 90 percent of the time. Jason shares how a single praise email lifted a team member's whole day and how he elevates his team in front of clients. They close on healthy competition, leaderboards and non-monetary rewards like a reserved car park, agreeing it's often the recognition, not the prize, that drives people.</p>
+        </div>
+        <div class="vask">
+          <button class="vbtn" id="vbtn" type="button">
+            <svg viewBox="0 0 24 24"><path d="M12 14a3 3 0 0 0 3-3V6a3 3 0 1 0-6 0v5a3 3 0 0 0 3 3zm5-3a5 5 0 0 1-10 0H5a7 7 0 0 0 6 6.92V21h2v-3.08A7 7 0 0 0 19 11h-2z"/></svg>
+            Send us a voice note
+          </button>
+          <div class="vslot" id="vslot" hidden>
+            <div class="vhead">
+              <p class="vmsg">We'd love to hear from you. You can leave up to a 90 second voice note for us to play on the show: a question, some feedback, or a topic you want covered.</p>
+              <button class="vclose" id="vclose" type="button" aria-label="Close">&times;</button>
+            </div>
+            <iframe src="https://www.speakpipe.com/widget/inline/hhq6kzggsx7zpcsvakgxfrzun3zidpde" allow="microphone" width="100%" height="200" frameborder="0" title="Leave The Numbers Game a voice note"></iframe>
+          </div>
+          <script async src="https://www.speakpipe.com/widget/loader.js" charset="utf-8"></script>
+        </div>
+        <div class="sumfacts">
+          <div class="fact"><span class="fl">Release date</span><span class="fv">22 February 2024</span></div>
+          <div class="fact"><span class="fl">Hosts</span><span class="fv"><a href="/nick-reilly">Nick Reilly</a>, <a href="/jason-robinson">Jason Robinson</a> &amp; <a href="/marty-vidakovic">Marty Vidakovic</a></span></div>
+
+        </div>
+      </section>
+      <section class="tpanel" id="p-chapters" hidden>
+        <p class="hint">Jump straight to the part you need.</p>
+        <div id="chapters"></div>
+      </section>
+      <section class="tpanel" id="p-questions" hidden>
+        <p class="hint">Real questions this episode answers. Tap one to hear the answer.</p>
+        <div id="qa"></div>
+      </section>
+    </div>
+
+    <div class="drops">
+
+      <details class="drop">
+        <summary><span class="st">Episode transcript</span><span class="chev">+</span></summary>
+        <div class="drop-body tbody">
+          <p><span class="spk">Jason · 00:00</span>Welcome to episode 156 of The Numbers Game. I'm Jase. I'm joined by Nick and Marty. How are we, fellas?</p>
+          <p><span class="spk">Nick · 00:07</span>Going</p>
+          <p><span class="spk">Marty · 00:07</span>well, Jase. Going well. I'm just, uh, knocking through, uh, Boy Swallows Universe, which is, uh, a great, uh, miniseries. Would you call it a miniseries? It's probably a series. Uh, but, oh, fantastic. Aussie culture in the 80s.</p>
+          <p><span class="spk">Marty · 00:21</span>A lot of undertones with, you know, drug trafficking and things like that. So, business owners, you know, cover your ears. Earmuffs. But, uh It's, uh, no, really great to see some good Aussie drama and something you can sink your teeth to. And it was funny, uh, Nick, uh, text me on the weekend saying, you should get around this.</p>
+          <p><span class="spk">Marty · 00:39</span>And I'm going, I'm already around it, all over it. But, uh, yeah, great fun. Great music, great Aussie music there as well. So get into it. Good listen. Good watch. Nick, how are you enjoying it?</p>
+          <p><span class="spk">Nick · 00:50</span>Yeah, it's good. Yeah, great, great cast too. Um, anyone familiar with Travis Fimmel? Um, local boy. He's from Echuca, from memory.</p>
+          <p><span class="spk">Nick · 00:59</span>Um,</p>
+          <p><span class="spk">Nick · 01:00</span>the main character out of Vikings. Most will remember him for. But, um, interesting man. But yeah, it's an awesome show. Awesome show. Loving it. But, um, just on, uh, I was thinking about TechStack last week. We obviously spoke about TechStack. I thought about my own tech stack at home and I'm the proud new owner of a robot vacuum.</p>
+          <p><span class="spk">Nick · 01:22</span>Um, so did really, I was a bit on the fence to be honest, how good could these things be? So don't have an expensive one, just bought a, you know, entry level, just seeing what, what would actually happen. And can I just say, I'm absolutely blown away. Um, so I think it's probably the best investment, home investment I've made apart from the home, investment I've made in quite some time.</p>
+          <p><span class="spk">Nick · 01:47</span>No, no, this thing's, this thing's groundbreaking. Oh, does</p>
+          <p><span class="spk">Marty · 01:51</span>it work on</p>
+          <p><span class="spk">Nick · 01:52</span>carpet? Oh man, it goes over mats, does everything, does backflips. I think when I'm not home, it just does everything. So I was,</p>
+          <p><span class="spk">Nick · 02:00</span>I was, I was worried about, you know, you've got a timber floor, for example, in a, in a, in a mat. Just straight over the mat, no problems.</p>
+          <p><span class="spk">Nick · 02:08</span>Um, and what was interesting, we, we have a cat as well. So, uh, on the particular day that I set it up, the house was cleaned the day prior, get this thing going. It does all the, um, all the floor area downstairs and it was full of cat hair. And this was a day after the house was cleaned. So it just makes you realize, particularly you've got kids and stuff, like how much stuff is actually floating around.</p>
+          <p><span class="spk">Nick · 02:33</span>Um, but I can, this thing's obviously connected in it. Look it. Most people are probably listening to this going, Yeah, duh, we know what a robot does. But, um, it's connected to an app, so I could switch it on now. Um, I can see it cleaning on the app. At the end of the, at the end of the cleaning cycle, it'll tell me.</p>
+          <p><span class="spk">Nick · 02:51</span>Uh, it'll show me a map of where it cleaned. Um, and then when it runs out of battery, it just sends itself back to its charging, charging station. And they can</p>
+          <p><span class="spk">Nick · 03:00</span>mop as well. If you can be bothered with all that, but, um, they can mop, they can empty themselves, it's like, unbelievable. Jase, sure. You got a cat, get on it.</p>
+          <p><span class="spk">Nick · 03:09</span>Marty, you got a dog, get on one, get</p>
+          <p><span class="spk">Jason · 03:11</span>on it. If Casey's listening, this is now the second person who can vouch for this. Her, her stepdad has one. It's called Sweetie. Have you nicknamed yours? No, I haven't gone that far. Steve, Steve O'Call's, uh, his robot vacuum and mop sweetie. They've got a big kind of, um, floorboard area in the kitchen, living room.</p>
+          <p><span class="spk">Jason · 03:28</span>And mate, this thing just, it's just, it's worked hard. Like there's a, I tried to eat the dog one day though. It did take, it did take the dog's tail in and the dog freaked out. So hopefully your cat gets along better with your version of sweetie. The cat</p>
+          <p><span class="spk">Nick · 03:42</span>had a few swipes at it the first day as they do. But, um, yeah, I think.</p>
+          <p><span class="spk">Nick · 03:47</span>With this one, it's a, as I said, it's just a, it's just a cheap one. So to mop, I've got to switch a few things out, but. You know, I think, wait a year, I'll probably have, yeah, I'll have the whiz bang, uh, for sure. Especially</p>
+          <p><span class="spk">Jason · 04:00</span>when you've already called it, that you're going to be upgrading from the basic one to the next one.</p>
+          <p><span class="spk">Jason · 04:03</span>I love it. 100%. Always bringing us gold, Nico. Get a robot. Get a robot. That's it. Bye. On whatever Marty said brought something to my mind and we've just started watching on Netflix Griselda. So if you haven't heard of Griselda and you're looking for a new Netflix show to jump on, it caught me when it started, it said, you know, Griselda was the only woman I was scared of said by Pablo Escobar.</p>
+          <p><span class="spk">Jason · 04:27</span>And then it goes into, you know, it's a bit of the old Narcos kind of importing. From one country to another of, um, you know, illegal substances, but yeah, quite an interesting show. So, you know, that's what we've all been up to. Robot vacuums, Griselda and, you know, Marty doing Marty things.</p>
+          <p><span class="spk">Marty · 04:44</span>Yeah. I was just going to say, it's good.</p>
+          <p><span class="spk">Marty · 04:45</span>We're just watching drug trafficking and, uh, vacuuming. Oh, that's it. Yeah, that's right, Narcos. That's a great series too. Anyway, let's get on. Let's get into</p>
+          <p><span class="spk">Nick · 04:55</span>it. We're</p>
+          <p><span class="spk">Jason · 04:55</span>getting, getting crazy at this time of day, we're all probably need a coffee and turn on our</p>
+          <p><span class="spk">Jason · 05:00</span>robot vacuums, but we've got Nick to bring us, uh, today's episode full of energy and vibe talking leadership principles, but I'll let you get into it, Nick, explain us what you've brought to the team</p>
+          <p><span class="spk">Nick · 05:10</span>today.</p>
+          <p><span class="spk">Nick · 05:11</span>Yeah. Thanks, Jase. I'm, I'm currently listening to an audio book, um, how to win friends and influence people. Um, Cool. Um, author is Dale Carnegie, uh, but the principles, um, even though written years and years ago, um, still, still stand up in today's society. So, um, look, it's a long book with a lot of principles, but what really stood out to me and, you know, thinking about our listeners in business were the leadership principles.</p>
+          <p><span class="spk">Nick · 05:39</span>Um, so. Any of you guys read the book? Um, do you remember the leadership principles? Marty, I know you're big on leadership. I know you're big on reading as well. So yeah, any, any, any initial thoughts around the book if you've read</p>
+          <p><span class="spk">Marty · 05:52</span>it? Yeah, it's a, it's a, it's a classic, absolute classic. It's up there, like Think and Grow Rich by Napoleon Hill, but.</p>
+          <p><span class="spk">Marty · 05:58</span>I like,</p>
+          <p><span class="spk">Marty · 06:00</span>it's funny with leadership. We've been talking about it this year, how you can lead in your own roles, whatever roles there is in business. And without those leadership qualities, you can be vulnerable. So it's a big thing. I certainly want to bring to the team this year is a leadership and hopefully bring that to our listeners as well.</p>
+          <p><span class="spk">Marty · 06:18</span>Uh, but yeah, great principles. So I won't steal your thunder on</p>
+          <p><span class="spk">Jason · 06:22</span>it. Great book. Totally agree. So it's actually been a long time since I've revisited it. So I'm looking forward to unpacking a few of the principles there, Nick. But I agree, Marty, the, there's a bunch of books that, you know, Think and Grow Rich, Seven Habits of Highly Successful People, How to Win Friends and Influence.</p>
+          <p><span class="spk">Jason · 06:37</span>Um, you know, they're all in that kind of upper echelon, the E Bith, the E Bith and the E Myth Revisited. Um, so absolute banger and I'm looking forward to unpacking it.</p>
+          <p><span class="spk">Marty · 06:47</span>And it's like in comedy, there's no new jokes, right? They're only repositioned and reshaped. And this is the same with these leadership qualities.</p>
+          <p><span class="spk">Marty · 06:54</span>It's, uh, it's just repackaged for a new generation, right? Time and time again, these</p>
+          <p><span class="spk">Marty · 07:00</span>foundational principles, uh, are the game changes and continue to be so.</p>
+          <p><span class="spk">Nick · 07:04</span>Yeah, 100%. Look, it doesn't have to just be business, you know, like I was reading some of this stuff and thinking, you know, thinking about parenting as well.</p>
+          <p><span class="spk">Nick · 07:12</span>Yep. It can go into your personal life, um, outside of business and even, you know, with friends, friends. And family in your network. There's some really good qualities here. So without further ado, principle one, and I'll, I'll read through these principles and I might get one of you to just give me a bit of a comment on it.</p>
+          <p><span class="spk">Nick · 07:31</span>You boys are no doubt already doing this stuff. Um, so principle one, begin with praise and honest appreciation. So the first step in changing someone with our words is to focus on the positive before the negative. By pointing out the strengths of a person, we put them in a positive mindset. When we get to the negatives, they are much easier to hear and more likely to be accepted.</p>
+          <p><span class="spk">Nick · 07:53</span>So, I guess what he's saying there is, you know, if I'm talking to someone as a leader, the first thing I want</p>
+          <p><span class="spk">Nick · 08:00</span>to do is I want to point out what you're doing well. And then I've got you in, I've got you in, I've got your attention. I've got you on my side. And then from there, we can talk about the negatives instead of straightaway negatives, people are on the back foot and maybe, you know, we'll communicate in a different manner.</p>
+          <p><span class="spk">Nick · 08:16</span>So always leave. Uh, lead with praise and honest appreciation is number one. So, anyone want to give me</p>
+          <p><span class="spk">Marty · 08:23</span>something on that? Yeah, I'll give you something on that. In the nineties, it was called the shit sandwich, which was, um, first you'd start with edifying something that was positive, exactly what you said.</p>
+          <p><span class="spk">Marty · 08:35</span>And then you would communicate around, you know, the qualities that you wanted improvement on. And then you come out the other side with some action steps, but you've got to earn the right to be able to have that. conversation in the challenge that needs to be resolved. And again, you got to edify the good behavior if you want more of the good behavior and then have the relationship to be able to then</p>
+          <p><span class="spk">Marty · 09:00</span>manage through the challenge and, and.</p>
+          <p><span class="spk">Marty · 09:02</span>To the point where the person wants to be able to work with you on that. So, um, like I said, the night is packaged up as the old shit sandwich, but I like the premise of otherwise people just go straight in for the kill on the negative. And that just reinforces that every interaction they have, um, with you.</p>
+          <p><span class="spk">Marty · 09:20</span>Is going to be a problem or a potential perceived as criticism, and then they just get defensive and closed down. So I think that's a great</p>
+          <p><span class="spk">Jason · 09:28</span>principle. Yeah, I've just messaged Greg and said we're going to have to start giving our team some shit sandwiches. So I'm interested to see what he writes back to that.</p>
+          <p><span class="spk">Jason · 09:35</span>But um, I love it. I couldn't agree more. The, and look at, some people do this naturally without having heard these principles. And it's just a. You know, obviously they're naturally got a way of winning friends and influencing people. And even without realizing just in delivery of getting that person to that right frame of mind, if you start negative and then expect that person to pay attention and follow through to the end of the combo, when you've hit them with something negative upfront, that's upset</p>
+          <p><span class="spk">Jason · 10:00</span>them or, or maybe somewhat confronting, you just got to know that that's not going to, that conversation is not going to go how you want it to go without softening it up front and at the end.</p>
+          <p><span class="spk">Jason · 10:09</span>So great principle, great, great way to start. Thank</p>
+          <p><span class="spk">Nick · 10:12</span>you, RoflFlyer. Um, Principle two, call attention to people's mistakes indirectly. So, direct criticism causes resentment and puts people on the defensive. By avoiding giving honest praise with a qualifying but, that leads into a negative observation. We can often make people more receptive.</p>
+          <p><span class="spk">Nick · 10:32</span>So, similar to the last one, but he's put an example here. You ran great today, but you would have One, if you had have run harder, that's what we don't do. What we would do is you ran great today. And if you ran harder next time, you will probably win. So again, it's just framing the mindset and coming from a positive angle instead of saying.</p>
+          <p><span class="spk">Nick · 10:54</span>You didn't do good enough. You did really well, but if better, you would have</p>
+          <p><span class="spk">Nick · 11:00</span>got the win. Well, it's, it's, it's</p>
+          <p><span class="spk">Jason · 11:01</span>dangling, dangling the carrot to keep someone motivated. Um, you know, even seeing that I ran great. And if I run a little bit harder next time, I can win. Oh, that's exciting. I'm, I'm going to have a crack next time and see if I can do even better.</p>
+          <p><span class="spk">Jason · 11:15</span>So, all of a sudden it's, you know, it's encouragement and dangling the carrot to have a bit more of a crack next time, rather than being left to be, you know, feel a bit negative. Like, Oh, like, Oh, this doesn't think I'm good enough.</p>
+          <p><span class="spk">Marty · 11:26</span>I didn't do enough. I use the same principles with, uh, cricket training with Charlie, do the same thing going.</p>
+          <p><span class="spk">Marty · 11:32</span>Geez, you really did well today in these areas and I tell you what, if we do this next time, you're going to be well ahead of the other under 10s if we keep doing this. So it's almost like encouraging to keep going up the level and addressing, instead of it being mistakes, opportunities to excel. And subtly, subtly ingraining that in, and I do that a lot with the sales team as well.</p>
+          <p><span class="spk">Marty · 11:57</span>They go, if I can get movement in the right direction,</p>
+          <p><span class="spk">Marty · 12:00</span>and they're enthused and excited about it, then it's a win win win, because obviously they're improving and they're enjoying that improvement. But that's a, that's a really encouraging principle.</p>
+          <p><span class="spk">Nick · 12:09</span>Agree. Principle 3, um, this is my favourite. I know I've used this a lot myself, um, particularly when having hard conversations.</p>
+          <p><span class="spk">Nick · 12:18</span>Um, talk about your own mistakes before criticising the other person. So people are more likely to take criticism better if they feel that the person criticising them is not afraid of pointing out their own flaws. By creating the common ground that nobody is perfect, it's much easier for someone to feel that the criticism is being given for their own good.</p>
+          <p><span class="spk">Nick · 12:39</span>So I've used that a lot. Um, prior to reading this book, I've just done that naturally. It's something that, um, I think really helps when, when you're having a hard conversation. You know, we're all flawed. I'm on the same level as you, I'm human. Um, this is the mistakes that I've done, but this is, this is the mistakes that you've done.</p>
+          <p><span class="spk">Nick · 12:57</span>Puts everyone on the same level. Um, and</p>
+          <p><span class="spk">Nick · 13:00</span>again, less on the back foot. So any of you boys use that tactic before?</p>
+          <p><span class="spk">Marty · 13:06</span>Definitely. I'd say like when I, when I was first a broker, I did this and it didn't work. And this is why it didn't work. Um, this is what I did to try and resolve that, be better, uh, but always coming back from the vulnerability into movement to the upside.</p>
+          <p><span class="spk">Marty · 13:23</span>Um, I think it's a, it's a superpower strategy, that one. And it, you're exactly right, Nick, it shows that vulnerability, but also the ability to keep progressing as well. Uh, I think it's, it's a cracker.</p>
+          <p><span class="spk">Nick · 13:36</span>It's a powerful word, particularly in leadership. I think, um, and I don't think it's spoken about much, but I think vulnerability is one of the most.</p>
+          <p><span class="spk">Nick · 13:45</span>Powerful, um, qualities of a, of a, of a good leader. Um, and it's, it's usually not spoken about. Yeah.</p>
+          <p><span class="spk">Marty · 13:52</span>And a difference between vulnerability and victimhood. Don't, don't get those two mixed up because you can come at</p>
+          <p><span class="spk">Marty · 14:00</span>it and edify the victimization of the performance. And you don't want to do that. You want to, you want to come from a.</p>
+          <p><span class="spk">Marty · 14:06</span>True place of authenticity and progress forward from that place. That's the key. And if you can meet them where they're at together, then you can generally move someone beyond that. But if you victimize and sit in the, the, the problem of, of, of something being stale and not moving and the mistakes build on mistakes, then that can lead to dramatic failure too, as a leader.</p>
+          <p><span class="spk">Marty · 14:28</span>So you've got to be</p>
+          <p><span class="spk">Nick · 14:28</span>careful not to do that. Principle four. Ask questions instead of giving orders. No one likes to be told what to do. By asking people to do something directly or indirectly, it makes it easier for them to comply. Bring me those books is quite different than could you bring me those books, please.</p>
+          <p><span class="spk">Nick · 14:45</span>So, pretty simple one. Um, no one likes to be barked at, um, yeah, any further comments on that? But I thought that one was pretty straightforward.</p>
+          <p><span class="spk">Jason · 14:54</span>Uh, I think a lot of this comes down to having the appropriate language to position yourself as a leader.</p>
+          <p><span class="spk">Jason · 15:00</span>Um, and that's just a simple example.</p>
+          <p><span class="spk">Nick · 15:03</span>Um, principle five, let the other person save face.</p>
+          <p><span class="spk">Nick · 15:09</span>So never criticize or give negative, negative feedback in public. When we deliver negative feed, uh, negative information, we can be more, more effective by doing it privately. And in a way that keeps the other person's dignity intact. And I guess what you've got to think about there is, okay, the shoe was on the other foot.</p>
+          <p><span class="spk">Nick · 15:27</span>How would I like to be delivered this information? Um, particularly if it's negative information. Well, you wouldn't want it to be delivered in front of a lot of other people. So I think the other thing that that does as a leader, it's also you putting them down in front of other people. Um, so yeah, I just think it has.</p>
+          <p><span class="spk">Nick · 15:46</span>All kinds of issues attached to it. If you're putting people down, um, you know, in, you know, around peers, especially.</p>
+          <p><span class="spk">Marty · 15:53</span>Massive breach of trust, massive breach of trust, that one. Um, again,</p>
+          <p><span class="spk">Marty · 16:00</span>if there is a few individuals that aren't performing, you can generalize the area of improvement within a group without, um, yeah, pointing, pointing to a particular person and then taking it offline.</p>
+          <p><span class="spk">Marty · 16:12</span>The same in regards to generalize good behaviors as well. Yes, you want to give encouragement. You can be more individual about that because it means a lot, you know, in front of the group. You have to be very careful, um, in, in pointing out someone for something that's, that's poor because, um, their trust is then gone forever.</p>
+          <p><span class="spk">Marty · 16:31</span>Principle</p>
+          <p><span class="spk">Nick · 16:31</span>six, praise the slightest improvement and praise every improvement. By noting even the slightest steps and minor improvements frequently and sincerely, sincerely being the key word, uh, we increase the chances of continuing improvement. And he goes on to talk about children, you know, we obviously encourage kids, Marty just mentioned it with Charlie.</p>
+          <p><span class="spk">Nick · 16:51</span>Uh, if they know they're doing well, we need to tell them they're doing well, so they continue to do. Um, they continue to act in, in, in, in a way</p>
+          <p><span class="spk">Nick · 17:00</span>that's going to improve them. So, yeah, I think at times, um, we don't praise enough. Obviously we don't want to praise too much. It needs to be warranted, but I think we have to remember to do that.</p>
+          <p><span class="spk">Nick · 17:11</span>Um, but Marty, you're probably the best one to ask here, given you are. Raising a young fella who's learning.</p>
+          <p><span class="spk">Marty · 17:17</span>Um, yeah, I love this one and I see the child in everyone too, like I go, every child's been in a position, every person's been in a position where they've copped a criticism and it doesn't feel good and you can't learn and you can't then act off that, uh, you, you become fearful.</p>
+          <p><span class="spk">Marty · 17:34</span>And you, your handbrake. So to me, even the slightest improvement, I will always edify because it gets people moving in a positive direction and it builds confidence within them soon as they can take the subtle actions and, and layer it, then all of a sudden you get real momentum. You get this upward curve.</p>
+          <p><span class="spk">Marty · 17:54</span>And that's what I'm always looking for in people, are they willing to apply simple steps in order to, you</p>
+          <p><span class="spk">Marty · 18:00</span>know, a year down the track, that's much more complex of what they've accomplished because of putting those simple steps together. I do that with Charlie, I try and do that with friends and even, you know, to me, I always want someone to move towards me in regards to growing on the journey and the adventure together.</p>
+          <p><span class="spk">Marty · 18:17</span>So I'm a big advocate of this one and. And you just praise more of what you want, ultimately, as a leader. Um, but really what you're doing is you're helping that other person, you know, to help them move forward too. The</p>
+          <p><span class="spk">Jason · 18:31</span>best, the best thing there as well. It doesn't have to be complicated. Um, but you've just got to build in the habit and the routine of going out of your way to give praise.</p>
+          <p><span class="spk">Jason · 18:40</span>And find those opportunities and those moments and, you know, simple one. I was CC'd in an email, um, dealing with what could have been an unfortunate event with a client where something didn't quite fall the way that we thought it was going to. It was well explained and well articulated. The phone call was made and then a follow up email.</p>
+          <p><span class="spk">Jason · 18:58</span>And I wrote back</p>
+          <p><span class="spk">Jason · 19:00</span>just internally to the team member who handled it and just said, Hey, you handled this so well. I'm really proud of the work you put in here. Great job. Keep it up. And, and I happen to be in the office, you know, the team member were on calls, turn around and look, the shoulders went back and the confidence and sat there with a bit of a head nod and the rest of the day, his team was up and about, attitude was great.</p>
+          <p><span class="spk">Jason · 19:20</span>So it just doesn't take much to change somebody's day. So find a way to build it in, look for opportunities, emails, texts, face to face, whatever it is. It doesn't have to be complicated, but you just need to create a habit and a routine of praise and, you know, getting around your team and letting them know when they're doing a great job.</p>
+          <p><span class="spk">Jason · 19:37</span>And improving. If</p>
+          <p><span class="spk">Marty · 19:38</span>you're doing that, if you're doing that 80, 90 percent of the time, you're getting momentum with the person. But then when there is something that's challenging, you've earned the right and that holds more weight when you're having a discussion to move through that as well. So I think it's powerful even when there is something that needs to be addressed, that that person then is more adamant of resolving</p>
+          <p><span class="spk">Marty · 20:00</span>that with you as well because of the, uh, the positive feedback when it's</p>
+          <p><span class="spk">Nick · 20:04</span>deserved.</p>
+          <p><span class="spk">Nick · 20:04</span>Yep. And rolling into principle seven, and I think it's similar, but there's something here that I think is really important. So the principle is, give the other person a fine reputation to live up to. And the thing he says here which resonates with me, if we sincerely tell someone that they are great at something often enough, they will begin to believe it themselves and make it part of their reputation within themselves.</p>
+          <p><span class="spk">Nick · 20:29</span>So again, you're only going to do this if they are doing the right job. You're not going to tell someone they're doing well when they're not. But if we reinforce that behavior, they then start to believe, Hey, this is me. This is how I, this is how I act. Um, yeah, it's same as goal setting. You read your goals every day.</p>
+          <p><span class="spk">Nick · 20:45</span>Eventually they just start, you know, you start to manifest them. So it's very similar in, you know, as a, as a, as a leader, the more that you tell someone that they're going well, the more they want to do it and they. Organically become that person over time. So I</p>
+          <p><span class="spk">Nick · 21:00</span>thought that was, uh, that was really good</p>
+          <p><span class="spk">Marty · 21:02</span>as well.</p>
+          <p><span class="spk">Marty · 21:02</span>Uh, I love that one, Nick. Uh, I, the, the great thing about being 52 and being a little older is I can see where that person that's in their thirties is going to be. And if I can, if I can give them insight to something they can't see yet. And based on their qualities of where it might end up, then that's, that's a great thing.</p>
+          <p><span class="spk">Marty · 21:25</span>And, you know, and I come at it from that space to be wanting to draw them forward from where they want to draw forward. And it's, um, yeah, I really, I really like that. And I will talk about that to go. If you're doing that today, you know, I can imagine where you'll be at in another five years because I've seen it before.</p>
+          <p><span class="spk">Marty · 21:44</span>Yeah, I've experienced it myself or I've seen it in someone else. And it's important to be able to build that. Confidence around that better future self as well, from a reputation standpoint. I think that's brilliant. Yep.</p>
+          <p><span class="spk">Jason · 21:56</span>I like to try and do that. And this is one that I'm trying to put into</p>
+          <p><span class="spk">Jason · 22:00</span>practice and have it a little bit more.</p>
+          <p><span class="spk">Jason · 22:02</span>Um, a lot of the time I'll get the call or the referral to say, Jace is a tax guy. You should deal with Jace. He's awesome. Now, while I can talk to the cows coming home about tax and accounting, my team are actually way smarter when it comes to the nitty gritty day to day tax stuff of actually implementing all of the current changes in legislation.</p>
+          <p><span class="spk">Jason · 22:20</span>So if I've got a team member on the line with me and we do the client intro, I'll often say, Hey, look, I'm, I'm good at tax, but Hey, you should deal with Dave, Dave. He's on the call with me right now. He is the smartest guy when it comes to the tax questions you've got. And he's gonna, he's the man you want to deal with.</p>
+          <p><span class="spk">Jason · 22:38</span>And then that pumps them up, they get off the call going, Oh, you know, thanks, Jase. You didn't have to say that. I'm like, no, I'm serious. You are way smarter than me in that area. And that's why this client should deal with you. They sit there and they're up and about. So yeah, I love it. You know, pumping somebody up publicly and giving praise or even behind the scenes, but they'll become that person too.</p>
+          <p><span class="spk">Jason · 22:57</span>They don't, they don't want to let you down either. If the</p>
+          <p><span class="spk">Jason · 23:00</span>leader is getting, getting around them. They'll do what they can to maintain that reputation for themself.</p>
+          <p><span class="spk">Nick · 23:04</span>Yeah, and then principle eight talks further on encouragement. Um, I won't go into it too deep because it's very similar, but it talks about if you focus on the negative, then you put people in a negative mindset and they're not going to want to improve.</p>
+          <p><span class="spk">Nick · 23:18</span>So, you know, it's just another demonstration that when you are talking positive and praising people, they want to do better than a positive mindset and they go to new levels. Principle nine, make the other person happy about doing the things that you suggest. So offering incentives, praise and authority are all great ways to make a person happy to accept decisions and do what you want them to do.</p>
+          <p><span class="spk">Nick · 23:40</span>Um, if someone doesn't get a promotion, but we make a sure point. On how important their current role is and why their performance made them a candidate in the first place. We soften the blow and minimize their resentment. So, again, similar sort of things coming through. Talk about the positive. Um, and you know, if you put people,</p>
+          <p><span class="spk">Nick · 24:00</span>uh, in that right mindset, as I said before, then they'll generally do what, what we want to do.</p>
+          <p><span class="spk">Nick · 24:06</span>Um, last principle, I know this will be your favorite, Marty, because I've seen, I've seen you put this in action. Uh, but throw down a challenge. People love to compete and they love winning even more. Even with the most mundane task or idea, a good dose of healthy competition is often enough to get more involvement and more productivity.</p>
+          <p><span class="spk">Nick · 24:26</span>So I'll pass to you, Marty, because I've seen, I've seen you implement this in our own business. Um, as much as people say they don't want competition, they do and they love it. Um, and they want to be at the top of the leaderboard or as you would say, no one wants to be on the second page.</p>
+          <p><span class="spk">Marty · 24:41</span>Yeah, no one wants to be on the second page and everyone loves to win, uh, including myself.</p>
+          <p><span class="spk">Marty · 24:46</span>I'm, uh, might not be the talented, most talented person around, but I'm certainly the most competitive in a fun way. Um, and I always think inspiring through reward and, and praise through that reward, I think</p>
+          <p><span class="spk">Marty · 25:00</span>is gold. And I've implemented that throughout all businesses I've been in and, uh. And again, you've got to set some ground rules around it too, cause you don't want people to take advantage just to try and get the win.</p>
+          <p><span class="spk">Marty · 25:10</span>They got to do the right things, but I think it's paramount. I think it's paramount. And the other thing I would say is reward trend in the upward direction. So very important to acknowledge high performance, um, in their particular categories, but also to acknowledge improvement and to reward improvement.</p>
+          <p><span class="spk">Marty · 25:30</span>Because again, you want to edify people continuously stepping up, continuously learning and being excited to do so. And that being acknowledged by the wider group as well as the management team. So it's, uh. Yeah, I'm, I'm a big one on this. It's, uh, and, and sometimes you don't need to have a particular prize, but you need to have the structure in place that could be, you know, seen by all.</p>
+          <p><span class="spk">Marty · 25:54</span>Yeah. I was just going to say, we've</p>
+          <p><span class="spk">Nick · 25:55</span>worked that out even with some of our referral partners. So we obviously rely on other businesses.</p>
+          <p><span class="spk">Nick · 26:00</span>Um, I'm going to refer to real estate businesses here because that's where the competition is. But, uh, we will run little competitions when we're trying to drive business from them, very small prize.</p>
+          <p><span class="spk">Nick · 26:10</span>Um, and for a lot of agents, given the, the income they earn. The prize is neither here nor there. It's just been on top of that leaderboard, um, that everyone can see. And we actually create a leaderboard that they've all got access to. Um, and they'll just fight, they'll just fight to the death to get to the top.</p>
+          <p><span class="spk">Nick · 26:26</span>And, um, it's been a really good tool for us. Um, healthy competition, I think is the</p>
+          <p><span class="spk">Marty · 26:31</span>right word. Healthy competition. And we kind of all like sports in some way, shape or form. Most people have had sort of, uh, you know, some interest somewhere in sports. So they know what it's like, but yeah, it's pretty cool and fun too.</p>
+          <p><span class="spk">Nick · 26:44</span>Jase, any, uh, internal competitions running over there at, uh, future? Oh,</p>
+          <p><span class="spk">Jason · 26:48</span>I don't know if you've met my business partner, Greg, who happens to be the most competitive guy in the world. So there is always competitions going on and, uh, I'd like to say all of them are healthy competitions, but, uh, you know,</p>
+          <p><span class="spk">Jason · 27:00</span>it's always good, good, healthy competition.</p>
+          <p><span class="spk">Jason · 27:02</span>And you know, we've, we've had to re reinvent or reshape some of the way we're doing things. You know, we actually. It's hired a lot of it surprises and it was, you know, we, we got caught up and oh my God, like we've got to give away this financial prize or this gift voucher or whatever. And at the end of the day, you know, this lesson here is that it's sometimes it's not about the prize, but it's the excitement of the challenge and the praise for being on top of that leaderboard.</p>
+          <p><span class="spk">Jason · 27:28</span>Um, and you know, the, the recognition that you get for that is more exciting and more rewarding than, you know, the 50 gift card or the a hundred dollar gift card. So. Yeah, always challenges going on, whether it's Google reviews, referrals to our referral partners, um, or even a running challenge with Greg, which everybody loses because the guys are freak at the moment, training for his London marathon coming up or our London marathon.</p>
+          <p><span class="spk">Jason · 27:50</span>I suppose I should start training too, but, um, yeah, lots and lots of competition at future advisory with Greg</p>
+          <p><span class="spk">Marty · 27:56</span>around. There was something simple I used to do, uh, if</p>
+          <p><span class="spk">Marty · 28:00</span>someone, you know, was the best performer for the month, I used to allocate them a car park underneath the building. Cause we had an additional one that wasn't being used and, uh, and give them a little certificate and stuff like that.</p>
+          <p><span class="spk">Marty · 28:12</span>But it was amazing how. That car park became just something, it wasn't monetary, but it just became the thing that everyone wanted to eventually get to. Um, it was so much fun around it and they'd really enjoy it because for that next month, you know, they're having interactions as some of the management group coming to the car park as well.</p>
+          <p><span class="spk">Marty · 28:32</span>So it was, that was, that was a good fun one, but there's lots of stuff like that you can do in many ways, shapes or form. Even if it's a certificate, right? It's like, it means a lot to them. They'll hang it on the wall and, and it's great to see it on the wall too. Cause they've earned it. So yeah, cool</p>
+          <p><span class="spk">Jason · 28:48</span>stuff.</p>
+          <p><span class="spk">Jason · 28:49</span>Good, good stuff there from Dale Carnegie and well shared. Thank you, Nick. So if you're out there in a leadership position, parent, or any position that allows you to kind of apply some of these principles, re listen to this episode</p>
+          <p><span class="spk">Jason · 29:00</span>because it was full of nuggets of gold. Thank you for joining us today on the numbers game.</p>
+          <p><span class="spk">Jason · 29:04</span>Make sure you tell your friends and family, like, and share our posts. Comment back to Marty's amazing posts on our LinkedIn and Nick as well. Those boys do a great job on LinkedIn. If you haven't connected with them, get on there and do that too. Like our Instagram page or follow that too. We're always sharing updates, but until next time.</p>
+          <p><span class="spk">Jason · 29:22</span>Keep</p>
+          <p><span class="spk">Marty · 29:22</span>leading, keep winning, game over. ---</p>
+        </div>
+      </details>
+
+    </div>
+
+    <!-- LISTEN:START (build_episode.py rewrites the 3 URLs + iframe title per episode; player dropped if no spotifyEmbedUrl) -->
+    <section class="listen-now">
+      <div class="ln-head">
+        <span class="ln-title">Listen now</span>
+      </div>
+      <div class="audio-embed">
+        <iframe src="https://open.spotify.com/embed/episode/0PLyULkrOhYz3tMJFRs5NX?utm_source=generator"
+          width="100%" height="152" loading="lazy" allowfullscreen
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+          title="Spotify — How to Win Friends and Influence People"></iframe>
+      </div>
+    </section>
+
+    <div class="listen">
+      <a href="https://open.spotify.com/episode/0PLyULkrOhYz3tMJFRs5NX" target="_blank" rel="noopener" aria-label="Listen to this episode on Spotify">
+        <svg viewBox="0 0 24 24"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.52 17.34c-.24.36-.66.48-1.02.24-2.82-1.74-6.36-2.1-10.56-1.14-.42.12-.78-.18-.9-.54-.12-.42.18-.78.54-.9 4.56-1.02 8.52-.6 11.64 1.32.42.18.48.66.3 1.02zm1.44-3.3c-.3.42-.84.6-1.26.3-3.24-1.98-8.16-2.58-11.94-1.38-.48.12-1.02-.12-1.14-.6-.12-.48.12-1.02.6-1.14 4.32-1.32 9.72-.66 13.44 1.62.36.18.54.78.3 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.3c-.6.18-1.2-.18-1.38-.72-.18-.6.18-1.2.72-1.38 4.26-1.26 11.28-1.02 15.72 1.62.54.3.72 1.02.42 1.56-.3.42-1.02.6-1.56.3z"/></svg>
+        Spotify
+      </a>
+      <a href="https://podcasts.apple.com/au/podcast/id1555566088?i=1000646250534" target="_blank" rel="noopener" aria-label="Listen to this episode on Apple Podcasts">
+        <svg viewBox="0 0 24 24"><path d="M5.34 0A5.328 5.328 0 000 5.34v13.32A5.328 5.328 0 005.34 24h13.32A5.328 5.328 0 0024 18.66V5.34A5.328 5.328 0 0018.66 0H5.34zm6.525 2.568c2.336 0 4.448.902 6.056 2.587 1.224 1.272 1.912 2.619 2.264 4.392l.04.23c.04.272-.16.527-.432.567a.505.505 0 01-.567-.431l-.04-.213c-.312-1.57-.92-2.747-2.004-3.867-1.428-1.496-3.293-2.294-5.393-2.294-2.1 0-3.966.798-5.394 2.294-1.084 1.12-1.692 2.298-2.004 3.867l-.04.213a.507.507 0 01-.567.431.504.504 0 01-.432-.567l.04-.23c.352-1.773 1.04-3.12 2.264-4.392 1.608-1.685 3.72-2.587 6.056-2.587h.153zm.136 3.033c1.74 0 3.312.67 4.527 1.934.883.916 1.394 1.93 1.663 3.253l.04.23a.505.505 0 01-.431.567.503.503 0 01-.567-.432l-.04-.212c-.23-1.112-.659-1.97-1.396-2.732-1.052-1.1-2.404-1.672-3.9-1.672s-2.849.572-3.901 1.672c-.737.762-1.167 1.62-1.396 2.732l-.04.212a.503.503 0 01-.567.432.505.505 0 01-.432-.567l.04-.23c.27-1.323.78-2.337 1.664-3.253 1.215-1.264 2.787-1.934 4.527-1.934h.21zm-.078 3.05c1.092 0 2.091.424 2.89 1.22.582.58.924 1.245 1.107 2.15l.04.218a.501.501 0 01-.424.568.499.499 0 01-.568-.424l-.04-.198c-.146-.724-.413-1.253-.871-1.716-.63-.63-1.398-.957-2.226-.957s-1.595.328-2.225.957c-.459.463-.726.992-.871 1.716l-.04.198a.499.499 0 01-.568.424.501.501 0 01-.424-.568l.04-.219c.183-.904.525-1.569 1.106-2.149.8-.796 1.799-1.22 2.89-1.22h.184zM12 14.07a2.477 2.477 0 012.48 2.478A2.477 2.477 0 0112 19.024a2.477 2.477 0 01-2.48-2.477A2.477 2.477 0 0112 14.07z"/></svg>
+        Apple
+      </a>
+      <a class="yt-pill" href="https://www.youtube.com/@thenumbersgamepodcast?sub_confirmation=1" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.12-2.14C19.5 3.55 12 3.55 12 3.55s-7.5 0-9.38.51A3 3 0 0 0 .5 6.2 31.4 31.4 0 0 0 0 12a31.4 31.4 0 0 0 .5 5.8 3 3 0 0 0 2.12 2.14c1.88.51 9.38.51 9.38.51s7.5 0 9.38-.51a3 3 0 0 0 2.12-2.14A31.4 31.4 0 0 0 24 12a31.4 31.4 0 0 0-.5-5.8zM9.55 15.57V8.43L15.82 12z"/></svg>
+        Subscribe
+      </a>
+    </div>
+    <!-- LISTEN:END -->
+
+    <div class="relsec">
+      <span class="rtitle">Discover more</span>
+      <div class="relgrid">
+        <a class="relcard" href="/our-take-on-gen-z-in-the-workplace">
+          <img src="https://i.ytimg.com/vi/-zzLDns8dhU/hqdefault.jpg" alt="EP 182 thumbnail">
+          <span class="rt">Our Take On Gen Z in the Workplace</span>
+          <span class="rfoot"><span class="rwhy">Also covers: team &amp; culture</span><span class="rtag">EP 182</span></span>
+        </a>
+        <a class="relcard" href="/courage-culture-tough-calls-cameron-schwab-on-redefining-leadership">
+          <img src="https://i.ytimg.com/vi/SXCEAyoLobo/hqdefault.jpg" alt="EP 249 thumbnail">
+          <span class="rt">Courage, Culture &amp; Tough Calls</span>
+          <span class="rfoot"><span class="rwhy">Also covers: team &amp; culture</span><span class="rtag">EP 249</span></span>
+        </a>
+        <a class="relcard" href="/the-future-of-working-from-home">
+          <img src="https://i.ytimg.com/vi/CSYAM098AQk/hqdefault.jpg" alt="EP 143 thumbnail">
+          <span class="rt">The Future of Working from Home</span>
+          <span class="rfoot"><span class="rwhy">Also covers: team &amp; culture</span><span class="rtag">EP 143</span></span>
+        </a>
+        <a class="relcard" href="/good-people-bad-fit-how-one-wrong-hire-can-cost-you-millions">
+          <img src="https://i.ytimg.com/vi/USkVF5bsujM/hqdefault.jpg" alt="EP 237 thumbnail">
+          <span class="rt">Good People, Bad Fit</span>
+          <span class="rfoot"><span class="rwhy">Also covers: team &amp; culture</span><span class="rtag">EP 237</span></span>
+        </a>
+        <a class="relcard" href="/human-advisory-board">
+          <img src="https://i.ytimg.com/vi/ZY2t4W1s5ww/hqdefault.jpg" alt="EP 174 thumbnail">
+          <span class="rt">Human Advisory Board</span>
+          <span class="rfoot"><span class="rwhy">Also covers: team &amp; culture</span><span class="rtag">EP 174</span></span>
+        </a>
+        <a class="relcard" href="/10-lessons-from-an-f1-boss-do-any-actually-apply-to-small-business">
+          <img src="https://i.ytimg.com/vi/ubSyFEJEohE/hqdefault.jpg" alt="EP 267 thumbnail">
+          <span class="rt">10 Lessons from an F1 Boss.</span>
+          <span class="rfoot"><span class="rwhy">Also covers: team &amp; culture</span><span class="rtag">EP 267</span></span>
+        </a>
+      </div>
+      <div class="reldots" id="reldots"></div>
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="footgrid">
+      <div class="fcol">
+        <div class="foot-label">Follow us on</div>
+        <div class="socials">
+          <a href="https://www.instagram.com/thenumbersgamepodcast/" target="_blank" rel="noopener" aria-label="The Numbers Game on Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.8.2 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1 .4 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .4-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1-.4-2.2-.1-1.3-.1-1.7-.1-4.9s0-3.6.1-4.9c.1-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.4 2.2-.4 1.3-.1 1.7-.1 4.9-.1zm0 2c-3.1 0-3.5 0-4.8.1-1.1.1-1.5.2-1.8.3-.4.2-.7.3-1 .6-.3.3-.5.6-.6 1-.1.3-.3.7-.3 1.8-.1 1.3-.1 1.7-.1 4.8s0 3.5.1 4.8c.1 1.1.2 1.5.3 1.8.2.4.3.7.6 1 .3.3.6.5 1 .6.3.1.7.3 1.8.3 1.3.1 1.7.1 4.8.1s3.5 0 4.8-.1c1.1-.1 1.5-.2 1.8-.3.4-.2.7-.3 1-.6.3-.3.5-.6.6-1 .1-.3.3-.7.3-1.8.1-1.3.1-1.7.1-4.8s0-3.5-.1-4.8c-.1-1.1-.2-1.5-.3-1.8-.2-.4-.3-.7-.6-1-.3-.3-.6-.5-1-.6-.3-.1-.7-.3-1.8-.3-1.3-.1-1.7-.1-4.8-.1zm0 3.4a5.4 5.4 0 1 1 0 10.8 5.4 5.4 0 0 1 0-10.8zm0 2a3.4 3.4 0 1 0 0 6.8 3.4 3.4 0 0 0 0-6.8zm5.6-2.3a1.3 1.3 0 1 1-2.6 0 1.3 1.3 0 0 1 2.6 0z"/></svg></a>
+          <a href="https://www.tiktok.com/@thenumbersgamepodcast" target="_blank" rel="noopener" aria-label="The Numbers Game on TikTok"><svg viewBox="0 0 24 24"><path d="M12.53.02C13.84 0 15.14.01 16.44 0c.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg></a>
+          <a href="https://www.linkedin.com/company/the-numbers-game-podcast/" target="_blank" rel="noopener" aria-label="The Numbers Game on LinkedIn"><svg viewBox="0 0 24 24"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.24 8.25h4.52V23H.24V8.25zM8.34 8.25h4.33v2.01h.06c.6-1.14 2.08-2.34 4.28-2.34 4.58 0 5.42 3.01 5.42 6.92V23h-4.51v-7.16c0-1.71-.03-3.91-2.38-3.91-2.39 0-2.75 1.86-2.75 3.78V23H8.34V8.25z"/></svg></a>
+          <a href="https://www.facebook.com/profile.php?id=100071290388343" target="_blank" rel="noopener" aria-label="The Numbers Game on Facebook"><svg viewBox="0 0 24 24"><path d="M24 12.07C24 5.41 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.04V9.41c0-3.02 1.8-4.7 4.54-4.7 1.31 0 2.68.24 2.68.24v2.97h-1.5c-1.5 0-1.96.93-1.96 1.89v2.26h3.32l-.53 3.5h-2.8V24C19.62 23.1 24 18.1 24 12.07z"/></svg></a>
+          <a href="https://www.youtube.com/@thenumbersgamepodcast" target="_blank" rel="noopener" aria-label="The Numbers Game on YouTube"><svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.2C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31.7 31.7 0 0 0 0 12a31.7 31.7 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.2A31.7 31.7 0 0 0 24 12a31.7 31.7 0 0 0-.5-5.8zM9.6 15.6V8.4L15.8 12z"/></svg></a>
+        </div>
+      </div>
+      <div class="fcol">
+        <div class="foot-label">Brought to you by</div>
+        <div class="sponsors">
+          <a href="https://www.inovayt.com.au/" target="_blank" rel="noopener"><img src="assets/inovayt-white.png" alt="Inovayt"></a>
+          <a href="https://futureadvisory.com.au/" target="_blank" rel="noopener"><img src="assets/future-advisory-white.png" alt="Future Advisory"></a>
+        </div>
+      </div>
+      <div class="fcol produced">
+        <div class="foot-label">Produced by</div>
+        <a href="https://www.vidpod.com.au/" target="_blank" rel="noopener"><img src="assets/vidpod-white.png" alt="VIDPOD"></a>
+      </div>
+    </div>
+    <div class="footbar">
+      <details class="footnav-dd">
+        <summary><svg class="ham" viewBox="0 0 24 24"><path d="M3 6h18v2H3zM3 11h18v2H3zM3 16h18v2H3z"/></svg> Menu</summary>
+        <div class="dd-links">
+          <a href="/">Home</a><a href="/episodes">Every episode</a><a href="/adventure">Choose your own adventure</a><a href="/about">About the show</a><a href="/nick-reilly">Nick Reilly</a><a href="/jason-robinson">Jason Robinson</a><a href="/contact">Contact</a>
+        </div>
+      </details>
+      <div class="copyright">© 2026 The Numbers Game</div>
+    </div>
+  </footer>
+
+  <script>
+    var VIDEO='__KEwxhVyDo';
+    var CHAPTERS=[
+      {t:"00:00",s:0,title:"Intro"},
+      {t:"05:11",s:311,title:""}
+    ];
+    var QUESTIONS=[
+      {q:"How should you start a feedback conversation?",s:451},
+      {q:"What is the shit sandwich feedback method?",s:503},
+      {q:"How do you correct someone without causing resentment?",s:612},
+      {q:"How do you make criticism easier to accept?",s:729},
+      {q:"How should a leader give direction?",s:868},
+      {q:"Should you ever criticise someone in public?",s:909},
+      {q:"How often should you praise your team?",s:991},
+      {q:"How do you help someone become their best self?",s:1204},
+      {q:"How do you get people to willingly follow your decisions?",s:1418},
+      {q:"How do you drive involvement and productivity?",s:1446}
+    ];
+
+    var chEl=document.getElementById('chapters');
+    CHAPTERS.forEach(function(c){var b=document.createElement('button');b.className='chapter';b.onclick=function(){startAt(c.s)};b.innerHTML='<span class="tc">'+c.t+'</span><span class="cx">'+c.title+'</span>';chEl.appendChild(b);});
+    document.getElementById('chcount').textContent=CHAPTERS.length;
+    var qEl=document.getElementById('qa');
+    QUESTIONS.forEach(function(q){var b=document.createElement('button');b.className='q';b.onclick=function(){startAt(q.s)};b.innerHTML='<span class="qm">?</span><span class="qx">'+q.q+'</span><span class="go">›</span>';qEl.appendChild(b);});
+    document.getElementById('qcount').textContent=QUESTIONS.length;
+
+    /* Mobile nav dropdown. */
+    var burger=document.getElementById('navburger'), navdrop=document.getElementById('navdrop');
+    if(burger&&navdrop){burger.addEventListener('click',function(){
+      navdrop.hidden=!navdrop.hidden;
+      burger.setAttribute('aria-expanded', navdrop.hidden?'false':'true');
+    });}
+
+    /* Voice-note button reveals the recorder; × tucks it away. */
+    var vbtn=document.getElementById('vbtn'), vslot=document.getElementById('vslot'), vclose=document.getElementById('vclose');
+    if(vbtn&&vslot){vbtn.addEventListener('click',function(){vslot.hidden=!vslot.hidden;});}
+    if(vclose&&vslot){vclose.addEventListener('click',function(){vslot.hidden=true;});}
+
+    /* Keep-exploring dots: only shown when the strip actually scrolls (mobile). */
+    var rg=document.querySelector('.relgrid'), rd=document.getElementById('reldots');
+    if(rg&&rd){
+      var relCards=rg.querySelectorAll('.relcard');
+      relCards.forEach(function(){rd.appendChild(document.createElement('span'))});
+      var updDots=function(){
+        var scrollable=rg.scrollWidth>rg.clientWidth+4;
+        rd.style.display=scrollable?'flex':'none';
+        if(!scrollable)return;
+        var i=Math.round(rg.scrollLeft/(rg.scrollWidth-rg.clientWidth)*(relCards.length-1));
+        rd.querySelectorAll('span').forEach(function(s,n){s.classList.toggle('on',n===i)});
+      };
+      rg.addEventListener('scroll',updDots,{passive:true});
+      window.addEventListener('resize',updDots);
+      updDots();
+    }
+
+    /* Explore tabs: swap the visible panel; the row stays put so you never lose your place. */
+    var tabBtns=document.querySelectorAll('.tabbtn');
+    tabBtns.forEach(function(b){
+      b.addEventListener('click',function(){
+        tabBtns.forEach(function(o){o.classList.remove('on')});
+        document.querySelectorAll('.tpanel').forEach(function(p){p.hidden=true});
+        b.classList.add('on');
+        document.getElementById(b.getAttribute('data-panel')).hidden=false;
+      });
+    });
+
+    /* YouTube: clean facade, then real player on demand. Seek without yanking to top. */
+    var player=null, ready=false, apiReady=false, pending=null;
+    window.onYouTubeIframeAPIReady=function(){apiReady=true; if(pending!=null){var s=pending;pending=null;createPlayer(s);}};
+    function createPlayer(sec){
+      var wrap=document.getElementById('player'); wrap.innerHTML='<div id="yt"></div>';
+      player=new YT.Player('yt',{videoId:VIDEO,playerVars:{autoplay:1,rel:0,modestbranding:1,playsinline:1,start:Math.floor(sec||0)},events:{onReady:function(){ready=true;}}});
+    }
+    function nudge(){
+      var p=document.getElementById('player-wrap'), r=p.getBoundingClientRect();
+      if(r.bottom<80 || r.top>window.innerHeight-90){ p.scrollIntoView({behavior:'smooth',block:'start'}); }
+    }
+    function startAt(sec){
+      nudge();
+      if(player&&ready){ player.seekTo(sec,true); player.playVideo(); return; }
+      if(apiReady){ createPlayer(sec); } else { pending=sec; }
+    }
+    document.getElementById('facade').addEventListener('click',function(){startAt(0);});
+    (function(){var s=document.createElement('script');s.src='https://www.youtube.com/iframe_api';document.head.appendChild(s);})();
+  </script>
+</body>
+</html>

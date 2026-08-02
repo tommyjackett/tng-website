@@ -1,0 +1,727 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EP 159 · The Rise and Fall of F45 | The Numbers Game</title>
+<meta name="description" content="">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" sizes="64x64" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="canonical" href="https://thenumbersgamepodcast.com.au/the-rise-and-fall-of-f45">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="The Numbers Game">
+<meta property="og:title" content="EP 159 · The Rise and Fall of F45 | The Numbers Game">
+<meta property="og:description" content="">
+<meta property="og:url" content="https://thenumbersgamepodcast.com.au/the-rise-and-fall-of-f45">
+<meta property="og:image" content="https://i.ytimg.com/vi/-j4kNHEGVx0/maxresdefault.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+  :root{
+    --purple:#585af3; --purple-dark:#2c1b8a; --mint:#7ad9a8;
+    --white:#ffffff; --muted:rgba(255,255,255,.60); --dim:rgba(255,255,255,.42);
+    --line:rgba(255,255,255,.12); --card:rgba(255,255,255,.05); --card-hi:rgba(255,255,255,.09);
+    --display:'Anton',Impact,'Helvetica Neue',sans-serif;
+    --sans:'Inter',system-ui,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif;
+    --wrap:1280px;   /* page frame (nav spans this) */
+    --col:960px;     /* content column (player, tabs, text) */
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:var(--sans); color:var(--white); line-height:1.6; -webkit-font-smoothing:antialiased;
+    background:#12093a;
+    background-image:
+      radial-gradient(1200px 600px at 82% -6%, rgba(88,90,243,.45) 0%, transparent 55%),
+      radial-gradient(900px 700px at 5% 8%, rgba(122,217,168,.10) 0%, transparent 50%),
+      linear-gradient(180deg,#2c1b8a 0%,#1a1150 28%,#100b34 62%,#0b0820 100%);
+    background-attachment:fixed;
+  }
+  a{color:inherit}
+  .wrap{max-width:var(--wrap);margin:0 auto;padding:0 36px}
+  main.wrap{max-width:var(--col)}
+  @media(max-width:720px){.wrap{padding:0 22px}}
+
+  /* ── Navbar ── */
+  .nav{position:sticky;top:0;z-index:50;background:linear-gradient(180deg,rgba(24,15,74,.92),rgba(24,15,74,.72));backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+  .nav-in{max-width:var(--wrap);margin:0 auto;padding:11px 36px;display:flex;align-items:center;justify-content:space-between}
+  @media(max-width:720px){.nav-in{padding:11px 22px}}
+  .brand{display:block;line-height:0}
+  .brand img{height:36px;width:auto;display:block}
+  .navlinks{display:flex;gap:28px;align-items:center}
+  .navlinks a{text-decoration:none;font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);transition:.15s}
+  .navlinks a:hover{color:var(--white)}
+  .navlinks a.navtop{cursor:default}
+  .navgroup{position:relative;display:flex;align-items:center}
+  .navgroup .subnav{display:none;position:absolute;top:100%;left:50%;transform:translateX(-50%);padding-top:14px;min-width:180px}
+  .navgroup:hover .subnav,.navgroup:focus-within .subnav{display:block}
+  .subnav-in,.navgroup .subnav{z-index:60}
+  .navgroup .subnav a{display:block;background:#180f4a;border:1px solid var(--line);border-top:0;padding:12px 16px;font-size:12px;color:rgba(255,255,255,.85)}
+  .navgroup .subnav a:first-child{border-top:1px solid var(--line)}
+  .navgroup .subnav a:hover{background:#221768;color:var(--white)}
+  .navburger{display:none;background:none;border:1px solid var(--line);padding:8px 10px;cursor:pointer;color:var(--white);transition:.15s}
+  .navburger:hover{border-color:rgba(122,217,168,.6)}
+  .navburger svg{width:20px;height:20px;fill:currentColor;display:block}
+  .navdrop{display:none}
+  @media(max-width:720px){
+    .navlinks{display:none}
+    .navburger{display:block}
+    .navdrop{display:block;position:absolute;left:0;right:0;top:100%;
+      background:#180f4a;border-bottom:1px solid var(--line);box-shadow:0 24px 50px rgba(0,0,0,.45)}
+    .navdrop[hidden]{display:none}
+    .navdrop a{display:block;padding:15px 22px;text-decoration:none;font-size:14px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:rgba(255,255,255,.9);border-bottom:1px solid rgba(255,255,255,.06)}
+    .navdrop a:last-child{border-bottom:0}
+    .navdrop a.sub{padding-left:42px;font-size:13px;color:rgba(255,255,255,.72)}
+    .navdrop .navlabel{display:block;padding:15px 22px 6px;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.4)}
+  }
+
+  /* ── Hero / hook (marker-highlight system: purple hook wraps naturally, mint payoff below)
+     Rules: title splits at its natural break (colon/pipe/question mark). Front = hook (purple,
+     big), back = payoff (mint, smaller). No break in title = purple hook only. Highlights hug
+     the text (tight em padding tuned to Anton) and wrap via box-decoration-break — never
+     hand-pick line breaks or mint words. ── */
+  header.hero{padding:34px 0 6px}
+  .hook{--inx:clamp(8.4px,2.1vw,15.6px)} /* one shared text inset so hook + payoff first letters align */
+  .hook .hk{font-family:var(--display);font-weight:400;text-transform:uppercase;
+    font-size:clamp(28px,7vw,52px);line-height:1.3;letter-spacing:-.5px;text-wrap:balance}
+  .hook .hk span{color:var(--white);padding:.04em var(--inx) .02em;
+    background:linear-gradient(var(--purple),var(--purple)) 0 50%/100% 87% no-repeat;
+    -webkit-box-decoration-break:clone;box-decoration-break:clone}
+  .hook .pay{font-family:var(--display);font-weight:400;text-transform:uppercase;
+    font-size:clamp(16px,4vw,24px);line-height:1.5;letter-spacing:.6px;margin-top:8px;text-wrap:balance}
+  .hook .pay span{color:#0a0a0a;padding:.08em var(--inx) .04em;
+    background:linear-gradient(var(--mint),var(--mint)) 0 50%/100% 88% no-repeat;
+    -webkit-box-decoration-break:clone;box-decoration-break:clone}
+  /* no-hook titles: mid-split into two full-size rows, purple then mint */
+  .hook .hk span.hkrow{display:block;background:none;padding:0}
+  .hook .hk .hkrow+.hkrow{margin-top:8px}
+  .hook .hk span.mintseg{color:#0a0a0a;
+    background:linear-gradient(var(--mint),var(--mint)) 0 50%/100% 87% no-repeat}
+
+  /* ── Player (clean facade → real player on tap) ── */
+  .player-wrap{margin:24px 0 4px;scroll-margin-top:76px}
+  .player{position:relative;width:100%;padding-top:56.25%;border-radius:0;overflow:hidden;background:#000;box-shadow:0 30px 70px rgba(0,0,0,.5),0 0 0 1px rgba(255,255,255,.06)}
+  .facade{position:absolute;inset:0;border:0;cursor:pointer;background-size:cover;background-position:center;display:flex;align-items:center;justify-content:center;padding:0}
+  .facade .play{width:74px;height:74px;border-radius:50%;background:rgba(10,6,30,.40);border:2px solid rgba(255,255,255,.72);display:flex;align-items:center;justify-content:center;transition:.18s;-webkit-backdrop-filter:blur(1px);backdrop-filter:blur(1px)}
+  .facade:hover .play{background:rgba(88,90,243,.62);transform:scale(1.07);border-color:#fff}
+  .facade .play::after{content:"";border-style:solid;border-width:11px 0 11px 19px;border-color:transparent transparent transparent #fff;margin-left:5px}
+  .player iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+
+  /* ── Episode facts (bottom of the Summary panel — templated per episode) ── */
+  .sumfacts{margin:14px 10px 4px;padding-top:13px;border-top:1px solid rgba(255,255,255,.08);display:flex;flex-direction:column;gap:8px}
+  .fact{display:flex;gap:12px;font-size:13.5px}
+  .fact .fl{flex:none;width:104px;color:var(--dim);font-weight:600;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;padding-top:2px}
+  .fact .fv{color:rgba(255,255,255,.9);font-weight:500}
+  .fact .fv a{color:var(--mint);text-decoration:none;border-bottom:1px solid rgba(122,217,168,.4);transition:.15s}
+  .fact .fv a:hover{border-bottom-color:var(--mint)}
+
+  /* ── Episode tag (identity: black label hanging off the title corner) ── */
+  .eptag{display:inline-block;position:relative;left:-6px;margin-bottom:-7px;z-index:2;
+    background:#0a0a0a;color:var(--white);font-family:var(--display);font-weight:400;
+    font-size:13.5px;letter-spacing:1.5px;text-transform:uppercase;padding:6px 11px 4px}
+
+  /* ── Explore tabs (sticky mode switcher; one panel swaps below, nothing shoves) ── */
+  .explore{margin-top:22px}
+  .tabs{position:sticky;top:58px;z-index:40;display:flex;flex-wrap:wrap;gap:8px;padding:10px 0;
+    background:linear-gradient(180deg,rgba(18,10,55,.96),rgba(18,10,55,.86));
+    backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+  .tabbtn{font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.5px;
+    font-size:14.5px;color:var(--white);background:var(--purple);border:1px solid var(--purple);
+    padding:9px 13px 7px;cursor:pointer;transition:.15s}
+  .tabbtn:hover{filter:brightness(1.12)}
+  .tabbtn.on{background:var(--mint);border-color:var(--mint);color:#0a0a0a}
+  .tabbtn.on:hover{filter:none}
+  .tabbtn .ct{font-size:12px;opacity:.75;font-variant-numeric:tabular-nums}
+  .tabbtn .ct::before{content:" · "}
+  .tpanel{border:1px solid var(--line);background:var(--card);padding:12px 10px 14px}
+  .hint{font-size:12.5px;color:var(--muted);padding:2px 10px 10px;border-bottom:1px solid rgba(255,255,255,.08);margin-bottom:6px}
+
+  /* ── Listen row (no box: label left, service pills follow) ── */
+  .listen{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:12px 16px;margin-top:34px}
+  .listen .lname{font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--dim)}
+  .listen a{display:inline-flex;align-items:center;gap:9px;padding:11px 18px;border-radius:999px;
+    background:var(--mint);color:#08210f;text-decoration:none;font-weight:800;font-size:12.5px;
+    letter-spacing:.04em;text-transform:uppercase;transition:.15s}
+  .listen a:hover{filter:brightness(1.06);transform:translateY(-1px);box-shadow:0 12px 30px rgba(122,217,168,.25)}
+  .listen svg{width:20px;height:20px;fill:currentColor;flex:none}
+  /* ── Listen-now Spotify audio embed (full column width, above the pills) ── */
+  .listen-now{margin-top:40px}
+  .listen-now .ln-head{display:flex;align-items:baseline;justify-content:space-between;gap:14px;margin-bottom:13px}
+  .listen-now .ln-title{font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--dim)}
+  .audio-embed{border-radius:12px;overflow:hidden;box-shadow:0 20px 50px rgba(0,0,0,.4),0 0 0 1px rgba(255,255,255,.06)}
+  .audio-embed iframe{display:block;width:100%;border:0}
+  @media(max-width:720px){.listen-now{margin-top:32px}}
+
+  /* ── Keep exploring (thumbnails link to other episode PAGES, never timecodes).
+     Swipeable strip on mobile, fits three-up on desktop. Variant rule: claim
+     "similar ground" + reason lines ONLY when moment-level topic overlap is
+     genuinely strong; otherwise show the latest released episodes with dates —
+     never invent a connection. ── */
+  .relsec{margin-top:60px;padding-top:58px;border-top:1px solid var(--line)} /* line = end of this episode's info */
+  .reldots{display:flex;justify-content:center;gap:7px;margin-top:12px}
+  .reldots span{width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.25);transition:.2s}
+  .reldots span.on{background:var(--mint)}
+  .relsec .rtitle{display:inline-block;font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.5px;font-size:14.5px;background:var(--mint);color:#0a0a0a;padding:9px 13px 7px;margin-bottom:18px}
+  .relgrid{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding-bottom:6px;scrollbar-width:none}
+  .relgrid::-webkit-scrollbar{display:none}
+  .relcard{flex:0 0 56%;max-width:232px;scroll-snap-align:start;display:flex;flex-direction:column;text-decoration:none;background:var(--card);border:1px solid var(--line);transition:.15s}
+  .relcard:hover{background:var(--card-hi);border-color:rgba(122,217,168,.55)}
+  .relcard img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block}
+  .relcard .rt{display:block;font-size:12.5px;font-weight:600;color:rgba(255,255,255,.92);line-height:1.4;padding:8px 8px 0}
+  .relcard .rfoot{margin-top:auto;display:flex;justify-content:space-between;align-items:flex-end;gap:8px;padding:10px 8px 9px}
+  .relcard .rwhy{font-size:11.5px;color:var(--mint)}
+  .relcard .rtag{display:inline-block;background:#0a0a0a;color:var(--white);font-family:var(--display);font-size:10px;letter-spacing:1.2px;text-transform:uppercase;padding:3px 7px 2px;white-space:nowrap;flex:0 0 auto}
+
+  /* ── Dropdown sections (accordion under the player) ── */
+  .drops{margin-top:34px;display:flex;flex-direction:column;gap:11px}
+  .drop{border:1px solid var(--line);border-radius:0;background:var(--card);overflow:hidden;transition:border-color .15s}
+  .drop[open]{border-color:rgba(122,217,168,.35)}
+  .drop>summary{list-style:none;cursor:pointer;padding:16px 18px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+  .drop>summary::-webkit-details-marker{display:none}
+  .drop>summary .st{font-weight:700;font-size:15.5px;letter-spacing:.005em}
+  .drop>summary .ct{margin-left:auto;font-size:12px;color:var(--dim);font-weight:600;font-variant-numeric:tabular-nums}
+  .drop>summary .chev{flex:none;width:22px;height:22px;border-radius:50%;background:rgba(122,217,168,.14);color:var(--mint);display:flex;align-items:center;justify-content:center;font-family:var(--display);font-size:15px;line-height:1;transition:.2s;transform:translateY(-1px)}
+  .drop[open]>summary .chev{transform:rotate(45deg)}
+  .drop-body{padding:2px 12px 12px}
+
+  /* chapters */
+  .chapter{display:flex;align-items:baseline;gap:14px;width:100%;text-align:left;cursor:pointer;background:none;border:0;color:inherit;font-family:inherit;padding:11px 10px;border-radius:10px;transition:.13s}
+  .chapter:hover{background:var(--card-hi)}
+  .chapter .tc{font-variant-numeric:tabular-nums;font-weight:700;font-size:14px;color:var(--mint);flex:none;width:48px}
+  .chapter .cx{font-size:15px;font-weight:500;color:rgba(255,255,255,.9)}
+  .chapter:hover .cx{color:#fff}
+
+  /* questions */
+  .q{display:flex;align-items:center;gap:12px;width:100%;text-align:left;cursor:pointer;background:none;border:0;border-radius:11px;color:inherit;font-family:inherit;padding:12px 10px;transition:.14s}
+  .q+.q{border-top:1px solid rgba(255,255,255,.05)}
+  .q:hover{background:var(--card-hi)}
+  .q .qm{font-family:var(--display);font-size:15px;color:var(--mint);flex:none;line-height:1;transform:translateY(1px)}
+  .q .qx{font-size:15px;font-weight:500;color:rgba(255,255,255,.92)}
+  .q .go{margin-left:auto;flex:none;color:var(--dim);font-size:18px;transition:.15s}
+  .q:hover .go{color:var(--mint);transform:translateX(2px)}
+
+  /* summary + transcript bodies */
+  .summary-body p{font-size:16.5px;line-height:1.62;color:rgba(255,255,255,.9);padding:6px 10px 4px}
+  .tbody{padding:2px 10px 8px}
+  .tbody p{font-size:14.5px;line-height:1.7;color:rgba(255,255,255,.78);margin-top:15px;max-width:64ch}
+  .tbody .spk{display:block;font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--mint);margin-bottom:2px}
+
+  /* ── Voice note ask (lives at the bottom of the Summary panel) ── */
+  .vask{margin:16px 10px 4px}
+  .vbtn{display:inline-flex;align-items:center;gap:9px;padding:12px 20px;border-radius:999px;border:0;cursor:pointer;
+    background:var(--mint);color:#08210f;font-family:inherit;font-weight:800;font-size:12.5px;
+    letter-spacing:.04em;text-transform:uppercase;transition:.15s}
+  .vbtn:hover{filter:brightness(1.06);transform:translateY(-1px);box-shadow:0 12px 30px rgba(122,217,168,.25)}
+  .vbtn svg{width:18px;height:18px;fill:currentColor;flex:none}
+  .vslot{background:var(--purple);padding:12px 10px 10px;margin:14px 0 4px;box-shadow:0 18px 40px rgba(0,0,0,.35)}
+  .vslot[hidden]{display:none}
+  .vhead{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;margin-bottom:10px}
+  .vhead .vmsg{font-family:var(--sans);font-size:13px;line-height:1.55;color:rgba(255,255,255,.92);margin:2px 0 0;padding:0 2px}
+  .vclose{background:none;border:0;color:rgba(255,255,255,.85);font-size:22px;line-height:1;cursor:pointer;padding:0 2px}
+  .vclose:hover{color:var(--white)}
+  .vslot iframe{display:block}
+
+  /* ── YouTube subscribe pill (sits in the listen row; outranks .listen a's mint) ── */
+  .listen a.yt-pill{background:var(--purple);color:var(--white)}
+  .listen a.yt-pill:hover{filter:brightness(1.1);transform:translateY(-1px)}
+  @media(max-width:720px){ /* mobile: no label, three compact pills on one row */
+    .listen .lname{display:none}
+    .listen{gap:8px}
+    .listen a{padding:10px 13px;font-size:11px;gap:6px}
+    .listen svg{width:16px;height:16px}
+  }
+
+  /* ── Footer: Follow us on | Brought to you by | Produced by, + Menu dropdown ── */
+  footer{border-top:1px solid var(--line);margin-top:68px;padding:52px 20px 58px}
+  .footgrid{max-width:var(--wrap);margin:0 auto;display:grid;grid-template-columns:1fr 1.15fr .8fr;gap:44px;align-items:start}
+  .fcol{text-align:center;display:flex;flex-direction:column;align-items:center}
+  .foot-label{font-size:11px;font-weight:700;letter-spacing:.26em;text-transform:uppercase;color:var(--dim);margin-bottom:18px}
+  .sponsors{display:flex;justify-content:center;align-items:center;gap:34px;flex-wrap:wrap}
+  .sponsors a,.produced a{display:inline-flex;transition:.15s}
+  .sponsors a:hover,.produced a:hover{transform:translateY(-1px)}
+  .sponsors img{height:32px;width:auto;opacity:.92}
+  .produced img{height:30px;width:auto;opacity:.95}
+  .sponsors a:hover img,.produced a:hover img{opacity:1}
+  footer .socials{display:flex;gap:11px;justify-content:center;flex-wrap:wrap;margin:0}
+  footer .socials a{width:40px;height:40px;border-radius:50%;border:1.5px solid rgba(122,217,168,.5);display:flex;align-items:center;justify-content:center;transition:.15s}
+  footer .socials a svg{width:18px;height:18px;fill:var(--mint);transition:.15s}
+  footer .socials a:hover{background:var(--mint);border-color:var(--mint);transform:translateY(-2px)}
+  footer .socials a:hover svg{fill:#0a0a0a}
+  .footbar{max-width:var(--wrap);margin:34px auto 0;border-top:1px solid var(--line);padding-top:20px;display:flex;flex-direction:column;align-items:center;gap:14px}
+  .footnav-dd{display:block;width:100%;max-width:var(--wrap);margin:0 auto;text-align:center}
+  .footnav-dd>summary{list-style:none;cursor:pointer;display:inline-flex;align-items:center;gap:9px;font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.5px;font-size:13px;color:var(--muted);background:transparent;border:1px solid var(--line);padding:8px 16px 6px;transition:.15s}
+  .footnav-dd>summary::-webkit-details-marker{display:none}
+  .footnav-dd>summary:hover{color:var(--mint);border-color:rgba(122,217,168,.45)}
+  .footnav-dd>summary .ham{width:15px;height:15px;fill:currentColor;transform:translateY(-1px)}
+  .footnav-dd .dd-links{display:flex;flex-direction:row;flex-wrap:wrap;justify-content:center;gap:12px 24px;padding:24px 0 4px}
+  .footnav-dd .dd-links a{font-size:11.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:.15s}
+  .footnav-dd .dd-links a:hover{color:var(--mint)}
+  .copyright{font-size:12px;color:var(--dim);text-align:center}
+  @media(max-width:720px){.footgrid{grid-template-columns:1fr;gap:34px}footer{padding:40px 16px 20px}.footbar{margin-top:34px;padding-top:24px;gap:20px}.footnav-dd .dd-links{flex-direction:column;align-items:center;gap:15px}}
+
+  @media(min-width:720px){header.hero{padding:48px 0 6px}}
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "PodcastEpisode", "name": "The Rise and Fall of F45", "url": "https://thenumbersgamepodcast.com.au/the-rise-and-fall-of-f45", "datePublished": "2024-03-04", "episodeNumber": 159, "image": "https://i.ytimg.com/vi/-j4kNHEGVx0/maxresdefault.jpg", "partOfSeries": {"@type": "PodcastSeries", "name": "The Numbers Game", "url": "https://thenumbersgamepodcast.com.au/"}}</script>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-in">
+      <a class="brand" href="/" aria-label="The Numbers Game home"><img src="assets/tng-logo.png" alt="The Numbers Game"></a>
+      <div class="navlinks">
+        <a href="/">Home</a>
+        <div class="navgroup">
+          <a class="navtop">Episodes</a>
+          <div class="subnav">
+            <a href="/episodes">All episodes</a>
+            <a href="/adventure">Find moments</a>
+          </div>
+        </div>
+        <div class="navgroup">
+          <a class="navtop">About</a>
+          <div class="subnav">
+            <a href="/about">The show</a>
+            <a href="/nick-reilly">Nick Reilly</a>
+            <a href="/jason-robinson">Jason Robinson</a>
+          </div>
+        </div>
+        <a href="/contact">Contact</a>
+      </div>
+      <button class="navburger" id="navburger" type="button" aria-label="Menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24"><path d="M3 6h18v2H3zM3 11h18v2H3zM3 16h18v2H3z"/></svg>
+      </button>
+    </div>
+    <div class="navdrop" id="navdrop" hidden>
+      <a href="/">Home</a>
+      <span class="navlabel">Episodes</span>
+      <a class="sub" href="/episodes">All episodes</a>
+      <a class="sub" href="/adventure">Find moments</a>
+      <span class="navlabel">About</span>
+      <a class="sub" href="/about">The show</a>
+      <a class="sub" href="/nick-reilly">Nick Reilly</a>
+      <a class="sub" href="/jason-robinson">Jason Robinson</a>
+      <a href="/contact">Contact</a>
+    </div>
+  </nav>
+
+  <main class="wrap">
+
+    <header class="hero">
+      <div class="hook">
+        <span class="eptag">EP 159</span>
+        <h1 class="hk"><span class="hkrow"><span>The Rise and</span></span>
+        <span class="hkrow"><span class="mintseg">Fall of F45</span></span></h1>
+      </div>
+    </header>
+
+    <div class="player-wrap" id="player-wrap">
+      <div class="player" id="player">
+        <button class="facade" id="facade" style="background-image:url('https://i.ytimg.com/vi/-j4kNHEGVx0/maxresdefault.jpg')" aria-label="Play episode">
+          <span class="play"></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="explore">
+      <div class="tabs" role="tablist">
+        <button class="tabbtn on" data-panel="p-summary">Summary</button>
+        <button class="tabbtn" data-panel="p-chapters">Chapters<span class="ct" id="chcount"></span></button>
+        <button class="tabbtn" data-panel="p-questions">Questions<span class="ct" id="qcount"></span></button>
+      </div>
+      <section class="tpanel" id="p-summary">
+        <div class="summary-body">
+          <p>Jason unpacks the rise and fall of F45, the Aussie fitness franchise that scaled to 2,200 studios across 60 countries, IPO'd at a 1.4 billion dollar valuation with Mark Wahlberg backing it, and has since collapsed to around 114 million with over a hundred studios for sale. Using a smartcompany.com.au teardown, he shows how percentage-of-revenue franchise fees punished growth, how branded-equipment margins and pulled financing hurt franchisees, and how the numbers and brand value unravelled. Nick and Marty then zoom out to franchising in general: easily duplicated fitness fads, handcuff exit terms, doing due diligence on the franchisor's own financials, and whether you're better building your own brand than paying half your revenue for a name on the door.</p>
+        </div>
+        <div class="vask">
+          <button class="vbtn" id="vbtn" type="button">
+            <svg viewBox="0 0 24 24"><path d="M12 14a3 3 0 0 0 3-3V6a3 3 0 1 0-6 0v5a3 3 0 0 0 3 3zm5-3a5 5 0 0 1-10 0H5a7 7 0 0 0 6 6.92V21h2v-3.08A7 7 0 0 0 19 11h-2z"/></svg>
+            Send us a voice note
+          </button>
+          <div class="vslot" id="vslot" hidden>
+            <div class="vhead">
+              <p class="vmsg">We'd love to hear from you. You can leave up to a 90 second voice note for us to play on the show: a question, some feedback, or a topic you want covered.</p>
+              <button class="vclose" id="vclose" type="button" aria-label="Close">&times;</button>
+            </div>
+            <iframe src="https://www.speakpipe.com/widget/inline/hhq6kzggsx7zpcsvakgxfrzun3zidpde" allow="microphone" width="100%" height="200" frameborder="0" title="Leave The Numbers Game a voice note"></iframe>
+          </div>
+          <script async src="https://www.speakpipe.com/widget/loader.js" charset="utf-8"></script>
+        </div>
+        <div class="sumfacts">
+          <div class="fact"><span class="fl">Release date</span><span class="fv">4 March 2024</span></div>
+          <div class="fact"><span class="fl">Hosts</span><span class="fv"><a href="/nick-reilly">Nick Reilly</a>, <a href="/jason-robinson">Jason Robinson</a> &amp; <a href="/marty-vidakovic">Marty Vidakovic</a></span></div>
+
+        </div>
+      </section>
+      <section class="tpanel" id="p-chapters" hidden>
+        <p class="hint">Jump straight to the part you need.</p>
+        <div id="chapters"></div>
+      </section>
+      <section class="tpanel" id="p-questions" hidden>
+        <p class="hint">Real questions this episode answers. Tap one to hear the answer.</p>
+        <div id="qa"></div>
+      </section>
+    </div>
+
+    <div class="drops">
+
+      <details class="drop">
+        <summary><span class="st">Episode transcript</span><span class="chev">+</span></summary>
+        <div class="drop-body tbody">
+          <p><span class="spk">Jason · 00:00</span>Welcome to episode 159 of The Numbers Game. I'm Jase. I'm here with Nick and Marty. How you going today, fellas? I'm excited</p>
+          <p><span class="spk">Marty · 00:08</span>and I don't know when this episode is going to drop, but Valentine's Day is coming up and um, I've got a jealousy issue in the household where the dog, Penny Lane, will not let me touch my missus at all without either going at me or my missus.</p>
+          <p><span class="spk">Marty · 00:24</span>Talk about, you know, big jealousy issues. Don't know what I'm going to do. Don't want to put it down, obviously, but, you know, intimacy is important to me, so, gotta work through it, gotta work through it. Nick, how are you going? Hope you're good, mate.</p>
+          <p><span class="spk">Nick · 00:38</span>Uh, yeah, good, good. Just a bit windy outside, so I'm suffering a bit of, uh, a bit of hay fever today.</p>
+          <p><span class="spk">Nick · 00:43</span>It's actually got me, so, might be another coughing fit, but, um, other than that, mate, yeah, um, fighting fit, can't complain. Just getting footy season, it's coming, uh, cricket's gone, um, yeah. I</p>
+          <p><span class="spk">Nick · 01:00</span>love and been keep up to date with uh, your cricket, your cricket nights, every cricket, every day is a cricket day for you at the moment.</p>
+          <p><span class="spk">Nick · 01:06</span>So yeah, maybe, maybe fill us in on that mate, because you are very excited about it, but you're down the nets, down the nets after work every night now, just, you know, putting a few back over Charlie's head. Any updates?</p>
+          <p><span class="spk">Marty · 01:20</span>Every night at the moment, but he's loving it. He, um, I think it's Lasif Malinga, who's a Sri Lankan bowler, um, coaches in June.</p>
+          <p><span class="spk">Marty · 01:30</span>At top line out in Bayswater and he's found out all about it and he wants bowling coaching off, you know, Sri Lankan legend. So, um, yeah, so I've, I've got to sort that out now. Goodness me.</p>
+          <p><span class="spk">Nick · 01:43</span>Is he leaning towards, um, fast, medium pace, um, wrist spinner, finger spinner? What's</p>
+          <p><span class="spk">Marty · 01:51</span>your Yeah, he, he likes, he likes pace.</p>
+          <p><span class="spk">Marty · 01:53</span>He likes bowling me. He loves that, but he's very interested in leg spin. So very</p>
+          <p><span class="spk">Marty · 02:00</span>interested, um, so there's a, there's a coach Lal who used to coach the Hong Kong international team. Um, I don't know how good Hong Kong are, but he's down at top line as well. So we're going to get some wrist spin lessons as well.</p>
+          <p><span class="spk">Marty · 02:13</span>So right into it. Sorry,</p>
+          <p><span class="spk">Nick · 02:15</span>Jase. We'll get you in a minute. We're just, we're just talking about Charlie's</p>
+          <p><span class="spk">Jason · 02:18</span>cricket career here, but our followers want to keep updates on Charlie. So I get it. That's fine.</p>
+          <p><span class="spk">Nick · 02:22</span>Yeah, and I'm just thinking, you know, being a, uh, a young guy that's into the business side of things, uh, statistics, um, chess, strategy, I, you know, he'd probably really love the, the strategy of being a spin bowler and, you know, setting, setting batsmen up to, to, to take the wickets out.</p>
+          <p><span class="spk">Marty · 02:42</span>There's this, if you Google it, well, get it on YouTube, there's this nine year old leg spinner in India. I don't know what his name is, but just look up nine year old leg spinner. And he's an absolute freak and Charlie's all over it. He's just ballin adults, just</p>
+          <p><span class="spk">Marty · 03:00</span>incredible. So yeah, he's got his eye on duplicating that.</p>
+          <p><span class="spk">Marty · 03:03</span>So yeah. Watch this Space Australia, don't worry about the Shane Warne stand, the Charlie Martin stand's going to be, uh, next in line. So yeah, pretty cool.</p>
+          <p><span class="spk">Nick · 03:13</span>Jase, how are you,</p>
+          <p><span class="spk">Jason · 03:13</span>mate? Mate, good. Before we, uh, just to, so this is know what's on the horizon. We are doing a fire, a teardown, well, resharing a teardown of F45 and then talking about the franchise space.</p>
+          <p><span class="spk">Jason · 03:24</span>But it's funny, you guys always get me thinking about random things. You know, Marty starts off with the dog and the missus and, and what jumps to my mind is that. I have the same problem at home, but it's the cat like refuses to let me go anywhere near Casey. The cat is always there, sleeps on Casey's chair, sleeps cuddled into Casey.</p>
+          <p><span class="spk">Jason · 03:43</span>I'm like pushed into the corner of the bed, like less than a third of the bed. So I feel you, Marty. I feel you. And if you come up with a solution about it, it's not right. No, it's not. And then also every time you guys start talking about cricket, I feel like I need to get back into it. So maybe, uh, end of.</p>
+          <p><span class="spk">Jason · 03:58</span>This year, once all my</p>
+          <p><span class="spk">Jason · 04:00</span>marathons are out of the way, London, Gold Coast, Chicago, I might rebirth the cricket career,</p>
+          <p><span class="spk">Nick · 04:05</span>but anyway. Marty's joining, um, the supers, so there could be, if you're happy to get down to the Yarra Valley there somewhere, you might be able to. Jump in his tape, kept the coach of his last time.</p>
+          <p><span class="spk">Nick · 04:16</span>So he'll go straight to the top of the new one as well. So you, you know,</p>
+          <p><span class="spk">Marty · 04:19</span>Jayce, you might have to put some, you might have to put some gray tint in your hair though, just to bring out a walking stick as you bring your cricket bag down, just to compete with the elites. This is</p>
+          <p><span class="spk">Jason · 04:31</span>my kind of time. This is my kind of scene that if you're telling me that I could be good in this group, I'm interested, but speaking of being good, speaking of, uh, being interesting, let's, uh, fire up and, and talk about, uh, you know, I've brought something to the team, big shout out up front to Jason Andrews, who's a fellow accountant.</p>
+          <p><span class="spk">Jason · 04:50</span>He does these interesting segments on LinkedIn where he tears down businesses. And the reason this kind of popped back up into mind. So by background, I want to talk a bit about F45.</p>
+          <p><span class="spk">Jason · 05:00</span>Now, to talk you guys into what got this on my path, I keep an eye on businesses that are, you know, up for sale and then businesses that are going to liquidation.</p>
+          <p><span class="spk">Jason · 05:08</span>And over the last year, almost every second week, I've seen an article pop up that talks about another F45 in Australia goes into administration or liquidation. Another F45 shuts down, another F45 rebrands and changes to something else. So it's kind of, um. Constantly been on my radar and then the number of businesses for sale about six months ago, there was about 50 F45 businesses for sale around Australia.</p>
+          <p><span class="spk">Jason · 05:35</span>And now, you know, my recent search this morning in prep for this episode had over a hundred. F45 businesses for sale in Australia. So, you know, a couple of episodes ago, we started talking about supply and demand and, you know, for that, it was Superbowl ticket prices going up all of a sudden, if you've got a hundred F45s for sale, Nick, what is the price happening there,</p>
+          <p><span class="spk">Nick · 05:56</span>uh, going.</p>
+          <p><span class="spk">Jason · 05:57</span>Correct. Going down. So</p>
+          <p><span class="spk">Jason · 06:00</span>I thought maybe that was a true question. No, no, no, no trick questions here. So, um, the reason for the shout out Jason Andrews, I've pulled up his article that was actually then published onto smartcompany. com. au really interesting read. I'll share a couple of tidbits out of that.</p>
+          <p><span class="spk">Jason · 06:14</span>But, um, my own, uh, I guess background to you guys, you know, F45 was a massive Aussie success story for, for quite a long time. You know. You couldn't drive through a suburb without seeing an F45. Anyone who did F45 would rave to you and tell you that they were into F45 and they went to the gym this many times per week.</p>
+          <p><span class="spk">Jason · 06:36</span>And maybe they look phenomenal too because they dropped some kilos because they were, they were getting into the gym way more regularly than they may usually due to, I guess, the F45 model, which we'll get to. But so back in the background for F45 just quickly so that I can spend more time talking numbers.</p>
+          <p><span class="spk">Jason · 06:53</span>Cause you know, I know how excited that is exciting. That is for Marty. 2013, Rob and Luke</p>
+          <p><span class="spk">Jason · 07:00</span>launched F45. Uh, the first studio was Paddington Sydney. And basically at 45, as the name suggests, 45 minute workouts, it's hit. So high intensity interval training, um, concept blew up. And within, I think, eight years, eight year time, they launched over 2, 200 franchises across 60, 60 countries worldwide and had, you know, Hollywood A listers like Mark Wahlberg get involved in investing into F45.</p>
+          <p><span class="spk">Jason · 07:31</span>So part of this, you know, rapid expansion, um, they did an IPO in 2021. So it's an initial public offering now as an Aussie business that had then had more of its success expanding into the U S I think the numbers were around, there was 500 to 550 franchises in Australia. And then in a shorter period of time, there was over 800 franchises that popped up into, into the U S.</p>
+          <p><span class="spk">Jason · 07:55</span>So it made sense for them. I'm sure they had advisors and numbers, people</p>
+          <p><span class="spk">Jason · 08:00</span>telling them where it made sense to list and they were listing on the NASDAQ. Um, so through this process, they raised 300 million at a valuation of 1. 4 billion. So before I go any further thoughts on. A rapidly expanding F45 gym. Do you, have you guys ever been to F45?</p>
+          <p><span class="spk">Jason · 08:21</span>Just want to take a little break there before I pummel into some more exciting info. You guys done an F45 class? I have,</p>
+          <p><span class="spk">Nick · 08:27</span>I can't even tell you why, where, because I've never, and the reason I'm saying this, I was never a member. I think I did one in Bali. I think we were looking. To train somewhere in Bali and there was an F45.</p>
+          <p><span class="spk">Nick · 08:40</span>So I went and did a class. Yep. Was</p>
+          <p><span class="spk">Jason · 08:42</span>there one in Bali? Yep. Saminiak had an F45. Yep.</p>
+          <p><span class="spk">Nick · 08:45</span>So yes, I have done one.</p>
+          <p><span class="spk">Marty · 08:46</span>Yep. No, I haven't myself. I haven't been in a gym for 15 years. Can't you tell?</p>
+          <p><span class="spk">Jason · 08:52</span>I didn't want to say anything, Marty, but, uh, you set yourself up for that one. No, no, all good. Yep. So, um, also I think</p>
+          <p><span class="spk">Jason · 09:00</span>I've done one F45 class myself, and I reckon that was traveling somewhere, maybe like a Byron Bay or something, just jumped in and, you know, smashed out a class or a couple of classes.</p>
+          <p><span class="spk">Jason · 09:09</span>Um, so the concept I guess there, and the reason for its success from a membership point of view was. The memberships were quite expensive. So, you know, you're paying 70 a week and what they said, even though it was a relatively simple workout, you know, you got in, you looked at a screen, you did some burpees or some mountain climbers, you had some kettlebells.</p>
+          <p><span class="spk">Jason · 09:30</span>What they were saying was because people were spending so much money on a membership to join part of a community and a cult. They were encouraged to go more times per week than they would if they were spending 10 a week on like, let's say an anytime fitness membership. If you're only spending 10, you're more likely to go, ah, I'm not going to go this week.</p>
+          <p><span class="spk">Jason · 09:49</span>But if you're spending 70 a week on your F45 membership, you've got to go to get value for money. And the more times you go, you're starting to see results. So that was a bit of the method of the</p>
+          <p><span class="spk">Jason · 10:00</span>madness behind F45's success. Now that's from a studios and memberships point of view. So you imagine the expansion, they've grown all over the world.</p>
+          <p><span class="spk">Jason · 10:11</span>They, as I said, the 1. 4 billion valuation. Do you want to have a guess at what it's valued today, Marty, as I then expand into all the issues that they've faced? Oh,</p>
+          <p><span class="spk">Marty · 10:21</span>well, it sounds like it's dramatically on the decline. Um, so I don't know, maybe. One, one tenths, two tenths of what it was worth. Who knows? I don't know.</p>
+          <p><span class="spk">Jason · 10:33</span>One tenth is a pretty bloody good guess, Mark. Really? Current valuation, 114 million. Okay, wow. Down from 1. 4 billion. So if you're talking share price, your share price at its peak was 17. 28 and you're buying shares for 0. 023 today. So, you know, F45, you know, the challenges that they faced, you know, COVID 19 pandemic was a big one.</p>
+          <p><span class="spk">Jason · 10:59</span>I mean,</p>
+          <p><span class="spk">Jason · 11:00</span>people realize that those kinds of workouts you can do from the comfort of your own home. You know, if you bought a kettlebell and a dumbbell set and you have those, all these workouts at home, then you've got the competition. BFTs exploded, Pelotons going mental. You've got Pilates and strong fitness studios.</p>
+          <p><span class="spk">Jason · 11:16</span>You got FitStop. There is just so much competition in the workout space and then also running. I mean, I know Greg and I run and we talk about it a bit, but it seems like there's more people running and getting into running than ever before. I don't know if you guys noticed that as well, but so F45 not only had challenges through the pandemic, but there's also increased competition.</p>
+          <p><span class="spk">Jason · 11:37</span>You then have oversaturated markets and decreasing size of franchise zones. So you'd imagine with F45 selling so many franchises that all of a sudden the customers are competing with the F45 in the next suburb. If you. Think Melbourne between, you know, Sandringham, Blackrock, Hampton, and Brighton, if you've got an F45 in all four of those suburbs, you're</p>
+          <p><span class="spk">Jason · 12:00</span>probably advertising, marketing, and targeting a pretty similar clientele through that area.</p>
+          <p><span class="spk">Jason · 12:04</span>Yes. Yes. Thank you for answering the semi rhetorical question. So I guess effectively, you know, what I wanted to talk through was. A little bit about what made F45 such a success from a numbers point of view at franchise level. So one of the things F45 did extremely well was not just make money on the franchise fees, so to sell the franchise, the brand, the playbook of how to do it.</p>
+          <p><span class="spk">Jason · 12:29</span>But also the amount of money they made on the equipment and merchandise sale as part of that. So anytime you want to increase your equipment, buy another dumbbell, get some, um, barbells and whatnot, everything was F45 branded and had to be purchased through the, the franchisor. So imagine from a sales point of view, not only were they getting a franchise fees.</p>
+          <p><span class="spk">Jason · 12:51</span>Being generated by your initial purchase price of your franchise, then your ongoing percentage of revenue, but then also the upfront and</p>
+          <p><span class="spk">Jason · 13:00</span>ongoing equipment sales of every time you wanted to buy a piece of equipment for your gym. So, you know, F45 continued to grow in that way, ridiculous margins on all of that.</p>
+          <p><span class="spk">Jason · 13:11</span>And then you start to think, well, these business owners who are buying these franchises compared to. You know, the up, the other ones popping up, like your BFTs, your revels, your fit stops that are going everywhere. You now with increased competition comparing, well, how much am I paying F45 and what am I really getting?</p>
+          <p><span class="spk">Jason · 13:30</span>Um, on the other side of that, you know, you've got your issues. Well, I mean, do you guys, did you guys, you know, any, any issues or thoughts from a franchise point of view? Um In that aspect, I mean, it seems like there's a fair bit of handcuffs involved into, and I guess, you know, leveraging, taking a lot of money off franchisees, trying to make a living versus, and then the big franchisor up the top makes all the money and all these businesses seem to be going bankrupt and into liquidation.</p>
+          <p><span class="spk">Marty · 13:59</span>I</p>
+          <p><span class="spk">Marty · 14:00</span>always get concerned on that fast paced growth, you know, is the franchisor purely making money off the franchise? You know, franchise entry fee, and then obviously the equipment being sold. They're making margins on that. For me, it always comes down to is the franchisee running a really profitable business through what the franchise or has set up.</p>
+          <p><span class="spk">Marty · 14:22</span>I mean, that's always a testament to how successful overall it's going to be, but some franchisors from what I've seen in, in franchising over the last 25 years or so. It's all about that speed to market and to get as many, you know, as many areas, you know, sold off as quickly as possible. But again, some of the more successful ones I've seen have established a franchise.</p>
+          <p><span class="spk">Marty · 14:46</span>They made it very profitable and use that blueprint to duplicate that. So it sounds like that. Obviously there was a need in the market. Uh, they were trying to build a culture that was unique. Uh, but again, when</p>
+          <p><span class="spk">Marty · 15:00</span>you say F45 to me, even though I knew it was around and even it's so saturated now with different franchises now, I'm not quite sure what the point of difference is that would win my money.</p>
+          <p><span class="spk">Marty · 15:13</span>You know, if I was making a decision to go to a gym, I'd probably end up just at a gym, right? Because unless something really stood out. So, so were the franchisees winning, um, was there pressure on the franchisees in the business model? And is that why it's all crumbling? It's like a house of cards.</p>
+          <p><span class="spk">Jason · 15:30</span>Yep.</p>
+          <p><span class="spk">Jason · 15:31</span>Yep. And look, the, the beauty, I mean, this smart company article and the way Jason Andrews unpacks it, there's so many different dot points I want to ramble into. Um, yeah, and it's actually mind blowing. I'm hoping one day we end up with a Netflix documentary on what happened to F45, a bit like the WeWorks and all those kinds of things.</p>
+          <p><span class="spk">Jason · 15:48</span>So, um, just on the franchise numbers as well. The other one, anyone, how do I word this in a more succinct way? In Australia, we love franchises. There's, there's</p>
+          <p><span class="spk">Jason · 16:00</span>1200 different franchises to choose from. Um, if you go to franchises Australia and have a look and there's like 800, 000 franchise businesses, you know, you think Subway is a franchise, Jim's Mowing, you know, some McDonald's and Hungry Jack's a franchise owned, um, franchisees and they, they own and run the stores.</p>
+          <p><span class="spk">Jason · 16:17</span>Um, so, you know. Any, any number of businesses out there can be a franchise and some of them work really, really well. And you know, there's, there's a huge amount of respect that goes to the franchises that are doing really, really well and supporting their franchisees. But I always say to clients who come in saying, Hey, I'm thinking about buying into a franchise, you know, buying my own franchise.</p>
+          <p><span class="spk">Jason · 16:38</span>And one of the things is looking at the, the, uh, structure of the fees you need to pay. Are they flat fee? Are they a percentage of revenue? What kind of contractual obligations are you, do you have for refurbishments of your fit out, you know, contributions to marketing fund. There's so many little T's and C's and it's always recommended to get a good lawyer on your side as well when you're doing this, not just an accountant.</p>
+          <p><span class="spk">Jason · 16:59</span>But the example in</p>
+          <p><span class="spk">Jason · 17:00</span>F45. Your typical franchise fee, depending on your patch was, you know, 000 a month, but as the business grew and you hit your revenue targets, it became a percentage of revenue. So if all of a sudden, you know, 3, 000 a month, you're paying 36, 000 a year for your franchise fees, and then you had to buy all the equipment.</p>
+          <p><span class="spk">Jason · 17:20</span>Once you hit your revenue target, you went up, let's say you grew your gym memberships to a million dollars a year. Next thing you're handing over 80, 000 in, uh, franchise fees rather than 36, 000 you were paying the year before when you were under the revenue target. So you're almost limited in your, you know, your desire to grow your business because all of a sudden your margins were being hit.</p>
+          <p><span class="spk">Jason · 17:41</span>Um, so that was one of the major things that happened in that area. And that's, you know, then when you compare to the other potential franchises out there these days, that's why the franchises have stopped growing to the numbers that they were. Then there's the, I guess the market, um, noise that was out there.</p>
+          <p><span class="spk">Jason · 17:58</span>So Mark Wahlberg</p>
+          <p><span class="spk">Jason · 18:00</span>invested, he got a pretty decent stake in F45 pretty early on. So he invested, uh, I've got the numbers here. He invested a hundred million dollars into F45 at a valuation of 450 million two years before the IPO. Now, once the IPO happened, obviously he made a pretty good return. He got about a 4X uplift on his hundred million.</p>
+          <p><span class="spk">Jason · 18:27</span>So, um, once it IPO'd, his shares were worth four times what he put in. Then. After it IPO'd, he made two major sales for 6 million worth of shares in Tranche 1, 6 million worth of shares in Tranche 2, right when the company was still kind of valued up and before it made any major announcements about its downturn in sales targets.</p>
+          <p><span class="spk">Jason · 18:51</span>Now once all of his sales, it's a pretty steep downward slope after Marky Wahlberg got out. Now I'm not saying Mark had insider information, just saying that</p>
+          <p><span class="spk">Jason · 19:00</span>from an. Outsider public perspective. All of a sudden you started to get whispers and noise around what was really happening at F45. The CEO stepped down, the CFO stepped down, the noise continues.</p>
+          <p><span class="spk">Jason · 19:12</span>And then you've also got public figures, brand ambassadors, and influencers that were working with F45 that then came out. David Beckham said something like along the lines of he was owed nearly 19 million us dollars. For a series of broken contracts as part of being a brand influencer and some of the marketing contracts.</p>
+          <p><span class="spk">Jason · 19:33</span>So then if you imagine legal battles, you've got David Beckham's legal team suing F45, um, Greg Norman came out and said he was owed money by a 45. So, and the down, the Paul, you know, the thing that I. Really upsets me when I work with these, some of these franchisees that have paid money to run a 45 gyms is it's all out of their control.</p>
+          <p><span class="spk">Jason · 19:54</span>Overall, ultimately at the end of the day, they're still got to pay their monies to at 45, um, the franchise.</p>
+          <p><span class="spk">Jason · 20:00</span>They've still got to buy their equipment through F45. They're contractually obliged. The popularity of F45 with all the negative press means that people are looking for alternatives of where they train.</p>
+          <p><span class="spk">Jason · 20:11</span>Now, not saying the everyday Aussie punter cares about what's happening in the news. Sometimes there's all these different touch points of things that you read and see that would make you not necessarily trust a brand as much as what you would in the past. And that for me is one of the biggest things you buy when you buy a franchise is you're buying the brand value.</p>
+          <p><span class="spk">Jason · 20:29</span>Thoughts on all of that. And were you aware of, um, how much was going on in F45 land? You've probably seen a bit of this pop up along the way. Oh, look, uh,</p>
+          <p><span class="spk">Nick · 20:37</span>I wasn't aware to the extent, um, I did know that a lot of them were closing down. Um, but yeah, I'm, you know, and this could be a subjective view. So I'm open to everyone thinking I'm very subjective.</p>
+          <p><span class="spk">Nick · 20:54</span>I wouldn't get, go nowhere near any fitness franchise, F45, whatever you want to</p>
+          <p><span class="spk">Nick · 21:00</span>call it. Like for me, anything that's easily duplicated, that's dependent on people's budgets and that's easy to cancel, um, when things are tight, um, that is very habit dependent. Um, and can also be seen as a fad. Um, let's be honest, fitness, fitness things are fads, diets are fads.</p>
+          <p><span class="spk">Nick · 21:23</span>There's always a new way to be fit or a new method of training that's, that's a fad. I just think, um, I just, I think if you're an investor, I think any kind of fitness. Um, franchise is a recipe for disaster, unless you can make, unless that's what you really want to do, which is fine, some people want to do that, and then you can make that work without the franchise if something goes wrong, no problem.</p>
+          <p><span class="spk">Nick · 21:47</span>But for me, if I'm going into a franchise, I'm looking at Okay, who's been around for 20 years? So I'm looking at McDonald's, right? And I know the barrier to entry there is very high as a franchise owner.</p>
+          <p><span class="spk">Nick · 22:00</span>Um, but I'm looking at, um, you know, necessities, food, things that people need. Um, the things that people can't go without, uh, before I'm buying a franchise, because I really want that franchise to do for me something that I can't do.</p>
+          <p><span class="spk">Nick · 22:15</span>Um. You know, I can't be, I can't advertise and market like a McDonald's. I can't be a McDonald's. Um, so I think if I want to set up a fast food chain, I'm going to have far better success. But if I'm at 45, that's been around, not that long is growing really quickly. Anyone who knows business knows that growth costs a lot of money.</p>
+          <p><span class="spk">Nick · 22:38</span>Um, and there's some other, uh, there's a lot of other, uh, fitness franchises out there at the moment who are growing. Um, I would not go near any of them. Oh, I would seriously consider what I could do personally, um, without them. If, if I chose to go down that, that path. Um. And I wish, um, maybe we can come back with some research on</p>
+          <p><span class="spk">Nick · 23:00</span>this, Jason, in a later episode, because we haven't had time to do that, but I'd love to go through a list of some other fitness franchises that have been and gone in the last 10 years.</p>
+          <p><span class="spk">Nick · 23:10</span>I don't know, I'm guessing, but, um, I reckon there'd be a lot. I reckon there'd be a lot, and it's because Easily duplicated. It's a budget thing when people don't have the money. It's one of the first things I can get rid of. You can't get rid of certain insurances. You can't get rid of your mortgage. Can't stop doing your tax, but you can drop, uh, your gym membership.</p>
+          <p><span class="spk">Nick · 23:31</span>And they're so habit dependent. There's a new influencer that comes out and starts to, um, promote a new way of training, and that becomes the next thing. The best thing that's probably spent. Uh, the test of time, stood the test of time that I can think of is, um, lately has been CrossFit. Um, and I don't know if that works as a franchise model or not.</p>
+          <p><span class="spk">Nick · 23:52</span>I know it's just a method of training, but that, that seems to still be around, but these, these brands and these, um, flashy</p>
+          <p><span class="spk">Nick · 24:00</span>brands. And there's a few more coming up now. Um, I don't know, I just, I just, I've struggled with sync. A lot of them are going to be here in 10, 15 years. That's</p>
+          <p><span class="spk">Marty · 24:09</span>a great question. The other thing you could ask yourself is a lot of the times the franchise feed into those types of industries.</p>
+          <p><span class="spk">Marty · 24:15</span>Uh, quite substantial, like could you create your own brand for half the cost? Now it takes a bit of work, but then you've got a unique point of difference that's linked to you as opposed to being generic across a brand as well. Now if you've got the ability to do that, you might have something a bit more sustainable as long as the numbers stack up.</p>
+          <p><span class="spk">Marty · 24:37</span>Behind it, and you could cherry pick in your investigations as to what some of them do well, what some of them don't do well, as a, as a sort of business plan test case. Um, I just think you've got to consider that as well as if you're going into a franchise, but Nick hit it on the head. I just go, it's, it's, you know, handcuff arrangements, even trying to exit that type of business,</p>
+          <p><span class="spk">Marty · 25:00</span>there are parameters in regards to the franchise or.</p>
+          <p><span class="spk">Marty · 25:02</span>will, you know, delegate based on you trying to exit on their terms and it might on their conditions. So you're hamstrung a lot of different ways and you don't want to get out of the nine to five to get a 24 seven and then not be productive and lucrative. You know, it's, it's, if you're making a call to go into business, you've got to think, what's, what's your greatest return given the capabilities you have and making it work.</p>
+          <p><span class="spk">Nick · 25:30</span>We've seen in our own industry, Marty, I'm not going to mention franchise names, but most franchises in our industry, if you ask the owners, if they had their time again, 99. 9 percent of them would say they would not go down the franchise path because they get stuck and they get stuck into a deal that's not as good as it should be.</p>
+          <p><span class="spk">Nick · 25:50</span>Um, but when you're stuck there and you've really got to start again to leave, it becomes too hard a decision to make because you know, you built your life around</p>
+          <p><span class="spk">Nick · 26:00</span>that particular business. So,</p>
+          <p><span class="spk">Marty · 26:03</span>and they control your revenues sometimes in our industry as well. So when you do leave, you're not guaranteed to get.</p>
+          <p><span class="spk">Marty · 26:10</span>You know, your passive revenue that you get paid on certain dealings and, you know, lots and lots of, uh, red flags to look out for. And you've got to do your research up front before you go into them, um, not just say, oh, this was bad on the back end. You, like you said, get a good legal team around it, um, lawyer, you know, accountant, like friends, family, you know, business people, you know.</p>
+          <p><span class="spk">Marty · 26:34</span>Um, just pressure test it. And if it's, if it's right for you, then great. But, Oh, geez, I've seen a lot go,</p>
+          <p><span class="spk">Marty · 26:40</span>go</p>
+          <p><span class="spk">Jason · 26:40</span>and miss. Yeah. I was going to say like, one of the things, you know, you boys do a bit of obviously is mortgage broking and getting finance for people. And that was one of the other areas that was noted as being a huge issue of the future growth of F45 franchises is that all of a sudden the funding was pulled.</p>
+          <p><span class="spk">Jason · 26:56</span>Like anyone who came along and said, yep, I want to start an F45</p>
+          <p><span class="spk">Jason · 27:00</span>franchise. Um, and historically you could fund the whole upfront or you can put in a deposit, their financing company would help you fund F45. You could set it up and running, you could have a loan. You could have your, you know, call it a hundred grand loan for your a hundred grand worth of franchise fees upfront and your equipment, and you'd get your rent and you'd sign on the dotted line and away you'd go, you'd start advertising to bring customers in.</p>
+          <p><span class="spk">Jason · 27:25</span>And a lot of that would be funded by. You know, the finance company, as soon as that funding stopped, because the risk was too high. Um, all of a sudden that was where they slashed, you know, they, they told their investors at the IPO, they're expecting to launch one and a half thousand new franchises over the coming years.</p>
+          <p><span class="spk">Jason · 27:42</span>And then they slashed that number to around 300 to 400, because The financing stop, they weren't able to finance people to do it. So it relied on people rocking up with a bag full of cash to do it themselves. So again, anyone who's thinking about getting into a business and it's going to take a giant loan to go and purchase the business, the franchise, or</p>
+          <p><span class="spk">Jason · 28:00</span>start a business from scratch, you need to have your ducks lined up.</p>
+          <p><span class="spk">Jason · 28:02</span>You need to have your advisors on board and you need to have the right people around you to advise you to get this thing done properly, because business is not. Not easy. And even when you've got a recipe for success, a proven, apparently proven model, a brand and marketing and advertising sorted, it's still not a guaranteed plan for success.</p>
+          <p><span class="spk">Jason · 28:21</span>Here's a little</p>
+          <p><span class="spk">Marty · 28:22</span>tip too, is if you're looking at, you know, buying an established franchise, you look at the financials of that franchise, but ask to see the financials of the core franchisor group as well. So you can see what their strength is because again, no point having a decent franchise that you've purchased if the house of cards is going to fall down.</p>
+          <p><span class="spk">Marty · 28:42</span>And if they don't want to give you that information. Again, there's a red flag straight away. So it's just a little tip if you're doing that. Um, and that's just due due due diligence. Did I say it? Due diligence, but that's, that's all that is to protect yourself. And you want autonomy. You want</p>
+          <p><span class="spk">Marty · 29:00</span>independence and control over your financial future in business.</p>
+          <p><span class="spk">Marty · 29:03</span>And sometimes. You know, enfranchising that can be taken away from you, even when you're doing well. So you just got to weigh it up.</p>
+          <p><span class="spk">Nick · 29:11</span>Yeah. And you know, Jase, we're, we're, we're talking about the listed entity here, right? What we're not talking about is young people and mums and dads who probably borrowed anywhere between 250 to 500 K to set an F45 up from a, you know, bond for rent, sign lease agreements, um, fit outs, which have to be in line with the F45 brand.</p>
+          <p><span class="spk">Nick · 29:33</span>Um, generally have to have a specific fit out person, fit them out. Um, these people are carrying debts to run these businesses. So I would encourage people to say, okay, well, what does it look like if I go down the franchise path versus if I do this for myself? Now, the first thing that's going to happen is you're going to say, well, I'm not going to grow as quick because I'm not going to have that brand.</p>
+          <p><span class="spk">Nick · 29:57</span>I'm not going to have the marketing behind me,</p>
+          <p><span class="spk">Nick · 30:00</span>but you're all also not going to have the costs. So, you know, look at what have I did this organically now? Well, number one, could I do this organically myself, grow a little bit slower with a lot more costs and you might grow slower, but you might find your end result being your net profit is more.</p>
+          <p><span class="spk">Nick · 30:15</span>Or is there another business out there, um, that I can take over? Is someone already doing this? Is there a, is there a gym somewhere where there's an older owner who wants to get out? It's got a decent client base. I know I can go in there and, you know, I'm thinking about the year 2024, I know I can go in there and put a couple of ice baths and a couple of saunas and, you know, the things I can make more money out of this place.</p>
+          <p><span class="spk">Nick · 30:39</span>So just look at alternatives and don't think because you see a flashy brand, um, behind a particular, um, well, it doesn't just have to be fitness, uh, but business, that that's the only way to go forward and, and build a business. And sometimes a big brand and more revenue doesn't mean net profit. More net profit.</p>
+          <p><span class="spk">Nick · 30:58</span>And you'd know that better than anyone,</p>
+          <p><span class="spk">Nick · 31:00</span>Jace, because you've seen. So many of them, um, and, you know, you want to get a really good understanding of, you know, how a business is trading. Show me someone who's been trading for 10 years. Show me someone who's managed to then sell the business and actually retire versus, um, you know, in 10 years they can't do anything with it and their memberships are going backwards.</p>
+          <p><span class="spk">Nick · 31:21</span>So, um, lots of DD to be done, being due diligence. And we</p>
+          <p><span class="spk">Marty · 31:26</span>talked about this in previous episodes in regards to merchant fees on your money in the digital age, you know, if that 100 gets clipped, you know, with merchant costs and various different costs throughout the process, that 100 is only worth maybe 70 bucks, right?</p>
+          <p><span class="spk">Marty · 31:42</span>And that's the same as As you know, when you go into a franchise, so you have to then think about, you know, what value are you getting for that 30? And is that in some way, you know, amplifying your position, uh, to what you could do yourself, because you're going to get that</p>
+          <p><span class="spk">Marty · 32:00</span>full hundred bucks yourself time and time again, and it compounds.</p>
+          <p><span class="spk">Marty · 32:04</span>So. Yeah, it's funny just talking about it today, I'm going, I actually, I'm not a franchise advocate at all, even, I didn't, I was probably impartial and neutral until we had this discussion, but the more I think about it over time and various people that have gone into them, I think it's good if you're just buying a job.</p>
+          <p><span class="spk">Marty · 32:25</span>If you just want to buy a job and you know, you're getting a patch, you get the marketing, you're not really entrepreneurial oriented. I think it can work from that proviso, but if you really have an entrepreneurial flair and you want to build a business and you want to expand upon a business and duplicate your own brand.</p>
+          <p><span class="spk">Marty · 32:46</span>Um, that's going to be a much more value down the track, but you've got to be that type of person too. So I see where it fits and it's interesting. Like I've seen, and this is, this reminds me, I was coaching a mortgage broker</p>
+          <p><span class="spk">Marty · 33:00</span>and they went into one of the major franchises and they came out of financial planning to go into mortgage broking and they wanted systems set up.</p>
+          <p><span class="spk">Marty · 33:09</span>They weren't confident in going out on their own and establishing a brand. They wanted that support. And they were happy to pay the fee and they earned okay money. And I'm sitting there going, Oh my goodness, you're only getting paid half of what we would get paid external to this franchise and only a portion of the passive trail that you would get on a loan here.</p>
+          <p><span class="spk">Marty · 33:31</span>And, and I know that franchise has changed this dynamic since then, um, to give more away, but I go, I just couldn't. Couldn't comprehend it in my mind that someone would give up over half their revenue, um, for the sake of a brand that you put on the front door. It just Just didn't make sense to me.</p>
+          <p><span class="spk">Jason · 33:51</span>A hundred percent.</p>
+          <p><span class="spk">Jason · 33:52</span>Well, I don't think this will be the last time we talk about, uh, businesses and franchises and what works and what doesn't. And I am interested in what you said, Nick, about, you</p>
+          <p><span class="spk">Jason · 34:00</span>know, over the last 10 years, which businesses came and went in the franchise or especially the fitness space. So we'll, uh, come back to you and report back on that.</p>
+          <p><span class="spk">Jason · 34:07</span>But for those listeners out there, if you do know someone who. Maybe struggling in business and things aren't going to plan the best thing they can do is speak to an advisor, speak to an expert, get somebody in their corner that can help them out of this situation. Um, you know, we, we, Nick, Marty, and I deal with, uh, all different things all day, every day.</p>
+          <p><span class="spk">Jason · 34:25</span>So we're always happy to help and can be reached out to, um, at the numbers game online. Uh, whether it's LinkedIn to us three straight connects or whether it's through our socials. Or hello at thenumbersgamepodcast. com. au. We're here to help. We're here to serve. We love helping business owners, and this has just been a bit of an unpack of an interesting business model at the moment, but there's plenty of interesting ones out there.</p>
+          <p><span class="spk">Jason · 34:47</span>So we've got your back until next time.</p>
+          <p><span class="spk">Marty · 34:50</span>If you're running a franchise really successfully, let us know. We want to actually, I'm serious. If you know of people that</p>
+          <p><span class="spk">Marty · 35:00</span>are running a successful franchise, let us know what they are, who they are, uh, cause again, it's only a perspective that we're sharing here today, so we wanna learn too.</p>
+          <p><span class="spk">Marty · 35:10</span>So yeah, hit us up. Game over. ---</p>
+        </div>
+      </details>
+
+    </div>
+
+    <!-- LISTEN:START (build_episode.py rewrites the 3 URLs + iframe title per episode; player dropped if no spotifyEmbedUrl) -->
+    <section class="listen-now">
+      <div class="ln-head">
+        <span class="ln-title">Listen now</span>
+      </div>
+      <div class="audio-embed">
+        <iframe src="https://open.spotify.com/embed/episode/0RiCQAzPBAdeDSb5pDCeqh?utm_source=generator"
+          width="100%" height="152" loading="lazy" allowfullscreen
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+          title="Spotify — The Rise and Fall of F45"></iframe>
+      </div>
+    </section>
+
+    <div class="listen">
+      <a href="https://open.spotify.com/episode/0RiCQAzPBAdeDSb5pDCeqh" target="_blank" rel="noopener" aria-label="Listen to this episode on Spotify">
+        <svg viewBox="0 0 24 24"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.52 17.34c-.24.36-.66.48-1.02.24-2.82-1.74-6.36-2.1-10.56-1.14-.42.12-.78-.18-.9-.54-.12-.42.18-.78.54-.9 4.56-1.02 8.52-.6 11.64 1.32.42.18.48.66.3 1.02zm1.44-3.3c-.3.42-.84.6-1.26.3-3.24-1.98-8.16-2.58-11.94-1.38-.48.12-1.02-.12-1.14-.6-.12-.48.12-1.02.6-1.14 4.32-1.32 9.72-.66 13.44 1.62.36.18.54.78.3 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.3c-.6.18-1.2-.18-1.38-.72-.18-.6.18-1.2.72-1.38 4.26-1.26 11.28-1.02 15.72 1.62.54.3.72 1.02.42 1.56-.3.42-1.02.6-1.56.3z"/></svg>
+        Spotify
+      </a>
+      <a href="https://podcasts.apple.com/au/podcast/id1555566088?i=1000647824720" target="_blank" rel="noopener" aria-label="Listen to this episode on Apple Podcasts">
+        <svg viewBox="0 0 24 24"><path d="M5.34 0A5.328 5.328 0 000 5.34v13.32A5.328 5.328 0 005.34 24h13.32A5.328 5.328 0 0024 18.66V5.34A5.328 5.328 0 0018.66 0H5.34zm6.525 2.568c2.336 0 4.448.902 6.056 2.587 1.224 1.272 1.912 2.619 2.264 4.392l.04.23c.04.272-.16.527-.432.567a.505.505 0 01-.567-.431l-.04-.213c-.312-1.57-.92-2.747-2.004-3.867-1.428-1.496-3.293-2.294-5.393-2.294-2.1 0-3.966.798-5.394 2.294-1.084 1.12-1.692 2.298-2.004 3.867l-.04.213a.507.507 0 01-.567.431.504.504 0 01-.432-.567l.04-.23c.352-1.773 1.04-3.12 2.264-4.392 1.608-1.685 3.72-2.587 6.056-2.587h.153zm.136 3.033c1.74 0 3.312.67 4.527 1.934.883.916 1.394 1.93 1.663 3.253l.04.23a.505.505 0 01-.431.567.503.503 0 01-.567-.432l-.04-.212c-.23-1.112-.659-1.97-1.396-2.732-1.052-1.1-2.404-1.672-3.9-1.672s-2.849.572-3.901 1.672c-.737.762-1.167 1.62-1.396 2.732l-.04.212a.503.503 0 01-.567.432.505.505 0 01-.432-.567l.04-.23c.27-1.323.78-2.337 1.664-3.253 1.215-1.264 2.787-1.934 4.527-1.934h.21zm-.078 3.05c1.092 0 2.091.424 2.89 1.22.582.58.924 1.245 1.107 2.15l.04.218a.501.501 0 01-.424.568.499.499 0 01-.568-.424l-.04-.198c-.146-.724-.413-1.253-.871-1.716-.63-.63-1.398-.957-2.226-.957s-1.595.328-2.225.957c-.459.463-.726.992-.871 1.716l-.04.198a.499.499 0 01-.568.424.501.501 0 01-.424-.568l.04-.219c.183-.904.525-1.569 1.106-2.149.8-.796 1.799-1.22 2.89-1.22h.184zM12 14.07a2.477 2.477 0 012.48 2.478A2.477 2.477 0 0112 19.024a2.477 2.477 0 01-2.48-2.477A2.477 2.477 0 0112 14.07z"/></svg>
+        Apple
+      </a>
+      <a class="yt-pill" href="https://www.youtube.com/@thenumbersgamepodcast?sub_confirmation=1" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.12-2.14C19.5 3.55 12 3.55 12 3.55s-7.5 0-9.38.51A3 3 0 0 0 .5 6.2 31.4 31.4 0 0 0 0 12a31.4 31.4 0 0 0 .5 5.8 3 3 0 0 0 2.12 2.14c1.88.51 9.38.51 9.38.51s7.5 0 9.38-.51a3 3 0 0 0 2.12-2.14A31.4 31.4 0 0 0 24 12a31.4 31.4 0 0 0-.5-5.8zM9.55 15.57V8.43L15.82 12z"/></svg>
+        Subscribe
+      </a>
+    </div>
+    <!-- LISTEN:END -->
+
+    <div class="relsec">
+      <span class="rtitle">Discover more</span>
+      <div class="relgrid">
+        <a class="relcard" href="/should-australia-ditch-super">
+          <img src="https://i.ytimg.com/vi/kaeaiK_FwDg/hqdefault.jpg" alt="EP 287 thumbnail">
+          <span class="rt">Should Australia Ditch Super?</span>
+          <span class="rfoot"><span class="rwhy">27 July 2026</span><span class="rtag">EP 287</span></span>
+        </a>
+        <a class="relcard" href="/pokemon-cards-vs-bitcoin-gold-and-the-asx">
+          <img src="https://i.ytimg.com/vi/7PHS9HCqNvM/hqdefault.jpg" alt="EP 286 thumbnail">
+          <span class="rt">Pokemon Cards vs Bitcoin, Gold and the ASX</span>
+          <span class="rfoot"><span class="rwhy">20 July 2026</span><span class="rtag">EP 286</span></span>
+        </a>
+        <a class="relcard" href="/buying-commercial-property-with-your-super-in-2026">
+          <img src="https://i.ytimg.com/vi/RAQ80ecsDq0/hqdefault.jpg" alt="EP 285 thumbnail">
+          <span class="rt">Buying Commercial Property With Your Super in 2026</span>
+          <span class="rfoot"><span class="rwhy">13 July 2026</span><span class="rtag">EP 285</span></span>
+        </a>
+        <a class="relcard" href="/the-most-expensive-day-in-aussie-small-business-history">
+          <img src="https://i.ytimg.com/vi/V-10kMQrsDM/hqdefault.jpg" alt="EP 284 thumbnail">
+          <span class="rt">The Most Expensive Day in Aussie Small Business History</span>
+          <span class="rfoot"><span class="rwhy">6 July 2026</span><span class="rtag">EP 284</span></span>
+        </a>
+        <a class="relcard" href="/what-real-budget-reform-for-young-australians-would-actually-look-like">
+          <img src="https://i.ytimg.com/vi/le7HuIBq6Ow/hqdefault.jpg" alt="EP 283 thumbnail">
+          <span class="rt">What Real Budget Reform for Young Australians Would Actually Look Like</span>
+          <span class="rfoot"><span class="rwhy">29 June 2026</span><span class="rtag">EP 283</span></span>
+        </a>
+        <a class="relcard" href="/the-business-of-gift-cards">
+          <img src="https://i.ytimg.com/vi/nC_JkW320Tw/hqdefault.jpg" alt="EP 282 thumbnail">
+          <span class="rt">The Business of Gift Cards</span>
+          <span class="rfoot"><span class="rwhy">22 June 2026</span><span class="rtag">EP 282</span></span>
+        </a>
+      </div>
+      <div class="reldots" id="reldots"></div>
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="footgrid">
+      <div class="fcol">
+        <div class="foot-label">Follow us on</div>
+        <div class="socials">
+          <a href="https://www.instagram.com/thenumbersgamepodcast/" target="_blank" rel="noopener" aria-label="The Numbers Game on Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.8.2 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1 .4 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .4-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1-.4-2.2-.1-1.3-.1-1.7-.1-4.9s0-3.6.1-4.9c.1-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.4 2.2-.4 1.3-.1 1.7-.1 4.9-.1zm0 2c-3.1 0-3.5 0-4.8.1-1.1.1-1.5.2-1.8.3-.4.2-.7.3-1 .6-.3.3-.5.6-.6 1-.1.3-.3.7-.3 1.8-.1 1.3-.1 1.7-.1 4.8s0 3.5.1 4.8c.1 1.1.2 1.5.3 1.8.2.4.3.7.6 1 .3.3.6.5 1 .6.3.1.7.3 1.8.3 1.3.1 1.7.1 4.8.1s3.5 0 4.8-.1c1.1-.1 1.5-.2 1.8-.3.4-.2.7-.3 1-.6.3-.3.5-.6.6-1 .1-.3.3-.7.3-1.8.1-1.3.1-1.7.1-4.8s0-3.5-.1-4.8c-.1-1.1-.2-1.5-.3-1.8-.2-.4-.3-.7-.6-1-.3-.3-.6-.5-1-.6-.3-.1-.7-.3-1.8-.3-1.3-.1-1.7-.1-4.8-.1zm0 3.4a5.4 5.4 0 1 1 0 10.8 5.4 5.4 0 0 1 0-10.8zm0 2a3.4 3.4 0 1 0 0 6.8 3.4 3.4 0 0 0 0-6.8zm5.6-2.3a1.3 1.3 0 1 1-2.6 0 1.3 1.3 0 0 1 2.6 0z"/></svg></a>
+          <a href="https://www.tiktok.com/@thenumbersgamepodcast" target="_blank" rel="noopener" aria-label="The Numbers Game on TikTok"><svg viewBox="0 0 24 24"><path d="M12.53.02C13.84 0 15.14.01 16.44 0c.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg></a>
+          <a href="https://www.linkedin.com/company/the-numbers-game-podcast/" target="_blank" rel="noopener" aria-label="The Numbers Game on LinkedIn"><svg viewBox="0 0 24 24"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.24 8.25h4.52V23H.24V8.25zM8.34 8.25h4.33v2.01h.06c.6-1.14 2.08-2.34 4.28-2.34 4.58 0 5.42 3.01 5.42 6.92V23h-4.51v-7.16c0-1.71-.03-3.91-2.38-3.91-2.39 0-2.75 1.86-2.75 3.78V23H8.34V8.25z"/></svg></a>
+          <a href="https://www.facebook.com/profile.php?id=100071290388343" target="_blank" rel="noopener" aria-label="The Numbers Game on Facebook"><svg viewBox="0 0 24 24"><path d="M24 12.07C24 5.41 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.04V9.41c0-3.02 1.8-4.7 4.54-4.7 1.31 0 2.68.24 2.68.24v2.97h-1.5c-1.5 0-1.96.93-1.96 1.89v2.26h3.32l-.53 3.5h-2.8V24C19.62 23.1 24 18.1 24 12.07z"/></svg></a>
+          <a href="https://www.youtube.com/@thenumbersgamepodcast" target="_blank" rel="noopener" aria-label="The Numbers Game on YouTube"><svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.2C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31.7 31.7 0 0 0 0 12a31.7 31.7 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.2A31.7 31.7 0 0 0 24 12a31.7 31.7 0 0 0-.5-5.8zM9.6 15.6V8.4L15.8 12z"/></svg></a>
+        </div>
+      </div>
+      <div class="fcol">
+        <div class="foot-label">Brought to you by</div>
+        <div class="sponsors">
+          <a href="https://www.inovayt.com.au/" target="_blank" rel="noopener"><img src="assets/inovayt-white.png" alt="Inovayt"></a>
+          <a href="https://futureadvisory.com.au/" target="_blank" rel="noopener"><img src="assets/future-advisory-white.png" alt="Future Advisory"></a>
+        </div>
+      </div>
+      <div class="fcol produced">
+        <div class="foot-label">Produced by</div>
+        <a href="https://www.vidpod.com.au/" target="_blank" rel="noopener"><img src="assets/vidpod-white.png" alt="VIDPOD"></a>
+      </div>
+    </div>
+    <div class="footbar">
+      <details class="footnav-dd">
+        <summary><svg class="ham" viewBox="0 0 24 24"><path d="M3 6h18v2H3zM3 11h18v2H3zM3 16h18v2H3z"/></svg> Menu</summary>
+        <div class="dd-links">
+          <a href="/">Home</a><a href="/episodes">Every episode</a><a href="/adventure">Choose your own adventure</a><a href="/about">About the show</a><a href="/nick-reilly">Nick Reilly</a><a href="/jason-robinson">Jason Robinson</a><a href="/contact">Contact</a>
+        </div>
+      </details>
+      <div class="copyright">© 2026 The Numbers Game</div>
+    </div>
+  </footer>
+
+  <script>
+    var VIDEO='-j4kNHEGVx0';
+    var CHAPTERS=[
+      {t:"00:00",s:0,title:"Intro"},
+      {t:"05:08",s:308,title:""}
+    ];
+    var QUESTIONS=[
+      {q:"How did F45's pricing drive attendance?",s:589},
+      {q:"How far has F45's share price fallen?",s:633},
+      {q:"How else did F45 make money from franchisees?",s:749},
+      {q:"Who should review a franchise agreement?",s:1013},
+      {q:"How can franchise fees discourage growth?",s:1061},
+      {q:"What are you buying when you buy a franchise?",s:1211},
+      {q:"When is a franchise actually worth paying for?",s:1320},
+      {q:"What financials should you check before buying a franchise?",s:1702},
+      {q:"Does more revenue mean more profit?",s:1858},
+      {q:"Who should buy a franchise and who shouldn't?",s:1945}
+    ];
+
+    var chEl=document.getElementById('chapters');
+    CHAPTERS.forEach(function(c){var b=document.createElement('button');b.className='chapter';b.onclick=function(){startAt(c.s)};b.innerHTML='<span class="tc">'+c.t+'</span><span class="cx">'+c.title+'</span>';chEl.appendChild(b);});
+    document.getElementById('chcount').textContent=CHAPTERS.length;
+    var qEl=document.getElementById('qa');
+    QUESTIONS.forEach(function(q){var b=document.createElement('button');b.className='q';b.onclick=function(){startAt(q.s)};b.innerHTML='<span class="qm">?</span><span class="qx">'+q.q+'</span><span class="go">›</span>';qEl.appendChild(b);});
+    document.getElementById('qcount').textContent=QUESTIONS.length;
+
+    /* Mobile nav dropdown. */
+    var burger=document.getElementById('navburger'), navdrop=document.getElementById('navdrop');
+    if(burger&&navdrop){burger.addEventListener('click',function(){
+      navdrop.hidden=!navdrop.hidden;
+      burger.setAttribute('aria-expanded', navdrop.hidden?'false':'true');
+    });}
+
+    /* Voice-note button reveals the recorder; × tucks it away. */
+    var vbtn=document.getElementById('vbtn'), vslot=document.getElementById('vslot'), vclose=document.getElementById('vclose');
+    if(vbtn&&vslot){vbtn.addEventListener('click',function(){vslot.hidden=!vslot.hidden;});}
+    if(vclose&&vslot){vclose.addEventListener('click',function(){vslot.hidden=true;});}
+
+    /* Keep-exploring dots: only shown when the strip actually scrolls (mobile). */
+    var rg=document.querySelector('.relgrid'), rd=document.getElementById('reldots');
+    if(rg&&rd){
+      var relCards=rg.querySelectorAll('.relcard');
+      relCards.forEach(function(){rd.appendChild(document.createElement('span'))});
+      var updDots=function(){
+        var scrollable=rg.scrollWidth>rg.clientWidth+4;
+        rd.style.display=scrollable?'flex':'none';
+        if(!scrollable)return;
+        var i=Math.round(rg.scrollLeft/(rg.scrollWidth-rg.clientWidth)*(relCards.length-1));
+        rd.querySelectorAll('span').forEach(function(s,n){s.classList.toggle('on',n===i)});
+      };
+      rg.addEventListener('scroll',updDots,{passive:true});
+      window.addEventListener('resize',updDots);
+      updDots();
+    }
+
+    /* Explore tabs: swap the visible panel; the row stays put so you never lose your place. */
+    var tabBtns=document.querySelectorAll('.tabbtn');
+    tabBtns.forEach(function(b){
+      b.addEventListener('click',function(){
+        tabBtns.forEach(function(o){o.classList.remove('on')});
+        document.querySelectorAll('.tpanel').forEach(function(p){p.hidden=true});
+        b.classList.add('on');
+        document.getElementById(b.getAttribute('data-panel')).hidden=false;
+      });
+    });
+
+    /* YouTube: clean facade, then real player on demand. Seek without yanking to top. */
+    var player=null, ready=false, apiReady=false, pending=null;
+    window.onYouTubeIframeAPIReady=function(){apiReady=true; if(pending!=null){var s=pending;pending=null;createPlayer(s);}};
+    function createPlayer(sec){
+      var wrap=document.getElementById('player'); wrap.innerHTML='<div id="yt"></div>';
+      player=new YT.Player('yt',{videoId:VIDEO,playerVars:{autoplay:1,rel:0,modestbranding:1,playsinline:1,start:Math.floor(sec||0)},events:{onReady:function(){ready=true;}}});
+    }
+    function nudge(){
+      var p=document.getElementById('player-wrap'), r=p.getBoundingClientRect();
+      if(r.bottom<80 || r.top>window.innerHeight-90){ p.scrollIntoView({behavior:'smooth',block:'start'}); }
+    }
+    function startAt(sec){
+      nudge();
+      if(player&&ready){ player.seekTo(sec,true); player.playVideo(); return; }
+      if(apiReady){ createPlayer(sec); } else { pending=sec; }
+    }
+    document.getElementById('facade').addEventListener('click',function(){startAt(0);});
+    (function(){var s=document.createElement('script');s.src='https://www.youtube.com/iframe_api';document.head.appendChild(s);})();
+  </script>
+</body>
+</html>

@@ -1,0 +1,703 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EP 166 · Understanding Trade Finance | The Numbers Game</title>
+<meta name="description" content="Nick drives an explainer on trade finance and how it frees up cash flow for growing businesses.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" sizes="64x64" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="canonical" href="https://thenumbersgamepodcast.com.au/understanding-trade-finance">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="The Numbers Game">
+<meta property="og:title" content="EP 166 · Understanding Trade Finance | The Numbers Game">
+<meta property="og:description" content="Nick drives an explainer on trade finance and how it frees up cash flow for growing businesses.">
+<meta property="og:url" content="https://thenumbersgamepodcast.com.au/understanding-trade-finance">
+<meta property="og:image" content="https://i.ytimg.com/vi/HXmPcjaRUaA/maxresdefault.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+  :root{
+    --purple:#585af3; --purple-dark:#2c1b8a; --mint:#7ad9a8;
+    --white:#ffffff; --muted:rgba(255,255,255,.60); --dim:rgba(255,255,255,.42);
+    --line:rgba(255,255,255,.12); --card:rgba(255,255,255,.05); --card-hi:rgba(255,255,255,.09);
+    --display:'Anton',Impact,'Helvetica Neue',sans-serif;
+    --sans:'Inter',system-ui,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif;
+    --wrap:1280px;   /* page frame (nav spans this) */
+    --col:960px;     /* content column (player, tabs, text) */
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:var(--sans); color:var(--white); line-height:1.6; -webkit-font-smoothing:antialiased;
+    background:#12093a;
+    background-image:
+      radial-gradient(1200px 600px at 82% -6%, rgba(88,90,243,.45) 0%, transparent 55%),
+      radial-gradient(900px 700px at 5% 8%, rgba(122,217,168,.10) 0%, transparent 50%),
+      linear-gradient(180deg,#2c1b8a 0%,#1a1150 28%,#100b34 62%,#0b0820 100%);
+    background-attachment:fixed;
+  }
+  a{color:inherit}
+  .wrap{max-width:var(--wrap);margin:0 auto;padding:0 36px}
+  main.wrap{max-width:var(--col)}
+  @media(max-width:720px){.wrap{padding:0 22px}}
+
+  /* ── Navbar ── */
+  .nav{position:sticky;top:0;z-index:50;background:linear-gradient(180deg,rgba(24,15,74,.92),rgba(24,15,74,.72));backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+  .nav-in{max-width:var(--wrap);margin:0 auto;padding:11px 36px;display:flex;align-items:center;justify-content:space-between}
+  @media(max-width:720px){.nav-in{padding:11px 22px}}
+  .brand{display:block;line-height:0}
+  .brand img{height:36px;width:auto;display:block}
+  .navlinks{display:flex;gap:28px;align-items:center}
+  .navlinks a{text-decoration:none;font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);transition:.15s}
+  .navlinks a:hover{color:var(--white)}
+  .navlinks a.navtop{cursor:default}
+  .navgroup{position:relative;display:flex;align-items:center}
+  .navgroup .subnav{display:none;position:absolute;top:100%;left:50%;transform:translateX(-50%);padding-top:14px;min-width:180px}
+  .navgroup:hover .subnav,.navgroup:focus-within .subnav{display:block}
+  .subnav-in,.navgroup .subnav{z-index:60}
+  .navgroup .subnav a{display:block;background:#180f4a;border:1px solid var(--line);border-top:0;padding:12px 16px;font-size:12px;color:rgba(255,255,255,.85)}
+  .navgroup .subnav a:first-child{border-top:1px solid var(--line)}
+  .navgroup .subnav a:hover{background:#221768;color:var(--white)}
+  .navburger{display:none;background:none;border:1px solid var(--line);padding:8px 10px;cursor:pointer;color:var(--white);transition:.15s}
+  .navburger:hover{border-color:rgba(122,217,168,.6)}
+  .navburger svg{width:20px;height:20px;fill:currentColor;display:block}
+  .navdrop{display:none}
+  @media(max-width:720px){
+    .navlinks{display:none}
+    .navburger{display:block}
+    .navdrop{display:block;position:absolute;left:0;right:0;top:100%;
+      background:#180f4a;border-bottom:1px solid var(--line);box-shadow:0 24px 50px rgba(0,0,0,.45)}
+    .navdrop[hidden]{display:none}
+    .navdrop a{display:block;padding:15px 22px;text-decoration:none;font-size:14px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:rgba(255,255,255,.9);border-bottom:1px solid rgba(255,255,255,.06)}
+    .navdrop a:last-child{border-bottom:0}
+    .navdrop a.sub{padding-left:42px;font-size:13px;color:rgba(255,255,255,.72)}
+    .navdrop .navlabel{display:block;padding:15px 22px 6px;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.4)}
+  }
+
+  /* ── Hero / hook (marker-highlight system: purple hook wraps naturally, mint payoff below)
+     Rules: title splits at its natural break (colon/pipe/question mark). Front = hook (purple,
+     big), back = payoff (mint, smaller). No break in title = purple hook only. Highlights hug
+     the text (tight em padding tuned to Anton) and wrap via box-decoration-break — never
+     hand-pick line breaks or mint words. ── */
+  header.hero{padding:34px 0 6px}
+  .hook{--inx:clamp(8.4px,2.1vw,15.6px)} /* one shared text inset so hook + payoff first letters align */
+  .hook .hk{font-family:var(--display);font-weight:400;text-transform:uppercase;
+    font-size:clamp(28px,7vw,52px);line-height:1.3;letter-spacing:-.5px;text-wrap:balance}
+  .hook .hk span{color:var(--white);padding:.04em var(--inx) .02em;
+    background:linear-gradient(var(--purple),var(--purple)) 0 50%/100% 87% no-repeat;
+    -webkit-box-decoration-break:clone;box-decoration-break:clone}
+  .hook .pay{font-family:var(--display);font-weight:400;text-transform:uppercase;
+    font-size:clamp(16px,4vw,24px);line-height:1.5;letter-spacing:.6px;margin-top:8px;text-wrap:balance}
+  .hook .pay span{color:#0a0a0a;padding:.08em var(--inx) .04em;
+    background:linear-gradient(var(--mint),var(--mint)) 0 50%/100% 88% no-repeat;
+    -webkit-box-decoration-break:clone;box-decoration-break:clone}
+  /* no-hook titles: mid-split into two full-size rows, purple then mint */
+  .hook .hk span.hkrow{display:block;background:none;padding:0}
+  .hook .hk .hkrow+.hkrow{margin-top:8px}
+  .hook .hk span.mintseg{color:#0a0a0a;
+    background:linear-gradient(var(--mint),var(--mint)) 0 50%/100% 87% no-repeat}
+
+  /* ── Player (clean facade → real player on tap) ── */
+  .player-wrap{margin:24px 0 4px;scroll-margin-top:76px}
+  .player{position:relative;width:100%;padding-top:56.25%;border-radius:0;overflow:hidden;background:#000;box-shadow:0 30px 70px rgba(0,0,0,.5),0 0 0 1px rgba(255,255,255,.06)}
+  .facade{position:absolute;inset:0;border:0;cursor:pointer;background-size:cover;background-position:center;display:flex;align-items:center;justify-content:center;padding:0}
+  .facade .play{width:74px;height:74px;border-radius:50%;background:rgba(10,6,30,.40);border:2px solid rgba(255,255,255,.72);display:flex;align-items:center;justify-content:center;transition:.18s;-webkit-backdrop-filter:blur(1px);backdrop-filter:blur(1px)}
+  .facade:hover .play{background:rgba(88,90,243,.62);transform:scale(1.07);border-color:#fff}
+  .facade .play::after{content:"";border-style:solid;border-width:11px 0 11px 19px;border-color:transparent transparent transparent #fff;margin-left:5px}
+  .player iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+
+  /* ── Episode facts (bottom of the Summary panel — templated per episode) ── */
+  .sumfacts{margin:14px 10px 4px;padding-top:13px;border-top:1px solid rgba(255,255,255,.08);display:flex;flex-direction:column;gap:8px}
+  .fact{display:flex;gap:12px;font-size:13.5px}
+  .fact .fl{flex:none;width:104px;color:var(--dim);font-weight:600;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;padding-top:2px}
+  .fact .fv{color:rgba(255,255,255,.9);font-weight:500}
+  .fact .fv a{color:var(--mint);text-decoration:none;border-bottom:1px solid rgba(122,217,168,.4);transition:.15s}
+  .fact .fv a:hover{border-bottom-color:var(--mint)}
+
+  /* ── Episode tag (identity: black label hanging off the title corner) ── */
+  .eptag{display:inline-block;position:relative;left:-6px;margin-bottom:-7px;z-index:2;
+    background:#0a0a0a;color:var(--white);font-family:var(--display);font-weight:400;
+    font-size:13.5px;letter-spacing:1.5px;text-transform:uppercase;padding:6px 11px 4px}
+
+  /* ── Explore tabs (sticky mode switcher; one panel swaps below, nothing shoves) ── */
+  .explore{margin-top:22px}
+  .tabs{position:sticky;top:58px;z-index:40;display:flex;flex-wrap:wrap;gap:8px;padding:10px 0;
+    background:linear-gradient(180deg,rgba(18,10,55,.96),rgba(18,10,55,.86));
+    backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+  .tabbtn{font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.5px;
+    font-size:14.5px;color:var(--white);background:var(--purple);border:1px solid var(--purple);
+    padding:9px 13px 7px;cursor:pointer;transition:.15s}
+  .tabbtn:hover{filter:brightness(1.12)}
+  .tabbtn.on{background:var(--mint);border-color:var(--mint);color:#0a0a0a}
+  .tabbtn.on:hover{filter:none}
+  .tabbtn .ct{font-size:12px;opacity:.75;font-variant-numeric:tabular-nums}
+  .tabbtn .ct::before{content:" · "}
+  .tpanel{border:1px solid var(--line);background:var(--card);padding:12px 10px 14px}
+  .hint{font-size:12.5px;color:var(--muted);padding:2px 10px 10px;border-bottom:1px solid rgba(255,255,255,.08);margin-bottom:6px}
+
+  /* ── Listen row (no box: label left, service pills follow) ── */
+  .listen{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:12px 16px;margin-top:34px}
+  .listen .lname{font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--dim)}
+  .listen a{display:inline-flex;align-items:center;gap:9px;padding:11px 18px;border-radius:999px;
+    background:var(--mint);color:#08210f;text-decoration:none;font-weight:800;font-size:12.5px;
+    letter-spacing:.04em;text-transform:uppercase;transition:.15s}
+  .listen a:hover{filter:brightness(1.06);transform:translateY(-1px);box-shadow:0 12px 30px rgba(122,217,168,.25)}
+  .listen svg{width:20px;height:20px;fill:currentColor;flex:none}
+  /* ── Listen-now Spotify audio embed (full column width, above the pills) ── */
+  .listen-now{margin-top:40px}
+  .listen-now .ln-head{display:flex;align-items:baseline;justify-content:space-between;gap:14px;margin-bottom:13px}
+  .listen-now .ln-title{font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--dim)}
+  .audio-embed{border-radius:12px;overflow:hidden;box-shadow:0 20px 50px rgba(0,0,0,.4),0 0 0 1px rgba(255,255,255,.06)}
+  .audio-embed iframe{display:block;width:100%;border:0}
+  @media(max-width:720px){.listen-now{margin-top:32px}}
+
+  /* ── Keep exploring (thumbnails link to other episode PAGES, never timecodes).
+     Swipeable strip on mobile, fits three-up on desktop. Variant rule: claim
+     "similar ground" + reason lines ONLY when moment-level topic overlap is
+     genuinely strong; otherwise show the latest released episodes with dates —
+     never invent a connection. ── */
+  .relsec{margin-top:60px;padding-top:58px;border-top:1px solid var(--line)} /* line = end of this episode's info */
+  .reldots{display:flex;justify-content:center;gap:7px;margin-top:12px}
+  .reldots span{width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.25);transition:.2s}
+  .reldots span.on{background:var(--mint)}
+  .relsec .rtitle{display:inline-block;font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.5px;font-size:14.5px;background:var(--mint);color:#0a0a0a;padding:9px 13px 7px;margin-bottom:18px}
+  .relgrid{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding-bottom:6px;scrollbar-width:none}
+  .relgrid::-webkit-scrollbar{display:none}
+  .relcard{flex:0 0 56%;max-width:232px;scroll-snap-align:start;display:flex;flex-direction:column;text-decoration:none;background:var(--card);border:1px solid var(--line);transition:.15s}
+  .relcard:hover{background:var(--card-hi);border-color:rgba(122,217,168,.55)}
+  .relcard img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block}
+  .relcard .rt{display:block;font-size:12.5px;font-weight:600;color:rgba(255,255,255,.92);line-height:1.4;padding:8px 8px 0}
+  .relcard .rfoot{margin-top:auto;display:flex;justify-content:space-between;align-items:flex-end;gap:8px;padding:10px 8px 9px}
+  .relcard .rwhy{font-size:11.5px;color:var(--mint)}
+  .relcard .rtag{display:inline-block;background:#0a0a0a;color:var(--white);font-family:var(--display);font-size:10px;letter-spacing:1.2px;text-transform:uppercase;padding:3px 7px 2px;white-space:nowrap;flex:0 0 auto}
+
+  /* ── Dropdown sections (accordion under the player) ── */
+  .drops{margin-top:34px;display:flex;flex-direction:column;gap:11px}
+  .drop{border:1px solid var(--line);border-radius:0;background:var(--card);overflow:hidden;transition:border-color .15s}
+  .drop[open]{border-color:rgba(122,217,168,.35)}
+  .drop>summary{list-style:none;cursor:pointer;padding:16px 18px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+  .drop>summary::-webkit-details-marker{display:none}
+  .drop>summary .st{font-weight:700;font-size:15.5px;letter-spacing:.005em}
+  .drop>summary .ct{margin-left:auto;font-size:12px;color:var(--dim);font-weight:600;font-variant-numeric:tabular-nums}
+  .drop>summary .chev{flex:none;width:22px;height:22px;border-radius:50%;background:rgba(122,217,168,.14);color:var(--mint);display:flex;align-items:center;justify-content:center;font-family:var(--display);font-size:15px;line-height:1;transition:.2s;transform:translateY(-1px)}
+  .drop[open]>summary .chev{transform:rotate(45deg)}
+  .drop-body{padding:2px 12px 12px}
+
+  /* chapters */
+  .chapter{display:flex;align-items:baseline;gap:14px;width:100%;text-align:left;cursor:pointer;background:none;border:0;color:inherit;font-family:inherit;padding:11px 10px;border-radius:10px;transition:.13s}
+  .chapter:hover{background:var(--card-hi)}
+  .chapter .tc{font-variant-numeric:tabular-nums;font-weight:700;font-size:14px;color:var(--mint);flex:none;width:48px}
+  .chapter .cx{font-size:15px;font-weight:500;color:rgba(255,255,255,.9)}
+  .chapter:hover .cx{color:#fff}
+
+  /* questions */
+  .q{display:flex;align-items:center;gap:12px;width:100%;text-align:left;cursor:pointer;background:none;border:0;border-radius:11px;color:inherit;font-family:inherit;padding:12px 10px;transition:.14s}
+  .q+.q{border-top:1px solid rgba(255,255,255,.05)}
+  .q:hover{background:var(--card-hi)}
+  .q .qm{font-family:var(--display);font-size:15px;color:var(--mint);flex:none;line-height:1;transform:translateY(1px)}
+  .q .qx{font-size:15px;font-weight:500;color:rgba(255,255,255,.92)}
+  .q .go{margin-left:auto;flex:none;color:var(--dim);font-size:18px;transition:.15s}
+  .q:hover .go{color:var(--mint);transform:translateX(2px)}
+
+  /* summary + transcript bodies */
+  .summary-body p{font-size:16.5px;line-height:1.62;color:rgba(255,255,255,.9);padding:6px 10px 4px}
+  .tbody{padding:2px 10px 8px}
+  .tbody p{font-size:14.5px;line-height:1.7;color:rgba(255,255,255,.78);margin-top:15px;max-width:64ch}
+  .tbody .spk{display:block;font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--mint);margin-bottom:2px}
+
+  /* ── Voice note ask (lives at the bottom of the Summary panel) ── */
+  .vask{margin:16px 10px 4px}
+  .vbtn{display:inline-flex;align-items:center;gap:9px;padding:12px 20px;border-radius:999px;border:0;cursor:pointer;
+    background:var(--mint);color:#08210f;font-family:inherit;font-weight:800;font-size:12.5px;
+    letter-spacing:.04em;text-transform:uppercase;transition:.15s}
+  .vbtn:hover{filter:brightness(1.06);transform:translateY(-1px);box-shadow:0 12px 30px rgba(122,217,168,.25)}
+  .vbtn svg{width:18px;height:18px;fill:currentColor;flex:none}
+  .vslot{background:var(--purple);padding:12px 10px 10px;margin:14px 0 4px;box-shadow:0 18px 40px rgba(0,0,0,.35)}
+  .vslot[hidden]{display:none}
+  .vhead{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;margin-bottom:10px}
+  .vhead .vmsg{font-family:var(--sans);font-size:13px;line-height:1.55;color:rgba(255,255,255,.92);margin:2px 0 0;padding:0 2px}
+  .vclose{background:none;border:0;color:rgba(255,255,255,.85);font-size:22px;line-height:1;cursor:pointer;padding:0 2px}
+  .vclose:hover{color:var(--white)}
+  .vslot iframe{display:block}
+
+  /* ── YouTube subscribe pill (sits in the listen row; outranks .listen a's mint) ── */
+  .listen a.yt-pill{background:var(--purple);color:var(--white)}
+  .listen a.yt-pill:hover{filter:brightness(1.1);transform:translateY(-1px)}
+  @media(max-width:720px){ /* mobile: no label, three compact pills on one row */
+    .listen .lname{display:none}
+    .listen{gap:8px}
+    .listen a{padding:10px 13px;font-size:11px;gap:6px}
+    .listen svg{width:16px;height:16px}
+  }
+
+  /* ── Footer: Follow us on | Brought to you by | Produced by, + Menu dropdown ── */
+  footer{border-top:1px solid var(--line);margin-top:68px;padding:52px 20px 58px}
+  .footgrid{max-width:var(--wrap);margin:0 auto;display:grid;grid-template-columns:1fr 1.15fr .8fr;gap:44px;align-items:start}
+  .fcol{text-align:center;display:flex;flex-direction:column;align-items:center}
+  .foot-label{font-size:11px;font-weight:700;letter-spacing:.26em;text-transform:uppercase;color:var(--dim);margin-bottom:18px}
+  .sponsors{display:flex;justify-content:center;align-items:center;gap:34px;flex-wrap:wrap}
+  .sponsors a,.produced a{display:inline-flex;transition:.15s}
+  .sponsors a:hover,.produced a:hover{transform:translateY(-1px)}
+  .sponsors img{height:32px;width:auto;opacity:.92}
+  .produced img{height:30px;width:auto;opacity:.95}
+  .sponsors a:hover img,.produced a:hover img{opacity:1}
+  footer .socials{display:flex;gap:11px;justify-content:center;flex-wrap:wrap;margin:0}
+  footer .socials a{width:40px;height:40px;border-radius:50%;border:1.5px solid rgba(122,217,168,.5);display:flex;align-items:center;justify-content:center;transition:.15s}
+  footer .socials a svg{width:18px;height:18px;fill:var(--mint);transition:.15s}
+  footer .socials a:hover{background:var(--mint);border-color:var(--mint);transform:translateY(-2px)}
+  footer .socials a:hover svg{fill:#0a0a0a}
+  .footbar{max-width:var(--wrap);margin:34px auto 0;border-top:1px solid var(--line);padding-top:20px;display:flex;flex-direction:column;align-items:center;gap:14px}
+  .footnav-dd{display:block;width:100%;max-width:var(--wrap);margin:0 auto;text-align:center}
+  .footnav-dd>summary{list-style:none;cursor:pointer;display:inline-flex;align-items:center;gap:9px;font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.5px;font-size:13px;color:var(--muted);background:transparent;border:1px solid var(--line);padding:8px 16px 6px;transition:.15s}
+  .footnav-dd>summary::-webkit-details-marker{display:none}
+  .footnav-dd>summary:hover{color:var(--mint);border-color:rgba(122,217,168,.45)}
+  .footnav-dd>summary .ham{width:15px;height:15px;fill:currentColor;transform:translateY(-1px)}
+  .footnav-dd .dd-links{display:flex;flex-direction:row;flex-wrap:wrap;justify-content:center;gap:12px 24px;padding:24px 0 4px}
+  .footnav-dd .dd-links a{font-size:11.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:.15s}
+  .footnav-dd .dd-links a:hover{color:var(--mint)}
+  .copyright{font-size:12px;color:var(--dim);text-align:center}
+  @media(max-width:720px){.footgrid{grid-template-columns:1fr;gap:34px}footer{padding:40px 16px 20px}.footbar{margin-top:34px;padding-top:24px;gap:20px}.footnav-dd .dd-links{flex-direction:column;align-items:center;gap:15px}}
+
+  @media(min-width:720px){header.hero{padding:48px 0 6px}}
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "PodcastEpisode", "name": "Understanding Trade Finance", "url": "https://thenumbersgamepodcast.com.au/understanding-trade-finance", "datePublished": "2024-04-02", "episodeNumber": 166, "image": "https://i.ytimg.com/vi/HXmPcjaRUaA/maxresdefault.jpg", "partOfSeries": {"@type": "PodcastSeries", "name": "The Numbers Game", "url": "https://thenumbersgamepodcast.com.au/"}}</script>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-in">
+      <a class="brand" href="/" aria-label="The Numbers Game home"><img src="assets/tng-logo.png" alt="The Numbers Game"></a>
+      <div class="navlinks">
+        <a href="/">Home</a>
+        <div class="navgroup">
+          <a class="navtop">Episodes</a>
+          <div class="subnav">
+            <a href="/episodes">All episodes</a>
+            <a href="/adventure">Find moments</a>
+          </div>
+        </div>
+        <div class="navgroup">
+          <a class="navtop">About</a>
+          <div class="subnav">
+            <a href="/about">The show</a>
+            <a href="/nick-reilly">Nick Reilly</a>
+            <a href="/jason-robinson">Jason Robinson</a>
+          </div>
+        </div>
+        <a href="/contact">Contact</a>
+      </div>
+      <button class="navburger" id="navburger" type="button" aria-label="Menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24"><path d="M3 6h18v2H3zM3 11h18v2H3zM3 16h18v2H3z"/></svg>
+      </button>
+    </div>
+    <div class="navdrop" id="navdrop" hidden>
+      <a href="/">Home</a>
+      <span class="navlabel">Episodes</span>
+      <a class="sub" href="/episodes">All episodes</a>
+      <a class="sub" href="/adventure">Find moments</a>
+      <span class="navlabel">About</span>
+      <a class="sub" href="/about">The show</a>
+      <a class="sub" href="/nick-reilly">Nick Reilly</a>
+      <a class="sub" href="/jason-robinson">Jason Robinson</a>
+      <a href="/contact">Contact</a>
+    </div>
+  </nav>
+
+  <main class="wrap">
+
+    <header class="hero">
+      <div class="hook">
+        <span class="eptag">EP 166</span>
+        <h1 class="hk"><span class="hkrow"><span>Understanding</span></span>
+        <span class="hkrow"><span class="mintseg">Trade Finance</span></span></h1>
+      </div>
+    </header>
+
+    <div class="player-wrap" id="player-wrap">
+      <div class="player" id="player">
+        <button class="facade" id="facade" style="background-image:url('https://i.ytimg.com/vi/HXmPcjaRUaA/maxresdefault.jpg')" aria-label="Play episode">
+          <span class="play"></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="explore">
+      <div class="tabs" role="tablist">
+        <button class="tabbtn on" data-panel="p-summary">Summary</button>
+        <button class="tabbtn" data-panel="p-chapters">Chapters<span class="ct" id="chcount"></span></button>
+        <button class="tabbtn" data-panel="p-questions">Questions<span class="ct" id="qcount"></span></button>
+      </div>
+      <section class="tpanel" id="p-summary">
+        <div class="summary-body">
+          <p>Nick drives an explainer on trade finance and how it frees up cash flow for growing businesses. The trio walk through invoice financing (a lender advancing money against unpaid invoices) and letters of credit (a bank guaranteeing the seller gets paid) and where each fits, from manufacturers and e-commerce importers to a waste-management client sitting on big invoices with long payment terms. Marty covers the mechanics: lenders fund 70 to 90 percent of a purchase, price for risk, 10 to 30 percent deposits, paying in advance offshore for a 5 to 10 percent supplier discount, and not tying up property security. They warn against quick, expensive online business lenders, tell the story of Xero buying and later offloading invoice-finance firm Waddle, and land on getting advice and matching the right facility to the right function.</p>
+        </div>
+        <div class="vask">
+          <button class="vbtn" id="vbtn" type="button">
+            <svg viewBox="0 0 24 24"><path d="M12 14a3 3 0 0 0 3-3V6a3 3 0 1 0-6 0v5a3 3 0 0 0 3 3zm5-3a5 5 0 0 1-10 0H5a7 7 0 0 0 6 6.92V21h2v-3.08A7 7 0 0 0 19 11h-2z"/></svg>
+            Send us a voice note
+          </button>
+          <div class="vslot" id="vslot" hidden>
+            <div class="vhead">
+              <p class="vmsg">We'd love to hear from you. You can leave up to a 90 second voice note for us to play on the show: a question, some feedback, or a topic you want covered.</p>
+              <button class="vclose" id="vclose" type="button" aria-label="Close">&times;</button>
+            </div>
+            <iframe src="https://www.speakpipe.com/widget/inline/hhq6kzggsx7zpcsvakgxfrzun3zidpde" allow="microphone" width="100%" height="200" frameborder="0" title="Leave The Numbers Game a voice note"></iframe>
+          </div>
+          <script async src="https://www.speakpipe.com/widget/loader.js" charset="utf-8"></script>
+        </div>
+        <div class="sumfacts">
+          <div class="fact"><span class="fl">Release date</span><span class="fv">2 April 2024</span></div>
+          <div class="fact"><span class="fl">Hosts</span><span class="fv"><a href="/nick-reilly">Nick Reilly</a>, <a href="/jason-robinson">Jason Robinson</a> &amp; <a href="/marty-vidakovic">Marty Vidakovic</a></span></div>
+
+        </div>
+      </section>
+      <section class="tpanel" id="p-chapters" hidden>
+        <p class="hint">Jump straight to the part you need.</p>
+        <div id="chapters"></div>
+      </section>
+      <section class="tpanel" id="p-questions" hidden>
+        <p class="hint">Real questions this episode answers. Tap one to hear the answer.</p>
+        <div id="qa"></div>
+      </section>
+    </div>
+
+    <div class="drops">
+
+      <details class="drop">
+        <summary><span class="st">Episode transcript</span><span class="chev">+</span></summary>
+        <div class="drop-body tbody">
+          <p><span class="spk">Jason · 00:00</span>Welcome to episode 166 of The Numbers Game. I'm Jase. I'm here with Mick and Marty. How are we going today, fellas?</p>
+          <p><span class="spk">Marty · 00:06</span>I'm fantastic, Jase. The AFL season up and about and keeping a lid on it. And I know this episode might come out in a few weeks time at Essendon. One against Hawthorne, so just keeping a lid on it.</p>
+          <p><span class="spk">Marty · 00:20</span>I know one thing for sure, we are not going to finish bottom four. 100%, 100%. So, absolutely pumped. So, Nick, Nick, you're looking dazed and confused with that statement. You think I'm not too</p>
+          <p><span class="spk">Nick · 00:33</span>early? I'm just writing it down. 100 percent Essendon will not finish bottom four.</p>
+          <p><span class="spk">Jason · 00:39</span>100%. I really hope we're not revisiting episode 166 to talk about this, uh, at the end of the season.</p>
+          <p><span class="spk">Jason · 00:45</span>Big call, I</p>
+          <p><span class="spk">Nick · 00:46</span>know. It's a big call, mate. This season's dangerous, I would say. But anyway, I'm feeling good. I've just, um, I've just noticed I look great. I look as tired as hell, but, um, I'm up and about. I actually</p>
+          <p><span class="spk">Nick · 01:00</span>need new goggles. And I haven't had the time to get down and get new goggles, because, as you know, Marty, I do like a swim.</p>
+          <p><span class="spk">Nick · 01:06</span>Um, so, instead of new goggles, I just proceed to make them more and more tight, so they don't leak. What that does is it looks like I'm extremely tired for half the day because of the bags under my eyes from the extra tight goggles. So, looking at myself now, I need to just get down there on the weekend and get some big cockles to prevent this stuff.</p>
+          <p><span class="spk">Nick · 01:26</span>But, uh, feeling good. Feeling good. Jase, how are you? Short of haircut? What's happening at the moment? You got a bit shorter? No, no, all good.</p>
+          <p><span class="spk">Jason · 01:33</span>I thought I was, thought I was actually due for a haircut. I thought there was a bit too much lift going on. I'm trying to go to the Marty school of haircuts, uh, to be honest.</p>
+          <p><span class="spk">Jason · 01:40</span>I'm just trying to bring it across and, you know, we're talking about, you know, just, just, I know people want to be like Marty, people want to act like Marty. And speaking of Marty, um, I did a presentation at the Accounting Business Expo and we were talking about, um, you know, different things that have happened from the podcast and Marty, you've been getting some epic feedback and people reaching out</p>
+          <p><span class="spk">Jason · 02:00</span>to you about.</p>
+          <p><span class="spk">Jason · 02:00</span>Episode 161 around homeschooling. Tell us about that.</p>
+          <p><span class="spk">Marty · 02:03</span>Yeah, it's been fantastic actually. It's surprising. I've had, uh, people connect with me that are homeschooling their kids. And, uh, one of the comments was it was just nice to hear someone saying they were proud that, uh, they were looking after their kids education in that way.</p>
+          <p><span class="spk">Marty · 02:18</span>It's not something you commonly hear. Other people have been sending me videos on, you know, a balanced approach, you know, trying to support the journey forward, which was lovely and other people, but really I'm not going to be honing in on the benefits of homeschooling, so it just goes to show you there's, uh, different hats for different heads and, uh, it's just keeping an open mindset.</p>
+          <p><span class="spk">Marty · 02:39</span>But I thought, uh, it was great and, and please, Jase, do not go down the Marty, Marty Vids, uh, school of hair because, uh, your hair is, uh, exact and very good. Mine is just organized chaos. So please don't take your fashion tips from me.</p>
+          <p><span class="spk">Jason · 02:56</span>Oh, mate. No, no, no. All good. If you, if you haven't checked out our</p>
+          <p><span class="spk">Jason · 03:00</span>YouTube channel, also a very good opportunity to not only mentioned to go back to F one 61 and check out the homeschooling app, but also do it on YouTube where you can see Marty's hair in absolute, just flying fashion.</p>
+          <p><span class="spk">Jason · 03:10</span>So, uh, check it out. Turning our attention to today's episode, though, uh, Nick, you're driving this one with a fun discussion on all things, trade finance.</p>
+          <p><span class="spk">Nick · 03:20</span>Driving it, but, um, you know, need, need a lot of support from you guys because you guys are actually. Probably more equipped to talk about this than I am, but I wanted to bring.</p>
+          <p><span class="spk">Nick · 03:30</span>The topic of trade finance in mainly because we're seeing a lot of it in our business, we have an asset and equipment side of our business assets being, you know, cars, machinery and whatnot. So we're talking with a lot of businesses, a lot of manufacturing businesses, uh, for example, and trade finance keeps coming up and we've had some really positive outcomes with businesses, um, that number one, don't know what trade finance is.</p>
+          <p><span class="spk">Nick · 03:59</span>So</p>
+          <p><span class="spk">Nick · 04:00</span>number two, they didn't have trade finance. And, and once, once, once you get inside a, a small business and understand their operations, how their business. works, how the cashflow works. Um, you can really add value with, with different products that are out there on the market. And one of those is trade finance.</p>
+          <p><span class="spk">Nick · 04:16</span>So I thought it'd be good opportunity. Number one, explain what it is, and then sort of pass to you guys on like, how are you seeing businesses use it? Um, you know, for, well, really what I think it, it helps push forward your business growth. So it's a, it's a pretty in depth topic, but if I'm going to summarize it, Um, and then try and put it into an example where people will go, yep, that makes sense.</p>
+          <p><span class="spk">Nick · 04:44</span>Trade finance really frees up liquidity or cash flow, um, in a business for either the buyer or the seller. of goods or services, um, in order for them to continue to push their business forward. So,</p>
+          <p><span class="spk">Nick · 05:00</span>you know, as you would know, Jace, accounts receivable can be a big issue for a lot of businesses. They do work, um, for people, they send those, um, those businesses an invoice.</p>
+          <p><span class="spk">Nick · 05:11</span>Those invoices can be anywhere from, you know, due in seven days to 120 days. So you've got this gap. And I'm talking about on the service provider side now where you have. You've supplied the service, and the job's been done, or the goods been provided, or delivered, or the product. You then send an invoice, and then you hope that they pay that invoice on time.</p>
+          <p><span class="spk">Nick · 05:34</span>And then given, um, well, depending on the size of the business and, and where your business is coming from, some, some invoices might have really long payment terms, as I said, 90 or 120 days. So you've got to wait 90 to 120 days, even 60 days for that revenue to come into your business. You then don't have that revenue to, um, grow your business, take on the next job.</p>
+          <p><span class="spk">Nick · 05:59</span>Let's</p>
+          <p><span class="spk">Nick · 06:00</span>say, um, let's say that, well, not service, let's say it was a product you provided and you needed to, uh, purchase goods to build that product and give it to the person that sold it off you. So you've actually. incurred a cost to deliver that good. And now you've got to wait 90 days or 120 days to get that money back.</p>
+          <p><span class="spk">Nick · 06:18</span>So trade finance is a few different products. And that example that I just talked about, you would use invoice financing. So you can have a third party come in or a lender come in for, um, to explain what the third party is. And that lender will actually lend against your invoices. So Jayce, if you invoice.</p>
+          <p><span class="spk">Nick · 06:37</span>If you provide me a good, I take that good and you say, here's an invoice due in 90 days, you can take that invoice you've got, which is almost like a guarantee that I'm going to pay if, if I'm a good customer of yours, you can take that to the bank and you can say, look, uh, I provided this good to Nick. Uh, there's a 90 day invoice.</p>
+          <p><span class="spk">Nick · 06:56</span>The money's coming from Nick in 90 days.</p>
+          <p><span class="spk">Nick · 07:00</span>Mr or Mrs, uh, bank manager. Can you give me that money now? So I can then continue to grow and fuel my business. Thanks. Yeah, there's a few things, um, that go along with that. Obviously, there's, there's credit assessment. So, yeah, the bank's got to have a look at your business.</p>
+          <p><span class="spk">Nick · 07:14</span>Where's your, um, where's your customers coming from? What are your payment terms usually like? But it's just a quicker way to get your invoices paid instead of waiting for your customers. So that's a really basic example, um, but it's used heavily in importing and exporting and it's a different product.</p>
+          <p><span class="spk">Nick · 07:33</span>It's not invoice financing. It's quite often what you'll see is a letter of credit. So, you know, there's, there's, there's risk mitigation. So if I'm exporting to you, Jace, well, you want the good, but you don't want to pay for the good. Until you've actually, until it lands, but I've got to, I've got to build that good, send it offshore.</p>
+          <p><span class="spk">Nick · 07:51</span>So it's got to go on a ship and it could take three months to get to you from the seller's point of view. You want that payment so that you can start producing the</p>
+          <p><span class="spk">Nick · 08:00</span>good, um, that you then got to send to the buyer. So a letter of credit comes in, which again is a third party. So a bank comes in. And they guarantee the seller that they will get paid.</p>
+          <p><span class="spk">Nick · 08:11</span>Um, they will get paid when the good is delivered or when the good is shipped. And then they guarantee that the buyer to the, that they won't be paying for the good until the seller meets certain requirements, such as building it and shipping it. So yeah, it's, it's, it's, it's hard to explain all the different circumstances because there are so many, but the easiest way for me to summarize it is when you've got money owing, the bank comes in.</p>
+          <p><span class="spk">Nick · 08:35</span>And they pay that money for you, knowing that there's an invoice that's going to be paid by a customer of yours within a certain time period. And it can get rid of so many cashflow issues for businesses, particularly when you're dealing with big clients like government. Like you speak to a lot of, um, manufacturers or businesses that work with government, government has extended payment terms at times.</p>
+          <p><span class="spk">Nick · 08:57</span>They always pay, but they can drag out</p>
+          <p><span class="spk">Nick · 09:00</span>payment times. So it's just getting money in the door quicker instead of waiting for your client to pay brilliant product. And those that have it, those businesses that use the product, absolutely love it and use it to, um, well, use it to the maximum, um, limits that, that they can.</p>
+          <p><span class="spk">Nick · 09:19</span>Um, because we all know business is all about growth and cashflow, and we all know how detrimental. Um, a, a, a customer not paying an invoice or taking a long time to pay an invoice can be to your business cashflow. So, Jase, I wouldn't mind your input. You're obviously an accountant, you deal with a lot of small businesses.</p>
+          <p><span class="spk">Nick · 09:36</span>What kind of businesses do you see use trade finance? Is it many businesses and can you, can you say from your end, the big advantages in cashflow?</p>
+          <p><span class="spk">Jason · 09:46</span>Yeah, definitely mate. And great question. So, you know, the ones that straight away come off the top of mind, we're kind of already touched on slightly manufacturing big ones.</p>
+          <p><span class="spk">Jason · 09:53</span>So where you've got lots of parts and different things that you've got to bolt and put together, there's a time delay on buying all of the</p>
+          <p><span class="spk">Jason · 10:00</span>supplies that go into making a good. And actually getting that good out the door, delivered, installed, and then paid for by a customer. So there's a huge time delay and usually where these things work really, really well is when there's a time difference between starting and finishing, um, whether you're manufacturing, importing, exporting, producing, um, outside of manufacturing though, the other main one, um, is e commerce or, um, Yeah, people buying, importing and exporting goods.</p>
+          <p><span class="spk">Jason · 10:27</span>So we find a lot of our e commerce, uh, clients, uh, let's say, uh, clothing retailer or, you know, online store, they've, they've got to bring in a bunch of clothing to then be able to print logos on them or, or get them produced and shipped out the door. Um, so there's a few different steps in the supply chain where it might be a giant shipment coming from overseas and then in Melbourne.</p>
+          <p><span class="spk">Jason · 10:48</span>Something happens in Melbourne, then it goes off to the customer to then sell. So they're another great, um, example of where trade finance bridges, the gap between how long it takes to get the goods from</p>
+          <p><span class="spk">Jason · 11:00</span>overseas, come over on a ship, get it through customs and, and out of, uh, out of Port Melbourne into their warehouse, ready to be made and put on the backs of, uh, clients all around Australia.</p>
+          <p><span class="spk">Nick · 11:10</span>I think goods in anyone who just carries large. Accounts receivables, you know, I think of one of, um, one of our clients who actually, uh, was a waste management business. So they were, he's actually a client of yours as well. So, yeah, that</p>
+          <p><span class="spk">Jason · 11:26</span>just popped into my head. So, yeah,</p>
+          <p><span class="spk">Nick · 11:27</span>so, so they had big contracts with developers where they would go around and collect waste from developments.</p>
+          <p><span class="spk">Nick · 11:34</span>Um, and then take that waste and do what they have to do with it. The problem is, is you're talking about really big invoices with really long payment terms. So you've got all, you've got big chunks of money outstanding for a long time. And that's really just providing a service, not even really a good. Um, so, you know, we've got a trade facility finance, um, a trade finance facility in place for them, and that just helps free</p>
+          <p><span class="spk">Nick · 12:00</span>their cashflow up.</p>
+          <p><span class="spk">Nick · 12:01</span>So yeah, it's products and services as well.</p>
+          <p><span class="spk">Jason · 12:04</span>You know, those ones we find are super important to our customers from a cashflow working capital point of view, where if you are dealing with a big client that stretches the payment terms, they say, yeah, look, we're going to pay you in 30, days. And you need that customer.</p>
+          <p><span class="spk">Jason · 12:18</span>Let's say it's a really great relationship, but they've got some power to kind of push back on their payment terms and you go, well, hang on a minute, you know, we really need that cash in the bank to pay wages, pay for our equipment, keep the wheels turning, buy the new equipment that's going to keep our business growing.</p>
+          <p><span class="spk">Jason · 12:34</span>So rather than waiting. You know, 30, 60, 90 days in business when you've got, you know, wages and superannuation and, and bills to pay rather than having that cash in your bank on the spot for a small cost of the, the interest, I guess, that you're losing out on rather than waiting for the payment. Um, there's a win in that way, but also, you know, I think that's where to answer the second part of your question is, do we see it a lot and is it very common?</p>
+          <p><span class="spk">Jason · 12:58</span>We're not seeing it so much</p>
+          <p><span class="spk">Jason · 13:00</span>in, you know, in the smaller business land, kind of sub 2 million turnover. If you're under 2 million turnover, we don't see a lot of businesses in that realm that use trade finance, whether they think it's out of their realm or it's not possible for them. And maybe Marty can throw to you on some of the parameters around when it does become the right size to start looking into trade finance.</p>
+          <p><span class="spk">Jason · 13:19</span>Um, but we definitely see our, you know, over 2 million clients, over 2 million revenue, they're more commonly have trade finance facilities or, you know, a range of finance facilities so that they're covered in event of anything happening in their business. So maybe Marty, what, what are, what are some of the parameters?</p>
+          <p><span class="spk">Marty · 13:36</span>Glad you mentioned that, Jase, because that's, that's what you see a lot of. It's like, Sometimes up to two million in turnover. People just haven't seen the product before or have no exposure to the product. But it's so beneficial as a company grows and particularly you see a lot, um, wanting to have payment in advance for goods overseas.</p>
+          <p><span class="spk">Marty · 13:57</span>Uh, because a lot of the times, you know, even though you're</p>
+          <p><span class="spk">Marty · 14:00</span>paying a fee, like sometimes it could take 1 percent of the total limit as a startup, you know, startup costs, and it varies depending on the risk of the business. But. Again, then, if you can get a payment in advance offshore, you generally get a discount for those goods coming across as well.</p>
+          <p><span class="spk">Marty · 14:18</span>And a lot of people don't think about that. So, you know, there's some significant discounts, sometimes 5 to 10 percent, that they can get off purchasing those goods overseas that then get shipped across. So, you've got to work out what's right for your business. Um, but it is a good thing. It is a fantastic product because a lot of times people under two million in turnover go, Oh, I'm funding this out of my own cash flows, uh, or I get an overdraft.</p>
+          <p><span class="spk">Marty · 14:46</span>And an overdraft is really just for the everyday running of the business with revenues coming in, expenses going out, but trades very specific, almost like, um, Best describe it as a project management.</p>
+          <p><span class="spk">Marty · 15:00</span>So again, you're not eating up any other cash flows, your project management, a shipment across from overseas into your business, and then, you know, obviously selling.</p>
+          <p><span class="spk">Marty · 15:11</span>So some people would like to get terms, like you said, Nick on a letter. where they might get a 120 day, uh, payment terms to overseas. And then what, like some businesses do, they get that product shipped. The client overseas knows that they're going to be okay because they've got a letter of credit guaranteeing the payment.</p>
+          <p><span class="spk">Marty · 15:31</span>And then the business owner in Australia, goes and sells that product and, uh, pays it in advance. And if they don't, obviously the bank's there, got the letter of credit. But the, the bank needs more security in that situation. They'll look at, you know, who the, who the person is overseas, making sure they're reputable, um, ensuring the business is strong.</p>
+          <p><span class="spk">Marty · 15:52</span>Uh, but again, you're not genuinely putting up property or any of the business assets other than the goods.</p>
+          <p><span class="spk">Marty · 16:00</span>And that's a benefit as well because then you can strategically still do property lending against relevant property lending, um, and then you have this cashflow aspect which you could fund independently.</p>
+          <p><span class="spk">Marty · 16:12</span>So it gives you a lot more flexibility in running your business, um, doesn't chew up cashflow. Uh, and it's relevant to the goods being purchased to then being sold. So, it's an integral part of the cycle and you'll see that as businesses, uh, get more sophisticated and have higher turnovers, that they see that as much more useful.</p>
+          <p><span class="spk">Marty · 16:32</span>At the small levels, it's just an unawareness thing and sometimes they just carry it in general cash flows.</p>
+          <p><span class="spk">Nick · 16:38</span>I'm just going to say, I wasn't even thinking about this. I like what you said about, uh, Not tying up security, because if we think about the people that come to us for business funding, the first thing you look at is, well, how much can you get them, um, as an overdraft without security?</p>
+          <p><span class="spk">Nick · 16:53</span>And then if you want more of a limit on your overdraft, then we've got to start bringing properties and other things. And, um,</p>
+          <p><span class="spk">Nick · 17:00</span>I think, well, that then stops them from doing, as you said, investing in property or what it might be. So, and most of the times it's just, you know, As I said at the start and people just unaware that this product actually exists.</p>
+          <p><span class="spk">Nick · 17:12</span>So it just really demonstrates the importance of if you want to grow your business, whether you're, you know, two years in five years in, you need to really understand what products are available and what products are best suited. Number one to my business, but number two to my overall, overall goal as an individual and what I'm trying to do from a wealth creation point of view.</p>
+          <p><span class="spk">Nick · 17:33</span>So I'm glad you brought that up. But, um, what I was going to ask you is, well, how, how does it work? So do you get a, a percentage of your invoices that are owing, um, if they're not taking collateral or security, what determines how much you can actually borrow for lack of a better word? Cause you are borrowing at the end of the day.</p>
+          <p><span class="spk">Nick · 17:55</span>Um, and, and, but, and then based on that, what, what are the</p>
+          <p><span class="spk">Nick · 18:00</span>costs?</p>
+          <p><span class="spk">Marty · 18:00</span>Lenders will generally want some, you know, margin of safety as well. So they'll look at the full, uh, let's say, uh, purchase amount from overseas and they'll issue like a percentage that they'll fund against that purchase amount. So it might be for instance, uh, Like it can go up to 90%, but anywhere between 70 and 90%.</p>
+          <p><span class="spk">Marty · 18:23</span>And the pricing is very much on price for risk. So it's always hard to give any form of interest rate and you try and stay, stay clear about that. But you know, to set that up, maybe 1 percent on the total facility and generally somewhere about. 0. 75 to 1. 25 percent of whatever the trade is that's happening, the cost on that.</p>
+          <p><span class="spk">Marty · 18:46</span>So if it's, let's say I've got my calculator here, it's a 400 grand trade. I'll go to the high end just to give some, so it's about a 5, 000 cost, but</p>
+          <p><span class="spk">Marty · 19:00</span>it could be as low as 0. 75 could be as low as 3, 000. So the more secure, I guess the more the lender has confidence in regards to the strength of the people that they're purchasing from and the businesses they're dealing with, it's really price for risk.</p>
+          <p><span class="spk">Marty · 19:20</span>So, but if you've got, uh, you'll have to pay the lender 10 to 30 percent deposit in order to issue the facility. Um, or the, or the actual supplier, you would pay them that deposit, and then the lender would fund the rest. So there's many different ways to skin it on trade. Invoice is really interesting, sort of similar parameters.</p>
+          <p><span class="spk">Marty · 19:43</span>Invoice finance is much more, it's similar to an overdraft because you're keeping momentum in your cashflow, so you're just getting the payments in advance. And again, they'll look at the balance sheet, making sure that your company's strong. They'll look at the people you're invoicing, but like, they love to have like sort of</p>
+          <p><span class="spk">Marty · 20:00</span>blue chip type of, uh, you know, people, uh, partners that you're dealing with there.</p>
+          <p><span class="spk">Marty · 20:05</span>So they'll review that. And then issue a facility based on that and they'll, they'll, they'll look over the last six months as to who those suppliers are, you know, whether they're making their payments within a certain time as well. So they'll do a review on that and make sure that, you know, obviously that when they're, they're issuing facility that it's going to be okay.</p>
+          <p><span class="spk">Marty · 20:26</span>So, but there's some of the parameters around it.</p>
+          <p><span class="spk">Nick · 20:29</span>From what you've told me there. It sounds like the more, um, the more strength the business has and track record, I guess, the, the business has that the bank can see possibly the bank will grow with you. Correct. You know, they, they learn that there's no little, little risk attached and the business continues to grow and pay.</p>
+          <p><span class="spk">Nick · 20:51</span>pay when the, when things are due, then they can kind of grow alongside you.</p>
+          <p><span class="spk">Marty · 20:55</span>And there's a couple of things there, Nick, in regards to the lenders, you know, will want</p>
+          <p><span class="spk">Marty · 21:00</span>a certain type of size of, uh, trade or invoice facility to make it reasonable for them as well. So when Jay says that 2 million mark of turnover for a business before they started thinking these solutions, that's probably what the lender wants as well.</p>
+          <p><span class="spk">Marty · 21:17</span>However, I would encourage. Um, businesses that are growing, any, anyone that's turning over a million dollars and is starting to think about solutions moving forward in their growth is, it's a great time to have a discussion and just make yourself aware of the solution. So even if you have a smaller facility to begin with, um, you can certainly expand with your business growth.</p>
+          <p><span class="spk">Marty · 21:40</span>So it's about you getting comfortable in utilizing the facility and it's of course the lender getting comfortable with you. And then building that strength as a combination partnership, um, really key elements for the future in your growth as well.</p>
+          <p><span class="spk">Jason · 21:55</span>I like that. I was just gonna say as well, guys, um, just, I remember years ago, it must've been 2020</p>
+          <p><span class="spk">Jason · 22:00</span>Xero bought a, uh, invoice finance company called Waddle and they bought them for like 30 million.</p>
+          <p><span class="spk">Jason · 22:06</span>I remember that. Zero wanted to get into the small business finance game. They, you know, they were, and what Waddle did was technology integration into a zero file. So, um, prefacing this question, it's about the big banks versus some of the new lenders you guys might be seeing in this space. Um, I was excited at the time thinking, geez, this is a really great solution for our, the small business clients that I was just talking about that Marty, you were touching on, being able to go sync their zero file.</p>
+          <p><span class="spk">Jason · 22:33</span>into Waddle. Waddle does a scan to go, is this business, you know, by what they can tell from P&amp; L balance sheet profitability, can we start to give these guys some money and, you know, give them access to their invoice funds in advance of time before their clients pay them. And it was all technology driven.</p>
+          <p><span class="spk">Jason · 22:49</span>It was, it was very quick, very easy. The money would appear in the bank account. They would set up a separate bank account in Xero, which would be then where they would collect the money to buy a BSP and</p>
+          <p><span class="spk">Jason · 23:00</span>account number or payment of the invoice. So then they knew they were going to get paid, clients were getting money in faster.</p>
+          <p><span class="spk">Jason · 23:05</span>And that was, you know, the product, which is why I could see, I guess, Xero's excitement at the time of buying this product integrated into, you know, millions of, of small business Xero files. And they were going to pop up a little button basically saying, get funding, get finance. And you can imagine, you know, there was also then maybe this, the reason the product was shelved is that, you know, if you've got a non sophisticated small business owner that all of a sudden starts clicking, get funding, get finance, and, you know, a business that maybe wasn't ready to take on debt without the checks and parameters that having, you know, brokers like yourselves involved in a decision like this, um, so yeah.</p>
+          <p><span class="spk">Jason · 23:41</span>That that's now been shelved or sold off. Zero went, no, we're going to stick to our core, which is accounting software. And that was bought back by ComBank. So ComBank wanted to increase it's, um, I guess it's technology and how it was going to be able to offer, um, finance and invoice. Um, solutions. So what have you guys</p>
+          <p><span class="spk">Jason · 24:00</span>seen now?</p>
+          <p><span class="spk">Jason · 24:00</span>I mean, are there some up and comers and players in the market that are doing great things with technology or is it the big banks really dominating the space?</p>
+          <p><span class="spk">Nick · 24:06</span>I'll let Marty comment on that. But Marty, before you do, I just want to say one thing, because something you said there really resonated with.</p>
+          <p><span class="spk">Nick · 24:14</span>With me and a concern that I've got about this space is there is, with the introduction of digital lending, um, there are a lot of these funders that have, that have come to the surface. Um, and it's really easy for businesses now to get money and to get money quick. Um, the problem is that if you don't have advice behind that product, what we find is people just get into this, this trap where they get the wrong funding, then they need more funding to cover that funding because it's too expensive.</p>
+          <p><span class="spk">Nick · 24:45</span>And they just go down a hole that they can't, they can't climb out of. So I think what really worries me at the moment is, you know, you're in the car, for example, on a mainstream radio station, and then you will hear an advertisement for some of these online</p>
+          <p><span class="spk">Nick · 25:00</span>business lenders. They do have a place because they do solve a lot of problems for us as well when, uh, with some of our clients, but we're generally using them as a short term solution and then there's a, there's a medium or longer term solution to get the client out of that product.</p>
+          <p><span class="spk">Nick · 25:17</span>So. All of these products that are popping up, I would just, I really worry that people go direct to those providers online because it seems simple and easy. Because the thing is, the providers online do not care about your business. They do not care about what your long or short term plans are. All they want to do is get you that facility and charge you as much as they can.</p>
+          <p><span class="spk">Nick · 25:37</span>So, we would much prefer people come to an advisor, uh, whether it's us or anyone. And get advice on the range of products that are out there because we've often seen people take those online products that are quite expensive. They're quick, but they're quite expensive, but there could have been better longer term facilities such as trade finance that could have also fixed the problem.</p>
+          <p><span class="spk">Jason · 25:56</span>I'll second that as well to say, you know, for, for clients of future and for anyone</p>
+          <p><span class="spk">Jason · 26:00</span>out there who's got an accountant, um, talk to them first before you go and do these online business loans. You think that, you know, maybe you're burying your head in the sand and think that it'll, it'll create a solution and it does short term.</p>
+          <p><span class="spk">Jason · 26:11</span>Um, but then when they're a payment. and start coming out and they're bigger and higher interest than ever, the pain starts again. So, talk to your advisors first, talk to your accountant, talk to your brokers. Um, they're there to have you back in these situations. Um, don't act alone, um, even if you think the deal is good and it's going to help you.</p>
+          <p><span class="spk">Jason · 26:28</span>Sometimes these deals are too good to be true and we've definitely seen some, um, high interest loans crush businesses into liquidation or into shutting down because they can't afford it.</p>
+          <p><span class="spk">Marty · 26:37</span>There's usually a midway point. You think about that, like you're talking about those online. Uh, online invoice payment providers.</p>
+          <p><span class="spk">Marty · 26:44</span>Usually there's a huge margin of safety in the way they operate. So they'll only, uh, they'll only approve certain amounts of invoices. It might be specific invoices, which might only be 30 percent of the overall invoicing. And what you've got to check out is if, like, like you're</p>
+          <p><span class="spk">Marty · 27:00</span>talking about, whether there's a higher cost involved.</p>
+          <p><span class="spk">Marty · 27:02</span>I mean, they're looking at heavy transactions, um, so maybe it's 10 percent of the overall invoicing. Yeah, not so much a high cost, but you need to find, find that out as well and get that advice up front. Yeah, sometimes the banks can go the direct opposite way, like they'll have property backing it, um, they'll over securitize the facility.</p>
+          <p><span class="spk">Marty · 27:19</span>The, it'll really be challenging to set it up and take, take six to eight weeks to set the whole thing up, look at profitability, look at everything else. But you're gonna, once you've got a facility set, It, it's there, you know, for the long term and usually well priced as well, but like we talked about before, you don't want to be tying up security that you could be building wealth with property elsewhere, uh, utilizing that security.</p>
+          <p><span class="spk">Marty · 27:45</span>So you need to find that mid range point. And there's a lot of providers now that are providing that mid range point. So instead of getting the money, let's say. in two days, three days, it might take three weeks because they have to look at your</p>
+          <p><span class="spk">Marty · 28:00</span>balance sheet. They have to, you know, they have to analyze the business, your business, the other business that you're dealing with.</p>
+          <p><span class="spk">Marty · 28:06</span>However, again, once it's set up and they're satisfied, um, you're going to have a facility for life that's going to be beneficial. And you're probably looking at that mid range price point. And that mid range price point Is actually very lucrative because you freed up all the property security and you've got something that functionally is actually going to work for you to be able to get payments in advance across, um, get discounts off the supplier and really keep your business motoring as well.</p>
+          <p><span class="spk">Marty · 28:35</span>So that's why to get the advice, um, I probably know of about three to four in that mid range point that are doing it really well. Um, and it's just a matter of, you know, dropping us a line and we'll, we'll go more specific in your needs. It is really specific to each company that we deal with. Um, because again, it's a price for risk.</p>
+          <p><span class="spk">Marty · 28:57</span>Depends where you're at. How healthy your</p>
+          <p><span class="spk">Marty · 29:00</span>business is, how healthy your suppliers are, and the whole proposition. So I don't want to give specific rates, um, only because they can vary depending on that risk, um, in what we're dealing with. Make sense?</p>
+          <p><span class="spk">Jason · 29:13</span>It does, Marty. It does. Uh, it makes perfect sense. One</p>
+          <p><span class="spk">Marty · 29:16</span>more thing.</p>
+          <p><span class="spk">Marty · 29:17</span>Sorry to cut you off. No, please. Just the unintended consequences of not understanding these types of facilities. A lot of people sometimes will take out a business loan. Over five or six years in order to get product from overseas, then bring it back out and then sell it. But the danger sometimes is that the business loan is five or six years.</p>
+          <p><span class="spk">Marty · 29:38</span>So they go, instead of paying back the loan, I'll just keep it there, put it back into the natural cash flows of the business, and then create hardcore debt that they're not paying down. That's relevant to what they're doing and that becomes a real, real pain point. So again, the right facility for the right function in your business is critical.</p>
+          <p><span class="spk">Marty · 30:00</span>So I've seen that happen a lot of times. So yeah, go on, sir.</p>
+          <p><span class="spk">Jason · 30:04</span>No, no, no, that's, that's perfect. And a great summary. I was just going to say, look, that final call to action, that if this is something you're like, geez, never heard of it or yeah, you know, my mates are doing it. It's business uses this, but I didn't think it was right for me.</p>
+          <p><span class="spk">Jason · 30:14</span>This is the perfect opportunity to have a conversation, uh, with the team at Innovate. So get in touch with, uh, Nick or Marty or direct through the Innovate website, I N O V A Y T. com. au. Um, epic team of people there that always help, uh, always ready to help. I know they do an epic job for future advisories, clients, and the numbers game listeners.</p>
+          <p><span class="spk">Jason · 30:32</span>So if you haven't checked it out, go and do that. And who knows trade financing, voice financing, and a bunch of other finance solutions, maybe what you need to get your business to its next stage of growth. And until next time,</p>
+          <p><span class="spk">Marty · 30:45</span>keep trading game over. ---</p>
+        </div>
+      </details>
+
+    </div>
+
+    <!-- LISTEN:START (build_episode.py rewrites the 3 URLs + iframe title per episode; player dropped if no spotifyEmbedUrl) -->
+    <section class="listen-now">
+      <div class="ln-head">
+        <span class="ln-title">Listen now</span>
+      </div>
+      <div class="audio-embed">
+        <iframe src="https://open.spotify.com/embed/episode/0rtL6WPWiZrYWbKSfEjpcF?utm_source=generator"
+          width="100%" height="152" loading="lazy" allowfullscreen
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+          title="Spotify — Understanding Trade Finance"></iframe>
+      </div>
+    </section>
+
+    <div class="listen">
+      <a href="https://open.spotify.com/episode/0rtL6WPWiZrYWbKSfEjpcF" target="_blank" rel="noopener" aria-label="Listen to this episode on Spotify">
+        <svg viewBox="0 0 24 24"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.52 17.34c-.24.36-.66.48-1.02.24-2.82-1.74-6.36-2.1-10.56-1.14-.42.12-.78-.18-.9-.54-.12-.42.18-.78.54-.9 4.56-1.02 8.52-.6 11.64 1.32.42.18.48.66.3 1.02zm1.44-3.3c-.3.42-.84.6-1.26.3-3.24-1.98-8.16-2.58-11.94-1.38-.48.12-1.02-.12-1.14-.6-.12-.48.12-1.02.6-1.14 4.32-1.32 9.72-.66 13.44 1.62.36.18.54.78.3 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.3c-.6.18-1.2-.18-1.38-.72-.18-.6.18-1.2.72-1.38 4.26-1.26 11.28-1.02 15.72 1.62.54.3.72 1.02.42 1.56-.3.42-1.02.6-1.56.3z"/></svg>
+        Spotify
+      </a>
+      <a href="https://podcasts.apple.com/au/podcast/id1555566088?i=1000651069507" target="_blank" rel="noopener" aria-label="Listen to this episode on Apple Podcasts">
+        <svg viewBox="0 0 24 24"><path d="M5.34 0A5.328 5.328 0 000 5.34v13.32A5.328 5.328 0 005.34 24h13.32A5.328 5.328 0 0024 18.66V5.34A5.328 5.328 0 0018.66 0H5.34zm6.525 2.568c2.336 0 4.448.902 6.056 2.587 1.224 1.272 1.912 2.619 2.264 4.392l.04.23c.04.272-.16.527-.432.567a.505.505 0 01-.567-.431l-.04-.213c-.312-1.57-.92-2.747-2.004-3.867-1.428-1.496-3.293-2.294-5.393-2.294-2.1 0-3.966.798-5.394 2.294-1.084 1.12-1.692 2.298-2.004 3.867l-.04.213a.507.507 0 01-.567.431.504.504 0 01-.432-.567l.04-.23c.352-1.773 1.04-3.12 2.264-4.392 1.608-1.685 3.72-2.587 6.056-2.587h.153zm.136 3.033c1.74 0 3.312.67 4.527 1.934.883.916 1.394 1.93 1.663 3.253l.04.23a.505.505 0 01-.431.567.503.503 0 01-.567-.432l-.04-.212c-.23-1.112-.659-1.97-1.396-2.732-1.052-1.1-2.404-1.672-3.9-1.672s-2.849.572-3.901 1.672c-.737.762-1.167 1.62-1.396 2.732l-.04.212a.503.503 0 01-.567.432.505.505 0 01-.432-.567l.04-.23c.27-1.323.78-2.337 1.664-3.253 1.215-1.264 2.787-1.934 4.527-1.934h.21zm-.078 3.05c1.092 0 2.091.424 2.89 1.22.582.58.924 1.245 1.107 2.15l.04.218a.501.501 0 01-.424.568.499.499 0 01-.568-.424l-.04-.198c-.146-.724-.413-1.253-.871-1.716-.63-.63-1.398-.957-2.226-.957s-1.595.328-2.225.957c-.459.463-.726.992-.871 1.716l-.04.198a.499.499 0 01-.568.424.501.501 0 01-.424-.568l.04-.219c.183-.904.525-1.569 1.106-2.149.8-.796 1.799-1.22 2.89-1.22h.184zM12 14.07a2.477 2.477 0 012.48 2.478A2.477 2.477 0 0112 19.024a2.477 2.477 0 01-2.48-2.477A2.477 2.477 0 0112 14.07z"/></svg>
+        Apple
+      </a>
+      <a class="yt-pill" href="https://www.youtube.com/@thenumbersgamepodcast?sub_confirmation=1" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.12-2.14C19.5 3.55 12 3.55 12 3.55s-7.5 0-9.38.51A3 3 0 0 0 .5 6.2 31.4 31.4 0 0 0 0 12a31.4 31.4 0 0 0 .5 5.8 3 3 0 0 0 2.12 2.14c1.88.51 9.38.51 9.38.51s7.5 0 9.38-.51a3 3 0 0 0 2.12-2.14A31.4 31.4 0 0 0 24 12a31.4 31.4 0 0 0-.5-5.8zM9.55 15.57V8.43L15.82 12z"/></svg>
+        Subscribe
+      </a>
+    </div>
+    <!-- LISTEN:END -->
+
+    <div class="relsec">
+      <span class="rtitle">Discover more</span>
+      <div class="relgrid">
+        <a class="relcard" href="/should-australia-ditch-super">
+          <img src="https://i.ytimg.com/vi/kaeaiK_FwDg/hqdefault.jpg" alt="EP 287 thumbnail">
+          <span class="rt">Should Australia Ditch Super?</span>
+          <span class="rfoot"><span class="rwhy">27 July 2026</span><span class="rtag">EP 287</span></span>
+        </a>
+        <a class="relcard" href="/pokemon-cards-vs-bitcoin-gold-and-the-asx">
+          <img src="https://i.ytimg.com/vi/7PHS9HCqNvM/hqdefault.jpg" alt="EP 286 thumbnail">
+          <span class="rt">Pokemon Cards vs Bitcoin, Gold and the ASX</span>
+          <span class="rfoot"><span class="rwhy">20 July 2026</span><span class="rtag">EP 286</span></span>
+        </a>
+        <a class="relcard" href="/buying-commercial-property-with-your-super-in-2026">
+          <img src="https://i.ytimg.com/vi/RAQ80ecsDq0/hqdefault.jpg" alt="EP 285 thumbnail">
+          <span class="rt">Buying Commercial Property With Your Super in 2026</span>
+          <span class="rfoot"><span class="rwhy">13 July 2026</span><span class="rtag">EP 285</span></span>
+        </a>
+        <a class="relcard" href="/the-most-expensive-day-in-aussie-small-business-history">
+          <img src="https://i.ytimg.com/vi/V-10kMQrsDM/hqdefault.jpg" alt="EP 284 thumbnail">
+          <span class="rt">The Most Expensive Day in Aussie Small Business History</span>
+          <span class="rfoot"><span class="rwhy">6 July 2026</span><span class="rtag">EP 284</span></span>
+        </a>
+        <a class="relcard" href="/what-real-budget-reform-for-young-australians-would-actually-look-like">
+          <img src="https://i.ytimg.com/vi/le7HuIBq6Ow/hqdefault.jpg" alt="EP 283 thumbnail">
+          <span class="rt">What Real Budget Reform for Young Australians Would Actually Look Like</span>
+          <span class="rfoot"><span class="rwhy">29 June 2026</span><span class="rtag">EP 283</span></span>
+        </a>
+        <a class="relcard" href="/the-business-of-gift-cards">
+          <img src="https://i.ytimg.com/vi/nC_JkW320Tw/hqdefault.jpg" alt="EP 282 thumbnail">
+          <span class="rt">The Business of Gift Cards</span>
+          <span class="rfoot"><span class="rwhy">22 June 2026</span><span class="rtag">EP 282</span></span>
+        </a>
+      </div>
+      <div class="reldots" id="reldots"></div>
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="footgrid">
+      <div class="fcol">
+        <div class="foot-label">Follow us on</div>
+        <div class="socials">
+          <a href="https://www.instagram.com/thenumbersgamepodcast/" target="_blank" rel="noopener" aria-label="The Numbers Game on Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.8.2 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1 .4 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .4-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1-.4-2.2-.1-1.3-.1-1.7-.1-4.9s0-3.6.1-4.9c.1-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.4 2.2-.4 1.3-.1 1.7-.1 4.9-.1zm0 2c-3.1 0-3.5 0-4.8.1-1.1.1-1.5.2-1.8.3-.4.2-.7.3-1 .6-.3.3-.5.6-.6 1-.1.3-.3.7-.3 1.8-.1 1.3-.1 1.7-.1 4.8s0 3.5.1 4.8c.1 1.1.2 1.5.3 1.8.2.4.3.7.6 1 .3.3.6.5 1 .6.3.1.7.3 1.8.3 1.3.1 1.7.1 4.8.1s3.5 0 4.8-.1c1.1-.1 1.5-.2 1.8-.3.4-.2.7-.3 1-.6.3-.3.5-.6.6-1 .1-.3.3-.7.3-1.8.1-1.3.1-1.7.1-4.8s0-3.5-.1-4.8c-.1-1.1-.2-1.5-.3-1.8-.2-.4-.3-.7-.6-1-.3-.3-.6-.5-1-.6-.3-.1-.7-.3-1.8-.3-1.3-.1-1.7-.1-4.8-.1zm0 3.4a5.4 5.4 0 1 1 0 10.8 5.4 5.4 0 0 1 0-10.8zm0 2a3.4 3.4 0 1 0 0 6.8 3.4 3.4 0 0 0 0-6.8zm5.6-2.3a1.3 1.3 0 1 1-2.6 0 1.3 1.3 0 0 1 2.6 0z"/></svg></a>
+          <a href="https://www.tiktok.com/@thenumbersgamepodcast" target="_blank" rel="noopener" aria-label="The Numbers Game on TikTok"><svg viewBox="0 0 24 24"><path d="M12.53.02C13.84 0 15.14.01 16.44 0c.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg></a>
+          <a href="https://www.linkedin.com/company/the-numbers-game-podcast/" target="_blank" rel="noopener" aria-label="The Numbers Game on LinkedIn"><svg viewBox="0 0 24 24"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.24 8.25h4.52V23H.24V8.25zM8.34 8.25h4.33v2.01h.06c.6-1.14 2.08-2.34 4.28-2.34 4.58 0 5.42 3.01 5.42 6.92V23h-4.51v-7.16c0-1.71-.03-3.91-2.38-3.91-2.39 0-2.75 1.86-2.75 3.78V23H8.34V8.25z"/></svg></a>
+          <a href="https://www.facebook.com/profile.php?id=100071290388343" target="_blank" rel="noopener" aria-label="The Numbers Game on Facebook"><svg viewBox="0 0 24 24"><path d="M24 12.07C24 5.41 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.04V9.41c0-3.02 1.8-4.7 4.54-4.7 1.31 0 2.68.24 2.68.24v2.97h-1.5c-1.5 0-1.96.93-1.96 1.89v2.26h3.32l-.53 3.5h-2.8V24C19.62 23.1 24 18.1 24 12.07z"/></svg></a>
+          <a href="https://www.youtube.com/@thenumbersgamepodcast" target="_blank" rel="noopener" aria-label="The Numbers Game on YouTube"><svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.2C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31.7 31.7 0 0 0 0 12a31.7 31.7 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.2A31.7 31.7 0 0 0 24 12a31.7 31.7 0 0 0-.5-5.8zM9.6 15.6V8.4L15.8 12z"/></svg></a>
+        </div>
+      </div>
+      <div class="fcol">
+        <div class="foot-label">Brought to you by</div>
+        <div class="sponsors">
+          <a href="https://www.inovayt.com.au/" target="_blank" rel="noopener"><img src="assets/inovayt-white.png" alt="Inovayt"></a>
+          <a href="https://futureadvisory.com.au/" target="_blank" rel="noopener"><img src="assets/future-advisory-white.png" alt="Future Advisory"></a>
+        </div>
+      </div>
+      <div class="fcol produced">
+        <div class="foot-label">Produced by</div>
+        <a href="https://www.vidpod.com.au/" target="_blank" rel="noopener"><img src="assets/vidpod-white.png" alt="VIDPOD"></a>
+      </div>
+    </div>
+    <div class="footbar">
+      <details class="footnav-dd">
+        <summary><svg class="ham" viewBox="0 0 24 24"><path d="M3 6h18v2H3zM3 11h18v2H3zM3 16h18v2H3z"/></svg> Menu</summary>
+        <div class="dd-links">
+          <a href="/">Home</a><a href="/episodes">Every episode</a><a href="/adventure">Choose your own adventure</a><a href="/about">About the show</a><a href="/nick-reilly">Nick Reilly</a><a href="/jason-robinson">Jason Robinson</a><a href="/contact">Contact</a>
+        </div>
+      </details>
+      <div class="copyright">© 2026 The Numbers Game</div>
+    </div>
+  </footer>
+
+  <script>
+    var VIDEO='HXmPcjaRUaA';
+    var CHAPTERS=[
+      {t:"00:00",s:0,title:"Intro"},
+      {t:"04:44",s:284,title:""}
+    ];
+    var QUESTIONS=[
+      {q:"What is trade finance?",s:284},
+      {q:"How does a letter of credit work?",s:471},
+      {q:"What is the simplest way to explain trade finance?",s:491},
+      {q:"Can trade finance save you money on goods?",s:837},
+      {q:"How big is the discount for paying suppliers in advance?",s:858},
+      {q:"What security does trade finance require?",s:952},
+      {q:"How do you choose the right business finance?",s:1032},
+      {q:"What is the danger of digital lending without advice?",s:1454},
+      {q:"Should you get advice before an online business loan?",s:1556},
+      {q:"Why does matching the finance product to the need matter?",s:1792}
+    ];
+
+    var chEl=document.getElementById('chapters');
+    CHAPTERS.forEach(function(c){var b=document.createElement('button');b.className='chapter';b.onclick=function(){startAt(c.s)};b.innerHTML='<span class="tc">'+c.t+'</span><span class="cx">'+c.title+'</span>';chEl.appendChild(b);});
+    document.getElementById('chcount').textContent=CHAPTERS.length;
+    var qEl=document.getElementById('qa');
+    QUESTIONS.forEach(function(q){var b=document.createElement('button');b.className='q';b.onclick=function(){startAt(q.s)};b.innerHTML='<span class="qm">?</span><span class="qx">'+q.q+'</span><span class="go">›</span>';qEl.appendChild(b);});
+    document.getElementById('qcount').textContent=QUESTIONS.length;
+
+    /* Mobile nav dropdown. */
+    var burger=document.getElementById('navburger'), navdrop=document.getElementById('navdrop');
+    if(burger&&navdrop){burger.addEventListener('click',function(){
+      navdrop.hidden=!navdrop.hidden;
+      burger.setAttribute('aria-expanded', navdrop.hidden?'false':'true');
+    });}
+
+    /* Voice-note button reveals the recorder; × tucks it away. */
+    var vbtn=document.getElementById('vbtn'), vslot=document.getElementById('vslot'), vclose=document.getElementById('vclose');
+    if(vbtn&&vslot){vbtn.addEventListener('click',function(){vslot.hidden=!vslot.hidden;});}
+    if(vclose&&vslot){vclose.addEventListener('click',function(){vslot.hidden=true;});}
+
+    /* Keep-exploring dots: only shown when the strip actually scrolls (mobile). */
+    var rg=document.querySelector('.relgrid'), rd=document.getElementById('reldots');
+    if(rg&&rd){
+      var relCards=rg.querySelectorAll('.relcard');
+      relCards.forEach(function(){rd.appendChild(document.createElement('span'))});
+      var updDots=function(){
+        var scrollable=rg.scrollWidth>rg.clientWidth+4;
+        rd.style.display=scrollable?'flex':'none';
+        if(!scrollable)return;
+        var i=Math.round(rg.scrollLeft/(rg.scrollWidth-rg.clientWidth)*(relCards.length-1));
+        rd.querySelectorAll('span').forEach(function(s,n){s.classList.toggle('on',n===i)});
+      };
+      rg.addEventListener('scroll',updDots,{passive:true});
+      window.addEventListener('resize',updDots);
+      updDots();
+    }
+
+    /* Explore tabs: swap the visible panel; the row stays put so you never lose your place. */
+    var tabBtns=document.querySelectorAll('.tabbtn');
+    tabBtns.forEach(function(b){
+      b.addEventListener('click',function(){
+        tabBtns.forEach(function(o){o.classList.remove('on')});
+        document.querySelectorAll('.tpanel').forEach(function(p){p.hidden=true});
+        b.classList.add('on');
+        document.getElementById(b.getAttribute('data-panel')).hidden=false;
+      });
+    });
+
+    /* YouTube: clean facade, then real player on demand. Seek without yanking to top. */
+    var player=null, ready=false, apiReady=false, pending=null;
+    window.onYouTubeIframeAPIReady=function(){apiReady=true; if(pending!=null){var s=pending;pending=null;createPlayer(s);}};
+    function createPlayer(sec){
+      var wrap=document.getElementById('player'); wrap.innerHTML='<div id="yt"></div>';
+      player=new YT.Player('yt',{videoId:VIDEO,playerVars:{autoplay:1,rel:0,modestbranding:1,playsinline:1,start:Math.floor(sec||0)},events:{onReady:function(){ready=true;}}});
+    }
+    function nudge(){
+      var p=document.getElementById('player-wrap'), r=p.getBoundingClientRect();
+      if(r.bottom<80 || r.top>window.innerHeight-90){ p.scrollIntoView({behavior:'smooth',block:'start'}); }
+    }
+    function startAt(sec){
+      nudge();
+      if(player&&ready){ player.seekTo(sec,true); player.playVideo(); return; }
+      if(apiReady){ createPlayer(sec); } else { pending=sec; }
+    }
+    document.getElementById('facade').addEventListener('click',function(){startAt(0);});
+    (function(){var s=document.createElement('script');s.src='https://www.youtube.com/iframe_api';document.head.appendChild(s);})();
+  </script>
+</body>
+</html>

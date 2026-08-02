@@ -1,0 +1,724 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EP 155 · The Digital Heartbeat of Business | The Numbers Game</title>
+<meta name="description" content="Jason leads the boys through how deeply businesses actually use the technology they pay for.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" sizes="64x64" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="canonical" href="https://thenumbersgamepodcast.com.au/the-digital-heartbeat-of-business">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="The Numbers Game">
+<meta property="og:title" content="EP 155 · The Digital Heartbeat of Business | The Numbers Game">
+<meta property="og:description" content="Jason leads the boys through how deeply businesses actually use the technology they pay for.">
+<meta property="og:url" content="https://thenumbersgamepodcast.com.au/the-digital-heartbeat-of-business">
+<meta property="og:image" content="https://i.ytimg.com/vi/fOlNHc31USo/maxresdefault.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+  :root{
+    --purple:#585af3; --purple-dark:#2c1b8a; --mint:#7ad9a8;
+    --white:#ffffff; --muted:rgba(255,255,255,.60); --dim:rgba(255,255,255,.42);
+    --line:rgba(255,255,255,.12); --card:rgba(255,255,255,.05); --card-hi:rgba(255,255,255,.09);
+    --display:'Anton',Impact,'Helvetica Neue',sans-serif;
+    --sans:'Inter',system-ui,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif;
+    --wrap:1280px;   /* page frame (nav spans this) */
+    --col:960px;     /* content column (player, tabs, text) */
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:var(--sans); color:var(--white); line-height:1.6; -webkit-font-smoothing:antialiased;
+    background:#12093a;
+    background-image:
+      radial-gradient(1200px 600px at 82% -6%, rgba(88,90,243,.45) 0%, transparent 55%),
+      radial-gradient(900px 700px at 5% 8%, rgba(122,217,168,.10) 0%, transparent 50%),
+      linear-gradient(180deg,#2c1b8a 0%,#1a1150 28%,#100b34 62%,#0b0820 100%);
+    background-attachment:fixed;
+  }
+  a{color:inherit}
+  .wrap{max-width:var(--wrap);margin:0 auto;padding:0 36px}
+  main.wrap{max-width:var(--col)}
+  @media(max-width:720px){.wrap{padding:0 22px}}
+
+  /* ── Navbar ── */
+  .nav{position:sticky;top:0;z-index:50;background:linear-gradient(180deg,rgba(24,15,74,.92),rgba(24,15,74,.72));backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+  .nav-in{max-width:var(--wrap);margin:0 auto;padding:11px 36px;display:flex;align-items:center;justify-content:space-between}
+  @media(max-width:720px){.nav-in{padding:11px 22px}}
+  .brand{display:block;line-height:0}
+  .brand img{height:36px;width:auto;display:block}
+  .navlinks{display:flex;gap:28px;align-items:center}
+  .navlinks a{text-decoration:none;font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);transition:.15s}
+  .navlinks a:hover{color:var(--white)}
+  .navlinks a.navtop{cursor:default}
+  .navgroup{position:relative;display:flex;align-items:center}
+  .navgroup .subnav{display:none;position:absolute;top:100%;left:50%;transform:translateX(-50%);padding-top:14px;min-width:180px}
+  .navgroup:hover .subnav,.navgroup:focus-within .subnav{display:block}
+  .subnav-in,.navgroup .subnav{z-index:60}
+  .navgroup .subnav a{display:block;background:#180f4a;border:1px solid var(--line);border-top:0;padding:12px 16px;font-size:12px;color:rgba(255,255,255,.85)}
+  .navgroup .subnav a:first-child{border-top:1px solid var(--line)}
+  .navgroup .subnav a:hover{background:#221768;color:var(--white)}
+  .navburger{display:none;background:none;border:1px solid var(--line);padding:8px 10px;cursor:pointer;color:var(--white);transition:.15s}
+  .navburger:hover{border-color:rgba(122,217,168,.6)}
+  .navburger svg{width:20px;height:20px;fill:currentColor;display:block}
+  .navdrop{display:none}
+  @media(max-width:720px){
+    .navlinks{display:none}
+    .navburger{display:block}
+    .navdrop{display:block;position:absolute;left:0;right:0;top:100%;
+      background:#180f4a;border-bottom:1px solid var(--line);box-shadow:0 24px 50px rgba(0,0,0,.45)}
+    .navdrop[hidden]{display:none}
+    .navdrop a{display:block;padding:15px 22px;text-decoration:none;font-size:14px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:rgba(255,255,255,.9);border-bottom:1px solid rgba(255,255,255,.06)}
+    .navdrop a:last-child{border-bottom:0}
+    .navdrop a.sub{padding-left:42px;font-size:13px;color:rgba(255,255,255,.72)}
+    .navdrop .navlabel{display:block;padding:15px 22px 6px;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.4)}
+  }
+
+  /* ── Hero / hook (marker-highlight system: purple hook wraps naturally, mint payoff below)
+     Rules: title splits at its natural break (colon/pipe/question mark). Front = hook (purple,
+     big), back = payoff (mint, smaller). No break in title = purple hook only. Highlights hug
+     the text (tight em padding tuned to Anton) and wrap via box-decoration-break — never
+     hand-pick line breaks or mint words. ── */
+  header.hero{padding:34px 0 6px}
+  .hook{--inx:clamp(8.4px,2.1vw,15.6px)} /* one shared text inset so hook + payoff first letters align */
+  .hook .hk{font-family:var(--display);font-weight:400;text-transform:uppercase;
+    font-size:clamp(28px,7vw,52px);line-height:1.3;letter-spacing:-.5px;text-wrap:balance}
+  .hook .hk span{color:var(--white);padding:.04em var(--inx) .02em;
+    background:linear-gradient(var(--purple),var(--purple)) 0 50%/100% 87% no-repeat;
+    -webkit-box-decoration-break:clone;box-decoration-break:clone}
+  .hook .pay{font-family:var(--display);font-weight:400;text-transform:uppercase;
+    font-size:clamp(16px,4vw,24px);line-height:1.5;letter-spacing:.6px;margin-top:8px;text-wrap:balance}
+  .hook .pay span{color:#0a0a0a;padding:.08em var(--inx) .04em;
+    background:linear-gradient(var(--mint),var(--mint)) 0 50%/100% 88% no-repeat;
+    -webkit-box-decoration-break:clone;box-decoration-break:clone}
+  /* no-hook titles: mid-split into two full-size rows, purple then mint */
+  .hook .hk span.hkrow{display:block;background:none;padding:0}
+  .hook .hk .hkrow+.hkrow{margin-top:8px}
+  .hook .hk span.mintseg{color:#0a0a0a;
+    background:linear-gradient(var(--mint),var(--mint)) 0 50%/100% 87% no-repeat}
+
+  /* ── Player (clean facade → real player on tap) ── */
+  .player-wrap{margin:24px 0 4px;scroll-margin-top:76px}
+  .player{position:relative;width:100%;padding-top:56.25%;border-radius:0;overflow:hidden;background:#000;box-shadow:0 30px 70px rgba(0,0,0,.5),0 0 0 1px rgba(255,255,255,.06)}
+  .facade{position:absolute;inset:0;border:0;cursor:pointer;background-size:cover;background-position:center;display:flex;align-items:center;justify-content:center;padding:0}
+  .facade .play{width:74px;height:74px;border-radius:50%;background:rgba(10,6,30,.40);border:2px solid rgba(255,255,255,.72);display:flex;align-items:center;justify-content:center;transition:.18s;-webkit-backdrop-filter:blur(1px);backdrop-filter:blur(1px)}
+  .facade:hover .play{background:rgba(88,90,243,.62);transform:scale(1.07);border-color:#fff}
+  .facade .play::after{content:"";border-style:solid;border-width:11px 0 11px 19px;border-color:transparent transparent transparent #fff;margin-left:5px}
+  .player iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+
+  /* ── Episode facts (bottom of the Summary panel — templated per episode) ── */
+  .sumfacts{margin:14px 10px 4px;padding-top:13px;border-top:1px solid rgba(255,255,255,.08);display:flex;flex-direction:column;gap:8px}
+  .fact{display:flex;gap:12px;font-size:13.5px}
+  .fact .fl{flex:none;width:104px;color:var(--dim);font-weight:600;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;padding-top:2px}
+  .fact .fv{color:rgba(255,255,255,.9);font-weight:500}
+  .fact .fv a{color:var(--mint);text-decoration:none;border-bottom:1px solid rgba(122,217,168,.4);transition:.15s}
+  .fact .fv a:hover{border-bottom-color:var(--mint)}
+
+  /* ── Episode tag (identity: black label hanging off the title corner) ── */
+  .eptag{display:inline-block;position:relative;left:-6px;margin-bottom:-7px;z-index:2;
+    background:#0a0a0a;color:var(--white);font-family:var(--display);font-weight:400;
+    font-size:13.5px;letter-spacing:1.5px;text-transform:uppercase;padding:6px 11px 4px}
+
+  /* ── Explore tabs (sticky mode switcher; one panel swaps below, nothing shoves) ── */
+  .explore{margin-top:22px}
+  .tabs{position:sticky;top:58px;z-index:40;display:flex;flex-wrap:wrap;gap:8px;padding:10px 0;
+    background:linear-gradient(180deg,rgba(18,10,55,.96),rgba(18,10,55,.86));
+    backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+  .tabbtn{font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.5px;
+    font-size:14.5px;color:var(--white);background:var(--purple);border:1px solid var(--purple);
+    padding:9px 13px 7px;cursor:pointer;transition:.15s}
+  .tabbtn:hover{filter:brightness(1.12)}
+  .tabbtn.on{background:var(--mint);border-color:var(--mint);color:#0a0a0a}
+  .tabbtn.on:hover{filter:none}
+  .tabbtn .ct{font-size:12px;opacity:.75;font-variant-numeric:tabular-nums}
+  .tabbtn .ct::before{content:" · "}
+  .tpanel{border:1px solid var(--line);background:var(--card);padding:12px 10px 14px}
+  .hint{font-size:12.5px;color:var(--muted);padding:2px 10px 10px;border-bottom:1px solid rgba(255,255,255,.08);margin-bottom:6px}
+
+  /* ── Listen row (no box: label left, service pills follow) ── */
+  .listen{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:12px 16px;margin-top:34px}
+  .listen .lname{font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--dim)}
+  .listen a{display:inline-flex;align-items:center;gap:9px;padding:11px 18px;border-radius:999px;
+    background:var(--mint);color:#08210f;text-decoration:none;font-weight:800;font-size:12.5px;
+    letter-spacing:.04em;text-transform:uppercase;transition:.15s}
+  .listen a:hover{filter:brightness(1.06);transform:translateY(-1px);box-shadow:0 12px 30px rgba(122,217,168,.25)}
+  .listen svg{width:20px;height:20px;fill:currentColor;flex:none}
+  /* ── Listen-now Spotify audio embed (full column width, above the pills) ── */
+  .listen-now{margin-top:40px}
+  .listen-now .ln-head{display:flex;align-items:baseline;justify-content:space-between;gap:14px;margin-bottom:13px}
+  .listen-now .ln-title{font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--dim)}
+  .audio-embed{border-radius:12px;overflow:hidden;box-shadow:0 20px 50px rgba(0,0,0,.4),0 0 0 1px rgba(255,255,255,.06)}
+  .audio-embed iframe{display:block;width:100%;border:0}
+  @media(max-width:720px){.listen-now{margin-top:32px}}
+
+  /* ── Keep exploring (thumbnails link to other episode PAGES, never timecodes).
+     Swipeable strip on mobile, fits three-up on desktop. Variant rule: claim
+     "similar ground" + reason lines ONLY when moment-level topic overlap is
+     genuinely strong; otherwise show the latest released episodes with dates —
+     never invent a connection. ── */
+  .relsec{margin-top:60px;padding-top:58px;border-top:1px solid var(--line)} /* line = end of this episode's info */
+  .reldots{display:flex;justify-content:center;gap:7px;margin-top:12px}
+  .reldots span{width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.25);transition:.2s}
+  .reldots span.on{background:var(--mint)}
+  .relsec .rtitle{display:inline-block;font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.5px;font-size:14.5px;background:var(--mint);color:#0a0a0a;padding:9px 13px 7px;margin-bottom:18px}
+  .relgrid{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding-bottom:6px;scrollbar-width:none}
+  .relgrid::-webkit-scrollbar{display:none}
+  .relcard{flex:0 0 56%;max-width:232px;scroll-snap-align:start;display:flex;flex-direction:column;text-decoration:none;background:var(--card);border:1px solid var(--line);transition:.15s}
+  .relcard:hover{background:var(--card-hi);border-color:rgba(122,217,168,.55)}
+  .relcard img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block}
+  .relcard .rt{display:block;font-size:12.5px;font-weight:600;color:rgba(255,255,255,.92);line-height:1.4;padding:8px 8px 0}
+  .relcard .rfoot{margin-top:auto;display:flex;justify-content:space-between;align-items:flex-end;gap:8px;padding:10px 8px 9px}
+  .relcard .rwhy{font-size:11.5px;color:var(--mint)}
+  .relcard .rtag{display:inline-block;background:#0a0a0a;color:var(--white);font-family:var(--display);font-size:10px;letter-spacing:1.2px;text-transform:uppercase;padding:3px 7px 2px;white-space:nowrap;flex:0 0 auto}
+
+  /* ── Dropdown sections (accordion under the player) ── */
+  .drops{margin-top:34px;display:flex;flex-direction:column;gap:11px}
+  .drop{border:1px solid var(--line);border-radius:0;background:var(--card);overflow:hidden;transition:border-color .15s}
+  .drop[open]{border-color:rgba(122,217,168,.35)}
+  .drop>summary{list-style:none;cursor:pointer;padding:16px 18px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+  .drop>summary::-webkit-details-marker{display:none}
+  .drop>summary .st{font-weight:700;font-size:15.5px;letter-spacing:.005em}
+  .drop>summary .ct{margin-left:auto;font-size:12px;color:var(--dim);font-weight:600;font-variant-numeric:tabular-nums}
+  .drop>summary .chev{flex:none;width:22px;height:22px;border-radius:50%;background:rgba(122,217,168,.14);color:var(--mint);display:flex;align-items:center;justify-content:center;font-family:var(--display);font-size:15px;line-height:1;transition:.2s;transform:translateY(-1px)}
+  .drop[open]>summary .chev{transform:rotate(45deg)}
+  .drop-body{padding:2px 12px 12px}
+
+  /* chapters */
+  .chapter{display:flex;align-items:baseline;gap:14px;width:100%;text-align:left;cursor:pointer;background:none;border:0;color:inherit;font-family:inherit;padding:11px 10px;border-radius:10px;transition:.13s}
+  .chapter:hover{background:var(--card-hi)}
+  .chapter .tc{font-variant-numeric:tabular-nums;font-weight:700;font-size:14px;color:var(--mint);flex:none;width:48px}
+  .chapter .cx{font-size:15px;font-weight:500;color:rgba(255,255,255,.9)}
+  .chapter:hover .cx{color:#fff}
+
+  /* questions */
+  .q{display:flex;align-items:center;gap:12px;width:100%;text-align:left;cursor:pointer;background:none;border:0;border-radius:11px;color:inherit;font-family:inherit;padding:12px 10px;transition:.14s}
+  .q+.q{border-top:1px solid rgba(255,255,255,.05)}
+  .q:hover{background:var(--card-hi)}
+  .q .qm{font-family:var(--display);font-size:15px;color:var(--mint);flex:none;line-height:1;transform:translateY(1px)}
+  .q .qx{font-size:15px;font-weight:500;color:rgba(255,255,255,.92)}
+  .q .go{margin-left:auto;flex:none;color:var(--dim);font-size:18px;transition:.15s}
+  .q:hover .go{color:var(--mint);transform:translateX(2px)}
+
+  /* summary + transcript bodies */
+  .summary-body p{font-size:16.5px;line-height:1.62;color:rgba(255,255,255,.9);padding:6px 10px 4px}
+  .tbody{padding:2px 10px 8px}
+  .tbody p{font-size:14.5px;line-height:1.7;color:rgba(255,255,255,.78);margin-top:15px;max-width:64ch}
+  .tbody .spk{display:block;font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--mint);margin-bottom:2px}
+
+  /* ── Voice note ask (lives at the bottom of the Summary panel) ── */
+  .vask{margin:16px 10px 4px}
+  .vbtn{display:inline-flex;align-items:center;gap:9px;padding:12px 20px;border-radius:999px;border:0;cursor:pointer;
+    background:var(--mint);color:#08210f;font-family:inherit;font-weight:800;font-size:12.5px;
+    letter-spacing:.04em;text-transform:uppercase;transition:.15s}
+  .vbtn:hover{filter:brightness(1.06);transform:translateY(-1px);box-shadow:0 12px 30px rgba(122,217,168,.25)}
+  .vbtn svg{width:18px;height:18px;fill:currentColor;flex:none}
+  .vslot{background:var(--purple);padding:12px 10px 10px;margin:14px 0 4px;box-shadow:0 18px 40px rgba(0,0,0,.35)}
+  .vslot[hidden]{display:none}
+  .vhead{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;margin-bottom:10px}
+  .vhead .vmsg{font-family:var(--sans);font-size:13px;line-height:1.55;color:rgba(255,255,255,.92);margin:2px 0 0;padding:0 2px}
+  .vclose{background:none;border:0;color:rgba(255,255,255,.85);font-size:22px;line-height:1;cursor:pointer;padding:0 2px}
+  .vclose:hover{color:var(--white)}
+  .vslot iframe{display:block}
+
+  /* ── YouTube subscribe pill (sits in the listen row; outranks .listen a's mint) ── */
+  .listen a.yt-pill{background:var(--purple);color:var(--white)}
+  .listen a.yt-pill:hover{filter:brightness(1.1);transform:translateY(-1px)}
+  @media(max-width:720px){ /* mobile: no label, three compact pills on one row */
+    .listen .lname{display:none}
+    .listen{gap:8px}
+    .listen a{padding:10px 13px;font-size:11px;gap:6px}
+    .listen svg{width:16px;height:16px}
+  }
+
+  /* ── Footer: Follow us on | Brought to you by | Produced by, + Menu dropdown ── */
+  footer{border-top:1px solid var(--line);margin-top:68px;padding:52px 20px 58px}
+  .footgrid{max-width:var(--wrap);margin:0 auto;display:grid;grid-template-columns:1fr 1.15fr .8fr;gap:44px;align-items:start}
+  .fcol{text-align:center;display:flex;flex-direction:column;align-items:center}
+  .foot-label{font-size:11px;font-weight:700;letter-spacing:.26em;text-transform:uppercase;color:var(--dim);margin-bottom:18px}
+  .sponsors{display:flex;justify-content:center;align-items:center;gap:34px;flex-wrap:wrap}
+  .sponsors a,.produced a{display:inline-flex;transition:.15s}
+  .sponsors a:hover,.produced a:hover{transform:translateY(-1px)}
+  .sponsors img{height:32px;width:auto;opacity:.92}
+  .produced img{height:30px;width:auto;opacity:.95}
+  .sponsors a:hover img,.produced a:hover img{opacity:1}
+  footer .socials{display:flex;gap:11px;justify-content:center;flex-wrap:wrap;margin:0}
+  footer .socials a{width:40px;height:40px;border-radius:50%;border:1.5px solid rgba(122,217,168,.5);display:flex;align-items:center;justify-content:center;transition:.15s}
+  footer .socials a svg{width:18px;height:18px;fill:var(--mint);transition:.15s}
+  footer .socials a:hover{background:var(--mint);border-color:var(--mint);transform:translateY(-2px)}
+  footer .socials a:hover svg{fill:#0a0a0a}
+  .footbar{max-width:var(--wrap);margin:34px auto 0;border-top:1px solid var(--line);padding-top:20px;display:flex;flex-direction:column;align-items:center;gap:14px}
+  .footnav-dd{display:block;width:100%;max-width:var(--wrap);margin:0 auto;text-align:center}
+  .footnav-dd>summary{list-style:none;cursor:pointer;display:inline-flex;align-items:center;gap:9px;font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.5px;font-size:13px;color:var(--muted);background:transparent;border:1px solid var(--line);padding:8px 16px 6px;transition:.15s}
+  .footnav-dd>summary::-webkit-details-marker{display:none}
+  .footnav-dd>summary:hover{color:var(--mint);border-color:rgba(122,217,168,.45)}
+  .footnav-dd>summary .ham{width:15px;height:15px;fill:currentColor;transform:translateY(-1px)}
+  .footnav-dd .dd-links{display:flex;flex-direction:row;flex-wrap:wrap;justify-content:center;gap:12px 24px;padding:24px 0 4px}
+  .footnav-dd .dd-links a{font-size:11.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:.15s}
+  .footnav-dd .dd-links a:hover{color:var(--mint)}
+  .copyright{font-size:12px;color:var(--dim);text-align:center}
+  @media(max-width:720px){.footgrid{grid-template-columns:1fr;gap:34px}footer{padding:40px 16px 20px}.footbar{margin-top:34px;padding-top:24px;gap:20px}.footnav-dd .dd-links{flex-direction:column;align-items:center;gap:15px}}
+
+  @media(min-width:720px){header.hero{padding:48px 0 6px}}
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "PodcastEpisode", "name": "The Digital Heartbeat of Business", "url": "https://thenumbersgamepodcast.com.au/the-digital-heartbeat-of-business", "datePublished": "2024-02-19", "episodeNumber": 155, "image": "https://i.ytimg.com/vi/fOlNHc31USo/maxresdefault.jpg", "partOfSeries": {"@type": "PodcastSeries", "name": "The Numbers Game", "url": "https://thenumbersgamepodcast.com.au/"}}</script>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-in">
+      <a class="brand" href="/" aria-label="The Numbers Game home"><img src="assets/tng-logo.png" alt="The Numbers Game"></a>
+      <div class="navlinks">
+        <a href="/">Home</a>
+        <div class="navgroup">
+          <a class="navtop">Episodes</a>
+          <div class="subnav">
+            <a href="/episodes">All episodes</a>
+            <a href="/adventure">Find moments</a>
+          </div>
+        </div>
+        <div class="navgroup">
+          <a class="navtop">About</a>
+          <div class="subnav">
+            <a href="/about">The show</a>
+            <a href="/nick-reilly">Nick Reilly</a>
+            <a href="/jason-robinson">Jason Robinson</a>
+          </div>
+        </div>
+        <a href="/contact">Contact</a>
+      </div>
+      <button class="navburger" id="navburger" type="button" aria-label="Menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24"><path d="M3 6h18v2H3zM3 11h18v2H3zM3 16h18v2H3z"/></svg>
+      </button>
+    </div>
+    <div class="navdrop" id="navdrop" hidden>
+      <a href="/">Home</a>
+      <span class="navlabel">Episodes</span>
+      <a class="sub" href="/episodes">All episodes</a>
+      <a class="sub" href="/adventure">Find moments</a>
+      <span class="navlabel">About</span>
+      <a class="sub" href="/about">The show</a>
+      <a class="sub" href="/nick-reilly">Nick Reilly</a>
+      <a class="sub" href="/jason-robinson">Jason Robinson</a>
+      <a href="/contact">Contact</a>
+    </div>
+  </nav>
+
+  <main class="wrap">
+
+    <header class="hero">
+      <div class="hook">
+        <span class="eptag">EP 155</span>
+        <h1 class="hk"><span class="hkrow"><span>The Digital Heartbeat</span></span>
+        <span class="hkrow"><span class="mintseg">of Business</span></span></h1>
+      </div>
+    </header>
+
+    <div class="player-wrap" id="player-wrap">
+      <div class="player" id="player">
+        <button class="facade" id="facade" style="background-image:url('https://i.ytimg.com/vi/fOlNHc31USo/maxresdefault.jpg')" aria-label="Play episode">
+          <span class="play"></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="explore">
+      <div class="tabs" role="tablist">
+        <button class="tabbtn on" data-panel="p-summary">Summary</button>
+        <button class="tabbtn" data-panel="p-chapters">Chapters<span class="ct" id="chcount"></span></button>
+        <button class="tabbtn" data-panel="p-questions">Questions<span class="ct" id="qcount"></span></button>
+      </div>
+      <section class="tpanel" id="p-summary">
+        <div class="summary-body">
+          <p>Jason leads the boys through how deeply businesses actually use the technology they pay for. Nick explains Innovate's big tech stack across four revenue streams, tech you must use versus tech of choice, and how HubSpot turned assumptive data into real-time insight. Jason works through Xero being underused: bank rules to auto-code recurring transactions, automated transfers, custom reports, invoice reminders, credit card payments, budget versus actual, and Hubdoc for receipts, plus why good records keep an ATO review from becoming an audit. They cover AI in business (Podium review replies, chatbots, loan assessment, Microsoft Copilot) and then the human side of adoption: showing the why, burning the boats, building a tech-savvy culture, appointing a tech champion, and not being over-stacked.</p>
+        </div>
+        <div class="vask">
+          <button class="vbtn" id="vbtn" type="button">
+            <svg viewBox="0 0 24 24"><path d="M12 14a3 3 0 0 0 3-3V6a3 3 0 1 0-6 0v5a3 3 0 0 0 3 3zm5-3a5 5 0 0 1-10 0H5a7 7 0 0 0 6 6.92V21h2v-3.08A7 7 0 0 0 19 11h-2z"/></svg>
+            Send us a voice note
+          </button>
+          <div class="vslot" id="vslot" hidden>
+            <div class="vhead">
+              <p class="vmsg">We'd love to hear from you. You can leave up to a 90 second voice note for us to play on the show: a question, some feedback, or a topic you want covered.</p>
+              <button class="vclose" id="vclose" type="button" aria-label="Close">&times;</button>
+            </div>
+            <iframe src="https://www.speakpipe.com/widget/inline/hhq6kzggsx7zpcsvakgxfrzun3zidpde" allow="microphone" width="100%" height="200" frameborder="0" title="Leave The Numbers Game a voice note"></iframe>
+          </div>
+          <script async src="https://www.speakpipe.com/widget/loader.js" charset="utf-8"></script>
+        </div>
+        <div class="sumfacts">
+          <div class="fact"><span class="fl">Release date</span><span class="fv">19 February 2024</span></div>
+          <div class="fact"><span class="fl">Hosts</span><span class="fv"><a href="/nick-reilly">Nick Reilly</a>, <a href="/jason-robinson">Jason Robinson</a> &amp; <a href="/marty-vidakovic">Marty Vidakovic</a></span></div>
+
+        </div>
+      </section>
+      <section class="tpanel" id="p-chapters" hidden>
+        <p class="hint">Jump straight to the part you need.</p>
+        <div id="chapters"></div>
+      </section>
+      <section class="tpanel" id="p-questions" hidden>
+        <p class="hint">Real questions this episode answers. Tap one to hear the answer.</p>
+        <div id="qa"></div>
+      </section>
+    </div>
+
+    <div class="drops">
+
+      <details class="drop">
+        <summary><span class="st">Episode transcript</span><span class="chev">+</span></summary>
+        <div class="drop-body tbody">
+          <p><span class="spk">Jason · 00:00</span>Welcome to episode 155 of The Numbers Game. I'm Jase. I'm here with Nick and Marty. How are we going today, guys? Going well, Jase.</p>
+          <p><span class="spk">Marty · 00:07</span>Um, tripped over my dog the other day and nearly killed myself, but apart from that I'm going well. Don't let your dog sleep next to the bedroom door, and it's dark, and you think it's a rug, but it's a dog.</p>
+          <p><span class="spk">Marty · 00:20</span>I couldn't believe it, so I'm alright, though. Live to find another day. But, uh, you love him? Just get out of my way. Nick, how are you?</p>
+          <p><span class="spk">Nick · 00:31</span>Mate, going well. Busy weekend, but, uh, pushing through the Monday. I actually went to a piano bar on Saturday night for the first time. A little bit out of my wheelhouse, but, um, I don't think I'll go out again.</p>
+          <p><span class="spk">Nick · 00:44</span>Not that I go out much these days, unless it's for a work event or something. Uh, I think I will only go to events now with, uh, someone playing the piano or live music. Um, it's a bit of a plug. It's called Murmur. Um,</p>
+          <p><span class="spk">Nick · 01:00</span>in the city of Melbourne. I've forgotten the lane, but um, geez it was a lot of fun. Versus just, you know, going out and sitting around talking.</p>
+          <p><span class="spk">Nick · 01:07</span>Um, you know, we had someone who was obviously performing on the piano, and made the night a heap of fun. Jase, you've surely been past</p>
+          <p><span class="spk">Jason · 01:17</span>murmur. I'm going to put it on the list though, and I'm sure if, uh, Case is listening to this episode at some point in the next six months, uh, it'll end up on the list anyway, so.</p>
+          <p><span class="spk">Jason · 01:25</span>You will not</p>
+          <p><span class="spk">Nick · 01:26</span>go anywhere else for quite some time. Unbelievable.</p>
+          <p><span class="spk">Marty · 01:28</span>Nothing better than live music though, really, it's, uh, I, I was fortunate enough to go to my nephew's 21st on the York and Lillydale, out of East, by God, what a debauchery that was. Great night. Everyone had fun. I'm thinking. Well, we're this bad at 21.</p>
+          <p><span class="spk">Marty · 01:43</span>And then I thought we're probably worse because there was no social media to keep us accountable. But, uh, it was, uh, geez, it was good to say the young people have a good time. It was going off. Chase, how are you? Any 21st or weddings</p>
+          <p><span class="spk">Jason · 01:56</span>or? No, actually awake for a</p>
+          <p><span class="spk">Jason · 02:00</span>funeral, but not to bring it in, but in context, sorry, to bring it in, um, the music thing.</p>
+          <p><span class="spk">Jason · 02:05</span>So, um, my uncle. Loved music and one of the things that he used to love was sitting around with a guitar and passing the guitar around. So at the wake in the afternoon, we went back to his place with all the family and a guitar got passed around and anyone who could play would play the guitar and sing and Case and I actually sat next to each other and Case was like, man, there's.</p>
+          <p><span class="spk">Jason · 02:25</span>Nothing better than just someone who's really good at the guitar and can sing, just sitting around a quiet little backyard. Everyone's sipping a glass of red in his honor and, or in his memory. And, you know, she told him, she says, man, that guy's got an epic voice. And we sat there listening to the young man's name was Ben and.</p>
+          <p><span class="spk">Jason · 02:41</span>He put on an epic little show and it was, you know, in, in honor of my uncle and, but live music, it was just a reminder that, you know, it's, it's so powerful. Music's beautiful and Nick, it's going to get definitely added to the list. And just in also related to the animal story. I forgot to tell Case on the way out the door this morning, but I</p>
+          <p><span class="spk">Jason · 03:00</span>heard the cat vomit under the table.</p>
+          <p><span class="spk">Jason · 03:01</span>So in case when this episode comes out, I still have forgotten to tell Case about that. There is cat vomit under the table. So we are just on fire here at the numbers game between animal stories and hot tips for where to go out on a Saturday night. So it is all happening. Today's episode though, to get it back on track and keep it in good numbers, game form, got some value to bring to our lovely listeners.</p>
+          <p><span class="spk">Jason · 03:23</span>I wanted to guide a bit of a chat with you boys around how deep people use their tech stacks in business. Um, it's one of my focuses for 2024 with our own business and the, and the conversations we're having with our clients. And I wanted to elaborate on a few things with you guys today. Um, I guess from.</p>
+          <p><span class="spk">Jason · 03:41</span>I guess to open up the discussion a little bit before I dive into a couple of specific examples of technology, Nick, I might throw to you, um, you know, you're a tech savvy guy. I know Innovate uses a whole bunch of tools and technology. Marty, I'm not saying you're not a tech savvy guy. I'm not saying tech's</p>
+          <p><span class="spk">Jason · 04:00</span>It's not an ageist thing, just Nick gave me the eyes.</p>
+          <p><span class="spk">Jason · 04:04</span>Uh, Nick, from a technology point of view, you know, would you say Innovate's got a huge tech stack, heaps of really deeply used technology, or how would you describe the current technology situation at Innovate? Yeah, I would say we've</p>
+          <p><span class="spk">Nick · 04:16</span>got a big tech stack, um, out of, out of necessity, really. Um, we've got industries that rely on tech as is every industry, but ours, I think more than some, um, the challenge we've got is we have three revenue streams.</p>
+          <p><span class="spk">Nick · 04:32</span>So yeah, asset and equipment, finance, uh, residential finance. We've actually got four commercial finance, uh, and financial planning. So each of those revenue streams require different tech to get the job done. Um, and it's tech that is actually required, like you, you can no longer lodge loans manually. Um, so, so we've got a big tech stack and then we have something.</p>
+          <p><span class="spk">Nick · 04:56</span>Uh, we need things to tie that all together. Um, so, you know,</p>
+          <p><span class="spk">Nick · 05:00</span>we use HubSpot as our CRM and our workflow tool. Um, so we, we use tech that we must use. So, you know, like you must use Xero, but then we've got tech of choice, um, to bring all the businesses together and have them work as one unit, I guess, to a degree, as far as.</p>
+          <p><span class="spk">Nick · 05:17</span>Yeah. Maintaining client records and being able to market, uh, said marketing information out and whatnot. Um, and then outside of that, you've got tech with all the different providers. So, you know, we've got lenders, um, got a panel of around 30 lenders. Each of those lenders have different tech, uh, and there is tech that.</p>
+          <p><span class="spk">Nick · 05:35</span>I guess brings it all together now, which is good, but, um, yeah, so it's fairly deep, but it's fairly well, I'd, I'd say it's fairly well used, um, cause, cause it's a necessity.</p>
+          <p><span class="spk">Jason · 05:48</span>Yeah. Uh, Marty, anything to add on from a tech point of view from your</p>
+          <p><span class="spk">Marty · 05:51</span>side? Oh, I just did regards to the relevance of tech. I think the, you know, the initial thing when you say new tech coming out, you go, oh, great.</p>
+          <p><span class="spk">Marty · 05:58</span>Now I'm going to try and work</p>
+          <p><span class="spk">Marty · 06:00</span>this out is the first response. But then when you see. What it does. And for me, I'll give you a direct example. Like 14 months ago, when we were attracting leads to the business, it was very assumptive and a lot of, you know, trust in regards to the salespeople telling us what they were doing and how we were doing it and, you know, even manually collating the data.</p>
+          <p><span class="spk">Marty · 06:23</span>You know, there was a lot more manual process, but since we've had HubSpot and all this data is now very intuitive and realistic in real time, we sort of get a read in real time what is going on and can predict what's going to happen over the next three to six months. Um, and you can adapt your strategy virtually daily.</p>
+          <p><span class="spk">Marty · 06:44</span>Instead of coming off the back end of three months of, uh, assumptive data and trying to work out and sort of, you know, trying to, trying to find your feet. So it's like, it's unbelievable in regards to how it progresses a business, um, from</p>
+          <p><span class="spk">Marty · 07:00</span>what I've seen. So I've really tried to. As a more mature person, uh, I've tried to, uh, I shouldn't say mature, just, you know, different demographic of person.</p>
+          <p><span class="spk">Marty · 07:10</span>Uh, that's probably not into the tech tech spaces, but I actually really enjoy it. And I just need to remind myself to sit with it and to learn it as you go, because it's, uh, it really advances business. It's great.</p>
+          <p><span class="spk">Nick · 07:24</span>The first thing that come to mind then, Marty, and obviously you're talking about our business, but what's.</p>
+          <p><span class="spk">Nick · 07:28</span>What's measured is managed. Um, and we haven't just realized that from a business point of view, but individuals as well. So, you know, individuals that are using the tech correctly, uh, actually get a read on their own performance, uh, and can then manage themselves off, off the tech. So. Um, yeah, that's a really good point.</p>
+          <p><span class="spk">Nick · 07:49</span>Really good point. It's incredible.</p>
+          <p><span class="spk">Jason · 07:51</span>Yep. No, I love it. And look, the reason I quiz you guys and ask you guys to get involved upfront before I've even talked about anything is I want this to be a reflection point for our listeners</p>
+          <p><span class="spk">Jason · 08:00</span>too, who may be in business and using a lot of technology and apps to sit back and go, actually, how much do I use?</p>
+          <p><span class="spk">Jason · 08:06</span>How deep am I using it? Like, do we use all of the capability of the technology that we're paying for day to day? So it's a bit of an opportunity to do a review of just what you're paying for and how you're using it. Now, the first one I want to do a quick snapshot on is obviously a big favorite of mine.</p>
+          <p><span class="spk">Jason · 08:22</span>Um, the zero accounting software. So if you're running a business and you're most likely going to be using zero accounting software, if you're, you know, amongst the majority of the small business owners who are on zero, if you're not on zero, you're probably on Myob or QuickBooks or one of these other ones.</p>
+          <p><span class="spk">Jason · 08:36</span>And if you are, you can probably apply the same, um, things that I'm going to go through. But a big part about Xero is it's often very highly underused all of the capabilities. Now that may be automating your bank feeds. It might be doing the record, um, bank feed data. So as that comes in, Xero can actually recognize a lot of things and you can create bank rules.</p>
+          <p><span class="spk">Jason · 08:58</span>So I go, whenever we bring</p>
+          <p><span class="spk">Jason · 09:00</span>on new clients, I like to jump in and have a look at their bank rules. And nine times out of 10, there are no bank rules set up. So the example there really quick, easy one would be if you bank with ANZ. Every single month, there's a 10 account fee from ANZ. Now, instead of each month having to click type ANZ, code it to bank fees and click okay, you can create a rule that says whenever this transaction that says account fees comes in from ANZ.</p>
+          <p><span class="spk">Jason · 09:24</span>reconcile it to bank fees and you'll never have to type that in again. It'll just be done. Now, that's a real basic example, but think about in business, how many transactions day to day, week to week, month to month are the same transaction every time. So if you can create bank rules to automate this easy, you may move money between bank accounts in your business.</p>
+          <p><span class="spk">Jason · 09:45</span>If you think about every time you move money from bank account one to bank account two, you can automate that transfer in Xero so that it recognizes it between bank accounts. That's just one simple little thing that saves business owners so much time, and they just don't know that they should go and do that or create</p>
+          <p><span class="spk">Jason · 10:00</span>that.</p>
+          <p><span class="spk">Jason · 10:00</span>If you've got a bookkeeper, your bookkeeper can probably do that too, and that would save a whole lot of time that you're paying for bookkeeping fees, for example. Beyond automating bank, um, bank rules and your bank feeds, you've got customized reports. So running a P&amp; L or a balance sheet, we've talked about this before, but a lot of times the, the basic structure that comes in these accounting softwares don't allow you to really see the detailed information.</p>
+          <p><span class="spk">Jason · 10:23</span>So creating a custom report, for example, that drops tax out of operating expenses into non operating expenses. So you've got some actual insight into how your business is performing. And then one of the other simple ones might be invoice reminders. You know, you're dealing with customers, you're sending invoices.</p>
+          <p><span class="spk">Jason · 10:39</span>A lot of times we see invoice reminders not even turned on and customers or clients are wondering why they're not getting paid on time. Adding to that one more would be also allowing yourself to be paid by credit card. So if you haven't activated the ability to be paid by credit card, your clients can only pay you by BSB and account number transfer.</p>
+          <p><span class="spk">Jason · 10:56</span>Now think about how slow and time consuming that is to log into</p>
+          <p><span class="spk">Jason · 11:00</span>the bank, add the BSB and account number. Make sure you've typed it right. Sometimes you get it wrong, as opposed to just clicking the pay online button and allowing your customers to pay you from an online payment gateway. Any thoughts so far guys on Xero and the little tips and tricks to make it more powerful?</p>
+          <p><span class="spk">Jason · 11:18</span>Well,</p>
+          <p><span class="spk">Nick · 11:19</span>first thing I thought about is how frustrated I get when Xero invoices come for payment to me as a client. And there's no credit card option. Um, no one wants to be logging into their bank account and doing a BSB in account. Um, in regards to Xero, we have a, uh, a bookkeeper. So, um, a lot of the stuff you said, I hope, I hope they're doing, um, but where we've found like something that we use it for, which has been a game changer is cashflow.</p>
+          <p><span class="spk">Nick · 11:46</span>Uh, forecasts and budgeting, so building in, cause it could be, you know, if you're not doing this, you're doing it with zero, uh, with sorry, Excel, which is quite time consuming. So. Building in your annual forecasts and</p>
+          <p><span class="spk">Nick · 12:00</span>then obviously what happens, happens throughout the year and then zero letting, you know, you know, the variances, um, whether it was a certain expense or income.</p>
+          <p><span class="spk">Nick · 12:09</span>So that's been a game changer for us. Um, just understanding how we're tracking compared to our, you like that? Yeah, I</p>
+          <p><span class="spk">Jason · 12:16</span>love it. It's exactly where I wanted to go with this and you've just hit the nail on the head. So yeah. The power of that, yeah, the power of that budget versus actual is beyond just knowing, you know, did you hit budget in revenue or did you spend a little bit more money than you thought you would?</p>
+          <p><span class="spk">Jason · 12:31</span>There's actually a lot more deeper insight you can get from the actual performance versus budget performance. And it goes beyond into things like, did we pay our work cover bill at the same time we paid it last year? Or did we miss that payment? Because you can see where the payment came out the year before, if you're running the budget based on the previous year's numbers, it might be.</p>
+          <p><span class="spk">Jason · 12:49</span>You know, the difference in your superannuation payments, your wages have gone up or down. You can kind of see trends and seasonality a lot better if you are tracking your performance in your budget versus</p>
+          <p><span class="spk">Jason · 13:00</span>actual area in Xero. And those things are often things that business owners miss when they don't get in and look at their figures properly.</p>
+          <p><span class="spk">Jason · 13:07</span>You know, you miss your work cover, you miss registering for payroll tax, when your wages go over a certain number, month to month. Cause if you're not getting in each month and checking how you went and did you hit the figures you meant to, you're missing out on this opportunity to check some of those other financial metrics, but cashflow management and budgeting, if you can do that inside your accounting software, as opposed to mucking around on an Excel template, you are so much more streamlined and organized than majority of the business owners out there that are not using that feature.</p>
+          <p><span class="spk">Jason · 13:36</span>Yep. Love it. Love that you guys are using that, uh, top tip. So that's, that's a little bit on zero and this is a little bit, this is a number two, but it's kind of a one and a half for zero. Do you guys use Hubdoc or how are you managing your receipts and invoices when it comes to collecting those for the bookkeeper?</p>
+          <p><span class="spk">Jason · 13:52</span>Don't</p>
+          <p><span class="spk">Nick · 13:53</span>use Hubdoc. We, that's a very good question. They just go to an email actually. Um, we don't, we don't have much</p>
+          <p><span class="spk">Nick · 14:00</span>expenditure that. Um, is an outside of accounts managing it. So accounts generally have access. I've looked at Hubdoc though, that's for, you know, receipts. If you're out to dinners or whatnot, is that what you're referring to?</p>
+          <p><span class="spk">Jason · 14:12</span>Yeah. But look, to be honest, when you just said you've got a special email address that I'll get sent to, there's a fair chance. That then may be forwarded to Hubdoc behind the scenes with the bookkeeping team. So Hubdoc is a receipt management system, just to let everyone know what we're talking about.</p>
+          <p><span class="spk">Jason · 14:26</span>It's an add on. It used to be an add on that you could add to a whole bunch of different accounting softwares, but Xero bought Hubdoc for something like 40 million because they wanted to kind of tighter, do a tighter integration into Xero. Hubdoc, if you are on Xero and you're not using Hubdoc, you're crazy because it's free.</p>
+          <p><span class="spk">Jason · 14:42</span>So you can basically turn Hubdoc on and start using it. And again, that might be something simple, Nick, for yourself, you know, for those dinners, for example, you could have Hubdoc as an app on your phone, take a paper physical receipt that gets handed to you when you're out and about, snap a photo on your phone, straight into the accounting system for the bookkeeper to sort</p>
+          <p><span class="spk">Jason · 15:00</span>out.</p>
+          <p><span class="spk">Jason · 15:00</span>And you know, your life is back to focusing on what you need to focus on day to day. I'm sending myself a reminder. There you go. Beautiful mate. I love it. Now, the reason I say from an email address point of view, Hubdoc also sets up an email address. So it might be innovate at hubdoc. com. So anytime there's an innovate receipt or invoice that needs to be sorted, you'd forward it to that email address.</p>
+          <p><span class="spk">Jason · 15:21</span>So there's a fair chance, potentially the email address you're forwarding to automatically then pushes that into Hubdoc. So, um, that was just a quick one to add in there. You know, we, we get asked a lot of questions by clients going, Oh, do I really need to keep every receipt? Now, look, if the ATO reviews your business, they may look at a list of transactions and pick half a dozen transactions to say, can we please see the invoices or receipts for those transactions?</p>
+          <p><span class="spk">Jason · 15:44</span>Now, if you can't pull up any of those receipts, do you know the next thing the ATO is going to say? Okay, this isn't just a review anymore, this is a full blown audit. We're going to audit your business now because you're not keeping financial records and we want to see what else we find. If you keep good records</p>
+          <p><span class="spk">Jason · 16:00</span>and the ATO do a review and they ask you for half a dozen receipts or invoices and you can hand them over on the spot because you've got the technology to attach every receipt or invoice to a transaction, tell you what, that's a business the ATO is not going to be too concerned about because they know you're keeping good financial records.</p>
+          <p><span class="spk">Jason · 16:17</span>So top tip there is use Xero to the full capability and then add on things like HubDoc, which are really simple tools to keep your expense management, receipt management, and just day to day life all under control and nice and easy. So again, trying to go paperless, document, digital, digitalizing documents all over it.</p>
+          <p><span class="spk">Jason · 16:37</span>You guys will kill it.</p>
+          <p><span class="spk">Nick · 16:38</span>So Marty Vids, all those cappuccinos. We need the receipts, mate. We need the receipts. Don't.</p>
+          <p><span class="spk">Marty · 16:44</span>Let the audience set it to innovate and hopped off, but make sure we don't use that email address, Nick. I don't want the audience sending in all their receipts and they, uh, automate to, uh, us.</p>
+          <p><span class="spk">Jason · 16:55</span>Fake, fake example, just a good pickup there, Marty. That's not exactly how it works. I left out a few of</p>
+          <p><span class="spk">Jason · 17:00</span>the little details. There's ones and twos and Es and you know, they don't make it that simple. Just checking. Yeah. No, good, good point though. Good point. Um, now it wouldn't be me, me leading an episode or talking about tech without then talking about AI.</p>
+          <p><span class="spk">Jason · 17:13</span>Um, so, you know, it's been well over a year since the November, 2022 chat GPT was launched and AI started to become a bit of the conversation. Um, what I will say is this isn't so much about, you know, implementing a whole bunch of tech tools and, you know, paying for more subscriptions. But chat GPT and other AI tools are now being implemented into businesses all the time.</p>
+          <p><span class="spk">Jason · 17:38</span>And if you haven't had a bit of a look at what type of things could AI do to improve your business or streamline some things, this is just a bit of a reminder that. Have a bit of a review of all of your tech stack, and then have a bit of a look at what are each of the things you're already paying for doing in AI land.</p>
+          <p><span class="spk">Jason · 17:52</span>Um, so the example would be Podium for us. Um, you know, we're talking about Podium, but I think I've mentioned Podium a few times on this show.</p>
+          <p><span class="spk">Jason · 18:00</span>Um, Podium has brought out an AI feature. So let's say somebody gives Future Advisory a five star Google review. They do it through the Podium platform and we text them to say, how are we going as a business?</p>
+          <p><span class="spk">Jason · 18:10</span>AI can then generate a response to that Google review. So, you know, Google likes it when the business owner gets in and replies to a review. It says, you know, thanks for leaving a review. We love working with you, blah, blah, blah. Podium's AI will pre draft an AI response based on what the review said. And it allows me, the business owner, just to quickly glance over and go, yep, that's beautiful and click okay.</p>
+          <p><span class="spk">Jason · 18:31</span>AI can do to make things faster and easier. Other ones that we're seeing clients bring out and. Tools that we use is like AI chatbots. So, you know, you jump on a website and a chatbot pops up in the bottom corner and says, you know, how can we help you today? Now, once upon a time, that may have been a human.</p>
+          <p><span class="spk">Jason · 18:50</span>Now it's more likely to be AI chatbot getting you to a certain point, you know, what do you need help with? I need a mortgage. Beautiful. You know, Marty's going to give you a call on this number soon. Can</p>
+          <p><span class="spk">Jason · 19:00</span>we grab a few more details about what type of mortgage you're looking for? And all of a sudden Marty gets sent to.</p>
+          <p><span class="spk">Jason · 19:04</span>A little checklist of info that's been asked questions by an AI chat bot before Marty then picks up the phone as a human and closes that deal. Yeah, for us,</p>
+          <p><span class="spk">Nick · 19:12</span>um, like I guess it's similar. We, we kind of lean on existing, um, tech partners to start to, to leverage AI. So, um. Blogs are a big thing for us. So through SEO, um, and generating online leads, uh, we write a lot of blogs.</p>
+          <p><span class="spk">Nick · 19:30</span>Um, so no doubt, um, ChatGPT will assist with that. Uh, the other thing for us is particularly around loan assessment. Um, so certain tools now starting to use AI to automatically assess. Whether an applicant, uh, will be approved for a loan or not. Um, so that's, that's a thing that we're going to see moving forward.</p>
+          <p><span class="spk">Nick · 19:50</span>So yeah. Anything else, Marty, that you can think of that we've. No,</p>
+          <p><span class="spk">Marty · 19:54</span>I think, I think we've got a lot of tech that we have within the business. The</p>
+          <p><span class="spk">Marty · 20:00</span>question I was going to ask Jase though, when you are implementing new tech into your business, how do you get everyone on board? Because I think there's, I think there's something that, you know, as a business owner, you might say that looks exceptional.</p>
+          <p><span class="spk">Marty · 20:14</span>And you know, it works. I think there's always a resistance point initially until someone, you know, gets the relevance of it. Do we still have issues around the training through these ideas? Because, uh, I'd just be interested to see what, what you're doing as well. And we certainly try to train in advance, but It's, uh, yeah, just</p>
+          <p><span class="spk">Jason · 20:34</span>interested in your perspective.</p>
+          <p><span class="spk">Jason · 20:35</span>It's, it's a very great question and something that I will definitely plan on covering up, but I'll bring it up to here to answer your question for now. And then we may expand on a little bit later on. Ultimately, you know, showing your team the why, why you're implementing a new piece of tech and how it's going to not only help their lives, help the business and also help clients.</p>
+          <p><span class="spk">Jason · 20:54</span>For example, now not all tech will touch all of those elements. But if you just tell someone here's a new piece</p>
+          <p><span class="spk">Jason · 21:00</span>of tech, start using it, but there's no reason why they should use it, why they should change their process. You know, there's no new system and procedure, you know, delved into of the ins and outs.</p>
+          <p><span class="spk">Jason · 21:11</span>People always default back to the way they've always done it. Even if this new tech or tool makes their life easier. But they, you know, if you're in a habit and you're in a routine and you've done something since the dawn of time, chances are you keep doing it that way, unless something's been shown to you, explained.</p>
+          <p><span class="spk">Jason · 21:26</span>And, you know, there was, there was an old saying that I saw a presenter do. It was around, if you've got a printer in the office and people print paper all the time, if that print is always there and people like to print paper, they will keep printing paper. Now, if you burn your boats or get rid of the printer and leave people with no choice, but to use paperless technology.</p>
+          <p><span class="spk">Jason · 21:46</span>They will then have to start using that. So a bit of that as well is if you are implementing new tech and a new procedure, is there a way to make the old way of doing it redundant so that you can have your team get on board with the new way of doing things?</p>
+          <p><span class="spk">Jason · 22:00</span>Um, you know, quite often there's a transition period where you'll leave.</p>
+          <p><span class="spk">Jason · 22:03</span>We've changed digital signing technology, for example, but we've got one that's still active, but we want to start using the new one. And quite often I'll see the old one going out and go, Oh my God, like, why are we still using this digital signing technology if we can move over here? So a lot of that will come down to the culture of your firm as well.</p>
+          <p><span class="spk">Jason · 22:19</span>If you've created a tech savvy culture that embraces new technology and gets involved in the training and aligning the adoption of technology with business goals, that's the biggest area that I've seen us start to have some success. We, you know, again, podium, the example. I started paying for Podium years ago and using Podium as a way of text messaging clients and getting Google reviews.</p>
+          <p><span class="spk">Jason · 22:41</span>But then after a while I was like, hang on a minute. There must be about seven people using Podium properly and 21 or 22 people that either had never logged in or only use it really sporadically. So we redid team training, we got Podium into the office and did a presentation. And now I quite often love turning around and</p>
+          <p><span class="spk">Jason · 23:00</span>seeing Podium on the screens of all of the computers in the office because it's a way of text messaging day to day with our clients without having to use the team members, my personal mobile phone number.</p>
+          <p><span class="spk">Jason · 23:10</span>So that way they're not getting a text at 10 o'clock at night on their phone while they're about to try and fall asleep. So, um, those examples, training, culture, and long term business goals. How does it fit in with your business and why are you implementing this bit of technology? Well, if you can explain that and articulate to your team and get them to buy into the vision, just like any business vision, it'll definitely help with the adoption of technology in the business.</p>
+          <p><span class="spk">Marty · 23:31</span>There's the key. One thing to have the technology, you've got to train it. Yeah, exactly what you said. Brilliant answer. Nah,</p>
+          <p><span class="spk">Jason · 23:38</span>my pleasure, mate. And just to cover off the last one or a couple of last points, um, just to make this one a short, sharp punchy for everyone, but one mistake, and I always like to go back to mistakes.</p>
+          <p><span class="spk">Jason · 23:48</span>I think we used to have a segment, you know, a long time ago, if you remember, I think it was losing it. Um, might have to do a special losing it every now and then just to spice things up a little bit. But we, when we started, um, Persian Mono Future</p>
+          <p><span class="spk">Jason · 24:00</span>Advisory many, many years ago, Greg and I, the web developer we worked with when we started forming the business, he was a Google suite guy.</p>
+          <p><span class="spk">Jason · 24:06</span>So he operated on Google, Google Docs, Google Sheets, everything was Google and Gmail. And I was like, yeah, cool. I'd never really used it before. The firm I'd worked at historically had always used Microsoft office, but we went, I, it's cheap, it's easy. We can store stuff in the cloud. And we started using Google for our new business.</p>
+          <p><span class="spk">Jason · 24:24</span>We were starting cut to six to 12 months into running this business. We onboarded our first hundred clients. We had documents in the cloud. We had Gmail emails. But then we moved to a new, uh, IT provider who wanted to look at our internet security, our management of who had access to what documents. And they went, look, to be honest, Google's great, but for what you do in the accounting industry, Microsoft Office, Outlook, SharePoint, OneDrive, the list goes on.</p>
+          <p><span class="spk">Jason · 24:53</span>You're going to be better off porting over to Microsoft. So we had to make this decision as early days in a business,</p>
+          <p><span class="spk">Jason · 25:00</span>what operating system were we going to be using? Now, Nick, you talked about your CRM as one major kind of central thing for the organization. If you think back before that, you probably had to make a call on where you were Microsoft office business, or did you use Google's business suite?</p>
+          <p><span class="spk">Jason · 25:14</span>Um, I'm sure you guys at Microsoft. Microsoft. Yep. Do you remember what, what back in the day you just chose Microsoft and went with it? Or was it the only option? Oh,</p>
+          <p><span class="spk">Nick · 25:22</span>I don't think, um, yeah, I just think we were there. And it just continued to get better and better. So, you know, I think if you look at both of them, what, what advantages can you really get?</p>
+          <p><span class="spk">Nick · 25:34</span>Um, so we've just always been Microsoft to be transparent.</p>
+          <p><span class="spk">Jason · 25:37</span>Yeah, cool. And this is not made to go one way or the other. It's talking about how deep we use our technology. So this is a reminder for everyone out there. If you're a Google business suite, there are so many things in within that suite that you can be using to, you know, just streamline your business to some just awesome capabilities as is with Microsoft and the thing with Microsoft.</p>
+          <p><span class="spk">Jason · 25:57</span>And I'll talk from that because we also use that.</p>
+          <p><span class="spk">Jason · 26:00</span>You know, the example is, you know, I wanted to create a new online form that people signed up with. And I started looking at type form, for example, and our it provider, um, Sebastian from SSGL, he's a mad dog loves Microsoft. He's like, well, Microsoft has the capability for you to do that and you already pay for it.</p>
+          <p><span class="spk">Jason · 26:16</span>So why would you not just use the technology you've got access to? So there's little things like that that happen all the time. There's Microsoft dynamics too, where it's like, you know, we were using Zapier where that creates a zap. Basically, if something happens, it zaps some information from here to here.</p>
+          <p><span class="spk">Jason · 26:30</span>And again, Microsoft Dynamics and, and those kind of tools does the same thing. Somebody signs up on your website, it can create a folder in SharePoint already in the name of the client that's just signed up to be a client. Yeah. Saves the manual processing. So keeping in mind as well, just lastly while I talk about the AI side, Microsoft Co-pilot will start to become active on a lot of computers out there and a lot of your team's devices.</p>
+          <p><span class="spk">Jason · 26:52</span>That is basically the inbuilt AI robot that starts to do things for you within Microsoft. So you, I might email you Nick. Asking you</p>
+          <p><span class="spk">Jason · 27:00</span>what times can we meet the next week and before you've even opened that email, Microsoft Copilot would have drafted a response to me, letting you know what potential times you could meet with me, but pre drafted in an email saying, Hey, Jason, here's my available times next week.</p>
+          <p><span class="spk">Jason · 27:14</span>So you don't even have to go and look at your calendar, Copilot would have done it for you and suggested some times based on your schedule. So I'm, uh, I don't know about you, but I'm excited for that day when that all goes live.</p>
+          <p><span class="spk">Nick · 27:24</span>Oh yeah, there's, there's nothing worse than looking at your diary and trying to find all the times that are free and sending them through.</p>
+          <p><span class="spk">Jason · 27:30</span>Just ask Beck who's trying to find a time for us to all play golf one day, so. There's</p>
+          <p><span class="spk">Nick · 27:36</span>so many tools out there and I guess the other thing that we found too is, um, Just talking about the challenges of implementing is just having someone. Uh, of, you know, they don't have to be of seniority, but someone may be seen as a leader in your business, champion the tech, um, you know, if I look at our business in particular, obviously we use HubSpot as a CRM, but it's also doubled as a sales tool for our</p>
+          <p><span class="spk">Nick · 28:00</span>salespeople, um, being able to manage their, uh, manage their leads or opportunities in, uh, manage their diaries, um, get back to people.</p>
+          <p><span class="spk">Nick · 28:08</span>And I guess what's happened for us is some of our top performers from a numbers point of view have really embraced HubSpot, um, and have used it full to its full extent. And then you've got a domino effect. So, you know, well, the top performers using it, why wouldn't you do what they're doing? So I think as a business, you can pull some people aside, um, who see themselves as leaders or as senior people and say, Hey, this is what we're doing.</p>
+          <p><span class="spk">Nick · 28:34</span>Obviously, all the stuff that you spoke about is spot on to the training and whatnot. But. We really need you to back this and we want, you know, you as a leader to embrace it 100 percent and then people will follow. So we've, we've definitely found that it's just been this slow. This slow pickup of HubSpot as people say, and you know, all the sales people talk to each other and they talk about the benefits they're getting from it.</p>
+          <p><span class="spk">Nick · 28:56</span>Um, so that's been a big</p>
+          <p><span class="spk">Jason · 28:57</span>win for us. A hundred percent. And if you, if you can put</p>
+          <p><span class="spk">Jason · 29:00</span>in a tech champion in your business, it may be an overarching tech champion. Who's the person you go to if you know, you want to look into using something better or if you're not using it enough, or you've come across a fancy bit of new technology, but you don't have time to investigate it or look into it because it's not really your role.</p>
+          <p><span class="spk">Jason · 29:15</span>If you know, in your business, who the tech champion is, and you can flick them an email or a Slack or a teams or whoever you communicate or WhatsApp, just say, Hey, I found this. Think it might be great for our business. I'll leave it for you to have a look into that tech champion can then go away and do the research, see if it works for your business or not.</p>
+          <p><span class="spk">Jason · 29:31</span>And then look at how to implement it and use it. Now, this app kind of focused very high level on a couple of little things. And now that's, you know, I've really found it a struggle just to cherry pick a couple of things to talk about because. You know, we would run 30 different bits of apps and technology to run our business.</p>
+          <p><span class="spk">Jason · 29:48</span>You're probably 40, 50, 60 across your three or four revenue streams. The challenge here and the message is that if you've implemented technology and it's not being used properly by your team, you're</p>
+          <p><span class="spk">Jason · 30:00</span>burning cash and you're burning the efficiency that you could be getting from using technology properly.</p>
+          <p><span class="spk">Jason · 30:04</span>The challenge now is post listening to this episode, go back and review all your technology. Have a look. Do you have a tech champion? Have you, um, got a tech savvy culture where people are utilizing technology? And if not, have a look at how you can invest in training and most importantly, aligning your technology with your business goals.</p>
+          <p><span class="spk">Jason · 30:24</span>And if you can articulate that back to your team as to why it's important to use your technology properly and how that's going to help you to achieve your business goals, that'll start to have you getting the runs on the board when it comes to a deeper use of your technology. I'll just throw one</p>
+          <p><span class="spk">Nick · 30:37</span>thing there in as a counter argument to Jace.</p>
+          <p><span class="spk">Nick · 30:40</span>I think you've also got to be careful, for lack of a better phrase, that you're not over stacked. Um, I think a lot of businesses grab this, grab that, I'll grab this, I'll grab that. And to your point, not using them. Uh, they're not using them because they're not relevant. Um, and they're not using them because they just don't have time.</p>
+          <p><span class="spk">Nick · 30:56</span>They might have two things that can do the work, you know, that can perform the</p>
+          <p><span class="spk">Nick · 31:00</span>same task. So, I think you've also got to make sure you're not over stacked. And You know, one of the things that we've learned is particularly as an SME, a small business, tech can be quite expensive. So, you know, use, use what's available to you.</p>
+          <p><span class="spk">Nick · 31:15</span>You don't necessarily have to, you know, have the absolute best thing in the market. If it gets you a result and it means you can be more efficient. Uh, and it means you can get the job done quicker and easier and at a lower cost, then take what you can and, and, you know, don't stress about it too much because we've, we've seen that, um, in our own business.</p>
+          <p><span class="spk">Nick · 31:33</span>So, yeah, don't, don't be overstacked. I like that. Marty likes that. I can tell.</p>
+          <p><span class="spk">Marty · 31:38</span>I do that. I do like that because everyone likes to have rhythm in their dealings. And if you over stack people, then, you know, you find that they can handbrake their efficiencies in another way. So I think both what you said is really relevant in regards to the training process, having an, you know, a tech champions, a great idea and the training method, or it's</p>
+          <p><span class="spk">Marty · 32:00</span>got to present something better.</p>
+          <p><span class="spk">Marty · 32:01</span>At the end of the day from the person that's using it perspective as well. So you've got to get that across, but yeah, certainly you want to maintain rhythm of dealings as well.</p>
+          <p><span class="spk">Jason · 32:11</span>One of the ways to maybe I would get back on track with that is the tech provider that you're using. If you're thinking about canceling that subscription, cause you're not getting use out of it.</p>
+          <p><span class="spk">Jason · 32:19</span>Give that tech provider, maybe the opportunity to come and present to your team and like a webinar or teams format, just show them how to use that tech properly and how it can benefit the business. So you can probably get some wins out of better use of your technology, but then also you may be able to get some wins out of canceling some of the tech and the apps that you're not using.</p>
+          <p><span class="spk">Jason · 32:37</span>So we're all about getting money back in your pocket here at the numbers game or being more efficient running our businesses. If you've enjoyed the episode, please remember to give us a like and a review at the store that you listen to your podcast through. Until next time, we're grateful for you listening and Game</p>
+          <p><span class="spk">Jason · 33:00</span>over. ---</p>
+        </div>
+      </details>
+
+    </div>
+
+    <!-- LISTEN:START (build_episode.py rewrites the 3 URLs + iframe title per episode; player dropped if no spotifyEmbedUrl) -->
+    <section class="listen-now">
+      <div class="ln-head">
+        <span class="ln-title">Listen now</span>
+      </div>
+      <div class="audio-embed">
+        <iframe src="https://open.spotify.com/embed/episode/7duA5T5VjhD5cLkZPndAtg?utm_source=generator"
+          width="100%" height="152" loading="lazy" allowfullscreen
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+          title="Spotify — The Digital Heartbeat of Business"></iframe>
+      </div>
+    </section>
+
+    <div class="listen">
+      <a href="https://open.spotify.com/episode/7duA5T5VjhD5cLkZPndAtg" target="_blank" rel="noopener" aria-label="Listen to this episode on Spotify">
+        <svg viewBox="0 0 24 24"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.52 17.34c-.24.36-.66.48-1.02.24-2.82-1.74-6.36-2.1-10.56-1.14-.42.12-.78-.18-.9-.54-.12-.42.18-.78.54-.9 4.56-1.02 8.52-.6 11.64 1.32.42.18.48.66.3 1.02zm1.44-3.3c-.3.42-.84.6-1.26.3-3.24-1.98-8.16-2.58-11.94-1.38-.48.12-1.02-.12-1.14-.6-.12-.48.12-1.02.6-1.14 4.32-1.32 9.72-.66 13.44 1.62.36.18.54.78.3 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.3c-.6.18-1.2-.18-1.38-.72-.18-.6.18-1.2.72-1.38 4.26-1.26 11.28-1.02 15.72 1.62.54.3.72 1.02.42 1.56-.3.42-1.02.6-1.56.3z"/></svg>
+        Spotify
+      </a>
+      <a href="https://podcasts.apple.com/au/podcast/id1555566088?i=1000645757943" target="_blank" rel="noopener" aria-label="Listen to this episode on Apple Podcasts">
+        <svg viewBox="0 0 24 24"><path d="M5.34 0A5.328 5.328 0 000 5.34v13.32A5.328 5.328 0 005.34 24h13.32A5.328 5.328 0 0024 18.66V5.34A5.328 5.328 0 0018.66 0H5.34zm6.525 2.568c2.336 0 4.448.902 6.056 2.587 1.224 1.272 1.912 2.619 2.264 4.392l.04.23c.04.272-.16.527-.432.567a.505.505 0 01-.567-.431l-.04-.213c-.312-1.57-.92-2.747-2.004-3.867-1.428-1.496-3.293-2.294-5.393-2.294-2.1 0-3.966.798-5.394 2.294-1.084 1.12-1.692 2.298-2.004 3.867l-.04.213a.507.507 0 01-.567.431.504.504 0 01-.432-.567l.04-.23c.352-1.773 1.04-3.12 2.264-4.392 1.608-1.685 3.72-2.587 6.056-2.587h.153zm.136 3.033c1.74 0 3.312.67 4.527 1.934.883.916 1.394 1.93 1.663 3.253l.04.23a.505.505 0 01-.431.567.503.503 0 01-.567-.432l-.04-.212c-.23-1.112-.659-1.97-1.396-2.732-1.052-1.1-2.404-1.672-3.9-1.672s-2.849.572-3.901 1.672c-.737.762-1.167 1.62-1.396 2.732l-.04.212a.503.503 0 01-.567.432.505.505 0 01-.432-.567l.04-.23c.27-1.323.78-2.337 1.664-3.253 1.215-1.264 2.787-1.934 4.527-1.934h.21zm-.078 3.05c1.092 0 2.091.424 2.89 1.22.582.58.924 1.245 1.107 2.15l.04.218a.501.501 0 01-.424.568.499.499 0 01-.568-.424l-.04-.198c-.146-.724-.413-1.253-.871-1.716-.63-.63-1.398-.957-2.226-.957s-1.595.328-2.225.957c-.459.463-.726.992-.871 1.716l-.04.198a.499.499 0 01-.568.424.501.501 0 01-.424-.568l.04-.219c.183-.904.525-1.569 1.106-2.149.8-.796 1.799-1.22 2.89-1.22h.184zM12 14.07a2.477 2.477 0 012.48 2.478A2.477 2.477 0 0112 19.024a2.477 2.477 0 01-2.48-2.477A2.477 2.477 0 0112 14.07z"/></svg>
+        Apple
+      </a>
+      <a class="yt-pill" href="https://www.youtube.com/@thenumbersgamepodcast?sub_confirmation=1" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.12-2.14C19.5 3.55 12 3.55 12 3.55s-7.5 0-9.38.51A3 3 0 0 0 .5 6.2 31.4 31.4 0 0 0 0 12a31.4 31.4 0 0 0 .5 5.8 3 3 0 0 0 2.12 2.14c1.88.51 9.38.51 9.38.51s7.5 0 9.38-.51a3 3 0 0 0 2.12-2.14A31.4 31.4 0 0 0 24 12a31.4 31.4 0 0 0-.5-5.8zM9.55 15.57V8.43L15.82 12z"/></svg>
+        Subscribe
+      </a>
+    </div>
+    <!-- LISTEN:END -->
+
+    <div class="relsec">
+      <span class="rtitle">Discover more</span>
+      <div class="relgrid">
+        <a class="relcard" href="/should-australia-ditch-super">
+          <img src="https://i.ytimg.com/vi/kaeaiK_FwDg/hqdefault.jpg" alt="EP 287 thumbnail">
+          <span class="rt">Should Australia Ditch Super?</span>
+          <span class="rfoot"><span class="rwhy">27 July 2026</span><span class="rtag">EP 287</span></span>
+        </a>
+        <a class="relcard" href="/pokemon-cards-vs-bitcoin-gold-and-the-asx">
+          <img src="https://i.ytimg.com/vi/7PHS9HCqNvM/hqdefault.jpg" alt="EP 286 thumbnail">
+          <span class="rt">Pokemon Cards vs Bitcoin, Gold and the ASX</span>
+          <span class="rfoot"><span class="rwhy">20 July 2026</span><span class="rtag">EP 286</span></span>
+        </a>
+        <a class="relcard" href="/buying-commercial-property-with-your-super-in-2026">
+          <img src="https://i.ytimg.com/vi/RAQ80ecsDq0/hqdefault.jpg" alt="EP 285 thumbnail">
+          <span class="rt">Buying Commercial Property With Your Super in 2026</span>
+          <span class="rfoot"><span class="rwhy">13 July 2026</span><span class="rtag">EP 285</span></span>
+        </a>
+        <a class="relcard" href="/the-most-expensive-day-in-aussie-small-business-history">
+          <img src="https://i.ytimg.com/vi/V-10kMQrsDM/hqdefault.jpg" alt="EP 284 thumbnail">
+          <span class="rt">The Most Expensive Day in Aussie Small Business History</span>
+          <span class="rfoot"><span class="rwhy">6 July 2026</span><span class="rtag">EP 284</span></span>
+        </a>
+        <a class="relcard" href="/what-real-budget-reform-for-young-australians-would-actually-look-like">
+          <img src="https://i.ytimg.com/vi/le7HuIBq6Ow/hqdefault.jpg" alt="EP 283 thumbnail">
+          <span class="rt">What Real Budget Reform for Young Australians Would Actually Look Like</span>
+          <span class="rfoot"><span class="rwhy">29 June 2026</span><span class="rtag">EP 283</span></span>
+        </a>
+        <a class="relcard" href="/the-business-of-gift-cards">
+          <img src="https://i.ytimg.com/vi/nC_JkW320Tw/hqdefault.jpg" alt="EP 282 thumbnail">
+          <span class="rt">The Business of Gift Cards</span>
+          <span class="rfoot"><span class="rwhy">22 June 2026</span><span class="rtag">EP 282</span></span>
+        </a>
+      </div>
+      <div class="reldots" id="reldots"></div>
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="footgrid">
+      <div class="fcol">
+        <div class="foot-label">Follow us on</div>
+        <div class="socials">
+          <a href="https://www.instagram.com/thenumbersgamepodcast/" target="_blank" rel="noopener" aria-label="The Numbers Game on Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.8.2 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1 .4 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .4-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1-.4-2.2-.1-1.3-.1-1.7-.1-4.9s0-3.6.1-4.9c.1-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.4 2.2-.4 1.3-.1 1.7-.1 4.9-.1zm0 2c-3.1 0-3.5 0-4.8.1-1.1.1-1.5.2-1.8.3-.4.2-.7.3-1 .6-.3.3-.5.6-.6 1-.1.3-.3.7-.3 1.8-.1 1.3-.1 1.7-.1 4.8s0 3.5.1 4.8c.1 1.1.2 1.5.3 1.8.2.4.3.7.6 1 .3.3.6.5 1 .6.3.1.7.3 1.8.3 1.3.1 1.7.1 4.8.1s3.5 0 4.8-.1c1.1-.1 1.5-.2 1.8-.3.4-.2.7-.3 1-.6.3-.3.5-.6.6-1 .1-.3.3-.7.3-1.8.1-1.3.1-1.7.1-4.8s0-3.5-.1-4.8c-.1-1.1-.2-1.5-.3-1.8-.2-.4-.3-.7-.6-1-.3-.3-.6-.5-1-.6-.3-.1-.7-.3-1.8-.3-1.3-.1-1.7-.1-4.8-.1zm0 3.4a5.4 5.4 0 1 1 0 10.8 5.4 5.4 0 0 1 0-10.8zm0 2a3.4 3.4 0 1 0 0 6.8 3.4 3.4 0 0 0 0-6.8zm5.6-2.3a1.3 1.3 0 1 1-2.6 0 1.3 1.3 0 0 1 2.6 0z"/></svg></a>
+          <a href="https://www.tiktok.com/@thenumbersgamepodcast" target="_blank" rel="noopener" aria-label="The Numbers Game on TikTok"><svg viewBox="0 0 24 24"><path d="M12.53.02C13.84 0 15.14.01 16.44 0c.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg></a>
+          <a href="https://www.linkedin.com/company/the-numbers-game-podcast/" target="_blank" rel="noopener" aria-label="The Numbers Game on LinkedIn"><svg viewBox="0 0 24 24"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.24 8.25h4.52V23H.24V8.25zM8.34 8.25h4.33v2.01h.06c.6-1.14 2.08-2.34 4.28-2.34 4.58 0 5.42 3.01 5.42 6.92V23h-4.51v-7.16c0-1.71-.03-3.91-2.38-3.91-2.39 0-2.75 1.86-2.75 3.78V23H8.34V8.25z"/></svg></a>
+          <a href="https://www.facebook.com/profile.php?id=100071290388343" target="_blank" rel="noopener" aria-label="The Numbers Game on Facebook"><svg viewBox="0 0 24 24"><path d="M24 12.07C24 5.41 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.04V9.41c0-3.02 1.8-4.7 4.54-4.7 1.31 0 2.68.24 2.68.24v2.97h-1.5c-1.5 0-1.96.93-1.96 1.89v2.26h3.32l-.53 3.5h-2.8V24C19.62 23.1 24 18.1 24 12.07z"/></svg></a>
+          <a href="https://www.youtube.com/@thenumbersgamepodcast" target="_blank" rel="noopener" aria-label="The Numbers Game on YouTube"><svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.2C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31.7 31.7 0 0 0 0 12a31.7 31.7 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.2A31.7 31.7 0 0 0 24 12a31.7 31.7 0 0 0-.5-5.8zM9.6 15.6V8.4L15.8 12z"/></svg></a>
+        </div>
+      </div>
+      <div class="fcol">
+        <div class="foot-label">Brought to you by</div>
+        <div class="sponsors">
+          <a href="https://www.inovayt.com.au/" target="_blank" rel="noopener"><img src="assets/inovayt-white.png" alt="Inovayt"></a>
+          <a href="https://futureadvisory.com.au/" target="_blank" rel="noopener"><img src="assets/future-advisory-white.png" alt="Future Advisory"></a>
+        </div>
+      </div>
+      <div class="fcol produced">
+        <div class="foot-label">Produced by</div>
+        <a href="https://www.vidpod.com.au/" target="_blank" rel="noopener"><img src="assets/vidpod-white.png" alt="VIDPOD"></a>
+      </div>
+    </div>
+    <div class="footbar">
+      <details class="footnav-dd">
+        <summary><svg class="ham" viewBox="0 0 24 24"><path d="M3 6h18v2H3zM3 11h18v2H3zM3 16h18v2H3z"/></svg> Menu</summary>
+        <div class="dd-links">
+          <a href="/">Home</a><a href="/episodes">Every episode</a><a href="/adventure">Choose your own adventure</a><a href="/about">About the show</a><a href="/nick-reilly">Nick Reilly</a><a href="/jason-robinson">Jason Robinson</a><a href="/contact">Contact</a>
+        </div>
+      </details>
+      <div class="copyright">© 2026 The Numbers Game</div>
+    </div>
+  </footer>
+
+  <script>
+    var VIDEO='fOlNHc31USo';
+    var CHAPTERS=[
+      {t:"00:00",s:0,title:"Intro"},
+      {t:"04:16",s:256,title:""}
+    ];
+    var QUESTIONS=[
+      {q:"How do you automate coding transactions in Xero?",s:538},
+      {q:"Why aren't my invoices getting paid on time?",s:633},
+      {q:"How can you make it easier for clients to pay invoices?",s:647},
+      {q:"What happens if you can't produce receipts for the ATO?",s:944},
+      {q:"How can AI help respond to customer reviews?",s:1090},
+      {q:"How are AI chatbots used to handle website enquiries?",s:1111},
+      {q:"How do you get buy-in for new technology?",s:1235},
+      {q:"How do you stop people defaulting to the old process?",s:1286},
+      {q:"What makes technology adoption succeed in a business?",s:1339},
+      {q:"Should you buy new software or use what you already pay for?",s:1557}
+    ];
+
+    var chEl=document.getElementById('chapters');
+    CHAPTERS.forEach(function(c){var b=document.createElement('button');b.className='chapter';b.onclick=function(){startAt(c.s)};b.innerHTML='<span class="tc">'+c.t+'</span><span class="cx">'+c.title+'</span>';chEl.appendChild(b);});
+    document.getElementById('chcount').textContent=CHAPTERS.length;
+    var qEl=document.getElementById('qa');
+    QUESTIONS.forEach(function(q){var b=document.createElement('button');b.className='q';b.onclick=function(){startAt(q.s)};b.innerHTML='<span class="qm">?</span><span class="qx">'+q.q+'</span><span class="go">›</span>';qEl.appendChild(b);});
+    document.getElementById('qcount').textContent=QUESTIONS.length;
+
+    /* Mobile nav dropdown. */
+    var burger=document.getElementById('navburger'), navdrop=document.getElementById('navdrop');
+    if(burger&&navdrop){burger.addEventListener('click',function(){
+      navdrop.hidden=!navdrop.hidden;
+      burger.setAttribute('aria-expanded', navdrop.hidden?'false':'true');
+    });}
+
+    /* Voice-note button reveals the recorder; × tucks it away. */
+    var vbtn=document.getElementById('vbtn'), vslot=document.getElementById('vslot'), vclose=document.getElementById('vclose');
+    if(vbtn&&vslot){vbtn.addEventListener('click',function(){vslot.hidden=!vslot.hidden;});}
+    if(vclose&&vslot){vclose.addEventListener('click',function(){vslot.hidden=true;});}
+
+    /* Keep-exploring dots: only shown when the strip actually scrolls (mobile). */
+    var rg=document.querySelector('.relgrid'), rd=document.getElementById('reldots');
+    if(rg&&rd){
+      var relCards=rg.querySelectorAll('.relcard');
+      relCards.forEach(function(){rd.appendChild(document.createElement('span'))});
+      var updDots=function(){
+        var scrollable=rg.scrollWidth>rg.clientWidth+4;
+        rd.style.display=scrollable?'flex':'none';
+        if(!scrollable)return;
+        var i=Math.round(rg.scrollLeft/(rg.scrollWidth-rg.clientWidth)*(relCards.length-1));
+        rd.querySelectorAll('span').forEach(function(s,n){s.classList.toggle('on',n===i)});
+      };
+      rg.addEventListener('scroll',updDots,{passive:true});
+      window.addEventListener('resize',updDots);
+      updDots();
+    }
+
+    /* Explore tabs: swap the visible panel; the row stays put so you never lose your place. */
+    var tabBtns=document.querySelectorAll('.tabbtn');
+    tabBtns.forEach(function(b){
+      b.addEventListener('click',function(){
+        tabBtns.forEach(function(o){o.classList.remove('on')});
+        document.querySelectorAll('.tpanel').forEach(function(p){p.hidden=true});
+        b.classList.add('on');
+        document.getElementById(b.getAttribute('data-panel')).hidden=false;
+      });
+    });
+
+    /* YouTube: clean facade, then real player on demand. Seek without yanking to top. */
+    var player=null, ready=false, apiReady=false, pending=null;
+    window.onYouTubeIframeAPIReady=function(){apiReady=true; if(pending!=null){var s=pending;pending=null;createPlayer(s);}};
+    function createPlayer(sec){
+      var wrap=document.getElementById('player'); wrap.innerHTML='<div id="yt"></div>';
+      player=new YT.Player('yt',{videoId:VIDEO,playerVars:{autoplay:1,rel:0,modestbranding:1,playsinline:1,start:Math.floor(sec||0)},events:{onReady:function(){ready=true;}}});
+    }
+    function nudge(){
+      var p=document.getElementById('player-wrap'), r=p.getBoundingClientRect();
+      if(r.bottom<80 || r.top>window.innerHeight-90){ p.scrollIntoView({behavior:'smooth',block:'start'}); }
+    }
+    function startAt(sec){
+      nudge();
+      if(player&&ready){ player.seekTo(sec,true); player.playVideo(); return; }
+      if(apiReady){ createPlayer(sec); } else { pending=sec; }
+    }
+    document.getElementById('facade').addEventListener('click',function(){startAt(0);});
+    (function(){var s=document.createElement('script');s.src='https://www.youtube.com/iframe_api';document.head.appendChild(s);})();
+  </script>
+</body>
+</html>

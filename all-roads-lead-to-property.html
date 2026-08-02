@@ -1,0 +1,706 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EP 167 · All Roads Lead to Property | The Numbers Game</title>
+<meta name="description" content="">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" sizes="64x64" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="canonical" href="https://thenumbersgamepodcast.com.au/all-roads-lead-to-property">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="The Numbers Game">
+<meta property="og:title" content="EP 167 · All Roads Lead to Property | The Numbers Game">
+<meta property="og:description" content="">
+<meta property="og:url" content="https://thenumbersgamepodcast.com.au/all-roads-lead-to-property">
+<meta property="og:image" content="https://i.ytimg.com/vi/v7VPO-0b278/maxresdefault.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+  :root{
+    --purple:#585af3; --purple-dark:#2c1b8a; --mint:#7ad9a8;
+    --white:#ffffff; --muted:rgba(255,255,255,.60); --dim:rgba(255,255,255,.42);
+    --line:rgba(255,255,255,.12); --card:rgba(255,255,255,.05); --card-hi:rgba(255,255,255,.09);
+    --display:'Anton',Impact,'Helvetica Neue',sans-serif;
+    --sans:'Inter',system-ui,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif;
+    --wrap:1280px;   /* page frame (nav spans this) */
+    --col:960px;     /* content column (player, tabs, text) */
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:var(--sans); color:var(--white); line-height:1.6; -webkit-font-smoothing:antialiased;
+    background:#12093a;
+    background-image:
+      radial-gradient(1200px 600px at 82% -6%, rgba(88,90,243,.45) 0%, transparent 55%),
+      radial-gradient(900px 700px at 5% 8%, rgba(122,217,168,.10) 0%, transparent 50%),
+      linear-gradient(180deg,#2c1b8a 0%,#1a1150 28%,#100b34 62%,#0b0820 100%);
+    background-attachment:fixed;
+  }
+  a{color:inherit}
+  .wrap{max-width:var(--wrap);margin:0 auto;padding:0 36px}
+  main.wrap{max-width:var(--col)}
+  @media(max-width:720px){.wrap{padding:0 22px}}
+
+  /* ── Navbar ── */
+  .nav{position:sticky;top:0;z-index:50;background:linear-gradient(180deg,rgba(24,15,74,.92),rgba(24,15,74,.72));backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+  .nav-in{max-width:var(--wrap);margin:0 auto;padding:11px 36px;display:flex;align-items:center;justify-content:space-between}
+  @media(max-width:720px){.nav-in{padding:11px 22px}}
+  .brand{display:block;line-height:0}
+  .brand img{height:36px;width:auto;display:block}
+  .navlinks{display:flex;gap:28px;align-items:center}
+  .navlinks a{text-decoration:none;font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);transition:.15s}
+  .navlinks a:hover{color:var(--white)}
+  .navlinks a.navtop{cursor:default}
+  .navgroup{position:relative;display:flex;align-items:center}
+  .navgroup .subnav{display:none;position:absolute;top:100%;left:50%;transform:translateX(-50%);padding-top:14px;min-width:180px}
+  .navgroup:hover .subnav,.navgroup:focus-within .subnav{display:block}
+  .subnav-in,.navgroup .subnav{z-index:60}
+  .navgroup .subnav a{display:block;background:#180f4a;border:1px solid var(--line);border-top:0;padding:12px 16px;font-size:12px;color:rgba(255,255,255,.85)}
+  .navgroup .subnav a:first-child{border-top:1px solid var(--line)}
+  .navgroup .subnav a:hover{background:#221768;color:var(--white)}
+  .navburger{display:none;background:none;border:1px solid var(--line);padding:8px 10px;cursor:pointer;color:var(--white);transition:.15s}
+  .navburger:hover{border-color:rgba(122,217,168,.6)}
+  .navburger svg{width:20px;height:20px;fill:currentColor;display:block}
+  .navdrop{display:none}
+  @media(max-width:720px){
+    .navlinks{display:none}
+    .navburger{display:block}
+    .navdrop{display:block;position:absolute;left:0;right:0;top:100%;
+      background:#180f4a;border-bottom:1px solid var(--line);box-shadow:0 24px 50px rgba(0,0,0,.45)}
+    .navdrop[hidden]{display:none}
+    .navdrop a{display:block;padding:15px 22px;text-decoration:none;font-size:14px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:rgba(255,255,255,.9);border-bottom:1px solid rgba(255,255,255,.06)}
+    .navdrop a:last-child{border-bottom:0}
+    .navdrop a.sub{padding-left:42px;font-size:13px;color:rgba(255,255,255,.72)}
+    .navdrop .navlabel{display:block;padding:15px 22px 6px;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.4)}
+  }
+
+  /* ── Hero / hook (marker-highlight system: purple hook wraps naturally, mint payoff below)
+     Rules: title splits at its natural break (colon/pipe/question mark). Front = hook (purple,
+     big), back = payoff (mint, smaller). No break in title = purple hook only. Highlights hug
+     the text (tight em padding tuned to Anton) and wrap via box-decoration-break — never
+     hand-pick line breaks or mint words. ── */
+  header.hero{padding:34px 0 6px}
+  .hook{--inx:clamp(8.4px,2.1vw,15.6px)} /* one shared text inset so hook + payoff first letters align */
+  .hook .hk{font-family:var(--display);font-weight:400;text-transform:uppercase;
+    font-size:clamp(28px,7vw,52px);line-height:1.3;letter-spacing:-.5px;text-wrap:balance}
+  .hook .hk span{color:var(--white);padding:.04em var(--inx) .02em;
+    background:linear-gradient(var(--purple),var(--purple)) 0 50%/100% 87% no-repeat;
+    -webkit-box-decoration-break:clone;box-decoration-break:clone}
+  .hook .pay{font-family:var(--display);font-weight:400;text-transform:uppercase;
+    font-size:clamp(16px,4vw,24px);line-height:1.5;letter-spacing:.6px;margin-top:8px;text-wrap:balance}
+  .hook .pay span{color:#0a0a0a;padding:.08em var(--inx) .04em;
+    background:linear-gradient(var(--mint),var(--mint)) 0 50%/100% 88% no-repeat;
+    -webkit-box-decoration-break:clone;box-decoration-break:clone}
+  /* no-hook titles: mid-split into two full-size rows, purple then mint */
+  .hook .hk span.hkrow{display:block;background:none;padding:0}
+  .hook .hk .hkrow+.hkrow{margin-top:8px}
+  .hook .hk span.mintseg{color:#0a0a0a;
+    background:linear-gradient(var(--mint),var(--mint)) 0 50%/100% 87% no-repeat}
+
+  /* ── Player (clean facade → real player on tap) ── */
+  .player-wrap{margin:24px 0 4px;scroll-margin-top:76px}
+  .player{position:relative;width:100%;padding-top:56.25%;border-radius:0;overflow:hidden;background:#000;box-shadow:0 30px 70px rgba(0,0,0,.5),0 0 0 1px rgba(255,255,255,.06)}
+  .facade{position:absolute;inset:0;border:0;cursor:pointer;background-size:cover;background-position:center;display:flex;align-items:center;justify-content:center;padding:0}
+  .facade .play{width:74px;height:74px;border-radius:50%;background:rgba(10,6,30,.40);border:2px solid rgba(255,255,255,.72);display:flex;align-items:center;justify-content:center;transition:.18s;-webkit-backdrop-filter:blur(1px);backdrop-filter:blur(1px)}
+  .facade:hover .play{background:rgba(88,90,243,.62);transform:scale(1.07);border-color:#fff}
+  .facade .play::after{content:"";border-style:solid;border-width:11px 0 11px 19px;border-color:transparent transparent transparent #fff;margin-left:5px}
+  .player iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+
+  /* ── Episode facts (bottom of the Summary panel — templated per episode) ── */
+  .sumfacts{margin:14px 10px 4px;padding-top:13px;border-top:1px solid rgba(255,255,255,.08);display:flex;flex-direction:column;gap:8px}
+  .fact{display:flex;gap:12px;font-size:13.5px}
+  .fact .fl{flex:none;width:104px;color:var(--dim);font-weight:600;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;padding-top:2px}
+  .fact .fv{color:rgba(255,255,255,.9);font-weight:500}
+  .fact .fv a{color:var(--mint);text-decoration:none;border-bottom:1px solid rgba(122,217,168,.4);transition:.15s}
+  .fact .fv a:hover{border-bottom-color:var(--mint)}
+
+  /* ── Episode tag (identity: black label hanging off the title corner) ── */
+  .eptag{display:inline-block;position:relative;left:-6px;margin-bottom:-7px;z-index:2;
+    background:#0a0a0a;color:var(--white);font-family:var(--display);font-weight:400;
+    font-size:13.5px;letter-spacing:1.5px;text-transform:uppercase;padding:6px 11px 4px}
+
+  /* ── Explore tabs (sticky mode switcher; one panel swaps below, nothing shoves) ── */
+  .explore{margin-top:22px}
+  .tabs{position:sticky;top:58px;z-index:40;display:flex;flex-wrap:wrap;gap:8px;padding:10px 0;
+    background:linear-gradient(180deg,rgba(18,10,55,.96),rgba(18,10,55,.86));
+    backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+  .tabbtn{font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.5px;
+    font-size:14.5px;color:var(--white);background:var(--purple);border:1px solid var(--purple);
+    padding:9px 13px 7px;cursor:pointer;transition:.15s}
+  .tabbtn:hover{filter:brightness(1.12)}
+  .tabbtn.on{background:var(--mint);border-color:var(--mint);color:#0a0a0a}
+  .tabbtn.on:hover{filter:none}
+  .tabbtn .ct{font-size:12px;opacity:.75;font-variant-numeric:tabular-nums}
+  .tabbtn .ct::before{content:" · "}
+  .tpanel{border:1px solid var(--line);background:var(--card);padding:12px 10px 14px}
+  .hint{font-size:12.5px;color:var(--muted);padding:2px 10px 10px;border-bottom:1px solid rgba(255,255,255,.08);margin-bottom:6px}
+
+  /* ── Listen row (no box: label left, service pills follow) ── */
+  .listen{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:12px 16px;margin-top:34px}
+  .listen .lname{font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--dim)}
+  .listen a{display:inline-flex;align-items:center;gap:9px;padding:11px 18px;border-radius:999px;
+    background:var(--mint);color:#08210f;text-decoration:none;font-weight:800;font-size:12.5px;
+    letter-spacing:.04em;text-transform:uppercase;transition:.15s}
+  .listen a:hover{filter:brightness(1.06);transform:translateY(-1px);box-shadow:0 12px 30px rgba(122,217,168,.25)}
+  .listen svg{width:20px;height:20px;fill:currentColor;flex:none}
+  /* ── Listen-now Spotify audio embed (full column width, above the pills) ── */
+  .listen-now{margin-top:40px}
+  .listen-now .ln-head{display:flex;align-items:baseline;justify-content:space-between;gap:14px;margin-bottom:13px}
+  .listen-now .ln-title{font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--dim)}
+  .audio-embed{border-radius:12px;overflow:hidden;box-shadow:0 20px 50px rgba(0,0,0,.4),0 0 0 1px rgba(255,255,255,.06)}
+  .audio-embed iframe{display:block;width:100%;border:0}
+  @media(max-width:720px){.listen-now{margin-top:32px}}
+
+  /* ── Keep exploring (thumbnails link to other episode PAGES, never timecodes).
+     Swipeable strip on mobile, fits three-up on desktop. Variant rule: claim
+     "similar ground" + reason lines ONLY when moment-level topic overlap is
+     genuinely strong; otherwise show the latest released episodes with dates —
+     never invent a connection. ── */
+  .relsec{margin-top:60px;padding-top:58px;border-top:1px solid var(--line)} /* line = end of this episode's info */
+  .reldots{display:flex;justify-content:center;gap:7px;margin-top:12px}
+  .reldots span{width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.25);transition:.2s}
+  .reldots span.on{background:var(--mint)}
+  .relsec .rtitle{display:inline-block;font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.5px;font-size:14.5px;background:var(--mint);color:#0a0a0a;padding:9px 13px 7px;margin-bottom:18px}
+  .relgrid{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding-bottom:6px;scrollbar-width:none}
+  .relgrid::-webkit-scrollbar{display:none}
+  .relcard{flex:0 0 56%;max-width:232px;scroll-snap-align:start;display:flex;flex-direction:column;text-decoration:none;background:var(--card);border:1px solid var(--line);transition:.15s}
+  .relcard:hover{background:var(--card-hi);border-color:rgba(122,217,168,.55)}
+  .relcard img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block}
+  .relcard .rt{display:block;font-size:12.5px;font-weight:600;color:rgba(255,255,255,.92);line-height:1.4;padding:8px 8px 0}
+  .relcard .rfoot{margin-top:auto;display:flex;justify-content:space-between;align-items:flex-end;gap:8px;padding:10px 8px 9px}
+  .relcard .rwhy{font-size:11.5px;color:var(--mint)}
+  .relcard .rtag{display:inline-block;background:#0a0a0a;color:var(--white);font-family:var(--display);font-size:10px;letter-spacing:1.2px;text-transform:uppercase;padding:3px 7px 2px;white-space:nowrap;flex:0 0 auto}
+
+  /* ── Dropdown sections (accordion under the player) ── */
+  .drops{margin-top:34px;display:flex;flex-direction:column;gap:11px}
+  .drop{border:1px solid var(--line);border-radius:0;background:var(--card);overflow:hidden;transition:border-color .15s}
+  .drop[open]{border-color:rgba(122,217,168,.35)}
+  .drop>summary{list-style:none;cursor:pointer;padding:16px 18px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+  .drop>summary::-webkit-details-marker{display:none}
+  .drop>summary .st{font-weight:700;font-size:15.5px;letter-spacing:.005em}
+  .drop>summary .ct{margin-left:auto;font-size:12px;color:var(--dim);font-weight:600;font-variant-numeric:tabular-nums}
+  .drop>summary .chev{flex:none;width:22px;height:22px;border-radius:50%;background:rgba(122,217,168,.14);color:var(--mint);display:flex;align-items:center;justify-content:center;font-family:var(--display);font-size:15px;line-height:1;transition:.2s;transform:translateY(-1px)}
+  .drop[open]>summary .chev{transform:rotate(45deg)}
+  .drop-body{padding:2px 12px 12px}
+
+  /* chapters */
+  .chapter{display:flex;align-items:baseline;gap:14px;width:100%;text-align:left;cursor:pointer;background:none;border:0;color:inherit;font-family:inherit;padding:11px 10px;border-radius:10px;transition:.13s}
+  .chapter:hover{background:var(--card-hi)}
+  .chapter .tc{font-variant-numeric:tabular-nums;font-weight:700;font-size:14px;color:var(--mint);flex:none;width:48px}
+  .chapter .cx{font-size:15px;font-weight:500;color:rgba(255,255,255,.9)}
+  .chapter:hover .cx{color:#fff}
+
+  /* questions */
+  .q{display:flex;align-items:center;gap:12px;width:100%;text-align:left;cursor:pointer;background:none;border:0;border-radius:11px;color:inherit;font-family:inherit;padding:12px 10px;transition:.14s}
+  .q+.q{border-top:1px solid rgba(255,255,255,.05)}
+  .q:hover{background:var(--card-hi)}
+  .q .qm{font-family:var(--display);font-size:15px;color:var(--mint);flex:none;line-height:1;transform:translateY(1px)}
+  .q .qx{font-size:15px;font-weight:500;color:rgba(255,255,255,.92)}
+  .q .go{margin-left:auto;flex:none;color:var(--dim);font-size:18px;transition:.15s}
+  .q:hover .go{color:var(--mint);transform:translateX(2px)}
+
+  /* summary + transcript bodies */
+  .summary-body p{font-size:16.5px;line-height:1.62;color:rgba(255,255,255,.9);padding:6px 10px 4px}
+  .tbody{padding:2px 10px 8px}
+  .tbody p{font-size:14.5px;line-height:1.7;color:rgba(255,255,255,.78);margin-top:15px;max-width:64ch}
+  .tbody .spk{display:block;font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--mint);margin-bottom:2px}
+
+  /* ── Voice note ask (lives at the bottom of the Summary panel) ── */
+  .vask{margin:16px 10px 4px}
+  .vbtn{display:inline-flex;align-items:center;gap:9px;padding:12px 20px;border-radius:999px;border:0;cursor:pointer;
+    background:var(--mint);color:#08210f;font-family:inherit;font-weight:800;font-size:12.5px;
+    letter-spacing:.04em;text-transform:uppercase;transition:.15s}
+  .vbtn:hover{filter:brightness(1.06);transform:translateY(-1px);box-shadow:0 12px 30px rgba(122,217,168,.25)}
+  .vbtn svg{width:18px;height:18px;fill:currentColor;flex:none}
+  .vslot{background:var(--purple);padding:12px 10px 10px;margin:14px 0 4px;box-shadow:0 18px 40px rgba(0,0,0,.35)}
+  .vslot[hidden]{display:none}
+  .vhead{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;margin-bottom:10px}
+  .vhead .vmsg{font-family:var(--sans);font-size:13px;line-height:1.55;color:rgba(255,255,255,.92);margin:2px 0 0;padding:0 2px}
+  .vclose{background:none;border:0;color:rgba(255,255,255,.85);font-size:22px;line-height:1;cursor:pointer;padding:0 2px}
+  .vclose:hover{color:var(--white)}
+  .vslot iframe{display:block}
+
+  /* ── YouTube subscribe pill (sits in the listen row; outranks .listen a's mint) ── */
+  .listen a.yt-pill{background:var(--purple);color:var(--white)}
+  .listen a.yt-pill:hover{filter:brightness(1.1);transform:translateY(-1px)}
+  @media(max-width:720px){ /* mobile: no label, three compact pills on one row */
+    .listen .lname{display:none}
+    .listen{gap:8px}
+    .listen a{padding:10px 13px;font-size:11px;gap:6px}
+    .listen svg{width:16px;height:16px}
+  }
+
+  /* ── Footer: Follow us on | Brought to you by | Produced by, + Menu dropdown ── */
+  footer{border-top:1px solid var(--line);margin-top:68px;padding:52px 20px 58px}
+  .footgrid{max-width:var(--wrap);margin:0 auto;display:grid;grid-template-columns:1fr 1.15fr .8fr;gap:44px;align-items:start}
+  .fcol{text-align:center;display:flex;flex-direction:column;align-items:center}
+  .foot-label{font-size:11px;font-weight:700;letter-spacing:.26em;text-transform:uppercase;color:var(--dim);margin-bottom:18px}
+  .sponsors{display:flex;justify-content:center;align-items:center;gap:34px;flex-wrap:wrap}
+  .sponsors a,.produced a{display:inline-flex;transition:.15s}
+  .sponsors a:hover,.produced a:hover{transform:translateY(-1px)}
+  .sponsors img{height:32px;width:auto;opacity:.92}
+  .produced img{height:30px;width:auto;opacity:.95}
+  .sponsors a:hover img,.produced a:hover img{opacity:1}
+  footer .socials{display:flex;gap:11px;justify-content:center;flex-wrap:wrap;margin:0}
+  footer .socials a{width:40px;height:40px;border-radius:50%;border:1.5px solid rgba(122,217,168,.5);display:flex;align-items:center;justify-content:center;transition:.15s}
+  footer .socials a svg{width:18px;height:18px;fill:var(--mint);transition:.15s}
+  footer .socials a:hover{background:var(--mint);border-color:var(--mint);transform:translateY(-2px)}
+  footer .socials a:hover svg{fill:#0a0a0a}
+  .footbar{max-width:var(--wrap);margin:34px auto 0;border-top:1px solid var(--line);padding-top:20px;display:flex;flex-direction:column;align-items:center;gap:14px}
+  .footnav-dd{display:block;width:100%;max-width:var(--wrap);margin:0 auto;text-align:center}
+  .footnav-dd>summary{list-style:none;cursor:pointer;display:inline-flex;align-items:center;gap:9px;font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.5px;font-size:13px;color:var(--muted);background:transparent;border:1px solid var(--line);padding:8px 16px 6px;transition:.15s}
+  .footnav-dd>summary::-webkit-details-marker{display:none}
+  .footnav-dd>summary:hover{color:var(--mint);border-color:rgba(122,217,168,.45)}
+  .footnav-dd>summary .ham{width:15px;height:15px;fill:currentColor;transform:translateY(-1px)}
+  .footnav-dd .dd-links{display:flex;flex-direction:row;flex-wrap:wrap;justify-content:center;gap:12px 24px;padding:24px 0 4px}
+  .footnav-dd .dd-links a{font-size:11.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:.15s}
+  .footnav-dd .dd-links a:hover{color:var(--mint)}
+  .copyright{font-size:12px;color:var(--dim);text-align:center}
+  @media(max-width:720px){.footgrid{grid-template-columns:1fr;gap:34px}footer{padding:40px 16px 20px}.footbar{margin-top:34px;padding-top:24px;gap:20px}.footnav-dd .dd-links{flex-direction:column;align-items:center;gap:15px}}
+
+  @media(min-width:720px){header.hero{padding:48px 0 6px}}
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "PodcastEpisode", "name": "All Roads Lead to Property", "url": "https://thenumbersgamepodcast.com.au/all-roads-lead-to-property", "datePublished": "2024-04-08", "episodeNumber": 167, "image": "https://i.ytimg.com/vi/v7VPO-0b278/maxresdefault.jpg", "partOfSeries": {"@type": "PodcastSeries", "name": "The Numbers Game", "url": "https://thenumbersgamepodcast.com.au/"}}</script>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-in">
+      <a class="brand" href="/" aria-label="The Numbers Game home"><img src="assets/tng-logo.png" alt="The Numbers Game"></a>
+      <div class="navlinks">
+        <a href="/">Home</a>
+        <div class="navgroup">
+          <a class="navtop">Episodes</a>
+          <div class="subnav">
+            <a href="/episodes">All episodes</a>
+            <a href="/adventure">Find moments</a>
+          </div>
+        </div>
+        <div class="navgroup">
+          <a class="navtop">About</a>
+          <div class="subnav">
+            <a href="/about">The show</a>
+            <a href="/nick-reilly">Nick Reilly</a>
+            <a href="/jason-robinson">Jason Robinson</a>
+          </div>
+        </div>
+        <a href="/contact">Contact</a>
+      </div>
+      <button class="navburger" id="navburger" type="button" aria-label="Menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24"><path d="M3 6h18v2H3zM3 11h18v2H3zM3 16h18v2H3z"/></svg>
+      </button>
+    </div>
+    <div class="navdrop" id="navdrop" hidden>
+      <a href="/">Home</a>
+      <span class="navlabel">Episodes</span>
+      <a class="sub" href="/episodes">All episodes</a>
+      <a class="sub" href="/adventure">Find moments</a>
+      <span class="navlabel">About</span>
+      <a class="sub" href="/about">The show</a>
+      <a class="sub" href="/nick-reilly">Nick Reilly</a>
+      <a class="sub" href="/jason-robinson">Jason Robinson</a>
+      <a href="/contact">Contact</a>
+    </div>
+  </nav>
+
+  <main class="wrap">
+
+    <header class="hero">
+      <div class="hook">
+        <span class="eptag">EP 167</span>
+        <h1 class="hk"><span class="hkrow"><span>All Roads Lead</span></span>
+        <span class="hkrow"><span class="mintseg">to Property</span></span></h1>
+      </div>
+    </header>
+
+    <div class="player-wrap" id="player-wrap">
+      <div class="player" id="player">
+        <button class="facade" id="facade" style="background-image:url('https://i.ytimg.com/vi/v7VPO-0b278/maxresdefault.jpg')" aria-label="Play episode">
+          <span class="play"></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="explore">
+      <div class="tabs" role="tablist">
+        <button class="tabbtn on" data-panel="p-summary">Summary</button>
+        <button class="tabbtn" data-panel="p-chapters">Chapters<span class="ct" id="chcount"></span></button>
+        <button class="tabbtn" data-panel="p-questions">Questions<span class="ct" id="qcount"></span></button>
+      </div>
+      <section class="tpanel" id="p-summary">
+        <div class="summary-body">
+          <p>With the RBA holding rates steady, Jason, Nick and Marty argue that Australia's housing shortage means prices only go one way, so waiting for a correction is a mistake. Nick lays out the numbers, a dwelling deficit heading past 145,000 by 2026, poverty and affordability now top social issues, and how the right lender panel and flexible terms can lift borrowing capacity. Marty rails against built-to-rent stock and people sitting on the sidelines, and Jason shares a raw personal regret about the St Kilda apartment he walked away from. The trio then explore getting in via rentvesting and regional buys, why government stimulus just recycles prices higher, and creative rental plays, modular homes, shipping-container units, shared housing and room-by-room letting, as answers to a market where 1,500 people chase every available room.</p>
+        </div>
+        <div class="vask">
+          <button class="vbtn" id="vbtn" type="button">
+            <svg viewBox="0 0 24 24"><path d="M12 14a3 3 0 0 0 3-3V6a3 3 0 1 0-6 0v5a3 3 0 0 0 3 3zm5-3a5 5 0 0 1-10 0H5a7 7 0 0 0 6 6.92V21h2v-3.08A7 7 0 0 0 19 11h-2z"/></svg>
+            Send us a voice note
+          </button>
+          <div class="vslot" id="vslot" hidden>
+            <div class="vhead">
+              <p class="vmsg">We'd love to hear from you. You can leave up to a 90 second voice note for us to play on the show: a question, some feedback, or a topic you want covered.</p>
+              <button class="vclose" id="vclose" type="button" aria-label="Close">&times;</button>
+            </div>
+            <iframe src="https://www.speakpipe.com/widget/inline/hhq6kzggsx7zpcsvakgxfrzun3zidpde" allow="microphone" width="100%" height="200" frameborder="0" title="Leave The Numbers Game a voice note"></iframe>
+          </div>
+          <script async src="https://www.speakpipe.com/widget/loader.js" charset="utf-8"></script>
+        </div>
+        <div class="sumfacts">
+          <div class="fact"><span class="fl">Release date</span><span class="fv">8 April 2024</span></div>
+          <div class="fact"><span class="fl">Hosts</span><span class="fv"><a href="/nick-reilly">Nick Reilly</a>, <a href="/jason-robinson">Jason Robinson</a> &amp; <a href="/marty-vidakovic">Marty Vidakovic</a></span></div>
+
+        </div>
+      </section>
+      <section class="tpanel" id="p-chapters" hidden>
+        <p class="hint">Jump straight to the part you need.</p>
+        <div id="chapters"></div>
+      </section>
+      <section class="tpanel" id="p-questions" hidden>
+        <p class="hint">Real questions this episode answers. Tap one to hear the answer.</p>
+        <div id="qa"></div>
+      </section>
+    </div>
+
+    <div class="drops">
+
+      <details class="drop">
+        <summary><span class="st">Episode transcript</span><span class="chev">+</span></summary>
+        <div class="drop-body tbody">
+          <p><span class="spk">Jason · 00:00</span>Welcome to episode 167 of The Numbers Game. I'm Jason. I'm joined by Nick and Marty. How you going, fellas?</p>
+          <p><span class="spk">Nick · 00:07</span>I'm going well, mate, but I'm losing concentration here very early in the piece. If you tune over to YouTube, Jason's got the biggest pimple on his forehead. I'm not sure I'm going to be able to get my content out today. It is, mate, it's got its own postcode.</p>
+          <p><span class="spk">Nick · 00:22</span>It's, um, how do I just, is it a welt or?</p>
+          <p><span class="spk">Jason · 00:26</span>I don't know. I almost said I'm Jason. I'm joined by Nick, Marty, and my pimple.</p>
+          <p><span class="spk">Marty · 00:29</span>Welcome to the episode. But, uh, yeah.</p>
+          <p><span class="spk">Jason · 00:32</span>Thanks for drawing attention to that. And, you know, loving that these episodes, these episodes live on YouTube now, or up on YouTube once we're finished recording and they go live. So, you know, just gonna have to start to increase my skincare routine. Gonna have to get some notes off Nick on his beautiful skincare routine, and maybe that won't happen again.</p>
+          <p><span class="spk">Marty · 00:50</span>Mate, I rarely get pimples, but when I get them, they're a bit like the one you've got. So what I can say is there's more to come there. That's pretty fresh, and I think the worst is yet to come. So good luck with that. But I think you just embrace it, don't you?</p>
+          <p><span class="spk">Marty · 01:05</span>You know, yeah, you know, well, it's better than being old and gray.</p>
+          <p><span class="spk">Nick · 01:09</span>I can't get rid of my, my old gray. You, you could at least squeeze yours. Get back to looking beautiful.</p>
+          <p><span class="spk">Jason · 01:18</span>Oh guys, getting this back on track. How have you been?</p>
+          <p><span class="spk">Marty · 01:20</span>Everyone's good?</p>
+          <p><span class="spk">Nick · 01:22</span>All good, man.</p>
+          <p><span class="spk">Jason · 01:23</span>Well, all good. Going well, going well. Well, we've got an exciting discussion today. We are with Marty for this episode and it's the hot topic that, you know, Everyone in Australia, the biggest thing people talk about having is the ability to own a home. You know, it's one of the biggest and best assets you'll ever have.</p>
+          <p><span class="spk">Jason · 01:40</span>And Marty's going to unpack what the future of housing looks like and why it may be one of the most important things still into the future.</p>
+          <p><span class="spk">Nick · 01:48</span>I'm just coming off the back of— obviously rates didn't increase, the Reserve Bank kept them steady, and the tone in that discussion was that rates obviously won't be going up. But they were open to still, you know, keeping rates where they are for a little time.</p>
+          <p><span class="spk">Nick · 02:06</span>All the metrics sort of the economy is suggesting inflation is reducing, but not at the rate they want it to reduce. Unemployment is going up. We still got a bit of scope there, but I read an interesting article on realestate.com and I hadn't thought about it in this way that they're saying that even the fact that rates are not going up, we are seeing property prices start to increase again.</p>
+          <p><span class="spk">Nick · 02:33</span>And we all know the difficulty with rents as well. I think there's only a 1% vacancy rate. So rents are going up substantially higher as well. And I just thought, far out, you, you really, if you're gonna get into property, don't be waiting for it to come back down cuz it's not going to.</p>
+          <p><span class="spk">Nick · 02:56</span>And the reason being, like Oxford Economics released, um, just some information in regards to the gap between the number of dwellings we need and with migration, the people that have come in, we have a stock deficiency in 2024 of 97,284 dwellings, and that will grow to 145,000 by 2026.</p>
+          <p><span class="spk">Nick · 03:21</span>So if rates do come down, um, mate, there's gonna be so much pressure on prices going up, um, that it's gonna be very difficult for people to get into the market. So, and we hear it every day cuz we're dealing with people wanting to buy properties.</p>
+          <p><span class="spk">Nick · 03:38</span>So we obviously see people excited to get into the market. Just know that there's a lot of lending opportunities now that has some flexibility. Um, you can get 35-year terms. People are assessing living expenses differently from bank to bank to bank.</p>
+          <p><span class="spk">Nick · 03:57</span>And to give you an example, we actually had a real estate agent we were dealing with just recently where they'd gone to another broker and the broker had said, you know, you could only actually borrow $500,000. But they were being, that broker I think was being pretty passive in that they dealt with, you know, one or two lenders regularly.</p>
+          <p><span class="spk">Nick · 04:17</span>And didn't sort of look outside the band of what was available. Um, and then they came to one of our brokers and we looked at the full suite and looked at servicing opportunities and policies where we could extend, um, the borrowing capacity. All of a sudden he could borrow $750,000.</p>
+          <p><span class="spk">Nick · 04:34</span>So again, you've really gotta get the right advice and understand what your capacity is. We have 40+ lenders. Um, So, you know, people naturally can get apathetic, you know, and they deal with certain lenders all the time. I get that. But I go, in this type of market, you can't afford to have professionals not thinking outside the box, because if you don't get in now, you're going to be significantly disappointed when property prices go up</p>
+          <p><span class="spk">Nick · 05:04</span>by $100,000 in the next 18 months. Yeah. You, you'll be, you'll be really angry about that. And again, I was reading another article just on some of the social challenges that Australia are having at the moment, and number 1 on that list, um, which I think is a disgrace in Australia, is poverty.</p>
+          <p><span class="spk">Nick · 05:23</span>3 million people under the poverty line. This is not good. And in that other top 10, there's lots of other specific, you know, issues as well that I won't delve into. But within the top 10, the other thing was housing affordability.</p>
+          <p><span class="spk">Nick · 05:38</span>And I'm just thinking we're in this real conundrum at the moment because again, there's the relevance of what people can afford. Cuz you've got obviously interest rates at a higher rate. Property prices have gone higher over the last 5 years, quite significantly.</p>
+          <p><span class="spk">Nick · 05:55</span>Um, and people have to live, but also they don't want to be in a position to miss out. So I think you gotta, and I don't know what exactly the answer is, cuz people are gonna wanna buy established cuz even now when you're looking to build a home, it's significantly at a higher cost.</p>
+          <p><span class="spk">Nick · 06:14</span>And of course people are feeling a little bit more uncertain given certain construction companies in Australia have gone under. It's just how people are feeling about constructing at the moment. They haven't got confidence around. So They want to buy established. And I know that, you know, just from Victoria, we've got future planning where they're not particularly building new houses on the old-fashioned 800 square metre lots.</p>
+          <p><span class="spk">Nick · 06:39</span>It's all apartment-driven and going up. And, you know, a lot, a lot of issues. But I just think I want to encourage our listeners just to think outside the square. If, if you can get into a market somewhere Even if it's, you're buying a rental property as your first property, at least you're getting the expanding wealth of owning a property and getting a return on that property.</p>
+          <p><span class="spk">Nick · 07:04</span>Even if it's $400,000, $500,000 somewhere, but it's, you know, over 500 square meters, it's got good facilities around it. You'll generally find, as long as there's good infrastructure, even in, you know, strong regional areas, the growth rate isn't significantly lower.</p>
+          <p><span class="spk">Nick · 07:19</span>It's on par. With, um, you know, Melbourne, Sydney Metro as well. Just gotta find the right pockets that have good infrastructure that can cater for that, good schools, all, all the mainstay things. But, um, yeah, I just, just reading between the lines on that, uh, I can tell that the RBA are concerned if they bring rates down, property prices are gonna go up, means less affordability, more issues.</p>
+          <p><span class="spk">Nick · 07:45</span>Um, And I think we have a bigger problem here we have to overcome. Gents?</p>
+          <p><span class="spk">Marty · 07:52</span>I think just to, just on one point there you mentioned too, like you talked about buildings going up in the city and yet they are creating stock, but every second one of those buildings now is built to rent. So, and is actually not available for sale. So, built to rent means developer is building them to hold them and rent them out.</p>
+          <p><span class="spk">Marty · 08:13</span>So, they're not necessarily for sale to, you know, the average punters like you and me. So this, it really frustrates me. And I, first I'll say I'm in the game and exposed to this stuff. So I think that's why it frustrates me.</p>
+          <p><span class="spk">Marty · 08:30</span>But the talk over the last, you know, 4 or 5 years, particularly through COVID about the property crash, you know, people being warned off property or, you know, property markets are too expensive, property's gonna come down, all this stuff that you hear, Like, at what stage do we not just accept the fact that there's a massive undersupply?</p>
+          <p><span class="spk">Marty · 08:51</span>There's a supply-demand issue. So if you've got the ability to get into the market, work out where you can purchase and get into the market. And that has been proven time and time and time again. But I think one of the things that frustrates me the most is, you know, people that come into our business as clients and they're going to an auction for $1.1 million and I don't wanna go over $1.1.</p>
+          <p><span class="spk">Marty · 09:15</span>Well, the house is worth $1.2. You should really, you know, you're not gonna get it for $1.1. And they sit on the sidelines for 6 months, you know? So I really liked what you said there about just getting into an asset, getting into a plot of land. They can't make more of it. If they can make more of it, it's, you know, it's another $10K or $30K outta the city.</p>
+          <p><span class="spk">Marty · 09:34</span>I just, yeah, it really frustrates me, the people that come out and downplay property and say it's not the right thing to do. Because how many times do we need to see it proven that you need a roof over your head? That's just the reality. And I'm not saying you have to go and build a big investment portfolio, but you need a roof over your head at some stage and you need to get into a market that continues to climb.</p>
+          <p><span class="spk">Marty · 10:00</span>And again, I think the reason I get frustrated is because I see it a lot. A lot of other people don't get exposed to what we do all the time, Marty, which is, you know, people consistently getting priced out of the market or saying they're going to wait for the prices to drop. And it just never happens. So yeah, we've been big on the rentvesting stuff for that reason.</p>
+          <p><span class="spk">Marty · 10:18</span>Get into the market even if you're not ready to buy that owner-occupied house.</p>
+          <p><span class="spk">Jason · 10:22</span>Yeah. And I'll probably pile on a bit of a personal story of, you know, regrets and, you know, that— how do you word it? Like, you know, you always look back and go, damn, I should have, would have, could have done that. But, you know, Case and I were in the market pre-COVID looking for a property and we actually drove past it last night.</p>
+          <p><span class="spk">Jason · 10:37</span>So it's fresh on the mind and we both sat in the car unpacking we were looking for a property. We were due to get married a few months later. So sorry, this is the end of 2021, around September, October, maybe July '21 to December '21.</p>
+          <p><span class="spk">Jason · 10:53</span>And we went to our first ever property inspection. It was on Hotham Street in St Kilda. Went and looked at it. It was a ground floor apartment with a big outdoor area that kind of opened up to the back. And we went, hey, this is cool. Like, you know, 2-bedroom bathroom, car, like super affordable.</p>
+          <p><span class="spk">Jason · 11:09</span>It was like way below what we wanted to spend. I think we wanted to spend somewhere between, you know, $800K and $1 million at this time. I think it was like $550K, $560K, advertised $600K. And we were like, oh, you know, what's wrong with it? Why is it so cheap? You know, blah, blah, blah.</p>
+          <p><span class="spk">Jason · 11:25</span>And we went, oh, we actually fucking loved it. And we went, oh, it's the first property we've looked at. Surely we can't buy the first one we looked at. Oh, you know, no worries. And we kept going. And then we looked at a couple of others. We went to several auctions. Auctions with our good friend Julian from PropertyWay, or now One Group Property.</p>
+          <p><span class="spk">Jason · 11:44</span>Back then, I don't know if they'd rebranded at that stage. And we got absolutely smashed. Everyone that we went to that was $800,000, $900,000, $1 million, they all went for way more than what was said. And now we drive past this property and I think it sold for around $600,000.</p>
+          <p><span class="spk">Jason · 11:59</span>And on the other side of COVID 2 years later, it was revalued at, and then resold, I think to someone else for about $800,000 or $900,000 2 years later. Like this property off. But Case and I went, oh, I can't buy the first property we looked at, and then started looking at properties that even though they were advertised in our price range— again, we're looking at a supply-demand issue where there's not enough supply and there's a huge demand of people wanting to buy properties.</p>
+          <p><span class="spk">Jason · 12:26</span>And again, this was 4 years ago or nearly 4 years ago. And what are we staring at 4 years later? The same damn problem that we were facing back then. If I had my time again, Case and I sat in the car last night and we said we would buy that property on the day, the first day we walked in, the first property we saw, we would buy it.</p>
+          <p><span class="spk">Jason · 12:45</span>And we're disappointed because we did that with our car. We went, why do we feel comfortable the first car we saw? Yeah, this car feels good, we'll buy it. But for some reason, for a property, we went, no, you know, we've got to look around, do our research, make sure we're buying in the right area, which I agree, you do have to do it. But at the same time, it's so easy to go and not take action.</p>
+          <p><span class="spk">Jason · 13:04</span>And again, I probably, you know, needed to actually ask some questions to the experts in my corner and said, hey, this property is less than what we wanted to spend, but is it a good buy? And it could have been, well, actually, yes, Jase, that means you're going to have less debt, more ability to pay it down faster.</p>
+          <p><span class="spk">Jason · 13:20</span>Your equity will grow and you'll be able to buy another property sooner rather than later. So yeah, there's always those stories of, you know, people who have bought property and done really well. There's stories of people who didn't buy the property and kick themselves. And then, you know, I often see there's a guy online that I follow, Oscar Ledland, who says you don't need to buy residential property because it's not— that's not the only property that will help you get in the market and grow.</p>
+          <p><span class="spk">Jason · 13:44</span>He spruiks commercial property a lot. Now, he's a commercial property developer, so I'm sure there's a big interest for him in that space. But I mean, ultimately though, it's property ownership. You know, we're talking housing at the moment, but I think for me, the message is taking action and investing in an asset that is going to appreciate and grow in value and not getting fixated on a particular area that is sexy or cool.</p>
+          <p><span class="spk">Jason · 14:10</span>I want to live, you know, closer to inner city Melbourne, but that doesn't mean that I can't buy a great property in Bendigo or Ballarat or regional Victoria where there is a huge demand where people want to live and will pay a good rental price and get a good rental return.</p>
+          <p><span class="spk">Jason · 14:25</span>And that means that property is going to go up in value and earn you some equity to help you further yourself in life and invest too. So yeah, rambled on a little bit there, guys, but for it's obviously still cutting up and eating away at me.</p>
+          <p><span class="spk">Nick · 14:40</span>But rightly so, Jase. And you know, because we see this all the time with people, I see two ends of the spectrum going, ah, just gotta wait till my income goes up to get to where I want to get to. Or, you know, I just need a little lucky win, need to win the lotto, or, you know, need to win $100 grand, then I can get to where— so people start to get, you know, almost delusional about it.</p>
+          <p><span class="spk">Nick · 15:04</span>And again, the key is to know what you can afford and to make a decision based upon where you can afford. And look, I know, I know clients don't own their home, but they have 8 or 9 investment properties because they've got capital appreciating in the market.</p>
+          <p><span class="spk">Nick · 15:20</span>So it depends on your strategy and your values around your strategy. But I go back to 2000 and I'm going, and this is more a social issue. I'm going, like, I was earning around $80 grand back then and bought a house in Nunawading for $169,000 on a 600 square metre block.</p>
+          <p><span class="spk">Nick · 15:39</span>And I just go, 2 and a bit times, not, it's just over 2 times your income. You know, you could still have, you know, one parent at home looking after the kids. You had more than enough money to live off and you could build a future. And I look at now, that's, you know, nearly 10 times people's income in Melbourne.</p>
+          <p><span class="spk">Nick · 15:56</span>13 times in Sydney. So what I'd encourage you to do is to think about where I could buy in those great— that disbursement of wealth into other regions is really important to think about. So maybe, you know, maybe you are looking into Woomera or Perth, or whether it's an investment or a lifestyle change.</p>
+          <p><span class="spk">Nick · 16:16</span>We have so much flexibility in where we can work now, given, you know, how the world's operated. But think about it. If you are buying a home, think about it holistically and go, all right, maybe I do rent invest and I rent in the area that I want to be in. So be it.</p>
+          <p><span class="spk">Nick · 16:31</span>But again, give yourself some choices and think outside of what we've always done in the past, because it's no point having $1.6 million mortgage and you can't sleep at night and you've got a tear on the pillow for the next 10 years. Um, when I look at some of those social stats that where Australia has dramas, uh, mental health is another one that's in that top 12.</p>
+          <p><span class="spk">Nick · 16:57</span>And I go, I guarantee you it'll be playing on people. Yeah, it'll be playing on people going, I'm not earning enough given the cost of living increases. You know, mortgages are getting out. Like, people feel like they're slowly drowning, the boiling frog effect. So I come back to going, rather than feel so emotive and trapped by the circumstances that are externally, come back to the intrinsic internal motivators and go, all right, where I'm comfortable is $500 grand, right?</p>
+          <p><span class="spk">Nick · 17:26</span>All right. What's the best value I can get in the market in the best area at $500 grand? It means your investigation needs to be, you know, outside of the realm sometimes of what you're thinking, but at least you're in the market. Maybe you get something with it. There's a 1% vacancy rate on rents.</p>
+          <p><span class="spk">Nick · 17:43</span>Maybe you're getting higher rents in that region that takes care of the debt so you can sleep at night while that price starts to accumulate to $600 grand, you know, and build your wealth. So just be flexible in your thinking. Think about, talk to professionals about what you can do.</p>
+          <p><span class="spk">Nick · 18:00</span>And then like you were saying, Jase, make a call on what you can do, because just looking at these numbers that I've seen, I'm going, my goodness, we, people are gonna be trying to get into established property wherever they can.</p>
+          <p><span class="spk">Nick · 18:17</span>And property's the only thing we can bank on really. I just feel like, yeah, I feel like everything else is challenged with interest rates being high and cost of living, but people are always gonna need that roof over their head, like Nick says. And if you don't get into it, you, the, the, the gap that will just keep increasing.</p>
+          <p><span class="spk">Nick · 18:37</span>From people that are in to people who will never be able to get in. And that's, that's not healthy in Australia. Yeah. I think we need to think differently.</p>
+          <p><span class="spk">Jason · 18:46</span>Acting on what the data suggests is that the property prices can only continue to go in the same direction they've gone every year for 60 years in Australia, or more now, might be 70 years of property growth in Australia. But when you have a supply and demand issue where we need more houses, there's, you cannot see the price coming down.</p>
+          <p><span class="spk">Jason · 19:04</span>And for all the people, you know, and I've been there before too, going, oh, well, I'll just wait for the market to correct itself. Surely property prices can't keep going up. And I'm an educated guy that works in this space, but you can get emotional in it and go, ah, surely they can't double again. The property that was bought for $1 million in 2010, surely that property, you know, out in Cranbourne, you know, on the back streets is not going to be a $2 million property in 2020.</p>
+          <p><span class="spk">Jason · 19:29</span>And what do you know, it was. And then you go, hang on a minute, surely that property is not going to be worth $4 million in 2030. The property prices continue to— yeah, you know, who knows? We're definitely not saying that's what's going to happen. But based on past performance and based on— I know you can't always— what's the Industry Superfund saying on the commercial?</p>
+          <p><span class="spk">Jason · 19:49</span>The past performance is an indication.</p>
+          <p><span class="spk">Marty · 19:50</span>Past performance is an indication of future.</p>
+          <p><span class="spk">Jason · 19:53</span>Yeah. Again, we're looking at this going, if we've got a shortage of 100,000 homes, we're now staring at a homelessness issue, a poverty issue, a housing affordability issue, and the gap between the 100,000 homes we need now doesn't get smaller, it's getting bigger.</p>
+          <p><span class="spk">Jason · 20:09</span>So what does it tell you? I'll let you guys and our listeners make the decisions.</p>
+          <p><span class="spk">Nick · 20:13</span>And it's a no-brainer, isn't it, Nick? Like, you go— it— like, I ask myself through every decade, I'm going, how is property going to double in value? Particularly when I was younger, I've got— because, you know, at the time it never feels like it could happen.</p>
+          <p><span class="spk">Nick · 20:28</span>And even this time, going, well, how the hell is it going to do it again? And then I look at these numbers and I go, Oh, that's how it's gonna happen again, potentially because there's just, you know, low supply and high demand and increasing demand. And, and I just feel like even in regards to development, like whether they're building homes in, you know, new pockets that are less expensive that people can get into that are reasonable, maybe, maybe there's a</p>
+          <p><span class="spk">Nick · 20:58</span>shift in the type of home we need. Maybe it's a two-bedder. So as a first, you know, on a nice plot of land, you know, somewhere lets people get into the market and can live a healthy lifestyle and not, you know, not be stressed at night. I think there's gotta be all those elements taken care of.</p>
+          <p><span class="spk">Nick · 21:15</span>And, but at the moment you go established properties, it has to be a no-brainer.</p>
+          <p><span class="spk">Jason · 21:22</span>I'd love to see what, what is gonna happen from, I guess, government intervention. You know, they've, they've got it. And this is also the thing as well, actually, maybe maybe this is where some of the problems have come from. You look back in the past and go into the housing affordability scheme, start me on this, the bonuses, the first home buyer schemes, all of that, how that has contributed over the last 20, 30, 40 years to our property pricing problem.</p>
+          <p><span class="spk">Jason · 21:45</span>And then now looking at it going, if they do get involved again and they continue to meddle with prices, the part that I was coming to from that was builders. If builders are going under everywhere and we don't have availability and the trust to go to a builder, buy a house and land package, and then not sit back wondering whether you're ever going to have your house delivered for their fear that a builder might go into liquidation or voluntary administration.</p>
+          <p><span class="spk">Jason · 22:11</span>I think there's a new article, if it's not daily, it's minimum weekly, of another builder that's gone under. There was one that popped up over the weekend that I shared with you guys that we won't go into too much detail, but the director of that company took millions, blamed materials and prices going up.</p>
+          <p><span class="spk">Jason · 22:28</span>And there's some, you know, there's some shock operators out there. But the fact of the matter is, is that materials have gone up, you know, contractors have gone up, the cost of running a business has gone up, and then they're driving the house price up, which I mean, people will pay if they appropriately put the right margins in, you know, they can get this right.</p>
+          <p><span class="spk">Jason · 22:45</span>But it's just not— we're in a really weird time right now for being able to feel safe and secure around that. So if again, if we can't have new homes being built and everybody's going to buy the existing bricks and mortar house and land that's already built because that feels safer secure.</p>
+          <p><span class="spk">Jason · 23:02</span>Again, it further adds fuel to this supply-demand problem if people aren't encouraged to build a new property that fits the housing market demand that we need and have.</p>
+          <p><span class="spk">Marty · 23:13</span>But they will be encouraged and it'll repeat. So everything that you said there is going to happen again. Absolutely no doubt. Because the issue you've got at the moment is the lack of supply of— because it's so hard to build now, people have lost the confidence. The other thing that's happening is the delay in developers being able to get titles through.</p>
+          <p><span class="spk">Marty · 23:33</span>So the government's trying to fix that. But how do they get people confident again to go back to a builder? They throw money at it. So they start to give away incentives, whether it's a builder's grant or a first homeowner's grant. If you give someone a grant, a young first homeowner, they will quickly get over the issues that's happened, that's, that have happened to builders in the last 2 years.</p>
+          <p><span class="spk">Marty · 23:53</span>I absolutely promise you. And we know it's going to happen. Now the builders will then take that money. Well, developers mainly will take that money, increase prices, and you've got this cycle again. The government throws money at it to get it stimulated and then the prices go up.</p>
+          <p><span class="spk">Marty · 24:10</span>But the other big issue at the moment is, like you talk about cost of building, a lot of it has to do with the compliance. The amount of compliance that builders have to tick off now One of the builders that we work with, from a finance point of view, the new 7-star energy rating and all these boxes they have to tick— I can't remember what it's actually called— but it adds on average $30K to the price of a house to be built, which then obviously gets passed on to the consumer.</p>
+          <p><span class="spk">Marty · 24:38</span>So all these compliance boxes that need to be ticking increase the prices. And what I'll say to people, particularly first-time homeowners who are sitting out there and thinking, oh no, the government's working on affordability.</p>
+          <p><span class="spk">Marty · 24:53</span>You know, they've got the KPIs they want to hit about how many houses they deliver. You know, the government's going to make it more affordable. They might find a way to do that, whether that's pushing land subdivisions through quicker, giving stimulus, whether it's, you know, allowing smaller properties to be built, like the medium density stuff we're seeing to be built at the time.</p>
+          <p><span class="spk">Marty · 25:14</span>So yeah, of course there might be some more affordable housing out there. But if you've got— that's for people that can't afford to buy something else. So what I'm saying is if you've got the ability to get in now into some kind of area, get in now because that affordable housing that they're talking about is going to be different.</p>
+          <p><span class="spk">Marty · 25:32</span>Dan Andrews at the moment. So what, anyone know? Well, either of you know what Dan Andrews' latest thing is?</p>
+          <p><span class="spk">Jason · 25:40</span>No.</p>
+          <p><span class="spk">Marty · 25:40</span>He's in China trying to import modular homes. That's what he's doing at the moment, and that is new business. So obviously he sees the problem because he's been around it. So what's an alternative to get homes cheaper? Well, modular homes, you know, prefab.</p>
+          <p><span class="spk">Marty · 25:55</span>You know, do the homes come to site? Pretty much. They've just got to be erected. So that might produce a cheaper product. But do you actually want that? Because you could have maybe got in 2 or 3 years ago on a piece of land, you know, 30Ks or 20Ks out of the CBD. With an old house on it versus a modular home, which is the affordable housing.</p>
+          <p><span class="spk">Marty · 26:14</span>So the price— the government saying we need to get houses more affordable doesn't mean the products that are there at the moment or the houses that are at the moment are going to go backwards. It means there'll be other options for people to get in. So I would really encourage people that if you have the ability to get into properties now with a good piece of land, whether it's right for you now or not, get in.</p>
+          <p><span class="spk">Marty · 26:39</span>Don't wait for, you know, what the government brings to the table because it won't be probably what you want to buy. We've just seen it over and over again. Government stimulus, prices go up. It'll happen again. Just a matter of when. It's the only way they're going to get people confident to build again is to throw money at it, whatever that looks like.</p>
+          <p><span class="spk">Nick · 27:00</span>I just was thinking back at the Sunny Coast and thinking how people were saying, 450 was too, too much to pay. And this is, this is 2018, 2017, 2018. 450 grand was too much to pay for a 600 square meter block that was probably about 300 meter walk to the beach.</p>
+          <p><span class="spk">Nick · 27:20</span>Just ridiculous price. Now it's over a million bucks because new airport's gone in, infrastructure's gone in, schools are good, remote work. It's, and again, those are like, you think about it and you go, well, what are those opportunities?</p>
+          <p><span class="spk">Nick · 27:36</span>Where else are those opportunities? You know, is it Toowoomba? Is it, you know, is it somewhere in Perth that's 30 minutes outta Perth? There's opportunities like that that you gotta put some time and effort into. And this is for investment or living, right? And you can still do something really good with where you're at.</p>
+          <p><span class="spk">Nick · 27:54</span>And don't don't discount, but like you said, you don't want to be in a position relying on the government and particularly Dan Andrews bringing in a modular home. So it's like, let's not spark his business up on that. But the thing that concerns me socially, in one way, I'm glad that there's something for people to go to, right?</p>
+          <p><span class="spk">Nick · 28:12</span>As well at that level, because I just see homelessness increasing and with the cost of living. So it must be a real difficult balancing act at the moment. That there's high debt levels in Vic and you go, you know, they gotta, they gotta invest in infrastructure.</p>
+          <p><span class="spk">Nick · 28:29</span>The money's not there. So it's like, there's a lot of, there's a lot of moving parts here, but you gotta think about your own economy. Like I always say, and, and know where you're at, know what you can do, make a decision, make it now. You know, you'll, you'll benefit from it in the end.</p>
+          <p><span class="spk">Marty · 28:45</span>And I, I just wanna cover off on affordable housing. It's, it's not just, the price of houses, it's affordable housing. So it's how do you get people into rental properties? And a couple of really cool things that I've, that I've heard lately with meeting from a few different people. There are people starting to look at modular homes, not just modular homes, but also old shipping containers and converting these into small units.</p>
+          <p><span class="spk">Marty · 29:11</span>So taking a shipping container, getting it converted into a 1-bedroom unit and then putting that out the back of an existing property. So you're gonna, you're gonna see stuff like that. So this is, this from an investment point of view, you're thinking, well, if I'm an investor and I've got a big block of land, how do I get, how do I help the rental issue?</p>
+          <p><span class="spk">Marty · 29:33</span>Well, I, you know, I make more rooms available on that property. So yeah, so I think you'll start to see people building units out the back and finding an efficient and a cheap way to do that, such as a modular home or a converted shipping container. This guy that I know is looking at doing as a business.</p>
+          <p><span class="spk">Marty · 29:50</span>So actually producing these and giving them to people. The other real cool thing I heard the other day, and this particular guy I spoke to is already doing it, but shared housing. So he had a house, he's got a house in the West, and what they're looking at doing, he does this already, is building houses that are built purposely to house 4 individuals.</p>
+          <p><span class="spk">Marty · 30:12</span>So a couple of real basic things that they will look to do: each room, each bedroom has an ensuite. The linen cupboards, instead of being one, two big doors, you've got 4 different doors with 4 different areas. You have a separate living space.</p>
+          <p><span class="spk">Marty · 30:28</span>So what it does is it builds you a big house with 4 bedrooms, but you make slight modifications to, to get 4 different people in there. But also what it does is the house is easily convertible with a few minor changes back to a big family home.</p>
+          <p><span class="spk">Marty · 30:47</span>So that's the first question I had. Well, what about the risk of, you know, what's your market when you want to sell it? And he said, well, you've basically got a 4-bedroom home. Everything's the same. You do a few little minor changes and then it appeals to the 4-bedroom home seeker. So then my question was, well, what are you actually getting for this place?</p>
+          <p><span class="spk">Marty · 31:05</span>So It was a place that was in the inner west of Melbourne that would fetch around $550 a week as a family renting that place. It was in and around Point Cook, around there. He's getting over $1,200 a week for this property.</p>
+          <p><span class="spk">Marty · 31:22</span>So he's basically got 4 people paying $300 a week. Now, I said to him, "Well, surely, where do you find those people? Who's going to pay $300 a week for one?" for one room. And he said, basically said to me, you're uneducated on it, you know, with all due respect.</p>
+          <p><span class="spk">Marty · 31:40</span>He said, he said, get on Flatmate Finder and have a look at how many people are looking to rent rooms and what they're willing to pay. Because he said, you come from it, you come from the angle of, well, I wouldn't do that. Well, no, Nick, you wouldn't do that, but there's 50,000 people out there that will, that have maybe migrated from overseas, that that's what they're actually used to doing.</p>
+          <p><span class="spk">Marty · 32:02</span>And then I said, what type of people are you getting in there? And he said, I've got young IT people, I've got young engineers, people coming out of uni. So, you know, he said— he gave me this stat, it was crazy, and I'm, I'm going to butcher it, but it was something like for every room that's available, there's 1,500 people that want to rent that room.</p>
+          <p><span class="spk">Marty · 32:23</span>I think Flatmate— I've never looked at Flatmate Finder, but he said that's, that's actually in there somewhere. So You know, suddenly you've got $500 or $600 a week turns into $1,200 a week. So things like this, people need to think about when, you know, the government's talking about affordable housing.</p>
+          <p><span class="spk">Marty · 32:40</span>They're also talking about getting people into rentals a lot cheaper. So think about ways that, you know, maybe you can buy an investment property and create more rental income than what most people are doing.</p>
+          <p><span class="spk">Nick · 32:51</span>I've had a couple of friends, and this is not going to be for everyone, that are converting their garage into a one-bedroom studio. So interesting when you talk about demand on Flatmates, Finder, I go, yeah, 'cause people need extra money and they realize there's a problem in the rental market.</p>
+          <p><span class="spk">Nick · 33:10</span>Beautiful when they've got two garages and they can convert one or they have a carport, but people are actually making modifications to the home because they need more money as well. So, and there's a demand. So it's just interesting that line of thinking Yeah, and it was easy.</p>
+          <p><span class="spk">Marty · 33:25</span>He gave me a prime example. He said, you've got a 4-bedroom house. Most of those 4-bedroom houses have 2 bathrooms. You've got an ensuite and then you've got a main bathroom. So he said, what you'll start to see is a 4-bedroom house will become a 3-bedroom house.</p>
+          <p><span class="spk">Marty · 33:41</span>You put a separate bathroom in, so you've got 3-bed, 3-bath, and that last bath, that second bedroom or that fourth bedroom would become a second living space. So he said it's really easy to convert them. And he said, you're going to start to see it.</p>
+          <p><span class="spk">Marty · 33:58</span>And he's actually looking at starting to build these properties and sell them to investors.</p>
+          <p><span class="spk">Nick · 34:04</span>Well, it's no different to back in the day when I was thinking, going to school, you would rent with 4 flatmates and they would do— sometimes they'd do, you know, you'd have the normal rent, but there was a lot in student accommodation where they'd have individual rents to one house, to each person coming into that house, but it just wasn't set up well.</p>
+          <p><span class="spk">Nick · 34:24</span>It was just set up as a house, right? So that makes sense, 'cause there was definitely a demand for that. And people were making more money off that separate type of tenancy to each person in the house. It just wasn't well thought of initially from the lenders because it wasn't one tenancy, right?</p>
+          <p><span class="spk">Nick · 34:43</span>But based on what you are saying, that makes total sense to me as to really a solution to a major problem for young people. But I guarantee you, you could have executives in that same position. Divorce rates up at 50% and there's lots of ways to skin a cat.</p>
+          <p><span class="spk">Jason · 35:02</span>A quick bit of Googling then, there's 2,500 rooms currently available, but there's 12,500 flatmates looking for a place to live.</p>
+          <p><span class="spk">Nick · 35:11</span>Geez.</p>
+          <p><span class="spk">Jason · 35:12</span>There you go. Yeah, huge disparity between the number looking and the number of rooms available. So again, it's times like these where, you know, you really see, you know, people with, you know, some entrepreneurial thought process or people, you know, who are going to take this as an opportunity to start creating solutions rather than complaining about the problems.</p>
+          <p><span class="spk">Jason · 35:32</span>And that's what we need more of, you know, less quick, quick government slapping a, you know, a Band-Aid fix over and some bigger long-term solutions. So be interesting to see where it goes.</p>
+          <p><span class="spk">Marty · 35:43</span>I've just jumped on the flag. Flatmate finders for the first time. A young guy here in Perth, um, from the UK, um, he's looking for a room to rent for 6 months. He's got a budget of $400 a week.</p>
+          <p><span class="spk">Jason · 35:58</span>Some money to be made.</p>
+          <p><span class="spk">Marty · 35:59</span>25-year-old man here, got a budget of $280 a week. Like, you know, so you look at this stuff and you go, well, what's the The thing is, you might think that's a lot of money that they're willing to spend, but they don't have another option.</p>
+          <p><span class="spk">Marty · 36:16</span>Because if they want to buy or rent even a 1-bedroom apartment, whether it might be— how many times have you heard people say lately they're going to the opens and, you know, there's 30 people there and the first applications to get put in the bin are young single people.</p>
+          <p><span class="spk">Marty · 36:33</span>Yeah, it all goes to young couples who have both got full-time jobs. You've got someone that's come from overseas that's doing some casual work, or this young guy's probably in the mines or something. His application probably goes straight to the bottom of the pile because it's not a young couple.</p>
+          <p><span class="spk">Marty · 36:48</span>So, or an old couple.</p>
+          <p><span class="spk">Nick · 36:49</span>Plus you've gotta pay bond traditionally and stuff like that. Pay bond, you've gotta furnish it. That's another huge cost upfront, furnishing. All these things.</p>
+          <p><span class="spk">Marty · 36:56</span>So these places that this guy does are furnished. So yeah, anyway.</p>
+          <p><span class="spk">Jason · 37:02</span>Guys, I always love an interesting conversation and topic with you guys, and housing affordability has definitely lived up to the hype. Up to the expectations at the start of the episode with Marty delivering another great topic for us to talk about. You know, we love sharing these things with our listeners on The Numbers Game.</p>
+          <p><span class="spk">Jason · 37:18</span>If you haven't liked, followed, subscribed to all those things across all our platforms, YouTube, Instagram, Spotify, Apple, you can find us bloody anywhere and everywhere. And we love what we do. So please share with your friends and family as well who may not have come across The Numbers Game yet.</p>
+          <p><span class="spk">Jason · 37:34</span>We absolutely we appreciate you all and love having you tune in to each episode.</p>
+          <p><span class="spk">Nick · 37:38</span>And until next time, your home is your castle, but you just might need to convert it now into 40 different pieces of accommodation. Game over.</p>
+        </div>
+      </details>
+
+    </div>
+
+    <!-- LISTEN:START (build_episode.py rewrites the 3 URLs + iframe title per episode; player dropped if no spotifyEmbedUrl) -->
+    <section class="listen-now">
+      <div class="ln-head">
+        <span class="ln-title">Listen now</span>
+      </div>
+      <div class="audio-embed">
+        <iframe src="https://open.spotify.com/embed/episode/5TfK2Z4oK1LsWzuAYO4P3S?utm_source=generator"
+          width="100%" height="152" loading="lazy" allowfullscreen
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+          title="Spotify — All Roads Lead to Property"></iframe>
+      </div>
+    </section>
+
+    <div class="listen">
+      <a href="https://open.spotify.com/episode/5TfK2Z4oK1LsWzuAYO4P3S" target="_blank" rel="noopener" aria-label="Listen to this episode on Spotify">
+        <svg viewBox="0 0 24 24"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.52 17.34c-.24.36-.66.48-1.02.24-2.82-1.74-6.36-2.1-10.56-1.14-.42.12-.78-.18-.9-.54-.12-.42.18-.78.54-.9 4.56-1.02 8.52-.6 11.64 1.32.42.18.48.66.3 1.02zm1.44-3.3c-.3.42-.84.6-1.26.3-3.24-1.98-8.16-2.58-11.94-1.38-.48.12-1.02-.12-1.14-.6-.12-.48.12-1.02.6-1.14 4.32-1.32 9.72-.66 13.44 1.62.36.18.54.78.3 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.3c-.6.18-1.2-.18-1.38-.72-.18-.6.18-1.2.72-1.38 4.26-1.26 11.28-1.02 15.72 1.62.54.3.72 1.02.42 1.56-.3.42-1.02.6-1.56.3z"/></svg>
+        Spotify
+      </a>
+      <a href="https://podcasts.apple.com/au/podcast/id1555566088?i=1000651679408" target="_blank" rel="noopener" aria-label="Listen to this episode on Apple Podcasts">
+        <svg viewBox="0 0 24 24"><path d="M5.34 0A5.328 5.328 0 000 5.34v13.32A5.328 5.328 0 005.34 24h13.32A5.328 5.328 0 0024 18.66V5.34A5.328 5.328 0 0018.66 0H5.34zm6.525 2.568c2.336 0 4.448.902 6.056 2.587 1.224 1.272 1.912 2.619 2.264 4.392l.04.23c.04.272-.16.527-.432.567a.505.505 0 01-.567-.431l-.04-.213c-.312-1.57-.92-2.747-2.004-3.867-1.428-1.496-3.293-2.294-5.393-2.294-2.1 0-3.966.798-5.394 2.294-1.084 1.12-1.692 2.298-2.004 3.867l-.04.213a.507.507 0 01-.567.431.504.504 0 01-.432-.567l.04-.23c.352-1.773 1.04-3.12 2.264-4.392 1.608-1.685 3.72-2.587 6.056-2.587h.153zm.136 3.033c1.74 0 3.312.67 4.527 1.934.883.916 1.394 1.93 1.663 3.253l.04.23a.505.505 0 01-.431.567.503.503 0 01-.567-.432l-.04-.212c-.23-1.112-.659-1.97-1.396-2.732-1.052-1.1-2.404-1.672-3.9-1.672s-2.849.572-3.901 1.672c-.737.762-1.167 1.62-1.396 2.732l-.04.212a.503.503 0 01-.567.432.505.505 0 01-.432-.567l.04-.23c.27-1.323.78-2.337 1.664-3.253 1.215-1.264 2.787-1.934 4.527-1.934h.21zm-.078 3.05c1.092 0 2.091.424 2.89 1.22.582.58.924 1.245 1.107 2.15l.04.218a.501.501 0 01-.424.568.499.499 0 01-.568-.424l-.04-.198c-.146-.724-.413-1.253-.871-1.716-.63-.63-1.398-.957-2.226-.957s-1.595.328-2.225.957c-.459.463-.726.992-.871 1.716l-.04.198a.499.499 0 01-.568.424.501.501 0 01-.424-.568l.04-.219c.183-.904.525-1.569 1.106-2.149.8-.796 1.799-1.22 2.89-1.22h.184zM12 14.07a2.477 2.477 0 012.48 2.478A2.477 2.477 0 0112 19.024a2.477 2.477 0 01-2.48-2.477A2.477 2.477 0 0112 14.07z"/></svg>
+        Apple
+      </a>
+      <a class="yt-pill" href="https://www.youtube.com/@thenumbersgamepodcast?sub_confirmation=1" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.12-2.14C19.5 3.55 12 3.55 12 3.55s-7.5 0-9.38.51A3 3 0 0 0 .5 6.2 31.4 31.4 0 0 0 0 12a31.4 31.4 0 0 0 .5 5.8 3 3 0 0 0 2.12 2.14c1.88.51 9.38.51 9.38.51s7.5 0 9.38-.51a3 3 0 0 0 2.12-2.14A31.4 31.4 0 0 0 24 12a31.4 31.4 0 0 0-.5-5.8zM9.55 15.57V8.43L15.82 12z"/></svg>
+        Subscribe
+      </a>
+    </div>
+    <!-- LISTEN:END -->
+
+    <div class="relsec">
+      <span class="rtitle">Discover more</span>
+      <div class="relgrid">
+        <a class="relcard" href="/melbourne-property-boom-why-2025-could-spark-a-gold-rush">
+          <img src="https://i.ytimg.com/vi/rT4U4nQ1H08/hqdefault.jpg" alt="EP 247 thumbnail">
+          <span class="rt">Melbourne Property Boom?</span>
+          <span class="rfoot"><span class="rwhy">Also covers: housing market</span><span class="rtag">EP 247</span></span>
+        </a>
+        <a class="relcard" href="/is-it-time-to-invest-in-melbourne">
+          <img src="https://i.ytimg.com/vi/rQdOcw5EcKw/hqdefault.jpg" alt="EP 189 thumbnail">
+          <span class="rt">Is It Time to Invest in Melbourne?</span>
+          <span class="rfoot"><span class="rwhy">Also covers: investment property</span><span class="rtag">EP 189</span></span>
+        </a>
+        <a class="relcard" href="/landlords-and-tenants-in-crisis">
+          <img src="https://i.ytimg.com/vi/rDDL-FJ2Xw4/hqdefault.jpg" alt="EP 202 thumbnail">
+          <span class="rt">Landlords and Tenants in Crisis</span>
+          <span class="rfoot"><span class="rwhy">Also covers: investment property</span><span class="rtag">EP 202</span></span>
+        </a>
+        <a class="relcard" href="/holiday-homes-don-t-make-financial-sense-in-2025">
+          <img src="https://i.ytimg.com/vi/kdm25W-20ng/hqdefault.jpg" alt="EP 229 thumbnail">
+          <span class="rt">Holiday Homes Don't Make Financial Sense in 2025</span>
+          <span class="rfoot"><span class="rwhy">Also covers: investment property</span><span class="rtag">EP 229</span></span>
+        </a>
+        <a class="relcard" href="/the-cost-of-sitting-on-the-sidelines">
+          <img src="https://i.ytimg.com/vi/cTdent0dFwU/hqdefault.jpg" alt="EP 179 thumbnail">
+          <span class="rt">The Cost of Sitting on the Sidelines</span>
+          <span class="rfoot"><span class="rwhy">Also covers: housing market</span><span class="rtag">EP 179</span></span>
+        </a>
+        <a class="relcard" href="/is-home-ownership-becoming-a-fantasy-in-australia">
+          <img src="https://i.ytimg.com/vi/FZTMDk7s-yI/hqdefault.jpg" alt="EP 218 thumbnail">
+          <span class="rt">Is Home Ownership Becoming a Fantasy in Australia?</span>
+          <span class="rfoot"><span class="rwhy">Also covers: housing market</span><span class="rtag">EP 218</span></span>
+        </a>
+      </div>
+      <div class="reldots" id="reldots"></div>
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="footgrid">
+      <div class="fcol">
+        <div class="foot-label">Follow us on</div>
+        <div class="socials">
+          <a href="https://www.instagram.com/thenumbersgamepodcast/" target="_blank" rel="noopener" aria-label="The Numbers Game on Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.8.2 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1 .4 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .4-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1-.4-2.2-.1-1.3-.1-1.7-.1-4.9s0-3.6.1-4.9c.1-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.4 2.2-.4 1.3-.1 1.7-.1 4.9-.1zm0 2c-3.1 0-3.5 0-4.8.1-1.1.1-1.5.2-1.8.3-.4.2-.7.3-1 .6-.3.3-.5.6-.6 1-.1.3-.3.7-.3 1.8-.1 1.3-.1 1.7-.1 4.8s0 3.5.1 4.8c.1 1.1.2 1.5.3 1.8.2.4.3.7.6 1 .3.3.6.5 1 .6.3.1.7.3 1.8.3 1.3.1 1.7.1 4.8.1s3.5 0 4.8-.1c1.1-.1 1.5-.2 1.8-.3.4-.2.7-.3 1-.6.3-.3.5-.6.6-1 .1-.3.3-.7.3-1.8.1-1.3.1-1.7.1-4.8s0-3.5-.1-4.8c-.1-1.1-.2-1.5-.3-1.8-.2-.4-.3-.7-.6-1-.3-.3-.6-.5-1-.6-.3-.1-.7-.3-1.8-.3-1.3-.1-1.7-.1-4.8-.1zm0 3.4a5.4 5.4 0 1 1 0 10.8 5.4 5.4 0 0 1 0-10.8zm0 2a3.4 3.4 0 1 0 0 6.8 3.4 3.4 0 0 0 0-6.8zm5.6-2.3a1.3 1.3 0 1 1-2.6 0 1.3 1.3 0 0 1 2.6 0z"/></svg></a>
+          <a href="https://www.tiktok.com/@thenumbersgamepodcast" target="_blank" rel="noopener" aria-label="The Numbers Game on TikTok"><svg viewBox="0 0 24 24"><path d="M12.53.02C13.84 0 15.14.01 16.44 0c.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg></a>
+          <a href="https://www.linkedin.com/company/the-numbers-game-podcast/" target="_blank" rel="noopener" aria-label="The Numbers Game on LinkedIn"><svg viewBox="0 0 24 24"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.24 8.25h4.52V23H.24V8.25zM8.34 8.25h4.33v2.01h.06c.6-1.14 2.08-2.34 4.28-2.34 4.58 0 5.42 3.01 5.42 6.92V23h-4.51v-7.16c0-1.71-.03-3.91-2.38-3.91-2.39 0-2.75 1.86-2.75 3.78V23H8.34V8.25z"/></svg></a>
+          <a href="https://www.facebook.com/profile.php?id=100071290388343" target="_blank" rel="noopener" aria-label="The Numbers Game on Facebook"><svg viewBox="0 0 24 24"><path d="M24 12.07C24 5.41 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.04V9.41c0-3.02 1.8-4.7 4.54-4.7 1.31 0 2.68.24 2.68.24v2.97h-1.5c-1.5 0-1.96.93-1.96 1.89v2.26h3.32l-.53 3.5h-2.8V24C19.62 23.1 24 18.1 24 12.07z"/></svg></a>
+          <a href="https://www.youtube.com/@thenumbersgamepodcast" target="_blank" rel="noopener" aria-label="The Numbers Game on YouTube"><svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.2C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31.7 31.7 0 0 0 0 12a31.7 31.7 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.2A31.7 31.7 0 0 0 24 12a31.7 31.7 0 0 0-.5-5.8zM9.6 15.6V8.4L15.8 12z"/></svg></a>
+        </div>
+      </div>
+      <div class="fcol">
+        <div class="foot-label">Brought to you by</div>
+        <div class="sponsors">
+          <a href="https://www.inovayt.com.au/" target="_blank" rel="noopener"><img src="assets/inovayt-white.png" alt="Inovayt"></a>
+          <a href="https://futureadvisory.com.au/" target="_blank" rel="noopener"><img src="assets/future-advisory-white.png" alt="Future Advisory"></a>
+        </div>
+      </div>
+      <div class="fcol produced">
+        <div class="foot-label">Produced by</div>
+        <a href="https://www.vidpod.com.au/" target="_blank" rel="noopener"><img src="assets/vidpod-white.png" alt="VIDPOD"></a>
+      </div>
+    </div>
+    <div class="footbar">
+      <details class="footnav-dd">
+        <summary><svg class="ham" viewBox="0 0 24 24"><path d="M3 6h18v2H3zM3 11h18v2H3zM3 16h18v2H3z"/></svg> Menu</summary>
+        <div class="dd-links">
+          <a href="/">Home</a><a href="/episodes">Every episode</a><a href="/adventure">Choose your own adventure</a><a href="/about">About the show</a><a href="/nick-reilly">Nick Reilly</a><a href="/jason-robinson">Jason Robinson</a><a href="/contact">Contact</a>
+        </div>
+      </details>
+      <div class="copyright">© 2026 The Numbers Game</div>
+    </div>
+  </footer>
+
+  <script>
+    var VIDEO='v7VPO-0b278';
+    var CHAPTERS=[
+      {t:"00:00",s:0,title:"Intro"},
+      {t:"02:33",s:153,title:""}
+    ];
+    var QUESTIONS=[
+      {q:"Should you wait for property prices to drop before buying?",s:153},
+      {q:"How big is Australia's housing shortage?",s:176},
+      {q:"Can different lenders change how much you can borrow?",s:257},
+      {q:"Can your first property be an investment rather than a home?",s:399},
+      {q:"Why does owning land matter so much?",s:555},
+      {q:"What matters most when buying property?",s:824},
+      {q:"How much has housing affordability worsened since 2000?",s:920},
+      {q:"Can property prices keep rising?",s:1126},
+      {q:"Why doesn't government stimulus lower house prices?",s:1433},
+      {q:"How much more can room-by-room renting earn?",s:1865}
+    ];
+
+    var chEl=document.getElementById('chapters');
+    CHAPTERS.forEach(function(c){var b=document.createElement('button');b.className='chapter';b.onclick=function(){startAt(c.s)};b.innerHTML='<span class="tc">'+c.t+'</span><span class="cx">'+c.title+'</span>';chEl.appendChild(b);});
+    document.getElementById('chcount').textContent=CHAPTERS.length;
+    var qEl=document.getElementById('qa');
+    QUESTIONS.forEach(function(q){var b=document.createElement('button');b.className='q';b.onclick=function(){startAt(q.s)};b.innerHTML='<span class="qm">?</span><span class="qx">'+q.q+'</span><span class="go">›</span>';qEl.appendChild(b);});
+    document.getElementById('qcount').textContent=QUESTIONS.length;
+
+    /* Mobile nav dropdown. */
+    var burger=document.getElementById('navburger'), navdrop=document.getElementById('navdrop');
+    if(burger&&navdrop){burger.addEventListener('click',function(){
+      navdrop.hidden=!navdrop.hidden;
+      burger.setAttribute('aria-expanded', navdrop.hidden?'false':'true');
+    });}
+
+    /* Voice-note button reveals the recorder; × tucks it away. */
+    var vbtn=document.getElementById('vbtn'), vslot=document.getElementById('vslot'), vclose=document.getElementById('vclose');
+    if(vbtn&&vslot){vbtn.addEventListener('click',function(){vslot.hidden=!vslot.hidden;});}
+    if(vclose&&vslot){vclose.addEventListener('click',function(){vslot.hidden=true;});}
+
+    /* Keep-exploring dots: only shown when the strip actually scrolls (mobile). */
+    var rg=document.querySelector('.relgrid'), rd=document.getElementById('reldots');
+    if(rg&&rd){
+      var relCards=rg.querySelectorAll('.relcard');
+      relCards.forEach(function(){rd.appendChild(document.createElement('span'))});
+      var updDots=function(){
+        var scrollable=rg.scrollWidth>rg.clientWidth+4;
+        rd.style.display=scrollable?'flex':'none';
+        if(!scrollable)return;
+        var i=Math.round(rg.scrollLeft/(rg.scrollWidth-rg.clientWidth)*(relCards.length-1));
+        rd.querySelectorAll('span').forEach(function(s,n){s.classList.toggle('on',n===i)});
+      };
+      rg.addEventListener('scroll',updDots,{passive:true});
+      window.addEventListener('resize',updDots);
+      updDots();
+    }
+
+    /* Explore tabs: swap the visible panel; the row stays put so you never lose your place. */
+    var tabBtns=document.querySelectorAll('.tabbtn');
+    tabBtns.forEach(function(b){
+      b.addEventListener('click',function(){
+        tabBtns.forEach(function(o){o.classList.remove('on')});
+        document.querySelectorAll('.tpanel').forEach(function(p){p.hidden=true});
+        b.classList.add('on');
+        document.getElementById(b.getAttribute('data-panel')).hidden=false;
+      });
+    });
+
+    /* YouTube: clean facade, then real player on demand. Seek without yanking to top. */
+    var player=null, ready=false, apiReady=false, pending=null;
+    window.onYouTubeIframeAPIReady=function(){apiReady=true; if(pending!=null){var s=pending;pending=null;createPlayer(s);}};
+    function createPlayer(sec){
+      var wrap=document.getElementById('player'); wrap.innerHTML='<div id="yt"></div>';
+      player=new YT.Player('yt',{videoId:VIDEO,playerVars:{autoplay:1,rel:0,modestbranding:1,playsinline:1,start:Math.floor(sec||0)},events:{onReady:function(){ready=true;}}});
+    }
+    function nudge(){
+      var p=document.getElementById('player-wrap'), r=p.getBoundingClientRect();
+      if(r.bottom<80 || r.top>window.innerHeight-90){ p.scrollIntoView({behavior:'smooth',block:'start'}); }
+    }
+    function startAt(sec){
+      nudge();
+      if(player&&ready){ player.seekTo(sec,true); player.playVideo(); return; }
+      if(apiReady){ createPlayer(sec); } else { pending=sec; }
+    }
+    document.getElementById('facade').addEventListener('click',function(){startAt(0);});
+    (function(){var s=document.createElement('script');s.src='https://www.youtube.com/iframe_api';document.head.appendChild(s);})();
+  </script>
+</body>
+</html>

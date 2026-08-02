@@ -1,0 +1,663 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EP 149 · Don't Fail to Scale: Unpacking the Challenges of Business Growth | The Numbers Game</title>
+<meta name="description" content="">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" sizes="64x64" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="canonical" href="https://thenumbersgamepodcast.com.au/don-t-fail-to-scale-unpacking-the-challenges-of-business-growth">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="The Numbers Game">
+<meta property="og:title" content="EP 149 · Don't Fail to Scale: Unpacking the Challenges of Business Growth | The Numbers Game">
+<meta property="og:description" content="">
+<meta property="og:url" content="https://thenumbersgamepodcast.com.au/don-t-fail-to-scale-unpacking-the-challenges-of-business-growth">
+<meta property="og:image" content="https://i.ytimg.com/vi/ZlOYPlLFn8U/maxresdefault.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+  :root{
+    --purple:#585af3; --purple-dark:#2c1b8a; --mint:#7ad9a8;
+    --white:#ffffff; --muted:rgba(255,255,255,.60); --dim:rgba(255,255,255,.42);
+    --line:rgba(255,255,255,.12); --card:rgba(255,255,255,.05); --card-hi:rgba(255,255,255,.09);
+    --display:'Anton',Impact,'Helvetica Neue',sans-serif;
+    --sans:'Inter',system-ui,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif;
+    --wrap:1280px;   /* page frame (nav spans this) */
+    --col:960px;     /* content column (player, tabs, text) */
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:var(--sans); color:var(--white); line-height:1.6; -webkit-font-smoothing:antialiased;
+    background:#12093a;
+    background-image:
+      radial-gradient(1200px 600px at 82% -6%, rgba(88,90,243,.45) 0%, transparent 55%),
+      radial-gradient(900px 700px at 5% 8%, rgba(122,217,168,.10) 0%, transparent 50%),
+      linear-gradient(180deg,#2c1b8a 0%,#1a1150 28%,#100b34 62%,#0b0820 100%);
+    background-attachment:fixed;
+  }
+  a{color:inherit}
+  .wrap{max-width:var(--wrap);margin:0 auto;padding:0 36px}
+  main.wrap{max-width:var(--col)}
+  @media(max-width:720px){.wrap{padding:0 22px}}
+
+  /* ── Navbar ── */
+  .nav{position:sticky;top:0;z-index:50;background:linear-gradient(180deg,rgba(24,15,74,.92),rgba(24,15,74,.72));backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+  .nav-in{max-width:var(--wrap);margin:0 auto;padding:11px 36px;display:flex;align-items:center;justify-content:space-between}
+  @media(max-width:720px){.nav-in{padding:11px 22px}}
+  .brand{display:block;line-height:0}
+  .brand img{height:36px;width:auto;display:block}
+  .navlinks{display:flex;gap:28px;align-items:center}
+  .navlinks a{text-decoration:none;font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);transition:.15s}
+  .navlinks a:hover{color:var(--white)}
+  .navlinks a.navtop{cursor:default}
+  .navgroup{position:relative;display:flex;align-items:center}
+  .navgroup .subnav{display:none;position:absolute;top:100%;left:50%;transform:translateX(-50%);padding-top:14px;min-width:180px}
+  .navgroup:hover .subnav,.navgroup:focus-within .subnav{display:block}
+  .subnav-in,.navgroup .subnav{z-index:60}
+  .navgroup .subnav a{display:block;background:#180f4a;border:1px solid var(--line);border-top:0;padding:12px 16px;font-size:12px;color:rgba(255,255,255,.85)}
+  .navgroup .subnav a:first-child{border-top:1px solid var(--line)}
+  .navgroup .subnav a:hover{background:#221768;color:var(--white)}
+  .navburger{display:none;background:none;border:1px solid var(--line);padding:8px 10px;cursor:pointer;color:var(--white);transition:.15s}
+  .navburger:hover{border-color:rgba(122,217,168,.6)}
+  .navburger svg{width:20px;height:20px;fill:currentColor;display:block}
+  .navdrop{display:none}
+  @media(max-width:720px){
+    .navlinks{display:none}
+    .navburger{display:block}
+    .navdrop{display:block;position:absolute;left:0;right:0;top:100%;
+      background:#180f4a;border-bottom:1px solid var(--line);box-shadow:0 24px 50px rgba(0,0,0,.45)}
+    .navdrop[hidden]{display:none}
+    .navdrop a{display:block;padding:15px 22px;text-decoration:none;font-size:14px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:rgba(255,255,255,.9);border-bottom:1px solid rgba(255,255,255,.06)}
+    .navdrop a:last-child{border-bottom:0}
+    .navdrop a.sub{padding-left:42px;font-size:13px;color:rgba(255,255,255,.72)}
+    .navdrop .navlabel{display:block;padding:15px 22px 6px;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.4)}
+  }
+
+  /* ── Hero / hook (marker-highlight system: purple hook wraps naturally, mint payoff below)
+     Rules: title splits at its natural break (colon/pipe/question mark). Front = hook (purple,
+     big), back = payoff (mint, smaller). No break in title = purple hook only. Highlights hug
+     the text (tight em padding tuned to Anton) and wrap via box-decoration-break — never
+     hand-pick line breaks or mint words. ── */
+  header.hero{padding:34px 0 6px}
+  .hook{--inx:clamp(8.4px,2.1vw,15.6px)} /* one shared text inset so hook + payoff first letters align */
+  .hook .hk{font-family:var(--display);font-weight:400;text-transform:uppercase;
+    font-size:clamp(28px,7vw,52px);line-height:1.3;letter-spacing:-.5px;text-wrap:balance}
+  .hook .hk span{color:var(--white);padding:.04em var(--inx) .02em;
+    background:linear-gradient(var(--purple),var(--purple)) 0 50%/100% 87% no-repeat;
+    -webkit-box-decoration-break:clone;box-decoration-break:clone}
+  .hook .pay{font-family:var(--display);font-weight:400;text-transform:uppercase;
+    font-size:clamp(16px,4vw,24px);line-height:1.5;letter-spacing:.6px;margin-top:8px;text-wrap:balance}
+  .hook .pay span{color:#0a0a0a;padding:.08em var(--inx) .04em;
+    background:linear-gradient(var(--mint),var(--mint)) 0 50%/100% 88% no-repeat;
+    -webkit-box-decoration-break:clone;box-decoration-break:clone}
+  /* no-hook titles: mid-split into two full-size rows, purple then mint */
+  .hook .hk span.hkrow{display:block;background:none;padding:0}
+  .hook .hk .hkrow+.hkrow{margin-top:8px}
+  .hook .hk span.mintseg{color:#0a0a0a;
+    background:linear-gradient(var(--mint),var(--mint)) 0 50%/100% 87% no-repeat}
+
+  /* ── Player (clean facade → real player on tap) ── */
+  .player-wrap{margin:24px 0 4px;scroll-margin-top:76px}
+  .player{position:relative;width:100%;padding-top:56.25%;border-radius:0;overflow:hidden;background:#000;box-shadow:0 30px 70px rgba(0,0,0,.5),0 0 0 1px rgba(255,255,255,.06)}
+  .facade{position:absolute;inset:0;border:0;cursor:pointer;background-size:cover;background-position:center;display:flex;align-items:center;justify-content:center;padding:0}
+  .facade .play{width:74px;height:74px;border-radius:50%;background:rgba(10,6,30,.40);border:2px solid rgba(255,255,255,.72);display:flex;align-items:center;justify-content:center;transition:.18s;-webkit-backdrop-filter:blur(1px);backdrop-filter:blur(1px)}
+  .facade:hover .play{background:rgba(88,90,243,.62);transform:scale(1.07);border-color:#fff}
+  .facade .play::after{content:"";border-style:solid;border-width:11px 0 11px 19px;border-color:transparent transparent transparent #fff;margin-left:5px}
+  .player iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+
+  /* ── Episode facts (bottom of the Summary panel — templated per episode) ── */
+  .sumfacts{margin:14px 10px 4px;padding-top:13px;border-top:1px solid rgba(255,255,255,.08);display:flex;flex-direction:column;gap:8px}
+  .fact{display:flex;gap:12px;font-size:13.5px}
+  .fact .fl{flex:none;width:104px;color:var(--dim);font-weight:600;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;padding-top:2px}
+  .fact .fv{color:rgba(255,255,255,.9);font-weight:500}
+  .fact .fv a{color:var(--mint);text-decoration:none;border-bottom:1px solid rgba(122,217,168,.4);transition:.15s}
+  .fact .fv a:hover{border-bottom-color:var(--mint)}
+
+  /* ── Episode tag (identity: black label hanging off the title corner) ── */
+  .eptag{display:inline-block;position:relative;left:-6px;margin-bottom:-7px;z-index:2;
+    background:#0a0a0a;color:var(--white);font-family:var(--display);font-weight:400;
+    font-size:13.5px;letter-spacing:1.5px;text-transform:uppercase;padding:6px 11px 4px}
+
+  /* ── Explore tabs (sticky mode switcher; one panel swaps below, nothing shoves) ── */
+  .explore{margin-top:22px}
+  .tabs{position:sticky;top:58px;z-index:40;display:flex;flex-wrap:wrap;gap:8px;padding:10px 0;
+    background:linear-gradient(180deg,rgba(18,10,55,.96),rgba(18,10,55,.86));
+    backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+  .tabbtn{font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.5px;
+    font-size:14.5px;color:var(--white);background:var(--purple);border:1px solid var(--purple);
+    padding:9px 13px 7px;cursor:pointer;transition:.15s}
+  .tabbtn:hover{filter:brightness(1.12)}
+  .tabbtn.on{background:var(--mint);border-color:var(--mint);color:#0a0a0a}
+  .tabbtn.on:hover{filter:none}
+  .tabbtn .ct{font-size:12px;opacity:.75;font-variant-numeric:tabular-nums}
+  .tabbtn .ct::before{content:" · "}
+  .tpanel{border:1px solid var(--line);background:var(--card);padding:12px 10px 14px}
+  .hint{font-size:12.5px;color:var(--muted);padding:2px 10px 10px;border-bottom:1px solid rgba(255,255,255,.08);margin-bottom:6px}
+
+  /* ── Listen row (no box: label left, service pills follow) ── */
+  .listen{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:12px 16px;margin-top:34px}
+  .listen .lname{font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--dim)}
+  .listen a{display:inline-flex;align-items:center;gap:9px;padding:11px 18px;border-radius:999px;
+    background:var(--mint);color:#08210f;text-decoration:none;font-weight:800;font-size:12.5px;
+    letter-spacing:.04em;text-transform:uppercase;transition:.15s}
+  .listen a:hover{filter:brightness(1.06);transform:translateY(-1px);box-shadow:0 12px 30px rgba(122,217,168,.25)}
+  .listen svg{width:20px;height:20px;fill:currentColor;flex:none}
+  /* ── Listen-now Spotify audio embed (full column width, above the pills) ── */
+  .listen-now{margin-top:40px}
+  .listen-now .ln-head{display:flex;align-items:baseline;justify-content:space-between;gap:14px;margin-bottom:13px}
+  .listen-now .ln-title{font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--dim)}
+  .audio-embed{border-radius:12px;overflow:hidden;box-shadow:0 20px 50px rgba(0,0,0,.4),0 0 0 1px rgba(255,255,255,.06)}
+  .audio-embed iframe{display:block;width:100%;border:0}
+  @media(max-width:720px){.listen-now{margin-top:32px}}
+
+  /* ── Keep exploring (thumbnails link to other episode PAGES, never timecodes).
+     Swipeable strip on mobile, fits three-up on desktop. Variant rule: claim
+     "similar ground" + reason lines ONLY when moment-level topic overlap is
+     genuinely strong; otherwise show the latest released episodes with dates —
+     never invent a connection. ── */
+  .relsec{margin-top:60px;padding-top:58px;border-top:1px solid var(--line)} /* line = end of this episode's info */
+  .reldots{display:flex;justify-content:center;gap:7px;margin-top:12px}
+  .reldots span{width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.25);transition:.2s}
+  .reldots span.on{background:var(--mint)}
+  .relsec .rtitle{display:inline-block;font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.5px;font-size:14.5px;background:var(--mint);color:#0a0a0a;padding:9px 13px 7px;margin-bottom:18px}
+  .relgrid{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding-bottom:6px;scrollbar-width:none}
+  .relgrid::-webkit-scrollbar{display:none}
+  .relcard{flex:0 0 56%;max-width:232px;scroll-snap-align:start;display:flex;flex-direction:column;text-decoration:none;background:var(--card);border:1px solid var(--line);transition:.15s}
+  .relcard:hover{background:var(--card-hi);border-color:rgba(122,217,168,.55)}
+  .relcard img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block}
+  .relcard .rt{display:block;font-size:12.5px;font-weight:600;color:rgba(255,255,255,.92);line-height:1.4;padding:8px 8px 0}
+  .relcard .rfoot{margin-top:auto;display:flex;justify-content:space-between;align-items:flex-end;gap:8px;padding:10px 8px 9px}
+  .relcard .rwhy{font-size:11.5px;color:var(--mint)}
+  .relcard .rtag{display:inline-block;background:#0a0a0a;color:var(--white);font-family:var(--display);font-size:10px;letter-spacing:1.2px;text-transform:uppercase;padding:3px 7px 2px;white-space:nowrap;flex:0 0 auto}
+
+  /* ── Dropdown sections (accordion under the player) ── */
+  .drops{margin-top:34px;display:flex;flex-direction:column;gap:11px}
+  .drop{border:1px solid var(--line);border-radius:0;background:var(--card);overflow:hidden;transition:border-color .15s}
+  .drop[open]{border-color:rgba(122,217,168,.35)}
+  .drop>summary{list-style:none;cursor:pointer;padding:16px 18px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+  .drop>summary::-webkit-details-marker{display:none}
+  .drop>summary .st{font-weight:700;font-size:15.5px;letter-spacing:.005em}
+  .drop>summary .ct{margin-left:auto;font-size:12px;color:var(--dim);font-weight:600;font-variant-numeric:tabular-nums}
+  .drop>summary .chev{flex:none;width:22px;height:22px;border-radius:50%;background:rgba(122,217,168,.14);color:var(--mint);display:flex;align-items:center;justify-content:center;font-family:var(--display);font-size:15px;line-height:1;transition:.2s;transform:translateY(-1px)}
+  .drop[open]>summary .chev{transform:rotate(45deg)}
+  .drop-body{padding:2px 12px 12px}
+
+  /* chapters */
+  .chapter{display:flex;align-items:baseline;gap:14px;width:100%;text-align:left;cursor:pointer;background:none;border:0;color:inherit;font-family:inherit;padding:11px 10px;border-radius:10px;transition:.13s}
+  .chapter:hover{background:var(--card-hi)}
+  .chapter .tc{font-variant-numeric:tabular-nums;font-weight:700;font-size:14px;color:var(--mint);flex:none;width:48px}
+  .chapter .cx{font-size:15px;font-weight:500;color:rgba(255,255,255,.9)}
+  .chapter:hover .cx{color:#fff}
+
+  /* questions */
+  .q{display:flex;align-items:center;gap:12px;width:100%;text-align:left;cursor:pointer;background:none;border:0;border-radius:11px;color:inherit;font-family:inherit;padding:12px 10px;transition:.14s}
+  .q+.q{border-top:1px solid rgba(255,255,255,.05)}
+  .q:hover{background:var(--card-hi)}
+  .q .qm{font-family:var(--display);font-size:15px;color:var(--mint);flex:none;line-height:1;transform:translateY(1px)}
+  .q .qx{font-size:15px;font-weight:500;color:rgba(255,255,255,.92)}
+  .q .go{margin-left:auto;flex:none;color:var(--dim);font-size:18px;transition:.15s}
+  .q:hover .go{color:var(--mint);transform:translateX(2px)}
+
+  /* summary + transcript bodies */
+  .summary-body p{font-size:16.5px;line-height:1.62;color:rgba(255,255,255,.9);padding:6px 10px 4px}
+  .tbody{padding:2px 10px 8px}
+  .tbody p{font-size:14.5px;line-height:1.7;color:rgba(255,255,255,.78);margin-top:15px;max-width:64ch}
+  .tbody .spk{display:block;font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--mint);margin-bottom:2px}
+
+  /* ── Voice note ask (lives at the bottom of the Summary panel) ── */
+  .vask{margin:16px 10px 4px}
+  .vbtn{display:inline-flex;align-items:center;gap:9px;padding:12px 20px;border-radius:999px;border:0;cursor:pointer;
+    background:var(--mint);color:#08210f;font-family:inherit;font-weight:800;font-size:12.5px;
+    letter-spacing:.04em;text-transform:uppercase;transition:.15s}
+  .vbtn:hover{filter:brightness(1.06);transform:translateY(-1px);box-shadow:0 12px 30px rgba(122,217,168,.25)}
+  .vbtn svg{width:18px;height:18px;fill:currentColor;flex:none}
+  .vslot{background:var(--purple);padding:12px 10px 10px;margin:14px 0 4px;box-shadow:0 18px 40px rgba(0,0,0,.35)}
+  .vslot[hidden]{display:none}
+  .vhead{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;margin-bottom:10px}
+  .vhead .vmsg{font-family:var(--sans);font-size:13px;line-height:1.55;color:rgba(255,255,255,.92);margin:2px 0 0;padding:0 2px}
+  .vclose{background:none;border:0;color:rgba(255,255,255,.85);font-size:22px;line-height:1;cursor:pointer;padding:0 2px}
+  .vclose:hover{color:var(--white)}
+  .vslot iframe{display:block}
+
+  /* ── YouTube subscribe pill (sits in the listen row; outranks .listen a's mint) ── */
+  .listen a.yt-pill{background:var(--purple);color:var(--white)}
+  .listen a.yt-pill:hover{filter:brightness(1.1);transform:translateY(-1px)}
+  @media(max-width:720px){ /* mobile: no label, three compact pills on one row */
+    .listen .lname{display:none}
+    .listen{gap:8px}
+    .listen a{padding:10px 13px;font-size:11px;gap:6px}
+    .listen svg{width:16px;height:16px}
+  }
+
+  /* ── Footer: Follow us on | Brought to you by | Produced by, + Menu dropdown ── */
+  footer{border-top:1px solid var(--line);margin-top:68px;padding:52px 20px 58px}
+  .footgrid{max-width:var(--wrap);margin:0 auto;display:grid;grid-template-columns:1fr 1.15fr .8fr;gap:44px;align-items:start}
+  .fcol{text-align:center;display:flex;flex-direction:column;align-items:center}
+  .foot-label{font-size:11px;font-weight:700;letter-spacing:.26em;text-transform:uppercase;color:var(--dim);margin-bottom:18px}
+  .sponsors{display:flex;justify-content:center;align-items:center;gap:34px;flex-wrap:wrap}
+  .sponsors a,.produced a{display:inline-flex;transition:.15s}
+  .sponsors a:hover,.produced a:hover{transform:translateY(-1px)}
+  .sponsors img{height:32px;width:auto;opacity:.92}
+  .produced img{height:30px;width:auto;opacity:.95}
+  .sponsors a:hover img,.produced a:hover img{opacity:1}
+  footer .socials{display:flex;gap:11px;justify-content:center;flex-wrap:wrap;margin:0}
+  footer .socials a{width:40px;height:40px;border-radius:50%;border:1.5px solid rgba(122,217,168,.5);display:flex;align-items:center;justify-content:center;transition:.15s}
+  footer .socials a svg{width:18px;height:18px;fill:var(--mint);transition:.15s}
+  footer .socials a:hover{background:var(--mint);border-color:var(--mint);transform:translateY(-2px)}
+  footer .socials a:hover svg{fill:#0a0a0a}
+  .footbar{max-width:var(--wrap);margin:34px auto 0;border-top:1px solid var(--line);padding-top:20px;display:flex;flex-direction:column;align-items:center;gap:14px}
+  .footnav-dd{display:block;width:100%;max-width:var(--wrap);margin:0 auto;text-align:center}
+  .footnav-dd>summary{list-style:none;cursor:pointer;display:inline-flex;align-items:center;gap:9px;font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.5px;font-size:13px;color:var(--muted);background:transparent;border:1px solid var(--line);padding:8px 16px 6px;transition:.15s}
+  .footnav-dd>summary::-webkit-details-marker{display:none}
+  .footnav-dd>summary:hover{color:var(--mint);border-color:rgba(122,217,168,.45)}
+  .footnav-dd>summary .ham{width:15px;height:15px;fill:currentColor;transform:translateY(-1px)}
+  .footnav-dd .dd-links{display:flex;flex-direction:row;flex-wrap:wrap;justify-content:center;gap:12px 24px;padding:24px 0 4px}
+  .footnav-dd .dd-links a{font-size:11.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:.15s}
+  .footnav-dd .dd-links a:hover{color:var(--mint)}
+  .copyright{font-size:12px;color:var(--dim);text-align:center}
+  @media(max-width:720px){.footgrid{grid-template-columns:1fr;gap:34px}footer{padding:40px 16px 20px}.footbar{margin-top:34px;padding-top:24px;gap:20px}.footnav-dd .dd-links{flex-direction:column;align-items:center;gap:15px}}
+
+  @media(min-width:720px){header.hero{padding:48px 0 6px}}
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "PodcastEpisode", "name": "Don't Fail to Scale: Unpacking the Challenges of Business Growth", "url": "https://thenumbersgamepodcast.com.au/don-t-fail-to-scale-unpacking-the-challenges-of-business-growth", "datePublished": "2023-12-18", "episodeNumber": 149, "image": "https://i.ytimg.com/vi/ZlOYPlLFn8U/maxresdefault.jpg", "partOfSeries": {"@type": "PodcastSeries", "name": "The Numbers Game", "url": "https://thenumbersgamepodcast.com.au/"}}</script>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-in">
+      <a class="brand" href="/" aria-label="The Numbers Game home"><img src="assets/tng-logo.png" alt="The Numbers Game"></a>
+      <div class="navlinks">
+        <a href="/">Home</a>
+        <div class="navgroup">
+          <a class="navtop">Episodes</a>
+          <div class="subnav">
+            <a href="/episodes">All episodes</a>
+            <a href="/adventure">Find moments</a>
+          </div>
+        </div>
+        <div class="navgroup">
+          <a class="navtop">About</a>
+          <div class="subnav">
+            <a href="/about">The show</a>
+            <a href="/nick-reilly">Nick Reilly</a>
+            <a href="/jason-robinson">Jason Robinson</a>
+          </div>
+        </div>
+        <a href="/contact">Contact</a>
+      </div>
+      <button class="navburger" id="navburger" type="button" aria-label="Menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24"><path d="M3 6h18v2H3zM3 11h18v2H3zM3 16h18v2H3z"/></svg>
+      </button>
+    </div>
+    <div class="navdrop" id="navdrop" hidden>
+      <a href="/">Home</a>
+      <span class="navlabel">Episodes</span>
+      <a class="sub" href="/episodes">All episodes</a>
+      <a class="sub" href="/adventure">Find moments</a>
+      <span class="navlabel">About</span>
+      <a class="sub" href="/about">The show</a>
+      <a class="sub" href="/nick-reilly">Nick Reilly</a>
+      <a class="sub" href="/jason-robinson">Jason Robinson</a>
+      <a href="/contact">Contact</a>
+    </div>
+  </nav>
+
+  <main class="wrap">
+
+    <header class="hero">
+      <div class="hook">
+        <span class="eptag">EP 149</span>
+        <h1 class="hk"><span>Don't Fail to Scale</span></h1>
+        <p class="pay"><span>Unpacking the Challenges of Business Growth</span></p>
+      </div>
+    </header>
+
+    <div class="player-wrap" id="player-wrap">
+      <div class="player" id="player">
+        <button class="facade" id="facade" style="background-image:url('https://i.ytimg.com/vi/ZlOYPlLFn8U/maxresdefault.jpg')" aria-label="Play episode">
+          <span class="play"></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="explore">
+      <div class="tabs" role="tablist">
+        <button class="tabbtn on" data-panel="p-summary">Summary</button>
+        <button class="tabbtn" data-panel="p-chapters">Chapters<span class="ct" id="chcount"></span></button>
+        <button class="tabbtn" data-panel="p-questions">Questions<span class="ct" id="qcount"></span></button>
+      </div>
+      <section class="tpanel" id="p-summary">
+        <div class="summary-body">
+          <p>Marty leads the trio through why so many businesses stall at $1 to $1.5 million in revenue and what it really takes to scale to the next level without losing what made them successful. They cover strategizing from where you want to be, setting stretch goals, standing on the shoulders of giants who have walked the path, hiring excellent salespeople, setting performance standards above the industry average, not burning cash on speculation, doubling down on what works, and simplifying to scale. Jason adds the accountant's view on forecasting and reading your numbers, and Nick shares his own experience of plateauing and seeking outside advice.</p>
+        </div>
+        <div class="vask">
+          <button class="vbtn" id="vbtn" type="button">
+            <svg viewBox="0 0 24 24"><path d="M12 14a3 3 0 0 0 3-3V6a3 3 0 1 0-6 0v5a3 3 0 0 0 3 3zm5-3a5 5 0 0 1-10 0H5a7 7 0 0 0 6 6.92V21h2v-3.08A7 7 0 0 0 19 11h-2z"/></svg>
+            Send us a voice note
+          </button>
+          <div class="vslot" id="vslot" hidden>
+            <div class="vhead">
+              <p class="vmsg">We'd love to hear from you. You can leave up to a 90 second voice note for us to play on the show: a question, some feedback, or a topic you want covered.</p>
+              <button class="vclose" id="vclose" type="button" aria-label="Close">&times;</button>
+            </div>
+            <iframe src="https://www.speakpipe.com/widget/inline/hhq6kzggsx7zpcsvakgxfrzun3zidpde" allow="microphone" width="100%" height="200" frameborder="0" title="Leave The Numbers Game a voice note"></iframe>
+          </div>
+          <script async src="https://www.speakpipe.com/widget/loader.js" charset="utf-8"></script>
+        </div>
+        <div class="sumfacts">
+          <div class="fact"><span class="fl">Release date</span><span class="fv">18 December 2023</span></div>
+          <div class="fact"><span class="fl">Hosts</span><span class="fv"><a href="/nick-reilly">Nick Reilly</a>, <a href="/jason-robinson">Jason Robinson</a> &amp; <a href="/marty-vidakovic">Marty Vidakovic</a></span></div>
+
+        </div>
+      </section>
+      <section class="tpanel" id="p-chapters" hidden>
+        <p class="hint">Jump straight to the part you need.</p>
+        <div id="chapters"></div>
+      </section>
+      <section class="tpanel" id="p-questions" hidden>
+        <p class="hint">Real questions this episode answers. Tap one to hear the answer.</p>
+        <div id="qa"></div>
+      </section>
+    </div>
+
+    <div class="drops">
+
+      <details class="drop">
+        <summary><span class="st">Episode transcript</span><span class="chev">+</span></summary>
+        <div class="drop-body tbody">
+          <p><span class="spk">Jason · 00:00</span>Welcome to episode 149 of The Numbers Game. I'm Jase. I'm here with Nick and Marty. Guys, how we going?</p>
+          <p><span class="spk">Marty · 00:08</span>Going well, Jase. Going well. 149. How are you going, Jase? Because I know you get so excited about the 150. Are you okay? We've got one to get through and then we're 150.</p>
+          <p><span class="spk">Jason · 00:18</span>Mate, I'm on the edge of my seat. I've just been ready to raise the bat for about 15 episodes. I think I started talking about it at 135. So you can just imagine the anticipation.</p>
+          <p><span class="spk">Marty · 00:27</span>I'd argue that. I reckon it was 112. But anyway, let's get into it. Nick, how are you, my friend?</p>
+          <p><span class="spk">Nick · 00:34</span>Oh, Marty, I'm good. I've just, um, just learned how to build a, uh, $10,000 cold plunge for $1,500 whilst waiting for Jase to sort his sound issues out. So whilst it was disappointing that, um, Jase's microphone packed it in, I've just, yeah, learned how to save $8,500 on a cold plunge.</p>
+          <p><span class="spk">Marty · 00:53</span>Always growing, Nick, always growing.</p>
+          <p><span class="spk">Nick · 00:56</span>I think I need to factor in $3,000 because I'll have to do everything twice. Based on watching the guy do it. I'm not quite as handy as he is, but yeah, never downtime, always learning. How are you, Jase?</p>
+          <p><span class="spk">Jason · 01:08</span>Mate, I'm good. I'm good. And look, to be honest, we're on the home stretch. This is a week, a week of just getting things done. And this is our time to shine. It's go time. But I'll tell you what, if you're going to build a cold plunge over the Chrissy New Year period, I'm more than happy to be the guinea pig to come over and test it out.</p>
+          <p><span class="spk">Jason · 01:24</span>That's for sure.</p>
+          <p><span class="spk">Nick · 01:25</span>Mate, I'm gonna put the link to the video on Airtasker and see who picks it up.</p>
+          <p><span class="spk">Jason · 01:30</span>Exciting app today from our boy Marty. We're gonna be talking about not, you know, don't fail to scale your business. And Marty's gonna bring us all sorts of interesting things to unpack. But before we do that, just quick mention of our good friends at Dashboard Insights. If you wanna be making data-driven decisions about your business, make sure you've got the most visually stunning business dashboards in the game, feeding real-time data in, giving you real-time decision-making.</p>
+          <p><span class="spk">Jason · 01:54</span>To get ahead in life. So, and it brings some life to your business too.</p>
+          <p><span class="spk">Nick · 02:00</span>Triple Ds.</p>
+          <p><span class="spk">Jason · 02:01</span>Triple Ds?</p>
+          <p><span class="spk">Nick · 02:02</span>Data-driven decisions.</p>
+          <p><span class="spk">Jason · 02:04</span>Data-driven decisions. I meant that. I knew that before I said it. So check out dashboardinsights.com. Say hi to our friend Ryan and go and check that out. Marty.</p>
+          <p><span class="spk">Marty · 02:15</span>Well, today I wanted to talk about don't fail to scale your business. More so from the fact that obviously I talk to a lot of business owners and one of the things that comes up a lot is the thing that made them successful when starting their business. They just go out there, they're on the hustle, they add huge value to the market, not so many staff, slowly growing, and they get to about $1 to $1.5 million revenues, and then they sort of get a bit stuck as to</p>
+          <p><span class="spk">Marty · 02:45</span>what the next step is. And it's like they get into almost a business comfort zone. So there's a lot of excitement when you first building a business, and then it gets to the point where it can get a little bit stagnant as well. So to go from $1.5 to $10 million is a whole different ballgame again, but it's important not to forget what got you to where you got to.</p>
+          <p><span class="spk">Marty · 03:07</span>And I would say you want to really consider how do you optimize your business and not over-corporatize it as well and handbrake natural momentum. So a lot of people say, you know, you've got to get corporate structures in, you've got to follow the path.</p>
+          <p><span class="spk">Marty · 03:23</span>And we're probably a little bit anti that sometimes, even though we do it, we do our best to do it. But so you've got to think about how did you get market traction uniquely in your own way initially? And how do you continue to do this as you grow to the next level?</p>
+          <p><span class="spk">Marty · 03:40</span>And I wanted to bring you guys in onto, you know, you've been through these different pain points and scaled through it. And get your unique feed on it. But do you see that very often, Jase, with clients that get stuck at a certain level?</p>
+          <p><span class="spk">Jason · 03:54</span>Yeah, and look, as soon as I saw your show notes come through, I was like, whoa, this is a banger. Because it's just so true. The business owner or the founder or the founders, they're good at what they do. They get it. As you said, they hustle, they grow a business to a certain size. And there's always some tipping points where the wheels fall off, where the business owners, let's say, should stop doing something and they don't.</p>
+          <p><span class="spk">Jason · 04:13</span>Or because the business owner's in the trenches, some of the different things fall apart where it's, let's say, debt management management, accounts, receivables, cash flow, making ATO payments, hiring the wrong people. So I definitely see it. We see businesses get to a point and just stagnate and stay the same, or they start— they make so many mistakes in trying to then grow and scale and focusing too much in the wrong areas that their business actually goes backwards.</p>
+          <p><span class="spk">Jason · 04:39</span>They end up— they might get more revenue and then end up with less profit through some of the decision-making and spending more money than what they were before to, you know, acquire new customers. So yeah, we do see it and it's very interesting to see some of the things that we're gonna unpack around that.</p>
+          <p><span class="spk">Jason · 04:57</span>But I'm also curious as to whether you think there's any other barriers from 1.5 to 10, whether there's a few kind of walls that you hit along the way.</p>
+          <p><span class="spk">Marty · 05:05</span>There certainly is. But I think that first stage is the most pivotal because it's the stage that comes out of them being that initial owner-occupier and then going to that next level. So I think that's a real critical point. I feel like when people scale through that first level, they get momentum and they've been through it now a couple of times in starting a business, taking them the next step to scale up.</p>
+          <p><span class="spk">Marty · 05:29</span>And then they know down the track that they need to get the resources in to take that next step as well. You generally find people will scale faster as they go through the business cycle. But if they get that, if they get hit with not moving, then that could be a real problem.</p>
+          <p><span class="spk">Marty · 05:48</span>And I always think the advantage of small business over big business is the ability to progress without the typical bureaucracy that you usually come in. You can be nimble, you can adapt to markets in real time, you can hire in real time for what you need as well.</p>
+          <p><span class="spk">Marty · 06:06</span>So I think there's some really good components that small business has over big business. It's not to say that you don't set boundaries, you don't set practices, processes. You need to be able to do that as your system grows. But ultimately, you're looking at key drivers to grow the people in the business, create great client experiences, and to create great outcomes across the board in your business.</p>
+          <p><span class="spk">Marty · 06:30</span>And you as a business owner know what that is. So you don't want to get too distracted off that path that made you successful. You're just putting more boundaries and processes around it so you can scale to another level. But I've put some points in that I thought were really good points.</p>
+          <p><span class="spk">Marty · 06:48</span>And it's funny, number one, I'll share with you, acknowledge the qualities of where you are at and strategize from a place you want to be. I think this is a really important point that Often we always talk about incremental growth, which is fine, but sometimes you got to ask yourself the question, all right, what's going to take my business to the next level and work backwards from where you want that business to be?</p>
+          <p><span class="spk">Marty · 07:15</span>And it doesn't mean you discount the incremental growth, but you should ask yourself that question that if I want to be here in 12 months now, because I want to be here in 12 months, what resources do I need to inject into the business to get there?</p>
+          <p><span class="spk">Marty · 07:31</span>Who are the people I need? And it might not always mean actual growth in the way you think about it. Sometimes it could mean efficiencies. You might be earning a ton of money, but you're hemorrhaging expense. So it might be, all right, for me to scale to the next level is to optimize my business.</p>
+          <p><span class="spk">Marty · 07:49</span>But you want to be asking strategic questions that are important to your business. But I always like setting a stretch goal and then actually working out how to get to the stretch goal because we kind of know the incremental blueprint.</p>
+          <p><span class="spk">Marty · 08:06</span>So, and the stretch goal just makes you ask better questions to go, firstly, how the hell am I going to do that? But secondly, okay, well, what's the most effective way that we could do it? And it still needs to be realistic as well. And you'll find efficiencies in forward thinking that you just can't find if you're looking at incremental growth..</p>
+          <p><span class="spk">Marty · 08:27</span>So I think it's a good pressure test to have both and then go, okay, what do I need to implement and inject to get to where I want to go? Yeah, Nick, thoughts?</p>
+          <p><span class="spk">Nick · 08:41</span>Yeah, I think it will just, just to go back on the whole, the whole thing, as in the scaling thing, it's daunting, right? So yeah, I think, you know, you're so, and again, we talk about this all the time, but most people fall into business because they're good at what they do. Um, so they get too many clients, which means they need help.</p>
+          <p><span class="spk">Nick · 08:58</span>So it's quite easy to get that $1.5 million turnover. You might be doing that by yourself, um, or with one other person. But the minute you go to scale and you bring in structures, HR, culture, all these things, you're in uncharted waters really if you haven't done it before, you know.</p>
+          <p><span class="spk">Nick · 09:15</span>And, um, I'm speaking from personal experience. That's pretty much what happened to us, you know. We kind of we got to a level where I got to a certain level really quick, uh, and then we sort of plateaued while we got comfortable with that.</p>
+          <p><span class="spk">Nick · 09:31</span>And then we got to that next level, probably where we are now, and we've probably been comfortable with that for a little while. And we're probably ready to go to that next level, um, but maybe not for a year or so. So I just think, yeah, it's such a, such a big thing to do, and it, it comes with so many risks And, you know, traditionally as a small business owner, you put a lot of blood, sweat, and tears in to get where you are.</p>
+          <p><span class="spk">Nick · 09:55</span>So to risk all that to try and go to that next level is, is a real challenge. Um, but yeah, you know, I, I think around qualities of where you're at and strategize from the place you want to be, 100%. And the only thing I'd add to that is get help because you won't— you've never been in that place you want to be.</p>
+          <p><span class="spk">Nick · 10:15</span>So you need to find someone who's been there to help you strategize because you won't know where to start. And that's— that was us, you know. And I think some of it we learned on the job, but we made a lot of mistakes. And what we did learn is that we need people around us who have been there and done it and have been in that position that we want to get to because they can really help us.</p>
+          <p><span class="spk">Nick · 10:37</span>So the only thing I'd add to that is get experts around you who've been there and done it.</p>
+          <p><span class="spk">Marty · 10:41</span>And that's exactly what was one of my points too. Stand on the shoulders of giants, I call it, is that seek advice from business owners who have walked the path you want to walk in real time. And it doesn't matter if it's from your own industry or another industry, preferably get a combination of different, you know, different vantage points to shift your perspective.</p>
+          <p><span class="spk">Marty · 11:03</span>But sometimes you can pick up one or two great ideas from someone that's actually applying the things that you want to apply, and that can be a real game changer. So I think you have to have that type of real-time advice to optimize your business from that new position.</p>
+          <p><span class="spk">Marty · 11:22</span>And then you can see what's relevant, what's in your sweet spot that you can execute on and get there more effectively and faster.</p>
+          <p><span class="spk">Nick · 11:30</span>I think another thing, Marty, is you'll be amazed at who will actually want to help you. And apologies, I didn't say the stand on giants thing, so apologies for stealing your thing.</p>
+          <p><span class="spk">Marty · 11:39</span>No, no, no, you're just ahead of the curve, mate.</p>
+          <p><span class="spk">Nick · 11:42</span>I don't know about that, um, but we've got a pretty big business decision we're making at the moment, um, and you know, I thought I had it right, and, um, I've definitely got the, the idea right, but there's some, there's some structure and some logistics that come with that idea, um, and you know, I've engaged 7 people to talk to, um, about that idea all from a similar profession, just to get their different opinions on it.</p>
+          <p><span class="spk">Nick · 12:12</span>So far I've spoken to 2 people out of the 7, and I've got a completely different opinion on it than what I had, particularly from one person. And then that second person kind of agreed with what the first person said.</p>
+          <p><span class="spk">Nick · 12:27</span>So yeah, it's, um, you know, I've, I've learned that, you know, to make these big decisions you need to get help. And Marty, before you came into the business, I used to call you when you're a— yeah, when you're a business coach to say, hey, this is what I'm thinking, what, what do you think? So yeah, just seek people out because they'll be more than willing to help.</p>
+          <p><span class="spk">Nick · 12:46</span>And seek people out that you don't necessarily know or don't have a, you know, a, a business relationship with, um, people that are external to your business.</p>
+          <p><span class="spk">Marty · 12:56</span>So important. And I've learned more over my career by doing that, um, than really anything else. It's quite phenomenal what you can pick up. And like you said, Nick, the different perspectives. Another thing I think when scaling, think about excellent salespeople in your business.</p>
+          <p><span class="spk">Marty · 13:16</span>And why I say that is great salespeople can usually outperform 2 to 4 times an average salesperson. And you've got to think about the impact of your business moving forward when you're recruiting. So again, and I'll give a caveat to this in a moment, but I think it's really important to be, and I've certainly made this mistake, wanting to have people in the sales team and grow the sales team</p>
+          <p><span class="spk">Marty · 13:46</span>to be bigger, but then sometimes the effectiveness has been a bit clumsy. So it's better to be patient and get the right salesperson on board because the extent of performance is quite considerably better. And the other thing you can do for a business, which I think is great in scaling, is that, you know, think about your industry average metrics and don't set your own performance standards on those industry metrics.</p>
+          <p><span class="spk">Marty · 14:15</span>Really set a high performance excellence metric for your own business and train and rise up to that. So excellence is seen as average almost in your business, if that makes sense. But I always like the fact, and to give you an example, even in mortgage broking, the average is around about $18 million per mortgage broker.</p>
+          <p><span class="spk">Marty · 14:37</span>And at Innov8, we're up around $50 million, which is about 2.5 times as an average. And that's been consistent in previous businesses I've been at, even coming out of the bank. Because I came out of the bank and had extended metrics I had to perform, then to me it was just common sense that we would have sort of an upscale when I came into broking.</p>
+          <p><span class="spk">Marty · 15:00</span>So for me, you know, $12 million broker would just seem totally unreasonable in my head, even $18 million. So it had to be 2 or 3 times that for it to be successful. But it was always funny, the feedback from top performing brokers then would come back and go, "Jeez, in hindsight, like we didn't realize how well we were doing." And you go, "That's a great feeling when brokers feel really good about their performance to the industry standard." That</p>
+          <p><span class="spk">Marty · 15:31</span>just feeds throughout the culture that we're unique, we're doing something uniquely different to achieve that. So again, think about in your industry, what's an industry average and how do you extend that but maintain the qualities to the market, to the customers that are exceptional.</p>
+          <p><span class="spk">Marty · 15:50</span>So you don't want to drop standard in order to stress those parameters. You want to have those parameters as the norm and create great qualities around it. Jase?</p>
+          <p><span class="spk">Jason · 16:01</span>Yeah, on that, Marty, you've got me thinking. I remember seeing a presentation years ago, a guy called Jack Daly. He's like a, I think he was in the mortgage broking industry in America, grew a huge business. But he talks about salespeople and having a salesperson, and he was presenting to a room full of accountants, and he went, what blew his mind was that so many accounting firms don't have a salesperson, or basically none.</p>
+          <p><span class="spk">Jason · 16:23</span>They don't hire a salesperson who can do the sales calls and onboard new clients and win business for an accounting firm. So whether you're applying to an accounting firm or not, if you're looking at your business and go, where do sales come from? And if you're in a business where you need someone to be able to convert a sale on the phone, should the business owner be the only person doing that?</p>
+          <p><span class="spk">Jason · 16:44</span>Because that's a lot of the time where you see that roadblock as well, where you might get to $1.5 million or wherever you are. If you're going to scale from that to $10 million and you're— and the business owner is the only person doing the sales calls, you've got yourself a fundamental problem where you can't continue to win, grow, and scale without adding more salespeople to your team.</p>
+          <p><span class="spk">Jason · 17:03</span>That's a challenge, I think, big challenge in the accounting industry. I think I've often had the feedback from people in our industry that, you know, Future Advisory has grown really fast over the years, but I'm a natural-born salesperson. I'm more of a sales and marketing guy than I am an accountant.</p>
+          <p><span class="spk">Jason · 17:20</span>Now, there's plenty of incredible accountants out there that created accounting firms that are struggling to grow, even though they're highly skilled and epic at what they do. They're just not good at the sales side. But maybe they've also never thought to hire a salesperson who can create a product, market it, and sell it to businesses that need that accountant's services.</p>
+          <p><span class="spk">Jason · 17:41</span>So yeah, love the salesperson needing to perform point of view, but also the fact that, you know, I just wanted to throw in there that if you want to grow a business and scale, you need to think about how does your sales pipeline work and how are you winning clients?</p>
+          <p><span class="spk">Marty · 17:56</span>It's all perspective, isn't it? I mean, to me, sales is something you do for people, not to people. So to me, it's about again, trust. It's about helping people move forward and enabling to secure what they want ultimately. So to me, it's just an extension of doing something really good with people, but not to them, for them.</p>
+          <p><span class="spk">Marty · 18:18</span>And I think just that shift of perspective alone will help people regardless of what role there is to want to add value to people at that level. And that's compensated back in regards to that value. So to me, sales is a very natural thing we do every day.</p>
+          <p><span class="spk">Marty · 18:34</span>In many different ways. So I totally agree. I think the more people you have putting great value out in the market, the better, obviously, it's going to be to the business. So it's a really good point. Another point I want to bring up is don't burn cash on speculation.</p>
+          <p><span class="spk">Marty · 18:52</span>Add fuel to an existing fire. I think that's— and we've certainly learned that, and I've done this before myself where you get bullish because you're doing so well. And you get all these great ideas and you go off on some slight tangents, but you're not asking yourself the question that sometimes the simplest way, what's the simplest way to increase performance?</p>
+          <p><span class="spk">Marty · 19:16</span>And that's just to add to what you're doing exceptionally well and just expanding upon it. And I think entrepreneurs are notorious for this because there's always another great idea and you want to explore those great ideas. Don't get me wrong. But I think you don't want to burn that cash on just a speculative idea when you've got a great idea that's already working and you can just expand upon it.</p>
+          <p><span class="spk">Marty · 19:40</span>And I think that's something I've certainly tried to discipline myself. I still sometimes get it wrong, obviously, but it's a constant discipline to go, hey, these are the main revenue drivers and profitability drivers, and this is how we win our business.</p>
+          <p><span class="spk">Marty · 19:56</span>And this is what we're good at. So again, it presents the best opportunity for a business. Uh, yeah, Nick, you would experience that yourself, no doubt.</p>
+          <p><span class="spk">Nick · 20:05</span>Yeah, for sure. Focus on what you're good at. You're good at it and you've got to where you are for a reason. So, and it comes back to scale, right? And you know, we all want to diversify and we all want to have other, other things that we're doing. But I think the reason you're in a position to scale and have the confidence to scale is because you're good at what you do.</p>
+          <p><span class="spk">Nick · 20:23</span>So double down on it. And, you know, we, we have been challenged a few times on our diversification. We have 3 revenue streams and we're considering a 4th, but they're all very complementary. We've spoken about this before, and we think we can apply our learnings to those, those new revenue streams.</p>
+          <p><span class="spk">Nick · 20:42</span>So yeah, 100%. It's always— not always, this is that's the wrong way to say it, but think about as much as you can extract from your existing, your existing offering or service offering before adding others unless they are completely complementary.</p>
+          <p><span class="spk">Marty · 21:04</span>Yeah, and I'll give you an example, and I've spoken about this before, where, you know, we had a mortgage business previously and all our clients were asking us to sell their property because they trusted us to that extent. And we thought, oh, that's great, we'll add a real estate division. And it was a total distraction.</p>
+          <p><span class="spk">Marty · 21:20</span>And even though it kind of worked in the end, it was still a distraction where we could have added one more mortgage broker and got a much more accelerated result. But again, we were excited, you know, we thought we could do it all.</p>
+          <p><span class="spk">Marty · 21:35</span>But in hindsight, it was just a distraction where we should have just kept the core thing, which was finance at the end of the day. So it was a great lesson. The other message I would say is if you're thinking about scaling before you go on that track to really work out, I call it SOS, simplify, optimize, and simplify.</p>
+          <p><span class="spk">Marty · 21:59</span>Whenever you make people's lives easier, you can scale and optimize more effectively. Think about what you can make easier to do business with clients. How do you make your functionality easier? For teammates to do more of what they do more effectively, and even in regards to logistics as well.</p>
+          <p><span class="spk">Marty · 22:18</span>So complexities create confusion and confusion is a handbrake to scaling effectively. So again, for me, it's always about simplicity without— but simplicity without performance is stupid, right? So if you're making it simple, but it doesn't work, there's no point to that.</p>
+          <p><span class="spk">Marty · 22:37</span>But think about simplicity Effectiveness that drives a result and do more of what works. I think that's really key because again, if you pour more water into a bucket that's got holes in it, well, guess what? It's not going to be really effective.</p>
+          <p><span class="spk">Marty · 22:54</span>Still going to lose a lot of that water off the bottom line. So make sure you've got a good bucket. We love talking bucket, bucket companies. And that way you'll just fill more buckets in the end, which is what it's all about. Jase?</p>
+          <p><span class="spk">Jason · 23:09</span>Yeah, couldn't agree more, mate. And I think, you know, just following on from your don't burn cash and then straight into simplify and optimize. So I wouldn't be an accountant if I didn't say that, you know, laying down a good financial forecast and a good plan for your business as well. If you are going to scale, if you are going to throw cash at something, if you are going to be hiring, I think really having a detailed understanding of your numbers, the ability to read a good profit and loss, look at your balance sheet and understand your numbers.</p>
+          <p><span class="spk">Jason · 23:34</span>Like anything with the whole begin with the end in mind, if you're looking ahead down the track and you want to go from, you know, 1 or 2 mil to 4 or 5 mil, understanding the metrics and the numbers and the key drivers that underline that cash flow and that spend that you're going to need to have and the flow of money.</p>
+          <p><span class="spk">Jason · 23:51</span>A lot of business owners will fly blind without a budget or a forecast. And they just kind of, you know, month to month looking at it and going, nope, I think we're doing okay. But creating that roadmap so that you know that you've got something to measure against, I think is definitely a key to seeing businesses be able to scale and grow without failing?</p>
+          <p><span class="spk">Marty · 24:11</span>I think it's really important to keep learning as a business owner, like we always do. Nick says it all the time. Yeah, every year is different in the business and he's taking on new activities and learning more. And I think what you said, Jase, is effective as well, where, you know, if you're going to that next level, seek professionals in order to really plan it out.</p>
+          <p><span class="spk">Marty · 24:32</span>I see a lot of those those business owners that are pretty loose and yet doing remarkably well and they know they're loose in regards to some of their streamlining of efficiencies and various different things, the way they deal with their own teams and create formulas because it's already working well to a point, but you can get so much more by taking it to the next level and putting great processes, great plans into play.</p>
+          <p><span class="spk">Marty · 24:59</span>That will really scale effectively for you and give you that confidence to take that next step. It doesn't have to be over the top, but you just have to be able to do it so you know the direction you're heading because if you haven't got any direction, you sure as hell aren't going to get there, you know, whether you're going here, there, or everywhere.</p>
+          <p><span class="spk">Marty · 25:18</span>So, have the direction to aim for and you've got a roadmap to really travel along. And I think that's really important. And it's no different, I always say, and I've said it to a lot of people, a lot of the times in business, from a revenue standpoint, it's just an extra zero, but there's a lot that goes into that extra zero when you're trying to achieve it.</p>
+          <p><span class="spk">Marty · 25:39</span>And you've got to work out where the focus points are and where the concentration is. And Nick's talked about this on various different episodes of just having a mission on a page and really understanding what are the impact points in your business as you're looking to grow and scale.</p>
+          <p><span class="spk">Marty · 25:54</span>So I think if you can do that, that'll give you enough confidence to take that next step and not just do it sort of from a hit and hope strategy, but actually have a formalized strategy to take you into the next part of your business success.</p>
+          <p><span class="spk">Marty · 26:11</span>And I just want to see people maintain and grow the wealth of their team and the wealth of their business and just make it stronger as you go. And it's okay if you have pain points. All the business owners I've spoken to, have chatted to about this, know they've got pain points based on coming in with those early stage functions and ideas and how they do business.</p>
+          <p><span class="spk">Marty · 26:35</span>So they know it and it's like, but don't be embarrassed, you know, really get the help and advice you need because you can really optimize and scale effectively at a whole different level.</p>
+          <p><span class="spk">Jason · 26:47</span>Well said, Marty. Well said. Well guys, thanks again and girls, of course. Thank you for listening to episode 149 of The Numbers Game. Absolutely loved having you all on this journey. Any new listeners, any old listeners that have been with us for a long time, we appreciate you. Please like, follow, subscribe to the new YouTube videos that are banging and going up every couple of days as well, which you can see the full-length episode of just how we look when we sit here and bang out episodes of The Numbers Game.</p>
+          <p><span class="spk">Jason · 27:14</span>So if you haven't checked out YouTube yet, go and check it out. And we appreciate your follows, your ratings, and your subscribes. Over the years and the journey. So thank you again. It's been episode 149, starting to get emotional before the big 150.</p>
+          <p><span class="spk">Marty · 27:27</span>And until next time, scale up, don't fail up. Game over.</p>
+        </div>
+      </details>
+
+    </div>
+
+    <!-- LISTEN:START (build_episode.py rewrites the 3 URLs + iframe title per episode; player dropped if no spotifyEmbedUrl) -->
+    <section class="listen-now">
+      <div class="ln-head">
+        <span class="ln-title">Listen now</span>
+      </div>
+      <div class="audio-embed">
+        <iframe src="https://open.spotify.com/embed/episode/5O0q8WqCY16D3BpTqz9V9J?utm_source=generator"
+          width="100%" height="152" loading="lazy" allowfullscreen
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+          title="Spotify — Don't Fail to Scale: Unpacking the Challenges of Business Growth"></iframe>
+      </div>
+    </section>
+
+    <div class="listen">
+      <a href="https://open.spotify.com/episode/5O0q8WqCY16D3BpTqz9V9J" target="_blank" rel="noopener" aria-label="Listen to this episode on Spotify">
+        <svg viewBox="0 0 24 24"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.52 17.34c-.24.36-.66.48-1.02.24-2.82-1.74-6.36-2.1-10.56-1.14-.42.12-.78-.18-.9-.54-.12-.42.18-.78.54-.9 4.56-1.02 8.52-.6 11.64 1.32.42.18.48.66.3 1.02zm1.44-3.3c-.3.42-.84.6-1.26.3-3.24-1.98-8.16-2.58-11.94-1.38-.48.12-1.02-.12-1.14-.6-.12-.48.12-1.02.6-1.14 4.32-1.32 9.72-.66 13.44 1.62.36.18.54.78.3 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.3c-.6.18-1.2-.18-1.38-.72-.18-.6.18-1.2.72-1.38 4.26-1.26 11.28-1.02 15.72 1.62.54.3.72 1.02.42 1.56-.3.42-1.02.6-1.56.3z"/></svg>
+        Spotify
+      </a>
+      <a href="https://podcasts.apple.com/au/podcast/id1555566088?i=1000638837460" target="_blank" rel="noopener" aria-label="Listen to this episode on Apple Podcasts">
+        <svg viewBox="0 0 24 24"><path d="M5.34 0A5.328 5.328 0 000 5.34v13.32A5.328 5.328 0 005.34 24h13.32A5.328 5.328 0 0024 18.66V5.34A5.328 5.328 0 0018.66 0H5.34zm6.525 2.568c2.336 0 4.448.902 6.056 2.587 1.224 1.272 1.912 2.619 2.264 4.392l.04.23c.04.272-.16.527-.432.567a.505.505 0 01-.567-.431l-.04-.213c-.312-1.57-.92-2.747-2.004-3.867-1.428-1.496-3.293-2.294-5.393-2.294-2.1 0-3.966.798-5.394 2.294-1.084 1.12-1.692 2.298-2.004 3.867l-.04.213a.507.507 0 01-.567.431.504.504 0 01-.432-.567l.04-.23c.352-1.773 1.04-3.12 2.264-4.392 1.608-1.685 3.72-2.587 6.056-2.587h.153zm.136 3.033c1.74 0 3.312.67 4.527 1.934.883.916 1.394 1.93 1.663 3.253l.04.23a.505.505 0 01-.431.567.503.503 0 01-.567-.432l-.04-.212c-.23-1.112-.659-1.97-1.396-2.732-1.052-1.1-2.404-1.672-3.9-1.672s-2.849.572-3.901 1.672c-.737.762-1.167 1.62-1.396 2.732l-.04.212a.503.503 0 01-.567.432.505.505 0 01-.432-.567l.04-.23c.27-1.323.78-2.337 1.664-3.253 1.215-1.264 2.787-1.934 4.527-1.934h.21zm-.078 3.05c1.092 0 2.091.424 2.89 1.22.582.58.924 1.245 1.107 2.15l.04.218a.501.501 0 01-.424.568.499.499 0 01-.568-.424l-.04-.198c-.146-.724-.413-1.253-.871-1.716-.63-.63-1.398-.957-2.226-.957s-1.595.328-2.225.957c-.459.463-.726.992-.871 1.716l-.04.198a.499.499 0 01-.568.424.501.501 0 01-.424-.568l.04-.219c.183-.904.525-1.569 1.106-2.149.8-.796 1.799-1.22 2.89-1.22h.184zM12 14.07a2.477 2.477 0 012.48 2.478A2.477 2.477 0 0112 19.024a2.477 2.477 0 01-2.48-2.477A2.477 2.477 0 0112 14.07z"/></svg>
+        Apple
+      </a>
+      <a class="yt-pill" href="https://www.youtube.com/@thenumbersgamepodcast?sub_confirmation=1" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.12-2.14C19.5 3.55 12 3.55 12 3.55s-7.5 0-9.38.51A3 3 0 0 0 .5 6.2 31.4 31.4 0 0 0 0 12a31.4 31.4 0 0 0 .5 5.8 3 3 0 0 0 2.12 2.14c1.88.51 9.38.51 9.38.51s7.5 0 9.38-.51a3 3 0 0 0 2.12-2.14A31.4 31.4 0 0 0 24 12a31.4 31.4 0 0 0-.5-5.8zM9.55 15.57V8.43L15.82 12z"/></svg>
+        Subscribe
+      </a>
+    </div>
+    <!-- LISTEN:END -->
+
+    <div class="relsec">
+      <span class="rtitle">Discover more</span>
+      <div class="relgrid">
+        <a class="relcard" href="/the-art-of-strategic-framework">
+          <img src="https://i.ytimg.com/vi/IUKi9wuKquE/hqdefault.jpg" alt="EP 209 thumbnail">
+          <span class="rt">The Art of Strategic Framework</span>
+          <span class="rfoot"><span class="rwhy">Also covers: systems</span><span class="rtag">EP 209</span></span>
+        </a>
+        <a class="relcard" href="/why-you-should-track-profit-per-hour-vs-revenue">
+          <img src="https://i.ytimg.com/vi/FUf4XcRx-w0/hqdefault.jpg" alt="EP 245 thumbnail">
+          <span class="rt">Why You Should Track Profit Per Hour vs Revenue</span>
+          <span class="rfoot"><span class="rwhy">Also covers: systems</span><span class="rtag">EP 245</span></span>
+        </a>
+        <a class="relcard" href="/grant-austin-disrupting-business-payments">
+          <img src="https://i.ytimg.com/vi/iH-GYt8A950/hqdefault.jpg" alt="EP 173 thumbnail">
+          <span class="rt">Grant Austin - Disrupting Business Payments</span>
+          <span class="rfoot"><span class="rwhy">Also covers: systems</span><span class="rtag">EP 173</span></span>
+        </a>
+        <a class="relcard" href="/knowing-when-to-quit-in-business">
+          <img src="https://i.ytimg.com/vi/KDQQ5bor1BQ/hqdefault.jpg" alt="EP 231 thumbnail">
+          <span class="rt">Knowing When to Quit in Business</span>
+          <span class="rfoot"><span class="rwhy">Also covers: systems</span><span class="rtag">EP 231</span></span>
+        </a>
+        <a class="relcard" href="/adam-diamond-change-your-business-change-your-life">
+          <img src="https://i.ytimg.com/vi/l-qwFf9g5Rg/hqdefault.jpg" alt="EP 206 thumbnail">
+          <span class="rt">Adam Diamond - Change Your Business, Change Your Life</span>
+          <span class="rfoot"><span class="rwhy">Also covers: systems</span><span class="rtag">EP 206</span></span>
+        </a>
+        <a class="relcard" href="/10-lessons-from-an-f1-boss-do-any-actually-apply-to-small-business">
+          <img src="https://i.ytimg.com/vi/ubSyFEJEohE/hqdefault.jpg" alt="EP 267 thumbnail">
+          <span class="rt">10 Lessons from an F1 Boss.</span>
+          <span class="rfoot"><span class="rwhy">Also covers: systems</span><span class="rtag">EP 267</span></span>
+        </a>
+      </div>
+      <div class="reldots" id="reldots"></div>
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="footgrid">
+      <div class="fcol">
+        <div class="foot-label">Follow us on</div>
+        <div class="socials">
+          <a href="https://www.instagram.com/thenumbersgamepodcast/" target="_blank" rel="noopener" aria-label="The Numbers Game on Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.8.2 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1 .4 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .4-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1-.4-2.2-.1-1.3-.1-1.7-.1-4.9s0-3.6.1-4.9c.1-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.4 2.2-.4 1.3-.1 1.7-.1 4.9-.1zm0 2c-3.1 0-3.5 0-4.8.1-1.1.1-1.5.2-1.8.3-.4.2-.7.3-1 .6-.3.3-.5.6-.6 1-.1.3-.3.7-.3 1.8-.1 1.3-.1 1.7-.1 4.8s0 3.5.1 4.8c.1 1.1.2 1.5.3 1.8.2.4.3.7.6 1 .3.3.6.5 1 .6.3.1.7.3 1.8.3 1.3.1 1.7.1 4.8.1s3.5 0 4.8-.1c1.1-.1 1.5-.2 1.8-.3.4-.2.7-.3 1-.6.3-.3.5-.6.6-1 .1-.3.3-.7.3-1.8.1-1.3.1-1.7.1-4.8s0-3.5-.1-4.8c-.1-1.1-.2-1.5-.3-1.8-.2-.4-.3-.7-.6-1-.3-.3-.6-.5-1-.6-.3-.1-.7-.3-1.8-.3-1.3-.1-1.7-.1-4.8-.1zm0 3.4a5.4 5.4 0 1 1 0 10.8 5.4 5.4 0 0 1 0-10.8zm0 2a3.4 3.4 0 1 0 0 6.8 3.4 3.4 0 0 0 0-6.8zm5.6-2.3a1.3 1.3 0 1 1-2.6 0 1.3 1.3 0 0 1 2.6 0z"/></svg></a>
+          <a href="https://www.tiktok.com/@thenumbersgamepodcast" target="_blank" rel="noopener" aria-label="The Numbers Game on TikTok"><svg viewBox="0 0 24 24"><path d="M12.53.02C13.84 0 15.14.01 16.44 0c.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg></a>
+          <a href="https://www.linkedin.com/company/the-numbers-game-podcast/" target="_blank" rel="noopener" aria-label="The Numbers Game on LinkedIn"><svg viewBox="0 0 24 24"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.24 8.25h4.52V23H.24V8.25zM8.34 8.25h4.33v2.01h.06c.6-1.14 2.08-2.34 4.28-2.34 4.58 0 5.42 3.01 5.42 6.92V23h-4.51v-7.16c0-1.71-.03-3.91-2.38-3.91-2.39 0-2.75 1.86-2.75 3.78V23H8.34V8.25z"/></svg></a>
+          <a href="https://www.facebook.com/profile.php?id=100071290388343" target="_blank" rel="noopener" aria-label="The Numbers Game on Facebook"><svg viewBox="0 0 24 24"><path d="M24 12.07C24 5.41 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.04V9.41c0-3.02 1.8-4.7 4.54-4.7 1.31 0 2.68.24 2.68.24v2.97h-1.5c-1.5 0-1.96.93-1.96 1.89v2.26h3.32l-.53 3.5h-2.8V24C19.62 23.1 24 18.1 24 12.07z"/></svg></a>
+          <a href="https://www.youtube.com/@thenumbersgamepodcast" target="_blank" rel="noopener" aria-label="The Numbers Game on YouTube"><svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.2C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31.7 31.7 0 0 0 0 12a31.7 31.7 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.2A31.7 31.7 0 0 0 24 12a31.7 31.7 0 0 0-.5-5.8zM9.6 15.6V8.4L15.8 12z"/></svg></a>
+        </div>
+      </div>
+      <div class="fcol">
+        <div class="foot-label">Brought to you by</div>
+        <div class="sponsors">
+          <a href="https://www.inovayt.com.au/" target="_blank" rel="noopener"><img src="assets/inovayt-white.png" alt="Inovayt"></a>
+          <a href="https://futureadvisory.com.au/" target="_blank" rel="noopener"><img src="assets/future-advisory-white.png" alt="Future Advisory"></a>
+        </div>
+      </div>
+      <div class="fcol produced">
+        <div class="foot-label">Produced by</div>
+        <a href="https://www.vidpod.com.au/" target="_blank" rel="noopener"><img src="assets/vidpod-white.png" alt="VIDPOD"></a>
+      </div>
+    </div>
+    <div class="footbar">
+      <details class="footnav-dd">
+        <summary><svg class="ham" viewBox="0 0 24 24"><path d="M3 6h18v2H3zM3 11h18v2H3zM3 16h18v2H3z"/></svg> Menu</summary>
+        <div class="dd-links">
+          <a href="/">Home</a><a href="/episodes">Every episode</a><a href="/adventure">Choose your own adventure</a><a href="/about">About the show</a><a href="/nick-reilly">Nick Reilly</a><a href="/jason-robinson">Jason Robinson</a><a href="/contact">Contact</a>
+        </div>
+      </details>
+      <div class="copyright">© 2026 The Numbers Game</div>
+    </div>
+  </footer>
+
+  <script>
+    var VIDEO='ZlOYPlLFn8U';
+    var CHAPTERS=[
+      {t:"00:00",s:0,title:"Intro"},
+      {t:"02:15",s:135,title:""}
+    ];
+    var QUESTIONS=[
+      {q:"Why is scaling a business so daunting?",s:521},
+      {q:"Why do you need help to scale a business?",s:595},
+      {q:"Where should you get advice when scaling?",s:641},
+      {q:"How much better is a great salesperson?",s:796},
+      {q:"Can you scale if the owner does all the selling?",s:1004},
+      {q:"How should you think about selling?",s:1076},
+      {q:"Where should you spend cash when growing?",s:1114},
+      {q:"Should you diversify or double down when scaling?",s:1205},
+      {q:"How does complexity hold back scaling?",s:1338},
+      {q:"Do you need a budget and forecast to grow?",s:1414}
+    ];
+
+    var chEl=document.getElementById('chapters');
+    CHAPTERS.forEach(function(c){var b=document.createElement('button');b.className='chapter';b.onclick=function(){startAt(c.s)};b.innerHTML='<span class="tc">'+c.t+'</span><span class="cx">'+c.title+'</span>';chEl.appendChild(b);});
+    document.getElementById('chcount').textContent=CHAPTERS.length;
+    var qEl=document.getElementById('qa');
+    QUESTIONS.forEach(function(q){var b=document.createElement('button');b.className='q';b.onclick=function(){startAt(q.s)};b.innerHTML='<span class="qm">?</span><span class="qx">'+q.q+'</span><span class="go">›</span>';qEl.appendChild(b);});
+    document.getElementById('qcount').textContent=QUESTIONS.length;
+
+    /* Mobile nav dropdown. */
+    var burger=document.getElementById('navburger'), navdrop=document.getElementById('navdrop');
+    if(burger&&navdrop){burger.addEventListener('click',function(){
+      navdrop.hidden=!navdrop.hidden;
+      burger.setAttribute('aria-expanded', navdrop.hidden?'false':'true');
+    });}
+
+    /* Voice-note button reveals the recorder; × tucks it away. */
+    var vbtn=document.getElementById('vbtn'), vslot=document.getElementById('vslot'), vclose=document.getElementById('vclose');
+    if(vbtn&&vslot){vbtn.addEventListener('click',function(){vslot.hidden=!vslot.hidden;});}
+    if(vclose&&vslot){vclose.addEventListener('click',function(){vslot.hidden=true;});}
+
+    /* Keep-exploring dots: only shown when the strip actually scrolls (mobile). */
+    var rg=document.querySelector('.relgrid'), rd=document.getElementById('reldots');
+    if(rg&&rd){
+      var relCards=rg.querySelectorAll('.relcard');
+      relCards.forEach(function(){rd.appendChild(document.createElement('span'))});
+      var updDots=function(){
+        var scrollable=rg.scrollWidth>rg.clientWidth+4;
+        rd.style.display=scrollable?'flex':'none';
+        if(!scrollable)return;
+        var i=Math.round(rg.scrollLeft/(rg.scrollWidth-rg.clientWidth)*(relCards.length-1));
+        rd.querySelectorAll('span').forEach(function(s,n){s.classList.toggle('on',n===i)});
+      };
+      rg.addEventListener('scroll',updDots,{passive:true});
+      window.addEventListener('resize',updDots);
+      updDots();
+    }
+
+    /* Explore tabs: swap the visible panel; the row stays put so you never lose your place. */
+    var tabBtns=document.querySelectorAll('.tabbtn');
+    tabBtns.forEach(function(b){
+      b.addEventListener('click',function(){
+        tabBtns.forEach(function(o){o.classList.remove('on')});
+        document.querySelectorAll('.tpanel').forEach(function(p){p.hidden=true});
+        b.classList.add('on');
+        document.getElementById(b.getAttribute('data-panel')).hidden=false;
+      });
+    });
+
+    /* YouTube: clean facade, then real player on demand. Seek without yanking to top. */
+    var player=null, ready=false, apiReady=false, pending=null;
+    window.onYouTubeIframeAPIReady=function(){apiReady=true; if(pending!=null){var s=pending;pending=null;createPlayer(s);}};
+    function createPlayer(sec){
+      var wrap=document.getElementById('player'); wrap.innerHTML='<div id="yt"></div>';
+      player=new YT.Player('yt',{videoId:VIDEO,playerVars:{autoplay:1,rel:0,modestbranding:1,playsinline:1,start:Math.floor(sec||0)},events:{onReady:function(){ready=true;}}});
+    }
+    function nudge(){
+      var p=document.getElementById('player-wrap'), r=p.getBoundingClientRect();
+      if(r.bottom<80 || r.top>window.innerHeight-90){ p.scrollIntoView({behavior:'smooth',block:'start'}); }
+    }
+    function startAt(sec){
+      nudge();
+      if(player&&ready){ player.seekTo(sec,true); player.playVideo(); return; }
+      if(apiReady){ createPlayer(sec); } else { pending=sec; }
+    }
+    document.getElementById('facade').addEventListener('click',function(){startAt(0);});
+    (function(){var s=document.createElement('script');s.src='https://www.youtube.com/iframe_api';document.head.appendChild(s);})();
+  </script>
+</body>
+</html>

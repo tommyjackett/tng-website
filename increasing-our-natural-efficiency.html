@@ -1,0 +1,682 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EP 177 · Increasing our Natural Efficiency | The Numbers Game</title>
+<meta name="description" content="Fresh off a trip through the UK, Jason asks whether Australia is falling behind the rest of the world on renewable energy and climate.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" sizes="64x64" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="canonical" href="https://thenumbersgamepodcast.com.au/increasing-our-natural-efficiency">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="The Numbers Game">
+<meta property="og:title" content="EP 177 · Increasing our Natural Efficiency | The Numbers Game">
+<meta property="og:description" content="Fresh off a trip through the UK, Jason asks whether Australia is falling behind the rest of the world on renewable energy and climate.">
+<meta property="og:url" content="https://thenumbersgamepodcast.com.au/increasing-our-natural-efficiency">
+<meta property="og:image" content="https://i.ytimg.com/vi/zHlDDmEUzow/maxresdefault.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+  :root{
+    --purple:#585af3; --purple-dark:#2c1b8a; --mint:#7ad9a8;
+    --white:#ffffff; --muted:rgba(255,255,255,.60); --dim:rgba(255,255,255,.42);
+    --line:rgba(255,255,255,.12); --card:rgba(255,255,255,.05); --card-hi:rgba(255,255,255,.09);
+    --display:'Anton',Impact,'Helvetica Neue',sans-serif;
+    --sans:'Inter',system-ui,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif;
+    --wrap:1280px;   /* page frame (nav spans this) */
+    --col:960px;     /* content column (player, tabs, text) */
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:var(--sans); color:var(--white); line-height:1.6; -webkit-font-smoothing:antialiased;
+    background:#12093a;
+    background-image:
+      radial-gradient(1200px 600px at 82% -6%, rgba(88,90,243,.45) 0%, transparent 55%),
+      radial-gradient(900px 700px at 5% 8%, rgba(122,217,168,.10) 0%, transparent 50%),
+      linear-gradient(180deg,#2c1b8a 0%,#1a1150 28%,#100b34 62%,#0b0820 100%);
+    background-attachment:fixed;
+  }
+  a{color:inherit}
+  .wrap{max-width:var(--wrap);margin:0 auto;padding:0 36px}
+  main.wrap{max-width:var(--col)}
+  @media(max-width:720px){.wrap{padding:0 22px}}
+
+  /* ── Navbar ── */
+  .nav{position:sticky;top:0;z-index:50;background:linear-gradient(180deg,rgba(24,15,74,.92),rgba(24,15,74,.72));backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+  .nav-in{max-width:var(--wrap);margin:0 auto;padding:11px 36px;display:flex;align-items:center;justify-content:space-between}
+  @media(max-width:720px){.nav-in{padding:11px 22px}}
+  .brand{display:block;line-height:0}
+  .brand img{height:36px;width:auto;display:block}
+  .navlinks{display:flex;gap:28px;align-items:center}
+  .navlinks a{text-decoration:none;font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);transition:.15s}
+  .navlinks a:hover{color:var(--white)}
+  .navlinks a.navtop{cursor:default}
+  .navgroup{position:relative;display:flex;align-items:center}
+  .navgroup .subnav{display:none;position:absolute;top:100%;left:50%;transform:translateX(-50%);padding-top:14px;min-width:180px}
+  .navgroup:hover .subnav,.navgroup:focus-within .subnav{display:block}
+  .subnav-in,.navgroup .subnav{z-index:60}
+  .navgroup .subnav a{display:block;background:#180f4a;border:1px solid var(--line);border-top:0;padding:12px 16px;font-size:12px;color:rgba(255,255,255,.85)}
+  .navgroup .subnav a:first-child{border-top:1px solid var(--line)}
+  .navgroup .subnav a:hover{background:#221768;color:var(--white)}
+  .navburger{display:none;background:none;border:1px solid var(--line);padding:8px 10px;cursor:pointer;color:var(--white);transition:.15s}
+  .navburger:hover{border-color:rgba(122,217,168,.6)}
+  .navburger svg{width:20px;height:20px;fill:currentColor;display:block}
+  .navdrop{display:none}
+  @media(max-width:720px){
+    .navlinks{display:none}
+    .navburger{display:block}
+    .navdrop{display:block;position:absolute;left:0;right:0;top:100%;
+      background:#180f4a;border-bottom:1px solid var(--line);box-shadow:0 24px 50px rgba(0,0,0,.45)}
+    .navdrop[hidden]{display:none}
+    .navdrop a{display:block;padding:15px 22px;text-decoration:none;font-size:14px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:rgba(255,255,255,.9);border-bottom:1px solid rgba(255,255,255,.06)}
+    .navdrop a:last-child{border-bottom:0}
+    .navdrop a.sub{padding-left:42px;font-size:13px;color:rgba(255,255,255,.72)}
+    .navdrop .navlabel{display:block;padding:15px 22px 6px;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.4)}
+  }
+
+  /* ── Hero / hook (marker-highlight system: purple hook wraps naturally, mint payoff below)
+     Rules: title splits at its natural break (colon/pipe/question mark). Front = hook (purple,
+     big), back = payoff (mint, smaller). No break in title = purple hook only. Highlights hug
+     the text (tight em padding tuned to Anton) and wrap via box-decoration-break — never
+     hand-pick line breaks or mint words. ── */
+  header.hero{padding:34px 0 6px}
+  .hook{--inx:clamp(8.4px,2.1vw,15.6px)} /* one shared text inset so hook + payoff first letters align */
+  .hook .hk{font-family:var(--display);font-weight:400;text-transform:uppercase;
+    font-size:clamp(28px,7vw,52px);line-height:1.3;letter-spacing:-.5px;text-wrap:balance}
+  .hook .hk span{color:var(--white);padding:.04em var(--inx) .02em;
+    background:linear-gradient(var(--purple),var(--purple)) 0 50%/100% 87% no-repeat;
+    -webkit-box-decoration-break:clone;box-decoration-break:clone}
+  .hook .pay{font-family:var(--display);font-weight:400;text-transform:uppercase;
+    font-size:clamp(16px,4vw,24px);line-height:1.5;letter-spacing:.6px;margin-top:8px;text-wrap:balance}
+  .hook .pay span{color:#0a0a0a;padding:.08em var(--inx) .04em;
+    background:linear-gradient(var(--mint),var(--mint)) 0 50%/100% 88% no-repeat;
+    -webkit-box-decoration-break:clone;box-decoration-break:clone}
+  /* no-hook titles: mid-split into two full-size rows, purple then mint */
+  .hook .hk span.hkrow{display:block;background:none;padding:0}
+  .hook .hk .hkrow+.hkrow{margin-top:8px}
+  .hook .hk span.mintseg{color:#0a0a0a;
+    background:linear-gradient(var(--mint),var(--mint)) 0 50%/100% 87% no-repeat}
+
+  /* ── Player (clean facade → real player on tap) ── */
+  .player-wrap{margin:24px 0 4px;scroll-margin-top:76px}
+  .player{position:relative;width:100%;padding-top:56.25%;border-radius:0;overflow:hidden;background:#000;box-shadow:0 30px 70px rgba(0,0,0,.5),0 0 0 1px rgba(255,255,255,.06)}
+  .facade{position:absolute;inset:0;border:0;cursor:pointer;background-size:cover;background-position:center;display:flex;align-items:center;justify-content:center;padding:0}
+  .facade .play{width:74px;height:74px;border-radius:50%;background:rgba(10,6,30,.40);border:2px solid rgba(255,255,255,.72);display:flex;align-items:center;justify-content:center;transition:.18s;-webkit-backdrop-filter:blur(1px);backdrop-filter:blur(1px)}
+  .facade:hover .play{background:rgba(88,90,243,.62);transform:scale(1.07);border-color:#fff}
+  .facade .play::after{content:"";border-style:solid;border-width:11px 0 11px 19px;border-color:transparent transparent transparent #fff;margin-left:5px}
+  .player iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+
+  /* ── Episode facts (bottom of the Summary panel — templated per episode) ── */
+  .sumfacts{margin:14px 10px 4px;padding-top:13px;border-top:1px solid rgba(255,255,255,.08);display:flex;flex-direction:column;gap:8px}
+  .fact{display:flex;gap:12px;font-size:13.5px}
+  .fact .fl{flex:none;width:104px;color:var(--dim);font-weight:600;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;padding-top:2px}
+  .fact .fv{color:rgba(255,255,255,.9);font-weight:500}
+  .fact .fv a{color:var(--mint);text-decoration:none;border-bottom:1px solid rgba(122,217,168,.4);transition:.15s}
+  .fact .fv a:hover{border-bottom-color:var(--mint)}
+
+  /* ── Episode tag (identity: black label hanging off the title corner) ── */
+  .eptag{display:inline-block;position:relative;left:-6px;margin-bottom:-7px;z-index:2;
+    background:#0a0a0a;color:var(--white);font-family:var(--display);font-weight:400;
+    font-size:13.5px;letter-spacing:1.5px;text-transform:uppercase;padding:6px 11px 4px}
+
+  /* ── Explore tabs (sticky mode switcher; one panel swaps below, nothing shoves) ── */
+  .explore{margin-top:22px}
+  .tabs{position:sticky;top:58px;z-index:40;display:flex;flex-wrap:wrap;gap:8px;padding:10px 0;
+    background:linear-gradient(180deg,rgba(18,10,55,.96),rgba(18,10,55,.86));
+    backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+  .tabbtn{font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.5px;
+    font-size:14.5px;color:var(--white);background:var(--purple);border:1px solid var(--purple);
+    padding:9px 13px 7px;cursor:pointer;transition:.15s}
+  .tabbtn:hover{filter:brightness(1.12)}
+  .tabbtn.on{background:var(--mint);border-color:var(--mint);color:#0a0a0a}
+  .tabbtn.on:hover{filter:none}
+  .tabbtn .ct{font-size:12px;opacity:.75;font-variant-numeric:tabular-nums}
+  .tabbtn .ct::before{content:" · "}
+  .tpanel{border:1px solid var(--line);background:var(--card);padding:12px 10px 14px}
+  .hint{font-size:12.5px;color:var(--muted);padding:2px 10px 10px;border-bottom:1px solid rgba(255,255,255,.08);margin-bottom:6px}
+
+  /* ── Listen row (no box: label left, service pills follow) ── */
+  .listen{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:12px 16px;margin-top:34px}
+  .listen .lname{font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--dim)}
+  .listen a{display:inline-flex;align-items:center;gap:9px;padding:11px 18px;border-radius:999px;
+    background:var(--mint);color:#08210f;text-decoration:none;font-weight:800;font-size:12.5px;
+    letter-spacing:.04em;text-transform:uppercase;transition:.15s}
+  .listen a:hover{filter:brightness(1.06);transform:translateY(-1px);box-shadow:0 12px 30px rgba(122,217,168,.25)}
+  .listen svg{width:20px;height:20px;fill:currentColor;flex:none}
+  /* ── Listen-now Spotify audio embed (full column width, above the pills) ── */
+  .listen-now{margin-top:40px}
+  .listen-now .ln-head{display:flex;align-items:baseline;justify-content:space-between;gap:14px;margin-bottom:13px}
+  .listen-now .ln-title{font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--dim)}
+  .audio-embed{border-radius:12px;overflow:hidden;box-shadow:0 20px 50px rgba(0,0,0,.4),0 0 0 1px rgba(255,255,255,.06)}
+  .audio-embed iframe{display:block;width:100%;border:0}
+  @media(max-width:720px){.listen-now{margin-top:32px}}
+
+  /* ── Keep exploring (thumbnails link to other episode PAGES, never timecodes).
+     Swipeable strip on mobile, fits three-up on desktop. Variant rule: claim
+     "similar ground" + reason lines ONLY when moment-level topic overlap is
+     genuinely strong; otherwise show the latest released episodes with dates —
+     never invent a connection. ── */
+  .relsec{margin-top:60px;padding-top:58px;border-top:1px solid var(--line)} /* line = end of this episode's info */
+  .reldots{display:flex;justify-content:center;gap:7px;margin-top:12px}
+  .reldots span{width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.25);transition:.2s}
+  .reldots span.on{background:var(--mint)}
+  .relsec .rtitle{display:inline-block;font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.5px;font-size:14.5px;background:var(--mint);color:#0a0a0a;padding:9px 13px 7px;margin-bottom:18px}
+  .relgrid{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding-bottom:6px;scrollbar-width:none}
+  .relgrid::-webkit-scrollbar{display:none}
+  .relcard{flex:0 0 56%;max-width:232px;scroll-snap-align:start;display:flex;flex-direction:column;text-decoration:none;background:var(--card);border:1px solid var(--line);transition:.15s}
+  .relcard:hover{background:var(--card-hi);border-color:rgba(122,217,168,.55)}
+  .relcard img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block}
+  .relcard .rt{display:block;font-size:12.5px;font-weight:600;color:rgba(255,255,255,.92);line-height:1.4;padding:8px 8px 0}
+  .relcard .rfoot{margin-top:auto;display:flex;justify-content:space-between;align-items:flex-end;gap:8px;padding:10px 8px 9px}
+  .relcard .rwhy{font-size:11.5px;color:var(--mint)}
+  .relcard .rtag{display:inline-block;background:#0a0a0a;color:var(--white);font-family:var(--display);font-size:10px;letter-spacing:1.2px;text-transform:uppercase;padding:3px 7px 2px;white-space:nowrap;flex:0 0 auto}
+
+  /* ── Dropdown sections (accordion under the player) ── */
+  .drops{margin-top:34px;display:flex;flex-direction:column;gap:11px}
+  .drop{border:1px solid var(--line);border-radius:0;background:var(--card);overflow:hidden;transition:border-color .15s}
+  .drop[open]{border-color:rgba(122,217,168,.35)}
+  .drop>summary{list-style:none;cursor:pointer;padding:16px 18px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+  .drop>summary::-webkit-details-marker{display:none}
+  .drop>summary .st{font-weight:700;font-size:15.5px;letter-spacing:.005em}
+  .drop>summary .ct{margin-left:auto;font-size:12px;color:var(--dim);font-weight:600;font-variant-numeric:tabular-nums}
+  .drop>summary .chev{flex:none;width:22px;height:22px;border-radius:50%;background:rgba(122,217,168,.14);color:var(--mint);display:flex;align-items:center;justify-content:center;font-family:var(--display);font-size:15px;line-height:1;transition:.2s;transform:translateY(-1px)}
+  .drop[open]>summary .chev{transform:rotate(45deg)}
+  .drop-body{padding:2px 12px 12px}
+
+  /* chapters */
+  .chapter{display:flex;align-items:baseline;gap:14px;width:100%;text-align:left;cursor:pointer;background:none;border:0;color:inherit;font-family:inherit;padding:11px 10px;border-radius:10px;transition:.13s}
+  .chapter:hover{background:var(--card-hi)}
+  .chapter .tc{font-variant-numeric:tabular-nums;font-weight:700;font-size:14px;color:var(--mint);flex:none;width:48px}
+  .chapter .cx{font-size:15px;font-weight:500;color:rgba(255,255,255,.9)}
+  .chapter:hover .cx{color:#fff}
+
+  /* questions */
+  .q{display:flex;align-items:center;gap:12px;width:100%;text-align:left;cursor:pointer;background:none;border:0;border-radius:11px;color:inherit;font-family:inherit;padding:12px 10px;transition:.14s}
+  .q+.q{border-top:1px solid rgba(255,255,255,.05)}
+  .q:hover{background:var(--card-hi)}
+  .q .qm{font-family:var(--display);font-size:15px;color:var(--mint);flex:none;line-height:1;transform:translateY(1px)}
+  .q .qx{font-size:15px;font-weight:500;color:rgba(255,255,255,.92)}
+  .q .go{margin-left:auto;flex:none;color:var(--dim);font-size:18px;transition:.15s}
+  .q:hover .go{color:var(--mint);transform:translateX(2px)}
+
+  /* summary + transcript bodies */
+  .summary-body p{font-size:16.5px;line-height:1.62;color:rgba(255,255,255,.9);padding:6px 10px 4px}
+  .tbody{padding:2px 10px 8px}
+  .tbody p{font-size:14.5px;line-height:1.7;color:rgba(255,255,255,.78);margin-top:15px;max-width:64ch}
+  .tbody .spk{display:block;font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--mint);margin-bottom:2px}
+
+  /* ── Voice note ask (lives at the bottom of the Summary panel) ── */
+  .vask{margin:16px 10px 4px}
+  .vbtn{display:inline-flex;align-items:center;gap:9px;padding:12px 20px;border-radius:999px;border:0;cursor:pointer;
+    background:var(--mint);color:#08210f;font-family:inherit;font-weight:800;font-size:12.5px;
+    letter-spacing:.04em;text-transform:uppercase;transition:.15s}
+  .vbtn:hover{filter:brightness(1.06);transform:translateY(-1px);box-shadow:0 12px 30px rgba(122,217,168,.25)}
+  .vbtn svg{width:18px;height:18px;fill:currentColor;flex:none}
+  .vslot{background:var(--purple);padding:12px 10px 10px;margin:14px 0 4px;box-shadow:0 18px 40px rgba(0,0,0,.35)}
+  .vslot[hidden]{display:none}
+  .vhead{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;margin-bottom:10px}
+  .vhead .vmsg{font-family:var(--sans);font-size:13px;line-height:1.55;color:rgba(255,255,255,.92);margin:2px 0 0;padding:0 2px}
+  .vclose{background:none;border:0;color:rgba(255,255,255,.85);font-size:22px;line-height:1;cursor:pointer;padding:0 2px}
+  .vclose:hover{color:var(--white)}
+  .vslot iframe{display:block}
+
+  /* ── YouTube subscribe pill (sits in the listen row; outranks .listen a's mint) ── */
+  .listen a.yt-pill{background:var(--purple);color:var(--white)}
+  .listen a.yt-pill:hover{filter:brightness(1.1);transform:translateY(-1px)}
+  @media(max-width:720px){ /* mobile: no label, three compact pills on one row */
+    .listen .lname{display:none}
+    .listen{gap:8px}
+    .listen a{padding:10px 13px;font-size:11px;gap:6px}
+    .listen svg{width:16px;height:16px}
+  }
+
+  /* ── Footer: Follow us on | Brought to you by | Produced by, + Menu dropdown ── */
+  footer{border-top:1px solid var(--line);margin-top:68px;padding:52px 20px 58px}
+  .footgrid{max-width:var(--wrap);margin:0 auto;display:grid;grid-template-columns:1fr 1.15fr .8fr;gap:44px;align-items:start}
+  .fcol{text-align:center;display:flex;flex-direction:column;align-items:center}
+  .foot-label{font-size:11px;font-weight:700;letter-spacing:.26em;text-transform:uppercase;color:var(--dim);margin-bottom:18px}
+  .sponsors{display:flex;justify-content:center;align-items:center;gap:34px;flex-wrap:wrap}
+  .sponsors a,.produced a{display:inline-flex;transition:.15s}
+  .sponsors a:hover,.produced a:hover{transform:translateY(-1px)}
+  .sponsors img{height:32px;width:auto;opacity:.92}
+  .produced img{height:30px;width:auto;opacity:.95}
+  .sponsors a:hover img,.produced a:hover img{opacity:1}
+  footer .socials{display:flex;gap:11px;justify-content:center;flex-wrap:wrap;margin:0}
+  footer .socials a{width:40px;height:40px;border-radius:50%;border:1.5px solid rgba(122,217,168,.5);display:flex;align-items:center;justify-content:center;transition:.15s}
+  footer .socials a svg{width:18px;height:18px;fill:var(--mint);transition:.15s}
+  footer .socials a:hover{background:var(--mint);border-color:var(--mint);transform:translateY(-2px)}
+  footer .socials a:hover svg{fill:#0a0a0a}
+  .footbar{max-width:var(--wrap);margin:34px auto 0;border-top:1px solid var(--line);padding-top:20px;display:flex;flex-direction:column;align-items:center;gap:14px}
+  .footnav-dd{display:block;width:100%;max-width:var(--wrap);margin:0 auto;text-align:center}
+  .footnav-dd>summary{list-style:none;cursor:pointer;display:inline-flex;align-items:center;gap:9px;font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.5px;font-size:13px;color:var(--muted);background:transparent;border:1px solid var(--line);padding:8px 16px 6px;transition:.15s}
+  .footnav-dd>summary::-webkit-details-marker{display:none}
+  .footnav-dd>summary:hover{color:var(--mint);border-color:rgba(122,217,168,.45)}
+  .footnav-dd>summary .ham{width:15px;height:15px;fill:currentColor;transform:translateY(-1px)}
+  .footnav-dd .dd-links{display:flex;flex-direction:row;flex-wrap:wrap;justify-content:center;gap:12px 24px;padding:24px 0 4px}
+  .footnav-dd .dd-links a{font-size:11.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:.15s}
+  .footnav-dd .dd-links a:hover{color:var(--mint)}
+  .copyright{font-size:12px;color:var(--dim);text-align:center}
+  @media(max-width:720px){.footgrid{grid-template-columns:1fr;gap:34px}footer{padding:40px 16px 20px}.footbar{margin-top:34px;padding-top:24px;gap:20px}.footnav-dd .dd-links{flex-direction:column;align-items:center;gap:15px}}
+
+  @media(min-width:720px){header.hero{padding:48px 0 6px}}
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "PodcastEpisode", "name": "Increasing our Natural Efficiency", "url": "https://thenumbersgamepodcast.com.au/increasing-our-natural-efficiency", "datePublished": "2024-05-16", "episodeNumber": 177, "image": "https://i.ytimg.com/vi/zHlDDmEUzow/maxresdefault.jpg", "partOfSeries": {"@type": "PodcastSeries", "name": "The Numbers Game", "url": "https://thenumbersgamepodcast.com.au/"}}</script>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-in">
+      <a class="brand" href="/" aria-label="The Numbers Game home"><img src="assets/tng-logo.png" alt="The Numbers Game"></a>
+      <div class="navlinks">
+        <a href="/">Home</a>
+        <div class="navgroup">
+          <a class="navtop">Episodes</a>
+          <div class="subnav">
+            <a href="/episodes">All episodes</a>
+            <a href="/adventure">Find moments</a>
+          </div>
+        </div>
+        <div class="navgroup">
+          <a class="navtop">About</a>
+          <div class="subnav">
+            <a href="/about">The show</a>
+            <a href="/nick-reilly">Nick Reilly</a>
+            <a href="/jason-robinson">Jason Robinson</a>
+          </div>
+        </div>
+        <a href="/contact">Contact</a>
+      </div>
+      <button class="navburger" id="navburger" type="button" aria-label="Menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24"><path d="M3 6h18v2H3zM3 11h18v2H3zM3 16h18v2H3z"/></svg>
+      </button>
+    </div>
+    <div class="navdrop" id="navdrop" hidden>
+      <a href="/">Home</a>
+      <span class="navlabel">Episodes</span>
+      <a class="sub" href="/episodes">All episodes</a>
+      <a class="sub" href="/adventure">Find moments</a>
+      <span class="navlabel">About</span>
+      <a class="sub" href="/about">The show</a>
+      <a class="sub" href="/nick-reilly">Nick Reilly</a>
+      <a class="sub" href="/jason-robinson">Jason Robinson</a>
+      <a href="/contact">Contact</a>
+    </div>
+  </nav>
+
+  <main class="wrap">
+
+    <header class="hero">
+      <div class="hook">
+        <span class="eptag">EP 177</span>
+        <h1 class="hk"><span class="hkrow"><span>Increasing our</span></span>
+        <span class="hkrow"><span class="mintseg">Natural Efficiency</span></span></h1>
+      </div>
+    </header>
+
+    <div class="player-wrap" id="player-wrap">
+      <div class="player" id="player">
+        <button class="facade" id="facade" style="background-image:url('https://i.ytimg.com/vi/zHlDDmEUzow/maxresdefault.jpg')" aria-label="Play episode">
+          <span class="play"></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="explore">
+      <div class="tabs" role="tablist">
+        <button class="tabbtn on" data-panel="p-summary">Summary</button>
+        <button class="tabbtn" data-panel="p-chapters">Chapters<span class="ct" id="chcount"></span></button>
+        <button class="tabbtn" data-panel="p-questions">Questions<span class="ct" id="qcount"></span></button>
+      </div>
+      <section class="tpanel" id="p-summary">
+        <div class="summary-body">
+          <p>Fresh off a trip through the UK, Jason asks whether Australia is falling behind the rest of the world on renewable energy and climate. He describes wind turbines and solar farms in every direction, low-emission zones that tax dirty cars out of city centres, EV charging poles on every street and great public transport. The trio weigh the numbers: Denmark at 81 percent renewables versus Australia at 32 percent, nearly 70 percent of our power from non-renewables, and Australia in the top five worst countries per capita for emissions. Nick pushes back with the economics, 14 percent of GDP tied to mining against Denmark's 1.25 percent and the UK's 0.64 percent, arguing the comparison isn't fair and a real transition plan is needed. They land on culture and packaging, Mike Cannon-Brookes and the AGL play as a smart investor bet, and Marty's reframe of go green as increasing our natural efficiency.</p>
+        </div>
+        <div class="vask">
+          <button class="vbtn" id="vbtn" type="button">
+            <svg viewBox="0 0 24 24"><path d="M12 14a3 3 0 0 0 3-3V6a3 3 0 1 0-6 0v5a3 3 0 0 0 3 3zm5-3a5 5 0 0 1-10 0H5a7 7 0 0 0 6 6.92V21h2v-3.08A7 7 0 0 0 19 11h-2z"/></svg>
+            Send us a voice note
+          </button>
+          <div class="vslot" id="vslot" hidden>
+            <div class="vhead">
+              <p class="vmsg">We'd love to hear from you. You can leave up to a 90 second voice note for us to play on the show: a question, some feedback, or a topic you want covered.</p>
+              <button class="vclose" id="vclose" type="button" aria-label="Close">&times;</button>
+            </div>
+            <iframe src="https://www.speakpipe.com/widget/inline/hhq6kzggsx7zpcsvakgxfrzun3zidpde" allow="microphone" width="100%" height="200" frameborder="0" title="Leave The Numbers Game a voice note"></iframe>
+          </div>
+          <script async src="https://www.speakpipe.com/widget/loader.js" charset="utf-8"></script>
+        </div>
+        <div class="sumfacts">
+          <div class="fact"><span class="fl">Release date</span><span class="fv">16 May 2024</span></div>
+          <div class="fact"><span class="fl">Hosts</span><span class="fv"><a href="/nick-reilly">Nick Reilly</a>, <a href="/jason-robinson">Jason Robinson</a> &amp; <a href="/marty-vidakovic">Marty Vidakovic</a></span></div>
+
+        </div>
+      </section>
+      <section class="tpanel" id="p-chapters" hidden>
+        <p class="hint">Jump straight to the part you need.</p>
+        <div id="chapters"></div>
+      </section>
+      <section class="tpanel" id="p-questions" hidden>
+        <p class="hint">Real questions this episode answers. Tap one to hear the answer.</p>
+        <div id="qa"></div>
+      </section>
+    </div>
+
+    <div class="drops">
+
+      <details class="drop">
+        <summary><span class="st">Episode transcript</span><span class="chev">+</span></summary>
+        <div class="drop-body tbody">
+          <p><span class="spk">Jason · 00:00</span>Welcome to episode 177 of The Numbers Game. I'm Jase. I'm here with Nick and Marty. How are you, fellas?</p>
+          <p><span class="spk">Marty · 00:07</span>Going well, Jase. Going well. Essendon doing well. That's all I'm saying. Essendon doing well. We are on track for finals. On track. That's all I'm saying.</p>
+          <p><span class="spk">Nick · 00:17</span>Do not derail the season.</p>
+          <p><span class="spk">Jason · 00:19</span>Do not derail the season. Sorry, Nick.</p>
+          <p><span class="spk">Nick · 00:22</span>I'm good, mate. Look, I'm a Crow supporter, as you boys know, and it's just nice to be in games. But I said this on the weekend to my wife. Both of us— she's also a Bombers supporter. Um, both of our—</p>
+          <p><span class="spk">Marty · 00:36</span>knew she was a smart lady. Good shout out to Elise.</p>
+          <p><span class="spk">Jason · 00:41</span>So, Alicia, well done.</p>
+          <p><span class="spk">Nick · 00:43</span>They obviously— we, um, it was a couple of weeks ago now at the time this got released, but, uh, the Crows played on the Friday night. Now the Crows played in the showdown on Thursday night and the Bombers played over the weekend. And I was just on the edge of my seat, like, just screaming, why can't we just get a comfortable win?</p>
+          <p><span class="spk">Nick · 01:04</span>Like, why does it have to be like this every week? You know, like, it's going to take time off my life. Like, I just get up by 5 or 6 goals, just make me feel comfortable. Anyway, and then the Bombers were playing whatever night it was, Saturday or Sunday, and, um, she's saying exactly the same thing.</p>
+          <p><span class="spk">Nick · 01:21</span>And then I thought about Marty, you texted me every time the Bombers are playing that your cortisol levels are just through the roof. It is really like the Crows. I was nearly going to turn it off and walk outside because I just couldn't watch it. And it made me think about, is supporting fun or is it just— I don't know.</p>
+          <p><span class="spk">Nick · 01:43</span>I just want a 10-goal win. I want a 10-goal win.</p>
+          <p><span class="spk">Marty · 01:47</span>I want to sit back and watch it and not, you know, my wife knows how we're going depending on where I am in the house. Like, if I'm behind the couch, if I'm behind the couch, it's not good. If I'm on the couch, standing up, very good.</p>
+          <p><span class="spk">Marty · 02:02</span>And if I'm across the couch, I'm just devastated. So it's, uh, yeah, it's just shocking. I don't know, like I said, there was a draw with Essendon and Collingwood, great game, Anzac Day. I can't tell you anything that happened, I was that stressed.</p>
+          <p><span class="spk">Marty · 02:18</span>And I go, I think, what would it be like for someone that didn't barrack for these teams to watch it? It's probably a great game, but I don't want to go back and watch it because I was just so distressed. Get that draw.</p>
+          <p><span class="spk">Jason · 02:29</span>It's just— this will lead into the episode. But just to follow on from that, I got up at 6 AM in the UK to watch the Anzac Day game. And it was that like— so Jim, Jim, who I was staying at his place watching, and he's laying back, he's got the dog across his lap, he's relatively chilled.</p>
+          <p><span class="spk">Jason · 02:48</span>I'm pacing the living room.</p>
+          <p><span class="spk">Marty · 02:50</span>It's—</p>
+          <p><span class="spk">Jason · 02:50</span>they've got a baby upstairs sleeping. I'm pacing the living room. I think I yelled at one point. I'm like, oh shit, the baby. I better calm down. And yeah, it's— I think sport I don't know, maybe we got to look at the numbers of does sport take years off your life rather than add to, you know, your, your enjoyment.</p>
+          <p><span class="spk">Marty · 03:06</span>Jase, instead of talking, Nick, when, when you're watching the game, are you screaming even when you're talking to someone else? Like, I noticed when I was talking to Charlie, I'm screaming at him and I'm screaming at Cole and just, you know, saying flick the kettle on, but it's like, flick the kettle on!</p>
+          <p><span class="spk">Nick · 03:22</span>It's like, yeah, no, I get really, um I get really serious and really deep, like, as in, oh, you know, like, like I'm really hurting. Like, like I'm really hurting that they just can't— they just can't, you know, get over the line by 10 goals.</p>
+          <p><span class="spk">Nick · 03:38</span>It's like it's a real problem. I don't scream in anger. It's real frustration when you think, geez, this is really having an impact on him, you know.</p>
+          <p><span class="spk">Marty · 03:45</span>Do you realize how good a mate I am, Nick, when Essendon beat Adelaide, that I did not text you? I did not do anything because I know that pain. I understand that pain, so I wasn't going to drive a knife in at that point.</p>
+          <p><span class="spk">Jason · 03:58</span>So anyway, but before our producer completely cuts this episode off and just deletes all content, we'll, we'll get into a bit of a convo. And the reason I led in from the Anzac Day watching in the UK thing is this: the, the idea for this episode is, you know, is Australia falling behind the rest of the world?</p>
+          <p><span class="spk">Jason · 04:17</span>Are we full of shit? You know, and I'm talking about going green, greenhouse gas emissions, climate change, which can, you know, can, can lead to just some pretty interesting barbecue discussions over a beer or over a glass of wine with your mates and, or the pub chats around this stuff.</p>
+          <p><span class="spk">Jason · 04:32</span>But, but I'll give you the, the reason it stuck in my head. So as you know, I recently got back from, from the UK over the last couple of weeks. But when I was there, I was in London and then I went from London out to Bath, which is kind of heading towards the west. Then I went as far west as you can go down to Cornwall.</p>
+          <p><span class="spk">Jason · 04:49</span>I was in St. Mawes and saw Padstow and Falmouth and a couple other places, Exeter, Glastonbury, basically a little country tour. Now, there wasn't one direction that I couldn't look without seeing a wind turbine.</p>
+          <p><span class="spk">Jason · 05:05</span>And then not only was there wind turbines in almost every direction I looked, I drove past a heap of solar farms. Now, over there, I tell you what, they don't get a lot of sun. So I don't know what the solar farms are doing. I'll put that out there that I think the solar farms might be going to a bit of waste, not necessarily generating too much.</p>
+          <p><span class="spk">Jason · 05:23</span>But every direction I looked, was a wind turbine. And it got me thinking, in a country like Australia, why do we not have more renewable energy? And why has it taken Australia so long to get to a point where renewable energy is even part of the conversation?</p>
+          <p><span class="spk">Jason · 05:42</span>Now, before I throw to you guys for a bit of a pre-thought on what I've said, also, when you drive into the city, depending on whether it's London, Bristol, Bath, there are signs up around low carbon emission vehicles. So unless you have a low carbon emission or extremely or very low, whatever the wording was, ultra-low, sorry, carbon emission vehicle.</p>
+          <p><span class="spk">Jason · 06:03</span>And this is all registered by your number plate. So you can search your number plate on a website and it tells you whether your car is low emission, ultra-low emission. But if your car's not one of those and you drive into a city that has those emission, low emission zone areas, you will be paying more taxes to cut, to offset your carbon emission footprint and pollution in that particular area.</p>
+          <p><span class="spk">Jason · 06:29</span>So again, That's something else that I thought, well, hey, isn't this great? So rather than jamming up the city, if people don't want to take their car into the city and pay extra money, well, they've got to use public transport. There's great train system, great buses. Buses are electric and all and whatnot. So these were the few things that jumped out to me straight away was going less pollution, less traffic in the cities based on taxes to drive your car in if it's not a low emission vehicle.</p>
+          <p><span class="spk">Jason · 06:52</span>Great public transport, wind turbines, solar farms, renewable energy. I'll pause there for a second. Nick and Marty, what are your thoughts when you think of Australia and renewable energy versus maybe other places in the world you've seen?</p>
+          <p><span class="spk">Marty · 07:07</span>I just got into trouble the other night for not using the recycling bin properly. So I don't know whether I'm best to judge on that, but I think we have the opportunity to be a leader, you know, in that field, given the amount of land we have and space. And as to whether, we are doing that.</p>
+          <p><span class="spk">Marty · 07:25</span>I have no idea. And I'm assuming by your tone, Jase, that we're nowhere near leading in that front.</p>
+          <p><span class="spk">Jason · 07:33</span>I can give you just some quick numbers off the top. The leader in the world is Denmark, and their energy comes from 81% renewables. So wind, solar, all the rest. Australia is now at 32%.</p>
+          <p><span class="spk">Jason · 07:49</span>Which is better than I kind of expected. But I guess I also go, Australia's actually got the capabilities. You know, we've got wind, we've got sun in abundance. But there's, there's always been this political tie to fossil fuel.</p>
+          <p><span class="spk">Jason · 08:05</span>And you can always find the video of one of the politicians who's holding a lump of coal in Parliament. And I should have looked at it beforehand. But, you know, maybe we'll throw it in the show notes if we come around to it. But, you know, Australia has huge ties to mining.</p>
+          <p><span class="spk">Jason · 08:20</span>To coal and to natural gas. And because of our, you know, ties to all these things around mining the coal and then getting the gas and then burning it to generate, you know, nearly 70% of our electricity comes from non-renewables.</p>
+          <p><span class="spk">Jason · 08:36</span>So I think that's also the big thing around, you know, government lobbying, you know, money, the money factor for our country going, well, we're not going to encourage going green if that's going to affect one of our biggest kind of areas of income and employment areas.</p>
+          <p><span class="spk">Marty · 08:52</span>So that's a great point. Yeah. Show me the incentive and I'll show you the behavior. So maybe, maybe there's gotta be some alterations there. Yeah. First up, what were the people like in the community generally much more like savvy around this area?</p>
+          <p><span class="spk">Marty · 09:08</span>Just out of interest.</p>
+          <p><span class="spk">Jason · 09:10</span>Yeah, definitely.</p>
+          <p><span class="spk">Nick · 09:10</span>Definitely.</p>
+          <p><span class="spk">Jason · 09:11</span>And that was so just adding onto that as well. I saw almost every second car, it's probably overkill there, but there was an electric car.. And also every street has charging poles in London. There's charging poles on almost every street, so you can pull up your electric vehicle and plug it into— and it's just a little black pole with a little, little cap on it.</p>
+          <p><span class="spk">Jason · 09:31</span>So it's not kind of outrageously in your face. And just quite often I'll be walking along going, oh shit, that car's parked into— plugged into that little pole on the ground there. What's going on? And, and it was charging. So again, I think you know, there's been these issues in Australia where if we don't have the infrastructure, people can't go out of their way to try and do better things.</p>
+          <p><span class="spk">Jason · 09:51</span>Like, you know, I'm not saying electric cars better. There's all these arguments, yada yada. But overall, though, the perception of renewable and climate, you know, what's happening with the environment, like the way they run their cooling or heating, there was a bit more— I felt like there was a bit more focusing and paying attention to it.</p>
+          <p><span class="spk">Jason · 10:11</span>Whereas, you know, here I think, you know, whether it's the public are conditioned this way because we go, ah, you know, climate change, it's not really a thing. Or, you know, oh, you know, we're only a small country with less people. We can't really make a difference.</p>
+          <p><span class="spk">Jason · 10:27</span>But Australia is in the top 5 worst countries in the world per capita for greenhouse gas emissions. It's something like 20 tonnes of carbon emissions. And then you compare to, I think, USA, which is again a pretty big manufacturing and, you know, pretty heavy carbon emission country.</p>
+          <p><span class="spk">Jason · 10:44</span>They're at 17. So we're worse than, you know, many other countries when it comes to carbon emissions. But I just think, you know, we're a pretty blessed country that could be doing a lot, you know, and again, whether it's something like emission zones. Sorry, Nico, you haven't had a chance to chime in.</p>
+          <p><span class="spk">Jason · 11:00</span>Well, what are your thoughts?</p>
+          <p><span class="spk">Nick · 11:01</span>I'm just listening and looking at a few things because I'm not that qualified here. I just saw the government has approved a 33,000-hectare wind farm in New South Wales, just out of Drilldry, which they say is going to power about 700,000 homes.</p>
+          <p><span class="spk">Nick · 11:16</span>But I also just looked up our GDP. So 14% of our GDP is attached to mining. Now you can, you can look at that and you can say, well, you know, the politicians have— and I'm just throwing a spanner in the works here— the politicians, they've got to deliver a country that works from a GDP point of view, from a budget point of view.</p>
+          <p><span class="spk">Nick · 11:40</span>So in their defense, they're looking at, well, 14% of our GDP is mining. And I get what you're saying. You've got to turn it around at some stage, but it's not easy. Look at all the people that it employs, all the tax, all the taxes that are paid.</p>
+          <p><span class="spk">Nick · 11:55</span>So I'd question— the question I'd ask, and we might just Google this, someone, but what's London's or the UK's or Denmark's— how much of their GDP is attached to mining, I wonder? I wonder if they have the same issue that— or the same conundrum that our politicians have.</p>
+          <p><span class="spk">Nick · 12:13</span>That's the first thing I'd ask because it's— I get what you're saying, but it's not that black and white if we want the country to prosper in other areas outside of just renewables, you know?</p>
+          <p><span class="spk">Jason · 12:25</span>Yeah, that's, that's, that's a great one. And we'll have to look into that. Or maybe what— I don't know if your Google searching is better than mine, but that's, that's a great question. Yeah. And I think, you know, we— I'll expand into a little bit more what got my attention too, because it reminded me of, um, you remember the Atlassian founder, Cannon-Brookes, Mike Cannon-Brookes?</p>
+          <p><span class="spk">Jason · 12:45</span>He made a big play to take over or to get involved in AGL, um, and he was talking about, you know, his big thing was the transition that we need to make over time, moving from being reliant on fossil fuels and, you know, burning coal to generate power versus actually putting things in place for long term.</p>
+          <p><span class="spk">Jason · 13:07</span>You know, his argument was, you know, AGL and these other providers— when, when you've got a goal to be carbon neutral by 2050 and you've got 26 years to get there, for example, or 2030, and, you know, we'll bring up— I've got some more numbers to go into— but you kind of always assume, oh, that's, that's such a far away time, that's somebody else's problem.</p>
+          <p><span class="spk">Jason · 13:27</span>But he— Caden Brooks was trying to get involved in AGL to say, well, no, the time is now to move away from coal and gas and go towards renewable energy. And the early are generally the ones that are going to be able to make, you know, make the most headwind into this.</p>
+          <p><span class="spk">Jason · 13:46</span>So he saw it as a huge opportunity, you know, from an environmental investment, but also a financially strategic one, where getting in, opening up new market opportunities, you know, and pivoting AGL from gas energy and coal to, you know, where they could make some serious coin using wind energy and solar energy, which is You know, yes, there's— and that's the thing where it's this upfront investment that the government and a lot of these energy providers are avoiding because it's costly to set up, obviously build</p>
+          <p><span class="spk">Jason · 14:16</span>the wind turbines, connect it to the grid and whatnot. So, you know, when you think of a billionaire like Mike Cannon-Brookes who has this keen interest in doing it, he's not just doing it because he loves, you know, the environment. I'm sure there's a part there that he wants to, but he's a smart man.</p>
+          <p><span class="spk">Jason · 14:32</span>He wants to prosper financially. He's not going to invest his billions of dollars and not see a return. So I can potentially see there's a smart way for investors to look to the future to go, we eventually have to move to renewable energy.</p>
+          <p><span class="spk">Jason · 14:47</span>Who, where are the companies that we can invest in now that are going to be doing that in Australia?</p>
+          <p><span class="spk">Marty · 14:52</span>Yeah. Well, I think there needs to be a transition plan, doesn't there? Because we're still going to rely on commodities for a fair while. But, but even logically, when you say you've got something that's being dug out of the ground that has a limited supply eventually to something that's going to be renewable and ongoing.</p>
+          <p><span class="spk">Marty · 15:08</span>There has to be a strategic shift in direction for that to be celebrated and for that to be marketed and for people to sort of get the depth of understanding. And look, I'm, like I said, I'm not, I'm nowhere near even one hundredth of an expert on any of that.</p>
+          <p><span class="spk">Marty · 15:26</span>But listening to you talk about it, I'm going, well, we need, we need more awareness. And I'm sure there's, there's a certain amount of people that have specific knowledge and awareness. That are pushing the cause, but it has to become mainstream so we can transition and have a balance.</p>
+          <p><span class="spk">Marty · 15:43</span>Because eventually, we'll be so far behind, we won't be able to catch up and we'll be giving our money to every other country instead of our own.</p>
+          <p><span class="spk">Jason · 15:51</span>Well, that's it. That's another thing Denmark does really well. And again, I'm sure it's different for us because of where we're located in the world and our ability to actually export electricity that is generated by, by wind turbines.</p>
+          <p><span class="spk">Jason · 16:06</span>But one thing, Denmark, basically their, their technology that they've developed, they're able to then on-sell that to other countries. So they've invested in this, they've gone hard, gone early. Their wind turbine technology and their technology around transportation options and whatnot are amongst the best in the world.</p>
+          <p><span class="spk">Jason · 16:27</span>So people now go there to study that. And they're able to export their ideas and their technology around the world. You know, I just think culturally as a country, we probably make it really difficult. And again, I go, where does this start?</p>
+          <p><span class="spk">Jason · 16:43</span>Does it start with government awareness? Does it start with awareness from— and who leads the way? So we love driving, let's say, petrol-hungry vehicles, V6s, V8s. People want their big utes to be able to go camping on the weekends and whatnot. This is the Aussie way.</p>
+          <p><span class="spk">Marty · 16:58</span>This is the It's like guns for the US, you know, that's our cars.</p>
+          <p><span class="spk">Jason · 17:04</span>And then, you know, so, so the idea of— and then also bike riding. And, you know, Nick, you like to get out on the bike. And but I feel like there's— for a lot of people, there's a bit of a negative thing about bike riders being on the road. Like there's a big part of us is like, oh, fucking bike riders on the road.</p>
+          <p><span class="spk">Jason · 17:20</span>Excuse my French. If there was kids in the cars there, maybe Tommy will have a beep on that one. You know, bike riders on the road have often had this negative connotation towards it. But again, Amsterdam, you know, when I was there, bike riders everywhere. It was, it was more bikes on the road than cars.</p>
+          <p><span class="spk">Jason · 17:36</span>Denmark, again, eco-friendly transport. They encourage, you know, there's public engagement riding your bike and getting around on either electric vehicles, public transport, buses that are electric, or riding a bike. Now, do we have the infrastructure here?</p>
+          <p><span class="spk">Jason · 17:51</span>And, you know, you started to see more bike lanes get added here, there, and everywhere. But again, again, is this a government thing where we don't have the infrastructure that allows people to make better decisions around transportation, for example.</p>
+          <p><span class="spk">Nick · 18:03</span>Yeah, everything you're saying there is spot on. And you look at— I just think about the bike riding. Those countries are bike riding countries, like European countries, uh, is where, you know, is where cycling, um, is where cycling is done. So I've just— I did a little bit of Googling just to give you— just to put this into context.</p>
+          <p><span class="spk">Nick · 18:22</span>And this is quick Google, so by no means is this a stat. This could be completely wrong, but there's got to be some level of truth to it, but mining in Denmark, their contribution to GDP, or the mining sector, 1.25%, and UK oil and gas contribution to GDP, 0.64%.</p>
+          <p><span class="spk">Nick · 18:46</span>So it's almost saying, look, look at the United Emirates, you know, and trying to, trying to move them away from oil, hypothetically. So I think that has to be put into context when we're trying to juggle the conversation around. Well, at the end of the day, it provides a lot of our prosperity in other ways.</p>
+          <p><span class="spk">Nick · 19:04</span>Maybe UK and Denmark don't have the conundrum that we've got, which means it's easy for them to make decisions and invest like they are in renewables because it's not a big issue on the other side.</p>
+          <p><span class="spk">Jason · 19:16</span>Now, very, very well challenged, Nick, and great to have a balanced argument for these things. I— here I am with my green, green hat on, but I think it's a great, it's a great point.</p>
+          <p><span class="spk">Nick · 19:29</span>I mean, no, I think you're spot on. Like, at the end of the day, we, it needs to happen, but maybe comparison to certain countries isn't, isn't fair, I guess, is probably what I'm saying. Particularly when you look at, and I know a lot of people say you don't use this argument, and our, our population, our actual contribution to, to climate change, but But at the same time, there's got to be a plan there, right?</p>
+          <p><span class="spk">Nick · 19:53</span>Like you can't just say, well, it's 14% of GDP, so we just have to deal with it. You've got to have a plan to turn it around and you've got to implement the plan.</p>
+          <p><span class="spk">Jason · 20:03</span>Very well said, Nick. Marty?</p>
+          <p><span class="spk">Marty · 20:04</span>I'm just thinking, are the bike lanes different in Europe too? Is there safety in the transportation, in the structure? They're the sort of things I think about. In regards to— because they're forward thinkers on this— does the infrastructure support that at a whole different level when you compare it to Australia?</p>
+          <p><span class="spk">Marty · 20:24</span>Just out of interest, more so from what you saw, Jase.</p>
+          <p><span class="spk">Jason · 20:28</span>Yeah, yeah, definitely. Infrastructure, you know, not in the smaller towns outside of London, but, you know, I think— and again, I'm just coming from a visited one country, come back to the country here, and, you know, was— again, it just stuck in my mind, even the low emission zones in the city.</p>
+          <p><span class="spk">Jason · 20:44</span>You know, our traffic is gridlocked. Every time you're on the Monash, you know, you just got cars backed up everywhere. And, you know, if there was more of a, I guess, a compelling reason to not take the car into the city and take public transport, would you?</p>
+          <p><span class="spk">Jason · 21:01</span>If it was going to cost you more, you know, would you? Depending on the type of car you drive, like Nick, you don't have a small car. If you were penalised for driving that into the city, would you jump in a low-cost Uber, which is a low-emission vehicle?</p>
+          <p><span class="spk">Nick · 21:15</span>No, I wouldn't. And here's the thing, I think—</p>
+          <p><span class="spk">Jason · 21:19</span>Great.</p>
+          <p><span class="spk">Nick · 21:20</span>No, it's, it's, it's, it's, it's fact and it's a cultural thing, right?</p>
+          <p><span class="spk">Marty · 21:23</span>I—</p>
+          <p><span class="spk">Nick · 21:24</span>Yeah, this could come out the completely wrong way, but the amount of travel that you've got to do from the Southeast in particular, well, even the West now too, because it's just as bad from a timing point of view to get into the CBD. And people continue to do that and they do that in their cars.</p>
+          <p><span class="spk">Nick · 21:40</span>And they're more than happy to spend, you know, probably an hour to an hour and a half each way. Um, so maybe sort of 2 to 3 hours somewhere in that vicinity a day in their car. So it goes back to what you said around the us liking to drive, to drive cars.</p>
+          <p><span class="spk">Nick · 21:57</span>It's a cultural thing. Like, even if you go to Europe, you can skip between countries in a train. Now, you can— obviously it's a very different landscape, which is why you can do that. We don't even have the I mean, it's a lot of— it's a different conversation here, but it's just the people are happy to get on trains over there.</p>
+          <p><span class="spk">Nick · 22:16</span>And is that because the trains run better? I actually don't know. Is it a better experience on a train over there than we have? I actually don't know. But the train experience here, for whatever reason, is not good enough for people to choose not to drive. Whereas maybe it's a different experience over there and it's more—</p>
+          <p><span class="spk">Marty · 22:35</span>it's a last resort. Yeah, it's a last resort over here, 100%. And then the same with riding your bike. I don't want to end up like being a cross on a tree or a wreath on a— you know what I mean? You see these crosses as you're going. Yeah, there's got to be a level of safety.</p>
+          <p><span class="spk">Marty · 22:52</span>Like, I'm going to take the car every time over that until I know the infrastructure is there to keep me safe. And it's, and it's actually a great thing to do for me as well. Not only just the environment. So, you know, you've got to get the balance right. And that's why I was asking those questions on infrastructure.</p>
+          <p><span class="spk">Nick · 23:08</span>So much of it's culture-driven, I reckon. And what's ingrained in us, you know, doesn't mean it's right.</p>
+          <p><span class="spk">Marty · 23:14</span>It just means what it is.</p>
+          <p><span class="spk">Jason · 23:17</span>And I think that's probably hit the nail on the head. Like culturally, Australia, our way of life, our cars, the way we travel, you know, it almost puts up a bit of a barrier to the go green movement. And there's a, there's a big minority that then when you have, when even when I say go green, I feel like there's a bit of a stigma around it.</p>
+          <p><span class="spk">Jason · 23:38</span>Like the people that are, you know, cause it basically, you see the, you see the protesters on the news with the go green signs and you think that's what it means to go green. You know, so they're, they're, they're giving it a bad name of what going green means.</p>
+          <p><span class="spk">Marty · 23:50</span>Whereas, you know, straight away I'm resistant. Like I'd rather have something like natural efficiency. Yep. You know, let's increase our natural efficiency. Now I'm in, right? But as soon as I hear go green, I'm going, yeah, right. Here we go.</p>
+          <p><span class="spk">Jason · 24:05</span>Even something like better options. Instead of getting on the plane from Melbourne to Sydney, what if there was a train that got you there in 2.5 hours?</p>
+          <p><span class="spk">Nick · 24:13</span>Yeah.</p>
+          <p><span class="spk">Jason · 24:14</span>You know, again, we just don't have the options that we probably should have as such a developed country when it comes to the public transport the bike lanes, the low emission zones in cities, the electric buses, the double-decker buses that fit more people and encourage more people to get on and be more comfortable.</p>
+          <p><span class="spk">Jason · 24:31</span>You know, this is my thing. Rather than the go green thing, is Australia falling behind? And what are we going to— what are we doing to catch up? Because eventually, eventually the exporting of fossil fuels and the mining of coal eventually starts to dwindle away.</p>
+          <p><span class="spk">Jason · 24:46</span>And are we getting prepared for that world? And, you know, and I then go, what are the investment opportunities that we're going to be making? So I'm going to go do some research and come back to you guys and fly a few past you.</p>
+          <p><span class="spk">Marty · 24:58</span>But I think we're all a little bit skeptical of the government incentives. And I think, you know, you want to see personal benefit as well as environmental benefit in that order until you get obviously where you need to get to.</p>
+          <p><span class="spk">Marty · 25:13</span>People have to see the overall benefit individually as individuals. And that is a cultural shift. And once that's established, then obviously you— and it's how you package it as well. I don't think you can package it how it's been packaged in the past, because there's some discomfort with it.</p>
+          <p><span class="spk">Marty · 25:31</span>So you've got to create a new way. But natural efficiency is my new term. That's what I'm going with. Sell that. I'm sold. Just show me the execution's good and I'm all in.</p>
+          <p><span class="spk">Jason · 25:43</span>Oh, beautiful. Well, we might be running the numbers game on renewable energy at some point. So watch this space. But until then, then. We'll be putting petrol in our cars and driving them wherever we want to go because that's just how we roll. But in all seriousness, listeners out there, I'd love to hear your thoughts on the whole going green and climate change and how we roll in Australia versus places you may have seen around the world.</p>
+          <p><span class="spk">Jason · 26:06</span>Would love to hear you guys share your thoughts. Send it in to a message on LinkedIn to Jason Nichol-Marty, the Instagram for The Numbers Game podcast, or hello@thenumbersgame.com.au. Thisgamepodcast.com.au. We'd love to hear from you and hear you share your side.</p>
+          <p><span class="spk">Jason · 26:23</span>But until next time, thank you for listening to my comparisons of my little UK pollution and going green and climate change spiel, and my, you know, just shitcanning Australia a little bit.</p>
+          <p><span class="spk">Marty · 26:35</span>Until next time, game over.</p>
+        </div>
+      </details>
+
+    </div>
+
+    <!-- LISTEN:START (build_episode.py rewrites the 3 URLs + iframe title per episode; player dropped if no spotifyEmbedUrl) -->
+    <section class="listen-now">
+      <div class="ln-head">
+        <span class="ln-title">Listen now</span>
+      </div>
+      <div class="audio-embed">
+        <iframe src="https://open.spotify.com/embed/episode/6Gobg4BStdUZlDITnKQWAx?utm_source=generator"
+          width="100%" height="152" loading="lazy" allowfullscreen
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+          title="Spotify — Increasing our Natural Efficiency"></iframe>
+      </div>
+    </section>
+
+    <div class="listen">
+      <a href="https://open.spotify.com/episode/6Gobg4BStdUZlDITnKQWAx" target="_blank" rel="noopener" aria-label="Listen to this episode on Spotify">
+        <svg viewBox="0 0 24 24"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.52 17.34c-.24.36-.66.48-1.02.24-2.82-1.74-6.36-2.1-10.56-1.14-.42.12-.78-.18-.9-.54-.12-.42.18-.78.54-.9 4.56-1.02 8.52-.6 11.64 1.32.42.18.48.66.3 1.02zm1.44-3.3c-.3.42-.84.6-1.26.3-3.24-1.98-8.16-2.58-11.94-1.38-.48.12-1.02-.12-1.14-.6-.12-.48.12-1.02.6-1.14 4.32-1.32 9.72-.66 13.44 1.62.36.18.54.78.3 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.3c-.6.18-1.2-.18-1.38-.72-.18-.6.18-1.2.72-1.38 4.26-1.26 11.28-1.02 15.72 1.62.54.3.72 1.02.42 1.56-.3.42-1.02.6-1.56.3z"/></svg>
+        Spotify
+      </a>
+      <a href="https://podcasts.apple.com/au/podcast/id1555566088?i=1000655678100" target="_blank" rel="noopener" aria-label="Listen to this episode on Apple Podcasts">
+        <svg viewBox="0 0 24 24"><path d="M5.34 0A5.328 5.328 0 000 5.34v13.32A5.328 5.328 0 005.34 24h13.32A5.328 5.328 0 0024 18.66V5.34A5.328 5.328 0 0018.66 0H5.34zm6.525 2.568c2.336 0 4.448.902 6.056 2.587 1.224 1.272 1.912 2.619 2.264 4.392l.04.23c.04.272-.16.527-.432.567a.505.505 0 01-.567-.431l-.04-.213c-.312-1.57-.92-2.747-2.004-3.867-1.428-1.496-3.293-2.294-5.393-2.294-2.1 0-3.966.798-5.394 2.294-1.084 1.12-1.692 2.298-2.004 3.867l-.04.213a.507.507 0 01-.567.431.504.504 0 01-.432-.567l.04-.23c.352-1.773 1.04-3.12 2.264-4.392 1.608-1.685 3.72-2.587 6.056-2.587h.153zm.136 3.033c1.74 0 3.312.67 4.527 1.934.883.916 1.394 1.93 1.663 3.253l.04.23a.505.505 0 01-.431.567.503.503 0 01-.567-.432l-.04-.212c-.23-1.112-.659-1.97-1.396-2.732-1.052-1.1-2.404-1.672-3.9-1.672s-2.849.572-3.901 1.672c-.737.762-1.167 1.62-1.396 2.732l-.04.212a.503.503 0 01-.567.432.505.505 0 01-.432-.567l.04-.23c.27-1.323.78-2.337 1.664-3.253 1.215-1.264 2.787-1.934 4.527-1.934h.21zm-.078 3.05c1.092 0 2.091.424 2.89 1.22.582.58.924 1.245 1.107 2.15l.04.218a.501.501 0 01-.424.568.499.499 0 01-.568-.424l-.04-.198c-.146-.724-.413-1.253-.871-1.716-.63-.63-1.398-.957-2.226-.957s-1.595.328-2.225.957c-.459.463-.726.992-.871 1.716l-.04.198a.499.499 0 01-.568.424.501.501 0 01-.424-.568l.04-.219c.183-.904.525-1.569 1.106-2.149.8-.796 1.799-1.22 2.89-1.22h.184zM12 14.07a2.477 2.477 0 012.48 2.478A2.477 2.477 0 0112 19.024a2.477 2.477 0 01-2.48-2.477A2.477 2.477 0 0112 14.07z"/></svg>
+        Apple
+      </a>
+      <a class="yt-pill" href="https://www.youtube.com/@thenumbersgamepodcast?sub_confirmation=1" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.12-2.14C19.5 3.55 12 3.55 12 3.55s-7.5 0-9.38.51A3 3 0 0 0 .5 6.2 31.4 31.4 0 0 0 0 12a31.4 31.4 0 0 0 .5 5.8 3 3 0 0 0 2.12 2.14c1.88.51 9.38.51 9.38.51s7.5 0 9.38-.51a3 3 0 0 0 2.12-2.14A31.4 31.4 0 0 0 24 12a31.4 31.4 0 0 0-.5-5.8zM9.55 15.57V8.43L15.82 12z"/></svg>
+        Subscribe
+      </a>
+    </div>
+    <!-- LISTEN:END -->
+
+    <div class="relsec">
+      <span class="rtitle">Discover more</span>
+      <div class="relgrid">
+        <a class="relcard" href="/your-beer-is-taxed-more-than-our-gas-exports">
+          <img src="https://i.ytimg.com/vi/JbWmJhmkaP0/hqdefault.jpg" alt="EP 268 thumbnail">
+          <span class="rt">Your Beer Is Taxed More Than Our Gas Exports</span>
+          <span class="rfoot"><span class="rwhy">Also covers: policy &amp; reform</span><span class="rtag">EP 268</span></span>
+        </a>
+        <a class="relcard" href="/australia-s-migration-numbers-explained-the-winners-losers-and-myths">
+          <img src="https://i.ytimg.com/vi/jwyuLdaWpKA/hqdefault.jpg" alt="EP 257 thumbnail">
+          <span class="rt">Australia's Migration Numbers Explained</span>
+          <span class="rfoot"><span class="rwhy">Also covers: policy &amp; reform</span><span class="rtag">EP 257</span></span>
+        </a>
+        <a class="relcard" href="/raising-gst-in-australia-and-why-it-would-work">
+          <img src="https://i.ytimg.com/vi/k1NVsiBc7JY/hqdefault.jpg" alt="EP 222 thumbnail">
+          <span class="rt">Raising GST in Australia and Why it Would Work</span>
+          <span class="rfoot"><span class="rwhy">Also covers: policy &amp; reform</span><span class="rtag">EP 222</span></span>
+        </a>
+        <a class="relcard" href="/marty-s-pissed-off">
+          <img src="https://i.ytimg.com/vi/fOm_jg0Nfqk/hqdefault.jpg" alt="EP 165 thumbnail">
+          <span class="rt">Marty's Pissed Off!</span>
+          <span class="rfoot"><span class="rwhy">Also covers: policy &amp; reform</span><span class="rtag">EP 165</span></span>
+        </a>
+        <a class="relcard" href="/six-years-of-zero-growth-786b-spent">
+          <img src="https://i.ytimg.com/vi/H-91xGnsyJA/hqdefault.jpg" alt="EP 275 thumbnail">
+          <span class="rt">Six Years of Zero Growth, $786B Spent</span>
+          <span class="rfoot"><span class="rwhy">Also covers: policy &amp; reform</span><span class="rtag">EP 275</span></span>
+        </a>
+        <a class="relcard" href="/victoria-owes-199-billion">
+          <img src="https://i.ytimg.com/vi/sppkdu-w5jU/hqdefault.jpg" alt="EP 280 thumbnail">
+          <span class="rt">Victoria Owes $199 Billion</span>
+          <span class="rfoot"><span class="rwhy">Also covers: policy &amp; reform</span><span class="rtag">EP 280</span></span>
+        </a>
+      </div>
+      <div class="reldots" id="reldots"></div>
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="footgrid">
+      <div class="fcol">
+        <div class="foot-label">Follow us on</div>
+        <div class="socials">
+          <a href="https://www.instagram.com/thenumbersgamepodcast/" target="_blank" rel="noopener" aria-label="The Numbers Game on Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.8.2 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1 .4 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .4-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1-.4-2.2-.1-1.3-.1-1.7-.1-4.9s0-3.6.1-4.9c.1-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.4 2.2-.4 1.3-.1 1.7-.1 4.9-.1zm0 2c-3.1 0-3.5 0-4.8.1-1.1.1-1.5.2-1.8.3-.4.2-.7.3-1 .6-.3.3-.5.6-.6 1-.1.3-.3.7-.3 1.8-.1 1.3-.1 1.7-.1 4.8s0 3.5.1 4.8c.1 1.1.2 1.5.3 1.8.2.4.3.7.6 1 .3.3.6.5 1 .6.3.1.7.3 1.8.3 1.3.1 1.7.1 4.8.1s3.5 0 4.8-.1c1.1-.1 1.5-.2 1.8-.3.4-.2.7-.3 1-.6.3-.3.5-.6.6-1 .1-.3.3-.7.3-1.8.1-1.3.1-1.7.1-4.8s0-3.5-.1-4.8c-.1-1.1-.2-1.5-.3-1.8-.2-.4-.3-.7-.6-1-.3-.3-.6-.5-1-.6-.3-.1-.7-.3-1.8-.3-1.3-.1-1.7-.1-4.8-.1zm0 3.4a5.4 5.4 0 1 1 0 10.8 5.4 5.4 0 0 1 0-10.8zm0 2a3.4 3.4 0 1 0 0 6.8 3.4 3.4 0 0 0 0-6.8zm5.6-2.3a1.3 1.3 0 1 1-2.6 0 1.3 1.3 0 0 1 2.6 0z"/></svg></a>
+          <a href="https://www.tiktok.com/@thenumbersgamepodcast" target="_blank" rel="noopener" aria-label="The Numbers Game on TikTok"><svg viewBox="0 0 24 24"><path d="M12.53.02C13.84 0 15.14.01 16.44 0c.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg></a>
+          <a href="https://www.linkedin.com/company/the-numbers-game-podcast/" target="_blank" rel="noopener" aria-label="The Numbers Game on LinkedIn"><svg viewBox="0 0 24 24"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.24 8.25h4.52V23H.24V8.25zM8.34 8.25h4.33v2.01h.06c.6-1.14 2.08-2.34 4.28-2.34 4.58 0 5.42 3.01 5.42 6.92V23h-4.51v-7.16c0-1.71-.03-3.91-2.38-3.91-2.39 0-2.75 1.86-2.75 3.78V23H8.34V8.25z"/></svg></a>
+          <a href="https://www.facebook.com/profile.php?id=100071290388343" target="_blank" rel="noopener" aria-label="The Numbers Game on Facebook"><svg viewBox="0 0 24 24"><path d="M24 12.07C24 5.41 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.04V9.41c0-3.02 1.8-4.7 4.54-4.7 1.31 0 2.68.24 2.68.24v2.97h-1.5c-1.5 0-1.96.93-1.96 1.89v2.26h3.32l-.53 3.5h-2.8V24C19.62 23.1 24 18.1 24 12.07z"/></svg></a>
+          <a href="https://www.youtube.com/@thenumbersgamepodcast" target="_blank" rel="noopener" aria-label="The Numbers Game on YouTube"><svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.2C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31.7 31.7 0 0 0 0 12a31.7 31.7 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.2A31.7 31.7 0 0 0 24 12a31.7 31.7 0 0 0-.5-5.8zM9.6 15.6V8.4L15.8 12z"/></svg></a>
+        </div>
+      </div>
+      <div class="fcol">
+        <div class="foot-label">Brought to you by</div>
+        <div class="sponsors">
+          <a href="https://www.inovayt.com.au/" target="_blank" rel="noopener"><img src="assets/inovayt-white.png" alt="Inovayt"></a>
+          <a href="https://futureadvisory.com.au/" target="_blank" rel="noopener"><img src="assets/future-advisory-white.png" alt="Future Advisory"></a>
+        </div>
+      </div>
+      <div class="fcol produced">
+        <div class="foot-label">Produced by</div>
+        <a href="https://www.vidpod.com.au/" target="_blank" rel="noopener"><img src="assets/vidpod-white.png" alt="VIDPOD"></a>
+      </div>
+    </div>
+    <div class="footbar">
+      <details class="footnav-dd">
+        <summary><svg class="ham" viewBox="0 0 24 24"><path d="M3 6h18v2H3zM3 11h18v2H3zM3 16h18v2H3z"/></svg> Menu</summary>
+        <div class="dd-links">
+          <a href="/">Home</a><a href="/episodes">Every episode</a><a href="/adventure">Choose your own adventure</a><a href="/about">About the show</a><a href="/nick-reilly">Nick Reilly</a><a href="/jason-robinson">Jason Robinson</a><a href="/contact">Contact</a>
+        </div>
+      </details>
+      <div class="copyright">© 2026 The Numbers Game</div>
+    </div>
+  </footer>
+
+  <script>
+    var VIDEO='zHlDDmEUzow';
+    var CHAPTERS=[
+      {t:"00:00",s:0,title:"Intro"},
+      {t:"03:58",s:238,title:""}
+    ];
+    var QUESTIONS=[
+      {q:"Which country leads the world in renewable energy?",s:453},
+      {q:"Why is Australia so reliant on fossil fuels for power?",s:485},
+      {q:"How do incentives shape behaviour?",s:532},
+      {q:"How bad are Australia's per capita emissions?",s:627},
+      {q:"What big renewable projects has Australia approved?",s:661},
+      {q:"Why can't Australia just drop mining for renewables?",s:676},
+      {q:"How does Denmark profit from renewable technology?",s:951},
+      {q:"Is protecting mining GDP an excuse for inaction?",s:1156},
+      {q:"Is ingrained culture always the right way?",s:1388},
+      {q:"How should the green movement be rebranded?",s:1430}
+    ];
+
+    var chEl=document.getElementById('chapters');
+    CHAPTERS.forEach(function(c){var b=document.createElement('button');b.className='chapter';b.onclick=function(){startAt(c.s)};b.innerHTML='<span class="tc">'+c.t+'</span><span class="cx">'+c.title+'</span>';chEl.appendChild(b);});
+    document.getElementById('chcount').textContent=CHAPTERS.length;
+    var qEl=document.getElementById('qa');
+    QUESTIONS.forEach(function(q){var b=document.createElement('button');b.className='q';b.onclick=function(){startAt(q.s)};b.innerHTML='<span class="qm">?</span><span class="qx">'+q.q+'</span><span class="go">›</span>';qEl.appendChild(b);});
+    document.getElementById('qcount').textContent=QUESTIONS.length;
+
+    /* Mobile nav dropdown. */
+    var burger=document.getElementById('navburger'), navdrop=document.getElementById('navdrop');
+    if(burger&&navdrop){burger.addEventListener('click',function(){
+      navdrop.hidden=!navdrop.hidden;
+      burger.setAttribute('aria-expanded', navdrop.hidden?'false':'true');
+    });}
+
+    /* Voice-note button reveals the recorder; × tucks it away. */
+    var vbtn=document.getElementById('vbtn'), vslot=document.getElementById('vslot'), vclose=document.getElementById('vclose');
+    if(vbtn&&vslot){vbtn.addEventListener('click',function(){vslot.hidden=!vslot.hidden;});}
+    if(vclose&&vslot){vclose.addEventListener('click',function(){vslot.hidden=true;});}
+
+    /* Keep-exploring dots: only shown when the strip actually scrolls (mobile). */
+    var rg=document.querySelector('.relgrid'), rd=document.getElementById('reldots');
+    if(rg&&rd){
+      var relCards=rg.querySelectorAll('.relcard');
+      relCards.forEach(function(){rd.appendChild(document.createElement('span'))});
+      var updDots=function(){
+        var scrollable=rg.scrollWidth>rg.clientWidth+4;
+        rd.style.display=scrollable?'flex':'none';
+        if(!scrollable)return;
+        var i=Math.round(rg.scrollLeft/(rg.scrollWidth-rg.clientWidth)*(relCards.length-1));
+        rd.querySelectorAll('span').forEach(function(s,n){s.classList.toggle('on',n===i)});
+      };
+      rg.addEventListener('scroll',updDots,{passive:true});
+      window.addEventListener('resize',updDots);
+      updDots();
+    }
+
+    /* Explore tabs: swap the visible panel; the row stays put so you never lose your place. */
+    var tabBtns=document.querySelectorAll('.tabbtn');
+    tabBtns.forEach(function(b){
+      b.addEventListener('click',function(){
+        tabBtns.forEach(function(o){o.classList.remove('on')});
+        document.querySelectorAll('.tpanel').forEach(function(p){p.hidden=true});
+        b.classList.add('on');
+        document.getElementById(b.getAttribute('data-panel')).hidden=false;
+      });
+    });
+
+    /* YouTube: clean facade, then real player on demand. Seek without yanking to top. */
+    var player=null, ready=false, apiReady=false, pending=null;
+    window.onYouTubeIframeAPIReady=function(){apiReady=true; if(pending!=null){var s=pending;pending=null;createPlayer(s);}};
+    function createPlayer(sec){
+      var wrap=document.getElementById('player'); wrap.innerHTML='<div id="yt"></div>';
+      player=new YT.Player('yt',{videoId:VIDEO,playerVars:{autoplay:1,rel:0,modestbranding:1,playsinline:1,start:Math.floor(sec||0)},events:{onReady:function(){ready=true;}}});
+    }
+    function nudge(){
+      var p=document.getElementById('player-wrap'), r=p.getBoundingClientRect();
+      if(r.bottom<80 || r.top>window.innerHeight-90){ p.scrollIntoView({behavior:'smooth',block:'start'}); }
+    }
+    function startAt(sec){
+      nudge();
+      if(player&&ready){ player.seekTo(sec,true); player.playVideo(); return; }
+      if(apiReady){ createPlayer(sec); } else { pending=sec; }
+    }
+    document.getElementById('facade').addEventListener('click',function(){startAt(0);});
+    (function(){var s=document.createElement('script');s.src='https://www.youtube.com/iframe_api';document.head.appendChild(s);})();
+  </script>
+</body>
+</html>
