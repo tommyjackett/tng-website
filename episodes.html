@@ -337,7 +337,7 @@
     var counts={};
     EPS.forEach(function(e){
       var seen={};
-      seen[e.topic]=1;
+      if(e.topic) seen[e.topic]=1;   // audio-era eps have topic:null — keep them off the topic chips
       Object.keys(byEp[e.episodeNumber].cover).forEach(function(t){
         if(byEp[e.episodeNumber].cover[t]>=COVER_MIN) seen[t]=1;
       });
