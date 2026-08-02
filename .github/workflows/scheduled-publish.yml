@@ -8,6 +8,12 @@ name: Scheduled episode publish
 # Cron runs at 13:00 and 14:00 UTC daily = midnight in Sydney across AEDT (UTC+11)
 # and AEST (UTC+10). promote.py checks the real Sydney date, so it fires within the
 # midnight hour year-round; the idempotent guard prevents any double-publish.
+#
+# IMPORTANT (why this workflow deploys Pages itself): a commit pushed with the
+# built-in GITHUB_TOKEN does NOT trigger other workflows (GitHub loop-prevention),
+# so the separate `deploy-pages.yml` (on: push) never ran for the bot's commit and
+# EP 288's scheduled listing sat on origin/main without deploying (3 Aug 2026). The
+# `deploy` job below deploys the updated site in-run, so publishing is self-contained.
 
 on:
   schedule:
@@ -20,6 +26,8 @@ on:
 
 permissions:
   contents: write
+  pages: write
+  id-token: write
 
 concurrency:
   group: scheduled-publish
@@ -28,6 +36,8 @@ concurrency:
 jobs:
   promote:
     runs-on: ubuntu-latest
+    outputs:
+      published: ${{ steps.commit.outputs.published }}
     steps:
       - name: Checkout main (the live site + data)
         uses: actions/checkout@v5
@@ -53,6 +63,7 @@ jobs:
         run: python3 _sched_src/_schedule/promote.py
 
       - name: Commit + push if an episode went live
+        id: commit
         run: |
           if [ -n "$(git status --porcelain data/catalogue.json data/search-index.json)" ]; then
             git config user.name "tng-scheduler[bot]"
@@ -60,7 +71,43 @@ jobs:
             git add -- data/catalogue.json data/search-index.json
             git commit -m "Scheduled publish: list due episode(s) in catalogue + search-index"
             git push origin main
-            echo "Published — deploy-pages workflow will now redeploy the site."
+            echo "published=true" >> "$GITHUB_OUTPUT"
+            echo "Published — the deploy job will now redeploy the site."
           else
+            echo "published=false" >> "$GITHUB_OUTPUT"
             echo "Nothing due today; no changes."
           fi
+
+  # Deploy the freshly-listed site. Runs only when the promote job published
+  # something. Self-contained (does NOT rely on deploy-pages.yml's push trigger,
+  # which a GITHUB_TOKEN commit cannot fire). Mirrors deploy-pages.yml exactly.
+  deploy:
+    needs: promote
+    if: needs.promote.outputs.published == 'true'
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    concurrency:
+      group: pages
+      cancel-in-progress: false
+    steps:
+      - name: Checkout main (now updated by promote)
+        uses: actions/checkout@v5
+        with:
+          ref: main
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: .
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+        continue-on-error: true
+      - name: Pause before retry
+        if: steps.deployment.outcome == 'failure'
+        run: sleep 30
+      - name: Deploy to GitHub Pages (retry after transient failure)
+        id: deployment-retry
+        if: steps.deployment.outcome == 'failure'
+        uses: actions/deploy-pages@v4
