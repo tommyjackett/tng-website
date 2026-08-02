@@ -1,0 +1,579 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EP 76 · Making The Move To Electric | The Numbers Game</title>
+<meta name="description" content="Welcome to episode 76 of The Numbers Game. On today&#x27;s show, we chat about the rise of electrical vehicles and the subscription based approach to upgrades.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" sizes="64x64" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="canonical" href="https://thenumbersgamepodcast.com.au/making-the-move-to-electric">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="The Numbers Game">
+<meta property="og:title" content="EP 76 · Making The Move To Electric | The Numbers Game">
+<meta property="og:description" content="Welcome to episode 76 of The Numbers Game. On today&#x27;s show, we chat about the rise of electrical vehicles and the subscription based approach to upgrades.">
+<meta property="og:url" content="https://thenumbersgamepodcast.com.au/making-the-move-to-electric">
+<meta property="og:image" content="https://thenumbersgamepodcast.com.au/assets/tng-audio-only-thumbnail.webp">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+  :root{
+    --purple:#585af3; --purple-dark:#2c1b8a; --mint:#7ad9a8;
+    --white:#ffffff; --muted:rgba(255,255,255,.60); --dim:rgba(255,255,255,.42);
+    --line:rgba(255,255,255,.12); --card:rgba(255,255,255,.05); --card-hi:rgba(255,255,255,.09);
+    --display:'Anton',Impact,'Helvetica Neue',sans-serif;
+    --sans:'Inter',system-ui,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif;
+    --wrap:1280px;   /* page frame (nav spans this) */
+    --col:960px;     /* content column (player, tabs, text) */
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:var(--sans); color:var(--white); line-height:1.6; -webkit-font-smoothing:antialiased;
+    background:#12093a;
+    background-image:
+      radial-gradient(1200px 600px at 82% -6%, rgba(88,90,243,.45) 0%, transparent 55%),
+      radial-gradient(900px 700px at 5% 8%, rgba(122,217,168,.10) 0%, transparent 50%),
+      linear-gradient(180deg,#2c1b8a 0%,#1a1150 28%,#100b34 62%,#0b0820 100%);
+    background-attachment:fixed;
+  }
+  a{color:inherit}
+  .wrap{max-width:var(--wrap);margin:0 auto;padding:0 36px}
+  main.wrap{max-width:var(--col)}
+  @media(max-width:720px){.wrap{padding:0 22px}}
+
+  /* ── Navbar ── */
+  .nav{position:sticky;top:0;z-index:50;background:linear-gradient(180deg,rgba(24,15,74,.92),rgba(24,15,74,.72));backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+  .nav-in{max-width:var(--wrap);margin:0 auto;padding:11px 36px;display:flex;align-items:center;justify-content:space-between}
+  @media(max-width:720px){.nav-in{padding:11px 22px}}
+  .brand{display:block;line-height:0}
+  .brand img{height:36px;width:auto;display:block}
+  .navlinks{display:flex;gap:28px;align-items:center}
+  .navlinks a{text-decoration:none;font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);transition:.15s}
+  .navlinks a:hover{color:var(--white)}
+  .navlinks a.navtop{cursor:default}
+  .navgroup{position:relative;display:flex;align-items:center}
+  .navgroup .subnav{display:none;position:absolute;top:100%;left:50%;transform:translateX(-50%);padding-top:14px;min-width:180px}
+  .navgroup:hover .subnav,.navgroup:focus-within .subnav{display:block}
+  .subnav-in,.navgroup .subnav{z-index:60}
+  .navgroup .subnav a{display:block;background:#180f4a;border:1px solid var(--line);border-top:0;padding:12px 16px;font-size:12px;color:rgba(255,255,255,.85)}
+  .navgroup .subnav a:first-child{border-top:1px solid var(--line)}
+  .navgroup .subnav a:hover{background:#221768;color:var(--white)}
+  .navburger{display:none;background:none;border:1px solid var(--line);padding:8px 10px;cursor:pointer;color:var(--white);transition:.15s}
+  .navburger:hover{border-color:rgba(122,217,168,.6)}
+  .navburger svg{width:20px;height:20px;fill:currentColor;display:block}
+  .navdrop{display:none}
+  @media(max-width:720px){
+    .navlinks{display:none}
+    .navburger{display:block}
+    .navdrop{display:block;position:absolute;left:0;right:0;top:100%;
+      background:#180f4a;border-bottom:1px solid var(--line);box-shadow:0 24px 50px rgba(0,0,0,.45)}
+    .navdrop[hidden]{display:none}
+    .navdrop a{display:block;padding:15px 22px;text-decoration:none;font-size:14px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:rgba(255,255,255,.9);border-bottom:1px solid rgba(255,255,255,.06)}
+    .navdrop a:last-child{border-bottom:0}
+    .navdrop a.sub{padding-left:42px;font-size:13px;color:rgba(255,255,255,.72)}
+    .navdrop .navlabel{display:block;padding:15px 22px 6px;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.4)}
+  }
+
+  /* ── Hero / hook (marker-highlight system: purple hook wraps naturally, mint payoff below)
+     Rules: title splits at its natural break (colon/pipe/question mark). Front = hook (purple,
+     big), back = payoff (mint, smaller). No break in title = purple hook only. Highlights hug
+     the text (tight em padding tuned to Anton) and wrap via box-decoration-break — never
+     hand-pick line breaks or mint words. ── */
+  header.hero{padding:34px 0 6px}
+  .hook{--inx:clamp(8.4px,2.1vw,15.6px)} /* one shared text inset so hook + payoff first letters align */
+  .hook .hk{font-family:var(--display);font-weight:400;text-transform:uppercase;
+    font-size:clamp(28px,7vw,52px);line-height:1.3;letter-spacing:-.5px;text-wrap:balance}
+  .hook .hk span{color:var(--white);padding:.04em var(--inx) .02em;
+    background:linear-gradient(var(--purple),var(--purple)) 0 50%/100% 87% no-repeat;
+    -webkit-box-decoration-break:clone;box-decoration-break:clone}
+  .hook .pay{font-family:var(--display);font-weight:400;text-transform:uppercase;
+    font-size:clamp(16px,4vw,24px);line-height:1.5;letter-spacing:.6px;margin-top:8px;text-wrap:balance}
+  .hook .pay span{color:#0a0a0a;padding:.08em var(--inx) .04em;
+    background:linear-gradient(var(--mint),var(--mint)) 0 50%/100% 88% no-repeat;
+    -webkit-box-decoration-break:clone;box-decoration-break:clone}
+  /* no-hook titles: mid-split into two full-size rows, purple then mint */
+  .hook .hk span.hkrow{display:block;background:none;padding:0}
+  .hook .hk .hkrow+.hkrow{margin-top:8px}
+  .hook .hk span.mintseg{color:#0a0a0a;
+    background:linear-gradient(var(--mint),var(--mint)) 0 50%/100% 87% no-repeat}
+
+  /* ── Player (clean facade → real player on tap) ── */
+  .player-wrap{margin:24px 0 4px;scroll-margin-top:76px}
+  .audio-hero{width:100%;min-height:232px;border-radius:12px;overflow:hidden;box-shadow:0 30px 70px rgba(0,0,0,.5),0 0 0 1px rgba(255,255,255,.06)}
+  .audio-hero iframe{display:block;width:100%;border:0}
+  .player{position:relative;width:100%;padding-top:56.25%;border-radius:0;overflow:hidden;background:#000;box-shadow:0 30px 70px rgba(0,0,0,.5),0 0 0 1px rgba(255,255,255,.06)}
+  .facade{position:absolute;inset:0;border:0;cursor:pointer;background-size:cover;background-position:center;display:flex;align-items:center;justify-content:center;padding:0}
+  .facade .play{width:74px;height:74px;border-radius:50%;background:rgba(10,6,30,.40);border:2px solid rgba(255,255,255,.72);display:flex;align-items:center;justify-content:center;transition:.18s;-webkit-backdrop-filter:blur(1px);backdrop-filter:blur(1px)}
+  .facade:hover .play{background:rgba(88,90,243,.62);transform:scale(1.07);border-color:#fff}
+  .facade .play::after{content:"";border-style:solid;border-width:11px 0 11px 19px;border-color:transparent transparent transparent #fff;margin-left:5px}
+  .player iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+
+  /* ── Episode facts (bottom of the Summary panel — templated per episode) ── */
+  .sumfacts{margin:14px 10px 4px;padding-top:13px;border-top:1px solid rgba(255,255,255,.08);display:flex;flex-direction:column;gap:8px}
+  .fact{display:flex;gap:12px;font-size:13.5px}
+  .fact .fl{flex:none;width:104px;color:var(--dim);font-weight:600;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;padding-top:2px}
+  .fact .fv{color:rgba(255,255,255,.9);font-weight:500}
+  .fact .fv a{color:var(--mint);text-decoration:none;border-bottom:1px solid rgba(122,217,168,.4);transition:.15s}
+  .fact .fv a:hover{border-bottom-color:var(--mint)}
+
+  /* ── Episode tag (identity: black label hanging off the title corner) ── */
+  .eptag{display:inline-block;position:relative;left:-6px;margin-bottom:-7px;z-index:2;
+    background:#0a0a0a;color:var(--white);font-family:var(--display);font-weight:400;
+    font-size:13.5px;letter-spacing:1.5px;text-transform:uppercase;padding:6px 11px 4px}
+
+  /* ── Explore tabs (sticky mode switcher; one panel swaps below, nothing shoves) ── */
+  .explore{margin-top:22px}
+  .tabs{position:sticky;top:58px;z-index:40;display:flex;flex-wrap:wrap;gap:8px;padding:10px 0;
+    background:linear-gradient(180deg,rgba(18,10,55,.96),rgba(18,10,55,.86));
+    backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+  .tabbtn{font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.5px;
+    font-size:14.5px;color:var(--white);background:var(--purple);border:1px solid var(--purple);
+    padding:9px 13px 7px;cursor:pointer;transition:.15s}
+  .tabbtn:hover{filter:brightness(1.12)}
+  .tabbtn.on{background:var(--mint);border-color:var(--mint);color:#0a0a0a}
+  .tabbtn.on:hover{filter:none}
+  .tabbtn .ct{font-size:12px;opacity:.75;font-variant-numeric:tabular-nums}
+  .tabbtn .ct::before{content:" · "}
+  .tpanel{border:1px solid var(--line);background:var(--card);padding:12px 10px 14px}
+  .hint{font-size:12.5px;color:var(--muted);padding:2px 10px 10px;border-bottom:1px solid rgba(255,255,255,.08);margin-bottom:6px}
+
+  /* ── Listen row (no box: label left, service pills follow) ── */
+  .listen{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:12px 16px;margin-top:34px}
+  .listen .lname{font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--dim)}
+  .listen a{display:inline-flex;align-items:center;gap:9px;padding:11px 18px;border-radius:999px;
+    background:var(--mint);color:#08210f;text-decoration:none;font-weight:800;font-size:12.5px;
+    letter-spacing:.04em;text-transform:uppercase;transition:.15s}
+  .listen a:hover{filter:brightness(1.06);transform:translateY(-1px);box-shadow:0 12px 30px rgba(122,217,168,.25)}
+  .listen svg{width:20px;height:20px;fill:currentColor;flex:none}
+  /* ── Listen-now Spotify audio embed (full column width, above the pills) ── */
+  .listen-now{margin-top:40px}
+  .listen-now .ln-head{display:flex;align-items:baseline;justify-content:space-between;gap:14px;margin-bottom:13px}
+  .listen-now .ln-title{font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--dim)}
+  .audio-embed{border-radius:12px;overflow:hidden;box-shadow:0 20px 50px rgba(0,0,0,.4),0 0 0 1px rgba(255,255,255,.06)}
+  .audio-embed iframe{display:block;width:100%;border:0}
+  @media(max-width:720px){.listen-now{margin-top:32px}}
+
+  /* ── Keep exploring (thumbnails link to other episode PAGES, never timecodes).
+     Swipeable strip on mobile, fits three-up on desktop. Variant rule: claim
+     "similar ground" + reason lines ONLY when moment-level topic overlap is
+     genuinely strong; otherwise show the latest released episodes with dates —
+     never invent a connection. ── */
+  .relsec{margin-top:60px;padding-top:58px;border-top:1px solid var(--line)} /* line = end of this episode's info */
+  .reldots{display:flex;justify-content:center;gap:7px;margin-top:12px}
+  .reldots span{width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.25);transition:.2s}
+  .reldots span.on{background:var(--mint)}
+  .relsec .rtitle{display:inline-block;font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.5px;font-size:14.5px;background:var(--mint);color:#0a0a0a;padding:9px 13px 7px;margin-bottom:18px}
+  .relgrid{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding-bottom:6px;scrollbar-width:none}
+  .relgrid::-webkit-scrollbar{display:none}
+  .relcard{flex:0 0 56%;max-width:232px;scroll-snap-align:start;display:flex;flex-direction:column;text-decoration:none;background:var(--card);border:1px solid var(--line);transition:.15s}
+  .relcard:hover{background:var(--card-hi);border-color:rgba(122,217,168,.55)}
+  .relcard img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block}
+  .relcard .rt{display:block;font-size:12.5px;font-weight:600;color:rgba(255,255,255,.92);line-height:1.4;padding:8px 8px 0}
+  .relcard .rfoot{margin-top:auto;display:flex;justify-content:space-between;align-items:flex-end;gap:8px;padding:10px 8px 9px}
+  .relcard .rwhy{font-size:11.5px;color:var(--mint)}
+  .relcard .rtag{display:inline-block;background:#0a0a0a;color:var(--white);font-family:var(--display);font-size:10px;letter-spacing:1.2px;text-transform:uppercase;padding:3px 7px 2px;white-space:nowrap;flex:0 0 auto}
+
+  /* ── Dropdown sections (accordion under the player) ── */
+  .drops{margin-top:34px;display:flex;flex-direction:column;gap:11px}
+  .drop{border:1px solid var(--line);border-radius:0;background:var(--card);overflow:hidden;transition:border-color .15s}
+  .drop[open]{border-color:rgba(122,217,168,.35)}
+  .drop>summary{list-style:none;cursor:pointer;padding:16px 18px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+  .drop>summary::-webkit-details-marker{display:none}
+  .drop>summary .st{font-weight:700;font-size:15.5px;letter-spacing:.005em}
+  .drop>summary .ct{margin-left:auto;font-size:12px;color:var(--dim);font-weight:600;font-variant-numeric:tabular-nums}
+  .drop>summary .chev{flex:none;width:22px;height:22px;border-radius:50%;background:rgba(122,217,168,.14);color:var(--mint);display:flex;align-items:center;justify-content:center;font-family:var(--display);font-size:15px;line-height:1;transition:.2s;transform:translateY(-1px)}
+  .drop[open]>summary .chev{transform:rotate(45deg)}
+  .drop-body{padding:2px 12px 12px}
+
+  /* chapters */
+  .chapter{display:flex;align-items:baseline;gap:14px;width:100%;text-align:left;cursor:pointer;background:none;border:0;color:inherit;font-family:inherit;padding:11px 10px;border-radius:10px;transition:.13s}
+  .chapter:hover{background:var(--card-hi)}
+  .chapter .tc{font-variant-numeric:tabular-nums;font-weight:700;font-size:14px;color:var(--mint);flex:none;width:48px}
+  .chapter .cx{font-size:15px;font-weight:500;color:rgba(255,255,255,.9)}
+  .chapter:hover .cx{color:#fff}
+
+  /* questions */
+  .q{display:flex;align-items:center;gap:12px;width:100%;text-align:left;cursor:pointer;background:none;border:0;border-radius:11px;color:inherit;font-family:inherit;padding:12px 10px;transition:.14s}
+  .q+.q{border-top:1px solid rgba(255,255,255,.05)}
+  .q:hover{background:var(--card-hi)}
+  .q .qm{font-family:var(--display);font-size:15px;color:var(--mint);flex:none;line-height:1;transform:translateY(1px)}
+  .q .qx{font-size:15px;font-weight:500;color:rgba(255,255,255,.92)}
+  .q .go{margin-left:auto;flex:none;color:var(--dim);font-size:18px;transition:.15s}
+  .q:hover .go{color:var(--mint);transform:translateX(2px)}
+
+  /* summary + transcript bodies */
+  .summary-body p{font-size:16.5px;line-height:1.62;color:rgba(255,255,255,.9);padding:6px 10px 4px}
+  .tbody{padding:2px 10px 8px}
+  .tbody p{font-size:14.5px;line-height:1.7;color:rgba(255,255,255,.78);margin-top:15px;max-width:64ch}
+  .tbody .spk{display:block;font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--mint);margin-bottom:2px}
+
+  /* ── Voice note ask (lives at the bottom of the Summary panel) ── */
+  .vask{margin:16px 10px 4px}
+  .vbtn{display:inline-flex;align-items:center;gap:9px;padding:12px 20px;border-radius:999px;border:0;cursor:pointer;
+    background:var(--mint);color:#08210f;font-family:inherit;font-weight:800;font-size:12.5px;
+    letter-spacing:.04em;text-transform:uppercase;transition:.15s}
+  .vbtn:hover{filter:brightness(1.06);transform:translateY(-1px);box-shadow:0 12px 30px rgba(122,217,168,.25)}
+  .vbtn svg{width:18px;height:18px;fill:currentColor;flex:none}
+  .vslot{background:var(--purple);padding:12px 10px 10px;margin:14px 0 4px;box-shadow:0 18px 40px rgba(0,0,0,.35)}
+  .vslot[hidden]{display:none}
+  .vhead{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;margin-bottom:10px}
+  .vhead .vmsg{font-family:var(--sans);font-size:13px;line-height:1.55;color:rgba(255,255,255,.92);margin:2px 0 0;padding:0 2px}
+  .vclose{background:none;border:0;color:rgba(255,255,255,.85);font-size:22px;line-height:1;cursor:pointer;padding:0 2px}
+  .vclose:hover{color:var(--white)}
+  .vslot iframe{display:block}
+
+  /* ── YouTube subscribe pill (sits in the listen row; outranks .listen a's mint) ── */
+  .listen a.yt-pill{background:var(--purple);color:var(--white)}
+  .listen a.yt-pill:hover{filter:brightness(1.1);transform:translateY(-1px)}
+  @media(max-width:720px){ /* mobile: no label, three compact pills on one row */
+    .listen .lname{display:none}
+    .listen{gap:8px}
+    .listen a{padding:10px 13px;font-size:11px;gap:6px}
+    .listen svg{width:16px;height:16px}
+  }
+
+  /* ── Footer: two columns under the line (Brought to you by | Produced by), matches adventure.html ── */
+  footer{border-top:1px solid var(--line);margin-top:68px;padding:52px 20px 58px}
+  .footgrid{max-width:var(--wrap);margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:start}
+  @media(max-width:720px){.footgrid{grid-template-columns:1fr;gap:40px}}
+  .fcol{text-align:center}
+  .foot-label{font-size:11px;font-weight:700;letter-spacing:.26em;text-transform:uppercase;color:var(--dim);margin-bottom:16px}
+  .sponsors{display:flex;justify-content:center;align-items:center;gap:38px;flex-wrap:wrap}
+  .sponsors a{display:inline-flex;transition:.15s}
+  .sponsors a:hover{transform:translateY(-1px)}
+  .sponsors img{height:34px;width:auto;opacity:.92}
+  .sponsors a:hover img{opacity:1}
+  .produced a{display:inline-flex;transition:.15s}
+  .produced a:hover img{opacity:1}
+  .produced img{height:30px;width:auto;opacity:.95}
+  .footnav{margin-top:36px;display:flex;justify-content:center;flex-wrap:wrap;gap:6px 26px}
+  .footnav a{font-size:12px;font-weight:600;letter-spacing:.04em;color:var(--dim);text-decoration:none;transition:.15s}
+  .footnav a:hover{color:var(--mint)}
+  .copyright{margin-top:40px;font-size:12px;color:var(--dim);text-align:center}
+
+  @media(min-width:720px){header.hero{padding:48px 0 6px}}
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "PodcastEpisode", "name": "Buying Commercial Property With Your Super in 2026 | What the Numbers Say", "url": "https://thenumbersgamepodcast.com.au/episode-285.html", "datePublished": "2026-07-13", "episodeNumber": 285, "image": "https://i.ytimg.com/vi/RAQ80ecsDq0/maxresdefault.jpg", "partOfSeries": {"@type": "PodcastSeries", "name": "The Numbers Game", "url": "https://thenumbersgamepodcast.com.au/"}}</script>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-in">
+      <a class="brand" href="index.html" aria-label="The Numbers Game home"><img src="assets/tng-logo.png" alt="The Numbers Game"></a>
+      <div class="navlinks">
+        <a href="index.html">Home</a>
+        <div class="navgroup">
+          <a class="navtop">Episodes</a>
+          <div class="subnav">
+            <a href="episodes.html">All episodes</a>
+            <a href="adventure.html">Find moments</a>
+          </div>
+        </div>
+        <div class="navgroup">
+          <a class="navtop">About</a>
+          <div class="subnav">
+            <a href="about.html">The show</a>
+            <a href="nick-reilly.html">Nick Reilly</a>
+            <a href="jason-robinson.html">Jason Robinson</a>
+          </div>
+        </div>
+        <a href="contact.html">Contact</a>
+      </div>
+      <button class="navburger" id="navburger" type="button" aria-label="Menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24"><path d="M3 6h18v2H3zM3 11h18v2H3zM3 16h18v2H3z"/></svg>
+      </button>
+    </div>
+    <div class="navdrop" id="navdrop" hidden>
+      <a href="index.html">Home</a>
+      <span class="navlabel">Episodes</span>
+      <a class="sub" href="episodes.html">All episodes</a>
+      <a class="sub" href="adventure.html">Find moments</a>
+      <span class="navlabel">About</span>
+      <a class="sub" href="about.html">The show</a>
+      <a class="sub" href="nick-reilly.html">Nick Reilly</a>
+      <a class="sub" href="jason-robinson.html">Jason Robinson</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+
+  <main class="wrap">
+
+    <header class="hero">
+      <div class="hook">
+        <span class="eptag">EP 76</span>
+        <h1 class="hk"><span>Making The Move To Electric</span></h1>
+      </div>
+    </header>
+
+    <div class="player-wrap" id="player-wrap">
+      <div class="audio-hero" id="spotify-embed"></div>
+    </div>
+
+    <div class="explore">
+      <div class="tabs" role="tablist">
+        <button class="tabbtn on" data-panel="p-summary">Summary</button>
+      </div>
+      <section class="tpanel" id="p-summary">
+        <div class="summary-body">
+          <p>Welcome to episode 76 of The Numbers Game. On today&#x27;s show, we chat about the rise of electrical vehicles and the subscription based approach to upgrades.</p>
+        </div>
+        <div class="vask">
+          <button class="vbtn" id="vbtn" type="button">
+            <svg viewBox="0 0 24 24"><path d="M12 14a3 3 0 0 0 3-3V6a3 3 0 1 0-6 0v5a3 3 0 0 0 3 3zm5-3a5 5 0 0 1-10 0H5a7 7 0 0 0 6 6.92V21h2v-3.08A7 7 0 0 0 19 11h-2z"/></svg>
+            Send us a voice note
+          </button>
+          <div class="vslot" id="vslot" hidden>
+            <div class="vhead">
+              <p class="vmsg">We'd love to hear from you. You can leave up to a 90 second voice note for us to play on the show: a question, some feedback, or a topic you want covered.</p>
+              <button class="vclose" id="vclose" type="button" aria-label="Close">&times;</button>
+            </div>
+            <iframe src="https://www.speakpipe.com/widget/inline/hhq6kzggsx7zpcsvakgxfrzun3zidpde" allow="microphone" width="100%" height="200" frameborder="0" title="Leave The Numbers Game a voice note"></iframe>
+          </div>
+          <script async src="https://www.speakpipe.com/widget/loader.js" charset="utf-8"></script>
+        </div>
+        <div class="sumfacts">
+          <div class="fact"><span class="fl">Release date</span><span class="fv">14 November 2022</span></div>
+          <div class="fact"><span class="fl">Hosts</span><span class="fv"><a href="jason-robinson.html">Jason Robinson</a> &amp; <a href="nick-reilly.html">Nick Reilly</a> &amp; <a href="marty-vidakovic.html">Marty Vidakovic</a></span></div>
+
+        </div>
+      </section>
+    </div>
+
+    <div class="drops">
+
+      <details class="drop">
+        <summary><span class="st">Episode transcript</span><span class="chev">+</span></summary>
+        <div class="drop-body tbody">
+          <p><span class="spk">Jason · 00:00</span>Welcome to episode 76 of The Numbers Game. It&#x27;s Jase, Nick, and Marty. Ready for another episode? How we going, boys?</p>
+          <p><span class="spk">Marty · 00:06</span>Going brilliantly, Jase. Very, very excited about this episode. There&#x27;s going to be a bit of speed, a bit of energy. I&#x27;m not going to give it away, but I&#x27;m pumped up. Nick, how are you going, my friend?</p>
+          <p><span class="spk">Nick · 00:18</span>Yeah, pumped up, pumped up as well, Marty. And yeah, really looking forward to this actually. It&#x27;s just Just, yeah, this is just an example of the ever-changing world that we live in. And, you know, for someone my age, you know, pushing 40, I&#x27;m actually starting to see significant change in things that are different to what I know.</p>
+          <p><span class="spk">Nick · 00:41</span>And yeah, I don&#x27;t think that was the case sort of 5 or 10 years ago. So keen to have a bit of a chat about vehicles today. Sorry, Jase. How are you going, mate?</p>
+          <p><span class="spk">Jason · 00:52</span>No, no, I&#x27;m good, mate. I&#x27;m good. It&#x27;s, um, look, we— Nick, uh, Marty and I threw the challenge to you. We said, uh, we, you know, reading the play coming up, it&#x27;s, uh, episode 76, it&#x27;s week 5 of the new season. We&#x27;re kind of in the middle of our, you know, we usually run in 10-week blocks, and we, we threw the challenge to you to find us something interesting.</p>
+          <p><span class="spk">Jason · 01:11</span>You, you had the Michelin star episode, uh, by the Michelin tires, and we thought, you know, let&#x27;s throw it to you to find something interesting to our listeners. And I don&#x27;t know whether you just Googled, you know, something to do with cars that&#x27;s interesting after the Michelin tire thing. But, you know, I&#x27;m excited.</p>
+          <p><span class="spk">Jason · 01:27</span>I&#x27;ve seen some of the show notes and I&#x27;m— yeah, I think our listeners are gonna have a blast. What have you got for us?</p>
+          <p><span class="spk">Nick · 01:33</span>Firstly, I&#x27;ll just say that the whole electric car phase, it&#x27;s not a phase, obviously. It&#x27;s something that&#x27;s coming. You know, I feel like it&#x27;s been creeping up, creeping up, and then I feel like it&#x27;s just gone whack and it&#x27;s here.</p>
+          <p><span class="spk">Nick · 01:49</span>And I know we had Tesla, we&#x27;ve had Tesla for quite some time, but I just feel like the last 6 months I&#x27;m starting to see electric cars, like I think it&#x27;s Haval is a brand that I&#x27;m starting to—</p>
+          <p><span class="spk">Jason · 02:05</span>Polestar, a few.</p>
+          <p><span class="spk">Nick · 02:07</span>Yeah, and I&#x27;m just starting to see them. And the only cars I used to see were Tesla. Spring Carnival has just been on and Lexus are the main major sponsor there. So we&#x27;ve got fed a lot of Lexus ads and it was all around electric cars.</p>
+          <p><span class="spk">Nick · 02:23</span>You know, some of the bigger, some of the expensive brands like Porsche are now coming out. So I don&#x27;t know what you guys are finding, but I just feel the last few months I&#x27;m seeing them on the road outside of Tesla and there&#x27;s just more and more about it.</p>
+          <p><span class="spk">Nick · 02:39</span>And it seems like it&#x27;s been creeping, creeping, and all of a sudden it&#x27;s just here. So yeah, have you guys found this similar sort of or had a similar experience?</p>
+          <p><span class="spk">Marty · 02:49</span>Yeah, I&#x27;ve certainly, I&#x27;ve done some reading on this a few months back and like a lot of these brands recognize how strong they are as brands and they&#x27;re sort of even looking at their cash flows, they&#x27;re willing to lose a little bit of money in order to be very vibrant in this space up until 2030 where it&#x27;ll become just mainstream.</p>
+          <p><span class="spk">Marty · 03:10</span>So again, we talk about Tesla being the front runner, which is tremendous, but these organisations have got big brands behind them and well-established brands. They&#x27;re going to come and they&#x27;re going to come hard ultimately. So yeah, but we&#x27;re hearing more and more about it.</p>
+          <p><span class="spk">Marty · 03:27</span>Jase, what about yourself?</p>
+          <p><span class="spk">Jason · 03:29</span>Yeah, definitely. Look, I&#x27;ve got a snapshot of a pretty broad market of people that are my clients. We&#x27;ve got 3,800 or so clients between companies, trusts, individuals. And I think that gives me a bit of a snapshot of a market spread of what people are doing.</p>
+          <p><span class="spk">Jason · 03:44</span>And the upward trend in people reaching out saying, I need vehicle finance for an electric vehicle, or I&#x27;m going through this process of getting a Tesla, or I&#x27;m looking for this. So all of a sudden, like you, Nick, there wasn&#x27;t a lot of action. There was probably like, um, 1 in 200 or 300.</p>
+          <p><span class="spk">Jason · 04:02</span>Now all of a sudden it&#x27;s increasing. There&#x27;s more and more, almost to the point where it&#x27;s almost a weekly— somebody touching base weekly saying, hey, I&#x27;m thinking about getting an electric car, what are your thoughts? And as an accountant, um, As an accounting firm of advisors and sounding boards for our clients, quite often they&#x27;ll reach out to us and say, what do you think?</p>
+          <p><span class="spk">Jason · 04:21</span>Should I do this? Is it a good idea? What have you seen with the values of the cars? Or is there any tax incentives or benefits that I can get? You know, so things like that. And there is, I mean, not to steal the show of make this about tax again, but there&#x27;s fringe benefits tax, um, off— basically, uh, what&#x27;s offsets incentives to say that, you know, if you&#x27;re providing an electric vehicle to employees there&#x27;s better tax incentives than there is of providing a petrol vehicle, for example.</p>
+          <p><span class="spk">Jason · 04:47</span>Things like that that are coming into play. And then also when it comes to luxury vehicle taxes and things like that. So there is definitely some upside to making the switch to an electric over petrol. And I mean, you only need to watch The Block to see the rise in electric now.</p>
+          <p><span class="spk">Jason · 05:03</span>I mean, every second episode was banging on about Red Earth electric energy storage for your solar panels and your car chargers and whatnot. So It&#x27;s coming. And even on the road, as you said, Nick, you&#x27;re driving along now and they&#x27;re starting to jump out at you. There&#x27;s more and more Teslas and then there&#x27;s different, you know, even if it&#x27;s your mainstream brands, your Volvos, your BMWs, all these ones are starting to come out.</p>
+          <p><span class="spk">Jason · 05:23</span>Clients— the client got a Porsche, one of those Porsche electric things. It&#x27;s bloody magnificent looking and fast apparently. So, yeah, bring it on. I mean, think about how fast things change when it would have been like in what, 2010, 2011, 2012, nobody had iPhones.</p>
+          <p><span class="spk">Jason · 05:41</span>They didn&#x27;t exist. And the first iPhone came out, and how, like, you know, a few people went, oh, I don&#x27;t know about that. Apple make computers, why would I get a phone from them? I love my Nokia 3310, or whatever it was, a RAZR at the time. And then how fast did it go from everybody jump ship and had Apples or Samsungs?</p>
+          <p><span class="spk">Jason · 05:58</span>At the moment, you&#x27;ve got a lot of people that are driving diesels or petrols going, no way will I own an electric car. I&#x27;m never going to own an electric car because I can&#x27;t get from here to here on one charge. It&#x27;s going to come a time in the next little while when all of a sudden more than half, you know, more than half of us are going to end up with electric vehicles because it&#x27;s just going to be the way of the future.</p>
+          <p><span class="spk">Marty · 06:19</span>Well, here&#x27;s something for Elon. Put a little solar panel on the top of your car, then we don&#x27;t have to worry about charging up because that costs 60% more now anyway. So, you know, I&#x27;m sure something like that will come out, right? And you&#x27;ll go, it&#x27;s just a no-brainer. So, but let&#x27;s, we&#x27;ve stolen all your thunder here, Nick.</p>
+          <p><span class="spk">Marty · 06:38</span>You&#x27;ve got a lot more to give us here.</p>
+          <p><span class="spk">Nick · 06:40</span>Well, no, there&#x27;s just one other main thing I wanna talk about. And Jase, to your point, I think you&#x27;re right. I think, look, I&#x27;m the proud driver of a diesel car, but I know it&#x27;s probably the last one I&#x27;m gonna have.</p>
+          <p><span class="spk">Marty · 06:51</span>Same here.</p>
+          <p><span class="spk">Nick · 06:52</span>You know, it&#x27;ll be electric and there&#x27;ll be a way that you can get from here to Sydney and back on one charge. That&#x27;s just a matter of time.</p>
+          <p><span class="spk">Jason · 07:02</span>So.</p>
+          <p><span class="spk">Nick · 07:02</span>Yeah.</p>
+          <p><span class="spk">Marty · 07:02</span>You were saying Nick too, Nick, in regards to how times have changed now, 40. Now that I&#x27;m 50, like, yeah, we used to have gear sticks and, you know, it&#x27;s like, and then in another 10 years we&#x27;ll be sitting in the back of this damn thing doing work. It&#x27;ll drive itself.</p>
+          <p><span class="spk">Jason · 07:19</span>You didn&#x27;t have the crank, the crankshaft thing. Did you have to wind it?</p>
+          <p><span class="spk">Marty · 07:22</span>Did I ever. Did I ever. I was a master on that.</p>
+          <p><span class="spk">Nick · 07:25</span>Well, no, just go back to the cars.</p>
+          <p><span class="spk">Jason · 07:27</span>Statistically though, just as a snapshot, I think all 3 of us just basically highlighted that we&#x27;re thinking our next car will be electric. Between— and that&#x27;s 3 out of 3 right here.</p>
+          <p><span class="spk">Marty · 07:36</span>I agree.</p>
+          <p><span class="spk">Jason · 07:37</span>Um, you know, Kase and I have sat there going, oh, what should it be? I mean, she&#x27;s kind of going, yeah, I want an electric car. And I never thought she&#x27;d be a convert for that. And Nick, you as well. I thought there&#x27;s no chance you&#x27;d have those words come out of your mouth, but here we are.</p>
+          <p><span class="spk">Nick · 07:50</span>I think it&#x27;ll be a dual, a dual, but, um, yeah, or a hybrid. But, uh, but yeah, it&#x27;s just the reality. Um, I always imagined you in a Prius.</p>
+          <p><span class="spk">Jason · 08:01</span>Always pictured you in a Prius.</p>
+          <p><span class="spk">Nick · 08:04</span>Well, it depends. If Prius lift their game, there might be a chance.</p>
+          <p><span class="spk">Marty · 08:09</span>What do you see me in, Jase?</p>
+          <p><span class="spk">Jason · 08:11</span>Oh, MG. One of those MG things.</p>
+          <p><span class="spk">Marty · 08:14</span>Jeez, thank you. I like that.</p>
+          <p><span class="spk">Nick · 08:17</span>All right, Nick, give it to us. So what this— obviously electric cars and what&#x27;s driving electric cars is tech and much better tech. And if you get in the electric cars now, particularly the Teslas, you&#x27;ll see they&#x27;ve just got a one big computer screen and, um, you know, you can get the software updated.</p>
+          <p><span class="spk">Nick · 08:35</span>And what that software does is gives your car, um, different options. But this, um, this actually come up talking to my— one of my neighbors who works at Mercedes, and he brought this stuff with me about 6 months ago. And then I&#x27;ve since seen BMW introduce a similar thing.</p>
+          <p><span class="spk">Nick · 08:53</span>But, um, it&#x27;s basically being able to option your car up. So, you know, things like 360 parking cameras, heated seats, Apple CarPlay, heated steering wheels, all the things that we usually pay for as options when we buy a car.</p>
+          <p><span class="spk">Nick · 09:11</span>You will now be able to subscribe to those options via an app. So if you&#x27;re driving a BMW, and I&#x27;m not sure exactly what it&#x27;s going to look like as far as the options, but here&#x27;s a really easy example. If you&#x27;re driving a BMW, you will drive a— you will buy a BMW that&#x27;s the base model And then if you want heated seats, you&#x27;ll be able to jump on a BMW application and subscribe to those heated seats at a monthly or a, or an annual cost.</p>
+          <p><span class="spk">Nick · 09:41</span>If you want Apple CarPlay, which isn&#x27;t standard in a lot of cars, you&#x27;ll be able to subscribe to that and pay an annual or a monthly fee to do that. So I actually think it&#x27;s really clever, and I think it&#x27;s really clever for a few reasons. Most people are saying it&#x27;s going to be a rip-off because the, the manufacturer is still giving the car the ability to have those options.</p>
+          <p><span class="spk">Nick · 10:05</span>So the price of the car is still going to need to be at the same level because the manufacturer is giving the car the ability to have those options. So it&#x27;s still going to cost the same amount to manufacture the car, but then you&#x27;ve got to pay for the subscriptions on top. The manufacturer is saying no, that&#x27;s not the case, because when you are adding those options manually or whatever it looks like, you are increasing the manufacturing cost.</p>
+          <p><span class="spk">Nick · 10:29</span>So this is actually going to reduce the manufacturing cost and reduce the cost of the car. The other thing is it means that if you sell the car, you can sell it to someone else who may want different options than you. So let&#x27;s say you hold a car for 2 or 3 years, you&#x27;d like to sell it.</p>
+          <p><span class="spk">Nick · 10:47</span>Someone&#x27;s want— is looking for a car with heated seats or a heated steering wheel, they will have the ability to switch those on in if you haven&#x27;t had them switched on. I actually really like it. I think it&#x27;s an awesome idea because one of the frustrating things when you buy, if you&#x27;re buying a luxury car or something like a Land Rover or a Mercedes, some of the frust— one of the biggest frustrations, and I&#x27;ve driven one of these cars before, is they&#x27;ve got all these options that</p>
+          <p><span class="spk">Nick · 11:17</span>you&#x27;re not interested in, and it completely jacks up the price of the car. Now for me, I don&#x27;t care about heated seats because it&#x27;s only going to be cold for, you know, for 1 minute. And I don&#x27;t care about a heated steering wheel because not once have I ever gotten the car and gone, Jesus, steering was cold.</p>
+          <p><span class="spk">Nick · 11:33</span>So the fact that it increases the price of these luxury cars for options that I think are just not needed, it&#x27;ll bring that— hypothetically, it&#x27;ll bring the price or the base price of the car down, which means you can drive a nice car and choose how you would like to option it up.</p>
+          <p><span class="spk">Nick · 11:50</span>And then I&#x27;m assuming you can, you can change that. So, you know, if, if you need to tighten the budget up, maybe you drop the heated seats on the car, or maybe you drop the Apple CarPlay. So I think it&#x27;s a really cool idea. As I said, Mercedes and BMW are the ones that I know are coming out with it.</p>
+          <p><span class="spk">Nick · 12:08</span>Um, no doubt they will all follow. Um, and yeah, you, you just think about Tesla. Tesla&#x27;s kind of already doing that. You can go in and get a software upgrade and it gives your car different options or whatnot, or makes your car quicker. So yeah, I think it&#x27;s cool.</p>
+          <p><span class="spk">Nick · 12:24</span>Marty, what do you think? I know you&#x27;re, you&#x27;re a man of luxury, so you&#x27;re in the, you&#x27;re in the Prado, you&#x27;ve got the heated seats, you&#x27;ve, you&#x27;ve got the 360 camera angles. So you still see marks on your car, but maybe you need 720.</p>
+          <p><span class="spk">Marty · 12:40</span>I&#x27;m not sure, but I think I need airbags on the front of the car the way I&#x27;m going at the moment. But look, I really, I&#x27;m interested in the concept because I like, from a manufacturer&#x27;s point of view, like they&#x27;re still making 20% off the servicing of the car, right?</p>
+          <p><span class="spk">Marty · 12:55</span>So, and we are in a streaming environment with what we do with Netflix and gym memberships and everything. I think for me, if I&#x27;m looking at a premium brand, I would probably want it packaged as a yearly fee.</p>
+          <p><span class="spk">Marty · 13:10</span>Like, like, And I&#x27;m just throwing an example up there, like $990 per annum for those additional luxuries that I&#x27;m taking on. And I get the nimbleness of changing them as you need them, but I just feel like it would drive me crazy monitoring, you know, 5 or 6 different components on streaming within the car.</p>
+          <p><span class="spk">Marty · 13:32</span>Like, I think that would agitate myself. But if I had a one-off fee and I was buying a premium brand, and I go for all those luxuries, it&#x27;s $990 a year. And yes, I could pay that monthly. I would probably take that out if I still had a chance to diminish all those luxuries from month to month.</p>
+          <p><span class="spk">Marty · 13:50</span>So if need be. So that would be the only thing I would, yeah, I would say in the way I think about it. So yeah, Jase.</p>
+          <p><span class="spk">Jason · 14:02</span>Yeah, look, I originally was thinking, geez, that&#x27;s crazy. Like, you know, They&#x27;re going to install rear seat heaters or full, like, heated seats, but then there&#x27;s a chance I buy the car and never turn on the subscription. So, that&#x27;s a sunk cost. They&#x27;ve lost the money of putting the seat heaters in and I&#x27;m never going to pay a subscription for it.</p>
+          <p><span class="spk">Jason · 14:21</span>But doing a bit of the research and looking into it, I guess when you think about a construction or an assembly line, like, imagine every single car that comes through has little different tweaks and upgraded seat heater, 360 parking cameras, you know, all these different bits and pieces that are optional upgrades.</p>
+          <p><span class="spk">Jason · 14:40</span>And every time you&#x27;ve got to stop, start, put that in, don&#x27;t put that in, oops, we made a mistake there, got to change it. That&#x27;s costing money to the car manufacturer on the assembly line. If you&#x27;re just banging every single car has everything in it, and then it&#x27;s going to bring the cost of the car down because you&#x27;re not making mistakes.</p>
+          <p><span class="spk">Jason · 14:57</span>It seems crazy, but that&#x27;s then actually how it works. And then, look, I think Tesla were probably the pioneers of this. They&#x27;ve done this for many, many years. And I think when it first came out, people were thinking, what the hell, I&#x27;ve got to pay for, for an upgrade? But it was the option, you know. They&#x27;ve capped the battery output at 60 kilowatts, and it might give you acceleration of 0 to 100 in 7 seconds, but if you want to go 0 to 100 in 4 seconds, you can upgrade and pay extra to release that battery capacity.</p>
+          <p><span class="spk">Jason · 15:26</span>Great, cool. But you didn&#x27;t have to decide in the car showroom. You get to decide later on an app what you want to upgrade. You want the rear heated seats during winter because in Melbourne, it was 6 degrees. Well, even in November it&#x27;s 6 degrees, you— and you&#x27;ve got passengers jumping in the back, upgrade to have rear heated seats for the month while your mates are over from overseas and they want rear heated seats.</p>
+          <p><span class="spk">Jason · 15:47</span>So, it&#x27;s pretty flexible. And not to get completely off topic, but the idea of subscriptions and add-ons, you know, this is only going to become more and more prevalent across different things. You know, Netflix came out and have said they&#x27;re going to add ads and reduce your subscription costs.</p>
+          <p><span class="spk">Jason · 16:04</span>So, you can pay less on your subscription if you want ads and different things like that. So look, cars are going to get into that space now. And, and I guess the challenge for, for people out there is, you know, you know, the thought process is what can you turn into a subscription? I mean, I think of everything as an opportunity, but the car market&#x27;s doing it and it&#x27;s going to be an interesting space to watch.</p>
+          <p><span class="spk">Marty · 16:23</span>Well, you&#x27;re right. You&#x27;re right with Netflix. Their share price has jumped up significantly since the $6.99 offer with advertising on it because they&#x27;ve created a wider market through it. So it&#x27;s good evidence again that it works.</p>
+          <p><span class="spk">Marty · 16:39</span>But I definitely feel like if there was a premium pack, if I was getting the car cheaper, if there was a premium package at $990 a year and maybe a basic package at $440, for me it&#x27;s just the functionality around having to think about what I want from month to month based on circumstance.</p>
+          <p><span class="spk">Marty · 16:57</span>But that&#x27;s just me personally. I think probably the younger generation coming through would actually enjoy that optimization of that. So you&#x27;ve got to look at where the market&#x27;s at as well. So, but for me, it&#x27;s simplicity. Like we&#x27;ve always talked about, you know, the ease of going, if I&#x27;m buying a premium car, I&#x27;m getting it cheaper, then I&#x27;m going to want some of the niceties to it too, right?</p>
+          <p><span class="spk">Marty · 17:18</span>So I would definitely take that on, on an annual subscription paid monthly. Yeah, definitely.</p>
+          <p><span class="spk">Nick · 17:24</span>And I think what this does is it gives you the ability to tailor the car to you, even if you&#x27;re a second secondhand owner. And to Jase&#x27;s point around the manufacturing, if you&#x27;ve ever bought a new car, you go in there and there&#x27;s all the options listed and you basically tick what you want.</p>
+          <p><span class="spk">Nick · 17:40</span>So from a manufacturing point of view, that would be a nightmare because you&#x27;ve got one car coming in with 8 options, then the next car comes in and it needs 12 options. So there&#x27;d be a lot of cost, um, in, in navigating through that. For yourself, Marty, you can choose the options that you want.</p>
+          <p><span class="spk">Nick · 17:58</span>And it might not be a, you know, a bronze, silver, gold package. There might be something in between based on your unique, um, your, you know, your uniqueness or my uniqueness. And I just really— where it resonates with me, because I don&#x27;t usually buy new cars.</p>
+          <p><span class="spk">Nick · 18:13</span>For me, I think you&#x27;re far better off to let someone else pay the premium of a new car, but to then be able to buy it a year or two later and then had the options that I would have added if I had bought it brand new is huge. And yeah, I just think it&#x27;s a great concept.</p>
+          <p><span class="spk">Jason · 18:28</span>I also like the idea if you&#x27;re an Uber driver or Didi or, you know, whatever ride sharing or even taxis, whatever they&#x27;re doing these days, but having Wi-Fi in the car. I mean, there&#x27;s times where people can&#x27;t connect, you know, you&#x27;re somewhere, you&#x27;re maybe an international traveler.</p>
+          <p><span class="spk">Jason · 18:46</span>I remember getting Ubers over in LA and just thinking, shit, like I&#x27;m burning through some serious data charges here because I didn&#x27;t have an international international SIM. But I&#x27;ve seen that as one of the options, being able to add Wi-Fi. So, if the Wi-Fi is already built in, not everybody&#x27;s going to turn it on, but those rideshare drivers might turn on Wi-Fi.</p>
+          <p><span class="spk">Jason · 19:05</span>You get to the Melbourne airport, you pick up an international tourist that&#x27;s just landed, they need to connect their phone when they jump in. You might be paying a couple of dollars a month for it, but you might have the ability to charge more from your ridesharing for giving the ability to access Wi-Fi.</p>
+          <p><span class="spk">Jason · 19:20</span>So, things like that. It&#x27;s going to be smart. I see it, you know, as a pretty interesting one and You know, definitely, definitely a space to watch. But I mean, yeah, I mean, it&#x27;ll be interesting to look back at this episode in 5 years when we&#x27;re all paying subscriptions for our cars and go, geez, remember when we were unsure about that?</p>
+          <p><span class="spk">Jason · 19:36</span>And Marty&#x27;s on the premium platinum package.</p>
+          <p><span class="spk">Marty · 19:39</span>I can&#x27;t wait till they&#x27;re self-driving because I&#x27;m going to save so much in costs on the dents. So I&#x27;m really looking forward to that time. And the Wi-Fi is a great idea just to step into your car and do work in the back seat. While you&#x27;re watching the cricket. I think that&#x27;s fantastic.</p>
+          <p><span class="spk">Marty · 19:55</span>So I hope you&#x27;ve enjoyed this episode of The Numbers Game. Please also share, share The Numbers Game with your friends. We want to sort of educate people financially and in business and just share it with a friend, family member and get us out there because I think the more people we can help and we can create that financial literacy around finance as a accounting and business, people are going to be better off.</p>
+          <p><span class="spk">Marty · 20:20</span>So thank you, lads, for today. And until next time, drive safely and game over.</p>
+        </div>
+      </details>
+
+    </div>
+
+    <!-- audio-only: the Spotify player is the hero above; duplicate embed removed -->
+
+    <div class="listen">
+      <a href="https://open.spotify.com/episode/78k4JeUZ96kec4QH6qLsMA" target="_blank" rel="noopener" aria-label="Listen to this episode on Spotify">
+        <svg viewBox="0 0 24 24"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.52 17.34c-.24.36-.66.48-1.02.24-2.82-1.74-6.36-2.1-10.56-1.14-.42.12-.78-.18-.9-.54-.12-.42.18-.78.54-.9 4.56-1.02 8.52-.6 11.64 1.32.42.18.48.66.3 1.02zm1.44-3.3c-.3.42-.84.6-1.26.3-3.24-1.98-8.16-2.58-11.94-1.38-.48.12-1.02-.12-1.14-.6-.12-.48.12-1.02.6-1.14 4.32-1.32 9.72-.66 13.44 1.62.36.18.54.78.3 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.3c-.6.18-1.2-.18-1.38-.72-.18-.6.18-1.2.72-1.38 4.26-1.26 11.28-1.02 15.72 1.62.54.3.72 1.02.42 1.56-.3.42-1.02.6-1.56.3z"/></svg>
+        Spotify
+      </a>
+      <a href="https://podcasts.apple.com/au/podcast/id1555566088?i=1000776470464" target="_blank" rel="noopener" aria-label="Listen to this episode on Apple Podcasts">
+        <svg viewBox="0 0 24 24"><path d="M5.34 0A5.328 5.328 0 000 5.34v13.32A5.328 5.328 0 005.34 24h13.32A5.328 5.328 0 0024 18.66V5.34A5.328 5.328 0 0018.66 0H5.34zm6.525 2.568c2.336 0 4.448.902 6.056 2.587 1.224 1.272 1.912 2.619 2.264 4.392l.04.23c.04.272-.16.527-.432.567a.505.505 0 01-.567-.431l-.04-.213c-.312-1.57-.92-2.747-2.004-3.867-1.428-1.496-3.293-2.294-5.393-2.294-2.1 0-3.966.798-5.394 2.294-1.084 1.12-1.692 2.298-2.004 3.867l-.04.213a.507.507 0 01-.567.431.504.504 0 01-.432-.567l.04-.23c.352-1.773 1.04-3.12 2.264-4.392 1.608-1.685 3.72-2.587 6.056-2.587h.153zm.136 3.033c1.74 0 3.312.67 4.527 1.934.883.916 1.394 1.93 1.663 3.253l.04.23a.505.505 0 01-.431.567.503.503 0 01-.567-.432l-.04-.212c-.23-1.112-.659-1.97-1.396-2.732-1.052-1.1-2.404-1.672-3.9-1.672s-2.849.572-3.901 1.672c-.737.762-1.167 1.62-1.396 2.732l-.04.212a.503.503 0 01-.567.432.505.505 0 01-.432-.567l.04-.23c.27-1.323.78-2.337 1.664-3.253 1.215-1.264 2.787-1.934 4.527-1.934h.21zm-.078 3.05c1.092 0 2.091.424 2.89 1.22.582.58.924 1.245 1.107 2.15l.04.218a.501.501 0 01-.424.568.499.499 0 01-.568-.424l-.04-.198c-.146-.724-.413-1.253-.871-1.716-.63-.63-1.398-.957-2.226-.957s-1.595.328-2.225.957c-.459.463-.726.992-.871 1.716l-.04.198a.499.499 0 01-.568.424.501.501 0 01-.424-.568l.04-.219c.183-.904.525-1.569 1.106-2.149.8-.796 1.799-1.22 2.89-1.22h.184zM12 14.07a2.477 2.477 0 012.48 2.478A2.477 2.477 0 0112 19.024a2.477 2.477 0 01-2.48-2.477A2.477 2.477 0 0112 14.07z"/></svg>
+        Apple
+      </a>
+      <a class="yt-pill" href="https://www.youtube.com/@thenumbersgamepodcast?sub_confirmation=1" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.12-2.14C19.5 3.55 12 3.55 12 3.55s-7.5 0-9.38.51A3 3 0 0 0 .5 6.2 31.4 31.4 0 0 0 0 12a31.4 31.4 0 0 0 .5 5.8 3 3 0 0 0 2.12 2.14c1.88.51 9.38.51 9.38.51s7.5 0 9.38-.51a3 3 0 0 0 2.12-2.14A31.4 31.4 0 0 0 24 12a31.4 31.4 0 0 0-.5-5.8zM9.55 15.57V8.43L15.82 12z"/></svg>
+        Subscribe
+      </a>
+    </div>
+    <!-- LISTEN:END -->
+
+    <div class="relsec">
+      <span class="rtitle">Discover more</span>
+      <div class="relgrid">
+        <a class="relcard" href="/victoria-owes-199-billion">
+          <img src="https://i.ytimg.com/vi/sppkdu-w5jU/hqdefault.jpg" alt="EP 280 thumbnail">
+          <span class="rt">Victoria Owes $199 Billion | What It Means for Your Business</span>
+          <span class="rfoot"><span class="rwhy">8 June 2026</span><span class="rtag">EP 280</span></span>
+        </a>
+        <a class="relcard" href="/your-beer-is-taxed-more-than-our-gas-exports">
+          <img src="https://i.ytimg.com/vi/JbWmJhmkaP0/hqdefault.jpg" alt="EP 268 thumbnail">
+          <span class="rt">Your Beer Is Taxed More Than Our Gas Exports | We Did the Numbers on What Could Have Been</span>
+          <span class="rfoot"><span class="rwhy">16 March 2026</span><span class="rtag">EP 268</span></span>
+        </a>
+        <a class="relcard" href="/marty-s-hiring-checklist">
+          <img src="https://i.ytimg.com/vi/VbhBLRJEGsI/hqdefault.jpg" alt="EP 170 thumbnail">
+          <span class="rt">Marty&#x27;s Hiring Checklist</span>
+          <span class="rfoot"><span class="rwhy">18 April 2024</span><span class="rtag">EP 170</span></span>
+        </a>
+        <a class="relcard" href="/holiday-homes-don-t-make-financial-sense-in-2025">
+          <img src="https://i.ytimg.com/vi/kdm25W-20ng/hqdefault.jpg" alt="EP 229 thumbnail">
+          <span class="rt">Holiday Homes Don&#x27;t Make Financial Sense in 2025</span>
+          <span class="rfoot"><span class="rwhy">28 April 2025</span><span class="rtag">EP 229</span></span>
+        </a>
+        <a class="relcard" href="/revised-stage-3-tax-cuts-explained">
+          <img src="https://i.ytimg.com/vi/QFOxAvVbv3M/hqdefault.jpg" alt="EP 152 thumbnail">
+          <span class="rt">Revised Stage 3 Tax Cuts Explained</span>
+          <span class="rfoot"><span class="rwhy">8 February 2024</span><span class="rtag">EP 152</span></span>
+        </a>
+        <a class="relcard" href="/sweat-the-small-stuff">
+          <img src="https://i.ytimg.com/vi/21_5CZ0up-8/hqdefault.jpg" alt="EP 172 thumbnail">
+          <span class="rt">Sweat the Small Stuff</span>
+          <span class="rfoot"><span class="rwhy">25 April 2024</span><span class="rtag">EP 172</span></span>
+        </a>
+      </div>
+      <div class="reldots" id="reldots"></div>
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="footgrid">
+      <div class="fcol">
+        <div class="foot-label">Brought to you by</div>
+        <div class="sponsors">
+          <a href="https://www.inovayt.com.au/" target="_blank" rel="noopener"><img src="assets/inovayt-white.png" alt="Inovayt"></a>
+          <a href="https://futureadvisory.com.au/" target="_blank" rel="noopener"><img src="assets/future-advisory-white.png" alt="Future Advisory"></a>
+        </div>
+      </div>
+      <div class="fcol produced">
+        <div class="foot-label">Produced by</div>
+        <a href="https://www.vidpod.com.au/" target="_blank" rel="noopener"><img src="assets/vidpod-white.png" alt="VIDPOD"></a>
+      </div>
+    </div>
+    <nav class="footnav">
+      <a href="index.html">Home</a><a href="episodes.html">Every episode</a><a href="adventure.html">Choose your own adventure</a><a href="about.html">About the show</a><a href="nick-reilly.html">Nick Reilly</a><a href="jason-robinson.html">Jason Robinson</a><a href="contact.html">Contact</a>
+    </nav>
+    <div class="copyright">© 2026 The Numbers Game</div>
+  </footer>
+
+  <script>
+    var VIDEO='RAQ80ecsDq0';
+
+    /* Mobile nav dropdown. */
+    var burger=document.getElementById('navburger'), navdrop=document.getElementById('navdrop');
+    if(burger&&navdrop){burger.addEventListener('click',function(){
+      navdrop.hidden=!navdrop.hidden;
+      burger.setAttribute('aria-expanded', navdrop.hidden?'false':'true');
+    });}
+
+    /* Voice-note button reveals the recorder; × tucks it away. */
+    var vbtn=document.getElementById('vbtn'), vslot=document.getElementById('vslot'), vclose=document.getElementById('vclose');
+    if(vbtn&&vslot){vbtn.addEventListener('click',function(){vslot.hidden=!vslot.hidden;});}
+    if(vclose&&vslot){vclose.addEventListener('click',function(){vslot.hidden=true;});}
+
+    /* Keep-exploring dots: only shown when the strip actually scrolls (mobile). */
+    var rg=document.querySelector('.relgrid'), rd=document.getElementById('reldots');
+    if(rg&&rd){
+      var relCards=rg.querySelectorAll('.relcard');
+      relCards.forEach(function(){rd.appendChild(document.createElement('span'))});
+      var updDots=function(){
+        var scrollable=rg.scrollWidth>rg.clientWidth+4;
+        rd.style.display=scrollable?'flex':'none';
+        if(!scrollable)return;
+        var i=Math.round(rg.scrollLeft/(rg.scrollWidth-rg.clientWidth)*(relCards.length-1));
+        rd.querySelectorAll('span').forEach(function(s,n){s.classList.toggle('on',n===i)});
+      };
+      rg.addEventListener('scroll',updDots,{passive:true});
+      window.addEventListener('resize',updDots);
+      updDots();
+    }
+
+    /* Explore tabs: swap the visible panel; the row stays put so you never lose your place. */
+    var tabBtns=document.querySelectorAll('.tabbtn');
+    tabBtns.forEach(function(b){
+      b.addEventListener('click',function(){
+        tabBtns.forEach(function(o){o.classList.remove('on')});
+        document.querySelectorAll('.tpanel').forEach(function(p){p.hidden=true});
+        b.classList.add('on');
+        document.getElementById(b.getAttribute('data-panel')).hidden=false;
+      });
+    });
+
+    /* Audio-only: Spotify player is the hero; chapters/questions seek it via the Spotify iFrame API. */
+    var spotifyCtrl=null, pendingSeek=null;
+    function nudge(){
+      var p=document.getElementById('player-wrap'), r=p.getBoundingClientRect();
+      if(r.bottom<80 || r.top>window.innerHeight-90){ p.scrollIntoView({behavior:'smooth',block:'start'}); }
+    }
+    function startAt(sec){
+      nudge();
+      if(spotifyCtrl){ spotifyCtrl.seek(sec); spotifyCtrl.resume(); } else { pendingSeek=sec; }
+    }
+    window.onSpotifyIframeApiReady=function(IFrameAPI){
+      IFrameAPI.createController(document.getElementById('spotify-embed'),
+        {uri:'spotify:episode:4qTuAl6W43OL2ZJxVW6SxY', width:'100%', height:'232'},
+        function(c){ spotifyCtrl=c; if(pendingSeek!=null){ c.seek(pendingSeek); c.resume(); pendingSeek=null; } });
+    };
+    (function(){var sc=document.createElement('script');sc.src='https://open.spotify.com/embed/iframe-api/v1';sc.async=true;document.head.appendChild(sc);})();
+  </script>
+</body>
+</html>

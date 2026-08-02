@@ -1,0 +1,738 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EP 27 · Data-Driven Business With Jordan Morieson | The Numbers Game</title>
+<meta name="description" content="Welcome to episode 27 of The Numbers Game podcast. In this episode we&#x27;re joined by General Manager of Inovayt, Jordan Morieson. We chat about using data to i…">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" sizes="64x64" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="canonical" href="https://thenumbersgamepodcast.com.au/data-driven-business-with-jordan-morieson">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="The Numbers Game">
+<meta property="og:title" content="EP 27 · Data-Driven Business With Jordan Morieson | The Numbers Game">
+<meta property="og:description" content="Welcome to episode 27 of The Numbers Game podcast. In this episode we&#x27;re joined by General Manager of Inovayt, Jordan Morieson. We chat about using data to i…">
+<meta property="og:url" content="https://thenumbersgamepodcast.com.au/data-driven-business-with-jordan-morieson">
+<meta property="og:image" content="https://thenumbersgamepodcast.com.au/assets/tng-audio-only-thumbnail.webp">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+  :root{
+    --purple:#585af3; --purple-dark:#2c1b8a; --mint:#7ad9a8;
+    --white:#ffffff; --muted:rgba(255,255,255,.60); --dim:rgba(255,255,255,.42);
+    --line:rgba(255,255,255,.12); --card:rgba(255,255,255,.05); --card-hi:rgba(255,255,255,.09);
+    --display:'Anton',Impact,'Helvetica Neue',sans-serif;
+    --sans:'Inter',system-ui,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif;
+    --wrap:1280px;   /* page frame (nav spans this) */
+    --col:960px;     /* content column (player, tabs, text) */
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:var(--sans); color:var(--white); line-height:1.6; -webkit-font-smoothing:antialiased;
+    background:#12093a;
+    background-image:
+      radial-gradient(1200px 600px at 82% -6%, rgba(88,90,243,.45) 0%, transparent 55%),
+      radial-gradient(900px 700px at 5% 8%, rgba(122,217,168,.10) 0%, transparent 50%),
+      linear-gradient(180deg,#2c1b8a 0%,#1a1150 28%,#100b34 62%,#0b0820 100%);
+    background-attachment:fixed;
+  }
+  a{color:inherit}
+  .wrap{max-width:var(--wrap);margin:0 auto;padding:0 36px}
+  main.wrap{max-width:var(--col)}
+  @media(max-width:720px){.wrap{padding:0 22px}}
+
+  /* ── Navbar ── */
+  .nav{position:sticky;top:0;z-index:50;background:linear-gradient(180deg,rgba(24,15,74,.92),rgba(24,15,74,.72));backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+  .nav-in{max-width:var(--wrap);margin:0 auto;padding:11px 36px;display:flex;align-items:center;justify-content:space-between}
+  @media(max-width:720px){.nav-in{padding:11px 22px}}
+  .brand{display:block;line-height:0}
+  .brand img{height:36px;width:auto;display:block}
+  .navlinks{display:flex;gap:28px;align-items:center}
+  .navlinks a{text-decoration:none;font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);transition:.15s}
+  .navlinks a:hover{color:var(--white)}
+  .navlinks a.navtop{cursor:default}
+  .navgroup{position:relative;display:flex;align-items:center}
+  .navgroup .subnav{display:none;position:absolute;top:100%;left:50%;transform:translateX(-50%);padding-top:14px;min-width:180px}
+  .navgroup:hover .subnav,.navgroup:focus-within .subnav{display:block}
+  .subnav-in,.navgroup .subnav{z-index:60}
+  .navgroup .subnav a{display:block;background:#180f4a;border:1px solid var(--line);border-top:0;padding:12px 16px;font-size:12px;color:rgba(255,255,255,.85)}
+  .navgroup .subnav a:first-child{border-top:1px solid var(--line)}
+  .navgroup .subnav a:hover{background:#221768;color:var(--white)}
+  .navburger{display:none;background:none;border:1px solid var(--line);padding:8px 10px;cursor:pointer;color:var(--white);transition:.15s}
+  .navburger:hover{border-color:rgba(122,217,168,.6)}
+  .navburger svg{width:20px;height:20px;fill:currentColor;display:block}
+  .navdrop{display:none}
+  @media(max-width:720px){
+    .navlinks{display:none}
+    .navburger{display:block}
+    .navdrop{display:block;position:absolute;left:0;right:0;top:100%;
+      background:#180f4a;border-bottom:1px solid var(--line);box-shadow:0 24px 50px rgba(0,0,0,.45)}
+    .navdrop[hidden]{display:none}
+    .navdrop a{display:block;padding:15px 22px;text-decoration:none;font-size:14px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:rgba(255,255,255,.9);border-bottom:1px solid rgba(255,255,255,.06)}
+    .navdrop a:last-child{border-bottom:0}
+    .navdrop a.sub{padding-left:42px;font-size:13px;color:rgba(255,255,255,.72)}
+    .navdrop .navlabel{display:block;padding:15px 22px 6px;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.4)}
+  }
+
+  /* ── Hero / hook (marker-highlight system: purple hook wraps naturally, mint payoff below)
+     Rules: title splits at its natural break (colon/pipe/question mark). Front = hook (purple,
+     big), back = payoff (mint, smaller). No break in title = purple hook only. Highlights hug
+     the text (tight em padding tuned to Anton) and wrap via box-decoration-break — never
+     hand-pick line breaks or mint words. ── */
+  header.hero{padding:34px 0 6px}
+  .hook{--inx:clamp(8.4px,2.1vw,15.6px)} /* one shared text inset so hook + payoff first letters align */
+  .hook .hk{font-family:var(--display);font-weight:400;text-transform:uppercase;
+    font-size:clamp(28px,7vw,52px);line-height:1.3;letter-spacing:-.5px;text-wrap:balance}
+  .hook .hk span{color:var(--white);padding:.04em var(--inx) .02em;
+    background:linear-gradient(var(--purple),var(--purple)) 0 50%/100% 87% no-repeat;
+    -webkit-box-decoration-break:clone;box-decoration-break:clone}
+  .hook .pay{font-family:var(--display);font-weight:400;text-transform:uppercase;
+    font-size:clamp(16px,4vw,24px);line-height:1.5;letter-spacing:.6px;margin-top:8px;text-wrap:balance}
+  .hook .pay span{color:#0a0a0a;padding:.08em var(--inx) .04em;
+    background:linear-gradient(var(--mint),var(--mint)) 0 50%/100% 88% no-repeat;
+    -webkit-box-decoration-break:clone;box-decoration-break:clone}
+  /* no-hook titles: mid-split into two full-size rows, purple then mint */
+  .hook .hk span.hkrow{display:block;background:none;padding:0}
+  .hook .hk .hkrow+.hkrow{margin-top:8px}
+  .hook .hk span.mintseg{color:#0a0a0a;
+    background:linear-gradient(var(--mint),var(--mint)) 0 50%/100% 87% no-repeat}
+
+  /* ── Player (clean facade → real player on tap) ── */
+  .player-wrap{margin:24px 0 4px;scroll-margin-top:76px}
+  .audio-hero{width:100%;min-height:232px;border-radius:12px;overflow:hidden;box-shadow:0 30px 70px rgba(0,0,0,.5),0 0 0 1px rgba(255,255,255,.06)}
+  .audio-hero iframe{display:block;width:100%;border:0}
+  .player{position:relative;width:100%;padding-top:56.25%;border-radius:0;overflow:hidden;background:#000;box-shadow:0 30px 70px rgba(0,0,0,.5),0 0 0 1px rgba(255,255,255,.06)}
+  .facade{position:absolute;inset:0;border:0;cursor:pointer;background-size:cover;background-position:center;display:flex;align-items:center;justify-content:center;padding:0}
+  .facade .play{width:74px;height:74px;border-radius:50%;background:rgba(10,6,30,.40);border:2px solid rgba(255,255,255,.72);display:flex;align-items:center;justify-content:center;transition:.18s;-webkit-backdrop-filter:blur(1px);backdrop-filter:blur(1px)}
+  .facade:hover .play{background:rgba(88,90,243,.62);transform:scale(1.07);border-color:#fff}
+  .facade .play::after{content:"";border-style:solid;border-width:11px 0 11px 19px;border-color:transparent transparent transparent #fff;margin-left:5px}
+  .player iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+
+  /* ── Episode facts (bottom of the Summary panel — templated per episode) ── */
+  .sumfacts{margin:14px 10px 4px;padding-top:13px;border-top:1px solid rgba(255,255,255,.08);display:flex;flex-direction:column;gap:8px}
+  .fact{display:flex;gap:12px;font-size:13.5px}
+  .fact .fl{flex:none;width:104px;color:var(--dim);font-weight:600;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;padding-top:2px}
+  .fact .fv{color:rgba(255,255,255,.9);font-weight:500}
+  .fact .fv a{color:var(--mint);text-decoration:none;border-bottom:1px solid rgba(122,217,168,.4);transition:.15s}
+  .fact .fv a:hover{border-bottom-color:var(--mint)}
+
+  /* ── Episode tag (identity: black label hanging off the title corner) ── */
+  .eptag{display:inline-block;position:relative;left:-6px;margin-bottom:-7px;z-index:2;
+    background:#0a0a0a;color:var(--white);font-family:var(--display);font-weight:400;
+    font-size:13.5px;letter-spacing:1.5px;text-transform:uppercase;padding:6px 11px 4px}
+
+  /* ── Explore tabs (sticky mode switcher; one panel swaps below, nothing shoves) ── */
+  .explore{margin-top:22px}
+  .tabs{position:sticky;top:58px;z-index:40;display:flex;flex-wrap:wrap;gap:8px;padding:10px 0;
+    background:linear-gradient(180deg,rgba(18,10,55,.96),rgba(18,10,55,.86));
+    backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+  .tabbtn{font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.5px;
+    font-size:14.5px;color:var(--white);background:var(--purple);border:1px solid var(--purple);
+    padding:9px 13px 7px;cursor:pointer;transition:.15s}
+  .tabbtn:hover{filter:brightness(1.12)}
+  .tabbtn.on{background:var(--mint);border-color:var(--mint);color:#0a0a0a}
+  .tabbtn.on:hover{filter:none}
+  .tabbtn .ct{font-size:12px;opacity:.75;font-variant-numeric:tabular-nums}
+  .tabbtn .ct::before{content:" · "}
+  .tpanel{border:1px solid var(--line);background:var(--card);padding:12px 10px 14px}
+  .hint{font-size:12.5px;color:var(--muted);padding:2px 10px 10px;border-bottom:1px solid rgba(255,255,255,.08);margin-bottom:6px}
+
+  /* ── Listen row (no box: label left, service pills follow) ── */
+  .listen{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:12px 16px;margin-top:34px}
+  .listen .lname{font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--dim)}
+  .listen a{display:inline-flex;align-items:center;gap:9px;padding:11px 18px;border-radius:999px;
+    background:var(--mint);color:#08210f;text-decoration:none;font-weight:800;font-size:12.5px;
+    letter-spacing:.04em;text-transform:uppercase;transition:.15s}
+  .listen a:hover{filter:brightness(1.06);transform:translateY(-1px);box-shadow:0 12px 30px rgba(122,217,168,.25)}
+  .listen svg{width:20px;height:20px;fill:currentColor;flex:none}
+  /* ── Listen-now Spotify audio embed (full column width, above the pills) ── */
+  .listen-now{margin-top:40px}
+  .listen-now .ln-head{display:flex;align-items:baseline;justify-content:space-between;gap:14px;margin-bottom:13px}
+  .listen-now .ln-title{font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--dim)}
+  .audio-embed{border-radius:12px;overflow:hidden;box-shadow:0 20px 50px rgba(0,0,0,.4),0 0 0 1px rgba(255,255,255,.06)}
+  .audio-embed iframe{display:block;width:100%;border:0}
+  @media(max-width:720px){.listen-now{margin-top:32px}}
+
+  /* ── Keep exploring (thumbnails link to other episode PAGES, never timecodes).
+     Swipeable strip on mobile, fits three-up on desktop. Variant rule: claim
+     "similar ground" + reason lines ONLY when moment-level topic overlap is
+     genuinely strong; otherwise show the latest released episodes with dates —
+     never invent a connection. ── */
+  .relsec{margin-top:60px;padding-top:58px;border-top:1px solid var(--line)} /* line = end of this episode's info */
+  .reldots{display:flex;justify-content:center;gap:7px;margin-top:12px}
+  .reldots span{width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.25);transition:.2s}
+  .reldots span.on{background:var(--mint)}
+  .relsec .rtitle{display:inline-block;font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.5px;font-size:14.5px;background:var(--mint);color:#0a0a0a;padding:9px 13px 7px;margin-bottom:18px}
+  .relgrid{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding-bottom:6px;scrollbar-width:none}
+  .relgrid::-webkit-scrollbar{display:none}
+  .relcard{flex:0 0 56%;max-width:232px;scroll-snap-align:start;display:flex;flex-direction:column;text-decoration:none;background:var(--card);border:1px solid var(--line);transition:.15s}
+  .relcard:hover{background:var(--card-hi);border-color:rgba(122,217,168,.55)}
+  .relcard img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block}
+  .relcard .rt{display:block;font-size:12.5px;font-weight:600;color:rgba(255,255,255,.92);line-height:1.4;padding:8px 8px 0}
+  .relcard .rfoot{margin-top:auto;display:flex;justify-content:space-between;align-items:flex-end;gap:8px;padding:10px 8px 9px}
+  .relcard .rwhy{font-size:11.5px;color:var(--mint)}
+  .relcard .rtag{display:inline-block;background:#0a0a0a;color:var(--white);font-family:var(--display);font-size:10px;letter-spacing:1.2px;text-transform:uppercase;padding:3px 7px 2px;white-space:nowrap;flex:0 0 auto}
+
+  /* ── Dropdown sections (accordion under the player) ── */
+  .drops{margin-top:34px;display:flex;flex-direction:column;gap:11px}
+  .drop{border:1px solid var(--line);border-radius:0;background:var(--card);overflow:hidden;transition:border-color .15s}
+  .drop[open]{border-color:rgba(122,217,168,.35)}
+  .drop>summary{list-style:none;cursor:pointer;padding:16px 18px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+  .drop>summary::-webkit-details-marker{display:none}
+  .drop>summary .st{font-weight:700;font-size:15.5px;letter-spacing:.005em}
+  .drop>summary .ct{margin-left:auto;font-size:12px;color:var(--dim);font-weight:600;font-variant-numeric:tabular-nums}
+  .drop>summary .chev{flex:none;width:22px;height:22px;border-radius:50%;background:rgba(122,217,168,.14);color:var(--mint);display:flex;align-items:center;justify-content:center;font-family:var(--display);font-size:15px;line-height:1;transition:.2s;transform:translateY(-1px)}
+  .drop[open]>summary .chev{transform:rotate(45deg)}
+  .drop-body{padding:2px 12px 12px}
+
+  /* chapters */
+  .chapter{display:flex;align-items:baseline;gap:14px;width:100%;text-align:left;cursor:pointer;background:none;border:0;color:inherit;font-family:inherit;padding:11px 10px;border-radius:10px;transition:.13s}
+  .chapter:hover{background:var(--card-hi)}
+  .chapter .tc{font-variant-numeric:tabular-nums;font-weight:700;font-size:14px;color:var(--mint);flex:none;width:48px}
+  .chapter .cx{font-size:15px;font-weight:500;color:rgba(255,255,255,.9)}
+  .chapter:hover .cx{color:#fff}
+
+  /* questions */
+  .q{display:flex;align-items:center;gap:12px;width:100%;text-align:left;cursor:pointer;background:none;border:0;border-radius:11px;color:inherit;font-family:inherit;padding:12px 10px;transition:.14s}
+  .q+.q{border-top:1px solid rgba(255,255,255,.05)}
+  .q:hover{background:var(--card-hi)}
+  .q .qm{font-family:var(--display);font-size:15px;color:var(--mint);flex:none;line-height:1;transform:translateY(1px)}
+  .q .qx{font-size:15px;font-weight:500;color:rgba(255,255,255,.92)}
+  .q .go{margin-left:auto;flex:none;color:var(--dim);font-size:18px;transition:.15s}
+  .q:hover .go{color:var(--mint);transform:translateX(2px)}
+
+  /* summary + transcript bodies */
+  .summary-body p{font-size:16.5px;line-height:1.62;color:rgba(255,255,255,.9);padding:6px 10px 4px}
+  .tbody{padding:2px 10px 8px}
+  .tbody p{font-size:14.5px;line-height:1.7;color:rgba(255,255,255,.78);margin-top:15px;max-width:64ch}
+  .tbody .spk{display:block;font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--mint);margin-bottom:2px}
+
+  /* ── Voice note ask (lives at the bottom of the Summary panel) ── */
+  .vask{margin:16px 10px 4px}
+  .vbtn{display:inline-flex;align-items:center;gap:9px;padding:12px 20px;border-radius:999px;border:0;cursor:pointer;
+    background:var(--mint);color:#08210f;font-family:inherit;font-weight:800;font-size:12.5px;
+    letter-spacing:.04em;text-transform:uppercase;transition:.15s}
+  .vbtn:hover{filter:brightness(1.06);transform:translateY(-1px);box-shadow:0 12px 30px rgba(122,217,168,.25)}
+  .vbtn svg{width:18px;height:18px;fill:currentColor;flex:none}
+  .vslot{background:var(--purple);padding:12px 10px 10px;margin:14px 0 4px;box-shadow:0 18px 40px rgba(0,0,0,.35)}
+  .vslot[hidden]{display:none}
+  .vhead{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;margin-bottom:10px}
+  .vhead .vmsg{font-family:var(--sans);font-size:13px;line-height:1.55;color:rgba(255,255,255,.92);margin:2px 0 0;padding:0 2px}
+  .vclose{background:none;border:0;color:rgba(255,255,255,.85);font-size:22px;line-height:1;cursor:pointer;padding:0 2px}
+  .vclose:hover{color:var(--white)}
+  .vslot iframe{display:block}
+
+  /* ── YouTube subscribe pill (sits in the listen row; outranks .listen a's mint) ── */
+  .listen a.yt-pill{background:var(--purple);color:var(--white)}
+  .listen a.yt-pill:hover{filter:brightness(1.1);transform:translateY(-1px)}
+  @media(max-width:720px){ /* mobile: no label, three compact pills on one row */
+    .listen .lname{display:none}
+    .listen{gap:8px}
+    .listen a{padding:10px 13px;font-size:11px;gap:6px}
+    .listen svg{width:16px;height:16px}
+  }
+
+  /* ── Footer: two columns under the line (Brought to you by | Produced by), matches adventure.html ── */
+  footer{border-top:1px solid var(--line);margin-top:68px;padding:52px 20px 58px}
+  .footgrid{max-width:var(--wrap);margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:start}
+  @media(max-width:720px){.footgrid{grid-template-columns:1fr;gap:40px}}
+  .fcol{text-align:center}
+  .foot-label{font-size:11px;font-weight:700;letter-spacing:.26em;text-transform:uppercase;color:var(--dim);margin-bottom:16px}
+  .sponsors{display:flex;justify-content:center;align-items:center;gap:38px;flex-wrap:wrap}
+  .sponsors a{display:inline-flex;transition:.15s}
+  .sponsors a:hover{transform:translateY(-1px)}
+  .sponsors img{height:34px;width:auto;opacity:.92}
+  .sponsors a:hover img{opacity:1}
+  .produced a{display:inline-flex;transition:.15s}
+  .produced a:hover img{opacity:1}
+  .produced img{height:30px;width:auto;opacity:.95}
+  .footnav{margin-top:36px;display:flex;justify-content:center;flex-wrap:wrap;gap:6px 26px}
+  .footnav a{font-size:12px;font-weight:600;letter-spacing:.04em;color:var(--dim);text-decoration:none;transition:.15s}
+  .footnav a:hover{color:var(--mint)}
+  .copyright{margin-top:40px;font-size:12px;color:var(--dim);text-align:center}
+
+  @media(min-width:720px){header.hero{padding:48px 0 6px}}
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "PodcastEpisode", "name": "Buying Commercial Property With Your Super in 2026 | What the Numbers Say", "url": "https://thenumbersgamepodcast.com.au/episode-285.html", "datePublished": "2026-07-13", "episodeNumber": 285, "image": "https://i.ytimg.com/vi/RAQ80ecsDq0/maxresdefault.jpg", "partOfSeries": {"@type": "PodcastSeries", "name": "The Numbers Game", "url": "https://thenumbersgamepodcast.com.au/"}}</script>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-in">
+      <a class="brand" href="index.html" aria-label="The Numbers Game home"><img src="assets/tng-logo.png" alt="The Numbers Game"></a>
+      <div class="navlinks">
+        <a href="index.html">Home</a>
+        <div class="navgroup">
+          <a class="navtop">Episodes</a>
+          <div class="subnav">
+            <a href="episodes.html">All episodes</a>
+            <a href="adventure.html">Find moments</a>
+          </div>
+        </div>
+        <div class="navgroup">
+          <a class="navtop">About</a>
+          <div class="subnav">
+            <a href="about.html">The show</a>
+            <a href="nick-reilly.html">Nick Reilly</a>
+            <a href="jason-robinson.html">Jason Robinson</a>
+          </div>
+        </div>
+        <a href="contact.html">Contact</a>
+      </div>
+      <button class="navburger" id="navburger" type="button" aria-label="Menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24"><path d="M3 6h18v2H3zM3 11h18v2H3zM3 16h18v2H3z"/></svg>
+      </button>
+    </div>
+    <div class="navdrop" id="navdrop" hidden>
+      <a href="index.html">Home</a>
+      <span class="navlabel">Episodes</span>
+      <a class="sub" href="episodes.html">All episodes</a>
+      <a class="sub" href="adventure.html">Find moments</a>
+      <span class="navlabel">About</span>
+      <a class="sub" href="about.html">The show</a>
+      <a class="sub" href="nick-reilly.html">Nick Reilly</a>
+      <a class="sub" href="jason-robinson.html">Jason Robinson</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+
+  <main class="wrap">
+
+    <header class="hero">
+      <div class="hook">
+        <span class="eptag">EP 27</span>
+        <h1 class="hk"><span>Data-Driven Business With Jordan Morieson</span></h1>
+      </div>
+    </header>
+
+    <div class="player-wrap" id="player-wrap">
+      <div class="audio-hero" id="spotify-embed"></div>
+    </div>
+
+    <div class="explore">
+      <div class="tabs" role="tablist">
+        <button class="tabbtn on" data-panel="p-summary">Summary</button>
+      </div>
+      <section class="tpanel" id="p-summary">
+        <div class="summary-body">
+          <p>Welcome to episode 27 of The Numbers Game podcast. In this episode we&#x27;re joined by General Manager of Inovayt, Jordan Morieson. We chat about using data to influence business strategy, how the right technology can change your business and the benefits of implementing a CRM system.</p>
+        </div>
+        <div class="vask">
+          <button class="vbtn" id="vbtn" type="button">
+            <svg viewBox="0 0 24 24"><path d="M12 14a3 3 0 0 0 3-3V6a3 3 0 1 0-6 0v5a3 3 0 0 0 3 3zm5-3a5 5 0 0 1-10 0H5a7 7 0 0 0 6 6.92V21h2v-3.08A7 7 0 0 0 19 11h-2z"/></svg>
+            Send us a voice note
+          </button>
+          <div class="vslot" id="vslot" hidden>
+            <div class="vhead">
+              <p class="vmsg">We'd love to hear from you. You can leave up to a 90 second voice note for us to play on the show: a question, some feedback, or a topic you want covered.</p>
+              <button class="vclose" id="vclose" type="button" aria-label="Close">&times;</button>
+            </div>
+            <iframe src="https://www.speakpipe.com/widget/inline/hhq6kzggsx7zpcsvakgxfrzun3zidpde" allow="microphone" width="100%" height="200" frameborder="0" title="Leave The Numbers Game a voice note"></iframe>
+          </div>
+          <script async src="https://www.speakpipe.com/widget/loader.js" charset="utf-8"></script>
+        </div>
+        <div class="sumfacts">
+          <div class="fact"><span class="fl">Release date</span><span class="fv">11 October 2021</span></div>
+          <div class="fact"><span class="fl">Hosts</span><span class="fv"><a href="jason-robinson.html">Jason Robinson</a> &amp; <a href="nick-reilly.html">Nick Reilly</a> &amp; <a href="marty-vidakovic.html">Marty Vidakovic</a></span></div>
+
+        </div>
+      </section>
+    </div>
+
+    <div class="drops">
+
+      <details class="drop">
+        <summary><span class="st">Episode transcript</span><span class="chev">+</span></summary>
+        <div class="drop-body tbody">
+          <p><span class="spk">Jason · 00:00</span>Thanks to our sponsor Walker Digital, who&#x27;ve stepped in to help The Numbers Game podcast with their social media. Walker Digital are a digital marketing agency covering strategy, content, video implementation, and education. The team at Walker have spread the word of our clients and love working with businesses doing good things, helping them to grow and reach more people so they can scale and get larger.</p>
+          <p><span class="spk">Jason · 00:20</span>I know personally the first thing I did when growing our business was to outsource social media, blogs, and copywriting because I knew it was something that was not the best use of my time, and the team at Walker Digital smashed it. Sometimes you need to walk before you can run. Find out more at their website, wlkr.digital. This podcast is for educational and informational purposes only.</p>
+          <p><span class="spk">Jason · 00:41</span>The conversations are of a general nature and do not qualify as financial or tax advice. We recommend before you make any financial decisions, you consult a licensed professional. Individuals on the podcast may hold positions in the companies discussed. Welcome to episode 27 of The Numbers Game.</p>
+          <p><span class="spk">Jason · 00:57</span>I&#x27;m here with Nick and Marty. How you going today, guys?</p>
+          <p><span class="spk">Marty · 01:00</span>I&#x27;m going well, thanks, Jason. I&#x27;m pumped up. We&#x27;re Talking data, we&#x27;re talking crypto, we&#x27;re talking— we&#x27;re just fired up. Nick, how are you going?</p>
+          <p><span class="spk">Nick · 01:09</span>Yes, going well, Marty, going well. Just, just edging down that road, that roadmap. So closer and closer to, to being free, let&#x27;s hope. But, um, yeah, look, really excited about today. Uh, we&#x27;re bringing in Jordan Morrison as a special guest. Um, Jordy&#x27;s been with our business for around 8 years and I guess has started from the bottom and worked his way all all the way to the top.</p>
+          <p><span class="spk">Nick · 01:31</span>He&#x27;s our general manager, adds a lot of value that Marty and I don&#x27;t add. We&#x27;ve all got things we&#x27;re good at, and I guess Geordie plugs the gaps for us. So we&#x27;re going to talk about analytics and how important it is to understand what&#x27;s going on in your business from a numbers or a data point of view.</p>
+          <p><span class="spk">Nick · 01:51</span>And we&#x27;ve talked about it a lot, but what&#x27;s measured is managed, and I think a lot of small businesses, the focus is always building, bringing in more revenue, but you know, what&#x27;s your cost to deliver that, um, that advice? So what&#x27;s your cost to deliver that product? And is the trajectory you&#x27;re on really the one you want to be on?</p>
+          <p><span class="spk">Nick · 02:09</span>And if it&#x27;s not, you need to understand that and change things up. So look, Jordy&#x27;s been a breath of fresh air in our business, particularly in the last couple of years where he&#x27;s focused on this stuff, and it&#x27;s made some massive improvements. So yeah, looking forward to to digging a little bit deeper into this with Jordie.</p>
+          <p><span class="spk">Jason · 02:25</span>Awesome. If there&#x27;s anyone who gets excited about data and analytics, it&#x27;s the bloody accountant in the room. So I&#x27;m excited for it. On today&#x27;s episode, I&#x27;m going to bring in the question of, is there money in clothing retail? So I&#x27;m excited for today&#x27;s episode.</p>
+          <p><span class="spk">Marty · 02:36</span>Let&#x27;s play, boys.</p>
+          <p><span class="spk">Jason · 02:38</span>Guys, next up, Reading the Play, where we&#x27;re going to go through some industry insights, some interesting facts that we&#x27;ve read in the last week, and any advice that we&#x27;ve got in relation to these topics. And a warm welcome to Jordan. Feel free to jump in anytime, mate, when we do these topics. And great to have you on the show.</p>
+          <p><span class="spk">Jordan · 02:53</span>Thanks for having us, guys. Looking forward to it.</p>
+          <p><span class="spk">Jason · 02:56</span>All right, Nick, you&#x27;re up first. What have you got on Reading the Play?</p>
+          <p><span class="spk">Nick · 02:58</span>A little bit of share market action today. So, dividends to cushion low share market returns. So most people will know, um, well, even listening to us or just being across the share market this year, but companies are earning a lot of money.</p>
+          <p><span class="spk">Nick · 03:15</span>Um, you know, we&#x27;ve, we&#x27;ve talked about certain companies giving back JobKeeper because they&#x27;ve had bumper years. So this has actually been a record earnings year, which means that there&#x27;s a record dividend year going back to shareholders. So I&#x27;m just going to read some of this stuff because I think it&#x27;s really important to get these numbers right.</p>
+          <p><span class="spk">Nick · 03:33</span>But share— shareholders are celebrating the richest earning period in history. $31 billion in dividends has been declared, uh, on the ASX back to shareholders. Now on top of that, you&#x27;ve also got, um, takeovers and buybacks.</p>
+          <p><span class="spk">Nick · 03:48</span>So A buyback is when a, a business or a company comes back and buys back shares of shareholders, generally at a premium. So in total, this earnings period, plus the buybacks, plus the takeovers, has seen $86 billion in cash go back to investors&#x27; bank accounts, whether it&#x27;s a bank account or a check.</p>
+          <p><span class="spk">Nick · 04:12</span>So that&#x27;s huge inflow of money. So what does that do? Well, Generally, most of these investors, well, most of them, all of them are investors. So when they&#x27;ve got spare cash, they generally put that money back into the market. If they&#x27;re not putting it back into the market, as in the stock market, they&#x27;re either saving it, which if they&#x27;re investors, hopefully they&#x27;re not doing, or they&#x27;ve already got savings, or they&#x27;re injecting that back into the economy, whether it be through products or services, however they&#x27;re spending it.</p>
+          <p><span class="spk">Nick · 04:39</span>So it&#x27;s really good for the recovery of the economy coming out of COVID People are cashed up. So the first thing it&#x27;s going to do is at the start of this month, um, we&#x27;re in September when we&#x27;re recording this, but at the start of this month, uh, the share market did, did pull back.</p>
+          <p><span class="spk">Nick · 04:56</span>Um, I think it was around 4, 4% roughly. Um, why did that happen? People were selling off. It&#x27;s been a bumper— well, it&#x27;s been a bumper 18 months. So at some stage, investors start to think, well, you know, this is going to turn around at some stage. &#x27;Let&#x27;s take some money off the table.&#x27; So you&#x27;ve seen a sell-off at the start of, at the start of September when, when these dividends were announced.</p>
+          <p><span class="spk">Nick · 05:18</span>And they&#x27;ve all been announced, some of them have been paid, some of them will continue to be paid, um, but that money has gone straight back in. So towards the end of this month, the share market actually recovered because people have got to deploy that cash somewhere. So they start buying again, or they start buying the dip that occurred early September.</p>
+          <p><span class="spk">Nick · 05:35</span>So It&#x27;s been really good to hold the share market up. And as I said, more, more cash means more money available for people to spend. And it&#x27;s really good for the economy. I just want to read out some, some, I guess, profits and dividends paid just because I thought this was some really interesting numbers.</p>
+          <p><span class="spk">Nick · 05:52</span>But so BHP, $17 billion US profit this year. Of that $17 billion, they paid out $8 billion in dividends to shareholders. That, that number staggered me.</p>
+          <p><span class="spk">Nick · 06:07</span>CBA, $3.5 billion in dividends paid this year back to shareholders. On top of that, they had a, a market buyback of $6.5 billion. So that means CBA shareholders collectively have all received around $10 billion in cash back into their bank accounts.</p>
+          <p><span class="spk">Nick · 06:26</span>So yeah, I thought it was really interesting. I guess it&#x27;s helped prop the share market, um, What we generally see historically is October is a really strong month for the share market because earnings season, which finishes up in August, and then the dividends are paid out.</p>
+          <p><span class="spk">Nick · 06:43</span>So you generally see the deployment of money back into the share market September, October. So yeah, hopefully October should be a good month as it has been historically because there&#x27;s more cash than ever in investors&#x27; bank accounts to go back into the market.</p>
+          <p><span class="spk">Marty · 06:58</span>And Nick, to add some fuel to that fire, I was listening to NAB Chief Economist Alan Olster And he— one of the questions that was thrown is what could derail the economy in the next 12 months? And he said really not much other than another pandemic variant. He goes, that&#x27;s the only thing that could, could happen that could stifle it.</p>
+          <p><span class="spk">Marty · 07:17</span>But he goes, businesses are doing really well. Some, some are doing it tough. But what&#x27;s going to happen when we open up is those businesses are going to get— catch fire. So people are going to be really at their peak performance in these businesses over the next 12 months to 2 years.</p>
+          <p><span class="spk">Marty · 07:32</span>So we&#x27;re going to see another upsurge. And of course, we&#x27;ve got international migration coming in as well. So there&#x27;s really not too many red lights in the next 12 months that he was acknowledging, and we should be in for a really bumper time.</p>
+          <p><span class="spk">Jason · 07:45</span>So yeah, just to add to that, uh, I might throw a quick semi-losing it into that off the back of that, Nick. When you buy shares, make sure you don&#x27;t do what I did 18 months ago. And make sure you put in your bank account details for where you want your dividends paid to and your tax file number so that they don&#x27;t tax your dividends and your earnings.</p>
+          <p><span class="spk">Jason · 08:06</span>We moved house not long after I bought a portfolio of shares, and it turns out all of the mail has been going to my old address with dividend checks, dividend statements saying that I need to put in my bank account details and TFN. And now, 18 months later, I&#x27;ve got a bit of admin on my hands to fix that up.</p>
+          <p><span class="spk">Jason · 08:25</span>So don&#x27;t make that mistake.</p>
+          <p><span class="spk">Marty · 08:27</span>What should you have done? Rolled those dividends back into shares.</p>
+          <p><span class="spk">Jason · 08:30</span>I should have done dividend reinvestment and I should have logged into the Invested Centre and put in my bank account details and updated my address like a good boy.</p>
+          <p><span class="spk">Nick · 08:37</span>Yeah, you&#x27;ll get a— you do it on paper, you should get a note. The thing is most people get these notices, including myself sometimes, and rip them up. So, but you&#x27;ll generally get a notice from the company saying, well, do you want to receive things electronically? And if you do get dividends, where do you want them to go?</p>
+          <p><span class="spk">Nick · 08:54</span>So yeah, don&#x27;t ignore those statements when they come. But I don&#x27;t know, Jase, maybe forced saving for you. It&#x27;s almost like getting a tax return.</p>
+          <p><span class="spk">Jason · 09:03</span>I hope so. What do you got, Marty? Kick us off, mate.</p>
+          <p><span class="spk">Marty · 09:05</span>Oh, look, I&#x27;m going to talk about the wacky Chinese, mate. They&#x27;re always doing something out there that&#x27;s pressing buttons, and they&#x27;ve banned crypto. It&#x27;s illegal in China because they think it&#x27;s going to harness illegal activities. But So on the 28th of September, the crypto market was, uh, shed $73 billion, down around 7%.</p>
+          <p><span class="spk">Marty · 09:25</span>But to give you some scope, I mean, even when you look at Bitcoin, I think it was $15 grand, uh, 12 months ago, it&#x27;s still up around high 40s. So, you know, everything in context. But reading the play on it, uh, China on the verge of releasing their very own digital yuan so they can track their own economy.</p>
+          <p><span class="spk">Marty · 09:43</span>And, um, they&#x27;ve been in development since 2014, and they&#x27;re working with Alipay, which is sort of a, a sort of an Afterpay for Alibaba that they have, and WeChat Pay. So they&#x27;re working with them to be able to take on this digital yuan, and, um, and they&#x27;re testing it in 3 cities at the moment.</p>
+          <p><span class="spk">Marty · 10:03</span>So it&#x27;s amazing how they, uh, yeah, they want to control their own economy. So fair enough, they&#x27;ve always wanted to do that, uh, but I just found that really interesting that they&#x27;ve come out and just said We are banning crypto illegal activities, but hey, use the digital yuan, nothing wrong with that.</p>
+          <p><span class="spk">Marty · 10:20</span>So, bit of fun. Communist country. Crazy stuff.</p>
+          <p><span class="spk">Jason · 10:25</span>I wish China would ban payroll tax. That&#x27;s one thing I wish they&#x27;d ban, but I don&#x27;t know if they&#x27;ve got any.</p>
+          <p><span class="spk">Marty · 10:29</span>Don&#x27;t start us, don&#x27;t start us. Jase, what do you got?</p>
+          <p><span class="spk">Jason · 10:32</span>Oh, good.</p>
+          <p><span class="spk">Nick · 10:33</span>Well, just keep going.</p>
+          <p><span class="spk">Jason · 10:34</span>Oh guys, I can&#x27;t help it, it pisses me off. Rounding out Reading the Play, guys, um, I got something that caught my eye. Avid lover of basketball jerseys, New Era caps, and that kind of clothing when I&#x27;m not dressed as an accountant every day. And my mate Greggy loves a basketball jersey and following the NBA and the NFL.</p>
+          <p><span class="spk">Jason · 10:53</span>So what caught my eye was Culture Kings. So Culture Kings, I&#x27;ve always thought, is there money in retail? Now Culture Kings, bricks and mortar retail, online store. Let me just tell you how much money there is in that. So the founders of the Australian fashion retailers Princess Polly, Petal and Pup and Culture Kings are in line for a billion-dollar payday following a move to publicly list on the New York Stock Exchange.</p>
+          <p><span class="spk">Jason · 11:17</span>So the three businesses are owned by a company called AKA Brands, um, basically bought out by private equity firm, or chunk of it, Summit Partners, and they&#x27;re the ones that want to file on the New York Stock Exchange. They are seeking to raise $262 million US dollars selling 13.8 million shares at about $18 each.</p>
+          <p><span class="spk">Jason · 11:35</span>What that means in bigger numbers again is it puts the valuation of the business at $2.3 $2.3 billion. Now when I think of Culture Kings and Princess Polly, the online store for ladies&#x27; clothing and bikinis and stuff, I would never have imagined a business valuation of $2.3 billion.</p>
+          <p><span class="spk">Jason · 11:53</span>Now, reason I thought this was cool to bring into this episode is talking about data and analytics. There&#x27;s a reason a business like this is valued so high, and there is a huge amount of data behind what they have on the types of buyers, how often they spend, what they&#x27;re spending, are they using Afterpay, blah blah so on.</p>
+          <p><span class="spk">Jason · 12:10</span>Like there&#x27;s so So much data. Now, just to go a little bit further background for those who are interested, in 2018, the private equity firm bought Princess Polly from Wes and Iron Buriette. Can&#x27;t pronounce the name, but there you go.</p>
+          <p><span class="spk">Jason · 12:26</span>And then earlier this year, they bought a 55% stake of Culture Kings from Simon and Tani Beard, Brisbane entrepreneurs. So another Brizzy startup. Brisbane boys and girls, or husband and wife. They sold their stake, or part of their stake, in Culture Kings for a cool $600 million at the time.</p>
+          <p><span class="spk">Jason · 12:43</span>And now with their stake, uh, that they still have, they&#x27;re probably going to get an uplift of another $370 million US dollars on their stake in the company from listing. So I had not pictured or imagined that that would be that. But also, just to also put in perspective from a valuation point of view, because we always think valuations of companies are interesting probably an episode in itself and bring on an expert, not us.</p>
+          <p><span class="spk">Jason · 13:08</span>Um, so the profit for, for Culture Kings and those businesses was $13.7 million. So the profit&#x27;s $13 million, but the business is valued at $2.3 billion. So yeah, wow, the numbers, the numbers are interesting. Um, but yeah, there you go, as a clothing retailing online business, um, data analytics and what they&#x27;re doing behind the scenes to keep people coming back and buying.</p>
+          <p><span class="spk">Jason · 13:32</span>And I know that there&#x27;s ads popping up on my feed all the time, which is making me click through and do crazy things at different hours of the night.</p>
+          <p><span class="spk">Marty · 13:39</span>So did you invest a little in there?</p>
+          <p><span class="spk">Jason · 13:41</span>No, I wish, mate. I wish. I wish. I might have to find a way to buy on the New York Stock Exchange, uh, in the near future so I can start.</p>
+          <p><span class="spk">Marty · 13:48</span>Tell you what though, I&#x27;m sitting here looking at Nick and Jordie and we&#x27;re all thinking we&#x27;re going to have to list and use this data effectively because, uh, yeah, I&#x27;m thinking Culture Kings, I&#x27;m thinking baggy jeans and adult males wearing flat brim caps backwards.</p>
+          <p><span class="spk">Nick · 14:00</span>So, you know, I&#x27;m I&#x27;m astounded. But the data play— when do you spend it? How do you spend it? Um, there&#x27;s so much value in that. So we&#x27;ve talked about that stuff for our business as well. And, um, yeah, it&#x27;s— there you go.</p>
+          <p><span class="spk">Jason · 14:15</span>Really, really warming us up to get into the bulk of the episode later on. But before we really dive into data and analytics and get that out of Jordie, Nick and Marty, you guys have got a Losing It for us. I&#x27;m going to dive straight into that segment. It&#x27;s Marty, your favorite segment every week. Guys, tell us about your losing it.</p>
+          <p><span class="spk">Nick · 14:32</span>You can go, Marty. I know you love losing it.</p>
+          <p><span class="spk">Marty · 14:34</span>Yeah, well, you like winning too, don&#x27;t you? I like winning. I&#x27;ll take one win out of eight as long as it&#x27;s a big one. But in regards to data, this is something I haven&#x27;t done in the past. It&#x27;s always been focused on the front end, you know, sales and then the revenues coming in off the sales. And one thing intuitively you always say when you&#x27;re expanding your business in the market is, um, it&#x27;s great doing what you do, but what are you actually losing?</p>
+          <p><span class="spk">Marty · 14:58</span>And the attrition rate as businesses expand is, is potentially horrific. And you really haven&#x27;t got a read on it if you&#x27;re not— if you haven&#x27;t got any data analytics. So there&#x27;s so much, um, you could say that you do well on the front end, but there&#x27;s so much more you could be doing.</p>
+          <p><span class="spk">Marty · 15:15</span>And I think when you tap into the data side of things and you get processes and systems where you can get ratios and strategy on what&#x27;s coming through the front end, what&#x27;s converting, what are those ratios, then you can build strategy around that.</p>
+          <p><span class="spk">Marty · 15:31</span>And that&#x27;s where Jordy&#x27;s absolutely exceptional on because he can take that intuition where you might be saying, geez, I think we&#x27;re losing out here, but not be quite sure how. He&#x27;ll run the numbers and give you analytics on it. And basically you can build strategy and generally you get so much more than what your intuition will give you.</p>
+          <p><span class="spk">Marty · 15:51</span>You probably get your 10x it. So it&#x27;s invaluable. And like you were saying, Jase, the value of that data, what are the buying behaviors of your clients? Who are the clients that have only got one product? I mean, we&#x27;ve got 95% of people with one product in the business and we&#x27;ve got about 20 solutions.</p>
+          <p><span class="spk">Marty · 16:10</span>You know what I mean? So we would never know that if we haven&#x27;t had the data that Jordie has. So how much are we leaving on the table by not implementing this into our businesses. And we&#x27;ve certainly worked really hard, and Jordie in particular has done some great work around this.</p>
+          <p><span class="spk">Marty · 16:27</span>Nick, any additions on that?</p>
+          <p><span class="spk">Nick · 16:29</span>Yeah, well, just on the sales piece and it&#x27;s understanding what your gaps are. So this is both myself and Marty, very good at bringing business in and very good at building relationships and bringing business. But what this has allowed us to do is actually understanding how good those relationships we had were.</p>
+          <p><span class="spk">Nick · 16:48</span>Because we look at what, you know, we look at the relationship and we look at the— we&#x27;ve been looking at the bottom line, which for us is settlements. So what&#x27;s that business settlement? Settlement&#x27;s a quarter or a month, and we want that to trend upwards. What this has helped us do with the stuff Jordie&#x27;s going to talk about is actually understand what&#x27;s coming into that top funnel and actually how good that relationship is, and we&#x27;ve got to make sure that we&#x27;re getting the most out of it for us as a business because we&#x27;ve worked so hard to get it to where it is.</p>
+          <p><span class="spk">Nick · 17:17</span>But geez, what&#x27;s falling off the table here? Because we&#x27;re just— we don&#x27;t have a system around it to make sure we track what&#x27;s coming in and then track the progression of that lead through our own business. So, you know, one of the things that we&#x27;ve worked out is it&#x27;s not really lead opportunity that&#x27;s the problem for us at the moment.</p>
+          <p><span class="spk">Nick · 17:34</span>It&#x27;s, it&#x27;s converting those leads and you know, the leads that aren&#x27;t ready to go, what are we doing with those leads to make sure when they are ready to go, it&#x27;s, it&#x27;s us that are helping them out? So yeah, it&#x27;s— look, it&#x27;s been really good for us. And again, not to repeat myself, but I&#x27;m gonna— but what&#x27;s not measured is not managed.</p>
+          <p><span class="spk">Nick · 17:51</span>So it then goes into then managing, um, the relationship for us with a referrer, because we can then go back to the referrer and then we found out, okay, well, there&#x27;s gaps in the way that the leads are coming in. And that&#x27;s also why we&#x27;re not converting. And you can, you can get systems or you can do things to change that and be on an upward trajectory with conversion.</p>
+          <p><span class="spk">Marty · 18:12</span>So yeah, Nick, Nick hit, hit it on the head here because again, it&#x27;s not a lead issue. The leads are there. And if you go out and try and attract even more leads, right, you&#x27;re just throwing more fuel on the fire. It&#x27;s a quality conversion situation here and you&#x27;re building strategy off that.</p>
+          <p><span class="spk">Marty · 18:28</span>It&#x27;s like, how do we make every lead a winner? How do we convert effectively? How do we get better in delivering to our clients? How do we train better in regards to our people? It&#x27;s, you&#x27;re extracting the most amount of opportunity out of the initial opportunity.</p>
+          <p><span class="spk">Marty · 18:46</span>And I think that&#x27;s the thing that will probably 4 to 5-fold your business revenues and your profitability. But without seeing or getting a read on the data, you just go, let&#x27;s get more business. If we get more business, we&#x27;ll get a result.</p>
+          <p><span class="spk">Marty · 19:02</span>But we might not be getting that fully fledged result that we want that we could really expand upon, which we can do.</p>
+          <p><span class="spk">Nick · 19:09</span>Yeah. And just one more thing before we move to Jordie is as well as tracking the flow of leads, but also understanding the different margins in different leads and where should you be spending your time versus where shouldn&#x27;t you be spending your time?</p>
+          <p><span class="spk">Nick · 19:26</span>And yeah, it&#x27;s not to say our system was broken, but we&#x27;ve just got a really good handle now on which direction to drive in instead of continuing to drive in two directions. Okay, they&#x27;re both great directions, but you know, this one&#x27;s probably better for us, so let&#x27;s allocate some more resources here.</p>
+          <p><span class="spk">Nick · 19:42</span>So again, having that data means you can pivot and make sure you&#x27;re extracting the most out of what, what, what comes in.</p>
+          <p><span class="spk">Jason · 19:50</span>And look, guys, what I take from that as well, just a little lesson on like not understanding your data or analytics properly from the losing it part. You know, we, we&#x27;ve had so many leads and we&#x27;ve, we&#x27;ve been in a position where we&#x27;ve actually been able to convert all of the leads, which was actually bad for our business because we were taking the wrong kind of leads and converting them into clients because it was a take-it-all mentality and not necessarily have the right pricing structure.</p>
+          <p><span class="spk">Jason · 20:11</span>Then you got the other end of the token where you&#x27;ve got 100 leads and you convert 10. So if you actually know the data you can then make business decisions around it. But without measuring it, you can&#x27;t make informed decisions. So yeah, looking forward to, uh, hearing more about how you guys actually were able to get that data and use it.</p>
+          <p><span class="spk">Jason · 20:29</span>We&#x27;d love to hear from you. Send us an email: hello@thenumbersgamepodcast.com.au. The 1%ers excited for this, guys. Small things that give you massive impacts. And as much as data analytics isn&#x27;t small things, The massive impacts today are going to be coming from Jordan.</p>
+          <p><span class="spk">Nick · 20:48</span>Jordie, welcome. Glad to have you in here, mate. It&#x27;s been a long time coming, but we&#x27;re all wrapped to have you, so thank you.</p>
+          <p><span class="spk">Jordan · 20:54</span>I feel like I&#x27;ve been on the journey for the last— what are we, nearly 3 seasons now? So I&#x27;m glad to be on board and finally get the opportunity. Thank you.</p>
+          <p><span class="spk">Nick · 21:01</span>Very good.</p>
+          <p><span class="spk">Jason · 21:01</span>Thanks for being one of our 10 listeners, Jordie. Appreciate it.</p>
+          <p><span class="spk">Nick · 21:04</span>Maybe to kick us off, mate, maybe tell us a little bit about your business journey, um, over the past, I think, 8 8 years you&#x27;ve been with us now, you&#x27;ve been at Innov8. So maybe give us a bit of background on how that&#x27;s all gone and panned out for you.</p>
+          <p><span class="spk">Jordan · 21:16</span>Definitely. So yeah, you&#x27;re right, 8 years as of the middle of this year. And even the beginning of the journey, just likening it back to that interview where I sat in front of you when I was 21, 20, something along those lines, and I had a severe degree of food poisoning.</p>
+          <p><span class="spk">Jordan · 21:34</span>I mean, in that interview, and I thought, you know what, I need to rock up. This, this is an awesome opportunity for a great company. I&#x27;m sitting across from you at the table, can&#x27;t complain. He was sweating, sweating more than I&#x27;ve ever sweated my entire life. So first of all, made it through the interview. And, um, the second piece of that story is there wasn&#x27;t really any opportunities going at that time.</p>
+          <p><span class="spk">Jordan · 21:53</span>Nick, uh, has always done a fairly incredible thing where he likes to meet good people. And not to say I was a good person at that time, but it was just more he always would run a seek ad no matter what, even if he was recruiting or not. So that gave him, and to this day gives him, the opportunity just to continue to sit with people.</p>
+          <p><span class="spk">Jordan · 22:10</span>And you never know who&#x27;s going to come across the desk. And funnily enough, it was my turn that day, and here I am 8 years later. So as Nick touched on, I&#x27;ve traveled from— well, traveled through, sorry— nearly every role within the business, starting at a base level administrative file manager type role within the mortgage division.</p>
+          <p><span class="spk">Jordan · 22:29</span>And then from there Nick and I, more so Nick than me, identified some strengths with regards to optimization of processes and systems and just had a bit of a natural knack for operations and continually looking to optimize what we were doing. And as my skill set developed and as the business grew, Nick needed some more, more layers of support.</p>
+          <p><span class="spk">Jordan · 22:51</span>So I was somewhat of the natural transition for some of Nick&#x27;s duties at that time to be passed on to myself. And then from there, I&#x27;ve continued to acquire more and more and more responsibility within the business and transition to general manager as of today. But I think for me, as Nick touched on, it&#x27;s really gone to another level over the last 2 years when I&#x27;ve— it&#x27;s really been that shift in terms of and somewhat passing of the, uh, passing of the torch from Nick and I in a lot of senses, which has freed him up to continue to</p>
+          <p><span class="spk">Jordan · 23:21</span>do what he does well. And it&#x27;s also given me the opportunity to really define and hone in on my craft and find what interests me and Data&#x27;s, data&#x27;s one of those things.</p>
+          <p><span class="spk">Nick · 23:32</span>Yeah, I think, I, I think you nailed it, mate. It was a passing of the guard, but you&#x27;ve definitely surpassed me because systems and process is just not my thing. Um, you know, I can see when something&#x27;s broken, but, you know, fixing it is not really what is— not really what my passion is.</p>
+          <p><span class="spk">Nick · 23:47</span>So I guess what, what, what we&#x27;ve seen is, you know, you&#x27;ve taken that role and run with it, and yeah, I haven&#x27;t seen anyone, anyone better at it as far as Finding a problem, finding solution, then implementing it really quickly. So yeah, just to back you up, and Marty would probably agree with that, he just plugs the gaps that we need plugged and does it better than we could do it.</p>
+          <p><span class="spk">Nick · 24:10</span>So it&#x27;s great.</p>
+          <p><span class="spk">Marty · 24:11</span>Yeah, totally back you up on that one, Nick. Jordie&#x27;s one of the most impressive young men that I&#x27;ve seen, but it&#x27;s not about being young, it&#x27;s about being capable. And what you described was right on point. And Nick and I being very intuitive in our business dealings, Geordie puts it out on the page, does the analysis, and then we continue to build strategy, all three of us together, which is just tremendous.</p>
+          <p><span class="spk">Marty · 24:34</span>Geordie, just to start with, what are you analysing in the business currently and how are you going about it? What&#x27;s something you&#x27;re focused on currently that&#x27;s making an impact?</p>
+          <p><span class="spk">Jordan · 24:46</span>Definitely. So I think what really made the big difference for us even over the last 6 months is there&#x27;s always been a hyperfocus on expenses, bottom, below the line, below the line, below the line. And for us, we knew knew our business operated quite leanly. So what I mean by that is quite limited operational expenses.</p>
+          <p><span class="spk">Jordan · 25:05</span>And for us, just quickly circling back to the Losing It segment, we weren&#x27;t hitting the profitability percentages and numbers that we really wanted or thought we needed to accomplish considering the effort and the hard work and everything that&#x27;s gone into the business to date. So for me, it&#x27;s all right if we&#x27;re not hitting the profit numbers and we&#x27;re running and operating a fairly lean business.</p>
+          <p><span class="spk">Jordan · 25:27</span>The natural assumption for me was, all right, well, let&#x27;s look above the line. Let&#x27;s look at, okay, well, what are we bringing in for those efforts? And for us, it was a matter of, okay, well, what can we achieve and what can we earn per deal or per sale in the mortgage business?</p>
+          <p><span class="spk">Jordan · 25:43</span>And then what I went through and analysed was, okay, well, what&#x27;s the total amount or what&#x27;s the gross amount that we could be earning? And then from there, what&#x27;s actually hitting our pocket? And then analysing, okay, well, what are we basically paying out to acquire that revenue, which has really flown off flowed onto us doing some really deep dive and analysis into our cost of acquisition of an opportunity or cost of acquisition for that revenue.</p>
+          <p><span class="spk">Jordan · 26:06</span>So as Nick touched on earlier, it&#x27;s allowed us to identify, okay, well, if this opportunity or this deal comes from this referral source or it comes from this avenue or whatever, where are we paying out and where are we receiving the most amount of revenue?</p>
+          <p><span class="spk">Jordan · 26:24</span>And that&#x27;s really given us an clarity on our direction and strategy. And as Nick said, rather than probably having 2 or 3 strategies, we&#x27;ve been able to identify and hone in on one that is going to help us accomplish what we need to. So that&#x27;s kind of the first answer to that question. But the next, the second answer, or the, the follow-on answer to that question for us is we first of all identified what we were leaving on the table, as Marty touched on, and, and what strategy is going to be optimal for us.</p>
+          <p><span class="spk">Jordan · 26:51</span>But then the, the next piece to that puzzle was Okay, if we pursue that strategy and we go all in, is it going to work for us? It&#x27;s all good and well to have a theory based on today&#x27;s numbers, but let&#x27;s, let&#x27;s try and do some forecasting to say, okay, well, in 2, 3, 4 years&#x27; time, based on this trajectory, if we execute how we foresee it, are we actually going to accomplish the results we want to?</p>
+          <p><span class="spk">Jordan · 27:13</span>And it&#x27;s— you don&#x27;t want to run the race and realize you&#x27;ve lost. You, you want to do all the training and the preparation before you start the race to, to give yourself the best position to, to win it. So That&#x27;s been a massive element.</p>
+          <p><span class="spk">Jason · 27:24</span>I guess, Jordie, over the last 12 months, you know, you&#x27;ve probably come a long way just recently in what you&#x27;ve implemented and, you know, what you&#x27;ve been doing in the business. I guess I&#x27;d love to know what it&#x27;s taught you, like looking at the analytics in more detail and actually analysing the data in the business.</p>
+          <p><span class="spk">Jason · 27:40</span>What has that taught you personally in your role?</p>
+          <p><span class="spk">Jordan · 27:42</span>I think for me, it&#x27;s just giving you confidence. Having a good handle on the numbers gives you confidence in your decision making, and it just gives you more confidence. It reduces the anxiety around you guessing. And in business, as we know, it&#x27;s quite stressful, and there can be a lot of anxiety even when you do know the numbers.</p>
+          <p><span class="spk">Jordan · 28:03</span>So you&#x27;re just giving yourself the best chance to make the right decision for your business and not only maintain what you&#x27;ve accomplished but help you grow. And then flowing on from that, as I said, it allows you just to make better strategic decisions.</p>
+          <p><span class="spk">Jordan · 28:19</span>And for us, it&#x27;s helped us gain a real, real good harness on, okay, well, when can we recruit? When can we double down on our marketing? When do we need to pull back and, you know, weather a bit of a storm potentially? And for us, it&#x27;s just helping us make better overall decisions and reducing the stress and the anxiety of day-to-day operations of running a business.</p>
+          <p><span class="spk">Jason · 28:41</span>It&#x27;s a great point you make, Jordie. I think we see it a lot working with business owners that don&#x27;t know their numbers. I&#x27;m glad you touched on numbers being, you know, the beauty of the numbers game. But taking away that anxiety of thinking you&#x27;re flying blind and making decisions based on gut feel, as opposed to being able to back up your decisions with a bit of numbers and have that confidence to take away that anxiety.</p>
+          <p><span class="spk">Jason · 28:59</span>So I love that, mate. That&#x27;s a great point.</p>
+          <p><span class="spk">Nick · 29:01</span>Yeah, I think, I think the other thing too is understanding quickly when you&#x27;ve made the wrong decision. That&#x27;s the other thing. Like, you know, we, we don&#x27;t get all our decisions right, and we&#x27;re going to continue to make the wrong ones, but it&#x27;s understanding Okay, what&#x27;s— how&#x27;s that all panned out?</p>
+          <p><span class="spk">Nick · 29:17</span>And getting, getting a hold of it quickly to change if it&#x27;s not working. That&#x27;s probably the other thing, you know. We&#x27;re going to make a lot of decisions in our business the next 2 or 3 years based on our trajectory, and they&#x27;re not all going to be right, but we&#x27;re going to know when they&#x27;re wrong really quickly, and we&#x27;re going to be able to, to pivot or go in a different direction instead of, you know, as Geordie said, run the race and then you&#x27;ve lost.</p>
+          <p><span class="spk">Nick · 29:39</span>Like, you know, you might as well know you&#x27;re losing halfway through and change direction or try and change your tactics.</p>
+          <p><span class="spk">Marty · 29:44</span>So Yeah, it&#x27;s a good point, Nick, because again, that&#x27;s the brilliance of forecasting that Jordy&#x27;s done. Like in the past, if you&#x27;re going off the figures from last month, you&#x27;re probably 3 months behind. So actually having forecasts and ratios to read off and even projecting them out to, you know, 1 year, 3, 10 years is gold.</p>
+          <p><span class="spk">Marty · 30:04</span>And then monitoring that, I think that&#x27;s been great. We&#x27;re getting real-time data and we can pivot much more quickly. And that&#x27;s been a huge value add in understanding that for us.</p>
+          <p><span class="spk">Nick · 30:18</span>Yeah, look, I&#x27;ve probably answered, we probably answered the last or the next question, Jordie, just in talking about that. But the question was, and feel free to add anything you want to, but how does the data influence business strategy?</p>
+          <p><span class="spk">Jordan · 30:29</span>Definitely. Well, I think for us, the data cost of acquisition was probably the most significant dataset for us that&#x27;s influenced our strategy. And that&#x27;s why we&#x27;re starting to have discussions around, okay, well, this is how we currently acquire our clients and what other avenues can we acquire clients potentially at a reduced cost?</p>
+          <p><span class="spk">Jordan · 30:49</span>That&#x27;s the first piece to it, that initial acquisition cost. And then circling back to what Marty said, it&#x27;s, okay, well, what&#x27;s the actual customer lifetime value or what can the maximum customer lifetime value be based on what services and products we can offer?? And at the moment, our average customer value is $5,000, is a made-up number, but it&#x27;s got the potential to be $15,000, $20,000, $40,000.</p>
+          <p><span class="spk">Jordan · 31:13</span>So what are our internal processes and systems doing to ensure we are maximising the value? Because for us, and as Marty said, and the opportunity is not necessarily on the first deal, but it&#x27;s on the second, third, fourth when they&#x27;re already a customer.</p>
+          <p><span class="spk">Jordan · 31:29</span>And For us, that&#x27;s really influencing both what we&#x27;re doing, how we&#x27;re training our sales guys. It&#x27;s, it&#x27;s highlighting the significance and the importance of, of first of all positioning yourself as, as a professional and an expert in that first instance and creating the awareness around what else we can offer.</p>
+          <p><span class="spk">Jordan · 31:46</span>But then following on from that, processes and systems and the way we operate internally, both with our internal marketing efforts and just supplementary retention strategies that we&#x27;ve got within the business so that we can maximize that value so that that cost of acquisition as an overall percentage to our average customer value continues to diminish as we optimize and continue to maximize what we&#x27;re extracting out of each customer.</p>
+          <p><span class="spk">Marty · 32:12</span>Jordie, not to put you on the spot, but I wanted to just maybe go through in real time the cost of acquisition to even from our client perspective to the cost of our delivery of what that is, because that&#x27;ll give business owners an insight as to how we, how we monitor.</p>
+          <p><span class="spk">Marty · 32:29</span>Even if it&#x27;s per one home loan deal, just to give an example.</p>
+          <p><span class="spk">Jordan · 32:34</span>So when you say deliver, our operating cost to execute?</p>
+          <p><span class="spk">Marty · 32:37</span>Yeah, yeah, that&#x27;s right. On that deal and also the revenue and how you get to that cost of acquisition, because I think that&#x27;ll be helpful.</p>
+          <p><span class="spk">Jordan · 32:44</span>Definitely, definitely. So for us, the way in which we first of all can establish our operating costs is it&#x27;s on a transaction basis. So for us, I went through and basically looked on a monthly basis, okay, well, what was our total operating costs? And your operating costs, things such as your rent, your utilities, your wages, anything that— and your IT, printing support, marketing efforts.</p>
+          <p><span class="spk">Jordan · 33:09</span>So anything that you require to execute on a day-to-day basis and operate and run your business. We excluded things such as potential once-off travel or any once-off expenses that don&#x27;t form part of you having to conduct daily operations. So that was the first piece, establishing what our operating costs are, and then basically looking at, okay, well, how many transactions or how many clients were we able to serve off the back of that expense or that total cost?</p>
+          <p><span class="spk">Jordan · 33:36</span>So for us, we roughly do about 150 transactions a month. So for us, I go away and calculate our operating cost per file or per deal is roughly about $1,200. And then from there, looking above the line, it&#x27;s okay, well, on an average loan amount for us, we for our business last financial year is $495,000.</p>
+          <p><span class="spk">Jordan · 33:58</span>And then I could derive, okay, well, the total gross commission from that we could pull is roughly $2,800. But what is actually landing in our pocket? And what I mean by that is what are we actually receiving? So who are we potentially paying out? Sorry, what are we actually potentially paying out to a referral partner or a different broker that is?</p>
+          <p><span class="spk">Jordan · 34:19</span>And what&#x27;s actually hitting the business&#x27;s pocket? And then for me, the Cost of acquisition is the difference between what we could have made and basically what we did make. So that was the cost that we had to pay to acquire that revenue. And then from there, it is accountable deducting what the cost was to acquire that revenue.</p>
+          <p><span class="spk">Jordan · 34:37</span>So not the cost of acquisition, but the cost to run the file. So what was our operating cost? And then from that, we can establish what our net profit is off our upfront revenue. In that scenario. Now, that doesn&#x27;t necessarily give you a true cost of acquisition because depending on who you talk to, for me and for us at this point in time, we&#x27;re just looking at it in isolation based on one transaction.</p>
+          <p><span class="spk">Jordan · 35:02</span>But that percentage could certainly reduce, or that cost of acquisition could be less of an impact if we&#x27;re focusing on the overall customer value, which could span 5, 10, 15 years depending on how well we nurture that customer.</p>
+          <p><span class="spk">Marty · 35:17</span>Look at the brilliance of that. If as a business owner, if you just listen to that 10 times, you will enhance your business 10 times because that&#x27;s the data right there that we build strategy off. Now we know the additional products we have and what the revenue potential is.</p>
+          <p><span class="spk">Marty · 35:36</span>We know where to focus on diminishing costs in the business and we can build direct strategy, even training, like Jordie said, we can really build our team up to be looking for those opportunities and it really changes the game, changes the focus much more specific to when you&#x27;re just going out there and trying to make every post a winner, so to speak.</p>
+          <p><span class="spk">Marty · 36:00</span>So great explanation.</p>
+          <p><span class="spk">Jordan · 36:02</span>I was going to say one of the other things, and this is more recent that we&#x27;ve been able to identify, is we&#x27;re starting to identify we&#x27;re feeling the effects of economies of scale within our operations. So I&#x27;d heard of the theory, I knew it, I understood it. But now that I&#x27;m monthly really analysing the numbers, we&#x27;re starting to feel the effects of the economy of scale.</p>
+          <p><span class="spk">Jordan · 36:24</span>So likewise, as I know we&#x27;re growing, our operating costs, our margins aren&#x27;t going to diminish, they&#x27;re going to increase because the economies of scale within our organisation are going to come into effect. And then you feel that flywheel and that flywheel will continue to gain momentum. So for me, that just gives me more confidence that, okay, well, we&#x27;re increasing what we&#x27;re receiving per deal, by reducing our cost of acquisition.</p>
+          <p><span class="spk">Jordan · 36:46</span>And then from an operational standpoint, I could have identified that, look, we are starting to feel the effects of the economy of scale with regards to our operating costs and our technology. And it&#x27;s probably a good segue to the last question, technology and systems and processes and automation.</p>
+          <p><span class="spk">Jordan · 37:01</span>So that, okay, well overall, as Marty&#x27;s described it to me before, you want the expenses to go down, the profit to go up, and the crocodile mouth, as if the alligator&#x27;s got its mouth open, that&#x27;s what you&#x27;re aiming for. For me too, the feeling the effects of economies of scale for the operating expenses has been a cool finding recently.</p>
+          <p><span class="spk">Nick · 37:23</span>I&#x27;m really glad you brought that up, Jordie. Sorry, Jase, I just want to bring this up while he&#x27;s talking about it because I was thinking about it when you were talking about, when you&#x27;re answering that last question. But it&#x27;s not just measuring the operating costs. That&#x27;s brilliant, yes. But the other thing that you&#x27;ve done, which is also data-driven, but is just get a really good handle on what the output of our workforce should be.</p>
+          <p><span class="spk">Nick · 37:46</span>So, you know, I&#x27;m talking about the CSMs here, but, and it&#x27;s, it&#x27;s different data, but it&#x27;s still data. So you, you know exactly now what output you can achieve from an individual, um, which again helps you understand, okay, what&#x27;s, what&#x27;s our capability here based on those operating costs.</p>
+          <p><span class="spk">Nick · 38:05</span>So I thought it was important because you— that&#x27;s, that&#x27;s definitely economies of scale., and that&#x27;s really understanding what you can get out of your current operating costs. But that&#x27;s also been data-driven to get to that number and get to that understanding. So I thought that&#x27;s really important as well.</p>
+          <p><span class="spk">Nick · 38:21</span>So maybe even talk through that, like how do you use data to understand the output of some of a cost in the business?</p>
+          <p><span class="spk">Jordan · 38:30</span>That&#x27;s a great point and exactly right. I couldn&#x27;t, it&#x27;s funny, I haven&#x27;t necessarily intended to accomplish any of these things, but they&#x27;ve all kind of gone in sequence and they&#x27;ve led me to where I am. So I couldn&#x27;t have Exactly as you said it. I couldn&#x27;t forecast, back to the analogy of you don&#x27;t want to run the race and realise you&#x27;ve lost.</p>
+          <p><span class="spk">Jordan · 38:46</span>We&#x27;ve got a very sound and firm understanding of the output per CSM and per broker and all the individuals within our organisation. We understand their output. So that has then allowed us, or allowed me and allowed us to forecast, okay, well based on this structure, based on the assumptions with regards to output, okay, well these are the results we can kind of expect in 2 or 3 years&#x27; time.</p>
+          <p><span class="spk">Jordan · 39:09</span>But for me, it&#x27;s— and in terms of output, it&#x27;s been a number of things. It&#x27;s a number of really listening to your employees and really getting an understanding of, okay, well, what do their days look like? What can they accomplish based on your current sets of processes and systems?</p>
+          <p><span class="spk">Jordan · 39:29</span>So for me, it&#x27;s looking at, okay, well, based on everyone&#x27;s stress levels, based on everyone&#x27;s duties, based on customer satisfaction as to the service we can deliver. Um, how many files— and in the context of our business, it&#x27;s how many clients are you responsible for at any given time.</p>
+          <p><span class="spk">Jordan · 39:45</span>And that&#x27;s something we&#x27;ve only really started recording over the last 12 months. So that was the first thing. It&#x27;s how do you measure somebody&#x27;s workload? So for us, it was the way in which we measured it was how many clients do you manage on a rolling basis. Um, and then from there, it&#x27;s okay, well, we&#x27;ve really got a few options.</p>
+          <p><span class="spk">Jordan · 40:02</span>It&#x27;s are we delivering the customer service we want? So that was kind of my first integral question, because of course if our business is going to be sustainable, customer service and customer experience is number one. So are we delivering the customer service that we expect as an organization, yes or no?</p>
+          <p><span class="spk">Jordan · 40:17</span>And then if the answer is yes, then awesome. Um, could I potentially increase the clients everyone&#x27;s handling, but then introduce some technologies and automation so that that offsets the workloads? So the cost attached to operating a certain amount of files will decrease Or alternatively, are we not delivering the customer service that we want, or are people too stressed and we&#x27;re going to have everyone leave in 6 months&#x27; time?</p>
+          <p><span class="spk">Jordan · 40:38</span>And okay, well, I need half the amount of clients they&#x27;re looking for. And then from there it&#x27;s, okay, well, how can I take a lot of— rather than having to necessarily go and hire another person or potentially significantly invest in a large technology, how can I just optimize the way we operate at the moment through processes and systems and extra training or whatever the type of the scenario is to, um, to, to reduce cost.</p>
+          <p><span class="spk">Jordan · 41:03</span>For me, and this is a big thing I think Nick&#x27;s taught me, and I&#x27;ve come to the realization recently, hiring someone should be the last thing you do if you&#x27;ve got operating issues. Um, the right hiring someone should be the last thing you do because you&#x27;ve got to look internally at the way you&#x27;re trying to execute the process before you just go and throw more money at it.</p>
+          <p><span class="spk">Jordan · 41:23</span>Money doesn&#x27;t mean it&#x27;s going to fix the problem. It&#x27;s just going to continue to be a problem as you grow. So yeah, I don&#x27;t think that probably answers the question, but that&#x27;s good stuff.</p>
+          <p><span class="spk">Marty · 41:34</span>It&#x27;s well put, mate. And I look at it because our industry&#x27;s notorious working off volume. And when you look at the ratios you&#x27;re talking about there, looking at those qualities, I mean, a great business builds profitability and great systems for their people and their clients.</p>
+          <p><span class="spk">Marty · 41:50</span>And I think one thing I wanted to bring up, even in regards to approvals in principle, when someone goes to buy a home and they want to get an indicative sort of answer whether they can buy that home. And we do a lot of those. But you find that over the course of the data that only 54% of that actually transitions into a full approval, which means that it turns into business.</p>
+          <p><span class="spk">Marty · 42:13</span>Now, Jordi was great because he goes, we&#x27;ve had this 70% conversion. Throughout our industry without questioning it. You know, so why is that the case? And once you dig deeper on the numbers, you go, okay, you could actually put some clear strategy around how do you turn those approval in principles into full approval because there&#x27;s a conversion and quality issue here.</p>
+          <p><span class="spk">Marty · 42:36</span>So it just shifts your focus because again, why would you be doing the work to lose 46% of that business? It just doesn&#x27;t make sense as a cost or a profitability standpoint or a business standpoint. So that&#x27;s the sort of the sort of richness you get out of the data in building direct strategy in different areas of the business depending on what the data shows us.</p>
+          <p><span class="spk">Marty · 42:59</span>But again, there&#x27;s another pinpoint where Jordie&#x27;s had a massive impact where we can build strategy off it. So I thought that was good to bring up.</p>
+          <p><span class="spk">Jordan · 43:08</span>And maybe just throwing that question to Marty ever so quickly, like Marty, you&#x27;ve had to work through the output of the sales team. So how are you able to identify where we kind of refer to as a sweet spot for a sales representative, what they can accomplish without necessarily being too stressed or starting to slip on that customer service?</p>
+          <p><span class="spk">Jordan · 43:26</span>How did you navigate that?</p>
+          <p><span class="spk">Marty · 43:27</span>Yeah, well, that comes to, first of all, depending on the quality of the support there. And with the support that we have in the office, you would think, given the numbers standpoint, I can tell on the front end, $4 to $5 million in settlements seems to be that point where quality starts to drop.</p>
+          <p><span class="spk">Marty · 43:44</span>But then, like you said, Jordie, as the quality support keeps developing, there&#x27;s more scope. So all of a sudden you can shift parameters based on where we&#x27;re putting our time and training into. And then again, there&#x27;s the next level up of additional support where people can then go to $8 to $10 million settlements that we&#x27;ve built a strategy off the progression of the person and the broker coming through the business.</p>
+          <p><span class="spk">Marty · 44:09</span>And that transcends, like you said, all the way through our customer services managers throughout with the qualities that we&#x27;re looking for and the competencies But it&#x27;s really at that front end piece. I know that I want all of our brokers to be like reverse engineering it in the top 15% of our industry.</p>
+          <p><span class="spk">Marty · 44:28</span>And I know the behaviors, actions, and capabilities for someone to be that. But even giving the data you&#x27;ve given me has shifted my perspective on that because I can see that with the Quality Support metrics, people can do more and they&#x27;re not at breaking point.</p>
+          <p><span class="spk">Marty · 44:44</span>So we can, we lift the bar together, which impacts the business because we&#x27;re obviously getting more opportunity for the business through each broker. And then of course, that&#x27;s more opportunity to the business as well. And it still keeps it in check where they&#x27;re not stressed out of their brains, which is against our values.</p>
+          <p><span class="spk">Marty · 45:05</span>So it&#x27;s, yeah.</p>
+          <p><span class="spk">Jordan · 45:07</span>I was going to say you can nearly do a whole episode on employee output because You&#x27;re exactly right. It&#x27;s what are you compromising? It&#x27;s quality, cost, it&#x27;s timeliness. There&#x27;s a really cool matrix on it, a 4-quadrant matrix. So yeah, employee output, because you see so many businesses that, you know, we&#x27;ve got a really good example that my partner&#x27;s with that they expect so much out of their staff that people are just leaving, leaving, leaving.</p>
+          <p><span class="spk">Jordan · 45:34</span>And it&#x27;s like, okay, well, why are people leaving? And okay, well, the environment or the systems or the processes aren&#x27;t where they need to be. So output of your staff and your employees is an integral part to forecasting and analyzing your data. Without that, without knowing what you can accomplish, you&#x27;re throwing darts at a dartboard.</p>
+          <p><span class="spk">Jason · 45:52</span>Beautiful, Jordan. Got a question for you, and it&#x27;s one that we&#x27;ve talked about in the past, which gets me really excited. And probably going to take it off you, Marty, because it excites me. So I&#x27;m going to jump in. Technology. I know that as an accountant working with small business owners, a lot of them don&#x27;t have a CRM. They don&#x27;t know what a CRM is.</p>
+          <p><span class="spk">Jason · 46:07</span>And I think that&#x27;s probably one of the biggest bits of technology you&#x27;ve probably been heavily involved in implementing in recent times. Can you talk us through the technology and systems that you are using and what that was like to implement them and the changes that that drove?</p>
+          <p><span class="spk">Jordan · 46:21</span>For us, one of the greatest challenges we had, because we&#x27;ve got multiple facets to our business being financial planning and mortgage broking across different industries, there&#x27;s different sets of CRMs. So as a group, we needed one for the business so we can correctly manage our clients and the way we communicate with our clients because we don&#x27;t want one system saying one thing and another system saying another.</p>
+          <p><span class="spk">Jordan · 46:43</span>So for us, it was looking at technology that we can basically combine all of our CRMs into one. So it allows us to build a profile on our customers and then helps us essentially nurture them and deliver services and products to them that suit their needs and requirements over their journey with us as a business.</p>
+          <p><span class="spk">Jordan · 47:04</span>So the big piece for us was circling back to maximising that customer value. We needed a system that basically could build a really accurate profile on you, Jase, as an example, as a customer. How old are you? What type of transactions or products do you have with us?</p>
+          <p><span class="spk">Jordan · 47:21</span>What are your goals or your plans in the next 6, 12, 18, 24, 36 months? And from us, we&#x27;ve got automation on the back end that basically can identify your profile and you as a consumer and can put you into a bucket or add you to a list. And then that allows us to conduct some really hyper-concentrated marketing efforts and very personalised marketing efforts to you as an individual so that when you are thinking about having a baby or buying a car or getting married or retiring, we&#x27;re the first person you</p>
+          <p><span class="spk">Jordan · 47:51</span>talk to because we&#x27;ve already passively been delivering that data and that information, that educational content to you through our CRM. So for us, it&#x27;s helping us build a really robust profile on you as a an individual, and then we can forecast your life milestones.</p>
+          <p><span class="spk">Jordan · 48:06</span>And then from there we can identify, okay, well, when, when can we fit into your journey and when can we add value to you as an individual? And you&#x27;re not being sold to because at the end of the day we&#x27;re adding value that you&#x27;re going to go and do anyway. So for us, it&#x27;s how can we add value but within our ecosystem?</p>
+          <p><span class="spk">Jordan · 48:23</span>That&#x27;s the first piece of the puzzle. With regards to marketing and technologies, one thing I&#x27;ve really learned of late is who owns your data? Um, so for us, if you&#x27;re doing a lot of marketing through Facebook or you&#x27;re doing a lot of marketing through Google, Google owns that data, Facebook owns that data.</p>
+          <p><span class="spk">Jordan · 48:41</span>So you, you&#x27;re not building a profile for that consumer, Facebook or Google are, as an example, right? So for us, it was looking at a technology that has the capabilities to collect and, and gather and format and sequence your data so that we can really harness that and talking about strategic valuations and us becoming more valuable as an organisation, the more data and the greater the profile we have on you as an individual adds overall business value</p>
+          <p><span class="spk">Jordan · 49:11</span>to us, but then also allows us to maximise that customer value. That&#x27;s the first piece of the puzzle.</p>
+          <p><span class="spk">Jason · 49:16</span>And then what did you use? What was the software that you ended up selecting?</p>
+          <p><span class="spk">Nick · 49:19</span>Don&#x27;t say, suspense.</p>
+          <p><span class="spk">Jordan · 49:21</span>Suspense. No, we&#x27;re with HubSpot at the moment. So HubSpot caters to that about 80 to 90% of the way. And then the extreme, the, the more so advanced analytics, looking at things such as Hootsuite. We haven&#x27;t engaged any, any system for that yet, but for us, HubSpot was, was that next step in the right direction that we can gather 80 to 90% of that data.</p>
+          <p><span class="spk">Jordan · 49:43</span>And then the real advanced analytics, there&#x27;s some specialized software out there that we&#x27;re, uh, we&#x27;re exploring and entertaining at the moment, but for us, we, we can&#x27;t necessarily do anything with it and we&#x27;re not necessarily accurately or consistently gathering it yet. So when it&#x27;s timely within the business, we&#x27;ll definitely be progressing down that path.</p>
+          <p><span class="spk">Nick · 50:02</span>Yeah, I think HubSpot is also, as well as marketing, it&#x27;s become a really good front-end sales tool for our mortgage brokers and our financial planners. And I get what that allows us to do is track deals from when they come in and then understand what journey that that, that opportunity takes from coming into the business.</p>
+          <p><span class="spk">Nick · 50:23</span>You know, when was it contacted by the salesperson? How long did it take to get submitted to the bank? Was it submitted to the bank or was it not? So analyzing that data, and as we spoke about earlier, to, to have a look at the opportunities and understand where they end up, you need to be tracking them from when they first come in.</p>
+          <p><span class="spk">Nick · 50:42</span>So HubSpot&#x27;s been a really good tool for that too, Jordie.</p>
+          <p><span class="spk">Jordan · 50:46</span>Definitely. And I can elaborate on that. Absolutely. We now know if we get 1,000 opportunities, how many of those are going to translate into applications submitted and then how many of those are going to translate into applications settled. And then what are we going to get paid off the back of those 1,000 opportunities?</p>
+          <p><span class="spk">Jordan · 51:02</span>So we&#x27;ve got really clear information and data to say, okay, well, if we want to be earning X, we need to pull in X amount of clients. So that means we need to be having X amount of conversations. We need to have X amount of staff that can process those applications and then we will earn X amount of revenue.</p>
+          <p><span class="spk">Jordan · 51:20</span>And that&#x27;s the first piece of the puzzle. And then not stealing Marty&#x27;s thunder, but the attrition rate of those opportunities. So if we know on average sales representative should be converting 6 out of 10 opportunities and we&#x27;ve got John Smith that&#x27;s converting 2 out of 10 opportunities, it gives us a real great opportunity to sit with him and conduct training and identify what&#x27;s he potentially missing, where is he what&#x27;s slipping through the cracks and why.</p>
+          <p><span class="spk">Jordan · 51:46</span>And then it helps him personally because of course he&#x27;s going to be accomplishing more as an individual. And then the flow-on effect is to us as a business as well. So Marty, how have you been finding that analyzing that data and really providing extra support to the sales team?</p>
+          <p><span class="spk">Marty · 52:00</span>Yeah, it&#x27;s great because you can actually look at timings on people calling clients. Like you can look at parameters around making sure that client experience is taken care of for that sense of urgency and quality as opposed to letting an opportunity slide by or taking too long.</p>
+          <p><span class="spk">Marty · 52:16</span>You want to really get onto that opportunity as quickly as possible, which increases conversion right away. So it&#x27;s, um, and, and you can certainly get a read of who&#x27;s very proactive in getting back to clients and utilizing the technology for impact, as opposed to someone that might not embrace it.</p>
+          <p><span class="spk">Marty · 52:34</span>And then you have to steer your training towards them to get them up to scratch. So it gives you a really good read on how are we delivering to our clients and also the performance of individuals within the business as well. So it&#x27;s a very, very powerful tool.</p>
+          <p><span class="spk">Marty · 52:50</span>And even converting, like you said, Jordie, like how much opportunity is coming in the front end? How much of that is actually converting? And is there a discrepancy? Are the better performers performing at a higher ratio of conversion?</p>
+          <p><span class="spk">Marty · 53:05</span>Than potentially people that aren&#x27;t performing as well. And it&#x27;s not to— it&#x27;s just getting visibility on it. It&#x27;s not to be pointing fingers. It&#x27;s more so to go, here&#x27;s the gap, like Nick said, and how do we train to the gap to make us a better business?</p>
+          <p><span class="spk">Marty · 53:20</span>And that&#x27;s what it&#x27;s all about. If we want to be elite, we need the metrics to be able to understand what elite is, not just on the human level, but on the analytical level as well. So it&#x27;s been impactful. And I also love the idea, and we don&#x27;t even really know what that value is, but that data, like you were talking about, Jase, with that firm that went public, is valuable.</p>
+          <p><span class="spk">Marty · 53:43</span>So even we might only have one product at the moment that we can expand out, but even having that data at the front end and attracting people to our business and giving them resources is hugely valuable as well. And we are still learning. I think, as to the value of that data, not just the business data on people actually taking on solutions through products and services.</p>
+          <p><span class="spk">Marty · 54:06</span>So there&#x27;s massive upside here that we&#x27;re starting to see in many different areas.</p>
+          <p><span class="spk">Jordan · 54:13</span>And just rounding that out with regards to the technology and the automation piece and the operating costs. So for us as a business, we have a certain standard of client experience we want to uphold, But with leveraging this technology and the automation within it, and HubSpot doesn&#x27;t just accomplish this, there&#x27;s a variety of other softwares that can.</p>
+          <p><span class="spk">Jordan · 54:30</span>We&#x27;ve identified at Acable, we want to communicate with a client 15 times from start to finish. Which of those communication points could we potentially automate or get the system to do so that essentially our team could either take on another file or manage another client or potentially just have deeper relationships with the customer?</p>
+          <p><span class="spk">Jordan · 54:50</span>And spend an extra few minutes on the phone with the customer when they do make those phone calls. So it just gives us choices to try and work out, okay, well, where does— where can that time be better spent? Because we&#x27;re leveraging technology and automation to, to do some of the heavy lifting that sometimes isn&#x27;t as necessary or important.</p>
+          <p><span class="spk">Marty · 55:08</span>And you&#x27;re getting best practice off the deck because there&#x27;s obviously HubSpot. You can monitor calls through it, emails. You can see the way people are communicating through it. So it gives you a lot of information on how to keep improving the business and not only the client experience but the team experience as well.</p>
+          <p><span class="spk">Marty · 55:25</span>And you generally find best practice even in the usage of the technology as well, which we just keep refining and improving, which is really powerful.</p>
+          <p><span class="spk">Jason · 55:35</span>Nick, maybe just one last question.</p>
+          <p><span class="spk">Nick · 55:37</span>The one thing I wanted you to round out with is for anyone that&#x27;s out there listening, like this is something that you&#x27;ve gone and upskilled yourself on. So, you know, I haven&#x27;t taught you this stuff. I know Marty hasn&#x27;t taught you this stuff. So for anyone that&#x27;s listening, How have you upskilled yourself on this? Have you read books, mentors, whatever it might be?</p>
+          <p><span class="spk">Nick · 55:55</span>But how do you know this stuff and how have you continued to develop your, um, your IQ on this stuff? Just so anyone out there listening might be thinking, geez, where do I start with this? I don&#x27;t really understand this. But you&#x27;ve obviously started from scratch.</p>
+          <p><span class="spk">Jordan · 56:07</span>So definitely, and to give everyone some confidence as well, I&#x27;ve got no external specific qualifications in any of this either. It&#x27;s literally just Google and books and talking to people and just acquiring the knowledge. Luckily I enjoy it, so for me it&#x27;s not a chore.</p>
+          <p><span class="spk">Jordan · 56:23</span>I get satisfaction, which I&#x27;m sure will make people feel a bit uncomfortable with satisfaction through analyzing data and numbers, but for me it&#x27;s something that really interests me. So HubSpot, first of all, and not plugging HubSpot at all, there&#x27;s no sponsorship over this episode from HubSpot.</p>
+          <p><span class="spk">Jason · 56:42</span>Future sponsor, future sponsor. Keep plugging, keep plugging.</p>
+          <p><span class="spk">Jordan · 56:48</span>They&#x27;ve got an incredible, incredible library of basically how to do everything and anything within that platform. So not only do they have the HubSpot Academy that if you sign up, you&#x27;ve got access to an extensive library of videos and written instructions that are accompanied with those videos, but they&#x27;ve got a large catalog of blogs and how-tos on virtually everything.</p>
+          <p><span class="spk">Jordan · 57:13</span>So for me it was, uh, Nick goes, look, this is the single largest investment we&#x27;re ever going to make, so it&#x27;s on you if it fails or succeeds. And for me, I locked myself in a dark room for about 3 months and studied every inch of what&#x27;s possible. So the first thing is just a lot of reading and allocating time throughout each day to, um, first of all, just self-teach and self-train.</p>
+          <p><span class="spk">Jordan · 57:37</span>But it is super user-friendly and very, very easy to consume. There&#x27;s also a lot of groups out there that are Platinum, Gold, Diamond partners that align themselves with HubSpot as well. So if you don&#x27;t have the time, you can align yourself with an agency, an organization that is well equipped and quite knowledgeable with the platform.</p>
+          <p><span class="spk">Jordan · 57:56</span>So that&#x27;s the first piece of the puzzle. But with regards to analyzing data and financials, mentors have probably been one of the largest influences. Both Nick and Marty and Jase, everyone on the episodes had a piece of that, but external mentors as well.</p>
+          <p><span class="spk">Jordan · 58:11</span>Online courses, Google. Google is your best friend with everything. So you&#x27;ve definitely got to take it with a grain of salt. But the thing that I&#x27;ve learned is immersing yourself and just trying to ask the right questions to both Google and your mentors. And for me, it&#x27;s I get an answer and then there&#x27;s always a follow-on question.</p>
+          <p><span class="spk">Jordan · 58:30</span>So there&#x27;s been many times it&#x27;s you going down the deep rabbit hole of you wanted to learn about cost of acquisition and then you&#x27;ve got down to churn rate percentages and you&#x27;ve got down to EBITDA and a variety of other key financial analysis tools that have better positioned me.</p>
+          <p><span class="spk">Jordan · 58:48</span>So it&#x27;s, to simply answer it, it&#x27;s just Google, but it&#x27;s talking to someone like a Jase and saying, hey Jase, what do I need to learn? What do I need to focus on? What do you look at as an individual when you look at my financials? And what type of terminology and theories and ideas should I go and research to better equip myself?</p>
+          <p><span class="spk">Jordan · 59:05</span>Jase, anything you want to add to that? Like, do you have clients coming to you and asking you those questions as to how do you review financials and what do you see as a healthy business?</p>
+          <p><span class="spk">Jason · 59:16</span>Yeah, definitely, mate. It&#x27;s one that a conversation is becoming more and more prevalent in our business is the clients that are looking at their growth and their future plans and then wondering how future plans can tie back into the things they can measure today, the metrics they&#x27;re looking at. And I&#x27;ve actually been scribbling notes off to the side during this episode just due to the value that I&#x27;m getting from it, the things that jumped out.</p>
+          <p><span class="spk">Jason · 59:36</span>We talk about customer acquisition, acquisition cost, the lifetime value of a customer, the, uh, revenue per client, and then your average recurring revenue if you&#x27;ve got a subscription-style business. All metrics that are super important, but metrics you can use to forecast your future planning of your business to go, if that number changes, what happens in the future?</p>
+          <p><span class="spk">Jason · 59:55</span>Or if we put some more money into acquiring customers, how does that affect the amount of leads we have? If we keep converting at the percentage we&#x27;re converting, what does that do to our revenue? Revenue. So they&#x27;re all fantastic drivers of being able to forecast your future position, whether it&#x27;s a 5-year plan or 10-year plan.</p>
+          <p><span class="spk">Jason · 60:10</span>If you know these numbers, if you invest in understanding your metrics and have systems like a HubSpot or something else that drives actually understanding your data, then all of these things that we&#x27;ve talked about in this episode are going to help you to plan for where you want to take your business. So yeah, really, really important stuff, mate, and I appreciate you sharing.</p>
+          <p><span class="spk">Jordan · 60:29</span>No, that&#x27;s good. And I was just going to say that I suppose the first step anybody could take is— and I know I&#x27;ve heard on this, this show a lot of the know your numbers. So you should be able to explain every single dollar that comes in and every single dollar that goes out within your business. If you have a dollar spent or a dollar earned that you don&#x27;t know or you can&#x27;t account for, then, then it&#x27;s not good enough.</p>
+          <p><span class="spk">Jordan · 60:51</span>Basically, for you to, to make good financial decisions, you&#x27;ve got to have a really sound understanding of every dollar in and every dollar out. And off the back of that information and knowledge, you can then analyze it.</p>
+          <p><span class="spk">Marty · 61:01</span>Yeah, great. Well said, Jordie. You want to send that dollar out and you want it to come back with some friends. So if you don&#x27;t know your numbers, you don&#x27;t know your numbers. And just on what you were saying there, like even from a sales perspective, when you&#x27;re thinking about giving that client an experience, you know, you think about that longevity of that customer value.</p>
+          <p><span class="spk">Marty · 61:19</span>How are you sitting with that client now? What are you giving to them? Are you giving them your best service or are you transactional and you&#x27;re only going to have them for one year or one transaction? You want to create a business that people want to be a part of. For a long time, whether it&#x27;s clients, team members, staff, whatever.</p>
+          <p><span class="spk">Marty · 61:36</span>You want them to be a part for the long haul.</p>
+          <p><span class="spk">Jason · 61:39</span>Guys, that has been episode 27 of The Numbers Game. Absolutely loved hearing from you, Jordan. Nick, what have you loved on today&#x27;s episode, mate?</p>
+          <p><span class="spk">Nick · 61:47</span>Oh, look, it&#x27;s not really something we&#x27;ve covered in today&#x27;s episode, but just from my own experience, you know, it&#x27;s— Jordie&#x27;s been a breath of fresh air. So I&#x27;ve spoken about this in the past, but understand where your gaps are. Get someone in your business to plug those gaps and You know, Jordie&#x27;s role now is really just projects, just making the business better, and he&#x27;s— there&#x27;s no one better at it.</p>
+          <p><span class="spk">Nick · 62:07</span>So as a business owner, the takeaway for me has been bringing expertise and give people the rope to excel at what they&#x27;re really good at. And that&#x27;s definitely changed our business. So thanks, Jordie.</p>
+          <p><span class="spk">Marty · 62:20</span>Yeah, and I&#x27;ll reiterate that I&#x27;ve got a businessman crush on Jordie because, again, he he&#x27;s just able to analyze your ideas around business and give you scope that you can implement really good strategy and work with people on. But I think too, as a business owner out there, if that is not a particular strength of yours, never hesitate to outsource.</p>
+          <p><span class="spk">Marty · 62:41</span>Never hesitate to get great people. Jordy said it, he loves doing what he does. There are people that love doing what they do that are different to you. So never think of it as an inadequacy. Think about it as providing opportunity for someone to take your business to another level with you.</p>
+          <p><span class="spk">Marty · 62:56</span>So really great stuff.</p>
+          <p><span class="spk">Jason · 62:59</span>100%. And for me, guys, it was the stuff that I touched on right at the end there, those metrics that are really important to a business that I think not a lot of business owners are focused on measuring their customer acquisition cost or looking at the lifetime value of retaining a customer. And just even a simple example, like you have a plumber come around to your house and do a job and you&#x27;re thinking, how How does a CRM help a plumber to grow their business?</p>
+          <p><span class="spk">Jason · 63:19</span>But every single time you interact with a client or a customer, you should be getting them onto your database— their name, their email, their phone number— and find a way to nurture that person so they remember you. Because if you&#x27;ve had a great experience with, let&#x27;s say, the plumber, and that you hear from them as a follow-up email saying, leave me a review or refer a friend for a $50 gift card, or whatever the follow-up is, you are much more likely to remember that person and refer someone to their business in future.</p>
+          <p><span class="spk">Jason · 63:45</span>You know, so think about things like that. This isn&#x27;t just applying to a mortgage broking firm or an accounting firm. This applies to business overall. There are things you can implement in your business using the data and analytics that is available to you every day in your business to help you grow and have a better future.</p>
+          <p><span class="spk">Jason · 64:01</span>Thanks, Jodie.</p>
+          <p><span class="spk">Jordan · 64:03</span>Beautiful. Thank you.</p>
+          <p><span class="spk">Nick · 64:04</span>Game over.</p>
+        </div>
+      </details>
+
+    </div>
+
+    <!-- audio-only: the Spotify player is the hero above; duplicate embed removed -->
+
+    <div class="listen">
+      <a href="https://open.spotify.com/episode/78k4JeUZ96kec4QH6qLsMA" target="_blank" rel="noopener" aria-label="Listen to this episode on Spotify">
+        <svg viewBox="0 0 24 24"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.52 17.34c-.24.36-.66.48-1.02.24-2.82-1.74-6.36-2.1-10.56-1.14-.42.12-.78-.18-.9-.54-.12-.42.18-.78.54-.9 4.56-1.02 8.52-.6 11.64 1.32.42.18.48.66.3 1.02zm1.44-3.3c-.3.42-.84.6-1.26.3-3.24-1.98-8.16-2.58-11.94-1.38-.48.12-1.02-.12-1.14-.6-.12-.48.12-1.02.6-1.14 4.32-1.32 9.72-.66 13.44 1.62.36.18.54.78.3 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.3c-.6.18-1.2-.18-1.38-.72-.18-.6.18-1.2.72-1.38 4.26-1.26 11.28-1.02 15.72 1.62.54.3.72 1.02.42 1.56-.3.42-1.02.6-1.56.3z"/></svg>
+        Spotify
+      </a>
+      <a href="https://podcasts.apple.com/au/podcast/id1555566088?i=1000776470464" target="_blank" rel="noopener" aria-label="Listen to this episode on Apple Podcasts">
+        <svg viewBox="0 0 24 24"><path d="M5.34 0A5.328 5.328 0 000 5.34v13.32A5.328 5.328 0 005.34 24h13.32A5.328 5.328 0 0024 18.66V5.34A5.328 5.328 0 0018.66 0H5.34zm6.525 2.568c2.336 0 4.448.902 6.056 2.587 1.224 1.272 1.912 2.619 2.264 4.392l.04.23c.04.272-.16.527-.432.567a.505.505 0 01-.567-.431l-.04-.213c-.312-1.57-.92-2.747-2.004-3.867-1.428-1.496-3.293-2.294-5.393-2.294-2.1 0-3.966.798-5.394 2.294-1.084 1.12-1.692 2.298-2.004 3.867l-.04.213a.507.507 0 01-.567.431.504.504 0 01-.432-.567l.04-.23c.352-1.773 1.04-3.12 2.264-4.392 1.608-1.685 3.72-2.587 6.056-2.587h.153zm.136 3.033c1.74 0 3.312.67 4.527 1.934.883.916 1.394 1.93 1.663 3.253l.04.23a.505.505 0 01-.431.567.503.503 0 01-.567-.432l-.04-.212c-.23-1.112-.659-1.97-1.396-2.732-1.052-1.1-2.404-1.672-3.9-1.672s-2.849.572-3.901 1.672c-.737.762-1.167 1.62-1.396 2.732l-.04.212a.503.503 0 01-.567.432.505.505 0 01-.432-.567l.04-.23c.27-1.323.78-2.337 1.664-3.253 1.215-1.264 2.787-1.934 4.527-1.934h.21zm-.078 3.05c1.092 0 2.091.424 2.89 1.22.582.58.924 1.245 1.107 2.15l.04.218a.501.501 0 01-.424.568.499.499 0 01-.568-.424l-.04-.198c-.146-.724-.413-1.253-.871-1.716-.63-.63-1.398-.957-2.226-.957s-1.595.328-2.225.957c-.459.463-.726.992-.871 1.716l-.04.198a.499.499 0 01-.568.424.501.501 0 01-.424-.568l.04-.219c.183-.904.525-1.569 1.106-2.149.8-.796 1.799-1.22 2.89-1.22h.184zM12 14.07a2.477 2.477 0 012.48 2.478A2.477 2.477 0 0112 19.024a2.477 2.477 0 01-2.48-2.477A2.477 2.477 0 0112 14.07z"/></svg>
+        Apple
+      </a>
+      <a class="yt-pill" href="https://www.youtube.com/@thenumbersgamepodcast?sub_confirmation=1" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.12-2.14C19.5 3.55 12 3.55 12 3.55s-7.5 0-9.38.51A3 3 0 0 0 .5 6.2 31.4 31.4 0 0 0 0 12a31.4 31.4 0 0 0 .5 5.8 3 3 0 0 0 2.12 2.14c1.88.51 9.38.51 9.38.51s7.5 0 9.38-.51a3 3 0 0 0 2.12-2.14A31.4 31.4 0 0 0 24 12a31.4 31.4 0 0 0-.5-5.8zM9.55 15.57V8.43L15.82 12z"/></svg>
+        Subscribe
+      </a>
+    </div>
+    <!-- LISTEN:END -->
+
+    <div class="relsec">
+      <span class="rtitle">Discover more</span>
+      <div class="relgrid">
+        <a class="relcard" href="/the-boom-of-aussie-small-businesses">
+          <img src="https://i.ytimg.com/vi/d1rAgpnupGU/hqdefault.jpg" alt="EP 141 thumbnail">
+          <span class="rt">The Boom of Aussie Small Businesses</span>
+          <span class="rfoot"><span class="rwhy">20 November 2023</span><span class="rtag">EP 141</span></span>
+        </a>
+        <a class="relcard" href="/fast-finance-how-apple-is-changing-spending-habits">
+          <img src="https://i.ytimg.com/vi/cK__CP7NNyw/hqdefault.jpg" alt="EP 192 thumbnail">
+          <span class="rt">Fast Finance: How Apple is Changing Spending Habits</span>
+          <span class="rfoot"><span class="rwhy">11 July 2024</span><span class="rtag">EP 192</span></span>
+        </a>
+        <a class="relcard" href="/why-you-need-a-will">
+          <img src="https://i.ytimg.com/vi/Xu_T0CedsxA/hqdefault.jpg" alt="EP 225 thumbnail">
+          <span class="rt">Why You Need a Will</span>
+          <span class="rfoot"><span class="rwhy">31 March 2025</span><span class="rtag">EP 225</span></span>
+        </a>
+        <a class="relcard" href="/should-australia-ditch-super">
+          <img src="https://i.ytimg.com/vi/kaeaiK_FwDg/hqdefault.jpg" alt="EP 287 thumbnail">
+          <span class="rt">Should Australia Ditch Super?</span>
+          <span class="rfoot"><span class="rwhy">27 July 2026</span><span class="rtag">EP 287</span></span>
+        </a>
+        <a class="relcard" href="/marty-s-hiring-checklist">
+          <img src="https://i.ytimg.com/vi/VbhBLRJEGsI/hqdefault.jpg" alt="EP 170 thumbnail">
+          <span class="rt">Marty&#x27;s Hiring Checklist</span>
+          <span class="rfoot"><span class="rwhy">18 April 2024</span><span class="rtag">EP 170</span></span>
+        </a>
+        <a class="relcard" href="/avoid-these-tax-time-pitfalls">
+          <img src="https://i.ytimg.com/vi/0QbVqLvsKMc/hqdefault.jpg" alt="EP 201 thumbnail">
+          <span class="rt">Avoid These Tax-Time Pitfalls</span>
+          <span class="rfoot"><span class="rwhy">2 September 2024</span><span class="rtag">EP 201</span></span>
+        </a>
+      </div>
+      <div class="reldots" id="reldots"></div>
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="footgrid">
+      <div class="fcol">
+        <div class="foot-label">Brought to you by</div>
+        <div class="sponsors">
+          <a href="https://www.inovayt.com.au/" target="_blank" rel="noopener"><img src="assets/inovayt-white.png" alt="Inovayt"></a>
+          <a href="https://futureadvisory.com.au/" target="_blank" rel="noopener"><img src="assets/future-advisory-white.png" alt="Future Advisory"></a>
+        </div>
+      </div>
+      <div class="fcol produced">
+        <div class="foot-label">Produced by</div>
+        <a href="https://www.vidpod.com.au/" target="_blank" rel="noopener"><img src="assets/vidpod-white.png" alt="VIDPOD"></a>
+      </div>
+    </div>
+    <nav class="footnav">
+      <a href="index.html">Home</a><a href="episodes.html">Every episode</a><a href="adventure.html">Choose your own adventure</a><a href="about.html">About the show</a><a href="nick-reilly.html">Nick Reilly</a><a href="jason-robinson.html">Jason Robinson</a><a href="contact.html">Contact</a>
+    </nav>
+    <div class="copyright">© 2026 The Numbers Game</div>
+  </footer>
+
+  <script>
+    var VIDEO='RAQ80ecsDq0';
+
+    /* Mobile nav dropdown. */
+    var burger=document.getElementById('navburger'), navdrop=document.getElementById('navdrop');
+    if(burger&&navdrop){burger.addEventListener('click',function(){
+      navdrop.hidden=!navdrop.hidden;
+      burger.setAttribute('aria-expanded', navdrop.hidden?'false':'true');
+    });}
+
+    /* Voice-note button reveals the recorder; × tucks it away. */
+    var vbtn=document.getElementById('vbtn'), vslot=document.getElementById('vslot'), vclose=document.getElementById('vclose');
+    if(vbtn&&vslot){vbtn.addEventListener('click',function(){vslot.hidden=!vslot.hidden;});}
+    if(vclose&&vslot){vclose.addEventListener('click',function(){vslot.hidden=true;});}
+
+    /* Keep-exploring dots: only shown when the strip actually scrolls (mobile). */
+    var rg=document.querySelector('.relgrid'), rd=document.getElementById('reldots');
+    if(rg&&rd){
+      var relCards=rg.querySelectorAll('.relcard');
+      relCards.forEach(function(){rd.appendChild(document.createElement('span'))});
+      var updDots=function(){
+        var scrollable=rg.scrollWidth>rg.clientWidth+4;
+        rd.style.display=scrollable?'flex':'none';
+        if(!scrollable)return;
+        var i=Math.round(rg.scrollLeft/(rg.scrollWidth-rg.clientWidth)*(relCards.length-1));
+        rd.querySelectorAll('span').forEach(function(s,n){s.classList.toggle('on',n===i)});
+      };
+      rg.addEventListener('scroll',updDots,{passive:true});
+      window.addEventListener('resize',updDots);
+      updDots();
+    }
+
+    /* Explore tabs: swap the visible panel; the row stays put so you never lose your place. */
+    var tabBtns=document.querySelectorAll('.tabbtn');
+    tabBtns.forEach(function(b){
+      b.addEventListener('click',function(){
+        tabBtns.forEach(function(o){o.classList.remove('on')});
+        document.querySelectorAll('.tpanel').forEach(function(p){p.hidden=true});
+        b.classList.add('on');
+        document.getElementById(b.getAttribute('data-panel')).hidden=false;
+      });
+    });
+
+    /* Audio-only: Spotify player is the hero; chapters/questions seek it via the Spotify iFrame API. */
+    var spotifyCtrl=null, pendingSeek=null;
+    function nudge(){
+      var p=document.getElementById('player-wrap'), r=p.getBoundingClientRect();
+      if(r.bottom<80 || r.top>window.innerHeight-90){ p.scrollIntoView({behavior:'smooth',block:'start'}); }
+    }
+    function startAt(sec){
+      nudge();
+      if(spotifyCtrl){ spotifyCtrl.seek(sec); spotifyCtrl.resume(); } else { pendingSeek=sec; }
+    }
+    window.onSpotifyIframeApiReady=function(IFrameAPI){
+      IFrameAPI.createController(document.getElementById('spotify-embed'),
+        {uri:'spotify:episode:2jTPyIcWEoLcV8g32cjbJn', width:'100%', height:'232'},
+        function(c){ spotifyCtrl=c; if(pendingSeek!=null){ c.seek(pendingSeek); c.resume(); pendingSeek=null; } });
+    };
+    (function(){var sc=document.createElement('script');sc.src='https://open.spotify.com/embed/iframe-api/v1';sc.async=true;document.head.appendChild(sc);})();
+  </script>
+</body>
+</html>

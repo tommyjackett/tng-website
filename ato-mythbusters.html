@@ -1,0 +1,661 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EP 127 · ATO Mythbusters | The Numbers Game</title>
+<meta name="description" content="Welcome to Episode 127 of The Numbers Game. In today&#x27;s episode, we&#x27;re debunking common myths around the Australian Tax Office (ATO) that could be affecting y…">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" sizes="64x64" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="canonical" href="https://thenumbersgamepodcast.com.au/ato-mythbusters">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="The Numbers Game">
+<meta property="og:title" content="EP 127 · ATO Mythbusters | The Numbers Game">
+<meta property="og:description" content="Welcome to Episode 127 of The Numbers Game. In today&#x27;s episode, we&#x27;re debunking common myths around the Australian Tax Office (ATO) that could be affecting y…">
+<meta property="og:url" content="https://thenumbersgamepodcast.com.au/ato-mythbusters">
+<meta property="og:image" content="https://thenumbersgamepodcast.com.au/assets/tng-audio-only-thumbnail.webp">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+  :root{
+    --purple:#585af3; --purple-dark:#2c1b8a; --mint:#7ad9a8;
+    --white:#ffffff; --muted:rgba(255,255,255,.60); --dim:rgba(255,255,255,.42);
+    --line:rgba(255,255,255,.12); --card:rgba(255,255,255,.05); --card-hi:rgba(255,255,255,.09);
+    --display:'Anton',Impact,'Helvetica Neue',sans-serif;
+    --sans:'Inter',system-ui,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif;
+    --wrap:1280px;   /* page frame (nav spans this) */
+    --col:960px;     /* content column (player, tabs, text) */
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:var(--sans); color:var(--white); line-height:1.6; -webkit-font-smoothing:antialiased;
+    background:#12093a;
+    background-image:
+      radial-gradient(1200px 600px at 82% -6%, rgba(88,90,243,.45) 0%, transparent 55%),
+      radial-gradient(900px 700px at 5% 8%, rgba(122,217,168,.10) 0%, transparent 50%),
+      linear-gradient(180deg,#2c1b8a 0%,#1a1150 28%,#100b34 62%,#0b0820 100%);
+    background-attachment:fixed;
+  }
+  a{color:inherit}
+  .wrap{max-width:var(--wrap);margin:0 auto;padding:0 36px}
+  main.wrap{max-width:var(--col)}
+  @media(max-width:720px){.wrap{padding:0 22px}}
+
+  /* ── Navbar ── */
+  .nav{position:sticky;top:0;z-index:50;background:linear-gradient(180deg,rgba(24,15,74,.92),rgba(24,15,74,.72));backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+  .nav-in{max-width:var(--wrap);margin:0 auto;padding:11px 36px;display:flex;align-items:center;justify-content:space-between}
+  @media(max-width:720px){.nav-in{padding:11px 22px}}
+  .brand{display:block;line-height:0}
+  .brand img{height:36px;width:auto;display:block}
+  .navlinks{display:flex;gap:28px;align-items:center}
+  .navlinks a{text-decoration:none;font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);transition:.15s}
+  .navlinks a:hover{color:var(--white)}
+  .navlinks a.navtop{cursor:default}
+  .navgroup{position:relative;display:flex;align-items:center}
+  .navgroup .subnav{display:none;position:absolute;top:100%;left:50%;transform:translateX(-50%);padding-top:14px;min-width:180px}
+  .navgroup:hover .subnav,.navgroup:focus-within .subnav{display:block}
+  .subnav-in,.navgroup .subnav{z-index:60}
+  .navgroup .subnav a{display:block;background:#180f4a;border:1px solid var(--line);border-top:0;padding:12px 16px;font-size:12px;color:rgba(255,255,255,.85)}
+  .navgroup .subnav a:first-child{border-top:1px solid var(--line)}
+  .navgroup .subnav a:hover{background:#221768;color:var(--white)}
+  .navburger{display:none;background:none;border:1px solid var(--line);padding:8px 10px;cursor:pointer;color:var(--white);transition:.15s}
+  .navburger:hover{border-color:rgba(122,217,168,.6)}
+  .navburger svg{width:20px;height:20px;fill:currentColor;display:block}
+  .navdrop{display:none}
+  @media(max-width:720px){
+    .navlinks{display:none}
+    .navburger{display:block}
+    .navdrop{display:block;position:absolute;left:0;right:0;top:100%;
+      background:#180f4a;border-bottom:1px solid var(--line);box-shadow:0 24px 50px rgba(0,0,0,.45)}
+    .navdrop[hidden]{display:none}
+    .navdrop a{display:block;padding:15px 22px;text-decoration:none;font-size:14px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:rgba(255,255,255,.9);border-bottom:1px solid rgba(255,255,255,.06)}
+    .navdrop a:last-child{border-bottom:0}
+    .navdrop a.sub{padding-left:42px;font-size:13px;color:rgba(255,255,255,.72)}
+    .navdrop .navlabel{display:block;padding:15px 22px 6px;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.4)}
+  }
+
+  /* ── Hero / hook (marker-highlight system: purple hook wraps naturally, mint payoff below)
+     Rules: title splits at its natural break (colon/pipe/question mark). Front = hook (purple,
+     big), back = payoff (mint, smaller). No break in title = purple hook only. Highlights hug
+     the text (tight em padding tuned to Anton) and wrap via box-decoration-break — never
+     hand-pick line breaks or mint words. ── */
+  header.hero{padding:34px 0 6px}
+  .hook{--inx:clamp(8.4px,2.1vw,15.6px)} /* one shared text inset so hook + payoff first letters align */
+  .hook .hk{font-family:var(--display);font-weight:400;text-transform:uppercase;
+    font-size:clamp(28px,7vw,52px);line-height:1.3;letter-spacing:-.5px;text-wrap:balance}
+  .hook .hk span{color:var(--white);padding:.04em var(--inx) .02em;
+    background:linear-gradient(var(--purple),var(--purple)) 0 50%/100% 87% no-repeat;
+    -webkit-box-decoration-break:clone;box-decoration-break:clone}
+  .hook .pay{font-family:var(--display);font-weight:400;text-transform:uppercase;
+    font-size:clamp(16px,4vw,24px);line-height:1.5;letter-spacing:.6px;margin-top:8px;text-wrap:balance}
+  .hook .pay span{color:#0a0a0a;padding:.08em var(--inx) .04em;
+    background:linear-gradient(var(--mint),var(--mint)) 0 50%/100% 88% no-repeat;
+    -webkit-box-decoration-break:clone;box-decoration-break:clone}
+  /* no-hook titles: mid-split into two full-size rows, purple then mint */
+  .hook .hk span.hkrow{display:block;background:none;padding:0}
+  .hook .hk .hkrow+.hkrow{margin-top:8px}
+  .hook .hk span.mintseg{color:#0a0a0a;
+    background:linear-gradient(var(--mint),var(--mint)) 0 50%/100% 87% no-repeat}
+
+  /* ── Player (clean facade → real player on tap) ── */
+  .player-wrap{margin:24px 0 4px;scroll-margin-top:76px}
+  .audio-hero{width:100%;min-height:232px;border-radius:12px;overflow:hidden;box-shadow:0 30px 70px rgba(0,0,0,.5),0 0 0 1px rgba(255,255,255,.06)}
+  .audio-hero iframe{display:block;width:100%;border:0}
+  .player{position:relative;width:100%;padding-top:56.25%;border-radius:0;overflow:hidden;background:#000;box-shadow:0 30px 70px rgba(0,0,0,.5),0 0 0 1px rgba(255,255,255,.06)}
+  .facade{position:absolute;inset:0;border:0;cursor:pointer;background-size:cover;background-position:center;display:flex;align-items:center;justify-content:center;padding:0}
+  .facade .play{width:74px;height:74px;border-radius:50%;background:rgba(10,6,30,.40);border:2px solid rgba(255,255,255,.72);display:flex;align-items:center;justify-content:center;transition:.18s;-webkit-backdrop-filter:blur(1px);backdrop-filter:blur(1px)}
+  .facade:hover .play{background:rgba(88,90,243,.62);transform:scale(1.07);border-color:#fff}
+  .facade .play::after{content:"";border-style:solid;border-width:11px 0 11px 19px;border-color:transparent transparent transparent #fff;margin-left:5px}
+  .player iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+
+  /* ── Episode facts (bottom of the Summary panel — templated per episode) ── */
+  .sumfacts{margin:14px 10px 4px;padding-top:13px;border-top:1px solid rgba(255,255,255,.08);display:flex;flex-direction:column;gap:8px}
+  .fact{display:flex;gap:12px;font-size:13.5px}
+  .fact .fl{flex:none;width:104px;color:var(--dim);font-weight:600;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;padding-top:2px}
+  .fact .fv{color:rgba(255,255,255,.9);font-weight:500}
+  .fact .fv a{color:var(--mint);text-decoration:none;border-bottom:1px solid rgba(122,217,168,.4);transition:.15s}
+  .fact .fv a:hover{border-bottom-color:var(--mint)}
+
+  /* ── Episode tag (identity: black label hanging off the title corner) ── */
+  .eptag{display:inline-block;position:relative;left:-6px;margin-bottom:-7px;z-index:2;
+    background:#0a0a0a;color:var(--white);font-family:var(--display);font-weight:400;
+    font-size:13.5px;letter-spacing:1.5px;text-transform:uppercase;padding:6px 11px 4px}
+
+  /* ── Explore tabs (sticky mode switcher; one panel swaps below, nothing shoves) ── */
+  .explore{margin-top:22px}
+  .tabs{position:sticky;top:58px;z-index:40;display:flex;flex-wrap:wrap;gap:8px;padding:10px 0;
+    background:linear-gradient(180deg,rgba(18,10,55,.96),rgba(18,10,55,.86));
+    backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+  .tabbtn{font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.5px;
+    font-size:14.5px;color:var(--white);background:var(--purple);border:1px solid var(--purple);
+    padding:9px 13px 7px;cursor:pointer;transition:.15s}
+  .tabbtn:hover{filter:brightness(1.12)}
+  .tabbtn.on{background:var(--mint);border-color:var(--mint);color:#0a0a0a}
+  .tabbtn.on:hover{filter:none}
+  .tabbtn .ct{font-size:12px;opacity:.75;font-variant-numeric:tabular-nums}
+  .tabbtn .ct::before{content:" · "}
+  .tpanel{border:1px solid var(--line);background:var(--card);padding:12px 10px 14px}
+  .hint{font-size:12.5px;color:var(--muted);padding:2px 10px 10px;border-bottom:1px solid rgba(255,255,255,.08);margin-bottom:6px}
+
+  /* ── Listen row (no box: label left, service pills follow) ── */
+  .listen{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:12px 16px;margin-top:34px}
+  .listen .lname{font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--dim)}
+  .listen a{display:inline-flex;align-items:center;gap:9px;padding:11px 18px;border-radius:999px;
+    background:var(--mint);color:#08210f;text-decoration:none;font-weight:800;font-size:12.5px;
+    letter-spacing:.04em;text-transform:uppercase;transition:.15s}
+  .listen a:hover{filter:brightness(1.06);transform:translateY(-1px);box-shadow:0 12px 30px rgba(122,217,168,.25)}
+  .listen svg{width:20px;height:20px;fill:currentColor;flex:none}
+  /* ── Listen-now Spotify audio embed (full column width, above the pills) ── */
+  .listen-now{margin-top:40px}
+  .listen-now .ln-head{display:flex;align-items:baseline;justify-content:space-between;gap:14px;margin-bottom:13px}
+  .listen-now .ln-title{font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--dim)}
+  .audio-embed{border-radius:12px;overflow:hidden;box-shadow:0 20px 50px rgba(0,0,0,.4),0 0 0 1px rgba(255,255,255,.06)}
+  .audio-embed iframe{display:block;width:100%;border:0}
+  @media(max-width:720px){.listen-now{margin-top:32px}}
+
+  /* ── Keep exploring (thumbnails link to other episode PAGES, never timecodes).
+     Swipeable strip on mobile, fits three-up on desktop. Variant rule: claim
+     "similar ground" + reason lines ONLY when moment-level topic overlap is
+     genuinely strong; otherwise show the latest released episodes with dates —
+     never invent a connection. ── */
+  .relsec{margin-top:60px;padding-top:58px;border-top:1px solid var(--line)} /* line = end of this episode's info */
+  .reldots{display:flex;justify-content:center;gap:7px;margin-top:12px}
+  .reldots span{width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.25);transition:.2s}
+  .reldots span.on{background:var(--mint)}
+  .relsec .rtitle{display:inline-block;font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.5px;font-size:14.5px;background:var(--mint);color:#0a0a0a;padding:9px 13px 7px;margin-bottom:18px}
+  .relgrid{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding-bottom:6px;scrollbar-width:none}
+  .relgrid::-webkit-scrollbar{display:none}
+  .relcard{flex:0 0 56%;max-width:232px;scroll-snap-align:start;display:flex;flex-direction:column;text-decoration:none;background:var(--card);border:1px solid var(--line);transition:.15s}
+  .relcard:hover{background:var(--card-hi);border-color:rgba(122,217,168,.55)}
+  .relcard img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block}
+  .relcard .rt{display:block;font-size:12.5px;font-weight:600;color:rgba(255,255,255,.92);line-height:1.4;padding:8px 8px 0}
+  .relcard .rfoot{margin-top:auto;display:flex;justify-content:space-between;align-items:flex-end;gap:8px;padding:10px 8px 9px}
+  .relcard .rwhy{font-size:11.5px;color:var(--mint)}
+  .relcard .rtag{display:inline-block;background:#0a0a0a;color:var(--white);font-family:var(--display);font-size:10px;letter-spacing:1.2px;text-transform:uppercase;padding:3px 7px 2px;white-space:nowrap;flex:0 0 auto}
+
+  /* ── Dropdown sections (accordion under the player) ── */
+  .drops{margin-top:34px;display:flex;flex-direction:column;gap:11px}
+  .drop{border:1px solid var(--line);border-radius:0;background:var(--card);overflow:hidden;transition:border-color .15s}
+  .drop[open]{border-color:rgba(122,217,168,.35)}
+  .drop>summary{list-style:none;cursor:pointer;padding:16px 18px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+  .drop>summary::-webkit-details-marker{display:none}
+  .drop>summary .st{font-weight:700;font-size:15.5px;letter-spacing:.005em}
+  .drop>summary .ct{margin-left:auto;font-size:12px;color:var(--dim);font-weight:600;font-variant-numeric:tabular-nums}
+  .drop>summary .chev{flex:none;width:22px;height:22px;border-radius:50%;background:rgba(122,217,168,.14);color:var(--mint);display:flex;align-items:center;justify-content:center;font-family:var(--display);font-size:15px;line-height:1;transition:.2s;transform:translateY(-1px)}
+  .drop[open]>summary .chev{transform:rotate(45deg)}
+  .drop-body{padding:2px 12px 12px}
+
+  /* chapters */
+  .chapter{display:flex;align-items:baseline;gap:14px;width:100%;text-align:left;cursor:pointer;background:none;border:0;color:inherit;font-family:inherit;padding:11px 10px;border-radius:10px;transition:.13s}
+  .chapter:hover{background:var(--card-hi)}
+  .chapter .tc{font-variant-numeric:tabular-nums;font-weight:700;font-size:14px;color:var(--mint);flex:none;width:48px}
+  .chapter .cx{font-size:15px;font-weight:500;color:rgba(255,255,255,.9)}
+  .chapter:hover .cx{color:#fff}
+
+  /* questions */
+  .q{display:flex;align-items:center;gap:12px;width:100%;text-align:left;cursor:pointer;background:none;border:0;border-radius:11px;color:inherit;font-family:inherit;padding:12px 10px;transition:.14s}
+  .q+.q{border-top:1px solid rgba(255,255,255,.05)}
+  .q:hover{background:var(--card-hi)}
+  .q .qm{font-family:var(--display);font-size:15px;color:var(--mint);flex:none;line-height:1;transform:translateY(1px)}
+  .q .qx{font-size:15px;font-weight:500;color:rgba(255,255,255,.92)}
+  .q .go{margin-left:auto;flex:none;color:var(--dim);font-size:18px;transition:.15s}
+  .q:hover .go{color:var(--mint);transform:translateX(2px)}
+
+  /* summary + transcript bodies */
+  .summary-body p{font-size:16.5px;line-height:1.62;color:rgba(255,255,255,.9);padding:6px 10px 4px}
+  .tbody{padding:2px 10px 8px}
+  .tbody p{font-size:14.5px;line-height:1.7;color:rgba(255,255,255,.78);margin-top:15px;max-width:64ch}
+  .tbody .spk{display:block;font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--mint);margin-bottom:2px}
+
+  /* ── Voice note ask (lives at the bottom of the Summary panel) ── */
+  .vask{margin:16px 10px 4px}
+  .vbtn{display:inline-flex;align-items:center;gap:9px;padding:12px 20px;border-radius:999px;border:0;cursor:pointer;
+    background:var(--mint);color:#08210f;font-family:inherit;font-weight:800;font-size:12.5px;
+    letter-spacing:.04em;text-transform:uppercase;transition:.15s}
+  .vbtn:hover{filter:brightness(1.06);transform:translateY(-1px);box-shadow:0 12px 30px rgba(122,217,168,.25)}
+  .vbtn svg{width:18px;height:18px;fill:currentColor;flex:none}
+  .vslot{background:var(--purple);padding:12px 10px 10px;margin:14px 0 4px;box-shadow:0 18px 40px rgba(0,0,0,.35)}
+  .vslot[hidden]{display:none}
+  .vhead{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;margin-bottom:10px}
+  .vhead .vmsg{font-family:var(--sans);font-size:13px;line-height:1.55;color:rgba(255,255,255,.92);margin:2px 0 0;padding:0 2px}
+  .vclose{background:none;border:0;color:rgba(255,255,255,.85);font-size:22px;line-height:1;cursor:pointer;padding:0 2px}
+  .vclose:hover{color:var(--white)}
+  .vslot iframe{display:block}
+
+  /* ── YouTube subscribe pill (sits in the listen row; outranks .listen a's mint) ── */
+  .listen a.yt-pill{background:var(--purple);color:var(--white)}
+  .listen a.yt-pill:hover{filter:brightness(1.1);transform:translateY(-1px)}
+  @media(max-width:720px){ /* mobile: no label, three compact pills on one row */
+    .listen .lname{display:none}
+    .listen{gap:8px}
+    .listen a{padding:10px 13px;font-size:11px;gap:6px}
+    .listen svg{width:16px;height:16px}
+  }
+
+  /* ── Footer: two columns under the line (Brought to you by | Produced by), matches adventure.html ── */
+  footer{border-top:1px solid var(--line);margin-top:68px;padding:52px 20px 58px}
+  .footgrid{max-width:var(--wrap);margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:start}
+  @media(max-width:720px){.footgrid{grid-template-columns:1fr;gap:40px}}
+  .fcol{text-align:center}
+  .foot-label{font-size:11px;font-weight:700;letter-spacing:.26em;text-transform:uppercase;color:var(--dim);margin-bottom:16px}
+  .sponsors{display:flex;justify-content:center;align-items:center;gap:38px;flex-wrap:wrap}
+  .sponsors a{display:inline-flex;transition:.15s}
+  .sponsors a:hover{transform:translateY(-1px)}
+  .sponsors img{height:34px;width:auto;opacity:.92}
+  .sponsors a:hover img{opacity:1}
+  .produced a{display:inline-flex;transition:.15s}
+  .produced a:hover img{opacity:1}
+  .produced img{height:30px;width:auto;opacity:.95}
+  .footnav{margin-top:36px;display:flex;justify-content:center;flex-wrap:wrap;gap:6px 26px}
+  .footnav a{font-size:12px;font-weight:600;letter-spacing:.04em;color:var(--dim);text-decoration:none;transition:.15s}
+  .footnav a:hover{color:var(--mint)}
+  .copyright{margin-top:40px;font-size:12px;color:var(--dim);text-align:center}
+
+  @media(min-width:720px){header.hero{padding:48px 0 6px}}
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "PodcastEpisode", "name": "Buying Commercial Property With Your Super in 2026 | What the Numbers Say", "url": "https://thenumbersgamepodcast.com.au/episode-285.html", "datePublished": "2026-07-13", "episodeNumber": 285, "image": "https://i.ytimg.com/vi/RAQ80ecsDq0/maxresdefault.jpg", "partOfSeries": {"@type": "PodcastSeries", "name": "The Numbers Game", "url": "https://thenumbersgamepodcast.com.au/"}}</script>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-in">
+      <a class="brand" href="index.html" aria-label="The Numbers Game home"><img src="assets/tng-logo.png" alt="The Numbers Game"></a>
+      <div class="navlinks">
+        <a href="index.html">Home</a>
+        <div class="navgroup">
+          <a class="navtop">Episodes</a>
+          <div class="subnav">
+            <a href="episodes.html">All episodes</a>
+            <a href="adventure.html">Find moments</a>
+          </div>
+        </div>
+        <div class="navgroup">
+          <a class="navtop">About</a>
+          <div class="subnav">
+            <a href="about.html">The show</a>
+            <a href="nick-reilly.html">Nick Reilly</a>
+            <a href="jason-robinson.html">Jason Robinson</a>
+          </div>
+        </div>
+        <a href="contact.html">Contact</a>
+      </div>
+      <button class="navburger" id="navburger" type="button" aria-label="Menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24"><path d="M3 6h18v2H3zM3 11h18v2H3zM3 16h18v2H3z"/></svg>
+      </button>
+    </div>
+    <div class="navdrop" id="navdrop" hidden>
+      <a href="index.html">Home</a>
+      <span class="navlabel">Episodes</span>
+      <a class="sub" href="episodes.html">All episodes</a>
+      <a class="sub" href="adventure.html">Find moments</a>
+      <span class="navlabel">About</span>
+      <a class="sub" href="about.html">The show</a>
+      <a class="sub" href="nick-reilly.html">Nick Reilly</a>
+      <a class="sub" href="jason-robinson.html">Jason Robinson</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+
+  <main class="wrap">
+
+    <header class="hero">
+      <div class="hook">
+        <span class="eptag">EP 127</span>
+        <h1 class="hk"><span>ATO Mythbusters</span></h1>
+      </div>
+    </header>
+
+    <div class="player-wrap" id="player-wrap">
+      <div class="audio-hero" id="spotify-embed"></div>
+    </div>
+
+    <div class="explore">
+      <div class="tabs" role="tablist">
+        <button class="tabbtn on" data-panel="p-summary">Summary</button>
+      </div>
+      <section class="tpanel" id="p-summary">
+        <div class="summary-body">
+          <p>Welcome to Episode 127 of The Numbers Game. In today&#x27;s episode, we&#x27;re debunking common myths around the Australian Tax Office (ATO) that could be affecting you or your business.</p>
+        </div>
+        <div class="vask">
+          <button class="vbtn" id="vbtn" type="button">
+            <svg viewBox="0 0 24 24"><path d="M12 14a3 3 0 0 0 3-3V6a3 3 0 1 0-6 0v5a3 3 0 0 0 3 3zm5-3a5 5 0 0 1-10 0H5a7 7 0 0 0 6 6.92V21h2v-3.08A7 7 0 0 0 19 11h-2z"/></svg>
+            Send us a voice note
+          </button>
+          <div class="vslot" id="vslot" hidden>
+            <div class="vhead">
+              <p class="vmsg">We'd love to hear from you. You can leave up to a 90 second voice note for us to play on the show: a question, some feedback, or a topic you want covered.</p>
+              <button class="vclose" id="vclose" type="button" aria-label="Close">&times;</button>
+            </div>
+            <iframe src="https://www.speakpipe.com/widget/inline/hhq6kzggsx7zpcsvakgxfrzun3zidpde" allow="microphone" width="100%" height="200" frameborder="0" title="Leave The Numbers Game a voice note"></iframe>
+          </div>
+          <script async src="https://www.speakpipe.com/widget/loader.js" charset="utf-8"></script>
+        </div>
+        <div class="sumfacts">
+          <div class="fact"><span class="fl">Release date</span><span class="fv">24 August 2023</span></div>
+          <div class="fact"><span class="fl">Hosts</span><span class="fv"><a href="jason-robinson.html">Jason Robinson</a> &amp; <a href="nick-reilly.html">Nick Reilly</a> &amp; <a href="marty-vidakovic.html">Marty Vidakovic</a></span></div>
+
+        </div>
+      </section>
+    </div>
+
+    <div class="drops">
+
+      <details class="drop">
+        <summary><span class="st">Episode transcript</span><span class="chev">+</span></summary>
+        <div class="drop-body tbody">
+          <p><span class="spk">Jason · 00:00</span>Welcome to The Numbers Game. I&#x27;m Jase and I&#x27;m joined by Nick and Marty. How are we going today, fellas?</p>
+          <p><span class="spk">Marty · 00:05</span>Going well, Jase, and really impressed with you picking up the phone today when I called rather than just letting me drop to voicemail. There&#x27;s some magic in that, mate. It&#x27;s— thank you. Thank you. I know you&#x27;re a busy man, but appreciate it.</p>
+          <p><span class="spk">Jason · 00:19</span>No, you&#x27;re very welcome. Trying something new, trying to, you know, when available, when not in a meeting or a podcast studio or webinar, if I can get to the phone, rather than letting it go to voicemail and then thinking, why are people leaving voicemails rather than sending texts or calling the office? Just handle it, deal with it, keep people happy.</p>
+          <p><span class="spk">Jason · 00:36</span>We&#x27;re here to serve, it&#x27;s what we do. So no, going really well and loving life.</p>
+          <p><span class="spk">Marty · 00:41</span>Felt special, Jase, felt special. And Nick, you always make me feel special, mate. So how are you, my friend?</p>
+          <p><span class="spk">Nick · 00:47</span>I&#x27;m going well. So just talk us through some of this magic. So if you&#x27;ve got an example of what picking up the phone provides for you, I&#x27;m just, This is just normal course of business. I&#x27;m just trying to understand.</p>
+          <p><span class="spk">Jason · 00:59</span>Normal course of business. So if I don&#x27;t answer the phone, like a client or a potential client needs something and I look at it and go, I&#x27;ll get to that later, knowing full well that my schedule really doesn&#x27;t allow for me to get to things later. But I think it for some stupid reason. And then later the stress piles on and I go, far out, I didn&#x27;t get back to that person&#x27;s call and I feel crap about it.</p>
+          <p><span class="spk">Jason · 01:19</span>Now, my voicemail does say to call the office because there&#x27;s a team of amazing people who could also help. But by answering the phone today, the example was a client was restructuring restructuring his business. He needed some companies and some trusts kind of restructured. He was feeling uncertain and concerned about what the restructure would do for his operations.</p>
+          <p><span class="spk">Jason · 01:37</span>And by answering the phone, putting everything at ease, and literally just then just got a text from lovely Matt just saying, mate, really appreciate the advice and quick turnaround. Thank you so much. So also leaves me feeling bloody good about my life too.</p>
+          <p><span class="spk">Nick · 01:52</span>That throws a spanner in the works for me. I might have to think my strategy because I find Yeah, purposely calling back 2 to 3 hours later means the problem&#x27;s fixed. So you know that if they&#x27;re calling, there&#x27;ll be a problem. I&#x27;ll just wait for 2 or 3 hours.</p>
+          <p><span class="spk">Nick · 02:07</span>Sometimes I don&#x27;t even have to wait. I got a text the other day, the reply was sorted about an hour later, no need to call me back. And you kind of know in the back of your head, well, I knew that was the case, which is why I didn&#x27;t call you back. So maybe he&#x27;s just selective on who you do and don&#x27;t call back.</p>
+          <p><span class="spk">Jason · 02:22</span>Maybe.</p>
+          <p><span class="spk">Marty · 02:23</span>Maybe.</p>
+          <p><span class="spk">Jason · 02:24</span>And Dad, if you&#x27;re listening, I swear I&#x27;ll call you back at some point soon, mate. I swear I haven&#x27;t been screening your calls.</p>
+          <p><span class="spk">Marty · 02:31</span>Nick, how are you, mate? Who are our sponsors, Jase? Who are our sponsors? They always pick up the phone. Come on.</p>
+          <p><span class="spk">Jason · 02:35</span>Actually, you know, before we get stuck in today, I&#x27;ve got an exciting ep about ATO and Mythbusters. And so don&#x27;t leave. It is actually exciting, but I&#x27;ve got something new for you today from a sponsor point of view, and I haven&#x27;t even flagged it with you guys, but I&#x27;m just going to do it anyway because I can and it&#x27;s already recording, so it&#x27;s happening. I&#x27;ve actually decided The lovely team at Coffco, Coff and Co Coffee Roasters, have approached and said they wanted to throw in a bit of a sponsor deal and get our listeners some discounted freshly roasted coffee, some of the best beans you can get in</p>
+          <p><span class="spk">Jason · 03:05</span>Melbourne. So check out coffco.com.au, it&#x27;s C-O-F-F-C-O.com.au, and there is a Numbers Game discount code for 30% off all freshly roasted coffee. So just type in the numbersgame at promo for— at the checkout for your promo and you&#x27;ll get 30% off your freshly roasted coffee.</p>
+          <p><span class="spk">Marty · 03:24</span>Where are they? Where are they, Jase?</p>
+          <p><span class="spk">Jason · 03:26</span>Melbourne. Melbourne-based coffee roasting business. And full disclaimer, I am involved in it. It&#x27;s Case. Case and I and a couple of friends set up this business years ago, and it just kind of sits off to the side. But I&#x27;ve had a few people reach out recently buying the coffee and then just messaging me saying, mate, good coffee, that&#x27;s really cool, or sending photos of their coffees through.</p>
+          <p><span class="spk">Jason · 03:44</span>And I thought, you know what, how do we get coffee into the hands of more people and The Numbers Game. Obviously there&#x27;s an audience, we&#x27;ve got some reach, things are pumping. And I thought it&#x27;d be a great example for anyone else who wants to reach out to The Numbers Game &#x27;cause they think our audience can benefit from their products or services.</p>
+          <p><span class="spk">Jason · 04:01</span>Obviously everyone loves Future Advisory and Innovate, but if we can get cheap coffee or better coffee into the people&#x27;s hands of Melbourne, that&#x27;s just exciting. So coffco.com.au. And during COVID we said it was the only cough that was acceptable in public.</p>
+          <p><span class="spk">Jason · 04:17</span>That was a bit of a cheap marketing, did they? Not bad.</p>
+          <p><span class="spk">Nick · 04:21</span>Do beans as well, or is it just—</p>
+          <p><span class="spk">Jason · 04:22</span>Yeah, beans, just freshly roasted beans.</p>
+          <p><span class="spk">Nick · 04:25</span>Oh, it is all beans. Perfect.</p>
+          <p><span class="spk">Jason · 04:27</span>You can get it ground up if you&#x27;ve got a— if you prefer it to come as a ground up ready to go. But most of the Brevilles and the machines these days have your grinder ready to rock and roll.</p>
+          <p><span class="spk">Marty · 04:38</span>So yeah, and I&#x27;ve got a mate who runs a secondhand car yard just out of Redwood there. Dodgy is all hell, overpriced cars, but just say Marty sent you and we&#x27;ll sort that out too for you. The coffee&#x27;s much more stable than my contacts. So there you go.</p>
+          <p><span class="spk">Jason · 04:53</span>There you go. Well, 30% off the numbers game. There you go. So yeah, something different. I thought, you know, Bugger It Future Adviser can go without sponsoring an episode. So, which would&#x27;ve made sense for ATO Mythbusters, but we&#x27;re really getting off track here. I&#x27;ve obviously had too much COFCO coffee today, but here we go.</p>
+          <p><span class="spk">Jason · 05:09</span>So, Guys, I did float this idea for an app. I do want to ask you a bit as well if you&#x27;re hearing things around the traps. But one of the big things that, you know, if you read some dodgy news sites, you&#x27;ll see that, you know, those Daily Mail articles and those kind of things popping up here, there, and everywhere.</p>
+          <p><span class="spk">Jason · 05:27</span>If you&#x27;re on TikTok, you&#x27;ll see it. But many, many Australians are out there complaining that their refunds this year were the smallest refunds they&#x27;ve had in years. So at a time where cost of living is going through the roof at a time where people are probably screaming for a bit of a handout and some money, and they&#x27;re used to getting their refund.</p>
+          <p><span class="spk">Jason · 05:46</span>What we&#x27;re seeing across the industry and personally as a firm is most people who were getting $2,000 to $3,000 back a year over the last couple of years, their refunds have dropped to a couple of hundred dollars. They&#x27;re getting $400 or $500 back this year.</p>
+          <p><span class="spk">Jason · 06:01</span>You guys seen or heard any of that around the traps before I explain what&#x27;s been happening? You hearing many people complain about their refunds or kind of separated from that world?</p>
+          <p><span class="spk">Nick · 06:11</span>We&#x27;re separated, luckily, but maybe it&#x27;s just too early for us. Just going into the fin year, you&#x27;re probably right at the coalface, mate. I&#x27;ve heard you mention it quite a few times, but yeah.</p>
+          <p><span class="spk">Marty · 06:22</span>Yeah.</p>
+          <p><span class="spk">Nick · 06:22</span>So keen to hear some more.</p>
+          <p><span class="spk">Jason · 06:24</span>Yeah, so effectively what ended up happening was the ATO removed an offset called the Low Middle Income Tax Offset. So for the last couple of years, it has genuinely just put basically $1,500 extra into most people&#x27;s pockets. There&#x27;s a bit of a tiered structure, but if you&#x27;re earning basically up to $120,000.</p>
+          <p><span class="spk">Jason · 06:43</span>So anything less than $120,000, you were qualifying for the Low Middle Income Tax Offset. So you imagine your mum and dad couple come in to get their tax done, and between them, they&#x27;re getting an extra $3,000 through this Low Middle Income Tax Offset.</p>
+          <p><span class="spk">Jason · 06:58</span>They both earn $80,000, $90,000. So, you know, they walk away with maybe $4,000 or $5,000 from their tax refunds, which means they can pay rego, pay insurance, throw some in the offset account as a bit of a top-up for their savings, and maybe book a family holiday. One year later, being this year, the ATO&#x27;s removed this offset.</p>
+          <p><span class="spk">Jason · 07:16</span>Wasn&#x27;t necessarily overly advertised by the ATO. We tried to talk to our clients a lot about it, but you know, not everyone lodges through an accountant. So there&#x27;s a lot of people out there that are doing their own tax wondering what the hell&#x27;s going on. That with that offset removed, if you imagine that same couple coming to do their tax on a year where that&#x27;s gone, that&#x27;s $3,000 less in their pocket from the get-go.</p>
+          <p><span class="spk">Jason · 07:37</span>The other thing we&#x27;re noticing is that more people have earned interest on their savings, which is good, but also there&#x27;s no tax paid on that. So that&#x27;s chewing into your refund and everything else. But unfortunately, what we&#x27;re seeing is couples come in who were used to getting $3,000, $4,000, $5,000, and they&#x27;re now getting $300 or $400.</p>
+          <p><span class="spk">Jason · 07:52</span>And psychologically, the mindset was that that money was already spent for a lot of people. You know, it was spent on the rego, it was spent on the family holiday that they&#x27;ve been telling the kids about for, you know, for months that, yeah, you know, we&#x27;ll book that soon, guys, no worries. And unfortunately, on our end, we&#x27;ve seen a lot of heartbreak week where we have to sit there on a Zoom call or a phone call with a client and hear them go, what do you mean?</p>
+          <p><span class="spk">Jason · 08:15</span>What do you mean that&#x27;s all I&#x27;m getting back this year? Like last year I got a couple of grand. How come it&#x27;s only $400 or $500? So I wanted to start by sharing that, that the times of couple of grand refunds, $3,000, $4,000, $5,000 refunds for, you know, your regular everyday worker has basically been slashed due to this low middle income tax offset that people had.</p>
+          <p><span class="spk">Jason · 08:34</span>It was a bit of a gravy train for 3 years. It wasn&#x27;t meant to continue. But as COVID happened, the government went, we&#x27;ll do it another year. We&#x27;ll do it another year and this year, probably the year that people need it most. But they&#x27;ve gone, look at inflation going, we don&#x27;t want to throw extra money in people&#x27;s pockets &#x27;cause they&#x27;re gonna go out and spend it.</p>
+          <p><span class="spk">Jason · 08:51</span>We&#x27;ve got inflation to tackle.</p>
+          <p><span class="spk">Marty · 08:53</span>Out of interest, Jase, does it impact, now this is just how I think, right? Like sometimes those rebates come into paying off your accountancy fees. You know, it&#x27;s like sometimes dollar for dollar you&#x27;re getting a good rebate back. And then you pay your accountancy fees through that.</p>
+          <p><span class="spk">Marty · 09:09</span>Does it impact your business in any way, or do you think it impacts accountants&#x27; businesses in any way? Because now people, not only the holiday, but also is there any perspective change on the fees? Hopefully not because there&#x27;s obviously value beyond that.</p>
+          <p><span class="spk">Jason · 09:25</span>Great question. Unfortunately, we&#x27;re providing value beyond just getting offsets automatically apply. We haven&#x27;t seen too much of that, but it&#x27;s natural that people do do that. I saw someone the other day, their refund was $250, which is approximately ultimately our fees. And the attitude is, well, at least your fees are paid, all good.</p>
+          <p><span class="spk">Jason · 09:43</span>Like, thanks for doing everything you can to improve my situation. But ultimately where that comes is, you know, if you haven&#x27;t kept receipts, if you haven&#x27;t done a logbook, if you haven&#x27;t done your home office logbook, there&#x27;s not a lot your accountant can do anyway. So having an accountant and going to get your tax done through an accountant, the value comes from accountability where your accountant tells you, hey Marty, before you come back next year, make sure you keep your home office logbook so we can claim the maximum hours possible for your home office or record the kilometres on your car because</p>
+          <p><span class="spk">Jason · 10:13</span>that&#x27;s a great claim and I can get you back more money next year if you keep your records.</p>
+          <p><span class="spk">Marty · 10:18</span>Yeah.</p>
+          <p><span class="spk">Jason · 10:19</span>So that education, mentoring, training and accountability through having an accountant or a tax agent do your tax is where you&#x27;re going to get your benefit. But ultimately, and not to remove, you know, customers from wanting to come and see an accountant like ourselves or anyone else out there, but if you have an extreme a family basic situation where you have no deductions to claim, it&#x27;s actually not worth your money to go to a tax agent and pay them, you know, $200 to push the form through when you could do that yourself from home</p>
+          <p><span class="spk">Jason · 10:49</span>and keep that $200 in your pocket.</p>
+          <p><span class="spk">Marty · 10:51</span>Well, it&#x27;s interesting that they were utilising that as discretionary spending. And that&#x27;s another thing now with inflation, people cutting back, that it just doesn&#x27;t put more money back into the market, does it? So I think they said that consumer spending was almost in negative territory in Sydney and Melbourne where the highest mortgages are at the moment compared to other states with lower mortgages.</p>
+          <p><span class="spk">Marty · 11:14</span>So that again, that&#x27;s another element. It&#x27;s all these death by a thousand paper cuts where people are choosing not to spend in various different reasons and areas.</p>
+          <p><span class="spk">Nick · 11:24</span>So it could be good for the CPI numbers. Is that what you&#x27;re saying, Marty?</p>
+          <p><span class="spk">Marty · 11:27</span>That&#x27;s exactly what I&#x27;m saying. I think I think that&#x27;ll surprise us the next couple of months.</p>
+          <p><span class="spk">Jason · 11:32</span>Yeah, look, and my message there, and there&#x27;s a few more points, but I&#x27;m just going to get this message out there really, really early and just a crisp, just cutting straight to the chase. I think gone are the times where people like you, you mean individuals working a job, working hard, not shelling out too much money.</p>
+          <p><span class="spk">Jason · 11:48</span>Maybe they use their phone and their internet a little bit. Maybe they work 1 or 2 days from home, but gone are the days of big tax refunds. If you&#x27;re being taxed properly, The ATO are doing everything they can to make it harder for you to claim things that you shouldn&#x27;t be claiming. So the mindset needs to change.</p>
+          <p><span class="spk">Jason · 12:03</span>I think a lot of these articles were geared towards that the Australian government was screwing over the taxpayer by not giving them a refund. But ultimately, you&#x27;re being taxed the same as previous years anyway. Yes, there&#x27;ll be some movements in brackets, but it&#x27;s more of a change of the mindset to not get to the end of the year and expect a refund.</p>
+          <p><span class="spk">Jason · 12:20</span>Every dollar that goes in your pocket every payday, every week, every fortnight, how you use that is up to you. And I&#x27;d say I would say put some of your own money and savings aside. If the mindset was that was going to come from your refund, it&#x27;s not anymore. But if you put it aside and then you do get a refund, bonus to you is you&#x27;ve got more savings put aside.</p>
+          <p><span class="spk">Jason · 12:39</span>I think there&#x27;s a bit of a mindset of spending that net dollar that ends up in your pocket and waiting for that refund at the end of the year.</p>
+          <p><span class="spk">Nick · 12:47</span>What would you say on average is the gap? So for your typical— I know you did rattle some figures off, but what are you actually seeing? What would someone get and what are they getting now? Are they getting anything back? What are we talking about here numbers-wise?</p>
+          <p><span class="spk">Jason · 13:03</span>The main difference is $1,500 smack bang on. So most of the time, if you got a $2,000 refund last year and you earned, you know, up to $120,000, you&#x27;re in that window, you&#x27;re basically at a point where you can just minus $1,500 straight off.</p>
+          <p><span class="spk">Jason · 13:18</span>So your $2,000 refund becomes your $500 refund instantly. And unless you&#x27;ve got more claims than you had the year before, nothing&#x27;s going to change that. So the other thing that&#x27;s kind of impacted that and it flows on from that question, Nick, is the ATO have changed how you claim home office, you know, and this one&#x27;s probably not an overly publicised one as well.</p>
+          <p><span class="spk">Jason · 13:44</span>But over the last couple of years, you know, you could rock up and tell your accountant, I worked on average 20 hours a week from home. And we&#x27;d do 20 hours times 48 weeks times 80 cents per hour or 52 cents per hour. Reel those numbers off quick.</p>
+          <p><span class="spk">Jason · 14:00</span>On now, if you use the 52-cent method, I was then able, which that covers your gas, electricity, you know, some running expenses from home. We were then able to claim your mobile phone, your internet, your printing and stationery, your new desk, your new chair, All of that stuff that you&#x27;re paying for to set up your home office, we could claim that.</p>
+          <p><span class="spk">Jason · 14:19</span>What&#x27;s happened now is they&#x27;ve moved the goalpost again and created a new home office rate of $0.67. They&#x27;ve got rid of the $0.80 method, which was the shortcut. They&#x27;ve got rid of the $0.52. They said, we&#x27;re going to be awesome and give you $0.67 per hour to work from home.</p>
+          <p><span class="spk">Jason · 14:36</span>But then this is where they were sneaky or shifty. They got rid of the ability to claim your mobile phone. Your internet, and your printing and stationery, amongst a few other things.</p>
+          <p><span class="spk">Marty · 14:48</span>There was a blanket cover.</p>
+          <p><span class="spk">Jason · 14:49</span>Yeah, correct. So, so if you work from home, you get 67 cents an hour, and that&#x27;s encapsulating basically everything. If you then went, well, no, I use my mobile phone a lot, I&#x27;m paying for it, all my calls are work-related, blah blah blah. If you want to claim your mobile phone and your internet, then the, the process of then trying to figure out how to claim your home office gets real complex to a point where you need to look at the kilowatt per hour use of the equipment that you use at home.</p>
+          <p><span class="spk">Jason · 15:16</span>On top of that, you&#x27;ve got to keep a record of your home office use every single day from the 1st of March 2023 ongoing. You can&#x27;t just keep a diary that gives an example of how you use your office week to week. It&#x27;s literally like every single day by the minute that you work from home, you&#x27;ve got to keep that diary.</p>
+          <p><span class="spk">Jason · 15:37</span>So it becomes— they&#x27;ve made it kind of so complex to be able to claim your home office that a lot of people are just going, Jase, it&#x27;s too hard. It&#x27;s, it&#x27;s, I&#x27;m not going to go check the kilowatt use of my air conditioning unit. You know, the kilowatt use of my desk lamp.</p>
+          <p><span class="spk">Jason · 15:53</span>I&#x27;m just not going to do it.</p>
+          <p><span class="spk">Nick · 15:55</span>Right.</p>
+          <p><span class="spk">Marty · 15:55</span>So that, that alone, that alone is good incentive to get back into work. But who wants to do that anyway?</p>
+          <p><span class="spk">Jason · 16:02</span>100%. So, you know, if you&#x27;ve got to then look at, you know, all of those things that, you know, that you&#x27;re using at home to run your home office during the day, you&#x27;ve then got to be able to compare your bills when you&#x27;re not working at home compared to your bills when you were working. There&#x27;s a whole list of things. And if you do generally work from home a lot, go through the process.</p>
+          <p><span class="spk">Jason · 16:20</span>You know, it&#x27;s worth it. You know, great. But don&#x27;t rock up to your accountant for your appointment, expect a big refund, but not be aware of all these new things, which is hard. I mean, you don&#x27;t know what you don&#x27;t know. But this is the challenges that the accounting industry and we are facing now is people rocking up, their refunds are slashed, and then it&#x27;s harder to claim things like home office printing and stationery.</p>
+          <p><span class="spk">Jason · 16:41</span>Mobile phone, internet.</p>
+          <p><span class="spk">Nick · 16:43</span>So what about people that are earning a bit more? So, you know, what if you&#x27;ve got someone who&#x27;s at that higher tax bracket? They might be having— they might have a second job, for example. And I know you&#x27;ve talked about this before, there&#x27;s a reluctance for people to have a second job because it&#x27;s going to push them up into that high tax bracket.</p>
+          <p><span class="spk">Nick · 17:02</span>And, you know, I&#x27;m going to lose half of my salary, you know, because I&#x27;m earning more, I&#x27;m in the top tax bracket. How are those people impacted? And is it any difference the fact that they&#x27;re earning more? Are you still encouraging people to take on that second job and earn more money if they have to?</p>
+          <p><span class="spk">Nick · 17:19</span>What are you finding there?</p>
+          <p><span class="spk">Jason · 17:21</span>Great question, Nick, and good to switch to that topic. We do hear that myth. If we&#x27;re talking ATO Mythbusters, one of the big ones we hear is there&#x27;s no point taking a second job. Because I&#x27;m just going to lose 50% of that to tax.</p>
+          <p><span class="spk">Jason · 17:37</span>Completely false. So to answer the two-part question, anyone earning more than $120,000 over the last couple of years, they won&#x27;t notice their circumstances change. If they&#x27;re coming in and claiming the same stuff as the year before, their refund&#x27;s going to be about on par.</p>
+          <p><span class="spk">Jason · 17:52</span>We have seen people get caught out with HELP debt. I mean, I answer it in two-part questions. If you had a HELP debt and you changed jobs in the last few years, because a lot of people jumped ship during COVID a lot of people forgot to tick the box and they&#x27;ve rocked in this year with $10,000 tax bills because their employer wasn&#x27;t withholding for their HELP debt.</p>
+          <p><span class="spk">Jason · 18:12</span>Part 2 of the question. If you have thought about getting a second job and you say, no, I&#x27;m not going to get a second job, it&#x27;s— I&#x27;m just going to lose 50% to tax. That&#x27;s absolutely not how it works. And I&#x27;d refer you to look up what&#x27;s called the marginal tax rates.</p>
+          <p><span class="spk">Jason · 18:28</span>So if your original job, you were earning $80,000. And you could pick up a second job doing a shift on the weekend and that job was going to earn you $20,000. And so you&#x27;d gross earn $100,000 for the year. We&#x27;re following my numbers if they all add up. Now what happens is because it&#x27;s your second job, you&#x27;ve got to tick the box that you can&#x27;t claim the tax-free threshold.</p>
+          <p><span class="spk">Jason · 18:48</span>That means that second employer will withhold more tax from you than what it looks like on your first job. But at the end of the year, when you go to do your tax return, you&#x27;ll end up paying what is your marginal rate of tax. So for example, between $80,000 and $100,000, you&#x27;re taxed at 32.5 cents to the dollar.</p>
+          <p><span class="spk">Jason · 19:08</span>So if your employer withheld closer to 50%, you&#x27;re going to get nearly 18 cents to the dollar back of that money at tax time, almost like a bit of forced savings. So it is well and truly— you&#x27;re well and truly better off that if you&#x27;re going to work a second job because things are a bit tight at the moment and you need to, you&#x27;re not going to lose half of that to the taxman unless that second job is putting you over $180,000 in income, then you&#x27;re going to lose $0.45 of it.</p>
+          <p><span class="spk">Jason · 19:34</span>And the reality is that you&#x27;re a high income earner.</p>
+          <p><span class="spk">Marty · 19:37</span>That&#x27;s really well explained because the general perception is, is what comes out of my pay, what comes out is what comes out of my pay. And I think that&#x27;s what, you know, people are impacted by right away. But you do get that benefit back based on your tax rate at the end of the tax year, if I&#x27;m hearing that correctly.</p>
+          <p><span class="spk">Marty · 19:53</span>So, but yeah, people are so reactionary. They go, well, 47 cents came out of, you know, my pay. And they get upset because they&#x27;re not getting that full whack in their hand right at that point. So yeah, a little bit of patience, but that&#x27;s a good mythbuster.</p>
+          <p><span class="spk">Jason · 20:09</span>Yep. And look, it&#x27;s amazing. I mean, I&#x27;ve heard it for the last 10 years of my career. Every year I hear it. Somebody says it multiple times that they didn&#x27;t take a second job because they didn&#x27;t want to lose half of the money to tax. So good reminder out there to everyone that if you do have the opportunity, it&#x27;s not going to work that way.</p>
+          <p><span class="spk">Marty · 20:23</span>I remember my dad carrying on about that going back even 15 years ago, &quot;These bastards charge me 50%. Dad, Dad, why do I work?&quot; And I&#x27;ll go, &quot;Well, Dad, I think you get that back.&quot; But, &quot;It doesn&#x27;t matter.&quot; It&#x27;s like, but that&#x27;s the very, very Croatian ethnic reaction.</p>
+          <p><span class="spk">Marty · 20:42</span>But I think everyone gets charged by that when they see it come out of their pay packet initially. So great point.</p>
+          <p><span class="spk">Jason · 20:50</span>Rounding out the kind of more personal income tax side, a few of the extra things that You know, what you don&#x27;t want to do is just go, well, look, my refund&#x27;s not as big. I&#x27;ll just inflate my deductions this year and the ATO won&#x27;t find out. You know, people that are a bit, I guess, disgruntled or saddened by the size of their refund, then going, oh, well, you know, actually maybe I did buy an extra $1,000 worth of tools, or, you know, actually my phone bill was double this year than what it was last year.</p>
+          <p><span class="spk">Jason · 21:15</span>When you start to inflate your deductions, the ATO benchmarks you against other people in your industry., and then they also have the data matching of last year versus this year, and they&#x27;re always flagging things that seem out of whack. So very important, you know, don&#x27;t, don&#x27;t, don&#x27;t try and fudge the system because, you know, too many people get caught out and it becomes painful down the track after that.</p>
+          <p><span class="spk">Jason · 21:36</span>So message there is keep your records, do your home office diary if you are working from home, and especially the big one is motor vehicle logbook. If you&#x27;re using your car to drive job site to job site and you&#x27;re carrying tools and equipment and whatnot, The best thing you&#x27;ll ever do is keep a motor vehicle logbook.</p>
+          <p><span class="spk">Jason · 21:51</span>Your accountant will love you for it. But the money you get back at year end when you provide your own vehicle to help you do your job is just phenomenal. So that&#x27;s the biggest tip there.</p>
+          <p><span class="spk">Marty · 22:03</span>Do you know what percentage of people get audited by the Tax Office out of interest?</p>
+          <p><span class="spk">Jason · 22:07</span>Yeah, very, very good question, Marty. And it&#x27;s really, really tiny. I can&#x27;t tell you the exact number, but it&#x27;s small. I mean, if there&#x27;s, you know, millions and millions and millions of taxpayers, I think it&#x27;s approximately 4 out of every 1,000 returns get picked up for audit.</p>
+          <p><span class="spk">Marty · 22:27</span>Okay.</p>
+          <p><span class="spk">Jason · 22:27</span>So, you know, 4 out of 1,000, I&#x27;d rather not risk it. It is a small number, but that&#x27;s definitely, you know, my message is there&#x27;s no point risking it because if you&#x27;re that 4 in 1,000, mate, you&#x27;re taken absolutely to town and then you&#x27;re watched every year after that for the sake of a couple of hundred dollars.</p>
+          <p><span class="spk">Jason · 22:42</span>You just don&#x27;t want to be that person.</p>
+          <p><span class="spk">Marty · 22:44</span>I only ask because every year you get the tax audit insurance that comes out, and I just, I&#x27;ve always wondered whether that&#x27;s actually worth doing. I guess if you do get audited, you would say that that&#x27;s a good idea. Yeah.</p>
+          <p><span class="spk">Jason · 22:57</span>Any other questions from you guys before I move from kind of individual side to more of the business myths around the ATO?</p>
+          <p><span class="spk">Nick · 23:04</span>No, no, no. I&#x27;m looking forward to the business stuff.</p>
+          <p><span class="spk">Jason · 23:07</span>Yeah, cool. I guess the business side probably comes more from a bit of, especially seeing what I see, and we talked about this earlier on today as we were pre-planning a bit of stuff, but I think the ability to register an ABN is a concern for me, which is the ability for just anyone to start a business, register a company.</p>
+          <p><span class="spk">Jason · 23:27</span>It&#x27;d be like being able to buy a car and drive a car without a license. Sure, you can buy a car, but unless you&#x27;ve got a license, you can&#x27;t legally drive that car on the road. What I really would love to see in the longer term is that before people can become business owners in Australia and register a business, or start a company on ASIC is that they have to do some kind of basic test, you know, course, licence to say, yes, I understand my obligations as</p>
+          <p><span class="spk">Jason · 23:58</span>a business owner. Unfortunately, we see way too many businesses go under. The stats around a business failing, it&#x27;s 3 in every 5 businesses are gone within a couple of years. You know, so those stats tell you something. It&#x27;s that people probably shouldn&#x27;t have got into business in the first place and they weren&#x27;t prepared for it.</p>
+          <p><span class="spk">Jason · 24:16</span>Do you guys Do you see or experience much of that on your end when business owners are coming to you to apply for loans and just things aren&#x27;t in order and things don&#x27;t look right?</p>
+          <p><span class="spk">Nick · 24:25</span>Yeah, well Marty&#x27;s probably the better question, better person to answer the question, but I would&#x27;ve thought that&#x27;s most business owners.</p>
+          <p><span class="spk">Marty · 24:31</span>Well, I&#x27;ve got two viewpoints on that. Firstly and foremost, you think about people going into any industry and they need to do testing compliance courses in order to be able to qualify to operate. In that industry.</p>
+          <p><span class="spk">Marty · 24:47</span>And I think it should be for any business, that should be the case, even starting a business. And for me, one of the most impactful things I ever did was when I was 17, 18 years of age. It was a government-run course called, uh, What Works, and it gave you the fundamentals of business and even having a vision, a mission, how to execute, knowing your financial numbers, uh, knowing when you&#x27;re in challenge point.</p>
+          <p><span class="spk">Marty · 25:12</span>What do you do, taxes. It was, it was a real eye-opener and it really set up some great foundations for me as a young person to go, these are the things I have to take note of. And I was doing a hobby business at the time, but it was, it was really invaluable.</p>
+          <p><span class="spk">Marty · 25:28</span>I learned more out of that than I did probably my last year of school, which tells you how I was going there. But, but it was, yeah, that was really impactful. And I think there needs to be something around that, you know, before you get an ABN and decide upon a business.</p>
+          <p><span class="spk">Marty · 25:43</span>And I see it then from the funding position. There are some people that are wanting to buy a business and have no experience in that business. And, you know, you ask them to put together a basic business plan and sometimes you get like 2 paragraphs and you just go, but there&#x27;s no way that you&#x27;re going to get anywhere here.</p>
+          <p><span class="spk">Marty · 26:04</span>You know, formulate a business plan, show your thinking behind it, that you&#x27;ve got, you know, you&#x27;ve got your ideal customer and all the things we know about. But it&#x27;s, yeah, it&#x27;s— there&#x27;s a lot of work to do there. And I think that&#x27;s why the failure rate is just so high, even in regards to managing cash flow and various different things.</p>
+          <p><span class="spk">Marty · 26:23</span>There&#x27;s still things I picked up from that What Works Business Course that stood me in good stead, you know, even to this day. So I would encourage people to follow that and try and get that information. There&#x27;ll be something around that you can do, but I think it needs to be a necessity before you get an ABN.</p>
+          <p><span class="spk">Jason · 26:43</span>Yeah, 100%. Couldn&#x27;t agree more. And even just then, I did a quick Google of a course to take before starting a small business in Australia, and there is heaps of them. And a lot of this info is free and it&#x27;s out there, but unfortunately people want to rush to the success or they want to rush to the starting line. It&#x27;d be like doing a marathon without training.</p>
+          <p><span class="spk">Jason · 27:00</span>Like, cool, Yep, you might be able to go and start, but the chance of actually making the full 42 kilometers, very unlikely. And that&#x27;s what&#x27;s happening in business. Getting to the starting line of a business without market research, business plan, budgeting and forecasting, avatar of client, business structure is usually wrong, accounting systems are wrong.</p>
+          <p><span class="spk">Jason · 27:19</span>There&#x27;s so much you&#x27;ve got to get set up right. And unfortunately, there is no checking mechanism or, or, you know, recommended education during that point of when you are starting up. Diving into a couple of the things that we then see that happens with people who dive into this journey of being a business owner and some of the myths is, actually I might throw it back at you guys, is it&#x27;s okay for me to run my personal expenses through my business.</p>
+          <p><span class="spk">Jason · 27:44</span>What do you think, Marty and Nick?</p>
+          <p><span class="spk">Marty · 27:46</span>Oh, for me it&#x27;s no, absolutely no. Don&#x27;t say anything.</p>
+          <p><span class="spk">Jason · 27:51</span>Yeah, yeah.</p>
+          <p><span class="spk">Marty · 27:54</span>Business is business. You get a wage out of that business or you get a distribution and that&#x27;s personal. It&#x27;s, don&#x27;t mix the two.</p>
+          <p><span class="spk">Jason · 28:03</span>Well said, Marty. That&#x27;s one we hear. You know, we look at a new client comes on board and we go through their business file. It&#x27;s the business bank account, it&#x27;s a company or a trust. And all of a sudden, you know, the holiday&#x27;s through there, the personal, the second vehicle for the family, car&#x27;s through there, the fuel, everything&#x27;s through there and the business isn&#x27;t making money.</p>
+          <p><span class="spk">Jason · 28:20</span>And we&#x27;re saying, geez, this business is not performing very well. And it&#x27;s not until you strip out all of the personal expenses, you actually, not a bad business in here. And then where we usually see that come undone is the business owner wants to sell or bring on an investor and the books are a shambles, is not painting the right picture of the business.</p>
+          <p><span class="spk">Jason · 28:39</span>Another fun one is, I can&#x27;t afford to— Sorry, Mark.</p>
+          <p><span class="spk">Marty · 28:43</span>Jase, could I just say before you go on, I remember in the old days in the bank, I had a client. I&#x27;m going, you&#x27;re making no money on your financials. And he said, see that, uh, figure of $280,000 for advertising and marketing? That&#x27;s mine. And I said, it&#x27;s not yours.</p>
+          <p><span class="spk">Marty · 29:00</span>It&#x27;s, you know, it&#x27;s the way it&#x27;s been, uh, you know, reported is that it&#x27;s not yours. And I can&#x27;t— he goes, that&#x27;s mine. I just couldn&#x27;t believe it. It&#x27;s like, uh, so that&#x27;s the &#x27;90s, kids. It&#x27;s the &#x27;90s. So, you know, hopefully he was one of the 400,000 that got picked up.</p>
+          <p><span class="spk">Marty · 29:18</span>Goodness me.</p>
+          <p><span class="spk">Jason · 29:20</span>Got another myth for you here that I&#x27;m interested in your take on for the general public. I can&#x27;t afford to pay my BAS or tax bill right now, so it&#x27;s better off that I don&#x27;t lodge my BAS or my tax if I can&#x27;t afford to pay it.</p>
+          <p><span class="spk">Nick · 29:33</span>Well, the answer is obviously no. The answer is no, but the minute you do lodge it, it&#x27;s due, right? So there&#x27;s a more sensible answer to this. Lodge it and communicate to the ATO.</p>
+          <p><span class="spk">Jason · 29:48</span>Not bad, Nick. Not bad. So, so yes.</p>
+          <p><span class="spk">Marty · 29:50</span>What about lodging one day prior to it needing to be lodged? Well, look, this is okay, isn&#x27;t it?</p>
+          <p><span class="spk">Jason · 29:56</span>This is the thing that really pains me at the moment. And there&#x27;s a lot of activity around liquidations, wind-ups from the ATO winding up businesses running as companies and a lot of activity in the insolvency space because that all went on hold during COVID Now, a lot of people had that mindset that, look, I don&#x27;t have the cash to pay my BAS or my taxes right now, so I&#x27;m just not going to lodge for a while.</p>
+          <p><span class="spk">Jason · 30:18</span>And eventually I&#x27;ll catch up. The issue and problem there is by not lodging, by not locking that in and letting the ATO know what&#x27;s happened, that gives the ATO the power to make whatever debt wasn&#x27;t lodged, making the director personally responsible under a Director Penalty Notice.</p>
+          <p><span class="spk">Jason · 30:34</span>It&#x27;s called a lockdown DPN if anyone is, you know, interested enough to go and Google it. But if you ever lodged your BAS late or your tax late and then you end up in insolvency and in a bit of trouble in business, all of those late lodgements can come back to bite you very, very firmly on the butt, and it becomes your personal liability that even if your company didn&#x27;t have the money to pay it, but you&#x27;ve got a nice house or some cars because business was good a few years ago, they&#x27;re coming after that stuff from you personally if you didn&#x27;t lodge your BASes or taxes on</p>
+          <p><span class="spk">Jason · 31:05</span>time. So even if you can&#x27;t afford to pay it at that time, you&#x27;re best off lodging it on time. And as Nick said, communicate to the ATO that, hey, we&#x27;re in a bit of a pickle right now, we need some time. Let&#x27;s put it on a payment plan and we&#x27;ll get back to you in a couple of months when we&#x27;ve got our affairs in order. That is the number one best way to handle that.</p>
+          <p><span class="spk">Marty · 31:23</span>Jase, what&#x27;s the longest you&#x27;ve ever seen someone not lodge a tax return?</p>
+          <p><span class="spk">Jason · 31:28</span>Uh, 20 years. And this was pre, pre, pre my time at Future Advisory, but a guy walked in, um, in Beaconsfield inside accounting I was working. Guy walked in and I think it was 1997 was the last time he lodged a return, and it might have been about 2017 or 2016.</p>
+          <p><span class="spk">Jason · 31:47</span>Might have not quite been 20 years. He was running a company, very, very successful company, lots and lots of dividends and a great wage. And he ran his company immaculately, but he had a problem with the ATO in 1997. He went, stuff &#x27;em, I&#x27;m not going to lodge and I&#x27;m going to wait and see how long it takes them to come after me.</p>
+          <p><span class="spk">Jason · 32:06</span>So he rocked in here, he had a shopping bag with the— in black capital, a black texta— he wrote 2017, 2018, 2019. He rocked in with 20 or 18 or 19 shopping bags, one per year, of all of his receipts, deductions, all expenses that he incurred personally while earning that wage, and just dropped it all on the desk and said, look, I waited nearly 20 years and the ATO still haven&#x27;t asked me for my returns.</p>
+          <p><span class="spk">Jason · 32:32</span>He goes, I don&#x27;t really want to leave it any longer just in case. It gets ugly. So let&#x27;s do it. Let&#x27;s get them all lodged. And I look, and the system&#x27;s still not great, and there&#x27;s still plenty of people out there that have overdue tax returns. And we&#x27;re seeing that more and more now, that, you know, they went, oh well, the ATO owed me $5, $10, so I decided not to lodge.</p>
+          <p><span class="spk">Jason · 32:54</span>It wasn&#x27;t worth my time. But if there&#x27;s, if any tax was withheld, you have an obligation to lodge your tax return.. And if you don&#x27;t, even for the sake of $5 or $10, I know it&#x27;s a pain in the butt, but you&#x27;re going to get that back. If you don&#x27;t lodge it, the fine for not lodging is $850 per year. So, you know, kind of worth your while to get in there and lodge it.</p>
+          <p><span class="spk">Jason · 33:13</span>I could talk about tax all day. I might give you the last myth here, guys. And then of course, if anyone ever wants to talk more business myths, I&#x27;m your man. I&#x27;m open book for this stuff. But I&#x27;m a business owner, Nick and Marty. So I&#x27;ve got employees. When it comes to paying superannuation, as long as all my employees&#x27; superannuation is paid, I don&#x27;t have to worry about superannuation for the business owner, but I need to make sure all my employees&#x27; super is paid.</p>
+          <p><span class="spk">Jason · 33:39</span>Thoughts?</p>
+          <p><span class="spk">Marty · 33:44</span>If you&#x27;re generating a wage out of the business, you have to pay super if you&#x27;re a business owner, don&#x27;t you?</p>
+          <p><span class="spk">Jason · 33:51</span>That was my thought. Very good. Very, very good. Yeah. So we hear sometimes business owners, you know, and again, they come across from a previous accountant where they may not have been as strict or firm and there&#x27;s some superannuation debt on the balance sheet.</p>
+          <p><span class="spk">Jason · 34:06</span>We say, oh, you&#x27;ve got some overdue super and the attitude is, oh, that&#x27;s, that&#x27;s just my super and I&#x27;m not going to dob myself in. I made sure I paid all my employees super. I&#x27;ll fix mine up another time. Unfortunately, when it comes to super, like what you said, Marty, if you&#x27;re an employee, you&#x27;re bound under all the laws and rules like everybody else, that your superannuation must be paid on time if you&#x27;re getting a wage out of your company or out of your business.</p>
+          <p><span class="spk">Jason · 34:29</span>And by not lodging super, the penalty for overdue super is 200% of the balance of the super. So we&#x27;ve seen an employer, a business owner who owed $50,000 in super. The penalty, if we weren&#x27;t able to kind of get them off that, the penalty that was floated was a $100,000 penalty, plus you still have to pay the $50,000 of super plus charges plus interest plus everything else.</p>
+          <p><span class="spk">Jason · 34:57</span>And then that $50,000, because it&#x27;s late, is not tax deductible. So you were just getting double whammied from all angles. Overdue super is one of the biggest issues I can see in small business owners from a risk point of view of that 200% penalty.</p>
+          <p><span class="spk">Jason · 35:13</span>There is an amnesty. There was an amnesty some years ago. There&#x27;s another amnesty coming up. If you have got overdue BASes and things like that, it&#x27;s kind of the time to pull your head out of being dug in the sand and put your hand up and let the ATO know, hey, I&#x27;ve got some overdue shit to sort out, but I&#x27;m working on it, you know, and it needs to be lodged, I think, between now and December, December &#x27;23 this year.</p>
+          <p><span class="spk">Jason · 35:35</span>So if you&#x27;ve got a backlog, try and engage an accountant ASAP to get your affairs in order. The amnesty that might be geared towards your GST and your pay-as-you-go withholding, but there&#x27;s no time like the present to lock in what you owe in super. Put your hand up so they don&#x27;t find you and do the 200% penalty and then get it on a payment plan.</p>
+          <p><span class="spk">Jason · 35:52</span>It&#x27;s going to— and again, superannuation is one that follows you for life. If you think as a director of a company, I&#x27;ll just sink the company, it&#x27;s failed, no good. Superannuation is one they&#x27;ll make the director personally liable for as well. So you&#x27;ve got to get on top of it, and there&#x27;s no time like the present.</p>
+          <p><span class="spk">Nick · 36:09</span>So Jase, the penalty notice for super, would you, would you still get that if it was just director super you hadn&#x27;t paid? Well, how do they view— if I&#x27;m a director and I&#x27;ve been on a salary and I sink the the company— sink the company is probably the wrong word— if my company fails and I owe myself super, how do they treat that?</p>
+          <p><span class="spk">Nick · 36:32</span>I&#x27;ve paid staff, but I haven&#x27;t paid myself. Call it, you know, there&#x27;s $20,000 or $30,000 owing. How, what would they do there?</p>
+          <p><span class="spk">Jason · 36:42</span>Effectively, there&#x27;s steps and processes to follow that they treat you just like every other employee. You&#x27;ve got entitlements that need to be paid out. And if you&#x27;re the person who&#x27;s going to be responsible for it, if they&#x27;re going to wind up that company and shut it all down, effectively that director penalty notice takes it from being a company debt and makes it a Nick Riley personal debt.</p>
+          <p><span class="spk">Jason · 37:01</span>So then you would have that debt assigned to your name and you&#x27;d have that debt sitting there earning accruing interest and penalties and fines and until you kind of knock it out and pay it off. And of course it&#x27;s going back into your super fund anyway. So it&#x27;s a bit of a frustrating process, but it&#x27;s what kind of They&#x27;ve got to follow, keep the wheels turning and make sure everyone follows the same set of rules.</p>
+          <p><span class="spk">Marty · 37:24</span>And Jase, is it different to someone owning a corporate trustee and not drawing a direct, you know, not being an employee, just being a business owner and then having distributions from the trust paid to them, then they don&#x27;t necessarily have to pay super.</p>
+          <p><span class="spk">Marty · 37:39</span>Isn&#x27;t that right? Because that&#x27;s something that a lot of business owners do as well, that it&#x27;s up to them to put into their super as to what they want to put in.</p>
+          <p><span class="spk">Jason · 37:47</span>That one is correct, Marty. And that&#x27;s why we do see a lot of people still opting for a family trust as a great way to operate a business so they can choose how much super to put in when they want rather than committing to the super guarantee system per being an employee of a company. But great question, Marty.</p>
+          <p><span class="spk">Jason · 38:04</span>Very good. I like it.</p>
+          <p><span class="spk">Marty · 38:06</span>I thought I&#x27;d better add that in because there&#x27;d be a few people going, oh no. And there&#x27;s a lot of people in that situation.</p>
+          <p><span class="spk">Jason · 38:12</span>All dependent on your circumstance. If you&#x27;re on a wage through a business, whether it&#x27;s a trust or a company, if you&#x27;re on a wage, you know, you&#x27;ve got entitlements. But if you&#x27;re the business owner taking drawings through a family trust, got a different set of rules. And like anything, seek your independent tax advice as well as financial advice from the great Nick and Marty and their team there.</p>
+          <p><span class="spk">Jason · 38:29</span>But guys, I know I&#x27;ve rambled off a lot of business and ATO myths, but I&#x27;m obviously immersed in this world and parts of it excite me, and I like educating the general public out there for some of the things that we can and can&#x27;t do. So hopefully you&#x27;ve, uh, you&#x27;ve Enjoyed.</p>
+          <p><span class="spk">Nick · 38:44</span>Awesome, mate. It&#x27;s great. Thank you.</p>
+          <p><span class="spk">Marty · 38:46</span>And until next time, game over.</p>
+        </div>
+      </details>
+
+    </div>
+
+    <!-- audio-only: the Spotify player is the hero above; duplicate embed removed -->
+
+    <div class="listen">
+      <a href="https://open.spotify.com/episode/78k4JeUZ96kec4QH6qLsMA" target="_blank" rel="noopener" aria-label="Listen to this episode on Spotify">
+        <svg viewBox="0 0 24 24"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.52 17.34c-.24.36-.66.48-1.02.24-2.82-1.74-6.36-2.1-10.56-1.14-.42.12-.78-.18-.9-.54-.12-.42.18-.78.54-.9 4.56-1.02 8.52-.6 11.64 1.32.42.18.48.66.3 1.02zm1.44-3.3c-.3.42-.84.6-1.26.3-3.24-1.98-8.16-2.58-11.94-1.38-.48.12-1.02-.12-1.14-.6-.12-.48.12-1.02.6-1.14 4.32-1.32 9.72-.66 13.44 1.62.36.18.54.78.3 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.3c-.6.18-1.2-.18-1.38-.72-.18-.6.18-1.2.72-1.38 4.26-1.26 11.28-1.02 15.72 1.62.54.3.72 1.02.42 1.56-.3.42-1.02.6-1.56.3z"/></svg>
+        Spotify
+      </a>
+      <a href="https://podcasts.apple.com/au/podcast/id1555566088?i=1000776470464" target="_blank" rel="noopener" aria-label="Listen to this episode on Apple Podcasts">
+        <svg viewBox="0 0 24 24"><path d="M5.34 0A5.328 5.328 0 000 5.34v13.32A5.328 5.328 0 005.34 24h13.32A5.328 5.328 0 0024 18.66V5.34A5.328 5.328 0 0018.66 0H5.34zm6.525 2.568c2.336 0 4.448.902 6.056 2.587 1.224 1.272 1.912 2.619 2.264 4.392l.04.23c.04.272-.16.527-.432.567a.505.505 0 01-.567-.431l-.04-.213c-.312-1.57-.92-2.747-2.004-3.867-1.428-1.496-3.293-2.294-5.393-2.294-2.1 0-3.966.798-5.394 2.294-1.084 1.12-1.692 2.298-2.004 3.867l-.04.213a.507.507 0 01-.567.431.504.504 0 01-.432-.567l.04-.23c.352-1.773 1.04-3.12 2.264-4.392 1.608-1.685 3.72-2.587 6.056-2.587h.153zm.136 3.033c1.74 0 3.312.67 4.527 1.934.883.916 1.394 1.93 1.663 3.253l.04.23a.505.505 0 01-.431.567.503.503 0 01-.567-.432l-.04-.212c-.23-1.112-.659-1.97-1.396-2.732-1.052-1.1-2.404-1.672-3.9-1.672s-2.849.572-3.901 1.672c-.737.762-1.167 1.62-1.396 2.732l-.04.212a.503.503 0 01-.567.432.505.505 0 01-.432-.567l.04-.23c.27-1.323.78-2.337 1.664-3.253 1.215-1.264 2.787-1.934 4.527-1.934h.21zm-.078 3.05c1.092 0 2.091.424 2.89 1.22.582.58.924 1.245 1.107 2.15l.04.218a.501.501 0 01-.424.568.499.499 0 01-.568-.424l-.04-.198c-.146-.724-.413-1.253-.871-1.716-.63-.63-1.398-.957-2.226-.957s-1.595.328-2.225.957c-.459.463-.726.992-.871 1.716l-.04.198a.499.499 0 01-.568.424.501.501 0 01-.424-.568l.04-.219c.183-.904.525-1.569 1.106-2.149.8-.796 1.799-1.22 2.89-1.22h.184zM12 14.07a2.477 2.477 0 012.48 2.478A2.477 2.477 0 0112 19.024a2.477 2.477 0 01-2.48-2.477A2.477 2.477 0 0112 14.07z"/></svg>
+        Apple
+      </a>
+      <a class="yt-pill" href="https://www.youtube.com/@thenumbersgamepodcast?sub_confirmation=1" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.12-2.14C19.5 3.55 12 3.55 12 3.55s-7.5 0-9.38.51A3 3 0 0 0 .5 6.2 31.4 31.4 0 0 0 0 12a31.4 31.4 0 0 0 .5 5.8 3 3 0 0 0 2.12 2.14c1.88.51 9.38.51 9.38.51s7.5 0 9.38-.51a3 3 0 0 0 2.12-2.14A31.4 31.4 0 0 0 24 12a31.4 31.4 0 0 0-.5-5.8zM9.55 15.57V8.43L15.82 12z"/></svg>
+        Subscribe
+      </a>
+    </div>
+    <!-- LISTEN:END -->
+
+    <div class="relsec">
+      <span class="rtitle">Discover more</span>
+      <div class="relgrid">
+        <a class="relcard" href="/victoria-owes-199-billion">
+          <img src="https://i.ytimg.com/vi/sppkdu-w5jU/hqdefault.jpg" alt="EP 280 thumbnail">
+          <span class="rt">Victoria Owes $199 Billion | What It Means for Your Business</span>
+          <span class="rfoot"><span class="rwhy">8 June 2026</span><span class="rtag">EP 280</span></span>
+        </a>
+        <a class="relcard" href="/human-advisory-board">
+          <img src="https://i.ytimg.com/vi/ZY2t4W1s5ww/hqdefault.jpg" alt="EP 174 thumbnail">
+          <span class="rt">Human Advisory Board</span>
+          <span class="rfoot"><span class="rwhy">6 May 2024</span><span class="rtag">EP 174</span></span>
+        </a>
+        <a class="relcard" href="/marty-s-pissed-off">
+          <img src="https://i.ytimg.com/vi/fOm_jg0Nfqk/hqdefault.jpg" alt="EP 165 thumbnail">
+          <span class="rt">Marty&#x27;s Pissed Off!</span>
+          <span class="rfoot"><span class="rwhy">28 March 2024</span><span class="rtag">EP 165</span></span>
+        </a>
+        <a class="relcard" href="/crafting-your-business-edge">
+          <img src="https://i.ytimg.com/vi/hnUeiudZfso/hqdefault.jpg" alt="EP 207 thumbnail">
+          <span class="rt">Crafting Your Business Edge</span>
+          <span class="rfoot"><span class="rwhy">14 October 2024</span><span class="rtag">EP 207</span></span>
+        </a>
+        <a class="relcard" href="/how-car-loans-are-destroying-your-wealth">
+          <img src="https://i.ytimg.com/vi/L3-9Ec_TlMg/hqdefault.jpg" alt="EP 226 thumbnail">
+          <span class="rt">How Car Loans Are Destroying Your Wealth</span>
+          <span class="rfoot"><span class="rwhy">7 April 2025</span><span class="rtag">EP 226</span></span>
+        </a>
+        <a class="relcard" href="/the-boom-of-aussie-small-businesses">
+          <img src="https://i.ytimg.com/vi/d1rAgpnupGU/hqdefault.jpg" alt="EP 141 thumbnail">
+          <span class="rt">The Boom of Aussie Small Businesses</span>
+          <span class="rfoot"><span class="rwhy">20 November 2023</span><span class="rtag">EP 141</span></span>
+        </a>
+      </div>
+      <div class="reldots" id="reldots"></div>
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="footgrid">
+      <div class="fcol">
+        <div class="foot-label">Brought to you by</div>
+        <div class="sponsors">
+          <a href="https://www.inovayt.com.au/" target="_blank" rel="noopener"><img src="assets/inovayt-white.png" alt="Inovayt"></a>
+          <a href="https://futureadvisory.com.au/" target="_blank" rel="noopener"><img src="assets/future-advisory-white.png" alt="Future Advisory"></a>
+        </div>
+      </div>
+      <div class="fcol produced">
+        <div class="foot-label">Produced by</div>
+        <a href="https://www.vidpod.com.au/" target="_blank" rel="noopener"><img src="assets/vidpod-white.png" alt="VIDPOD"></a>
+      </div>
+    </div>
+    <nav class="footnav">
+      <a href="index.html">Home</a><a href="episodes.html">Every episode</a><a href="adventure.html">Choose your own adventure</a><a href="about.html">About the show</a><a href="nick-reilly.html">Nick Reilly</a><a href="jason-robinson.html">Jason Robinson</a><a href="contact.html">Contact</a>
+    </nav>
+    <div class="copyright">© 2026 The Numbers Game</div>
+  </footer>
+
+  <script>
+    var VIDEO='RAQ80ecsDq0';
+
+    /* Mobile nav dropdown. */
+    var burger=document.getElementById('navburger'), navdrop=document.getElementById('navdrop');
+    if(burger&&navdrop){burger.addEventListener('click',function(){
+      navdrop.hidden=!navdrop.hidden;
+      burger.setAttribute('aria-expanded', navdrop.hidden?'false':'true');
+    });}
+
+    /* Voice-note button reveals the recorder; × tucks it away. */
+    var vbtn=document.getElementById('vbtn'), vslot=document.getElementById('vslot'), vclose=document.getElementById('vclose');
+    if(vbtn&&vslot){vbtn.addEventListener('click',function(){vslot.hidden=!vslot.hidden;});}
+    if(vclose&&vslot){vclose.addEventListener('click',function(){vslot.hidden=true;});}
+
+    /* Keep-exploring dots: only shown when the strip actually scrolls (mobile). */
+    var rg=document.querySelector('.relgrid'), rd=document.getElementById('reldots');
+    if(rg&&rd){
+      var relCards=rg.querySelectorAll('.relcard');
+      relCards.forEach(function(){rd.appendChild(document.createElement('span'))});
+      var updDots=function(){
+        var scrollable=rg.scrollWidth>rg.clientWidth+4;
+        rd.style.display=scrollable?'flex':'none';
+        if(!scrollable)return;
+        var i=Math.round(rg.scrollLeft/(rg.scrollWidth-rg.clientWidth)*(relCards.length-1));
+        rd.querySelectorAll('span').forEach(function(s,n){s.classList.toggle('on',n===i)});
+      };
+      rg.addEventListener('scroll',updDots,{passive:true});
+      window.addEventListener('resize',updDots);
+      updDots();
+    }
+
+    /* Explore tabs: swap the visible panel; the row stays put so you never lose your place. */
+    var tabBtns=document.querySelectorAll('.tabbtn');
+    tabBtns.forEach(function(b){
+      b.addEventListener('click',function(){
+        tabBtns.forEach(function(o){o.classList.remove('on')});
+        document.querySelectorAll('.tpanel').forEach(function(p){p.hidden=true});
+        b.classList.add('on');
+        document.getElementById(b.getAttribute('data-panel')).hidden=false;
+      });
+    });
+
+    /* Audio-only: Spotify player is the hero; chapters/questions seek it via the Spotify iFrame API. */
+    var spotifyCtrl=null, pendingSeek=null;
+    function nudge(){
+      var p=document.getElementById('player-wrap'), r=p.getBoundingClientRect();
+      if(r.bottom<80 || r.top>window.innerHeight-90){ p.scrollIntoView({behavior:'smooth',block:'start'}); }
+    }
+    function startAt(sec){
+      nudge();
+      if(spotifyCtrl){ spotifyCtrl.seek(sec); spotifyCtrl.resume(); } else { pendingSeek=sec; }
+    }
+    window.onSpotifyIframeApiReady=function(IFrameAPI){
+      IFrameAPI.createController(document.getElementById('spotify-embed'),
+        {uri:'spotify:episode:4eQX8qGiz2lJs9VC0dyoiU', width:'100%', height:'232'},
+        function(c){ spotifyCtrl=c; if(pendingSeek!=null){ c.seek(pendingSeek); c.resume(); pendingSeek=null; } });
+    };
+    (function(){var sc=document.createElement('script');sc.src='https://open.spotify.com/embed/iframe-api/v1';sc.async=true;document.head.appendChild(sc);})();
+  </script>
+</body>
+</html>

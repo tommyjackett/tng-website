@@ -1,0 +1,600 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EP 86 · Discovering The Potential Of AI | The Numbers Game</title>
+<meta name="description" content="Welcome to episode 86 of The Numbers Game. On today&#x27;s show, we discuss how AI is changing the way business is done and how it is becoming an integral part of…">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" sizes="64x64" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="canonical" href="https://thenumbersgamepodcast.com.au/discovering-the-potential-of-ai">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="The Numbers Game">
+<meta property="og:title" content="EP 86 · Discovering The Potential Of AI | The Numbers Game">
+<meta property="og:description" content="Welcome to episode 86 of The Numbers Game. On today&#x27;s show, we discuss how AI is changing the way business is done and how it is becoming an integral part of…">
+<meta property="og:url" content="https://thenumbersgamepodcast.com.au/discovering-the-potential-of-ai">
+<meta property="og:image" content="https://thenumbersgamepodcast.com.au/assets/tng-audio-only-thumbnail.webp">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+  :root{
+    --purple:#585af3; --purple-dark:#2c1b8a; --mint:#7ad9a8;
+    --white:#ffffff; --muted:rgba(255,255,255,.60); --dim:rgba(255,255,255,.42);
+    --line:rgba(255,255,255,.12); --card:rgba(255,255,255,.05); --card-hi:rgba(255,255,255,.09);
+    --display:'Anton',Impact,'Helvetica Neue',sans-serif;
+    --sans:'Inter',system-ui,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif;
+    --wrap:1280px;   /* page frame (nav spans this) */
+    --col:960px;     /* content column (player, tabs, text) */
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:var(--sans); color:var(--white); line-height:1.6; -webkit-font-smoothing:antialiased;
+    background:#12093a;
+    background-image:
+      radial-gradient(1200px 600px at 82% -6%, rgba(88,90,243,.45) 0%, transparent 55%),
+      radial-gradient(900px 700px at 5% 8%, rgba(122,217,168,.10) 0%, transparent 50%),
+      linear-gradient(180deg,#2c1b8a 0%,#1a1150 28%,#100b34 62%,#0b0820 100%);
+    background-attachment:fixed;
+  }
+  a{color:inherit}
+  .wrap{max-width:var(--wrap);margin:0 auto;padding:0 36px}
+  main.wrap{max-width:var(--col)}
+  @media(max-width:720px){.wrap{padding:0 22px}}
+
+  /* ── Navbar ── */
+  .nav{position:sticky;top:0;z-index:50;background:linear-gradient(180deg,rgba(24,15,74,.92),rgba(24,15,74,.72));backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+  .nav-in{max-width:var(--wrap);margin:0 auto;padding:11px 36px;display:flex;align-items:center;justify-content:space-between}
+  @media(max-width:720px){.nav-in{padding:11px 22px}}
+  .brand{display:block;line-height:0}
+  .brand img{height:36px;width:auto;display:block}
+  .navlinks{display:flex;gap:28px;align-items:center}
+  .navlinks a{text-decoration:none;font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);transition:.15s}
+  .navlinks a:hover{color:var(--white)}
+  .navlinks a.navtop{cursor:default}
+  .navgroup{position:relative;display:flex;align-items:center}
+  .navgroup .subnav{display:none;position:absolute;top:100%;left:50%;transform:translateX(-50%);padding-top:14px;min-width:180px}
+  .navgroup:hover .subnav,.navgroup:focus-within .subnav{display:block}
+  .subnav-in,.navgroup .subnav{z-index:60}
+  .navgroup .subnav a{display:block;background:#180f4a;border:1px solid var(--line);border-top:0;padding:12px 16px;font-size:12px;color:rgba(255,255,255,.85)}
+  .navgroup .subnav a:first-child{border-top:1px solid var(--line)}
+  .navgroup .subnav a:hover{background:#221768;color:var(--white)}
+  .navburger{display:none;background:none;border:1px solid var(--line);padding:8px 10px;cursor:pointer;color:var(--white);transition:.15s}
+  .navburger:hover{border-color:rgba(122,217,168,.6)}
+  .navburger svg{width:20px;height:20px;fill:currentColor;display:block}
+  .navdrop{display:none}
+  @media(max-width:720px){
+    .navlinks{display:none}
+    .navburger{display:block}
+    .navdrop{display:block;position:absolute;left:0;right:0;top:100%;
+      background:#180f4a;border-bottom:1px solid var(--line);box-shadow:0 24px 50px rgba(0,0,0,.45)}
+    .navdrop[hidden]{display:none}
+    .navdrop a{display:block;padding:15px 22px;text-decoration:none;font-size:14px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:rgba(255,255,255,.9);border-bottom:1px solid rgba(255,255,255,.06)}
+    .navdrop a:last-child{border-bottom:0}
+    .navdrop a.sub{padding-left:42px;font-size:13px;color:rgba(255,255,255,.72)}
+    .navdrop .navlabel{display:block;padding:15px 22px 6px;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.4)}
+  }
+
+  /* ── Hero / hook (marker-highlight system: purple hook wraps naturally, mint payoff below)
+     Rules: title splits at its natural break (colon/pipe/question mark). Front = hook (purple,
+     big), back = payoff (mint, smaller). No break in title = purple hook only. Highlights hug
+     the text (tight em padding tuned to Anton) and wrap via box-decoration-break — never
+     hand-pick line breaks or mint words. ── */
+  header.hero{padding:34px 0 6px}
+  .hook{--inx:clamp(8.4px,2.1vw,15.6px)} /* one shared text inset so hook + payoff first letters align */
+  .hook .hk{font-family:var(--display);font-weight:400;text-transform:uppercase;
+    font-size:clamp(28px,7vw,52px);line-height:1.3;letter-spacing:-.5px;text-wrap:balance}
+  .hook .hk span{color:var(--white);padding:.04em var(--inx) .02em;
+    background:linear-gradient(var(--purple),var(--purple)) 0 50%/100% 87% no-repeat;
+    -webkit-box-decoration-break:clone;box-decoration-break:clone}
+  .hook .pay{font-family:var(--display);font-weight:400;text-transform:uppercase;
+    font-size:clamp(16px,4vw,24px);line-height:1.5;letter-spacing:.6px;margin-top:8px;text-wrap:balance}
+  .hook .pay span{color:#0a0a0a;padding:.08em var(--inx) .04em;
+    background:linear-gradient(var(--mint),var(--mint)) 0 50%/100% 88% no-repeat;
+    -webkit-box-decoration-break:clone;box-decoration-break:clone}
+  /* no-hook titles: mid-split into two full-size rows, purple then mint */
+  .hook .hk span.hkrow{display:block;background:none;padding:0}
+  .hook .hk .hkrow+.hkrow{margin-top:8px}
+  .hook .hk span.mintseg{color:#0a0a0a;
+    background:linear-gradient(var(--mint),var(--mint)) 0 50%/100% 87% no-repeat}
+
+  /* ── Player (clean facade → real player on tap) ── */
+  .player-wrap{margin:24px 0 4px;scroll-margin-top:76px}
+  .audio-hero{width:100%;min-height:232px;border-radius:12px;overflow:hidden;box-shadow:0 30px 70px rgba(0,0,0,.5),0 0 0 1px rgba(255,255,255,.06)}
+  .audio-hero iframe{display:block;width:100%;border:0}
+  .player{position:relative;width:100%;padding-top:56.25%;border-radius:0;overflow:hidden;background:#000;box-shadow:0 30px 70px rgba(0,0,0,.5),0 0 0 1px rgba(255,255,255,.06)}
+  .facade{position:absolute;inset:0;border:0;cursor:pointer;background-size:cover;background-position:center;display:flex;align-items:center;justify-content:center;padding:0}
+  .facade .play{width:74px;height:74px;border-radius:50%;background:rgba(10,6,30,.40);border:2px solid rgba(255,255,255,.72);display:flex;align-items:center;justify-content:center;transition:.18s;-webkit-backdrop-filter:blur(1px);backdrop-filter:blur(1px)}
+  .facade:hover .play{background:rgba(88,90,243,.62);transform:scale(1.07);border-color:#fff}
+  .facade .play::after{content:"";border-style:solid;border-width:11px 0 11px 19px;border-color:transparent transparent transparent #fff;margin-left:5px}
+  .player iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+
+  /* ── Episode facts (bottom of the Summary panel — templated per episode) ── */
+  .sumfacts{margin:14px 10px 4px;padding-top:13px;border-top:1px solid rgba(255,255,255,.08);display:flex;flex-direction:column;gap:8px}
+  .fact{display:flex;gap:12px;font-size:13.5px}
+  .fact .fl{flex:none;width:104px;color:var(--dim);font-weight:600;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;padding-top:2px}
+  .fact .fv{color:rgba(255,255,255,.9);font-weight:500}
+  .fact .fv a{color:var(--mint);text-decoration:none;border-bottom:1px solid rgba(122,217,168,.4);transition:.15s}
+  .fact .fv a:hover{border-bottom-color:var(--mint)}
+
+  /* ── Episode tag (identity: black label hanging off the title corner) ── */
+  .eptag{display:inline-block;position:relative;left:-6px;margin-bottom:-7px;z-index:2;
+    background:#0a0a0a;color:var(--white);font-family:var(--display);font-weight:400;
+    font-size:13.5px;letter-spacing:1.5px;text-transform:uppercase;padding:6px 11px 4px}
+
+  /* ── Explore tabs (sticky mode switcher; one panel swaps below, nothing shoves) ── */
+  .explore{margin-top:22px}
+  .tabs{position:sticky;top:58px;z-index:40;display:flex;flex-wrap:wrap;gap:8px;padding:10px 0;
+    background:linear-gradient(180deg,rgba(18,10,55,.96),rgba(18,10,55,.86));
+    backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+  .tabbtn{font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.5px;
+    font-size:14.5px;color:var(--white);background:var(--purple);border:1px solid var(--purple);
+    padding:9px 13px 7px;cursor:pointer;transition:.15s}
+  .tabbtn:hover{filter:brightness(1.12)}
+  .tabbtn.on{background:var(--mint);border-color:var(--mint);color:#0a0a0a}
+  .tabbtn.on:hover{filter:none}
+  .tabbtn .ct{font-size:12px;opacity:.75;font-variant-numeric:tabular-nums}
+  .tabbtn .ct::before{content:" · "}
+  .tpanel{border:1px solid var(--line);background:var(--card);padding:12px 10px 14px}
+  .hint{font-size:12.5px;color:var(--muted);padding:2px 10px 10px;border-bottom:1px solid rgba(255,255,255,.08);margin-bottom:6px}
+
+  /* ── Listen row (no box: label left, service pills follow) ── */
+  .listen{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:12px 16px;margin-top:34px}
+  .listen .lname{font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--dim)}
+  .listen a{display:inline-flex;align-items:center;gap:9px;padding:11px 18px;border-radius:999px;
+    background:var(--mint);color:#08210f;text-decoration:none;font-weight:800;font-size:12.5px;
+    letter-spacing:.04em;text-transform:uppercase;transition:.15s}
+  .listen a:hover{filter:brightness(1.06);transform:translateY(-1px);box-shadow:0 12px 30px rgba(122,217,168,.25)}
+  .listen svg{width:20px;height:20px;fill:currentColor;flex:none}
+  /* ── Listen-now Spotify audio embed (full column width, above the pills) ── */
+  .listen-now{margin-top:40px}
+  .listen-now .ln-head{display:flex;align-items:baseline;justify-content:space-between;gap:14px;margin-bottom:13px}
+  .listen-now .ln-title{font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--dim)}
+  .audio-embed{border-radius:12px;overflow:hidden;box-shadow:0 20px 50px rgba(0,0,0,.4),0 0 0 1px rgba(255,255,255,.06)}
+  .audio-embed iframe{display:block;width:100%;border:0}
+  @media(max-width:720px){.listen-now{margin-top:32px}}
+
+  /* ── Keep exploring (thumbnails link to other episode PAGES, never timecodes).
+     Swipeable strip on mobile, fits three-up on desktop. Variant rule: claim
+     "similar ground" + reason lines ONLY when moment-level topic overlap is
+     genuinely strong; otherwise show the latest released episodes with dates —
+     never invent a connection. ── */
+  .relsec{margin-top:60px;padding-top:58px;border-top:1px solid var(--line)} /* line = end of this episode's info */
+  .reldots{display:flex;justify-content:center;gap:7px;margin-top:12px}
+  .reldots span{width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.25);transition:.2s}
+  .reldots span.on{background:var(--mint)}
+  .relsec .rtitle{display:inline-block;font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.5px;font-size:14.5px;background:var(--mint);color:#0a0a0a;padding:9px 13px 7px;margin-bottom:18px}
+  .relgrid{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding-bottom:6px;scrollbar-width:none}
+  .relgrid::-webkit-scrollbar{display:none}
+  .relcard{flex:0 0 56%;max-width:232px;scroll-snap-align:start;display:flex;flex-direction:column;text-decoration:none;background:var(--card);border:1px solid var(--line);transition:.15s}
+  .relcard:hover{background:var(--card-hi);border-color:rgba(122,217,168,.55)}
+  .relcard img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block}
+  .relcard .rt{display:block;font-size:12.5px;font-weight:600;color:rgba(255,255,255,.92);line-height:1.4;padding:8px 8px 0}
+  .relcard .rfoot{margin-top:auto;display:flex;justify-content:space-between;align-items:flex-end;gap:8px;padding:10px 8px 9px}
+  .relcard .rwhy{font-size:11.5px;color:var(--mint)}
+  .relcard .rtag{display:inline-block;background:#0a0a0a;color:var(--white);font-family:var(--display);font-size:10px;letter-spacing:1.2px;text-transform:uppercase;padding:3px 7px 2px;white-space:nowrap;flex:0 0 auto}
+
+  /* ── Dropdown sections (accordion under the player) ── */
+  .drops{margin-top:34px;display:flex;flex-direction:column;gap:11px}
+  .drop{border:1px solid var(--line);border-radius:0;background:var(--card);overflow:hidden;transition:border-color .15s}
+  .drop[open]{border-color:rgba(122,217,168,.35)}
+  .drop>summary{list-style:none;cursor:pointer;padding:16px 18px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+  .drop>summary::-webkit-details-marker{display:none}
+  .drop>summary .st{font-weight:700;font-size:15.5px;letter-spacing:.005em}
+  .drop>summary .ct{margin-left:auto;font-size:12px;color:var(--dim);font-weight:600;font-variant-numeric:tabular-nums}
+  .drop>summary .chev{flex:none;width:22px;height:22px;border-radius:50%;background:rgba(122,217,168,.14);color:var(--mint);display:flex;align-items:center;justify-content:center;font-family:var(--display);font-size:15px;line-height:1;transition:.2s;transform:translateY(-1px)}
+  .drop[open]>summary .chev{transform:rotate(45deg)}
+  .drop-body{padding:2px 12px 12px}
+
+  /* chapters */
+  .chapter{display:flex;align-items:baseline;gap:14px;width:100%;text-align:left;cursor:pointer;background:none;border:0;color:inherit;font-family:inherit;padding:11px 10px;border-radius:10px;transition:.13s}
+  .chapter:hover{background:var(--card-hi)}
+  .chapter .tc{font-variant-numeric:tabular-nums;font-weight:700;font-size:14px;color:var(--mint);flex:none;width:48px}
+  .chapter .cx{font-size:15px;font-weight:500;color:rgba(255,255,255,.9)}
+  .chapter:hover .cx{color:#fff}
+
+  /* questions */
+  .q{display:flex;align-items:center;gap:12px;width:100%;text-align:left;cursor:pointer;background:none;border:0;border-radius:11px;color:inherit;font-family:inherit;padding:12px 10px;transition:.14s}
+  .q+.q{border-top:1px solid rgba(255,255,255,.05)}
+  .q:hover{background:var(--card-hi)}
+  .q .qm{font-family:var(--display);font-size:15px;color:var(--mint);flex:none;line-height:1;transform:translateY(1px)}
+  .q .qx{font-size:15px;font-weight:500;color:rgba(255,255,255,.92)}
+  .q .go{margin-left:auto;flex:none;color:var(--dim);font-size:18px;transition:.15s}
+  .q:hover .go{color:var(--mint);transform:translateX(2px)}
+
+  /* summary + transcript bodies */
+  .summary-body p{font-size:16.5px;line-height:1.62;color:rgba(255,255,255,.9);padding:6px 10px 4px}
+  .tbody{padding:2px 10px 8px}
+  .tbody p{font-size:14.5px;line-height:1.7;color:rgba(255,255,255,.78);margin-top:15px;max-width:64ch}
+  .tbody .spk{display:block;font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--mint);margin-bottom:2px}
+
+  /* ── Voice note ask (lives at the bottom of the Summary panel) ── */
+  .vask{margin:16px 10px 4px}
+  .vbtn{display:inline-flex;align-items:center;gap:9px;padding:12px 20px;border-radius:999px;border:0;cursor:pointer;
+    background:var(--mint);color:#08210f;font-family:inherit;font-weight:800;font-size:12.5px;
+    letter-spacing:.04em;text-transform:uppercase;transition:.15s}
+  .vbtn:hover{filter:brightness(1.06);transform:translateY(-1px);box-shadow:0 12px 30px rgba(122,217,168,.25)}
+  .vbtn svg{width:18px;height:18px;fill:currentColor;flex:none}
+  .vslot{background:var(--purple);padding:12px 10px 10px;margin:14px 0 4px;box-shadow:0 18px 40px rgba(0,0,0,.35)}
+  .vslot[hidden]{display:none}
+  .vhead{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;margin-bottom:10px}
+  .vhead .vmsg{font-family:var(--sans);font-size:13px;line-height:1.55;color:rgba(255,255,255,.92);margin:2px 0 0;padding:0 2px}
+  .vclose{background:none;border:0;color:rgba(255,255,255,.85);font-size:22px;line-height:1;cursor:pointer;padding:0 2px}
+  .vclose:hover{color:var(--white)}
+  .vslot iframe{display:block}
+
+  /* ── YouTube subscribe pill (sits in the listen row; outranks .listen a's mint) ── */
+  .listen a.yt-pill{background:var(--purple);color:var(--white)}
+  .listen a.yt-pill:hover{filter:brightness(1.1);transform:translateY(-1px)}
+  @media(max-width:720px){ /* mobile: no label, three compact pills on one row */
+    .listen .lname{display:none}
+    .listen{gap:8px}
+    .listen a{padding:10px 13px;font-size:11px;gap:6px}
+    .listen svg{width:16px;height:16px}
+  }
+
+  /* ── Footer: two columns under the line (Brought to you by | Produced by), matches adventure.html ── */
+  footer{border-top:1px solid var(--line);margin-top:68px;padding:52px 20px 58px}
+  .footgrid{max-width:var(--wrap);margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:start}
+  @media(max-width:720px){.footgrid{grid-template-columns:1fr;gap:40px}}
+  .fcol{text-align:center}
+  .foot-label{font-size:11px;font-weight:700;letter-spacing:.26em;text-transform:uppercase;color:var(--dim);margin-bottom:16px}
+  .sponsors{display:flex;justify-content:center;align-items:center;gap:38px;flex-wrap:wrap}
+  .sponsors a{display:inline-flex;transition:.15s}
+  .sponsors a:hover{transform:translateY(-1px)}
+  .sponsors img{height:34px;width:auto;opacity:.92}
+  .sponsors a:hover img{opacity:1}
+  .produced a{display:inline-flex;transition:.15s}
+  .produced a:hover img{opacity:1}
+  .produced img{height:30px;width:auto;opacity:.95}
+  .footnav{margin-top:36px;display:flex;justify-content:center;flex-wrap:wrap;gap:6px 26px}
+  .footnav a{font-size:12px;font-weight:600;letter-spacing:.04em;color:var(--dim);text-decoration:none;transition:.15s}
+  .footnav a:hover{color:var(--mint)}
+  .copyright{margin-top:40px;font-size:12px;color:var(--dim);text-align:center}
+
+  @media(min-width:720px){header.hero{padding:48px 0 6px}}
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "PodcastEpisode", "name": "Buying Commercial Property With Your Super in 2026 | What the Numbers Say", "url": "https://thenumbersgamepodcast.com.au/episode-285.html", "datePublished": "2026-07-13", "episodeNumber": 285, "image": "https://i.ytimg.com/vi/RAQ80ecsDq0/maxresdefault.jpg", "partOfSeries": {"@type": "PodcastSeries", "name": "The Numbers Game", "url": "https://thenumbersgamepodcast.com.au/"}}</script>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-in">
+      <a class="brand" href="index.html" aria-label="The Numbers Game home"><img src="assets/tng-logo.png" alt="The Numbers Game"></a>
+      <div class="navlinks">
+        <a href="index.html">Home</a>
+        <div class="navgroup">
+          <a class="navtop">Episodes</a>
+          <div class="subnav">
+            <a href="episodes.html">All episodes</a>
+            <a href="adventure.html">Find moments</a>
+          </div>
+        </div>
+        <div class="navgroup">
+          <a class="navtop">About</a>
+          <div class="subnav">
+            <a href="about.html">The show</a>
+            <a href="nick-reilly.html">Nick Reilly</a>
+            <a href="jason-robinson.html">Jason Robinson</a>
+          </div>
+        </div>
+        <a href="contact.html">Contact</a>
+      </div>
+      <button class="navburger" id="navburger" type="button" aria-label="Menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24"><path d="M3 6h18v2H3zM3 11h18v2H3zM3 16h18v2H3z"/></svg>
+      </button>
+    </div>
+    <div class="navdrop" id="navdrop" hidden>
+      <a href="index.html">Home</a>
+      <span class="navlabel">Episodes</span>
+      <a class="sub" href="episodes.html">All episodes</a>
+      <a class="sub" href="adventure.html">Find moments</a>
+      <span class="navlabel">About</span>
+      <a class="sub" href="about.html">The show</a>
+      <a class="sub" href="nick-reilly.html">Nick Reilly</a>
+      <a class="sub" href="jason-robinson.html">Jason Robinson</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+
+  <main class="wrap">
+
+    <header class="hero">
+      <div class="hook">
+        <span class="eptag">EP 86</span>
+        <h1 class="hk"><span>Discovering The Potential Of AI</span></h1>
+      </div>
+    </header>
+
+    <div class="player-wrap" id="player-wrap">
+      <div class="audio-hero" id="spotify-embed"></div>
+    </div>
+
+    <div class="explore">
+      <div class="tabs" role="tablist">
+        <button class="tabbtn on" data-panel="p-summary">Summary</button>
+      </div>
+      <section class="tpanel" id="p-summary">
+        <div class="summary-body">
+          <p>Welcome to episode 86 of The Numbers Game. On today&#x27;s show, we discuss how AI is changing the way business is done and how it is becoming an integral part of many processes. We look at the potential for AI to revolutionise the way we work and interact with technology and the potential for AI to improve efficiency, accuracy, and cost savings in the near future.</p>
+        </div>
+        <div class="vask">
+          <button class="vbtn" id="vbtn" type="button">
+            <svg viewBox="0 0 24 24"><path d="M12 14a3 3 0 0 0 3-3V6a3 3 0 1 0-6 0v5a3 3 0 0 0 3 3zm5-3a5 5 0 0 1-10 0H5a7 7 0 0 0 6 6.92V21h2v-3.08A7 7 0 0 0 19 11h-2z"/></svg>
+            Send us a voice note
+          </button>
+          <div class="vslot" id="vslot" hidden>
+            <div class="vhead">
+              <p class="vmsg">We'd love to hear from you. You can leave up to a 90 second voice note for us to play on the show: a question, some feedback, or a topic you want covered.</p>
+              <button class="vclose" id="vclose" type="button" aria-label="Close">&times;</button>
+            </div>
+            <iframe src="https://www.speakpipe.com/widget/inline/hhq6kzggsx7zpcsvakgxfrzun3zidpde" allow="microphone" width="100%" height="200" frameborder="0" title="Leave The Numbers Game a voice note"></iframe>
+          </div>
+          <script async src="https://www.speakpipe.com/widget/loader.js" charset="utf-8"></script>
+        </div>
+        <div class="sumfacts">
+          <div class="fact"><span class="fl">Release date</span><span class="fv">7 February 2023</span></div>
+          <div class="fact"><span class="fl">Hosts</span><span class="fv"><a href="jason-robinson.html">Jason Robinson</a> &amp; <a href="nick-reilly.html">Nick Reilly</a> &amp; <a href="marty-vidakovic.html">Marty Vidakovic</a></span></div>
+
+        </div>
+      </section>
+    </div>
+
+    <div class="drops">
+
+      <details class="drop">
+        <summary><span class="st">Episode transcript</span><span class="chev">+</span></summary>
+        <div class="drop-body tbody">
+          <p><span class="spk">Jason · 00:00</span>Welcome to the Numbers Game podcast. I&#x27;m Jason and I&#x27;m here with Nick and Marty. And boys, we are back for season 7. I think we&#x27;re going to have to call this one the Road to 100. How are you both going?</p>
+          <p><span class="spk">Marty · 00:12</span>I&#x27;m really excited, Jason. You&#x27;ve been, you&#x27;ve been really excited about episode 100 since episode 35. So I&#x27;m really pleased that we&#x27;re actually going to get there in this season. So I&#x27;m well, great, great Chrissy break and fired up and ready for 2023.</p>
+          <p><span class="spk">Marty · 00:27</span>How are you going, Nick?</p>
+          <p><span class="spk">Nick · 00:30</span>Uh, mate, also well. Very refreshed, actually. It&#x27;s been, um, it&#x27;s been a good break, although it seems like quite some time ago. Been back at work for 3 weeks now, but, um, it was a break that was needed, I think. Not just from, uh, from business land, but podcast land.</p>
+          <p><span class="spk">Nick · 00:47</span>I can see you boys are just refreshed and ready to roll into a few more episodes as we head towards 100. And, um, good to have you back, Marty. New hip. 11 weeks in with a new hip. How&#x27;s it all going?</p>
+          <p><span class="spk">Marty · 01:00</span>Life-changing. Absolutely life-changing. But, you know, a lot of courage last year, fought through the pain and, you know, but no one wants to hear that. But yeah, soft, I heard from a lot of friends of mine. But now I&#x27;m back and, you know, started up the ballet again.</p>
+          <p><span class="spk">Marty · 01:16</span>So doing really well there and looking forward to snapping a few goals. It&#x27;s 2023. So yeah, certainly feeling great. So I&#x27;m happy about everything that&#x27;s happened. And Jase, any surgeries?</p>
+          <p><span class="spk">Jason · 01:31</span>No, no surgeries. No, yeah, all good on my front. I can&#x27;t believe that it&#x27;s 6 days into February 2023 already. January just disappeared. I think in finance and accounting land, we&#x27;ve usually got the saying that like nothing really starts again until Australia Day.</p>
+          <p><span class="spk">Jason · 01:47</span>And I don&#x27;t know if that applies for other industries as well, but I know it feels like there&#x27;s lots going on and lots of exciting things to talk about. So I&#x27;m looking forward to getting the Numbers Game back underway. Yes, the break was good and I think I felt like I didn&#x27;t work for 6 weeks with the little UK trip and then Christmas.</p>
+          <p><span class="spk">Jason · 02:03</span>So yeah, I&#x27;ve been just fired up and ready to get to 100 since, as you said, episode 35. So bring it on.</p>
+          <p><span class="spk">Marty · 02:10</span>Well, what are we talking about today?</p>
+          <p><span class="spk">Jason · 02:11</span>Well, guys, today&#x27;s episode is brought to you by Future Advisory. Future Advisory are an accounting firm and advisory firm that sponsors this podcast along with the great team of Innov8, which they&#x27;ll get to sponsor a few shows in the upcoming season. And today, Marty, we&#x27;re going to be talking about all things AI off the back of my prediction from the end of last season, which apparently wasn&#x27;t good enough, and I had to throw in that the Bombers would win the 2023 flag.</p>
+          <p><span class="spk">Jason · 02:36</span>So bring on a big year for 2023 and bring on an episode talking all things AI.</p>
+          <p><span class="spk">Nick · 02:42</span>What was the prediction again?</p>
+          <p><span class="spk">Jason · 02:43</span>Uh, that AI was going to take, take over a lot of what we were talking about and a lot of the topics of conversation and a lot of things in business. Like, AI would become the biggest kind of trending topic that it had ever been before. And if you look at the last couple of years, AI, you know, it was there in the background, but no one was really using it or talking about it as much.</p>
+          <p><span class="spk">Jason · 03:02</span>And now it&#x27;s almost become mainstream overnight. So that is where we&#x27;re headed.</p>
+          <p><span class="spk">Marty · 03:07</span>Well, I was 6 weeks in the recliner and, uh, looked at this ChatGPT. What is it? GPT?</p>
+          <p><span class="spk">Jason · 03:14</span>Yes.</p>
+          <p><span class="spk">Marty · 03:14</span>My goodness me, like, you were absolutely right. You could see into the future, Jase, and it was incredible in regards to what you could do with that, even rewriting essays from famous people in your own wording and putting up content for social media repurposing.</p>
+          <p><span class="spk">Marty · 03:33</span>And I&#x27;m not sure the kids will need to go to school anymore given what&#x27;s going on here, given the amount of opportunity that this AI is going to create. And At first I&#x27;m going, I don&#x27;t know about this, but having played with AI over that break, I could see we can get so many efficiencies through this software.</p>
+          <p><span class="spk">Marty · 03:57</span>And I think we&#x27;re going to be— it&#x27;s going to be a part of everyday business. So you were right on point, Jase.</p>
+          <p><span class="spk">Jason · 04:03</span>Thank you, Marty. Well, let me set the scene a little bit for you as well, for any listeners out there that may not have heard about ChatGPT or OpenAI and all the AI revolution that was part of my predictions from the end of last season. Reading the Play episode, usually we take some kind of like article we&#x27;ve read or some kind of fact from online, we share it, and then we unpack it.</p>
+          <p><span class="spk">Jason · 04:24</span>So, I actually found this stat earlier today off a website, which I&#x27;ll then go on to share. But basically, they&#x27;ve got this screenshot of the time it took an app to reach 100 million monthly users.</p>
+          <p><span class="spk">Jason · 04:39</span>So, Google Translate took 78 months to get 100 million monthly users. Uber took 70 months for 100 million. Pinterest took 41 months. Instagram took 30 months.</p>
+          <p><span class="spk">Jason · 04:54</span>TikTok took 9 months. Do you want to hazard a guess as to how many months it took ChatGPT to get 100 million monthly users?</p>
+          <p><span class="spk">Nick · 05:05</span>One month.</p>
+          <p><span class="spk">Jason · 05:07</span>Two. Pretty bloody close, Nico. So, GPT now holds the record for the fastest app in history to get 100 million monthly users. Now, to expand on what the hell ChatGPT is, just to make sure, uh, you know, our audience, uh, understands.</p>
+          <p><span class="spk">Jason · 05:23</span>So back in 2015, a not-for-profit organization called OpenAI raised some money and had some investors put some money in to align basically artificial intelligence with human values to have a positive impact on society.</p>
+          <p><span class="spk">Jason · 05:38</span>That was the mission of why OpenAI was created. And that they wanted to create and give access to artificial intelligence to the masses so that it could actually help impact society in a positive way. So, you wouldn&#x27;t have guessed that Elon Musk was one of the people behind OpenAI and ChatGPT, and another huge backer and investor is Microsoft.</p>
+          <p><span class="spk">Jason · 06:01</span>And in recent news with ChatGPT, Microsoft have now come out and are going to start to embed it into its underlying apps and technology. So, when you think Teams, you&#x27;re having a Teams conversation with someone, Teams Premium will now have an underlay of ChatGPT where it can start to draft your responses for you before you even need to think about it.</p>
+          <p><span class="spk">Jason · 06:21</span>Um, Outlook will get to a point where it&#x27;s already pre-drafting the reply to emails before you&#x27;ve even had to think about it. And all this is real and happening right now. Now, where that image came from, where ChatGPT took 2 months to get 100 million users, It actually came from the news being shared on futurepedia.io.</p>
+          <p><span class="spk">Jason · 06:40</span>So, if you&#x27;re unsure about how much AI is available out there and how it can impact your industry or help you do your job, I would say that the first website or one of the first websites after OpenAI ChatGPT, you want to go and look at futurepedia.io.</p>
+          <p><span class="spk">Jason · 06:56</span>And last week there was 849 AI tools available across 49 different categories. From last week to this week, that number&#x27;s now gone up to 901 AI tools available to help business owners or to help people in their daily lives.</p>
+          <p><span class="spk">Jason · 07:13</span>So, that&#x27;s just a week in its infant stages. We&#x27;ve had 52 apps added to this. And as a bit of a muck around, as a bit of an experiment pre-leading into this episode to talk about it, one of them was called Jasper and another one was called Copy.ai.</p>
+          <p><span class="spk">Jason · 07:29</span>And I thought, oh, my, our social media team, Victoria, has asked me to help draft a bit of a start to a blog about leadership. I thought, oh, this will be interesting. I&#x27;ll, I&#x27;ll use one of the proper tools which is designed around copywriting for blogs and website content.</p>
+          <p><span class="spk">Jason · 07:45</span>And I think it— the timer took me 34 seconds to draft a 732-word blog article on how to be a great leader in 2023. And I&#x27;ve read the article and I sound smart, like I&#x27;m a smart guy..</p>
+          <p><span class="spk">Jason · 08:02</span>So, okay, it wasn&#x27;t me. I had nothing to do with it. But if I posted it and said that I wrote that, it kind of sounds like how I&#x27;d write. I asked it to write in a relaxed, like, casual tone, which is generally how a lot of my posts online would be. And I read and just think that&#x27;s— it&#x27;s very timely.</p>
+          <p><span class="spk">Jason · 08:20</span>It talks about inclusive— inclusivity? Inclusion. It talks about being transparent. It talks about honesty and including a global viewpoint. So when you&#x27;re thinking about leadership, not just think about your local community, but how on a global scale you can impact, have impact beyond just your, your local reach nowadays with technology.</p>
+          <p><span class="spk">Jason · 08:40</span>So yeah, guys, I&#x27;ve spoken a lot. ChatGPT, as I said, and AI is, uh, something that&#x27;s consuming a lot of my headspace. And when I start to think about how it&#x27;s going to impact my business and the business owners that I look after But I&#x27;d love to throw it back to you guys for a second to let you get a word in.</p>
+          <p><span class="spk">Jason · 08:58</span>And what are your thoughts and what have you seen so far?</p>
+          <p><span class="spk">Marty · 09:01</span>Keith, tell them.</p>
+          <p><span class="spk">Jason · 09:02</span>I&#x27;m a bit red-faced.</p>
+          <p><span class="spk">Marty · 09:03</span>We always keep saying we need to communicate better as leaders and now we can. So it&#x27;s strange, not that anyone from Innovate listens to this, Nick, surely. But my Christmas message, I ran through that program and it actually, it was better than what I could have written and it was more to the point.</p>
+          <p><span class="spk">Marty · 09:25</span>So I go, but where is that balance of transparency now? Like I go, I guess that&#x27;s the question. I could see the upside in regards to getting access to great information and repurposing ideas through AI, but what&#x27;s the line now?</p>
+          <p><span class="spk">Marty · 09:44</span>And has there ever been a line? Are we in fact in the Matrix already? Without realizing it. I mean, that&#x27;s a lot of questions come up.</p>
+          <p><span class="spk">Jason · 09:53</span>Yeah, 100%. I think— sorry, Nick, you jump in.</p>
+          <p><span class="spk">Nick · 09:56</span>No, no, keep, keep going, keep going.</p>
+          <p><span class="spk">Jason · 09:58</span>No, I was just gonna say, look, I think, I think this is where, um, Mark Manson&#x27;s book, uh, the second one after Subtle Art of Not Giving a Fuck, um, was Everything Is Fucked. And spoiler alert, if you haven&#x27;t read it, turn this off for the next 30 seconds. But the end, the last chapter of that book, it builds it up, it builds up about how the world is it&#x27;s fucked for all these different reasons.</p>
+          <p><span class="spk">Jason · 10:17</span>But the grand finale of that whole blue book is that AI is going to change the world, and unless you&#x27;re, you&#x27;re a part of it and embracing it, your world is going to change as you know it. And it&#x27;s kind of like how what life would have been like before the internet, which we can probably throw to you, Marty, and you can talk about what that was like.</p>
+          <p><span class="spk">Jason · 10:35</span>Um, but there will be, there&#x27;ll be a time in our future where we talk about life before AI was changing everything that we did. And I&#x27;m— I couldn&#x27;t be more strongly— I couldn&#x27;t feel more strongly about that, that there will be an after-AI world and a pre-AI world that we&#x27;ll be able to see, see and touch and talk about the difference of what that was like.</p>
+          <p><span class="spk">Jason · 10:55</span>And I think a big part of why OpenAI was founded as this not-for-profit organization was a lot to do with that. In the wrong hands, if AI was developed to the state that it is now, and this is early days, if this was put in the wrong hands, it could be used to do some pretty awful, pretty bad things.</p>
+          <p><span class="spk">Jason · 11:12</span>And they&#x27;ve already, through their beta trials of giving access to the world to talk to this AI, have had to change its data inputs to make sure that it didn&#x27;t kind of collect dark— the wrong dark info that you don&#x27;t want this artificial intelligence to be fed.</p>
+          <p><span class="spk">Jason · 11:28</span>You know, early users were coming on saying how to hide bodies that they&#x27;d killed and things like that. So there, there is bad people in the world. And where there&#x27;s bad people in the world, this kind of technology needs to have some protections in place. So it&#x27;s going to— and even there&#x27;s going to be laws that don&#x27;t exist now that will need to exist to protect how we operate and how we, we go through day-to-day life because of AI&#x27;s impact.</p>
+          <p><span class="spk">Nick · 11:52</span>It is a fine line, isn&#x27;t it? And for me, I think if my initial thoughts are that it&#x27;s only going to help us, and you know, you talk about, you know, pre-internet. And I liked your little dig there at Marty&#x27;s age. That was clever.</p>
+          <p><span class="spk">Jason · 12:05</span>I was just copying how you usually do it in our pre-show stuff, so I thought I&#x27;d bring a little jibe in.</p>
+          <p><span class="spk">Marty · 12:10</span>Times have changed since the dinosaur age. But yeah, keep going.</p>
+          <p><span class="spk">Nick · 12:15</span>Yeah, but for me personally, look, I love what it&#x27;s doing from a tools point of view. So that, you know, this ChatGPT and, you know, we— and where we are going to go with this episode, I think, is to talk about how you can utilize these tools in your business. I really love that.</p>
+          <p><span class="spk">Nick · 12:30</span>But then you listen to people like Elon Musk talk, and, you know, he&#x27;s worried that AI and robots are actually going to outsmart humans at some stage and take over. So that, that scares the shit out of me. I don&#x27;t know what that looks like or how that&#x27;s even possible, but that&#x27;s where I think we need rules, um, and we need boundaries.</p>
+          <p><span class="spk">Nick · 12:49</span>And I feel strange even saying that, like, we need to put rules in to make sure the robots don&#x27;t take over us. Like, to me, that just sounds crazy, but you know, you&#x27;ve got to listen to people like Elon Musk because of, you know, his smarts and what he&#x27;s done so far.</p>
+          <p><span class="spk">Nick · 13:05</span>And if he&#x27;s concerned about it and he&#x27;s just saying it&#x27;s going to happen almost, then what hope have we got? But, um, I really like using it as a tool to make, to make our lives better. Um, and yeah, there&#x27;s some areas that we&#x27;re not going to be as good, you know, we&#x27;re not going to be able to put an essay together like we used to.</p>
+          <p><span class="spk">Nick · 13:23</span>Um, you know, writing might just be a thing of the past. Um, But again, if you, if you do want to be a writer or if you&#x27;re into writing, then I&#x27;m sure you can still learn how to write. So it&#x27;s just interesting how it&#x27;s just going to change the dynamics of how we, um, how we transact on a day-to-day basis and how we communicate.</p>
+          <p><span class="spk">Nick · 13:44</span>Um, the challenge is, and we&#x27;ve spoken about this, particularly Marty and I with young kids and stuff coming through, is the lack of social skills, you know, by, by having all this stuff done for you, by not needing to see people face to face. What are the social skills?</p>
+          <p><span class="spk">Nick · 14:02</span>What does that do to the social skills? So yeah, for us, we&#x27;re thinking about how can we use it in our business and what does the future of business look like, or what the future of business looks like. And you know, I think today what we&#x27;re going to talk about is how that could then change certain industries for the better, I think, in most cases.</p>
+          <p><span class="spk">Nick · 14:21</span>Or whereas the default opinion has been for the worst, you know, everyone&#x27;s been worried about AI and it&#x27;s going to take up— it&#x27;s going to take everyone&#x27;s job and we&#x27;ll be obsolete. But I think there&#x27;s there&#x27;s a positive way to think about it, which we&#x27;re going to talk about today.</p>
+          <p><span class="spk">Jason · 14:35</span>I think, um, just from the get-go, for anyone out there who is interested in exploring AI and how it can help you, because I think you&#x27;ve got to start somewhere. I mean, obviously we can unpack and explore how it can help, but knowing where to start, you need to have an understanding. And if this is your first little dip the toe in the water of AI, um, you&#x27;re at the very beginnings, and it&#x27;ll be doing some research, reading, experimenting with ChatGPT, But, you know, you&#x27;ve got to start with understanding the capabilities and the limitations.</p>
+          <p><span class="spk">Jason · 15:00</span>As you said, Nick, there&#x27;ll be things that AI won&#x27;t be able to do that will still need human involvement, which, which is great for, you know, the, the human species to still be needed. Um, one of the big things that they talk about is the data quality. Like, AI is only as good as the data you put in.</p>
+          <p><span class="spk">Jason · 15:17</span>So if you, if you&#x27;re looking at your business now and you do have big data sets, if you&#x27;ve got a lot of junk data that&#x27;s full of, you know, old client information or the incorrect data, and eventually you feed that into AI, you&#x27;re going to get junk results back from feeding bad data into AI.</p>
+          <p><span class="spk">Jason · 15:32</span>So you can start to look at your own business now and think, what things can I tidy up to be ready for the ability to use AI? Once you&#x27;ve figured it out, and then also, you know, starting to plan ahead for workforce impact. I know, you know, getting into that conversation about how AI can, can impact industries that, that you know, we&#x27;re going to look at.</p>
+          <p><span class="spk">Jason · 15:51</span>It&#x27;s 5 to 10 years ago, I was at an accounting conference where a futurist stood on stage and basically screamed at bookkeepers telling them that their job wasn&#x27;t going to exist in 10 years. Um, and you know, potentially, look, this is where I see Xero has worked really hard to position bookkeepers and accountants as advisors.</p>
+          <p><span class="spk">Jason · 16:08</span>Xero&#x27;s, you know, done a lot of their branding and marketing and advertising about having a relationship with your advisor. So they&#x27;re taking— they&#x27;re trying to start to take away the word of bookkeeper or your accountant and make it advisor, which is what it&#x27;s going to become if the underlying transactions and data entry is being done by artificial intelligence.</p>
+          <p><span class="spk">Jason · 16:27</span>You&#x27;re going to need a face-to-face or a personal relationship with your client to talk to them about their business and advise them on the next steps they should be doing. Um, but you know, that&#x27;s the kind of industry that, you know, you&#x27;ve got to look at those kind of things that can be replaced. As one example.</p>
+          <p><span class="spk">Nick · 16:44</span>Our thoughts on this as a service-based business, so you know, everyone knows what we do probably, but it&#x27;s residential finance, business finance, and also financial planning. And when we look at our workload and what our day is mainly made up of, it&#x27;s things that don&#x27;t provide a value add to the client.</p>
+          <p><span class="spk">Nick · 17:06</span>So you know, it&#x27;s processing loan applications, it&#x27;s processing super insurance applications, It&#x27;s data entry to bank systems, whatever it might be. Where do we add our value to the client? It&#x27;s the advice piece. And the advice piece is something at this stage that you cannot do with AI, and is quite some time away.</p>
+          <p><span class="spk">Nick · 17:29</span>And look, they might get to a point, it might get to a point where AI can play some sort of role, but people still want that human interaction. So I think for us, we&#x27;re going, okay, well, If 90% of what we do is not a value-add, imagine if we didn&#x27;t have to do a lot of that stuff.</p>
+          <p><span class="spk">Nick · 17:45</span>Imagine if AI took care of our loan application process. It was all robots that did the data entry instead of humans. Um, now you might think, well, that just reduces, um, jobs available for humans, but there&#x27;s another argument to that, that AI actually creates more.</p>
+          <p><span class="spk">Nick · 18:02</span>So for us, we&#x27;re thinking, how good would our business be if we could get, say, 30 or 40% back of the stuff that we think doesn&#x27;t add value to a client, and then we can focus another 30 or 40% into adding value for the client, seeing more clients, which means seeing more clients, make more revenue, and have a far more efficient and profitable business.</p>
+          <p><span class="spk">Nick · 18:23</span>That&#x27;s, that&#x27;s how we&#x27;re thinking about it. And everything that we&#x27;ve seen so far, whether it&#x27;s AI or any sort of tech advancement, only makes our job easier. Whereas the old school thought was everyone should be scared because tech and AI are going to take over.</p>
+          <p><span class="spk">Nick · 18:39</span>We&#x27;re looking at how it&#x27;s going to help us. And I think most businesses need to start doing that. So no matter what service you&#x27;re in, no matter what product you&#x27;re selling, you need to start thinking, well, how can I actually use this to make my business better and get across it all?</p>
+          <p><span class="spk">Marty · 18:56</span>It&#x27;s a great point, Nick. And like I&#x27;ve always said, if you&#x27;re not going with change, you&#x27;re actually not going sideways, you&#x27;re going backwards. And I think it&#x27;s attitudinal. I think there&#x27;s a genuine fear with anything new that comes in. And I just think about what Jason and I said at the start.</p>
+          <p><span class="spk">Marty · 19:14</span>We almost trusted the AI instead of our own communication skills as well. So we want to make sure we don&#x27;t lose that confidence in people thinking the AI is better because it will be ultimately. So we don&#x27;t want the human replacement. As an advisor, we always want to be able to back ourselves.</p>
+          <p><span class="spk">Marty · 19:31</span>Have social engagement, connection, come up with great ideas to use these types of technologies to benefit. And why not focus on the 10% that really matters in the business from an advisory role? And it just means that people get repurposed into those advisory roles as well.</p>
+          <p><span class="spk">Marty · 19:49</span>So it presents a great opportunity for people to step up and utilize AI in different ways that maybe they haven&#x27;t thought of in their current roles. So like anything with transition, there&#x27;s always a benefit, but the initial thought process is fear.</p>
+          <p><span class="spk">Marty · 20:07</span>It&#x27;s like in the schools, like schools are worried about that they&#x27;re defucked basically because kids can get access to any information that they want to utilize it in their own pursuits. But that might also encourage more entrepreneurial thinking.</p>
+          <p><span class="spk">Marty · 20:23</span>I&#x27;m sure before schools, people were very entrepreneurial to get by. As a human species. So it&#x27;s like, because they had to be, right? So maybe it encourages people to test out new ideas and we break through new frontiers as social human beings that wasn&#x27;t there before.</p>
+          <p><span class="spk">Marty · 20:41</span>So I see that upside, but definitely on the negative front, I also see with what&#x27;s been going on that people could feel like they&#x27;ve lived a life digitally before actually living a real life. And what consequences come with that.</p>
+          <p><span class="spk">Marty · 20:58</span>So I think you always got to have a balanced argument and go, okay, we need to put a lot of thought around this transition and ensure that people could manage the transition effectively. Like I said, we&#x27;re used to being put under challenge with new innovation.</p>
+          <p><span class="spk">Marty · 21:15</span>So our general thought process is to adapt and find a way to best benefit all parties through it. But that&#x27;s not necessarily for all mainstream people that don&#x27;t think that way and are happy in the jobs that they do. But I would encourage them to be open-minded and to think, learn about this and work out how it could benefit them and the people they serve as well.</p>
+          <p><span class="spk">Marty · 21:39</span>Like Nick was talking about, I think it&#x27;s a great way to look at it.</p>
+          <p><span class="spk">Nick · 21:42</span>100%. And you need to think about as a business, you need to be thinking ahead. So, okay, well, how is this going to impact my business? Not just like, like I was saying, for us we&#x27;re thinking about how we can make our business better. But if you&#x27;re doing something where you think this is going to have an impact on your ability to earn revenue, or that particular service might be replaced, now is the time to start thinking about, okay, where can I repurpose my skill set?</p>
+          <p><span class="spk">Nick · 22:08</span>We had a good chat the other day about it, and Tommy, who produces this show, just ran through his particular industry. You know, so many new tools that are available and that are going to continue to be available, which is going to make a lot of the tasks he does obsolete for him anyway.</p>
+          <p><span class="spk">Nick · 22:24</span>So it just means he&#x27;s charging for different things. So, you know, Tommy&#x27;s got to look at, well, what can I do now? If I didn&#x27;t do that piece of the puzzle, I&#x27;ve now got more hours to spend on this. And, you know, AI is not going to take, take over that anytime soon. So I think, I think we call it an AI audit, Jase.</p>
+          <p><span class="spk">Nick · 22:41</span>That might have been your title. Um, but claim it. Yeah, number one, how can I make my business better? And number two, If there&#x27;s any of my services that are gonna be obsolete, what else can I be doing with my skillset to make sure that I&#x27;m still making revenue?</p>
+          <p><span class="spk">Nick · 22:56</span>And don&#x27;t be too late in doing that. Be prepared.</p>
+          <p><span class="spk">Marty · 22:59</span>Tommy&#x27;s a great example too, because like we look to Tommy for guidance and advice in the world of podcasting, &#x27;cause we&#x27;re not experts on it. I couldn&#x27;t tell you what technology he utilizes to get the show up and running. And so sparkling reparti, obviously with us three, but Tommy brings it all together.</p>
+          <p><span class="spk">Marty · 23:18</span>And just makes it work. And I think I look for Tommy for advice, I look for guidance and you can&#x27;t replace that. I feel like that&#x27;s such an important part of what we do on the podcast as well.</p>
+          <p><span class="spk">Marty · 23:35</span>And I would think then people would feel that way about our advice given our industries that we&#x27;re in as well. People want that tactility still to have that contact and be guided. It&#x27;s like we&#x27;re driving, we&#x27;ve got the steering wheel, but there&#x27;s lots of different components to the car to get to where you need to get to.</p>
+          <p><span class="spk">Marty · 23:55</span>But this still needs to be a driving force. And I think we can do that.</p>
+          <p><span class="spk">Jason · 24:00</span>100%. And the thing that AI, even itself talks about not being able to replace creativity, empathy, and complex problem solving. That&#x27;s where a human is going to be able to look beyond just the data that was available at the time and use emotion and creativity and feelings to get a different result than a computer may have spat out, for example.</p>
+          <p><span class="spk">Jason · 24:18</span>So, you know, in that world where we can still have our feelings, which for now AI isn&#x27;t meant to actually be able to feel things, it just spits out datasets and information based on that. We&#x27;ve still got our leg up in that sense. And I think even for now, what we know, what we&#x27;re looking at, and I love the AI audit thing, whether that was me or whether that was somebody else, it&#x27;s a great thing to start with is to audit your business and look at can AI have an impact?.</p>
+          <p><span class="spk">Jason · 24:43</span>And even if the AI is not quite ready yet, but you can see how it will replace things in the future, I&#x27;m starting myself in the way that I&#x27;m going to start to advise our business clients is to get ahead of the trend. So an example I shared with you guys was, um, the ATO is looking like it&#x27;s going to try and eliminate BASes one day.</p>
+          <p><span class="spk">Jason · 25:02</span>So I won&#x27;t be lodging quarterly BASes for our clients. What I want to start to doing, and whether that&#x27;s AI related or not, it&#x27;s just that that&#x27;s something that&#x27;ll be replaced, same as potentially bookkeeping. But what I want our clients to get used to is having a touchpoint of communication where they talk to a human and they share how they&#x27;re feeling, how their business is going, is there any way we can help.</p>
+          <p><span class="spk">Jason · 25:21</span>If they get used to that quarterly phone hookup or Teams meeting where they talk about their business, even when the BAS isn&#x27;t getting lodged anymore, they&#x27;re still going to want that quarterly 15, half an hour hookup to say g&#x27;day and touch base. So I want to be able to build routines around things like that, that even if AI replaces some things, we&#x27;ve got a strong business model that, that involves communication and human, human contact.</p>
+          <p><span class="spk">Nick · 25:44</span>And it&#x27;s the stuff you probably enjoy, Jason. That&#x27;s what we&#x27;ve, you know, we talk about adding value and what adds value to our client and what doesn&#x27;t, or what part of the process adds value and what doesn&#x27;t. It&#x27;s the advice piece that we enjoy. It&#x27;s all the stuff that we don&#x27;t enjoy doing as a business that AI is probably going to take over a lot of that.</p>
+          <p><span class="spk">Nick · 26:01</span>So, so we welcome it, um, again, within reason. I Totally agree with what you said at the start. There&#x27;s going to be some significant rules and laws that need to be written around it. So solicitors are going to do really well. But yeah, we welcome it because I just think it can make our job better and means we can put more emphasis on, you know, making sure our clients have a really good outcome.</p>
+          <p><span class="spk">Jason · 26:27</span>Well, boys, this has been the first episode back to Season 7 of The Numbers Game. It&#x27;s been a pleasure to be joined by you guys and talk about all things AI as it gets me fired up and excited. If you do want to check it out, futurepedia.io or look up ChatGPT, start experimenting with AI and start to figure out how it&#x27;s going to impact your life and the ones around you.</p>
+          <p><span class="spk">Jason · 26:48</span>And once again, this episode was brought to you by Future Advisory. And if you haven&#x27;t checked them out, futureadvisory.com.au for all of your accounting and advisory needs. Till next time.</p>
+          <p><span class="spk">Marty · 26:59</span>Game over.</p>
+        </div>
+      </details>
+
+    </div>
+
+    <!-- audio-only: the Spotify player is the hero above; duplicate embed removed -->
+
+    <div class="listen">
+      <a href="https://open.spotify.com/episode/78k4JeUZ96kec4QH6qLsMA" target="_blank" rel="noopener" aria-label="Listen to this episode on Spotify">
+        <svg viewBox="0 0 24 24"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.52 17.34c-.24.36-.66.48-1.02.24-2.82-1.74-6.36-2.1-10.56-1.14-.42.12-.78-.18-.9-.54-.12-.42.18-.78.54-.9 4.56-1.02 8.52-.6 11.64 1.32.42.18.48.66.3 1.02zm1.44-3.3c-.3.42-.84.6-1.26.3-3.24-1.98-8.16-2.58-11.94-1.38-.48.12-1.02-.12-1.14-.6-.12-.48.12-1.02.6-1.14 4.32-1.32 9.72-.66 13.44 1.62.36.18.54.78.3 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.3c-.6.18-1.2-.18-1.38-.72-.18-.6.18-1.2.72-1.38 4.26-1.26 11.28-1.02 15.72 1.62.54.3.72 1.02.42 1.56-.3.42-1.02.6-1.56.3z"/></svg>
+        Spotify
+      </a>
+      <a href="https://podcasts.apple.com/au/podcast/id1555566088?i=1000776470464" target="_blank" rel="noopener" aria-label="Listen to this episode on Apple Podcasts">
+        <svg viewBox="0 0 24 24"><path d="M5.34 0A5.328 5.328 0 000 5.34v13.32A5.328 5.328 0 005.34 24h13.32A5.328 5.328 0 0024 18.66V5.34A5.328 5.328 0 0018.66 0H5.34zm6.525 2.568c2.336 0 4.448.902 6.056 2.587 1.224 1.272 1.912 2.619 2.264 4.392l.04.23c.04.272-.16.527-.432.567a.505.505 0 01-.567-.431l-.04-.213c-.312-1.57-.92-2.747-2.004-3.867-1.428-1.496-3.293-2.294-5.393-2.294-2.1 0-3.966.798-5.394 2.294-1.084 1.12-1.692 2.298-2.004 3.867l-.04.213a.507.507 0 01-.567.431.504.504 0 01-.432-.567l.04-.23c.352-1.773 1.04-3.12 2.264-4.392 1.608-1.685 3.72-2.587 6.056-2.587h.153zm.136 3.033c1.74 0 3.312.67 4.527 1.934.883.916 1.394 1.93 1.663 3.253l.04.23a.505.505 0 01-.431.567.503.503 0 01-.567-.432l-.04-.212c-.23-1.112-.659-1.97-1.396-2.732-1.052-1.1-2.404-1.672-3.9-1.672s-2.849.572-3.901 1.672c-.737.762-1.167 1.62-1.396 2.732l-.04.212a.503.503 0 01-.567.432.505.505 0 01-.432-.567l.04-.23c.27-1.323.78-2.337 1.664-3.253 1.215-1.264 2.787-1.934 4.527-1.934h.21zm-.078 3.05c1.092 0 2.091.424 2.89 1.22.582.58.924 1.245 1.107 2.15l.04.218a.501.501 0 01-.424.568.499.499 0 01-.568-.424l-.04-.198c-.146-.724-.413-1.253-.871-1.716-.63-.63-1.398-.957-2.226-.957s-1.595.328-2.225.957c-.459.463-.726.992-.871 1.716l-.04.198a.499.499 0 01-.568.424.501.501 0 01-.424-.568l.04-.219c.183-.904.525-1.569 1.106-2.149.8-.796 1.799-1.22 2.89-1.22h.184zM12 14.07a2.477 2.477 0 012.48 2.478A2.477 2.477 0 0112 19.024a2.477 2.477 0 01-2.48-2.477A2.477 2.477 0 0112 14.07z"/></svg>
+        Apple
+      </a>
+      <a class="yt-pill" href="https://www.youtube.com/@thenumbersgamepodcast?sub_confirmation=1" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.12-2.14C19.5 3.55 12 3.55 12 3.55s-7.5 0-9.38.51A3 3 0 0 0 .5 6.2 31.4 31.4 0 0 0 0 12a31.4 31.4 0 0 0 .5 5.8 3 3 0 0 0 2.12 2.14c1.88.51 9.38.51 9.38.51s7.5 0 9.38-.51a3 3 0 0 0 2.12-2.14A31.4 31.4 0 0 0 24 12a31.4 31.4 0 0 0-.5-5.8zM9.55 15.57V8.43L15.82 12z"/></svg>
+        Subscribe
+      </a>
+    </div>
+    <!-- LISTEN:END -->
+
+    <div class="relsec">
+      <span class="rtitle">Discover more</span>
+      <div class="relgrid">
+        <a class="relcard" href="/rethinking-property-tax-in-australia">
+          <img src="https://i.ytimg.com/vi/2Qpl-rFQsYo/hqdefault.jpg" alt="EP 227 thumbnail">
+          <span class="rt">Rethinking Property Tax in Australia</span>
+          <span class="rfoot"><span class="rwhy">14 April 2025</span><span class="rtag">EP 227</span></span>
+        </a>
+        <a class="relcard" href="/how-to-win-on-social-media-vanity-metrics-vs-real-results">
+          <img src="https://i.ytimg.com/vi/lPdaCst3SL4/hqdefault.jpg" alt="EP 250 thumbnail">
+          <span class="rt">How to Win on Social Media: Vanity Metrics vs Real Results</span>
+          <span class="rfoot"><span class="rwhy">22 September 2025</span><span class="rtag">EP 250</span></span>
+        </a>
+        <a class="relcard" href="/pre-approve-or-lose">
+          <img src="https://i.ytimg.com/vi/9R8465BgNkM/hqdefault.jpg" alt="EP 210 thumbnail">
+          <span class="rt">Pre-Approve or Lose!</span>
+          <span class="rfoot"><span class="rwhy">4 November 2024</span><span class="rtag">EP 210</span></span>
+        </a>
+        <a class="relcard" href="/crafting-your-business-edge">
+          <img src="https://i.ytimg.com/vi/hnUeiudZfso/hqdefault.jpg" alt="EP 207 thumbnail">
+          <span class="rt">Crafting Your Business Edge</span>
+          <span class="rfoot"><span class="rwhy">14 October 2024</span><span class="rtag">EP 207</span></span>
+        </a>
+        <a class="relcard" href="/bucket-companies-everything-you-need-to-know">
+          <img src="https://i.ytimg.com/vi/5JhhzUGsvwE/hqdefault.jpg" alt="EP 194 thumbnail">
+          <span class="rt">Bucket Companies - Everything you need to know</span>
+          <span class="rfoot"><span class="rwhy">22 July 2024</span><span class="rtag">EP 194</span></span>
+        </a>
+        <a class="relcard" href="/how-car-loans-are-destroying-your-wealth">
+          <img src="https://i.ytimg.com/vi/L3-9Ec_TlMg/hqdefault.jpg" alt="EP 226 thumbnail">
+          <span class="rt">How Car Loans Are Destroying Your Wealth</span>
+          <span class="rfoot"><span class="rwhy">7 April 2025</span><span class="rtag">EP 226</span></span>
+        </a>
+      </div>
+      <div class="reldots" id="reldots"></div>
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="footgrid">
+      <div class="fcol">
+        <div class="foot-label">Brought to you by</div>
+        <div class="sponsors">
+          <a href="https://www.inovayt.com.au/" target="_blank" rel="noopener"><img src="assets/inovayt-white.png" alt="Inovayt"></a>
+          <a href="https://futureadvisory.com.au/" target="_blank" rel="noopener"><img src="assets/future-advisory-white.png" alt="Future Advisory"></a>
+        </div>
+      </div>
+      <div class="fcol produced">
+        <div class="foot-label">Produced by</div>
+        <a href="https://www.vidpod.com.au/" target="_blank" rel="noopener"><img src="assets/vidpod-white.png" alt="VIDPOD"></a>
+      </div>
+    </div>
+    <nav class="footnav">
+      <a href="index.html">Home</a><a href="episodes.html">Every episode</a><a href="adventure.html">Choose your own adventure</a><a href="about.html">About the show</a><a href="nick-reilly.html">Nick Reilly</a><a href="jason-robinson.html">Jason Robinson</a><a href="contact.html">Contact</a>
+    </nav>
+    <div class="copyright">© 2026 The Numbers Game</div>
+  </footer>
+
+  <script>
+    var VIDEO='RAQ80ecsDq0';
+
+    /* Mobile nav dropdown. */
+    var burger=document.getElementById('navburger'), navdrop=document.getElementById('navdrop');
+    if(burger&&navdrop){burger.addEventListener('click',function(){
+      navdrop.hidden=!navdrop.hidden;
+      burger.setAttribute('aria-expanded', navdrop.hidden?'false':'true');
+    });}
+
+    /* Voice-note button reveals the recorder; × tucks it away. */
+    var vbtn=document.getElementById('vbtn'), vslot=document.getElementById('vslot'), vclose=document.getElementById('vclose');
+    if(vbtn&&vslot){vbtn.addEventListener('click',function(){vslot.hidden=!vslot.hidden;});}
+    if(vclose&&vslot){vclose.addEventListener('click',function(){vslot.hidden=true;});}
+
+    /* Keep-exploring dots: only shown when the strip actually scrolls (mobile). */
+    var rg=document.querySelector('.relgrid'), rd=document.getElementById('reldots');
+    if(rg&&rd){
+      var relCards=rg.querySelectorAll('.relcard');
+      relCards.forEach(function(){rd.appendChild(document.createElement('span'))});
+      var updDots=function(){
+        var scrollable=rg.scrollWidth>rg.clientWidth+4;
+        rd.style.display=scrollable?'flex':'none';
+        if(!scrollable)return;
+        var i=Math.round(rg.scrollLeft/(rg.scrollWidth-rg.clientWidth)*(relCards.length-1));
+        rd.querySelectorAll('span').forEach(function(s,n){s.classList.toggle('on',n===i)});
+      };
+      rg.addEventListener('scroll',updDots,{passive:true});
+      window.addEventListener('resize',updDots);
+      updDots();
+    }
+
+    /* Explore tabs: swap the visible panel; the row stays put so you never lose your place. */
+    var tabBtns=document.querySelectorAll('.tabbtn');
+    tabBtns.forEach(function(b){
+      b.addEventListener('click',function(){
+        tabBtns.forEach(function(o){o.classList.remove('on')});
+        document.querySelectorAll('.tpanel').forEach(function(p){p.hidden=true});
+        b.classList.add('on');
+        document.getElementById(b.getAttribute('data-panel')).hidden=false;
+      });
+    });
+
+    /* Audio-only: Spotify player is the hero; chapters/questions seek it via the Spotify iFrame API. */
+    var spotifyCtrl=null, pendingSeek=null;
+    function nudge(){
+      var p=document.getElementById('player-wrap'), r=p.getBoundingClientRect();
+      if(r.bottom<80 || r.top>window.innerHeight-90){ p.scrollIntoView({behavior:'smooth',block:'start'}); }
+    }
+    function startAt(sec){
+      nudge();
+      if(spotifyCtrl){ spotifyCtrl.seek(sec); spotifyCtrl.resume(); } else { pendingSeek=sec; }
+    }
+    window.onSpotifyIframeApiReady=function(IFrameAPI){
+      IFrameAPI.createController(document.getElementById('spotify-embed'),
+        {uri:'spotify:episode:28zymDUtcrFXiXsEGzWYFs', width:'100%', height:'232'},
+        function(c){ spotifyCtrl=c; if(pendingSeek!=null){ c.seek(pendingSeek); c.resume(); pendingSeek=null; } });
+    };
+    (function(){var sc=document.createElement('script');sc.src='https://open.spotify.com/embed/iframe-api/v1';sc.async=true;document.head.appendChild(sc);})();
+  </script>
+</body>
+</html>

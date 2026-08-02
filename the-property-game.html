@@ -1,0 +1,637 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EP 8 · The Property Game | The Numbers Game</title>
+<meta name="description" content="Welcome to episode 8 of The Numbers Game podcast. In this episode we look at the new ways in which people are getting in to the property market, dangers of b…">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" sizes="64x64" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="canonical" href="https://thenumbersgamepodcast.com.au/the-property-game">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="The Numbers Game">
+<meta property="og:title" content="EP 8 · The Property Game | The Numbers Game">
+<meta property="og:description" content="Welcome to episode 8 of The Numbers Game podcast. In this episode we look at the new ways in which people are getting in to the property market, dangers of b…">
+<meta property="og:url" content="https://thenumbersgamepodcast.com.au/the-property-game">
+<meta property="og:image" content="https://thenumbersgamepodcast.com.au/assets/tng-audio-only-thumbnail.webp">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+  :root{
+    --purple:#585af3; --purple-dark:#2c1b8a; --mint:#7ad9a8;
+    --white:#ffffff; --muted:rgba(255,255,255,.60); --dim:rgba(255,255,255,.42);
+    --line:rgba(255,255,255,.12); --card:rgba(255,255,255,.05); --card-hi:rgba(255,255,255,.09);
+    --display:'Anton',Impact,'Helvetica Neue',sans-serif;
+    --sans:'Inter',system-ui,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif;
+    --wrap:1280px;   /* page frame (nav spans this) */
+    --col:960px;     /* content column (player, tabs, text) */
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:var(--sans); color:var(--white); line-height:1.6; -webkit-font-smoothing:antialiased;
+    background:#12093a;
+    background-image:
+      radial-gradient(1200px 600px at 82% -6%, rgba(88,90,243,.45) 0%, transparent 55%),
+      radial-gradient(900px 700px at 5% 8%, rgba(122,217,168,.10) 0%, transparent 50%),
+      linear-gradient(180deg,#2c1b8a 0%,#1a1150 28%,#100b34 62%,#0b0820 100%);
+    background-attachment:fixed;
+  }
+  a{color:inherit}
+  .wrap{max-width:var(--wrap);margin:0 auto;padding:0 36px}
+  main.wrap{max-width:var(--col)}
+  @media(max-width:720px){.wrap{padding:0 22px}}
+
+  /* ── Navbar ── */
+  .nav{position:sticky;top:0;z-index:50;background:linear-gradient(180deg,rgba(24,15,74,.92),rgba(24,15,74,.72));backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+  .nav-in{max-width:var(--wrap);margin:0 auto;padding:11px 36px;display:flex;align-items:center;justify-content:space-between}
+  @media(max-width:720px){.nav-in{padding:11px 22px}}
+  .brand{display:block;line-height:0}
+  .brand img{height:36px;width:auto;display:block}
+  .navlinks{display:flex;gap:28px;align-items:center}
+  .navlinks a{text-decoration:none;font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);transition:.15s}
+  .navlinks a:hover{color:var(--white)}
+  .navlinks a.navtop{cursor:default}
+  .navgroup{position:relative;display:flex;align-items:center}
+  .navgroup .subnav{display:none;position:absolute;top:100%;left:50%;transform:translateX(-50%);padding-top:14px;min-width:180px}
+  .navgroup:hover .subnav,.navgroup:focus-within .subnav{display:block}
+  .subnav-in,.navgroup .subnav{z-index:60}
+  .navgroup .subnav a{display:block;background:#180f4a;border:1px solid var(--line);border-top:0;padding:12px 16px;font-size:12px;color:rgba(255,255,255,.85)}
+  .navgroup .subnav a:first-child{border-top:1px solid var(--line)}
+  .navgroup .subnav a:hover{background:#221768;color:var(--white)}
+  .navburger{display:none;background:none;border:1px solid var(--line);padding:8px 10px;cursor:pointer;color:var(--white);transition:.15s}
+  .navburger:hover{border-color:rgba(122,217,168,.6)}
+  .navburger svg{width:20px;height:20px;fill:currentColor;display:block}
+  .navdrop{display:none}
+  @media(max-width:720px){
+    .navlinks{display:none}
+    .navburger{display:block}
+    .navdrop{display:block;position:absolute;left:0;right:0;top:100%;
+      background:#180f4a;border-bottom:1px solid var(--line);box-shadow:0 24px 50px rgba(0,0,0,.45)}
+    .navdrop[hidden]{display:none}
+    .navdrop a{display:block;padding:15px 22px;text-decoration:none;font-size:14px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:rgba(255,255,255,.9);border-bottom:1px solid rgba(255,255,255,.06)}
+    .navdrop a:last-child{border-bottom:0}
+    .navdrop a.sub{padding-left:42px;font-size:13px;color:rgba(255,255,255,.72)}
+    .navdrop .navlabel{display:block;padding:15px 22px 6px;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.4)}
+  }
+
+  /* ── Hero / hook (marker-highlight system: purple hook wraps naturally, mint payoff below)
+     Rules: title splits at its natural break (colon/pipe/question mark). Front = hook (purple,
+     big), back = payoff (mint, smaller). No break in title = purple hook only. Highlights hug
+     the text (tight em padding tuned to Anton) and wrap via box-decoration-break — never
+     hand-pick line breaks or mint words. ── */
+  header.hero{padding:34px 0 6px}
+  .hook{--inx:clamp(8.4px,2.1vw,15.6px)} /* one shared text inset so hook + payoff first letters align */
+  .hook .hk{font-family:var(--display);font-weight:400;text-transform:uppercase;
+    font-size:clamp(28px,7vw,52px);line-height:1.3;letter-spacing:-.5px;text-wrap:balance}
+  .hook .hk span{color:var(--white);padding:.04em var(--inx) .02em;
+    background:linear-gradient(var(--purple),var(--purple)) 0 50%/100% 87% no-repeat;
+    -webkit-box-decoration-break:clone;box-decoration-break:clone}
+  .hook .pay{font-family:var(--display);font-weight:400;text-transform:uppercase;
+    font-size:clamp(16px,4vw,24px);line-height:1.5;letter-spacing:.6px;margin-top:8px;text-wrap:balance}
+  .hook .pay span{color:#0a0a0a;padding:.08em var(--inx) .04em;
+    background:linear-gradient(var(--mint),var(--mint)) 0 50%/100% 88% no-repeat;
+    -webkit-box-decoration-break:clone;box-decoration-break:clone}
+  /* no-hook titles: mid-split into two full-size rows, purple then mint */
+  .hook .hk span.hkrow{display:block;background:none;padding:0}
+  .hook .hk .hkrow+.hkrow{margin-top:8px}
+  .hook .hk span.mintseg{color:#0a0a0a;
+    background:linear-gradient(var(--mint),var(--mint)) 0 50%/100% 87% no-repeat}
+
+  /* ── Player (clean facade → real player on tap) ── */
+  .player-wrap{margin:24px 0 4px;scroll-margin-top:76px}
+  .audio-hero{width:100%;min-height:232px;border-radius:12px;overflow:hidden;box-shadow:0 30px 70px rgba(0,0,0,.5),0 0 0 1px rgba(255,255,255,.06)}
+  .audio-hero iframe{display:block;width:100%;border:0}
+  .player{position:relative;width:100%;padding-top:56.25%;border-radius:0;overflow:hidden;background:#000;box-shadow:0 30px 70px rgba(0,0,0,.5),0 0 0 1px rgba(255,255,255,.06)}
+  .facade{position:absolute;inset:0;border:0;cursor:pointer;background-size:cover;background-position:center;display:flex;align-items:center;justify-content:center;padding:0}
+  .facade .play{width:74px;height:74px;border-radius:50%;background:rgba(10,6,30,.40);border:2px solid rgba(255,255,255,.72);display:flex;align-items:center;justify-content:center;transition:.18s;-webkit-backdrop-filter:blur(1px);backdrop-filter:blur(1px)}
+  .facade:hover .play{background:rgba(88,90,243,.62);transform:scale(1.07);border-color:#fff}
+  .facade .play::after{content:"";border-style:solid;border-width:11px 0 11px 19px;border-color:transparent transparent transparent #fff;margin-left:5px}
+  .player iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+
+  /* ── Episode facts (bottom of the Summary panel — templated per episode) ── */
+  .sumfacts{margin:14px 10px 4px;padding-top:13px;border-top:1px solid rgba(255,255,255,.08);display:flex;flex-direction:column;gap:8px}
+  .fact{display:flex;gap:12px;font-size:13.5px}
+  .fact .fl{flex:none;width:104px;color:var(--dim);font-weight:600;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;padding-top:2px}
+  .fact .fv{color:rgba(255,255,255,.9);font-weight:500}
+  .fact .fv a{color:var(--mint);text-decoration:none;border-bottom:1px solid rgba(122,217,168,.4);transition:.15s}
+  .fact .fv a:hover{border-bottom-color:var(--mint)}
+
+  /* ── Episode tag (identity: black label hanging off the title corner) ── */
+  .eptag{display:inline-block;position:relative;left:-6px;margin-bottom:-7px;z-index:2;
+    background:#0a0a0a;color:var(--white);font-family:var(--display);font-weight:400;
+    font-size:13.5px;letter-spacing:1.5px;text-transform:uppercase;padding:6px 11px 4px}
+
+  /* ── Explore tabs (sticky mode switcher; one panel swaps below, nothing shoves) ── */
+  .explore{margin-top:22px}
+  .tabs{position:sticky;top:58px;z-index:40;display:flex;flex-wrap:wrap;gap:8px;padding:10px 0;
+    background:linear-gradient(180deg,rgba(18,10,55,.96),rgba(18,10,55,.86));
+    backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+  .tabbtn{font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.5px;
+    font-size:14.5px;color:var(--white);background:var(--purple);border:1px solid var(--purple);
+    padding:9px 13px 7px;cursor:pointer;transition:.15s}
+  .tabbtn:hover{filter:brightness(1.12)}
+  .tabbtn.on{background:var(--mint);border-color:var(--mint);color:#0a0a0a}
+  .tabbtn.on:hover{filter:none}
+  .tabbtn .ct{font-size:12px;opacity:.75;font-variant-numeric:tabular-nums}
+  .tabbtn .ct::before{content:" · "}
+  .tpanel{border:1px solid var(--line);background:var(--card);padding:12px 10px 14px}
+  .hint{font-size:12.5px;color:var(--muted);padding:2px 10px 10px;border-bottom:1px solid rgba(255,255,255,.08);margin-bottom:6px}
+
+  /* ── Listen row (no box: label left, service pills follow) ── */
+  .listen{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:12px 16px;margin-top:34px}
+  .listen .lname{font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--dim)}
+  .listen a{display:inline-flex;align-items:center;gap:9px;padding:11px 18px;border-radius:999px;
+    background:var(--mint);color:#08210f;text-decoration:none;font-weight:800;font-size:12.5px;
+    letter-spacing:.04em;text-transform:uppercase;transition:.15s}
+  .listen a:hover{filter:brightness(1.06);transform:translateY(-1px);box-shadow:0 12px 30px rgba(122,217,168,.25)}
+  .listen svg{width:20px;height:20px;fill:currentColor;flex:none}
+  /* ── Listen-now Spotify audio embed (full column width, above the pills) ── */
+  .listen-now{margin-top:40px}
+  .listen-now .ln-head{display:flex;align-items:baseline;justify-content:space-between;gap:14px;margin-bottom:13px}
+  .listen-now .ln-title{font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--dim)}
+  .audio-embed{border-radius:12px;overflow:hidden;box-shadow:0 20px 50px rgba(0,0,0,.4),0 0 0 1px rgba(255,255,255,.06)}
+  .audio-embed iframe{display:block;width:100%;border:0}
+  @media(max-width:720px){.listen-now{margin-top:32px}}
+
+  /* ── Keep exploring (thumbnails link to other episode PAGES, never timecodes).
+     Swipeable strip on mobile, fits three-up on desktop. Variant rule: claim
+     "similar ground" + reason lines ONLY when moment-level topic overlap is
+     genuinely strong; otherwise show the latest released episodes with dates —
+     never invent a connection. ── */
+  .relsec{margin-top:60px;padding-top:58px;border-top:1px solid var(--line)} /* line = end of this episode's info */
+  .reldots{display:flex;justify-content:center;gap:7px;margin-top:12px}
+  .reldots span{width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.25);transition:.2s}
+  .reldots span.on{background:var(--mint)}
+  .relsec .rtitle{display:inline-block;font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.5px;font-size:14.5px;background:var(--mint);color:#0a0a0a;padding:9px 13px 7px;margin-bottom:18px}
+  .relgrid{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding-bottom:6px;scrollbar-width:none}
+  .relgrid::-webkit-scrollbar{display:none}
+  .relcard{flex:0 0 56%;max-width:232px;scroll-snap-align:start;display:flex;flex-direction:column;text-decoration:none;background:var(--card);border:1px solid var(--line);transition:.15s}
+  .relcard:hover{background:var(--card-hi);border-color:rgba(122,217,168,.55)}
+  .relcard img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block}
+  .relcard .rt{display:block;font-size:12.5px;font-weight:600;color:rgba(255,255,255,.92);line-height:1.4;padding:8px 8px 0}
+  .relcard .rfoot{margin-top:auto;display:flex;justify-content:space-between;align-items:flex-end;gap:8px;padding:10px 8px 9px}
+  .relcard .rwhy{font-size:11.5px;color:var(--mint)}
+  .relcard .rtag{display:inline-block;background:#0a0a0a;color:var(--white);font-family:var(--display);font-size:10px;letter-spacing:1.2px;text-transform:uppercase;padding:3px 7px 2px;white-space:nowrap;flex:0 0 auto}
+
+  /* ── Dropdown sections (accordion under the player) ── */
+  .drops{margin-top:34px;display:flex;flex-direction:column;gap:11px}
+  .drop{border:1px solid var(--line);border-radius:0;background:var(--card);overflow:hidden;transition:border-color .15s}
+  .drop[open]{border-color:rgba(122,217,168,.35)}
+  .drop>summary{list-style:none;cursor:pointer;padding:16px 18px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+  .drop>summary::-webkit-details-marker{display:none}
+  .drop>summary .st{font-weight:700;font-size:15.5px;letter-spacing:.005em}
+  .drop>summary .ct{margin-left:auto;font-size:12px;color:var(--dim);font-weight:600;font-variant-numeric:tabular-nums}
+  .drop>summary .chev{flex:none;width:22px;height:22px;border-radius:50%;background:rgba(122,217,168,.14);color:var(--mint);display:flex;align-items:center;justify-content:center;font-family:var(--display);font-size:15px;line-height:1;transition:.2s;transform:translateY(-1px)}
+  .drop[open]>summary .chev{transform:rotate(45deg)}
+  .drop-body{padding:2px 12px 12px}
+
+  /* chapters */
+  .chapter{display:flex;align-items:baseline;gap:14px;width:100%;text-align:left;cursor:pointer;background:none;border:0;color:inherit;font-family:inherit;padding:11px 10px;border-radius:10px;transition:.13s}
+  .chapter:hover{background:var(--card-hi)}
+  .chapter .tc{font-variant-numeric:tabular-nums;font-weight:700;font-size:14px;color:var(--mint);flex:none;width:48px}
+  .chapter .cx{font-size:15px;font-weight:500;color:rgba(255,255,255,.9)}
+  .chapter:hover .cx{color:#fff}
+
+  /* questions */
+  .q{display:flex;align-items:center;gap:12px;width:100%;text-align:left;cursor:pointer;background:none;border:0;border-radius:11px;color:inherit;font-family:inherit;padding:12px 10px;transition:.14s}
+  .q+.q{border-top:1px solid rgba(255,255,255,.05)}
+  .q:hover{background:var(--card-hi)}
+  .q .qm{font-family:var(--display);font-size:15px;color:var(--mint);flex:none;line-height:1;transform:translateY(1px)}
+  .q .qx{font-size:15px;font-weight:500;color:rgba(255,255,255,.92)}
+  .q .go{margin-left:auto;flex:none;color:var(--dim);font-size:18px;transition:.15s}
+  .q:hover .go{color:var(--mint);transform:translateX(2px)}
+
+  /* summary + transcript bodies */
+  .summary-body p{font-size:16.5px;line-height:1.62;color:rgba(255,255,255,.9);padding:6px 10px 4px}
+  .tbody{padding:2px 10px 8px}
+  .tbody p{font-size:14.5px;line-height:1.7;color:rgba(255,255,255,.78);margin-top:15px;max-width:64ch}
+  .tbody .spk{display:block;font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--mint);margin-bottom:2px}
+
+  /* ── Voice note ask (lives at the bottom of the Summary panel) ── */
+  .vask{margin:16px 10px 4px}
+  .vbtn{display:inline-flex;align-items:center;gap:9px;padding:12px 20px;border-radius:999px;border:0;cursor:pointer;
+    background:var(--mint);color:#08210f;font-family:inherit;font-weight:800;font-size:12.5px;
+    letter-spacing:.04em;text-transform:uppercase;transition:.15s}
+  .vbtn:hover{filter:brightness(1.06);transform:translateY(-1px);box-shadow:0 12px 30px rgba(122,217,168,.25)}
+  .vbtn svg{width:18px;height:18px;fill:currentColor;flex:none}
+  .vslot{background:var(--purple);padding:12px 10px 10px;margin:14px 0 4px;box-shadow:0 18px 40px rgba(0,0,0,.35)}
+  .vslot[hidden]{display:none}
+  .vhead{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;margin-bottom:10px}
+  .vhead .vmsg{font-family:var(--sans);font-size:13px;line-height:1.55;color:rgba(255,255,255,.92);margin:2px 0 0;padding:0 2px}
+  .vclose{background:none;border:0;color:rgba(255,255,255,.85);font-size:22px;line-height:1;cursor:pointer;padding:0 2px}
+  .vclose:hover{color:var(--white)}
+  .vslot iframe{display:block}
+
+  /* ── YouTube subscribe pill (sits in the listen row; outranks .listen a's mint) ── */
+  .listen a.yt-pill{background:var(--purple);color:var(--white)}
+  .listen a.yt-pill:hover{filter:brightness(1.1);transform:translateY(-1px)}
+  @media(max-width:720px){ /* mobile: no label, three compact pills on one row */
+    .listen .lname{display:none}
+    .listen{gap:8px}
+    .listen a{padding:10px 13px;font-size:11px;gap:6px}
+    .listen svg{width:16px;height:16px}
+  }
+
+  /* ── Footer: two columns under the line (Brought to you by | Produced by), matches adventure.html ── */
+  footer{border-top:1px solid var(--line);margin-top:68px;padding:52px 20px 58px}
+  .footgrid{max-width:var(--wrap);margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:start}
+  @media(max-width:720px){.footgrid{grid-template-columns:1fr;gap:40px}}
+  .fcol{text-align:center}
+  .foot-label{font-size:11px;font-weight:700;letter-spacing:.26em;text-transform:uppercase;color:var(--dim);margin-bottom:16px}
+  .sponsors{display:flex;justify-content:center;align-items:center;gap:38px;flex-wrap:wrap}
+  .sponsors a{display:inline-flex;transition:.15s}
+  .sponsors a:hover{transform:translateY(-1px)}
+  .sponsors img{height:34px;width:auto;opacity:.92}
+  .sponsors a:hover img{opacity:1}
+  .produced a{display:inline-flex;transition:.15s}
+  .produced a:hover img{opacity:1}
+  .produced img{height:30px;width:auto;opacity:.95}
+  .footnav{margin-top:36px;display:flex;justify-content:center;flex-wrap:wrap;gap:6px 26px}
+  .footnav a{font-size:12px;font-weight:600;letter-spacing:.04em;color:var(--dim);text-decoration:none;transition:.15s}
+  .footnav a:hover{color:var(--mint)}
+  .copyright{margin-top:40px;font-size:12px;color:var(--dim);text-align:center}
+
+  @media(min-width:720px){header.hero{padding:48px 0 6px}}
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "PodcastEpisode", "name": "Buying Commercial Property With Your Super in 2026 | What the Numbers Say", "url": "https://thenumbersgamepodcast.com.au/episode-285.html", "datePublished": "2026-07-13", "episodeNumber": 285, "image": "https://i.ytimg.com/vi/RAQ80ecsDq0/maxresdefault.jpg", "partOfSeries": {"@type": "PodcastSeries", "name": "The Numbers Game", "url": "https://thenumbersgamepodcast.com.au/"}}</script>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-in">
+      <a class="brand" href="index.html" aria-label="The Numbers Game home"><img src="assets/tng-logo.png" alt="The Numbers Game"></a>
+      <div class="navlinks">
+        <a href="index.html">Home</a>
+        <div class="navgroup">
+          <a class="navtop">Episodes</a>
+          <div class="subnav">
+            <a href="episodes.html">All episodes</a>
+            <a href="adventure.html">Find moments</a>
+          </div>
+        </div>
+        <div class="navgroup">
+          <a class="navtop">About</a>
+          <div class="subnav">
+            <a href="about.html">The show</a>
+            <a href="nick-reilly.html">Nick Reilly</a>
+            <a href="jason-robinson.html">Jason Robinson</a>
+          </div>
+        </div>
+        <a href="contact.html">Contact</a>
+      </div>
+      <button class="navburger" id="navburger" type="button" aria-label="Menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24"><path d="M3 6h18v2H3zM3 11h18v2H3zM3 16h18v2H3z"/></svg>
+      </button>
+    </div>
+    <div class="navdrop" id="navdrop" hidden>
+      <a href="index.html">Home</a>
+      <span class="navlabel">Episodes</span>
+      <a class="sub" href="episodes.html">All episodes</a>
+      <a class="sub" href="adventure.html">Find moments</a>
+      <span class="navlabel">About</span>
+      <a class="sub" href="about.html">The show</a>
+      <a class="sub" href="nick-reilly.html">Nick Reilly</a>
+      <a class="sub" href="jason-robinson.html">Jason Robinson</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+
+  <main class="wrap">
+
+    <header class="hero">
+      <div class="hook">
+        <span class="eptag">EP 8</span>
+        <h1 class="hk"><span>The Property Game</span></h1>
+      </div>
+    </header>
+
+    <div class="player-wrap" id="player-wrap">
+      <div class="audio-hero" id="spotify-embed"></div>
+    </div>
+
+    <div class="explore">
+      <div class="tabs" role="tablist">
+        <button class="tabbtn on" data-panel="p-summary">Summary</button>
+      </div>
+      <section class="tpanel" id="p-summary">
+        <div class="summary-body">
+          <p>Welcome to episode 8 of The Numbers Game podcast. In this episode we look at the new ways in which people are getting in to the property market, dangers of buying property with friends / family and the importance of knowing your long term financial plan.</p>
+        </div>
+        <div class="vask">
+          <button class="vbtn" id="vbtn" type="button">
+            <svg viewBox="0 0 24 24"><path d="M12 14a3 3 0 0 0 3-3V6a3 3 0 1 0-6 0v5a3 3 0 0 0 3 3zm5-3a5 5 0 0 1-10 0H5a7 7 0 0 0 6 6.92V21h2v-3.08A7 7 0 0 0 19 11h-2z"/></svg>
+            Send us a voice note
+          </button>
+          <div class="vslot" id="vslot" hidden>
+            <div class="vhead">
+              <p class="vmsg">We'd love to hear from you. You can leave up to a 90 second voice note for us to play on the show: a question, some feedback, or a topic you want covered.</p>
+              <button class="vclose" id="vclose" type="button" aria-label="Close">&times;</button>
+            </div>
+            <iframe src="https://www.speakpipe.com/widget/inline/hhq6kzggsx7zpcsvakgxfrzun3zidpde" allow="microphone" width="100%" height="200" frameborder="0" title="Leave The Numbers Game a voice note"></iframe>
+          </div>
+          <script async src="https://www.speakpipe.com/widget/loader.js" charset="utf-8"></script>
+        </div>
+        <div class="sumfacts">
+          <div class="fact"><span class="fl">Release date</span><span class="fv">19 April 2021</span></div>
+          <div class="fact"><span class="fl">Hosts</span><span class="fv"><a href="jason-robinson.html">Jason Robinson</a> &amp; <a href="nick-reilly.html">Nick Reilly</a> &amp; <a href="marty-vidakovic.html">Marty Vidakovic</a></span></div>
+
+        </div>
+      </section>
+    </div>
+
+    <div class="drops">
+
+      <details class="drop">
+        <summary><span class="st">Episode transcript</span><span class="chev">+</span></summary>
+        <div class="drop-body tbody">
+          <p><span class="spk">Jason · 00:00</span>Thanks to our sponsor Walker Digital, who&#x27;ve stepped in to help the Numbers Game podcast with their social media. Walker Digital are a digital marketing agency covering strategy, content, video, implementation, and education. The team at Walker have spread the word of our clients and love working with businesses doing good things, helping them to grow and reach more people so they can scale and get larger.</p>
+          <p><span class="spk">Jason · 00:20</span>I know personally the first thing I did when growing our business was to outsource social media, blogs, and copywriting because I knew it was something that was not the best use of my time, and the girls at Walker Digital smashed it. Sometimes you need to walk before you can run. Find out more at their website, wlkr.digital. This episode does not class as personal advice.</p>
+          <p><span class="spk">Jason · 00:40</span>It is general and does not take into account your objectives, financial situation, or needs. People may also hold positions in the companies discussed. Welcome to The Numbers Game, Episode 8. I&#x27;m Jason, and I&#x27;m here with Nick and Marty. Guys, exciting, another question from one of our listeners.</p>
+          <p><span class="spk">Jason · 00:57</span>Marty, it was fired your way. What is it?</p>
+          <p><span class="spk">Marty · 01:01</span>Well, we got a question from Lisa Evans. Really good question. We talked about guarantee loans, parents guaranteeing their kids&#x27; loans. And she writes in and said, what are the potential dangers of providing a guarantee for your kids to buy a house? And I thought it was an excellent question, Lisa.</p>
+          <p><span class="spk">Marty · 01:16</span>So thank you for that. Just things to consider. If that borrower can&#x27;t make the repayments, there is a possibility you might have to pay that loan back. So that&#x27;s an important thing to know. So let&#x27;s say potentially now we&#x27;ve got property going up in value.</p>
+          <p><span class="spk">Marty · 01:32</span>Let&#x27;s say that comes off a bit and all of a sudden that child can&#x27;t make their repayments. Now this is over a 1-year process. It&#x27;s not just going to happen overnight, but they&#x27;re still exposed. They&#x27;re still exposed. So it&#x27;s important to get legal advice to understand what your obligations and responsibilities are.</p>
+          <p><span class="spk">Marty · 01:49</span>The other thing that you need to consider is that you— it might impact your own borrowing needs as well. So you&#x27;ve got a lot of younger parents out there still doing things. So you&#x27;ve got a debt and an obligation here as a guarantee. So you&#x27;ve got to think about that.</p>
+          <p><span class="spk">Marty · 02:05</span>The other thing I would say is if something does go wrong, it could damage the relationship with, uh, the special people in your life as well. Now that&#x27;s all the potential consequences, but again, we&#x27;ve talked about in previous episodes, there are upsides in saving mortgage insurance and you&#x27;ve got to look at the default rate on mortgages as well.</p>
+          <p><span class="spk">Marty · 02:24</span>The trend is your friend. And it&#x27;s sitting at around 1%, 1.2%. But if it goes wrong, it can go very wrong. Nick?</p>
+          <p><span class="spk">Nick · 02:31</span>I believe one of the keys to the guarantor product now too, Marty, is it&#x27;s a limited guarantee unlike it was in the past. Correct. The parents are only guaranteeing that deposit amount, not the entire loan.</p>
+          <p><span class="spk">Marty · 02:44</span>Correct. Yeah, there&#x27;s limited guarantees and unlimited guarantees. Nowadays, you&#x27;re generally finding they&#x27;re limited guarantees. So you&#x27;ve got a little bit more safety around it as well.</p>
+          <p><span class="spk">Nick · 02:54</span>Really good question.</p>
+          <p><span class="spk">Jason · 02:56</span>One little extra one that I see as a danger, because I&#x27;d love my parents to be guarantor at some point soon. Mum, Dad, if you&#x27;re listening, pay attention. What if they want to move house? So they&#x27;re heading towards retirement age, they may want to downsize and move somewhere else. Can that guarantor chunk move to their next property or is that a whole complicated process?</p>
+          <p><span class="spk">Marty · 03:14</span>Oh, it&#x27;s sort of like a portability. When you&#x27;re moving house, you can always get the loan on the new house as well. But generally, you&#x27;ll find that you want to plan that out in advance to know if they&#x27;re going to move. Because again, once the property is standalone for the child and it supports itself at 80%, then you can take that guarantee off.</p>
+          <p><span class="spk">Marty · 03:33</span>The parent gets their obligation sent back to them. They&#x27;re free and we move on. But yeah, that would have to be— they&#x27;re all the great questions upfront to be asking when you&#x27;re dealing with a parent and a child in that type of situation. You know, what are your long-term plans?</p>
+          <p><span class="spk">Marty · 03:48</span>You need to know what the guarantor wants to do, not only the person borrowing the money. So yeah.</p>
+          <p><span class="spk">Jason · 03:54</span>Mate, I&#x27;m loving the listener questions. It makes me feel warmed up before we even get to the warm-up. But on this week&#x27;s episode, Nick, what have you got for us coming up?</p>
+          <p><span class="spk">Nick · 04:01</span>I&#x27;m gonna talk about the pros and cons of buying property with third parties.</p>
+          <p><span class="spk">Marty · 04:06</span>Jayce, what do you got for us?</p>
+          <p><span class="spk">Jason · 04:07</span>Mate, well, we&#x27;re heading into tax planning time for accountants. So it&#x27;s kind of like Christmas. We&#x27;re getting really, really busy. Calendar&#x27;s getting fully jam-packed and we&#x27;re gonna be sitting down having really valuable conversations with our clients. Around what their taxable income looks like and what their plans are for the future.</p>
+          <p><span class="spk">Marty · 04:22</span>Fantastic. And I&#x27;m going to be talking about are we in an asset bubble and also how to create income outside of your normal income pay. Let&#x27;s play.</p>
+          <p><span class="spk">Jason · 04:33</span>On fire today and firing straight into Reading the Play, where we&#x27;re going to bring you the usual interesting facts and industry insights and things that are going on day to day that you need to know. Nick, you&#x27;re first up today with something interesting for us.</p>
+          <p><span class="spk">Nick · 04:46</span>Yeah, well, considering we&#x27;re talking about alternatives or quicker ways to get into the property market today, I wanna just talk about a company called Brix, which you may or may not have heard of. But Brix is a, it&#x27;s almost like a trust setup where they&#x27;re a business that owns property or buys and sells property.</p>
+          <p><span class="spk">Nick · 05:03</span>And you have the ability to invest in a particular property without having your name on the title of that property. So to put it, To put it into an example for you, Bricks will buy a house, let&#x27;s say it&#x27;s in Essendon, and they will split that house into 10,000 bricks.</p>
+          <p><span class="spk">Nick · 05:20</span>Now you as the investor have the ability to buy one brick in that house in Essendon. You will get, based on your brick, you will get capital growth if the property goes up and you&#x27;ll get a rental return if there&#x27;s a rental return. So it&#x27;s a way to play the property market or diversify your investments without actually physically going and buying a property.</p>
+          <p><span class="spk">Nick · 05:41</span>Now, of course, you don&#x27;t get the luxuries and the emotional side of being a property owner, but if you&#x27;re looking to get into the market, it&#x27;s a good way to do that. So couple of things that came up when I first heard about this and a few questions I asked.</p>
+          <p><span class="spk">Nick · 05:57</span>Well, most properties are negatively geared. So if a property is negatively geared or, you know, costs more to hold than the rent that comes in, then how does that work? Do you have to make a contribution? One of the things that I discovered was every time Brix buy a property, there&#x27;s a maximum of around a 10% cash reserve that&#x27;s left.</p>
+          <p><span class="spk">Nick · 06:20</span>So the property&#x27;s worth $500,000, they&#x27;ll have a cash reserve of $50,000 to cover incidentals, repairs and whatnot. And obviously the older the property, the closer to that 10% is. The newer properties have less. The other thing that I thought was very interesting is they only gear the properties to 30% or they only loan 30% of what the properties are worth.</p>
+          <p><span class="spk">Nick · 06:39</span>So if the property&#x27;s worth $1 million, then they&#x27;ll only loan $300,000 of that, which means you&#x27;ve got lower payments. So in no circumstance, hypothetically, you&#x27;re gonna get a position where the costs are more than the rental income that&#x27;s coming in.</p>
+          <p><span class="spk">Nick · 06:55</span>So you should always get a return. The other thing I thought was, well, how do you get your money back? If you need to get your money back, property being very, illiquid. How do you get your money back through this company? So all you do is you just go into the market, the bricks market, and sell your brick.</p>
+          <p><span class="spk">Nick · 07:10</span>Now they propose that on average it takes 28 hours to sell a brick from what I found online yesterday. That&#x27;s pretty good. So fairly liquid. It&#x27;s a good way to get exposure to the residential property market. You see a lot of property REITs you can get exposure to on the ASX, but a lot of those businesses are commercial or industrial property related.</p>
+          <p><span class="spk">Nick · 07:30</span>Not so many residential. So yeah, the other thing I really liked about it, and it&#x27;s the last thing I&#x27;ll say, was it&#x27;s almost like buying a property on realestate.com. So you actually go onto the BRICKS website and the listing is there almost like you would see on realestate.com. You can see the yields, the cash flows, the property, the photos, and the price of the brick, and you can buy a brick in that property.</p>
+          <p><span class="spk">Nick · 07:53</span>So look, I thought it was pretty cool. It won&#x27;t be for everyone, but it&#x27;s a good alternative. To buying a property if you don&#x27;t have that 5-10% deposit, which is a lot of money these days.</p>
+          <p><span class="spk">Jason · 08:02</span>It does make it really tangible to be able to almost see, feel, and touch the brick that you&#x27;re buying and know that you own a share of that particular property.</p>
+          <p><span class="spk">Nick · 08:11</span>I think they&#x27;ve done it very well because myself, when I was looking online last night, the first thing I thought was, how cool is that? I&#x27;d buy that property. Oh, it&#x27;s $100 for a brick? Of course I&#x27;m gonna buy one. So yeah, look, it&#x27;s done really well. Definitely worth a look. Again, there is risk factors and the risk factors would be that the company goes under.</p>
+          <p><span class="spk">Nick · 08:30</span>To give you some comfort, the equity they&#x27;ve raised came from NAB initially. So, you know, small cost, 0.5% of the buy or the sell price is the fees they charge, which is not a great deal of money.</p>
+          <p><span class="spk">Nick · 08:45</span>So yeah, check it out.</p>
+          <p><span class="spk">Marty · 08:47</span>So the people buying the bricks make up the other 70% of that investment. Is that the theory?</p>
+          <p><span class="spk">Nick · 08:52</span>Without understanding or knowing their business model, that&#x27;s what the assumption would be.</p>
+          <p><span class="spk">Marty · 08:57</span>Makes sense.</p>
+          <p><span class="spk">Nick · 08:57</span>Yeah.</p>
+          <p><span class="spk">Marty · 08:58</span>Low, 30%. Yeah, that&#x27;s a great concept. Yeah.</p>
+          <p><span class="spk">Nick · 09:02</span>Yeah. Interesting. So yeah, I thought that was a really good segue into what we&#x27;re gonna talk about today, which is alternatives to getting into the property market.</p>
+          <p><span class="spk">Marty · 09:09</span>Yeah.</p>
+          <p><span class="spk">Jason · 09:09</span>Well, and at risk of taking it to my reading the play and going the opposite and telling people not to be smart with their money and invest in a brick, I&#x27;ve got something that got me excited in news recently, having the previous week of travel home from Perth and the week before that, we&#x27;re talking about being in Byron Bay, or I think you were further up north, Nick.</p>
+          <p><span class="spk">Jason · 09:28</span>I&#x27;m excited because the travel bubble has been announced. So New Zealand and Australia, the travel bubble— what that has to do with numbers, you may be asking. Um, economy, what it does for our economy and what it does for people&#x27;s general vibe and excitement. Um, I went and kind of read some numbers about what is going to happen off the back of this.</p>
+          <p><span class="spk">Jason · 09:47</span>Um, so tourism dollars and where, you know, is it going to go where it&#x27;s needed most? We&#x27;ve got about $1.5 billion that is expected to enter the Australian economy because of the New Zealand tourists that will be coming over. Um, Qantas is ramping up flights, 120 flights a week from Qantas, and New Zealand has been able to put 330 people back on the payroll to be able to get these flights going back and forth.</p>
+          <p><span class="spk">Jason · 10:11</span>So already, so really positive stuff for both the Australian economy and New Zealand economy. Now Australia is New Zealand&#x27;s biggest economy of overseas market coming and going from the country. We spend $2.7 billion a year in New Zealand, the Australian tourists.</p>
+          <p><span class="spk">Jason · 10:27</span>You got to think about, you know, snowboarding and your trips like that. So I&#x27;ve got a special shout out for a client, Mint Tours, who they were very excited about the prospect of Australians being able to go and snowboard in New Zealand. So get excited, Jared. Google Trends, numbers, trends, we love all this stuff.</p>
+          <p><span class="spk">Jason · 10:44</span>The Google search trend for Queenstown has gone through the roof off the back of the New Zealand bubble being announced. On average, people spend $1,700 per trip from Australia going over to Queenstown for the New Zealand ski season. So yeah, make your choice.</p>
+          <p><span class="spk">Jason · 11:01</span>You want to go snowboarding off the back of my credit card story? You&#x27;re probably thinking that I haven&#x27;t really learnt much. Yeah, I&#x27;ve got a couple of spare boards for sale, so then I might be able to put that into a brick and, you know, actually do something smart with my money. And on the other side of it, Kiwis come into Australia and spend on average $1,800 per trip, with 1.2 million visitors making up a total spend before COVID of $2.1 billion per year.</p>
+          <p><span class="spk">Jason · 11:25</span>So quite important for our economy. And you think of the flow-on effect for the tourism industry, which is arguably one of the hardest hit from COVID or the hardest hit. What that does for hotels, restaurant bookings, you know, all of that flow-on effect. I think it&#x27;s really good for everyone out there to get fired up and get excited about those kind of bubbles.</p>
+          <p><span class="spk">Jason · 11:46</span>Whereas I think Marty, unless there&#x27;s any questions, because I&#x27;m just amped and pumped, you&#x27;ve got another bubble which isn&#x27;t as exciting as, or as good for I&#x27;m always, I&#x27;m always the optimist, right?</p>
+          <p><span class="spk">Marty · 11:58</span>But I&#x27;m hearing about BRICS, I&#x27;m hearing about NFTs and non-fungible tokens last episode, a couple episodes ago. And I&#x27;m worried is if we&#x27;re getting a bit of that &#x27;is my neighbor getting rich&#x27; syndrome.</p>
+          <p><span class="spk">Marty · 12:13</span>And what I mean by that is everyone&#x27;s got a speculative play, whether it&#x27;s the Uber driver or your neighbor.</p>
+          <p><span class="spk">Jason · 12:21</span>You might—</p>
+          <p><span class="spk">Marty · 12:21</span>but yeah, you might— but Everyone&#x27;s into the market trying to create more money and, you know, trying to invest in interesting things. But what worries me a little bit is, is what if we have a short-term pullback, you know, the next 2 years?</p>
+          <p><span class="spk">Marty · 12:36</span>And are we, are we thinking about that? Are we thinking about the longer-term play? Because again, with all types of roaring markets like we&#x27;re in, I mean, where the stocks are almost at all-time highs, or if not, they&#x27;re reaching all-time highs. The property market&#x27;s going through the roof as well.</p>
+          <p><span class="spk">Marty · 12:51</span>And I know for a fact, having lived through 2008, even though it&#x27;s very different now in many ways, but the one consistency in any pullback in the market is a lot of government stimulus. And then also mixed in with almost this euphoria of people wanting to get in the market and fearing that they&#x27;re going to miss out.</p>
+          <p><span class="spk">Marty · 13:13</span>And I just have this, I know it&#x27;s only gut feel, it&#x27;s not based on numbers here, but it&#x27;s gut feel. That if someone is buying a property at the moment thinking the property&#x27;s going to go up and up and up, it may well do. But what if there is a pullback? What if there is a pullback in the share market?</p>
+          <p><span class="spk">Marty · 13:29</span>Have you planned for that downturn? And that&#x27;s the question I want to open up to yourself. Have you given any consideration? Have you seen anything in the market that concerns you as well? Because usually we&#x27;re very buoyant on things, but what have you seen from your perspective, Nick?</p>
+          <p><span class="spk">Nick · 13:44</span>Well, look, I think I think your gut feel, I&#x27;m not going to say it&#x27;s spot on, but it&#x27;s very warranted because, you know, there&#x27;s always a downturn following what we&#x27;re seeing or conditions that we&#x27;re seeing at the moment. So look, it is a concern. I would say at least 2 or 3 times a week I&#x27;m getting a phone call, &quot;Oh, hey mate, I think I should be doing this.</p>
+          <p><span class="spk">Nick · 14:04</span>I spoke to this guy at work.&quot; I know I&#x27;ve got some clients that work on commercial job sites Tradies are walking around punting on the stock market all day. We&#x27;ve spoken about this stuff. So I think it&#x27;s a good thing.</p>
+          <p><span class="spk">Nick · 14:21</span>Like, I think there&#x27;s a new generation coming through. Social media, access to information. We&#x27;ve spoken about all this. It&#x27;s easier now. So I think organically that&#x27;s gonna happen. But people need to, you know, I say to our financial planning clients, what is your backup plan?</p>
+          <p><span class="spk">Nick · 14:38</span>Cash is king. Have some cash in the bank, whether it&#x27;s a 6-month— whether it&#x27;s 6 months&#x27; worth of living expenses, 12 months, whatever you feel comfortable with. But make sure that you don&#x27;t have to pull the trigger at the wrong time. We&#x27;ve spoken about this in prior, in the prior episodes, but it&#x27;s not so much about don&#x27;t invest, it&#x27;s get that balance right and don&#x27;t put everything you&#x27;ve got into an asset.</p>
+          <p><span class="spk">Nick · 15:02</span>Have a fallback position so you can get through a tough time because it&#x27;s not if it comes, it&#x27;s when. It&#x27;s going to come. It&#x27;s a matter of when it happens.</p>
+          <p><span class="spk">Marty · 15:11</span>Yeah.</p>
+          <p><span class="spk">Nick · 15:12</span>And are you in a position to ride it out when it does come?</p>
+          <p><span class="spk">Jason · 15:14</span>And I&#x27;ve started seeing, you know, avid reader of really random articles that not a lot of people probably dive into, but discussions from economists about inflation and then how the economy and how the government will, you know, take care of that inflation and ensure that the price of a basket of goods doesn&#x27;t get out of control.</p>
+          <p><span class="spk">Jason · 15:30</span>And one of the ways of doing that is increasing the interest rate. If you increase the interest rate where you&#x27;ve got an economy that is propped up by everyone thinking they need to go out and buy a house because the property market&#x27;s booming, interest rate change of a few pips and, you know, where there&#x27;s a lot of people that&#x27;ll potentially be in trouble and not be able to meet their home loan repayments.</p>
+          <p><span class="spk">Marty · 15:51</span>And it sort of leads into the losing it segment, which we love. But I go, even circumstantial situations with COVID now, with people going into regional areas, people going, oh, fantastic. I&#x27;m gonna go regional. I can work from anywhere now. And these areas, like I know the Sunny Coast for one, are going up in value, just unprecedented rises in prices.</p>
+          <p><span class="spk">Marty · 16:12</span>And you go, but there will be a transition back. Not &#x27;cause people have got their networks from where they&#x27;re from, they&#x27;re testing out the waters, they&#x27;re going to regional hubs. Have the regional hubs got infrastructure to support? Maybe some have, maybe some don&#x27;t. But there could be a big pullback in those regions as well.</p>
+          <p><span class="spk">Marty · 16:29</span>And I worry that sometimes the investor or person making that choice are going in without doing the homework and then could get burnt on the back end. And I just think COVID&#x27;s an ideal situation where it, it&#x27;s unprecedented, like we&#x27;ve heard many a time, but people are making decisions based off it that might not be sustainable for the long term.</p>
+          <p><span class="spk">Marty · 16:50</span>So it&#x27;s, it&#x27;s, yeah, I would just think, ask the next questions before you just ride the wave with what everyone&#x27;s thinking and what everyone&#x27;s doing. It&#x27;s like, ask the deeper questions. Is that where you want to be for the next 20 years? Is that going to be important to you?</p>
+          <p><span class="spk">Marty · 17:06</span>But I think that I&#x27;m just seeing too many of those conversations, like Nick said, with people coming and going, I just need to do something. Tell me what to do. Okay, well, I can&#x27;t tell you what to do. We can fund it, but it&#x27;s like, but so many people coming in, they&#x27;re willing to take that chance on something speculative.</p>
+          <p><span class="spk">Marty · 17:22</span>They want to get that instant quick hit instead of thinking, well, how do I actually make a plan and bridge this to what I want? Long term. So yeah, just something I&#x27;ve seen.</p>
+          <p><span class="spk">Nick · 17:34</span>Well, yeah, and it goes as far as just consumer goods. And I was on the phone on the way here to a mate of mine who&#x27;s looking at buying a caravan. And first thing is he can&#x27;t get the van that he wants until late this year because of the backorder. The van that he wants is $90,000 now, which is $15,000-$20,000 more expensive than it was a year ago.</p>
+          <p><span class="spk">Nick · 17:54</span>So the question I ask is, are you going to continue to caravan? In 2 years&#x27; time when all this stops and you can travel again? And do you really need the caravan now? Because give it 2 years, people start thinking, geez, I&#x27;m not using that thing as much as I thought I would. Looks ugly sitting in the driveway, or it&#x27;s costing me, you know, $20 a week to store it wherever I&#x27;m storing it.</p>
+          <p><span class="spk">Nick · 18:16</span>So I can just see this, this flood of certain products onto the market in 2 or 3 years&#x27; time because of what we&#x27;re seeing at the moment. Cars are another thing. Like, I think if you&#x27;re looking at buying a car at the moment just park it because people are paying over. There&#x27;s people paying more for a used car than some— than what is the value of a new car now because they just— there&#x27;s an undersupply, particularly when you&#x27;re looking at cars that are in, in demand like, like</p>
+          <p><span class="spk">Nick · 18:47</span>four-wheel drives and these sorts of cars because people are traveling around. They&#x27;re selling ones that are 1 year old for more expensive than what they paid for them. So just really question if you need it now or should you just sit tight and wait to see how this plays out? Because you could be buying something at an inflated rate, more supply comes in later and you know, you&#x27;ve lost some value.</p>
+          <p><span class="spk">Nick · 19:05</span>So.</p>
+          <p><span class="spk">Marty · 19:07</span>Same as property. I mean, investors have caught on, you know, you can borrow at 2.5%, 2.7%. They&#x27;ve caught on, they&#x27;re in the market as well. There&#x27;s also talk now of capping investors and interest-only loans again. So again, if you&#x27;re a first home buyer going, I&#x27;ve got to get in, I&#x27;ve got to get in.</p>
+          <p><span class="spk">Marty · 19:22</span>It could be in 12 months&#x27; time, it&#x27;s going to be an actual fairer market. So you could be buying right in the peak now and you could get hurt on the back end here. So fair enough, get in if it&#x27;s your long-term plan, you know, you&#x27;ll have a plan around it, but don&#x27;t, yeah, don&#x27;t just buy the hype.</p>
+          <p><span class="spk">Marty · 19:40</span>Think about it. And we could have a fairer market coming up in 2022.</p>
+          <p><span class="spk">Jason · 19:47</span>We&#x27;d love to hear from you. Send us an email, hello@thenumbersgamepodcast.com. Investorpodcast.com.au.</p>
+          <p><span class="spk">Marty · 19:53</span>All right, it&#x27;s time for Losing It, my favorite segment. And today we&#x27;re talking to Nick. Nick&#x27;s got a circumstance. We&#x27;ve been talking about getting into the property market. Everyone&#x27;s got FOMO, everyone&#x27;s thinking of new ways to get in. But Nick, you&#x27;ve got a real life situation with a couple of people known to each other that got into an investment.</p>
+          <p><span class="spk">Marty · 20:11</span>It didn&#x27;t work out so well. Tell us a little bit more about that.</p>
+          <p><span class="spk">Nick · 20:15</span>Yeah, and look, this is something we see go wrong. I think in many circumstances, and the circumstances are always different, but I mentioned at the start, I wanted to talk about the pros and cons of buying property with third parties or someone that&#x27;s not your wife.</p>
+          <p><span class="spk">Nick · 20:31</span>It could be a mate or a cousin or whatever it might be. But this particular example is two people that wanted to get into the market and wanted to get into the market really quick and wanted to build an investment portfolio really quick.</p>
+          <p><span class="spk">Nick · 20:46</span>Without too much thought behind why they were doing that. In quick succession, I believe they bought 3 to 4 properties in certain areas. A relationship breakdown then happened and that breakdown was between those two people.</p>
+          <p><span class="spk">Nick · 21:01</span>And those properties were all sold and settled within an 18-month or 12 to 18-month period. Now, first thing that does is, you&#x27;re not in the market long enough. So, you know, you&#x27;ve had costs to get into the property and you haven&#x27;t been able to recoup those costs by being in the market long enough to gain the capital growth.</p>
+          <p><span class="spk">Nick · 21:23</span>You&#x27;ve then got costs to sell the property. You&#x27;ve gotta engage a real estate agent to sell those properties and they will charge you a fee to do that. So my point being is when you get in or you are rushing to get into the market, or, you know, we&#x27;re talking about fear of missing out, And one of the things people are thinking about now is how do I get in quicker?</p>
+          <p><span class="spk">Nick · 21:43</span>And maybe that&#x27;s, I&#x27;ll do it with a mate or I&#x27;ll do it with my sister. Understand what happens if that goes wrong. And it might not be a relationship breakdown. It could be something as simple as you just go on a different path. It could be brother and sister.</p>
+          <p><span class="spk">Nick · 21:59</span>Sister gets married, has her own goals that are now different that she might wanna sell the property and you don&#x27;t. Just look at all the different scenarios that could play out. And very rarely, you know, 15 years in the mortgage broking business, very rarely do you see it work.</p>
+          <p><span class="spk">Nick · 22:17</span>At some stage it gets unraveled and it doesn&#x27;t all, it&#x27;s not always a nasty unravel, but you know, very rarely do you see people in the property long enough to get the true return that they should have got. You know, make it 10, 15 years. So.</p>
+          <p><span class="spk">Marty · 22:33</span>In that scenario, Nick, do you— what, what sort of question would you ask them to sort of try and mitigate that up front? Is there, is there sort of a strategy behind that that you think could have been more effective for them?</p>
+          <p><span class="spk">Nick · 22:46</span>I think you need to really understand what your own personal goals are, uh, outside of that third party. So what are your personal goals, whether it be, you know, 2 years, 5 years, 10 years? What are you putting into this actual transaction and why are you doing it?</p>
+          <p><span class="spk">Nick · 23:02</span>And are you doing it to help you achieve your personal goals quicker? Or more importantly, what happens if you don&#x27;t, if you&#x27;re not in the property long enough or if it does unravel? What effect is that gonna have on you and reaching your personal goals?</p>
+          <p><span class="spk">Nick · 23:20</span>And look, sometimes it&#x27;s just better off not to do it and just keep going on your own path. Another example I had was a client who rang me just last night. Again, fear of missing out, felt the need to buy an investment property. Gotta get into the market, gotta get into the market, it&#x27;s going crazy.</p>
+          <p><span class="spk">Nick · 23:37</span>You know, such and such has made this amount of money in 12 months. Those were his exact words. And this particular client has a second child on the way. So, you know, we sat down and we had a conversation and worked out that, his main priority in the next 2 years was to buy a new home to house his new family.</p>
+          <p><span class="spk">Nick · 23:57</span>So what is it that you&#x27;re looking for? You&#x27;re looking to get into the market to make a quick dollar or is what you really want is to make sure you&#x27;re in a position to buy a new home in the next 2 years? We got to the end of the conversation and he realised he shouldn&#x27;t be buying investment property. He should be focusing on what his actual goal was or his top priority was and that was a roof over his head and his family.</p>
+          <p><span class="spk">Nick · 24:19</span>So just understand what your goals are don&#x27;t just judge your decision based on getting into the market because you&#x27;re gonna miss out and how do we get in?</p>
+          <p><span class="spk">Marty · 24:27</span>So it&#x27;s almost like a prenup for investors in many ways and asking the right questions around it. What happens if one of us gets sick? What happens if someone has a midlife crisis or something like that or someone gets married? So at least to be able to mitigate those upfront and have a discussion around it and put some boundaries around that investment strategy I think could be very useful.</p>
+          <p><span class="spk">Marty · 24:50</span>And not many people do it because they get the FOMO, they want to get in and they don&#x27;t think about these things, but it needs to be fleshed out for it to work successfully. I&#x27;ve seen it maybe in 20 years work well twice. I&#x27;ve seen it happen where a lot more times it&#x27;s been a terrible situation. So, yeah.</p>
+          <p><span class="spk">Nick · 25:07</span>At the moment, it&#x27;s the assumption that everything&#x27;s going to go up. And we&#x27;ve spoken about that in prior episodes. So, okay, well, you&#x27;d assume it would go up, but what are your costs to get in? And if you&#x27;ve got another goal that needs to be reached in 2 years, what happens if it doesn&#x27;t? What effect does that have on your top priority?</p>
+          <p><span class="spk">Nick · 25:23</span>And are you willing to risk that on top of investing in the market?</p>
+          <p><span class="spk">Marty · 25:29</span>Yeah, great point.</p>
+          <p><span class="spk">Jason · 25:30</span>The idea of the 1%er then, to flow on from that, and I&#x27;m actually going to take it back to a real-life example of myself because Nick, I&#x27;ve had this conversation with you and I love how passionate you feel because of your experience with this, but understanding the longer-term plan.</p>
+          <p><span class="spk">Jason · 25:45</span>So right now, the fear of missing out is driving a lot of people to say, I want to get in the market. And even as someone who probably is a little bit more financially literate than a lot of the regular punters out there that rely on advice from advisors like ourselves, I was at a winery, had a few drinks with a mate.</p>
+          <p><span class="spk">Jason · 26:01</span>Mate said, hey, friend of mine and his other mate, they bought a property together to get into the market really quick. That property went up in value, they were able to use that to then roll forward in their own separate direction. So I sent a message to you, Nick, and said, mate, I want to do this, I want to get into the property, me and my mate are going to go in together and buy it.</p>
+          <p><span class="spk">Jason · 26:19</span>And I didn&#x27;t take into consideration what that long-term plan was. So it was your example of losing it which has allowed me to, you know, not fall into that trap, which is fortunately what our listeners get from that. That key takeaway is think beyond the short-term goal of, oh my God, I need to get in the market.</p>
+          <p><span class="spk">Jason · 26:37</span>But the longer term of what happens in 5 years though, when circumstances change and you want to buy your own main residence? What if the other person wants to sell? So—</p>
+          <p><span class="spk">Marty · 26:47</span>And that&#x27;s a very different headspace for people to consider right now because they&#x27;re all hypo in trying to do something to create wealth. So again, you&#x27;ve got to ask that question to go, well, what if the relationship breaks down? What are you going to do? It will never happen to us. But what if it does?</p>
+          <p><span class="spk">Marty · 27:04</span>What if it does?</p>
+          <p><span class="spk">Jason · 27:06</span>How does that affect your borrowing capacity when you are with somebody else? Like, so two different parties, brothers, cousins, different family members, two best mates. Does that have a big, decent impact on your borrowing capacity when you do go to, you know, take action on your own goals?</p>
+          <p><span class="spk">Marty · 27:23</span>Yeah, well, it does. And I think it comes back to the emotion that sometimes happens with this, where someone wants to buy a house for a certain level. But they&#x27;ve got an obligation somewhere else. So again, it comes back to the goals. They haven&#x27;t considered that. And then they go, all right, well, I want to sell this investment with my friend.</p>
+          <p><span class="spk">Marty · 27:38</span>The other friend goes, I don&#x27;t want to sell it. I&#x27;m in a different position. What do you do? No one knows. And that&#x27;s where it can start to fall over. But definitely it&#x27;s going to have an impact. Depends on the exposure and the income. But yeah, that&#x27;s where things go wrong.</p>
+          <p><span class="spk">Nick · 27:54</span>I think the one thing that is guaranteed, is that circumstances for either party will change. That&#x27;s the guarantee.</p>
+          <p><span class="spk">Marty · 28:01</span>Definitely.</p>
+          <p><span class="spk">Nick · 28:02</span>And it&#x27;s whether it happens in 2 years or 3 years, there will be a change in circumstances, whether it&#x27;s good or bad. And in both cases, good or bad, it can affect that investment. And I&#x27;m just speaking from experience from 15 years. I&#x27;ve just seen it happen over and over again.</p>
+          <p><span class="spk">Marty · 28:17</span>And that&#x27;s okay. Address it. Address it. Most people won&#x27;t address it. So that&#x27;s the thing. If you get it addressed and you mitigate it, and when it&#x27;s like buy-sells in business, right? Something happens to one of the business owners, you know, there&#x27;s a plan in place for that to be covered.</p>
+          <p><span class="spk">Marty · 28:33</span>It&#x27;s the same thing here. It&#x27;s just at an investment level and more personal. So again, have a plan in place that if something, there&#x27;s a life-changing circumstance, then at least have a plan around it that you agree upon. Maybe it&#x27;s a 3-year goal where you say, all right, we&#x27;re gonna ride the market.</p>
+          <p><span class="spk">Marty · 28:49</span>We might pick up 15, 20% and we&#x27;re gonna, agree to sell it and put that towards our house. But have a plan around it. But it is a really, it&#x27;s such a fine line. I&#x27;ve seen so many of those fall over and relationships be damaged through it. So it&#x27;s a hard one for me too.</p>
+          <p><span class="spk">Jason · 29:06</span>And on the note of good and bad, I often get these conversations where a good thing that I talk to people about and that they drive the conversation is paying less tax. And they want to save on their tax and pay less tax when it comes to their longer term or short short to medium term planning is, Jase, help me pay less tax.</p>
+          <p><span class="spk">Jason · 29:22</span>Now obviously we know that paying less tax means having less taxable income. Having less taxable income means having a smaller borrowing capacity. So I touched on it earlier on that I wanted to bring in at some stage the tax planning and the meeting with your accountant. The importance that we&#x27;re talking about here of the 1% of knowing your longer term plan when it does come to getting into the market and being ready to borrow and buy with not just a friend, just yourself, is if you keep driving your</p>
+          <p><span class="spk">Jason · 29:52</span>taxable income down and you&#x27;re doing tax planning and all you&#x27;re focused on is paying less tax and you haven&#x27;t thought beyond a year or two of what happens when you are ready to enter the market and buy property, then you&#x27;re doing it wrong. So tax planning, you know, the next 3 months is where you need to meet your accountant and talk about this, but don&#x27;t drive the conversation by paying less tax.</p>
+          <p><span class="spk">Jason · 30:11</span>And your accountant shouldn&#x27;t just drive the conversation of paying less tax. It should be about what are you trying to achieve in your future? What do the next few years look like and what are you trying to get out of it? And if it is buying a house, then the last thing you want to do is smash your taxable income down and not be able to borrow to buy the family home or an investment property.</p>
+          <p><span class="spk">Nick · 30:29</span>And you know, we see it all the time. Marty, you&#x27;d see it more than I, but so many times, you know, people will come in and they say, I&#x27;m earning this amount per week or I&#x27;m earning this amount per year. You get the tax returns and it&#x27;s half of that. And unfortunately, the banks only look at what&#x27;s on paper.</p>
+          <p><span class="spk">Marty · 30:43</span>That&#x27;s right. It&#x27;s what&#x27;s on paper and everyone wants their cake and eat it too, right? So. It&#x27;s amazing how many people go, &quot;I wanna buy the home, but I&#x27;m not paying tax.&quot; Okay, you don&#x27;t get the home. &quot;All right, I&#x27;ll pay tax.&quot; So a lot of the conversation comes back to, okay, here&#x27;s what your earnings would need to look like in order to be able to substantiate that type of loan.</p>
+          <p><span class="spk">Marty · 31:03</span>Talk to your accountant. And a lot of people then have an understanding &#x27;cause there&#x27;s a goal linked to it. But when there&#x27;s no goal linked to it, it&#x27;s amazing how you&#x27;d say, &quot;Jase, I just wanna save money on tax.&quot; There&#x27;s better ways. There&#x27;s better ways.</p>
+          <p><span class="spk">Jason · 31:16</span>Yeah, so asking the right questions.</p>
+          <p><span class="spk">Marty · 31:17</span>Absolutely.</p>
+          <p><span class="spk">Nick · 31:17</span>It&#x27;s really important.</p>
+          <p><span class="spk">Jason · 31:19</span>Asking the right questions to your adviser and to yourself.</p>
+          <p><span class="spk">Marty · 31:22</span>Yeah.</p>
+          <p><span class="spk">Jason · 31:22</span>Like be planning in advance of what you&#x27;re trying to achieve and yeah, the questions, it all comes down to that.</p>
+          <p><span class="spk">Marty · 31:27</span>And I&#x27;ll bring the accountant in on the conversation as well because it&#x27;s such an important factor here. And once everyone&#x27;s on the same page, there&#x27;s an understanding that the goal is, I want to buy a home. So now we can work accordingly. So simple, but it&#x27;s amazing how often it&#x27;s come in where, I want to buy a home, but I don&#x27;t want to pay tax.</p>
+          <p><span class="spk">Marty · 31:46</span>They go, well, sorry, no home. Okay, pay tax.</p>
+          <p><span class="spk">Jason · 31:50</span>Clarity around the numbers. Clarity. Got a question? Email us hello@thenumbersgamepodcast.com.au. Wrapping up this week, guys, my key takeaway is asking more questions and asking the right questions, especially when you go and see your accountant or your advisor.</p>
+          <p><span class="spk">Jason · 32:08</span>It&#x27;s really important to not go in with a preconceived idea. But ask for information and let them drive the conversation sometimes.</p>
+          <p><span class="spk">Nick · 32:17</span>Thanks, Jase. Yeah, mine was understand what your long-term goals are before you&#x27;re making investment decisions.</p>
+          <p><span class="spk">Marty · 32:23</span>Yeah. And for me it was, there&#x27;s always a way, but make sure it&#x27;s the right way for you. So I think we&#x27;ve got a lot out of this episode. If you&#x27;ve got a mate out there or a friend that you think will benefit from the podcast, let them know. Don&#x27;t keep us a secret. Get us out there. We want to help as many people as we can.</p>
+          <p><span class="spk">Marty · 32:39</span>And if you have any questions, email hello@thenumbersgame.com.au. Podcast.com.au. It is game over. Until next time, bye.</p>
+        </div>
+      </details>
+
+    </div>
+
+    <!-- audio-only: the Spotify player is the hero above; duplicate embed removed -->
+
+    <div class="listen">
+      <a href="https://open.spotify.com/episode/78k4JeUZ96kec4QH6qLsMA" target="_blank" rel="noopener" aria-label="Listen to this episode on Spotify">
+        <svg viewBox="0 0 24 24"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.52 17.34c-.24.36-.66.48-1.02.24-2.82-1.74-6.36-2.1-10.56-1.14-.42.12-.78-.18-.9-.54-.12-.42.18-.78.54-.9 4.56-1.02 8.52-.6 11.64 1.32.42.18.48.66.3 1.02zm1.44-3.3c-.3.42-.84.6-1.26.3-3.24-1.98-8.16-2.58-11.94-1.38-.48.12-1.02-.12-1.14-.6-.12-.48.12-1.02.6-1.14 4.32-1.32 9.72-.66 13.44 1.62.36.18.54.78.3 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.3c-.6.18-1.2-.18-1.38-.72-.18-.6.18-1.2.72-1.38 4.26-1.26 11.28-1.02 15.72 1.62.54.3.72 1.02.42 1.56-.3.42-1.02.6-1.56.3z"/></svg>
+        Spotify
+      </a>
+      <a href="https://podcasts.apple.com/au/podcast/id1555566088?i=1000776470464" target="_blank" rel="noopener" aria-label="Listen to this episode on Apple Podcasts">
+        <svg viewBox="0 0 24 24"><path d="M5.34 0A5.328 5.328 0 000 5.34v13.32A5.328 5.328 0 005.34 24h13.32A5.328 5.328 0 0024 18.66V5.34A5.328 5.328 0 0018.66 0H5.34zm6.525 2.568c2.336 0 4.448.902 6.056 2.587 1.224 1.272 1.912 2.619 2.264 4.392l.04.23c.04.272-.16.527-.432.567a.505.505 0 01-.567-.431l-.04-.213c-.312-1.57-.92-2.747-2.004-3.867-1.428-1.496-3.293-2.294-5.393-2.294-2.1 0-3.966.798-5.394 2.294-1.084 1.12-1.692 2.298-2.004 3.867l-.04.213a.507.507 0 01-.567.431.504.504 0 01-.432-.567l.04-.23c.352-1.773 1.04-3.12 2.264-4.392 1.608-1.685 3.72-2.587 6.056-2.587h.153zm.136 3.033c1.74 0 3.312.67 4.527 1.934.883.916 1.394 1.93 1.663 3.253l.04.23a.505.505 0 01-.431.567.503.503 0 01-.567-.432l-.04-.212c-.23-1.112-.659-1.97-1.396-2.732-1.052-1.1-2.404-1.672-3.9-1.672s-2.849.572-3.901 1.672c-.737.762-1.167 1.62-1.396 2.732l-.04.212a.503.503 0 01-.567.432.505.505 0 01-.432-.567l.04-.23c.27-1.323.78-2.337 1.664-3.253 1.215-1.264 2.787-1.934 4.527-1.934h.21zm-.078 3.05c1.092 0 2.091.424 2.89 1.22.582.58.924 1.245 1.107 2.15l.04.218a.501.501 0 01-.424.568.499.499 0 01-.568-.424l-.04-.198c-.146-.724-.413-1.253-.871-1.716-.63-.63-1.398-.957-2.226-.957s-1.595.328-2.225.957c-.459.463-.726.992-.871 1.716l-.04.198a.499.499 0 01-.568.424.501.501 0 01-.424-.568l.04-.219c.183-.904.525-1.569 1.106-2.149.8-.796 1.799-1.22 2.89-1.22h.184zM12 14.07a2.477 2.477 0 012.48 2.478A2.477 2.477 0 0112 19.024a2.477 2.477 0 01-2.48-2.477A2.477 2.477 0 0112 14.07z"/></svg>
+        Apple
+      </a>
+      <a class="yt-pill" href="https://www.youtube.com/@thenumbersgamepodcast?sub_confirmation=1" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.12-2.14C19.5 3.55 12 3.55 12 3.55s-7.5 0-9.38.51A3 3 0 0 0 .5 6.2 31.4 31.4 0 0 0 0 12a31.4 31.4 0 0 0 .5 5.8 3 3 0 0 0 2.12 2.14c1.88.51 9.38.51 9.38.51s7.5 0 9.38-.51a3 3 0 0 0 2.12-2.14A31.4 31.4 0 0 0 24 12a31.4 31.4 0 0 0-.5-5.8zM9.55 15.57V8.43L15.82 12z"/></svg>
+        Subscribe
+      </a>
+    </div>
+    <!-- LISTEN:END -->
+
+    <div class="relsec">
+      <span class="rtitle">Discover more</span>
+      <div class="relgrid">
+        <a class="relcard" href="/how-money-beliefs-undermine-confidence-and-lead-to-self-sabotage">
+          <img src="https://i.ytimg.com/vi/8krYXDGj_m0/hqdefault.jpg" alt="EP 240 thumbnail">
+          <span class="rt">How Money Beliefs Undermine Confidence and Lead to Self-Sabotage</span>
+          <span class="rfoot"><span class="rwhy">14 July 2025</span><span class="rtag">EP 240</span></span>
+        </a>
+        <a class="relcard" href="/your-guide-to-buying-and-financing-a-business">
+          <img src="https://i.ytimg.com/vi/HVojcU-gBSE/hqdefault.jpg" alt="EP 191 thumbnail">
+          <span class="rt">Your Guide to Buying and Financing a Business</span>
+          <span class="rfoot"><span class="rwhy">8 July 2024</span><span class="rtag">EP 191</span></span>
+        </a>
+        <a class="relcard" href="/the-real-cost-of-uni-in-australia">
+          <img src="https://i.ytimg.com/vi/IOfH8SSaLwQ/hqdefault.jpg" alt="EP 228 thumbnail">
+          <span class="rt">The Real Cost of Uni in Australia</span>
+          <span class="rfoot"><span class="rwhy">21 April 2025</span><span class="rtag">EP 228</span></span>
+        </a>
+        <a class="relcard" href="/marty-s-pissed-off">
+          <img src="https://i.ytimg.com/vi/fOm_jg0Nfqk/hqdefault.jpg" alt="EP 165 thumbnail">
+          <span class="rt">Marty&#x27;s Pissed Off!</span>
+          <span class="rfoot"><span class="rwhy">28 March 2024</span><span class="rtag">EP 165</span></span>
+        </a>
+        <a class="relcard" href="/super-strategies-investing-with-self-managed-super-funds">
+          <img src="https://i.ytimg.com/vi/kQL09T4bqic/hqdefault.jpg" alt="EP 205 thumbnail">
+          <span class="rt">Super Strategies - Investing with Self Managed Super Funds</span>
+          <span class="rfoot"><span class="rwhy">30 September 2024</span><span class="rtag">EP 205</span></span>
+        </a>
+        <a class="relcard" href="/the-luck-factor">
+          <img src="https://i.ytimg.com/vi/EsohMUk-TtQ/hqdefault.jpg" alt="EP 188 thumbnail">
+          <span class="rt">The Luck Factor</span>
+          <span class="rfoot"><span class="rwhy">27 June 2024</span><span class="rtag">EP 188</span></span>
+        </a>
+      </div>
+      <div class="reldots" id="reldots"></div>
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="footgrid">
+      <div class="fcol">
+        <div class="foot-label">Brought to you by</div>
+        <div class="sponsors">
+          <a href="https://www.inovayt.com.au/" target="_blank" rel="noopener"><img src="assets/inovayt-white.png" alt="Inovayt"></a>
+          <a href="https://futureadvisory.com.au/" target="_blank" rel="noopener"><img src="assets/future-advisory-white.png" alt="Future Advisory"></a>
+        </div>
+      </div>
+      <div class="fcol produced">
+        <div class="foot-label">Produced by</div>
+        <a href="https://www.vidpod.com.au/" target="_blank" rel="noopener"><img src="assets/vidpod-white.png" alt="VIDPOD"></a>
+      </div>
+    </div>
+    <nav class="footnav">
+      <a href="index.html">Home</a><a href="episodes.html">Every episode</a><a href="adventure.html">Choose your own adventure</a><a href="about.html">About the show</a><a href="nick-reilly.html">Nick Reilly</a><a href="jason-robinson.html">Jason Robinson</a><a href="contact.html">Contact</a>
+    </nav>
+    <div class="copyright">© 2026 The Numbers Game</div>
+  </footer>
+
+  <script>
+    var VIDEO='RAQ80ecsDq0';
+
+    /* Mobile nav dropdown. */
+    var burger=document.getElementById('navburger'), navdrop=document.getElementById('navdrop');
+    if(burger&&navdrop){burger.addEventListener('click',function(){
+      navdrop.hidden=!navdrop.hidden;
+      burger.setAttribute('aria-expanded', navdrop.hidden?'false':'true');
+    });}
+
+    /* Voice-note button reveals the recorder; × tucks it away. */
+    var vbtn=document.getElementById('vbtn'), vslot=document.getElementById('vslot'), vclose=document.getElementById('vclose');
+    if(vbtn&&vslot){vbtn.addEventListener('click',function(){vslot.hidden=!vslot.hidden;});}
+    if(vclose&&vslot){vclose.addEventListener('click',function(){vslot.hidden=true;});}
+
+    /* Keep-exploring dots: only shown when the strip actually scrolls (mobile). */
+    var rg=document.querySelector('.relgrid'), rd=document.getElementById('reldots');
+    if(rg&&rd){
+      var relCards=rg.querySelectorAll('.relcard');
+      relCards.forEach(function(){rd.appendChild(document.createElement('span'))});
+      var updDots=function(){
+        var scrollable=rg.scrollWidth>rg.clientWidth+4;
+        rd.style.display=scrollable?'flex':'none';
+        if(!scrollable)return;
+        var i=Math.round(rg.scrollLeft/(rg.scrollWidth-rg.clientWidth)*(relCards.length-1));
+        rd.querySelectorAll('span').forEach(function(s,n){s.classList.toggle('on',n===i)});
+      };
+      rg.addEventListener('scroll',updDots,{passive:true});
+      window.addEventListener('resize',updDots);
+      updDots();
+    }
+
+    /* Explore tabs: swap the visible panel; the row stays put so you never lose your place. */
+    var tabBtns=document.querySelectorAll('.tabbtn');
+    tabBtns.forEach(function(b){
+      b.addEventListener('click',function(){
+        tabBtns.forEach(function(o){o.classList.remove('on')});
+        document.querySelectorAll('.tpanel').forEach(function(p){p.hidden=true});
+        b.classList.add('on');
+        document.getElementById(b.getAttribute('data-panel')).hidden=false;
+      });
+    });
+
+    /* Audio-only: Spotify player is the hero; chapters/questions seek it via the Spotify iFrame API. */
+    var spotifyCtrl=null, pendingSeek=null;
+    function nudge(){
+      var p=document.getElementById('player-wrap'), r=p.getBoundingClientRect();
+      if(r.bottom<80 || r.top>window.innerHeight-90){ p.scrollIntoView({behavior:'smooth',block:'start'}); }
+    }
+    function startAt(sec){
+      nudge();
+      if(spotifyCtrl){ spotifyCtrl.seek(sec); spotifyCtrl.resume(); } else { pendingSeek=sec; }
+    }
+    window.onSpotifyIframeApiReady=function(IFrameAPI){
+      IFrameAPI.createController(document.getElementById('spotify-embed'),
+        {uri:'spotify:episode:6evNZnC9yNb2qEC3YXGC7W', width:'100%', height:'232'},
+        function(c){ spotifyCtrl=c; if(pendingSeek!=null){ c.seek(pendingSeek); c.resume(); pendingSeek=null; } });
+    };
+    (function(){var sc=document.createElement('script');sc.src='https://open.spotify.com/embed/iframe-api/v1';sc.async=true;document.head.appendChild(sc);})();
+  </script>
+</body>
+</html>

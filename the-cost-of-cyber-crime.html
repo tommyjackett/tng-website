@@ -1,0 +1,598 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EP 74 · The Cost Of Cyber Crime | The Numbers Game</title>
+<meta name="description" content="Welcome to episode 74 of The Numbers Game. On today&#x27;s show, we&#x27;re talking cyber security and the impact it&#x27;s having on business&#x27;.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" sizes="64x64" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="canonical" href="https://thenumbersgamepodcast.com.au/the-cost-of-cyber-crime">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="The Numbers Game">
+<meta property="og:title" content="EP 74 · The Cost Of Cyber Crime | The Numbers Game">
+<meta property="og:description" content="Welcome to episode 74 of The Numbers Game. On today&#x27;s show, we&#x27;re talking cyber security and the impact it&#x27;s having on business&#x27;.">
+<meta property="og:url" content="https://thenumbersgamepodcast.com.au/the-cost-of-cyber-crime">
+<meta property="og:image" content="https://thenumbersgamepodcast.com.au/assets/tng-audio-only-thumbnail.webp">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+  :root{
+    --purple:#585af3; --purple-dark:#2c1b8a; --mint:#7ad9a8;
+    --white:#ffffff; --muted:rgba(255,255,255,.60); --dim:rgba(255,255,255,.42);
+    --line:rgba(255,255,255,.12); --card:rgba(255,255,255,.05); --card-hi:rgba(255,255,255,.09);
+    --display:'Anton',Impact,'Helvetica Neue',sans-serif;
+    --sans:'Inter',system-ui,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif;
+    --wrap:1280px;   /* page frame (nav spans this) */
+    --col:960px;     /* content column (player, tabs, text) */
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:var(--sans); color:var(--white); line-height:1.6; -webkit-font-smoothing:antialiased;
+    background:#12093a;
+    background-image:
+      radial-gradient(1200px 600px at 82% -6%, rgba(88,90,243,.45) 0%, transparent 55%),
+      radial-gradient(900px 700px at 5% 8%, rgba(122,217,168,.10) 0%, transparent 50%),
+      linear-gradient(180deg,#2c1b8a 0%,#1a1150 28%,#100b34 62%,#0b0820 100%);
+    background-attachment:fixed;
+  }
+  a{color:inherit}
+  .wrap{max-width:var(--wrap);margin:0 auto;padding:0 36px}
+  main.wrap{max-width:var(--col)}
+  @media(max-width:720px){.wrap{padding:0 22px}}
+
+  /* ── Navbar ── */
+  .nav{position:sticky;top:0;z-index:50;background:linear-gradient(180deg,rgba(24,15,74,.92),rgba(24,15,74,.72));backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+  .nav-in{max-width:var(--wrap);margin:0 auto;padding:11px 36px;display:flex;align-items:center;justify-content:space-between}
+  @media(max-width:720px){.nav-in{padding:11px 22px}}
+  .brand{display:block;line-height:0}
+  .brand img{height:36px;width:auto;display:block}
+  .navlinks{display:flex;gap:28px;align-items:center}
+  .navlinks a{text-decoration:none;font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);transition:.15s}
+  .navlinks a:hover{color:var(--white)}
+  .navlinks a.navtop{cursor:default}
+  .navgroup{position:relative;display:flex;align-items:center}
+  .navgroup .subnav{display:none;position:absolute;top:100%;left:50%;transform:translateX(-50%);padding-top:14px;min-width:180px}
+  .navgroup:hover .subnav,.navgroup:focus-within .subnav{display:block}
+  .subnav-in,.navgroup .subnav{z-index:60}
+  .navgroup .subnav a{display:block;background:#180f4a;border:1px solid var(--line);border-top:0;padding:12px 16px;font-size:12px;color:rgba(255,255,255,.85)}
+  .navgroup .subnav a:first-child{border-top:1px solid var(--line)}
+  .navgroup .subnav a:hover{background:#221768;color:var(--white)}
+  .navburger{display:none;background:none;border:1px solid var(--line);padding:8px 10px;cursor:pointer;color:var(--white);transition:.15s}
+  .navburger:hover{border-color:rgba(122,217,168,.6)}
+  .navburger svg{width:20px;height:20px;fill:currentColor;display:block}
+  .navdrop{display:none}
+  @media(max-width:720px){
+    .navlinks{display:none}
+    .navburger{display:block}
+    .navdrop{display:block;position:absolute;left:0;right:0;top:100%;
+      background:#180f4a;border-bottom:1px solid var(--line);box-shadow:0 24px 50px rgba(0,0,0,.45)}
+    .navdrop[hidden]{display:none}
+    .navdrop a{display:block;padding:15px 22px;text-decoration:none;font-size:14px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:rgba(255,255,255,.9);border-bottom:1px solid rgba(255,255,255,.06)}
+    .navdrop a:last-child{border-bottom:0}
+    .navdrop a.sub{padding-left:42px;font-size:13px;color:rgba(255,255,255,.72)}
+    .navdrop .navlabel{display:block;padding:15px 22px 6px;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.4)}
+  }
+
+  /* ── Hero / hook (marker-highlight system: purple hook wraps naturally, mint payoff below)
+     Rules: title splits at its natural break (colon/pipe/question mark). Front = hook (purple,
+     big), back = payoff (mint, smaller). No break in title = purple hook only. Highlights hug
+     the text (tight em padding tuned to Anton) and wrap via box-decoration-break — never
+     hand-pick line breaks or mint words. ── */
+  header.hero{padding:34px 0 6px}
+  .hook{--inx:clamp(8.4px,2.1vw,15.6px)} /* one shared text inset so hook + payoff first letters align */
+  .hook .hk{font-family:var(--display);font-weight:400;text-transform:uppercase;
+    font-size:clamp(28px,7vw,52px);line-height:1.3;letter-spacing:-.5px;text-wrap:balance}
+  .hook .hk span{color:var(--white);padding:.04em var(--inx) .02em;
+    background:linear-gradient(var(--purple),var(--purple)) 0 50%/100% 87% no-repeat;
+    -webkit-box-decoration-break:clone;box-decoration-break:clone}
+  .hook .pay{font-family:var(--display);font-weight:400;text-transform:uppercase;
+    font-size:clamp(16px,4vw,24px);line-height:1.5;letter-spacing:.6px;margin-top:8px;text-wrap:balance}
+  .hook .pay span{color:#0a0a0a;padding:.08em var(--inx) .04em;
+    background:linear-gradient(var(--mint),var(--mint)) 0 50%/100% 88% no-repeat;
+    -webkit-box-decoration-break:clone;box-decoration-break:clone}
+  /* no-hook titles: mid-split into two full-size rows, purple then mint */
+  .hook .hk span.hkrow{display:block;background:none;padding:0}
+  .hook .hk .hkrow+.hkrow{margin-top:8px}
+  .hook .hk span.mintseg{color:#0a0a0a;
+    background:linear-gradient(var(--mint),var(--mint)) 0 50%/100% 87% no-repeat}
+
+  /* ── Player (clean facade → real player on tap) ── */
+  .player-wrap{margin:24px 0 4px;scroll-margin-top:76px}
+  .audio-hero{width:100%;min-height:232px;border-radius:12px;overflow:hidden;box-shadow:0 30px 70px rgba(0,0,0,.5),0 0 0 1px rgba(255,255,255,.06)}
+  .audio-hero iframe{display:block;width:100%;border:0}
+  .player{position:relative;width:100%;padding-top:56.25%;border-radius:0;overflow:hidden;background:#000;box-shadow:0 30px 70px rgba(0,0,0,.5),0 0 0 1px rgba(255,255,255,.06)}
+  .facade{position:absolute;inset:0;border:0;cursor:pointer;background-size:cover;background-position:center;display:flex;align-items:center;justify-content:center;padding:0}
+  .facade .play{width:74px;height:74px;border-radius:50%;background:rgba(10,6,30,.40);border:2px solid rgba(255,255,255,.72);display:flex;align-items:center;justify-content:center;transition:.18s;-webkit-backdrop-filter:blur(1px);backdrop-filter:blur(1px)}
+  .facade:hover .play{background:rgba(88,90,243,.62);transform:scale(1.07);border-color:#fff}
+  .facade .play::after{content:"";border-style:solid;border-width:11px 0 11px 19px;border-color:transparent transparent transparent #fff;margin-left:5px}
+  .player iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+
+  /* ── Episode facts (bottom of the Summary panel — templated per episode) ── */
+  .sumfacts{margin:14px 10px 4px;padding-top:13px;border-top:1px solid rgba(255,255,255,.08);display:flex;flex-direction:column;gap:8px}
+  .fact{display:flex;gap:12px;font-size:13.5px}
+  .fact .fl{flex:none;width:104px;color:var(--dim);font-weight:600;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;padding-top:2px}
+  .fact .fv{color:rgba(255,255,255,.9);font-weight:500}
+  .fact .fv a{color:var(--mint);text-decoration:none;border-bottom:1px solid rgba(122,217,168,.4);transition:.15s}
+  .fact .fv a:hover{border-bottom-color:var(--mint)}
+
+  /* ── Episode tag (identity: black label hanging off the title corner) ── */
+  .eptag{display:inline-block;position:relative;left:-6px;margin-bottom:-7px;z-index:2;
+    background:#0a0a0a;color:var(--white);font-family:var(--display);font-weight:400;
+    font-size:13.5px;letter-spacing:1.5px;text-transform:uppercase;padding:6px 11px 4px}
+
+  /* ── Explore tabs (sticky mode switcher; one panel swaps below, nothing shoves) ── */
+  .explore{margin-top:22px}
+  .tabs{position:sticky;top:58px;z-index:40;display:flex;flex-wrap:wrap;gap:8px;padding:10px 0;
+    background:linear-gradient(180deg,rgba(18,10,55,.96),rgba(18,10,55,.86));
+    backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+  .tabbtn{font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.5px;
+    font-size:14.5px;color:var(--white);background:var(--purple);border:1px solid var(--purple);
+    padding:9px 13px 7px;cursor:pointer;transition:.15s}
+  .tabbtn:hover{filter:brightness(1.12)}
+  .tabbtn.on{background:var(--mint);border-color:var(--mint);color:#0a0a0a}
+  .tabbtn.on:hover{filter:none}
+  .tabbtn .ct{font-size:12px;opacity:.75;font-variant-numeric:tabular-nums}
+  .tabbtn .ct::before{content:" · "}
+  .tpanel{border:1px solid var(--line);background:var(--card);padding:12px 10px 14px}
+  .hint{font-size:12.5px;color:var(--muted);padding:2px 10px 10px;border-bottom:1px solid rgba(255,255,255,.08);margin-bottom:6px}
+
+  /* ── Listen row (no box: label left, service pills follow) ── */
+  .listen{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:12px 16px;margin-top:34px}
+  .listen .lname{font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--dim)}
+  .listen a{display:inline-flex;align-items:center;gap:9px;padding:11px 18px;border-radius:999px;
+    background:var(--mint);color:#08210f;text-decoration:none;font-weight:800;font-size:12.5px;
+    letter-spacing:.04em;text-transform:uppercase;transition:.15s}
+  .listen a:hover{filter:brightness(1.06);transform:translateY(-1px);box-shadow:0 12px 30px rgba(122,217,168,.25)}
+  .listen svg{width:20px;height:20px;fill:currentColor;flex:none}
+  /* ── Listen-now Spotify audio embed (full column width, above the pills) ── */
+  .listen-now{margin-top:40px}
+  .listen-now .ln-head{display:flex;align-items:baseline;justify-content:space-between;gap:14px;margin-bottom:13px}
+  .listen-now .ln-title{font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--dim)}
+  .audio-embed{border-radius:12px;overflow:hidden;box-shadow:0 20px 50px rgba(0,0,0,.4),0 0 0 1px rgba(255,255,255,.06)}
+  .audio-embed iframe{display:block;width:100%;border:0}
+  @media(max-width:720px){.listen-now{margin-top:32px}}
+
+  /* ── Keep exploring (thumbnails link to other episode PAGES, never timecodes).
+     Swipeable strip on mobile, fits three-up on desktop. Variant rule: claim
+     "similar ground" + reason lines ONLY when moment-level topic overlap is
+     genuinely strong; otherwise show the latest released episodes with dates —
+     never invent a connection. ── */
+  .relsec{margin-top:60px;padding-top:58px;border-top:1px solid var(--line)} /* line = end of this episode's info */
+  .reldots{display:flex;justify-content:center;gap:7px;margin-top:12px}
+  .reldots span{width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.25);transition:.2s}
+  .reldots span.on{background:var(--mint)}
+  .relsec .rtitle{display:inline-block;font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.5px;font-size:14.5px;background:var(--mint);color:#0a0a0a;padding:9px 13px 7px;margin-bottom:18px}
+  .relgrid{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding-bottom:6px;scrollbar-width:none}
+  .relgrid::-webkit-scrollbar{display:none}
+  .relcard{flex:0 0 56%;max-width:232px;scroll-snap-align:start;display:flex;flex-direction:column;text-decoration:none;background:var(--card);border:1px solid var(--line);transition:.15s}
+  .relcard:hover{background:var(--card-hi);border-color:rgba(122,217,168,.55)}
+  .relcard img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block}
+  .relcard .rt{display:block;font-size:12.5px;font-weight:600;color:rgba(255,255,255,.92);line-height:1.4;padding:8px 8px 0}
+  .relcard .rfoot{margin-top:auto;display:flex;justify-content:space-between;align-items:flex-end;gap:8px;padding:10px 8px 9px}
+  .relcard .rwhy{font-size:11.5px;color:var(--mint)}
+  .relcard .rtag{display:inline-block;background:#0a0a0a;color:var(--white);font-family:var(--display);font-size:10px;letter-spacing:1.2px;text-transform:uppercase;padding:3px 7px 2px;white-space:nowrap;flex:0 0 auto}
+
+  /* ── Dropdown sections (accordion under the player) ── */
+  .drops{margin-top:34px;display:flex;flex-direction:column;gap:11px}
+  .drop{border:1px solid var(--line);border-radius:0;background:var(--card);overflow:hidden;transition:border-color .15s}
+  .drop[open]{border-color:rgba(122,217,168,.35)}
+  .drop>summary{list-style:none;cursor:pointer;padding:16px 18px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+  .drop>summary::-webkit-details-marker{display:none}
+  .drop>summary .st{font-weight:700;font-size:15.5px;letter-spacing:.005em}
+  .drop>summary .ct{margin-left:auto;font-size:12px;color:var(--dim);font-weight:600;font-variant-numeric:tabular-nums}
+  .drop>summary .chev{flex:none;width:22px;height:22px;border-radius:50%;background:rgba(122,217,168,.14);color:var(--mint);display:flex;align-items:center;justify-content:center;font-family:var(--display);font-size:15px;line-height:1;transition:.2s;transform:translateY(-1px)}
+  .drop[open]>summary .chev{transform:rotate(45deg)}
+  .drop-body{padding:2px 12px 12px}
+
+  /* chapters */
+  .chapter{display:flex;align-items:baseline;gap:14px;width:100%;text-align:left;cursor:pointer;background:none;border:0;color:inherit;font-family:inherit;padding:11px 10px;border-radius:10px;transition:.13s}
+  .chapter:hover{background:var(--card-hi)}
+  .chapter .tc{font-variant-numeric:tabular-nums;font-weight:700;font-size:14px;color:var(--mint);flex:none;width:48px}
+  .chapter .cx{font-size:15px;font-weight:500;color:rgba(255,255,255,.9)}
+  .chapter:hover .cx{color:#fff}
+
+  /* questions */
+  .q{display:flex;align-items:center;gap:12px;width:100%;text-align:left;cursor:pointer;background:none;border:0;border-radius:11px;color:inherit;font-family:inherit;padding:12px 10px;transition:.14s}
+  .q+.q{border-top:1px solid rgba(255,255,255,.05)}
+  .q:hover{background:var(--card-hi)}
+  .q .qm{font-family:var(--display);font-size:15px;color:var(--mint);flex:none;line-height:1;transform:translateY(1px)}
+  .q .qx{font-size:15px;font-weight:500;color:rgba(255,255,255,.92)}
+  .q .go{margin-left:auto;flex:none;color:var(--dim);font-size:18px;transition:.15s}
+  .q:hover .go{color:var(--mint);transform:translateX(2px)}
+
+  /* summary + transcript bodies */
+  .summary-body p{font-size:16.5px;line-height:1.62;color:rgba(255,255,255,.9);padding:6px 10px 4px}
+  .tbody{padding:2px 10px 8px}
+  .tbody p{font-size:14.5px;line-height:1.7;color:rgba(255,255,255,.78);margin-top:15px;max-width:64ch}
+  .tbody .spk{display:block;font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--mint);margin-bottom:2px}
+
+  /* ── Voice note ask (lives at the bottom of the Summary panel) ── */
+  .vask{margin:16px 10px 4px}
+  .vbtn{display:inline-flex;align-items:center;gap:9px;padding:12px 20px;border-radius:999px;border:0;cursor:pointer;
+    background:var(--mint);color:#08210f;font-family:inherit;font-weight:800;font-size:12.5px;
+    letter-spacing:.04em;text-transform:uppercase;transition:.15s}
+  .vbtn:hover{filter:brightness(1.06);transform:translateY(-1px);box-shadow:0 12px 30px rgba(122,217,168,.25)}
+  .vbtn svg{width:18px;height:18px;fill:currentColor;flex:none}
+  .vslot{background:var(--purple);padding:12px 10px 10px;margin:14px 0 4px;box-shadow:0 18px 40px rgba(0,0,0,.35)}
+  .vslot[hidden]{display:none}
+  .vhead{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;margin-bottom:10px}
+  .vhead .vmsg{font-family:var(--sans);font-size:13px;line-height:1.55;color:rgba(255,255,255,.92);margin:2px 0 0;padding:0 2px}
+  .vclose{background:none;border:0;color:rgba(255,255,255,.85);font-size:22px;line-height:1;cursor:pointer;padding:0 2px}
+  .vclose:hover{color:var(--white)}
+  .vslot iframe{display:block}
+
+  /* ── YouTube subscribe pill (sits in the listen row; outranks .listen a's mint) ── */
+  .listen a.yt-pill{background:var(--purple);color:var(--white)}
+  .listen a.yt-pill:hover{filter:brightness(1.1);transform:translateY(-1px)}
+  @media(max-width:720px){ /* mobile: no label, three compact pills on one row */
+    .listen .lname{display:none}
+    .listen{gap:8px}
+    .listen a{padding:10px 13px;font-size:11px;gap:6px}
+    .listen svg{width:16px;height:16px}
+  }
+
+  /* ── Footer: two columns under the line (Brought to you by | Produced by), matches adventure.html ── */
+  footer{border-top:1px solid var(--line);margin-top:68px;padding:52px 20px 58px}
+  .footgrid{max-width:var(--wrap);margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:start}
+  @media(max-width:720px){.footgrid{grid-template-columns:1fr;gap:40px}}
+  .fcol{text-align:center}
+  .foot-label{font-size:11px;font-weight:700;letter-spacing:.26em;text-transform:uppercase;color:var(--dim);margin-bottom:16px}
+  .sponsors{display:flex;justify-content:center;align-items:center;gap:38px;flex-wrap:wrap}
+  .sponsors a{display:inline-flex;transition:.15s}
+  .sponsors a:hover{transform:translateY(-1px)}
+  .sponsors img{height:34px;width:auto;opacity:.92}
+  .sponsors a:hover img{opacity:1}
+  .produced a{display:inline-flex;transition:.15s}
+  .produced a:hover img{opacity:1}
+  .produced img{height:30px;width:auto;opacity:.95}
+  .footnav{margin-top:36px;display:flex;justify-content:center;flex-wrap:wrap;gap:6px 26px}
+  .footnav a{font-size:12px;font-weight:600;letter-spacing:.04em;color:var(--dim);text-decoration:none;transition:.15s}
+  .footnav a:hover{color:var(--mint)}
+  .copyright{margin-top:40px;font-size:12px;color:var(--dim);text-align:center}
+
+  @media(min-width:720px){header.hero{padding:48px 0 6px}}
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "PodcastEpisode", "name": "Buying Commercial Property With Your Super in 2026 | What the Numbers Say", "url": "https://thenumbersgamepodcast.com.au/episode-285.html", "datePublished": "2026-07-13", "episodeNumber": 285, "image": "https://i.ytimg.com/vi/RAQ80ecsDq0/maxresdefault.jpg", "partOfSeries": {"@type": "PodcastSeries", "name": "The Numbers Game", "url": "https://thenumbersgamepodcast.com.au/"}}</script>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-in">
+      <a class="brand" href="index.html" aria-label="The Numbers Game home"><img src="assets/tng-logo.png" alt="The Numbers Game"></a>
+      <div class="navlinks">
+        <a href="index.html">Home</a>
+        <div class="navgroup">
+          <a class="navtop">Episodes</a>
+          <div class="subnav">
+            <a href="episodes.html">All episodes</a>
+            <a href="adventure.html">Find moments</a>
+          </div>
+        </div>
+        <div class="navgroup">
+          <a class="navtop">About</a>
+          <div class="subnav">
+            <a href="about.html">The show</a>
+            <a href="nick-reilly.html">Nick Reilly</a>
+            <a href="jason-robinson.html">Jason Robinson</a>
+          </div>
+        </div>
+        <a href="contact.html">Contact</a>
+      </div>
+      <button class="navburger" id="navburger" type="button" aria-label="Menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24"><path d="M3 6h18v2H3zM3 11h18v2H3zM3 16h18v2H3z"/></svg>
+      </button>
+    </div>
+    <div class="navdrop" id="navdrop" hidden>
+      <a href="index.html">Home</a>
+      <span class="navlabel">Episodes</span>
+      <a class="sub" href="episodes.html">All episodes</a>
+      <a class="sub" href="adventure.html">Find moments</a>
+      <span class="navlabel">About</span>
+      <a class="sub" href="about.html">The show</a>
+      <a class="sub" href="nick-reilly.html">Nick Reilly</a>
+      <a class="sub" href="jason-robinson.html">Jason Robinson</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+
+  <main class="wrap">
+
+    <header class="hero">
+      <div class="hook">
+        <span class="eptag">EP 74</span>
+        <h1 class="hk"><span>The Cost Of Cyber Crime</span></h1>
+      </div>
+    </header>
+
+    <div class="player-wrap" id="player-wrap">
+      <div class="audio-hero" id="spotify-embed"></div>
+    </div>
+
+    <div class="explore">
+      <div class="tabs" role="tablist">
+        <button class="tabbtn on" data-panel="p-summary">Summary</button>
+      </div>
+      <section class="tpanel" id="p-summary">
+        <div class="summary-body">
+          <p>Welcome to episode 74 of The Numbers Game. On today&#x27;s show, we&#x27;re talking cyber security and the impact it&#x27;s having on business&#x27;.</p>
+        </div>
+        <div class="vask">
+          <button class="vbtn" id="vbtn" type="button">
+            <svg viewBox="0 0 24 24"><path d="M12 14a3 3 0 0 0 3-3V6a3 3 0 1 0-6 0v5a3 3 0 0 0 3 3zm5-3a5 5 0 0 1-10 0H5a7 7 0 0 0 6 6.92V21h2v-3.08A7 7 0 0 0 19 11h-2z"/></svg>
+            Send us a voice note
+          </button>
+          <div class="vslot" id="vslot" hidden>
+            <div class="vhead">
+              <p class="vmsg">We'd love to hear from you. You can leave up to a 90 second voice note for us to play on the show: a question, some feedback, or a topic you want covered.</p>
+              <button class="vclose" id="vclose" type="button" aria-label="Close">&times;</button>
+            </div>
+            <iframe src="https://www.speakpipe.com/widget/inline/hhq6kzggsx7zpcsvakgxfrzun3zidpde" allow="microphone" width="100%" height="200" frameborder="0" title="Leave The Numbers Game a voice note"></iframe>
+          </div>
+          <script async src="https://www.speakpipe.com/widget/loader.js" charset="utf-8"></script>
+        </div>
+        <div class="sumfacts">
+          <div class="fact"><span class="fl">Release date</span><span class="fv">7 November 2022</span></div>
+          <div class="fact"><span class="fl">Hosts</span><span class="fv"><a href="jason-robinson.html">Jason Robinson</a> &amp; <a href="nick-reilly.html">Nick Reilly</a> &amp; <a href="marty-vidakovic.html">Marty Vidakovic</a></span></div>
+
+        </div>
+      </section>
+    </div>
+
+    <div class="drops">
+
+      <details class="drop">
+        <summary><span class="st">Episode transcript</span><span class="chev">+</span></summary>
+        <div class="drop-body tbody">
+          <p><span class="spk">Jason · 00:00</span>Welcome to episode 74 of The Numbers Game. I&#x27;m Jase, and as always, I&#x27;m here with Nick and Marty. How are we going today, fellas?</p>
+          <p><span class="spk">Marty · 00:07</span>I&#x27;m going well, thanks, Jase. It&#x27;s early November when we&#x27;re recording here, and Charlie has instructed that the Christmas tree needs to go up, and I figure a lot of Christmas stuff in the shops already. 8 weeks of joy, so I&#x27;m looking forward to that. So yeah, I&#x27;m well.</p>
+          <p><span class="spk">Marty · 00:23</span>Nick, how are you going, my friend?</p>
+          <p><span class="spk">Nick · 00:25</span>I&#x27;m going well, thank you, apart from the fact that We&#x27;ve all got jackets on and it&#x27;s— there&#x27;s an Arctic blast shooting through Melbourne, early November. So it&#x27;s, it&#x27;s quite strange. There was 8 degrees when I got in the car this morning and it&#x27;s, yeah, it&#x27;s the 2nd of November today. So strange times we live in.</p>
+          <p><span class="spk">Nick · 00:42</span>Global warming, it&#x27;s here, but, uh, it&#x27;s actually the opposite, it&#x27;s cooling. But I know it&#x27;s all the same thing. So going okay, mate, just a bit, um, just a bit bewildered by this weather. But anyway, it&#x27;s all good.</p>
+          <p><span class="spk">Jason · 00:55</span>Yep, I&#x27;m about the same, mate. I was in the car at 5:30 and it was 6.5 degrees at 5:30 AM, and I was just mulling over the Cup Day losses or the whole weekend worth of losses that I&#x27;d accumulated. Wasn&#x27;t quite the best weekend for myself, but that&#x27;s okay.</p>
+          <p><span class="spk">Jason · 01:11</span>We bounce back. We&#x27;ve got the numbers game to talk about some wins and some things that we can do well. So let&#x27;s crack into it today, guys.</p>
+          <p><span class="spk">Marty · 01:19</span>Just got to work a bit harder this week, don&#x27;t we? So yeah, looking forward. I think it was actually— there was snow at Hotham. So that&#x27;s unbelievable.</p>
+          <p><span class="spk">Nick · 01:26</span>Unreal.</p>
+          <p><span class="spk">Jason · 01:27</span>Stop it.</p>
+          <p><span class="spk">Marty · 01:27</span>November. Yeah, not a lot, but yeah, for this time of year. So burn your shorts, burn your short sleeve t-shirts. It&#x27;s a new climate. What are we talking about today, Jase?</p>
+          <p><span class="spk">Jason · 01:39</span>Well, today, guys, I&#x27;m going to lead straight into it and crack in for you guys. I wanted to bring up some of the recent news. We&#x27;ve got a reading the play today and it&#x27;s all about cybersecurity. Now, there&#x27;s heaps in the news. I wouldn&#x27;t have known which article to start with and end with in relation to in case unless you&#x27;ve been living under a rock, uh, Optus hack and now the Medibank hack or cyber breach, or depending on how you want to word it.</p>
+          <p><span class="spk">Jason · 02:03</span>So just opening it up to you guys, do you know much about it? Have you heard much? Would you like me to delve into a little bit of a snapshot of how it happened and what happened?</p>
+          <p><span class="spk">Nick · 02:13</span>I know the headlines, but that&#x27;s probably about it, mate. So yeah, please do us a favor and fill us in.</p>
+          <p><span class="spk">Jason · 02:19</span>Beautiful. I won&#x27;t go into too much detail because I mean, some of this cybersecurity tech stuff is, uh, even a bit above my nerdy head. I&#x27;d need to bring Brammer in for a special episode since he&#x27;s the bit— he&#x27;s the tech guy our office. But I&#x27;ll start with the Optus hack. That&#x27;s the one that happened before the more recent Medibank hack. So, basically, the Optus hack— I don&#x27;t even know if you could call it a hack because apparently it&#x27;s more like they just left a window open.</p>
+          <p><span class="spk">Jason · 02:40</span>So, it&#x27;s like, you know, did your house really get broken into if the front door was open? Probably not. So, they&#x27;re describing the Optus hack as they left the window open for hackers to get in. It&#x27;s possibly the biggest cyber attack or breach in Australian history with nearly 11.2 million users&#x27; accounts details, phone numbers, passports, driver&#x27;s licenses, all this stuff accessed and taken, which is just— when you think about the sheer scale of that many people&#x27;s details left open for someone in the world to just jump</p>
+          <p><span class="spk">Jason · 03:10</span>onto and grab and download. Now, how did it happen? Um, it was through what&#x27;s called an API, which is basically— it&#x27;s a bit of technology that connects two different pieces of software together, and it&#x27;s just a gateway. It&#x27;s kind of like how Xero— you might add another piece of technology like a Receipt Bank or Hubdoc, they work through, through API.</p>
+          <p><span class="spk">Jason · 03:29</span>So Optus had an API, it was left open, some hacker got in there and he was asking for a measly $1 million US to delete the data, and he ended up getting cold feet and backing out, but not before some of that data was leaked and accessed by other people on the internet.</p>
+          <p><span class="spk">Jason · 03:45</span>So what now if you were one of these Optus customers? Basically Optus just contacted everyone and said, hey, all the best, you&#x27;re on your own, be vigilant, look out for things that don&#x27;t look real. &#x27;Your data&#x27;s out there and there&#x27;s nothing we can do about it.&#x27; But then the governments have gone and said, &#x27;Look, we&#x27;ll help fund getting some new driver&#x27;s license and new passport numbers, and you just need to monitor your accounts.&#x27; That&#x27;s basically Optus&#x27;s email out to the world was, &#x27;You&#x27;ve— your data&#x27;s been breached and just be on the lookout.&#x27; So that&#x27;s the</p>
+          <p><span class="spk">Jason · 04:15</span>Optus one, 11.2 million people. You guys weren&#x27;t former Optus customers at all, were you? No. Current?</p>
+          <p><span class="spk">Marty · 04:22</span>No, fortunately.</p>
+          <p><span class="spk">Jason · 04:23</span>I don&#x27;t know many Optus customers. I don&#x27;t know where they got these 11 million customers from, but anyway, that&#x27;s, that&#x27;s neither here nor there. So the other one, uh, that I wanted to highlight as well was the Medibank hack. Now this one for me probably feels a little bit more sinister and a bit more— it just leaves me a bit uneasy.</p>
+          <p><span class="spk">Jason · 04:40</span>So effectively this one was using somebody&#x27;s credentials to, to access the system. Now that the credentials were compromised— now this is something that could happen to any business, which is what we&#x27;re going to expand into But effectively, these compromised credentials allowed a hacker to get into Medibank system, and they were able to access the intimate medical records along with all of the other records of 700,000 users.</p>
+          <p><span class="spk">Jason · 05:04</span>And they have found it being sold on a Russian-language cybercriminal forum. So you can imagine your deepest kind of, you know, secretive medical things where you sit with a doctor and they punch into a computer your, your medical records, and you think it&#x27;s between you and the doctor.</p>
+          <p><span class="spk">Jason · 05:21</span>That&#x27;s now on the World Wide Web for somebody else to access and do something with. Um, so Cybersecurity Minister Clare O&#x27;Neill came out and warned of a new world where we are under relentless cyber attack all the time. So on the 13th of October, Medibank informed the ASX that they were negotiating over 200 gigabytes of customer data that was stolen, including medical procedures, diagnosis, credit card information, along with TF, um, you know, date of birth, phone numbers,</p>
+          <p><span class="spk">Jason · 05:51</span>all the rest of it. So I don&#x27;t know about you guys, but if that was my private information that was taken was on the web, I would feel— I feel, I feel pretty gross for those people out there that have that, that accessed.</p>
+          <p><span class="spk">Nick · 06:02</span>So just on the Medibank stuff, it&#x27;s interesting you bring this up because I&#x27;m a Medibank client, but I haven&#x27;t heard anything from Medibank about this. Um, do you know if it— I&#x27;m assuming if I was impacted, I would have heard, or is it you&#x27;ve got to put your hand— because you said only 700,000 I can only imagine they&#x27;ve got more, far more clients than that.</p>
+          <p><span class="spk">Nick · 06:26</span>Um, that—</p>
+          <p><span class="spk">Jason · 06:27</span>unless it&#x27;s because it&#x27;s still under investigation. So as far as I can see, what I&#x27;ve researched this morning, Medibank&#x27;s come out and said they&#x27;re still investigating what has happened, and they don&#x27;t even know if it was accessed through a fake or compromised user credentials. That&#x27;s what they&#x27;re assuming at the moment. So I mean, I think there&#x27;s still a fair bit to unravel from the Medibank thing.</p>
+          <p><span class="spk">Jason · 06:44</span>I think because they&#x27;re ASX listed, they had to kind of just throw something out there just, just to cover themselves. Um, but I&#x27;d imagine, I&#x27;d imagine there should be something sent to all Medibank users just as a generic, hey, this is what happened, this is what we&#x27;re doing to resolve it. I mean, as ASX listed, if you&#x27;re a shareholder right now, I haven&#x27;t checked that what the shares are doing.</p>
+          <p><span class="spk">Jason · 07:04</span>I might have a look as we delve into a little bit more. But geez, you&#x27;d have to be, I don&#x27;t know, you&#x27;d have to be a little bit worried. I mean, that, that this kind of stuff is being accessed. And I guess that brings us to at an individual level or a small business owner level, what are the things that we need to look out for and do to protect our data and protect our clients&#x27; data?</p>
+          <p><span class="spk">Jason · 07:26</span>Um, you guys had any experiences with yourselves? Well, first of all, thoughts on Optus and Medibank?</p>
+          <p><span class="spk">Marty · 07:33</span>Personally, I&#x27;m an AHM client, which I think Medibank owns.</p>
+          <p><span class="spk">Jason · 07:37</span>That&#x27;s the one that was accessed. So AHM was the main, main data.</p>
+          <p><span class="spk">Marty · 07:41</span>I am getting correspondence to say the data has been breached and we&#x27;re looking into it and And I got, it&#x27;s a weird feeling because I&#x27;ve got an operation coming up on the 22nd of November, just for our Russian listeners. But I don&#x27;t wanna come out with a bicep reattachment when I need a new hip.</p>
+          <p><span class="spk">Marty · 08:01</span>I don&#x27;t know what&#x27;s gonna be going on there, but it certainly is disconcerting. So I&#x27;m watching it like a hawk personally, &#x27;cause yeah, and I&#x27;m just really, waiting on their instruction, but just even changing my passwords and whether that&#x27;s a good idea.</p>
+          <p><span class="spk">Marty · 08:18</span>Sometimes when you&#x27;re renewing passwords, someone can get in and do something there. So all this doubt is creeping in. So I think, like you said, there just needs to be clear instruction rather than just a general communication.</p>
+          <p><span class="spk">Marty · 08:34</span>That&#x27;s how I feel anyway as a customer. So yeah, just to give you some scope on that. Yeah.</p>
+          <p><span class="spk">Nick · 08:41</span>So, ahhn? What is that?</p>
+          <p><span class="spk">Jason · 08:44</span>AHM&#x27;s the one of the, they&#x27;re one of the private health policy providers.</p>
+          <p><span class="spk">Marty · 08:48</span>Yeah.</p>
+          <p><span class="spk">Jason · 08:49</span>Pay out Medibank.</p>
+          <p><span class="spk">Nick · 08:50</span>So it&#x27;s just another Medibank business that&#x27;s also—</p>
+          <p><span class="spk">Marty · 08:52</span>Yeah, it is subsidiary. Yeah.</p>
+          <p><span class="spk">Nick · 08:54</span>Okay.</p>
+          <p><span class="spk">Jason · 08:54</span>Gotcha. Yeah. So, and also to put it in perspective, just I&#x27;ve got the producer to jump in the background and look at the stock price of Medibank Private down 20% or $1.7 billion hit to the value of the company as of 6 days ago.</p>
+          <p><span class="spk">Jason · 09:10</span>Hasn&#x27;t covered. Stocks were at about $3.50, $3.55, down to $2.85. So yeah, nearly 20% dump on the company due to this cyber breach.</p>
+          <p><span class="spk">Marty · 09:23</span>We&#x27;re just under attack in Australia at the moment, so they must see some opportunity here. And that&#x27;s the thing. It&#x27;s like the hackers are always in front of the cyber people, really the cybersecurity people, because that&#x27;s how they update their products and services, right?</p>
+          <p><span class="spk">Marty · 09:39</span>So it&#x27;s always pressure tested by the hackers, which is always disconcerting. But there seems to be a direct attack on Australia for whatever reason at the moment, whether there&#x27;s just opportunity that sits here and we&#x27;re underutilizing our cybersecurity, but certainly seems to be targeted at the moment.</p>
+          <p><span class="spk">Marty · 09:58</span>Nick, what do you think from a business level? Because we worry about this all the time.</p>
+          <p><span class="spk">Nick · 10:03</span>Yeah, we do. And I think from a business level, it is just part of doing business now. So we spoke We spoke prior to this podcast about HR, and you know, HR is something that we outsource now, and it&#x27;s now part of your— part of our expense line.</p>
+          <p><span class="spk">Nick · 10:19</span>And I think, I think cyber is as well. Well, it definitely is for us, but I think it needs to be for everyone now. And it&#x27;s not just people like us that hold important data, because like you, Jase, we, we hold extremely important and valuable data on our clients.</p>
+          <p><span class="spk">Nick · 10:37</span>So for us to be a responsible business, we need to make sure that we&#x27;re doing the right things, just like Optus should have been. I&#x27;m sure we&#x27;re trying to, and also Medibank. So for us, it&#x27;s something that we have to invest in every year and continuing to invest and not stay still in that area.</p>
+          <p><span class="spk">Nick · 11:01</span>So we have an IT support group who supports us, that takes care of printing, all of our laptops, all of our networks and whatnot. But I think a lot of businesses out there would think that that&#x27;s enough and that if they go through an IT business, that means everything&#x27;s okay.</p>
+          <p><span class="spk">Nick · 11:24</span>It&#x27;s not okay. Generally, these IT support businesses are purely there to make sure that you can get up and running. Not look at security. So for us, we&#x27;ve— we have another specialist that we pay a monthly retainer to that actually manage our ongoing cybersecurity.</p>
+          <p><span class="spk">Nick · 11:43</span>That business is called Red Piranha, and they have been great. So they sit across the top of our IT— of our IT service provider, purely working on data security and cyber. So And not just making sure that our systems are watertight, what are the processes in our business?</p>
+          <p><span class="spk">Nick · 12:03</span>How are we training our staff? How are we testing our staff to make sure that they&#x27;re aware of what a cyber attack might look like? So yeah, so I think as a business, it&#x27;s particularly if you&#x27;re holding client data, it&#x27;s now irresponsible to not be investing in this ongoing.</p>
+          <p><span class="spk">Nick · 12:23</span>And I say investing because the cost of being hacked is probably far more than what you&#x27;re investing. So yeah, I think most businesses—</p>
+          <p><span class="spk">Jason · 12:32</span>I&#x27;ve got that number for you, Nick.</p>
+          <p><span class="spk">Nick · 12:34</span>Oh, there you go.</p>
+          <p><span class="spk">Jason · 12:34</span>Yep, the, the average cost of a business after a cybercrime attack, the average cost that, that a business is hit with, $276,323. And that&#x27;s from infrastructure.gov.au on the cost of cybercrime in Australia on businesses.</p>
+          <p><span class="spk">Jason · 12:51</span>So you can imagine. And then the total cost to the economy of self-reported losses due to cybercrime was $33 billion in the 2021 financial year.</p>
+          <p><span class="spk">Marty · 13:02</span>That&#x27;s huge.</p>
+          <p><span class="spk">Jason · 13:03</span>It&#x27;s phenomenal. So, and look, Nick, I love the, the measures that you&#x27;ve taken to, to put something in place. Um, we haven&#x27;t got a separate IT provider that does it, but just, just our current provider, um, our good friend Sebastian at SSDL, um, been, been a client of ours for, since Greg and I started the business.</p>
+          <p><span class="spk">Jason · 13:20</span>And, and, you know it every year, it kind of increases what we need to do because of how, like, much more sophisticated the hackers are getting. So I think, I guess if you think back to 4 or 5 years ago, if you&#x27;re still doing the same thing you&#x27;re doing 4 or 5 years ago when it comes to your IT and/or cybersecurity, and you need to look at them differently— IT isn&#x27;t just like your usernames and passwords, like, you&#x27;ve got to actually think of cybersecurity as its own separate thing in relation to that.</p>
+          <p><span class="spk">Jason · 13:47</span>And I agree. Like, I love when I get the report each month that says— so they run attacks on our business, like fake attacks, like phishing scams and different things. They email our staff. And then we, as business owners, we get a report back that says, hey, this is how many people opened the email. This is how many people clicked the link.</p>
+          <p><span class="spk">Jason · 14:03</span>This is the people that punched in to change their password or to do something silly. Now that&#x27;s only happened maybe 2 or 3 times in a couple of years. And those people then go into training of how to avoid that happening again, because they may not have actually gone all the way to do it.</p>
+          <p><span class="spk">Jason · 14:19</span>But because they got to the page, we want to make sure that the training continues to upskill our, especially our younger team members that just come on. And like, real life stories of how easy it is. I mean, the, the average cost of $276,000, there&#x27;s real examples that we come across with our clients and ourselves.</p>
+          <p><span class="spk">Jason · 14:35</span>We had a team member a few years ago that got an email from one of the directors that said, hey, I urgently need a favor, can you help? And she was, she was new, she wanted to impress. Yep.</p>
+          <p><span class="spk">Marty · 14:46</span>Yep.</p>
+          <p><span class="spk">Jason · 14:46</span>No worries. How can I help? He goes, oh, I&#x27;m out. I&#x27;m out at lunch with a client and I forgot to get them a Christmas present. This is around December. So, you know, all checked out. Can you duck down to the post office and get 3 $300 Google gift cards? And I need the coupon voucher so I can give it to them in a card.</p>
+          <p><span class="spk">Jason · 15:03</span>Cool. All sounds like it checks out. She runs down. Couldn&#x27;t contact admin for the work credit card. So, she used her own credit card. Bought the 3 $300 gift cards, cost of $900, rushed back, started scratching the, the back to get the, the codes and the PIN, and then went, oh, wait a minute, I&#x27;ve rushed into this and haven&#x27;t really thought this through.</p>
+          <p><span class="spk">Jason · 15:26</span>Gone back and check where the actual email came from, and it wasn&#x27;t the director&#x27;s email address. So it&#x27;s something that easy that, that can happen. I mean, it doesn&#x27;t have to be hundreds of thousands of dollars, it can be the small amounts that add up as well. So you just really need to be on your toes and look out for these things and educate, educate your people of what to look out for as well.</p>
+          <p><span class="spk">Nick · 15:43</span>100%. 100%. And I think the other thing to mention, um, is like you, you can actually get insurance for this stuff as well. And we, um, we&#x27;ve, we&#x27;ve found this out ourselves, and actually we&#x27;re going through the process to, to try and get some sorted for ourselves.</p>
+          <p><span class="spk">Nick · 16:00</span>But you can get cyber security or cyber attack insurance as a business owner. And, you know, it doesn&#x27;t beat having the, the, the systems and the processes in place to to not be hacked, but there is cyber insurance. It will vary, as in the cost will vary depending on your business and the risk, as all insurance does.</p>
+          <p><span class="spk">Nick · 16:21</span>So that&#x27;s something else for business owners to look at as well. But what are your thoughts, Marty, as someone who&#x27;s possibly got some information floating out there somewhere at the moment?</p>
+          <p><span class="spk">Marty · 16:32</span>So I&#x27;m just watching my account. I&#x27;ve lost another $10,000, so I&#x27;m very edgy. So no, I think you&#x27;re making some great points. And I think the other thing we have to recognize, we do have to definitely educate our team all the time, but we also have to educate clients as well because these hackers are very good at getting in and trying to duplicate team members as well.</p>
+          <p><span class="spk">Marty · 16:55</span>So you have to educate clients as to how you want them to respond to you effectively and what to look out for. I think that I think that&#x27;s just going to be good business practice moving into the future. And I think clients are going to demand it. They&#x27;re going to ask a lot more, what&#x27;s your cyber protection around your business as well?</p>
+          <p><span class="spk">Marty · 17:15</span>So I think you can look at it from a proactive standpoint. Yes, you get your insurances. Yes, you get your strategy and services into play around cyber, but you also need to be utilizing that as a proactive tool in your business.</p>
+          <p><span class="spk">Marty · 17:30</span>And gone are the days where 5 years ago you got your anti-Norton virus and stuff like that. People sort of had it as a nice to have, but never thought about it as like Nick said, this has to be a strategy in your business, both defensively and proactively moving forward.</p>
+          <p><span class="spk">Marty · 17:48</span>You have to put it in as a cost because this is what good business is going to look like in regards to making sure your clients are safe. Your team members are safe, and ultimately your business is safe as well. So I think, yeah, some real food for thought today, lads.</p>
+          <p><span class="spk">Nick · 18:04</span>Marty, I really like what you said there on educating your clients because we had an issue a couple of years ago in our business where we weren&#x27;t actually hacked. One of our clients&#x27; emails was hacked. And I hear a lot of stories about people losing money, and this is generally how it happens.</p>
+          <p><span class="spk">Nick · 18:21</span>It&#x27;s not the business, One of our clients was hacked. The hacker, or whoever was controlling it, could see that the person was paying the bank money for deposits and whatnot in order to get a loan.</p>
+          <p><span class="spk">Nick · 18:37</span>That&#x27;s pretty much how it worked. So the client&#x27;s email was hacked. The client— the hacker saw that the client had been dealing with a bank. Or in this actual circumstance it was a conveyancer, and actually went in and mimicked the, the conveyancer, created an email address that was very similar to the conveyancer&#x27;s.</p>
+          <p><span class="spk">Nick · 18:58</span>And this has happened, as I said, to one of our clients as well. And the client transferred money off the instructions of who they thought were the conveyancer. So that&#x27;s the circumstance. And we&#x27;ve had one of our clients also attempt to transfer money for someone pretending to be us.</p>
+          <p><span class="spk">Nick · 19:17</span>Now, we weren&#x27;t hacked at all. They were actually hacked, and that hacker had access to their emails, so they could see that if they mimicked us, or the other example, if they mimic the conveyancer, they could coach the people into maybe transferring some money. So you need to educate your clients at the same time that, hey, we&#x27;re not ever going to ask you to transfer money over an email.</p>
+          <p><span class="spk">Nick · 19:39</span>We&#x27;re going to give you a phone call. Or if you ever get an email that looks like us, it says transfer money, pick the phone up because it might not be us, and it&#x27;s probably not us that have been hacked, it&#x27;s probably you, and someone&#x27;s just gone through your emails and, and worked out what they need to do.</p>
+          <p><span class="spk">Nick · 19:54</span>So it&#x27;s a really important point that you&#x27;re, you&#x27;re educating your clients, you&#x27;ve got something that&#x27;s going to your clients consistently, um, around, you know, not paying payments that are instructed by us unless we bring you.</p>
+          <p><span class="spk">Marty · 20:09</span>And you might say you&#x27;d never do it, but the sophistication of these types of emails are very, very good. Like even myself, I&#x27;ve had to double-check on emails coming from banks, you know, personally. And you go, oh, that actually reads very logistically as something that they would do.</p>
+          <p><span class="spk">Marty · 20:28</span>And of course you double-read it and you go, oh yeah, you can pull it apart pretty quickly. But to the everyday consumer, it&#x27;s, if you have to pull it apart as a finance person, professional, then they&#x27;re really out in the open waters and they can drown very quickly. So yeah, again, if you&#x27;re unsure and you feel unsteady, pick up the phone, talk to the people you need to talk to and get confirmation.</p>
+          <p><span class="spk">Marty · 20:51</span>Don&#x27;t transfer money off the back of just a digital instruction. Really important.</p>
+          <p><span class="spk">Jason · 20:57</span>A big one that&#x27;ll help resolve that and getting onto trends early and adopting things early as we do at Future Advisory is e-invoicing. So in places like Singapore and around the world, like where it&#x27;s been mandated, e-invoicing with B2B is the digital transfer of one invoice from one business to another through their accounting software.</p>
+          <p><span class="spk">Jason · 21:17</span>It&#x27;s on a basically a data chain that, that is closed and secure. So let&#x27;s say Innovate&#x27;s on Xero and Futures on Xero. If I send you guys an invoice, I don&#x27;t send it as a PDF through an email. It&#x27;s going to be Xero to Xero, where e-invoicing means that invoice is going to pop up inside your Xero accounting system for you to then approve and pay.</p>
+          <p><span class="spk">Jason · 21:38</span>Um, so what the Australian government&#x27;s doing at the moment is they&#x27;ve mandated e-invoicing for government agencies. So any government agencies that are dealing with each other have to do it through e-invoicing at the moment. I think that came in July 2022 this year. Um, and then like what&#x27;ll happen is they&#x27;ll eventually start to trickle that down to not just government agencies.</p>
+          <p><span class="spk">Jason · 21:58</span>It&#x27;ll start with, you know, the big businesses, probably the top 200 ASX will have to start doing e-invoicing, and then that&#x27;ll start to push it down the ranks because the more people that turn on e-invoicing, obviously then the more likelihood that you&#x27;re dealing with other business that can receive the invoice electronically without it going through emails or through a system that might be hacked.</p>
+          <p><span class="spk">Jason · 22:17</span>I mean, if I was to generate an email out of Xero and email it to you guys, it&#x27;s still something that can be, um, copied or manipulated on your end from an email point of view, saying, hey, pay to this BNB— BSB account number, or click the Pay Now button and it takes you to a fake payment gateway.</p>
+          <p><span class="spk">Jason · 22:33</span>Whereas through Xero to Xero, which now they&#x27;ve turned on two-factor authentication, which you have to do every single day, every single day you have to do your 2-factor authentication, which, you know, about a month or two ago, pre the Optus and Medibank hacks, you could authenticate once and click Remember Me for 30 days.</p>
+          <p><span class="spk">Jason · 22:51</span>And it means you&#x27;re— if somebody gets hold of your laptop or a hacker gets into your laptop, they could go into your Xero account, see your bank details, send a bunch of invoices to people. Now though, every single day that&#x27;s going to not be able to be accessed because you&#x27;re going to have to refresh and go again.</p>
+          <p><span class="spk">Nick · 23:06</span>So I&#x27;ve noticed that.</p>
+          <p><span class="spk">Marty · 23:08</span>Do you think off the back of, uh, what you&#x27;re just talking there, that a lot of hackers hold a lot of crypto because that sounds like the foundation piece for the future for crypto, right? And like I&#x27;ve talked about in previous episodes, I saw crypto as very similar to the tech wreck going back in 2000.</p>
+          <p><span class="spk">Marty · 23:27</span>And then you come through that stage and everything, particularly if crypto gets regulated in the general market, that, that what you just said there could be the future, the starting point of the future, um, in crypto.</p>
+          <p><span class="spk">Marty · 23:42</span>So yeah, very interesting.</p>
+          <p><span class="spk">Jason · 23:45</span>Well guys, wrapping up this episode, I think for all the listeners out there, um, be vigilant, be on top of your cybersecurity kind of, um, you know, awareness. Just, just be cyber aware, I think, is the message we&#x27;re out there today. And if you don&#x27;t have a cybersecurity plan which is separate to your email management your password management, start to look into that and turn on two-factor authentication.</p>
+          <p><span class="spk">Jason · 24:06</span>Get your e-invoicing software up and running and let&#x27;s help Australia become a more cyber safe place.</p>
+          <p><span class="spk">Marty · 24:13</span>And if you do get into my AHM account, I will find you. I will hunt you down and I will find you. Game over, lads.</p>
+        </div>
+      </details>
+
+    </div>
+
+    <!-- audio-only: the Spotify player is the hero above; duplicate embed removed -->
+
+    <div class="listen">
+      <a href="https://open.spotify.com/episode/78k4JeUZ96kec4QH6qLsMA" target="_blank" rel="noopener" aria-label="Listen to this episode on Spotify">
+        <svg viewBox="0 0 24 24"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.52 17.34c-.24.36-.66.48-1.02.24-2.82-1.74-6.36-2.1-10.56-1.14-.42.12-.78-.18-.9-.54-.12-.42.18-.78.54-.9 4.56-1.02 8.52-.6 11.64 1.32.42.18.48.66.3 1.02zm1.44-3.3c-.3.42-.84.6-1.26.3-3.24-1.98-8.16-2.58-11.94-1.38-.48.12-1.02-.12-1.14-.6-.12-.48.12-1.02.6-1.14 4.32-1.32 9.72-.66 13.44 1.62.36.18.54.78.3 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.3c-.6.18-1.2-.18-1.38-.72-.18-.6.18-1.2.72-1.38 4.26-1.26 11.28-1.02 15.72 1.62.54.3.72 1.02.42 1.56-.3.42-1.02.6-1.56.3z"/></svg>
+        Spotify
+      </a>
+      <a href="https://podcasts.apple.com/au/podcast/id1555566088?i=1000776470464" target="_blank" rel="noopener" aria-label="Listen to this episode on Apple Podcasts">
+        <svg viewBox="0 0 24 24"><path d="M5.34 0A5.328 5.328 0 000 5.34v13.32A5.328 5.328 0 005.34 24h13.32A5.328 5.328 0 0024 18.66V5.34A5.328 5.328 0 0018.66 0H5.34zm6.525 2.568c2.336 0 4.448.902 6.056 2.587 1.224 1.272 1.912 2.619 2.264 4.392l.04.23c.04.272-.16.527-.432.567a.505.505 0 01-.567-.431l-.04-.213c-.312-1.57-.92-2.747-2.004-3.867-1.428-1.496-3.293-2.294-5.393-2.294-2.1 0-3.966.798-5.394 2.294-1.084 1.12-1.692 2.298-2.004 3.867l-.04.213a.507.507 0 01-.567.431.504.504 0 01-.432-.567l.04-.23c.352-1.773 1.04-3.12 2.264-4.392 1.608-1.685 3.72-2.587 6.056-2.587h.153zm.136 3.033c1.74 0 3.312.67 4.527 1.934.883.916 1.394 1.93 1.663 3.253l.04.23a.505.505 0 01-.431.567.503.503 0 01-.567-.432l-.04-.212c-.23-1.112-.659-1.97-1.396-2.732-1.052-1.1-2.404-1.672-3.9-1.672s-2.849.572-3.901 1.672c-.737.762-1.167 1.62-1.396 2.732l-.04.212a.503.503 0 01-.567.432.505.505 0 01-.432-.567l.04-.23c.27-1.323.78-2.337 1.664-3.253 1.215-1.264 2.787-1.934 4.527-1.934h.21zm-.078 3.05c1.092 0 2.091.424 2.89 1.22.582.58.924 1.245 1.107 2.15l.04.218a.501.501 0 01-.424.568.499.499 0 01-.568-.424l-.04-.198c-.146-.724-.413-1.253-.871-1.716-.63-.63-1.398-.957-2.226-.957s-1.595.328-2.225.957c-.459.463-.726.992-.871 1.716l-.04.198a.499.499 0 01-.568.424.501.501 0 01-.424-.568l.04-.219c.183-.904.525-1.569 1.106-2.149.8-.796 1.799-1.22 2.89-1.22h.184zM12 14.07a2.477 2.477 0 012.48 2.478A2.477 2.477 0 0112 19.024a2.477 2.477 0 01-2.48-2.477A2.477 2.477 0 0112 14.07z"/></svg>
+        Apple
+      </a>
+      <a class="yt-pill" href="https://www.youtube.com/@thenumbersgamepodcast?sub_confirmation=1" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.12-2.14C19.5 3.55 12 3.55 12 3.55s-7.5 0-9.38.51A3 3 0 0 0 .5 6.2 31.4 31.4 0 0 0 0 12a31.4 31.4 0 0 0 .5 5.8 3 3 0 0 0 2.12 2.14c1.88.51 9.38.51 9.38.51s7.5 0 9.38-.51a3 3 0 0 0 2.12-2.14A31.4 31.4 0 0 0 24 12a31.4 31.4 0 0 0-.5-5.8zM9.55 15.57V8.43L15.82 12z"/></svg>
+        Subscribe
+      </a>
+    </div>
+    <!-- LISTEN:END -->
+
+    <div class="relsec">
+      <span class="rtitle">Discover more</span>
+      <div class="relgrid">
+        <a class="relcard" href="/is-home-ownership-becoming-a-fantasy-in-australia">
+          <img src="https://i.ytimg.com/vi/FZTMDk7s-yI/hqdefault.jpg" alt="EP 218 thumbnail">
+          <span class="rt">Is Home Ownership Becoming a Fantasy in Australia?</span>
+          <span class="rfoot"><span class="rwhy">10 February 2025</span><span class="rtag">EP 218</span></span>
+        </a>
+        <a class="relcard" href="/the-bank-of-mum-and-dad-a-financial-disaster-waiting-to-happen">
+          <img src="https://i.ytimg.com/vi/SkVVJ7VzjuI/hqdefault.jpg" alt="EP 279 thumbnail">
+          <span class="rt">The Bank of Mum and Dad: A Financial Disaster Waiting to Happen?</span>
+          <span class="rfoot"><span class="rwhy">1 June 2026</span><span class="rtag">EP 279</span></span>
+        </a>
+        <a class="relcard" href="/what-real-budget-reform-for-young-australians-would-actually-look-like">
+          <img src="https://i.ytimg.com/vi/le7HuIBq6Ow/hqdefault.jpg" alt="EP 283 thumbnail">
+          <span class="rt">What Real Budget Reform for Young Australians Would Actually Look Like</span>
+          <span class="rfoot"><span class="rwhy">29 June 2026</span><span class="rtag">EP 283</span></span>
+        </a>
+        <a class="relcard" href="/how-car-loans-are-destroying-your-wealth">
+          <img src="https://i.ytimg.com/vi/L3-9Ec_TlMg/hqdefault.jpg" alt="EP 226 thumbnail">
+          <span class="rt">How Car Loans Are Destroying Your Wealth</span>
+          <span class="rfoot"><span class="rwhy">7 April 2025</span><span class="rtag">EP 226</span></span>
+        </a>
+        <a class="relcard" href="/petrol-vs-electric-cars-how-much-you-actually-save-in-2026">
+          <img src="https://i.ytimg.com/vi/2vYQ6HlHtgA/hqdefault.jpg" alt="EP 276 thumbnail">
+          <span class="rt">Petrol vs Electric Cars: How Much You Actually Save in 2026</span>
+          <span class="rfoot"><span class="rwhy">11 May 2026</span><span class="rtag">EP 276</span></span>
+        </a>
+        <a class="relcard" href="/bucket-companies-everything-you-need-to-know">
+          <img src="https://i.ytimg.com/vi/5JhhzUGsvwE/hqdefault.jpg" alt="EP 194 thumbnail">
+          <span class="rt">Bucket Companies - Everything you need to know</span>
+          <span class="rfoot"><span class="rwhy">22 July 2024</span><span class="rtag">EP 194</span></span>
+        </a>
+      </div>
+      <div class="reldots" id="reldots"></div>
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="footgrid">
+      <div class="fcol">
+        <div class="foot-label">Brought to you by</div>
+        <div class="sponsors">
+          <a href="https://www.inovayt.com.au/" target="_blank" rel="noopener"><img src="assets/inovayt-white.png" alt="Inovayt"></a>
+          <a href="https://futureadvisory.com.au/" target="_blank" rel="noopener"><img src="assets/future-advisory-white.png" alt="Future Advisory"></a>
+        </div>
+      </div>
+      <div class="fcol produced">
+        <div class="foot-label">Produced by</div>
+        <a href="https://www.vidpod.com.au/" target="_blank" rel="noopener"><img src="assets/vidpod-white.png" alt="VIDPOD"></a>
+      </div>
+    </div>
+    <nav class="footnav">
+      <a href="index.html">Home</a><a href="episodes.html">Every episode</a><a href="adventure.html">Choose your own adventure</a><a href="about.html">About the show</a><a href="nick-reilly.html">Nick Reilly</a><a href="jason-robinson.html">Jason Robinson</a><a href="contact.html">Contact</a>
+    </nav>
+    <div class="copyright">© 2026 The Numbers Game</div>
+  </footer>
+
+  <script>
+    var VIDEO='RAQ80ecsDq0';
+
+    /* Mobile nav dropdown. */
+    var burger=document.getElementById('navburger'), navdrop=document.getElementById('navdrop');
+    if(burger&&navdrop){burger.addEventListener('click',function(){
+      navdrop.hidden=!navdrop.hidden;
+      burger.setAttribute('aria-expanded', navdrop.hidden?'false':'true');
+    });}
+
+    /* Voice-note button reveals the recorder; × tucks it away. */
+    var vbtn=document.getElementById('vbtn'), vslot=document.getElementById('vslot'), vclose=document.getElementById('vclose');
+    if(vbtn&&vslot){vbtn.addEventListener('click',function(){vslot.hidden=!vslot.hidden;});}
+    if(vclose&&vslot){vclose.addEventListener('click',function(){vslot.hidden=true;});}
+
+    /* Keep-exploring dots: only shown when the strip actually scrolls (mobile). */
+    var rg=document.querySelector('.relgrid'), rd=document.getElementById('reldots');
+    if(rg&&rd){
+      var relCards=rg.querySelectorAll('.relcard');
+      relCards.forEach(function(){rd.appendChild(document.createElement('span'))});
+      var updDots=function(){
+        var scrollable=rg.scrollWidth>rg.clientWidth+4;
+        rd.style.display=scrollable?'flex':'none';
+        if(!scrollable)return;
+        var i=Math.round(rg.scrollLeft/(rg.scrollWidth-rg.clientWidth)*(relCards.length-1));
+        rd.querySelectorAll('span').forEach(function(s,n){s.classList.toggle('on',n===i)});
+      };
+      rg.addEventListener('scroll',updDots,{passive:true});
+      window.addEventListener('resize',updDots);
+      updDots();
+    }
+
+    /* Explore tabs: swap the visible panel; the row stays put so you never lose your place. */
+    var tabBtns=document.querySelectorAll('.tabbtn');
+    tabBtns.forEach(function(b){
+      b.addEventListener('click',function(){
+        tabBtns.forEach(function(o){o.classList.remove('on')});
+        document.querySelectorAll('.tpanel').forEach(function(p){p.hidden=true});
+        b.classList.add('on');
+        document.getElementById(b.getAttribute('data-panel')).hidden=false;
+      });
+    });
+
+    /* Audio-only: Spotify player is the hero; chapters/questions seek it via the Spotify iFrame API. */
+    var spotifyCtrl=null, pendingSeek=null;
+    function nudge(){
+      var p=document.getElementById('player-wrap'), r=p.getBoundingClientRect();
+      if(r.bottom<80 || r.top>window.innerHeight-90){ p.scrollIntoView({behavior:'smooth',block:'start'}); }
+    }
+    function startAt(sec){
+      nudge();
+      if(spotifyCtrl){ spotifyCtrl.seek(sec); spotifyCtrl.resume(); } else { pendingSeek=sec; }
+    }
+    window.onSpotifyIframeApiReady=function(IFrameAPI){
+      IFrameAPI.createController(document.getElementById('spotify-embed'),
+        {uri:'spotify:episode:6pQm2YQ8KQAJ2x38EE6NZG', width:'100%', height:'232'},
+        function(c){ spotifyCtrl=c; if(pendingSeek!=null){ c.seek(pendingSeek); c.resume(); pendingSeek=null; } });
+    };
+    (function(){var sc=document.createElement('script');sc.src='https://open.spotify.com/embed/iframe-api/v1';sc.async=true;document.head.appendChild(sc);})();
+  </script>
+</body>
+</html>

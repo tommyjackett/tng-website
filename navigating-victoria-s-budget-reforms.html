@@ -1,0 +1,642 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EP 110 · Navigating Victoria&#x27;s Budget Reforms | The Numbers Game</title>
+<meta name="description" content="Welcome to Episode 110 of The Numbers Game. In this episode, we delve into the newly released Victorian State Budget. We examine how the transition from upfr…">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" sizes="64x64" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="canonical" href="https://thenumbersgamepodcast.com.au/navigating-victoria-s-budget-reforms">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="The Numbers Game">
+<meta property="og:title" content="EP 110 · Navigating Victoria&#x27;s Budget Reforms | The Numbers Game">
+<meta property="og:description" content="Welcome to Episode 110 of The Numbers Game. In this episode, we delve into the newly released Victorian State Budget. We examine how the transition from upfr…">
+<meta property="og:url" content="https://thenumbersgamepodcast.com.au/navigating-victoria-s-budget-reforms">
+<meta property="og:image" content="https://thenumbersgamepodcast.com.au/assets/tng-audio-only-thumbnail.webp">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+  :root{
+    --purple:#585af3; --purple-dark:#2c1b8a; --mint:#7ad9a8;
+    --white:#ffffff; --muted:rgba(255,255,255,.60); --dim:rgba(255,255,255,.42);
+    --line:rgba(255,255,255,.12); --card:rgba(255,255,255,.05); --card-hi:rgba(255,255,255,.09);
+    --display:'Anton',Impact,'Helvetica Neue',sans-serif;
+    --sans:'Inter',system-ui,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif;
+    --wrap:1280px;   /* page frame (nav spans this) */
+    --col:960px;     /* content column (player, tabs, text) */
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:var(--sans); color:var(--white); line-height:1.6; -webkit-font-smoothing:antialiased;
+    background:#12093a;
+    background-image:
+      radial-gradient(1200px 600px at 82% -6%, rgba(88,90,243,.45) 0%, transparent 55%),
+      radial-gradient(900px 700px at 5% 8%, rgba(122,217,168,.10) 0%, transparent 50%),
+      linear-gradient(180deg,#2c1b8a 0%,#1a1150 28%,#100b34 62%,#0b0820 100%);
+    background-attachment:fixed;
+  }
+  a{color:inherit}
+  .wrap{max-width:var(--wrap);margin:0 auto;padding:0 36px}
+  main.wrap{max-width:var(--col)}
+  @media(max-width:720px){.wrap{padding:0 22px}}
+
+  /* ── Navbar ── */
+  .nav{position:sticky;top:0;z-index:50;background:linear-gradient(180deg,rgba(24,15,74,.92),rgba(24,15,74,.72));backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+  .nav-in{max-width:var(--wrap);margin:0 auto;padding:11px 36px;display:flex;align-items:center;justify-content:space-between}
+  @media(max-width:720px){.nav-in{padding:11px 22px}}
+  .brand{display:block;line-height:0}
+  .brand img{height:36px;width:auto;display:block}
+  .navlinks{display:flex;gap:28px;align-items:center}
+  .navlinks a{text-decoration:none;font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);transition:.15s}
+  .navlinks a:hover{color:var(--white)}
+  .navlinks a.navtop{cursor:default}
+  .navgroup{position:relative;display:flex;align-items:center}
+  .navgroup .subnav{display:none;position:absolute;top:100%;left:50%;transform:translateX(-50%);padding-top:14px;min-width:180px}
+  .navgroup:hover .subnav,.navgroup:focus-within .subnav{display:block}
+  .subnav-in,.navgroup .subnav{z-index:60}
+  .navgroup .subnav a{display:block;background:#180f4a;border:1px solid var(--line);border-top:0;padding:12px 16px;font-size:12px;color:rgba(255,255,255,.85)}
+  .navgroup .subnav a:first-child{border-top:1px solid var(--line)}
+  .navgroup .subnav a:hover{background:#221768;color:var(--white)}
+  .navburger{display:none;background:none;border:1px solid var(--line);padding:8px 10px;cursor:pointer;color:var(--white);transition:.15s}
+  .navburger:hover{border-color:rgba(122,217,168,.6)}
+  .navburger svg{width:20px;height:20px;fill:currentColor;display:block}
+  .navdrop{display:none}
+  @media(max-width:720px){
+    .navlinks{display:none}
+    .navburger{display:block}
+    .navdrop{display:block;position:absolute;left:0;right:0;top:100%;
+      background:#180f4a;border-bottom:1px solid var(--line);box-shadow:0 24px 50px rgba(0,0,0,.45)}
+    .navdrop[hidden]{display:none}
+    .navdrop a{display:block;padding:15px 22px;text-decoration:none;font-size:14px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:rgba(255,255,255,.9);border-bottom:1px solid rgba(255,255,255,.06)}
+    .navdrop a:last-child{border-bottom:0}
+    .navdrop a.sub{padding-left:42px;font-size:13px;color:rgba(255,255,255,.72)}
+    .navdrop .navlabel{display:block;padding:15px 22px 6px;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.4)}
+  }
+
+  /* ── Hero / hook (marker-highlight system: purple hook wraps naturally, mint payoff below)
+     Rules: title splits at its natural break (colon/pipe/question mark). Front = hook (purple,
+     big), back = payoff (mint, smaller). No break in title = purple hook only. Highlights hug
+     the text (tight em padding tuned to Anton) and wrap via box-decoration-break — never
+     hand-pick line breaks or mint words. ── */
+  header.hero{padding:34px 0 6px}
+  .hook{--inx:clamp(8.4px,2.1vw,15.6px)} /* one shared text inset so hook + payoff first letters align */
+  .hook .hk{font-family:var(--display);font-weight:400;text-transform:uppercase;
+    font-size:clamp(28px,7vw,52px);line-height:1.3;letter-spacing:-.5px;text-wrap:balance}
+  .hook .hk span{color:var(--white);padding:.04em var(--inx) .02em;
+    background:linear-gradient(var(--purple),var(--purple)) 0 50%/100% 87% no-repeat;
+    -webkit-box-decoration-break:clone;box-decoration-break:clone}
+  .hook .pay{font-family:var(--display);font-weight:400;text-transform:uppercase;
+    font-size:clamp(16px,4vw,24px);line-height:1.5;letter-spacing:.6px;margin-top:8px;text-wrap:balance}
+  .hook .pay span{color:#0a0a0a;padding:.08em var(--inx) .04em;
+    background:linear-gradient(var(--mint),var(--mint)) 0 50%/100% 88% no-repeat;
+    -webkit-box-decoration-break:clone;box-decoration-break:clone}
+  /* no-hook titles: mid-split into two full-size rows, purple then mint */
+  .hook .hk span.hkrow{display:block;background:none;padding:0}
+  .hook .hk .hkrow+.hkrow{margin-top:8px}
+  .hook .hk span.mintseg{color:#0a0a0a;
+    background:linear-gradient(var(--mint),var(--mint)) 0 50%/100% 87% no-repeat}
+
+  /* ── Player (clean facade → real player on tap) ── */
+  .player-wrap{margin:24px 0 4px;scroll-margin-top:76px}
+  .audio-hero{width:100%;min-height:232px;border-radius:12px;overflow:hidden;box-shadow:0 30px 70px rgba(0,0,0,.5),0 0 0 1px rgba(255,255,255,.06)}
+  .audio-hero iframe{display:block;width:100%;border:0}
+  .player{position:relative;width:100%;padding-top:56.25%;border-radius:0;overflow:hidden;background:#000;box-shadow:0 30px 70px rgba(0,0,0,.5),0 0 0 1px rgba(255,255,255,.06)}
+  .facade{position:absolute;inset:0;border:0;cursor:pointer;background-size:cover;background-position:center;display:flex;align-items:center;justify-content:center;padding:0}
+  .facade .play{width:74px;height:74px;border-radius:50%;background:rgba(10,6,30,.40);border:2px solid rgba(255,255,255,.72);display:flex;align-items:center;justify-content:center;transition:.18s;-webkit-backdrop-filter:blur(1px);backdrop-filter:blur(1px)}
+  .facade:hover .play{background:rgba(88,90,243,.62);transform:scale(1.07);border-color:#fff}
+  .facade .play::after{content:"";border-style:solid;border-width:11px 0 11px 19px;border-color:transparent transparent transparent #fff;margin-left:5px}
+  .player iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+
+  /* ── Episode facts (bottom of the Summary panel — templated per episode) ── */
+  .sumfacts{margin:14px 10px 4px;padding-top:13px;border-top:1px solid rgba(255,255,255,.08);display:flex;flex-direction:column;gap:8px}
+  .fact{display:flex;gap:12px;font-size:13.5px}
+  .fact .fl{flex:none;width:104px;color:var(--dim);font-weight:600;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;padding-top:2px}
+  .fact .fv{color:rgba(255,255,255,.9);font-weight:500}
+  .fact .fv a{color:var(--mint);text-decoration:none;border-bottom:1px solid rgba(122,217,168,.4);transition:.15s}
+  .fact .fv a:hover{border-bottom-color:var(--mint)}
+
+  /* ── Episode tag (identity: black label hanging off the title corner) ── */
+  .eptag{display:inline-block;position:relative;left:-6px;margin-bottom:-7px;z-index:2;
+    background:#0a0a0a;color:var(--white);font-family:var(--display);font-weight:400;
+    font-size:13.5px;letter-spacing:1.5px;text-transform:uppercase;padding:6px 11px 4px}
+
+  /* ── Explore tabs (sticky mode switcher; one panel swaps below, nothing shoves) ── */
+  .explore{margin-top:22px}
+  .tabs{position:sticky;top:58px;z-index:40;display:flex;flex-wrap:wrap;gap:8px;padding:10px 0;
+    background:linear-gradient(180deg,rgba(18,10,55,.96),rgba(18,10,55,.86));
+    backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+  .tabbtn{font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.5px;
+    font-size:14.5px;color:var(--white);background:var(--purple);border:1px solid var(--purple);
+    padding:9px 13px 7px;cursor:pointer;transition:.15s}
+  .tabbtn:hover{filter:brightness(1.12)}
+  .tabbtn.on{background:var(--mint);border-color:var(--mint);color:#0a0a0a}
+  .tabbtn.on:hover{filter:none}
+  .tabbtn .ct{font-size:12px;opacity:.75;font-variant-numeric:tabular-nums}
+  .tabbtn .ct::before{content:" · "}
+  .tpanel{border:1px solid var(--line);background:var(--card);padding:12px 10px 14px}
+  .hint{font-size:12.5px;color:var(--muted);padding:2px 10px 10px;border-bottom:1px solid rgba(255,255,255,.08);margin-bottom:6px}
+
+  /* ── Listen row (no box: label left, service pills follow) ── */
+  .listen{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:12px 16px;margin-top:34px}
+  .listen .lname{font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--dim)}
+  .listen a{display:inline-flex;align-items:center;gap:9px;padding:11px 18px;border-radius:999px;
+    background:var(--mint);color:#08210f;text-decoration:none;font-weight:800;font-size:12.5px;
+    letter-spacing:.04em;text-transform:uppercase;transition:.15s}
+  .listen a:hover{filter:brightness(1.06);transform:translateY(-1px);box-shadow:0 12px 30px rgba(122,217,168,.25)}
+  .listen svg{width:20px;height:20px;fill:currentColor;flex:none}
+  /* ── Listen-now Spotify audio embed (full column width, above the pills) ── */
+  .listen-now{margin-top:40px}
+  .listen-now .ln-head{display:flex;align-items:baseline;justify-content:space-between;gap:14px;margin-bottom:13px}
+  .listen-now .ln-title{font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--dim)}
+  .audio-embed{border-radius:12px;overflow:hidden;box-shadow:0 20px 50px rgba(0,0,0,.4),0 0 0 1px rgba(255,255,255,.06)}
+  .audio-embed iframe{display:block;width:100%;border:0}
+  @media(max-width:720px){.listen-now{margin-top:32px}}
+
+  /* ── Keep exploring (thumbnails link to other episode PAGES, never timecodes).
+     Swipeable strip on mobile, fits three-up on desktop. Variant rule: claim
+     "similar ground" + reason lines ONLY when moment-level topic overlap is
+     genuinely strong; otherwise show the latest released episodes with dates —
+     never invent a connection. ── */
+  .relsec{margin-top:60px;padding-top:58px;border-top:1px solid var(--line)} /* line = end of this episode's info */
+  .reldots{display:flex;justify-content:center;gap:7px;margin-top:12px}
+  .reldots span{width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.25);transition:.2s}
+  .reldots span.on{background:var(--mint)}
+  .relsec .rtitle{display:inline-block;font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.5px;font-size:14.5px;background:var(--mint);color:#0a0a0a;padding:9px 13px 7px;margin-bottom:18px}
+  .relgrid{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding-bottom:6px;scrollbar-width:none}
+  .relgrid::-webkit-scrollbar{display:none}
+  .relcard{flex:0 0 56%;max-width:232px;scroll-snap-align:start;display:flex;flex-direction:column;text-decoration:none;background:var(--card);border:1px solid var(--line);transition:.15s}
+  .relcard:hover{background:var(--card-hi);border-color:rgba(122,217,168,.55)}
+  .relcard img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block}
+  .relcard .rt{display:block;font-size:12.5px;font-weight:600;color:rgba(255,255,255,.92);line-height:1.4;padding:8px 8px 0}
+  .relcard .rfoot{margin-top:auto;display:flex;justify-content:space-between;align-items:flex-end;gap:8px;padding:10px 8px 9px}
+  .relcard .rwhy{font-size:11.5px;color:var(--mint)}
+  .relcard .rtag{display:inline-block;background:#0a0a0a;color:var(--white);font-family:var(--display);font-size:10px;letter-spacing:1.2px;text-transform:uppercase;padding:3px 7px 2px;white-space:nowrap;flex:0 0 auto}
+
+  /* ── Dropdown sections (accordion under the player) ── */
+  .drops{margin-top:34px;display:flex;flex-direction:column;gap:11px}
+  .drop{border:1px solid var(--line);border-radius:0;background:var(--card);overflow:hidden;transition:border-color .15s}
+  .drop[open]{border-color:rgba(122,217,168,.35)}
+  .drop>summary{list-style:none;cursor:pointer;padding:16px 18px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+  .drop>summary::-webkit-details-marker{display:none}
+  .drop>summary .st{font-weight:700;font-size:15.5px;letter-spacing:.005em}
+  .drop>summary .ct{margin-left:auto;font-size:12px;color:var(--dim);font-weight:600;font-variant-numeric:tabular-nums}
+  .drop>summary .chev{flex:none;width:22px;height:22px;border-radius:50%;background:rgba(122,217,168,.14);color:var(--mint);display:flex;align-items:center;justify-content:center;font-family:var(--display);font-size:15px;line-height:1;transition:.2s;transform:translateY(-1px)}
+  .drop[open]>summary .chev{transform:rotate(45deg)}
+  .drop-body{padding:2px 12px 12px}
+
+  /* chapters */
+  .chapter{display:flex;align-items:baseline;gap:14px;width:100%;text-align:left;cursor:pointer;background:none;border:0;color:inherit;font-family:inherit;padding:11px 10px;border-radius:10px;transition:.13s}
+  .chapter:hover{background:var(--card-hi)}
+  .chapter .tc{font-variant-numeric:tabular-nums;font-weight:700;font-size:14px;color:var(--mint);flex:none;width:48px}
+  .chapter .cx{font-size:15px;font-weight:500;color:rgba(255,255,255,.9)}
+  .chapter:hover .cx{color:#fff}
+
+  /* questions */
+  .q{display:flex;align-items:center;gap:12px;width:100%;text-align:left;cursor:pointer;background:none;border:0;border-radius:11px;color:inherit;font-family:inherit;padding:12px 10px;transition:.14s}
+  .q+.q{border-top:1px solid rgba(255,255,255,.05)}
+  .q:hover{background:var(--card-hi)}
+  .q .qm{font-family:var(--display);font-size:15px;color:var(--mint);flex:none;line-height:1;transform:translateY(1px)}
+  .q .qx{font-size:15px;font-weight:500;color:rgba(255,255,255,.92)}
+  .q .go{margin-left:auto;flex:none;color:var(--dim);font-size:18px;transition:.15s}
+  .q:hover .go{color:var(--mint);transform:translateX(2px)}
+
+  /* summary + transcript bodies */
+  .summary-body p{font-size:16.5px;line-height:1.62;color:rgba(255,255,255,.9);padding:6px 10px 4px}
+  .tbody{padding:2px 10px 8px}
+  .tbody p{font-size:14.5px;line-height:1.7;color:rgba(255,255,255,.78);margin-top:15px;max-width:64ch}
+  .tbody .spk{display:block;font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--mint);margin-bottom:2px}
+
+  /* ── Voice note ask (lives at the bottom of the Summary panel) ── */
+  .vask{margin:16px 10px 4px}
+  .vbtn{display:inline-flex;align-items:center;gap:9px;padding:12px 20px;border-radius:999px;border:0;cursor:pointer;
+    background:var(--mint);color:#08210f;font-family:inherit;font-weight:800;font-size:12.5px;
+    letter-spacing:.04em;text-transform:uppercase;transition:.15s}
+  .vbtn:hover{filter:brightness(1.06);transform:translateY(-1px);box-shadow:0 12px 30px rgba(122,217,168,.25)}
+  .vbtn svg{width:18px;height:18px;fill:currentColor;flex:none}
+  .vslot{background:var(--purple);padding:12px 10px 10px;margin:14px 0 4px;box-shadow:0 18px 40px rgba(0,0,0,.35)}
+  .vslot[hidden]{display:none}
+  .vhead{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;margin-bottom:10px}
+  .vhead .vmsg{font-family:var(--sans);font-size:13px;line-height:1.55;color:rgba(255,255,255,.92);margin:2px 0 0;padding:0 2px}
+  .vclose{background:none;border:0;color:rgba(255,255,255,.85);font-size:22px;line-height:1;cursor:pointer;padding:0 2px}
+  .vclose:hover{color:var(--white)}
+  .vslot iframe{display:block}
+
+  /* ── YouTube subscribe pill (sits in the listen row; outranks .listen a's mint) ── */
+  .listen a.yt-pill{background:var(--purple);color:var(--white)}
+  .listen a.yt-pill:hover{filter:brightness(1.1);transform:translateY(-1px)}
+  @media(max-width:720px){ /* mobile: no label, three compact pills on one row */
+    .listen .lname{display:none}
+    .listen{gap:8px}
+    .listen a{padding:10px 13px;font-size:11px;gap:6px}
+    .listen svg{width:16px;height:16px}
+  }
+
+  /* ── Footer: two columns under the line (Brought to you by | Produced by), matches adventure.html ── */
+  footer{border-top:1px solid var(--line);margin-top:68px;padding:52px 20px 58px}
+  .footgrid{max-width:var(--wrap);margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:start}
+  @media(max-width:720px){.footgrid{grid-template-columns:1fr;gap:40px}}
+  .fcol{text-align:center}
+  .foot-label{font-size:11px;font-weight:700;letter-spacing:.26em;text-transform:uppercase;color:var(--dim);margin-bottom:16px}
+  .sponsors{display:flex;justify-content:center;align-items:center;gap:38px;flex-wrap:wrap}
+  .sponsors a{display:inline-flex;transition:.15s}
+  .sponsors a:hover{transform:translateY(-1px)}
+  .sponsors img{height:34px;width:auto;opacity:.92}
+  .sponsors a:hover img{opacity:1}
+  .produced a{display:inline-flex;transition:.15s}
+  .produced a:hover img{opacity:1}
+  .produced img{height:30px;width:auto;opacity:.95}
+  .footnav{margin-top:36px;display:flex;justify-content:center;flex-wrap:wrap;gap:6px 26px}
+  .footnav a{font-size:12px;font-weight:600;letter-spacing:.04em;color:var(--dim);text-decoration:none;transition:.15s}
+  .footnav a:hover{color:var(--mint)}
+  .copyright{margin-top:40px;font-size:12px;color:var(--dim);text-align:center}
+
+  @media(min-width:720px){header.hero{padding:48px 0 6px}}
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "PodcastEpisode", "name": "Buying Commercial Property With Your Super in 2026 | What the Numbers Say", "url": "https://thenumbersgamepodcast.com.au/episode-285.html", "datePublished": "2026-07-13", "episodeNumber": 285, "image": "https://i.ytimg.com/vi/RAQ80ecsDq0/maxresdefault.jpg", "partOfSeries": {"@type": "PodcastSeries", "name": "The Numbers Game", "url": "https://thenumbersgamepodcast.com.au/"}}</script>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-in">
+      <a class="brand" href="index.html" aria-label="The Numbers Game home"><img src="assets/tng-logo.png" alt="The Numbers Game"></a>
+      <div class="navlinks">
+        <a href="index.html">Home</a>
+        <div class="navgroup">
+          <a class="navtop">Episodes</a>
+          <div class="subnav">
+            <a href="episodes.html">All episodes</a>
+            <a href="adventure.html">Find moments</a>
+          </div>
+        </div>
+        <div class="navgroup">
+          <a class="navtop">About</a>
+          <div class="subnav">
+            <a href="about.html">The show</a>
+            <a href="nick-reilly.html">Nick Reilly</a>
+            <a href="jason-robinson.html">Jason Robinson</a>
+          </div>
+        </div>
+        <a href="contact.html">Contact</a>
+      </div>
+      <button class="navburger" id="navburger" type="button" aria-label="Menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24"><path d="M3 6h18v2H3zM3 11h18v2H3zM3 16h18v2H3z"/></svg>
+      </button>
+    </div>
+    <div class="navdrop" id="navdrop" hidden>
+      <a href="index.html">Home</a>
+      <span class="navlabel">Episodes</span>
+      <a class="sub" href="episodes.html">All episodes</a>
+      <a class="sub" href="adventure.html">Find moments</a>
+      <span class="navlabel">About</span>
+      <a class="sub" href="about.html">The show</a>
+      <a class="sub" href="nick-reilly.html">Nick Reilly</a>
+      <a class="sub" href="jason-robinson.html">Jason Robinson</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+
+  <main class="wrap">
+
+    <header class="hero">
+      <div class="hook">
+        <span class="eptag">EP 110</span>
+        <h1 class="hk"><span>Navigating Victoria&#x27;s Budget Reforms</span></h1>
+      </div>
+    </header>
+
+    <div class="player-wrap" id="player-wrap">
+      <div class="audio-hero" id="spotify-embed"></div>
+    </div>
+
+    <div class="explore">
+      <div class="tabs" role="tablist">
+        <button class="tabbtn on" data-panel="p-summary">Summary</button>
+      </div>
+      <section class="tpanel" id="p-summary">
+        <div class="summary-body">
+          <p>Welcome to Episode 110 of The Numbers Game. In this episode, we delve into the newly released Victorian State Budget. We examine how the transition from upfront stamp duty to a ten-year land tax could shape commercial property investment and potentially drive up rental costs for small businesses.</p>
+        </div>
+        <div class="vask">
+          <button class="vbtn" id="vbtn" type="button">
+            <svg viewBox="0 0 24 24"><path d="M12 14a3 3 0 0 0 3-3V6a3 3 0 1 0-6 0v5a3 3 0 0 0 3 3zm5-3a5 5 0 0 1-10 0H5a7 7 0 0 0 6 6.92V21h2v-3.08A7 7 0 0 0 19 11h-2z"/></svg>
+            Send us a voice note
+          </button>
+          <div class="vslot" id="vslot" hidden>
+            <div class="vhead">
+              <p class="vmsg">We'd love to hear from you. You can leave up to a 90 second voice note for us to play on the show: a question, some feedback, or a topic you want covered.</p>
+              <button class="vclose" id="vclose" type="button" aria-label="Close">&times;</button>
+            </div>
+            <iframe src="https://www.speakpipe.com/widget/inline/hhq6kzggsx7zpcsvakgxfrzun3zidpde" allow="microphone" width="100%" height="200" frameborder="0" title="Leave The Numbers Game a voice note"></iframe>
+          </div>
+          <script async src="https://www.speakpipe.com/widget/loader.js" charset="utf-8"></script>
+        </div>
+        <div class="sumfacts">
+          <div class="fact"><span class="fl">Release date</span><span class="fv">5 June 2023</span></div>
+          <div class="fact"><span class="fl">Hosts</span><span class="fv"><a href="jason-robinson.html">Jason Robinson</a> &amp; <a href="nick-reilly.html">Nick Reilly</a> &amp; <a href="marty-vidakovic.html">Marty Vidakovic</a></span></div>
+
+        </div>
+      </section>
+    </div>
+
+    <div class="drops">
+
+      <details class="drop">
+        <summary><span class="st">Episode transcript</span><span class="chev">+</span></summary>
+        <div class="drop-body tbody">
+          <p><span class="spk">Jason · 00:00</span>Welcome to The Numbers Game. I&#x27;m Jason. I&#x27;m here with Nick and Marty. How are you going today, boys?</p>
+          <p><span class="spk">Marty · 00:05</span>Going well, thanks, Jase. Thanks for battling through. I know you&#x27;re a bit croaky there, mate. You&#x27;ve got the man flu, which God knows what will happen to you, but I&#x27;m sure you&#x27;ll pull through. So thanks for stepping up and we&#x27;ve got an exciting episode today. So, well, exciting in regards to borrowing and stamp duty reform.</p>
+          <p><span class="spk">Marty · 00:22</span>So we&#x27;re going to make it exciting, put it that way. How are you, Nick? How are you going?</p>
+          <p><span class="spk">Nick · 00:27</span>I&#x27;m going well. Thank you, Marty. Yet to attract the flu, although everyone else seems to be getting it at the moment, so it&#x27;s probably just a matter of time. There&#x27;s some lemon and ginger tea floating around our office, fresh lemon and ginger tea actually. People are actually bringing in their own ginger and lemon and honey, which is interesting.</p>
+          <p><span class="spk">Nick · 00:44</span>But yeah, all good at this stage. So agree, Marty, good to have Jase back. Looking forward to this episode. I love talking about the Vic government and how useless they are. So let&#x27;s Let&#x27;s, uh, let&#x27;s get started on that.</p>
+          <p><span class="spk">Nick · 00:59</span>How are you, Jase? You look a million dollars.</p>
+          <p><span class="spk">Jason · 01:01</span>Uh, feeling better than I look, probably, or maybe, maybe feeling better than I sound. Uh, all good though, just, um, you know, as mentioned on the potty a few weeks ago, was enjoying the sun up in Port Douglas, and just karma in life sometimes just has a way to bring you back down. And landed back from Port Douglas on the plane and felt my throat and went, yep, I&#x27;ve copped something here.</p>
+          <p><span class="spk">Jason · 01:21</span>So nothing like a week at home with the flu to kind of get you feeling really good. And then at the same time, the, uh, Dan Andrews and Tim Pallas came along and, you know, announced their Victorian state budget and gave us plenty to get fired up and angry about. So before we jump into that, we&#x27;ll always start with who the episode&#x27;s brought to you by today, and we&#x27;ve got this one by Future Advisory.</p>
+          <p><span class="spk">Jason · 01:43</span>Coming into tax time in a couple of months, this recording&#x27;s end of May 2023, and of course we&#x27;ve got people lining up at the moment ready for their tax returns, and we&#x27;re business owners in tax planning mode, so all of your tax needs and business needs, futureadvisory.com.au.</p>
+          <p><span class="spk">Jason · 01:59</span>Now boys, you guys got together and did some episode planning as the Victorian State Budget came out. I was on my deathbed, but just like always, there&#x27;s always something that we can get out of it that we can talk to our listeners about.</p>
+          <p><span class="spk">Jason · 02:15</span>And for this one, it affects a few different things, but we want to probably start to talk about the stamp duty on commercial properties and industrial properties. And then how that flows on and affects the small business owners or the property owners that are in our client bases and extended networks and obviously the Numbers Game listeners.</p>
+          <p><span class="spk">Jason · 02:34</span>So not sure who wants to jump in and give a bit of a summary or recap, but Marty, you look excited, you look fired up. Why don&#x27;t you start by letting us know what has happened?</p>
+          <p><span class="spk">Marty · 02:44</span>Always excited. You know I&#x27;m a fair guy, Jase. You know I&#x27;m a fair guy. Of course, of course. So I like to talk about the good news about things and also, you know, the not so good news. So this was interesting in regards to the new reform that the Vic government&#x27;s bringing out in regards to commercial and industrial property.</p>
+          <p><span class="spk">Marty · 02:59</span>So they&#x27;re basically abolishing the upfront stamp duty and they&#x27;re going to replace that with an ongoing land tax. So this is an interesting policy change. I think it actually is a good one purely because notoriously it&#x27;s so hard to get into commercial property because you&#x27;ve obviously got 6% on the stamps.</p>
+          <p><span class="spk">Marty · 03:25</span>Upfront. And then usually in the past you&#x27;ve found that commercial property owners to invest have to put in 35% as a deposit. So I&#x27;ll run through some numbers as we go. Now on the lending side, things have got a lot more nimble where you can borrow up to 80% on your owner-occupied property if you&#x27;re buying a property to house your business in, which is a good thing.</p>
+          <p><span class="spk">Marty · 03:48</span>But yeah, so this is an interesting change. So it means that you can now pay that land tax on the unimproved value of the land at 1%. Over the course of 10 years. So I&#x27;ll give you some numbers around it just because I like numbers.</p>
+          <p><span class="spk">Marty · 04:04</span>If you had a $2 million commercial property, you would usually pay 6% stamp duty upfront. So that&#x27;d be $125,000, $120,000. And let me just give you the premise on the lending side too.</p>
+          <p><span class="spk">Marty · 04:20</span>So 4 or 5 years ago, you could only borrow up to 65% of the value of the investment. So effectively you&#x27;d need $700,000 of capital to get into that, plus $120,000 of stamp. So that&#x27;s $820,000. And business owners being business owners are going, &quot;I could probably utilise that capital somewhere else in the business.&quot; So they think, &quot;I may as well, yeah, I may as well lease the property.&quot; But now you can get up to 80% borrowings on the property</p>
+          <p><span class="spk">Marty · 04:50</span>value of the commercial property. So if the unimproved value of the land is $1.2 million, you&#x27;d be paying $12,000 a year in the land tax. And then you&#x27;ve got $400,000 worth of deposit that you have to put in. So basically $412,000 you&#x27;re putting in upfront.</p>
+          <p><span class="spk">Marty · 05:08</span>So that&#x27;s basically halving that capital injection required to what it probably would&#x27;ve been overall, you know, 3 or 4 years ago. So I think that&#x27;s significant. The other thing you have to look at too is that we are talking about 1% on the unimproved value of the land.</p>
+          <p><span class="spk">Marty · 05:29</span>So immediately the things we have to be, we have to consider is what is the value of that land going to be over the next 10 years? So that might seem equal upfront now, but you also have to cost the land value and to make sure that you&#x27;re not significantly out of pocket as time goes on as well.</p>
+          <p><span class="spk">Marty · 05:50</span>So you want to always talk to experts and professionals in order to really understand the overall impact of this type of change. So good from a point of view of capital injection is less to get into commercial property. It&#x27;s a relevant investment. I think business owners always, I think it&#x27;s a good idea to get your own property to operate out of.</p>
+          <p><span class="spk">Marty · 06:12</span>And then you also gotta consider the longer-term costs and how that impacts your business. So throw it open to yourselves, gentlemen. Nick, anything to add on that?</p>
+          <p><span class="spk">Nick · 06:22</span>I agree. I agree with you totally. I think, It&#x27;s giving people the ability to get into an owner-occupied property, which I think is great, and get into that. And when we talk, again, owner-occupied, we&#x27;re talking about owner-occupied commercial. So I think anyone that get, anything that gives people the incentive to buy a premises is great.</p>
+          <p><span class="spk">Nick · 06:40</span>But as always, there&#x27;s always a downside. And the thing that I think about, and a lot of people may not know this, but industrial tenants generally pay all outgoings, including any government taxes such as land tax.</p>
+          <p><span class="spk">Nick · 06:57</span>So this is effectively going to be seen as a land tax. We obviously have an existing land tax. Now, on industrial property, if you&#x27;ve got an extra land tax of, say, 1% a year, who&#x27;s going to pay for that? The tenant&#x27;s actually going to pay for that.</p>
+          <p><span class="spk">Nick · 07:14</span>So I think what you&#x27;ll see is an increase in rents for people that are, whether they&#x27;re occupying a factory or a warehouse or whatever it might be, because landlords are gonna pass that on. So retail is different. Retail, the landlord pays all the outgoings.</p>
+          <p><span class="spk">Nick · 07:32</span>So what I think about is I think about the top end of town. When I say that, I mean fund managers who own a big pool of assets. I think about groups where capital isn&#x27;t an issue. When I say capital, I mean the deposit on these properties was never an issue and it&#x27;s all about the cash flow.</p>
+          <p><span class="spk">Nick · 07:53</span>So when these, bigger groups look at buying commercial properties, it&#x27;s all about cash flow, rents, and the rate of return. So I look at this and I say, okay, well, they&#x27;re gonna wanna get more money in to make an asset worth purchasing. So the thing that I fear is the people that still don&#x27;t have the ability to buy, particularly in the industrial space, are just gonna get an increase in rent because at the moment they&#x27;re paying land tax of a certain amount and that&#x27;s obviously gonna increase.</p>
+          <p><span class="spk">Nick · 08:21</span>Now, who does that hurt? That hurts the small businesses that can&#x27;t afford to buy. So whilst I think it is a good thing because it gets people into the market, I&#x27;m not sure if you&#x27;ve done the numbers or I&#x27;m assuming there is some numbers out there on what 1% of the land value looks like over 10 years versus say 5% of the total value at year 1.</p>
+          <p><span class="spk">Marty · 08:43</span>Yeah, it&#x27;s about the same. Like if I work it on the land value on a $2 million property being $1.2 mil, the unimproved land value, like 1% on that is virtually the same amount over that 10-year period. However, that&#x27;s not taking into account that land value increasing over that time.</p>
+          <p><span class="spk">Marty · 09:01</span>And that&#x27;s what you have to consider because that could be substantially more. And I think they&#x27;re repricing now, the government, as you talked about previously, Nick.</p>
+          <p><span class="spk">Nick · 09:10</span>This is the thing and they&#x27;re going hell for leather at the moment. Revaluing everyone&#x27;s land values to get more money. So, you know, I think there could be, although the way the government is pitching it is, you know, we spoke to small business and this is what they wanted.</p>
+          <p><span class="spk">Nick · 09:26</span>But I think they&#x27;d be looking at particularly commercial valuations at the moment and almost licking their lips going, geez, this is gonna be a really good revenue stream for us moving forward. Marty and I have a mutual client at the moment that we&#x27;re doing some work for, owns a few factories. In Melbourne, and he was in here the other day.</p>
+          <p><span class="spk">Nick · 09:45</span>He&#x27;s got a factory. I think he was renting that out at $45,000 a year plus outgoings to his tenant. This is not a big factory by any means. I think it&#x27;s about 400, 500 square meters. He&#x27;s just renegotiated that lease with the tenant at $69,000 plus outgoings.</p>
+          <p><span class="spk">Nick · 10:05</span>And that was a little bit under. He could He could have got $70,000 to $75,000. He did a little bit under because this guy had been in the warehouse for quite some time. So you think about his tenant who&#x27;s running a small business, all of a sudden his lease has gone from $49,000 a year to $69,000.</p>
+          <p><span class="spk">Nick · 10:22</span>So his lease has gone up, you know, just under 50% hypothetically. And that&#x27;s without these land tax changes. So I just worry about the people that are actually renting these. Spaces, particularly off bigger groups, whether they be super funds or property trusts, and what that&#x27;s actually going to look like, because they&#x27;ll be looking to recoup that money from somewhere.</p>
+          <p><span class="spk">Nick · 10:42</span>Jayce, you&#x27;re a tax expert. What do you think?</p>
+          <p><span class="spk">Jason · 10:44</span>Oh, look, definitely haven&#x27;t had time to run all the numbers, but ultimately definitely agree with Marty&#x27;s sentiment that, you know, upfront, that amount of cash that you need to cover the stamp duty definitely helps a lot of people to not have to find that extra money. From a tax perspective, that stamp duty often becomes part of the cost base of the property.</p>
+          <p><span class="spk">Jason · 11:01</span>So then you&#x27;re talking CGT time now and you&#x27;ve got to wait, you know, your 10, 5, 10, 15 years until you sell the property to have that factored into what capital gain did you make and have the stamp duty actually become useful as a deduction to help you pay less tax. Moving over to the annual property tax version, that&#x27;s going to be an annual tax deduction.</p>
+          <p><span class="spk">Jason · 11:20</span>So you&#x27;re going to get your tax saving upfront in the year that you incur those fees. So you&#x27;re not waiting 10 or 20 years to do your CGT schedule to get your benefit for the stamp duty you&#x27;ve shelled out. So you&#x27;ll get an immediate tax benefit. Benefit, you know, if that&#x27;s companies, if that&#x27;s at marginal tax rates and each year the profits from that property were distributed to an income earner paying tax at, let&#x27;s say, 37 cents to the dollar, all of a sudden you&#x27;re getting that tax deduction in the year that it happened rather than having to wait.</p>
+          <p><span class="spk">Jason · 11:50</span>So I don&#x27;t mind that when you&#x27;re looking at tax savings and I&#x27;m working with business owners and individuals at the moment looking for extra tax deductions to help them minimise their tax where it&#x27;s genuine and they need to spend some money. So that&#x27;s definitely fine. Don&#x27;t mind that at all.</p>
+          <p><span class="spk">Marty · 12:06</span>So Chase, if someone sells the property after 5 years, then they&#x27;re only expensing what they&#x27;ve expensed on that land tax to that site. So then they haven&#x27;t necessarily paid what they would be paying usually on the full upfront on the stamp duty in advance.</p>
+          <p><span class="spk">Marty · 12:21</span>So then that could be a benefit if they&#x27;re moving through properties because the next owner will then start to pay that land tax and keep that obligation going for that property. So that&#x27;s interesting in itself as well.</p>
+          <p><span class="spk">Jason · 12:36</span>Instead of multiple people copping hundreds of thousands of dollars of stamp duty every time that property&#x27;s transacted, it&#x27;s just that one annual fee per year. So it definitely makes a lot more sense in that aspect. So definitely getting into the market better. The longer term though, I guess, you know, as you said, Nick, where you&#x27;ve got portfolios that are owned and it&#x27;s long term, every year copping that over and over and over again.</p>
+          <p><span class="spk">Jason · 12:58</span>And you&#x27;ve got to think, I guess, as well, for the people that have already paid stamp duty in the past, once they transition into the annual property tax game as well, they&#x27;re kind of getting double hit with that short straw of we&#x27;ve already paid stamp duty and then now we&#x27;re outside of the 10-year bracket.</p>
+          <p><span class="spk">Jason · 13:13</span>Now we&#x27;re on the annual property tax scheme. So they&#x27;re going to get hit with that as well.</p>
+          <p><span class="spk">Nick · 13:18</span>That&#x27;s a good point. So Marty, just explain to me how this works. So let&#x27;s say I&#x27;m buying a commercial place now.</p>
+          <p><span class="spk">Marty · 13:26</span>Yep.</p>
+          <p><span class="spk">Nick · 13:26</span>And if you don&#x27;t know the answer to this, that&#x27;s all good. But I&#x27;m buying a commercial place now. I make the decision to go the ongoing over 10 years instead of the stamp duty. I&#x27;ve actually got the ability to make that decision?</p>
+          <p><span class="spk">Marty · 13:39</span>I think so. I&#x27;ll have to double check, but I think, yeah, I think you have because the property carries that 1% rate. So the next person coming in will then take that over. So once a property reverts to this 1% land tax payment, It never reverts back to an upfront stamp duty ever again.</p>
+          <p><span class="spk">Nick · 13:56</span>Okay, so I buy the property, I hold it for 12 years.</p>
+          <p><span class="spk">Marty · 14:02</span>Yep.</p>
+          <p><span class="spk">Nick · 14:02</span>So after 10 years, I stop paying that land tax, but then someone else comes in and then that re-triggers that 10 years again?</p>
+          <p><span class="spk">Marty · 14:13</span>Yeah, that&#x27;s the interesting one. I have to look into that, what happens after 10 years, because I would think that it would just keep going. I mean, 10 years is there for a reason, but I think that&#x27;s something I want to double-check because you would think that it&#x27;s just, well, maybe that&#x27;s just the cap.</p>
+          <p><span class="spk">Marty · 14:28</span>Maybe that&#x27;s just what it is at 10 years and then it caps out, which makes sense.</p>
+          <p><span class="spk">Nick · 14:33</span>10 years for a single owner. Yeah. And then the new one comes in, that 10 years probably resets because that then, I guess, covers any stamp duty that would&#x27;ve been payable because it would&#x27;ve been payable again. Yeah, look, again, I just worry this will all be, I think the stamp duty saving up front will all become forgotten about when it comes to negotiating leases.</p>
+          <p><span class="spk">Nick · 14:57</span>And I can see the losers out of this being the tenants as people, well, as landlords need more cash flow.</p>
+          <p><span class="spk">Marty · 15:05</span>Nick, do you think by, let&#x27;s say, obviously rents are gonna go up, then does the tenant then go, well, maybe I&#x27;m better off buying property? Now that&#x27;s not always gonna be, the equivalent, I think, price. But I go, is that gonna be an encouragement for people to get into property for that benefit?</p>
+          <p><span class="spk">Nick · 15:25</span>Yeah, 100%, mate. Couldn&#x27;t agree more. And I think it&#x27;s kind of what we&#x27;re seeing now with the resi space. It&#x27;s so difficult to rent that people are just saying, it&#x27;s all too hard to rent. I&#x27;m just gonna see if I can buy. I think the challenge with buying a commercial premises is It&#x27;s attached to your business generally.</p>
+          <p><span class="spk">Nick · 15:47</span>So a commercial owner-occupied premises, if you&#x27;re not coming in purely from an investment point of view, which a lot of people just aren&#x27;t in that commercial investment space, you&#x27;re coming in as an owner-occupied. Now, if that premises is attached to your business and what you&#x27;re doing as a business, at times it can actually hamstring your business.</p>
+          <p><span class="spk">Nick · 16:04</span>Have seen this personally, bought an office that was big enough, all of a sudden it wasn&#x27;t. So we had to get the office next door. All of a sudden that wasn&#x27;t big enough either. And to be transparent, if I had my time again, I would have never bought the office because I think it hamstrung us to that particular office as a business location for too long.</p>
+          <p><span class="spk">Nick · 16:24</span>So there&#x27;s other factors outside of the investment. You know, what if you don&#x27;t have your business and you don&#x27;t need that warehouse anymore or that office anymore? Do you still want the asset? So I think there&#x27;s a lot more decisions that need to be made outside of, I will just buy because it makes sense, you know, because of the stamp duty issue.</p>
+          <p><span class="spk">Nick · 16:44</span>Then it&#x27;s a matter of, well, do we want this asset if we&#x27;re not running the business? Is our business gonna be able to grow with this asset? We can&#x27;t really be nimble if we own it. We can&#x27;t just go and get another lease &#x27;cause we actually own the asset. We&#x27;ve gotta put another tenant in. A lot of the times, the fact that you&#x27;ve gotta re-tenant it will stop you from moving out.</p>
+          <p><span class="spk">Nick · 17:03</span>So, but on the surface, yeah, I agree with you. I think people will look at it now if they&#x27;ve got the ability to, and were ever thinking about buying commercial, why wouldn&#x27;t you do it now? Particularly what&#x27;s happening with the values.</p>
+          <p><span class="spk">Marty · 17:16</span>But that&#x27;s where the professionals come in, like in giving that advice. Because again, you wanna know the business&#x27;s long-term plan. And like you said, it&#x27;s when you think about rents going up, yeah, how feasible is that? But you still have to be in that position where if you are gonna tenant that out to an investor down the track, that it makes sense as well.</p>
+          <p><span class="spk">Marty · 17:35</span>So these are all the conundrums and opportunities you&#x27;ve gotta work through in order to get to a strong decision on it. Jase, anything to add on that?</p>
+          <p><span class="spk">Jason · 17:45</span>Well, not on that. I think rounded that out perfectly and just adds to something different to think about. And obviously dealing with experts when it comes to then the mortgage side of buying a commercial property as well as the cash flow forecasting and everything else that you do as an investor and a business owner before you make those decisions.</p>
+          <p><span class="spk">Jason · 18:01</span>It&#x27;s just again changing the game. Just got to think about it a little bit differently and do what you&#x27;d usually do and forecast it out. There was a couple of other ones, uh, interesting things that came out of the budget, just to round out the budget before we might talk about a couple of the borrowing changes that are really interesting, um, that you guys might want to bring to the table.</p>
+          <p><span class="spk">Jason · 18:18</span>But one of the other ones that I found interesting was the lowering of the threshold for land tax. I actually didn&#x27;t realize how many properties it affected. So the land tax threshold was $300,000 in the value of the property or the land that you own as an investor.</p>
+          <p><span class="spk">Jason · 18:34</span>They&#x27;ve dropped that to $50,000. So you can imagine that probably captures almost every single, you know, property wasn&#x27;t being captured. It actually affects 380,000 homeowners, which I think is a huge number.</p>
+          <p><span class="spk">Jason · 18:50</span>So you can imagine the—</p>
+          <p><span class="spk">Marty · 18:52</span>That&#x27;s residential?</p>
+          <p><span class="spk">Jason · 18:53</span>Yeah, this is land tax. Yeah, on residential. So Anyone who had an investment property that was being rented out that was maybe a small apartment or a small unit townhouse that was low value and wasn&#x27;t copping land tax is now likely to be picked up under land tax.</p>
+          <p><span class="spk">Jason · 19:09</span>So there&#x27;s an extra year, 380,000 homes that are going to get hit with land tax.</p>
+          <p><span class="spk">Marty · 19:14</span>That&#x27;s a disgrace. Again, people trying to get ahead and they&#x27;re saying, we need more rental properties, we need people to be investing in property to provide homes. That&#x27;s a total disincentive. So where I see some upside on the commercial side, I think that move is an absolute disgrace.</p>
+          <p><span class="spk">Marty · 19:32</span>And yeah, there&#x27;s nothing more to say on that from me. I just don&#x27;t like that at all. It&#x27;s just, to me, it&#x27;s wrong.</p>
+          <p><span class="spk">Nick · 19:42</span>Any policy that&#x27;s introduced that is making people that have tried to get ahead in life that are now thinking about selling assets because of the tax attached to it is absolutely ridiculous. And what kind of state are we living in where there&#x27;s a disincentive to try and get ahead?</p>
+          <p><span class="spk">Nick · 19:58</span>Now, there&#x27;s a certain word that&#x27;s attached to that, and I&#x27;ll let everyone at home think about what that is. But the reality is it doesn&#x27;t make sense to buy properties at the moment. Like, it&#x27;s just, of course, there&#x27;s the long-term view, but people are looking at, okay, well, you know, you can talk about negative gearing.</p>
+          <p><span class="spk">Nick · 20:17</span>Well, Negative gearing&#x27;s only a little bit back of what you&#x27;re down. So forget about that being a big incentive to buy. You know, all the media is talking about rental increases and how much, you know, the landlords are getting back in rent. Well, I can tell you now, the average landlord mortgage repayment has gone up $1,000 a month and the average rent received has gone up around $250 a month.</p>
+          <p><span class="spk">Nick · 20:40</span>So there&#x27;s a $750 a month gap there. So there&#x27;s no incentive just because the rents have gone up. And now you&#x27;ve got something like this where the cash flows are already hindered because of the reduction, or sorry, the increase in interest rates.</p>
+          <p><span class="spk">Nick · 20:56</span>Now you&#x27;ve got more land tax. I don&#x27;t know. The only upside that I can see here for existing investors is their house is gonna be worth more. Because who&#x27;s gonna wanna build anymore? You&#x27;ve got immigration coming in, more people need to rent. And there&#x27;s a disincentive to actually produce more property.</p>
+          <p><span class="spk">Nick · 21:13</span>Developers have got to pay that much in costs. This whole cladding issue, you know, like how much did the government put in this cladding issue? And we&#x27;re already like, the fire ratings on our properties were world-class.</p>
+          <p><span class="spk">Jason · 21:27</span>Yeah.</p>
+          <p><span class="spk">Nick · 21:28</span>Some of the stuff, like some of the buildings that went up, the fires were put out by sprinklers once it got past the first level, which is what exactly what the code, the fire code was there to do. Meanwhile, they&#x27;re pumping millions and millions of dollars, and I think it&#x27;s a billion dollars, into trying to fix this cladding issue. So why would you want to buy property at the moment?</p>
+          <p><span class="spk">Nick · 21:46</span>Seriously, unless you&#x27;ve got the ability to improve it, it&#x27;s getting very difficult for the mum and dad investor who have got to fund a weekly shortfall to maintain that property over a long term to get good, to get a good return.</p>
+          <p><span class="spk">Nick · 22:01</span>And now you are more than ever banking on high capital growth. To get some kind of return.</p>
+          <p><span class="spk">Marty · 22:09</span>And so are the government. This is what gets me, is like they know that that capital growth will increase because just the amount of immigrants coming in over the next, particularly in Melbourne, over the next 12 months to 18 months. And yeah, and they&#x27;re gouging now while they can, and they know there&#x27;s going to be an upside on that gouge into the future.</p>
+          <p><span class="spk">Marty · 22:29</span>And again, I just don&#x27;t see I just see, why wouldn&#x27;t you go and invest in other states? So whereas they&#x27;re encouraging the commercial side, I just go, I just don&#x27;t understand. This is where the majority of the market is, in the resi space.</p>
+          <p><span class="spk">Marty · 22:47</span>So people are trying to get ahead, you know, just everyday people. So I just think this was just poorly thought out.</p>
+          <p><span class="spk">Nick · 22:55</span>Yeah.</p>
+          <p><span class="spk">Jason · 22:55</span>Well, that one, the land tax one, that one there is meant to be a COVID relief one or temporary. But like anything the government does, these temporary things sometimes find find a way to linger around longer than what they&#x27;re meant to.</p>
+          <p><span class="spk">Marty · 23:08</span>Payroll tax threshold went up to a million.</p>
+          <p><span class="spk">Jason · 23:10</span>Yes. Yes.</p>
+          <p><span class="spk">Marty · 23:11</span>So that&#x27;s, uh, Nick, what a joy.</p>
+          <p><span class="spk">Jason · 23:14</span>$700,000 to $900,000 to July &#x27;24.</p>
+          <p><span class="spk">Marty · 23:18</span>$900,000, was it?</p>
+          <p><span class="spk">Jason · 23:19</span>Yeah, well, $900,000 phases to $900,000 from July &#x27;24, and then from a million from July &#x27;25. But once again, Victoria is the most expensive, you know, comparing to the East Coast, New South Wales, and Queensland. Victoria is by far the most expensive state to employ, to give people jobs, to have employees.</p>
+          <p><span class="spk">Marty · 23:35</span>So Such a great idea to just give that to the government instead of employing another person. What a prick.</p>
+          <p><span class="spk">Nick · 23:42</span>It&#x27;s only gone up at the higher end of town anyway, hasn&#x27;t it? So it&#x27;s getting it back there.</p>
+          <p><span class="spk">Jason · 23:46</span>Yeah, the higher end of town, payroll tax has gone up for the higher end and then thresholds are actually going up for small business. So if you&#x27;re approaching the $700,000 amount and you&#x27;re thinking, I&#x27;m not going to give anyone else a job or there&#x27;s no pay rises because we&#x27;re about to tip over into payroll tax land, If you can hold off for a year, you&#x27;ll get to $900,000 from July &#x27;24.</p>
+          <p><span class="spk">Jason · 24:07</span>Yeah, so might be a way of negotiating your pay rises and locking people in for a year and pushing, kicking that, well, getting rid of that payroll tax can rather than kicking it down the road.</p>
+          <p><span class="spk">Marty · 24:19</span>But Chase, just you mentioning that again shows you how stupid it is. Like, you would rather invest that into your people than do that. Oh man.</p>
+          <p><span class="spk">Nick · 24:30</span>Anyway, to make an extra 5%, they&#x27;re really foregoing hypothetically somewhere between 20% and 30% to give me the incentive to hire a new person.</p>
+          <p><span class="spk">Jason · 24:41</span>Yep, 100%. Exactly.</p>
+          <p><span class="spk">Nick · 24:42</span>This is why these people aren&#x27;t in business.</p>
+          <p><span class="spk">Jason · 24:43</span>Yeah, and look, they, they could do that too. And I think they had it during COVID that between 2021 and 2022, whatever percentage of wages you increased, they gave you the same percentage discount off your payroll tax bill. Now, if that was the incentive every year for a growing business to hire more people and they would reduce your payroll tax bill, wouldn&#x27;t that be a nice little thank you for growing your business and giving people more jobs?</p>
+          <p><span class="spk">Marty · 25:07</span>Makes sense.</p>
+          <p><span class="spk">Jason · 25:08</span>That was a little one-off COVID bloody grant, and now they&#x27;re going the other way and trying to suck all that money back in. So what was nice a few years ago is now we&#x27;re feeling the pain for that. And final one for me to add in before I will ask you guys to touch base on this borrowing capacity changes.</p>
+          <p><span class="spk">Jason · 25:26</span>And this is a big one for all business owners out there to pay attention to. When you&#x27;re looking at your &#x27;23/&#x27;24 forecast, you&#x27;re running your budget, you&#x27;re doing your numbers. One of the biggest line items that you will need to look at is your WorkCover insurance premium.</p>
+          <p><span class="spk">Jason · 25:42</span>So we&#x27;ve got a business that pays, let&#x27;s say an example, they pay $100,000 in WorkCover premiums. They&#x27;ve got a big team, they&#x27;re doing a risky job. That&#x27;s now likely to go up to $142,000 next year. Just a crisp 42% increase on your WorkCover premiums on average.</p>
+          <p><span class="spk">Jason · 26:00</span>So again, depends on the industry you&#x27;re in. Obviously us white-collar workers, you know, a few risks of paper cuts and things, but our premiums won&#x27;t be as dramatic. But for anyone in trades, construction, high-risk industries, have a look at your WorkCover premiums because they are set to increase by 42%.</p>
+          <p><span class="spk">Nick · 26:19</span>Any idea what&#x27;s driving that?</p>
+          <p><span class="spk">Jason · 26:20</span>Claims. There&#x27;s just been a huge year of claims.</p>
+          <p><span class="spk">Nick · 26:24</span>Purely claims.</p>
+          <p><span class="spk">Jason · 26:25</span>It&#x27;s claims related in a sense that they&#x27;ve just had a ridiculous amount of people on WorkCover through WorkCover Victoria. That may be— look, I think as well, when you look into that, it&#x27;s not just physical injuries. There are people that are on stress leave and mental health related WorkCover claims.</p>
+          <p><span class="spk">Jason · 26:41</span>And over the last couple of years, we know what&#x27;s happened in Victoria. We don&#x27;t have to go and say it and all read between the lines, but there is a lot of people that are on WorkCover right now that aren&#x27;t back at work due to multiple reasons. And what that&#x27;s doing is it&#x27;s now again forcing the Victoria government to push that cost back to business owners and make them wear the cost of everything that&#x27;s happening in our state right now.</p>
+          <p><span class="spk">Nick · 27:04</span>Yeah, so it&#x27;s— so we&#x27;re paying for their COVID stuff up, we&#x27;re paying for the cladding issue that I don&#x27;t think is really an issue, and most people will that know the circumstances, don&#x27;t think the cladding issue is such an issue. What else have they stuffed up, Marty, that we&#x27;re paying for?</p>
+          <p><span class="spk">Marty · 27:21</span>Mate, I, I could go on for the next 2 hours and we haven&#x27;t got 2 hours, but how this bloke is still in is just— I just can&#x27;t believe it. Like, even the kids coming out of schools, it&#x27;s like they missed 2 years. I think the, the mental health issues— there was a great podcast, last podcast with John Pearl, but just the resilience in people coming into work and performing at their best has been challenged because of those circumstances as well.</p>
+          <p><span class="spk">Marty · 27:48</span>So it&#x27;s like trying to turn a Titanic, and it will turn and things will get back to normal. But just the damage that&#x27;s been done throughout various different sectors and for people, I think, can&#x27;t be underestimated here.</p>
+          <p><span class="spk">Marty · 28:03</span>And I&#x27;m not political at all, but this is like Yeah, we could see the fallout across many different areas and now we&#x27;re paying for it. Yep.</p>
+          <p><span class="spk">Jason · 28:13</span>Big time. Nick, give us some good news. What&#x27;s happening with the lender buffers?</p>
+          <p><span class="spk">Nick · 28:18</span>Yeah, and I&#x27;m wary of time, so I&#x27;ll make this reasonably quick and Marty might have some gold here as well. But one of the biggest issues we&#x27;re seeing at the moment, and we&#x27;ve been seeing since the interest rate increases, is people&#x27;s ability to borrow based on their income. So that&#x27;s called your serviceability.</p>
+          <p><span class="spk">Nick · 28:34</span>So how much money can you borrow based on your gross income? When the banks look at how much you can borrow, they add a buffer rate in there, which is driven by the regulators. And at the moment, that&#x27;s 3%. So Jase, if you and Case want to buy a house and your interest rate was 5.5%, the banks will want to see that you can make those repayments if the rates go up to 8.5%.</p>
+          <p><span class="spk">Nick · 28:56</span>Wow. Makes sense? Seems smart. Okay, what if the rates go up? We want to make sure they&#x27;re not going to get in trouble. What&#x27;s happened now is given the rates hypothetically are at the peak of the cycle or very close to it, there&#x27;s discussion that maybe that 3% is a little bit, there&#x27;s a little bit of overkill there.</p>
+          <p><span class="spk">Nick · 29:16</span>So when the rates are 2% and you&#x27;ve got to demonstrate that you can repay the rates at 5%, that makes total sense to me because 2% is too cheap. When they&#x27;re at pushing towards 6% and you&#x27;ve got to show 9% and we&#x27;re already at the top, you would be pretty comfortable we&#x27;re not going to get too many more rate rises and that you and Case don&#x27;t need to demonstrate serviceability at 9% interest rate.</p>
+          <p><span class="spk">Nick · 29:37</span>So the first thing that&#x27;s happened is Westpac were the first to come out. They&#x27;re saying they&#x27;re actually reducing that buffer rate from 3% down to 1%. So if your home loan rate is 6%, you&#x27;ve now got to only demonstrate that you can repay the debt at 7%.</p>
+          <p><span class="spk">Nick · 29:53</span>Wow. Westpac&#x27;s reasoning behind that was this mortgage prison word that&#x27;s floating around, which is, you know, people not being able to refinance into a better rate. Because they can&#x27;t show serviceability anymore because they&#x27;ve got to show serviceability at hypothetically 9%.</p>
+          <p><span class="spk">Nick · 30:08</span>If someone just is simply refinancing and doing nothing else, Westpac will let you do that at a reduced buffer rate of 1%. So it just gives people more freedom to move in between loans if serviceability was an issue.</p>
+          <p><span class="spk">Nick · 30:24</span>Second to that, there are some smaller lenders, and this is what we often see when lending gets tighter. You&#x27;ll generally see smaller lenders who can be more nimble come out with policies that will help attract business. So there&#x27;s a couple of lenders that are now coming out and saying, well, we&#x27;ve dropped our rate, our buffer rate to 2% across the board.</p>
+          <p><span class="spk">Nick · 30:44</span>So whether that&#x27;s a purchase or you need to move from one bank to another for a better refinance rate, or you need to increase your loan to put a new kitchen in or do a renovation, we&#x27;re now 2%. Because we think the rates are at the top of their peak of the cycle and we think a 2% buffer is more than enough for us to be comfortable our clients are going to be able to afford their repayments.</p>
+          <p><span class="spk">Nick · 31:05</span>So the reality is it just gives people more ability to borrow. It&#x27;s good for the property market. It means instead of maybe being able to lend $700,000, people can now lend $750,000, $760,000 because a lot of people are getting priced out of property or not having the ability to borrow because of that buffer rate.</p>
+          <p><span class="spk">Nick · 31:26</span>So Well, it was only a matter of time. What&#x27;ll be interesting now is to see which lenders follow suit. Today&#x27;s being the 29th of May that we&#x27;re recording this, and there&#x27;s already been quite a few lenders come out that have followed suit. The big thing for me will be whether or not the regulators, which is APRA, who set these guidelines— the banks are allowed to go out these guidelines, but they need to have a good reason.</p>
+          <p><span class="spk">Nick · 31:49</span>So what&#x27;ll be interesting is if the regulator actually comes in now and does something and actually officially drops what their guidance is. But it&#x27;s a good news story. Means people can refinance into better rates and it means those people who were maybe on the borderline of serviceability for being able to purchase the property they wanted to, hopefully will now have some options with some smaller lenders.</p>
+          <p><span class="spk">Marty · 32:11</span>Yeah, well said, Nick. I think Liberty, ANZ and AFG have come out on that 1% buffer rate for refinances, which is really good. So I think the trend has been set. All will follow. This is great news because our whole purpose, our whole life is based on putting people&#x27;s best interests at heart.</p>
+          <p><span class="spk">Marty · 32:31</span>And there is no way that you should be stopped from getting a better rate because of that buffer rate. If you are putting someone in a better position and their income supports that from, you know, being able to, you know, they&#x27;re paying what they&#x27;re paying now. So I&#x27;m fully on board with that.</p>
+          <p><span class="spk">Marty · 32:48</span>I think it&#x27;s a great idea and we&#x27;ve just given the key to unlock the mortgage prison, which is We don&#x27;t need to hear that term hopefully ever again if we&#x27;re doing the right thing by people and this is a policy in the right direction. And I think you&#x27;re right, Nick. I think other lenders will follow even on a 2% buffer rate for new purchases.</p>
+          <p><span class="spk">Marty · 33:06</span>Resimac&#x27;s done that at the moment. I think that would be wise. &#x27;Cause again, you can&#x27;t have people earning $100,000, $125,000 and only able to borrow $400,000. It doesn&#x27;t make sense. I mean, it&#x27;s— whereas they could have borrowed probably about $700, $800 going back 18 months ago.</p>
+          <p><span class="spk">Marty · 33:25</span>So it&#x27;s a significant hit. So we have to have some reasoning around this particular— at the top end of the interest rate cycle to allow people to do what they need to do and also to support people, to put them into better positions. I think that&#x27;s the main lesson out of this.</p>
+          <p><span class="spk">Marty · 33:44</span>So yeah. Good. A good move to the positive there. Jase, excited about that?</p>
+          <p><span class="spk">Jason · 33:48</span>Oh guys, 100%. And it was just so good to finish on some good news after what we just went through earlier in the episode. Every now and then we have to do it. We have to bring the news to the people. But I like that you guys found a way to—</p>
+          <p><span class="spk">Marty · 33:59</span>Can we get Dan Andrews on? Is it— can we, can we do that?</p>
+          <p><span class="spk">Jason · 34:03</span>I mean, we could.</p>
+          <p><span class="spk">Nick · 34:04</span>Oh yeah, yeah, you can count, you can count me out of that chat, mate.</p>
+          <p><span class="spk">Marty · 34:08</span>No, I&#x27;ll take it while I want.</p>
+          <p><span class="spk">Jason · 34:09</span>Done. Marty V and the hard questions to Danny A. So let&#x27;s— I&#x27;ll send you the highlights reel of my arms swinging Like a KO Mini.</p>
+          <p><span class="spk">Nick · 34:18</span>I just want all the good stuff in like 5 minutes.</p>
+          <p><span class="spk">Jason · 34:20</span>Oh, KO Mini. I know what you do on the weekend, Nico. Recapping the Adelaide win over the Brizzy Lions. Anyway, before we get off topic, everybody, thank you for listening. It&#x27;s been another episode of The Numbers Game. Glad to finish on some great news there, Nick and Marty. And then apart from that, make sure you&#x27;re planning for your future when it comes to all things nasty state taxes.</p>
+          <p><span class="spk">Jason · 34:39</span>Until next time though, game over.</p>
+        </div>
+      </details>
+
+    </div>
+
+    <!-- audio-only: the Spotify player is the hero above; duplicate embed removed -->
+
+    <div class="listen">
+      <a href="https://open.spotify.com/episode/78k4JeUZ96kec4QH6qLsMA" target="_blank" rel="noopener" aria-label="Listen to this episode on Spotify">
+        <svg viewBox="0 0 24 24"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.52 17.34c-.24.36-.66.48-1.02.24-2.82-1.74-6.36-2.1-10.56-1.14-.42.12-.78-.18-.9-.54-.12-.42.18-.78.54-.9 4.56-1.02 8.52-.6 11.64 1.32.42.18.48.66.3 1.02zm1.44-3.3c-.3.42-.84.6-1.26.3-3.24-1.98-8.16-2.58-11.94-1.38-.48.12-1.02-.12-1.14-.6-.12-.48.12-1.02.6-1.14 4.32-1.32 9.72-.66 13.44 1.62.36.18.54.78.3 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.3c-.6.18-1.2-.18-1.38-.72-.18-.6.18-1.2.72-1.38 4.26-1.26 11.28-1.02 15.72 1.62.54.3.72 1.02.42 1.56-.3.42-1.02.6-1.56.3z"/></svg>
+        Spotify
+      </a>
+      <a href="https://podcasts.apple.com/au/podcast/id1555566088?i=1000776470464" target="_blank" rel="noopener" aria-label="Listen to this episode on Apple Podcasts">
+        <svg viewBox="0 0 24 24"><path d="M5.34 0A5.328 5.328 0 000 5.34v13.32A5.328 5.328 0 005.34 24h13.32A5.328 5.328 0 0024 18.66V5.34A5.328 5.328 0 0018.66 0H5.34zm6.525 2.568c2.336 0 4.448.902 6.056 2.587 1.224 1.272 1.912 2.619 2.264 4.392l.04.23c.04.272-.16.527-.432.567a.505.505 0 01-.567-.431l-.04-.213c-.312-1.57-.92-2.747-2.004-3.867-1.428-1.496-3.293-2.294-5.393-2.294-2.1 0-3.966.798-5.394 2.294-1.084 1.12-1.692 2.298-2.004 3.867l-.04.213a.507.507 0 01-.567.431.504.504 0 01-.432-.567l.04-.23c.352-1.773 1.04-3.12 2.264-4.392 1.608-1.685 3.72-2.587 6.056-2.587h.153zm.136 3.033c1.74 0 3.312.67 4.527 1.934.883.916 1.394 1.93 1.663 3.253l.04.23a.505.505 0 01-.431.567.503.503 0 01-.567-.432l-.04-.212c-.23-1.112-.659-1.97-1.396-2.732-1.052-1.1-2.404-1.672-3.9-1.672s-2.849.572-3.901 1.672c-.737.762-1.167 1.62-1.396 2.732l-.04.212a.503.503 0 01-.567.432.505.505 0 01-.432-.567l.04-.23c.27-1.323.78-2.337 1.664-3.253 1.215-1.264 2.787-1.934 4.527-1.934h.21zm-.078 3.05c1.092 0 2.091.424 2.89 1.22.582.58.924 1.245 1.107 2.15l.04.218a.501.501 0 01-.424.568.499.499 0 01-.568-.424l-.04-.198c-.146-.724-.413-1.253-.871-1.716-.63-.63-1.398-.957-2.226-.957s-1.595.328-2.225.957c-.459.463-.726.992-.871 1.716l-.04.198a.499.499 0 01-.568.424.501.501 0 01-.424-.568l.04-.219c.183-.904.525-1.569 1.106-2.149.8-.796 1.799-1.22 2.89-1.22h.184zM12 14.07a2.477 2.477 0 012.48 2.478A2.477 2.477 0 0112 19.024a2.477 2.477 0 01-2.48-2.477A2.477 2.477 0 0112 14.07z"/></svg>
+        Apple
+      </a>
+      <a class="yt-pill" href="https://www.youtube.com/@thenumbersgamepodcast?sub_confirmation=1" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.12-2.14C19.5 3.55 12 3.55 12 3.55s-7.5 0-9.38.51A3 3 0 0 0 .5 6.2 31.4 31.4 0 0 0 0 12a31.4 31.4 0 0 0 .5 5.8 3 3 0 0 0 2.12 2.14c1.88.51 9.38.51 9.38.51s7.5 0 9.38-.51a3 3 0 0 0 2.12-2.14A31.4 31.4 0 0 0 24 12a31.4 31.4 0 0 0-.5-5.8zM9.55 15.57V8.43L15.82 12z"/></svg>
+        Subscribe
+      </a>
+    </div>
+    <!-- LISTEN:END -->
+
+    <div class="relsec">
+      <span class="rtitle">Discover more</span>
+      <div class="relgrid">
+        <a class="relcard" href="/why-every-business-owner-needs-a-tax-planning-meeting">
+          <img src="https://i.ytimg.com/vi/N-4IKD5gZVk/hqdefault.jpg" alt="EP 234 thumbnail">
+          <span class="rt">Why Every Business Owner Needs a Tax Planning Meeting</span>
+          <span class="rfoot"><span class="rwhy">2 June 2025</span><span class="rtag">EP 234</span></span>
+        </a>
+        <a class="relcard" href="/hunter-vs-farmer-and-fixing-your-sales-strategy">
+          <img src="https://i.ytimg.com/vi/_qzRCuvzt3g/hqdefault.jpg" alt="EP 224 thumbnail">
+          <span class="rt">Hunter vs. Farmer and Fixing Your Sales Strategy</span>
+          <span class="rfoot"><span class="rwhy">24 March 2025</span><span class="rtag">EP 224</span></span>
+        </a>
+        <a class="relcard" href="/victoria-s-50-billion-dollar-problem">
+          <img src="https://i.ytimg.com/vi/hB8h9aFKk1M/hqdefault.jpg" alt="EP 171 thumbnail">
+          <span class="rt">Victoria&#x27;s 50 Billion Dollar Problem</span>
+          <span class="rfoot"><span class="rwhy">22 April 2024</span><span class="rtag">EP 171</span></span>
+        </a>
+        <a class="relcard" href="/the-numbers-game-of-life-marty-s-5-biggest-lessons">
+          <img src="https://i.ytimg.com/vi/bM7PFcSZj6Q/hqdefault.jpg" alt="EP 261 thumbnail">
+          <span class="rt">The Numbers Game of Life: Marty&#x27;s 5 Biggest Lessons</span>
+          <span class="rfoot"><span class="rwhy">8 December 2025</span><span class="rtag">EP 261</span></span>
+        </a>
+        <a class="relcard" href="/the-business-of-gift-cards">
+          <img src="https://i.ytimg.com/vi/nC_JkW320Tw/hqdefault.jpg" alt="EP 282 thumbnail">
+          <span class="rt">The Business of Gift Cards | Why Most Get the Accounting Wrong</span>
+          <span class="rfoot"><span class="rwhy">22 June 2026</span><span class="rtag">EP 282</span></span>
+        </a>
+        <a class="relcard" href="/are-low-interest-rates-gone-for-good-in-australia">
+          <img src="https://i.ytimg.com/vi/JC5ff2GpyZU/hqdefault.jpg" alt="EP 239 thumbnail">
+          <span class="rt">Are Low Interest Rates Gone for Good In Australia?</span>
+          <span class="rfoot"><span class="rwhy">7 July 2025</span><span class="rtag">EP 239</span></span>
+        </a>
+      </div>
+      <div class="reldots" id="reldots"></div>
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="footgrid">
+      <div class="fcol">
+        <div class="foot-label">Brought to you by</div>
+        <div class="sponsors">
+          <a href="https://www.inovayt.com.au/" target="_blank" rel="noopener"><img src="assets/inovayt-white.png" alt="Inovayt"></a>
+          <a href="https://futureadvisory.com.au/" target="_blank" rel="noopener"><img src="assets/future-advisory-white.png" alt="Future Advisory"></a>
+        </div>
+      </div>
+      <div class="fcol produced">
+        <div class="foot-label">Produced by</div>
+        <a href="https://www.vidpod.com.au/" target="_blank" rel="noopener"><img src="assets/vidpod-white.png" alt="VIDPOD"></a>
+      </div>
+    </div>
+    <nav class="footnav">
+      <a href="index.html">Home</a><a href="episodes.html">Every episode</a><a href="adventure.html">Choose your own adventure</a><a href="about.html">About the show</a><a href="nick-reilly.html">Nick Reilly</a><a href="jason-robinson.html">Jason Robinson</a><a href="contact.html">Contact</a>
+    </nav>
+    <div class="copyright">© 2026 The Numbers Game</div>
+  </footer>
+
+  <script>
+    var VIDEO='RAQ80ecsDq0';
+
+    /* Mobile nav dropdown. */
+    var burger=document.getElementById('navburger'), navdrop=document.getElementById('navdrop');
+    if(burger&&navdrop){burger.addEventListener('click',function(){
+      navdrop.hidden=!navdrop.hidden;
+      burger.setAttribute('aria-expanded', navdrop.hidden?'false':'true');
+    });}
+
+    /* Voice-note button reveals the recorder; × tucks it away. */
+    var vbtn=document.getElementById('vbtn'), vslot=document.getElementById('vslot'), vclose=document.getElementById('vclose');
+    if(vbtn&&vslot){vbtn.addEventListener('click',function(){vslot.hidden=!vslot.hidden;});}
+    if(vclose&&vslot){vclose.addEventListener('click',function(){vslot.hidden=true;});}
+
+    /* Keep-exploring dots: only shown when the strip actually scrolls (mobile). */
+    var rg=document.querySelector('.relgrid'), rd=document.getElementById('reldots');
+    if(rg&&rd){
+      var relCards=rg.querySelectorAll('.relcard');
+      relCards.forEach(function(){rd.appendChild(document.createElement('span'))});
+      var updDots=function(){
+        var scrollable=rg.scrollWidth>rg.clientWidth+4;
+        rd.style.display=scrollable?'flex':'none';
+        if(!scrollable)return;
+        var i=Math.round(rg.scrollLeft/(rg.scrollWidth-rg.clientWidth)*(relCards.length-1));
+        rd.querySelectorAll('span').forEach(function(s,n){s.classList.toggle('on',n===i)});
+      };
+      rg.addEventListener('scroll',updDots,{passive:true});
+      window.addEventListener('resize',updDots);
+      updDots();
+    }
+
+    /* Explore tabs: swap the visible panel; the row stays put so you never lose your place. */
+    var tabBtns=document.querySelectorAll('.tabbtn');
+    tabBtns.forEach(function(b){
+      b.addEventListener('click',function(){
+        tabBtns.forEach(function(o){o.classList.remove('on')});
+        document.querySelectorAll('.tpanel').forEach(function(p){p.hidden=true});
+        b.classList.add('on');
+        document.getElementById(b.getAttribute('data-panel')).hidden=false;
+      });
+    });
+
+    /* Audio-only: Spotify player is the hero; chapters/questions seek it via the Spotify iFrame API. */
+    var spotifyCtrl=null, pendingSeek=null;
+    function nudge(){
+      var p=document.getElementById('player-wrap'), r=p.getBoundingClientRect();
+      if(r.bottom<80 || r.top>window.innerHeight-90){ p.scrollIntoView({behavior:'smooth',block:'start'}); }
+    }
+    function startAt(sec){
+      nudge();
+      if(spotifyCtrl){ spotifyCtrl.seek(sec); spotifyCtrl.resume(); } else { pendingSeek=sec; }
+    }
+    window.onSpotifyIframeApiReady=function(IFrameAPI){
+      IFrameAPI.createController(document.getElementById('spotify-embed'),
+        {uri:'spotify:episode:5zPLJvUGdlmU2L9EycjBsf', width:'100%', height:'232'},
+        function(c){ spotifyCtrl=c; if(pendingSeek!=null){ c.seek(pendingSeek); c.resume(); pendingSeek=null; } });
+    };
+    (function(){var sc=document.createElement('script');sc.src='https://open.spotify.com/embed/iframe-api/v1';sc.async=true;document.head.appendChild(sc);})();
+  </script>
+</body>
+</html>

@@ -1,0 +1,645 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EP 1 · Budgets, Fixed Rates &amp; Coffee | The Numbers Game</title>
+<meta name="description" content="Welcome to episode 1 of The Numbers Game podcast. In this episode we discuss stocks, fixed rates, a new accounting app called Thrive, saving money with coffe…">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" sizes="64x64" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="canonical" href="https://thenumbersgamepodcast.com.au/budgets-fixed-rates-coffee">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="The Numbers Game">
+<meta property="og:title" content="EP 1 · Budgets, Fixed Rates &amp; Coffee | The Numbers Game">
+<meta property="og:description" content="Welcome to episode 1 of The Numbers Game podcast. In this episode we discuss stocks, fixed rates, a new accounting app called Thrive, saving money with coffe…">
+<meta property="og:url" content="https://thenumbersgamepodcast.com.au/budgets-fixed-rates-coffee">
+<meta property="og:image" content="https://thenumbersgamepodcast.com.au/assets/tng-audio-only-thumbnail.webp">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+  :root{
+    --purple:#585af3; --purple-dark:#2c1b8a; --mint:#7ad9a8;
+    --white:#ffffff; --muted:rgba(255,255,255,.60); --dim:rgba(255,255,255,.42);
+    --line:rgba(255,255,255,.12); --card:rgba(255,255,255,.05); --card-hi:rgba(255,255,255,.09);
+    --display:'Anton',Impact,'Helvetica Neue',sans-serif;
+    --sans:'Inter',system-ui,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif;
+    --wrap:1280px;   /* page frame (nav spans this) */
+    --col:960px;     /* content column (player, tabs, text) */
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:var(--sans); color:var(--white); line-height:1.6; -webkit-font-smoothing:antialiased;
+    background:#12093a;
+    background-image:
+      radial-gradient(1200px 600px at 82% -6%, rgba(88,90,243,.45) 0%, transparent 55%),
+      radial-gradient(900px 700px at 5% 8%, rgba(122,217,168,.10) 0%, transparent 50%),
+      linear-gradient(180deg,#2c1b8a 0%,#1a1150 28%,#100b34 62%,#0b0820 100%);
+    background-attachment:fixed;
+  }
+  a{color:inherit}
+  .wrap{max-width:var(--wrap);margin:0 auto;padding:0 36px}
+  main.wrap{max-width:var(--col)}
+  @media(max-width:720px){.wrap{padding:0 22px}}
+
+  /* ── Navbar ── */
+  .nav{position:sticky;top:0;z-index:50;background:linear-gradient(180deg,rgba(24,15,74,.92),rgba(24,15,74,.72));backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+  .nav-in{max-width:var(--wrap);margin:0 auto;padding:11px 36px;display:flex;align-items:center;justify-content:space-between}
+  @media(max-width:720px){.nav-in{padding:11px 22px}}
+  .brand{display:block;line-height:0}
+  .brand img{height:36px;width:auto;display:block}
+  .navlinks{display:flex;gap:28px;align-items:center}
+  .navlinks a{text-decoration:none;font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);transition:.15s}
+  .navlinks a:hover{color:var(--white)}
+  .navlinks a.navtop{cursor:default}
+  .navgroup{position:relative;display:flex;align-items:center}
+  .navgroup .subnav{display:none;position:absolute;top:100%;left:50%;transform:translateX(-50%);padding-top:14px;min-width:180px}
+  .navgroup:hover .subnav,.navgroup:focus-within .subnav{display:block}
+  .subnav-in,.navgroup .subnav{z-index:60}
+  .navgroup .subnav a{display:block;background:#180f4a;border:1px solid var(--line);border-top:0;padding:12px 16px;font-size:12px;color:rgba(255,255,255,.85)}
+  .navgroup .subnav a:first-child{border-top:1px solid var(--line)}
+  .navgroup .subnav a:hover{background:#221768;color:var(--white)}
+  .navburger{display:none;background:none;border:1px solid var(--line);padding:8px 10px;cursor:pointer;color:var(--white);transition:.15s}
+  .navburger:hover{border-color:rgba(122,217,168,.6)}
+  .navburger svg{width:20px;height:20px;fill:currentColor;display:block}
+  .navdrop{display:none}
+  @media(max-width:720px){
+    .navlinks{display:none}
+    .navburger{display:block}
+    .navdrop{display:block;position:absolute;left:0;right:0;top:100%;
+      background:#180f4a;border-bottom:1px solid var(--line);box-shadow:0 24px 50px rgba(0,0,0,.45)}
+    .navdrop[hidden]{display:none}
+    .navdrop a{display:block;padding:15px 22px;text-decoration:none;font-size:14px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:rgba(255,255,255,.9);border-bottom:1px solid rgba(255,255,255,.06)}
+    .navdrop a:last-child{border-bottom:0}
+    .navdrop a.sub{padding-left:42px;font-size:13px;color:rgba(255,255,255,.72)}
+    .navdrop .navlabel{display:block;padding:15px 22px 6px;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.4)}
+  }
+
+  /* ── Hero / hook (marker-highlight system: purple hook wraps naturally, mint payoff below)
+     Rules: title splits at its natural break (colon/pipe/question mark). Front = hook (purple,
+     big), back = payoff (mint, smaller). No break in title = purple hook only. Highlights hug
+     the text (tight em padding tuned to Anton) and wrap via box-decoration-break — never
+     hand-pick line breaks or mint words. ── */
+  header.hero{padding:34px 0 6px}
+  .hook{--inx:clamp(8.4px,2.1vw,15.6px)} /* one shared text inset so hook + payoff first letters align */
+  .hook .hk{font-family:var(--display);font-weight:400;text-transform:uppercase;
+    font-size:clamp(28px,7vw,52px);line-height:1.3;letter-spacing:-.5px;text-wrap:balance}
+  .hook .hk span{color:var(--white);padding:.04em var(--inx) .02em;
+    background:linear-gradient(var(--purple),var(--purple)) 0 50%/100% 87% no-repeat;
+    -webkit-box-decoration-break:clone;box-decoration-break:clone}
+  .hook .pay{font-family:var(--display);font-weight:400;text-transform:uppercase;
+    font-size:clamp(16px,4vw,24px);line-height:1.5;letter-spacing:.6px;margin-top:8px;text-wrap:balance}
+  .hook .pay span{color:#0a0a0a;padding:.08em var(--inx) .04em;
+    background:linear-gradient(var(--mint),var(--mint)) 0 50%/100% 88% no-repeat;
+    -webkit-box-decoration-break:clone;box-decoration-break:clone}
+  /* no-hook titles: mid-split into two full-size rows, purple then mint */
+  .hook .hk span.hkrow{display:block;background:none;padding:0}
+  .hook .hk .hkrow+.hkrow{margin-top:8px}
+  .hook .hk span.mintseg{color:#0a0a0a;
+    background:linear-gradient(var(--mint),var(--mint)) 0 50%/100% 87% no-repeat}
+
+  /* ── Player (clean facade → real player on tap) ── */
+  .player-wrap{margin:24px 0 4px;scroll-margin-top:76px}
+  .audio-hero{width:100%;min-height:232px;border-radius:12px;overflow:hidden;box-shadow:0 30px 70px rgba(0,0,0,.5),0 0 0 1px rgba(255,255,255,.06)}
+  .audio-hero iframe{display:block;width:100%;border:0}
+  .player{position:relative;width:100%;padding-top:56.25%;border-radius:0;overflow:hidden;background:#000;box-shadow:0 30px 70px rgba(0,0,0,.5),0 0 0 1px rgba(255,255,255,.06)}
+  .facade{position:absolute;inset:0;border:0;cursor:pointer;background-size:cover;background-position:center;display:flex;align-items:center;justify-content:center;padding:0}
+  .facade .play{width:74px;height:74px;border-radius:50%;background:rgba(10,6,30,.40);border:2px solid rgba(255,255,255,.72);display:flex;align-items:center;justify-content:center;transition:.18s;-webkit-backdrop-filter:blur(1px);backdrop-filter:blur(1px)}
+  .facade:hover .play{background:rgba(88,90,243,.62);transform:scale(1.07);border-color:#fff}
+  .facade .play::after{content:"";border-style:solid;border-width:11px 0 11px 19px;border-color:transparent transparent transparent #fff;margin-left:5px}
+  .player iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+
+  /* ── Episode facts (bottom of the Summary panel — templated per episode) ── */
+  .sumfacts{margin:14px 10px 4px;padding-top:13px;border-top:1px solid rgba(255,255,255,.08);display:flex;flex-direction:column;gap:8px}
+  .fact{display:flex;gap:12px;font-size:13.5px}
+  .fact .fl{flex:none;width:104px;color:var(--dim);font-weight:600;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;padding-top:2px}
+  .fact .fv{color:rgba(255,255,255,.9);font-weight:500}
+  .fact .fv a{color:var(--mint);text-decoration:none;border-bottom:1px solid rgba(122,217,168,.4);transition:.15s}
+  .fact .fv a:hover{border-bottom-color:var(--mint)}
+
+  /* ── Episode tag (identity: black label hanging off the title corner) ── */
+  .eptag{display:inline-block;position:relative;left:-6px;margin-bottom:-7px;z-index:2;
+    background:#0a0a0a;color:var(--white);font-family:var(--display);font-weight:400;
+    font-size:13.5px;letter-spacing:1.5px;text-transform:uppercase;padding:6px 11px 4px}
+
+  /* ── Explore tabs (sticky mode switcher; one panel swaps below, nothing shoves) ── */
+  .explore{margin-top:22px}
+  .tabs{position:sticky;top:58px;z-index:40;display:flex;flex-wrap:wrap;gap:8px;padding:10px 0;
+    background:linear-gradient(180deg,rgba(18,10,55,.96),rgba(18,10,55,.86));
+    backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+  .tabbtn{font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.5px;
+    font-size:14.5px;color:var(--white);background:var(--purple);border:1px solid var(--purple);
+    padding:9px 13px 7px;cursor:pointer;transition:.15s}
+  .tabbtn:hover{filter:brightness(1.12)}
+  .tabbtn.on{background:var(--mint);border-color:var(--mint);color:#0a0a0a}
+  .tabbtn.on:hover{filter:none}
+  .tabbtn .ct{font-size:12px;opacity:.75;font-variant-numeric:tabular-nums}
+  .tabbtn .ct::before{content:" · "}
+  .tpanel{border:1px solid var(--line);background:var(--card);padding:12px 10px 14px}
+  .hint{font-size:12.5px;color:var(--muted);padding:2px 10px 10px;border-bottom:1px solid rgba(255,255,255,.08);margin-bottom:6px}
+
+  /* ── Listen row (no box: label left, service pills follow) ── */
+  .listen{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:12px 16px;margin-top:34px}
+  .listen .lname{font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--dim)}
+  .listen a{display:inline-flex;align-items:center;gap:9px;padding:11px 18px;border-radius:999px;
+    background:var(--mint);color:#08210f;text-decoration:none;font-weight:800;font-size:12.5px;
+    letter-spacing:.04em;text-transform:uppercase;transition:.15s}
+  .listen a:hover{filter:brightness(1.06);transform:translateY(-1px);box-shadow:0 12px 30px rgba(122,217,168,.25)}
+  .listen svg{width:20px;height:20px;fill:currentColor;flex:none}
+  /* ── Listen-now Spotify audio embed (full column width, above the pills) ── */
+  .listen-now{margin-top:40px}
+  .listen-now .ln-head{display:flex;align-items:baseline;justify-content:space-between;gap:14px;margin-bottom:13px}
+  .listen-now .ln-title{font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--dim)}
+  .audio-embed{border-radius:12px;overflow:hidden;box-shadow:0 20px 50px rgba(0,0,0,.4),0 0 0 1px rgba(255,255,255,.06)}
+  .audio-embed iframe{display:block;width:100%;border:0}
+  @media(max-width:720px){.listen-now{margin-top:32px}}
+
+  /* ── Keep exploring (thumbnails link to other episode PAGES, never timecodes).
+     Swipeable strip on mobile, fits three-up on desktop. Variant rule: claim
+     "similar ground" + reason lines ONLY when moment-level topic overlap is
+     genuinely strong; otherwise show the latest released episodes with dates —
+     never invent a connection. ── */
+  .relsec{margin-top:60px;padding-top:58px;border-top:1px solid var(--line)} /* line = end of this episode's info */
+  .reldots{display:flex;justify-content:center;gap:7px;margin-top:12px}
+  .reldots span{width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.25);transition:.2s}
+  .reldots span.on{background:var(--mint)}
+  .relsec .rtitle{display:inline-block;font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.5px;font-size:14.5px;background:var(--mint);color:#0a0a0a;padding:9px 13px 7px;margin-bottom:18px}
+  .relgrid{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding-bottom:6px;scrollbar-width:none}
+  .relgrid::-webkit-scrollbar{display:none}
+  .relcard{flex:0 0 56%;max-width:232px;scroll-snap-align:start;display:flex;flex-direction:column;text-decoration:none;background:var(--card);border:1px solid var(--line);transition:.15s}
+  .relcard:hover{background:var(--card-hi);border-color:rgba(122,217,168,.55)}
+  .relcard img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block}
+  .relcard .rt{display:block;font-size:12.5px;font-weight:600;color:rgba(255,255,255,.92);line-height:1.4;padding:8px 8px 0}
+  .relcard .rfoot{margin-top:auto;display:flex;justify-content:space-between;align-items:flex-end;gap:8px;padding:10px 8px 9px}
+  .relcard .rwhy{font-size:11.5px;color:var(--mint)}
+  .relcard .rtag{display:inline-block;background:#0a0a0a;color:var(--white);font-family:var(--display);font-size:10px;letter-spacing:1.2px;text-transform:uppercase;padding:3px 7px 2px;white-space:nowrap;flex:0 0 auto}
+
+  /* ── Dropdown sections (accordion under the player) ── */
+  .drops{margin-top:34px;display:flex;flex-direction:column;gap:11px}
+  .drop{border:1px solid var(--line);border-radius:0;background:var(--card);overflow:hidden;transition:border-color .15s}
+  .drop[open]{border-color:rgba(122,217,168,.35)}
+  .drop>summary{list-style:none;cursor:pointer;padding:16px 18px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+  .drop>summary::-webkit-details-marker{display:none}
+  .drop>summary .st{font-weight:700;font-size:15.5px;letter-spacing:.005em}
+  .drop>summary .ct{margin-left:auto;font-size:12px;color:var(--dim);font-weight:600;font-variant-numeric:tabular-nums}
+  .drop>summary .chev{flex:none;width:22px;height:22px;border-radius:50%;background:rgba(122,217,168,.14);color:var(--mint);display:flex;align-items:center;justify-content:center;font-family:var(--display);font-size:15px;line-height:1;transition:.2s;transform:translateY(-1px)}
+  .drop[open]>summary .chev{transform:rotate(45deg)}
+  .drop-body{padding:2px 12px 12px}
+
+  /* chapters */
+  .chapter{display:flex;align-items:baseline;gap:14px;width:100%;text-align:left;cursor:pointer;background:none;border:0;color:inherit;font-family:inherit;padding:11px 10px;border-radius:10px;transition:.13s}
+  .chapter:hover{background:var(--card-hi)}
+  .chapter .tc{font-variant-numeric:tabular-nums;font-weight:700;font-size:14px;color:var(--mint);flex:none;width:48px}
+  .chapter .cx{font-size:15px;font-weight:500;color:rgba(255,255,255,.9)}
+  .chapter:hover .cx{color:#fff}
+
+  /* questions */
+  .q{display:flex;align-items:center;gap:12px;width:100%;text-align:left;cursor:pointer;background:none;border:0;border-radius:11px;color:inherit;font-family:inherit;padding:12px 10px;transition:.14s}
+  .q+.q{border-top:1px solid rgba(255,255,255,.05)}
+  .q:hover{background:var(--card-hi)}
+  .q .qm{font-family:var(--display);font-size:15px;color:var(--mint);flex:none;line-height:1;transform:translateY(1px)}
+  .q .qx{font-size:15px;font-weight:500;color:rgba(255,255,255,.92)}
+  .q .go{margin-left:auto;flex:none;color:var(--dim);font-size:18px;transition:.15s}
+  .q:hover .go{color:var(--mint);transform:translateX(2px)}
+
+  /* summary + transcript bodies */
+  .summary-body p{font-size:16.5px;line-height:1.62;color:rgba(255,255,255,.9);padding:6px 10px 4px}
+  .tbody{padding:2px 10px 8px}
+  .tbody p{font-size:14.5px;line-height:1.7;color:rgba(255,255,255,.78);margin-top:15px;max-width:64ch}
+  .tbody .spk{display:block;font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--mint);margin-bottom:2px}
+
+  /* ── Voice note ask (lives at the bottom of the Summary panel) ── */
+  .vask{margin:16px 10px 4px}
+  .vbtn{display:inline-flex;align-items:center;gap:9px;padding:12px 20px;border-radius:999px;border:0;cursor:pointer;
+    background:var(--mint);color:#08210f;font-family:inherit;font-weight:800;font-size:12.5px;
+    letter-spacing:.04em;text-transform:uppercase;transition:.15s}
+  .vbtn:hover{filter:brightness(1.06);transform:translateY(-1px);box-shadow:0 12px 30px rgba(122,217,168,.25)}
+  .vbtn svg{width:18px;height:18px;fill:currentColor;flex:none}
+  .vslot{background:var(--purple);padding:12px 10px 10px;margin:14px 0 4px;box-shadow:0 18px 40px rgba(0,0,0,.35)}
+  .vslot[hidden]{display:none}
+  .vhead{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;margin-bottom:10px}
+  .vhead .vmsg{font-family:var(--sans);font-size:13px;line-height:1.55;color:rgba(255,255,255,.92);margin:2px 0 0;padding:0 2px}
+  .vclose{background:none;border:0;color:rgba(255,255,255,.85);font-size:22px;line-height:1;cursor:pointer;padding:0 2px}
+  .vclose:hover{color:var(--white)}
+  .vslot iframe{display:block}
+
+  /* ── YouTube subscribe pill (sits in the listen row; outranks .listen a's mint) ── */
+  .listen a.yt-pill{background:var(--purple);color:var(--white)}
+  .listen a.yt-pill:hover{filter:brightness(1.1);transform:translateY(-1px)}
+  @media(max-width:720px){ /* mobile: no label, three compact pills on one row */
+    .listen .lname{display:none}
+    .listen{gap:8px}
+    .listen a{padding:10px 13px;font-size:11px;gap:6px}
+    .listen svg{width:16px;height:16px}
+  }
+
+  /* ── Footer: two columns under the line (Brought to you by | Produced by), matches adventure.html ── */
+  footer{border-top:1px solid var(--line);margin-top:68px;padding:52px 20px 58px}
+  .footgrid{max-width:var(--wrap);margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:start}
+  @media(max-width:720px){.footgrid{grid-template-columns:1fr;gap:40px}}
+  .fcol{text-align:center}
+  .foot-label{font-size:11px;font-weight:700;letter-spacing:.26em;text-transform:uppercase;color:var(--dim);margin-bottom:16px}
+  .sponsors{display:flex;justify-content:center;align-items:center;gap:38px;flex-wrap:wrap}
+  .sponsors a{display:inline-flex;transition:.15s}
+  .sponsors a:hover{transform:translateY(-1px)}
+  .sponsors img{height:34px;width:auto;opacity:.92}
+  .sponsors a:hover img{opacity:1}
+  .produced a{display:inline-flex;transition:.15s}
+  .produced a:hover img{opacity:1}
+  .produced img{height:30px;width:auto;opacity:.95}
+  .footnav{margin-top:36px;display:flex;justify-content:center;flex-wrap:wrap;gap:6px 26px}
+  .footnav a{font-size:12px;font-weight:600;letter-spacing:.04em;color:var(--dim);text-decoration:none;transition:.15s}
+  .footnav a:hover{color:var(--mint)}
+  .copyright{margin-top:40px;font-size:12px;color:var(--dim);text-align:center}
+
+  @media(min-width:720px){header.hero{padding:48px 0 6px}}
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "PodcastEpisode", "name": "Buying Commercial Property With Your Super in 2026 | What the Numbers Say", "url": "https://thenumbersgamepodcast.com.au/episode-285.html", "datePublished": "2026-07-13", "episodeNumber": 285, "image": "https://i.ytimg.com/vi/RAQ80ecsDq0/maxresdefault.jpg", "partOfSeries": {"@type": "PodcastSeries", "name": "The Numbers Game", "url": "https://thenumbersgamepodcast.com.au/"}}</script>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-in">
+      <a class="brand" href="index.html" aria-label="The Numbers Game home"><img src="assets/tng-logo.png" alt="The Numbers Game"></a>
+      <div class="navlinks">
+        <a href="index.html">Home</a>
+        <div class="navgroup">
+          <a class="navtop">Episodes</a>
+          <div class="subnav">
+            <a href="episodes.html">All episodes</a>
+            <a href="adventure.html">Find moments</a>
+          </div>
+        </div>
+        <div class="navgroup">
+          <a class="navtop">About</a>
+          <div class="subnav">
+            <a href="about.html">The show</a>
+            <a href="nick-reilly.html">Nick Reilly</a>
+            <a href="jason-robinson.html">Jason Robinson</a>
+          </div>
+        </div>
+        <a href="contact.html">Contact</a>
+      </div>
+      <button class="navburger" id="navburger" type="button" aria-label="Menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24"><path d="M3 6h18v2H3zM3 11h18v2H3zM3 16h18v2H3z"/></svg>
+      </button>
+    </div>
+    <div class="navdrop" id="navdrop" hidden>
+      <a href="index.html">Home</a>
+      <span class="navlabel">Episodes</span>
+      <a class="sub" href="episodes.html">All episodes</a>
+      <a class="sub" href="adventure.html">Find moments</a>
+      <span class="navlabel">About</span>
+      <a class="sub" href="about.html">The show</a>
+      <a class="sub" href="nick-reilly.html">Nick Reilly</a>
+      <a class="sub" href="jason-robinson.html">Jason Robinson</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+
+  <main class="wrap">
+
+    <header class="hero">
+      <div class="hook">
+        <span class="eptag">EP 1</span>
+        <h1 class="hk"><span>Budgets, Fixed Rates &amp; Coffee</span></h1>
+      </div>
+    </header>
+
+    <div class="player-wrap" id="player-wrap">
+      <div class="audio-hero" id="spotify-embed"></div>
+    </div>
+
+    <div class="explore">
+      <div class="tabs" role="tablist">
+        <button class="tabbtn on" data-panel="p-summary">Summary</button>
+      </div>
+      <section class="tpanel" id="p-summary">
+        <div class="summary-body">
+          <p>Welcome to episode 1 of The Numbers Game podcast. In this episode we discuss stocks, fixed rates, a new accounting app called Thrive, saving money with coffee and easy ways to budget your week.</p>
+        </div>
+        <div class="vask">
+          <button class="vbtn" id="vbtn" type="button">
+            <svg viewBox="0 0 24 24"><path d="M12 14a3 3 0 0 0 3-3V6a3 3 0 1 0-6 0v5a3 3 0 0 0 3 3zm5-3a5 5 0 0 1-10 0H5a7 7 0 0 0 6 6.92V21h2v-3.08A7 7 0 0 0 19 11h-2z"/></svg>
+            Send us a voice note
+          </button>
+          <div class="vslot" id="vslot" hidden>
+            <div class="vhead">
+              <p class="vmsg">We'd love to hear from you. You can leave up to a 90 second voice note for us to play on the show: a question, some feedback, or a topic you want covered.</p>
+              <button class="vclose" id="vclose" type="button" aria-label="Close">&times;</button>
+            </div>
+            <iframe src="https://www.speakpipe.com/widget/inline/hhq6kzggsx7zpcsvakgxfrzun3zidpde" allow="microphone" width="100%" height="200" frameborder="0" title="Leave The Numbers Game a voice note"></iframe>
+          </div>
+          <script async src="https://www.speakpipe.com/widget/loader.js" charset="utf-8"></script>
+        </div>
+        <div class="sumfacts">
+          <div class="fact"><span class="fl">Release date</span><span class="fv">1 March 2021</span></div>
+          <div class="fact"><span class="fl">Hosts</span><span class="fv"><a href="jason-robinson.html">Jason Robinson</a> &amp; <a href="nick-reilly.html">Nick Reilly</a> &amp; <a href="marty-vidakovic.html">Marty Vidakovic</a></span></div>
+
+        </div>
+      </section>
+    </div>
+
+    <div class="drops">
+
+      <details class="drop">
+        <summary><span class="st">Episode transcript</span><span class="chev">+</span></summary>
+        <div class="drop-body tbody">
+          <p><span class="spk">Jason · 00:00</span>Thanks to our sponsor Walker Digital, who&#x27;ve stepped in to help The Numbers Game podcast with their social media. Walker Digital are a digital marketing agency covering strategy, content, video implementation, and education. The team at Walker have spread the word of our clients and love working with businesses doing good things, helping them to grow and reach more people so they can scale and get larger.</p>
+          <p><span class="spk">Jason · 00:20</span>I know personally the first thing I did when growing our business was to outsource social media, blogs, and copywriting because I knew it was something that was not the best use of my time, and the girls at Walker Digital smashed it. Sometimes you need to walk before you can run. Find out more at their website, wlkr.digital. This episode does not class as personal advice.</p>
+          <p><span class="spk">Jason · 00:40</span>It is general and does not take into account your objectives, financial situation, or needs. People may also hold positions in the companies discussed. Welcome to episode 1 of The Numbers Game. I&#x27;m Jason, and I&#x27;m here with Nick and Marty. The Numbers Game is going to exist to give you the stories that you need to know about numbers from an accountant, a financial planner, and a mortgage broker.</p>
+          <p><span class="spk">Jason · 01:01</span>Don&#x27;t leave yet. I guarantee you the 30 minutes you spend with us each week is going to give you plenty of insight and knowledge that you guys need to know about things that you&#x27;re doing in your life.</p>
+          <p><span class="spk">Marty · 01:12</span>It&#x27;s Marty here, listeners. I am super stoked about the numbers game. I love numbers. Ever since I&#x27;ve been a cricketer young, I&#x27;ve been checking my averages. Under 10s was about 4.5, not good, but it did improve.</p>
+          <p><span class="spk">Jason · 01:25</span>I got the bowling averages at under 12-year-olds. I think we&#x27;ve got some gun cricketers here.</p>
+          <p><span class="spk">Marty · 01:28</span>This is where it all started. But I suppose we need to learn a little bit about who&#x27;s on the show. And I&#x27;m going to introduce Nick Riley, Managing Director of Innovate Finance and Wealth, financial planner. He likes to celebrate with duck muck, very expensive wine, but only on special occasions.</p>
+          <p><span class="spk">Marty · 01:45</span>He&#x27;s an Italian stallion. He looks sharp. He won&#x27;t tell you that, but when you see him on YouTube, you&#x27;ll see what I mean. And he&#x27;s a very, very sophisticated business owner. So you&#x27;re gonna, we&#x27;re gonna learn a lot from Nick. Welcome to the show, Nick.</p>
+          <p><span class="spk">Nick · 01:58</span>Well, thank you, Marty. I&#x27;m very humbled. I&#x27;m gonna introduce Jason, who is the rose between two thorns today. Might admit it, a self-confessed tax nerd. All around great guy, loves helping people, which is why he&#x27;s so good in his business.</p>
+          <p><span class="spk">Nick · 02:14</span>He has more than one business. His main business is Future Advisory. Again, tax, helping people. The side hustle is a gin business, which he might tell us a bit more about. And I think that might actually be his passion. So rapt to be here with Jase and also you, Marty.</p>
+          <p><span class="spk">Jason · 02:30</span>Mate, and Marty, Marty Vids, what can I say about you, mate? Absolute lover of all things numbers, telling stories, sport, sports business, successful exit of businesses in the past, but also ability to tell us some of the mistakes that were made over the journey and tell us why numbers matter.</p>
+          <p><span class="spk">Marty · 02:48</span>Mate, I&#x27;ve made all the mistakes that could be made. Had a couple of wins along the way that I&#x27;m happy to share as well. So let&#x27;s get into this.</p>
+          <p><span class="spk">Nick · 02:55</span>This is exciting. I might just jump in there. One thing you haven&#x27;t mentioned, which I can see on the bit of paper there, is Marty&#x27;s first career was a stand-up comedian. Which is why he&#x27;s gonna be so natural on this show.</p>
+          <p><span class="spk">Marty · 03:06</span>Yeah.</p>
+          <p><span class="spk">Nick · 03:06</span>How many people know that?</p>
+          <p><span class="spk">Marty · 03:07</span>So you&#x27;re just putting the pressure on from the start now. So I have to be naturally funny. Great. How do we make numbers sexy, guys? That&#x27;s what we&#x27;re all about here.</p>
+          <p><span class="spk">Jason · 03:17</span>Reading the Play each week. We&#x27;re gonna start off by telling you what&#x27;s going on in the industry. Interesting facts, pieces of advice, and things that are gonna help you in your day-to-day finances or business ventures. First up, Nick, what do you got for us for Reading the Play this week?</p>
+          <p><span class="spk">Nick · 03:32</span>I am talking about pure gambling on the stock market that is occurring at the moment.</p>
+          <p><span class="spk">Jason · 03:37</span>Gambling.</p>
+          <p><span class="spk">Nick · 03:38</span>Everyone is a trader. Stocks are being pushed through various social media sites, whether it be Twitter or Facebook or Reddit is another one that&#x27;s quite popular now.</p>
+          <p><span class="spk">Jason · 03:49</span>So that&#x27;s GameStop. GameStop, that was very, very public news recently.</p>
+          <p><span class="spk">Nick · 03:54</span>So I have a similar story to GameStop, but the issue is that people are reading these sites and don&#x27;t do any any research on the companies, listen to other people. And most of these people that are pumping these stocks up are actually owners of those stocks. So I&#x27;m going to give you an example.</p>
+          <p><span class="spk">Nick · 04:10</span>And this is an example that was just yesterday, but it&#x27;s a business called Fat Fish. Fat Fish are a business that invests in tech businesses, more recently in the buy-sell, buy now, pay later space, and also crypto, which is what&#x27;s caused the hype.</p>
+          <p><span class="spk">Nick · 04:27</span>So the start of this month, and we&#x27;re in February 2021, Fatfish was valued at around 3 cents on the ASX. Uh, yesterday Fatfish opened at 32 cents, uh, peaked at 43 cents, and closed at 18 cents.</p>
+          <p><span class="spk">Nick · 04:43</span>So with all the hype, someone has paid 43 cents yesterday for that stock, um, and by the end of the day had lost more than half of their money. So all I&#x27;m saying is just be really careful about where you&#x27;re getting your information from. And then secondly, know when to take a win.</p>
+          <p><span class="spk">Nick · 05:00</span>If something&#x27;s on the up, take some off the table.</p>
+          <p><span class="spk">Jason · 05:03</span>So basically money into Sportsbet is what you&#x27;re recommending rather than into the stock market?</p>
+          <p><span class="spk">Nick · 05:07</span>Well, depending. You probably would understand the sport a lot more than you would Fatfish. So I think people just like the name. It&#x27;s a cool name, right? Fatfish Group. I&#x27;d probably invest in that if someone told me to.</p>
+          <p><span class="spk">Marty · 05:19</span>I like the way you&#x27;re thinking. Take the win and catch it on the up. But like you said, Jase, you know, Sportsbet at least people have an understanding of what&#x27;s happening around that. You know, do your research. I think get professional advice.</p>
+          <p><span class="spk">Nick · 05:32</span>Don&#x27;t just jump on the hype.</p>
+          <p><span class="spk">Jason · 05:33</span>Like, you know, I think I followed the GameStop thing and thought, holy crap, I&#x27;ve missed out here. But now I&#x27;m reading stories of all these people that have lost money as it comes back down. And even I think a lot of people would have jumped into the market back in March last year when COVID was kind of crashed the market and everyone&#x27;s kind of got the, well, what next?</p>
+          <p><span class="spk">Jason · 05:50</span>You know, is it going to crash again? Should I buy now while it&#x27;s at the top?</p>
+          <p><span class="spk">Nick · 05:54</span>So I think when the market dropped by 30% around March, everyone thought there was an opportunity to get in. So you look at businesses like SelfWealth, which are a trading platform, they&#x27;ve got a great app. Their users has just skyrocketed because people are at home, they&#x27;ve got more money than they might have had, and they think the stock market&#x27;s undervalued.</p>
+          <p><span class="spk">Nick · 06:11</span>So everyone&#x27;s been punting, I guess, for lack of a better word. So, you know, we&#x27;re at levels now back to where we were pre-COVID. So it&#x27;s probably time to take some money off the table and maybe put against your mortgage or something.</p>
+          <p><span class="spk">Marty · 06:25</span>And accessibility is the key because it used to be you had to go through a stockbroker to actually invest. You know, now you can do it on platforms like SelfWealth and it&#x27;s easy access for the everyday consumer. And of course there&#x27;s stories being sold that, you know, I got onto GameStop and paid for my mother&#x27;s operation and all these emotional stories coming out.</p>
+          <p><span class="spk">Marty · 06:45</span>Everyone feels like what you just said, Jase, they don&#x27;t wanna miss out. And then of course they&#x27;ve come late to the party and they get, they get crushed. Crucified on the way down. And that&#x27;s why you&#x27;ve gotta do your research. You can&#x27;t buy the emotion. You gotta look at the real core value ultimately.</p>
+          <p><span class="spk">Nick · 07:01</span>And what I can tell you is there are people out there that know this and know what they&#x27;re doing and they know when to pull out because they see the hype. Social media&#x27;s just given everyone the platform to get this information now, whereas you never used to be able to get it. So interesting times.</p>
+          <p><span class="spk">Jason · 07:17</span>Nice one. Marty, what do you got for us on reading the play?</p>
+          <p><span class="spk">Marty · 07:20</span>Well, I&#x27;m just thinking fixed rates are at all-time lows. And the big question in the market is, should I be fixing my home loan at this stage? I mean, we are looking at 2-year and 4-year fixed rates around 1.89% through to 2.09%. And I would say you gotta look at your individual circumstance.</p>
+          <p><span class="spk">Marty · 07:38</span>The banks have always priced that fixed rate in, but given this is as low as I&#x27;ve seen it. So a lot of people rush in and say, I want to fix for 4 years, but life&#x27;s interesting in that a lot can happen in 4 years and circumstances can change.</p>
+          <p><span class="spk">Marty · 07:54</span>You might have to sell your home, might wanna upgrade, and then there are break costs that you don&#x27;t anticipate. So what I would say is think about your personal circumstances, look at potentially fixing 3/4 of the debt and then having a variable component of the debt as well.</p>
+          <p><span class="spk">Marty · 08:11</span>I think that&#x27;s really important. The other thing that&#x27;s not spoken about very often is Why are the break costs so expensive on a fixed rate?</p>
+          <p><span class="spk">Jason · 08:22</span>That was my next question. Yeah.</p>
+          <p><span class="spk">Marty · 08:23</span>And people just don&#x27;t know. There are general exit costs. But if you look at it, let&#x27;s say you lock something in for 4 years at 1.99%. Now let&#x27;s say, now I don&#x27;t think this is gonna happen, but you never know, never assume, right? But let&#x27;s say now that rate goes down to 0.99%, then you&#x27;re looking on a $500,000 type of loan, that&#x27;s like, $5,000 a year.</p>
+          <p><span class="spk">Marty · 08:47</span>So if you&#x27;ve locked in for 4 years, you&#x27;re— and look, and when I say that, the rate has to come down lower to what you fixed it in for. So that&#x27;s a really important component. If it stays put, then no break costs. But if you look at it that way, that can be $20,000 over 4 years.</p>
+          <p><span class="spk">Marty · 09:05</span>That is, yeah, that&#x27;s a big cost. So you just have to take that into account. Talk to your professional. Look at your individual situation. That&#x27;s what I would say. Get professional advice. Look at your independent situation.</p>
+          <p><span class="spk">Jason · 09:21</span>And as you said, getting professional advice, on my end of seeing people&#x27;s tax returns and talking through this stuff, I see the $10,000, $15,000 break fee and sit with a client who, you know, just went, &quot;Oh, I had no choice. I had to make this decision. My circumstances changed.&quot; And it was like, &quot;Well, how did you get into that situation in the first place?&quot; And they went, &quot;Oh, it just seemed like a good deal at the time, so I took it, and the bank were giving some kind of kickback.&quot; And, you know, for refinancing, it&#x27;s like, wow.</p>
+          <p><span class="spk">Jason · 09:45</span>Like, as you said, seek advice, make sure that you&#x27;re doing the right thing over the longer period of time and not just that split-second decision.</p>
+          <p><span class="spk">Marty · 09:52</span>Yeah. And how I would look at it, even on a 2-year fixed rate, if you&#x27;ve got a variable component, at least you can make accelerated repayments without break costs. So you want to have that capability, but you want to structure it over a 2-year period. You might say, okay, we can knock over $50,000, $60,000 in 2 years.</p>
+          <p><span class="spk">Marty · 10:09</span>So you want to have that capability to reduce debt. But remembering on a fixed rate, sometimes you can only make $5,000 to $10,000 extra repayments per annum. So, or over the fixed rate term. So there are limitations that you have to think about when you&#x27;re coming up with a strategy.</p>
+          <p><span class="spk">Marty · 10:24</span>So.</p>
+          <p><span class="spk">Nick · 10:26</span>And coming from a boring financial planner angle, but hedging your bets too, because you really are, if you&#x27;re picking a fixed rate, you are almost punting on what&#x27;s gonna happen with the rate.</p>
+          <p><span class="spk">Marty · 10:37</span>Correct.</p>
+          <p><span class="spk">Nick · 10:38</span>Half fixed, half variable. You almost can&#x27;t go wrong.</p>
+          <p><span class="spk">Marty · 10:41</span>Spreading your risk. Yep.</p>
+          <p><span class="spk">Nick · 10:43</span>I like it.</p>
+          <p><span class="spk">Marty · 10:43</span>Nice one.</p>
+          <p><span class="spk">Jason · 10:45</span>Guys, I&#x27;ve got something to share. I think about 10 or so years ago when Xero started, and you can imagine being in the room with the founders of Xero going, hey, can you throw in a couple of grand? Let&#x27;s see where this goes. And it&#x27;s now worth, I think, market cap of like $18.3 billion. So an Aussie fintech called Thrive just became the fastest ever company to crowdfund $1 million in funding for their new app or business platform.</p>
+          <p><span class="spk">Jason · 11:08</span>Now I get excited by this because it&#x27;s like, you know, Xero came along and disrupted MYOB and Reckon and all these other accounting softwares. So what&#x27;s Thrive? I see you guys kind of looking at me like I&#x27;m a madman. It&#x27;s almost like merging your business bank account with your accounting software, with your lender, with your payment gateway.</p>
+          <p><span class="spk">Jason · 11:28</span>It puts all 4 of these together into one powerful app, and that&#x27;s going to allow you to— using AI, it&#x27;s going to run your business for you in a sense from the financial admin side. It&#x27;s going to bookkeep your accounts. It&#x27;s going to be a CFO in your pocket is the term that they&#x27;re coining. And it&#x27;s effectively, it&#x27;s aimed at the small business owners, the gig economy, sole traders, not so much, you know, your businesses with 10, 20 employees, but those smaller businesses which make up the vast majority of the businesses that we have in Australia anyway, who</p>
+          <p><span class="spk">Jason · 11:58</span>probably feel like the cost to do accounting and to do financial admin is beyond their reach and they go about it alone. And I think that&#x27;s why we, we see so many businesses fail. So Obviously seek advice, have a bit of a squeeze, but I think Thrive is something to watch moving forward.</p>
+          <p><span class="spk">Jason · 12:13</span>And hopefully in a couple of years we can look back at this episode and go, hey, remember when we talked about Thrive and look at it now, it&#x27;s everywhere.</p>
+          <p><span class="spk">Nick · 12:20</span>Well, efficiencies too, I guess. Like I remember when I started in business, Saturday was my admin day. So that was bookkeeping, paying bills and whatnot. So there&#x27;d be a lot of small businesses in the same boat. Get some time back too, I guess.</p>
+          <p><span class="spk">Marty · 12:33</span>Yeah, there&#x27;s a lot of pressure on small business owners. So again, we&#x27;re across many different things. So something like that would be fantastic in regards to just simply simplifying that component of the business.</p>
+          <p><span class="spk">Jason · 12:43</span>It&#x27;s funny you say saving time. I think that&#x27;s one of their big taglines is saving time and money for the business owner.</p>
+          <p><span class="spk">Nick · 12:48</span>It&#x27;s my marketing brain kicking in, mate. Mate, absolutely.</p>
+          <p><span class="spk">Jason · 12:52</span>We&#x27;d love to hear from you. Send us an email, hello@thenumbersgamepodcast.com.au. So we hear about the wins. Hopefully I&#x27;m going to have a win on Thrive, but just obviously there&#x27;s also losses that we need to talk about. And Marty, you&#x27;ve got a great story for us.</p>
+          <p><span class="spk">Marty · 13:07</span>Oh, well, I love this segment because you learn so much more from your mistakes than your wins. And I think we can share some, some great stuff with the audience. And something that came up for myself was always in business, I&#x27;d have a budget and it was very strict budget. I knew exactly where the expenses were going, I knew where the profits were going, and I&#x27;d look at it like a fine-tooth comb.</p>
+          <p><span class="spk">Marty · 13:26</span>But when I got home, I never looked at my personal expenses. And in my 30s, I was just like, money was just going through the floor. And one of the things that I— Colleen was really good, my wife&#x27;s really good on this. I was the chef in business that wouldn&#x27;t cook at home.</p>
+          <p><span class="spk">Marty · 13:42</span>Perfect, perfect example. And we love our coffees, and this is an example of it. We love our coffees. Colleen and I always love the best coffees. We would have 2 a day, but what you don&#x27;t realize when you&#x27;re having 2 a day, it adds up. So each coffee, $5.50 a week, you&#x27;re looking at 4 coffees a day, $22.</p>
+          <p><span class="spk">Marty · 14:00</span>Still pretty good, right?</p>
+          <p><span class="spk">Jason · 14:02</span>You&#x27;re not— You&#x27;re not the fancy coffee shop.</p>
+          <p><span class="spk">Marty · 14:04</span>Yeah, you&#x27;re not worried. You&#x27;re setting it up. You love going to the coffee shop. You&#x27;re getting that interaction going. You know, it&#x27;s an experience, right? And then you branch it out to a week. It&#x27;s 28 coffees. You&#x27;re looking at $154. And then you branch it out to a year and you look at $8,000 a year.</p>
+          <p><span class="spk">Marty · 14:21</span>And then you look at 10 years and you go, that&#x27;s $80,000.</p>
+          <p><span class="spk">Jason · 14:25</span>You make me feel sick at the moment, mate.</p>
+          <p><span class="spk">Nick · 14:27</span>You haven&#x27;t compounded that.</p>
+          <p><span class="spk">Marty · 14:29</span>So yeah, I haven&#x27;t. Yeah. Which compounding that, you know, I imagine how much money I could make off that. But it&#x27;s— but Cole said to me, enough&#x27;s enough. She looked at the accounts, which I wasn&#x27;t looking at at home, so she called me on it. And so she said, we need to buy a coffee machine. And I&#x27;m going, I really like going to the coffee shop, I really like my coffee.</p>
+          <p><span class="spk">Marty · 14:48</span>Anyway, we did our research, we bought the Lavazzo coffee machine, $288, and bought the Intenso pods. We did some research, we thought we&#x27;d like those, we did like them. So on special You can buy the Intenso pods for $7 for a pack of 16, and with milk, treat yourself.</p>
+          <p><span class="spk">Marty · 15:07</span>If you&#x27;re gonna— if you&#x27;re gonna budget, treat yourself with Bramble milk. We— it might cost you $6, $7 a week, but it is delicious. And there&#x27;s some cream on the top. No, no, no, no, we&#x27;re saving, and I&#x27;m coming to that. I&#x27;m coming to that. You look at the weekly cost, 2 packs of pods at $14, so get them on special, bulk up, and $6 on milk.</p>
+          <p><span class="spk">Marty · 15:26</span>$20 a week. That&#x27;s $1,000 a year in coffee with a $7,000 saving per annum. Now, the point I&#x27;m trying to make, you might still buy a coffee here or there, which I haven&#x27;t done, strangely enough, when the awareness has been there.</p>
+          <p><span class="spk">Marty · 15:43</span>But I realize how expensive habits are. And, you know, and particularly if you just don&#x27;t have the awareness, you just go about doing what you do because you like to do it. That could be beer, that could be, you know, cigarettes in the past was a big one. So I go, you know, Just to have the awareness.</p>
+          <p><span class="spk">Marty · 15:59</span>And I think, what could that money go to? It could go to future investment, it could go to school fees, it could go on a holiday, it can go to any form of enjoyment.</p>
+          <p><span class="spk">Jason · 16:09</span>It&#x27;s that opportunity cost of the money. So what goes towards coffee, what it could actually mean going in your super fund or off your mortgage.</p>
+          <p><span class="spk">Marty · 16:16</span>Exactly. And I didn&#x27;t want to compromise my life, you know, so I had to reshape. And so Cole and I have made an experience of it. So we catch up and have that coffee and talk about how delicious it is. So enhance the relationship. And redefine it.</p>
+          <p><span class="spk">Marty · 16:32</span>So that was really important.</p>
+          <p><span class="spk">Jason · 16:34</span>As two guys in our 30s still, Nick, does that hit home pretty hard?</p>
+          <p><span class="spk">Nick · 16:37</span>Yeah, definitely. Particularly for me being a financial planner, understanding the value of compound interest. And one of the things we love showing our clients is where their super will be in 30 years&#x27; time, particularly when they&#x27;re in their mid-20s and they don&#x27;t care about it and they think, oh, there&#x27;s just a little bit going there every month.</p>
+          <p><span class="spk">Nick · 16:55</span>When they see the effect that has over a long time, compound interest, dividends reinvested, they actually get excited and they want to understand their super and they want to know what&#x27;s happening with it. It&#x27;s the same with the coffee story. If you put $10 a week away instead of the $10 a day away, if you actually did those numbers, maybe we&#x27;ll bring them in at some stage.</p>
+          <p><span class="spk">Nick · 17:15</span>We&#x27;ll see what that would&#x27;ve been in retirement. So when people understand that and they see the numbers, that also helps change the mindset. And that&#x27;s what we really like showing our clients.</p>
+          <p><span class="spk">Marty · 17:25</span>It&#x27;s a good point, Nick. And I think, you know, philosophically, when you&#x27;re in your 30s, you&#x27;re invincible. And I get that. I was absolutely there. And you know, I just wanted to have as much fun and have as much experience as I could have out there in the market. But sometimes when you get into your 40s, you start to think, you have kids, you start to think about legacy and you start to go, where am I?</p>
+          <p><span class="spk">Marty · 17:44</span>Where am I? Just all this hard work to make the money. Why aren&#x27;t I utilizing it personally more effectively for the future as well? So those questions start to come up and I think I think everyone can relate to that. I know we&#x27;re talking about a coffee story here, but it&#x27;s something that I hope the listeners can connect into.</p>
+          <p><span class="spk">Nick · 18:02</span>Most people become aware of it just too late. And look, it&#x27;s never too late, but you nailed it. Responsibilities, education, people go, &quot;Jeez, how much am I actually spending on that?&quot; If you could bring that back to your mid-20s, I know it&#x27;s difficult and boring, but you change the game as far as retirement goes.</p>
+          <p><span class="spk">Jason · 18:19</span>As Marty said, change the mindset. And the lesson there is to know the numbers in your household. I think so many people don&#x27;t actually understand where their money goes, how they&#x27;re spending it, but also the lifetime or the long-term value of that money. I think, Nick, we might have had the conversation that, you know, $10,000 put away this year is about $100,000 20 years later when you retire.</p>
+          <p><span class="spk">Nick · 18:39</span>Yeah. Well, this came up when everyone started pulling $10,000 out of their super through COVID, not understanding the long-term ramifications of that.</p>
+          <p><span class="spk">Marty · 18:48</span>It&#x27;s a great point.</p>
+          <p><span class="spk">Jason · 18:48</span>Well, talking of budgeting, that actually leads us into our 1%er this week. So we&#x27;re going to talk about the small things that have the biggest impact in your life. And as much as a budget may not seem like a small thing, effectively what I want to take it back to is having a financial controller.</p>
+          <p><span class="spk">Jason · 19:04</span>So Marty, in, in losing it with your coffee story, you had to take control of the finances and become the financial controller. So we talk about a financial controller, you got to think about someone who manages the finances, plans, minimises risk, looks after record keeping, all those things.</p>
+          <p><span class="spk">Jason · 19:21</span>I&#x27;m talking about a CFO. Now, if you think about your household, who&#x27;s the CFO in your household? And is somebody actually managing the budget or your business? Because I think about what you said, Marty, about how strict you ran the business numbers. Now, I feel very much the same. I&#x27;m in my 30s.</p>
+          <p><span class="spk">Jason · 19:37</span>I can probably take a leaf out of your book and learn. As you said, you want to have our listeners— I&#x27;m even going to learn from your mistakes. I run the business numbers so tight, but I get home and money between Case and I is willy-nilly out the door, and that&#x27;s got to stop. I&#x27;ve got to, you know, I&#x27;ve got to take control and become the financial controller.</p>
+          <p><span class="spk">Jason · 19:53</span>So Nick, talking about budgets, why is that super important for you to have a financial controller? Business, personal life, and what&#x27;s that going to lead to if we do manage our numbers better?</p>
+          <p><span class="spk">Nick · 20:07</span>Well, it&#x27;s obviously highly important. The issue is that it&#x27;s not an interesting job, but someone needs to take the lead. You know, don&#x27;t worry about— I&#x27;m not downgrading The Barefoot Investor. I think that&#x27;s a fantastic book and there&#x27;s some great lessons, but don&#x27;t worry about the date night where you sort out your finances.</p>
+          <p><span class="spk">Nick · 20:23</span>Someone put your hand up, take control of it. And it doesn&#x27;t have to be a big job. You can look at it monthly, tweak it where you need to, and then set yourself up for life. And you know, we won&#x27;t go into exact numbers because we don&#x27;t have a live example, but One of the things that I find with budgets is it&#x27;s all good and well to have a budget, but people never stick to it.</p>
+          <p><span class="spk">Nick · 20:47</span>And the reason they don&#x27;t stick to it is because they don&#x27;t make it easy enough to stick to it. So what I mean by that is that if you set your budget up, you almost should reverse engineer it. So where there&#x27;s discretionary spending and non-discretionary spending. So discretionary spending is what you choose to spend.</p>
+          <p><span class="spk">Nick · 21:03</span>So that&#x27;s your nice polo shirt. That is your, oh, your polo shirt purchase on the way to—</p>
+          <p><span class="spk">Jason · 21:10</span>Thank you.</p>
+          <p><span class="spk">Nick · 21:10</span>Where were you going?</p>
+          <p><span class="spk">Jason · 21:11</span>I was leaving the tennis at about 11 PM. That&#x27;s right.</p>
+          <p><span class="spk">Nick · 21:14</span>So discretionary spend, dinner with your partner, discretionary spend, taking the kids to movies, discretionary spend. Non-discretionary is your bills, your rates notices, your utilities, your petrol. So split those up and understand what your non-discretionary spend is versus your discretionary and reverse engineer it.</p>
+          <p><span class="spk">Nick · 21:33</span>So if you say, to your wife, okay, we&#x27;ve got $500 a week between us to spend on whatever we would like to spend that on. What you should do is set your account structure up, whether you&#x27;re paid monthly, fortnightly, or weekly, that $250 a week goes to each of your spending accounts, and then that&#x27;s all you&#x27;ve got to spend.</p>
+          <p><span class="spk">Nick · 21:54</span>You generally can&#x27;t change the non-discretionary items, it&#x27;s only the discretionary. So make it really easy and make it visual, because these days with credit cards Tap, tap and go. People actually have no idea what they spend. If you have a bank account that is going down throughout the week, you know how much you&#x27;ve got left.</p>
+          <p><span class="spk">Nick · 22:12</span>And if you spend too much that week, you might rein it in the week after. Or if you&#x27;ve got something coming up next week, you might rein it in the week prior, knowing you&#x27;ve got something coming up. So my advice to people is to just make it visual so you can see it and don&#x27;t just keep tapping because you don&#x27;t really know until it&#x27;s too late.</p>
+          <p><span class="spk">Nick · 22:30</span>Yeah.</p>
+          <p><span class="spk">Jason · 22:30</span>So if you, I think what you&#x27;ve touched on there as well of the discretionary spend. So slaying your expenses, Marty, where can you make some cuts on your discretionary spend?</p>
+          <p><span class="spk">Marty · 22:41</span>Yeah, well, coffee and grog is a big one first up. We&#x27;ll touch on that. I think we&#x27;ve all related to that. So, but Nick makes a great point. And one thing I&#x27;ve seen even with homeowners, like even reverse budgeting, putting that $500 in their offset account and the rest of the money in the mortgage, and you can have multiple offset accounts.</p>
+          <p><span class="spk">Marty · 23:01</span>So that can have an absolutely massive impact on your mortgage. And it&#x27;s just an awareness piece. Do the budget. Like, like, do it. Most people avoid it. They have it in their heads and nothing gets done about it. And I think you really like subscriptions like Stan, Netflix, you know, you choose one.</p>
+          <p><span class="spk">Marty · 23:22</span>You don&#x27;t have to miss out. Takeaway food 3 times a week. Really? We&#x27;re busy.</p>
+          <p><span class="spk">Jason · 23:28</span>Uber Eats does make it a little bit too easy, doesn&#x27;t it? The ice cream that got delivered last night at 9 PM probably didn&#x27;t need that.</p>
+          <p><span class="spk">Nick · 23:33</span>Yeah.</p>
+          <p><span class="spk">Marty · 23:34</span>Yeah, but do it once a week. You know, I&#x27;m not saying miss out. I&#x27;m just saying you can enrich your life through your budget, but it takes responsibility and it takes a craft. And if you&#x27;re a couple, both, I think both should be involved. One needs to lead it, but you should be involved as a couple.</p>
+          <p><span class="spk">Marty · 23:50</span>Most people have their budget in their head. It&#x27;s a loose budget. And business owners do that, you know, so well in their business with really being detailed But then, you know, it&#x27;s like the pressure&#x27;s off once you&#x27;re home. So I think you&#x27;ve got to use that intelligence across into your personal life.</p>
+          <p><span class="spk">Marty · 24:06</span>And I know in my 40s, it started to change around pretty quickly. And I know a lot of people that were very similar started to make some real inroads and accelerate their own personal growth and their finances through that age. Yeah.</p>
+          <p><span class="spk">Jason · 24:20</span>I think as well, I mean, the key part of that information is implement a budget, actually have a budget.</p>
+          <p><span class="spk">Marty · 24:25</span>Absolutely.</p>
+          <p><span class="spk">Jason · 24:26</span>And get it out of your head. I think, I&#x27;ve always been one that&#x27;s big on writing down goals, and your budget should be a goal. You&#x27;re working towards something, whether it&#x27;s paying off the mortgage a little bit earlier, saving for the holiday, paying your kids&#x27; school fees, all those kind of things. Writing that down, setting a goal and a target is probably the most important thing you can do.</p>
+          <p><span class="spk">Jason · 24:44</span>And then on top of that, it&#x27;s what tools can you use? I&#x27;ve always thought about like, you know, do I need a fancy tool to be able to do a budget? So I&#x27;ve seen Pocketbook. Pocketbook kind of syncs to your bank accounts. PocketSmith, there&#x27;s a few examples. But, you know, is there anything wrong with with a good old-fashioned spreadsheet.</p>
+          <p><span class="spk">Nick · 25:01</span>Probably the best way to do it because you actually have to sit down and make it happen. Although a lot of the banks now are doing it for you as well. You know, I know I bank with Macquarie. Unfortunately, they tell me what I spend on things I shouldn&#x27;t be spending on, on a daily basis. So I actually think a spreadsheet is the best way to do it because you need to make it simple.</p>
+          <p><span class="spk">Nick · 25:20</span>And that is the issue with budgeting. It just gets all too hard.</p>
+          <p><span class="spk">Jason · 25:23</span>It&#x27;s on this spreadsheet. Totally good example of how to do it if you want to start basic. But where do I start, Nick? Like what are the main columns I should have? What am I noting down?</p>
+          <p><span class="spk">Nick · 25:32</span>Yeah, so it doesn&#x27;t need to be war and peace. I think the first thing you should do, and again, the banks provide a lot of, or make it very easy to do this, but print out maybe your last 3 months&#x27; worth of your bank transactions. That way you can actually understand what you&#x27;re spending on each item.</p>
+          <p><span class="spk">Nick · 25:47</span>But I would generally break it down into your bills. So bills could be your utilities, things such as rates and electricity and whatnot, car insurance, anything that&#x27;s gonna come out on a regular basis that you don&#x27;t have a choice. You have to spend that money within reason.</p>
+          <p><span class="spk">Nick · 26:05</span>Second to that, I would probably put down a holiday. If holidays are your thing, which is most people, work out what you wanna spend on an annual basis and have that go away on a, I suggest weekly for most people, &#x27;cause it&#x27;s far easier to track things weekly.</p>
+          <p><span class="spk">Nick · 26:22</span>Other than that, anything else that you might like to do?</p>
+          <p><span class="spk">Jason · 26:27</span>So, do you call it entertainment or you break it into like dining, eating out, alcohol? How detailed do we want to go?</p>
+          <p><span class="spk">Nick · 26:36</span>Well, everyone is different. So I think as long as you&#x27;ve got your non-negotiables in one account and then you can set up direct debits out of that account, you don&#x27;t have to worry about them. Second to that is everyone&#x27;s different. So some people like to go out to dinner. Some people like to, to gamble. There&#x27;s nothing wrong with gambling as long as it&#x27;s within reason and as long as it&#x27;s within your budget.</p>
+          <p><span class="spk">Nick · 26:56</span>Some people like to drink. Some people like to play video games. So what, what, whatever your vice is, have a, have a budget for that. Um, and that is your discretionary spending. Some people like to buy a lot of clothes. So really simple: bills, discretionary spending, holiday.</p>
+          <p><span class="spk">Nick · 27:14</span>If you&#x27;re investing outside of your mortgage, then maybe you have an investment account. And then third and probably most important for most of us is your mortgage. And just keep it at that. You can go beyond that if you like, but that&#x27;s all you really need to do.</p>
+          <p><span class="spk">Marty · 27:30</span>I really like the multiple accounts for discretionary spending. I think that&#x27;s a big one because most people just run it through one account. But I really like that. I think that&#x27;s something I&#x27;m going to implement, Nick. I think it&#x27;s a great idea.</p>
+          <p><span class="spk">Jason · 27:43</span>It&#x27;s easy to keep it simple.</p>
+          <p><span class="spk">Nick · 27:45</span>Keep it simple, stupid.</p>
+          <p><span class="spk">Marty · 27:48</span>Why did you look at me when you said that?</p>
+          <p><span class="spk">Jason · 27:51</span>And from the audience, we&#x27;d love to actually hear some of your budget stories. If you&#x27;ve got a kick-ass way of managing your budget that you think is absolutely worthwhile sharing, please actually send in how your budget&#x27;s going. Or if you don&#x27;t have a budget at all and you want some more tips on where to get started, please feel free to reach out. We&#x27;re all very happy, approachable guys, and you know, we&#x27;re still on our journey too.</p>
+          <p><span class="spk">Jason · 28:10</span>I mean, I don&#x27;t think any of us sit here going we&#x27;re perfect, we&#x27;ve got our budgets nailed. I know the holiday account, we haven&#x27;t kind of put anything there and I think that&#x27;s kind of starting to get on my nerves a little bit that I don&#x27;t have something planned coming up. But you know, you&#x27;ve got to have something to look forward to.</p>
+          <p><span class="spk">Nick · 28:26</span>I agree. Set up the holiday account, have the money go in there and then you don&#x27;t need to make a decision on whether or not you go on a holiday. You&#x27;ve budgeted for it all year, you know what you can spend and the money&#x27;s there. It&#x27;s just simple stuff and we are all learning. And we&#x27;re still spending too much. Don&#x27;t worry about that.</p>
+          <p><span class="spk">Nick · 28:41</span>But at least if it&#x27;s visual, we know we&#x27;ve done it and we can rectify it the week after.</p>
+          <p><span class="spk">Marty · 28:46</span>Yeah, it&#x27;s good to be able to feel bad about it when you see it on a page. So, &#x27;cause it&#x27;s the reality instead of being a delusion, you know, off somewhere, you bring it into focus. I really like that strategy.</p>
+          <p><span class="spk">Nick · 28:58</span>Today&#x27;s episode was brought to you by Future Advisory for all your accounting needs and Innovate Finance for all your financial planning and mortgage needs. Marty, what have we learned today?</p>
+          <p><span class="spk">Marty · 29:07</span>Well, we&#x27;ve learned that you need a financial controller in your household. So make a decision, get together, get financial. Setting up your budget, just do it. You&#x27;ve learned a lot today. Let&#x27;s implement it. No use having a great idea without a great strategy. And you&#x27;ve learned a little bit about what&#x27;s going on in finance.</p>
+          <p><span class="spk">Marty · 29:25</span>So I hope you&#x27;ve enjoyed the show.</p>
+          <p><span class="spk">Jason · 29:28</span>Don&#x27;t lose it with those coffee purchases either, Marty. That&#x27;s right. Let&#x27;s not forget about that, mate. You&#x27;ve given us some value. Able lessons for everyone out there. If there&#x27;s anything you need to know, you can reach us at hello@thenumbersgamepodcast.com.au. Drop us an email, we&#x27;re more than happy to send some feedback back to you and help you out.</p>
+          <p><span class="spk">Jason · 29:44</span>And even if you think the show was shit, let us know. This is a work in progress and we&#x27;re looking forward to, uh, coming to you live every week.</p>
+          <p><span class="spk">Nick · 29:51</span>Fantastic. Thank you, gentlemen.</p>
+          <p><span class="spk">Jason · 29:53</span>That&#x27;s The Numbers Game.</p>
+        </div>
+      </details>
+
+    </div>
+
+    <!-- audio-only: the Spotify player is the hero above; duplicate embed removed -->
+
+    <div class="listen">
+      <a href="https://open.spotify.com/episode/78k4JeUZ96kec4QH6qLsMA" target="_blank" rel="noopener" aria-label="Listen to this episode on Spotify">
+        <svg viewBox="0 0 24 24"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.52 17.34c-.24.36-.66.48-1.02.24-2.82-1.74-6.36-2.1-10.56-1.14-.42.12-.78-.18-.9-.54-.12-.42.18-.78.54-.9 4.56-1.02 8.52-.6 11.64 1.32.42.18.48.66.3 1.02zm1.44-3.3c-.3.42-.84.6-1.26.3-3.24-1.98-8.16-2.58-11.94-1.38-.48.12-1.02-.12-1.14-.6-.12-.48.12-1.02.6-1.14 4.32-1.32 9.72-.66 13.44 1.62.36.18.54.78.3 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.3c-.6.18-1.2-.18-1.38-.72-.18-.6.18-1.2.72-1.38 4.26-1.26 11.28-1.02 15.72 1.62.54.3.72 1.02.42 1.56-.3.42-1.02.6-1.56.3z"/></svg>
+        Spotify
+      </a>
+      <a href="https://podcasts.apple.com/au/podcast/id1555566088?i=1000776470464" target="_blank" rel="noopener" aria-label="Listen to this episode on Apple Podcasts">
+        <svg viewBox="0 0 24 24"><path d="M5.34 0A5.328 5.328 0 000 5.34v13.32A5.328 5.328 0 005.34 24h13.32A5.328 5.328 0 0024 18.66V5.34A5.328 5.328 0 0018.66 0H5.34zm6.525 2.568c2.336 0 4.448.902 6.056 2.587 1.224 1.272 1.912 2.619 2.264 4.392l.04.23c.04.272-.16.527-.432.567a.505.505 0 01-.567-.431l-.04-.213c-.312-1.57-.92-2.747-2.004-3.867-1.428-1.496-3.293-2.294-5.393-2.294-2.1 0-3.966.798-5.394 2.294-1.084 1.12-1.692 2.298-2.004 3.867l-.04.213a.507.507 0 01-.567.431.504.504 0 01-.432-.567l.04-.23c.352-1.773 1.04-3.12 2.264-4.392 1.608-1.685 3.72-2.587 6.056-2.587h.153zm.136 3.033c1.74 0 3.312.67 4.527 1.934.883.916 1.394 1.93 1.663 3.253l.04.23a.505.505 0 01-.431.567.503.503 0 01-.567-.432l-.04-.212c-.23-1.112-.659-1.97-1.396-2.732-1.052-1.1-2.404-1.672-3.9-1.672s-2.849.572-3.901 1.672c-.737.762-1.167 1.62-1.396 2.732l-.04.212a.503.503 0 01-.567.432.505.505 0 01-.432-.567l.04-.23c.27-1.323.78-2.337 1.664-3.253 1.215-1.264 2.787-1.934 4.527-1.934h.21zm-.078 3.05c1.092 0 2.091.424 2.89 1.22.582.58.924 1.245 1.107 2.15l.04.218a.501.501 0 01-.424.568.499.499 0 01-.568-.424l-.04-.198c-.146-.724-.413-1.253-.871-1.716-.63-.63-1.398-.957-2.226-.957s-1.595.328-2.225.957c-.459.463-.726.992-.871 1.716l-.04.198a.499.499 0 01-.568.424.501.501 0 01-.424-.568l.04-.219c.183-.904.525-1.569 1.106-2.149.8-.796 1.799-1.22 2.89-1.22h.184zM12 14.07a2.477 2.477 0 012.48 2.478A2.477 2.477 0 0112 19.024a2.477 2.477 0 01-2.48-2.477A2.477 2.477 0 0112 14.07z"/></svg>
+        Apple
+      </a>
+      <a class="yt-pill" href="https://www.youtube.com/@thenumbersgamepodcast?sub_confirmation=1" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.12-2.14C19.5 3.55 12 3.55 12 3.55s-7.5 0-9.38.51A3 3 0 0 0 .5 6.2 31.4 31.4 0 0 0 0 12a31.4 31.4 0 0 0 .5 5.8 3 3 0 0 0 2.12 2.14c1.88.51 9.38.51 9.38.51s7.5 0 9.38-.51a3 3 0 0 0 2.12-2.14A31.4 31.4 0 0 0 24 12a31.4 31.4 0 0 0-.5-5.8zM9.55 15.57V8.43L15.82 12z"/></svg>
+        Subscribe
+      </a>
+    </div>
+    <!-- LISTEN:END -->
+
+    <div class="relsec">
+      <span class="rtitle">Discover more</span>
+      <div class="relgrid">
+        <a class="relcard" href="/crafting-your-business-edge">
+          <img src="https://i.ytimg.com/vi/hnUeiudZfso/hqdefault.jpg" alt="EP 207 thumbnail">
+          <span class="rt">Crafting Your Business Edge</span>
+          <span class="rfoot"><span class="rwhy">14 October 2024</span><span class="rtag">EP 207</span></span>
+        </a>
+        <a class="relcard" href="/the-business-of-sports-how-franchises-generate-billions-in-revenue">
+          <img src="https://i.ytimg.com/vi/GV4g8mi9k9o/hqdefault.jpg" alt="EP 140 thumbnail">
+          <span class="rt">The Business of Sports: How Franchises Generate Billions in Revenue</span>
+          <span class="rfoot"><span class="rwhy">16 November 2023</span><span class="rtag">EP 140</span></span>
+        </a>
+        <a class="relcard" href="/why-you-should-track-profit-per-hour-vs-revenue">
+          <img src="https://i.ytimg.com/vi/FUf4XcRx-w0/hqdefault.jpg" alt="EP 245 thumbnail">
+          <span class="rt">Why You Should Track Profit Per Hour vs Revenue</span>
+          <span class="rfoot"><span class="rwhy">18 August 2025</span><span class="rtag">EP 245</span></span>
+        </a>
+        <a class="relcard" href="/enhanced-games-can-the-olympics-keep-up">
+          <img src="https://i.ytimg.com/vi/Ndgcpcg_TAw/hqdefault.jpg" alt="EP 242 thumbnail">
+          <span class="rt">Enhanced Games - Can The Olympics Keep Up?</span>
+          <span class="rfoot"><span class="rwhy">28 July 2025</span><span class="rtag">EP 242</span></span>
+        </a>
+        <a class="relcard" href="/how-to-avoid-burnout-and-still-grow-your-business">
+          <img src="https://i.ytimg.com/vi/kaHCI7VQoA4/hqdefault.jpg" alt="EP 233 thumbnail">
+          <span class="rt">How to Avoid Burnout and Still Grow Your Business</span>
+          <span class="rfoot"><span class="rwhy">26 May 2025</span><span class="rtag">EP 233</span></span>
+        </a>
+        <a class="relcard" href="/adam-diamond-change-your-business-change-your-life">
+          <img src="https://i.ytimg.com/vi/l-qwFf9g5Rg/hqdefault.jpg" alt="EP 206 thumbnail">
+          <span class="rt">Adam Diamond - Change Your Business, Change Your Life</span>
+          <span class="rfoot"><span class="rwhy">7 October 2024</span><span class="rtag">EP 206</span></span>
+        </a>
+      </div>
+      <div class="reldots" id="reldots"></div>
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="footgrid">
+      <div class="fcol">
+        <div class="foot-label">Brought to you by</div>
+        <div class="sponsors">
+          <a href="https://www.inovayt.com.au/" target="_blank" rel="noopener"><img src="assets/inovayt-white.png" alt="Inovayt"></a>
+          <a href="https://futureadvisory.com.au/" target="_blank" rel="noopener"><img src="assets/future-advisory-white.png" alt="Future Advisory"></a>
+        </div>
+      </div>
+      <div class="fcol produced">
+        <div class="foot-label">Produced by</div>
+        <a href="https://www.vidpod.com.au/" target="_blank" rel="noopener"><img src="assets/vidpod-white.png" alt="VIDPOD"></a>
+      </div>
+    </div>
+    <nav class="footnav">
+      <a href="index.html">Home</a><a href="episodes.html">Every episode</a><a href="adventure.html">Choose your own adventure</a><a href="about.html">About the show</a><a href="nick-reilly.html">Nick Reilly</a><a href="jason-robinson.html">Jason Robinson</a><a href="contact.html">Contact</a>
+    </nav>
+    <div class="copyright">© 2026 The Numbers Game</div>
+  </footer>
+
+  <script>
+    var VIDEO='RAQ80ecsDq0';
+
+    /* Mobile nav dropdown. */
+    var burger=document.getElementById('navburger'), navdrop=document.getElementById('navdrop');
+    if(burger&&navdrop){burger.addEventListener('click',function(){
+      navdrop.hidden=!navdrop.hidden;
+      burger.setAttribute('aria-expanded', navdrop.hidden?'false':'true');
+    });}
+
+    /* Voice-note button reveals the recorder; × tucks it away. */
+    var vbtn=document.getElementById('vbtn'), vslot=document.getElementById('vslot'), vclose=document.getElementById('vclose');
+    if(vbtn&&vslot){vbtn.addEventListener('click',function(){vslot.hidden=!vslot.hidden;});}
+    if(vclose&&vslot){vclose.addEventListener('click',function(){vslot.hidden=true;});}
+
+    /* Keep-exploring dots: only shown when the strip actually scrolls (mobile). */
+    var rg=document.querySelector('.relgrid'), rd=document.getElementById('reldots');
+    if(rg&&rd){
+      var relCards=rg.querySelectorAll('.relcard');
+      relCards.forEach(function(){rd.appendChild(document.createElement('span'))});
+      var updDots=function(){
+        var scrollable=rg.scrollWidth>rg.clientWidth+4;
+        rd.style.display=scrollable?'flex':'none';
+        if(!scrollable)return;
+        var i=Math.round(rg.scrollLeft/(rg.scrollWidth-rg.clientWidth)*(relCards.length-1));
+        rd.querySelectorAll('span').forEach(function(s,n){s.classList.toggle('on',n===i)});
+      };
+      rg.addEventListener('scroll',updDots,{passive:true});
+      window.addEventListener('resize',updDots);
+      updDots();
+    }
+
+    /* Explore tabs: swap the visible panel; the row stays put so you never lose your place. */
+    var tabBtns=document.querySelectorAll('.tabbtn');
+    tabBtns.forEach(function(b){
+      b.addEventListener('click',function(){
+        tabBtns.forEach(function(o){o.classList.remove('on')});
+        document.querySelectorAll('.tpanel').forEach(function(p){p.hidden=true});
+        b.classList.add('on');
+        document.getElementById(b.getAttribute('data-panel')).hidden=false;
+      });
+    });
+
+    /* Audio-only: Spotify player is the hero; chapters/questions seek it via the Spotify iFrame API. */
+    var spotifyCtrl=null, pendingSeek=null;
+    function nudge(){
+      var p=document.getElementById('player-wrap'), r=p.getBoundingClientRect();
+      if(r.bottom<80 || r.top>window.innerHeight-90){ p.scrollIntoView({behavior:'smooth',block:'start'}); }
+    }
+    function startAt(sec){
+      nudge();
+      if(spotifyCtrl){ spotifyCtrl.seek(sec); spotifyCtrl.resume(); } else { pendingSeek=sec; }
+    }
+    window.onSpotifyIframeApiReady=function(IFrameAPI){
+      IFrameAPI.createController(document.getElementById('spotify-embed'),
+        {uri:'spotify:episode:5SOgRyx41Q9nVXuFPTkA42', width:'100%', height:'232'},
+        function(c){ spotifyCtrl=c; if(pendingSeek!=null){ c.seek(pendingSeek); c.resume(); pendingSeek=null; } });
+    };
+    (function(){var sc=document.createElement('script');sc.src='https://open.spotify.com/embed/iframe-api/v1';sc.async=true;document.head.appendChild(sc);})();
+  </script>
+</body>
+</html>

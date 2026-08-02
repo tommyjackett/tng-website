@@ -1,0 +1,594 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EP 136 · Navigating Growth and Profitability | The Numbers Game</title>
+<meta name="description" content="Welcome to Episode 136 of The Numbers Game. Today, we dissect Uber&#x27;s ambitious plans to evolve into a super travel app and draw learnings on balancing growth…">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" sizes="64x64" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="canonical" href="https://thenumbersgamepodcast.com.au/navigating-growth-and-profitability">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="The Numbers Game">
+<meta property="og:title" content="EP 136 · Navigating Growth and Profitability | The Numbers Game">
+<meta property="og:description" content="Welcome to Episode 136 of The Numbers Game. Today, we dissect Uber&#x27;s ambitious plans to evolve into a super travel app and draw learnings on balancing growth…">
+<meta property="og:url" content="https://thenumbersgamepodcast.com.au/navigating-growth-and-profitability">
+<meta property="og:image" content="https://thenumbersgamepodcast.com.au/assets/tng-audio-only-thumbnail.webp">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+  :root{
+    --purple:#585af3; --purple-dark:#2c1b8a; --mint:#7ad9a8;
+    --white:#ffffff; --muted:rgba(255,255,255,.60); --dim:rgba(255,255,255,.42);
+    --line:rgba(255,255,255,.12); --card:rgba(255,255,255,.05); --card-hi:rgba(255,255,255,.09);
+    --display:'Anton',Impact,'Helvetica Neue',sans-serif;
+    --sans:'Inter',system-ui,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif;
+    --wrap:1280px;   /* page frame (nav spans this) */
+    --col:960px;     /* content column (player, tabs, text) */
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:var(--sans); color:var(--white); line-height:1.6; -webkit-font-smoothing:antialiased;
+    background:#12093a;
+    background-image:
+      radial-gradient(1200px 600px at 82% -6%, rgba(88,90,243,.45) 0%, transparent 55%),
+      radial-gradient(900px 700px at 5% 8%, rgba(122,217,168,.10) 0%, transparent 50%),
+      linear-gradient(180deg,#2c1b8a 0%,#1a1150 28%,#100b34 62%,#0b0820 100%);
+    background-attachment:fixed;
+  }
+  a{color:inherit}
+  .wrap{max-width:var(--wrap);margin:0 auto;padding:0 36px}
+  main.wrap{max-width:var(--col)}
+  @media(max-width:720px){.wrap{padding:0 22px}}
+
+  /* ── Navbar ── */
+  .nav{position:sticky;top:0;z-index:50;background:linear-gradient(180deg,rgba(24,15,74,.92),rgba(24,15,74,.72));backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+  .nav-in{max-width:var(--wrap);margin:0 auto;padding:11px 36px;display:flex;align-items:center;justify-content:space-between}
+  @media(max-width:720px){.nav-in{padding:11px 22px}}
+  .brand{display:block;line-height:0}
+  .brand img{height:36px;width:auto;display:block}
+  .navlinks{display:flex;gap:28px;align-items:center}
+  .navlinks a{text-decoration:none;font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);transition:.15s}
+  .navlinks a:hover{color:var(--white)}
+  .navlinks a.navtop{cursor:default}
+  .navgroup{position:relative;display:flex;align-items:center}
+  .navgroup .subnav{display:none;position:absolute;top:100%;left:50%;transform:translateX(-50%);padding-top:14px;min-width:180px}
+  .navgroup:hover .subnav,.navgroup:focus-within .subnav{display:block}
+  .subnav-in,.navgroup .subnav{z-index:60}
+  .navgroup .subnav a{display:block;background:#180f4a;border:1px solid var(--line);border-top:0;padding:12px 16px;font-size:12px;color:rgba(255,255,255,.85)}
+  .navgroup .subnav a:first-child{border-top:1px solid var(--line)}
+  .navgroup .subnav a:hover{background:#221768;color:var(--white)}
+  .navburger{display:none;background:none;border:1px solid var(--line);padding:8px 10px;cursor:pointer;color:var(--white);transition:.15s}
+  .navburger:hover{border-color:rgba(122,217,168,.6)}
+  .navburger svg{width:20px;height:20px;fill:currentColor;display:block}
+  .navdrop{display:none}
+  @media(max-width:720px){
+    .navlinks{display:none}
+    .navburger{display:block}
+    .navdrop{display:block;position:absolute;left:0;right:0;top:100%;
+      background:#180f4a;border-bottom:1px solid var(--line);box-shadow:0 24px 50px rgba(0,0,0,.45)}
+    .navdrop[hidden]{display:none}
+    .navdrop a{display:block;padding:15px 22px;text-decoration:none;font-size:14px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:rgba(255,255,255,.9);border-bottom:1px solid rgba(255,255,255,.06)}
+    .navdrop a:last-child{border-bottom:0}
+    .navdrop a.sub{padding-left:42px;font-size:13px;color:rgba(255,255,255,.72)}
+    .navdrop .navlabel{display:block;padding:15px 22px 6px;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.4)}
+  }
+
+  /* ── Hero / hook (marker-highlight system: purple hook wraps naturally, mint payoff below)
+     Rules: title splits at its natural break (colon/pipe/question mark). Front = hook (purple,
+     big), back = payoff (mint, smaller). No break in title = purple hook only. Highlights hug
+     the text (tight em padding tuned to Anton) and wrap via box-decoration-break — never
+     hand-pick line breaks or mint words. ── */
+  header.hero{padding:34px 0 6px}
+  .hook{--inx:clamp(8.4px,2.1vw,15.6px)} /* one shared text inset so hook + payoff first letters align */
+  .hook .hk{font-family:var(--display);font-weight:400;text-transform:uppercase;
+    font-size:clamp(28px,7vw,52px);line-height:1.3;letter-spacing:-.5px;text-wrap:balance}
+  .hook .hk span{color:var(--white);padding:.04em var(--inx) .02em;
+    background:linear-gradient(var(--purple),var(--purple)) 0 50%/100% 87% no-repeat;
+    -webkit-box-decoration-break:clone;box-decoration-break:clone}
+  .hook .pay{font-family:var(--display);font-weight:400;text-transform:uppercase;
+    font-size:clamp(16px,4vw,24px);line-height:1.5;letter-spacing:.6px;margin-top:8px;text-wrap:balance}
+  .hook .pay span{color:#0a0a0a;padding:.08em var(--inx) .04em;
+    background:linear-gradient(var(--mint),var(--mint)) 0 50%/100% 88% no-repeat;
+    -webkit-box-decoration-break:clone;box-decoration-break:clone}
+  /* no-hook titles: mid-split into two full-size rows, purple then mint */
+  .hook .hk span.hkrow{display:block;background:none;padding:0}
+  .hook .hk .hkrow+.hkrow{margin-top:8px}
+  .hook .hk span.mintseg{color:#0a0a0a;
+    background:linear-gradient(var(--mint),var(--mint)) 0 50%/100% 87% no-repeat}
+
+  /* ── Player (clean facade → real player on tap) ── */
+  .player-wrap{margin:24px 0 4px;scroll-margin-top:76px}
+  .audio-hero{width:100%;min-height:232px;border-radius:12px;overflow:hidden;box-shadow:0 30px 70px rgba(0,0,0,.5),0 0 0 1px rgba(255,255,255,.06)}
+  .audio-hero iframe{display:block;width:100%;border:0}
+  .player{position:relative;width:100%;padding-top:56.25%;border-radius:0;overflow:hidden;background:#000;box-shadow:0 30px 70px rgba(0,0,0,.5),0 0 0 1px rgba(255,255,255,.06)}
+  .facade{position:absolute;inset:0;border:0;cursor:pointer;background-size:cover;background-position:center;display:flex;align-items:center;justify-content:center;padding:0}
+  .facade .play{width:74px;height:74px;border-radius:50%;background:rgba(10,6,30,.40);border:2px solid rgba(255,255,255,.72);display:flex;align-items:center;justify-content:center;transition:.18s;-webkit-backdrop-filter:blur(1px);backdrop-filter:blur(1px)}
+  .facade:hover .play{background:rgba(88,90,243,.62);transform:scale(1.07);border-color:#fff}
+  .facade .play::after{content:"";border-style:solid;border-width:11px 0 11px 19px;border-color:transparent transparent transparent #fff;margin-left:5px}
+  .player iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+
+  /* ── Episode facts (bottom of the Summary panel — templated per episode) ── */
+  .sumfacts{margin:14px 10px 4px;padding-top:13px;border-top:1px solid rgba(255,255,255,.08);display:flex;flex-direction:column;gap:8px}
+  .fact{display:flex;gap:12px;font-size:13.5px}
+  .fact .fl{flex:none;width:104px;color:var(--dim);font-weight:600;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;padding-top:2px}
+  .fact .fv{color:rgba(255,255,255,.9);font-weight:500}
+  .fact .fv a{color:var(--mint);text-decoration:none;border-bottom:1px solid rgba(122,217,168,.4);transition:.15s}
+  .fact .fv a:hover{border-bottom-color:var(--mint)}
+
+  /* ── Episode tag (identity: black label hanging off the title corner) ── */
+  .eptag{display:inline-block;position:relative;left:-6px;margin-bottom:-7px;z-index:2;
+    background:#0a0a0a;color:var(--white);font-family:var(--display);font-weight:400;
+    font-size:13.5px;letter-spacing:1.5px;text-transform:uppercase;padding:6px 11px 4px}
+
+  /* ── Explore tabs (sticky mode switcher; one panel swaps below, nothing shoves) ── */
+  .explore{margin-top:22px}
+  .tabs{position:sticky;top:58px;z-index:40;display:flex;flex-wrap:wrap;gap:8px;padding:10px 0;
+    background:linear-gradient(180deg,rgba(18,10,55,.96),rgba(18,10,55,.86));
+    backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+  .tabbtn{font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.5px;
+    font-size:14.5px;color:var(--white);background:var(--purple);border:1px solid var(--purple);
+    padding:9px 13px 7px;cursor:pointer;transition:.15s}
+  .tabbtn:hover{filter:brightness(1.12)}
+  .tabbtn.on{background:var(--mint);border-color:var(--mint);color:#0a0a0a}
+  .tabbtn.on:hover{filter:none}
+  .tabbtn .ct{font-size:12px;opacity:.75;font-variant-numeric:tabular-nums}
+  .tabbtn .ct::before{content:" · "}
+  .tpanel{border:1px solid var(--line);background:var(--card);padding:12px 10px 14px}
+  .hint{font-size:12.5px;color:var(--muted);padding:2px 10px 10px;border-bottom:1px solid rgba(255,255,255,.08);margin-bottom:6px}
+
+  /* ── Listen row (no box: label left, service pills follow) ── */
+  .listen{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:12px 16px;margin-top:34px}
+  .listen .lname{font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--dim)}
+  .listen a{display:inline-flex;align-items:center;gap:9px;padding:11px 18px;border-radius:999px;
+    background:var(--mint);color:#08210f;text-decoration:none;font-weight:800;font-size:12.5px;
+    letter-spacing:.04em;text-transform:uppercase;transition:.15s}
+  .listen a:hover{filter:brightness(1.06);transform:translateY(-1px);box-shadow:0 12px 30px rgba(122,217,168,.25)}
+  .listen svg{width:20px;height:20px;fill:currentColor;flex:none}
+  /* ── Listen-now Spotify audio embed (full column width, above the pills) ── */
+  .listen-now{margin-top:40px}
+  .listen-now .ln-head{display:flex;align-items:baseline;justify-content:space-between;gap:14px;margin-bottom:13px}
+  .listen-now .ln-title{font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--dim)}
+  .audio-embed{border-radius:12px;overflow:hidden;box-shadow:0 20px 50px rgba(0,0,0,.4),0 0 0 1px rgba(255,255,255,.06)}
+  .audio-embed iframe{display:block;width:100%;border:0}
+  @media(max-width:720px){.listen-now{margin-top:32px}}
+
+  /* ── Keep exploring (thumbnails link to other episode PAGES, never timecodes).
+     Swipeable strip on mobile, fits three-up on desktop. Variant rule: claim
+     "similar ground" + reason lines ONLY when moment-level topic overlap is
+     genuinely strong; otherwise show the latest released episodes with dates —
+     never invent a connection. ── */
+  .relsec{margin-top:60px;padding-top:58px;border-top:1px solid var(--line)} /* line = end of this episode's info */
+  .reldots{display:flex;justify-content:center;gap:7px;margin-top:12px}
+  .reldots span{width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.25);transition:.2s}
+  .reldots span.on{background:var(--mint)}
+  .relsec .rtitle{display:inline-block;font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.5px;font-size:14.5px;background:var(--mint);color:#0a0a0a;padding:9px 13px 7px;margin-bottom:18px}
+  .relgrid{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding-bottom:6px;scrollbar-width:none}
+  .relgrid::-webkit-scrollbar{display:none}
+  .relcard{flex:0 0 56%;max-width:232px;scroll-snap-align:start;display:flex;flex-direction:column;text-decoration:none;background:var(--card);border:1px solid var(--line);transition:.15s}
+  .relcard:hover{background:var(--card-hi);border-color:rgba(122,217,168,.55)}
+  .relcard img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block}
+  .relcard .rt{display:block;font-size:12.5px;font-weight:600;color:rgba(255,255,255,.92);line-height:1.4;padding:8px 8px 0}
+  .relcard .rfoot{margin-top:auto;display:flex;justify-content:space-between;align-items:flex-end;gap:8px;padding:10px 8px 9px}
+  .relcard .rwhy{font-size:11.5px;color:var(--mint)}
+  .relcard .rtag{display:inline-block;background:#0a0a0a;color:var(--white);font-family:var(--display);font-size:10px;letter-spacing:1.2px;text-transform:uppercase;padding:3px 7px 2px;white-space:nowrap;flex:0 0 auto}
+
+  /* ── Dropdown sections (accordion under the player) ── */
+  .drops{margin-top:34px;display:flex;flex-direction:column;gap:11px}
+  .drop{border:1px solid var(--line);border-radius:0;background:var(--card);overflow:hidden;transition:border-color .15s}
+  .drop[open]{border-color:rgba(122,217,168,.35)}
+  .drop>summary{list-style:none;cursor:pointer;padding:16px 18px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+  .drop>summary::-webkit-details-marker{display:none}
+  .drop>summary .st{font-weight:700;font-size:15.5px;letter-spacing:.005em}
+  .drop>summary .ct{margin-left:auto;font-size:12px;color:var(--dim);font-weight:600;font-variant-numeric:tabular-nums}
+  .drop>summary .chev{flex:none;width:22px;height:22px;border-radius:50%;background:rgba(122,217,168,.14);color:var(--mint);display:flex;align-items:center;justify-content:center;font-family:var(--display);font-size:15px;line-height:1;transition:.2s;transform:translateY(-1px)}
+  .drop[open]>summary .chev{transform:rotate(45deg)}
+  .drop-body{padding:2px 12px 12px}
+
+  /* chapters */
+  .chapter{display:flex;align-items:baseline;gap:14px;width:100%;text-align:left;cursor:pointer;background:none;border:0;color:inherit;font-family:inherit;padding:11px 10px;border-radius:10px;transition:.13s}
+  .chapter:hover{background:var(--card-hi)}
+  .chapter .tc{font-variant-numeric:tabular-nums;font-weight:700;font-size:14px;color:var(--mint);flex:none;width:48px}
+  .chapter .cx{font-size:15px;font-weight:500;color:rgba(255,255,255,.9)}
+  .chapter:hover .cx{color:#fff}
+
+  /* questions */
+  .q{display:flex;align-items:center;gap:12px;width:100%;text-align:left;cursor:pointer;background:none;border:0;border-radius:11px;color:inherit;font-family:inherit;padding:12px 10px;transition:.14s}
+  .q+.q{border-top:1px solid rgba(255,255,255,.05)}
+  .q:hover{background:var(--card-hi)}
+  .q .qm{font-family:var(--display);font-size:15px;color:var(--mint);flex:none;line-height:1;transform:translateY(1px)}
+  .q .qx{font-size:15px;font-weight:500;color:rgba(255,255,255,.92)}
+  .q .go{margin-left:auto;flex:none;color:var(--dim);font-size:18px;transition:.15s}
+  .q:hover .go{color:var(--mint);transform:translateX(2px)}
+
+  /* summary + transcript bodies */
+  .summary-body p{font-size:16.5px;line-height:1.62;color:rgba(255,255,255,.9);padding:6px 10px 4px}
+  .tbody{padding:2px 10px 8px}
+  .tbody p{font-size:14.5px;line-height:1.7;color:rgba(255,255,255,.78);margin-top:15px;max-width:64ch}
+  .tbody .spk{display:block;font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--mint);margin-bottom:2px}
+
+  /* ── Voice note ask (lives at the bottom of the Summary panel) ── */
+  .vask{margin:16px 10px 4px}
+  .vbtn{display:inline-flex;align-items:center;gap:9px;padding:12px 20px;border-radius:999px;border:0;cursor:pointer;
+    background:var(--mint);color:#08210f;font-family:inherit;font-weight:800;font-size:12.5px;
+    letter-spacing:.04em;text-transform:uppercase;transition:.15s}
+  .vbtn:hover{filter:brightness(1.06);transform:translateY(-1px);box-shadow:0 12px 30px rgba(122,217,168,.25)}
+  .vbtn svg{width:18px;height:18px;fill:currentColor;flex:none}
+  .vslot{background:var(--purple);padding:12px 10px 10px;margin:14px 0 4px;box-shadow:0 18px 40px rgba(0,0,0,.35)}
+  .vslot[hidden]{display:none}
+  .vhead{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;margin-bottom:10px}
+  .vhead .vmsg{font-family:var(--sans);font-size:13px;line-height:1.55;color:rgba(255,255,255,.92);margin:2px 0 0;padding:0 2px}
+  .vclose{background:none;border:0;color:rgba(255,255,255,.85);font-size:22px;line-height:1;cursor:pointer;padding:0 2px}
+  .vclose:hover{color:var(--white)}
+  .vslot iframe{display:block}
+
+  /* ── YouTube subscribe pill (sits in the listen row; outranks .listen a's mint) ── */
+  .listen a.yt-pill{background:var(--purple);color:var(--white)}
+  .listen a.yt-pill:hover{filter:brightness(1.1);transform:translateY(-1px)}
+  @media(max-width:720px){ /* mobile: no label, three compact pills on one row */
+    .listen .lname{display:none}
+    .listen{gap:8px}
+    .listen a{padding:10px 13px;font-size:11px;gap:6px}
+    .listen svg{width:16px;height:16px}
+  }
+
+  /* ── Footer: two columns under the line (Brought to you by | Produced by), matches adventure.html ── */
+  footer{border-top:1px solid var(--line);margin-top:68px;padding:52px 20px 58px}
+  .footgrid{max-width:var(--wrap);margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:start}
+  @media(max-width:720px){.footgrid{grid-template-columns:1fr;gap:40px}}
+  .fcol{text-align:center}
+  .foot-label{font-size:11px;font-weight:700;letter-spacing:.26em;text-transform:uppercase;color:var(--dim);margin-bottom:16px}
+  .sponsors{display:flex;justify-content:center;align-items:center;gap:38px;flex-wrap:wrap}
+  .sponsors a{display:inline-flex;transition:.15s}
+  .sponsors a:hover{transform:translateY(-1px)}
+  .sponsors img{height:34px;width:auto;opacity:.92}
+  .sponsors a:hover img{opacity:1}
+  .produced a{display:inline-flex;transition:.15s}
+  .produced a:hover img{opacity:1}
+  .produced img{height:30px;width:auto;opacity:.95}
+  .footnav{margin-top:36px;display:flex;justify-content:center;flex-wrap:wrap;gap:6px 26px}
+  .footnav a{font-size:12px;font-weight:600;letter-spacing:.04em;color:var(--dim);text-decoration:none;transition:.15s}
+  .footnav a:hover{color:var(--mint)}
+  .copyright{margin-top:40px;font-size:12px;color:var(--dim);text-align:center}
+
+  @media(min-width:720px){header.hero{padding:48px 0 6px}}
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "PodcastEpisode", "name": "Buying Commercial Property With Your Super in 2026 | What the Numbers Say", "url": "https://thenumbersgamepodcast.com.au/episode-285.html", "datePublished": "2026-07-13", "episodeNumber": 285, "image": "https://i.ytimg.com/vi/RAQ80ecsDq0/maxresdefault.jpg", "partOfSeries": {"@type": "PodcastSeries", "name": "The Numbers Game", "url": "https://thenumbersgamepodcast.com.au/"}}</script>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-in">
+      <a class="brand" href="index.html" aria-label="The Numbers Game home"><img src="assets/tng-logo.png" alt="The Numbers Game"></a>
+      <div class="navlinks">
+        <a href="index.html">Home</a>
+        <div class="navgroup">
+          <a class="navtop">Episodes</a>
+          <div class="subnav">
+            <a href="episodes.html">All episodes</a>
+            <a href="adventure.html">Find moments</a>
+          </div>
+        </div>
+        <div class="navgroup">
+          <a class="navtop">About</a>
+          <div class="subnav">
+            <a href="about.html">The show</a>
+            <a href="nick-reilly.html">Nick Reilly</a>
+            <a href="jason-robinson.html">Jason Robinson</a>
+          </div>
+        </div>
+        <a href="contact.html">Contact</a>
+      </div>
+      <button class="navburger" id="navburger" type="button" aria-label="Menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24"><path d="M3 6h18v2H3zM3 11h18v2H3zM3 16h18v2H3z"/></svg>
+      </button>
+    </div>
+    <div class="navdrop" id="navdrop" hidden>
+      <a href="index.html">Home</a>
+      <span class="navlabel">Episodes</span>
+      <a class="sub" href="episodes.html">All episodes</a>
+      <a class="sub" href="adventure.html">Find moments</a>
+      <span class="navlabel">About</span>
+      <a class="sub" href="about.html">The show</a>
+      <a class="sub" href="nick-reilly.html">Nick Reilly</a>
+      <a class="sub" href="jason-robinson.html">Jason Robinson</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+
+  <main class="wrap">
+
+    <header class="hero">
+      <div class="hook">
+        <span class="eptag">EP 136</span>
+        <h1 class="hk"><span>Navigating Growth and Profitability</span></h1>
+      </div>
+    </header>
+
+    <div class="player-wrap" id="player-wrap">
+      <div class="audio-hero" id="spotify-embed"></div>
+    </div>
+
+    <div class="explore">
+      <div class="tabs" role="tablist">
+        <button class="tabbtn on" data-panel="p-summary">Summary</button>
+      </div>
+      <section class="tpanel" id="p-summary">
+        <div class="summary-body">
+          <p>Welcome to Episode 136 of The Numbers Game. Today, we dissect Uber&#x27;s ambitious plans to evolve into a super travel app and draw learnings on balancing growth with profitability and optimising businesses for a successful exit.</p>
+        </div>
+        <div class="vask">
+          <button class="vbtn" id="vbtn" type="button">
+            <svg viewBox="0 0 24 24"><path d="M12 14a3 3 0 0 0 3-3V6a3 3 0 1 0-6 0v5a3 3 0 0 0 3 3zm5-3a5 5 0 0 1-10 0H5a7 7 0 0 0 6 6.92V21h2v-3.08A7 7 0 0 0 19 11h-2z"/></svg>
+            Send us a voice note
+          </button>
+          <div class="vslot" id="vslot" hidden>
+            <div class="vhead">
+              <p class="vmsg">We'd love to hear from you. You can leave up to a 90 second voice note for us to play on the show: a question, some feedback, or a topic you want covered.</p>
+              <button class="vclose" id="vclose" type="button" aria-label="Close">&times;</button>
+            </div>
+            <iframe src="https://www.speakpipe.com/widget/inline/hhq6kzggsx7zpcsvakgxfrzun3zidpde" allow="microphone" width="100%" height="200" frameborder="0" title="Leave The Numbers Game a voice note"></iframe>
+          </div>
+          <script async src="https://www.speakpipe.com/widget/loader.js" charset="utf-8"></script>
+        </div>
+        <div class="sumfacts">
+          <div class="fact"><span class="fl">Release date</span><span class="fv">28 September 2023</span></div>
+          <div class="fact"><span class="fl">Hosts</span><span class="fv"><a href="jason-robinson.html">Jason Robinson</a> &amp; <a href="nick-reilly.html">Nick Reilly</a> &amp; <a href="marty-vidakovic.html">Marty Vidakovic</a></span></div>
+
+        </div>
+      </section>
+    </div>
+
+    <div class="drops">
+
+      <details class="drop">
+        <summary><span class="st">Episode transcript</span><span class="chev">+</span></summary>
+        <div class="drop-body tbody">
+          <p><span class="spk">Jason · 00:00</span>Welcome to The Numbers Game. I&#x27;m Jase and I&#x27;m here with Nick and Marty. How are we going today, fellas?</p>
+          <p><span class="spk">Marty · 00:04</span>Going well, thanks, Jase. You know, just enjoyed my dog eating a big lamb shank on the weekend and there isn&#x27;t anything more just exciting and exhilarating than watching a dog devour a piece of meat. It was extraordinary. And then of course, I copped the back end of that on the floor in the lounge room.</p>
+          <p><span class="spk">Marty · 00:23</span>So dog life, mate. So going well. Um, yeah, these things happen. Feeling good. Nick, how are you?</p>
+          <p><span class="spk">Nick · 00:31</span>I&#x27;m going well, mate. I&#x27;m going well. I&#x27;m just, um, just wondering which end the aftermath was. It— because you did say that you copped the back end on the floor. Yeah, which would make me think it came out of the rear end of the dog, but you didn&#x27;t elaborate.</p>
+          <p><span class="spk">Marty · 00:47</span>And I did, and I knew that, um, there could be an episode, so I, you know, walked it for about 15 minutes. Thinking that that might happen outside, but as dogs will do, they, uh, yeah, just, uh, very undisciplined. So yeah, a bit of a whack on the nose.</p>
+          <p><span class="spk">Nick · 01:04</span>Yeah, it&#x27;s good. I&#x27;m going well, mate. I&#x27;m just, um, a couple of days in Melbourne, then I&#x27;ve got some, some travel coming up this week to, um, to Brisbane. And I just, uh, realized again how out of control airfares are the other day. I was considering— I&#x27;ve got some work on the Sunny Coast, so I was considering going to the Sunshine Coast and then driving down to Brisbane.</p>
+          <p><span class="spk">Nick · 01:24</span>How much do you think a one-way ticket to the Sunshine Coast was?</p>
+          <p><span class="spk">Jason · 01:30</span>$600 at a guess.</p>
+          <p><span class="spk">Nick · 01:32</span>Correct, with Jetstar. And granted, it&#x27;s school holidays, so we&#x27;re kind of in that period, so they are inflated. But yeah, well, anyway, definitely changed the decision. So I&#x27;m just going to go to Brisbane this time and maybe go to Sunshine Coast another time.</p>
+          <p><span class="spk">Nick · 01:48</span>But geez, that&#x27;s a lot for a domestic flight in the air for 2 hours. $600 just to get there. Anyway, aroar. How are you, Jase?</p>
+          <p><span class="spk">Jason · 01:57</span>Really good, mate. Just, yeah. Oh God, I didn&#x27;t realize we&#x27;re going to start with pet stories again, but I had a case and I&#x27;ve got a game going on at the moment, which is probably a little bit of an overshare, but the cat had a bit of poo that she dragged out into our bedroom and it&#x27;s obviously sat there for a little while under a blanket.</p>
+          <p><span class="spk">Jason · 02:16</span>We found it the other day and Kase told me to put it in the toilet and I was like, no, you put it in the toilet. So now it&#x27;s the game of where we hide the poo in a tissue for the other person to find. To find. So I&#x27;m currently winning, Case hasn&#x27;t found it for a while, and it&#x27;s— no, I&#x27;m just kidding, it&#x27;s been flushed.</p>
+          <p><span class="spk">Jason · 02:32</span>But that was a fun game going on at home with a piece of poo floating around. It&#x27;s the kind of awesome pet stories we&#x27;ve got going on here at the numbers game. But that aside, doing really well. It&#x27;s, I don&#x27;t know, this time of year in Melbourne, blue skies and sunshine, you know, life&#x27;s good. I&#x27;m counting down the Fridays until Christmas.</p>
+          <p><span class="spk">Jason · 02:48</span>It&#x27;s getting a bit really, really too close for comfort. And mate, life is good.</p>
+          <p><span class="spk">Marty · 02:54</span>How good is the weather? Like, on the media they go heatwave, Disaster, Sydney, 31, terrible. Just look up Instagram, everyone&#x27;s on the beach surfing, having a great time. Just shut the media down. Goodness me.</p>
+          <p><span class="spk">Nick · 03:08</span>Yeah, I just— I guess it depends on whether or not you want your kids to be alive. I don&#x27;t know, anyone who says global warming isn&#x27;t happening is, you know, is kidding themselves. Um, but it&#x27;s, it&#x27;s good from a selfish point of view, it&#x27;s great. Really enjoying it.</p>
+          <p><span class="spk">Jason · 03:25</span>Nick, before we get fired in today, I&#x27;m just going to share our show sponsor and then we&#x27;re going to throw to you, mate, for a bit of a rundown on some things going on in the world of travel and, you know, all the fun platforms out there. But today&#x27;s show is brought to you by Innov8.</p>
+          <p><span class="spk">Jason · 03:40</span>The lovely team at Innov8 handle all things financial planning, mortgage broking, asset finance, commercial lending. I think the list is going to go on and on. You guys are always expanding and doing fun and exciting things to look after your clients to the best of your abilities. If you want to check out all the extra things Innov8 do that I don&#x27;t have time to list right now while you&#x27;re listening.</p>
+          <p><span class="spk">Jason · 03:59</span>Innov8.com.au. And, uh, check out what the team have got going on. Nick, what is happening?</p>
+          <p><span class="spk">Nick · 04:06</span>Well, on my topic of travel, I came across something on the weekend which was really interesting to me, not just because of the, the business side of things, but, um, you know, I think it&#x27;s, um just investment and money in general and what&#x27;s happening in the world at the moment.</p>
+          <p><span class="spk">Nick · 04:26</span>And the particular story I read was about Uber, and everyone knows who Uber are, but they have a new CEO, Dan— I&#x27;m going to butcher this— Dan Khosrowshahi or something like that. Marty might know the pronunciation of that.</p>
+          <p><span class="spk">Nick · 04:41</span>He&#x27;s very good with—</p>
+          <p><span class="spk">Marty · 04:43</span>I can&#x27;t get my own name right, mate.</p>
+          <p><span class="spk">Nick · 04:47</span>Well, if you can come up with it by the end of this episode, that&#x27;ll be a feather in your cap. Um, new CEO, ex-CEO of Expedia. So anyone who doesn&#x27;t know Expedia, um, that&#x27;s where you would go and book travel, um, and they would compare different airlines and, and whatnot. So Dan&#x27;s plan is to have Uber being a super travel app.</p>
+          <p><span class="spk">Nick · 05:07</span>And as we know at the moment, um, you can book an Uber just like you would a taxi. We&#x27;ve recently had Uber helicopter rides. And I know in Melbourne around Spring Carnival you would have seen the Uber Chopper rides going around.</p>
+          <p><span class="spk">Nick · 05:23</span>Um, these days though, in the UK you can now book flights, uh, through the Uber app, and they have plans on letting you book trains, boats, and all types of transport through the Uber app. Um, so a couple of things to think about here.</p>
+          <p><span class="spk">Nick · 05:40</span>What I really love is the vertical integration and how they&#x27;ve, they&#x27;ve captured a market. And I think the number I read was 4 million Australians used Uber in the last 12 months. So they&#x27;ve captured a market where they saw a need, which was, you know, the lack of taxi service in this country.</p>
+          <p><span class="spk">Nick · 06:00</span>I&#x27;m referring to this country, but I&#x27;m sure it&#x27;s worldwide. They then created great tech to the point where I almost feel like Uber apps have become part of our day-to-day life. So for me, it&#x27;s almost like my banking app. It&#x27;s just somewhere I&#x27;d go every day or two.</p>
+          <p><span class="spk">Nick · 06:15</span>So we are so accustomed to the using the, the Uber app, they&#x27;re now looking at ways, okay, well, how do we leverage off that? Okay, well, we can book tickets. And, um, in the UK, if you book a, a flight with Uber, you then get a 15% discount on an Uber ride to the airport.</p>
+          <p><span class="spk">Nick · 06:35</span>So really leveraging the fact that people are on their platform, why not give them other things to do, um, or other services? And obviously the, the Uber app is absolutely brilliant and very easy to use. So I can only imagine for myself, um, I&#x27;ll— I will be using it because I, I often will go to Webjet to compare, um, airlines when I&#x27;m looking.</p>
+          <p><span class="spk">Nick · 06:57</span>Um, so, you know, Uber could be my new comparison app moving forward because I&#x27;m so used to using it. So What I also found really interesting is their, is their results. So for the first time in the last quarter, so the first time ever, Uber announced a quarterly global profit of $394 million.</p>
+          <p><span class="spk">Nick · 07:18</span>So that compares to 12 months ago in the same quarter, a $2.6 billion loss. So what a turnaround. And it just got me thinking, well, they lost— if they lost $2.6 billion, what is their market cap? And I just jumped online last night and they&#x27;re market cap was like $90 billion or something.</p>
+          <p><span class="spk">Nick · 07:36</span>So then a few things started to add up. But what this story was going into, which, um, which I found interesting, was this, this, this movement away from growth at all costs from these tech businesses. And these tech businesses actually needing to show that they are in profitable businesses that have a good cash position to get investors interested.</p>
+          <p><span class="spk">Nick · 08:02</span>So if we look back, you know, the last 2 or 3 years, there&#x27;s been a lot of capital available for businesses that wanted to grow. Capital has been cheap because interest rates have been cheap. So it was very easy for investment groups and investors to deploy cash into these businesses for long-term growth.</p>
+          <p><span class="spk">Nick · 08:19</span>What you&#x27;ve got now is you&#x27;ve got a higher cost of capital, which means if you&#x27;re either leveraging that capital and lending it to, um, and lending it out to invest. You need to see a return because you&#x27;ve got your own cost to, to, to get the capital.</p>
+          <p><span class="spk">Nick · 08:35</span>Or you&#x27;ve got another option. You can just park the capital in a safe investment, get a guaranteed return on it. So you might not be as willing to put it into an investment such as Uber, which is a long, long, long-term growth plan. So it&#x27;s getting harder for these businesses to get access to capital.</p>
+          <p><span class="spk">Nick · 08:52</span>So they&#x27;re needing to become profitable quickly. And I thought this was a really good, um, this is a really good example of a business that&#x27;s gone ultra, ultra growth. Okay, we&#x27;ve built the platform. Okay, now how do we leverage this? And then how do we get money in the door?</p>
+          <p><span class="spk">Nick · 09:07</span>Because we need that now. It&#x27;s no longer about just simply growth, growth, growth. And there&#x27;s a lot of tech businesses that are going through that at the moment. So then it got me thinking, well, how does that You know, how does— how can our own listeners and business owners think about this?</p>
+          <p><span class="spk">Nick · 09:24</span>I know with our own business, we try and leverage off the database that we have by bringing in services that are complementary to each other. So finance, financial planning, asset and equipment finance, and small business lending. And there&#x27;s another revenue stream we&#x27;re looking at bringing in, but they all, they all, they all complement each other.</p>
+          <p><span class="spk">Nick · 09:44</span>So if you get a house then of course you need insurance. If you get insurance, then you need financial planning. If you&#x27;re a self-employed person and you get a house and you need a home loan, there&#x27;s every chance you&#x27;re going to need a business loan. And Uber is very similar. It&#x27;s all based around travel.</p>
+          <p><span class="spk">Nick · 10:00</span>You know, you book your flight, then you can book your travel to the airport and you get a discount for that. They know that they&#x27;ve got everyone&#x27;s attention on the app, so they&#x27;re looking to leverage that to the absolute maximum that they can. So I thought it was a really good story. And then to top it off, the turnaround in profitability, but $394 million US dollars in a quarter, like that&#x27;s mind-boggling.</p>
+          <p><span class="spk">Nick · 10:23</span>And then it is to us, but relative to the, um, relative to the price, um, or the, um, the value of Uber, it&#x27;s probably not that mind-boggling. But then it is when you compare it to last year&#x27;s loss at $2.6 billion. So it just goes to show when these growth businesses do turn their focus to profitability, how quickly they can make it happen, just purely because of the following and the revenues that they do have.</p>
+          <p><span class="spk">Nick · 10:48</span>It&#x27;s a lot easier for them to, to cut expenses. But thought I&#x27;d open it to you lads. Um, thoughts on that? Mario, I can see your mind ticking. You, I can tell you love this story. Number one, on turning the, uh, the profitability around, but, um, number two, the vertical integration of different service offerings to, um, to make sure that they&#x27;re you know, helping people and getting every dollar they can, um, out of their, out of their followers.</p>
+          <p><span class="spk">Marty · 11:13</span>Yeah, do love it. I, I love the fact that, um, the simplicity of Uber, first of all, is, I think, fantastic. I, and like I said, I&#x27;ve used Uber Eats as well as the Uber, yeah, Uber Travel, um, and I would put on another app if it&#x27;s that simple to use, you know, if it was Uber, you know, Planes.</p>
+          <p><span class="spk">Marty · 11:33</span>I, I, strangely enough, because of the— it&#x27;s so simple to utilize the, the app itself, I don&#x27;t mind having multiple apps for what I need, which is actually— I don&#x27;t know whether they&#x27;ll integrate it all into one app in the end, but I go, I actually quite like having Uber, but what I want to do on my screensaver.</p>
+          <p><span class="spk">Marty · 11:56</span>So I, I don&#x27;t know why, that might be just a personal choice. You know how you go into some apps and they&#x27;ll do everything, but you just get lost and confused. I really like the simplicity of the product. I really like the idea of, you know, if, if business owners are going to burn people&#x27;s money— you know how they talk about burn rate?</p>
+          <p><span class="spk">Marty · 12:16</span>I&#x27;ve never liked that. You know, you just don&#x27;t want someone burning your money in order to get somewhere on numbers other than the financial ones. So I like the turnaround in thinking because If you can&#x27;t make something profitable at that level, then really what&#x27;s the point?</p>
+          <p><span class="spk">Marty · 12:33</span>How long do we have to wait? So I think that&#x27;s a good turnaround. And particularly we have a lot more smaller business owners listening in, you know, don&#x27;t be thinking that way in regards to, I&#x27;m not going to turn a profit until year 4. You know, think about how you can turn a profit in month 3.</p>
+          <p><span class="spk">Marty · 12:49</span>You know, you want to be nimble from the start and then reinvest those profits into other great ideas. Um, and the other thing that just, I know from history is to focus in on delivering one great product. And in previous episodes, we&#x27;ve talked about, you know, Koala Mattresses and all they sold were mattresses and they&#x27;re renowned for mattresses.</p>
+          <p><span class="spk">Marty · 13:11</span>They got reviews on that, you know, they, and they dominated making millions off that. And then they leverage out into, into other products. And generally from what I&#x27;ve seen, even on numbers in reading up on businesses, 4 vertical products is the key, but all because then you&#x27;re getting lifetime value off the clients in the— but the delivery on the first product is critical because that&#x27;s where you&#x27;re creating your, you know, your following, creating</p>
+          <p><span class="spk">Marty · 13:42</span>your numbers, creating happy clients. Then the leverage point to those additional 3 products is a lot easier as long as they&#x27;re relevant. In the market. So I really love that as well. Too many people try to integrate and diversify too early and then get lost.</p>
+          <p><span class="spk">Marty · 13:58</span>They don&#x27;t do one thing well and they get lost in trying to do too much okay, and they never get a following. Whereas I feel like, yeah, that&#x27;s the, that&#x27;s the key component is to deliver well on one product, then diversify out.</p>
+          <p><span class="spk">Nick · 14:14</span>I love that you brought that up. And the word that comes to mind for me, Marty, is trust. And I think once you&#x27;ve developed that trust with your client, you&#x27;ve done a really good job on a particular service that you offer, then you can bring in other revenue streams or other service offerings.</p>
+          <p><span class="spk">Nick · 14:29</span>Because I just picture the client there going, oh, you guys can do that as well. You did such a good job on that. If you can take care of that, geez, that&#x27;s easier because that means you&#x27;ve got all my information. You know, look at our business in the mortgage space, and we&#x27;ve done exactly that. We&#x27;ve been very good at doing mortgages.</p>
+          <p><span class="spk">Nick · 14:45</span>Then it&#x27;s been financial planning, then it&#x27;s been equipment finance. And it almost becomes, um, the client— well, I guess for the client it&#x27;s a no-brainer. Okay, well, I&#x27;ll just get you to handle everything because that means I don&#x27;t have to go here, here, and here. So yeah, for me, for me, that word is trust.</p>
+          <p><span class="spk">Nick · 15:00</span>And you gain that trust through that initial product. Um, and then, oh yeah, I just love how you brought that up. It then just becomes really easy for the client to give you more of their more of their wallet share, as you would say.</p>
+          <p><span class="spk">Marty · 15:14</span>Yeah, and you&#x27;ve hit the nail on the head. The transference of trust is not selling another product. It&#x27;s a value add based on the value add that&#x27;s connecting on what you&#x27;ve established. So it&#x27;s a really key feature and that&#x27;s in all sales.</p>
+          <p><span class="spk">Marty · 15:30</span>And that&#x27;s another thing to think about. You know, this, again, I always think about what&#x27;s the value that the clients experience on the other side. And a lot of times that value is that trust.. But a lot of people think, oh yeah, I wanna sell a product. They need the product, but they never ask the next vertical question of what&#x27;s the value that that client&#x27;s experiencing.</p>
+          <p><span class="spk">Marty · 15:50</span>And with Uber, you know, it was a better solution to what&#x27;s out there. You know, so Uber Eats, my goodness, they come to me. That&#x27;s like the vehicle. That&#x27;s strange. But now the food comes to me.</p>
+          <p><span class="spk">Marty · 16:06</span>So there&#x27;s so many great things in Uber. And I&#x27;m actually looking forward to going, well, what does the plane flights look like? What&#x27;s the point of difference out there in the market to what is currently there? So all of a sudden I have this inquisitive curiosity as to how they&#x27;re going to execute on that and make my life better.</p>
+          <p><span class="spk">Jason · 16:26</span>They started in a sense of how they became successful was creating a better user experience than its competitors. So when it started, its competitors were taxis and the user experience of booking a cab, hailing a cab, calling, Remember when we were, you know, booking a cab when we were growing up and I remember being on hold to 13 Cabs and listening to that bloody 13 Cabs, 13 Cabs, and the music would roll on and on.</p>
+          <p><span class="spk">Jason · 16:49</span>You&#x27;d be on hold for hours. You didn&#x27;t know if anyone was coming or not. And now, like, you know, Nick saying, you know, the app, how good the app is. So, you know, I&#x27;ve just actually opened it up because usually you&#x27;re in autopilot. You click, it remembers where I&#x27;m going or, you know, tells me, suggested, offers me discounts.</p>
+          <p><span class="spk">Jason · 17:04</span>And I don&#x27;t even know. I don&#x27;t even think about it anymore. But having opened it up now, looking at it, it&#x27;s like It is so user-friendly. Like, I can have a package delivered, I can go pick a package up, I can rideshare, I can reserve it, I can travel, group ride, two wheels, get anything delivered, and it&#x27;s got all the options in one place to get it delivered.</p>
+          <p><span class="spk">Jason · 17:22</span>Like, it is super simple, but all it is is created a great customer experience. So I think, you know, as Nick was saying, you know, the lesson or the thought process for our listeners out there is how can I apply that mentality to my business and what I do?</p>
+          <p><span class="spk">Jason · 17:37</span>And You know, for starters, creating a great customer experience. And this is done through technology. So, you know, if you&#x27;ve got a business that doesn&#x27;t leverage technology, let&#x27;s say you&#x27;re still rocking up and, you know, you&#x27;re fixing someone&#x27;s, you know, kitchen, you&#x27;re a kitchen repairman of some sort, and then you&#x27;re writing a physical receipt and getting them to transfer to BSB an account number.</p>
+          <p><span class="spk">Jason · 17:59</span>Maybe that&#x27;s not as good an experience as a digital invoice on an iPad, and they can tap their credit card on your Square reader if that&#x27;s the kind of thing that you&#x27;re going. But thinking about technology and great customer experiences. That&#x27;s what— that&#x27;s how Uber really took off and did really well.</p>
+          <p><span class="spk">Jason · 18:15</span>And then they&#x27;ve been able to leverage from there by building in, you know, other verticals. And yeah, I&#x27;m the same as you, Marty. I&#x27;m excited. You know, I was booking something on the Qantas app the other day, then it went from the app and opened up some browser, then it told me I couldn&#x27;t log in. I had to call some number and I&#x27;m like, what? Like, this never happens on, you know, on Uber&#x27;s— never made me call someone before.</p>
+          <p><span class="spk">Jason · 18:34</span>I had something was delivered wrong. From some food on the weekend. I just got a refund straight away, like no questions asked. Bang! How easy and how good is that? So definitely some lessons to learn. And also the turnaround on the last quarter, a quarter, one year ago, a quarter losing in the billions to then be profiting in the hundreds of millions.</p>
+          <p><span class="spk">Jason · 18:54</span>Like that&#x27;s some serious focus and attention to detail within the four walls of a company and how they&#x27;re running it. And you know, they, I think for a long time, people wanted to cut Uber down and you know, all the competition came out and you had Lyft and DiDi and all these other ones.</p>
+          <p><span class="spk">Jason · 19:10</span>And for a long time, people were going, &quot;Ah, Uber can&#x27;t survive. Uber&#x27;s not gonna be around.&quot; And to Uber&#x27;s credit, they&#x27;ve just, you know, and I looked at their share price from 9 months ago and a year ago, it was $20 a share. And now I think it&#x27;s up around $50 a share again.</p>
+          <p><span class="spk">Jason · 19:25</span>So it&#x27;s going from strength to strength and yeah, well done. That&#x27;s incredible.</p>
+          <p><span class="spk">Marty · 19:30</span>Yeah.</p>
+          <p><span class="spk">Nick · 19:31</span>And look, it&#x27;s, it&#x27;s only going to get stronger with profitability, right? And I think it&#x27;s really important for businesses to think about this. And this is a focus that we&#x27;ve really only had for the last 18 months, that you need to— obviously you need to do business plans and cash flow projections and set goals, but your goals need to have a growth target in there, but they also need to have a profitability target because without profit you&#x27;re not an Uber.</p>
+          <p><span class="spk">Nick · 19:56</span>You can&#x27;t go to the market to get more money. Without profit, things can quickly unwind and you could have no business. So that profitability then gives you confidence to grow. To Marty&#x27;s point before, you get the profitability and you bank the money and then use that money to, to, to grow and invest in your business.</p>
+          <p><span class="spk">Nick · 20:15</span>But I think a lot of businesses just think about growth, growth, growth. But if you&#x27;re just thinking about growth, again, you&#x27;re not an Uber. You might only have 2 years, 3 years before either you don&#x27;t want to do it anymore because you haven&#x27;t made any money, or there&#x27;s things that are happening beyond your control and you don&#x27;t have profitability, so you don&#x27;t have cash in the bank to sit back and, you know, ride out bad times.</p>
+          <p><span class="spk">Nick · 20:37</span>But if you&#x27;re focusing on both growth and profitability, puts you in a really strong position with your bank. So when opportunities come, you can borrow to take growth plans. It puts money in your own pocket, so then you can invest that money personally.</p>
+          <p><span class="spk">Nick · 20:53</span>But yeah, I don&#x27;t know, I&#x27;d probably pass this to you, Jason. Do you see a lot of businesses that only focus on growth and don&#x27;t think about what&#x27;s actually left? Because at the end of the day, that&#x27;s what you&#x27;re really there for. You&#x27;re there to make money. So you can grow the business as much as you like, but unless there&#x27;s a big exit coming one day, it&#x27;s pointless.</p>
+          <p><span class="spk">Nick · 21:09</span>So you&#x27;ve got to make sure that you&#x27;re not just trying to be profitable, but what are those margins you&#x27;re trying to hit, and then how do they align with your growth plans and find the balance between growth and profitability? Which is what a lot of these bigger businesses are having to do now because the gravy train of capital investment just isn&#x27;t there anymore.</p>
+          <p><span class="spk">Jason · 21:27</span>We definitely see it. It&#x27;s an ongoing conversation that we&#x27;re always having with business owners is to what is that endgame? And you don&#x27;t need to sell your business tomorrow and you don&#x27;t even need to sell it in 5 or 10 years. But knowing an endgame of a profitability number when you can wind down and either start to retire or have somebody take over the business and run it for you, And for a long time, I think a lot of people were, especially when they start a business, they do focus on revenue over profit because they think one will lead to the other, which often sometimes</p>
+          <p><span class="spk">Jason · 21:58</span>it can. So when you start, what you want to do is get revenue in the door because you want to have a business that can start to bring in the cash. So cool, you focus on revenue. But I think it&#x27;s often too long. People focus on revenue for too long before they shift their attention to profit.</p>
+          <p><span class="spk">Jason · 22:13</span>And look, I think even in some way, shape, or form, we were guilty of that in our accounting firm. For the first couple of years, accounting firms, or to a certain size, accounting firms are valued on revenue. So all of a sudden we were tying this fake idea of what our firm was worth because of a revenue growth number.</p>
+          <p><span class="spk">Jason · 22:32</span>And then all of a sudden maturity hits and you go, hang on a minute, we&#x27;re running a business, we need to be profitable to lead by example and show other businesses around us how to do it, talk to our employees about what it meant to be successful in business. And then also in the industry, if we&#x27;re going around wanting to promote the accounting industry and promote businesses overall, we need to live and breathe and practise what we preach.</p>
+          <p><span class="spk">Jason · 22:55</span>So, which has been a good conversation to now have with our clients too, is to go, you know, what is the ideal profit you want to make? And as you touched on, Nick, knowing the margins, like gross profit and net profit for a particular industry. You know, if you&#x27;re operating in an industry that usually drops 20% to the bottom line and you&#x27;re making 3%, Well, you know that there&#x27;s room that you can move between your 3% margin and achieving 20% at some point in the future if you turn some dials and improve your business operations.</p>
+          <p><span class="spk">Nick · 23:25</span>You can still go for growth. It&#x27;s, you know, it&#x27;s just what&#x27;s the balance of profitability and growth. And I think, I think what happens too is it becomes this hamster wheel because with most industries, the bigger that you get, the bigger the expense base is that you build.</p>
+          <p><span class="spk">Nick · 23:43</span>So if you&#x27;re not focusing on profit from day one, it doesn&#x27;t mean you can turn it around in 4 or 5 years. Because what happens is growth becomes this, this drug. So you keep chasing it, chasing it, chasing it. But every time you&#x27;re growing, you&#x27;re putting in more fixed costs, you&#x27;re putting in more variable costs, you&#x27;re taking on more space, whatever it might be.</p>
+          <p><span class="spk">Nick · 24:01</span>So I would argue that the bigger you get, the harder it becomes to come to become profitable because of all those expenses. But if you&#x27;ve got a good method around it and you&#x27;re doing it from day one, it just becomes second nature. You don&#x27;t make decisions unless you&#x27;re hitting those profit margins, and every decision you make is in line with hitting those margins or that balance of margin and growth.</p>
+          <p><span class="spk">Nick · 24:21</span>So I think it&#x27;s, you know, to your point, highly important to be focusing day one because it doesn&#x27;t— it&#x27;s not necessarily something you can turn around in 4 years&#x27; time like Uber&#x27;s managed to do. But for a lot of businesses, you can&#x27;t do that because of the fixed the fixed cost base that you build in during growth.</p>
+          <p><span class="spk">Marty · 24:38</span>Yeah, I think that was the thing I worked out in business banking, and I was fortunate before I went into business to see it, that the good, the really good business owners knew their profit margins and what they wanted, and they had ratios accordingly, and they made decisions off that, off revenue.</p>
+          <p><span class="spk">Marty · 24:53</span>And the other thing you always have to remember, particularly as a small business owner, it&#x27;s a very small percentage of businesses that actually get sold. Like, I think it&#x27;s under 5%. It might only be 2 or 3%. It&#x27;s not a huge amount of businesses that get to that position to get acquired.</p>
+          <p><span class="spk">Marty · 25:10</span>So you need to be running a business that you obviously want to be running and that is lucrative and profitable, um, to the people in it and yourself. And it&#x27;s, um, yeah, and, and sometimes people think, I&#x27;ll get the wind later, the wind will come later, but a lot could change in business.</p>
+          <p><span class="spk">Marty · 25:29</span>So you want to ensure you&#x27;re enjoying the financial benefits of the business and understanding that you have control of that, I think is critical in the decision-making as to how you go about putting the plan of attack into play. So really key.</p>
+          <p><span class="spk">Jason · 25:45</span>I couldn&#x27;t agree more, Marty. And I think that definitely becomes the mindset of beginning with the end in mind. So even if you&#x27;re not planning on selling anytime soon, if you build a business and design it as if you&#x27;re going to sell it one day, it actually puts those principles in place of having systems and process, a leadership team, an ability for the business to run without you.</p>
+          <p><span class="spk">Jason · 26:05</span>So there&#x27;s no key person dependence and whether you then end up selling the business or not, at least it&#x27;s structured and set up in the right way from day one, which I&#x27;d love to see more business owners get successful exits. It&#x27;s definitely, as you said, there&#x27;s a very small number of business owners that do get to sell and have that successful finish to their business.</p>
+          <p><span class="spk">Marty · 26:25</span>That tech space is extremely interesting. Like sometimes you see higher profit margins at 40% and 50% because it&#x27;s software related, but there&#x27;s a lot of, there&#x27;s a lot of smaller business owners. When I say small business owners, small teams that are creating extraordinary revenues and profits just based on having all the logistics set up, all automated.</p>
+          <p><span class="spk">Marty · 26:46</span>You know, they&#x27;ve, they&#x27;ve dominated the social space, doing extremely well. And I go, I don&#x27;t even know what they, that those type of businesses are going to sell for, but someone could basically walk in and I&#x27;ve seen probably about 5 or 6 in the last couple of weeks. Someone could walk in and just take over and it&#x27;s not that difficult because the hard work&#x27;s been done and you just go, it&#x27;s quite phenomenal.</p>
+          <p><span class="spk">Marty · 27:09</span>Then when you&#x27;ve got a more labor-intensive type business as well. So there&#x27;s certainly the changing guard in the types of businesses that you&#x27;re seeing online now that probably just didn&#x27;t exist, you know, 10, 15 years ago.</p>
+          <p><span class="spk">Jason · 27:23</span>Spot on. Well, Nick, thank you for sharing. I&#x27;m looking forward to booking my future travel plans on my Uber app. And for listeners out there, think about about those customer experiences and how technology can help influence and shape your business and a few of those different angles you can take it to help yourselves grow, but focusing on that beautiful profit down the bottom as well.</p>
+          <p><span class="spk">Jason · 27:43</span>Thank you, Nico. And until next time.</p>
+          <p><span class="spk">Marty · 27:45</span>Have we got an app? Have we got an app, guys, before we go that listeners can just press on it and we turn up?</p>
+          <p><span class="spk">Nick · 27:51</span>I thought you were building it, mate. Didn&#x27;t we give that job to you?</p>
+          <p><span class="spk">Marty · 27:54</span>All right, I better get onto it. Game over.</p>
+        </div>
+      </details>
+
+    </div>
+
+    <!-- audio-only: the Spotify player is the hero above; duplicate embed removed -->
+
+    <div class="listen">
+      <a href="https://open.spotify.com/episode/78k4JeUZ96kec4QH6qLsMA" target="_blank" rel="noopener" aria-label="Listen to this episode on Spotify">
+        <svg viewBox="0 0 24 24"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.52 17.34c-.24.36-.66.48-1.02.24-2.82-1.74-6.36-2.1-10.56-1.14-.42.12-.78-.18-.9-.54-.12-.42.18-.78.54-.9 4.56-1.02 8.52-.6 11.64 1.32.42.18.48.66.3 1.02zm1.44-3.3c-.3.42-.84.6-1.26.3-3.24-1.98-8.16-2.58-11.94-1.38-.48.12-1.02-.12-1.14-.6-.12-.48.12-1.02.6-1.14 4.32-1.32 9.72-.66 13.44 1.62.36.18.54.78.3 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.3c-.6.18-1.2-.18-1.38-.72-.18-.6.18-1.2.72-1.38 4.26-1.26 11.28-1.02 15.72 1.62.54.3.72 1.02.42 1.56-.3.42-1.02.6-1.56.3z"/></svg>
+        Spotify
+      </a>
+      <a href="https://podcasts.apple.com/au/podcast/id1555566088?i=1000776470464" target="_blank" rel="noopener" aria-label="Listen to this episode on Apple Podcasts">
+        <svg viewBox="0 0 24 24"><path d="M5.34 0A5.328 5.328 0 000 5.34v13.32A5.328 5.328 0 005.34 24h13.32A5.328 5.328 0 0024 18.66V5.34A5.328 5.328 0 0018.66 0H5.34zm6.525 2.568c2.336 0 4.448.902 6.056 2.587 1.224 1.272 1.912 2.619 2.264 4.392l.04.23c.04.272-.16.527-.432.567a.505.505 0 01-.567-.431l-.04-.213c-.312-1.57-.92-2.747-2.004-3.867-1.428-1.496-3.293-2.294-5.393-2.294-2.1 0-3.966.798-5.394 2.294-1.084 1.12-1.692 2.298-2.004 3.867l-.04.213a.507.507 0 01-.567.431.504.504 0 01-.432-.567l.04-.23c.352-1.773 1.04-3.12 2.264-4.392 1.608-1.685 3.72-2.587 6.056-2.587h.153zm.136 3.033c1.74 0 3.312.67 4.527 1.934.883.916 1.394 1.93 1.663 3.253l.04.23a.505.505 0 01-.431.567.503.503 0 01-.567-.432l-.04-.212c-.23-1.112-.659-1.97-1.396-2.732-1.052-1.1-2.404-1.672-3.9-1.672s-2.849.572-3.901 1.672c-.737.762-1.167 1.62-1.396 2.732l-.04.212a.503.503 0 01-.567.432.505.505 0 01-.432-.567l.04-.23c.27-1.323.78-2.337 1.664-3.253 1.215-1.264 2.787-1.934 4.527-1.934h.21zm-.078 3.05c1.092 0 2.091.424 2.89 1.22.582.58.924 1.245 1.107 2.15l.04.218a.501.501 0 01-.424.568.499.499 0 01-.568-.424l-.04-.198c-.146-.724-.413-1.253-.871-1.716-.63-.63-1.398-.957-2.226-.957s-1.595.328-2.225.957c-.459.463-.726.992-.871 1.716l-.04.198a.499.499 0 01-.568.424.501.501 0 01-.424-.568l.04-.219c.183-.904.525-1.569 1.106-2.149.8-.796 1.799-1.22 2.89-1.22h.184zM12 14.07a2.477 2.477 0 012.48 2.478A2.477 2.477 0 0112 19.024a2.477 2.477 0 01-2.48-2.477A2.477 2.477 0 0112 14.07z"/></svg>
+        Apple
+      </a>
+      <a class="yt-pill" href="https://www.youtube.com/@thenumbersgamepodcast?sub_confirmation=1" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.12-2.14C19.5 3.55 12 3.55 12 3.55s-7.5 0-9.38.51A3 3 0 0 0 .5 6.2 31.4 31.4 0 0 0 0 12a31.4 31.4 0 0 0 .5 5.8 3 3 0 0 0 2.12 2.14c1.88.51 9.38.51 9.38.51s7.5 0 9.38-.51a3 3 0 0 0 2.12-2.14A31.4 31.4 0 0 0 24 12a31.4 31.4 0 0 0-.5-5.8zM9.55 15.57V8.43L15.82 12z"/></svg>
+        Subscribe
+      </a>
+    </div>
+    <!-- LISTEN:END -->
+
+    <div class="relsec">
+      <span class="rtitle">Discover more</span>
+      <div class="relgrid">
+        <a class="relcard" href="/courage-culture-tough-calls-cameron-schwab-on-redefining-leadership">
+          <img src="https://i.ytimg.com/vi/SXCEAyoLobo/hqdefault.jpg" alt="EP 249 thumbnail">
+          <span class="rt">Courage, Culture &amp; Tough Calls: Cameron Schwab on Redefining Leadership</span>
+          <span class="rfoot"><span class="rwhy">15 September 2025</span><span class="rtag">EP 249</span></span>
+        </a>
+        <a class="relcard" href="/understanding-financial-wellbeing">
+          <img src="https://i.ytimg.com/vi/tAEoyV7Bj4A/hqdefault.jpg" alt="EP 211 thumbnail">
+          <span class="rt">Understanding Financial Wellbeing</span>
+          <span class="rfoot"><span class="rwhy">11 November 2024</span><span class="rtag">EP 211</span></span>
+        </a>
+        <a class="relcard" href="/a-strong-case-for-homeschooling">
+          <img src="https://i.ytimg.com/vi/kcibY_ck4zY/hqdefault.jpg" alt="EP 161 thumbnail">
+          <span class="rt">A Strong Case For Homeschooling</span>
+          <span class="rfoot"><span class="rwhy">11 March 2024</span><span class="rtag">EP 161</span></span>
+        </a>
+        <a class="relcard" href="/the-death-of-cash">
+          <img src="https://i.ytimg.com/vi/Js06MUV7yFo/hqdefault.jpg" alt="EP 153 thumbnail">
+          <span class="rt">The Death of Cash</span>
+          <span class="rfoot"><span class="rwhy">12 February 2024</span><span class="rtag">EP 153</span></span>
+        </a>
+        <a class="relcard" href="/melbourne-property-boom-why-2025-could-spark-a-gold-rush">
+          <img src="https://i.ytimg.com/vi/rT4U4nQ1H08/hqdefault.jpg" alt="EP 247 thumbnail">
+          <span class="rt">Melbourne Property Boom? Why 2025 Could Spark a Gold Rush</span>
+          <span class="rfoot"><span class="rwhy">1 September 2025</span><span class="rtag">EP 247</span></span>
+        </a>
+        <a class="relcard" href="/avoid-these-tax-time-pitfalls">
+          <img src="https://i.ytimg.com/vi/0QbVqLvsKMc/hqdefault.jpg" alt="EP 201 thumbnail">
+          <span class="rt">Avoid These Tax-Time Pitfalls</span>
+          <span class="rfoot"><span class="rwhy">2 September 2024</span><span class="rtag">EP 201</span></span>
+        </a>
+      </div>
+      <div class="reldots" id="reldots"></div>
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="footgrid">
+      <div class="fcol">
+        <div class="foot-label">Brought to you by</div>
+        <div class="sponsors">
+          <a href="https://www.inovayt.com.au/" target="_blank" rel="noopener"><img src="assets/inovayt-white.png" alt="Inovayt"></a>
+          <a href="https://futureadvisory.com.au/" target="_blank" rel="noopener"><img src="assets/future-advisory-white.png" alt="Future Advisory"></a>
+        </div>
+      </div>
+      <div class="fcol produced">
+        <div class="foot-label">Produced by</div>
+        <a href="https://www.vidpod.com.au/" target="_blank" rel="noopener"><img src="assets/vidpod-white.png" alt="VIDPOD"></a>
+      </div>
+    </div>
+    <nav class="footnav">
+      <a href="index.html">Home</a><a href="episodes.html">Every episode</a><a href="adventure.html">Choose your own adventure</a><a href="about.html">About the show</a><a href="nick-reilly.html">Nick Reilly</a><a href="jason-robinson.html">Jason Robinson</a><a href="contact.html">Contact</a>
+    </nav>
+    <div class="copyright">© 2026 The Numbers Game</div>
+  </footer>
+
+  <script>
+    var VIDEO='RAQ80ecsDq0';
+
+    /* Mobile nav dropdown. */
+    var burger=document.getElementById('navburger'), navdrop=document.getElementById('navdrop');
+    if(burger&&navdrop){burger.addEventListener('click',function(){
+      navdrop.hidden=!navdrop.hidden;
+      burger.setAttribute('aria-expanded', navdrop.hidden?'false':'true');
+    });}
+
+    /* Voice-note button reveals the recorder; × tucks it away. */
+    var vbtn=document.getElementById('vbtn'), vslot=document.getElementById('vslot'), vclose=document.getElementById('vclose');
+    if(vbtn&&vslot){vbtn.addEventListener('click',function(){vslot.hidden=!vslot.hidden;});}
+    if(vclose&&vslot){vclose.addEventListener('click',function(){vslot.hidden=true;});}
+
+    /* Keep-exploring dots: only shown when the strip actually scrolls (mobile). */
+    var rg=document.querySelector('.relgrid'), rd=document.getElementById('reldots');
+    if(rg&&rd){
+      var relCards=rg.querySelectorAll('.relcard');
+      relCards.forEach(function(){rd.appendChild(document.createElement('span'))});
+      var updDots=function(){
+        var scrollable=rg.scrollWidth>rg.clientWidth+4;
+        rd.style.display=scrollable?'flex':'none';
+        if(!scrollable)return;
+        var i=Math.round(rg.scrollLeft/(rg.scrollWidth-rg.clientWidth)*(relCards.length-1));
+        rd.querySelectorAll('span').forEach(function(s,n){s.classList.toggle('on',n===i)});
+      };
+      rg.addEventListener('scroll',updDots,{passive:true});
+      window.addEventListener('resize',updDots);
+      updDots();
+    }
+
+    /* Explore tabs: swap the visible panel; the row stays put so you never lose your place. */
+    var tabBtns=document.querySelectorAll('.tabbtn');
+    tabBtns.forEach(function(b){
+      b.addEventListener('click',function(){
+        tabBtns.forEach(function(o){o.classList.remove('on')});
+        document.querySelectorAll('.tpanel').forEach(function(p){p.hidden=true});
+        b.classList.add('on');
+        document.getElementById(b.getAttribute('data-panel')).hidden=false;
+      });
+    });
+
+    /* Audio-only: Spotify player is the hero; chapters/questions seek it via the Spotify iFrame API. */
+    var spotifyCtrl=null, pendingSeek=null;
+    function nudge(){
+      var p=document.getElementById('player-wrap'), r=p.getBoundingClientRect();
+      if(r.bottom<80 || r.top>window.innerHeight-90){ p.scrollIntoView({behavior:'smooth',block:'start'}); }
+    }
+    function startAt(sec){
+      nudge();
+      if(spotifyCtrl){ spotifyCtrl.seek(sec); spotifyCtrl.resume(); } else { pendingSeek=sec; }
+    }
+    window.onSpotifyIframeApiReady=function(IFrameAPI){
+      IFrameAPI.createController(document.getElementById('spotify-embed'),
+        {uri:'spotify:episode:2OqFiTQ9n8AVt9FYjKESdD', width:'100%', height:'232'},
+        function(c){ spotifyCtrl=c; if(pendingSeek!=null){ c.seek(pendingSeek); c.resume(); pendingSeek=null; } });
+    };
+    (function(){var sc=document.createElement('script');sc.src='https://open.spotify.com/embed/iframe-api/v1';sc.async=true;document.head.appendChild(sc);})();
+  </script>
+</body>
+</html>

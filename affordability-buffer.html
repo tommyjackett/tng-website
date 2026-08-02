@@ -1,0 +1,560 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EP 62 · Affordability Buffer | The Numbers Game</title>
+<meta name="description" content="Welcome to episode 62 of The Numbers Game. On today&#x27;s show, we chat about the UK&#x27;s approach to mortgage buffers, how the cost of living assessment is calcula…">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" sizes="64x64" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="canonical" href="https://thenumbersgamepodcast.com.au/affordability-buffer">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="The Numbers Game">
+<meta property="og:title" content="EP 62 · Affordability Buffer | The Numbers Game">
+<meta property="og:description" content="Welcome to episode 62 of The Numbers Game. On today&#x27;s show, we chat about the UK&#x27;s approach to mortgage buffers, how the cost of living assessment is calcula…">
+<meta property="og:url" content="https://thenumbersgamepodcast.com.au/affordability-buffer">
+<meta property="og:image" content="https://thenumbersgamepodcast.com.au/assets/tng-audio-only-thumbnail.webp">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+  :root{
+    --purple:#585af3; --purple-dark:#2c1b8a; --mint:#7ad9a8;
+    --white:#ffffff; --muted:rgba(255,255,255,.60); --dim:rgba(255,255,255,.42);
+    --line:rgba(255,255,255,.12); --card:rgba(255,255,255,.05); --card-hi:rgba(255,255,255,.09);
+    --display:'Anton',Impact,'Helvetica Neue',sans-serif;
+    --sans:'Inter',system-ui,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif;
+    --wrap:1280px;   /* page frame (nav spans this) */
+    --col:960px;     /* content column (player, tabs, text) */
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:var(--sans); color:var(--white); line-height:1.6; -webkit-font-smoothing:antialiased;
+    background:#12093a;
+    background-image:
+      radial-gradient(1200px 600px at 82% -6%, rgba(88,90,243,.45) 0%, transparent 55%),
+      radial-gradient(900px 700px at 5% 8%, rgba(122,217,168,.10) 0%, transparent 50%),
+      linear-gradient(180deg,#2c1b8a 0%,#1a1150 28%,#100b34 62%,#0b0820 100%);
+    background-attachment:fixed;
+  }
+  a{color:inherit}
+  .wrap{max-width:var(--wrap);margin:0 auto;padding:0 36px}
+  main.wrap{max-width:var(--col)}
+  @media(max-width:720px){.wrap{padding:0 22px}}
+
+  /* ── Navbar ── */
+  .nav{position:sticky;top:0;z-index:50;background:linear-gradient(180deg,rgba(24,15,74,.92),rgba(24,15,74,.72));backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+  .nav-in{max-width:var(--wrap);margin:0 auto;padding:11px 36px;display:flex;align-items:center;justify-content:space-between}
+  @media(max-width:720px){.nav-in{padding:11px 22px}}
+  .brand{display:block;line-height:0}
+  .brand img{height:36px;width:auto;display:block}
+  .navlinks{display:flex;gap:28px;align-items:center}
+  .navlinks a{text-decoration:none;font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);transition:.15s}
+  .navlinks a:hover{color:var(--white)}
+  .navlinks a.navtop{cursor:default}
+  .navgroup{position:relative;display:flex;align-items:center}
+  .navgroup .subnav{display:none;position:absolute;top:100%;left:50%;transform:translateX(-50%);padding-top:14px;min-width:180px}
+  .navgroup:hover .subnav,.navgroup:focus-within .subnav{display:block}
+  .subnav-in,.navgroup .subnav{z-index:60}
+  .navgroup .subnav a{display:block;background:#180f4a;border:1px solid var(--line);border-top:0;padding:12px 16px;font-size:12px;color:rgba(255,255,255,.85)}
+  .navgroup .subnav a:first-child{border-top:1px solid var(--line)}
+  .navgroup .subnav a:hover{background:#221768;color:var(--white)}
+  .navburger{display:none;background:none;border:1px solid var(--line);padding:8px 10px;cursor:pointer;color:var(--white);transition:.15s}
+  .navburger:hover{border-color:rgba(122,217,168,.6)}
+  .navburger svg{width:20px;height:20px;fill:currentColor;display:block}
+  .navdrop{display:none}
+  @media(max-width:720px){
+    .navlinks{display:none}
+    .navburger{display:block}
+    .navdrop{display:block;position:absolute;left:0;right:0;top:100%;
+      background:#180f4a;border-bottom:1px solid var(--line);box-shadow:0 24px 50px rgba(0,0,0,.45)}
+    .navdrop[hidden]{display:none}
+    .navdrop a{display:block;padding:15px 22px;text-decoration:none;font-size:14px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:rgba(255,255,255,.9);border-bottom:1px solid rgba(255,255,255,.06)}
+    .navdrop a:last-child{border-bottom:0}
+    .navdrop a.sub{padding-left:42px;font-size:13px;color:rgba(255,255,255,.72)}
+    .navdrop .navlabel{display:block;padding:15px 22px 6px;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.4)}
+  }
+
+  /* ── Hero / hook (marker-highlight system: purple hook wraps naturally, mint payoff below)
+     Rules: title splits at its natural break (colon/pipe/question mark). Front = hook (purple,
+     big), back = payoff (mint, smaller). No break in title = purple hook only. Highlights hug
+     the text (tight em padding tuned to Anton) and wrap via box-decoration-break — never
+     hand-pick line breaks or mint words. ── */
+  header.hero{padding:34px 0 6px}
+  .hook{--inx:clamp(8.4px,2.1vw,15.6px)} /* one shared text inset so hook + payoff first letters align */
+  .hook .hk{font-family:var(--display);font-weight:400;text-transform:uppercase;
+    font-size:clamp(28px,7vw,52px);line-height:1.3;letter-spacing:-.5px;text-wrap:balance}
+  .hook .hk span{color:var(--white);padding:.04em var(--inx) .02em;
+    background:linear-gradient(var(--purple),var(--purple)) 0 50%/100% 87% no-repeat;
+    -webkit-box-decoration-break:clone;box-decoration-break:clone}
+  .hook .pay{font-family:var(--display);font-weight:400;text-transform:uppercase;
+    font-size:clamp(16px,4vw,24px);line-height:1.5;letter-spacing:.6px;margin-top:8px;text-wrap:balance}
+  .hook .pay span{color:#0a0a0a;padding:.08em var(--inx) .04em;
+    background:linear-gradient(var(--mint),var(--mint)) 0 50%/100% 88% no-repeat;
+    -webkit-box-decoration-break:clone;box-decoration-break:clone}
+  /* no-hook titles: mid-split into two full-size rows, purple then mint */
+  .hook .hk span.hkrow{display:block;background:none;padding:0}
+  .hook .hk .hkrow+.hkrow{margin-top:8px}
+  .hook .hk span.mintseg{color:#0a0a0a;
+    background:linear-gradient(var(--mint),var(--mint)) 0 50%/100% 87% no-repeat}
+
+  /* ── Player (clean facade → real player on tap) ── */
+  .player-wrap{margin:24px 0 4px;scroll-margin-top:76px}
+  .audio-hero{width:100%;min-height:232px;border-radius:12px;overflow:hidden;box-shadow:0 30px 70px rgba(0,0,0,.5),0 0 0 1px rgba(255,255,255,.06)}
+  .audio-hero iframe{display:block;width:100%;border:0}
+  .player{position:relative;width:100%;padding-top:56.25%;border-radius:0;overflow:hidden;background:#000;box-shadow:0 30px 70px rgba(0,0,0,.5),0 0 0 1px rgba(255,255,255,.06)}
+  .facade{position:absolute;inset:0;border:0;cursor:pointer;background-size:cover;background-position:center;display:flex;align-items:center;justify-content:center;padding:0}
+  .facade .play{width:74px;height:74px;border-radius:50%;background:rgba(10,6,30,.40);border:2px solid rgba(255,255,255,.72);display:flex;align-items:center;justify-content:center;transition:.18s;-webkit-backdrop-filter:blur(1px);backdrop-filter:blur(1px)}
+  .facade:hover .play{background:rgba(88,90,243,.62);transform:scale(1.07);border-color:#fff}
+  .facade .play::after{content:"";border-style:solid;border-width:11px 0 11px 19px;border-color:transparent transparent transparent #fff;margin-left:5px}
+  .player iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+
+  /* ── Episode facts (bottom of the Summary panel — templated per episode) ── */
+  .sumfacts{margin:14px 10px 4px;padding-top:13px;border-top:1px solid rgba(255,255,255,.08);display:flex;flex-direction:column;gap:8px}
+  .fact{display:flex;gap:12px;font-size:13.5px}
+  .fact .fl{flex:none;width:104px;color:var(--dim);font-weight:600;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;padding-top:2px}
+  .fact .fv{color:rgba(255,255,255,.9);font-weight:500}
+  .fact .fv a{color:var(--mint);text-decoration:none;border-bottom:1px solid rgba(122,217,168,.4);transition:.15s}
+  .fact .fv a:hover{border-bottom-color:var(--mint)}
+
+  /* ── Episode tag (identity: black label hanging off the title corner) ── */
+  .eptag{display:inline-block;position:relative;left:-6px;margin-bottom:-7px;z-index:2;
+    background:#0a0a0a;color:var(--white);font-family:var(--display);font-weight:400;
+    font-size:13.5px;letter-spacing:1.5px;text-transform:uppercase;padding:6px 11px 4px}
+
+  /* ── Explore tabs (sticky mode switcher; one panel swaps below, nothing shoves) ── */
+  .explore{margin-top:22px}
+  .tabs{position:sticky;top:58px;z-index:40;display:flex;flex-wrap:wrap;gap:8px;padding:10px 0;
+    background:linear-gradient(180deg,rgba(18,10,55,.96),rgba(18,10,55,.86));
+    backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+  .tabbtn{font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.5px;
+    font-size:14.5px;color:var(--white);background:var(--purple);border:1px solid var(--purple);
+    padding:9px 13px 7px;cursor:pointer;transition:.15s}
+  .tabbtn:hover{filter:brightness(1.12)}
+  .tabbtn.on{background:var(--mint);border-color:var(--mint);color:#0a0a0a}
+  .tabbtn.on:hover{filter:none}
+  .tabbtn .ct{font-size:12px;opacity:.75;font-variant-numeric:tabular-nums}
+  .tabbtn .ct::before{content:" · "}
+  .tpanel{border:1px solid var(--line);background:var(--card);padding:12px 10px 14px}
+  .hint{font-size:12.5px;color:var(--muted);padding:2px 10px 10px;border-bottom:1px solid rgba(255,255,255,.08);margin-bottom:6px}
+
+  /* ── Listen row (no box: label left, service pills follow) ── */
+  .listen{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:12px 16px;margin-top:34px}
+  .listen .lname{font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--dim)}
+  .listen a{display:inline-flex;align-items:center;gap:9px;padding:11px 18px;border-radius:999px;
+    background:var(--mint);color:#08210f;text-decoration:none;font-weight:800;font-size:12.5px;
+    letter-spacing:.04em;text-transform:uppercase;transition:.15s}
+  .listen a:hover{filter:brightness(1.06);transform:translateY(-1px);box-shadow:0 12px 30px rgba(122,217,168,.25)}
+  .listen svg{width:20px;height:20px;fill:currentColor;flex:none}
+  /* ── Listen-now Spotify audio embed (full column width, above the pills) ── */
+  .listen-now{margin-top:40px}
+  .listen-now .ln-head{display:flex;align-items:baseline;justify-content:space-between;gap:14px;margin-bottom:13px}
+  .listen-now .ln-title{font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--dim)}
+  .audio-embed{border-radius:12px;overflow:hidden;box-shadow:0 20px 50px rgba(0,0,0,.4),0 0 0 1px rgba(255,255,255,.06)}
+  .audio-embed iframe{display:block;width:100%;border:0}
+  @media(max-width:720px){.listen-now{margin-top:32px}}
+
+  /* ── Keep exploring (thumbnails link to other episode PAGES, never timecodes).
+     Swipeable strip on mobile, fits three-up on desktop. Variant rule: claim
+     "similar ground" + reason lines ONLY when moment-level topic overlap is
+     genuinely strong; otherwise show the latest released episodes with dates —
+     never invent a connection. ── */
+  .relsec{margin-top:60px;padding-top:58px;border-top:1px solid var(--line)} /* line = end of this episode's info */
+  .reldots{display:flex;justify-content:center;gap:7px;margin-top:12px}
+  .reldots span{width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.25);transition:.2s}
+  .reldots span.on{background:var(--mint)}
+  .relsec .rtitle{display:inline-block;font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.5px;font-size:14.5px;background:var(--mint);color:#0a0a0a;padding:9px 13px 7px;margin-bottom:18px}
+  .relgrid{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding-bottom:6px;scrollbar-width:none}
+  .relgrid::-webkit-scrollbar{display:none}
+  .relcard{flex:0 0 56%;max-width:232px;scroll-snap-align:start;display:flex;flex-direction:column;text-decoration:none;background:var(--card);border:1px solid var(--line);transition:.15s}
+  .relcard:hover{background:var(--card-hi);border-color:rgba(122,217,168,.55)}
+  .relcard img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block}
+  .relcard .rt{display:block;font-size:12.5px;font-weight:600;color:rgba(255,255,255,.92);line-height:1.4;padding:8px 8px 0}
+  .relcard .rfoot{margin-top:auto;display:flex;justify-content:space-between;align-items:flex-end;gap:8px;padding:10px 8px 9px}
+  .relcard .rwhy{font-size:11.5px;color:var(--mint)}
+  .relcard .rtag{display:inline-block;background:#0a0a0a;color:var(--white);font-family:var(--display);font-size:10px;letter-spacing:1.2px;text-transform:uppercase;padding:3px 7px 2px;white-space:nowrap;flex:0 0 auto}
+
+  /* ── Dropdown sections (accordion under the player) ── */
+  .drops{margin-top:34px;display:flex;flex-direction:column;gap:11px}
+  .drop{border:1px solid var(--line);border-radius:0;background:var(--card);overflow:hidden;transition:border-color .15s}
+  .drop[open]{border-color:rgba(122,217,168,.35)}
+  .drop>summary{list-style:none;cursor:pointer;padding:16px 18px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+  .drop>summary::-webkit-details-marker{display:none}
+  .drop>summary .st{font-weight:700;font-size:15.5px;letter-spacing:.005em}
+  .drop>summary .ct{margin-left:auto;font-size:12px;color:var(--dim);font-weight:600;font-variant-numeric:tabular-nums}
+  .drop>summary .chev{flex:none;width:22px;height:22px;border-radius:50%;background:rgba(122,217,168,.14);color:var(--mint);display:flex;align-items:center;justify-content:center;font-family:var(--display);font-size:15px;line-height:1;transition:.2s;transform:translateY(-1px)}
+  .drop[open]>summary .chev{transform:rotate(45deg)}
+  .drop-body{padding:2px 12px 12px}
+
+  /* chapters */
+  .chapter{display:flex;align-items:baseline;gap:14px;width:100%;text-align:left;cursor:pointer;background:none;border:0;color:inherit;font-family:inherit;padding:11px 10px;border-radius:10px;transition:.13s}
+  .chapter:hover{background:var(--card-hi)}
+  .chapter .tc{font-variant-numeric:tabular-nums;font-weight:700;font-size:14px;color:var(--mint);flex:none;width:48px}
+  .chapter .cx{font-size:15px;font-weight:500;color:rgba(255,255,255,.9)}
+  .chapter:hover .cx{color:#fff}
+
+  /* questions */
+  .q{display:flex;align-items:center;gap:12px;width:100%;text-align:left;cursor:pointer;background:none;border:0;border-radius:11px;color:inherit;font-family:inherit;padding:12px 10px;transition:.14s}
+  .q+.q{border-top:1px solid rgba(255,255,255,.05)}
+  .q:hover{background:var(--card-hi)}
+  .q .qm{font-family:var(--display);font-size:15px;color:var(--mint);flex:none;line-height:1;transform:translateY(1px)}
+  .q .qx{font-size:15px;font-weight:500;color:rgba(255,255,255,.92)}
+  .q .go{margin-left:auto;flex:none;color:var(--dim);font-size:18px;transition:.15s}
+  .q:hover .go{color:var(--mint);transform:translateX(2px)}
+
+  /* summary + transcript bodies */
+  .summary-body p{font-size:16.5px;line-height:1.62;color:rgba(255,255,255,.9);padding:6px 10px 4px}
+  .tbody{padding:2px 10px 8px}
+  .tbody p{font-size:14.5px;line-height:1.7;color:rgba(255,255,255,.78);margin-top:15px;max-width:64ch}
+  .tbody .spk{display:block;font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--mint);margin-bottom:2px}
+
+  /* ── Voice note ask (lives at the bottom of the Summary panel) ── */
+  .vask{margin:16px 10px 4px}
+  .vbtn{display:inline-flex;align-items:center;gap:9px;padding:12px 20px;border-radius:999px;border:0;cursor:pointer;
+    background:var(--mint);color:#08210f;font-family:inherit;font-weight:800;font-size:12.5px;
+    letter-spacing:.04em;text-transform:uppercase;transition:.15s}
+  .vbtn:hover{filter:brightness(1.06);transform:translateY(-1px);box-shadow:0 12px 30px rgba(122,217,168,.25)}
+  .vbtn svg{width:18px;height:18px;fill:currentColor;flex:none}
+  .vslot{background:var(--purple);padding:12px 10px 10px;margin:14px 0 4px;box-shadow:0 18px 40px rgba(0,0,0,.35)}
+  .vslot[hidden]{display:none}
+  .vhead{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;margin-bottom:10px}
+  .vhead .vmsg{font-family:var(--sans);font-size:13px;line-height:1.55;color:rgba(255,255,255,.92);margin:2px 0 0;padding:0 2px}
+  .vclose{background:none;border:0;color:rgba(255,255,255,.85);font-size:22px;line-height:1;cursor:pointer;padding:0 2px}
+  .vclose:hover{color:var(--white)}
+  .vslot iframe{display:block}
+
+  /* ── YouTube subscribe pill (sits in the listen row; outranks .listen a's mint) ── */
+  .listen a.yt-pill{background:var(--purple);color:var(--white)}
+  .listen a.yt-pill:hover{filter:brightness(1.1);transform:translateY(-1px)}
+  @media(max-width:720px){ /* mobile: no label, three compact pills on one row */
+    .listen .lname{display:none}
+    .listen{gap:8px}
+    .listen a{padding:10px 13px;font-size:11px;gap:6px}
+    .listen svg{width:16px;height:16px}
+  }
+
+  /* ── Footer: two columns under the line (Brought to you by | Produced by), matches adventure.html ── */
+  footer{border-top:1px solid var(--line);margin-top:68px;padding:52px 20px 58px}
+  .footgrid{max-width:var(--wrap);margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:start}
+  @media(max-width:720px){.footgrid{grid-template-columns:1fr;gap:40px}}
+  .fcol{text-align:center}
+  .foot-label{font-size:11px;font-weight:700;letter-spacing:.26em;text-transform:uppercase;color:var(--dim);margin-bottom:16px}
+  .sponsors{display:flex;justify-content:center;align-items:center;gap:38px;flex-wrap:wrap}
+  .sponsors a{display:inline-flex;transition:.15s}
+  .sponsors a:hover{transform:translateY(-1px)}
+  .sponsors img{height:34px;width:auto;opacity:.92}
+  .sponsors a:hover img{opacity:1}
+  .produced a{display:inline-flex;transition:.15s}
+  .produced a:hover img{opacity:1}
+  .produced img{height:30px;width:auto;opacity:.95}
+  .footnav{margin-top:36px;display:flex;justify-content:center;flex-wrap:wrap;gap:6px 26px}
+  .footnav a{font-size:12px;font-weight:600;letter-spacing:.04em;color:var(--dim);text-decoration:none;transition:.15s}
+  .footnav a:hover{color:var(--mint)}
+  .copyright{margin-top:40px;font-size:12px;color:var(--dim);text-align:center}
+
+  @media(min-width:720px){header.hero{padding:48px 0 6px}}
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "PodcastEpisode", "name": "Buying Commercial Property With Your Super in 2026 | What the Numbers Say", "url": "https://thenumbersgamepodcast.com.au/episode-285.html", "datePublished": "2026-07-13", "episodeNumber": 285, "image": "https://i.ytimg.com/vi/RAQ80ecsDq0/maxresdefault.jpg", "partOfSeries": {"@type": "PodcastSeries", "name": "The Numbers Game", "url": "https://thenumbersgamepodcast.com.au/"}}</script>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-in">
+      <a class="brand" href="index.html" aria-label="The Numbers Game home"><img src="assets/tng-logo.png" alt="The Numbers Game"></a>
+      <div class="navlinks">
+        <a href="index.html">Home</a>
+        <div class="navgroup">
+          <a class="navtop">Episodes</a>
+          <div class="subnav">
+            <a href="episodes.html">All episodes</a>
+            <a href="adventure.html">Find moments</a>
+          </div>
+        </div>
+        <div class="navgroup">
+          <a class="navtop">About</a>
+          <div class="subnav">
+            <a href="about.html">The show</a>
+            <a href="nick-reilly.html">Nick Reilly</a>
+            <a href="jason-robinson.html">Jason Robinson</a>
+          </div>
+        </div>
+        <a href="contact.html">Contact</a>
+      </div>
+      <button class="navburger" id="navburger" type="button" aria-label="Menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24"><path d="M3 6h18v2H3zM3 11h18v2H3zM3 16h18v2H3z"/></svg>
+      </button>
+    </div>
+    <div class="navdrop" id="navdrop" hidden>
+      <a href="index.html">Home</a>
+      <span class="navlabel">Episodes</span>
+      <a class="sub" href="episodes.html">All episodes</a>
+      <a class="sub" href="adventure.html">Find moments</a>
+      <span class="navlabel">About</span>
+      <a class="sub" href="about.html">The show</a>
+      <a class="sub" href="nick-reilly.html">Nick Reilly</a>
+      <a class="sub" href="jason-robinson.html">Jason Robinson</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+
+  <main class="wrap">
+
+    <header class="hero">
+      <div class="hook">
+        <span class="eptag">EP 62</span>
+        <h1 class="hk"><span>Affordability Buffer</span></h1>
+      </div>
+    </header>
+
+    <div class="player-wrap" id="player-wrap">
+      <div class="audio-hero" id="spotify-embed"></div>
+    </div>
+
+    <div class="explore">
+      <div class="tabs" role="tablist">
+        <button class="tabbtn on" data-panel="p-summary">Summary</button>
+      </div>
+      <section class="tpanel" id="p-summary">
+        <div class="summary-body">
+          <p>Welcome to episode 62 of The Numbers Game. On today&#x27;s show, we chat about the UK&#x27;s approach to mortgage buffers, how the cost of living assessment is calculated and the financial challenge people now face once their pre approval runs out.</p>
+        </div>
+        <div class="vask">
+          <button class="vbtn" id="vbtn" type="button">
+            <svg viewBox="0 0 24 24"><path d="M12 14a3 3 0 0 0 3-3V6a3 3 0 1 0-6 0v5a3 3 0 0 0 3 3zm5-3a5 5 0 0 1-10 0H5a7 7 0 0 0 6 6.92V21h2v-3.08A7 7 0 0 0 19 11h-2z"/></svg>
+            Send us a voice note
+          </button>
+          <div class="vslot" id="vslot" hidden>
+            <div class="vhead">
+              <p class="vmsg">We'd love to hear from you. You can leave up to a 90 second voice note for us to play on the show: a question, some feedback, or a topic you want covered.</p>
+              <button class="vclose" id="vclose" type="button" aria-label="Close">&times;</button>
+            </div>
+            <iframe src="https://www.speakpipe.com/widget/inline/hhq6kzggsx7zpcsvakgxfrzun3zidpde" allow="microphone" width="100%" height="200" frameborder="0" title="Leave The Numbers Game a voice note"></iframe>
+          </div>
+          <script async src="https://www.speakpipe.com/widget/loader.js" charset="utf-8"></script>
+        </div>
+        <div class="sumfacts">
+          <div class="fact"><span class="fl">Release date</span><span class="fv">22 August 2022</span></div>
+          <div class="fact"><span class="fl">Hosts</span><span class="fv"><a href="jason-robinson.html">Jason Robinson</a> &amp; <a href="nick-reilly.html">Nick Reilly</a> &amp; <a href="marty-vidakovic.html">Marty Vidakovic</a></span></div>
+
+        </div>
+      </section>
+    </div>
+
+    <div class="drops">
+
+      <details class="drop">
+        <summary><span class="st">Episode transcript</span><span class="chev">+</span></summary>
+        <div class="drop-body tbody">
+          <p><span class="spk">Jason · 00:00</span>This podcast is for educational and informational purposes only. The conversations are of a general nature and do not qualify as financial or tax advice. We recommend before you make any financial decisions, you consult a licensed professional. Individuals on the podcast may hold positions in the companies discussed.</p>
+          <p><span class="spk">Jason · 00:15</span>Welcome to The Numbers Game. I&#x27;m Jason, and I&#x27;m back here with Marty and Nick. How you going today, guys?</p>
+          <p><span class="spk">Marty · 00:22</span>Going well, thanks, Jason. You&#x27;ve just informed me with it— was it number 28? Top 28 business show in Australia on podcasting. That&#x27;s pretty cool.</p>
+          <p><span class="spk">Jason · 00:33</span>Yeah, correct, mate. We&#x27;ve bumped up the list. I think when we started, we were kind of just snuck in at the bottom of the, the 70 top business podcasts in Australia and, uh, somehow just slowly climbing our way to the top. And we&#x27;re 28th on the list out of 70 at the moment, uh, in Australia. So you&#x27;re pretty chuffed.</p>
+          <p><span class="spk">Marty · 00:48</span>Well, it&#x27;s something to be juiced about. And, uh, thank you to our audience. And, uh, look, we want to get into that top 10, so tell a friend, tell a friend. So feeling good. Nick Riley, how are you?</p>
+          <p><span class="spk">Nick · 00:58</span>Well, I&#x27;m juiced, mate, obviously. You know, it&#x27;s, uh, how else would you be? But, uh, no, that&#x27;s good, it&#x27;s good. Look, I&#x27;m glad, um, I&#x27;m glad people are enjoying it because it&#x27;s, it&#x27;s getting easier for us, really. I&#x27;m just thinking back, it was quite difficult to sit down and put all that content together, but yeah, now it just rolls off the tongue.</p>
+          <p><span class="spk">Nick · 01:15</span>You know, we&#x27;ve got a real, um, we&#x27;ve got a real good lens on what people want to hear, so I&#x27;m glad that the content that we are putting out there is good and People obviously voting in the right way, so it&#x27;s good.</p>
+          <p><span class="spk">Marty · 01:27</span>You&#x27;re well, Jase, mate?</p>
+          <p><span class="spk">Jason · 01:28</span>I&#x27;m good, I&#x27;m good. We&#x27;re hitting a rhythm, we&#x27;re getting it done, and we&#x27;re sharing some valuable content. And look, um, off the back of the last couple of, uh, interview episodes too, like, I really think like breaking away and, and just diving deeper into things like Trevor Hendy, Nathan Theos, you know, those worlds that we can incorporate in and learn some lessons from, it&#x27;s been great.</p>
+          <p><span class="spk">Jason · 01:45</span>Uh, so today&#x27;s Reading the Play though, guys, brought to you by Walker Digital, wlkr.digital, the team that it can help you walk Digital Talks. So if you need any help, jump over that way and check them out. But today, Marty, you&#x27;re gonna lead the way on reading the place.</p>
+          <p><span class="spk">Jason · 02:01</span>I&#x27;m gonna throw to you and let&#x27;s dive in.</p>
+          <p><span class="spk">Marty · 02:04</span>Yeah, well today I wanna talk about affordability. You know, with interest rates going up and of course inflation, cost of living is going up, it&#x27;s becoming increasingly more difficult for people to buy property. And to give you some context, there are people out there on, you know, $180 grand, you know, doing really well.</p>
+          <p><span class="spk">Marty · 02:23</span>They might have a spouse, couple of kids, and they&#x27;re struggling to buy for $1.1 million, right? Because of costs going up so high. So it&#x27;s interesting. And what&#x27;s come out of that, and I was thinking about this myself, I go, it almost seems ridiculous that someone that got a fixed rate, let&#x27;s say at 1.89%, you know, maybe a year ago, might be starting to come off those fixed rates in the next 6 months</p>
+          <p><span class="spk">Marty · 02:53</span>and go to a much higher variable rate. And they can&#x27;t refinance to a better rate again, because affordability is, is such that you just can&#x27;t now refinance something you were approved upon, you know, 1 or 2 or 3 years ago.</p>
+          <p><span class="spk">Marty · 03:08</span>So it just didn&#x27;t strike me that there was an integrity in that. You should always be able to look for a better deal in the market to, to have a better circumstance. And the fact you are covering it at that higher rate anyway, why would you jeopardize someone from getting a better opportunity?</p>
+          <p><span class="spk">Marty · 03:25</span>So I just read an article the other day that the UK is looking to scrap mortgage buffers, and that&#x27;s like, that&#x27;s just a high-ticket headline. They&#x27;re gonna reduce it. I don&#x27;t think they&#x27;re gonna scrap it. But to give you an example, so if rates go up to like, let&#x27;s say 4.5%, the banks will put a buffer of 3, 3% on top of that on how they service your ability to lend.</p>
+          <p><span class="spk">Marty · 03:51</span>Now that could make things very, very challenging and almost unrealistic in some circumstances. So now there&#x27;s still gonna be an understanding that living costs are going up, so that has to be catered for in the way a loan&#x27;s being serviced.</p>
+          <p><span class="spk">Marty · 04:06</span>But now there&#x27;s discussion around bringing those buffers down from 3% to 1% to still allow people access to be able to fund successfully in the market, given where the market&#x27;s at. And I just think this is, you know, this is a really good idea.</p>
+          <p><span class="spk">Marty · 04:25</span>I feel like we need to have flexibility in our banking system and our lending system to enable people to still purchase at reasonable prices and also have the option to get into better products and services and interest rates as well.</p>
+          <p><span class="spk">Marty · 04:42</span>So yeah, that was my general thought process around it. Thoughts around that, gentlemen?</p>
+          <p><span class="spk">Nick · 04:50</span>I can actually see it happening here. I think it&#x27;s a matter of when and not if. The regulators have done this in the past. When they need to boost the property market or get things moving again, one quick way to do that is to open up lending, and the way they do that is to reduce the buffer.</p>
+          <p><span class="spk">Nick · 05:07</span>If someone is paying or was paying 2%, let&#x27;s go back 12 months ago or 8 months ago, people were paying 2%, there was a 3% buffer so they would need to demonstrate to the lender that they could service the debt at 5%.</p>
+          <p><span class="spk">Nick · 05:23</span>So when those rates peak at 4.5%, 5%, which they&#x27;re tipped to do, people are going to need to demonstrate that they can service a loan at 7.5% or 8% depending on their rate. And the challenge that&#x27;s happening at the moment is anyone that was pre-approved.</p>
+          <p><span class="spk">Nick · 05:39</span>So if you&#x27;ve got a pre-approval in place to purchase for say $800,000 or $1 million, if that pre-approval expires and you, which they do in 3 months. And let&#x27;s say you got that pre-approval when the rates, when your interest rate was 3%.</p>
+          <p><span class="spk">Nick · 05:55</span>So you&#x27;re approved for a certain amount based on an interest rate of 3%, which means you&#x27;ve got a buffer in there pushing you up to 6%. Now, if you don&#x27;t transact on that pre-approval within that time period, you then have to get reassessed. So yeah, again, that&#x27;s creating a bit of a frenzy where people are trying to make sure they transact on these pre-approvals before they expire.</p>
+          <p><span class="spk">Nick · 06:16</span>So, you know, the one thing that the banks will need to do— not the banks, but the regulators will need to do— is at some stage make that easier for people to get into the market. Because the risk is not really there anymore. Like, the risk is there when the interest rate is 2%. You&#x27;ve got to have a 3% buffer because that is just not normal.</p>
+          <p><span class="spk">Nick · 06:34</span>But if we get to rates of 4.5%, 5%, you then don&#x27;t need a buffer for 3%. Given we&#x27;ve been through such an aggressive cycle of increasing rates, you would think that the regulators would be happy that, okay, if rates go anywhere from here, it&#x27;s probably going to be down.</p>
+          <p><span class="spk">Nick · 06:49</span>So we don&#x27;t need that 3% buffer. Yeah, 2% might be okay. That increases people&#x27;s borrowing capacity. Market kicks off again and people get into homes. So it&#x27;s a really good topic to talk about, Marty.</p>
+          <p><span class="spk">Jason · 07:01</span>So your opinion, guys, is that 3% is too much? And do you think that there&#x27;s some risk element in bringing it back to 2%? Like, I mean, obviously there&#x27;s risk in everything that we do, but from a bank perspective, you know, they were 2% some time ago and they tested people with +3%, so they&#x27;ve been tested on 5%.</p>
+          <p><span class="spk">Jason · 07:22</span>There&#x27;s a fair chance that we&#x27;re going to get to 5% potentially, maybe, whether you guys agree or disagree at that.</p>
+          <p><span class="spk">Marty · 07:29</span>I think APRA are going to review it based on what the UK is doing. And look, ultimately they&#x27;re still taking into account the increased living cost, right? So that&#x27;s more in real time. Like it used to work off a HEM system, which is basically just a ratio system.</p>
+          <p><span class="spk">Marty · 07:46</span>If you had 2 kids and 2 adults, it would be something like $4,400 a month, right, to live. So it&#x27;ll be based on on actually more realistic living costs. And then APRA are actually looking at regulating that 3% buffer back down to 2%.</p>
+          <p><span class="spk">Marty · 08:04</span>So I think to me that feels fair. I mean, in June we had $12.7 billion worth of refinances hitting the market here in Australia. Like that&#x27;s monstrous. So it shows there&#x27;s definitely demand in people that can&#x27;t be— oh, that must be worth a loan.</p>
+          <p><span class="spk">Marty · 08:24</span>Sorry. So there&#x27;s definitely demand in people wanting to relook at what they&#x27;re doing. And like Nick said, it basically means that if someone&#x27;s out there in the market with an approval in principle, we know every time it go, the rate goes up 0.5, you strip out an extra $50,000 of borrowings depending on your circumstances.</p>
+          <p><span class="spk">Marty · 08:44</span>But again, if we can give people back, you know, $75,000 in their borrowing capacity, it actually makes a difference all round. So there&#x27;s just got to be a bit of realistic thinking here. And I think it&#x27;s the right time to bring it up.</p>
+          <p><span class="spk">Marty · 09:00</span>And we don&#x27;t want to starve the market. Property&#x27;s our biggest asset and our biggest investment in Australia. And we don&#x27;t want to starve the market of opportunity and people being able to transact successfully and get into property and also make sure that they&#x27;re getting better dealings on current debt as well.</p>
+          <p><span class="spk">Marty · 09:20</span>So I think that&#x27;s, I think it&#x27;s a, we&#x27;re heading in the right direction. And in the UK, as of the 1st of, I think it&#x27;s the 1st of August. I think it was. Yeah. Monday, the 1st of August. The Bank of England have made a decision to withdraw.</p>
+          <p><span class="spk">Marty · 09:36</span>They&#x27;ve actually made a decision to withdraw the buffer test in full, but being more realistic on living costs. So, so it just goes to show you people want activity to still occur. And the other thing you have to recognize is unemployment&#x27;s at all-time lows.</p>
+          <p><span class="spk">Marty · 09:53</span>Like, there&#x27;s a staff shortage and wages are going up because, you know, you have to secure good talent. So there&#x27;s still the capability of upside there is huge, and there&#x27;s not a lot of people out of work. So you go, it&#x27;s a pretty healthy, strong market, um, you know, even with inflation doing what it&#x27;s doing.</p>
+          <p><span class="spk">Marty · 10:12</span>So, so again, you&#x27;ve got to have parameters that back that up and support people. To have access to funding ultimately.</p>
+          <p><span class="spk">Nick · 10:20</span>So in response to your question around is there a risk, Jase, obviously they will do a lot of work on making sure that&#x27;s the right decision. But if, as I said, if we get to the end of an aggressive cycle of increasing rates, the RBA is comfortable that— the RBA is comfortable that inflation has peaked.</p>
+          <p><span class="spk">Nick · 10:39</span>Really, you&#x27;ve got two things are going to happen from there. People&#x27;s cost of living is going to decrease. And they don&#x27;t see the rates moving any higher. If anything, the next move, depending on who you listen to, but a lot of economists are tipping the rates to go backwards as of the end of next year. So they&#x27;ll have comfort that a 2% buffer will be fine because we&#x27;ve been through this rate cycle and look where we are at 4.5%, 5%, whereas at 2% interest rates, there was always a risk that it&#x27;s not going to be there long.</p>
+          <p><span class="spk">Nick · 11:06</span>So that&#x27;s why those 3% buffers were introduced. So to me, it&#x27;s logical and I think it&#x27;s just a matter of when, not if.</p>
+          <p><span class="spk">Jason · 11:13</span>I feel like the industry has always kind of had a way of continuing to— I think we touched on it previously— reinvent things and produce new products and change the way that borrowing is done to continue to allow homes to be bought and families to afford to buy homes in a market where homes are forever raising— rising in prices.</p>
+          <p><span class="spk">Jason · 11:32</span>So, you know, we touched on the 20-year, 30-year, 40-year home loans and now, you know, looking to make a change to the buffer to ensure people can keep borrowing. So it&#x27;s smart. I mean, it&#x27;s, it&#x27;s what needs to happen.</p>
+          <p><span class="spk">Marty · 11:44</span>And not forgetting, like with property, like you said, there&#x27;s gonna be 40 million, you know, 40 million population in Australia in 2050. It&#x27;s been earmarked. So you go, property&#x27;s the greatest staple in Australia. And, and we saw, you know, I think it was Macquarie speak about it, didn&#x27;t we, at the conference, Nick, a couple of weeks back, that they are investing $25 billion into property and that&#x27;s looking to go up to about $125 billion.</p>
+          <p><span class="spk">Marty · 12:11</span>So that&#x27;s how confident they are in Australia&#x27;s property market and also the international property market as well. So you look at that and you go, like, when major institutions like that are really bullish, you can&#x27;t go too wrong.</p>
+          <p><span class="spk">Marty · 12:28</span>So to stop someone buying because of 50,000 and affordability rate with employment at 20-year lows, unemployment at 20-year lows, it just doesn&#x27;t seem quite realistic. So I think we are coming to a better place and again, We remind our audience that a 5% interest rate is not terrible.</p>
+          <p><span class="spk">Marty · 12:49</span>It&#x27;s actually quite good. If you go back to 2008, you&#x27;d be quite happy with that type of rate. So it&#x27;s just getting comfortable with the new norm, but property&#x27;s always gonna do what property does.</p>
+          <p><span class="spk">Jason · 13:00</span>Talking about affordability buffers, but Marty also mentioned the cost of living assessment. Now we know CPI and inflation&#x27;s going crazy. What is happening with the banks at the moment and how are they actually assessing and looking looking at cost of living? Like, is it a blanket rule? Like you said, how many kids a family has, or is it— how are they looking at cost of living?</p>
+          <p><span class="spk">Jason · 13:20</span>And is it different for everybody and all different banks?</p>
+          <p><span class="spk">Marty · 13:22</span>Yeah, no, it&#x27;s a two-way street. So they&#x27;ll still have ratios they&#x27;ll look at in regards to, let&#x27;s say, a single applicant or a couple with a couple of kids. So they&#x27;ll have ratios they look at, but it&#x27;s also suburb-based, you know, so it&#x27;s demographic comes into that as well.</p>
+          <p><span class="spk">Marty · 13:40</span>So it might be a lower cost base if you&#x27;re leaving regional compared to Melbourne metropolitan. But then they&#x27;ll also look at what your actual spending is over the last 3 months as well, going through your statements. Now, not all lenders will do that. There are some lenders that don&#x27;t require the 3-month statements, but there&#x27;s a lot of lenders that will have a look at that and just make sure it&#x27;s in alignment with those ratios to do the due diligence as well.</p>
+          <p><span class="spk">Marty · 14:06</span>So, but yeah, it&#x27;s, it&#x27;s been a moving target over the last 3 months as inflation&#x27;s gone up. So we have to keep constantly keep our eye on that and work out which lenders are actually more favorable in some circumstances to others, depending on the individual situation as well.</p>
+          <p><span class="spk">Marty · 14:23</span>So, so again, what the one great thing about the industry we&#x27;re in with, with broking is if things don&#x27;t fit a certain criteria of one lender, there might be an appetite elsewhere with another lender. And I&#x27;ve done the modeling on that and that could be, sometimes that could be $75,000, $80,000 difference on, you know, two people on $85,000 a year on income.</p>
+          <p><span class="spk">Marty · 14:46</span>So it&#x27;s really just looking at the individual circumstances and making sure the client&#x27;s best positioned for their circumstances when we go and research the various lenders.</p>
+          <p><span class="spk">Jason · 14:58</span>So that&#x27;s episode 63 of The Numbers Game, talking all things affordability buffers when it comes to getting a loan. And I really thank you for sharing, Marty. As I said, I&#x27;m interested in getting a loan myself. And interested in your key takeaways, Nick?</p>
+          <p><span class="spk">Nick · 15:12</span>For me, it just tells me that property is still going to be strong and going to be okay. And you know, we haven&#x27;t seen that assessment rate or that buffer come down yet in Australia, but we&#x27;re just talking about the fact that it probably will. So I think there&#x27;s a real small window of opportunity in the next 6 to 12 months for anyone who is trying to get into the market or has been trying to get into the market in the last 4 or 5 years, there could be a real buying opportunity in the next 6 to 12 months.</p>
+          <p><span class="spk">Nick · 15:41</span>But beyond that, it&#x27;ll continue to do what it&#x27;s always done and that will go up. And when I say buying opportunity, we&#x27;re seeing 10% in some areas already. There might be another 5 or 10%, which is okay given what the property market&#x27;s done in the last 2 years.</p>
+          <p><span class="spk">Nick · 15:57</span>So I&#x27;d encourage people to get into the market if they can, because I think once we go through this interest rate increase cycle, there&#x27;ll be ways, they&#x27;ll be looking for ways to push that market forward again. So get in, long-term investment.</p>
+          <p><span class="spk">Nick · 16:14</span>Yeah, don&#x27;t be trying to pick the market too much. Just get in if you can get into a good deal.</p>
+          <p><span class="spk">Marty · 16:20</span>It&#x27;s a great point, Nick. And like, you know, you can buy 15% lower than what you could 6 months ago. So you go, that&#x27;s not a bad time to start looking at buying, right? So a little bit of a discount there. And it&#x27;s good to see that the affordability and the parameters around affordability there&#x27;s some flexibility being, you know, starting to be talked about and hopefully created within the next couple of months because we still need to transact to buy those types of properties and we still need to transact to find better</p>
+          <p><span class="spk">Marty · 16:51</span>rates on existing debt as well to put people in greater positions in the current reality. You know, not from what it was a year ago or 2 years ago, but in the current reality. Jase, what did you take away outta today?</p>
+          <p><span class="spk">Jason · 17:04</span>Well guys, I think you&#x27;re gonna love this one, but I reckon I&#x27;ve had between 50 and 100 clients come through from Future Advisory head Innov8&#x27;s way to have a look at their mortgages and their home loans. And I think, you know, at this point in time, anyone who&#x27;s interested, anyone who thinks they want to get in the market, anyone who needs tips and tricks and needs to know in advance what they need to do to get in the market, they&#x27;ve got to get in and sit down and have a conversation with a skilled broker and someone like the team at Innov8.</p>
+          <p><span class="spk">Jason · 17:30</span>I know I&#x27;m overdue to sit down and have a chat with someone. Case and I will get our act together and book in. But I think it&#x27;s a really timely reminder that You know, if you want to be in the market long-term, there&#x27;s opportunities there. And you guys have shared some really wonderful tips on how to get in the market.</p>
+          <p><span class="spk">Jason · 17:46</span>And I look forward to sharing that with our audience and exploring that more. But my key takeaway is get in and chat to you guys. I love what you guys are about and how you&#x27;ve shared that information. Thanks again for listening. And until next time, share with your friends and family, let them all know what we&#x27;re about. We&#x27;re climbing that list from 70 to 28, up to the top 10 next.</p>
+          <p><span class="spk">Jason · 18:05</span>And until next time, game over.</p>
+        </div>
+      </details>
+
+    </div>
+
+    <!-- audio-only: the Spotify player is the hero above; duplicate embed removed -->
+
+    <div class="listen">
+      <a href="https://open.spotify.com/episode/78k4JeUZ96kec4QH6qLsMA" target="_blank" rel="noopener" aria-label="Listen to this episode on Spotify">
+        <svg viewBox="0 0 24 24"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.52 17.34c-.24.36-.66.48-1.02.24-2.82-1.74-6.36-2.1-10.56-1.14-.42.12-.78-.18-.9-.54-.12-.42.18-.78.54-.9 4.56-1.02 8.52-.6 11.64 1.32.42.18.48.66.3 1.02zm1.44-3.3c-.3.42-.84.6-1.26.3-3.24-1.98-8.16-2.58-11.94-1.38-.48.12-1.02-.12-1.14-.6-.12-.48.12-1.02.6-1.14 4.32-1.32 9.72-.66 13.44 1.62.36.18.54.78.3 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.3c-.6.18-1.2-.18-1.38-.72-.18-.6.18-1.2.72-1.38 4.26-1.26 11.28-1.02 15.72 1.62.54.3.72 1.02.42 1.56-.3.42-1.02.6-1.56.3z"/></svg>
+        Spotify
+      </a>
+      <a href="https://podcasts.apple.com/au/podcast/id1555566088?i=1000776470464" target="_blank" rel="noopener" aria-label="Listen to this episode on Apple Podcasts">
+        <svg viewBox="0 0 24 24"><path d="M5.34 0A5.328 5.328 0 000 5.34v13.32A5.328 5.328 0 005.34 24h13.32A5.328 5.328 0 0024 18.66V5.34A5.328 5.328 0 0018.66 0H5.34zm6.525 2.568c2.336 0 4.448.902 6.056 2.587 1.224 1.272 1.912 2.619 2.264 4.392l.04.23c.04.272-.16.527-.432.567a.505.505 0 01-.567-.431l-.04-.213c-.312-1.57-.92-2.747-2.004-3.867-1.428-1.496-3.293-2.294-5.393-2.294-2.1 0-3.966.798-5.394 2.294-1.084 1.12-1.692 2.298-2.004 3.867l-.04.213a.507.507 0 01-.567.431.504.504 0 01-.432-.567l.04-.23c.352-1.773 1.04-3.12 2.264-4.392 1.608-1.685 3.72-2.587 6.056-2.587h.153zm.136 3.033c1.74 0 3.312.67 4.527 1.934.883.916 1.394 1.93 1.663 3.253l.04.23a.505.505 0 01-.431.567.503.503 0 01-.567-.432l-.04-.212c-.23-1.112-.659-1.97-1.396-2.732-1.052-1.1-2.404-1.672-3.9-1.672s-2.849.572-3.901 1.672c-.737.762-1.167 1.62-1.396 2.732l-.04.212a.503.503 0 01-.567.432.505.505 0 01-.432-.567l.04-.23c.27-1.323.78-2.337 1.664-3.253 1.215-1.264 2.787-1.934 4.527-1.934h.21zm-.078 3.05c1.092 0 2.091.424 2.89 1.22.582.58.924 1.245 1.107 2.15l.04.218a.501.501 0 01-.424.568.499.499 0 01-.568-.424l-.04-.198c-.146-.724-.413-1.253-.871-1.716-.63-.63-1.398-.957-2.226-.957s-1.595.328-2.225.957c-.459.463-.726.992-.871 1.716l-.04.198a.499.499 0 01-.568.424.501.501 0 01-.424-.568l.04-.219c.183-.904.525-1.569 1.106-2.149.8-.796 1.799-1.22 2.89-1.22h.184zM12 14.07a2.477 2.477 0 012.48 2.478A2.477 2.477 0 0112 19.024a2.477 2.477 0 01-2.48-2.477A2.477 2.477 0 0112 14.07z"/></svg>
+        Apple
+      </a>
+      <a class="yt-pill" href="https://www.youtube.com/@thenumbersgamepodcast?sub_confirmation=1" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.12-2.14C19.5 3.55 12 3.55 12 3.55s-7.5 0-9.38.51A3 3 0 0 0 .5 6.2 31.4 31.4 0 0 0 0 12a31.4 31.4 0 0 0 .5 5.8 3 3 0 0 0 2.12 2.14c1.88.51 9.38.51 9.38.51s7.5 0 9.38-.51a3 3 0 0 0 2.12-2.14A31.4 31.4 0 0 0 24 12a31.4 31.4 0 0 0-.5-5.8zM9.55 15.57V8.43L15.82 12z"/></svg>
+        Subscribe
+      </a>
+    </div>
+    <!-- LISTEN:END -->
+
+    <div class="relsec">
+      <span class="rtitle">Discover more</span>
+      <div class="relgrid">
+        <a class="relcard" href="/victoria-owes-199-billion">
+          <img src="https://i.ytimg.com/vi/sppkdu-w5jU/hqdefault.jpg" alt="EP 280 thumbnail">
+          <span class="rt">Victoria Owes $199 Billion | What It Means for Your Business</span>
+          <span class="rfoot"><span class="rwhy">8 June 2026</span><span class="rtag">EP 280</span></span>
+        </a>
+        <a class="relcard" href="/the-business-of-sports-how-franchises-generate-billions-in-revenue">
+          <img src="https://i.ytimg.com/vi/GV4g8mi9k9o/hqdefault.jpg" alt="EP 140 thumbnail">
+          <span class="rt">The Business of Sports: How Franchises Generate Billions in Revenue</span>
+          <span class="rfoot"><span class="rwhy">16 November 2023</span><span class="rtag">EP 140</span></span>
+        </a>
+        <a class="relcard" href="/why-every-business-owner-needs-a-tax-planning-meeting">
+          <img src="https://i.ytimg.com/vi/N-4IKD5gZVk/hqdefault.jpg" alt="EP 234 thumbnail">
+          <span class="rt">Why Every Business Owner Needs a Tax Planning Meeting</span>
+          <span class="rfoot"><span class="rwhy">2 June 2025</span><span class="rtag">EP 234</span></span>
+        </a>
+        <a class="relcard" href="/the-bank-of-mum-and-dad-a-financial-disaster-waiting-to-happen">
+          <img src="https://i.ytimg.com/vi/SkVVJ7VzjuI/hqdefault.jpg" alt="EP 279 thumbnail">
+          <span class="rt">The Bank of Mum and Dad: A Financial Disaster Waiting to Happen?</span>
+          <span class="rfoot"><span class="rwhy">1 June 2026</span><span class="rtag">EP 279</span></span>
+        </a>
+        <a class="relcard" href="/rethinking-property-tax-in-australia">
+          <img src="https://i.ytimg.com/vi/2Qpl-rFQsYo/hqdefault.jpg" alt="EP 227 thumbnail">
+          <span class="rt">Rethinking Property Tax in Australia</span>
+          <span class="rfoot"><span class="rwhy">14 April 2025</span><span class="rtag">EP 227</span></span>
+        </a>
+        <a class="relcard" href="/enhanced-games-can-the-olympics-keep-up">
+          <img src="https://i.ytimg.com/vi/Ndgcpcg_TAw/hqdefault.jpg" alt="EP 242 thumbnail">
+          <span class="rt">Enhanced Games - Can The Olympics Keep Up?</span>
+          <span class="rfoot"><span class="rwhy">28 July 2025</span><span class="rtag">EP 242</span></span>
+        </a>
+      </div>
+      <div class="reldots" id="reldots"></div>
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="footgrid">
+      <div class="fcol">
+        <div class="foot-label">Brought to you by</div>
+        <div class="sponsors">
+          <a href="https://www.inovayt.com.au/" target="_blank" rel="noopener"><img src="assets/inovayt-white.png" alt="Inovayt"></a>
+          <a href="https://futureadvisory.com.au/" target="_blank" rel="noopener"><img src="assets/future-advisory-white.png" alt="Future Advisory"></a>
+        </div>
+      </div>
+      <div class="fcol produced">
+        <div class="foot-label">Produced by</div>
+        <a href="https://www.vidpod.com.au/" target="_blank" rel="noopener"><img src="assets/vidpod-white.png" alt="VIDPOD"></a>
+      </div>
+    </div>
+    <nav class="footnav">
+      <a href="index.html">Home</a><a href="episodes.html">Every episode</a><a href="adventure.html">Choose your own adventure</a><a href="about.html">About the show</a><a href="nick-reilly.html">Nick Reilly</a><a href="jason-robinson.html">Jason Robinson</a><a href="contact.html">Contact</a>
+    </nav>
+    <div class="copyright">© 2026 The Numbers Game</div>
+  </footer>
+
+  <script>
+    var VIDEO='RAQ80ecsDq0';
+
+    /* Mobile nav dropdown. */
+    var burger=document.getElementById('navburger'), navdrop=document.getElementById('navdrop');
+    if(burger&&navdrop){burger.addEventListener('click',function(){
+      navdrop.hidden=!navdrop.hidden;
+      burger.setAttribute('aria-expanded', navdrop.hidden?'false':'true');
+    });}
+
+    /* Voice-note button reveals the recorder; × tucks it away. */
+    var vbtn=document.getElementById('vbtn'), vslot=document.getElementById('vslot'), vclose=document.getElementById('vclose');
+    if(vbtn&&vslot){vbtn.addEventListener('click',function(){vslot.hidden=!vslot.hidden;});}
+    if(vclose&&vslot){vclose.addEventListener('click',function(){vslot.hidden=true;});}
+
+    /* Keep-exploring dots: only shown when the strip actually scrolls (mobile). */
+    var rg=document.querySelector('.relgrid'), rd=document.getElementById('reldots');
+    if(rg&&rd){
+      var relCards=rg.querySelectorAll('.relcard');
+      relCards.forEach(function(){rd.appendChild(document.createElement('span'))});
+      var updDots=function(){
+        var scrollable=rg.scrollWidth>rg.clientWidth+4;
+        rd.style.display=scrollable?'flex':'none';
+        if(!scrollable)return;
+        var i=Math.round(rg.scrollLeft/(rg.scrollWidth-rg.clientWidth)*(relCards.length-1));
+        rd.querySelectorAll('span').forEach(function(s,n){s.classList.toggle('on',n===i)});
+      };
+      rg.addEventListener('scroll',updDots,{passive:true});
+      window.addEventListener('resize',updDots);
+      updDots();
+    }
+
+    /* Explore tabs: swap the visible panel; the row stays put so you never lose your place. */
+    var tabBtns=document.querySelectorAll('.tabbtn');
+    tabBtns.forEach(function(b){
+      b.addEventListener('click',function(){
+        tabBtns.forEach(function(o){o.classList.remove('on')});
+        document.querySelectorAll('.tpanel').forEach(function(p){p.hidden=true});
+        b.classList.add('on');
+        document.getElementById(b.getAttribute('data-panel')).hidden=false;
+      });
+    });
+
+    /* Audio-only: Spotify player is the hero; chapters/questions seek it via the Spotify iFrame API. */
+    var spotifyCtrl=null, pendingSeek=null;
+    function nudge(){
+      var p=document.getElementById('player-wrap'), r=p.getBoundingClientRect();
+      if(r.bottom<80 || r.top>window.innerHeight-90){ p.scrollIntoView({behavior:'smooth',block:'start'}); }
+    }
+    function startAt(sec){
+      nudge();
+      if(spotifyCtrl){ spotifyCtrl.seek(sec); spotifyCtrl.resume(); } else { pendingSeek=sec; }
+    }
+    window.onSpotifyIframeApiReady=function(IFrameAPI){
+      IFrameAPI.createController(document.getElementById('spotify-embed'),
+        {uri:'spotify:episode:3g6XMPBhW0YrTnPRN8GwZe', width:'100%', height:'232'},
+        function(c){ spotifyCtrl=c; if(pendingSeek!=null){ c.seek(pendingSeek); c.resume(); pendingSeek=null; } });
+    };
+    (function(){var sc=document.createElement('script');sc.src='https://open.spotify.com/embed/iframe-api/v1';sc.async=true;document.head.appendChild(sc);})();
+  </script>
+</body>
+</html>

@@ -1,0 +1,699 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EP 26 · Employee Blueprint | The Numbers Game</title>
+<meta name="description" content="Welcome to episode 26 of The Numbers Game podcast. In this episode we chat about the financial winners of the AFL Grand Final, homeless billionaires and the …">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" sizes="64x64" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="canonical" href="https://thenumbersgamepodcast.com.au/employee-blueprint">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="The Numbers Game">
+<meta property="og:title" content="EP 26 · Employee Blueprint | The Numbers Game">
+<meta property="og:description" content="Welcome to episode 26 of The Numbers Game podcast. In this episode we chat about the financial winners of the AFL Grand Final, homeless billionaires and the …">
+<meta property="og:url" content="https://thenumbersgamepodcast.com.au/employee-blueprint">
+<meta property="og:image" content="https://thenumbersgamepodcast.com.au/assets/tng-audio-only-thumbnail.webp">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+  :root{
+    --purple:#585af3; --purple-dark:#2c1b8a; --mint:#7ad9a8;
+    --white:#ffffff; --muted:rgba(255,255,255,.60); --dim:rgba(255,255,255,.42);
+    --line:rgba(255,255,255,.12); --card:rgba(255,255,255,.05); --card-hi:rgba(255,255,255,.09);
+    --display:'Anton',Impact,'Helvetica Neue',sans-serif;
+    --sans:'Inter',system-ui,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif;
+    --wrap:1280px;   /* page frame (nav spans this) */
+    --col:960px;     /* content column (player, tabs, text) */
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:var(--sans); color:var(--white); line-height:1.6; -webkit-font-smoothing:antialiased;
+    background:#12093a;
+    background-image:
+      radial-gradient(1200px 600px at 82% -6%, rgba(88,90,243,.45) 0%, transparent 55%),
+      radial-gradient(900px 700px at 5% 8%, rgba(122,217,168,.10) 0%, transparent 50%),
+      linear-gradient(180deg,#2c1b8a 0%,#1a1150 28%,#100b34 62%,#0b0820 100%);
+    background-attachment:fixed;
+  }
+  a{color:inherit}
+  .wrap{max-width:var(--wrap);margin:0 auto;padding:0 36px}
+  main.wrap{max-width:var(--col)}
+  @media(max-width:720px){.wrap{padding:0 22px}}
+
+  /* ── Navbar ── */
+  .nav{position:sticky;top:0;z-index:50;background:linear-gradient(180deg,rgba(24,15,74,.92),rgba(24,15,74,.72));backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+  .nav-in{max-width:var(--wrap);margin:0 auto;padding:11px 36px;display:flex;align-items:center;justify-content:space-between}
+  @media(max-width:720px){.nav-in{padding:11px 22px}}
+  .brand{display:block;line-height:0}
+  .brand img{height:36px;width:auto;display:block}
+  .navlinks{display:flex;gap:28px;align-items:center}
+  .navlinks a{text-decoration:none;font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);transition:.15s}
+  .navlinks a:hover{color:var(--white)}
+  .navlinks a.navtop{cursor:default}
+  .navgroup{position:relative;display:flex;align-items:center}
+  .navgroup .subnav{display:none;position:absolute;top:100%;left:50%;transform:translateX(-50%);padding-top:14px;min-width:180px}
+  .navgroup:hover .subnav,.navgroup:focus-within .subnav{display:block}
+  .subnav-in,.navgroup .subnav{z-index:60}
+  .navgroup .subnav a{display:block;background:#180f4a;border:1px solid var(--line);border-top:0;padding:12px 16px;font-size:12px;color:rgba(255,255,255,.85)}
+  .navgroup .subnav a:first-child{border-top:1px solid var(--line)}
+  .navgroup .subnav a:hover{background:#221768;color:var(--white)}
+  .navburger{display:none;background:none;border:1px solid var(--line);padding:8px 10px;cursor:pointer;color:var(--white);transition:.15s}
+  .navburger:hover{border-color:rgba(122,217,168,.6)}
+  .navburger svg{width:20px;height:20px;fill:currentColor;display:block}
+  .navdrop{display:none}
+  @media(max-width:720px){
+    .navlinks{display:none}
+    .navburger{display:block}
+    .navdrop{display:block;position:absolute;left:0;right:0;top:100%;
+      background:#180f4a;border-bottom:1px solid var(--line);box-shadow:0 24px 50px rgba(0,0,0,.45)}
+    .navdrop[hidden]{display:none}
+    .navdrop a{display:block;padding:15px 22px;text-decoration:none;font-size:14px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:rgba(255,255,255,.9);border-bottom:1px solid rgba(255,255,255,.06)}
+    .navdrop a:last-child{border-bottom:0}
+    .navdrop a.sub{padding-left:42px;font-size:13px;color:rgba(255,255,255,.72)}
+    .navdrop .navlabel{display:block;padding:15px 22px 6px;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.4)}
+  }
+
+  /* ── Hero / hook (marker-highlight system: purple hook wraps naturally, mint payoff below)
+     Rules: title splits at its natural break (colon/pipe/question mark). Front = hook (purple,
+     big), back = payoff (mint, smaller). No break in title = purple hook only. Highlights hug
+     the text (tight em padding tuned to Anton) and wrap via box-decoration-break — never
+     hand-pick line breaks or mint words. ── */
+  header.hero{padding:34px 0 6px}
+  .hook{--inx:clamp(8.4px,2.1vw,15.6px)} /* one shared text inset so hook + payoff first letters align */
+  .hook .hk{font-family:var(--display);font-weight:400;text-transform:uppercase;
+    font-size:clamp(28px,7vw,52px);line-height:1.3;letter-spacing:-.5px;text-wrap:balance}
+  .hook .hk span{color:var(--white);padding:.04em var(--inx) .02em;
+    background:linear-gradient(var(--purple),var(--purple)) 0 50%/100% 87% no-repeat;
+    -webkit-box-decoration-break:clone;box-decoration-break:clone}
+  .hook .pay{font-family:var(--display);font-weight:400;text-transform:uppercase;
+    font-size:clamp(16px,4vw,24px);line-height:1.5;letter-spacing:.6px;margin-top:8px;text-wrap:balance}
+  .hook .pay span{color:#0a0a0a;padding:.08em var(--inx) .04em;
+    background:linear-gradient(var(--mint),var(--mint)) 0 50%/100% 88% no-repeat;
+    -webkit-box-decoration-break:clone;box-decoration-break:clone}
+  /* no-hook titles: mid-split into two full-size rows, purple then mint */
+  .hook .hk span.hkrow{display:block;background:none;padding:0}
+  .hook .hk .hkrow+.hkrow{margin-top:8px}
+  .hook .hk span.mintseg{color:#0a0a0a;
+    background:linear-gradient(var(--mint),var(--mint)) 0 50%/100% 87% no-repeat}
+
+  /* ── Player (clean facade → real player on tap) ── */
+  .player-wrap{margin:24px 0 4px;scroll-margin-top:76px}
+  .audio-hero{width:100%;min-height:232px;border-radius:12px;overflow:hidden;box-shadow:0 30px 70px rgba(0,0,0,.5),0 0 0 1px rgba(255,255,255,.06)}
+  .audio-hero iframe{display:block;width:100%;border:0}
+  .player{position:relative;width:100%;padding-top:56.25%;border-radius:0;overflow:hidden;background:#000;box-shadow:0 30px 70px rgba(0,0,0,.5),0 0 0 1px rgba(255,255,255,.06)}
+  .facade{position:absolute;inset:0;border:0;cursor:pointer;background-size:cover;background-position:center;display:flex;align-items:center;justify-content:center;padding:0}
+  .facade .play{width:74px;height:74px;border-radius:50%;background:rgba(10,6,30,.40);border:2px solid rgba(255,255,255,.72);display:flex;align-items:center;justify-content:center;transition:.18s;-webkit-backdrop-filter:blur(1px);backdrop-filter:blur(1px)}
+  .facade:hover .play{background:rgba(88,90,243,.62);transform:scale(1.07);border-color:#fff}
+  .facade .play::after{content:"";border-style:solid;border-width:11px 0 11px 19px;border-color:transparent transparent transparent #fff;margin-left:5px}
+  .player iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+
+  /* ── Episode facts (bottom of the Summary panel — templated per episode) ── */
+  .sumfacts{margin:14px 10px 4px;padding-top:13px;border-top:1px solid rgba(255,255,255,.08);display:flex;flex-direction:column;gap:8px}
+  .fact{display:flex;gap:12px;font-size:13.5px}
+  .fact .fl{flex:none;width:104px;color:var(--dim);font-weight:600;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;padding-top:2px}
+  .fact .fv{color:rgba(255,255,255,.9);font-weight:500}
+  .fact .fv a{color:var(--mint);text-decoration:none;border-bottom:1px solid rgba(122,217,168,.4);transition:.15s}
+  .fact .fv a:hover{border-bottom-color:var(--mint)}
+
+  /* ── Episode tag (identity: black label hanging off the title corner) ── */
+  .eptag{display:inline-block;position:relative;left:-6px;margin-bottom:-7px;z-index:2;
+    background:#0a0a0a;color:var(--white);font-family:var(--display);font-weight:400;
+    font-size:13.5px;letter-spacing:1.5px;text-transform:uppercase;padding:6px 11px 4px}
+
+  /* ── Explore tabs (sticky mode switcher; one panel swaps below, nothing shoves) ── */
+  .explore{margin-top:22px}
+  .tabs{position:sticky;top:58px;z-index:40;display:flex;flex-wrap:wrap;gap:8px;padding:10px 0;
+    background:linear-gradient(180deg,rgba(18,10,55,.96),rgba(18,10,55,.86));
+    backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+  .tabbtn{font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.5px;
+    font-size:14.5px;color:var(--white);background:var(--purple);border:1px solid var(--purple);
+    padding:9px 13px 7px;cursor:pointer;transition:.15s}
+  .tabbtn:hover{filter:brightness(1.12)}
+  .tabbtn.on{background:var(--mint);border-color:var(--mint);color:#0a0a0a}
+  .tabbtn.on:hover{filter:none}
+  .tabbtn .ct{font-size:12px;opacity:.75;font-variant-numeric:tabular-nums}
+  .tabbtn .ct::before{content:" · "}
+  .tpanel{border:1px solid var(--line);background:var(--card);padding:12px 10px 14px}
+  .hint{font-size:12.5px;color:var(--muted);padding:2px 10px 10px;border-bottom:1px solid rgba(255,255,255,.08);margin-bottom:6px}
+
+  /* ── Listen row (no box: label left, service pills follow) ── */
+  .listen{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:12px 16px;margin-top:34px}
+  .listen .lname{font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--dim)}
+  .listen a{display:inline-flex;align-items:center;gap:9px;padding:11px 18px;border-radius:999px;
+    background:var(--mint);color:#08210f;text-decoration:none;font-weight:800;font-size:12.5px;
+    letter-spacing:.04em;text-transform:uppercase;transition:.15s}
+  .listen a:hover{filter:brightness(1.06);transform:translateY(-1px);box-shadow:0 12px 30px rgba(122,217,168,.25)}
+  .listen svg{width:20px;height:20px;fill:currentColor;flex:none}
+  /* ── Listen-now Spotify audio embed (full column width, above the pills) ── */
+  .listen-now{margin-top:40px}
+  .listen-now .ln-head{display:flex;align-items:baseline;justify-content:space-between;gap:14px;margin-bottom:13px}
+  .listen-now .ln-title{font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--dim)}
+  .audio-embed{border-radius:12px;overflow:hidden;box-shadow:0 20px 50px rgba(0,0,0,.4),0 0 0 1px rgba(255,255,255,.06)}
+  .audio-embed iframe{display:block;width:100%;border:0}
+  @media(max-width:720px){.listen-now{margin-top:32px}}
+
+  /* ── Keep exploring (thumbnails link to other episode PAGES, never timecodes).
+     Swipeable strip on mobile, fits three-up on desktop. Variant rule: claim
+     "similar ground" + reason lines ONLY when moment-level topic overlap is
+     genuinely strong; otherwise show the latest released episodes with dates —
+     never invent a connection. ── */
+  .relsec{margin-top:60px;padding-top:58px;border-top:1px solid var(--line)} /* line = end of this episode's info */
+  .reldots{display:flex;justify-content:center;gap:7px;margin-top:12px}
+  .reldots span{width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.25);transition:.2s}
+  .reldots span.on{background:var(--mint)}
+  .relsec .rtitle{display:inline-block;font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.5px;font-size:14.5px;background:var(--mint);color:#0a0a0a;padding:9px 13px 7px;margin-bottom:18px}
+  .relgrid{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding-bottom:6px;scrollbar-width:none}
+  .relgrid::-webkit-scrollbar{display:none}
+  .relcard{flex:0 0 56%;max-width:232px;scroll-snap-align:start;display:flex;flex-direction:column;text-decoration:none;background:var(--card);border:1px solid var(--line);transition:.15s}
+  .relcard:hover{background:var(--card-hi);border-color:rgba(122,217,168,.55)}
+  .relcard img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block}
+  .relcard .rt{display:block;font-size:12.5px;font-weight:600;color:rgba(255,255,255,.92);line-height:1.4;padding:8px 8px 0}
+  .relcard .rfoot{margin-top:auto;display:flex;justify-content:space-between;align-items:flex-end;gap:8px;padding:10px 8px 9px}
+  .relcard .rwhy{font-size:11.5px;color:var(--mint)}
+  .relcard .rtag{display:inline-block;background:#0a0a0a;color:var(--white);font-family:var(--display);font-size:10px;letter-spacing:1.2px;text-transform:uppercase;padding:3px 7px 2px;white-space:nowrap;flex:0 0 auto}
+
+  /* ── Dropdown sections (accordion under the player) ── */
+  .drops{margin-top:34px;display:flex;flex-direction:column;gap:11px}
+  .drop{border:1px solid var(--line);border-radius:0;background:var(--card);overflow:hidden;transition:border-color .15s}
+  .drop[open]{border-color:rgba(122,217,168,.35)}
+  .drop>summary{list-style:none;cursor:pointer;padding:16px 18px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+  .drop>summary::-webkit-details-marker{display:none}
+  .drop>summary .st{font-weight:700;font-size:15.5px;letter-spacing:.005em}
+  .drop>summary .ct{margin-left:auto;font-size:12px;color:var(--dim);font-weight:600;font-variant-numeric:tabular-nums}
+  .drop>summary .chev{flex:none;width:22px;height:22px;border-radius:50%;background:rgba(122,217,168,.14);color:var(--mint);display:flex;align-items:center;justify-content:center;font-family:var(--display);font-size:15px;line-height:1;transition:.2s;transform:translateY(-1px)}
+  .drop[open]>summary .chev{transform:rotate(45deg)}
+  .drop-body{padding:2px 12px 12px}
+
+  /* chapters */
+  .chapter{display:flex;align-items:baseline;gap:14px;width:100%;text-align:left;cursor:pointer;background:none;border:0;color:inherit;font-family:inherit;padding:11px 10px;border-radius:10px;transition:.13s}
+  .chapter:hover{background:var(--card-hi)}
+  .chapter .tc{font-variant-numeric:tabular-nums;font-weight:700;font-size:14px;color:var(--mint);flex:none;width:48px}
+  .chapter .cx{font-size:15px;font-weight:500;color:rgba(255,255,255,.9)}
+  .chapter:hover .cx{color:#fff}
+
+  /* questions */
+  .q{display:flex;align-items:center;gap:12px;width:100%;text-align:left;cursor:pointer;background:none;border:0;border-radius:11px;color:inherit;font-family:inherit;padding:12px 10px;transition:.14s}
+  .q+.q{border-top:1px solid rgba(255,255,255,.05)}
+  .q:hover{background:var(--card-hi)}
+  .q .qm{font-family:var(--display);font-size:15px;color:var(--mint);flex:none;line-height:1;transform:translateY(1px)}
+  .q .qx{font-size:15px;font-weight:500;color:rgba(255,255,255,.92)}
+  .q .go{margin-left:auto;flex:none;color:var(--dim);font-size:18px;transition:.15s}
+  .q:hover .go{color:var(--mint);transform:translateX(2px)}
+
+  /* summary + transcript bodies */
+  .summary-body p{font-size:16.5px;line-height:1.62;color:rgba(255,255,255,.9);padding:6px 10px 4px}
+  .tbody{padding:2px 10px 8px}
+  .tbody p{font-size:14.5px;line-height:1.7;color:rgba(255,255,255,.78);margin-top:15px;max-width:64ch}
+  .tbody .spk{display:block;font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--mint);margin-bottom:2px}
+
+  /* ── Voice note ask (lives at the bottom of the Summary panel) ── */
+  .vask{margin:16px 10px 4px}
+  .vbtn{display:inline-flex;align-items:center;gap:9px;padding:12px 20px;border-radius:999px;border:0;cursor:pointer;
+    background:var(--mint);color:#08210f;font-family:inherit;font-weight:800;font-size:12.5px;
+    letter-spacing:.04em;text-transform:uppercase;transition:.15s}
+  .vbtn:hover{filter:brightness(1.06);transform:translateY(-1px);box-shadow:0 12px 30px rgba(122,217,168,.25)}
+  .vbtn svg{width:18px;height:18px;fill:currentColor;flex:none}
+  .vslot{background:var(--purple);padding:12px 10px 10px;margin:14px 0 4px;box-shadow:0 18px 40px rgba(0,0,0,.35)}
+  .vslot[hidden]{display:none}
+  .vhead{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;margin-bottom:10px}
+  .vhead .vmsg{font-family:var(--sans);font-size:13px;line-height:1.55;color:rgba(255,255,255,.92);margin:2px 0 0;padding:0 2px}
+  .vclose{background:none;border:0;color:rgba(255,255,255,.85);font-size:22px;line-height:1;cursor:pointer;padding:0 2px}
+  .vclose:hover{color:var(--white)}
+  .vslot iframe{display:block}
+
+  /* ── YouTube subscribe pill (sits in the listen row; outranks .listen a's mint) ── */
+  .listen a.yt-pill{background:var(--purple);color:var(--white)}
+  .listen a.yt-pill:hover{filter:brightness(1.1);transform:translateY(-1px)}
+  @media(max-width:720px){ /* mobile: no label, three compact pills on one row */
+    .listen .lname{display:none}
+    .listen{gap:8px}
+    .listen a{padding:10px 13px;font-size:11px;gap:6px}
+    .listen svg{width:16px;height:16px}
+  }
+
+  /* ── Footer: two columns under the line (Brought to you by | Produced by), matches adventure.html ── */
+  footer{border-top:1px solid var(--line);margin-top:68px;padding:52px 20px 58px}
+  .footgrid{max-width:var(--wrap);margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:start}
+  @media(max-width:720px){.footgrid{grid-template-columns:1fr;gap:40px}}
+  .fcol{text-align:center}
+  .foot-label{font-size:11px;font-weight:700;letter-spacing:.26em;text-transform:uppercase;color:var(--dim);margin-bottom:16px}
+  .sponsors{display:flex;justify-content:center;align-items:center;gap:38px;flex-wrap:wrap}
+  .sponsors a{display:inline-flex;transition:.15s}
+  .sponsors a:hover{transform:translateY(-1px)}
+  .sponsors img{height:34px;width:auto;opacity:.92}
+  .sponsors a:hover img{opacity:1}
+  .produced a{display:inline-flex;transition:.15s}
+  .produced a:hover img{opacity:1}
+  .produced img{height:30px;width:auto;opacity:.95}
+  .footnav{margin-top:36px;display:flex;justify-content:center;flex-wrap:wrap;gap:6px 26px}
+  .footnav a{font-size:12px;font-weight:600;letter-spacing:.04em;color:var(--dim);text-decoration:none;transition:.15s}
+  .footnav a:hover{color:var(--mint)}
+  .copyright{margin-top:40px;font-size:12px;color:var(--dim);text-align:center}
+
+  @media(min-width:720px){header.hero{padding:48px 0 6px}}
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "PodcastEpisode", "name": "Buying Commercial Property With Your Super in 2026 | What the Numbers Say", "url": "https://thenumbersgamepodcast.com.au/episode-285.html", "datePublished": "2026-07-13", "episodeNumber": 285, "image": "https://i.ytimg.com/vi/RAQ80ecsDq0/maxresdefault.jpg", "partOfSeries": {"@type": "PodcastSeries", "name": "The Numbers Game", "url": "https://thenumbersgamepodcast.com.au/"}}</script>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-in">
+      <a class="brand" href="index.html" aria-label="The Numbers Game home"><img src="assets/tng-logo.png" alt="The Numbers Game"></a>
+      <div class="navlinks">
+        <a href="index.html">Home</a>
+        <div class="navgroup">
+          <a class="navtop">Episodes</a>
+          <div class="subnav">
+            <a href="episodes.html">All episodes</a>
+            <a href="adventure.html">Find moments</a>
+          </div>
+        </div>
+        <div class="navgroup">
+          <a class="navtop">About</a>
+          <div class="subnav">
+            <a href="about.html">The show</a>
+            <a href="nick-reilly.html">Nick Reilly</a>
+            <a href="jason-robinson.html">Jason Robinson</a>
+          </div>
+        </div>
+        <a href="contact.html">Contact</a>
+      </div>
+      <button class="navburger" id="navburger" type="button" aria-label="Menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24"><path d="M3 6h18v2H3zM3 11h18v2H3zM3 16h18v2H3z"/></svg>
+      </button>
+    </div>
+    <div class="navdrop" id="navdrop" hidden>
+      <a href="index.html">Home</a>
+      <span class="navlabel">Episodes</span>
+      <a class="sub" href="episodes.html">All episodes</a>
+      <a class="sub" href="adventure.html">Find moments</a>
+      <span class="navlabel">About</span>
+      <a class="sub" href="about.html">The show</a>
+      <a class="sub" href="nick-reilly.html">Nick Reilly</a>
+      <a class="sub" href="jason-robinson.html">Jason Robinson</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+
+  <main class="wrap">
+
+    <header class="hero">
+      <div class="hook">
+        <span class="eptag">EP 26</span>
+        <h1 class="hk"><span>Employee Blueprint</span></h1>
+      </div>
+    </header>
+
+    <div class="player-wrap" id="player-wrap">
+      <div class="audio-hero" id="spotify-embed"></div>
+    </div>
+
+    <div class="explore">
+      <div class="tabs" role="tablist">
+        <button class="tabbtn on" data-panel="p-summary">Summary</button>
+      </div>
+      <section class="tpanel" id="p-summary">
+        <div class="summary-body">
+          <p>Welcome to episode 26 of The Numbers Game podcast. In this episode we chat about the financial winners of the AFL Grand Final, homeless billionaires and the importance of focusing on the people within your business.</p>
+        </div>
+        <div class="vask">
+          <button class="vbtn" id="vbtn" type="button">
+            <svg viewBox="0 0 24 24"><path d="M12 14a3 3 0 0 0 3-3V6a3 3 0 1 0-6 0v5a3 3 0 0 0 3 3zm5-3a5 5 0 0 1-10 0H5a7 7 0 0 0 6 6.92V21h2v-3.08A7 7 0 0 0 19 11h-2z"/></svg>
+            Send us a voice note
+          </button>
+          <div class="vslot" id="vslot" hidden>
+            <div class="vhead">
+              <p class="vmsg">We'd love to hear from you. You can leave up to a 90 second voice note for us to play on the show: a question, some feedback, or a topic you want covered.</p>
+              <button class="vclose" id="vclose" type="button" aria-label="Close">&times;</button>
+            </div>
+            <iframe src="https://www.speakpipe.com/widget/inline/hhq6kzggsx7zpcsvakgxfrzun3zidpde" allow="microphone" width="100%" height="200" frameborder="0" title="Leave The Numbers Game a voice note"></iframe>
+          </div>
+          <script async src="https://www.speakpipe.com/widget/loader.js" charset="utf-8"></script>
+        </div>
+        <div class="sumfacts">
+          <div class="fact"><span class="fl">Release date</span><span class="fv">4 October 2021</span></div>
+          <div class="fact"><span class="fl">Hosts</span><span class="fv"><a href="jason-robinson.html">Jason Robinson</a> &amp; <a href="nick-reilly.html">Nick Reilly</a> &amp; <a href="marty-vidakovic.html">Marty Vidakovic</a></span></div>
+
+        </div>
+      </section>
+    </div>
+
+    <div class="drops">
+
+      <details class="drop">
+        <summary><span class="st">Episode transcript</span><span class="chev">+</span></summary>
+        <div class="drop-body tbody">
+          <p><span class="spk">Jason · 00:00</span>Thanks to our sponsor Walker Digital, who&#x27;ve stepped in to help the Numbers Game podcast with their social media. Walker Digital are a digital marketing agency covering strategy, content, video implementation, and education. The team at Walker have spread the word of our clients and love working with businesses doing good things, helping them to grow and reach more people so they can scale and get larger.</p>
+          <p><span class="spk">Jason · 00:20</span>I know personally the first thing I did when growing our business was to outsource social media, blogs, and copywriting because I knew it was something that was not the best use of my time, and the team at Walker Digital smashed it. Sometimes you need to walk before you can run. Find out more at their website, wlkr.digital. This podcast is for educational and informational purposes only.</p>
+          <p><span class="spk">Jason · 00:41</span>The conversations are of a general nature and do not qualify as financial or tax advice. We recommend before you make any financial decisions, you consult a licensed professional. Individuals on the podcast may hold positions in the companies discussed. Welcome to episode 26 of The Numbers Game.</p>
+          <p><span class="spk">Jason · 00:58</span>I&#x27;m here with Nick and Marty, whose last name I&#x27;ve been banned from saying live on the show, so How are we going today?</p>
+          <p><span class="spk">Marty · 01:04</span>I&#x27;m going great, thanks, Jase. Marty Vidakovic in the house. Marty Vidakovic in the house. Melbourne won the grand final after 57 years. Everyone&#x27;s pumped about that. So feeling on a high and we&#x27;ve got a roadmap out of lockdown. My God, life is good.</p>
+          <p><span class="spk">Marty · 01:20</span>Nick Riley, how are you?</p>
+          <p><span class="spk">Nick · 01:22</span>Good, mate. You&#x27;ve said it all. Vidakovic, Vidakovic, Vidakovic. I&#x27;ve heard about 5 or 6 versions, to be honest.</p>
+          <p><span class="spk">Marty · 01:30</span>But Marty V, Marty V.</p>
+          <p><span class="spk">Jason · 01:32</span>And all of them have come from me. But yeah, very excited.</p>
+          <p><span class="spk">Nick · 01:35</span>Excited. We do have a roadmap, so let&#x27;s hope, let&#x27;s hope it&#x27;s a roadmap that we can actually follow and it doesn&#x27;t get— don&#x27;t have the rug pulled from underneath us. But we&#x27;re excited. Let&#x27;s rip in.</p>
+          <p><span class="spk">Jason · 01:46</span>On today&#x27;s show, guys, I&#x27;m going to be talking about something that&#x27;s close to my heart after my recent experience, which I&#x27;ll talk about more in the Reading the Play. But it&#x27;s based around numbers on suicides and alcohol, which is a bit morbid, but you&#x27;ll hear more soon. What have you guys got?</p>
+          <p><span class="spk">Marty · 02:00</span>For me, I&#x27;ve got when employment goes wrong and what you can do about it to make sure it doesn&#x27;t go wrong. Nick, what have you got for us today?</p>
+          <p><span class="spk">Nick · 02:09</span>Big employment focus this episode. For me, it&#x27;s train and then retain. So we&#x27;re going to help people understand some of the lessons that we&#x27;ve learned in, you know, holding on to your staff and making sure you keep, keep your quality people.</p>
+          <p><span class="spk">Marty · 02:22</span>Let&#x27;s play, guys.</p>
+          <p><span class="spk">Jason · 02:25</span>Reading the Play. Each week we share some interesting facts or news and stories that have caught our eye, and I might jump into it first since It&#x27;s something that&#x27;s, you know, I was pretty keen to talk about. Now, I&#x27;ve got some stats here in front of me that I want to read out. So, pardon me for looking down on you boys at the moment.</p>
+          <p><span class="spk">Jason · 02:42</span>But I came across an article in The Age by Rachel Chun or Clun, sorry, I should say. And it was titled &quot;Fewer suicides, but alcohol-related deaths rose in the first year of the pandemic.&quot; Now, a lot of people talked about, oh, suicide rates are going through the roof because of COVID and so on and so forth.</p>
+          <p><span class="spk">Jason · 02:59</span>You know what we like at The Numbers Game, we like to back things by statistics and data. So, here we are. The suicide rate fell to the lowest level in years in 2020 despite the coronavirus pandemic. Experts pointed to a rise in government payments and support payments, which then meant that people were able to get help before they met crisis point.</p>
+          <p><span class="spk">Jason · 03:22</span>Now, to give you the numbers, 3,139 people took their lives in 2020 compared to 3,318 the year before. Now, putting that into numbers per day, it&#x27;s around 8 to 9 people per day take their life, which is way too much.</p>
+          <p><span class="spk">Jason · 03:38</span>And it&#x27;s kind of, you know, a bit— hurts the heart a little bit to actually say those numbers out loud. Now, the reason this caught my eye, I&#x27;ve been on a bit of a journey myself. And Marty, I know you don&#x27;t drink alcohol. I&#x27;m about 124 days alcohol-free at the moment.</p>
+          <p><span class="spk">Jason · 03:54</span>It was just something I did to get myself back on track and make sure that I wasn&#x27;t slipping down a bit of a bad path. So, the numbers that caught my eye in this article were the fact that alcohol-related deaths rose and that Australians spent more on home-delivered booze.</p>
+          <p><span class="spk">Jason · 04:11</span>Obviously, we were stuck in lockdown, but they spent more on booze in general overall than any year before. The top 5 causes of death in the ABS report related to respiratory disease, heart, dementia, they all fell as well, and coronavirus was ranked number 30.</p>
+          <p><span class="spk">Jason · 04:28</span>&#x27;98 with 898 deaths. Um, some of the statistics around alcohol was that the spend on alcohol grew 14.7% in the space of 12 months, from $5.3 billion in the December &#x27;19 quarter to $6.2 billion in the June 2020 quarter.</p>
+          <p><span class="spk">Jason · 04:47</span>So an extra— nearly an extra billion dollars in a quarter was spent on alcohol off the back of the coronavirus pandemic. Now, very few people die of alcohol poisoning directly, but there was around 1,400 deaths due to alcohol. But related to alcohol was 6,000 people died from alcohol-related deaths.</p>
+          <p><span class="spk">Jason · 05:07</span>Now, that can be cancers caused by alcohol, suicides, murders, car accidents. So, yeah, huge numbers, disappointing numbers around the alcohol and suicides and everything else. But one that I wanted to flag for our listeners and a bit of awareness around mental health, alcohol, and all those numbers.</p>
+          <p><span class="spk">Jason · 05:24</span>And you can&#x27;t just believe what you hear, um, generally in the media and people spruiking that, you know, suicides have gone up, people are committing suicide more than ever because of the pandemic, when those numbers just simply— statistics show those numbers just aren&#x27;t right. And whether those numbers have changed in 2021, we&#x27;ll have to await the stats to come out.</p>
+          <p><span class="spk">Jason · 05:41</span>But yeah, what do you boys think of that?</p>
+          <p><span class="spk">Nick · 05:42</span>I think it&#x27;s very interesting because not doing any research myself and just, you know, hearing what you hear From what I understood, suicide rates, um, have climbed. And maybe not suicide rates, maybe what I&#x27;m hearing is, you know, I think the calls to helplines and whatnot, particularly with the younger people, has spiked.</p>
+          <p><span class="spk">Nick · 06:01</span>So I&#x27;m not sure if you looked at those stats, but is that real or is that just people pushing an agenda like everyone seems to be doing at the moment depending on their belief?</p>
+          <p><span class="spk">Jason · 06:11</span>Yeah, 100%. The article actually went into that, Nick. So glad you said that. It talked about the sheer demand and impact on helplines and people reaching out for help because of what had happened. What they&#x27;re hoping is the correlation between people having a little bit more money to spend meant they were able to go and get the help that they needed.</p>
+          <p><span class="spk">Jason · 06:28</span>So I think, um, you know, I&#x27;ve got plenty of clients that are psychologists and counsellors. They&#x27;re fully booked and they&#x27;ve never had more clients before in their lives than what they have right now.</p>
+          <p><span class="spk">Marty · 06:38</span>Chase, I was just going to say it&#x27;s probably a testament to the work that&#x27;s gone into this area over the last 3 or 4 years that people are open enough to make those calls. Because our generation, we would have had that, uh, you know, probably that percentage of alcohol up to about 30% because no one would have addressed, uh, their emotions around it.</p>
+          <p><span class="spk">Marty · 06:58</span>So it shows me how far we&#x27;ve come as a society to have those vehicles to call in and get help, and also for people to be brave enough and vulnerable enough to make those calls because Sometimes that one conversation can, can save a life.</p>
+          <p><span class="spk">Marty · 07:15</span>And it&#x27;s— but the, the alcohol thing is a really interesting thing because beware of idle hands that have nothing to do other than work. And I totally can understand why people would be looking for an outlet like that. I don&#x27;t know the domestic violence numbers.</p>
+          <p><span class="spk">Marty · 07:31</span>I know having family in the police force that they&#x27;ve risen. I don&#x27;t know the exact numbers. But again, there&#x27;s always dangers when we silo people into, yeah, into an entrapment situation. So, it&#x27;s— But very interesting numbers, mate.</p>
+          <p><span class="spk">Marty · 07:47</span>Very interesting numbers.</p>
+          <p><span class="spk">Jason · 07:48</span>And just on the end of that personal story, just for anyone out there who, you know, their alcohol drinking right now or their use of alcohol, which is a drug. Alcohol&#x27;s a drug and 77% of people aged over 14 when surveyed said they&#x27;d like recently and regularly used alcohol.</p>
+          <p><span class="spk">Jason · 08:04</span>That&#x27;s a huge number, 77% of the population over 14. The game changer for me was a book called The 30-Day Alcohol Experiment, and it was just, it&#x27;s a chapter a day for 30 days. I think it&#x27;s by a lady called Annie Grace. It&#x27;s like $6 in the Apple Bookstore, and you just read a chapter a day for 30 days.</p>
+          <p><span class="spk">Jason · 08:21</span>You don&#x27;t drink alcohol for the 30 days, and by the end of the 30, you feel pretty bloody amazing. And a bit of a mindset shift of, you drink because of boredom sometimes. You crack a bottle of red or a couple of beers at the end of the day because you think it de-stresses you or you&#x27;ve got nothing else to do. But it just kind of talks you through a bit of that, like what it does to your body, what it does to your mind, and how you can change that for something a little bit more sustainable, better for your health.</p>
+          <p><span class="spk">Marty · 08:43</span>And that&#x27;s exactly what happened to me, mate. I set myself a challenge. My wife and I did it for 90 days, and it ended up now coming up to 10 years without alcohol because of the benefits. But again, it&#x27;s all about— Nick talks about this as well a lot— it&#x27;s all about habits.</p>
+          <p><span class="spk">Marty · 08:59</span>So I was, yeah, I knew I had the personality where I wouldn&#x27;t drink for a while. Then you go to a function and you drink enough to kill a small donkey, so then you&#x27;d, uh, regret it for the next 3, 4 days. And, um, it wasn&#x27;t— it wasn&#x27;t a good thing. So we made a call on it because we were having kids.</p>
+          <p><span class="spk">Marty · 09:15</span>Um, we got the kids, so we&#x27;re happy about that. Uh, but the thing is that it&#x27;s funny though, I certainly ended up— I lost weight initially and then put on weight, uh, afterwards because you transfer the habit into something else as an outlet.</p>
+          <p><span class="spk">Marty · 09:31</span>So just because mine&#x27;s ice cream, I&#x27;m definitely, uh, yeah.</p>
+          <p><span class="spk">Jason · 09:36</span>Couple of kilos.</p>
+          <p><span class="spk">Marty · 09:36</span>So again, you, you always got to take stock to go— just because you stop one thing doesn&#x27;t mean you try— you don&#x27;t transfer the habit into something else. So you want to always monitor the habit. Um, but yeah, it was certainly— it certainly changed my whole social game.</p>
+          <p><span class="spk">Marty · 09:52</span>And, uh, it was a very interesting time for 6 months, and then just became a part of who I was and it didn&#x27;t matter anymore. But, uh, yeah, interesting numbers. And I&#x27;m— look, I don&#x27;t go— I I&#x27;m not judgmental. I don&#x27;t go around to people going, mate, you shouldn&#x27;t drink, you&#x27;re killing brain cells.</p>
+          <p><span class="spk">Marty · 10:07</span>You know, I don&#x27;t do that. Everyone has the right to do what they, what they please. And, you know, and I think all things in moderation are good. I&#x27;m an extremist, so if I do— if I drink, I&#x27;ll drink well. You know, if I, if I focus on something, I&#x27;ll do it well. And that can be detrimental or positive.</p>
+          <p><span class="spk">Marty · 10:24</span>So to me, it&#x27;s just not something I should do. So yeah, Nick, any—</p>
+          <p><span class="spk">Nick · 10:29</span>oh, I&#x27;m just going to continue to drink.</p>
+          <p><span class="spk">Marty · 10:31</span>So the beautiful stories, gents, but, um, Nick He looks the happiest too, can I just say.</p>
+          <p><span class="spk">Jason · 10:37</span>Yeah, happiest, healthiest, nice skin, great teeth.</p>
+          <p><span class="spk">Nick · 10:40</span>Really happy for the both of you, but yet to be convinced. So look, I think there&#x27;s a healthy balance, right? And it&#x27;s a cliché, but I think it&#x27;s a healthy balance and whatever works for the individual. I&#x27;m going to make it a little bit more lighthearted, Jase, if that&#x27;s all right. If we can push on to the next topic.</p>
+          <p><span class="spk">Nick · 10:55</span>Please do, mate. Homeless billionaires. And so where this stems from is Elon Musk tweeted, I think it was around May this year, he was going to offload all of his houses or all of his physical possessions. The reason being was because they weighed him down, basically.</p>
+          <p><span class="spk">Nick · 11:12</span>So Elon Musk had a property portfolio worth around $140 million Australian, which I believe was only about 6 properties. But you can imagine the type of properties that this guy owned. And he sold them all except for one, and he&#x27;s kept one in San Francisco.</p>
+          <p><span class="spk">Nick · 11:28</span>And the reason he&#x27;s kept that property is they actually hold a lot of events there. Um, just to give you an idea of why I think this is, this is so interesting, because April 20 to April 2021, Elon Musk was earning on average $383 million US per day.</p>
+          <p><span class="spk">Nick · 11:46</span>Um, per day, per day. Obviously Tesla&#x27;s doing this, right? So from a share price point of view, uh, current net worth is just under $200 billion US. So, you know, here&#x27;s a guy that really doesn&#x27;t give a shit about, you know, about things, I guess.</p>
+          <p><span class="spk">Nick · 12:05</span>And the comment I really liked is they just weigh you down. And it made me think about— it made me think about Steve Jobs, you know, wearing the same outfit every day because he didn&#x27;t want the headspace of thinking— he didn&#x27;t want to give the headspace of thinking about what to wear.</p>
+          <p><span class="spk">Nick · 12:24</span>So Elon Musk now rents a 35 square meter property, which is worth about $50,000. So he&#x27;s just split up with his partner as well. So now he&#x27;s renting 35 square meters. I can assume it&#x27;s only got one bedroom and then he can focus on his work.</p>
+          <p><span class="spk">Nick · 12:40</span>Just another quick story. Warren Buffett&#x27;s very similar. So Warren Buffett has one house and it&#x27;s a house that he bought in 1958 for $35,000. I&#x27;ve watched a documentary on Warren Buffett and his life. It&#x27;s a very basic house, very basic lifestyle that he lives.</p>
+          <p><span class="spk">Nick · 13:00</span>And Marty, you know him well, so you could probably talk more to this. But Buffett, a quote from Buffett, &quot;How would I improve my life or happiness by having 10 properties around the globe? I don&#x27;t want to manage them and I don&#x27;t want to pay anyone else to manage them.&quot; So it&#x27;s just really interesting that these these people that are on a different— or these people that are severely wealthy, they just don&#x27;t care about physical things.</p>
+          <p><span class="spk">Nick · 13:24</span>They&#x27;re, they&#x27;re just so— they&#x27;re wide different to most people. They don&#x27;t do it for the money. Steve Jobs is another one. They&#x27;re in, they&#x27;re in the game they&#x27;re in because they, they love it and they&#x27;re obsessed with it, and then the money follows. So yeah, I just think it&#x27;s— there&#x27;s a clear gap between the really, really wealthy and the people that trying to make money to get good things.</p>
+          <p><span class="spk">Nick · 13:46</span>And I just think, thought it was a really cool story and I can kind of relate to it. Obviously, you know, we&#x27;re no Elon Musk, but I can see how properties and, you know, holidays and all these things, they take a lot of headspace. And if you could redirect that headspace into what you do well, who knows where that would go?</p>
+          <p><span class="spk">Nick · 14:03</span>That&#x27;s me personally. And I know a lot of my friends. So yeah, it was just a really interesting article.</p>
+          <p><span class="spk">Marty · 14:10</span>Totally agree with that. I think Warren Buffett, he decides if the share market goes up and it does does well, he gets a bacon and egg McMuffin. If it doesn&#x27;t do so well, he gets just a basic cheeseburger. But he&#x27;s, he&#x27;s, he just like, again, he reinvests all the dividends in the business.</p>
+          <p><span class="spk">Marty · 14:28</span>Like, he knows what he&#x27;s going to live off, and it&#x27;s a craft. And I, I think as you get older, definitely in my 30s, I wanted to accumulate assets because I wanted it to stand for something and create a legacy. But it&#x27;s, it&#x27;s absolutely right. You, as you get older, you realize life&#x27;s about experience, impact, and connection.</p>
+          <p><span class="spk">Marty · 14:46</span>And they&#x27;re the 3 things that you recognize to go, if you live in a comfortable home, fantastic. And relevant investing, like you said, if you&#x27;re working on your business, that can be the greatest investment out there and what you can do. So, I mean, my dad wears the same tracksuit pants every day, not because he, yeah, he just can&#x27;t afford to, but it&#x27;s like he lives a simple life.</p>
+          <p><span class="spk">Marty · 15:12</span>And he does okay, you know. And I look at him sometimes and I go, geez, I overcomplicate stuff. He&#x27;s as happy as you&#x27;d see anyone 80 years of age. And, you know, lives frugally but lives well, you know, in comfort. But, uh, I just think they&#x27;re on to something there.</p>
+          <p><span class="spk">Marty · 15:28</span>And minimalism has been a term that has come into the vocabulary a lot in the last probably 4 or 5 years. But I look at it a little bit differently. I look at it as enrichment. So I don&#x27;t, I don&#x27;t minimalize to, to just take stuff out. I, I go, what do I want to keep in that actually means something to me and that, you know, brings, brings me happiness in my day?</p>
+          <p><span class="spk">Marty · 15:51</span>And if you do that, you can still have beautiful things that you appreciate, and then every day is an experience. And that&#x27;s, that&#x27;s the shift for me, whereas before it would have been, all right, well, you&#x27;re getting stuff and you realize the stuff doesn&#x27;t make you happier.</p>
+          <p><span class="spk">Marty · 16:06</span>It&#x27;s, um, Yeah, it&#x27;s how you go about your life. So, but it&#x27;s a really great thing.</p>
+          <p><span class="spk">Jason · 16:11</span>Finding joy in the simple things is really important too, because if you&#x27;re fixated on, I need to get the big property and I need to have more wealth, and you know, you&#x27;re just going to live a miserable life when you&#x27;re focusing on things that may be out of reach. Always chasing, getting some joy and happiness out of what you&#x27;ve got. Yeah, rather than always chasing.</p>
+          <p><span class="spk">Marty · 16:27</span>You&#x27;re right, and it&#x27;s never enough. One thing I started to realize, it didn&#x27;t matter what you got, it was never enough. And then what can happen is you can get so distracted in forward thinking and trying to accumulate more that you actually forget what&#x27;s here and now.</p>
+          <p><span class="spk">Marty · 16:43</span>And that&#x27;s, that&#x27;s a distraction point of being happy where you&#x27;re at. So look, again, like anything, I&#x27;m sure there&#x27;s a synergy of both that can work well, but, um, it&#x27;s really important. That&#x27;s, that&#x27;s the big thing I picked up probably in my mid-40s where I&#x27;m going You know, I, and I&#x27;ve said this to Nick before, you know, the thing about building businesses is you&#x27;re buying time as well.</p>
+          <p><span class="spk">Marty · 17:07</span>Like when you do have an exit, like I go, I got to spend 4 years when Charlie was between 2 to 6 years of age, um, and I, I could basically have choice to do whatever I wanted to do with him. I mean, you just can&#x27;t get that like that. Most people just don&#x27;t get that.</p>
+          <p><span class="spk">Marty · 17:23</span>Like I, I don&#x27;t forget that time. And, and then you can work on projects of interest where you feel like you&#x27;re going to make an impact and help people. And it&#x27;s, um, it&#x27;s just totally different way of thinking to probably what I had in my late 20s and what I thought I needed to do to create self-worth, you know.</p>
+          <p><span class="spk">Marty · 17:41</span>And that&#x27;s, that&#x27;s a big one. You&#x27;ve got to understand what your own self-worth is, what your identity is, and hey, excuse me, and how you&#x27;re going to make impact in the world. So, and it can be— it doesn&#x27;t have to be on a grand scale. Like Elon Musk. It can be within your own circle of friends and, you know, work colleagues and family.</p>
+          <p><span class="spk">Marty · 17:58</span>And it doesn&#x27;t have to be like that. It&#x27;s great if you want to do it, no drama, but it can be just as, just as connected on a smaller scale. So I hope that makes sense.</p>
+          <p><span class="spk">Nick · 18:09</span>Beautiful, Marty.</p>
+          <p><span class="spk">Marty · 18:10</span>Very philosophical.</p>
+          <p><span class="spk">Nick · 18:11</span>You&#x27;re on fire today.</p>
+          <p><span class="spk">Marty · 18:13</span>Went on a tangent, didn&#x27;t I?</p>
+          <p><span class="spk">Nick · 18:14</span>Sure, it&#x27;s your reading of play too, so I&#x27;m really excited.</p>
+          <p><span class="spk">Marty · 18:19</span>So, well, look, I wanted to say congratulations to all the Melbourne fans out there in AFL football world. Uh, 57 years, and I think any supporter that was watching— like, I love the Bullies too, I&#x27;m an Essendon supporter— but, uh, it was fantastic to see lifelong, uh, fans that, uh, end their suffering and celebrate.</p>
+          <p><span class="spk">Marty · 18:39</span>And I just thought, who was the real winner here of the Grand Final? And definitely the WA economy. Big winners, $50 mil injected economic boost for WA. Haven&#x27;t they done well living as per normal? Well done, well done. Even border closures, border closures and everything.</p>
+          <p><span class="spk">Marty · 18:57</span>Not that that stopped many Melbourne fans. Well done to the guys who got through it. Uh, 57 years, you might not see it again. So, and, um, for, uh, they had 40,000 additional people, um, go to the big game and enter the state. So whether from South Australia or Northern Territory or from somewhere, maybe from Melbourne.</p>
+          <p><span class="spk">Marty · 19:16</span>That was good. Hotel non-vacancy rates the lowest in 20 years. And, and I think winners are grinners as well. The Melbourne Footy Club sold one year&#x27;s worth of merchandise within 48 hours after winning the preliminary final.</p>
+          <p><span class="spk">Marty · 19:32</span>And over the last 4 weeks, they&#x27;ve sold 3 years&#x27; worth of merchandise, which is $2.7 mil. In, um, in that, in that time frame. I just thought it&#x27;s incredible how success brings financial success. So for any businesses that are winning awards out there, don&#x27;t think it doesn&#x27;t matter if you&#x27;re building an elite team and you&#x27;re getting some recognition in that.</p>
+          <p><span class="spk">Marty · 19:55</span>It certainly makes a financial impact. So sorry to bring it back to business, but footy is business as well. And, um, and now they want the Boxing Day Test. So it&#x27;s been traditionally in Melbourne forever. Should we give it to them, boys?</p>
+          <p><span class="spk">Nick · 20:11</span>I think they should get this year&#x27;s, definitely. Like, if, if we can&#x27;t get, uh, a crowd to the MCG, then 100%, because I haven&#x27;t been to that Perth stadium, but I can&#x27;t wait to go. It looks sensational, and I&#x27;ve heard it&#x27;s unbelievable. And, you know, I love the cricket, and I&#x27;ve been to a lot of Boxing Day Tests, and to think that that could be played without a crowd this year, um you know, which based on today&#x27;s cases is probably going to happen.</p>
+          <p><span class="spk">Nick · 20:34</span>I just think, yeah, give it to Perth. Why would you keep it here when no one can go?</p>
+          <p><span class="spk">Jason · 20:39</span>Stood outside that stadium earlier this year, late last year, can&#x27;t remember, whenever I was allowed to leave the state at one point. And mate, that stadium is stunning. And even the grounds around it and the pub across from it is like the biggest pub in the southern hemisphere or something. It&#x27;s ridiculous. So yep, if they can have a crowd there, I&#x27;m all for it.</p>
+          <p><span class="spk">Jason · 20:57</span>We&#x27;d love to hear from you. Send us an email, hello@thenumbersgame.com.au. Podcast.com.au.</p>
+          <p><span class="spk">Nick · 21:02</span>All right guys, it&#x27;s time for Marty&#x27;s favorite segment, and this is actually you, Marty, and Jase, you&#x27;re going to chime in as well. So Marty, what do you got for us in Losing It this week?</p>
+          <p><span class="spk">Marty · 21:15</span>Uh, today I want to talk about, um, employees and what can go wrong if you&#x27;re not paying attention to them. And I always think in any business, you know, your talent is really your business ultimately. And, um, the biggest losing it I find with is, is in a business is when you lose employees.</p>
+          <p><span class="spk">Marty · 21:35</span>Now I&#x27;ve been pretty fortunate, it hasn&#x27;t happened a lot to me, but, um, it&#x27;s, it&#x27;s probably out of a little bit of luck in that as well, particularly in the early days. But again, a lot of people are not listening to their employees and also they don&#x27;t have structures and clarity around performance targets and performance and also capabilities in their roles and behaviors in their roles.</p>
+          <p><span class="spk">Marty · 22:01</span>So all people want to do is progress in their career and have something, a system to believe in and something to follow in order to progress. And one thing I find that small business owners do, I mean, they&#x27;re so heavy on sales because initially you&#x27;re trying to survive, but Again, if you&#x27;re not being clear with your employees as to what the career progression is and, you know, even what the pay grades are, you&#x27;re really leaving yourself</p>
+          <p><span class="spk">Marty · 22:31</span>open to other businesses taking those employees away from you or the employee being disgruntled and moving away from the business. And I just wanted to put it out there, and Jase, you can chime in on this as well.</p>
+          <p><span class="spk">Marty · 22:47</span>I just think it&#x27;s a bigger issue than a lot of business owners recognize, and the cost is substantial. I think the cost is something like half their salary to get it wrong. So we certainly want to, and we&#x27;ll talk about how to get it right ultimately. But Jase, have you found that as well with business owners that you take care of and in your own businesses?</p>
+          <p><span class="spk">Jason · 23:08</span>Well, yeah, Marty. And look, talking about the pre-episode planning when we ran through this, so the reason I wanted to chime in on losing it was it hit home hard after 4 or 5 years of running the business. I think we&#x27;re at a team of nearly 27 next week with a few new people starting.</p>
+          <p><span class="spk">Jason · 23:23</span>Um, the business before this got to a team of 26 before we, um, broke it up and went our separate ways. But, and fortunately, like yourself, mate, we haven&#x27;t had too many people that, you know, put the cue in the rack and wanted to walk out the door and leave until just recently. Uh, what you&#x27;ve talked about is when employment goes wrong, the career plans and progression is one thing, but also you touched on listening to your employees and We seek feedback using a software called Everperform.</p>
+          <p><span class="spk">Jason · 23:49</span>Um, the team members put in how they&#x27;re feeling, they answer a bunch of questions, and the AI and the software processes it and kind of gives a rating and a ranking on, you know, who we need to pay some attention to and who needs a hand and who&#x27;s not coping. Um, unfortunately, we&#x27;ve just been through quite a busy growth patch, and for a couple of months we weren&#x27;t looking at that data.</p>
+          <p><span class="spk">Jason · 24:08</span>And now one of our team members came along and said they wanted to wrap up, um, and, and basically leave because they can&#x27;t cope with what&#x27;s— how busy it is at work, and then also being at home with lockdown, with family commitments that they need to be able to stick to. Now, while we fully understood this person&#x27;s reason for leaving, um, it hit us hard.</p>
+          <p><span class="spk">Jason · 24:28</span>We were devastated because this person&#x27;s such an important employee— or they all are, but, you know, as a manager or a senior in our team who&#x27;s been with us for years. Now, the lesson that we learned from that is we need to pay attention to our team members. That, you know, if we are going to put systems in place to take feedback and get information off our team on how they&#x27;re feeling, but then do nothing with it, then we can expect to lose good team members if we don&#x27;t pay attention to them.</p>
+          <p><span class="spk">Jason · 24:54</span>So putting in, you know, systems in place to make sure that you review information, you meet with your team, you have one-on-one meetings to ask them how they&#x27;re going and how you can help. Um, fortunately, once we got that data and we kind of sat down and had a chat, we&#x27;ve been able to resolve it.</p>
+          <p><span class="spk">Jason · 25:09</span>Team member&#x27;s going to have a couple of months off, unfortunately, come back because Future Advisory, she says, is such a fantastic place to work. She wants to come back into the environment after a bit of time off to sort out stuff at home. So we&#x27;re lucky in that aspect, but it could have been an absolute disaster if we weren&#x27;t able to resolve it.</p>
+          <p><span class="spk">Jason · 25:26</span>And as you said, the cost to replace a team member like that would have been tens of thousands of dollars, which just, you know, it hurts businesses to have to go through that.</p>
+          <p><span class="spk">Marty · 25:34</span>I had an employee in Adelaide and it was the first time we ventured interstate and I learned a valuable lesson. Everyone that was under the roof in Melbourne was doing extraordinarily well, but because the person wasn&#x27;t, uh, wasn&#x27;t involved into the day-to-day and I wasn&#x27;t paying enough attention to that person, um, it just atrophied and the person left.</p>
+          <p><span class="spk">Marty · 25:56</span>And I, I actually blame myself on that because I really didn&#x27;t set up a structure for that person to succeed, and I didn&#x27;t integrate them into the main group. And, um, Yeah, it was just, it was an invaluable lesson of understanding of even, even having systems in-house are really important, understanding pay grades, career progression, but also even when you&#x27;re venturing out interstate.</p>
+          <p><span class="spk">Marty · 26:18</span>And I certainly pay attention to the interstate guys in our business and integrate them into the sales meetings and things like that based off what I learned in my early 30s in my first business and just thinking that that person will be okay ultimately and they&#x27;ll run their own show and it should be okay.</p>
+          <p><span class="spk">Marty · 26:34</span>And you leave it to chance and, um, you take a hit. And I, I don&#x27;t see it as that employee&#x27;s fault. I saw that as purely my fault, and I was really annoyed with myself because I, you know, I set more infrastructure up after that. Um, yeah, Nick, any additions to that?</p>
+          <p><span class="spk">Marty · 26:51</span>But that was a valuable lesson.</p>
+          <p><span class="spk">Nick · 26:53</span>Oh, look, I&#x27;ve, I&#x27;ve got a lot to talk about, obviously, because, um, we&#x27;ve just, we&#x27;ve just done a lot in our business that&#x27;s an, um, that hopefully fixes this problem for us. Not that it was a big problem, but I think when you&#x27;re, when you&#x27;re a small business, and we&#x27;ve obviously been through the process of being a small business to, to medium-sized business, but as a small business, you&#x27;re just so focused on revenue and keeping the doors open.</p>
+          <p><span class="spk">Nick · 27:18</span>And you and I spoke about this last night, Marty, but you just assume that your small team is going to stay out of loyalty. But you— and in a lot of cases that&#x27;s true, they will stay because they&#x27;re loyal to you. But you, you want them to stay because they want to be there and they&#x27;ve got a reason to be there and they&#x27;re happy.</p>
+          <p><span class="spk">Nick · 27:34</span>You don&#x27;t want someone unhappy in their job, but they don&#x27;t want to leave you because, you know, you&#x27;ve given that original opportunity. So look, I think what we&#x27;re going to talk about today is something that everyone can take away from it. You might not go to the, to the depths that we&#x27;ve gone as a business to get this right.</p>
+          <p><span class="spk">Nick · 27:51</span>But as a small business, I think there&#x27;s a lot you can take away from it. And you don&#x27;t have to be a business owner, even if you&#x27;re a team leader, if you&#x27;ve got a sales team around you. Hopefully a lot of the stuff we&#x27;re going to talk about today is you can at least take one or two things away and go, geez, I can really implement that in my business. And particularly with small business, you know, you&#x27;ve got a team of 5 and you lose one, that&#x27;s significant, right?</p>
+          <p><span class="spk">Nick · 28:11</span>That&#x27;s 20% of your workforce gone. So you need to get this stuff right. And you need to find some time to spend on it because it&#x27;ll just make your business far more efficient. Um, you know, then you think about the downtime that exists when you&#x27;ve got to rehire.</p>
+          <p><span class="spk">Nick · 28:28</span>You know, you talked about, uh, the cost from a lack of productivity point of view, but you know, you&#x27;re paying 10— anywhere between $10,000 and $20,000 to a recruiter these days. Um, so I think it&#x27;s, yeah, spending a little bit of time on it at the start Um, I&#x27;m sorry, ongoing, can prevent a lot of heartache in your business no matter what the size of your business.</p>
+          <p><span class="spk">Marty · 28:50</span>You&#x27;re right, Nick. And the other thing business owners don&#x27;t take note on, like if you&#x27;ve got like a rotating wheel of employees coming in and going back out, the brand damage that does as well as being a place to not to work and what, what the messages that are going out into the general market can do a lot of damage as well.</p>
+          <p><span class="spk">Marty · 29:10</span>So if people aren&#x27;t listened to and there isn&#x27;t a system set up for them to progress. And, you know, they don&#x27;t want to be there and they&#x27;re upset, which you hear a lot of in small business, that there&#x27;s just some business owners just can&#x27;t maintain staff.</p>
+          <p><span class="spk">Marty · 29:25</span>And, you know, probably, probably a bit more of the old-style bullying technique, but I don&#x27;t know if it&#x27;s as evident today as it was back then. But again, that, that presents huge brand damage for the company as well. That takes time to heal and get right.</p>
+          <p><span class="spk">Jason · 29:42</span>So jumping into the 1%, as we want to talk about all things employment, and we want to flip it the other way around now and go, what are the things you can do to get massive impacts when you are employing team members? So probably throw it to yourself, Nick. Um, you&#x27;ve done a fair bit of work at Innov8 over the years, and probably more recently in the, you know, most recent couple of years.</p>
+          <p><span class="spk">Jason · 29:59</span>Why don&#x27;t you tell us a little bit about what&#x27;s been implemented and what the process to get to that point was?</p>
+          <p><span class="spk">Nick · 30:04</span>Yeah, thanks, mate. So I guess for us going back a few years ago, and I think this would be a lot of small businesses, you just really pay people what you think you should be paying them or what, what you think you need to pay them to, to retain them. And you know, that, that may be the wrong or right, right or wrong salary.</p>
+          <p><span class="spk">Nick · 30:22</span>It may also, it can also take up a lot of headspace. Like, I go back to trying to figure out what we&#x27;re going to pay people, and you know, you jump online, do a bit of research, jump on Seek throw a number at them and hope it stuck. So I guess as our business has grown, we&#x27;ve realized that, okay, number one, we need to make sure that whatever we&#x27;re paying people is right in the market.</p>
+          <p><span class="spk">Nick · 30:44</span>And number two, we need to give people the ability to move through different pay levels. And number three, we need to help people to get to those next pay, uh, next pay levels and help them understand what that job what the opportunity is in that role from a remuneration point of view.</p>
+          <p><span class="spk">Nick · 31:02</span>So I guess the thing that, that we did, we, we outsourced a lot of this. So we went to an HR expert who&#x27;s helped us with this, but this took us 12 months to get right, and we&#x27;re— it&#x27;s something we&#x27;re consistently working on. So just to really briefly explain what we do, but we— for each, for each role we have, we have different levels within that role.</p>
+          <p><span class="spk">Nick · 31:25</span>So If I talk about a CSM in our business, which is a client service manager, there&#x27;s 3 levels of CSM. There&#x27;s level 1, level 2, level 3. Each one of those levels has a different salary range that the CSM can hit. So, you know, I&#x27;m just going to pick a number, but CSM 1 might be $70,000 to $80,000.</p>
+          <p><span class="spk">Nick · 31:45</span>Uh, CSM 2 might be $80,000 to $90,000. CSM 3 might be $90,000 to $100,000. And that could be That&#x27;s for all of our roles, our CSMs, our mortgage brokers, our financial planners, everyone. So it&#x27;s really transparent as to when they come into our business, they know exactly what they can earn in that role firstly.</p>
+          <p><span class="spk">Nick · 32:04</span>And if they&#x27;re at CSM 1 level, they know what CSM 2 and CSM 3 looks like. And then they know that if they want to earn more than that, then they have to do something different in our business. You don&#x27;t get the situation where they just, you know, you&#x27;re continuously paying more because they&#x27;ve spent another year with you.</p>
+          <p><span class="spk">Nick · 32:21</span>The other thing that, um, that we&#x27;ve done is create competencies around each of those levels. So if you&#x27;re a CSM 1, these are the competencies we expect you to have. If you&#x27;re a CSM 2, you have to have all the CSM 1 competencies plus a few more.</p>
+          <p><span class="spk">Nick · 32:37</span>CSM 3, CSM 1 and 2 competencies plus a few more. So there&#x27;s also a really good understanding of okay, well, that&#x27;s what I need to be able to do to go to that next level. The third thing we do, which I guess underpins it all in my opinion, is we give them a development plan to get to that next level.</p>
+          <p><span class="spk">Nick · 32:57</span>So we do our salary reviews annually, and when we do those reviews, if someone&#x27;s at CSM2 level and wants to get to CSM3, then we put a development plan in place for them so they can hit those next level of competencies. And there&#x27;s no— it&#x27;s not black and white, the development plan.</p>
+          <p><span class="spk">Nick · 33:15</span>It&#x27;s whatever you come up with. So, you know, it could be reading books on, um, on certain competencies that you want to get better in. If it&#x27;s a sales competency, it might be tagging along with someone senior in the business and going to sales meetings with them or sales appointments so you can learn your craft in sales.</p>
+          <p><span class="spk">Nick · 33:32</span>So it&#x27;s whatever you come up with with the individual that they think is going to get them in place to go that next level. So it&#x27;s really good for us in, in retaining people because people understand what they need to do to get to that next income level.</p>
+          <p><span class="spk">Nick · 33:49</span>They&#x27;re not always sitting there wondering, well, when&#x27;s the pay rise coming? They know that there&#x27;s a salary review every 12 months and you&#x27;ve got to get to that next level, and if you do, you get a salary increase. There&#x27;s also real transparency. There&#x27;s around what everyone&#x27;s earning almost.</p>
+          <p><span class="spk">Nick · 34:04</span>So all the CSMs and all the financial planners they all— they don&#x27;t know exactly what the other person&#x27;s earning, but they know roughly where it&#x27;s going to be based on the CSM 1, 2, 3 or the Financial Planner 1, 2, 3 level. So I don&#x27;t get a situation where Joe Blogs has been in the business for 15 years, so he automatically gets more than someone who&#x27;s been in the business for 5 years who&#x27;s actually got more competencies than Joe Blogs.</p>
+          <p><span class="spk">Nick · 34:27</span>So you don&#x27;t get those issues as well. I think the last piece of the puzzle for us, and I&#x27;ve been doing a lot of work myself, and this is part of my development plan, um, as a, I guess, a CEO role in the business, but is around, um, is around getting rid of gender inequality.</p>
+          <p><span class="spk">Nick · 34:44</span>So, you know, bringing diversity into your business, and what does your diversity plan look like? And it&#x27;s not just about gender, it can be race, religion, beliefs, all these sorts of things. But it just eliminates— well, part of our diversity plan will be no gender inequality as far as income goes.</p>
+          <p><span class="spk">Nick · 35:02</span>And this eliminates that. It&#x27;s all based on competencies, and it&#x27;s all based on the individual, not what they look like or not what their beliefs are. So look, it&#x27;s been really good for us. I&#x27;ll get Marty to talk a little bit more about this because he&#x27;s, he&#x27;s driving our sales team in here.</p>
+          <p><span class="spk">Nick · 35:18</span>I guess he&#x27;s on the ground having these conversations. But I think as a small business owner, you just don&#x27;t have to go as, as deep as we have, but understand what the salary is for that person in the market, understand, okay, well, what&#x27;s the maximum it could be, document that and show people how to get to that next level.</p>
+          <p><span class="spk">Nick · 35:39</span>And then again, people know what, what their limit is, and they also know that, okay, well, once I hit CSM3 at $80,000, I need to develop myself to go into a new role. So you don&#x27;t just get that continuous increase of income, you&#x27;ve got to do something different.</p>
+          <p><span class="spk">Jason · 35:54</span>So Marty, I might just jump in quickly before Marty does, just from experience of working in organizations where there was no structure around that. I remember my first accounting job, I was on what I considered to be a really low salary for how hard I was working, and there was no structure.</p>
+          <p><span class="spk">Jason · 36:10</span>Like, I wasn&#x27;t told how to improve that, what do I need to do, what were the next steps I needed to take. And I ended up going into the pay review meeting feeling sick, feeling nervous, not sure what I should ask for. But also didn&#x27;t want to sell myself short. So I went from using, you know, numbers from 10 years ago, but if I was on $40,000, I went and asked for $60,000.</p>
+          <p><span class="spk">Jason · 36:29</span>And the boss nearly fell off his chair going, what do you mean you want to go from $40,000 to $60,000? I said, well, I can do all of these things that the person on $60,000 can do, and if not, I think I&#x27;m actually better. So why shouldn&#x27;t I go from $40,000 to $60,000? But I felt so terrible about it, and I had no idea if I was going to lose my job for you know, asking for so much.</p>
+          <p><span class="spk">Jason · 36:50</span>But what you&#x27;ve said, Nick, by having tiers, structures, training plans, and guidelines around salary band for the job you&#x27;re doing, it takes all that away. And, you know, I&#x27;d love to work at a place that had that kind of transparency.</p>
+          <p><span class="spk">Nick · 37:04</span>You know what else it does, just quickly before I hand to Marty, is it makes the job easy for the leader or the manager. You don&#x27;t spend time trying to work out what you should pay someone. It&#x27;s all there. So You also means that you as a leader, you don&#x27;t get tied up in thinking, geez, what&#x27;s this person worth?</p>
+          <p><span class="spk">Nick · 37:19</span>The blueprint&#x27;s there and you just got to follow the guideline. And then it&#x27;s really easy also to make that decision and be confident and comfortable that you&#x27;ve made the right decision. You can&#x27;t really have an employee come back at you and say, well, that&#x27;s not fair. You say, well, it is fair because this is the blueprint that we&#x27;ve come up with.</p>
+          <p><span class="spk">Nick · 37:37</span>This is what it&#x27;s been like since you&#x27;ve come into the business. So Yeah, it, it makes everyone&#x27;s job easier as a leader as well, in my opinion.</p>
+          <p><span class="spk">Marty · 37:46</span>Brilliantly said, guys. I think, um, there&#x27;s a big difference between reactive employee remuneration discussions to proactive, and I&#x27;ve been in both camps. And Jase and Nick, you hit it on the head. I remember having wage discussions with employees, there was no structure.</p>
+          <p><span class="spk">Marty · 38:04</span>People would come in going, I think I need a a wage increase, and I&#x27;ll go, well, hang on a minute, you&#x27;re 70% of target. That would be my response at the time. And then you&#x27;d go, then you&#x27;d be reactive and create a development plan off the back of that. Okay, if you do this, I&#x27;ll give you that.</p>
+          <p><span class="spk">Marty · 38:21</span>And how much stress is that for the leader? Because it&#x27;s all assumptive, um, rather than well thought out. And then, um, and then so that, that can work to, to a degree early, but it&#x27;s not very effective, I find. But now you can have real proactive discussion to go, okay, here are the bands, here are the behaviors and competencies in these bands, these are where your strengths are, here&#x27;s areas of development, let&#x27;s work on this over the next quarter and we&#x27;ll</p>
+          <p><span class="spk">Marty · 38:51</span>check in each month, we&#x27;ll set some activity steps, and then you hit these, you&#x27;re going to go into this next band, or you&#x27;re going to go in the higher side of your current band. And what I love about what&#x27;s been put together over the last 12 months is that someone can come into our business and they&#x27;ve got a career progression path all the way through, probably to about 8 or 9 different stages of what they can accomplish within the business.</p>
+          <p><span class="spk">Marty · 39:18</span>And I think if people have a real clear roadmap to going, this is what I can achieve in this business, they&#x27;re always striving forward. And we had a great discussion about this yesterday, Jase, in regards to building an elite team.</p>
+          <p><span class="spk">Marty · 39:33</span>Like, loyalty will take you so far. And Nick and I had a discussion about— I&#x27;ve, I&#x27;ve, I used to think the old school way, you know, you&#x27;re creating a business family, so you&#x27;re getting buy-in and loyalty. But that can cause problems, that can cause real decision-making problems.</p>
+          <p><span class="spk">Marty · 39:49</span>You might hang on to people you shouldn&#x27;t, uh, people might not perform and you let them get away with it. And, uh, but when you set up that elite team structure of we want to be an elite team in our organization. Here are the behaviors and capabilities to be a part of that elite structure.</p>
+          <p><span class="spk">Marty · 40:05</span>Let&#x27;s work towards embracing that. Let&#x27;s work towards training that. And people feel great about it because they&#x27;re progressing forward. And we&#x27;re still, look, to be blatantly transparent, we&#x27;re still early days. We&#x27;re just driving it now. But already the discussions are different in the development plan.</p>
+          <p><span class="spk">Marty · 40:22</span>The discussions are much more proactive. They&#x27;re much more robust and the people are driven. They feel like there&#x27;s a way for the future here that they don&#x27;t have to guess. And that&#x27;s a huge thing. So even if you&#x27;re a small business owner and I get it, a lot of small business owners are income generators.</p>
+          <p><span class="spk">Marty · 40:42</span>So they&#x27;d be thinking, really, I&#x27;ve got to think about all this. I haven&#x27;t got time. I&#x27;ve got to make money to run the business as well. But if you can get it right at a smaller scale, even if you implement it yourself, initially, outsource it if you&#x27;re a bit bigger. But even if you can implement it in the early days, then you&#x27;re going to build so much momentum and clarity that people are going to want to be a part of your business and they&#x27;re going to want to help you grow and drive in that business together.</p>
+          <p><span class="spk">Marty · 41:08</span>So it&#x27;s really cool if you can get in early, take one thing away, put in the time and effort, because once it&#x27;s done, it&#x27;s done, and then you just execute on it and everyone can, can can drive it. So yeah, but really powerful. I can see it firsthand with the sales team.</p>
+          <p><span class="spk">Marty · 41:25</span>And yeah, it&#x27;s, it&#x27;s— I&#x27;m really looking forward to seeing how that actually evolves and expands into the future as well.</p>
+          <p><span class="spk">Jason · 41:33</span>And to further on for that, Marty, what I see working with a lot of small business owners is a lot of small businesses are family members running a business together.</p>
+          <p><span class="spk">Marty · 41:40</span>Correct.</p>
+          <p><span class="spk">Jason · 41:41</span>Now, the recipe for disaster there is when it&#x27;s family members running a business together and there&#x27;s no structure and no roles and responsibilities and no employment contracts. That&#x27;s when things can go really pear-shaped and go wrong. Now, as much as you love your family and you trust your family, or even your close mates that you hire, putting this stuff in place in the early days is going to save you so many headaches in the future.</p>
+          <p><span class="spk">Jason · 42:02</span>And it&#x27;s the ones that, you know, Innovate may have faced between year 5 and year 15. You&#x27;ve probably had headaches. We&#x27;ve gone from year 1 to year 5 and had headaches over employment because the structure was not in place. So the takeaway for me and the 1%er is As you said, Marty, you know, if you&#x27;re spending 100% of your time on sales and growth, take 10% of that out and focus on your internal structure for your employees or future employees if you don&#x27;t have them yet.</p>
+          <p><span class="spk">Jason · 42:27</span>Draw up your org structure. Like, that&#x27;s one thing that was a huge game changer for us is we had, you know, earlier this year we had 14, 15 people. End of this year we&#x27;re going to have 30. I did not have a structure map of who they were, where they fit, what was the mix of managers, senior accountants, graduates, admin, bookkeeping.</p>
+          <p><span class="spk">Jason · 42:48</span>I didn&#x27;t have the right mix or the right idea of what that was going to look like. We&#x27;re flying blind. So something I wish we&#x27;d done earlier, I wish we&#x27;d focused it on it ourselves as business owners at the start, and we didn&#x27;t. So we brought in similar thing, we brought in a HR expert and a change consultant to kind of work with that.</p>
+          <p><span class="spk">Jason · 43:04</span>But having org structure, having a structure map, like draw out the current employees, and then even drawing— where&#x27;s your next hire? Like, where do you need to fill a gap? Like, if you actually focus on where your business is heading, you should be able to plot on your org structure who your next strategic hire should be.</p>
+          <p><span class="spk">Jason · 43:22</span>And by doing that, knowing how much you&#x27;re going to pay them, what band you want them to be within, you can budget for it as well, which is fantastic. Um, and it just takes away so many problems. But yeah, you&#x27;ve got to have structure, you&#x27;ve got to have controls. And the other thing, roles and responsibilities. For business owners, even employees, and then tied back into what I think you guys do really well is your targets and KPIs.</p>
+          <p><span class="spk">Jason · 43:43</span>Now you&#x27;re measuring those quarterly, you know, doing salary reviews based on your KPIs annually, and then having monthly one-on-one check-ins with your team where required. All of these little things, as much as it seems like a huge time sucker or vampire of time, it is going to make your organization so much more profitable and successful if you implement these one percenters.</p>
+          <p><span class="spk">Marty · 44:06</span>And you&#x27;re right, Jase, look, it used to be here are the sales, what are we doing to get to the sales? And that used to be the discussion. That was culture. That&#x27;s right. Whereas now, and that&#x27;s still a proponent of it, but now it&#x27;s about values.</p>
+          <p><span class="spk">Marty · 44:22</span>Are you living the company values? And we&#x27;ve talked about this before. They&#x27;re all graded at 25%. Client experience. What are you doing within that? Your file quality. What&#x27;s your quality of your craft? The way you&#x27;re presenting yourself. How&#x27;s that? As well as your performance. So it&#x27;s much more holistic.</p>
+          <p><span class="spk">Marty · 44:38</span>And I know there&#x27;d be small business owners out there going, I haven&#x27;t got time and it&#x27;s too expensive. The way technology is in this day and age, you can look up a damn YouTube clip and pick up ideas around how to do it. So don&#x27;t use, uh, cost as an excuse.</p>
+          <p><span class="spk">Marty · 44:55</span>Go in there and like you said, Jase, allocate some time to it because you can get it right. You can always expand it down the track as well and bring more qualities to it, but really put it into place and you&#x27;ll see a massive upside, not only now but into the future as well.</p>
+          <p><span class="spk">Marty · 45:13</span>So yeah, don&#x27;t let cost be the excuse.</p>
+          <p><span class="spk">Jason · 45:16</span>Yeah, 100%. The other thing as well that really changed the game for us was a position description. And as silly as that sounds, to not have a strong position description for each level, so even like CSM1, CSM2, taking it back to us, like graduate accountant, accountant, senior accountant, manager.</p>
+          <p><span class="spk">Jason · 45:31</span>All of those positions have different requirements in a position description. The jobs they should be doing, the level of tasks they&#x27;re handling, should they be replying to emails, how they save documents. It&#x27;s all in their position description now that they&#x27;ve got a lane to stay in.</p>
+          <p><span class="spk">Jason · 45:47</span>And when they get given a job that&#x27;s outside of their position description, they can easily push back and say, hey, sorry, I&#x27;m not able to do that, I don&#x27;t have the competency yet, or that&#x27;s actually so-and-so&#x27;s position job to do that. And it just creates ease of flow of information and jobs through the business because the right people are doing the right jobs based on their experience.</p>
+          <p><span class="spk">Marty · 46:06</span>And you&#x27;re attention— you&#x27;re hiring for the right position. It&#x27;s much more specific to go, we need an FB3 and these are what the requirements are. This is how we advertise to that avatar out there in the market. So you can really tighten the screws in regards to what you need to take your business to the next level.</p>
+          <p><span class="spk">Marty · 46:25</span>And that&#x27;s really effective. You&#x27;re not just shooting fish in a barrel hoping you get someone decent. So it&#x27;s like you, you&#x27;re being really strategic around that, and I think that&#x27;s, uh, that&#x27;s a real superpower as well. Yeah, you had something.</p>
+          <p><span class="spk">Nick · 46:38</span>Oh yeah, I was just going to say, look, it&#x27;s all really good stuff, and the only, the only thing I&#x27;ll add to it is one of the things that I&#x27;ve learned the last few years is just this new generation coming through. So this younger generation, it&#x27;s, it seems like it&#x27;s not all about money and it&#x27;s not all about hitting that next target, which I think my generation, I felt like that&#x27;s it was.</p>
+          <p><span class="spk">Nick · 46:57</span>So I&#x27;m, you know, 30, 39 this year. So this younger generation, they want to be part of something, and they want to, they want to know what they&#x27;re part of, and they want to, they want to understand their, their path. They want to understand what are they contributing to the overall business.</p>
+          <p><span class="spk">Nick · 47:12</span>So, you know, I, I think the old school way of thinking, you know, look, I pay you, do your job and go home, that&#x27;s, that&#x27;s gone. So that&#x27;s gone. And I think it&#x27;s more prevalent now with the, the younger people that are coming through you can see the change. People want happiness, people want a good culture.</p>
+          <p><span class="spk">Nick · 47:28</span>It&#x27;s not all about money for people. So if you can be really transparent—</p>
+          <p><span class="spk">Jason · 47:32</span>big one too—</p>
+          <p><span class="spk">Nick · 47:33</span>flexibility, diversity, all these things, uh, it&#x27;s just, I think it&#x27;s just holding far more value with the younger generation. And we find this has been a big part of keeping them happy and making them feel like they&#x27;re contributing to something.</p>
+          <p><span class="spk">Marty · 47:47</span>So, and acknowledgement, and, and in context, like if someone is performing the capabilities and tasks and behaviors well Acknowledgement&#x27;s a big one. It&#x27;s amazing how that builds confidence in someone to want to do more of it and to inspire their teammates to do more.</p>
+          <p><span class="spk">Marty · 48:02</span>And it&#x27;s, um, you&#x27;re really right, it&#x27;s, it&#x27;s definitely shifted. People want to feel a part of something that matters, and they want to align their own personal goals to the business vision, you know, to their own vision. And, um, there&#x27;s, there&#x27;s so many intricacies in that, but it&#x27;s really powerful when you get it right.</p>
+          <p><span class="spk">Marty · 48:20</span>You can see this magnificent momentum build, and people are dynamic and excited about being a part of an organization rather than just earning a wage.</p>
+          <p><span class="spk">Jason · 48:30</span>Recognition doesn&#x27;t have to be a $10,000 bonus either. Recognition can be a big thank you, a pat on the back, some flowers, whatever it is. We, we gave the whole team a day off last week, um, had a mental health or recovery day from working so hard for the last 18 months through the pandemic. Everyone got a day off for an extra long weekend for the grand final, and that that recognition of their hard work, man, when the team came back in Monday, there was energy.</p>
+          <p><span class="spk">Jason · 48:53</span>They&#x27;re like, everyone was up and about, and this week&#x27;s been flying along at a high level because people were recovered and rested, but they felt good that they&#x27;d been recognized and rewarded for the hard work they&#x27;d done.</p>
+          <p><span class="spk">Marty · 49:04</span>Something that&#x27;s worked really well, and it&#x27;s come off the values and the, and the KPIs and the, you know, looking after employees. Every 3 months in the sales meetings, we, we have an appreciation meeting on peer-to-peer, and everyone talks about certain team members and what&#x27;s great about those team members and what they appreciate and acknowledge about them.</p>
+          <p><span class="spk">Marty · 49:23</span>The impact of those was absolutely incredible. To see people respond to that feedback from their peers, um, was absolutely phenomenal. And I go, you know, I, yeah, I tested that based on what we were doing, and it&#x27;s something that I&#x27;ll just continue because That peer-to-peer acknowledgement and appreciation based on performance and all the values and the KPIs and behaviors.</p>
+          <p><span class="spk">Marty · 49:48</span>Absolutely incredible. Absolutely incredible.</p>
+          <p><span class="spk">Jason · 49:51</span>Yeah.</p>
+          <p><span class="spk">Marty · 49:52</span>Sorry, Jess.</p>
+          <p><span class="spk">Jason · 49:53</span>And the last, no, the last thing I was going to say, just because Nick had this saying and I wanted to round out the beautiful session here with the saying, is off the back of one of the things that our team find most important and then seeing it in our small business clients when I talk to them about what their team are after.</p>
+          <p><span class="spk">Jason · 50:08</span>Part of the train— the development plan is the training that&#x27;s provided. Now, as an organization, you, you know, and if we talked about wanting to have an elite team, if you&#x27;re talking about sporting organizations, elite teams train. They train all week, every week, to then get to game day and play to the best of their ability.</p>
+          <p><span class="spk">Jason · 50:25</span>So think about your team members, you know, well, what training is your organization providing to make your employees the best they can possibly be? And Nick&#x27;s saying was recruit, train, and retain. So have a think about that. I just wanted to round out on that little saying because I think it&#x27;s super important.</p>
+          <p><span class="spk">Marty · 50:42</span>Yeah, brilliant, mate.</p>
+          <p><span class="spk">Jason · 50:43</span>That&#x27;s been episode 26 of The Numbers Game. I&#x27;ve really loved that, guys. So many lessons to learn. What was your key takeaway there, Marty?</p>
+          <p><span class="spk">Marty · 50:51</span>Well, you&#x27;ve got to go from being a small business and being the pirates out there just getting sales into the Navy SEALs. Set up your systems, your processes, your cultures and values for the future, and you&#x27;re going to go great places. Nick?</p>
+          <p><span class="spk">Nick · 51:05</span>Oh, look, there&#x27;s nothing more important in your business than your people. If your people aren&#x27;t happy and your people aren&#x27;t, aren&#x27;t doing good things, then your business isn&#x27;t going to progress. So, you know, you need, you need to make sure your people are happy. You need to make sure your people, uh, your people feel, feel wanted, um, and they stay because they want to and not out of loyalty.</p>
+          <p><span class="spk">Nick · 51:23</span>You get that piece right and things will just happen for you.</p>
+          <p><span class="spk">Jason · 51:27</span>Yeah, for me, guys, it&#x27;s the fact that any small business owners out there or people thinking of employing, leave this podcast knowing that if you develop some framework around your org structure, position descriptions, KPIs, targets, and It seems like a lot of work, but it&#x27;s an area that all three of us would have invested in earlier had we now known and seen the effects that it has.</p>
+          <p><span class="spk">Jason · 51:46</span>So really, really appreciate your time listening to this episode. Any questions, hello@thenumbersgamepodcast.com.au. We look forward to hearing from you.</p>
+          <p><span class="spk">Nick · 51:54</span>See you, gents.</p>
+          <p><span class="spk">Marty · 51:55</span>Game over.</p>
+        </div>
+      </details>
+
+    </div>
+
+    <!-- audio-only: the Spotify player is the hero above; duplicate embed removed -->
+
+    <div class="listen">
+      <a href="https://open.spotify.com/episode/78k4JeUZ96kec4QH6qLsMA" target="_blank" rel="noopener" aria-label="Listen to this episode on Spotify">
+        <svg viewBox="0 0 24 24"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.52 17.34c-.24.36-.66.48-1.02.24-2.82-1.74-6.36-2.1-10.56-1.14-.42.12-.78-.18-.9-.54-.12-.42.18-.78.54-.9 4.56-1.02 8.52-.6 11.64 1.32.42.18.48.66.3 1.02zm1.44-3.3c-.3.42-.84.6-1.26.3-3.24-1.98-8.16-2.58-11.94-1.38-.48.12-1.02-.12-1.14-.6-.12-.48.12-1.02.6-1.14 4.32-1.32 9.72-.66 13.44 1.62.36.18.54.78.3 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.3c-.6.18-1.2-.18-1.38-.72-.18-.6.18-1.2.72-1.38 4.26-1.26 11.28-1.02 15.72 1.62.54.3.72 1.02.42 1.56-.3.42-1.02.6-1.56.3z"/></svg>
+        Spotify
+      </a>
+      <a href="https://podcasts.apple.com/au/podcast/id1555566088?i=1000776470464" target="_blank" rel="noopener" aria-label="Listen to this episode on Apple Podcasts">
+        <svg viewBox="0 0 24 24"><path d="M5.34 0A5.328 5.328 0 000 5.34v13.32A5.328 5.328 0 005.34 24h13.32A5.328 5.328 0 0024 18.66V5.34A5.328 5.328 0 0018.66 0H5.34zm6.525 2.568c2.336 0 4.448.902 6.056 2.587 1.224 1.272 1.912 2.619 2.264 4.392l.04.23c.04.272-.16.527-.432.567a.505.505 0 01-.567-.431l-.04-.213c-.312-1.57-.92-2.747-2.004-3.867-1.428-1.496-3.293-2.294-5.393-2.294-2.1 0-3.966.798-5.394 2.294-1.084 1.12-1.692 2.298-2.004 3.867l-.04.213a.507.507 0 01-.567.431.504.504 0 01-.432-.567l.04-.23c.352-1.773 1.04-3.12 2.264-4.392 1.608-1.685 3.72-2.587 6.056-2.587h.153zm.136 3.033c1.74 0 3.312.67 4.527 1.934.883.916 1.394 1.93 1.663 3.253l.04.23a.505.505 0 01-.431.567.503.503 0 01-.567-.432l-.04-.212c-.23-1.112-.659-1.97-1.396-2.732-1.052-1.1-2.404-1.672-3.9-1.672s-2.849.572-3.901 1.672c-.737.762-1.167 1.62-1.396 2.732l-.04.212a.503.503 0 01-.567.432.505.505 0 01-.432-.567l.04-.23c.27-1.323.78-2.337 1.664-3.253 1.215-1.264 2.787-1.934 4.527-1.934h.21zm-.078 3.05c1.092 0 2.091.424 2.89 1.22.582.58.924 1.245 1.107 2.15l.04.218a.501.501 0 01-.424.568.499.499 0 01-.568-.424l-.04-.198c-.146-.724-.413-1.253-.871-1.716-.63-.63-1.398-.957-2.226-.957s-1.595.328-2.225.957c-.459.463-.726.992-.871 1.716l-.04.198a.499.499 0 01-.568.424.501.501 0 01-.424-.568l.04-.219c.183-.904.525-1.569 1.106-2.149.8-.796 1.799-1.22 2.89-1.22h.184zM12 14.07a2.477 2.477 0 012.48 2.478A2.477 2.477 0 0112 19.024a2.477 2.477 0 01-2.48-2.477A2.477 2.477 0 0112 14.07z"/></svg>
+        Apple
+      </a>
+      <a class="yt-pill" href="https://www.youtube.com/@thenumbersgamepodcast?sub_confirmation=1" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.12-2.14C19.5 3.55 12 3.55 12 3.55s-7.5 0-9.38.51A3 3 0 0 0 .5 6.2 31.4 31.4 0 0 0 0 12a31.4 31.4 0 0 0 .5 5.8 3 3 0 0 0 2.12 2.14c1.88.51 9.38.51 9.38.51s7.5 0 9.38-.51a3 3 0 0 0 2.12-2.14A31.4 31.4 0 0 0 24 12a31.4 31.4 0 0 0-.5-5.8zM9.55 15.57V8.43L15.82 12z"/></svg>
+        Subscribe
+      </a>
+    </div>
+    <!-- LISTEN:END -->
+
+    <div class="relsec">
+      <span class="rtitle">Discover more</span>
+      <div class="relgrid">
+        <a class="relcard" href="/adam-sullivan-s-hard-lessons-division-7a-fbt-avoiding-costly-mistakes-in-business">
+          <img src="https://i.ytimg.com/vi/P9duZaTzc3k/hqdefault.jpg" alt="EP 230 thumbnail">
+          <span class="rt">Adam Sullivan&#x27;s Hard Lessons: Division 7A, FBT &amp; Avoiding Costly Mistakes in Business</span>
+          <span class="rfoot"><span class="rwhy">5 May 2025</span><span class="rtag">EP 230</span></span>
+        </a>
+        <a class="relcard" href="/the-rise-and-fall-of-f45">
+          <img src="https://i.ytimg.com/vi/-j4kNHEGVx0/hqdefault.jpg" alt="EP 159 thumbnail">
+          <span class="rt">The Rise and Fall of F45</span>
+          <span class="rfoot"><span class="rwhy">4 March 2024</span><span class="rtag">EP 159</span></span>
+        </a>
+        <a class="relcard" href="/crafting-your-business-edge">
+          <img src="https://i.ytimg.com/vi/hnUeiudZfso/hqdefault.jpg" alt="EP 207 thumbnail">
+          <span class="rt">Crafting Your Business Edge</span>
+          <span class="rfoot"><span class="rwhy">14 October 2024</span><span class="rtag">EP 207</span></span>
+        </a>
+        <a class="relcard" href="/profit-margins-the-difference-between-growth-and-going-broke">
+          <img src="https://i.ytimg.com/vi/OdR2UxuVYKM/hqdefault.jpg" alt="EP 243 thumbnail">
+          <span class="rt">Profit Margins: The Difference Between Growth and Going Broke</span>
+          <span class="rfoot"><span class="rwhy">4 August 2025</span><span class="rtag">EP 243</span></span>
+        </a>
+        <a class="relcard" href="/luke-mase-financial-planning-for-your-future">
+          <img src="https://i.ytimg.com/vi/LGbkVxkoFcg/hqdefault.jpg" alt="EP 175 thumbnail">
+          <span class="rt">Luke Mase - Financial Planning for your Future</span>
+          <span class="rfoot"><span class="rwhy">9 May 2024</span><span class="rtag">EP 175</span></span>
+        </a>
+        <a class="relcard" href="/rising-rates-market-shifts-australia-s-economic-crossroads">
+          <img src="https://i.ytimg.com/vi/pgpaPwOq1zw/hqdefault.jpg" alt="EP 142 thumbnail">
+          <span class="rt">Rising Rates &amp; Market Shifts: Australia&#x27;s Economic Crossroads</span>
+          <span class="rfoot"><span class="rwhy">23 November 2023</span><span class="rtag">EP 142</span></span>
+        </a>
+      </div>
+      <div class="reldots" id="reldots"></div>
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="footgrid">
+      <div class="fcol">
+        <div class="foot-label">Brought to you by</div>
+        <div class="sponsors">
+          <a href="https://www.inovayt.com.au/" target="_blank" rel="noopener"><img src="assets/inovayt-white.png" alt="Inovayt"></a>
+          <a href="https://futureadvisory.com.au/" target="_blank" rel="noopener"><img src="assets/future-advisory-white.png" alt="Future Advisory"></a>
+        </div>
+      </div>
+      <div class="fcol produced">
+        <div class="foot-label">Produced by</div>
+        <a href="https://www.vidpod.com.au/" target="_blank" rel="noopener"><img src="assets/vidpod-white.png" alt="VIDPOD"></a>
+      </div>
+    </div>
+    <nav class="footnav">
+      <a href="index.html">Home</a><a href="episodes.html">Every episode</a><a href="adventure.html">Choose your own adventure</a><a href="about.html">About the show</a><a href="nick-reilly.html">Nick Reilly</a><a href="jason-robinson.html">Jason Robinson</a><a href="contact.html">Contact</a>
+    </nav>
+    <div class="copyright">© 2026 The Numbers Game</div>
+  </footer>
+
+  <script>
+    var VIDEO='RAQ80ecsDq0';
+
+    /* Mobile nav dropdown. */
+    var burger=document.getElementById('navburger'), navdrop=document.getElementById('navdrop');
+    if(burger&&navdrop){burger.addEventListener('click',function(){
+      navdrop.hidden=!navdrop.hidden;
+      burger.setAttribute('aria-expanded', navdrop.hidden?'false':'true');
+    });}
+
+    /* Voice-note button reveals the recorder; × tucks it away. */
+    var vbtn=document.getElementById('vbtn'), vslot=document.getElementById('vslot'), vclose=document.getElementById('vclose');
+    if(vbtn&&vslot){vbtn.addEventListener('click',function(){vslot.hidden=!vslot.hidden;});}
+    if(vclose&&vslot){vclose.addEventListener('click',function(){vslot.hidden=true;});}
+
+    /* Keep-exploring dots: only shown when the strip actually scrolls (mobile). */
+    var rg=document.querySelector('.relgrid'), rd=document.getElementById('reldots');
+    if(rg&&rd){
+      var relCards=rg.querySelectorAll('.relcard');
+      relCards.forEach(function(){rd.appendChild(document.createElement('span'))});
+      var updDots=function(){
+        var scrollable=rg.scrollWidth>rg.clientWidth+4;
+        rd.style.display=scrollable?'flex':'none';
+        if(!scrollable)return;
+        var i=Math.round(rg.scrollLeft/(rg.scrollWidth-rg.clientWidth)*(relCards.length-1));
+        rd.querySelectorAll('span').forEach(function(s,n){s.classList.toggle('on',n===i)});
+      };
+      rg.addEventListener('scroll',updDots,{passive:true});
+      window.addEventListener('resize',updDots);
+      updDots();
+    }
+
+    /* Explore tabs: swap the visible panel; the row stays put so you never lose your place. */
+    var tabBtns=document.querySelectorAll('.tabbtn');
+    tabBtns.forEach(function(b){
+      b.addEventListener('click',function(){
+        tabBtns.forEach(function(o){o.classList.remove('on')});
+        document.querySelectorAll('.tpanel').forEach(function(p){p.hidden=true});
+        b.classList.add('on');
+        document.getElementById(b.getAttribute('data-panel')).hidden=false;
+      });
+    });
+
+    /* Audio-only: Spotify player is the hero; chapters/questions seek it via the Spotify iFrame API. */
+    var spotifyCtrl=null, pendingSeek=null;
+    function nudge(){
+      var p=document.getElementById('player-wrap'), r=p.getBoundingClientRect();
+      if(r.bottom<80 || r.top>window.innerHeight-90){ p.scrollIntoView({behavior:'smooth',block:'start'}); }
+    }
+    function startAt(sec){
+      nudge();
+      if(spotifyCtrl){ spotifyCtrl.seek(sec); spotifyCtrl.resume(); } else { pendingSeek=sec; }
+    }
+    window.onSpotifyIframeApiReady=function(IFrameAPI){
+      IFrameAPI.createController(document.getElementById('spotify-embed'),
+        {uri:'spotify:episode:0ynWSstU6aWT349GsZF5tM', width:'100%', height:'232'},
+        function(c){ spotifyCtrl=c; if(pendingSeek!=null){ c.seek(pendingSeek); c.resume(); pendingSeek=null; } });
+    };
+    (function(){var sc=document.createElement('script');sc.src='https://open.spotify.com/embed/iframe-api/v1';sc.async=true;document.head.appendChild(sc);})();
+  </script>
+</body>
+</html>

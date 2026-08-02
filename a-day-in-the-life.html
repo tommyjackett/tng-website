@@ -1,0 +1,737 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EP 51 · A Day In The Life | The Numbers Game</title>
+<meta name="description" content="Today we&#x27;re celebrating our 50th episode of The Numbers Game. Jase fills us in on why electricity prices are on the rise, Marty chats about the importance of…">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" sizes="64x64" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="canonical" href="https://thenumbersgamepodcast.com.au/a-day-in-the-life">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="The Numbers Game">
+<meta property="og:title" content="EP 51 · A Day In The Life | The Numbers Game">
+<meta property="og:description" content="Today we&#x27;re celebrating our 50th episode of The Numbers Game. Jase fills us in on why electricity prices are on the rise, Marty chats about the importance of…">
+<meta property="og:url" content="https://thenumbersgamepodcast.com.au/a-day-in-the-life">
+<meta property="og:image" content="https://thenumbersgamepodcast.com.au/assets/tng-audio-only-thumbnail.webp">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+  :root{
+    --purple:#585af3; --purple-dark:#2c1b8a; --mint:#7ad9a8;
+    --white:#ffffff; --muted:rgba(255,255,255,.60); --dim:rgba(255,255,255,.42);
+    --line:rgba(255,255,255,.12); --card:rgba(255,255,255,.05); --card-hi:rgba(255,255,255,.09);
+    --display:'Anton',Impact,'Helvetica Neue',sans-serif;
+    --sans:'Inter',system-ui,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif;
+    --wrap:1280px;   /* page frame (nav spans this) */
+    --col:960px;     /* content column (player, tabs, text) */
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:var(--sans); color:var(--white); line-height:1.6; -webkit-font-smoothing:antialiased;
+    background:#12093a;
+    background-image:
+      radial-gradient(1200px 600px at 82% -6%, rgba(88,90,243,.45) 0%, transparent 55%),
+      radial-gradient(900px 700px at 5% 8%, rgba(122,217,168,.10) 0%, transparent 50%),
+      linear-gradient(180deg,#2c1b8a 0%,#1a1150 28%,#100b34 62%,#0b0820 100%);
+    background-attachment:fixed;
+  }
+  a{color:inherit}
+  .wrap{max-width:var(--wrap);margin:0 auto;padding:0 36px}
+  main.wrap{max-width:var(--col)}
+  @media(max-width:720px){.wrap{padding:0 22px}}
+
+  /* ── Navbar ── */
+  .nav{position:sticky;top:0;z-index:50;background:linear-gradient(180deg,rgba(24,15,74,.92),rgba(24,15,74,.72));backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+  .nav-in{max-width:var(--wrap);margin:0 auto;padding:11px 36px;display:flex;align-items:center;justify-content:space-between}
+  @media(max-width:720px){.nav-in{padding:11px 22px}}
+  .brand{display:block;line-height:0}
+  .brand img{height:36px;width:auto;display:block}
+  .navlinks{display:flex;gap:28px;align-items:center}
+  .navlinks a{text-decoration:none;font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);transition:.15s}
+  .navlinks a:hover{color:var(--white)}
+  .navlinks a.navtop{cursor:default}
+  .navgroup{position:relative;display:flex;align-items:center}
+  .navgroup .subnav{display:none;position:absolute;top:100%;left:50%;transform:translateX(-50%);padding-top:14px;min-width:180px}
+  .navgroup:hover .subnav,.navgroup:focus-within .subnav{display:block}
+  .subnav-in,.navgroup .subnav{z-index:60}
+  .navgroup .subnav a{display:block;background:#180f4a;border:1px solid var(--line);border-top:0;padding:12px 16px;font-size:12px;color:rgba(255,255,255,.85)}
+  .navgroup .subnav a:first-child{border-top:1px solid var(--line)}
+  .navgroup .subnav a:hover{background:#221768;color:var(--white)}
+  .navburger{display:none;background:none;border:1px solid var(--line);padding:8px 10px;cursor:pointer;color:var(--white);transition:.15s}
+  .navburger:hover{border-color:rgba(122,217,168,.6)}
+  .navburger svg{width:20px;height:20px;fill:currentColor;display:block}
+  .navdrop{display:none}
+  @media(max-width:720px){
+    .navlinks{display:none}
+    .navburger{display:block}
+    .navdrop{display:block;position:absolute;left:0;right:0;top:100%;
+      background:#180f4a;border-bottom:1px solid var(--line);box-shadow:0 24px 50px rgba(0,0,0,.45)}
+    .navdrop[hidden]{display:none}
+    .navdrop a{display:block;padding:15px 22px;text-decoration:none;font-size:14px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:rgba(255,255,255,.9);border-bottom:1px solid rgba(255,255,255,.06)}
+    .navdrop a:last-child{border-bottom:0}
+    .navdrop a.sub{padding-left:42px;font-size:13px;color:rgba(255,255,255,.72)}
+    .navdrop .navlabel{display:block;padding:15px 22px 6px;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.4)}
+  }
+
+  /* ── Hero / hook (marker-highlight system: purple hook wraps naturally, mint payoff below)
+     Rules: title splits at its natural break (colon/pipe/question mark). Front = hook (purple,
+     big), back = payoff (mint, smaller). No break in title = purple hook only. Highlights hug
+     the text (tight em padding tuned to Anton) and wrap via box-decoration-break — never
+     hand-pick line breaks or mint words. ── */
+  header.hero{padding:34px 0 6px}
+  .hook{--inx:clamp(8.4px,2.1vw,15.6px)} /* one shared text inset so hook + payoff first letters align */
+  .hook .hk{font-family:var(--display);font-weight:400;text-transform:uppercase;
+    font-size:clamp(28px,7vw,52px);line-height:1.3;letter-spacing:-.5px;text-wrap:balance}
+  .hook .hk span{color:var(--white);padding:.04em var(--inx) .02em;
+    background:linear-gradient(var(--purple),var(--purple)) 0 50%/100% 87% no-repeat;
+    -webkit-box-decoration-break:clone;box-decoration-break:clone}
+  .hook .pay{font-family:var(--display);font-weight:400;text-transform:uppercase;
+    font-size:clamp(16px,4vw,24px);line-height:1.5;letter-spacing:.6px;margin-top:8px;text-wrap:balance}
+  .hook .pay span{color:#0a0a0a;padding:.08em var(--inx) .04em;
+    background:linear-gradient(var(--mint),var(--mint)) 0 50%/100% 88% no-repeat;
+    -webkit-box-decoration-break:clone;box-decoration-break:clone}
+  /* no-hook titles: mid-split into two full-size rows, purple then mint */
+  .hook .hk span.hkrow{display:block;background:none;padding:0}
+  .hook .hk .hkrow+.hkrow{margin-top:8px}
+  .hook .hk span.mintseg{color:#0a0a0a;
+    background:linear-gradient(var(--mint),var(--mint)) 0 50%/100% 87% no-repeat}
+
+  /* ── Player (clean facade → real player on tap) ── */
+  .player-wrap{margin:24px 0 4px;scroll-margin-top:76px}
+  .audio-hero{width:100%;min-height:232px;border-radius:12px;overflow:hidden;box-shadow:0 30px 70px rgba(0,0,0,.5),0 0 0 1px rgba(255,255,255,.06)}
+  .audio-hero iframe{display:block;width:100%;border:0}
+  .player{position:relative;width:100%;padding-top:56.25%;border-radius:0;overflow:hidden;background:#000;box-shadow:0 30px 70px rgba(0,0,0,.5),0 0 0 1px rgba(255,255,255,.06)}
+  .facade{position:absolute;inset:0;border:0;cursor:pointer;background-size:cover;background-position:center;display:flex;align-items:center;justify-content:center;padding:0}
+  .facade .play{width:74px;height:74px;border-radius:50%;background:rgba(10,6,30,.40);border:2px solid rgba(255,255,255,.72);display:flex;align-items:center;justify-content:center;transition:.18s;-webkit-backdrop-filter:blur(1px);backdrop-filter:blur(1px)}
+  .facade:hover .play{background:rgba(88,90,243,.62);transform:scale(1.07);border-color:#fff}
+  .facade .play::after{content:"";border-style:solid;border-width:11px 0 11px 19px;border-color:transparent transparent transparent #fff;margin-left:5px}
+  .player iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+
+  /* ── Episode facts (bottom of the Summary panel — templated per episode) ── */
+  .sumfacts{margin:14px 10px 4px;padding-top:13px;border-top:1px solid rgba(255,255,255,.08);display:flex;flex-direction:column;gap:8px}
+  .fact{display:flex;gap:12px;font-size:13.5px}
+  .fact .fl{flex:none;width:104px;color:var(--dim);font-weight:600;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;padding-top:2px}
+  .fact .fv{color:rgba(255,255,255,.9);font-weight:500}
+  .fact .fv a{color:var(--mint);text-decoration:none;border-bottom:1px solid rgba(122,217,168,.4);transition:.15s}
+  .fact .fv a:hover{border-bottom-color:var(--mint)}
+
+  /* ── Episode tag (identity: black label hanging off the title corner) ── */
+  .eptag{display:inline-block;position:relative;left:-6px;margin-bottom:-7px;z-index:2;
+    background:#0a0a0a;color:var(--white);font-family:var(--display);font-weight:400;
+    font-size:13.5px;letter-spacing:1.5px;text-transform:uppercase;padding:6px 11px 4px}
+
+  /* ── Explore tabs (sticky mode switcher; one panel swaps below, nothing shoves) ── */
+  .explore{margin-top:22px}
+  .tabs{position:sticky;top:58px;z-index:40;display:flex;flex-wrap:wrap;gap:8px;padding:10px 0;
+    background:linear-gradient(180deg,rgba(18,10,55,.96),rgba(18,10,55,.86));
+    backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+  .tabbtn{font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.5px;
+    font-size:14.5px;color:var(--white);background:var(--purple);border:1px solid var(--purple);
+    padding:9px 13px 7px;cursor:pointer;transition:.15s}
+  .tabbtn:hover{filter:brightness(1.12)}
+  .tabbtn.on{background:var(--mint);border-color:var(--mint);color:#0a0a0a}
+  .tabbtn.on:hover{filter:none}
+  .tabbtn .ct{font-size:12px;opacity:.75;font-variant-numeric:tabular-nums}
+  .tabbtn .ct::before{content:" · "}
+  .tpanel{border:1px solid var(--line);background:var(--card);padding:12px 10px 14px}
+  .hint{font-size:12.5px;color:var(--muted);padding:2px 10px 10px;border-bottom:1px solid rgba(255,255,255,.08);margin-bottom:6px}
+
+  /* ── Listen row (no box: label left, service pills follow) ── */
+  .listen{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:12px 16px;margin-top:34px}
+  .listen .lname{font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--dim)}
+  .listen a{display:inline-flex;align-items:center;gap:9px;padding:11px 18px;border-radius:999px;
+    background:var(--mint);color:#08210f;text-decoration:none;font-weight:800;font-size:12.5px;
+    letter-spacing:.04em;text-transform:uppercase;transition:.15s}
+  .listen a:hover{filter:brightness(1.06);transform:translateY(-1px);box-shadow:0 12px 30px rgba(122,217,168,.25)}
+  .listen svg{width:20px;height:20px;fill:currentColor;flex:none}
+  /* ── Listen-now Spotify audio embed (full column width, above the pills) ── */
+  .listen-now{margin-top:40px}
+  .listen-now .ln-head{display:flex;align-items:baseline;justify-content:space-between;gap:14px;margin-bottom:13px}
+  .listen-now .ln-title{font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--dim)}
+  .audio-embed{border-radius:12px;overflow:hidden;box-shadow:0 20px 50px rgba(0,0,0,.4),0 0 0 1px rgba(255,255,255,.06)}
+  .audio-embed iframe{display:block;width:100%;border:0}
+  @media(max-width:720px){.listen-now{margin-top:32px}}
+
+  /* ── Keep exploring (thumbnails link to other episode PAGES, never timecodes).
+     Swipeable strip on mobile, fits three-up on desktop. Variant rule: claim
+     "similar ground" + reason lines ONLY when moment-level topic overlap is
+     genuinely strong; otherwise show the latest released episodes with dates —
+     never invent a connection. ── */
+  .relsec{margin-top:60px;padding-top:58px;border-top:1px solid var(--line)} /* line = end of this episode's info */
+  .reldots{display:flex;justify-content:center;gap:7px;margin-top:12px}
+  .reldots span{width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.25);transition:.2s}
+  .reldots span.on{background:var(--mint)}
+  .relsec .rtitle{display:inline-block;font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.5px;font-size:14.5px;background:var(--mint);color:#0a0a0a;padding:9px 13px 7px;margin-bottom:18px}
+  .relgrid{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding-bottom:6px;scrollbar-width:none}
+  .relgrid::-webkit-scrollbar{display:none}
+  .relcard{flex:0 0 56%;max-width:232px;scroll-snap-align:start;display:flex;flex-direction:column;text-decoration:none;background:var(--card);border:1px solid var(--line);transition:.15s}
+  .relcard:hover{background:var(--card-hi);border-color:rgba(122,217,168,.55)}
+  .relcard img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block}
+  .relcard .rt{display:block;font-size:12.5px;font-weight:600;color:rgba(255,255,255,.92);line-height:1.4;padding:8px 8px 0}
+  .relcard .rfoot{margin-top:auto;display:flex;justify-content:space-between;align-items:flex-end;gap:8px;padding:10px 8px 9px}
+  .relcard .rwhy{font-size:11.5px;color:var(--mint)}
+  .relcard .rtag{display:inline-block;background:#0a0a0a;color:var(--white);font-family:var(--display);font-size:10px;letter-spacing:1.2px;text-transform:uppercase;padding:3px 7px 2px;white-space:nowrap;flex:0 0 auto}
+
+  /* ── Dropdown sections (accordion under the player) ── */
+  .drops{margin-top:34px;display:flex;flex-direction:column;gap:11px}
+  .drop{border:1px solid var(--line);border-radius:0;background:var(--card);overflow:hidden;transition:border-color .15s}
+  .drop[open]{border-color:rgba(122,217,168,.35)}
+  .drop>summary{list-style:none;cursor:pointer;padding:16px 18px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+  .drop>summary::-webkit-details-marker{display:none}
+  .drop>summary .st{font-weight:700;font-size:15.5px;letter-spacing:.005em}
+  .drop>summary .ct{margin-left:auto;font-size:12px;color:var(--dim);font-weight:600;font-variant-numeric:tabular-nums}
+  .drop>summary .chev{flex:none;width:22px;height:22px;border-radius:50%;background:rgba(122,217,168,.14);color:var(--mint);display:flex;align-items:center;justify-content:center;font-family:var(--display);font-size:15px;line-height:1;transition:.2s;transform:translateY(-1px)}
+  .drop[open]>summary .chev{transform:rotate(45deg)}
+  .drop-body{padding:2px 12px 12px}
+
+  /* chapters */
+  .chapter{display:flex;align-items:baseline;gap:14px;width:100%;text-align:left;cursor:pointer;background:none;border:0;color:inherit;font-family:inherit;padding:11px 10px;border-radius:10px;transition:.13s}
+  .chapter:hover{background:var(--card-hi)}
+  .chapter .tc{font-variant-numeric:tabular-nums;font-weight:700;font-size:14px;color:var(--mint);flex:none;width:48px}
+  .chapter .cx{font-size:15px;font-weight:500;color:rgba(255,255,255,.9)}
+  .chapter:hover .cx{color:#fff}
+
+  /* questions */
+  .q{display:flex;align-items:center;gap:12px;width:100%;text-align:left;cursor:pointer;background:none;border:0;border-radius:11px;color:inherit;font-family:inherit;padding:12px 10px;transition:.14s}
+  .q+.q{border-top:1px solid rgba(255,255,255,.05)}
+  .q:hover{background:var(--card-hi)}
+  .q .qm{font-family:var(--display);font-size:15px;color:var(--mint);flex:none;line-height:1;transform:translateY(1px)}
+  .q .qx{font-size:15px;font-weight:500;color:rgba(255,255,255,.92)}
+  .q .go{margin-left:auto;flex:none;color:var(--dim);font-size:18px;transition:.15s}
+  .q:hover .go{color:var(--mint);transform:translateX(2px)}
+
+  /* summary + transcript bodies */
+  .summary-body p{font-size:16.5px;line-height:1.62;color:rgba(255,255,255,.9);padding:6px 10px 4px}
+  .tbody{padding:2px 10px 8px}
+  .tbody p{font-size:14.5px;line-height:1.7;color:rgba(255,255,255,.78);margin-top:15px;max-width:64ch}
+  .tbody .spk{display:block;font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--mint);margin-bottom:2px}
+
+  /* ── Voice note ask (lives at the bottom of the Summary panel) ── */
+  .vask{margin:16px 10px 4px}
+  .vbtn{display:inline-flex;align-items:center;gap:9px;padding:12px 20px;border-radius:999px;border:0;cursor:pointer;
+    background:var(--mint);color:#08210f;font-family:inherit;font-weight:800;font-size:12.5px;
+    letter-spacing:.04em;text-transform:uppercase;transition:.15s}
+  .vbtn:hover{filter:brightness(1.06);transform:translateY(-1px);box-shadow:0 12px 30px rgba(122,217,168,.25)}
+  .vbtn svg{width:18px;height:18px;fill:currentColor;flex:none}
+  .vslot{background:var(--purple);padding:12px 10px 10px;margin:14px 0 4px;box-shadow:0 18px 40px rgba(0,0,0,.35)}
+  .vslot[hidden]{display:none}
+  .vhead{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;margin-bottom:10px}
+  .vhead .vmsg{font-family:var(--sans);font-size:13px;line-height:1.55;color:rgba(255,255,255,.92);margin:2px 0 0;padding:0 2px}
+  .vclose{background:none;border:0;color:rgba(255,255,255,.85);font-size:22px;line-height:1;cursor:pointer;padding:0 2px}
+  .vclose:hover{color:var(--white)}
+  .vslot iframe{display:block}
+
+  /* ── YouTube subscribe pill (sits in the listen row; outranks .listen a's mint) ── */
+  .listen a.yt-pill{background:var(--purple);color:var(--white)}
+  .listen a.yt-pill:hover{filter:brightness(1.1);transform:translateY(-1px)}
+  @media(max-width:720px){ /* mobile: no label, three compact pills on one row */
+    .listen .lname{display:none}
+    .listen{gap:8px}
+    .listen a{padding:10px 13px;font-size:11px;gap:6px}
+    .listen svg{width:16px;height:16px}
+  }
+
+  /* ── Footer: two columns under the line (Brought to you by | Produced by), matches adventure.html ── */
+  footer{border-top:1px solid var(--line);margin-top:68px;padding:52px 20px 58px}
+  .footgrid{max-width:var(--wrap);margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:start}
+  @media(max-width:720px){.footgrid{grid-template-columns:1fr;gap:40px}}
+  .fcol{text-align:center}
+  .foot-label{font-size:11px;font-weight:700;letter-spacing:.26em;text-transform:uppercase;color:var(--dim);margin-bottom:16px}
+  .sponsors{display:flex;justify-content:center;align-items:center;gap:38px;flex-wrap:wrap}
+  .sponsors a{display:inline-flex;transition:.15s}
+  .sponsors a:hover{transform:translateY(-1px)}
+  .sponsors img{height:34px;width:auto;opacity:.92}
+  .sponsors a:hover img{opacity:1}
+  .produced a{display:inline-flex;transition:.15s}
+  .produced a:hover img{opacity:1}
+  .produced img{height:30px;width:auto;opacity:.95}
+  .footnav{margin-top:36px;display:flex;justify-content:center;flex-wrap:wrap;gap:6px 26px}
+  .footnav a{font-size:12px;font-weight:600;letter-spacing:.04em;color:var(--dim);text-decoration:none;transition:.15s}
+  .footnav a:hover{color:var(--mint)}
+  .copyright{margin-top:40px;font-size:12px;color:var(--dim);text-align:center}
+
+  @media(min-width:720px){header.hero{padding:48px 0 6px}}
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "PodcastEpisode", "name": "Buying Commercial Property With Your Super in 2026 | What the Numbers Say", "url": "https://thenumbersgamepodcast.com.au/episode-285.html", "datePublished": "2026-07-13", "episodeNumber": 285, "image": "https://i.ytimg.com/vi/RAQ80ecsDq0/maxresdefault.jpg", "partOfSeries": {"@type": "PodcastSeries", "name": "The Numbers Game", "url": "https://thenumbersgamepodcast.com.au/"}}</script>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-in">
+      <a class="brand" href="index.html" aria-label="The Numbers Game home"><img src="assets/tng-logo.png" alt="The Numbers Game"></a>
+      <div class="navlinks">
+        <a href="index.html">Home</a>
+        <div class="navgroup">
+          <a class="navtop">Episodes</a>
+          <div class="subnav">
+            <a href="episodes.html">All episodes</a>
+            <a href="adventure.html">Find moments</a>
+          </div>
+        </div>
+        <div class="navgroup">
+          <a class="navtop">About</a>
+          <div class="subnav">
+            <a href="about.html">The show</a>
+            <a href="nick-reilly.html">Nick Reilly</a>
+            <a href="jason-robinson.html">Jason Robinson</a>
+          </div>
+        </div>
+        <a href="contact.html">Contact</a>
+      </div>
+      <button class="navburger" id="navburger" type="button" aria-label="Menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24"><path d="M3 6h18v2H3zM3 11h18v2H3zM3 16h18v2H3z"/></svg>
+      </button>
+    </div>
+    <div class="navdrop" id="navdrop" hidden>
+      <a href="index.html">Home</a>
+      <span class="navlabel">Episodes</span>
+      <a class="sub" href="episodes.html">All episodes</a>
+      <a class="sub" href="adventure.html">Find moments</a>
+      <span class="navlabel">About</span>
+      <a class="sub" href="about.html">The show</a>
+      <a class="sub" href="nick-reilly.html">Nick Reilly</a>
+      <a class="sub" href="jason-robinson.html">Jason Robinson</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+
+  <main class="wrap">
+
+    <header class="hero">
+      <div class="hook">
+        <span class="eptag">EP 51</span>
+        <h1 class="hk"><span>A Day In The Life</span></h1>
+      </div>
+    </header>
+
+    <div class="player-wrap" id="player-wrap">
+      <div class="audio-hero" id="spotify-embed"></div>
+    </div>
+
+    <div class="explore">
+      <div class="tabs" role="tablist">
+        <button class="tabbtn on" data-panel="p-summary">Summary</button>
+      </div>
+      <section class="tpanel" id="p-summary">
+        <div class="summary-body">
+          <p>Today we&#x27;re celebrating our 50th episode of The Numbers Game. Jase fills us in on why electricity prices are on the rise, Marty chats about the importance of optimistic productivity and the guys each share a case study from one of their clients.</p>
+        </div>
+        <div class="vask">
+          <button class="vbtn" id="vbtn" type="button">
+            <svg viewBox="0 0 24 24"><path d="M12 14a3 3 0 0 0 3-3V6a3 3 0 1 0-6 0v5a3 3 0 0 0 3 3zm5-3a5 5 0 0 1-10 0H5a7 7 0 0 0 6 6.92V21h2v-3.08A7 7 0 0 0 19 11h-2z"/></svg>
+            Send us a voice note
+          </button>
+          <div class="vslot" id="vslot" hidden>
+            <div class="vhead">
+              <p class="vmsg">We'd love to hear from you. You can leave up to a 90 second voice note for us to play on the show: a question, some feedback, or a topic you want covered.</p>
+              <button class="vclose" id="vclose" type="button" aria-label="Close">&times;</button>
+            </div>
+            <iframe src="https://www.speakpipe.com/widget/inline/hhq6kzggsx7zpcsvakgxfrzun3zidpde" allow="microphone" width="100%" height="200" frameborder="0" title="Leave The Numbers Game a voice note"></iframe>
+          </div>
+          <script async src="https://www.speakpipe.com/widget/loader.js" charset="utf-8"></script>
+        </div>
+        <div class="sumfacts">
+          <div class="fact"><span class="fl">Release date</span><span class="fv">6 June 2022</span></div>
+          <div class="fact"><span class="fl">Hosts</span><span class="fv"><a href="jason-robinson.html">Jason Robinson</a> &amp; <a href="nick-reilly.html">Nick Reilly</a> &amp; <a href="marty-vidakovic.html">Marty Vidakovic</a></span></div>
+
+        </div>
+      </section>
+    </div>
+
+    <div class="drops">
+
+      <details class="drop">
+        <summary><span class="st">Episode transcript</span><span class="chev">+</span></summary>
+        <div class="drop-body tbody">
+          <p><span class="spk">Jason · 00:00</span>Thanks to our sponsor Walker Digital, who&#x27;ve stepped in to help the Numbers Game podcast with their social media. Walker Digital are a digital marketing agency covering strategy, content, video implementation, and education. The team at Walker have spread the word of our clients and love working with businesses doing good things, helping them to grow and reach more people so they can scale and get larger.</p>
+          <p><span class="spk">Jason · 00:20</span>I know personally the first thing I did when growing our business was to outsource social media, blogs, and copywriting because I knew it was something that was not the best use of my time, and the team at Walker Digital smashed it. Sometimes you need to walk before you can run. Find out more at their website, wlkr.digital. This podcast is for educational and informational purposes only.</p>
+          <p><span class="spk">Jason · 00:41</span>The conversations are of a general nature and do not qualify as financial or tax advice. We recommend before you make any financial decisions, you consult a licensed professional. Individuals on the podcast may hold positions in the companies discussed. Welcome to episode 50 of The Numbers Game.</p>
+          <p><span class="spk">Jason · 00:57</span>It&#x27;s not 49.1 anymore. We are here, we&#x27;ve hit the milestone, the big 5-0. I&#x27;m joined by Nick and Marty. Marty, welcome back. It&#x27;s exciting to have you here. You&#x27;re alive and well.</p>
+          <p><span class="spk">Marty · 01:09</span>It&#x27;s great to be back, Jason. You know, that man flu can get pretty gripping. And, uh, and I like what you were talking about in the last episode about the rat test and me not having any idea about it. And you wouldn&#x27;t believe how close to the truth you actually were. First time I thought a rat test was a urine test.</p>
+          <p><span class="spk">Marty · 01:24</span>And, um, and my wife was actually laughing very much at your comments &#x27;cause I didn&#x27;t quite know what the cotton bud was for. Very, very disturbing, but good to be back. Happy. We raised the bat. 50. Nick Riley, we got here. How exciting.</p>
+          <p><span class="spk">Nick · 01:40</span>We did. We did. We nearly didn&#x27;t though. So it&#x27;s good to have you back, Marty, &#x27;cause it wasn&#x27;t the same without you. But spending all day in office with you, I knew exactly you had no idea how to take the RAT test. So I personally think you&#x27;ve had COVID twice and you just don&#x27;t know it.</p>
+          <p><span class="spk">Nick · 01:56</span>Anyway, you&#x27;re looking fresh today and we&#x27;re ready to go. Episode 50, what a milestone.</p>
+          <p><span class="spk">Jason · 02:00</span>Well, yeah, and I almost didn&#x27;t make it this morning. I think I was telling you guys, woke up with a migraine. I very seriously looked at my phone and thought, I&#x27;m going to have to do a Marty and pull the pin on the day of the big 5-0. I thought we were going to be recording episode 49.2, but visited my osteo and she put her finger in my mouth to relieve some nerve pain.</p>
+          <p><span class="spk">Marty · 02:20</span>Right. Yep.</p>
+          <p><span class="spk">Jason · 02:21</span>And here I am, migraine-free, feeling a million bucks. Shout out to Heather at Health Connection in South Yarra. Um, when she put that latex glove on, I had no idea what I was getting myself into, but it turns out, yeah, there&#x27;s some kind of nerve.</p>
+          <p><span class="spk">Marty · 02:33</span>There&#x27;s a million jokes there that we&#x27;re not going to explore on episode 50, but, uh, maybe afterwards we&#x27;ll talk about a bit more.</p>
+          <p><span class="spk">Jason · 02:39</span>Of course. Of course. Well, boys, let&#x27;s talk about the warm-up and let&#x27;s get into what we&#x27;ve got on today&#x27;s show. I&#x27;ll throw to you, Marty, now that you&#x27;re back. What are you talking about today?</p>
+          <p><span class="spk">Marty · 02:47</span>I&#x27;m going to talk about competitive edges and barrier to entry, and also a little bit about the day in the life of of what I do and possibly what we do, Nick.</p>
+          <p><span class="spk">Nick · 02:55</span>That&#x27;s exactly right. I think a lot of people listen to us and we talk about numbers and we talk about scenarios, but what do we actually do and how can we help people? So I&#x27;m going to bring up a scenario of a, you know, just a normal person, an everyday person that we help and how we can actually, you know, make people&#x27;s lives better, whether it be retirement or increasing wealth.</p>
+          <p><span class="spk">Nick · 03:15</span>So yeah, hopefully putting some meat on the bones for people.</p>
+          <p><span class="spk">Jason · 03:18</span>Well, I&#x27;ve gone completely rogue and I was going to talk about Bob Iger buying into Canva, but I&#x27;ve decided to bring in a hot topic which I&#x27;ve done some research on. I&#x27;m going to talk to you about energy prices. I think, you know, it&#x27;s something we can help our listeners with. Gas and electricity is going bloody bonkers.</p>
+          <p><span class="spk">Jason · 03:34</span>So I&#x27;m going to share some data around that and then also excited to talk about a day in the life of Nick, Marty, and Jase.</p>
+          <p><span class="spk">Marty · 03:40</span>Yeah, well, I&#x27;m excited because it&#x27;s getting pretty cool in here. So let&#x27;s bump up the heat and let&#x27;s play.</p>
+          <p><span class="spk">Jason · 03:47</span>Next up, we have Reading the Play. As always, we bring you industry insights, news articles, bits of advice, and anything that can help you in your day-to-day finances. And today I reckon we&#x27;ve got a good spread of all of those. Nick, you&#x27;ve got a follow-up from last week&#x27;s episode. Why don&#x27;t you crack in?</p>
+          <p><span class="spk">Nick · 04:03</span>I have, mate. We spoke about Metricon last week, and I think, um, you&#x27;d have to be under a rock not to hear something about Metricon in the last couple of months. And one of the things you and I spoke about is we think it&#x27;s all rumors and innuendo, and everything we&#x27;re hearing is there, okay, but Everything that I&#x27;ve heard in the last week just makes me question that.</p>
+          <p><span class="spk">Nick · 04:21</span>So I read an article on Monday about what is actually happening at Metricon. So they do need cash. And the question I would ask the both of you once we get— I get to the end of this is, are they future-proofing their business or are they actually in trouble? And by future-proofing, I mean getting ready for a really turbulent time.</p>
+          <p><span class="spk">Nick · 04:39</span>So what&#x27;s happened in the last couple of weeks at Metricon? First thing is they&#x27;ve gone to the Commonwealth Bank and they&#x27;ve had their line of credit credit limit or their lending limit doubled. So, you know, hazard a guess at what it actually was. I can only imagine it&#x27;s a pretty big limit, probably bigger than yours and mine, Marty.</p>
+          <p><span class="spk">Nick · 04:57</span>Only just, but CBA have agreed to restructure their finance and double their credit limit. They&#x27;ve had $30 million put back into the business by shareholders. And on top of that, they&#x27;ve had urgent meetings with the New South Wales government who have said they will step in if they need to, to make sure that they don&#x27;t collapse.</p>
+          <p><span class="spk">Nick · 05:15</span>For me, it&#x27;s like, well, okay, there must be something there. There has to be something there. We all know the story on the CEO, which is a very sad story. I think it was the ex-CEO, really bad story. But yeah, what do you think?</p>
+          <p><span class="spk">Nick · 05:31</span>Do you think they&#x27;re future-proofing for turbulent times or do you think they are in trouble? And the other question I&#x27;ll ask you is, should the government step in? Because if the government steps in for Metricon, where does it end? We&#x27;ve already had billions of dollars spent on JobKeeper. Whether or not Metricon got any of that, I&#x27;m not sure, but where does it stop?</p>
+          <p><span class="spk">Nick · 05:49</span>How do you justify money to Metricon but not another builder? And I get it comes down to scale and how big they are and the ramifications, but just thought it was very interesting and yeah, keen to get your thoughts.</p>
+          <p><span class="spk">Marty · 06:00</span>I think they&#x27;re too big to fail, you know, and I really like your idea. You&#x27;ve mentioned this before, Nick, the best thing the government could potentially do in that situation is guarantee the deposits. Of the people buying in. I think that&#x27;s probably the safest thing to do. But who knows?</p>
+          <p><span class="spk">Marty · 06:15</span>Where there&#x27;s smoke, there&#x27;s fire. I just feel like there&#x27;s been a lot of talk and it&#x27;s been under-the-radar talk. You notice it hasn&#x27;t blown up in the media beyond the initial items that were coming up about it. So that&#x27;s always a concern. I get the feeling there&#x27;s going to be some pretty harrowing work done behind the scenes as well.</p>
+          <p><span class="spk">Marty · 06:34</span>But we don&#x27;t know for 100%. They could be okay.</p>
+          <p><span class="spk">Jason · 06:37</span>Like what you said, where there&#x27;s smoke, there&#x27;s fire, right? And as soon as I got any whispers of it, I was getting text messages before things even kind of came out in the news. And where that happens, it was kind of like when Nick used to send me texts before JobKeeper announcement and things that were happening in government. I&#x27;m going, how&#x27;s this guy getting the inside scoop here before I do?</p>
+          <p><span class="spk">Jason · 06:53</span>Like, smoke— where the smoke, there&#x27;s fire. And I think it&#x27;s two sides. I think Metricon shoring up future operations while also covering their ass in the event that things— margins are going to get tough. I mean, big companies like that can operate at a loss for some time. You can raise some funds from investors, you can get money from the bank, but it&#x27;s all about what is sustainable long term.</p>
+          <p><span class="spk">Jason · 07:12</span>So if you&#x27;ve got continued inflation pressures, supply chain issues, we&#x27;ve just got to basically get to a point where does it make sense to do, to build 4,000 homes at a 3% margin or a 4% margin? And that&#x27;s kind of some of the margins that the volume builders are kind of operating at, which is probably not going to be sustainable long term in this climate.</p>
+          <p><span class="spk">Jason · 07:32</span>On the government-backed or the government buyout and, and to help them survive, I look at it and go Probuild went under with $5 billion in projects on the go. Huge commercial infrastructure, big buildings, government projects. And the South African parent company of Probuild was offered to be bought out by a Chinese conglomerate who were going to continue to fund those projects.</p>
+          <p><span class="spk">Jason · 07:55</span>And the Australian government said no, we&#x27;re not going to let that Chinese company buy out the South African company and become the owner of Probuild because of government security. I think, uh, Probuild were building the Victorian Police headquarters at the time. But at the end of the day because the government didn&#x27;t step in, $5 billion of projects went under and thousands and thousands of employees and contractors didn&#x27;t get paid.</p>
+          <p><span class="spk">Jason · 08:17</span>So like what you said, how do they determine who they bail out and who they don&#x27;t? It starts to get pretty ugly if they bail out one and not the other.</p>
+          <p><span class="spk">Marty · 08:25</span>Can they trade their way out of it? Because if inflation&#x27;s going up and supply costs are heavier and then all of a sudden pricing to the consumer, like there&#x27;s enough of a lag time with a build to when people are getting paid anyway. So could there be a loss of momentum which makes that more of a struggle as well.</p>
+          <p><span class="spk">Nick · 08:42</span>And I think one of the biggest issues, obviously the supply chain issues at the moment, you guys would understand and anyone who&#x27;s built a house would understand, but builders get paid in stages, so, and they don&#x27;t get paid until they finish that stage. So with the supply chain issues and not getting timber or steel and then staffing issues, they might have a job that would usually go 6 months that might now be going 12 months.</p>
+          <p><span class="spk">Nick · 09:05</span>So they&#x27;re actually whether they&#x27;re making money or not on the build, they&#x27;re not actually getting the cash in. But you&#x27;ve still got to pay staff, you&#x27;ve still got to pay wages and super. And that&#x27;s probably the biggest issue at the moment.</p>
+          <p><span class="spk">Jason · 09:17</span>I think as well, the amount of variables that go into building a home between brick prices, timber prices, fuel to get from A to B when you&#x27;re driving things around, all of these things that are going up in price, let alone me about to talk about gas and electricity as well to fund running sites. You&#x27;ve still got to pay all these bills.</p>
+          <p><span class="spk">Jason · 09:32</span>And if your margin is 3 or 4%, there is not enough skin in the game to deal with all of the other pressures.</p>
+          <p><span class="spk">Marty · 09:40</span>Well, talking amongst friends too, like, I don&#x27;t know if you started to notice this, but people will say, oh, I wouldn&#x27;t build at the moment given what&#x27;s going on and the costs are rising and timings are out. Like, I may as well go and buy established. So just the perspective change out in the market has been interesting to hear too.</p>
+          <p><span class="spk">Jason · 09:57</span>And you know, when you start hearing the word recession, right? Like recession&#x27;s a scary word. We haven&#x27;t been through one. Or people my age going, what&#x27;s a recession? How do you survive? Survive through one of those. And then I think the news just came out and said that we&#x27;ve had our first quarter of negative house pricing growth. So the house prices have come back in some parts.</p>
+          <p><span class="spk">Jason · 10:13</span>So with news like that, you&#x27;re going, well, hang on, do I want to build right now and put all of my money into a house that, you know, may not be worth what I&#x27;m paying for it today? I mean, it will be, but—</p>
+          <p><span class="spk">Marty · 10:24</span>Well, how do they win sales? Usually it&#x27;s pricing too.</p>
+          <p><span class="spk">Jason · 10:27</span>Yeah.</p>
+          <p><span class="spk">Marty · 10:28</span>Isn&#x27;t it?</p>
+          <p><span class="spk">Jason · 10:28</span>Correct.</p>
+          <p><span class="spk">Marty · 10:29</span>Which they haven&#x27;t got that lever to bring in. Better pricing at the moment because costs are so high. So it&#x27;s an interesting, I&#x27;m sure it&#x27;ll rectify itself, but there could be a lot of collateral damage in the interim. But it&#x27;s a fascinating topic. It&#x27;ll be interesting to see how it plays out over the next 12 months to 18 months.</p>
+          <p><span class="spk">Nick · 10:45</span>A lot of people affected just like they are with electricity prices, mate.</p>
+          <p><span class="spk">Jason · 10:49</span>Yeah, I reckon we&#x27;ll finish on a high note with the bit of Disney from Marty and get us all talking Mickey Mouse and getting excited. &#x27;Cause the last time we mentioned Disney on the show, Nick, I think you were talking about Mickey Mouse or Donald Duck serving you breakfast or dinner. We were.</p>
+          <p><span class="spk">Marty · 11:03</span>Estate.</p>
+          <p><span class="spk">Jason · 11:03</span>Yeah, so get— look at us, we&#x27;re going full circle back to housing and Disney. But what I will talk to you about first is the gas and electricity prices. I&#x27;m actually going to even do more research into this because I&#x27;ve just really got interested in it, and I&#x27;ve actually taken some screenshots that I want to read to you guys as I, I&#x27;ll find them.</p>
+          <p><span class="spk">Jason · 11:20</span>There we go, cool. So the story, Smart Company, Bruce Mountain— wrote down here, cool name, Bruce Mountain. I want to be— I think I might become Jason River or something like— anyway, sorry Bruce. The article was, why are power prices likely to keep surging and where do we go from here?</p>
+          <p><span class="spk">Jason · 11:36</span>So they&#x27;re expecting prices to increase at retail level. They&#x27;re building margins in the Australian retail, um, whatever the name is. I&#x27;m not— it&#x27;s not in front of me. There&#x27;s a basically an agency that kind of dictates what you can charge at retail and the margins you can build in.</p>
+          <p><span class="spk">Jason · 11:53</span>Now these margins have been told they can go up 9 to 18% in certain states, and then in other states it&#x27;s smaller, it&#x27;s only like 5 to 9%.. But what&#x27;s happening behind the scenes is the wholesale cost to get that gas and electricity has gone up like 400% nearly.</p>
+          <p><span class="spk">Jason · 12:10</span>So there&#x27;s stupid numbers of how much it&#x27;s going up in the background. So I wanted to look into what were the reasons some of these prices were changing. So fossil fuel costs are spiking. We&#x27;ve got, for the first time, generating power from coal or gas. 70% of electricity that Australians consumed is generated from coal or gas being burnt.</p>
+          <p><span class="spk">Marty · 12:30</span>It.</p>
+          <p><span class="spk">Jason · 12:31</span>So we&#x27;re still very heavily reliant on the older methods, or the old-school methods, of generating power. Now, the short-term price of gas has risen, risen to levels never seen in Australia before, and it&#x27;s 4 times the average of the previous prices over the last 5 years.</p>
+          <p><span class="spk">Jason · 12:47</span>The price hikes have driven wholesale electricity to extraordinary levels. 409% is the number. There it is. It was $68 per megawatt hour, and now it&#x27;s $346 per megawatt hour. That is huge increase.</p>
+          <p><span class="spk">Jason · 13:02</span>So they&#x27;ve got some things of what you can do, and then I&#x27;m going to go back to this message I saw after reading this. The recommendation in this article is you need to go and look at what you are paying for your electricity now, and then how your, your provider is sourcing their electricity.</p>
+          <p><span class="spk">Jason · 13:18</span>If they are a reseller, you are in, you&#x27;re in a bad place because they&#x27;re going to have to jack their prices up, you know, 3, 4, 5 times over the coming year. So if you paid $2,000 this year, you&#x27;re looking at $4,000 or $5,000 minimum next year on your electricity bills. So cutting, switching, looking for a discount you can lock in for a long period of time is their number one recommendation.</p>
+          <p><span class="spk">Jason · 13:38</span>Obviously number two, reduce your waste. If you&#x27;re leaving lights on and power on and wasting electricity, start to think of that as some serious dollars that are going out the door and not just leaving the light on for the sake of it. If you want to look at a market where you can study to see what&#x27;s happened in another market, Britain is where they think Australia is going to be over the next couple of years.</p>
+          <p><span class="spk">Jason · 13:58</span>So in Britain, average electricity prices in 2021 were 36% higher than 2020, and then the market regulator increased prices again a further 54% this year heading into next year. So those increases across the board were 30 to 50% minimum for the whole market in the UK.</p>
+          <p><span class="spk">Jason · 14:19</span>In Feb 2022, half of Britain&#x27;s electricity retailers went into liquidation or administration. So you&#x27;ve got to think of the providers that they had couldn&#x27;t sustain the model because their price to get wholesale and what they were allowed to build in as a, as a margin for retail, it wasn&#x27;t enough to survive.</p>
+          <p><span class="spk">Jason · 14:37</span>So they sunk their business. They say this is the future of Australia.</p>
+          <p><span class="spk">Marty · 14:41</span>It&#x27;s pretty scary.</p>
+          <p><span class="spk">Jason · 14:43</span>So Case just looked into this for us as well, which I thought the timing was interesting. We paid $1,700 last year. She did the government— the Victorian government have a comparison thing which then helps you get a new electricity provider through the government website. And if you&#x27;re eligible, you you get a $250 credit.</p>
+          <p><span class="spk">Jason · 14:59</span>So recommend going to check that out. We paid $1,700 and now our lock-in for next year is $1,340 at the moment. So highly recommend that. The picture that I took this morning was a guy I know on Facebook actually got a letter from his electricity provider. Hi Barry, we are writing to you because of unprecedented times in the energy markets.</p>
+          <p><span class="spk">Jason · 15:20</span>We know Australian households are facing significant cost challenges and living challenges. Blah, blah, blah, blah. Effectively, I&#x27;m going to get to the fun part. Energy wholesale costs have now gone up so much that we are writing to you to tell you to change energy provider. They&#x27;re getting rid of their customers. We cannot— basically saying we cannot provide you electricity at a price that makes sense for you to remain our customer.</p>
+          <p><span class="spk">Jason · 15:41</span>So we are doing what&#x27;s right and letting you know that you need to make the change to switch retailers as soon as possible to avoid paying higher prices. This will save you hundreds of dollars per year. That was Reamped Energy from their chief executive Luke Blincoe.</p>
+          <p><span class="spk">Marty · 15:58</span>So they&#x27;re putting up the white flag basically.</p>
+          <p><span class="spk">Jason · 16:00</span>So I think they are letting their customers go before it&#x27;s too, too hard and too much trouble. While they&#x27;re still surviving and trading, they can offboard their customers before it becomes their power gets turned off when they can&#x27;t afford to pay for their supply. So really interesting that Reamped Energy customers— if you&#x27;re a Reamped Energy customer, check your emails and make sure you got this.</p>
+          <p><span class="spk">Jason · 16:20</span>But they&#x27;re basically telling you move now. Because we can&#x27;t, we can&#x27;t provide you energy at a price that makes sense. And while costs are going up, you should be locking in something to bring your costs down. But I thought, what a, what a, what a weird time for gas and electricity that, you know, you&#x27;ve got a company telling customers to leave.</p>
+          <p><span class="spk">Nick · 16:38</span>Yeah. And look, just from a consumer point of view, how scary is at the moment? Like, you look at petrol prices, interest rates, you&#x27;re talking about energy. These are all necessities, right? We can&#x27;t get away. From spending this money. You can&#x27;t go to the supermarket anymore to get dinner without spending $50.</p>
+          <p><span class="spk">Nick · 16:53</span>You just can&#x27;t. And you maybe used to go in there and spend $30.</p>
+          <p><span class="spk">Marty · 16:58</span>Well, there&#x27;s supply issues too, mate. Like trying to get kids&#x27; Nurofen, it was off the shelves. You couldn&#x27;t get kids&#x27; Nurofen within 50-kilometer radius. It was ridiculous. And they just said, there&#x27;s no supplies. Our supplies are down. And that, of course, not that they were price gouging on it, but when we did find one, we were pretty happy at the end of the day.</p>
+          <p><span class="spk">Marty · 17:18</span>That seems to be a consistent theme throughout groceries and things like that at the moment.</p>
+          <p><span class="spk">Nick · 17:23</span>I can&#x27;t remember if it was Coles or Woolies, but I&#x27;m pretty sure I heard an ad the other day and they were saying that the price of this and this is gonna come down and there are supply chain issues. I can&#x27;t remember if it was Coles or Woolies, but they&#x27;re actually in one of their ads, whether it was on the radio or whatever it was, they&#x27;re saying, yes, we understand that, I&#x27;m just picking something here, we understand the price of bananas is expensive, but we expect to see some, some decrease by August or September or something like that.</p>
+          <p><span class="spk">Nick · 17:49</span>I&#x27;ve never heard anything like that before. But you can walk around Coles and Woolies now and even just the normal fruit and veg, there&#x27;s lots of shelves that are empty, completely empty.</p>
+          <p><span class="spk">Marty · 18:01</span>Yeah. I don&#x27;t think I&#x27;ve lived through this type of cycle where like you look at even diesel and petrol&#x27;s back up over $2 a litre. You&#x27;re going less supplies in the food store chains, costs going up dramatically across the board. It&#x27;s unusual. I&#x27;m thinking inflation&#x27;s up, mortgage rates are increasing, increasing.</p>
+          <p><span class="spk">Marty · 18:17</span>Like we said last episode, it was a good news story. It seems like we&#x27;ve got 360 here. But, but I go, but I go, it is an interesting time. Like, I think, like, I haven&#x27;t seen this at all in that type of cycle before. And energy, like you said, there was some talk. I saw those stats which, which were interesting that you brought up, and they were saying it will rectify itself back to probably double of what it was.</p>
+          <p><span class="spk">Marty · 18:40</span>So instead of 68, it might be 136, but that&#x27;s still double. You know, even when it comes back, it&#x27;s not gonna come back, back to the figures that you&#x27;re getting now. It&#x27;s still gonna be more expensive. So it&#x27;s, yeah, very, very strange times. But anyway, we&#x27;ve gotta make more money.</p>
+          <p><span class="spk">Jason · 18:57</span>Marty, I think we need to turn this into something a little bit more, less doom and gloom and more exciting. What have you got for us in relation to Disney?</p>
+          <p><span class="spk">Marty · 19:05</span>Disneyland is closing.</p>
+          <p><span class="spk">Nick · 19:06</span>No, no, no.</p>
+          <p><span class="spk">Marty · 19:07</span>I can&#x27;t do that to your kids, sorry. No, I wanted to talk about the happiest investment on earth, which is, I believe, is Disneyland. And I was thinking about the importance of barrier to entry and competitive moats. And I think if you want to play in the Disneyland space, you&#x27;ve got a— it&#x27;s a $1 trillion entry point.</p>
+          <p><span class="spk">Marty · 19:30</span>It&#x27;s like, it&#x27;s massive. And it&#x27;s amazing how difficulty to entry into a particular industry can have such an upside. Because you go, even like I looked at some stats and they had And this is a 50 episode, so this company&#x27;s over 50 years old.</p>
+          <p><span class="spk">Marty · 19:46</span>You&#x27;ll notice 1955, they spent $17 mil to build Disneyland, which is about $168 mil in this day and age. So they&#x27;ve got a trillion dollars of assets. So you need to pretty hardcore to get into the space.</p>
+          <p><span class="spk">Marty · 20:01</span>Just want— if you want to have a nibble, if you&#x27;re Netflix, you know, you, you got to build a theme park to go to the next level. Netflixland.</p>
+          <p><span class="spk">Jason · 20:09</span>You heard it here first.</p>
+          <p><span class="spk">Nick · 20:10</span>Well, if they&#x27;ve got $168 mil—</p>
+          <p><span class="spk">Jason · 20:13</span>no, trillion, a trillion now.</p>
+          <p><span class="spk">Marty · 20:15</span>But that&#x27;s, that&#x27;s their competitive edge, is they&#x27;re going, they&#x27;ve got a brand behind that, behind that. Um, well, Disneyland is a brand, so you&#x27;ve got a competitive, competitive moat of entertainment. So that&#x27;s what makes it really interesting. No one else could replicate Disney, and they&#x27;re doing that now you know, throughout all their theme parks.</p>
+          <p><span class="spk">Marty · 20:35</span>They&#x27;ve got Star Wars on board. And if they want to make an addition to their theme park, it only costs them $250 million. So it&#x27;s a lot easier to add to what they&#x27;ve already got than it is to come in and disrupt the whole, the whole industry. So like you said, Netflix would have to go come up with a shtick to be able to compete at that level, and it&#x27;s just not worth it.</p>
+          <p><span class="spk">Marty · 20:58</span>And they&#x27;re streaming Disney&#x27;s streaming stats are going up quite aggressively too. So even the link into the digital space is a fascinating play. Like, they want to take Netflix, you can tell. And, um, and we&#x27;ve, we&#x27;ve had that conversation just lately.</p>
+          <p><span class="spk">Marty · 21:14</span>And yes, we&#x27;ve got an 8-year-old, but we&#x27;ve flicked over to Disney instead of Netflix because there&#x27;s just more variety of kids stuff on it. So yeah, so it&#x27;s, it&#x27;s pretty interesting. But I think you can relate that to any industry. We think about sometimes financial planning, you know, you look at the barrier to entry is getting harder and harder to get in, more compliance, but you can have an absolute edge in that industry by, you know, sticking it out and doing the right things and getting further ahead down the road and building a bigger business.</p>
+          <p><span class="spk">Marty · 21:43</span>But yeah, very, very interesting. And the last thing I&#x27;ll just state on that, this is why it&#x27;s a good business. The one-day ticket price of Disney has gone from 1980 being $27 a ticket to 2000 being $78 a ticket to 2019— this is pre-COVID— to $122 a ticket.</p>
+          <p><span class="spk">Marty · 22:04</span>And you would think prices go up, attendance rates, what would they do? You think maybe they come down? No, they&#x27;re going up too. 1980, it was 11.5 mil. 2000, they had 13.9 mil go through the gates. And in 2019, 18.6 mil go through the gates.</p>
+          <p><span class="spk">Marty · 22:23</span>So wherever you go, they&#x27;re raising tickets, same as Coca-Cola. Every year people drink more and more Coca-Cola, they put the price up slightly, they make millions and it keeps going. So that competitive edge is quite dramatic. And what I&#x27;d encourage the listeners to do is to think where do they have that competitive edge in their business or their industry or even in the niche that they do.</p>
+          <p><span class="spk">Marty · 22:47</span>But yeah, thoughts, Gerald?</p>
+          <p><span class="spk">Nick · 22:48</span>Oh, well, and again, on the other side of the fence, if you are starting a business, you need to understand your market. You know, and that&#x27;s obviously an easy example because everyone knows Disney. But if you&#x27;re thinking about going into a business, you&#x27;ve gotta be in a position where you can do really well. So you need to understand your competitors and is there gonna be a competitor that&#x27;s just gonna blow you outta the water and you&#x27;re never gonna have a chance?</p>
+          <p><span class="spk">Nick · 23:10</span>You know, what is your niche, I guess.</p>
+          <p><span class="spk">Marty · 23:12</span>So yeah.</p>
+          <p><span class="spk">Jason · 23:13</span>Disney story, just one of my reading the play was gonna be about Bob Iger who bought into Canva. He was the former CEO of Disney. If you&#x27;ve got any interest in Disney at all, I highly recommend reading The Ride of a Lifetime. Good friend of mine, Nick Riley, sitting across from me, gave me The Ride of a Lifetime book to read.</p>
+          <p><span class="spk">Marty · 23:30</span>Um, I gave it to Nick, I think.</p>
+          <p><span class="spk">Nick · 23:32</span>Oh, I&#x27;m pretty sure you told me about it.</p>
+          <p><span class="spk">Jason · 23:33</span>Yeah, there you go. So highly recommend, listeners out there, The Ride of a Lifetime by Bob Iger is a story of his time as the CEO of Disney. To put it into, or to add to what you&#x27;ve said about Disney&#x27;s growth and the growth of their streaming service, He basically went all in on the streaming service, and this is like 10 years ago, to start building it and planning for it.</p>
+          <p><span class="spk">Jason · 23:54</span>And all the other board members and stakeholders of Disney were like, are you mental? Like, you know, we, we launch movies into a theater where people have to go to a theater to watch a movie, and that&#x27;s how we make all our money. And he&#x27;s gone, nah, streaming, $10 a month.</p>
+          <p><span class="spk">Jason · 24:09</span>They&#x27;re going, no way, box office. And he went all in. And people thought he was bloody bonkers. And then they bought Marvel and they bought Pixar and they bought Lucasfilm for the Star Wars. And what&#x27;s the other one? There&#x27;s something else. 20th Century Fox.</p>
+          <p><span class="spk">Marty · 24:25</span>Yep.</p>
+          <p><span class="spk">Jason · 24:25</span>So all of a sudden, if you think about the assets Disney own and the price they paid to acquire all of that, but then also what that does for their streaming service, that is smart business.</p>
+          <p><span class="spk">Marty · 24:35</span>It&#x27;s smart. And that&#x27;s what Netflix doesn&#x27;t have.</p>
+          <p><span class="spk">Jason · 24:38</span>Yeah.</p>
+          <p><span class="spk">Marty · 24:38</span>And that&#x27;s where they&#x27;re vulnerable. Well, they haven&#x27;t got that brand behind them at that level. And Universal Studios is another one that, you know, holds a real monopoly on the— it&#x27;s a duopoly really with theme parks.</p>
+          <p><span class="spk">Jason · 24:48</span>Reading books, I was gonna say, this way reading books just can get some stuff into your head that you wouldn&#x27;t normally think about. And how taking risk in a business like what Bob Iger did at Disney, how it&#x27;s paying off now in the long term. And that wasn&#x27;t a short-term play. No, he&#x27;s been putting the building blocks in place for over 10 years to make sure that when they launch their streaming service, they were going to be damn good.</p>
+          <p><span class="spk">Nick · 25:09</span>Yeah.</p>
+          <p><span class="spk">Marty · 25:09</span>And very—</p>
+          <p><span class="spk">Nick · 25:10</span>it all comes to content. And that is why, like, I&#x27;m not sure how long ago it was, but I actually did a case study on Netflix, and I think it was maybe 3 or 4 years ago, but Netflix was the most shorted stock on the US stock exchange at one stage because all they were is a streaming service.</p>
+          <p><span class="spk">Nick · 25:26</span>Now anyone can replicate that. So now you&#x27;ll see they&#x27;re all trying to create their own content. So, you know, you&#x27;ve got Amazon, Netflix, Stan, they&#x27;re all creating a Stan original or a Netflix original. Because anyone can stream, it&#x27;s all about the content and who owns the content, which is why Disney now dominates because of all of that content that they do own, um, through those various businesses.</p>
+          <p><span class="spk">Marty · 25:46</span>And I think all those streaming services are thinking on the same lines, aren&#x27;t they? To create, create their own content or try and get a sport that&#x27;s exclusive. And, and, but it doesn&#x27;t hold for the long term.</p>
+          <p><span class="spk">Nick · 25:58</span>No, I feel like you&#x27;ve mentioned this, like, who&#x27;s got— who&#x27;s starting to dominate streaming at the moment? It&#x27;s YouTube.</p>
+          <p><span class="spk">Marty · 26:03</span>YouTube.</p>
+          <p><span class="spk">Nick · 26:03</span>You&#x27;ve told me So Netflix all of a sudden risk having YouTube start, you know, take away their clients. So that&#x27;s the content. Who owns the act? Because you can easily replicate a streaming business, but not if you own the content.</p>
+          <p><span class="spk">Marty · 26:16</span>Yeah. And we&#x27;re YouTube Disney now because we&#x27;ve had that conversation around Netflix. There&#x27;s not enough wide content, but for some reason, because we&#x27;ve been to Disney, you know, back in our younger days, there&#x27;s affection for it. And also there&#x27;s a wider spread of entertainment, but we link it to a very good happy brand.</p>
+          <p><span class="spk">Marty · 26:33</span>So it&#x27;s interesting how how we&#x27;re thinking about it. But like you said, they&#x27;ve got to keep coming up with really good individual content, Netflix, to be able to survive. So I feel like, yeah, they could be in a little bit of trouble.</p>
+          <p><span class="spk">Jason · 26:49</span>We&#x27;d love to hear from you. Send us an email, hello@thenumbersgamepodcast.com.au.</p>
+          <p><span class="spk">Nick · 26:56</span>All right, Marty, episode 50, you&#x27;re shaking up losing it. I&#x27;m pretty sure you said you&#x27;ve got to shake up for losing it. Talk us through it.</p>
+          <p><span class="spk">Marty · 27:02</span>Yeah, well, we&#x27;re going with winning it, boys, which— Settle down, settle down. It&#x27;s all right.</p>
+          <p><span class="spk">Nick · 27:07</span>Did you consult the other two on the table or you&#x27;ve just decided this is the way we&#x27;re going to go?</p>
+          <p><span class="spk">Jason · 27:12</span>It was the good vibes from our episode last week. He just wants to come in and have some of the fun.</p>
+          <p><span class="spk">Marty · 27:16</span>I&#x27;m sitting here in a duffel coat and Ugg boots now because electricity prices are so high. So we&#x27;ve got to keep this winning feeling going on. But I thought I was listening to the episode last week, which I was really impressed with about attitude and and showing up regardless through challenge or enthusiasm, show up professionally the right way.</p>
+          <p><span class="spk">Marty · 27:34</span>And I had a situation with one of the brokers last week, Aaron, who was a fantastic young broker, but like in business, he just had one of those days. And I&#x27;m sure everyone can relate to that where we have one of those days out there, not quite in the greatest mood.</p>
+          <p><span class="spk">Marty · 27:50</span>And he had a client to see, a young couple, and also they had their parents there. Where they had some guarantee documents, which were basically, you know, basically the parents were putting up the house to support the kids. And anyway, the parents were listening in and Aaron, before he went into the house, he goes, I&#x27;ve got to shift my mood here.</p>
+          <p><span class="spk">Marty · 28:09</span>You know, I&#x27;ve got to put my best performance on display here and looking after those kids. So even though, you know, it wasn&#x27;t the biggest deal in the world, he still came in with a great attitude, absolutely dominated the interview, did a great job, educated the clients. They felt really, really good and supported.</p>
+          <p><span class="spk">Marty · 28:25</span>And anyway, at the end of it, the parents of those children said, &quot;We are so impressed of how you&#x27;ve turned up and how you&#x27;ve supported our kids and you&#x27;ve communicated effectively. And we would like to share an opportunity with you.</p>
+          <p><span class="spk">Marty · 28:41</span>We&#x27;ve got a $1.3 million purchase that we&#x27;d like to do and we&#x27;d like you to do it.&quot; And I said to, I remember talking to Aaron the next day about it and I said, &quot;Isn&#x27;t it amazing how?&quot; when you go in with a bad attitude, like if he was to go in with a bad attitude to that appointment, he would never have known what he had lost.</p>
+          <p><span class="spk">Marty · 29:03</span>And that&#x27;s what I want to encourage the listeners to think about. Yes, you get your wins normally, but if you switch on with a great attitude and you&#x27;re there to serve and do the best job you can do regardless of the zeros on that number, you know, whether it&#x27;s a client stepping into the market or it&#x27;s one of the wealthiest clients you&#x27;ve ever dealt with, if you show up with that same level of professionalism and quality every time and make sure you&#x27;re in a decent mood.</p>
+          <p><span class="spk">Marty · 29:30</span>Because again, they don&#x27;t care. They don&#x27;t care if you&#x27;ve had a bad day. No one cares. So I go, but to get that opportunity, I thought, absolutely brilliant. I was really proud of him. But I was thinking how many people have had a bad day, take that negative attitude into the business.</p>
+          <p><span class="spk">Marty · 29:48</span>You lose the business in the driveway or you lose the business as you put up the laptop to do your Zoom. If you&#x27;re not in the right headspace, how much business do you lose because of that? And he&#x27;s had the exact reverse effect where he&#x27;s picked up something that has been quite substantial for him and it made his day.</p>
+          <p><span class="spk">Marty · 30:07</span>It made his day off the back of a bad day, shifted his attitude, came out of it absolutely pumping off the back end. And do you think they&#x27;re going to refer to him? Of course they&#x27;re going to refer to him beyond even their own deal. So they&#x27;re going to work with him forever now. So yeah, it&#x27;s great.</p>
+          <p><span class="spk">Nick · 30:23</span>And it&#x27;s everything we spoke about last week and positive energy attracts positive energy back. And you said this before, you decide what mood you&#x27;re going to be in. At the end of the day, you make that decision. And yes, there might be external things that have an impact, but you decide how you&#x27;re going to show up really.</p>
+          <p><span class="spk">Nick · 30:44</span>And Aaron sat in the car and said, well, no, this is how I&#x27;m going to show up. And it came back. Well, the positive energy came back.</p>
+          <p><span class="spk">Jason · 30:51</span>So I love it. I love it. And something that we&#x27;ve talked about a lot at Future is around we&#x27;re gonna have a phone call for a $200 tax return, or we get a phone call for a $20,000 business package. Doesn&#x27;t matter if it&#x27;s $200 or $20,000, that person deserves the same good vibes, positive kind of treatment.</p>
+          <p><span class="spk">Jason · 31:08</span>And anytime that you are giving value, what&#x27;s ended up happening, and the proof in the pudding of like what you said, Marty, a smaller deal with a great attitude landed some bigger piece of work. Even if that&#x27;s not— doesn&#x27;t happen every single time, with the right attitude and going at things the right way and treating people and adding value, treating people well and adding value, sometimes those $200 tax returns then refer the $20,000 business.</p>
+          <p><span class="spk">Jason · 31:32</span>So you just gotta— you don&#x27;t know what it&#x27;s going to lead to, but you&#x27;ve got to attack things with the right energy and just give value and look after people, and good business karma comes around.</p>
+          <p><span class="spk">Marty · 31:42</span>And look, I can talk— like, when I was younger, first getting into the industry, I know there were 2 deals that I had lost because of my attitude in the driveway before meeting the client. I knew I had lost it already in hindsight. I didn&#x27;t know it as a young person, but I know it now.</p>
+          <p><span class="spk">Marty · 31:58</span>And I go, but I also know I had an incident in the Dandenong, it&#x27;s a good incident where I was out cold night, $50 grand loan, you know, and same sort of thing Aaron went through. I go, all right, I&#x27;ve gotta give my best here. This is what it&#x27;s about. Had a challenging day and it was like, it was amazing.</p>
+          <p><span class="spk">Marty · 32:15</span>Did a good job. Job, got the parents&#x27; loan too because they were impressed. I had the partner of the person I went out to see ended up working for us, and I picked up— then they were part of a church group, and I think there were about 8 deals that had come out of that.</p>
+          <p><span class="spk">Marty · 32:31</span>And that was probably the best thing I could have seen as a young man because I recognized that if I show up, I be professional, the opportunity of that chain of opportunity— people want to work with good, optimistic, optimistic productivity, I call it. They want to be served, they want to have good capability, but they want someone that they can come to that they trust and makes them feel good about what they&#x27;re doing too.</p>
+          <p><span class="spk">Marty · 32:54</span>So it was a great lesson and that&#x27;s why I was so proud of Aaron and I&#x27;m proud of our team for doing that because I think that&#x27;s why we continue to expand. So yeah, it was a good winning it story. So remember that next time where you&#x27;ve backed into a power pole And you know, you&#x27;ve lost $100 on your betting and go in with a good attitude regardless.</p>
+          <p><span class="spk">Jason · 33:22</span>We&#x27;d love to hear from you. Send us an email, hello@thenumbersgamepodcast.com.au. All right guys, it&#x27;s the One Percenters and today it&#x27;s actually, I&#x27;m pretty excited for this topic. It&#x27;s a day in the life of, and I think for our listeners who think that we probably sit around recording podcasts all day and laughing and carrying on.</p>
+          <p><span class="spk">Jason · 33:39</span>I thought it was important to maybe share some case studies around just what we do for people in our day-to-day lives. And Nick, I might throw to you first. You are my financial advisor. You look after me and all your team with Salty and Macy. I know what you do, but why don&#x27;t you share a little bit of what you get up to?</p>
+          <p><span class="spk">Nick · 33:56</span>I think the best way to explain this is to give a case study or a scenario. And I&#x27;ve been pretty vocal on this podcast before and in general that But our philosophy is that with financial planning, everyone needs a financial planner. The misconception that you need to be wealthy frustrates me.</p>
+          <p><span class="spk">Nick · 34:16</span>Everyone needs to know that everyone&#x27;s got a different journey and they need to know how to get there. So everyone needs a financial planner. I think this is a really good example. And you know, this might be, you know, 40% of the listeners. So a lot of people out there can probably relate to this, whether it&#x27;s themselves or a parent, but this particular client, we&#x27;re going to call her Jenny, was 57 years old, single, earning $70,000 a year.</p>
+          <p><span class="spk">Nick · 34:43</span>So I&#x27;d say that&#x27;s probably pretty normal for a lot of our clients or a lot of people. Wanted to retire in 8 years. So for whatever reason, whenever you ask someone when do they want to retire, the age 65 comes up all the time. So she wanted to retire at the age of 65. She had a plan to downsize, as a lot of people do in this country.</p>
+          <p><span class="spk">Nick · 35:02</span>A lot of their wealth is tied up in their owner-occupied home because obviously our property prices have done really good things. So her plan was to downsize, sell her property, and then take all of that cash, or all of that cash and maybe leave a little bit for super, and go into a new house with no debt.</p>
+          <p><span class="spk">Nick · 35:23</span>Now everyone would assume, of course you want to go into a new house with no debt because that&#x27;s just what we&#x27;re taught. You can&#x27;t have debt. But what we worked out is by her not having any debt, debt and not utilising more money to put into super, she was never going to be able to retire at age 65.</p>
+          <p><span class="spk">Nick · 35:40</span>So what we did is we convinced her to take on some debt. It was around $300,000, put a bigger lump sum into super, and we were able to project out for her what her super would do in 8 years versus what the debt reduction would do in 8 years.</p>
+          <p><span class="spk">Nick · 35:56</span>So we could show her that, okay, well, based on what you need to retire from an income point of view, in 8 years&#x27; time. If you put this amount of money into your super, plus you continue to contribute to super based on your salary, your super will be here by age 65, and your $300,000 worth of debt that we borrowed will be down to here.</p>
+          <p><span class="spk">Nick · 36:18</span>You&#x27;ll actually have enough in super to pull the lump sum out, pay your house off, and enough remaining in super to then supply you the income you need from 65 65 onwards. Now, that actually brought her a time— when we did the projections, if she didn&#x27;t put the money into super, she would have had to work for another 8 years is what we&#x27;d worked out.</p>
+          <p><span class="spk">Nick · 36:39</span>So it&#x27;s not rocket science. It&#x27;s just people aren&#x27;t exposed to these sorts of things and they don&#x27;t know how to project it out. So all we can do is just run projections and scenarios and they&#x27;re conservative to show people how it&#x27;s going to work. So Jenny gets to retire at age 65.</p>
+          <p><span class="spk">Nick · 36:55</span>Gets a house with no debt and has an income that she needs to live the life that she wants to live in retirement. Second to that, putting that money into super got her a tax deduction of around $14,000 that year. Now that is a— got her a tax rebate, sorry.</p>
+          <p><span class="spk">Nick · 37:12</span>So that is a massive rebate and Jayce, you&#x27;ll probably talk to this, but someone on $70,000 could never get a rebate of $14,000 really. So again, and just wasn&#x27;t aware that she could do that. So it&#x27;s these little things where people think, okay, well, a financial planner, that&#x27;s what I do if I need to invest money.</p>
+          <p><span class="spk">Nick · 37:30</span>No, no, not at all. I want to retire, this is what I need to retire on. And it doesn&#x27;t matter how much money you&#x27;ve got, there still needs to be a plan. So I love that example because that is probably 70% of what we do and that is probably 70% of our clientele in our business.</p>
+          <p><span class="spk">Marty · 37:47</span>Yeah, I&#x27;m glad you brought it up actually, Nick, because so often, even from a finance perspective, I have people coming in wanting to buy that next investment property at that stage. But like you were saying, the benefits of putting extra money into super as the investment, the tax incentives that you get, I think it&#x27;s a great idea.</p>
+          <p><span class="spk">Marty · 38:06</span>And that&#x27;s why it&#x27;s so important to get a financial planner early on in the piece when someone&#x27;s looking to invest or use their money to effect. But I think that&#x27;s really great because very often we have, I want to buy a property because I feel like I need to do something.</p>
+          <p><span class="spk">Nick · 38:20</span>Yeah.</p>
+          <p><span class="spk">Marty · 38:21</span>Without having the goals and advice. So I think that&#x27;s brilliant.</p>
+          <p><span class="spk">Nick · 38:23</span>Everyone wants to reduce debt and I totally understand that. But historically debt has been really— when I say historically, I mean, you know, in recent times, not going back 20, 30 years, but debt has been cheap. So the amount of money you could have made in the last 10 years versus having debt there&#x27;s a huge discrepancy.</p>
+          <p><span class="spk">Nick · 38:42</span>And I guess it&#x27;s just having exposure to that and most people don&#x27;t. But as I said, don&#x27;t think that you don&#x27;t deserve a financial planner. Everyone should go and see a planner no matter what your position is.</p>
+          <p><span class="spk">Marty · 38:54</span>Yeah, the cost of not having one can be immense, as we know. Well, since we&#x27;re talking about investment, I may as well go on for what I do. And I had an interesting example with an investor in property, probably should have seen you first, Nick. Samantha, who who actually was on some pretty hefty rates, had 2 investment properties plus her home.</p>
+          <p><span class="spk">Marty · 39:15</span>And she was on rates of around 3.9% on her investments, quite high. And she was looking to buy another investment. She had a goal to develop a portfolio up to about 5, and she was looking at the next one. Couldn&#x27;t do it, got capped out, just banks wouldn&#x27;t support, and she didn&#x27;t know what to do.</p>
+          <p><span class="spk">Marty · 39:35</span>So she was fortunate enough to know to come into Innovate and we actually structured it where we could get her 1.2% of her current investment debt and 0.5% off her home loan debt. But all in all, she had about $1.25 million in investment debt and then $250,000 home loan debt.</p>
+          <p><span class="spk">Marty · 39:54</span>We saved her $15,000 per annum on her interest, and we also funded her with $12,000 on cashbacks because we funded them as individual investments. So sometimes you get a cashback per property.</p>
+          <p><span class="spk">Marty · 40:10</span>So in her situation, she had one property, one loan, one property, one loan, one property, one loan. So before it was cross-collateralized, which means they&#x27;d integrated all the securities and loans together, which is actually quite dangerous. It shouldn&#x27;t happen anyway.</p>
+          <p><span class="spk">Marty · 40:26</span>You&#x27;ve got to protect your clients. So that was a really great win. We set her up on a great structure. We&#x27;d put $15,000 a year back into her pocket and basically she could buy her next investment, which she did. So I just thought that was a, it was just one of those situations where everything came together well.</p>
+          <p><span class="spk">Marty · 40:45</span>We got her funded and she&#x27;d been to 4 other brokers and 2 lenders and they couldn&#x27;t help her out. We also showed her with the improvements as to her borrowing capacity increased as well. So it was just one of those. It was win-win-win scenario. So I was really happy for her because she continued on.</p>
+          <p><span class="spk">Nick · 41:03</span>And that&#x27;s timely given what&#x27;s happened with the rates.</p>
+          <p><span class="spk">Marty · 41:07</span>Absolutely. With fixed rates now, you know, we talked about it in previous episodes, fixed rates 9 months ago were at 1.89, you know, 1.99. They&#x27;re all up, 3-year rates up to 4.8, 4.6. You know, some are even starting to jump into the 5s, which is quite incredible.</p>
+          <p><span class="spk">Marty · 41:24</span>So in that situation, she actually wanted a lower variable rate and so she was happy with that and that was saving her a heap of cash because the revert rate was terrible.</p>
+          <p><span class="spk">Nick · 41:36</span>And what that doesn&#x27;t explain, and this is why people need to be on top of this stuff, you&#x27;re talking about a saving of $15,000.</p>
+          <p><span class="spk">Marty · 41:43</span>Yeah.</p>
+          <p><span class="spk">Nick · 41:43</span>What&#x27;s the compound effect of that? Because that $15,000 has allowed her then to go and buy another investment property.</p>
+          <p><span class="spk">Marty · 41:48</span>Correct.</p>
+          <p><span class="spk">Nick · 41:49</span>That is going to do whatever it&#x27;s going to do over time from a capital growth from a growth point of view. So, you know, it&#x27;d be difficult to work out, but the compounding effect of that $15K, even if it just goes back into the debt, it&#x27;s actually far more than $15K.</p>
+          <p><span class="spk">Marty · 42:01</span>Yeah, she could put that back into her home loan, but yields on her rent had gone up quite significantly. So, and she&#x27;s got equity because the property market&#x27;s done well. So she really wanted to have that next property to keep compounding, like Nick said.</p>
+          <p><span class="spk">Jason · 42:13</span>Marty, a client comes along with a similar circumstance from start to finish. How long does it take you to work a deal like that from start to finish and what&#x27;s involved?</p>
+          <p><span class="spk">Marty · 42:22</span>Yeah, I would think that we would be able to knock that over in about 4 weeks, 4 to 5 weeks. So it&#x27;d be initial appointment, you do look at the client&#x27;s objectives and needs, and then you&#x27;d come away in 24 hours and put together some research and recommendations.</p>
+          <p><span class="spk">Marty · 42:38</span>And then you&#x27;re pretty much starting the process. If there&#x27;s an agreement on the strategy paper, you start the process to arranging the valuations and the financing around it. So it&#x27;s not a challenging process anymore. People, you know, going back maybe 10, 15 years might&#x27;ve been a bit more arduous, but now things can happen a lot quicker than they used to.</p>
+          <p><span class="spk">Marty · 42:58</span>So it&#x27;s definitely worth getting the advice, even if you&#x27;re not buying another investment property. But just again, with rates going up, you just want to secure the best rate in the market at the moment because still that discrepancy, people haven&#x27;t reviewed sometimes in the last 2 or 3 years.</p>
+          <p><span class="spk">Marty · 43:15</span>And they&#x27;re on 1%, 1.2% higher that they shouldn&#x27;t be, and it&#x27;s going to hurt them. So imagine that 3.9% goes to 5.1%. You know, it&#x27;s the compound effect in the negative, right? So it&#x27;s like, I think it&#x27;s really important to review and get good professionals behind you.</p>
+          <p><span class="spk">Jason · 43:34</span>By the time you&#x27;ve paid for your fuel and your gas and electricity, if you&#x27;re paying too much on your mortgage interest rate as well, you&#x27;re just burning cash left, right, and center.</p>
+          <p><span class="spk">Marty · 43:41</span>And that&#x27;s tax-free too. Like, again, those savings are interest savings. So, you know, you&#x27;ve got to You&#x27;ve got to work hard to make that money.</p>
+          <p><span class="spk">Nick · 43:47</span>Well, yeah, well, on a $15K saving, if you&#x27;re at the top tax dollar, you&#x27;ve got to earn $30K to make $15K. So Marty, question for me. You mentioned the cashback. I know that was big during COVID Are you still seeing that or is that something of the past?</p>
+          <p><span class="spk">Marty · 44:04</span>Yeah, there&#x27;s still cashbacks available, but they&#x27;ve brought it back a little bit. So usually you might get $4,000 cashback on a whole proposal. With a number of properties. But yeah, the thing is the market always brings out new opportunities like that because they, for some reason, lenders want to keep attracting new clients.</p>
+          <p><span class="spk">Marty · 44:23</span>You know, give it to existing clients too, for goodness sake. But it&#x27;s like, yeah, so they always want to attract new business. But that&#x27;s as brokers, that&#x27;s what we are at the forefront on. So we know what rebates are there, we know what rates are coming out. We also get intel in regards to where rates are going up as well.</p>
+          <p><span class="spk">Marty · 44:40</span>So we can sort of get on the front foot if we know things are going to jump pretty quickly, like 2% or 3%, we might still lock in down the track. So, but we&#x27;ll make that judgment call depending on the client&#x27;s goals and individual situation.</p>
+          <p><span class="spk">Jason · 44:55</span>Nice one. Well guys, a lot of the stuff that we&#x27;ve talked about there also carries across into day-to-day what I end up doing as an advisor for small business owners. Obviously a good advisor who&#x27;s worth their weight in golds will— gold, goals, gold. I&#x27;m thinking goals. I&#x27;m thinking they&#x27;ll talk about the things outside of tax and the things that we do day to day from tax planning, small business compliance.</p>
+          <p><span class="spk">Jason · 45:16</span>You know, it&#x27;s not that glorious lodging BASes and tax returns, but the big conversations come into planning for our clients&#x27; future. And one of the kind of mission that we talk about is how do we help our clients have a better future? And a big part of that is a better financial future, but it&#x27;s not the be-all and end-all.</p>
+          <p><span class="spk">Jason · 45:32</span>And, you know, superannuation is definitely a big conversation for us at the moment with tax planning. So most of our day in May and June at the end of a financial year is meeting with clients to do tax planning. So I wanted to touch on a few tax planning scenarios of real-life clients.</p>
+          <p><span class="spk">Jason · 45:49</span>Met with one today, we call them Steve and Sarah, and they&#x27;ve had a good couple of years, but what&#x27;s happened with the way the business was operating and a different combination of of dividends and wages meant that they haven&#x27;t hit their superannuation cap. Now, over the last couple of years, it was $25,000 was the most you could put into super per year, and then it&#x27;s gone up to $27,500.</p>
+          <p><span class="spk">Jason · 46:10</span>And the husband and wife have ended up with a $100,000 gap in their— what they can put into super from concessional contributions. So a bit like your scenario, Nick, by sitting down and doing tax planning and looking at their taxable incomes this year, We&#x27;ve been able to say, if you guys put $50,000 each into super, you&#x27;re actually going to get $40,000 back as part of your refund or offsetting your tax bills in the 2022 financial year.</p>
+          <p><span class="spk">Jason · 46:37</span>So this couple is sitting there going, they&#x27;re going to get the $100,000 they can redraw off their mortgage, which is only a 2, roughly 2% interest rate. They&#x27;re going to be able to top up their super fund with an extra $100,000. They&#x27;re going to get $40,000 back off the ATO.</p>
+          <p><span class="spk">Jason · 46:52</span>Superfund will tax $0.15 to the dollar. So they&#x27;re still $25,000 ahead. But that $100,000 in super invested in compound earnings, we&#x27;re talking that could be worth hundreds of thousands, nearly $1 million over a 30-year period. I think it&#x27;s about a 10 times multiple.</p>
+          <p><span class="spk">Nick · 47:08</span>Yeah.</p>
+          <p><span class="spk">Jason · 47:08</span>So the way these clients, their eyes lit up going, well, wow, what are the opportunities then? They started then talking about the ambition to buy a commercial property. Now with a self-managed super fund, being able to buy a commercial property becomes a reality. So they&#x27;ve looked at their super balance and gone, well, this is our plan for the next few years, be working with Future Advisory and UJACE to make sure we&#x27;re maximising our tax deductions, maximising our super contributions, and starting to put plans in place for getting ahead, buying a commercial property, which</p>
+          <p><span class="spk">Jason · 47:38</span>in turn their business will be able to rent back off itself. So awesome structuring to be able to talk about how that all works and get those plans out. But it&#x27;s not unless you unless you sit down with an advisor like what we do and have that conversation, you might not know that these things exist.</p>
+          <p><span class="spk">Jason · 47:53</span>And Steve and Sarah were super pumped because they&#x27;re going, well, geez, we didn&#x27;t really have the cash over the last couple of years, but because of the increase in value of our property, we can draw that $100,000 and we&#x27;re happy to make that investment into super and plan for our retirement. Not a lot of people think long term like that.</p>
+          <p><span class="spk">Jason · 48:10</span>So I love having those kind of conversations. The other main thing that we&#x27;re talking about at the moment, which is a little bit more doom and gloom, but there&#x27;s a new thing that the ATO has called small business restructure. Now, small business restructure is kind of like a mini version of a liquidation or a voluntary administration where you appoint an insolvency expert to come in and kind of wrap up your business and sell off all your assets and pay off debts and call it a day.</p>
+          <p><span class="spk">Jason · 48:38</span>A small business restructure exists exists to help a business survive and get through. We&#x27;ve come off a few years of COVID and a real-life example I had was in the construction industry. I&#x27;ve got some clients that ended up not getting paid by a big builder that went into liquidation, and they were owed, call it, $700,000.</p>
+          <p><span class="spk">Jason · 48:55</span>Now, in this time, to continue to survive, the business built up some GST and pay-as-you-go debts, which is natural. A lot of businesses, that, that&#x27;ll happen when if you&#x27;ve got money in the bank and you&#x27;ve got to choose between paying wages or paying the ATO, most of the time people will pay wages while they wait for those receivables to come in because it&#x27;s an asset and a receivable.</p>
+          <p><span class="spk">Jason · 49:16</span>What happens as soon as that asset becomes— that receivable becomes not existent because a business goes into liquidation, all of a sudden you&#x27;re going, I&#x27;m not going to get the money to pay the ATO now. Now, before small business restructure existed, that client would seriously be considering liquidating, and 35 people would lose their jobs, and a whole bunch of projects that were on the go wouldn&#x27;t get finished.</p>
+          <p><span class="spk">Jason · 49:39</span>Small business restructure— we&#x27;re now able to bring in an insolvency expert. They don&#x27;t get appointed as a director, which means there&#x27;s no record formally for your clients to see that you&#x27;re in liquidation. And the small business restructure expert that we&#x27;re working with basically puts a, an offer forward to the ATO that says, hey, if you come to the party and accept call it 30 cents in the dollar on your $500,000 of debt, you&#x27;ll get $150,000.</p>
+          <p><span class="spk">Jason · 50:04</span>But this client will— this business will continue to survive. 35 people will keep their jobs and this business lives to see another day. It&#x27;s pretty bloody awesome.</p>
+          <p><span class="spk">Marty · 50:17</span>So who instigates that appointer?</p>
+          <p><span class="spk">Jason · 50:19</span>The client. So our small business customer will appoint the small business restructure expert. So this is before the ATO starts chasing debt. Debts, you know. So what it is doing is it&#x27;s giving businesses the opportunity to be proactive about their tax debt. And I&#x27;m looking forward to having this conversation with even more clients because this is only— they&#x27;ve— as of 2 weeks ago, I was at the CPA conference down in Lorne, and 55 businesses in total had done a small business restructure.</p>
+          <p><span class="spk">Jason · 50:44</span>That&#x27;s how fresh and new, uh, this is. It&#x27;s been around, but because COVID, JobKeeper, cash boost, it kind of strung strung out the time people had to kind of really take action. And the government and the ATO put a pause on winding people up over the last couple of years.</p>
+          <p><span class="spk">Jason · 51:00</span>So it&#x27;s only now that it&#x27;s time. The ATO is getting really active on debt collection and director penalty notices. All of a sudden people are going, hang on a minute, small business restructure. They brought that out a while ago. I really need to consider using that. So I&#x27;d say anyone out there that is running a business and has some debts that have built up doesn&#x27;t have to just be ATO.</p>
+          <p><span class="spk">Jason · 51:20</span>The the person who comes in to do a small business restructure will look at all of your debts and creditors and seriously consider if you&#x27;ve got a good business that apart from some crap that happened over the last couple of years with COVID if you think moving forward, if you were able to strike off some debt, you&#x27;d be able to survive and trade into the future, you should be looking at small business restructure like a few of our clients are, which, yeah, I think it&#x27;s a great result.</p>
+          <p><span class="spk">Marty · 51:46</span>How does the ATO think about it?</p>
+          <p><span class="spk">Jason · 51:48</span>The ATO, look, from all reports, what what we&#x27;re hearing is the ATO is being really good about it, going, well, if we don&#x27;t help this small business survive and people lose jobs, bad for the economy. If we help this small— if we— and sorry, the other thing is they&#x27;ll go, part of the report is if we don&#x27;t do this and the business goes into liquidation, what are we going to get?</p>
+          <p><span class="spk">Marty · 52:08</span>Yeah.</p>
+          <p><span class="spk">Jason · 52:08</span>So let&#x27;s say at the end of the day, if that happened and the business shut down, had to pay off all of the debts, they might get 10 cents to the dollar back at the ATO. If the small business restructure put forward a plan for 30 cents to the dollar, writes in the report that if you don&#x27;t accept this, you&#x27;re likely to get 10 cents or zero in a liquidation event.</p>
+          <p><span class="spk">Jason · 52:26</span>The ATO goes, well, we&#x27;ll take 30, right? We&#x27;re not stupid. So that&#x27;s why it&#x27;s looking like a really attractive thing.</p>
+          <p><span class="spk">Marty · 52:34</span>It&#x27;s really interesting. I mean, how I relate to that is through finance. Like sometimes there&#x27;s what&#x27;s called hardcore debt that people can&#x27;t pay off and circumstances change. They might get ill or something. And under investigation, the lenders will have a look at what— it&#x27;s usually unsecured debt, but the lenders will say, okay, well, you owe $60,000, but with our negotiation, if you are okay to pay $38,000, we&#x27;ll clear that debt.</p>
+          <p><span class="spk">Marty · 53:00</span>But you have to be in absolute communication with the organization. And I think it&#x27;s the same premise. They think if this client goes under, we&#x27;re not going to get anything. So it&#x27;s not widely known about, but you certainly can go in and negotiate hardcore debt if it&#x27;s a real problem and circumstances dictate it.</p>
+          <p><span class="spk">Nick · 53:22</span>And Jase, you mentioned there&#x27;s no ramifications in the future. So if they need to borrow money, there&#x27;s no record because if there was a liquidation, then that would be an issue if someone, one of Marty&#x27;s team needed to get some funding. But you&#x27;re saying there&#x27;s no ramifications?</p>
+          <p><span class="spk">Jason · 53:35</span>It&#x27;s not going to be on the formal ASIC record because it doesn&#x27;t show that you&#x27;ve appointed a liquidator or administrator. I imagine there&#x27;ll be basically to clean up the balance sheet, you&#x27;ll have a debt forgiveness or an expense that kind of shows that you&#x27;ve had to move it from an ATO debt to an expense on the P&amp;L. So there&#x27;ll be questions there.</p>
+          <p><span class="spk">Jason · 53:52</span>Again, this is so fresh and so new. We&#x27;ve only seen 55 businesses do it.</p>
+          <p><span class="spk">Marty · 53:56</span>It&#x27;s a brilliant idea though.</p>
+          <p><span class="spk">Jason · 53:57</span>I think next season, Season 5, I&#x27;ll probably be coming back with some more numbers around that. And obviously day to day, I mean, it&#x27;s not all doom and gloom at my end. Most of it&#x27;s around helping businesses grow. And doing business advisory and, you know, the exciting stuff, which is, you know, a lot of what we talk about on the podcast and a lot of the advice that we&#x27;ve filled 50— well, 51, but we&#x27;ll call it 50 episodes worth of real good advice and nuggets of gold on either running a business and the things that we do at business level or even at consumer level.</p>
+          <p><span class="spk">Jason · 54:25</span>The— what you talked about in helping somebody retire and helping somebody save money, they&#x27;re all the things that are incorporated in all the day-to-day. So it&#x27;s pretty exciting.</p>
+          <p><span class="spk">Marty · 54:35</span>Can you restructure electricity debt and petroleum debt. Is that— I&#x27;m sure we&#x27;ll come on to that.</p>
+          <p><span class="spk">Jason · 54:41</span>Well, we&#x27;ll work on that over the break. It is the end of season 4 of The Numbers Game. That&#x27;s our 50th episode. It&#x27;s been so great to get into the studio with you boys and see each other face to face. Guys, the wrap-up. Nick, what have you enjoyed about the episode?</p>
+          <p><span class="spk">Nick · 54:56</span>Mate, for me, I take away the timing of the advice. You know, the thing that I spoke about about, which was the selling of the property, you know, getting advice prior to that instead of being reactive. And you spoke about the tax saving. Again, we&#x27;ve talked about the importance of tax planning.</p>
+          <p><span class="spk">Nick · 55:13</span>So the thing I take away is any big decisions that are coming up, be proactive and get advice before you make a decision and don&#x27;t do it after because it could be too late. Yeah.</p>
+          <p><span class="spk">Marty · 55:23</span>Two things for me. First of all, where&#x27;s the after-party? Very, very, very important. But you don&#x27;t know what you don&#x27;t know. And I think I&#x27;ve said that in previous episodes, but just even today, picking up some nuggets of gold of how important it is to have a professional to empower your financial decisions.</p>
+          <p><span class="spk">Marty · 55:40</span>I think it&#x27;s— there&#x27;s money just being left on the table all over the place. Get the right support and forget about the cost because it&#x27;s not a big cost given the upside that can happen for clients. So yeah, that&#x27;s my takeaway. Jase, what about yourself?</p>
+          <p><span class="spk">Jason · 55:56</span>Guys, look, I think for me, my key takeaway is work with an advisor that truly cares about your future. I think everything that you guys touched on just then in the two case studies you shared was helping somebody have a better future. I know that&#x27;s why I get out of bed every day and go to work and talk to my team and our clients is have a better future, work towards something.</p>
+          <p><span class="spk">Jason · 56:13</span>And if you&#x27;ve got those goals and those aspirations, I really think having a great team of advisors around you— and it doesn&#x27;t have to be us three, that&#x27;s not the point of this— but I love the message that you guys are sending, that we&#x27;re sending, is is you&#x27;re never too young to have a financial advisor. I think you&#x27;ve said that before.</p>
+          <p><span class="spk">Jason · 56:29</span>Get in and get it sorted. And then as well, reviewing your costs and reviewing money that&#x27;s going out the door from a budgeting and financial aspect, now&#x27;s the time.</p>
+          <p><span class="spk">Marty · 56:39</span>Alright, lads. Well, that&#x27;s the end of Season 4. And listeners, we&#x27;re going to take a 3-week break, but we&#x27;ll be back. But in the interim, why not check out previous episodes? It&#x27;s like a goldmine of financial information that I&#x27;m sure you&#x27;ll enjoy. Make sure you tell your friends, associates, we&#x27;re here to serve.</p>
+          <p><span class="spk">Marty · 56:55</span>We want to help more people with financial literacy and create better futures. Like Jason says, it&#x27;s been an outstanding season. Thank you. Thank you, lads. And, um, catch us up on Instagram, LinkedIn, or any other social media app that I don&#x27;t know about. And until next season, uh, it&#x27;s game over.</p>
+        </div>
+      </details>
+
+    </div>
+
+    <!-- audio-only: the Spotify player is the hero above; duplicate embed removed -->
+
+    <div class="listen">
+      <a href="https://open.spotify.com/episode/78k4JeUZ96kec4QH6qLsMA" target="_blank" rel="noopener" aria-label="Listen to this episode on Spotify">
+        <svg viewBox="0 0 24 24"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.52 17.34c-.24.36-.66.48-1.02.24-2.82-1.74-6.36-2.1-10.56-1.14-.42.12-.78-.18-.9-.54-.12-.42.18-.78.54-.9 4.56-1.02 8.52-.6 11.64 1.32.42.18.48.66.3 1.02zm1.44-3.3c-.3.42-.84.6-1.26.3-3.24-1.98-8.16-2.58-11.94-1.38-.48.12-1.02-.12-1.14-.6-.12-.48.12-1.02.6-1.14 4.32-1.32 9.72-.66 13.44 1.62.36.18.54.78.3 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.3c-.6.18-1.2-.18-1.38-.72-.18-.6.18-1.2.72-1.38 4.26-1.26 11.28-1.02 15.72 1.62.54.3.72 1.02.42 1.56-.3.42-1.02.6-1.56.3z"/></svg>
+        Spotify
+      </a>
+      <a href="https://podcasts.apple.com/au/podcast/id1555566088?i=1000776470464" target="_blank" rel="noopener" aria-label="Listen to this episode on Apple Podcasts">
+        <svg viewBox="0 0 24 24"><path d="M5.34 0A5.328 5.328 0 000 5.34v13.32A5.328 5.328 0 005.34 24h13.32A5.328 5.328 0 0024 18.66V5.34A5.328 5.328 0 0018.66 0H5.34zm6.525 2.568c2.336 0 4.448.902 6.056 2.587 1.224 1.272 1.912 2.619 2.264 4.392l.04.23c.04.272-.16.527-.432.567a.505.505 0 01-.567-.431l-.04-.213c-.312-1.57-.92-2.747-2.004-3.867-1.428-1.496-3.293-2.294-5.393-2.294-2.1 0-3.966.798-5.394 2.294-1.084 1.12-1.692 2.298-2.004 3.867l-.04.213a.507.507 0 01-.567.431.504.504 0 01-.432-.567l.04-.23c.352-1.773 1.04-3.12 2.264-4.392 1.608-1.685 3.72-2.587 6.056-2.587h.153zm.136 3.033c1.74 0 3.312.67 4.527 1.934.883.916 1.394 1.93 1.663 3.253l.04.23a.505.505 0 01-.431.567.503.503 0 01-.567-.432l-.04-.212c-.23-1.112-.659-1.97-1.396-2.732-1.052-1.1-2.404-1.672-3.9-1.672s-2.849.572-3.901 1.672c-.737.762-1.167 1.62-1.396 2.732l-.04.212a.503.503 0 01-.567.432.505.505 0 01-.432-.567l.04-.23c.27-1.323.78-2.337 1.664-3.253 1.215-1.264 2.787-1.934 4.527-1.934h.21zm-.078 3.05c1.092 0 2.091.424 2.89 1.22.582.58.924 1.245 1.107 2.15l.04.218a.501.501 0 01-.424.568.499.499 0 01-.568-.424l-.04-.198c-.146-.724-.413-1.253-.871-1.716-.63-.63-1.398-.957-2.226-.957s-1.595.328-2.225.957c-.459.463-.726.992-.871 1.716l-.04.198a.499.499 0 01-.568.424.501.501 0 01-.424-.568l.04-.219c.183-.904.525-1.569 1.106-2.149.8-.796 1.799-1.22 2.89-1.22h.184zM12 14.07a2.477 2.477 0 012.48 2.478A2.477 2.477 0 0112 19.024a2.477 2.477 0 01-2.48-2.477A2.477 2.477 0 0112 14.07z"/></svg>
+        Apple
+      </a>
+      <a class="yt-pill" href="https://www.youtube.com/@thenumbersgamepodcast?sub_confirmation=1" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.12-2.14C19.5 3.55 12 3.55 12 3.55s-7.5 0-9.38.51A3 3 0 0 0 .5 6.2 31.4 31.4 0 0 0 0 12a31.4 31.4 0 0 0 .5 5.8 3 3 0 0 0 2.12 2.14c1.88.51 9.38.51 9.38.51s7.5 0 9.38-.51a3 3 0 0 0 2.12-2.14A31.4 31.4 0 0 0 24 12a31.4 31.4 0 0 0-.5-5.8zM9.55 15.57V8.43L15.82 12z"/></svg>
+        Subscribe
+      </a>
+    </div>
+    <!-- LISTEN:END -->
+
+    <div class="relsec">
+      <span class="rtitle">Discover more</span>
+      <div class="relgrid">
+        <a class="relcard" href="/how-your-inheritance-can-be-taken-over-without-a-proper-will">
+          <img src="https://i.ytimg.com/vi/WNMWwy-HqCw/hqdefault.jpg" alt="EP 258 thumbnail">
+          <span class="rt">How Your Inheritance Can Be Taken Over Without a Proper Will</span>
+          <span class="rfoot"><span class="rwhy">17 November 2025</span><span class="rtag">EP 258</span></span>
+        </a>
+        <a class="relcard" href="/how-to-avoid-burnout-and-still-grow-your-business">
+          <img src="https://i.ytimg.com/vi/kaHCI7VQoA4/hqdefault.jpg" alt="EP 233 thumbnail">
+          <span class="rt">How to Avoid Burnout and Still Grow Your Business</span>
+          <span class="rfoot"><span class="rwhy">26 May 2025</span><span class="rtag">EP 233</span></span>
+        </a>
+        <a class="relcard" href="/raising-gst-in-australia-and-why-it-would-work">
+          <img src="https://i.ytimg.com/vi/k1NVsiBc7JY/hqdefault.jpg" alt="EP 222 thumbnail">
+          <span class="rt">Raising GST in Australia and Why it Would Work</span>
+          <span class="rfoot"><span class="rwhy">10 March 2025</span><span class="rtag">EP 222</span></span>
+        </a>
+        <a class="relcard" href="/petrol-vs-electric-cars-how-much-you-actually-save-in-2026">
+          <img src="https://i.ytimg.com/vi/2vYQ6HlHtgA/hqdefault.jpg" alt="EP 276 thumbnail">
+          <span class="rt">Petrol vs Electric Cars: How Much You Actually Save in 2026</span>
+          <span class="rfoot"><span class="rwhy">11 May 2026</span><span class="rtag">EP 276</span></span>
+        </a>
+        <a class="relcard" href="/has-realestate-com-au-become-too-powerful">
+          <img src="https://i.ytimg.com/vi/xR6nvqgBWmc/hqdefault.jpg" alt="EP 252 thumbnail">
+          <span class="rt">Has Realestate.com.au Become Too Powerful?</span>
+          <span class="rfoot"><span class="rwhy">6 October 2025</span><span class="rtag">EP 252</span></span>
+        </a>
+        <a class="relcard" href="/pokemon-cards-vs-bitcoin-gold-and-the-asx">
+          <img src="https://i.ytimg.com/vi/7PHS9HCqNvM/hqdefault.jpg" alt="EP 286 thumbnail">
+          <span class="rt">Pokemon Cards vs Bitcoin, Gold and the ASX | A 25-Year Investment Comparison</span>
+          <span class="rfoot"><span class="rwhy">20 July 2026</span><span class="rtag">EP 286</span></span>
+        </a>
+      </div>
+      <div class="reldots" id="reldots"></div>
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="footgrid">
+      <div class="fcol">
+        <div class="foot-label">Brought to you by</div>
+        <div class="sponsors">
+          <a href="https://www.inovayt.com.au/" target="_blank" rel="noopener"><img src="assets/inovayt-white.png" alt="Inovayt"></a>
+          <a href="https://futureadvisory.com.au/" target="_blank" rel="noopener"><img src="assets/future-advisory-white.png" alt="Future Advisory"></a>
+        </div>
+      </div>
+      <div class="fcol produced">
+        <div class="foot-label">Produced by</div>
+        <a href="https://www.vidpod.com.au/" target="_blank" rel="noopener"><img src="assets/vidpod-white.png" alt="VIDPOD"></a>
+      </div>
+    </div>
+    <nav class="footnav">
+      <a href="index.html">Home</a><a href="episodes.html">Every episode</a><a href="adventure.html">Choose your own adventure</a><a href="about.html">About the show</a><a href="nick-reilly.html">Nick Reilly</a><a href="jason-robinson.html">Jason Robinson</a><a href="contact.html">Contact</a>
+    </nav>
+    <div class="copyright">© 2026 The Numbers Game</div>
+  </footer>
+
+  <script>
+    var VIDEO='RAQ80ecsDq0';
+
+    /* Mobile nav dropdown. */
+    var burger=document.getElementById('navburger'), navdrop=document.getElementById('navdrop');
+    if(burger&&navdrop){burger.addEventListener('click',function(){
+      navdrop.hidden=!navdrop.hidden;
+      burger.setAttribute('aria-expanded', navdrop.hidden?'false':'true');
+    });}
+
+    /* Voice-note button reveals the recorder; × tucks it away. */
+    var vbtn=document.getElementById('vbtn'), vslot=document.getElementById('vslot'), vclose=document.getElementById('vclose');
+    if(vbtn&&vslot){vbtn.addEventListener('click',function(){vslot.hidden=!vslot.hidden;});}
+    if(vclose&&vslot){vclose.addEventListener('click',function(){vslot.hidden=true;});}
+
+    /* Keep-exploring dots: only shown when the strip actually scrolls (mobile). */
+    var rg=document.querySelector('.relgrid'), rd=document.getElementById('reldots');
+    if(rg&&rd){
+      var relCards=rg.querySelectorAll('.relcard');
+      relCards.forEach(function(){rd.appendChild(document.createElement('span'))});
+      var updDots=function(){
+        var scrollable=rg.scrollWidth>rg.clientWidth+4;
+        rd.style.display=scrollable?'flex':'none';
+        if(!scrollable)return;
+        var i=Math.round(rg.scrollLeft/(rg.scrollWidth-rg.clientWidth)*(relCards.length-1));
+        rd.querySelectorAll('span').forEach(function(s,n){s.classList.toggle('on',n===i)});
+      };
+      rg.addEventListener('scroll',updDots,{passive:true});
+      window.addEventListener('resize',updDots);
+      updDots();
+    }
+
+    /* Explore tabs: swap the visible panel; the row stays put so you never lose your place. */
+    var tabBtns=document.querySelectorAll('.tabbtn');
+    tabBtns.forEach(function(b){
+      b.addEventListener('click',function(){
+        tabBtns.forEach(function(o){o.classList.remove('on')});
+        document.querySelectorAll('.tpanel').forEach(function(p){p.hidden=true});
+        b.classList.add('on');
+        document.getElementById(b.getAttribute('data-panel')).hidden=false;
+      });
+    });
+
+    /* Audio-only: Spotify player is the hero; chapters/questions seek it via the Spotify iFrame API. */
+    var spotifyCtrl=null, pendingSeek=null;
+    function nudge(){
+      var p=document.getElementById('player-wrap'), r=p.getBoundingClientRect();
+      if(r.bottom<80 || r.top>window.innerHeight-90){ p.scrollIntoView({behavior:'smooth',block:'start'}); }
+    }
+    function startAt(sec){
+      nudge();
+      if(spotifyCtrl){ spotifyCtrl.seek(sec); spotifyCtrl.resume(); } else { pendingSeek=sec; }
+    }
+    window.onSpotifyIframeApiReady=function(IFrameAPI){
+      IFrameAPI.createController(document.getElementById('spotify-embed'),
+        {uri:'spotify:episode:4K9NBcg0jLRiv7m2InPRma', width:'100%', height:'232'},
+        function(c){ spotifyCtrl=c; if(pendingSeek!=null){ c.seek(pendingSeek); c.resume(); pendingSeek=null; } });
+    };
+    (function(){var sc=document.createElement('script');sc.src='https://open.spotify.com/embed/iframe-api/v1';sc.async=true;document.head.appendChild(sc);})();
+  </script>
+</body>
+</html>

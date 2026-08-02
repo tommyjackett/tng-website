@@ -1,0 +1,683 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EP 17 · Ethical Investments | The Numbers Game</title>
+<meta name="description" content="Welcome to episode 17 of The Numbers Game podcast. In this episode we chat about the cost of accessing your superannuation early, the latest Aussie billion d…">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" sizes="64x64" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="canonical" href="https://thenumbersgamepodcast.com.au/ethical-investments">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="The Numbers Game">
+<meta property="og:title" content="EP 17 · Ethical Investments | The Numbers Game">
+<meta property="og:description" content="Welcome to episode 17 of The Numbers Game podcast. In this episode we chat about the cost of accessing your superannuation early, the latest Aussie billion d…">
+<meta property="og:url" content="https://thenumbersgamepodcast.com.au/ethical-investments">
+<meta property="og:image" content="https://thenumbersgamepodcast.com.au/assets/tng-audio-only-thumbnail.webp">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+  :root{
+    --purple:#585af3; --purple-dark:#2c1b8a; --mint:#7ad9a8;
+    --white:#ffffff; --muted:rgba(255,255,255,.60); --dim:rgba(255,255,255,.42);
+    --line:rgba(255,255,255,.12); --card:rgba(255,255,255,.05); --card-hi:rgba(255,255,255,.09);
+    --display:'Anton',Impact,'Helvetica Neue',sans-serif;
+    --sans:'Inter',system-ui,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif;
+    --wrap:1280px;   /* page frame (nav spans this) */
+    --col:960px;     /* content column (player, tabs, text) */
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:var(--sans); color:var(--white); line-height:1.6; -webkit-font-smoothing:antialiased;
+    background:#12093a;
+    background-image:
+      radial-gradient(1200px 600px at 82% -6%, rgba(88,90,243,.45) 0%, transparent 55%),
+      radial-gradient(900px 700px at 5% 8%, rgba(122,217,168,.10) 0%, transparent 50%),
+      linear-gradient(180deg,#2c1b8a 0%,#1a1150 28%,#100b34 62%,#0b0820 100%);
+    background-attachment:fixed;
+  }
+  a{color:inherit}
+  .wrap{max-width:var(--wrap);margin:0 auto;padding:0 36px}
+  main.wrap{max-width:var(--col)}
+  @media(max-width:720px){.wrap{padding:0 22px}}
+
+  /* ── Navbar ── */
+  .nav{position:sticky;top:0;z-index:50;background:linear-gradient(180deg,rgba(24,15,74,.92),rgba(24,15,74,.72));backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+  .nav-in{max-width:var(--wrap);margin:0 auto;padding:11px 36px;display:flex;align-items:center;justify-content:space-between}
+  @media(max-width:720px){.nav-in{padding:11px 22px}}
+  .brand{display:block;line-height:0}
+  .brand img{height:36px;width:auto;display:block}
+  .navlinks{display:flex;gap:28px;align-items:center}
+  .navlinks a{text-decoration:none;font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);transition:.15s}
+  .navlinks a:hover{color:var(--white)}
+  .navlinks a.navtop{cursor:default}
+  .navgroup{position:relative;display:flex;align-items:center}
+  .navgroup .subnav{display:none;position:absolute;top:100%;left:50%;transform:translateX(-50%);padding-top:14px;min-width:180px}
+  .navgroup:hover .subnav,.navgroup:focus-within .subnav{display:block}
+  .subnav-in,.navgroup .subnav{z-index:60}
+  .navgroup .subnav a{display:block;background:#180f4a;border:1px solid var(--line);border-top:0;padding:12px 16px;font-size:12px;color:rgba(255,255,255,.85)}
+  .navgroup .subnav a:first-child{border-top:1px solid var(--line)}
+  .navgroup .subnav a:hover{background:#221768;color:var(--white)}
+  .navburger{display:none;background:none;border:1px solid var(--line);padding:8px 10px;cursor:pointer;color:var(--white);transition:.15s}
+  .navburger:hover{border-color:rgba(122,217,168,.6)}
+  .navburger svg{width:20px;height:20px;fill:currentColor;display:block}
+  .navdrop{display:none}
+  @media(max-width:720px){
+    .navlinks{display:none}
+    .navburger{display:block}
+    .navdrop{display:block;position:absolute;left:0;right:0;top:100%;
+      background:#180f4a;border-bottom:1px solid var(--line);box-shadow:0 24px 50px rgba(0,0,0,.45)}
+    .navdrop[hidden]{display:none}
+    .navdrop a{display:block;padding:15px 22px;text-decoration:none;font-size:14px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:rgba(255,255,255,.9);border-bottom:1px solid rgba(255,255,255,.06)}
+    .navdrop a:last-child{border-bottom:0}
+    .navdrop a.sub{padding-left:42px;font-size:13px;color:rgba(255,255,255,.72)}
+    .navdrop .navlabel{display:block;padding:15px 22px 6px;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.4)}
+  }
+
+  /* ── Hero / hook (marker-highlight system: purple hook wraps naturally, mint payoff below)
+     Rules: title splits at its natural break (colon/pipe/question mark). Front = hook (purple,
+     big), back = payoff (mint, smaller). No break in title = purple hook only. Highlights hug
+     the text (tight em padding tuned to Anton) and wrap via box-decoration-break — never
+     hand-pick line breaks or mint words. ── */
+  header.hero{padding:34px 0 6px}
+  .hook{--inx:clamp(8.4px,2.1vw,15.6px)} /* one shared text inset so hook + payoff first letters align */
+  .hook .hk{font-family:var(--display);font-weight:400;text-transform:uppercase;
+    font-size:clamp(28px,7vw,52px);line-height:1.3;letter-spacing:-.5px;text-wrap:balance}
+  .hook .hk span{color:var(--white);padding:.04em var(--inx) .02em;
+    background:linear-gradient(var(--purple),var(--purple)) 0 50%/100% 87% no-repeat;
+    -webkit-box-decoration-break:clone;box-decoration-break:clone}
+  .hook .pay{font-family:var(--display);font-weight:400;text-transform:uppercase;
+    font-size:clamp(16px,4vw,24px);line-height:1.5;letter-spacing:.6px;margin-top:8px;text-wrap:balance}
+  .hook .pay span{color:#0a0a0a;padding:.08em var(--inx) .04em;
+    background:linear-gradient(var(--mint),var(--mint)) 0 50%/100% 88% no-repeat;
+    -webkit-box-decoration-break:clone;box-decoration-break:clone}
+  /* no-hook titles: mid-split into two full-size rows, purple then mint */
+  .hook .hk span.hkrow{display:block;background:none;padding:0}
+  .hook .hk .hkrow+.hkrow{margin-top:8px}
+  .hook .hk span.mintseg{color:#0a0a0a;
+    background:linear-gradient(var(--mint),var(--mint)) 0 50%/100% 87% no-repeat}
+
+  /* ── Player (clean facade → real player on tap) ── */
+  .player-wrap{margin:24px 0 4px;scroll-margin-top:76px}
+  .audio-hero{width:100%;min-height:232px;border-radius:12px;overflow:hidden;box-shadow:0 30px 70px rgba(0,0,0,.5),0 0 0 1px rgba(255,255,255,.06)}
+  .audio-hero iframe{display:block;width:100%;border:0}
+  .player{position:relative;width:100%;padding-top:56.25%;border-radius:0;overflow:hidden;background:#000;box-shadow:0 30px 70px rgba(0,0,0,.5),0 0 0 1px rgba(255,255,255,.06)}
+  .facade{position:absolute;inset:0;border:0;cursor:pointer;background-size:cover;background-position:center;display:flex;align-items:center;justify-content:center;padding:0}
+  .facade .play{width:74px;height:74px;border-radius:50%;background:rgba(10,6,30,.40);border:2px solid rgba(255,255,255,.72);display:flex;align-items:center;justify-content:center;transition:.18s;-webkit-backdrop-filter:blur(1px);backdrop-filter:blur(1px)}
+  .facade:hover .play{background:rgba(88,90,243,.62);transform:scale(1.07);border-color:#fff}
+  .facade .play::after{content:"";border-style:solid;border-width:11px 0 11px 19px;border-color:transparent transparent transparent #fff;margin-left:5px}
+  .player iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+
+  /* ── Episode facts (bottom of the Summary panel — templated per episode) ── */
+  .sumfacts{margin:14px 10px 4px;padding-top:13px;border-top:1px solid rgba(255,255,255,.08);display:flex;flex-direction:column;gap:8px}
+  .fact{display:flex;gap:12px;font-size:13.5px}
+  .fact .fl{flex:none;width:104px;color:var(--dim);font-weight:600;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;padding-top:2px}
+  .fact .fv{color:rgba(255,255,255,.9);font-weight:500}
+  .fact .fv a{color:var(--mint);text-decoration:none;border-bottom:1px solid rgba(122,217,168,.4);transition:.15s}
+  .fact .fv a:hover{border-bottom-color:var(--mint)}
+
+  /* ── Episode tag (identity: black label hanging off the title corner) ── */
+  .eptag{display:inline-block;position:relative;left:-6px;margin-bottom:-7px;z-index:2;
+    background:#0a0a0a;color:var(--white);font-family:var(--display);font-weight:400;
+    font-size:13.5px;letter-spacing:1.5px;text-transform:uppercase;padding:6px 11px 4px}
+
+  /* ── Explore tabs (sticky mode switcher; one panel swaps below, nothing shoves) ── */
+  .explore{margin-top:22px}
+  .tabs{position:sticky;top:58px;z-index:40;display:flex;flex-wrap:wrap;gap:8px;padding:10px 0;
+    background:linear-gradient(180deg,rgba(18,10,55,.96),rgba(18,10,55,.86));
+    backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+  .tabbtn{font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.5px;
+    font-size:14.5px;color:var(--white);background:var(--purple);border:1px solid var(--purple);
+    padding:9px 13px 7px;cursor:pointer;transition:.15s}
+  .tabbtn:hover{filter:brightness(1.12)}
+  .tabbtn.on{background:var(--mint);border-color:var(--mint);color:#0a0a0a}
+  .tabbtn.on:hover{filter:none}
+  .tabbtn .ct{font-size:12px;opacity:.75;font-variant-numeric:tabular-nums}
+  .tabbtn .ct::before{content:" · "}
+  .tpanel{border:1px solid var(--line);background:var(--card);padding:12px 10px 14px}
+  .hint{font-size:12.5px;color:var(--muted);padding:2px 10px 10px;border-bottom:1px solid rgba(255,255,255,.08);margin-bottom:6px}
+
+  /* ── Listen row (no box: label left, service pills follow) ── */
+  .listen{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:12px 16px;margin-top:34px}
+  .listen .lname{font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--dim)}
+  .listen a{display:inline-flex;align-items:center;gap:9px;padding:11px 18px;border-radius:999px;
+    background:var(--mint);color:#08210f;text-decoration:none;font-weight:800;font-size:12.5px;
+    letter-spacing:.04em;text-transform:uppercase;transition:.15s}
+  .listen a:hover{filter:brightness(1.06);transform:translateY(-1px);box-shadow:0 12px 30px rgba(122,217,168,.25)}
+  .listen svg{width:20px;height:20px;fill:currentColor;flex:none}
+  /* ── Listen-now Spotify audio embed (full column width, above the pills) ── */
+  .listen-now{margin-top:40px}
+  .listen-now .ln-head{display:flex;align-items:baseline;justify-content:space-between;gap:14px;margin-bottom:13px}
+  .listen-now .ln-title{font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--dim)}
+  .audio-embed{border-radius:12px;overflow:hidden;box-shadow:0 20px 50px rgba(0,0,0,.4),0 0 0 1px rgba(255,255,255,.06)}
+  .audio-embed iframe{display:block;width:100%;border:0}
+  @media(max-width:720px){.listen-now{margin-top:32px}}
+
+  /* ── Keep exploring (thumbnails link to other episode PAGES, never timecodes).
+     Swipeable strip on mobile, fits three-up on desktop. Variant rule: claim
+     "similar ground" + reason lines ONLY when moment-level topic overlap is
+     genuinely strong; otherwise show the latest released episodes with dates —
+     never invent a connection. ── */
+  .relsec{margin-top:60px;padding-top:58px;border-top:1px solid var(--line)} /* line = end of this episode's info */
+  .reldots{display:flex;justify-content:center;gap:7px;margin-top:12px}
+  .reldots span{width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.25);transition:.2s}
+  .reldots span.on{background:var(--mint)}
+  .relsec .rtitle{display:inline-block;font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.5px;font-size:14.5px;background:var(--mint);color:#0a0a0a;padding:9px 13px 7px;margin-bottom:18px}
+  .relgrid{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding-bottom:6px;scrollbar-width:none}
+  .relgrid::-webkit-scrollbar{display:none}
+  .relcard{flex:0 0 56%;max-width:232px;scroll-snap-align:start;display:flex;flex-direction:column;text-decoration:none;background:var(--card);border:1px solid var(--line);transition:.15s}
+  .relcard:hover{background:var(--card-hi);border-color:rgba(122,217,168,.55)}
+  .relcard img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block}
+  .relcard .rt{display:block;font-size:12.5px;font-weight:600;color:rgba(255,255,255,.92);line-height:1.4;padding:8px 8px 0}
+  .relcard .rfoot{margin-top:auto;display:flex;justify-content:space-between;align-items:flex-end;gap:8px;padding:10px 8px 9px}
+  .relcard .rwhy{font-size:11.5px;color:var(--mint)}
+  .relcard .rtag{display:inline-block;background:#0a0a0a;color:var(--white);font-family:var(--display);font-size:10px;letter-spacing:1.2px;text-transform:uppercase;padding:3px 7px 2px;white-space:nowrap;flex:0 0 auto}
+
+  /* ── Dropdown sections (accordion under the player) ── */
+  .drops{margin-top:34px;display:flex;flex-direction:column;gap:11px}
+  .drop{border:1px solid var(--line);border-radius:0;background:var(--card);overflow:hidden;transition:border-color .15s}
+  .drop[open]{border-color:rgba(122,217,168,.35)}
+  .drop>summary{list-style:none;cursor:pointer;padding:16px 18px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+  .drop>summary::-webkit-details-marker{display:none}
+  .drop>summary .st{font-weight:700;font-size:15.5px;letter-spacing:.005em}
+  .drop>summary .ct{margin-left:auto;font-size:12px;color:var(--dim);font-weight:600;font-variant-numeric:tabular-nums}
+  .drop>summary .chev{flex:none;width:22px;height:22px;border-radius:50%;background:rgba(122,217,168,.14);color:var(--mint);display:flex;align-items:center;justify-content:center;font-family:var(--display);font-size:15px;line-height:1;transition:.2s;transform:translateY(-1px)}
+  .drop[open]>summary .chev{transform:rotate(45deg)}
+  .drop-body{padding:2px 12px 12px}
+
+  /* chapters */
+  .chapter{display:flex;align-items:baseline;gap:14px;width:100%;text-align:left;cursor:pointer;background:none;border:0;color:inherit;font-family:inherit;padding:11px 10px;border-radius:10px;transition:.13s}
+  .chapter:hover{background:var(--card-hi)}
+  .chapter .tc{font-variant-numeric:tabular-nums;font-weight:700;font-size:14px;color:var(--mint);flex:none;width:48px}
+  .chapter .cx{font-size:15px;font-weight:500;color:rgba(255,255,255,.9)}
+  .chapter:hover .cx{color:#fff}
+
+  /* questions */
+  .q{display:flex;align-items:center;gap:12px;width:100%;text-align:left;cursor:pointer;background:none;border:0;border-radius:11px;color:inherit;font-family:inherit;padding:12px 10px;transition:.14s}
+  .q+.q{border-top:1px solid rgba(255,255,255,.05)}
+  .q:hover{background:var(--card-hi)}
+  .q .qm{font-family:var(--display);font-size:15px;color:var(--mint);flex:none;line-height:1;transform:translateY(1px)}
+  .q .qx{font-size:15px;font-weight:500;color:rgba(255,255,255,.92)}
+  .q .go{margin-left:auto;flex:none;color:var(--dim);font-size:18px;transition:.15s}
+  .q:hover .go{color:var(--mint);transform:translateX(2px)}
+
+  /* summary + transcript bodies */
+  .summary-body p{font-size:16.5px;line-height:1.62;color:rgba(255,255,255,.9);padding:6px 10px 4px}
+  .tbody{padding:2px 10px 8px}
+  .tbody p{font-size:14.5px;line-height:1.7;color:rgba(255,255,255,.78);margin-top:15px;max-width:64ch}
+  .tbody .spk{display:block;font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--mint);margin-bottom:2px}
+
+  /* ── Voice note ask (lives at the bottom of the Summary panel) ── */
+  .vask{margin:16px 10px 4px}
+  .vbtn{display:inline-flex;align-items:center;gap:9px;padding:12px 20px;border-radius:999px;border:0;cursor:pointer;
+    background:var(--mint);color:#08210f;font-family:inherit;font-weight:800;font-size:12.5px;
+    letter-spacing:.04em;text-transform:uppercase;transition:.15s}
+  .vbtn:hover{filter:brightness(1.06);transform:translateY(-1px);box-shadow:0 12px 30px rgba(122,217,168,.25)}
+  .vbtn svg{width:18px;height:18px;fill:currentColor;flex:none}
+  .vslot{background:var(--purple);padding:12px 10px 10px;margin:14px 0 4px;box-shadow:0 18px 40px rgba(0,0,0,.35)}
+  .vslot[hidden]{display:none}
+  .vhead{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;margin-bottom:10px}
+  .vhead .vmsg{font-family:var(--sans);font-size:13px;line-height:1.55;color:rgba(255,255,255,.92);margin:2px 0 0;padding:0 2px}
+  .vclose{background:none;border:0;color:rgba(255,255,255,.85);font-size:22px;line-height:1;cursor:pointer;padding:0 2px}
+  .vclose:hover{color:var(--white)}
+  .vslot iframe{display:block}
+
+  /* ── YouTube subscribe pill (sits in the listen row; outranks .listen a's mint) ── */
+  .listen a.yt-pill{background:var(--purple);color:var(--white)}
+  .listen a.yt-pill:hover{filter:brightness(1.1);transform:translateY(-1px)}
+  @media(max-width:720px){ /* mobile: no label, three compact pills on one row */
+    .listen .lname{display:none}
+    .listen{gap:8px}
+    .listen a{padding:10px 13px;font-size:11px;gap:6px}
+    .listen svg{width:16px;height:16px}
+  }
+
+  /* ── Footer: two columns under the line (Brought to you by | Produced by), matches adventure.html ── */
+  footer{border-top:1px solid var(--line);margin-top:68px;padding:52px 20px 58px}
+  .footgrid{max-width:var(--wrap);margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:start}
+  @media(max-width:720px){.footgrid{grid-template-columns:1fr;gap:40px}}
+  .fcol{text-align:center}
+  .foot-label{font-size:11px;font-weight:700;letter-spacing:.26em;text-transform:uppercase;color:var(--dim);margin-bottom:16px}
+  .sponsors{display:flex;justify-content:center;align-items:center;gap:38px;flex-wrap:wrap}
+  .sponsors a{display:inline-flex;transition:.15s}
+  .sponsors a:hover{transform:translateY(-1px)}
+  .sponsors img{height:34px;width:auto;opacity:.92}
+  .sponsors a:hover img{opacity:1}
+  .produced a{display:inline-flex;transition:.15s}
+  .produced a:hover img{opacity:1}
+  .produced img{height:30px;width:auto;opacity:.95}
+  .footnav{margin-top:36px;display:flex;justify-content:center;flex-wrap:wrap;gap:6px 26px}
+  .footnav a{font-size:12px;font-weight:600;letter-spacing:.04em;color:var(--dim);text-decoration:none;transition:.15s}
+  .footnav a:hover{color:var(--mint)}
+  .copyright{margin-top:40px;font-size:12px;color:var(--dim);text-align:center}
+
+  @media(min-width:720px){header.hero{padding:48px 0 6px}}
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "PodcastEpisode", "name": "Buying Commercial Property With Your Super in 2026 | What the Numbers Say", "url": "https://thenumbersgamepodcast.com.au/episode-285.html", "datePublished": "2026-07-13", "episodeNumber": 285, "image": "https://i.ytimg.com/vi/RAQ80ecsDq0/maxresdefault.jpg", "partOfSeries": {"@type": "PodcastSeries", "name": "The Numbers Game", "url": "https://thenumbersgamepodcast.com.au/"}}</script>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-in">
+      <a class="brand" href="index.html" aria-label="The Numbers Game home"><img src="assets/tng-logo.png" alt="The Numbers Game"></a>
+      <div class="navlinks">
+        <a href="index.html">Home</a>
+        <div class="navgroup">
+          <a class="navtop">Episodes</a>
+          <div class="subnav">
+            <a href="episodes.html">All episodes</a>
+            <a href="adventure.html">Find moments</a>
+          </div>
+        </div>
+        <div class="navgroup">
+          <a class="navtop">About</a>
+          <div class="subnav">
+            <a href="about.html">The show</a>
+            <a href="nick-reilly.html">Nick Reilly</a>
+            <a href="jason-robinson.html">Jason Robinson</a>
+          </div>
+        </div>
+        <a href="contact.html">Contact</a>
+      </div>
+      <button class="navburger" id="navburger" type="button" aria-label="Menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24"><path d="M3 6h18v2H3zM3 11h18v2H3zM3 16h18v2H3z"/></svg>
+      </button>
+    </div>
+    <div class="navdrop" id="navdrop" hidden>
+      <a href="index.html">Home</a>
+      <span class="navlabel">Episodes</span>
+      <a class="sub" href="episodes.html">All episodes</a>
+      <a class="sub" href="adventure.html">Find moments</a>
+      <span class="navlabel">About</span>
+      <a class="sub" href="about.html">The show</a>
+      <a class="sub" href="nick-reilly.html">Nick Reilly</a>
+      <a class="sub" href="jason-robinson.html">Jason Robinson</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+
+  <main class="wrap">
+
+    <header class="hero">
+      <div class="hook">
+        <span class="eptag">EP 17</span>
+        <h1 class="hk"><span>Ethical Investments</span></h1>
+      </div>
+    </header>
+
+    <div class="player-wrap" id="player-wrap">
+      <div class="audio-hero" id="spotify-embed"></div>
+    </div>
+
+    <div class="explore">
+      <div class="tabs" role="tablist">
+        <button class="tabbtn on" data-panel="p-summary">Summary</button>
+      </div>
+      <section class="tpanel" id="p-summary">
+        <div class="summary-body">
+          <p>Welcome to episode 17 of The Numbers Game podcast. In this episode we chat about the cost of accessing your superannuation early, the latest Aussie billion dollar start-up and we&#x27;re joined by our first ever guest Niv Dagan from PEAK Asset Management.</p>
+        </div>
+        <div class="vask">
+          <button class="vbtn" id="vbtn" type="button">
+            <svg viewBox="0 0 24 24"><path d="M12 14a3 3 0 0 0 3-3V6a3 3 0 1 0-6 0v5a3 3 0 0 0 3 3zm5-3a5 5 0 0 1-10 0H5a7 7 0 0 0 6 6.92V21h2v-3.08A7 7 0 0 0 19 11h-2z"/></svg>
+            Send us a voice note
+          </button>
+          <div class="vslot" id="vslot" hidden>
+            <div class="vhead">
+              <p class="vmsg">We'd love to hear from you. You can leave up to a 90 second voice note for us to play on the show: a question, some feedback, or a topic you want covered.</p>
+              <button class="vclose" id="vclose" type="button" aria-label="Close">&times;</button>
+            </div>
+            <iframe src="https://www.speakpipe.com/widget/inline/hhq6kzggsx7zpcsvakgxfrzun3zidpde" allow="microphone" width="100%" height="200" frameborder="0" title="Leave The Numbers Game a voice note"></iframe>
+          </div>
+          <script async src="https://www.speakpipe.com/widget/loader.js" charset="utf-8"></script>
+        </div>
+        <div class="sumfacts">
+          <div class="fact"><span class="fl">Release date</span><span class="fv">26 July 2021</span></div>
+          <div class="fact"><span class="fl">Hosts</span><span class="fv"><a href="jason-robinson.html">Jason Robinson</a> &amp; <a href="nick-reilly.html">Nick Reilly</a> &amp; <a href="marty-vidakovic.html">Marty Vidakovic</a></span></div>
+
+        </div>
+      </section>
+    </div>
+
+    <div class="drops">
+
+      <details class="drop">
+        <summary><span class="st">Episode transcript</span><span class="chev">+</span></summary>
+        <div class="drop-body tbody">
+          <p><span class="spk">Jason · 00:00</span>Thanks to our sponsor Walker Digital, who&#x27;ve stepped in to help The Numbers Game podcast with their social media. Walker Digital are a digital marketing agency covering strategy, content, video implementation, and education. The team at Walker have spread the word of our clients and love working with businesses doing good things, helping them to grow and reach more people so they can scale and get larger.</p>
+          <p><span class="spk">Jason · 00:20</span>I know personally the first thing I did when growing our business was to outsource social media, blogs, and copywriting because I knew it was something that was not the best use of my time, and the team at Walker Digital smashed it. Sometimes you need to walk before you can run. Find out more at their website, wlkr.digital. This podcast is for educational and informational purposes only.</p>
+          <p><span class="spk">Jason · 00:41</span>The conversations are of a general nature and do not qualify as financial or tax advice. We recommend before you make any financial decisions, you consult a licensed professional. Individuals on the podcast may hold positions in the companies discussed. Welcome to The Numbers Game, episode 17.</p>
+          <p><span class="spk">Jason · 00:57</span>We&#x27;re talking investments. We&#x27;re excited. We weren&#x27;t going to let a lockdown stop us from coming in hot with an episode episode every Monday. As always, I&#x27;m here with Nick and Marty. How are you, fellas?</p>
+          <p><span class="spk">Marty · 01:08</span>I&#x27;m doing really well, thanks, Jason. We&#x27;re in lockdown here, my hair&#x27;s out of control. We&#x27;ve won the Olympics. I mean, Brisbane, well done! It&#x27;s so exciting. I&#x27;m going well. How are you, Nick?</p>
+          <p><span class="spk">Nick · 01:19</span>Very well, Marty. And apparently we&#x27;re going to be one of the first countries, or Brisbane is going to be one of the first cities not to experience a loss by holding the Olympics. So let&#x27;s just see how that goes. But I&#x27;m really excited. We&#x27;ve got a guest today, so this is groundbreaking for us. This is our first, uh, well, yeah, our very first episode where we&#x27;re not together, um, and also our very first episode where we&#x27;re bringing a guest in.</p>
+          <p><span class="spk">Nick · 01:41</span>So yeah, really excited for what we&#x27;re going to talk about today.</p>
+          <p><span class="spk">Jason · 01:44</span>Yeah, beautiful. I&#x27;m going to come into Reading the Play with a big chat about where our super money went when we all pulled $10,000 or $20,000 out earlier this year or last year. Uh, Marty, what have you got this episode?</p>
+          <p><span class="spk">Marty · 01:55</span>Well, I&#x27;m just going to talk about all things investment, and I&#x27;ve got a a nice little success story I&#x27;m going to chat about today. So I think you&#x27;ll enjoy that.</p>
+          <p><span class="spk">Nick · 02:04</span>And myself, BHP, and moving towards, I guess, a greener outlook. And it&#x27;s a really good segue to get our guest involved in that discussion as well.</p>
+          <p><span class="spk">Jason · 02:14</span>Let&#x27;s play my favorite segment, Reading the Play, where we bring you all of the interesting things going on in the industry, any news that&#x27;s caught our eye, and even podcasts and books that we&#x27;re reading. I&#x27;m going to take it away this week, guys, with the episode. Actually, Greg, my lovely business business partner sent this to me this week, a couple of days ago, said, Jase, this might be good for reading the play.</p>
+          <p><span class="spk">Jason · 02:35</span>So I didn&#x27;t have to do too much homework, which was awesome. Uh, it was an article on news.com.au. It was Aussies who withdrew $20,000 in super have lost around $100,000 by the time they get retirement. So that&#x27;s kind of the, the main headline of the article.</p>
+          <p><span class="spk">Jason · 02:52</span>So what it&#x27;s saying is, Nick, I mean, obviously you guys do this over at Innovate in the financial planning land, so maybe you&#x27;ll have a bit to comment on. But the data was the $20,000 that was taken out. I should go a bit of a background, actually. This is actually quite funny. So the idea was you kind of survival, get your $10,000 or $20,000 out and you&#x27;re going to be able to survive during COVID and the lockdown, and you had to prove you&#x27;d lost your income.</p>
+          <p><span class="spk">Jason · 03:16</span>Now, while we thought a lot of that money would have gone towards paying down debt and, you know, keeping people, you know, surviving during that period, what the research actually found was that The second biggest area that money was spent on was gambling.</p>
+          <p><span class="spk">Jason · 03:32</span>So, and in the first fortnight people got their first $10,000 payment, $3,000 was spent within the first fortnight. And most of it was debt repayments, gambling, or clothing in department stores. So, I mean, from a government stimulus point of view, it probably made sense that, you know, there was a lot of money in the people&#x27;s pockets and they were able to spend.</p>
+          <p><span class="spk">Jason · 03:51</span>Of course, that wasn&#x27;t the government&#x27;s idea to prop up Dan Murphy&#x27;s and TAB.. But that&#x27;s where we ended up. The other side of that as well, which you might be able to comment on, Nick, I&#x27;ll throw to you in a second, was that 22% of first home buyers that were surveyed said that they used the money that came out of their super fund to help prop up their deposit for their first home.</p>
+          <p><span class="spk">Jason · 04:13</span>So maybe over to you, Nick. Did you see a bit of that? And what are your thoughts on the stats around, you know, $20,000 out now could cost you $100,000? You know, 30 years, 40 years from now.</p>
+          <p><span class="spk">Nick · 04:24</span>Yeah, look, it&#x27;s spot on. And there&#x27;s a few things to talk about here. And we could actually spend a whole episode on this, but I think the first thing is, as far as the government&#x27;s concerned, is just the ease at which you could pull that $10,000 out. You know, very similar to JobKeeper.</p>
+          <p><span class="spk">Nick · 04:40</span>It was a self-declaration. So you basically logged onto the myGov website, declared that you&#x27;d had an issue, and that money was released from your super. In 210,000 doses. So I think that&#x27;s the first issue.</p>
+          <p><span class="spk">Nick · 04:55</span>But at the same time, how does the government— you know, they were scrambling for answers and scrambling to try and get solutions. So, you know, it&#x27;s not easy to implement a process where they could actually assess people on their merits. And look, they&#x27;re saying now that they&#x27;re going to come back on people, uh, the ATO is.</p>
+          <p><span class="spk">Nick · 05:12</span>But let&#x27;s see where that goes. So that&#x27;s the first thing. The second thing is they&#x27;re absolutely mad if they didn&#x27;t think people were going to spend it the wrong way, um, let&#x27;s be honest. And I believe gambling though.</p>
+          <p><span class="spk">Niv · 05:24</span>Wow.</p>
+          <p><span class="spk">Jason · 05:24</span>Well, I suppose you&#x27;re bored. You&#x27;re probably sitting at home with not much else to do.</p>
+          <p><span class="spk">Marty · 05:28</span>But yeah, how Aussie is it though?</p>
+          <p><span class="spk">Jason · 05:30</span>How Aussie is it?</p>
+          <p><span class="spk">Marty · 05:31</span>We&#x27;re gonna rip out $20 and double it. I mean, people are always gonna use money how they&#x27;re gonna use it, right? But it&#x27;s amazing, like Nick said, that behavior is incredible really.</p>
+          <p><span class="spk">Nick · 05:43</span>And I think the thing that underpins all this is, and you know, we talk about this all the time with our financial planning business, but it&#x27;s just a lack of education. So People understanding the power of compounding and what pulling out that $20,000 is actually going to do over the next 30 years or not going to do over the next 30 years.</p>
+          <p><span class="spk">Nick · 06:00</span>So not educated on compounding, compounding returns, not educated on superannuation and how it is going to form a big part of our retirement. And, you know, people just looking at their super, you know, they&#x27;re 25 years old, they&#x27;ve got $20,000 in there, they&#x27;re thinking, what&#x27;s that really going to do for me?</p>
+          <p><span class="spk">Nick · 06:17</span>Little do they know that it&#x27;s probably going to fund a majority of their retirement.</p>
+          <p><span class="spk">Jason · 06:21</span>Well, for most, I think it left a million people with no balance and closing their super funds. They, they basically cleaned their super funds out, which then in long— in, in turn then meant no insurances in that super fund anymore. So for a million, look, you&#x27;re imagining they&#x27;re probably very, very young Australians.</p>
+          <p><span class="spk">Jason · 06:38</span>This is more than 18 to 25. They&#x27;ve had their first job, but they&#x27;ve had almost $10,000 put into super and they&#x27;ve sucked it all out now and left themselves with nothing. So Bit of a concern there, but yeah, yeah, just thought I&#x27;d bring that one up for those at home that, that did pull the money out.</p>
+          <p><span class="spk">Jason · 06:53</span>What actually, for an actionable thing on that, Nick, if people did pull money out and now they&#x27;re hearing that, you know, potentially $100,000 going to be missing out of their retirement fund, how do we reverse that? Is that just obviously putting some more money back in?</p>
+          <p><span class="spk">Nick · 07:08</span>And exactly right, but, um, you know, you could put as much money in as you wanted, but if we look at what the stock market&#x27;s done, you&#x27;re never going to get those investments at the same price that they were. Particularly if we look at COVID, people have sold down into cash to pull that money out and they&#x27;ve sold down into cash at the wrong time.</p>
+          <p><span class="spk">Nick · 07:29</span>It was when the market bottomed. So just quickly, Jayce, but on the first homeowner deposit and people pulling money out, if you wanted them to pull money out, For any reason, that&#x27;s probably the one reason you would say, okay, well, at least you put it into another asset. And we saw quite a bit of that.</p>
+          <p><span class="spk">Nick · 07:47</span>But the thing to remember there is when you log on to the government website to get the $10,000 out, you have to say that you&#x27;re in hardship, otherwise you can&#x27;t get the $10,000 out. So, you know, the issue we had in our business, and Marty can probably comment more on this, but people came to us saying, oh, I&#x27;ve got another $20,000 now in deposit because I pulled it out of super.</p>
+          <p><span class="spk">Nick · 08:06</span>And then our brokers are saying, well, you&#x27;ve actually declared you&#x27;re in hardship, so you can&#x27;t just march into a bank now and say you want a loan. So there was a bit of that happening as well. Not every bank would accept that. Well, it just really depended on how far the bank went into the deposit source, I guess.</p>
+          <p><span class="spk">Marty · 08:23</span>What about if someone wanted to pay off a credit card debt? Would that— like, if you&#x27;re looking at 18% on a credit card debt that&#x27;s been sitting there, is that a good use of it in your mind?</p>
+          <p><span class="spk">Nick · 08:33</span>Oh, look, in that, yeah, I guess so. Because if you&#x27;re looking at 18% worth of interest, is the market gonna do 18% year on year? Probably not. You know, Nev will probably comment on this further on, but if you&#x27;re doing it to put into another investment or to pay a debt off, well, that&#x27;s great.</p>
+          <p><span class="spk">Nick · 08:52</span>But, you know, if you, you know, and you&#x27;ve spoke about this in earlier podcasts, but that person that&#x27;s paid the credit card off, there&#x27;s every chance they&#x27;re just gonna go and run that debt up. That up again. So that&#x27;s why super is so powerful, because you can&#x27;t touch it. You can&#x27;t use it to go and pay your credit card off, and you can&#x27;t do that year on year.</p>
+          <p><span class="spk">Nick · 09:11</span>So yeah, look, it&#x27;s better than putting it into your lab— your lab breaks account. But at the end of the day, we&#x27;d much rather it stay in there.</p>
+          <p><span class="spk">Marty · 09:19</span>And remember, and remember, kids, gambling is built upon a foundation of losers. Said it once, I&#x27;ve said it before. So I&#x27;ve got a story that&#x27;s, uh, looks so topical. Because we&#x27;ve won the Olympics, uh, nothing to do with the Olympics, mind you, but these are Brisbane-based founders. Andrew Barnes, Chris England, Chris Hood, and Vu Tran would be some very happy Brisbane boys at the moment because their company Go One has become Australia&#x27;s latest billion-dollar unicorn, and they&#x27;ve just had a cap raise</p>
+          <p><span class="spk">Marty · 09:49</span>of $270 mil in Australian dollars, and it values their company in the US at a billion bucks. So that&#x27;s absolutely incredible. And they started in 2015. So yeah, that old story of starting out of your garage, these guys legitimately did.</p>
+          <p><span class="spk">Marty · 10:06</span>And they&#x27;ve started an edtech company. So it&#x27;s like an aggregator of online learning. And of course COVID has just escalated this opportunity. So think about it, think about it as a Spotify for education. It&#x27;s, um, you can choose your own content as to what you want to learn, whether it&#x27;s leadership, whether it&#x27;s personal development, whether it&#x27;s Blinkist.</p>
+          <p><span class="spk">Marty · 10:30</span>I know that you&#x27;re a big fan, Jason, Blinkist as well. You can do all this through this platform, and what&#x27;s happening is employers and companies all around the world are realizing that you have to continue to develop your teams, not only in what they do for their profession, but also outside of that on courses of interest.</p>
+          <p><span class="spk">Marty · 10:50</span>And so they can continue to develop. So you can actually white label your own education program through them for your company. So you think about governments bringing this in, and I just, I just really thought that, um, it was a really clever idea.</p>
+          <p><span class="spk">Marty · 11:06</span>And I think it&#x27;s going to transcend the way we learn, not only within businesses. But I was also thinking from, you know, school kids as well. Anything you&#x27;re interested in learning about is there. The platform of content is quite extraordinary.</p>
+          <p><span class="spk">Marty · 11:22</span>So I thought that was a really good news story for 4 blokes out of Brisbane that are shooting the lights out globally. So yeah.</p>
+          <p><span class="spk">Jason · 11:32</span>That is actually incredible, Marty. And thanks for sharing because I literally just clicked on the first one, which was business, went into accounting and finance, and it&#x27;s got courses on Zero, Bookkeeping for Beginners, Business Finance. And I just think in, you know, from what I do day to day, seeing a lot of people that don&#x27;t have a good clear financial understanding of just the basics— P&amp;L, balance sheet, how does it all work?</p>
+          <p><span class="spk">Jason · 11:54</span>And, you know, obviously if we pick Nev&#x27;s brain on some of this stuff later, we can probably then apply this to the bigger picture of, you know, how to make investment decisions. So that&#x27;s awesome, buddy.</p>
+          <p><span class="spk">Marty · 12:03</span>I really love that they&#x27;re doing so— they&#x27;re making a social impact through online learning. And I think this is actually going to change the game. And yeah, I think it&#x27;s a brilliant idea.</p>
+          <p><span class="spk">Jason · 12:14</span>It&#x27;s fine. They&#x27;ve got a billion-dollar valuation.</p>
+          <p><span class="spk">Marty · 12:17</span>It&#x27;ll change their game.</p>
+          <p><span class="spk">Nick · 12:19</span>I might actually introduce Niv before I do my reading the plaques. He&#x27;s sitting there patiently, just wants to comment. I can tell. So welcome, Niv Dagan. Just a bit of a wrap on you before I hand over, but founder and executive director of Peak Asset Management. Peak Asset Management is a boutique corporate advisory firm helping companies raise capital and list on both ASX and also some experience on the Canadian Stock Exchange.</p>
+          <p><span class="spk">Nick · 12:45</span>To date, Niv and his business has raised over $200 million in capital for various companies. So welcome, Niv.</p>
+          <p><span class="spk">Niv · 12:53</span>How are you today, guys?</p>
+          <p><span class="spk">Nick · 12:55</span>I&#x27;m going to get you involved on my— for— on my Rating the Play this week. So My reading, the play is around BHP and considering the sale of their oil and gas asset. So everyone knows BHP, the world&#x27;s biggest coal miner, is looking at selling their petroleum business for around $15 million.</p>
+          <p><span class="spk">Nick · 13:14</span>That business is forecast to make them $2.73 billion this year. So it&#x27;s a significant asset, but to bring it into context, the total BHP market cap is $146 billion.</p>
+          <p><span class="spk">Nick · 13:30</span>You know, pretty small, uh, in the scheme of things for BHP. Uh, what do they want to do this? BHP want to avoid being stuck with assets that will become harder to sell as the world moves away from fossil fuels. Um, it&#x27;s important to note that BHP doesn&#x27;t depend on its energy business for its profits.</p>
+          <p><span class="spk">Nick · 13:49</span>It&#x27;s obviously dwarfed by the iron ore and the copper profits. So, uh, great timing as it&#x27;s, uh, it&#x27;s in line with around a 60% rally in oil prices in the last year. And I guess this all comes from investors, or the pressure to sell these assets come from investors and, you know, wanting a long-term sustainable business model within BHP.</p>
+          <p><span class="spk">Nick · 14:10</span>So, Nev, I know this is very much an area that you&#x27;re focused in, the renewable space. So yeah, what do you think about that?</p>
+          <p><span class="spk">Niv · 14:18</span>Yeah, look, BHP&#x27;s had a record 12 months, sitting around $51 per share in today&#x27;s trade, and they&#x27;ve actually just Nick launched a bid with a nickel supply with Tesla, which is a major, uh, electrical car battery obviously based in the NASDAQ.</p>
+          <p><span class="spk">Niv · 14:34</span>So look, they are trying to, um, call it streamline their underlying business. We&#x27;ve seen the nickel output, 22 million tons, which is enormous. Petroleum output is 27 million and really improved their profit margins. But look, I mean, it&#x27;s all about green and and the move to zero carbon emissions.</p>
+          <p><span class="spk">Niv · 14:53</span>And there&#x27;s a lot of focal— and I know we&#x27;ll talk about the show. So look, BHP, um, record growth, $51.30 per share. And, um, All Ordinaries is generating a lot of steam ahead, um, with US markets. So here to stay.</p>
+          <p><span class="spk">Jason · 15:07</span>Niv, thanks for joining us. It&#x27;s exciting to have a guest, uh, or first guest on our episode, uh, ever, and doing it from lockdown. So really, really grateful to have you on. Um, I guess for myself, who&#x27;s had a busy week and hasn&#x27;t been across everything like I usually would, and for our audience, can you, um, start by maybe giving us an understanding of exactly what you do, just a background, how you got to where you are and what it is day to day that you&#x27;re up to.</p>
+          <p><span class="spk">Niv · 15:31</span>Yeah, Jase, absolutely. So my background is more institutional. I started doing my bachelor with a Bachelor of Commerce and an honours in finance. Didn&#x27;t know what I was going to do and travelled around South America, got a job at Macquarie Bank back in 2005, 2006, and at the time was known as a millionaires factory because everyone was making so much money before the GFC.</p>
+          <p><span class="spk">Niv · 15:49</span>For a young guy coming through the ranks, learned a hell of a lot. So working predominantly with fund managers, global institutional clients, doing more on the research sales, sales trading side. And Macquarie is a great stepping stone for a young guy coming through university and learned a lot.</p>
+          <p><span class="spk">Niv · 16:05</span>Spent 5 years there and moved to a group called HC Securities. HC Securities were— was a division, was part of the Australian Stock Report, and I was running at the age of 25, 26. Got a, got a great opportunity to run the, um, not only the corporate side but also the trading side. So learned a lot, um, and we had a number of clients and following different recommendations.</p>
+          <p><span class="spk">Niv · 16:26</span>But then that business was sold and I said, look, what am I going to do? And I set up Peak Asset Management. And this is going back to September 2013, so we&#x27;re nearly 8 years old. Our whole model, Jason and Marty and Nick knows, is all about co-investment.</p>
+          <p><span class="spk">Niv · 16:41</span>What that means, we simply don&#x27;t put opportunities in front of anyone, and those anyone could be your retail investor that&#x27;s buying your BHPs and your Rio Tintos, all the way to your institutions and family offices, unless we&#x27;re co-investing, unless we&#x27;re essentially backing it with our own capital.</p>
+          <p><span class="spk">Niv · 16:57</span>I spent a few years in Canada growing our North American distribution. My wife, or girlfriend at the time, now wife of 3 years, said to me, Niv, why don&#x27;t we go to Canada? I said, are you mad? I saw a picture from our next-door neighbor. We were living in Middle Park. But look, going to Canada was probably the best thing we&#x27;ve ever done.</p>
+          <p><span class="spk">Niv · 17:15</span>Not only obviously from the relationship side but also from a networking side. So we try to help these companies a lot more than capital. I think raising capital is one thing, but if we can help companies with joint ventures and partnerships and opening doors to different angles, help them with the, uh, you know, IR, PR— we&#x27;ve got around 30,000 people, they get like a morning wrap, afternoon wrap, interviews with CEOs.</p>
+          <p><span class="spk">Niv · 17:37</span>But we try to get, um, really hands-on with the companies, and, and, and, and we&#x27;re 100% aligned because Remember, we&#x27;re taking a big position in ourselves, so we want to make sure that the stock price and the market cap goes up, and that&#x27;s how we make the majority of our capital. So that&#x27;s a bit about Peak and us, and, you know, really excited to be here.</p>
+          <p><span class="spk">Niv · 17:56</span>So thanks, guys.</p>
+          <p><span class="spk">Marty · 17:58</span>I love how you co-invest with businesses. I think that&#x27;s tremendous, and you&#x27;ve already demonstrated, you know, you&#x27;re a lot smarter than us on the show, which I think is another wonderful thing. But I got a question for you. Innovate and Future Advisory, You know, we&#x27;re going ahead in leaps and bounds, mate.</p>
+          <p><span class="spk">Marty · 18:16</span>When should businesses think about potentially doing an IPO and co-investing? Just give our audience some insights in regards to that, because I&#x27;m sure that&#x27;s a question that comes up a bit.</p>
+          <p><span class="spk">Niv · 18:28</span>Oh, look, IPO is one thing. I mean, and you mentioned it today with GO1. I mean, they&#x27;re a unicorn. You&#x27;ve got likes of the Canvas of the world. There&#x27;s a lot of money on the venture capital funds, you know. So Airtree just, I think, deployed over $100 $1 million in the last, you know, 12 months. So there&#x27;s this huge amount of money also for private companies.</p>
+          <p><span class="spk">Niv · 18:46</span>And I&#x27;ll give you an example. We backed a business called Nycolab that uses artificial intelligence, machine learning for stroke detection. We did attend to IPO the business. Having said that, they remained private, and since then they&#x27;ve got FDA approval, CE approval, TGA approval.</p>
+          <p><span class="spk">Niv · 19:03</span>I just signed Philips as a client, and now they&#x27;re looking to go into the US market. So I think It&#x27;s important for companies to understand that, that, you know, there&#x27;s a number of angles you can go through. You can either go through the venture capital private round, or you can actually be obviously bought out through a trade sale or an initial public offering.</p>
+          <p><span class="spk">Niv · 19:20</span>So what initial public offering means is you&#x27;re essentially selling your, your private shares and selling it on, on the ASX or, or a different exchange. Um, there&#x27;s, there&#x27;s pros and, and cons for, for everything. I mean, sometimes as, as a listed company, essentially the the pros is that by, by increasing, call it, your, your value, and through the news flow, through your market capitalization and execution, then obviously you could take your market capitalization a lot higher.</p>
+          <p><span class="spk">Niv · 19:45</span>With a higher market cap, you can also utilize your scrip, essentially your shares, to buy and make acquisitions. You can also reward your staff. And I think staff retention— I know you spoke about that, Jason, Nick— is really important these days. So like you&#x27;re seeing a lot of these listed companies apply what&#x27;s known as an ESOP, which is an employee share scheme, to reward their employees, which I think is important.</p>
+          <p><span class="spk">Niv · 20:08</span>The negative side though of listing is you&#x27;ve got a lot of eyeballs on you. There&#x27;s guys like me that speak to the management teams, that ask the hard questions. Every quarter you have to report your quarterly reports. Your competitors can have a look at exactly what you&#x27;re doing. So I think there&#x27;s pros and cons for both sides, whether you are staying private but also the listed side as well.</p>
+          <p><span class="spk">Nick · 20:29</span>So based on that, if a business was to go public, what does that cost from a, you know, obviously there&#x27;s a lot of consultants, people like yourself involved, so legal, I guess. So what&#x27;s a business looking at?</p>
+          <p><span class="spk">Niv · 20:42</span>Yeah, it&#x27;s a good question, Nick. I mean, first things first, the ASX or any exchange will want audited accounts, and those audited accounts, probably you&#x27;d have to engage an auditor, cost anywhere between $50,000 or $100,000 to get your accounts audited depending on the complexity of it. The second thing a company needs to do is appoint some directors.</p>
+          <p><span class="spk">Niv · 20:58</span>So in order to list on the ASX, you need to have 2 Australian non-exec directors, essentially as a minimum requirement. Normally non-exec directors get paid probably $3,000 or $4,000 a month, and your chairman normally $5,000 or $6,000 a month. That&#x27;s standard depending on the size.</p>
+          <p><span class="spk">Niv · 21:14</span>Obviously, bigger companies like the BHPs and the REOs will demand or command significantly higher than that. So that&#x27;s something to consider. You need to engage a lead manager like Peak Asset Management. Essentially, that is a requirement. So a group like us that are under an Australian Financial Services License, and normally on success we might charge the company a percentage to raise capital, but also we might charge an ongoing retainer to help with ongoing corporate advisory or help throughout the process.</p>
+          <p><span class="spk">Niv · 21:41</span>A company on the— to list, you need to engage a lawyer, and for that you need to do what&#x27;s known as a prospectus, which is essentially an offer document. And what a prospectus does has a bit about the company, has a bit about, um, what they&#x27;re doing, a little bit about their structure, a little bit about the market, a little bit about the capital, um, and what it&#x27;s used for, the use of funds, etc.</p>
+          <p><span class="spk">Niv · 22:03</span>So that normally costs, um, anywhere between $80,000 to $150,000 to put the prospectus together. And then, um, a company also needs to engage a company secretary. And what a company secretary is is really the liaison between the ASX, which is the exchange, and the company.</p>
+          <p><span class="spk">Niv · 22:19</span>So they help with anything to do with the documentation and anything, you know, ongoing. So it&#x27;s a whole project involved. So normally the average cost to list the company is anywhere in $300,000 to $500,000. That, that&#x27;s sort of a norm.</p>
+          <p><span class="spk">Jason · 22:35</span>So you&#x27;ve got to be pretty, pretty bloody big company to be starting to think about that then.</p>
+          <p><span class="spk">Niv · 22:39</span>So what&#x27;s your future at Innov8?</p>
+          <p><span class="spk">Jason · 22:41</span>It&#x27;ll keep growing for a little, a little bit longer?</p>
+          <p><span class="spk">Niv · 22:43</span>You can actually, um, what we normally see, um, Jase, is we normally see companies engage guys like us to do what&#x27;s known as a pre-IPO round. And that&#x27;s called a round to help basically cover the cost of the IPO. So companies may raise $300, $500 million, um, so depending on the size of the, of the business, obviously the larger business they&#x27;ll raise more.</p>
+          <p><span class="spk">Niv · 23:03</span>But, um, that they&#x27;ll do it, undertake it normally a pre-IPO round, and that capital or part of that use of funds is used obviously for working capital, and, and the other side could be actually for for paying the, you know, all the project side. So just, yeah.</p>
+          <p><span class="spk">Nick · 23:19</span>So I was just going to say, just on that, Nick, for our listeners, so that&#x27;s known as seed capital, and that would generally, I guess, hold a higher risk than IPO because there&#x27;s no guarantee that the company will list. And for that, you generally get in at a lower price to what the IPO price would be.</p>
+          <p><span class="spk">Niv · 23:36</span>Yeah, it&#x27;s a good point, Nick. That&#x27;s known as a pre-IPO round or a seed capital round. Now remember, there are a lot of risks in coming in that round because if, if the company doesn&#x27;t list, it&#x27;s not necessarily for, you know, you&#x27;ve lost your money. Um, you, you essentially are a shareholder of an unlisted, um, company, right?</p>
+          <p><span class="spk">Niv · 23:53</span>So, uh, which is fine. I mean, you know, a lot of these companies don&#x27;t list and might one day be, you know, bought out or go through the US or a SPAC, etc. But yeah, look, I mean, a pre-IPO round, that&#x27;s, um, offered normally to sophisticated investors or accredited investors relative to a retail investor.</p>
+          <p><span class="spk">Niv · 24:09</span>And for those listening, an accredited investor is someone that normally has net assets of $2.5 million, earns $250,000 in the last 2 years, and/or invests $500,000 in that one opportunity. So I think absolutely there are risks to invest in the pre-IPO round or a seed round, but that&#x27;s something that as an investor needs to take into consideration.</p>
+          <p><span class="spk">Nick · 24:31</span>Absolutely. Again, we probably understand how to get access to those investments, but if people wanted to get involved in that type of investing, obviously they have to be a sophisticated investor and there&#x27;s some there&#x27;s a few boxes you need to tick to be classed as that, but would they, you know, Google seed investing?</p>
+          <p><span class="spk">Nick · 24:47</span>Would they be Googling corporate advisory? Obviously you can assist, but yeah, just in general.</p>
+          <p><span class="spk">Niv · 24:53</span>It&#x27;s a really good question. Look, we see a lot of businesses across our desk, so normally an average between 10 to 20 a week, right? Our job is really to critique those investment opportunities and to only put opportunities in front of our clients that will co-invest alongside them, right?</p>
+          <p><span class="spk">Niv · 25:13</span>You know, there&#x27;s a lot of investments out there. There&#x27;s a lot of money also on the sidelines with interest rates being low and investors are looking for returns. But yeah, look, I mean, my advice, and general advice only, is to align yourself with the likes of a Peak Asset Management or groups that have a good track record of taking companies to public.</p>
+          <p><span class="spk">Niv · 25:31</span>Because just investing in a crowdfunding platform, essentially, the issue is you might be stuck there forever and they might not have a liquidity event or an exit strategy. So It&#x27;s important for us, and this is one of the things when we do sign these companies up, that we know exactly where the exit strategy is before we enter that position.</p>
+          <p><span class="spk">Niv · 25:48</span>Because the last thing we want is we want to have $2, $3, $4, $5 million of capital essentially tied for a considerable amount of time. So it is, it is important to work with the companies and, and essentially work with the guys like the Peeks of the world who do see a lot of companies, but remember they can actually vet if they are a good opportunity or not.</p>
+          <p><span class="spk">Jason · 26:07</span>To give a real-life scenario, if you can, what&#x27;s been a past investment success story, and in hindsight, what made it successful? What were the attributes that this company showed before listing or going through the raise that made it successful?</p>
+          <p><span class="spk">Niv · 26:20</span>Yeah, look, I&#x27;ll go through two examples, and I&#x27;ll give one private and one public. I think that&#x27;s important. A private company that&#x27;s still private is a company called Buildxact. We first met— oh, sorry, Buildxact, what it is for those listening, essentially is an enterprise solution software for the building industry.</p>
+          <p><span class="spk">Niv · 26:36</span>So it provides end-to-end solutions. So if you&#x27;re a builder, helps with the estimation, helps with the procurement, helps essentially with the invoicing, helps with the whole supply chain integration, buying the materials, etc. So if you&#x27;re a small builder, rather than traditionally putting everything on hand and writing it down, everything&#x27;s through the software.</p>
+          <p><span class="spk">Niv · 26:54</span>So it makes it nice and easy and streamlined. We looked at the business when it was doing about $500,000 annual recurring revenue. We decided it was a little bit too small, and 6 months later they hit $2 million ARR, which is a huge growth. At that level, we jumped on a call with David Murray, We met— luckily he was in Melbourne.</p>
+          <p><span class="spk">Niv · 27:14</span>We met David, we introduced about 10 or 15 investors, um, for lunch, and we invested about $1.5 million in that business at that $16 million pre-money valuation, which is about 8 times their ARR. And traditionally speaking, normally SaaS businesses are trading over in 8 times ARR all the way to 15 times depending on their growth.</p>
+          <p><span class="spk">Niv · 27:34</span>Right now, um, or they finished last financial year with an ARR of over $9 million, so Within 2 years, have gone from around $2 million ARR to over $9 million ARR. They received funding from a guy by the name of Lee Jasper. Lee Jasper used to be the CEO of a company called Aconex.</p>
+          <p><span class="spk">Niv · 27:51</span>Aconex, if you Google it at home, got sold to— bought by Oracle for $1.6 billion. So they&#x27;ve done an exceptional job to grow not only in Australia and be probably the number one in Australia, New Zealand, but also opening up doors in the US and European markets.</p>
+          <p><span class="spk">Niv · 28:08</span>They are still private, but they&#x27;re on track for, you know, hopefully significant growth. And at that multiple, we&#x27;re coming in at $16 million. Hopefully one day we&#x27;ll, you know, exit at $150 to $200 million. So that&#x27;ll be a nice return for investors. In terms of a public company, and I think Nick, you were involved in a company called iCandy Interactive, ICI.</p>
+          <p><span class="spk">Niv · 28:27</span>So one thing in terms of when COVID hit, you&#x27;d expected a lot of people at home, spare time, playing video games, esports. So that was a big— so, so iCAN Interactive is a mobile game developer. They had a game company, a game that was called Musketeers launching.</p>
+          <p><span class="spk">Niv · 28:45</span>We knew that, it was all public. But what we did is we came out to, to the CEO, we came out and, and basically said to, to Kin Wah, the CEO, said, look, we like the business, can we invest in the business? And normally when we do an— undertake a placement, for those at home, it&#x27;s, it&#x27;s a company that essentially is already listed on the Australian Stock Exchange or Canadian exchange, let&#x27;s say, or the US.</p>
+          <p><span class="spk">Niv · 29:04</span>But we come in at a discount to the last price. So the stock was trading around $2.4, $2.5. We came in at 2 cents, so around that 20-30% discount to the last price. And we also included a 1-for-1 listed option. Um, for those that don&#x27;t know what an option is, an option gives you the, the right but not the obligation to actually buy the— buy or sell the stock.</p>
+          <p><span class="spk">Niv · 29:23</span>Um, after Musketeers launch had a huge run, lots of success. I think within the first month generated over $1 million of revenues for the company, which is absolutely enormous for a small cap. Stock went from 2 cents, hit a high of 24 cents 3 months later.</p>
+          <p><span class="spk">Niv · 29:38</span>So investors made some really nice money. The options were listed, so that also provided an extra bonus for investors. And a lot of our clients were very, very happy. So they&#x27;re sort of two, I&#x27;d say, success stories, one in the private and one in the public side.</p>
+          <p><span class="spk">Marty · 29:54</span>That&#x27;s brilliant, Niv. And I&#x27;ve been doing a little bit of research myself over the last 10 years and I saw, uh, 52 companies founded by Australians in the last 10 years are valued at over $100 mil, and 14 are valued over $500 mil on a market cap.</p>
+          <p><span class="spk">Marty · 30:09</span>But based on those good news stories, and I&#x27;ve presented one today earlier, you must see stories that aren&#x27;t so good. And I&#x27;m wondering what the attrition rate is, and maybe if you could give me an example and sort of talk about maybe the fundamentals of why it didn&#x27;t work?</p>
+          <p><span class="spk">Marty · 30:27</span>Because it&#x27;s always good to know two sides of the story as well.</p>
+          <p><span class="spk">Niv · 30:31</span>Look, it comes down to management, Marty. I&#x27;ll be honest with you, and skin in the game. I mean, we see a lot of companies out there, and probably, um, maybe not necessarily mention names as such, but a lot of companies that really fail are the companies that, A, don&#x27;t have skin in the game, and essentially their operating costs are very, very high, and they have to continuously come to guys like Apeka Asset Management to raise capital.</p>
+          <p><span class="spk">Niv · 30:53</span>So we&#x27;re very, very nervous of those type of companies, that companies that maybe have listed, have promised shareholders of the world, very, very high operating costs, high administration costs, and essentially they&#x27;re out there to just continue dilute. The issue is with raising capital, every time you&#x27;re raising capital, you&#x27;re essentially diluting your shareholder base.</p>
+          <p><span class="spk">Niv · 31:10</span>You&#x27;re issuing more shares, and issuing more shares makes it a lot more dilutionary for investors. So look, we&#x27;re always nervous about those type of management teams, and it&#x27;s really important— two things. One is how much skin in the game do they have? Have they paid for their shares? How much money do they pay themselves?</p>
+          <p><span class="spk">Niv · 31:26</span>And what&#x27;s their track record of delivering what they say they&#x27;re going to do, right? I think that&#x27;s really, really important.</p>
+          <p><span class="spk">Nick · 31:34</span>I think the thing that you always harp on when we talk is the management team, the management team. It&#x27;s not all about the numbers. Who&#x27;s behind it? What have they done before? You know, because obviously good people drive good outcomes, right? So that totally makes sense. Okay, so I think you said 10 to 20 deals a week?</p>
+          <p><span class="spk">Nick · 31:51</span>On average. Is that what you said that you&#x27;d come across? So you must have a few in the pipeline. Um, what&#x27;s up and coming IPO-wise? Anything we should be looking out for?</p>
+          <p><span class="spk">Niv · 32:03</span>Look, there&#x27;s a company, um, Nick, called Countrywire Renewable Hydrogen. I mean, green hydrogen is a really topical, um, space right now. Um, obviously central banks around the world, municipalities, councils are trying to push for zero carbon emissions, and we&#x27;re seeing a really strong theme right now with the ethical side, and we&#x27;ll probably cover that a bit later on.</p>
+          <p><span class="spk">Niv · 32:23</span>Um, this company, Countrywide Renewables, uh, Jeff Drucker and, um, and Stephen Nossel, 25 to 30 years in project management and renewable energy. So once again, a really good team with a track record of delivering value. They&#x27;ve got a partnership with a company called Woodside Energy to develop the H2 Tass project in Bell Bay.</p>
+          <p><span class="spk">Niv · 32:42</span>For those at home, not sure if you&#x27;ve been following the green hydrogen space, but Fortescue Metals just picked up a tenement right next door to, um, to, to, um, uh, Countrywire Renewable with Woodside Energy. So very, very interested. There&#x27;s obviously a lot of money coming into that space. They&#x27;ve also got a partnership with Ampol, and Ampol have got a, obviously, a $6.7 billion listed company here in Australia, all the refueling side.</p>
+          <p><span class="spk">Niv · 33:05</span>So that&#x27;s really, really interesting. And they&#x27;ve also got 3 projects overseas. So that&#x27;s a company that we&#x27;re currently assessing whether we&#x27;re going to take it to the ASX or the Canadian exchange, but there&#x27;s a lot of money coming in in terms of green hydrogen. Um, another company is, uh, we&#x27;re actually looking in the uranium space very, very carefully.</p>
+          <p><span class="spk">Niv · 33:22</span>Um, Nick, uh, once again, uranium, based on what happened with Fukushima and Japan, was, was sort of, uh, it had a negative connotation. Having said that, since probably 2018, 2019, the price of uranium on a spot price has really picked up. There&#x27;s a lot of, um, opportunity.</p>
+          <p><span class="spk">Niv · 33:38</span>There&#x27;s big, big supply disruptions globally, and it&#x27;s actually touted as a green energy essentially angle for instead of fossil fuels. So look, Terra Uranium is a company and we&#x27;ll probably go out, take that to the listing later in the year. And we&#x27;re currently in discussions actually with a number of private and public companies to undertake a number of placements.</p>
+          <p><span class="spk">Niv · 33:58</span>One of them is actually taking plastics, essentially dirty plastics. They clean the plastic up and they&#x27;re making different reusable, um, essentially different applications for, for, I mean, fencing all the way to containers, leveraging off the clean, clean side of, of their IP.</p>
+          <p><span class="spk">Niv · 34:15</span>So look, there&#x27;s a number that we&#x27;re keeping an eye on, but like all of them, the due diligence is quite rigorous, and we only do— we only go live with a deal unless, as I mentioned, ticks our boxes, we&#x27;re willing to back it with our own capital.</p>
+          <p><span class="spk">Jason · 34:29</span>So the decision to list ASX, Canadian, US— what changes where you list?</p>
+          <p><span class="spk">Niv · 34:35</span>Yeah, good question, Jaz. Um, comes down to your network, I think, and it also comes down to where the investors are. And it also depends on what the company&#x27;s trying to do and their addressable market. So I&#x27;ll give you an example. We took a business called, um, Lobe.</p>
+          <p><span class="spk">Niv · 34:51</span>And, and Lobe, um, uh, for those at home and, and follow the whole psilocybin and the extract of magic mushrooms, a really, really interesting theme with psychedelics. Now you&#x27;ve got psychedelics, even though, even though they&#x27;re not legal here um, based here on the TGA side, they are getting a lot of recognition, or they were getting a lot of significant recognition overseas in the US and the Canadian markets.</p>
+          <p><span class="spk">Niv · 35:13</span>So we knew for a fact that if we took low public— and they&#x27;re essentially taking the extract of magic mushroom to treat depression, concussion, PTSD, mental health— as a lot of us at home, um, is impacting a lot, especially with young, young teenagers coming through the ranks.</p>
+          <p><span class="spk">Niv · 35:28</span>So look, psilocybin&#x27;s got huge, um, empirical evidence, and also a number of journals of medicines that he&#x27;s actually got some, some significant benefits. So what they&#x27;re doing, they&#x27;re actually undertaking the clinical trials in the US to take it to Australia. We knew for a fact that the ASX probably wouldn&#x27;t have pushed forward with it.</p>
+          <p><span class="spk">Niv · 35:46</span>And, um, on the other side, the Canadian market was very, very pro, uh, just like they were pro-cannabis, pro-psilocybin. So we made the decision to take that public in Canada. We listed it at 8 cents with a 1-for-2 option. I think it hit a high of around 27, 28 cents, um, a few months later.</p>
+          <p><span class="spk">Niv · 36:03</span>Now that&#x27;s sort of stable around that 10-12 cent level. So look, investors are still making 50%+ returns on their money, but at one stage they were making 300-400%. But that&#x27;s an example of a company that, you know, we really felt that taking it to Canada, which is a very similar market to Australia in terms of the rules that I mentioned, the cost, etc., was probably more suitable.</p>
+          <p><span class="spk">Jason · 36:27</span>That&#x27;s interesting. Makes a lot of sense.</p>
+          <p><span class="spk">Marty · 36:28</span>We talked about the management team. Are there any other ratios that you&#x27;re specifically looking for when a business comes on board? Like, let&#x27;s say for instance, debt levels, uh, might be income levels, just, just to give some parameters.</p>
+          <p><span class="spk">Jason · 36:42</span>Being called the numbers game, we do like to throw some numbers in there.</p>
+          <p><span class="spk">Marty · 36:45</span>Yes, sir. Yeah, and I&#x27;m all over the magic mushrooms too, mate. Don&#x27;t get me out of this house soon.</p>
+          <p><span class="spk">Niv · 36:51</span>It really depends, Marty. It depends where the business is at. So we, we don&#x27;t back really early stage businesses, and what I mean by that, they have to have a concept, a proof of concept validation, and, and maybe growth. Um, so look, as I mentioned to you, like, for examples, like a Build Exact, where that&#x27;s growing exponentially and it&#x27;s still private.</p>
+          <p><span class="spk">Niv · 37:10</span>But there are companies like some of the cannabis companies that are doing clinical trials, or, or the, the medicinal cannabis, magic mushroom, psilocybin, that may never actually generate revenues, right? Um, absolutely. In terms of, in terms of numbers, um, you want to, you want to ensure that the company, that the debt-to-equity ratio is not too high, right?</p>
+          <p><span class="spk">Niv · 37:29</span>Because that&#x27;s a problem. You want to make sure that the money that is going into the company is actually going out to working capital. So relative to, to the debt levels and, and paying interest, right? So I think that&#x27;s important. I think it&#x27;s important, um, we look at the management, um, in terms of the cost structure, in terms of the cost structure of the corporate overhead.</p>
+          <p><span class="spk">Niv · 37:47</span>So the corporate overheads and, and how much they pay for staff, how much they pay for rent as a percentage of your market cap, and, um, and really where their operations are. We like— actually, I&#x27;ll tell you a funny story. This is going back 5 years ago. I met with a with a company in our office on Collins Street that, um, the CEO, uh, was— ran a $3 million market cap company, mining company, uh, in Africa.</p>
+          <p><span class="spk">Niv · 38:11</span>And he, he was basically trying to, to, to gloat in a way how many times he flew to Mozambique and back during the year, right? And, and guys like me, there&#x27;s, there&#x27;s, there&#x27;s warning signals through because you know that every, every dollar that, that you invest in that company is going to travel, going to accommodation, going to their lifestyle.</p>
+          <p><span class="spk">Niv · 38:29</span>So look, we&#x27;re always conscious of the, of the cost base of the company as a percentage of the market cap, and I think that&#x27;s, that&#x27;s an important ratio to look at.</p>
+          <p><span class="spk">Nick · 38:38</span>Is there a ratio you should be looking at? You mentioned the debt-to-equity ratio.</p>
+          <p><span class="spk">Niv · 38:45</span>It all depends on the balance sheet, Nick. So, so if the balance sheet is obviously strong and the net tangible assets is high you know, you probably don&#x27;t want to have a debt-to-equity ratio of probably more than 30-40%, I suspect. But, um, we, we, we prefer companies that have a lower debt.</p>
+          <p><span class="spk">Niv · 39:01</span>Having said that, debt is not too bad if you can get it at like a CBA rate or, you know, facility at 3-4-5%, right? We always get nervous when we see companies, and, and we&#x27;ve got a few, um, that we&#x27;re looking at right now, but the debt, the debt-to-equity ratio is also high, but also the interest that they&#x27;re paying on that debt with fixed and floating charges of their businesses is over 10%, 12%, 15%, then we have a bit of warning signals across the board.</p>
+          <p><span class="spk">Niv · 39:27</span>So that&#x27;s something that we do keep an eye on.</p>
+          <p><span class="spk">Marty · 39:29</span>So do you have a minimum revenue that you&#x27;re looking for? Like, would you look at a startup and it has to hit a certain point before you get interested, just out of interest?</p>
+          <p><span class="spk">Niv · 39:40</span>I think anything below $2 million, Marty, is probably too early, but it does depend on the business. I mean, are they selling essentially seaweed products, you know, through, through, through chains, or are they providing research? Are they medical device that might have patents and IP and trademarks and TGA and CE approval and FDA approval?</p>
+          <p><span class="spk">Niv · 39:58</span>It really depends on the line, you know, the nature of the business, right, and where they&#x27;re at. But, um, you know, for a business that&#x27;s growing, we look at the growth, we look at the inside ownership, when, um, we look at obviously that, that revenue mix of, you know, well over $2-3 million, I think Anything below that is, is a bit too, too startup.</p>
+          <p><span class="spk">Nick · 40:18</span>I&#x27;m going to link a couple of questions in here that we obviously had a dozen questions written down for you, but I think these two will go well together. So, um, what are some of the new sectors that excite you? You know, we&#x27;ve sort of touched on green hydro, cannabis. I know you&#x27;re big in the plant, plant-based food space.</p>
+          <p><span class="spk">Nick · 40:33</span>So, and then second to that, uh, you&#x27;ve, as in Peak, have recently launched, um, an ethical division looking at ethical investments, uh, and why do you think that&#x27;s important for millennials in this day and age?</p>
+          <p><span class="spk">Niv · 40:47</span>Yeah, so I might tie in the first— sorry, the second question and then go into some of the deals. Um, but, but look, the ethical side is, is really interesting. I mean, the conversations we&#x27;re having with millennials and, uh, probably that, that 25-year-old to the 45-year-old, um, is, is they&#x27;re more conscious than ever about the environment, and we&#x27;re seeing a lot of money being thrown into zero carbon emissions, essentially biodegradable food, plant-based, you know.</p>
+          <p><span class="spk">Niv · 41:13</span>So, so those themes, I think— renewable energy, electrical cars, etc., medical devices— are here to stay. So I think in terms of going to the themes, we came across a really, really interesting company called Huross. And what Huross has is essentially a technology for— I don&#x27;t know if people are watching at home, and I know we&#x27;ve had this debate, Nick, um, over dinner, is whether you should be eating plant-based versus meat.</p>
+          <p><span class="spk">Niv · 41:36</span>But what they&#x27;ve got as well is, um, essentially a technology with— for curated meat. So, so cell-based. So they&#x27;re actually creating, um, meat out of the cells at, at, um, and they&#x27;ve got a technology essentially to fast-track the growth of those cells. So look, we&#x27;re looking at that business very interestingly.</p>
+          <p><span class="spk">Niv · 41:53</span>I think cell-based meat and, um, moving to plant-based is a topic that is, is, um, here at front of mind. Um, medical devices. I think the whole artificial intelligence, machine learning, um, medical device space is heating up.</p>
+          <p><span class="spk">Niv · 42:10</span>So I think that&#x27;s here to stay. And I&#x27;ll give you an example. I know we&#x27;re investing in a company called NicoLab, and I think I mentioned to you before that they take, um, the biggest problem when you&#x27;ve got a stroke is by the time you have a stroke and you go to hospital and have a CT scan and the radiologist looks at it, neurologist, it might be 3 or 4 hours.</p>
+          <p><span class="spk">Niv · 42:27</span>And by the time you&#x27;ve you&#x27;ve, you&#x27;ve worked that out, that equates to for every minute that you&#x27;ve had a stroke, that equates to 20 healthy living days. So what this company does, it takes the CT scan and uploads it on the cloud, and with a matter of seconds, within 99.99% accuracy, can tell you the stroke, the location of the stroke, and, and whether to operate or not.</p>
+          <p><span class="spk">Niv · 42:48</span>I think that&#x27;s mind-blowing. And they&#x27;ve recently received FDA approval. Philips on board and rolling that technology and software across hospitals, not only in Amsterdam and Europe but also now in the US. So I think going back to your question, um, I think it&#x27;s ethical investing and sustainability is front of mind for when it comes to investments.</p>
+          <p><span class="spk">Niv · 43:07</span>But there&#x27;s some revolutionary things happening around the world, and we like to back great companies with great IP, with great trademarks, with great protection, with great management team. Um, that, that&#x27;s really front of mind, that, that&#x27;s, you know, that, that can actually go out and create a really big you know, big, big difference in the world.</p>
+          <p><span class="spk">Jason · 43:28</span>That&#x27;s awesome, Niv. Look, I&#x27;ve got a business called Future Advisory. I don&#x27;t have a crystal ball. I&#x27;m hoping you might be able to help me out so I can have some things to talk about. We get asked a lot, you know, what&#x27;s, what&#x27;s happening in the next 12 months? What&#x27;s happening in the future? Where should I be investing? What should I be doing? I guess, in, you know, tying it back into the stock market as it is today, what— we&#x27;re priced at an all-time high.</p>
+          <p><span class="spk">Jason · 43:49</span>What do you see in the next 12 months? What&#x27;s your feel?</p>
+          <p><span class="spk">Niv · 43:52</span>Yeah, look, it&#x27;s a, it&#x27;s, it&#x27;s a lot. We could be here probably for hours. Jay&#x27;s probably having a beer in person next. But look, the, the thing is, I think, I think, look, global markets are at all-time highs. You&#x27;ve got the Dow Jones at 35,000. I think the All Ordinaries are, you know, multi-year highs, right? Um, it comes down to the, to the outlook statements.</p>
+          <p><span class="spk">Niv · 44:09</span>We&#x27;ve got the US reporting currently at the moment, and what we are seeing across the US reporting is, I think, over 70%, 75% of those companies actually reporting better than expected earnings. And that&#x27;s because things are really opening up in America. You&#x27;ve got low interest rates, the lowest they&#x27;ve ever been, essentially potentially moving to negative interest rates.</p>
+          <p><span class="spk">Niv · 44:27</span>The biggest concern, uh, that&#x27;s happening globally is inflation. So, um, and then that&#x27;s the price, not only from, from supply disruptions, but also from demand and pool pools. So we&#x27;re seeing inflation increase the highest on a monthly, um, level in over 13 years in the US.</p>
+          <p><span class="spk">Niv · 44:45</span>And that is a concern because if prices do increase, then interest rates will have to rise. And, and then you have to ask yourself, well, if interest rates do rise, what impacts does that have on consumer confidence, on business confidence, on retail sales, etc.? So we&#x27;re watching inflation very, very carefully in America.</p>
+          <p><span class="spk">Niv · 45:01</span>We&#x27;re also looking here in Australia. We&#x27;ve got the reporting season kicking off, I think, next week, at the end of next week, about a week or so from here. And we&#x27;ll be looking at not only, I mean, how corporate Australia is impacting with the whole COVID situation but what the outlook statements are looking like. So I think, look, the market is vulnerable at the moment.</p>
+          <p><span class="spk">Niv · 45:19</span>I mean, we&#x27;re obviously, as you mentioned, priced at all-time highs. I think you have to be, as an investor, very stock-specific, sector-specific. I think there&#x27;s going to be a lot of green sprouts and green shoots across any industry. But once again, it comes down to backing the right horse and backing the right team.</p>
+          <p><span class="spk">Marty · 45:36</span>Well, Nev, I&#x27;m about to invest in magic mushrooms here. You&#x27;ve got me excited. How do I work with you, mate? Do I need to have like $100,000? Do I need to have $5,000? How do I get involved if I want that type of advice and strategy piece?</p>
+          <p><span class="spk">Niv · 45:52</span>Yeah, look, when I set up Peak, we were doing everything, Marty. So what I mean by that, we&#x27;re doing portfolio management and reviews and asset allocation. We had a software portal and looking at cash and structured products. And one of the guys that used to work for me said, look, Nev, why don&#x27;t we do one thing and one thing only? And that&#x27;s to bring the best deals to investors that we back with our own capital.</p>
+          <p><span class="spk">Niv · 46:10</span>And that&#x27;s all we do right now. So, so look, we don&#x27;t charge anything to onboard anyone. It&#x27;s all free to get a morning wrap or afternoon wrap. So if anyone&#x27;s listening, more than happy to go to the Peak Asset Management website and log in your details. But essentially, we open an account. Everyone&#x27;s got an app.</p>
+          <p><span class="spk">Niv · 46:26</span>It&#x27;s with our partner SelfWealth that we work with as well. And really, it&#x27;s deal-by-deal specific. So what I mean by that, Marty, is that when we&#x27;ve got a deal that we think is, is interesting, it ticks absolutely each one of our boxes, and we&#x27;re 99.99% sure it&#x27;s going to make Nick and Marty and Jase money. Um, remember, we&#x27;re co-investing exactly the same price, same terms as you.</p>
+          <p><span class="spk">Niv · 46:45</span>We send it out, we&#x27;ll SMS it, and we&#x27;ll send it an email, and it will be personalized. We&#x27;ll say, hi Marty, trust all is well, we&#x27;ve got a new pick opportunity, iCandy Interactive with One for One Options. There&#x27;s normally about 8 reasons why we&#x27;re co-investing, why we like it. You can have— get access to the presentation, get access to the website, read a bit about the company and the term sheet and go, right, this looks really interesting.</p>
+          <p><span class="spk">Niv · 47:05</span>You then put a bid in for— could be as low as $2,000 all the way up to— we&#x27;ve got some investors investing $100,000, $200,000, $500,000 in the deal. So to answer your question, it&#x27;s deal-by-deal specific, maybe as little as $2,000 per deal. And remember, we&#x27;re co-investing with you along the way.</p>
+          <p><span class="spk">Niv · 47:25</span>And I&#x27;d say 90% of our investments are in that listed space. So companies already listed on the ASX or Canadian exchanges, and we come in and through an IPO or in a placement. But about, you know, 1 out of 10 or 2 out of 10 are in that private space. If you are in the private space, remember you have to be accredited professional investor.</p>
+          <p><span class="spk">Niv · 47:43</span>But yeah, look, everything that we do, we&#x27;re co-investing, and it&#x27;s very deal-by-deal specific.</p>
+          <p><span class="spk">Marty · 47:49</span>I, I just think that co-investing holds so much weight, that you&#x27;re in it together. I, I really love that that context. I think as an investor, you want someone to be there with you, not only from a strategy piece, but they&#x27;ve got skin in the game as well. Rather than probably some of the older models, if you&#x27;ve got a stockbroker, they make the commission off, you know, just buying and selling the stock and that&#x27;s where it ends.</p>
+          <p><span class="spk">Marty · 48:12</span>So I think this is a really good alternative investment, but I think it&#x27;s certainly one worth exploring. It&#x27;s brilliant, mate. Love the idea.</p>
+          <p><span class="spk">Jason · 48:20</span>Yeah, Niv, fantastic, mate. Thanks for coming on the show. Guys, this has been episode 17 of The Numbers Game. Nev, big thank you. For me, my biggest takeaway, aside from magic mushrooms that we&#x27;ve mentioned too many times— so Marty and I probably need to get some help ourselves— um, it&#x27;s actually how accessible this is for the general public.</p>
+          <p><span class="spk">Jason · 48:38</span>I actually thought we&#x27;re going to get through this whole episode and have people potentially sitting at home going, well, this is out of my reach, I can&#x27;t do it. But I mean, just the basics of getting some education, signing up to an email so they can hear about things that are out there, and actually just being involved in that education I think that&#x27;s awesome that this is actually accessible for many people.</p>
+          <p><span class="spk">Niv · 48:57</span>So thanks, Nev. Yeah, thanks for having us, Nick and Marty and Jay. It&#x27;s been a pleasure and look forward to hopefully coming back again in future.</p>
+          <p><span class="spk">Nick · 49:03</span>Thanks guys, see you next week.</p>
+          <p><span class="spk">Marty · 49:04</span>Game over.</p>
+        </div>
+      </details>
+
+    </div>
+
+    <!-- audio-only: the Spotify player is the hero above; duplicate embed removed -->
+
+    <div class="listen">
+      <a href="https://open.spotify.com/episode/78k4JeUZ96kec4QH6qLsMA" target="_blank" rel="noopener" aria-label="Listen to this episode on Spotify">
+        <svg viewBox="0 0 24 24"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.52 17.34c-.24.36-.66.48-1.02.24-2.82-1.74-6.36-2.1-10.56-1.14-.42.12-.78-.18-.9-.54-.12-.42.18-.78.54-.9 4.56-1.02 8.52-.6 11.64 1.32.42.18.48.66.3 1.02zm1.44-3.3c-.3.42-.84.6-1.26.3-3.24-1.98-8.16-2.58-11.94-1.38-.48.12-1.02-.12-1.14-.6-.12-.48.12-1.02.6-1.14 4.32-1.32 9.72-.66 13.44 1.62.36.18.54.78.3 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.3c-.6.18-1.2-.18-1.38-.72-.18-.6.18-1.2.72-1.38 4.26-1.26 11.28-1.02 15.72 1.62.54.3.72 1.02.42 1.56-.3.42-1.02.6-1.56.3z"/></svg>
+        Spotify
+      </a>
+      <a href="https://podcasts.apple.com/au/podcast/id1555566088?i=1000776470464" target="_blank" rel="noopener" aria-label="Listen to this episode on Apple Podcasts">
+        <svg viewBox="0 0 24 24"><path d="M5.34 0A5.328 5.328 0 000 5.34v13.32A5.328 5.328 0 005.34 24h13.32A5.328 5.328 0 0024 18.66V5.34A5.328 5.328 0 0018.66 0H5.34zm6.525 2.568c2.336 0 4.448.902 6.056 2.587 1.224 1.272 1.912 2.619 2.264 4.392l.04.23c.04.272-.16.527-.432.567a.505.505 0 01-.567-.431l-.04-.213c-.312-1.57-.92-2.747-2.004-3.867-1.428-1.496-3.293-2.294-5.393-2.294-2.1 0-3.966.798-5.394 2.294-1.084 1.12-1.692 2.298-2.004 3.867l-.04.213a.507.507 0 01-.567.431.504.504 0 01-.432-.567l.04-.23c.352-1.773 1.04-3.12 2.264-4.392 1.608-1.685 3.72-2.587 6.056-2.587h.153zm.136 3.033c1.74 0 3.312.67 4.527 1.934.883.916 1.394 1.93 1.663 3.253l.04.23a.505.505 0 01-.431.567.503.503 0 01-.567-.432l-.04-.212c-.23-1.112-.659-1.97-1.396-2.732-1.052-1.1-2.404-1.672-3.9-1.672s-2.849.572-3.901 1.672c-.737.762-1.167 1.62-1.396 2.732l-.04.212a.503.503 0 01-.567.432.505.505 0 01-.432-.567l.04-.23c.27-1.323.78-2.337 1.664-3.253 1.215-1.264 2.787-1.934 4.527-1.934h.21zm-.078 3.05c1.092 0 2.091.424 2.89 1.22.582.58.924 1.245 1.107 2.15l.04.218a.501.501 0 01-.424.568.499.499 0 01-.568-.424l-.04-.198c-.146-.724-.413-1.253-.871-1.716-.63-.63-1.398-.957-2.226-.957s-1.595.328-2.225.957c-.459.463-.726.992-.871 1.716l-.04.198a.499.499 0 01-.568.424.501.501 0 01-.424-.568l.04-.219c.183-.904.525-1.569 1.106-2.149.8-.796 1.799-1.22 2.89-1.22h.184zM12 14.07a2.477 2.477 0 012.48 2.478A2.477 2.477 0 0112 19.024a2.477 2.477 0 01-2.48-2.477A2.477 2.477 0 0112 14.07z"/></svg>
+        Apple
+      </a>
+      <a class="yt-pill" href="https://www.youtube.com/@thenumbersgamepodcast?sub_confirmation=1" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.12-2.14C19.5 3.55 12 3.55 12 3.55s-7.5 0-9.38.51A3 3 0 0 0 .5 6.2 31.4 31.4 0 0 0 0 12a31.4 31.4 0 0 0 .5 5.8 3 3 0 0 0 2.12 2.14c1.88.51 9.38.51 9.38.51s7.5 0 9.38-.51a3 3 0 0 0 2.12-2.14A31.4 31.4 0 0 0 24 12a31.4 31.4 0 0 0-.5-5.8zM9.55 15.57V8.43L15.82 12z"/></svg>
+        Subscribe
+      </a>
+    </div>
+    <!-- LISTEN:END -->
+
+    <div class="relsec">
+      <span class="rtitle">Discover more</span>
+      <div class="relgrid">
+        <a class="relcard" href="/melbourne-property-boom-why-2025-could-spark-a-gold-rush">
+          <img src="https://i.ytimg.com/vi/rT4U4nQ1H08/hqdefault.jpg" alt="EP 247 thumbnail">
+          <span class="rt">Melbourne Property Boom? Why 2025 Could Spark a Gold Rush</span>
+          <span class="rfoot"><span class="rwhy">1 September 2025</span><span class="rtag">EP 247</span></span>
+        </a>
+        <a class="relcard" href="/ryan-richardson-data-driven-decision-making-with-dashboard-insights">
+          <img src="https://i.ytimg.com/vi/1N9PhqFTWBc/hqdefault.jpg" alt="EP 145 thumbnail">
+          <span class="rt">Ryan Richardson - Data-driven Decision Making with Dashboard Insights</span>
+          <span class="rfoot"><span class="rwhy">4 December 2023</span><span class="rtag">EP 145</span></span>
+        </a>
+        <a class="relcard" href="/2026-predictions-and-marty-s-final-episode">
+          <img src="https://i.ytimg.com/vi/kpLzFX5dS88/hqdefault.jpg" alt="EP 262 thumbnail">
+          <span class="rt">2026 Predictions And Marty&#x27;s Final Episode</span>
+          <span class="rfoot"><span class="rwhy">15 December 2025</span><span class="rtag">EP 262</span></span>
+        </a>
+        <a class="relcard" href="/daniel-breese-scaling-your-business-through-offshoring">
+          <img src="https://i.ytimg.com/vi/nrFR6863P1I/hqdefault.jpg" alt="EP 163 thumbnail">
+          <span class="rt">Daniel Breese - Scaling Your Business Through Offshoring</span>
+          <span class="rfoot"><span class="rwhy">18 March 2024</span><span class="rtag">EP 163</span></span>
+        </a>
+        <a class="relcard" href="/victoria-s-50-billion-dollar-problem">
+          <img src="https://i.ytimg.com/vi/hB8h9aFKk1M/hqdefault.jpg" alt="EP 171 thumbnail">
+          <span class="rt">Victoria&#x27;s 50 Billion Dollar Problem</span>
+          <span class="rfoot"><span class="rwhy">22 April 2024</span><span class="rtag">EP 171</span></span>
+        </a>
+        <a class="relcard" href="/maximising-productivity-in-2024">
+          <img src="https://i.ytimg.com/vi/LsWLHuyfTsw/hqdefault.jpg" alt="EP 151 thumbnail">
+          <span class="rt">Maximising Productivity in 2024</span>
+          <span class="rfoot"><span class="rwhy">5 February 2024</span><span class="rtag">EP 151</span></span>
+        </a>
+      </div>
+      <div class="reldots" id="reldots"></div>
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="footgrid">
+      <div class="fcol">
+        <div class="foot-label">Brought to you by</div>
+        <div class="sponsors">
+          <a href="https://www.inovayt.com.au/" target="_blank" rel="noopener"><img src="assets/inovayt-white.png" alt="Inovayt"></a>
+          <a href="https://futureadvisory.com.au/" target="_blank" rel="noopener"><img src="assets/future-advisory-white.png" alt="Future Advisory"></a>
+        </div>
+      </div>
+      <div class="fcol produced">
+        <div class="foot-label">Produced by</div>
+        <a href="https://www.vidpod.com.au/" target="_blank" rel="noopener"><img src="assets/vidpod-white.png" alt="VIDPOD"></a>
+      </div>
+    </div>
+    <nav class="footnav">
+      <a href="index.html">Home</a><a href="episodes.html">Every episode</a><a href="adventure.html">Choose your own adventure</a><a href="about.html">About the show</a><a href="nick-reilly.html">Nick Reilly</a><a href="jason-robinson.html">Jason Robinson</a><a href="contact.html">Contact</a>
+    </nav>
+    <div class="copyright">© 2026 The Numbers Game</div>
+  </footer>
+
+  <script>
+    var VIDEO='RAQ80ecsDq0';
+
+    /* Mobile nav dropdown. */
+    var burger=document.getElementById('navburger'), navdrop=document.getElementById('navdrop');
+    if(burger&&navdrop){burger.addEventListener('click',function(){
+      navdrop.hidden=!navdrop.hidden;
+      burger.setAttribute('aria-expanded', navdrop.hidden?'false':'true');
+    });}
+
+    /* Voice-note button reveals the recorder; × tucks it away. */
+    var vbtn=document.getElementById('vbtn'), vslot=document.getElementById('vslot'), vclose=document.getElementById('vclose');
+    if(vbtn&&vslot){vbtn.addEventListener('click',function(){vslot.hidden=!vslot.hidden;});}
+    if(vclose&&vslot){vclose.addEventListener('click',function(){vslot.hidden=true;});}
+
+    /* Keep-exploring dots: only shown when the strip actually scrolls (mobile). */
+    var rg=document.querySelector('.relgrid'), rd=document.getElementById('reldots');
+    if(rg&&rd){
+      var relCards=rg.querySelectorAll('.relcard');
+      relCards.forEach(function(){rd.appendChild(document.createElement('span'))});
+      var updDots=function(){
+        var scrollable=rg.scrollWidth>rg.clientWidth+4;
+        rd.style.display=scrollable?'flex':'none';
+        if(!scrollable)return;
+        var i=Math.round(rg.scrollLeft/(rg.scrollWidth-rg.clientWidth)*(relCards.length-1));
+        rd.querySelectorAll('span').forEach(function(s,n){s.classList.toggle('on',n===i)});
+      };
+      rg.addEventListener('scroll',updDots,{passive:true});
+      window.addEventListener('resize',updDots);
+      updDots();
+    }
+
+    /* Explore tabs: swap the visible panel; the row stays put so you never lose your place. */
+    var tabBtns=document.querySelectorAll('.tabbtn');
+    tabBtns.forEach(function(b){
+      b.addEventListener('click',function(){
+        tabBtns.forEach(function(o){o.classList.remove('on')});
+        document.querySelectorAll('.tpanel').forEach(function(p){p.hidden=true});
+        b.classList.add('on');
+        document.getElementById(b.getAttribute('data-panel')).hidden=false;
+      });
+    });
+
+    /* Audio-only: Spotify player is the hero; chapters/questions seek it via the Spotify iFrame API. */
+    var spotifyCtrl=null, pendingSeek=null;
+    function nudge(){
+      var p=document.getElementById('player-wrap'), r=p.getBoundingClientRect();
+      if(r.bottom<80 || r.top>window.innerHeight-90){ p.scrollIntoView({behavior:'smooth',block:'start'}); }
+    }
+    function startAt(sec){
+      nudge();
+      if(spotifyCtrl){ spotifyCtrl.seek(sec); spotifyCtrl.resume(); } else { pendingSeek=sec; }
+    }
+    window.onSpotifyIframeApiReady=function(IFrameAPI){
+      IFrameAPI.createController(document.getElementById('spotify-embed'),
+        {uri:'spotify:episode:5ZL7pluzU1e9SoXKTeiZE1', width:'100%', height:'232'},
+        function(c){ spotifyCtrl=c; if(pendingSeek!=null){ c.seek(pendingSeek); c.resume(); pendingSeek=null; } });
+    };
+    (function(){var sc=document.createElement('script');sc.src='https://open.spotify.com/embed/iframe-api/v1';sc.async=true;document.head.appendChild(sc);})();
+  </script>
+</body>
+</html>

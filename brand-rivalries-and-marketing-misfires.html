@@ -1,0 +1,600 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EP 122 · Brand Rivalries and Marketing Misfires | The Numbers Game</title>
+<meta name="description" content="Welcome to Episode 122 of The Numbers Game. In this episode, we take a close look at the launch of Zuckerberg&#x27;s new social media platform, Threads, and consi…">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" sizes="64x64" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="canonical" href="https://thenumbersgamepodcast.com.au/brand-rivalries-and-marketing-misfires">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="The Numbers Game">
+<meta property="og:title" content="EP 122 · Brand Rivalries and Marketing Misfires | The Numbers Game">
+<meta property="og:description" content="Welcome to Episode 122 of The Numbers Game. In this episode, we take a close look at the launch of Zuckerberg&#x27;s new social media platform, Threads, and consi…">
+<meta property="og:url" content="https://thenumbersgamepodcast.com.au/brand-rivalries-and-marketing-misfires">
+<meta property="og:image" content="https://thenumbersgamepodcast.com.au/assets/tng-audio-only-thumbnail.webp">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+  :root{
+    --purple:#585af3; --purple-dark:#2c1b8a; --mint:#7ad9a8;
+    --white:#ffffff; --muted:rgba(255,255,255,.60); --dim:rgba(255,255,255,.42);
+    --line:rgba(255,255,255,.12); --card:rgba(255,255,255,.05); --card-hi:rgba(255,255,255,.09);
+    --display:'Anton',Impact,'Helvetica Neue',sans-serif;
+    --sans:'Inter',system-ui,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif;
+    --wrap:1280px;   /* page frame (nav spans this) */
+    --col:960px;     /* content column (player, tabs, text) */
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:var(--sans); color:var(--white); line-height:1.6; -webkit-font-smoothing:antialiased;
+    background:#12093a;
+    background-image:
+      radial-gradient(1200px 600px at 82% -6%, rgba(88,90,243,.45) 0%, transparent 55%),
+      radial-gradient(900px 700px at 5% 8%, rgba(122,217,168,.10) 0%, transparent 50%),
+      linear-gradient(180deg,#2c1b8a 0%,#1a1150 28%,#100b34 62%,#0b0820 100%);
+    background-attachment:fixed;
+  }
+  a{color:inherit}
+  .wrap{max-width:var(--wrap);margin:0 auto;padding:0 36px}
+  main.wrap{max-width:var(--col)}
+  @media(max-width:720px){.wrap{padding:0 22px}}
+
+  /* ── Navbar ── */
+  .nav{position:sticky;top:0;z-index:50;background:linear-gradient(180deg,rgba(24,15,74,.92),rgba(24,15,74,.72));backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+  .nav-in{max-width:var(--wrap);margin:0 auto;padding:11px 36px;display:flex;align-items:center;justify-content:space-between}
+  @media(max-width:720px){.nav-in{padding:11px 22px}}
+  .brand{display:block;line-height:0}
+  .brand img{height:36px;width:auto;display:block}
+  .navlinks{display:flex;gap:28px;align-items:center}
+  .navlinks a{text-decoration:none;font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);transition:.15s}
+  .navlinks a:hover{color:var(--white)}
+  .navlinks a.navtop{cursor:default}
+  .navgroup{position:relative;display:flex;align-items:center}
+  .navgroup .subnav{display:none;position:absolute;top:100%;left:50%;transform:translateX(-50%);padding-top:14px;min-width:180px}
+  .navgroup:hover .subnav,.navgroup:focus-within .subnav{display:block}
+  .subnav-in,.navgroup .subnav{z-index:60}
+  .navgroup .subnav a{display:block;background:#180f4a;border:1px solid var(--line);border-top:0;padding:12px 16px;font-size:12px;color:rgba(255,255,255,.85)}
+  .navgroup .subnav a:first-child{border-top:1px solid var(--line)}
+  .navgroup .subnav a:hover{background:#221768;color:var(--white)}
+  .navburger{display:none;background:none;border:1px solid var(--line);padding:8px 10px;cursor:pointer;color:var(--white);transition:.15s}
+  .navburger:hover{border-color:rgba(122,217,168,.6)}
+  .navburger svg{width:20px;height:20px;fill:currentColor;display:block}
+  .navdrop{display:none}
+  @media(max-width:720px){
+    .navlinks{display:none}
+    .navburger{display:block}
+    .navdrop{display:block;position:absolute;left:0;right:0;top:100%;
+      background:#180f4a;border-bottom:1px solid var(--line);box-shadow:0 24px 50px rgba(0,0,0,.45)}
+    .navdrop[hidden]{display:none}
+    .navdrop a{display:block;padding:15px 22px;text-decoration:none;font-size:14px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:rgba(255,255,255,.9);border-bottom:1px solid rgba(255,255,255,.06)}
+    .navdrop a:last-child{border-bottom:0}
+    .navdrop a.sub{padding-left:42px;font-size:13px;color:rgba(255,255,255,.72)}
+    .navdrop .navlabel{display:block;padding:15px 22px 6px;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.4)}
+  }
+
+  /* ── Hero / hook (marker-highlight system: purple hook wraps naturally, mint payoff below)
+     Rules: title splits at its natural break (colon/pipe/question mark). Front = hook (purple,
+     big), back = payoff (mint, smaller). No break in title = purple hook only. Highlights hug
+     the text (tight em padding tuned to Anton) and wrap via box-decoration-break — never
+     hand-pick line breaks or mint words. ── */
+  header.hero{padding:34px 0 6px}
+  .hook{--inx:clamp(8.4px,2.1vw,15.6px)} /* one shared text inset so hook + payoff first letters align */
+  .hook .hk{font-family:var(--display);font-weight:400;text-transform:uppercase;
+    font-size:clamp(28px,7vw,52px);line-height:1.3;letter-spacing:-.5px;text-wrap:balance}
+  .hook .hk span{color:var(--white);padding:.04em var(--inx) .02em;
+    background:linear-gradient(var(--purple),var(--purple)) 0 50%/100% 87% no-repeat;
+    -webkit-box-decoration-break:clone;box-decoration-break:clone}
+  .hook .pay{font-family:var(--display);font-weight:400;text-transform:uppercase;
+    font-size:clamp(16px,4vw,24px);line-height:1.5;letter-spacing:.6px;margin-top:8px;text-wrap:balance}
+  .hook .pay span{color:#0a0a0a;padding:.08em var(--inx) .04em;
+    background:linear-gradient(var(--mint),var(--mint)) 0 50%/100% 88% no-repeat;
+    -webkit-box-decoration-break:clone;box-decoration-break:clone}
+  /* no-hook titles: mid-split into two full-size rows, purple then mint */
+  .hook .hk span.hkrow{display:block;background:none;padding:0}
+  .hook .hk .hkrow+.hkrow{margin-top:8px}
+  .hook .hk span.mintseg{color:#0a0a0a;
+    background:linear-gradient(var(--mint),var(--mint)) 0 50%/100% 87% no-repeat}
+
+  /* ── Player (clean facade → real player on tap) ── */
+  .player-wrap{margin:24px 0 4px;scroll-margin-top:76px}
+  .audio-hero{width:100%;min-height:232px;border-radius:12px;overflow:hidden;box-shadow:0 30px 70px rgba(0,0,0,.5),0 0 0 1px rgba(255,255,255,.06)}
+  .audio-hero iframe{display:block;width:100%;border:0}
+  .player{position:relative;width:100%;padding-top:56.25%;border-radius:0;overflow:hidden;background:#000;box-shadow:0 30px 70px rgba(0,0,0,.5),0 0 0 1px rgba(255,255,255,.06)}
+  .facade{position:absolute;inset:0;border:0;cursor:pointer;background-size:cover;background-position:center;display:flex;align-items:center;justify-content:center;padding:0}
+  .facade .play{width:74px;height:74px;border-radius:50%;background:rgba(10,6,30,.40);border:2px solid rgba(255,255,255,.72);display:flex;align-items:center;justify-content:center;transition:.18s;-webkit-backdrop-filter:blur(1px);backdrop-filter:blur(1px)}
+  .facade:hover .play{background:rgba(88,90,243,.62);transform:scale(1.07);border-color:#fff}
+  .facade .play::after{content:"";border-style:solid;border-width:11px 0 11px 19px;border-color:transparent transparent transparent #fff;margin-left:5px}
+  .player iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+
+  /* ── Episode facts (bottom of the Summary panel — templated per episode) ── */
+  .sumfacts{margin:14px 10px 4px;padding-top:13px;border-top:1px solid rgba(255,255,255,.08);display:flex;flex-direction:column;gap:8px}
+  .fact{display:flex;gap:12px;font-size:13.5px}
+  .fact .fl{flex:none;width:104px;color:var(--dim);font-weight:600;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;padding-top:2px}
+  .fact .fv{color:rgba(255,255,255,.9);font-weight:500}
+  .fact .fv a{color:var(--mint);text-decoration:none;border-bottom:1px solid rgba(122,217,168,.4);transition:.15s}
+  .fact .fv a:hover{border-bottom-color:var(--mint)}
+
+  /* ── Episode tag (identity: black label hanging off the title corner) ── */
+  .eptag{display:inline-block;position:relative;left:-6px;margin-bottom:-7px;z-index:2;
+    background:#0a0a0a;color:var(--white);font-family:var(--display);font-weight:400;
+    font-size:13.5px;letter-spacing:1.5px;text-transform:uppercase;padding:6px 11px 4px}
+
+  /* ── Explore tabs (sticky mode switcher; one panel swaps below, nothing shoves) ── */
+  .explore{margin-top:22px}
+  .tabs{position:sticky;top:58px;z-index:40;display:flex;flex-wrap:wrap;gap:8px;padding:10px 0;
+    background:linear-gradient(180deg,rgba(18,10,55,.96),rgba(18,10,55,.86));
+    backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+  .tabbtn{font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.5px;
+    font-size:14.5px;color:var(--white);background:var(--purple);border:1px solid var(--purple);
+    padding:9px 13px 7px;cursor:pointer;transition:.15s}
+  .tabbtn:hover{filter:brightness(1.12)}
+  .tabbtn.on{background:var(--mint);border-color:var(--mint);color:#0a0a0a}
+  .tabbtn.on:hover{filter:none}
+  .tabbtn .ct{font-size:12px;opacity:.75;font-variant-numeric:tabular-nums}
+  .tabbtn .ct::before{content:" · "}
+  .tpanel{border:1px solid var(--line);background:var(--card);padding:12px 10px 14px}
+  .hint{font-size:12.5px;color:var(--muted);padding:2px 10px 10px;border-bottom:1px solid rgba(255,255,255,.08);margin-bottom:6px}
+
+  /* ── Listen row (no box: label left, service pills follow) ── */
+  .listen{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:12px 16px;margin-top:34px}
+  .listen .lname{font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--dim)}
+  .listen a{display:inline-flex;align-items:center;gap:9px;padding:11px 18px;border-radius:999px;
+    background:var(--mint);color:#08210f;text-decoration:none;font-weight:800;font-size:12.5px;
+    letter-spacing:.04em;text-transform:uppercase;transition:.15s}
+  .listen a:hover{filter:brightness(1.06);transform:translateY(-1px);box-shadow:0 12px 30px rgba(122,217,168,.25)}
+  .listen svg{width:20px;height:20px;fill:currentColor;flex:none}
+  /* ── Listen-now Spotify audio embed (full column width, above the pills) ── */
+  .listen-now{margin-top:40px}
+  .listen-now .ln-head{display:flex;align-items:baseline;justify-content:space-between;gap:14px;margin-bottom:13px}
+  .listen-now .ln-title{font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--dim)}
+  .audio-embed{border-radius:12px;overflow:hidden;box-shadow:0 20px 50px rgba(0,0,0,.4),0 0 0 1px rgba(255,255,255,.06)}
+  .audio-embed iframe{display:block;width:100%;border:0}
+  @media(max-width:720px){.listen-now{margin-top:32px}}
+
+  /* ── Keep exploring (thumbnails link to other episode PAGES, never timecodes).
+     Swipeable strip on mobile, fits three-up on desktop. Variant rule: claim
+     "similar ground" + reason lines ONLY when moment-level topic overlap is
+     genuinely strong; otherwise show the latest released episodes with dates —
+     never invent a connection. ── */
+  .relsec{margin-top:60px;padding-top:58px;border-top:1px solid var(--line)} /* line = end of this episode's info */
+  .reldots{display:flex;justify-content:center;gap:7px;margin-top:12px}
+  .reldots span{width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.25);transition:.2s}
+  .reldots span.on{background:var(--mint)}
+  .relsec .rtitle{display:inline-block;font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.5px;font-size:14.5px;background:var(--mint);color:#0a0a0a;padding:9px 13px 7px;margin-bottom:18px}
+  .relgrid{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding-bottom:6px;scrollbar-width:none}
+  .relgrid::-webkit-scrollbar{display:none}
+  .relcard{flex:0 0 56%;max-width:232px;scroll-snap-align:start;display:flex;flex-direction:column;text-decoration:none;background:var(--card);border:1px solid var(--line);transition:.15s}
+  .relcard:hover{background:var(--card-hi);border-color:rgba(122,217,168,.55)}
+  .relcard img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block}
+  .relcard .rt{display:block;font-size:12.5px;font-weight:600;color:rgba(255,255,255,.92);line-height:1.4;padding:8px 8px 0}
+  .relcard .rfoot{margin-top:auto;display:flex;justify-content:space-between;align-items:flex-end;gap:8px;padding:10px 8px 9px}
+  .relcard .rwhy{font-size:11.5px;color:var(--mint)}
+  .relcard .rtag{display:inline-block;background:#0a0a0a;color:var(--white);font-family:var(--display);font-size:10px;letter-spacing:1.2px;text-transform:uppercase;padding:3px 7px 2px;white-space:nowrap;flex:0 0 auto}
+
+  /* ── Dropdown sections (accordion under the player) ── */
+  .drops{margin-top:34px;display:flex;flex-direction:column;gap:11px}
+  .drop{border:1px solid var(--line);border-radius:0;background:var(--card);overflow:hidden;transition:border-color .15s}
+  .drop[open]{border-color:rgba(122,217,168,.35)}
+  .drop>summary{list-style:none;cursor:pointer;padding:16px 18px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+  .drop>summary::-webkit-details-marker{display:none}
+  .drop>summary .st{font-weight:700;font-size:15.5px;letter-spacing:.005em}
+  .drop>summary .ct{margin-left:auto;font-size:12px;color:var(--dim);font-weight:600;font-variant-numeric:tabular-nums}
+  .drop>summary .chev{flex:none;width:22px;height:22px;border-radius:50%;background:rgba(122,217,168,.14);color:var(--mint);display:flex;align-items:center;justify-content:center;font-family:var(--display);font-size:15px;line-height:1;transition:.2s;transform:translateY(-1px)}
+  .drop[open]>summary .chev{transform:rotate(45deg)}
+  .drop-body{padding:2px 12px 12px}
+
+  /* chapters */
+  .chapter{display:flex;align-items:baseline;gap:14px;width:100%;text-align:left;cursor:pointer;background:none;border:0;color:inherit;font-family:inherit;padding:11px 10px;border-radius:10px;transition:.13s}
+  .chapter:hover{background:var(--card-hi)}
+  .chapter .tc{font-variant-numeric:tabular-nums;font-weight:700;font-size:14px;color:var(--mint);flex:none;width:48px}
+  .chapter .cx{font-size:15px;font-weight:500;color:rgba(255,255,255,.9)}
+  .chapter:hover .cx{color:#fff}
+
+  /* questions */
+  .q{display:flex;align-items:center;gap:12px;width:100%;text-align:left;cursor:pointer;background:none;border:0;border-radius:11px;color:inherit;font-family:inherit;padding:12px 10px;transition:.14s}
+  .q+.q{border-top:1px solid rgba(255,255,255,.05)}
+  .q:hover{background:var(--card-hi)}
+  .q .qm{font-family:var(--display);font-size:15px;color:var(--mint);flex:none;line-height:1;transform:translateY(1px)}
+  .q .qx{font-size:15px;font-weight:500;color:rgba(255,255,255,.92)}
+  .q .go{margin-left:auto;flex:none;color:var(--dim);font-size:18px;transition:.15s}
+  .q:hover .go{color:var(--mint);transform:translateX(2px)}
+
+  /* summary + transcript bodies */
+  .summary-body p{font-size:16.5px;line-height:1.62;color:rgba(255,255,255,.9);padding:6px 10px 4px}
+  .tbody{padding:2px 10px 8px}
+  .tbody p{font-size:14.5px;line-height:1.7;color:rgba(255,255,255,.78);margin-top:15px;max-width:64ch}
+  .tbody .spk{display:block;font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--mint);margin-bottom:2px}
+
+  /* ── Voice note ask (lives at the bottom of the Summary panel) ── */
+  .vask{margin:16px 10px 4px}
+  .vbtn{display:inline-flex;align-items:center;gap:9px;padding:12px 20px;border-radius:999px;border:0;cursor:pointer;
+    background:var(--mint);color:#08210f;font-family:inherit;font-weight:800;font-size:12.5px;
+    letter-spacing:.04em;text-transform:uppercase;transition:.15s}
+  .vbtn:hover{filter:brightness(1.06);transform:translateY(-1px);box-shadow:0 12px 30px rgba(122,217,168,.25)}
+  .vbtn svg{width:18px;height:18px;fill:currentColor;flex:none}
+  .vslot{background:var(--purple);padding:12px 10px 10px;margin:14px 0 4px;box-shadow:0 18px 40px rgba(0,0,0,.35)}
+  .vslot[hidden]{display:none}
+  .vhead{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;margin-bottom:10px}
+  .vhead .vmsg{font-family:var(--sans);font-size:13px;line-height:1.55;color:rgba(255,255,255,.92);margin:2px 0 0;padding:0 2px}
+  .vclose{background:none;border:0;color:rgba(255,255,255,.85);font-size:22px;line-height:1;cursor:pointer;padding:0 2px}
+  .vclose:hover{color:var(--white)}
+  .vslot iframe{display:block}
+
+  /* ── YouTube subscribe pill (sits in the listen row; outranks .listen a's mint) ── */
+  .listen a.yt-pill{background:var(--purple);color:var(--white)}
+  .listen a.yt-pill:hover{filter:brightness(1.1);transform:translateY(-1px)}
+  @media(max-width:720px){ /* mobile: no label, three compact pills on one row */
+    .listen .lname{display:none}
+    .listen{gap:8px}
+    .listen a{padding:10px 13px;font-size:11px;gap:6px}
+    .listen svg{width:16px;height:16px}
+  }
+
+  /* ── Footer: two columns under the line (Brought to you by | Produced by), matches adventure.html ── */
+  footer{border-top:1px solid var(--line);margin-top:68px;padding:52px 20px 58px}
+  .footgrid{max-width:var(--wrap);margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:start}
+  @media(max-width:720px){.footgrid{grid-template-columns:1fr;gap:40px}}
+  .fcol{text-align:center}
+  .foot-label{font-size:11px;font-weight:700;letter-spacing:.26em;text-transform:uppercase;color:var(--dim);margin-bottom:16px}
+  .sponsors{display:flex;justify-content:center;align-items:center;gap:38px;flex-wrap:wrap}
+  .sponsors a{display:inline-flex;transition:.15s}
+  .sponsors a:hover{transform:translateY(-1px)}
+  .sponsors img{height:34px;width:auto;opacity:.92}
+  .sponsors a:hover img{opacity:1}
+  .produced a{display:inline-flex;transition:.15s}
+  .produced a:hover img{opacity:1}
+  .produced img{height:30px;width:auto;opacity:.95}
+  .footnav{margin-top:36px;display:flex;justify-content:center;flex-wrap:wrap;gap:6px 26px}
+  .footnav a{font-size:12px;font-weight:600;letter-spacing:.04em;color:var(--dim);text-decoration:none;transition:.15s}
+  .footnav a:hover{color:var(--mint)}
+  .copyright{margin-top:40px;font-size:12px;color:var(--dim);text-align:center}
+
+  @media(min-width:720px){header.hero{padding:48px 0 6px}}
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "PodcastEpisode", "name": "Buying Commercial Property With Your Super in 2026 | What the Numbers Say", "url": "https://thenumbersgamepodcast.com.au/episode-285.html", "datePublished": "2026-07-13", "episodeNumber": 285, "image": "https://i.ytimg.com/vi/RAQ80ecsDq0/maxresdefault.jpg", "partOfSeries": {"@type": "PodcastSeries", "name": "The Numbers Game", "url": "https://thenumbersgamepodcast.com.au/"}}</script>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-in">
+      <a class="brand" href="index.html" aria-label="The Numbers Game home"><img src="assets/tng-logo.png" alt="The Numbers Game"></a>
+      <div class="navlinks">
+        <a href="index.html">Home</a>
+        <div class="navgroup">
+          <a class="navtop">Episodes</a>
+          <div class="subnav">
+            <a href="episodes.html">All episodes</a>
+            <a href="adventure.html">Find moments</a>
+          </div>
+        </div>
+        <div class="navgroup">
+          <a class="navtop">About</a>
+          <div class="subnav">
+            <a href="about.html">The show</a>
+            <a href="nick-reilly.html">Nick Reilly</a>
+            <a href="jason-robinson.html">Jason Robinson</a>
+          </div>
+        </div>
+        <a href="contact.html">Contact</a>
+      </div>
+      <button class="navburger" id="navburger" type="button" aria-label="Menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24"><path d="M3 6h18v2H3zM3 11h18v2H3zM3 16h18v2H3z"/></svg>
+      </button>
+    </div>
+    <div class="navdrop" id="navdrop" hidden>
+      <a href="index.html">Home</a>
+      <span class="navlabel">Episodes</span>
+      <a class="sub" href="episodes.html">All episodes</a>
+      <a class="sub" href="adventure.html">Find moments</a>
+      <span class="navlabel">About</span>
+      <a class="sub" href="about.html">The show</a>
+      <a class="sub" href="nick-reilly.html">Nick Reilly</a>
+      <a class="sub" href="jason-robinson.html">Jason Robinson</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+
+  <main class="wrap">
+
+    <header class="hero">
+      <div class="hook">
+        <span class="eptag">EP 122</span>
+        <h1 class="hk"><span>Brand Rivalries and Marketing Misfires</span></h1>
+      </div>
+    </header>
+
+    <div class="player-wrap" id="player-wrap">
+      <div class="audio-hero" id="spotify-embed"></div>
+    </div>
+
+    <div class="explore">
+      <div class="tabs" role="tablist">
+        <button class="tabbtn on" data-panel="p-summary">Summary</button>
+      </div>
+      <section class="tpanel" id="p-summary">
+        <div class="summary-body">
+          <p>Welcome to Episode 122 of The Numbers Game. In this episode, we take a close look at the launch of Zuckerberg&#x27;s new social media platform, Threads, and consider its potential impact on its rival Twitter. We also take a look into the world of marketing mishaps, recounting the notorious Pepsi advertising campaign that offered a Harrier jet in exchange for Pepsi points.</p>
+        </div>
+        <div class="vask">
+          <button class="vbtn" id="vbtn" type="button">
+            <svg viewBox="0 0 24 24"><path d="M12 14a3 3 0 0 0 3-3V6a3 3 0 1 0-6 0v5a3 3 0 0 0 3 3zm5-3a5 5 0 0 1-10 0H5a7 7 0 0 0 6 6.92V21h2v-3.08A7 7 0 0 0 19 11h-2z"/></svg>
+            Send us a voice note
+          </button>
+          <div class="vslot" id="vslot" hidden>
+            <div class="vhead">
+              <p class="vmsg">We'd love to hear from you. You can leave up to a 90 second voice note for us to play on the show: a question, some feedback, or a topic you want covered.</p>
+              <button class="vclose" id="vclose" type="button" aria-label="Close">&times;</button>
+            </div>
+            <iframe src="https://www.speakpipe.com/widget/inline/hhq6kzggsx7zpcsvakgxfrzun3zidpde" allow="microphone" width="100%" height="200" frameborder="0" title="Leave The Numbers Game a voice note"></iframe>
+          </div>
+          <script async src="https://www.speakpipe.com/widget/loader.js" charset="utf-8"></script>
+        </div>
+        <div class="sumfacts">
+          <div class="fact"><span class="fl">Release date</span><span class="fv">17 July 2023</span></div>
+          <div class="fact"><span class="fl">Hosts</span><span class="fv"><a href="jason-robinson.html">Jason Robinson</a> &amp; <a href="nick-reilly.html">Nick Reilly</a> &amp; <a href="marty-vidakovic.html">Marty Vidakovic</a></span></div>
+
+        </div>
+      </section>
+    </div>
+
+    <div class="drops">
+
+      <details class="drop">
+        <summary><span class="st">Episode transcript</span><span class="chev">+</span></summary>
+        <div class="drop-body tbody">
+          <p><span class="spk">Jason · 00:00</span>Welcome to The Numbers Game. I&#x27;m Jason. I&#x27;m here with Nick and Marty. Great to be joined with you boys. What&#x27;s happening? How are we both?</p>
+          <p><span class="spk">Marty · 00:06</span>Going really well, thanks, Jase. Uh, very stimulated about today&#x27;s episode of going all social media and digital with Zuckerberg and Musk. And, uh, Musk is not yet in jail as, uh, Nick&#x27;s prediction at the end of last year, but it&#x27;s not to say that&#x27;s not going to happen.</p>
+          <p><span class="spk">Marty · 00:24</span>So let&#x27;s just watch this space. Uh, Nick, how are you, my friend?</p>
+          <p><span class="spk">Nick · 00:28</span>I&#x27;m good, mate. I&#x27;m good. I got 6 months to go, so it could still happen. And I think it was you that was saying that, um, Elon Musk and Zuckerberg have challenged each other to a cage fight. Is that happening?</p>
+          <p><span class="spk">Marty · 00:40</span>Yeah, that was happening, but his mum— his mum— Musk&#x27;s mum said no on Twitter, so she&#x27;s, she&#x27;s put a stop to it. She shut it down. So it&#x27;s good to see that mummy still has got Elon&#x27;s back, even with all those billions in the account.</p>
+          <p><span class="spk">Jason · 00:57</span>It could almost be back on this cagefight after some of the recent things that we may be discussing today. But on the predictions though, I did talk about the Bombers winning, winning a game for the first time in like 15 years, a finals game, I should say, in 15 years. And Nick, in recent weeks, the Bombers and the Crows faced off.</p>
+          <p><span class="spk">Jason · 01:15</span>By the time this episode goes live, did you happen to catch the game?</p>
+          <p><span class="spk">Nick · 01:19</span>I watched the second half. But yeah, Bombers were too good, mate. Bombers were too good. I feel— I still feel like we&#x27;re a better side, as strange as that might sound.</p>
+          <p><span class="spk">Jason · 01:28</span>But it doesn&#x27;t sound strange.</p>
+          <p><span class="spk">Nick · 01:31</span>I was trying to explain to my wife last night, I was trying to explain to my wife last night watching the game. I was like, I still think we&#x27;re a better side. You know, we had more of the ball and, you know, we just weren&#x27;t capitalizing. She just looked at me like, you idiot, like you just got pantsed. So anyway, all good.</p>
+          <p><span class="spk">Nick · 01:48</span>Happy to see the Bombers doing well for you two boys.</p>
+          <p><span class="spk">Jason · 01:51</span>So that&#x27;s all right. Well, it&#x27;s, it&#x27;s very quick to go. By the time this goes live, who knows, we&#x27;ve had to play Geelong between now and then, and we may have— that, that simply losing to Geelong will drop us from 5th till about 9th or 10th on the ladder. It&#x27;s very tight in that space. So, uh, you know, hopefully my prediction for the year still goes well.</p>
+          <p><span class="spk">Jason · 02:07</span>I mean, the AI prediction that AI would be everywhere, I mean, it&#x27;s— yeah, over 7 months into the 2023 calendar year, and it&#x27;s probably not as hot as I would have liked it to be. There&#x27;s a bit of noise, but You know, there&#x27;s plenty going on, but before we fire into today&#x27;s episode, just like to say that it&#x27;s brought to you by the team at Future Advisory that are pumping away in tax return land at the moment.</p>
+          <p><span class="spk">Jason · 02:27</span>So if you do need to get your tax returns sorted, futureadvisory.com.au, there&#x27;s a book online button in the top right-hand corner and check in with the team and see what you can get back from the taxman because it&#x27;s been a bit of an interesting year for a lot of people who are having a bit of financial pain with their refunds and almost getting tax bills as well.</p>
+          <p><span class="spk">Jason · 02:45</span>So there&#x27;s some weird stuff going on and If you can&#x27;t do it yourself, get an expert to help you out. So today, Marty, you&#x27;ve talked a little bit earlier about you starting to get onto social media. So I didn&#x27;t know if you had a phone that allowed you to connect to the internet. I thought, you know, but if you do, what have you found, Marty?</p>
+          <p><span class="spk">Jason · 03:02</span>What&#x27;s this new social media contraption you&#x27;re talking about?</p>
+          <p><span class="spk">Marty · 03:06</span>Thank you again for insulting my age, Jay. So it wouldn&#x27;t be a week in my life without copping something on grey hair or being immobile.</p>
+          <p><span class="spk">Nick · 03:16</span>So is this the Is this the string in the cup thing you were talking about, Marty? You can tell what your neighbors are up to.</p>
+          <p><span class="spk">Marty · 03:22</span>Yeah, you put two cans together and has to be a certain type of string. The Bunnings don&#x27;t sell it anymore, which is a bit disconcerting. No, as you know, boys, I&#x27;ve been losing myself in the digital platforms and socials over the weekend. Uh, Threads.</p>
+          <p><span class="spk">Marty · 03:37</span>Threads. You would have heard about it. It&#x27;s probably been up and running for about 3 weeks and it&#x27;s It&#x27;s, I guess, an equivalent to Twitter in this Zuckerberg and Elon Musk war. Uh, but I think very clever from Zuckerberg.</p>
+          <p><span class="spk">Marty · 03:52</span>Uh, there&#x27;s no ads on these Threads. It&#x27;s, it&#x27;s basically aesthetically more pleasing. There&#x27;s probably about 10% more functionality than what, uh, Twitter has. Like, you could have 500 characters, you could do videos, everything you like to do in sharing, share on each other&#x27;s posts, and Uh, you can&#x27;t yet personally message someone on Threads, which, uh, is a big no-no.</p>
+          <p><span class="spk">Marty · 04:14</span>I think they need to change that. But it&#x27;s, um, fascinating. They have attracted 90 million downloads and users onto the Threads platform within virtually the first 3 days. So by the time we will be going out on air, it&#x27;s probably going to be well over 100 million.</p>
+          <p><span class="spk">Marty · 04:32</span>And just to give you some scope, I don&#x27;t know whether this is, competitive advantage that Zuckerberg&#x27;s trying to get, or he&#x27;s just trying to absolutely kill off Elon. Um, Instagram already has 2.4 billion monthly active users.</p>
+          <p><span class="spk">Marty · 04:49</span>Twitter only has 396 million active, uh, users, but traditionally they&#x27;re very loyal, the Twitter users. But this is giving Twitter users a chance to actually abandon the platform and come over into Instagram and Threads.</p>
+          <p><span class="spk">Marty · 05:05</span>And The experience and just hearing, I have nephews and people a lot younger than me, Jase, using the platform already. And they&#x27;re saying what&#x27;s nice about it is it&#x27;s all about community connection and communication again.</p>
+          <p><span class="spk">Marty · 05:21</span>No ads on the platform yet, but as if that&#x27;s not going to change ultimately. But they&#x27;re saying it&#x27;s just at its very infancy stage, so everyone&#x27;s really excited about it. Yeah, I&#x27;m, I&#x27;m interested to hear your thoughts on this.</p>
+          <p><span class="spk">Marty · 05:37</span>It&#x27;s a very simple, uh, boarding— onboarding process to get Threads. The other thing that I really like that Zuckerberg has done here, uh, apart from the cage match with Elon, is that if you start up Threads, um, you start up an account, in order to cancel that account, you have to cancel Instagram altogether.</p>
+          <p><span class="spk">Marty · 05:58</span>So it&#x27;s very smart play in regards to getting that user base traction up and then maintaining it as well. I thought, what a— what an interesting strategic move. Um, so yeah, so I thought, how, how much does competition play a role in this, and how much is it just Zucker going for the jugular here?</p>
+          <p><span class="spk">Marty · 06:19</span>I&#x27;m not quite sure. I think competition&#x27;s healthy, and we can relate that to our own industries. But what are your general thoughts on it, lads?</p>
+          <p><span class="spk">Nick · 06:27</span>Well, I think it&#x27;s smart from Zuckerberg because Twitter&#x27;s in in a bit of trouble, which is why Elon&#x27;s come in. Um, what do you think? I&#x27;m interested in the fact that you can&#x27;t— you have to close your Instagram account if you don&#x27;t have a Threads account.</p>
+          <p><span class="spk">Marty · 06:43</span>I should explain myself, Nick. If you&#x27;ve got an Instagram account, um, and you don&#x27;t use Threads, you just can have your Instagram account. But if you do download Threads and you want to utilize it, to cancel it, then you have to cancel both. So you don&#x27;t have to take it up, but if you want to log on to Threads and then you want— you say it&#x27;s not for me, you then have to cancel your whole Instagram account.</p>
+          <p><span class="spk">Nick · 07:10</span>Still, it&#x27;s still pretty harsh, I would have thought.</p>
+          <p><span class="spk">Marty · 07:12</span>It is.</p>
+          <p><span class="spk">Nick · 07:13</span>It&#x27;s an interest because most, you know, look, looking at the way things are going, it&#x27;s— most people would be anti that these days, and I&#x27;m not sure if that would have a positive or a negative impact.</p>
+          <p><span class="spk">Jason · 07:24</span>They may look to change it too. I mean, at the moment it was just— I set up a couple of accounts over the weekend, um, and it was just seamless if you, if you decide to use Instagram to set up your Threads, which I think is the main thing they&#x27;re doing at the moment. Just while they&#x27;re, you know, they&#x27;ve launched a quick, you know, uh, what do you call it, like a fast startup version of a product.</p>
+          <p><span class="spk">Jason · 07:42</span>Like, it&#x27;s definitely so far from their finished version. I think they&#x27;re, we&#x27;re just going to test the waters and see how it went, and then, you know, if enough users adopt it, then they can go all in on it. And I think, um, proof will be in the pudding at the moment that The amount of users that have jumped on, the interaction, people then posting from Threads back onto their Instagram stories, and then that&#x27;s driving engagement.</p>
+          <p><span class="spk">Jason · 08:04</span>Because if you&#x27;re on Instagram and you didn&#x27;t know what Threads was, chances are over the weekend you saw other people putting their Threads back onto their Instagram. Whereas, you know, Twitter, people go there and add some stuff to Twitter and then you kind of don&#x27;t then send it somewhere else. So yeah, the integration&#x27;s quite interesting between Instagram and Threads.</p>
+          <p><span class="spk">Jason · 08:21</span>I don&#x27;t think long-term, if you decided to shut down Threads, that&#x27;d make you delete your Instagram. I don&#x27;t think that&#x27;ll be a long-term thing, because when you think about that, that&#x27;s kind of counterintuitive to the share value of Meta. If you&#x27;re making users cancel and you&#x27;re losing a subscriber of Instagram just because they want to shut down their Threads.</p>
+          <p><span class="spk">Jason · 08:39</span>So I think that&#x27;ll be a long-term thing they&#x27;ll change up. But from a competition and industry type of thing, you know, why this was brought to our attention and, you know, why I think it hit you, Marty, was just, just how you know, vulnerable some companies can be to being copied or, you know, having a competitor come along and do something the same or better than them.</p>
+          <p><span class="spk">Jason · 08:58</span>So obviously that&#x27;s important to protect your brand and protect— to protect your IP. Um, and it&#x27;ll be interesting to see how this one plays out in courts. I mean, Elon Musk is talking about suing Zuck already. Um, Zuckerberg went on to Twitter and did a tweet for the first time in 10 years.</p>
+          <p><span class="spk">Jason · 09:13</span>So like, this is like, you know, two of these tech billionaires having an— they&#x27;re, you know, this is an online version of that cage fight that we may not get to see party, but, um, there&#x27;s this meme where two Spider-Mans point at each other and they&#x27;re dressed the same. It&#x27;s like, hey, I&#x27;m you or you&#x27;re me.</p>
+          <p><span class="spk">Jason · 09:30</span>And, um, Elon, um, Zuck posted that to Elon being like, hey, here I am copying Twitter. Like a blatant, like, just absolute F you to Elon&#x27;s face. And the whole Twitter and Thread world went wild. They&#x27;re like, look at this, you know.</p>
+          <p><span class="spk">Jason · 09:46</span>And so, but I was driving a lot of attention, and I&#x27;m sure Meta&#x27;s share price probably took a hit after all this investment into the metaverse that doesn&#x27;t seem to have kind of gone anywhere. And this could have been a little bit of a Hail Mary for, for Zuck to kind of bring back some share value and some, uh, some excitement for the investors.</p>
+          <p><span class="spk">Jason · 10:02</span>And look, to be honest, yeah, as I said, it&#x27;d be interesting to see how that plays out because it doesn&#x27;t seem kind of right to be able to just copy somebody else&#x27;s business model and, and launch a product that&#x27;s exactly the same as somebody else&#x27;s. And from the word going around, it&#x27;s that a lot of the Twitter employees that were sacked by Elon actually got hired by Meta.</p>
+          <p><span class="spk">Jason · 10:23</span>So not only did Zuck, you know, create this new platform that looks like Twitter, feels like Twitter, performs in a similar way to Twitter, but he&#x27;s also got Twitter, ex-Twitter employees working on developing this, this software. So I know it&#x27;s going to be an interesting one to see how it plays out, but I guess the message for people out there that have businesses or have ideas is to look at, look at how you can launch it, look at how you can protect it.</p>
+          <p><span class="spk">Jason · 10:50</span>And if you are going to have something that can be copied, you need to make sure that you&#x27;re fast to move into the market and that you, you know, give your users a reason not to leave you and go somewhere else.</p>
+          <p><span class="spk">Marty · 11:00</span>Well, they always say from a, you know, in any business, the most important things are the need for what you do. So certainly a need— people want to communicate online— your ability to do it which is basically what sets you apart, and how difficult is it to replace you is the third thing.</p>
+          <p><span class="spk">Marty · 11:19</span>And it sounds like, you know, what Elon has is very replaceable. Whether it&#x27;s legal to be able to do this, I guess that will play out. But there are three really important components when you&#x27;re specializing in any business or industry. And I relate it back to our finance industry and going, we have so many brokers that have access to the similar products.</p>
+          <p><span class="spk">Marty · 11:43</span>And I&#x27;m going, well, what&#x27;s our competitive edge? You know, what&#x27;s our point of difference? And it comes down to your ability to do it. It&#x27;s like, I mean, we, yeah, we can be replaced by the next mortgage broker or the next financial planner, but it&#x27;s our ability to do it and also to integrate various different services around it that creates that point of difference in the market.</p>
+          <p><span class="spk">Marty · 12:07</span>So we become very difficult to replace in that standpoint. Many businesses in our industry have those components as well. Well, but not, not more than 10%. So it&#x27;s like you&#x27;re playing, you&#x27;re playing in a, in a unique field, but you certainly have to think about that as a business owner.</p>
+          <p><span class="spk">Marty · 12:24</span>Otherwise you could be very easily replaced. It&#x27;s the same thing as a, if you take it from an employee standpoint, you always want to be of value in the same way, because again, you know, if your ability is unique to someone else, even though you&#x27;re doing a similar service and you&#x27;re getting traction out there in the market, That&#x27;s your own unique point of difference as well.</p>
+          <p><span class="spk">Marty · 12:46</span>So it can happen at an individual level and also at a company level. But the one thing I know, and it&#x27;s the same as we talked about comedy the last episode, uh, the last couple of episodes, and you know, there&#x27;s no new ideas, it&#x27;s just reimagined ideas of the same thing coming together in new ways, which is always fascinating.</p>
+          <p><span class="spk">Marty · 13:06</span>So I guess there are legalities around things, trademarks, uh, patents, all sorts of things to protect ideas, which you need, otherwise everyone would would just be duplicating the crap out of each other. Um, but I, I like it. I, I like sometimes being second to market is actually quite interesting.</p>
+          <p><span class="spk">Marty · 13:25</span>You can get great scale, but it&#x27;s amazing when you can learn off someone else&#x27;s mistakes and then you incorporate other industries that you see and you bring in unique concepts together in their own way. That, and that&#x27;s what people say is original, but really it&#x27;s taking components from different industries.</p>
+          <p><span class="spk">Marty · 13:43</span>So there&#x27;s lots of different ways to do it, but Yeah, it&#x27;s certainly, it&#x27;s certainly interesting.</p>
+          <p><span class="spk">Jason · 13:50</span>Look, this whole episode is not just going to be to focus on Threads. We did find it quite interesting. And yeah, who knows after this is— this isn&#x27;t going live for a couple of weeks and it&#x27;ll be interesting to look back and see how Threads is actually going right now or if the whole world&#x27;s blown up and Elon and Zuck have, you know, taken each other out.</p>
+          <p><span class="spk">Jason · 14:06</span>And I actually saw a funny tweet right before we recorded this that somebody tweeted Zuckerberg and said, you should also go to space because that would really make Elon mad if you did that.</p>
+          <p><span class="spk">Marty · 14:17</span>And then that&#x27;s a great idea.</p>
+          <p><span class="spk">Jason · 14:19</span>And then Elon tweet, like, retweeted it or shared it and said, Zuck is a cuck. Um, and then I just left it at that. I&#x27;m like, these, these are big billionaires just having, uh, childish fights online with each other. It&#x27;s, uh, quite interesting. But, um, Nick, we&#x27;re going to go back in time a little bit to a lesson that was learned by Pepsi.</p>
+          <p><span class="spk">Jason · 14:37</span>You might— would mind sharing that story for us?</p>
+          <p><span class="spk">Nick · 14:41</span>Kind of falls in line with our competition and copying people&#x27;s ideas. And I guess it goes back to the Coke versus Pepsi battle, which I guess is still going on. I don&#x27;t really know. The— what was really interesting— well, just firstly to say, I watched a documentary on Netflix called Pepsi: Where Is My Jet?</p>
+          <p><span class="spk">Nick · 15:02</span>I couldn&#x27;t stop watching it actually. Once I got into it, it was awesome. So I think it was 4 or 5 episodes. Um, but it goes back to the Coke versus Pepsi battle, and Pepsi were obviously second on to the market. So the, the advertising, um, budget that I had was massive.</p>
+          <p><span class="spk">Nick · 15:20</span>And you think back to the &#x27;90s, um, I can remember those days, but ads were a big thing and ads were pretty cool, and there was a lot of money that got pumped into ads. And they showed some of the Pepsi ads back then. You had, you know, Cindy Crawford was in the Manny Pacquiao, um, Shaquille O&#x27;Neal, just big names that would have charged huge money because they needed to get market share and they needed to get it quick off, off Coke.</p>
+          <p><span class="spk">Nick · 15:43</span>So, um, anyway, this— the documentary is based on a particular ad where they were running a campaign where you could gain Pepsi points by buying and drinking Pepsi. That was not your drink, it was up to you, but by buying the Pepsi you could gain Pepsi points.</p>
+          <p><span class="spk">Nick · 15:59</span>And then you had a catalog where you could spend those Pepsi points on things like you know, sunglasses and jackets and hats and whatnot. Anyway, they had this really cool ad. I thought it was cool anyway. And they showed this kid getting out of bed, gets up, puts his Pepsi jacket on, walks outside, puts his Pepsi sunnies on, and then, um, and they show him landing at school in a jet.</p>
+          <p><span class="spk">Nick · 16:25</span>So all the kids are in the classroom and all the papers are flying around. Next thing you know, this jet lands and this kid gets out of the jet. And all through the ad they had when he puts the glasses on, it said Pepsi sunglasses, you know, 200 points. Pepsi jacket, 400 points. And then it said Harrier jet, Pepsi Harrier jet, 7 million points.</p>
+          <p><span class="spk">Nick · 16:47</span>And then, and then the ad finished, you know, and this kid puts his sunnies up and said it beats getting the bus or something. It all sounds pretty normal to now, um, and pretty, uh, yeah, just, just like a normal cool ad back in the &#x27;90s. But, um, this young guy called Leonard watched it.</p>
+          <p><span class="spk">Nick · 17:02</span>He was 20 years old, and he saw an opportunity to get the jet. So what he&#x27;d figured out was there was no disclaimer on the points. So the, the offer, or the, the points given for the jacket was correct, the points given for the sunglasses were correct, um, but then they had 7 million points for this, for this jet.</p>
+          <p><span class="spk">Nick · 17:26</span>So his mind got ticking, um, and he&#x27;s like, okay, I&#x27;ll just need to get 7 million points. How do I do this? Uh, he knew a guy that he&#x27;d met through, um, uh, just through, through life who was quite, quite wealthy and would back— and he decided he would back him on this.</p>
+          <p><span class="spk">Nick · 17:44</span>And we&#x27;re going to go and get, get this jet off Pepsi for 7 million points. Drew up a business plan, worked out they&#x27;d need warehouses to house the all the Pepsi they needed to buy. They worked out they&#x27;d need employees, did the business plan, and worked out it would cost about $4.3 million to buy that amount of Pepsi.</p>
+          <p><span class="spk">Nick · 18:05</span>Still cheap because these jets were worth $32 million, I think, from memory. And this is, this is US.</p>
+          <p><span class="spk">Jason · 18:11</span>Yeah.</p>
+          <p><span class="spk">Nick · 18:11</span>So anyway, that didn&#x27;t work, so the guy shut it down. And then quite some time later, not too far down the track because the competition was still going on, Uh, he sees, uh, like a cardboard cutout marketing stand thing in a 7-Eleven shop or some kind of shop, picks up the catalog, starts flicking through it, you know, thinking what could have been.</p>
+          <p><span class="spk">Nick · 18:32</span>And he sees in the fine print, 10 cents— similar to Qantas, if you don&#x27;t have enough points to buy something, you can buy the points for 10 cents each. So this guy worked out, well, 10 cents each for a point, that gets me a jet delivered.</p>
+          <p><span class="spk">Nick · 18:48</span>For about $700,000 because I only need 7 million points. So he goes back to the guy who was going to invest in him, tells him the story, goes, let&#x27;s do it. So they cut a check for $700 grand to Pepsi. They send the check to Pepsi, and this is where it all kicks off.</p>
+          <p><span class="spk">Nick · 19:04</span>Pepsi basically shut it down and send it— send, send him 2 vouchers and the check back or something. Um, anyway, this turned into a Tell me, fix that up. Anyway, this turned into a 4-year saga, 3 to 4-year saga, um, of Pepsi versus, uh, this, this young guy Leonard and, and his backers.</p>
+          <p><span class="spk">Nick · 19:26</span>Um, he was saying there was no disclaimer on the ad. Um, it was a legitimate offer, is the, is the legal path they were going down, that 7 million points would get the jet. Um, they had some other things that they dug up on Pepsi, like, um, Pepsi actually misprinted some, some bottle caps for another competition in the Philippines, and some people thought they&#x27;d won a million dollars basically.</p>
+          <p><span class="spk">Nick · 19:51</span>But it was because of the misprint on the bottle caps. I think it was about 5. Pepsi didn&#x27;t pay up. Um, there was actually riots and whatnot in the Philippines when it didn&#x27;t happen. So it went down this path of, you know, these big corporates, um, that want to throw things out there And did Pepsi know what they were doing, or didn&#x27;t they know what they were doing?</p>
+          <p><span class="spk">Nick · 20:15</span>And this is where it got really interesting, because what happened after this guy had sent them the $700,000 and was chasing the, the jet— um, go back a step. He did actually get a settlement offer. So in their first meeting, he got offered $750k. Uh, he didn&#x27;t take it.</p>
+          <p><span class="spk">Nick · 20:31</span>He wanted the jet. So, um, what the— what happened post post him first going at Pepsi is they, they changed it to, um, 70 million, then they changed it to 700 million points, um, then they had another ad come out and underneath it they had a &#x27;just kidding.&#x27; So they were admitting default by doing that.</p>
+          <p><span class="spk">Nick · 20:55</span>So this is all the legal terms are starting to come out. Um, they also worked out that they had a disclaimer in Canada. So when the ad came out in Canada, when it originally came out, it had a disclaimer. The American one didn&#x27;t. So the argument was then, okay, well, what did you really— did you really think that, you know, were you trying to make kids think this was actually possible so they would buy more Pepsi?</p>
+          <p><span class="spk">Nick · 21:18</span>You know, now, any— I&#x27;ll go to— I&#x27;ll go to the end. It all got thrown out of court after 3 or 4 years ago. Um, they had a corporate lawyer that said, look, no, no normal person would expect that is legitimate offer. Um, and they had some reasons as, as to why not, but they were going down the path of, you know, big corporates trying to, you know, brainwash kids on what is possible.</p>
+          <p><span class="spk">Nick · 21:42</span>Um, so yeah, look, it was a really cool doco. Um, I actually thought that this is— I could see Marty Vidakovic doing this as a kid, going, okay, 7 million points, 10 cents, I still have some points, uh, I can make this, uh, I can make this work.</p>
+          <p><span class="spk">Nick · 21:57</span>Um, but yeah, I thought it was cool. Um, David versus Goliath story. So if anyone is looking for something interesting on Netflix, a doco, watch Pepsi: Where Is My Jet?</p>
+          <p><span class="spk">Jason · 22:09</span>Oh, I quite like it. I mean, especially thinking about, you know, Twitter existed and then Threads has come out. Coke— Coca-Cola existed and then Pepsi became the next player in the market. So it&#x27;s just the lessons learned about, you know, if there is enough space in the market for more than one competitor doing something very similar.</p>
+          <p><span class="spk">Jason · 22:24</span>And, um, you know, because of course there&#x27;s going to be slight differentials to both kind of offerings, right? When you&#x27;re talking Coke and Pepsi, some people really prefer Pepsi, Pepsi over Coke, and then others are like, nah, Coca-Cola is way better. And, um, but yeah, I mean, the lessons learned in, you know, how not to market and advertise and how to do things properly.</p>
+          <p><span class="spk">Nick · 22:42</span>But what was interesting, um, every, every person they interviewed did the Pepsi Coke challenge. So they gave them 2 cups, one with Coke, one with Pepsi, with obviously no labels, um, and they had to drink it and go with their preferred.</p>
+          <p><span class="spk">Nick · 22:57</span>And I think it was Pepsi was 6-4 or 6-5 or something. Uh, I was— no, sorry, Coke was— Coke actually won. It was almost like a screw you Pepsi kind of moment at the end, you know. So, um, yeah, I don&#x27;t know, I&#x27;m not, I&#x27;m not having a go at your age here, Marty, but you probably thought— you probably remember the ads, but I don&#x27;t, I don&#x27;t remember the ads.</p>
+          <p><span class="spk">Nick · 23:19</span>I&#x27;ll stop being serious. I was too young. So I— they were talking about Pepsi being the really cool brand. Coke was the brand that everyone drank, everyone drank, and Pepsi had to come in and be different. So they had to be cool, which is why they had Cindy Crawford, they had Shaquille O&#x27;Neal. Yeah, I don&#x27;t remember those ads, but that&#x27;s the— that&#x27;s what they were going for back in the day.</p>
+          <p><span class="spk">Marty · 23:39</span>It was, uh, it was certainly a big battle on TV. And, uh, not that I can remember much anymore given my age, but it&#x27;s, um, yeah, Pepsi was certainly prominent in trying to be cool, but Coke tasted better and Coke was it. You know, that was the ad, Coke is it.</p>
+          <p><span class="spk">Marty · 23:55</span>It was like, well, &#x27;Yep, Pepsi&#x27;s trying, but Coke is it.&#x27; And it was like, that was, um, yeah, they were, they were always battling. And what I really loved about that story though, Nick, is the specialized knowledge and just the intellect of that guy having a crack and, and also working out when to spend that time and effort and money in trying to do something like that, and when it&#x27;s bordering on absolutely ridiculous and crazy.</p>
+          <p><span class="spk">Marty · 24:22</span>Because I know a lot of people that are intellectual geniuses but what&#x27;s the result you&#x27;re trying to get out of going through that whole process? So that would have been incredible if he got that payout and secured the payout. That would have been the real story, the $750,000 that Pepsi were offering.</p>
+          <p><span class="spk">Jason · 24:40</span>Not taking the check?</p>
+          <p><span class="spk">Marty · 24:42</span>You&#x27;d have to, uh, it&#x27;s like Deal or No Deal.</p>
+          <p><span class="spk">Nick · 24:45</span>Yeah, no, he definitely did, he definitely did. But I can understand his thinking, right? First, first meeting and he gets offered $750K. So that&#x27;s got to say, okay, we&#x27;ve got something here. But the reality is, and this is what the court said, this is purely a money grab.</p>
+          <p><span class="spk">Nick · 25:03</span>No one was disadvantaged here. It was meant to be a joke. It should have been taken as a joke. It&#x27;s obviously a money grab. You know, the lawyers can spin that they&#x27;re trying to brainwash kids all they want, but The reality is it&#x27;s a money grab from, from, from the people that were driving it.</p>
+          <p><span class="spk">Nick · 25:22</span>Um, but you know, all up, all the way up until the end, because I was telling Marty this morning, I actually forced myself not to Google it after the first episode and find out if he won or not. Um, all the way up into the end, I was like, I think he&#x27;s gonna get paid, I think he&#x27;s gonna get paid, and then he just doesn&#x27;t.</p>
+          <p><span class="spk">Nick · 25:40</span>Um, and they, they&#x27;re unlucky in the end because they&#x27;ve got, they&#x27;ve got the wrong judge. Really. And it was quite apparent that, you know, Pepsi had, you know, a lot of cash and a pretty big legal team, and they— it was always going to be a hard one to win.</p>
+          <p><span class="spk">Nick · 25:56</span>And they got a judge who was very pro-big corporate, which was probably the nail in the coffin.</p>
+          <p><span class="spk">Marty · 26:01</span>Well, I think it changed a lot of the disclaimer laws at the time as well. Like, people became very tight with their advertising throughout many different industries, not only products. So it was, um, yeah, it&#x27;s like, I do remember it and it was, uh, it was a great story.</p>
+          <p><span class="spk">Marty · 26:18</span>And I, I just think that particularly because Charlie at the moment, my son, he&#x27;s collecting coins and it&#x27;s like he&#x27;s buying coins and getting coins at face value and he knows what the upside of that value is because that&#x27;s what he loves doing.</p>
+          <p><span class="spk">Marty · 26:34</span>So it&#x27;s really interesting when you&#x27;re talking about that, I&#x27;m thinking about what he&#x27;s doing in securing these coins at the real price as opposed to what he knows the heightened price is based on his own studies on what they&#x27;re selling them for.</p>
+          <p><span class="spk">Marty · 26:49</span>But again, it&#x27;s a strategy, specialized knowledge. They were, they were looking for a way and utilizing their intelligence and their resources to find a gap and a point of difference in the market. So there&#x27;s some really good, some really good things to that.</p>
+          <p><span class="spk">Marty · 27:05</span>But also, like you said, it&#x27;s got to be, uh, It&#x27;s got to be fair and reasonable too. That was, uh, it makes for a great story though, that&#x27;s for sure.</p>
+          <p><span class="spk">Jason · 27:13</span>Oh, definitely. Well, hopefully you&#x27;ve enjoyed a bit of a lighthearted episode. Threads versus Twitter and Coca-Cola versus Pepsi and unpacking a few of the things going on. If you haven&#x27;t seen that doco on Netflix, go and check it out. And, uh, until next time, thank you for listening. Um, give us a like, follow us on Threads if that&#x27;s a thing.</p>
+          <p><span class="spk">Jason · 27:30</span>Is it a follow on Threads? I don&#x27;t know, but we&#x27;re The Numbers Game Podcast. Podcast has done its first thread, if that&#x27;s even what it&#x27;s called. So get over there, like it, share it, thread it, post it, and, uh, share us with a friend. We love having new listeners. And, uh, until next time, I think you gotta tie the thread.</p>
+          <p><span class="spk">Marty · 27:46</span>Game over.</p>
+        </div>
+      </details>
+
+    </div>
+
+    <!-- audio-only: the Spotify player is the hero above; duplicate embed removed -->
+
+    <div class="listen">
+      <a href="https://open.spotify.com/episode/78k4JeUZ96kec4QH6qLsMA" target="_blank" rel="noopener" aria-label="Listen to this episode on Spotify">
+        <svg viewBox="0 0 24 24"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.52 17.34c-.24.36-.66.48-1.02.24-2.82-1.74-6.36-2.1-10.56-1.14-.42.12-.78-.18-.9-.54-.12-.42.18-.78.54-.9 4.56-1.02 8.52-.6 11.64 1.32.42.18.48.66.3 1.02zm1.44-3.3c-.3.42-.84.6-1.26.3-3.24-1.98-8.16-2.58-11.94-1.38-.48.12-1.02-.12-1.14-.6-.12-.48.12-1.02.6-1.14 4.32-1.32 9.72-.66 13.44 1.62.36.18.54.78.3 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.3c-.6.18-1.2-.18-1.38-.72-.18-.6.18-1.2.72-1.38 4.26-1.26 11.28-1.02 15.72 1.62.54.3.72 1.02.42 1.56-.3.42-1.02.6-1.56.3z"/></svg>
+        Spotify
+      </a>
+      <a href="https://podcasts.apple.com/au/podcast/id1555566088?i=1000776470464" target="_blank" rel="noopener" aria-label="Listen to this episode on Apple Podcasts">
+        <svg viewBox="0 0 24 24"><path d="M5.34 0A5.328 5.328 0 000 5.34v13.32A5.328 5.328 0 005.34 24h13.32A5.328 5.328 0 0024 18.66V5.34A5.328 5.328 0 0018.66 0H5.34zm6.525 2.568c2.336 0 4.448.902 6.056 2.587 1.224 1.272 1.912 2.619 2.264 4.392l.04.23c.04.272-.16.527-.432.567a.505.505 0 01-.567-.431l-.04-.213c-.312-1.57-.92-2.747-2.004-3.867-1.428-1.496-3.293-2.294-5.393-2.294-2.1 0-3.966.798-5.394 2.294-1.084 1.12-1.692 2.298-2.004 3.867l-.04.213a.507.507 0 01-.567.431.504.504 0 01-.432-.567l.04-.23c.352-1.773 1.04-3.12 2.264-4.392 1.608-1.685 3.72-2.587 6.056-2.587h.153zm.136 3.033c1.74 0 3.312.67 4.527 1.934.883.916 1.394 1.93 1.663 3.253l.04.23a.505.505 0 01-.431.567.503.503 0 01-.567-.432l-.04-.212c-.23-1.112-.659-1.97-1.396-2.732-1.052-1.1-2.404-1.672-3.9-1.672s-2.849.572-3.901 1.672c-.737.762-1.167 1.62-1.396 2.732l-.04.212a.503.503 0 01-.567.432.505.505 0 01-.432-.567l.04-.23c.27-1.323.78-2.337 1.664-3.253 1.215-1.264 2.787-1.934 4.527-1.934h.21zm-.078 3.05c1.092 0 2.091.424 2.89 1.22.582.58.924 1.245 1.107 2.15l.04.218a.501.501 0 01-.424.568.499.499 0 01-.568-.424l-.04-.198c-.146-.724-.413-1.253-.871-1.716-.63-.63-1.398-.957-2.226-.957s-1.595.328-2.225.957c-.459.463-.726.992-.871 1.716l-.04.198a.499.499 0 01-.568.424.501.501 0 01-.424-.568l.04-.219c.183-.904.525-1.569 1.106-2.149.8-.796 1.799-1.22 2.89-1.22h.184zM12 14.07a2.477 2.477 0 012.48 2.478A2.477 2.477 0 0112 19.024a2.477 2.477 0 01-2.48-2.477A2.477 2.477 0 0112 14.07z"/></svg>
+        Apple
+      </a>
+      <a class="yt-pill" href="https://www.youtube.com/@thenumbersgamepodcast?sub_confirmation=1" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.12-2.14C19.5 3.55 12 3.55 12 3.55s-7.5 0-9.38.51A3 3 0 0 0 .5 6.2 31.4 31.4 0 0 0 0 12a31.4 31.4 0 0 0 .5 5.8 3 3 0 0 0 2.12 2.14c1.88.51 9.38.51 9.38.51s7.5 0 9.38-.51a3 3 0 0 0 2.12-2.14A31.4 31.4 0 0 0 24 12a31.4 31.4 0 0 0-.5-5.8zM9.55 15.57V8.43L15.82 12z"/></svg>
+        Subscribe
+      </a>
+    </div>
+    <!-- LISTEN:END -->
+
+    <div class="relsec">
+      <span class="rtitle">Discover more</span>
+      <div class="relgrid">
+        <a class="relcard" href="/dollar-cost-averaging-the-easiest-way-to-build-wealth-over-time">
+          <img src="https://i.ytimg.com/vi/mbQ7UObCuHA/hqdefault.jpg" alt="EP 232 thumbnail">
+          <span class="rt">Dollar Cost Averaging - The Easiest Way to Build Wealth Over Time</span>
+          <span class="rfoot"><span class="rwhy">19 May 2025</span><span class="rtag">EP 232</span></span>
+        </a>
+        <a class="relcard" href="/joel-wermut-reinventing-real-estate-tech-with-prop-app">
+          <img src="https://i.ytimg.com/vi/OMLSIds1ofI/hqdefault.jpg" alt="EP 246 thumbnail">
+          <span class="rt">Joel Wermut - Reinventing Real Estate Tech With Prop App</span>
+          <span class="rfoot"><span class="rwhy">25 August 2025</span><span class="rtag">EP 246</span></span>
+        </a>
+        <a class="relcard" href="/raising-gst-in-australia-and-why-it-would-work">
+          <img src="https://i.ytimg.com/vi/k1NVsiBc7JY/hqdefault.jpg" alt="EP 222 thumbnail">
+          <span class="rt">Raising GST in Australia and Why it Would Work</span>
+          <span class="rfoot"><span class="rwhy">10 March 2025</span><span class="rtag">EP 222</span></span>
+        </a>
+        <a class="relcard" href="/the-real-cost-of-uni-in-australia">
+          <img src="https://i.ytimg.com/vi/IOfH8SSaLwQ/hqdefault.jpg" alt="EP 228 thumbnail">
+          <span class="rt">The Real Cost of Uni in Australia</span>
+          <span class="rfoot"><span class="rwhy">21 April 2025</span><span class="rtag">EP 228</span></span>
+        </a>
+        <a class="relcard" href="/why-income-alone-doesn-t-build-wealth">
+          <img src="https://i.ytimg.com/vi/0xqEhQPbwFU/hqdefault.jpg" alt="EP 269 thumbnail">
+          <span class="rt">Why Income Alone Doesn&#x27;t Build Wealth</span>
+          <span class="rfoot"><span class="rwhy">23 March 2026</span><span class="rtag">EP 269</span></span>
+        </a>
+        <a class="relcard" href="/how-money-beliefs-undermine-confidence-and-lead-to-self-sabotage">
+          <img src="https://i.ytimg.com/vi/8krYXDGj_m0/hqdefault.jpg" alt="EP 240 thumbnail">
+          <span class="rt">How Money Beliefs Undermine Confidence and Lead to Self-Sabotage</span>
+          <span class="rfoot"><span class="rwhy">14 July 2025</span><span class="rtag">EP 240</span></span>
+        </a>
+      </div>
+      <div class="reldots" id="reldots"></div>
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="footgrid">
+      <div class="fcol">
+        <div class="foot-label">Brought to you by</div>
+        <div class="sponsors">
+          <a href="https://www.inovayt.com.au/" target="_blank" rel="noopener"><img src="assets/inovayt-white.png" alt="Inovayt"></a>
+          <a href="https://futureadvisory.com.au/" target="_blank" rel="noopener"><img src="assets/future-advisory-white.png" alt="Future Advisory"></a>
+        </div>
+      </div>
+      <div class="fcol produced">
+        <div class="foot-label">Produced by</div>
+        <a href="https://www.vidpod.com.au/" target="_blank" rel="noopener"><img src="assets/vidpod-white.png" alt="VIDPOD"></a>
+      </div>
+    </div>
+    <nav class="footnav">
+      <a href="index.html">Home</a><a href="episodes.html">Every episode</a><a href="adventure.html">Choose your own adventure</a><a href="about.html">About the show</a><a href="nick-reilly.html">Nick Reilly</a><a href="jason-robinson.html">Jason Robinson</a><a href="contact.html">Contact</a>
+    </nav>
+    <div class="copyright">© 2026 The Numbers Game</div>
+  </footer>
+
+  <script>
+    var VIDEO='RAQ80ecsDq0';
+
+    /* Mobile nav dropdown. */
+    var burger=document.getElementById('navburger'), navdrop=document.getElementById('navdrop');
+    if(burger&&navdrop){burger.addEventListener('click',function(){
+      navdrop.hidden=!navdrop.hidden;
+      burger.setAttribute('aria-expanded', navdrop.hidden?'false':'true');
+    });}
+
+    /* Voice-note button reveals the recorder; × tucks it away. */
+    var vbtn=document.getElementById('vbtn'), vslot=document.getElementById('vslot'), vclose=document.getElementById('vclose');
+    if(vbtn&&vslot){vbtn.addEventListener('click',function(){vslot.hidden=!vslot.hidden;});}
+    if(vclose&&vslot){vclose.addEventListener('click',function(){vslot.hidden=true;});}
+
+    /* Keep-exploring dots: only shown when the strip actually scrolls (mobile). */
+    var rg=document.querySelector('.relgrid'), rd=document.getElementById('reldots');
+    if(rg&&rd){
+      var relCards=rg.querySelectorAll('.relcard');
+      relCards.forEach(function(){rd.appendChild(document.createElement('span'))});
+      var updDots=function(){
+        var scrollable=rg.scrollWidth>rg.clientWidth+4;
+        rd.style.display=scrollable?'flex':'none';
+        if(!scrollable)return;
+        var i=Math.round(rg.scrollLeft/(rg.scrollWidth-rg.clientWidth)*(relCards.length-1));
+        rd.querySelectorAll('span').forEach(function(s,n){s.classList.toggle('on',n===i)});
+      };
+      rg.addEventListener('scroll',updDots,{passive:true});
+      window.addEventListener('resize',updDots);
+      updDots();
+    }
+
+    /* Explore tabs: swap the visible panel; the row stays put so you never lose your place. */
+    var tabBtns=document.querySelectorAll('.tabbtn');
+    tabBtns.forEach(function(b){
+      b.addEventListener('click',function(){
+        tabBtns.forEach(function(o){o.classList.remove('on')});
+        document.querySelectorAll('.tpanel').forEach(function(p){p.hidden=true});
+        b.classList.add('on');
+        document.getElementById(b.getAttribute('data-panel')).hidden=false;
+      });
+    });
+
+    /* Audio-only: Spotify player is the hero; chapters/questions seek it via the Spotify iFrame API. */
+    var spotifyCtrl=null, pendingSeek=null;
+    function nudge(){
+      var p=document.getElementById('player-wrap'), r=p.getBoundingClientRect();
+      if(r.bottom<80 || r.top>window.innerHeight-90){ p.scrollIntoView({behavior:'smooth',block:'start'}); }
+    }
+    function startAt(sec){
+      nudge();
+      if(spotifyCtrl){ spotifyCtrl.seek(sec); spotifyCtrl.resume(); } else { pendingSeek=sec; }
+    }
+    window.onSpotifyIframeApiReady=function(IFrameAPI){
+      IFrameAPI.createController(document.getElementById('spotify-embed'),
+        {uri:'spotify:episode:5shbLf9GpvGPmw9VsjLDfv', width:'100%', height:'232'},
+        function(c){ spotifyCtrl=c; if(pendingSeek!=null){ c.seek(pendingSeek); c.resume(); pendingSeek=null; } });
+    };
+    (function(){var sc=document.createElement('script');sc.src='https://open.spotify.com/embed/iframe-api/v1';sc.async=true;document.head.appendChild(sc);})();
+  </script>
+</body>
+</html>

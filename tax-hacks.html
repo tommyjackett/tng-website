@@ -1,0 +1,747 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EP 10 · Tax Hacks | The Numbers Game</title>
+<meta name="description" content="Welcome to episode 10 of The Numbers Game podcast. End of financial year is fast approaching and today we&#x27;re talking all things tax and how to best optimise …">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" sizes="64x64" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="canonical" href="https://thenumbersgamepodcast.com.au/tax-hacks">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="The Numbers Game">
+<meta property="og:title" content="EP 10 · Tax Hacks | The Numbers Game">
+<meta property="og:description" content="Welcome to episode 10 of The Numbers Game podcast. End of financial year is fast approaching and today we&#x27;re talking all things tax and how to best optimise …">
+<meta property="og:url" content="https://thenumbersgamepodcast.com.au/tax-hacks">
+<meta property="og:image" content="https://thenumbersgamepodcast.com.au/assets/tng-audio-only-thumbnail.webp">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+  :root{
+    --purple:#585af3; --purple-dark:#2c1b8a; --mint:#7ad9a8;
+    --white:#ffffff; --muted:rgba(255,255,255,.60); --dim:rgba(255,255,255,.42);
+    --line:rgba(255,255,255,.12); --card:rgba(255,255,255,.05); --card-hi:rgba(255,255,255,.09);
+    --display:'Anton',Impact,'Helvetica Neue',sans-serif;
+    --sans:'Inter',system-ui,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif;
+    --wrap:1280px;   /* page frame (nav spans this) */
+    --col:960px;     /* content column (player, tabs, text) */
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:var(--sans); color:var(--white); line-height:1.6; -webkit-font-smoothing:antialiased;
+    background:#12093a;
+    background-image:
+      radial-gradient(1200px 600px at 82% -6%, rgba(88,90,243,.45) 0%, transparent 55%),
+      radial-gradient(900px 700px at 5% 8%, rgba(122,217,168,.10) 0%, transparent 50%),
+      linear-gradient(180deg,#2c1b8a 0%,#1a1150 28%,#100b34 62%,#0b0820 100%);
+    background-attachment:fixed;
+  }
+  a{color:inherit}
+  .wrap{max-width:var(--wrap);margin:0 auto;padding:0 36px}
+  main.wrap{max-width:var(--col)}
+  @media(max-width:720px){.wrap{padding:0 22px}}
+
+  /* ── Navbar ── */
+  .nav{position:sticky;top:0;z-index:50;background:linear-gradient(180deg,rgba(24,15,74,.92),rgba(24,15,74,.72));backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+  .nav-in{max-width:var(--wrap);margin:0 auto;padding:11px 36px;display:flex;align-items:center;justify-content:space-between}
+  @media(max-width:720px){.nav-in{padding:11px 22px}}
+  .brand{display:block;line-height:0}
+  .brand img{height:36px;width:auto;display:block}
+  .navlinks{display:flex;gap:28px;align-items:center}
+  .navlinks a{text-decoration:none;font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);transition:.15s}
+  .navlinks a:hover{color:var(--white)}
+  .navlinks a.navtop{cursor:default}
+  .navgroup{position:relative;display:flex;align-items:center}
+  .navgroup .subnav{display:none;position:absolute;top:100%;left:50%;transform:translateX(-50%);padding-top:14px;min-width:180px}
+  .navgroup:hover .subnav,.navgroup:focus-within .subnav{display:block}
+  .subnav-in,.navgroup .subnav{z-index:60}
+  .navgroup .subnav a{display:block;background:#180f4a;border:1px solid var(--line);border-top:0;padding:12px 16px;font-size:12px;color:rgba(255,255,255,.85)}
+  .navgroup .subnav a:first-child{border-top:1px solid var(--line)}
+  .navgroup .subnav a:hover{background:#221768;color:var(--white)}
+  .navburger{display:none;background:none;border:1px solid var(--line);padding:8px 10px;cursor:pointer;color:var(--white);transition:.15s}
+  .navburger:hover{border-color:rgba(122,217,168,.6)}
+  .navburger svg{width:20px;height:20px;fill:currentColor;display:block}
+  .navdrop{display:none}
+  @media(max-width:720px){
+    .navlinks{display:none}
+    .navburger{display:block}
+    .navdrop{display:block;position:absolute;left:0;right:0;top:100%;
+      background:#180f4a;border-bottom:1px solid var(--line);box-shadow:0 24px 50px rgba(0,0,0,.45)}
+    .navdrop[hidden]{display:none}
+    .navdrop a{display:block;padding:15px 22px;text-decoration:none;font-size:14px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:rgba(255,255,255,.9);border-bottom:1px solid rgba(255,255,255,.06)}
+    .navdrop a:last-child{border-bottom:0}
+    .navdrop a.sub{padding-left:42px;font-size:13px;color:rgba(255,255,255,.72)}
+    .navdrop .navlabel{display:block;padding:15px 22px 6px;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.4)}
+  }
+
+  /* ── Hero / hook (marker-highlight system: purple hook wraps naturally, mint payoff below)
+     Rules: title splits at its natural break (colon/pipe/question mark). Front = hook (purple,
+     big), back = payoff (mint, smaller). No break in title = purple hook only. Highlights hug
+     the text (tight em padding tuned to Anton) and wrap via box-decoration-break — never
+     hand-pick line breaks or mint words. ── */
+  header.hero{padding:34px 0 6px}
+  .hook{--inx:clamp(8.4px,2.1vw,15.6px)} /* one shared text inset so hook + payoff first letters align */
+  .hook .hk{font-family:var(--display);font-weight:400;text-transform:uppercase;
+    font-size:clamp(28px,7vw,52px);line-height:1.3;letter-spacing:-.5px;text-wrap:balance}
+  .hook .hk span{color:var(--white);padding:.04em var(--inx) .02em;
+    background:linear-gradient(var(--purple),var(--purple)) 0 50%/100% 87% no-repeat;
+    -webkit-box-decoration-break:clone;box-decoration-break:clone}
+  .hook .pay{font-family:var(--display);font-weight:400;text-transform:uppercase;
+    font-size:clamp(16px,4vw,24px);line-height:1.5;letter-spacing:.6px;margin-top:8px;text-wrap:balance}
+  .hook .pay span{color:#0a0a0a;padding:.08em var(--inx) .04em;
+    background:linear-gradient(var(--mint),var(--mint)) 0 50%/100% 88% no-repeat;
+    -webkit-box-decoration-break:clone;box-decoration-break:clone}
+  /* no-hook titles: mid-split into two full-size rows, purple then mint */
+  .hook .hk span.hkrow{display:block;background:none;padding:0}
+  .hook .hk .hkrow+.hkrow{margin-top:8px}
+  .hook .hk span.mintseg{color:#0a0a0a;
+    background:linear-gradient(var(--mint),var(--mint)) 0 50%/100% 87% no-repeat}
+
+  /* ── Player (clean facade → real player on tap) ── */
+  .player-wrap{margin:24px 0 4px;scroll-margin-top:76px}
+  .audio-hero{width:100%;min-height:232px;border-radius:12px;overflow:hidden;box-shadow:0 30px 70px rgba(0,0,0,.5),0 0 0 1px rgba(255,255,255,.06)}
+  .audio-hero iframe{display:block;width:100%;border:0}
+  .player{position:relative;width:100%;padding-top:56.25%;border-radius:0;overflow:hidden;background:#000;box-shadow:0 30px 70px rgba(0,0,0,.5),0 0 0 1px rgba(255,255,255,.06)}
+  .facade{position:absolute;inset:0;border:0;cursor:pointer;background-size:cover;background-position:center;display:flex;align-items:center;justify-content:center;padding:0}
+  .facade .play{width:74px;height:74px;border-radius:50%;background:rgba(10,6,30,.40);border:2px solid rgba(255,255,255,.72);display:flex;align-items:center;justify-content:center;transition:.18s;-webkit-backdrop-filter:blur(1px);backdrop-filter:blur(1px)}
+  .facade:hover .play{background:rgba(88,90,243,.62);transform:scale(1.07);border-color:#fff}
+  .facade .play::after{content:"";border-style:solid;border-width:11px 0 11px 19px;border-color:transparent transparent transparent #fff;margin-left:5px}
+  .player iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+
+  /* ── Episode facts (bottom of the Summary panel — templated per episode) ── */
+  .sumfacts{margin:14px 10px 4px;padding-top:13px;border-top:1px solid rgba(255,255,255,.08);display:flex;flex-direction:column;gap:8px}
+  .fact{display:flex;gap:12px;font-size:13.5px}
+  .fact .fl{flex:none;width:104px;color:var(--dim);font-weight:600;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;padding-top:2px}
+  .fact .fv{color:rgba(255,255,255,.9);font-weight:500}
+  .fact .fv a{color:var(--mint);text-decoration:none;border-bottom:1px solid rgba(122,217,168,.4);transition:.15s}
+  .fact .fv a:hover{border-bottom-color:var(--mint)}
+
+  /* ── Episode tag (identity: black label hanging off the title corner) ── */
+  .eptag{display:inline-block;position:relative;left:-6px;margin-bottom:-7px;z-index:2;
+    background:#0a0a0a;color:var(--white);font-family:var(--display);font-weight:400;
+    font-size:13.5px;letter-spacing:1.5px;text-transform:uppercase;padding:6px 11px 4px}
+
+  /* ── Explore tabs (sticky mode switcher; one panel swaps below, nothing shoves) ── */
+  .explore{margin-top:22px}
+  .tabs{position:sticky;top:58px;z-index:40;display:flex;flex-wrap:wrap;gap:8px;padding:10px 0;
+    background:linear-gradient(180deg,rgba(18,10,55,.96),rgba(18,10,55,.86));
+    backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+  .tabbtn{font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.5px;
+    font-size:14.5px;color:var(--white);background:var(--purple);border:1px solid var(--purple);
+    padding:9px 13px 7px;cursor:pointer;transition:.15s}
+  .tabbtn:hover{filter:brightness(1.12)}
+  .tabbtn.on{background:var(--mint);border-color:var(--mint);color:#0a0a0a}
+  .tabbtn.on:hover{filter:none}
+  .tabbtn .ct{font-size:12px;opacity:.75;font-variant-numeric:tabular-nums}
+  .tabbtn .ct::before{content:" · "}
+  .tpanel{border:1px solid var(--line);background:var(--card);padding:12px 10px 14px}
+  .hint{font-size:12.5px;color:var(--muted);padding:2px 10px 10px;border-bottom:1px solid rgba(255,255,255,.08);margin-bottom:6px}
+
+  /* ── Listen row (no box: label left, service pills follow) ── */
+  .listen{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:12px 16px;margin-top:34px}
+  .listen .lname{font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--dim)}
+  .listen a{display:inline-flex;align-items:center;gap:9px;padding:11px 18px;border-radius:999px;
+    background:var(--mint);color:#08210f;text-decoration:none;font-weight:800;font-size:12.5px;
+    letter-spacing:.04em;text-transform:uppercase;transition:.15s}
+  .listen a:hover{filter:brightness(1.06);transform:translateY(-1px);box-shadow:0 12px 30px rgba(122,217,168,.25)}
+  .listen svg{width:20px;height:20px;fill:currentColor;flex:none}
+  /* ── Listen-now Spotify audio embed (full column width, above the pills) ── */
+  .listen-now{margin-top:40px}
+  .listen-now .ln-head{display:flex;align-items:baseline;justify-content:space-between;gap:14px;margin-bottom:13px}
+  .listen-now .ln-title{font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--dim)}
+  .audio-embed{border-radius:12px;overflow:hidden;box-shadow:0 20px 50px rgba(0,0,0,.4),0 0 0 1px rgba(255,255,255,.06)}
+  .audio-embed iframe{display:block;width:100%;border:0}
+  @media(max-width:720px){.listen-now{margin-top:32px}}
+
+  /* ── Keep exploring (thumbnails link to other episode PAGES, never timecodes).
+     Swipeable strip on mobile, fits three-up on desktop. Variant rule: claim
+     "similar ground" + reason lines ONLY when moment-level topic overlap is
+     genuinely strong; otherwise show the latest released episodes with dates —
+     never invent a connection. ── */
+  .relsec{margin-top:60px;padding-top:58px;border-top:1px solid var(--line)} /* line = end of this episode's info */
+  .reldots{display:flex;justify-content:center;gap:7px;margin-top:12px}
+  .reldots span{width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.25);transition:.2s}
+  .reldots span.on{background:var(--mint)}
+  .relsec .rtitle{display:inline-block;font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.5px;font-size:14.5px;background:var(--mint);color:#0a0a0a;padding:9px 13px 7px;margin-bottom:18px}
+  .relgrid{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding-bottom:6px;scrollbar-width:none}
+  .relgrid::-webkit-scrollbar{display:none}
+  .relcard{flex:0 0 56%;max-width:232px;scroll-snap-align:start;display:flex;flex-direction:column;text-decoration:none;background:var(--card);border:1px solid var(--line);transition:.15s}
+  .relcard:hover{background:var(--card-hi);border-color:rgba(122,217,168,.55)}
+  .relcard img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block}
+  .relcard .rt{display:block;font-size:12.5px;font-weight:600;color:rgba(255,255,255,.92);line-height:1.4;padding:8px 8px 0}
+  .relcard .rfoot{margin-top:auto;display:flex;justify-content:space-between;align-items:flex-end;gap:8px;padding:10px 8px 9px}
+  .relcard .rwhy{font-size:11.5px;color:var(--mint)}
+  .relcard .rtag{display:inline-block;background:#0a0a0a;color:var(--white);font-family:var(--display);font-size:10px;letter-spacing:1.2px;text-transform:uppercase;padding:3px 7px 2px;white-space:nowrap;flex:0 0 auto}
+
+  /* ── Dropdown sections (accordion under the player) ── */
+  .drops{margin-top:34px;display:flex;flex-direction:column;gap:11px}
+  .drop{border:1px solid var(--line);border-radius:0;background:var(--card);overflow:hidden;transition:border-color .15s}
+  .drop[open]{border-color:rgba(122,217,168,.35)}
+  .drop>summary{list-style:none;cursor:pointer;padding:16px 18px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+  .drop>summary::-webkit-details-marker{display:none}
+  .drop>summary .st{font-weight:700;font-size:15.5px;letter-spacing:.005em}
+  .drop>summary .ct{margin-left:auto;font-size:12px;color:var(--dim);font-weight:600;font-variant-numeric:tabular-nums}
+  .drop>summary .chev{flex:none;width:22px;height:22px;border-radius:50%;background:rgba(122,217,168,.14);color:var(--mint);display:flex;align-items:center;justify-content:center;font-family:var(--display);font-size:15px;line-height:1;transition:.2s;transform:translateY(-1px)}
+  .drop[open]>summary .chev{transform:rotate(45deg)}
+  .drop-body{padding:2px 12px 12px}
+
+  /* chapters */
+  .chapter{display:flex;align-items:baseline;gap:14px;width:100%;text-align:left;cursor:pointer;background:none;border:0;color:inherit;font-family:inherit;padding:11px 10px;border-radius:10px;transition:.13s}
+  .chapter:hover{background:var(--card-hi)}
+  .chapter .tc{font-variant-numeric:tabular-nums;font-weight:700;font-size:14px;color:var(--mint);flex:none;width:48px}
+  .chapter .cx{font-size:15px;font-weight:500;color:rgba(255,255,255,.9)}
+  .chapter:hover .cx{color:#fff}
+
+  /* questions */
+  .q{display:flex;align-items:center;gap:12px;width:100%;text-align:left;cursor:pointer;background:none;border:0;border-radius:11px;color:inherit;font-family:inherit;padding:12px 10px;transition:.14s}
+  .q+.q{border-top:1px solid rgba(255,255,255,.05)}
+  .q:hover{background:var(--card-hi)}
+  .q .qm{font-family:var(--display);font-size:15px;color:var(--mint);flex:none;line-height:1;transform:translateY(1px)}
+  .q .qx{font-size:15px;font-weight:500;color:rgba(255,255,255,.92)}
+  .q .go{margin-left:auto;flex:none;color:var(--dim);font-size:18px;transition:.15s}
+  .q:hover .go{color:var(--mint);transform:translateX(2px)}
+
+  /* summary + transcript bodies */
+  .summary-body p{font-size:16.5px;line-height:1.62;color:rgba(255,255,255,.9);padding:6px 10px 4px}
+  .tbody{padding:2px 10px 8px}
+  .tbody p{font-size:14.5px;line-height:1.7;color:rgba(255,255,255,.78);margin-top:15px;max-width:64ch}
+  .tbody .spk{display:block;font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--mint);margin-bottom:2px}
+
+  /* ── Voice note ask (lives at the bottom of the Summary panel) ── */
+  .vask{margin:16px 10px 4px}
+  .vbtn{display:inline-flex;align-items:center;gap:9px;padding:12px 20px;border-radius:999px;border:0;cursor:pointer;
+    background:var(--mint);color:#08210f;font-family:inherit;font-weight:800;font-size:12.5px;
+    letter-spacing:.04em;text-transform:uppercase;transition:.15s}
+  .vbtn:hover{filter:brightness(1.06);transform:translateY(-1px);box-shadow:0 12px 30px rgba(122,217,168,.25)}
+  .vbtn svg{width:18px;height:18px;fill:currentColor;flex:none}
+  .vslot{background:var(--purple);padding:12px 10px 10px;margin:14px 0 4px;box-shadow:0 18px 40px rgba(0,0,0,.35)}
+  .vslot[hidden]{display:none}
+  .vhead{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;margin-bottom:10px}
+  .vhead .vmsg{font-family:var(--sans);font-size:13px;line-height:1.55;color:rgba(255,255,255,.92);margin:2px 0 0;padding:0 2px}
+  .vclose{background:none;border:0;color:rgba(255,255,255,.85);font-size:22px;line-height:1;cursor:pointer;padding:0 2px}
+  .vclose:hover{color:var(--white)}
+  .vslot iframe{display:block}
+
+  /* ── YouTube subscribe pill (sits in the listen row; outranks .listen a's mint) ── */
+  .listen a.yt-pill{background:var(--purple);color:var(--white)}
+  .listen a.yt-pill:hover{filter:brightness(1.1);transform:translateY(-1px)}
+  @media(max-width:720px){ /* mobile: no label, three compact pills on one row */
+    .listen .lname{display:none}
+    .listen{gap:8px}
+    .listen a{padding:10px 13px;font-size:11px;gap:6px}
+    .listen svg{width:16px;height:16px}
+  }
+
+  /* ── Footer: two columns under the line (Brought to you by | Produced by), matches adventure.html ── */
+  footer{border-top:1px solid var(--line);margin-top:68px;padding:52px 20px 58px}
+  .footgrid{max-width:var(--wrap);margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:start}
+  @media(max-width:720px){.footgrid{grid-template-columns:1fr;gap:40px}}
+  .fcol{text-align:center}
+  .foot-label{font-size:11px;font-weight:700;letter-spacing:.26em;text-transform:uppercase;color:var(--dim);margin-bottom:16px}
+  .sponsors{display:flex;justify-content:center;align-items:center;gap:38px;flex-wrap:wrap}
+  .sponsors a{display:inline-flex;transition:.15s}
+  .sponsors a:hover{transform:translateY(-1px)}
+  .sponsors img{height:34px;width:auto;opacity:.92}
+  .sponsors a:hover img{opacity:1}
+  .produced a{display:inline-flex;transition:.15s}
+  .produced a:hover img{opacity:1}
+  .produced img{height:30px;width:auto;opacity:.95}
+  .footnav{margin-top:36px;display:flex;justify-content:center;flex-wrap:wrap;gap:6px 26px}
+  .footnav a{font-size:12px;font-weight:600;letter-spacing:.04em;color:var(--dim);text-decoration:none;transition:.15s}
+  .footnav a:hover{color:var(--mint)}
+  .copyright{margin-top:40px;font-size:12px;color:var(--dim);text-align:center}
+
+  @media(min-width:720px){header.hero{padding:48px 0 6px}}
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "PodcastEpisode", "name": "Buying Commercial Property With Your Super in 2026 | What the Numbers Say", "url": "https://thenumbersgamepodcast.com.au/episode-285.html", "datePublished": "2026-07-13", "episodeNumber": 285, "image": "https://i.ytimg.com/vi/RAQ80ecsDq0/maxresdefault.jpg", "partOfSeries": {"@type": "PodcastSeries", "name": "The Numbers Game", "url": "https://thenumbersgamepodcast.com.au/"}}</script>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-in">
+      <a class="brand" href="index.html" aria-label="The Numbers Game home"><img src="assets/tng-logo.png" alt="The Numbers Game"></a>
+      <div class="navlinks">
+        <a href="index.html">Home</a>
+        <div class="navgroup">
+          <a class="navtop">Episodes</a>
+          <div class="subnav">
+            <a href="episodes.html">All episodes</a>
+            <a href="adventure.html">Find moments</a>
+          </div>
+        </div>
+        <div class="navgroup">
+          <a class="navtop">About</a>
+          <div class="subnav">
+            <a href="about.html">The show</a>
+            <a href="nick-reilly.html">Nick Reilly</a>
+            <a href="jason-robinson.html">Jason Robinson</a>
+          </div>
+        </div>
+        <a href="contact.html">Contact</a>
+      </div>
+      <button class="navburger" id="navburger" type="button" aria-label="Menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24"><path d="M3 6h18v2H3zM3 11h18v2H3zM3 16h18v2H3z"/></svg>
+      </button>
+    </div>
+    <div class="navdrop" id="navdrop" hidden>
+      <a href="index.html">Home</a>
+      <span class="navlabel">Episodes</span>
+      <a class="sub" href="episodes.html">All episodes</a>
+      <a class="sub" href="adventure.html">Find moments</a>
+      <span class="navlabel">About</span>
+      <a class="sub" href="about.html">The show</a>
+      <a class="sub" href="nick-reilly.html">Nick Reilly</a>
+      <a class="sub" href="jason-robinson.html">Jason Robinson</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+
+  <main class="wrap">
+
+    <header class="hero">
+      <div class="hook">
+        <span class="eptag">EP 10</span>
+        <h1 class="hk"><span>Tax Hacks</span></h1>
+      </div>
+    </header>
+
+    <div class="player-wrap" id="player-wrap">
+      <div class="audio-hero" id="spotify-embed"></div>
+    </div>
+
+    <div class="explore">
+      <div class="tabs" role="tablist">
+        <button class="tabbtn on" data-panel="p-summary">Summary</button>
+      </div>
+      <section class="tpanel" id="p-summary">
+        <div class="summary-body">
+          <p>Welcome to episode 10 of The Numbers Game podcast. End of financial year is fast approaching and today we&#x27;re talking all things tax and how to best optimise your situation.</p>
+        </div>
+        <div class="vask">
+          <button class="vbtn" id="vbtn" type="button">
+            <svg viewBox="0 0 24 24"><path d="M12 14a3 3 0 0 0 3-3V6a3 3 0 1 0-6 0v5a3 3 0 0 0 3 3zm5-3a5 5 0 0 1-10 0H5a7 7 0 0 0 6 6.92V21h2v-3.08A7 7 0 0 0 19 11h-2z"/></svg>
+            Send us a voice note
+          </button>
+          <div class="vslot" id="vslot" hidden>
+            <div class="vhead">
+              <p class="vmsg">We'd love to hear from you. You can leave up to a 90 second voice note for us to play on the show: a question, some feedback, or a topic you want covered.</p>
+              <button class="vclose" id="vclose" type="button" aria-label="Close">&times;</button>
+            </div>
+            <iframe src="https://www.speakpipe.com/widget/inline/hhq6kzggsx7zpcsvakgxfrzun3zidpde" allow="microphone" width="100%" height="200" frameborder="0" title="Leave The Numbers Game a voice note"></iframe>
+          </div>
+          <script async src="https://www.speakpipe.com/widget/loader.js" charset="utf-8"></script>
+        </div>
+        <div class="sumfacts">
+          <div class="fact"><span class="fl">Release date</span><span class="fv">3 May 2021</span></div>
+          <div class="fact"><span class="fl">Hosts</span><span class="fv"><a href="jason-robinson.html">Jason Robinson</a> &amp; <a href="nick-reilly.html">Nick Reilly</a> &amp; <a href="marty-vidakovic.html">Marty Vidakovic</a></span></div>
+
+        </div>
+      </section>
+    </div>
+
+    <div class="drops">
+
+      <details class="drop">
+        <summary><span class="st">Episode transcript</span><span class="chev">+</span></summary>
+        <div class="drop-body tbody">
+          <p><span class="spk">Jason · 00:00</span>Thanks to our sponsor Walker Digital, who&#x27;ve stepped in to help the Numbers Game podcast with their social media. Walker Digital are a digital marketing agency covering strategy, content, video implementation, and education. The team at Walker have spread the word of our clients and love working with businesses doing good things, helping them to grow and reach more people so they can scale and get larger.</p>
+          <p><span class="spk">Jason · 00:20</span>I know personally the first thing I did when growing our business was to outsource social media, blogs, and copywriting because I knew it was something that was not the best use of my time, and the girls at Walker Digital smashed it. Sometimes you need to walk before you can run. Find out more at their website, wlkr.digital. This episode does not class as personal advice.</p>
+          <p><span class="spk">Jason · 00:40</span>It is general and does not take into account your objectives, financial situation, or needs. People may also hold positions in the companies discussed. Welcome to episode 10 of The Numbers Game. I&#x27;m Jason, and as always, I&#x27;m here with Nick and Marty.</p>
+          <p><span class="spk">Jason · 00:55</span>How are we going today, guys?</p>
+          <p><span class="spk">Marty · 00:57</span>Oh mate, this is going to be the episode of episodes. It is episode 10. I&#x27;ve asked for the cake, I&#x27;ve asked for the streamers, Nothing.</p>
+          <p><span class="spk">Nick · 01:05</span>You got a big cup. You&#x27;ve got a big cup.</p>
+          <p><span class="spk">Marty · 01:06</span>I&#x27;ve got a big cup. Daily Talk Show. Daily Talk Show. Cheers. It&#x27;s an American small. Check it out on YouTube. Nick, how you going, buddy?</p>
+          <p><span class="spk">Nick · 01:13</span>I&#x27;m going well, mate. That time of the year, Nelly. Tax time. I did mention a couple of weeks ago that I spent a full sad day putting my tax together. So, Jase, this is your time to shine. We&#x27;re going to talk about how we can save some tax prior to June 30 and put more money in our pockets.</p>
+          <p><span class="spk">Jason · 01:29</span>Beautiful, mate. I&#x27;m also going to share today what happens when you have a bad relationship with your accountant. Do you not get emails replied? Do they return your calls? Or are they confident in their advice? We&#x27;ll talk about that. Marty?</p>
+          <p><span class="spk">Marty · 01:40</span>Well, I&#x27;m going to talk about why used cars are so hot right now. So let&#x27;s play Reading the Play.</p>
+          <p><span class="spk">Jason · 01:48</span>Each week we bring you the tips and tricks or interesting facts that are going around. This week, guys, I&#x27;ve got a ripper. I&#x27;m pretty happy with it because it&#x27;s tax related. We&#x27;re talking end of financial year hacks, and I&#x27;ve come across an article again in The Age, my fave, as we&#x27;ve discussed., and it was actually around income splitting to make your financial situation better.</p>
+          <p><span class="spk">Jason · 02:09</span>So I&#x27;m going to give you a scenario. You&#x27;ve got husband and wife or husband and husband, wife and wife, all good. They earn— one of them stays home because they&#x27;ve had a child. One of them goes out and earns $200K. But if they&#x27;d both went back to work and split the duties, they would have up to $18,000 more in their pocket rather than one person going out and earning $200,000 and one person staying at home.</p>
+          <p><span class="spk">Jason · 02:36</span>So bear with me while I share how these numbers work. The person who earns $200K ends up in higher tax brackets. So they&#x27;re going to lose $65,000 of their hard-earned to the taxman. Now, if you split the role and you co-share the home duties and both of you go back to work, and in these days of flexible working arrangements, there&#x27;s a lot of employers out there that would have a gun back 3, 4 days a week or 2.5 days.</p>
+          <p><span class="spk">Jason · 03:00</span>Now, at the best split, you got 2 people earning $100K rather than 1 person on $200K. They end up paying $24,000 tax each or $48,000. So they&#x27;re $17,000 better off after tax in their pocket. If you then ended up going, well, look, that&#x27;s not realistic, but 1 person can go back 4 days and the other person can do 1 or 2, and you&#x27;ve got somebody earning $150,000.</p>
+          <p><span class="spk">Jason · 03:23</span>And the other person earning $50,000, you are still $15,000 better off. So if you have the ability to split your income, and this goes beyond just, you know, two people having different jobs, we&#x27;ll talk about this a little bit later on.</p>
+          <p><span class="spk">Jason · 03:39</span>But when you have a family trust and you&#x27;ve got profit distribution from a business, getting deep there, but if you can split the income across your family group and spread the marginal tax rate, so you&#x27;re taking advantage of other people&#x27;s tax-free bracket, which is $18,201 of tax-free money each year, then you are going to be better off rather than just slamming income into the one person&#x27;s name.</p>
+          <p><span class="spk">Jason · 04:02</span>We see it all the time when customers or clients come across to us and, you know, we notice these opportunities to say, well, hang on, what— why are you paying all the tax in your name rather than sharing that wealth around your family group? And because clients haven&#x27;t heard of how a family trust can help in this situation.</p>
+          <p><span class="spk">Jason · 04:18</span>So the further things that this article goes on to talk about that I found was really interesting was career development. If somebody doesn&#x27;t go back to work because you&#x27;re letting one person go and earn all the income, the career development for that other person, they fall back, they fall out of line. I imagine, you know, for Case not going back to being a lawyer, if we have children, she&#x27;d fall behind, behind her colleagues rather than being able to go back sooner, even if it is part-time.</p>
+          <p><span class="spk">Jason · 04:41</span>The other thing that people don&#x27;t think about when it comes to income splitting more broadly as well is capital gains on their investments and also investment income. So I see a lot of people come along, they&#x27;re the high income earner, so they&#x27;ve used their high income to buy shares in their name because they just went out and did it.</p>
+          <p><span class="spk">Jason · 04:59</span>They talked to their mate and I say, well, why didn&#x27;t you buy that in your wife&#x27;s name? Or if I say to the wife, why didn&#x27;t you buy that in hubby&#x27;s name? They didn&#x27;t consider how the investment income would then— they&#x27;d lose 47% to the tax man if they&#x27;re in that higher bracket rather than their spouse or partner who might be in the lower tax bracket, and they would have lost 20 cents or 19 cents of the dollar.</p>
+          <p><span class="spk">Jason · 05:18</span>So lesson learned in that one, guys. My reading the play, income splitting think about how your income&#x27;s being taxed and talk to your advisor on how you can have more tax, more after-tax dollars in your pocket.</p>
+          <p><span class="spk">Nick · 05:32</span>And you can do better things with that money.</p>
+          <p><span class="spk">Jason · 05:34</span>Bloody oath. What do you got, Nick?</p>
+          <p><span class="spk">Nick · 05:36</span>Has cleaning up the financial services industry gone too far and made it unaffordable for everyday Australians? So most people will be aware we had a Royal Commission a couple of years ago and out of that came a lot of changes. There was a lot of things happening in the financial planning industry prior to that, mainly around how financial planners were paid.</p>
+          <p><span class="spk">Nick · 05:57</span>So traditionally, financial planners have been paid on a commission base. So if they sold a financial product, they would get a commission that was inside of that product, and the end result being the consumer pays. So there&#x27;s been a lot of changes that have happened, the main one being that the industry has now gone fee-for-service.</p>
+          <p><span class="spk">Nick · 06:13</span>So if we are charging our clients a fee, it&#x27;s transparent. There&#x27;s no hidden fees in the product. You pay us this amount, there it is. If you&#x27;re not happy with that year on year, then you can opt out of that payment. So all good stuff and all things that should have happened.</p>
+          <p><span class="spk">Nick · 06:29</span>What has happened though, prior, post the Royal Commission is just a lot of red tape and a lot of compliance and a lot of compliance that is just a tick box really that a financial planner has to complete. Higher education standards, education that has to be done for existing planners who have been in the business for 20 to 30 years.</p>
+          <p><span class="spk">Nick · 06:52</span>So in theory, it all sounds great, but it&#x27;s, it&#x27;s, has it gone too far? And look, the problem we&#x27;ve got at the moment is we&#x27;ve got financial planners leaving the business. So we had 3,000 financial planners leave the industry last year, which resulted in 20,000 planners still being in the industry.</p>
+          <p><span class="spk">Nick · 07:14</span>That number is expected to diminish to 13,000 by 2023. So you go from 23,000 to 13,000, you&#x27;ve got less planners. The other thing you&#x27;ve got is higher compliance, which is making it very hard for planners to make money.</p>
+          <p><span class="spk">Nick · 07:30</span>So based on the amount of work that they have to do to create a statement of advice, which is a document that they must give a client prior to providing advice, that&#x27;s an 80 to 90 page document. Now we outsource those at a cost of anywhere from $500 to $700. Wow. If you read a statement of advice, there&#x27;s a lot of tick box material in there, warnings for clients, repetitiveness.</p>
+          <p><span class="spk">Nick · 07:52</span>So it&#x27;s just got to the point where financial planners are saying it&#x27;s just too hard on our business model to provide a service to clients at a reasonable price. The cost of financial planning over the last 2 years on average has gone up by 28%. So we&#x27;re at risk here of everyday Australians not being able to afford financial planning and only the wealthy getting financial planning.</p>
+          <p><span class="spk">Nick · 08:16</span>And you just continue to get this gap between who&#x27;s wealthy and who&#x27;s not. And you would argue that who needs the advice the most? It&#x27;s everyday Australians and mum and dad. So the Financial Services Council has realised this and they&#x27;re starting now to push for a scrapping of the statement of advice and bringing what they call a letter of advice, which would be Clear, concise, punchy.</p>
+          <p><span class="spk">Nick · 08:40</span>This is what you&#x27;re invested in. These are the costs. These are the risks. It&#x27;s about you having faith in the professionalism of your planner, not making sure your planner completes a 90-page document with all the risks and warnings. So look, I think it&#x27;s brilliant that this stuff&#x27;s happening.</p>
+          <p><span class="spk">Nick · 08:57</span>But what is so frustrating is as a planner, and this isn&#x27;t just financial planning, a mutual client of ours was in our office earlier this week. They&#x27;re in waste management. Just government regulations and policies that are implemented when particular people that come up with these policies do not have a clear understanding of the logistics of how an industry works, and they put these policies in place that at the end of the day just end up hurting the consumer.</p>
+          <p><span class="spk">Nick · 09:24</span>You know, there needs to be a balance of protecting the consumer and making sure that an industry can succeed and that in our case, advice can be provided to people at a reasonable price. Otherwise, people don&#x27;t get advice. So it&#x27;s probably similar in your industry, Jase.</p>
+          <p><span class="spk">Jason · 09:41</span>Yeah, definitely. But having seen, you know, giving referrals to get statement of advice and knowing that nobody reads that 80 or 90-page document, I think the letter of advice you just mentioned, that gets me excited that clients are going to get something that&#x27;s of value. They&#x27;re going to pay the right price for it, but it&#x27;s going to have everything they need to know.</p>
+          <p><span class="spk">Jason · 09:57</span>And if it&#x27;s a couple of pages, they&#x27;re more likely to read it and understand it rather than—</p>
+          <p><span class="spk">Nick · 10:02</span>Well, we tell our clients they need to read the statement of advice and we leave it in their hands and we obviously take them through it and we explain what they need to know, you know, the risks associated, the costs. But we cannot physically sit there and read a 90-page document. We would not get any work done.</p>
+          <p><span class="spk">Nick · 10:17</span>We&#x27;d see one client a day if we were lucky. So you are reliant on the client going home and reading that. And who has got time to read 80, 90 pages? And in all honesty, they won&#x27;t understand half of it. And that&#x27;s the worst thing. Half of it is written in language to protect the planner. The mum and dads who are not financial planners don&#x27;t understand it.</p>
+          <p><span class="spk">Nick · 10:36</span>It&#x27;s just, it&#x27;s so silly when you think about it.</p>
+          <p><span class="spk">Marty · 10:40</span>It loses its commercial benefit to the consumer and to the business owner as well. And I think it&#x27;s just the maturity of an industry. Like you&#x27;ll usually find an industry&#x27;s unregulated when it first begins. And then it gets big. But the— there&#x27;s always a sweet spot in the industry when it self-regulates because people find that it&#x27;s really important to do the right things, right?</p>
+          <p><span class="spk">Marty · 11:01</span>Because it&#x27;s got big enough. And I&#x27;ve always found a self-regulated industry is still very commercial because people understand the dynamics of it. As soon as it goes to that next level where it&#x27;s all about red tape, it becomes very restricted. But the one thing I know about business, it&#x27;ll always evolve.</p>
+          <p><span class="spk">Marty · 11:17</span>And like what Nick says there, That to me, that letter of advice sounds relevant. That&#x27;s a direct benefit to the consumer being able to understand it. And that&#x27;s what it&#x27;s about. People need to know what they&#x27;re getting into, not have 90 pages that they have no idea and will never read.</p>
+          <p><span class="spk">Marty · 11:33</span>Just doesn&#x27;t make any sense. So I think that&#x27;s spot on. Talking about unregulated industries or self-regulated industries, I should say. Used car prices are up by 37% from pre-pandemic highs of Feb 2020. 2020.</p>
+          <p><span class="spk">Marty · 11:52</span>So a secondhand 2018 Ford Ranger. Is that an updated model enough? I&#x27;m 48, so that&#x27;s a very popular— is that a popular model? Because I&#x27;m sort of still at the Daiwu stage.</p>
+          <p><span class="spk">Jason · 12:04</span>I&#x27;m gonna get the Raptor though. It&#x27;s going to be the Raptor.</p>
+          <p><span class="spk">Marty · 12:05</span>Do you remember the Daiwu?</p>
+          <p><span class="spk">Nick · 12:07</span>No, no, that was— I recognize the name.</p>
+          <p><span class="spk">Marty · 12:09</span>Yeah, it was a crap car. They went bankrupt. If it went for a day, I went bloody woo! So, but, um, it recently sold for $41,000, the Ford Ranger, whereas 12 months ago it was only worth around $30,000. I mean, stop the madness.</p>
+          <p><span class="spk">Marty · 12:25</span>Used cars up by that much. So why? It&#x27;s the perfect storm of supply constraints with increased demands. Uh, the one thing you wouldn&#x27;t think about is there&#x27;s a shortage of semiconductor computer chips. So what that&#x27;s doing is new cars can&#x27;t get out quick enough.</p>
+          <p><span class="spk">Marty · 12:43</span>So you&#x27;re looking at— usually it would be 3 months on the production line, it&#x27;s taking 6. The other thing, COVID. No one wanted to use public transport, so they needed a vehicle to get around. So no one wanted to be on the train anymore.</p>
+          <p><span class="spk">Marty · 12:58</span>Air travel was not an option. So people use cars to travel on holidays. It was a more affordable option. New cars have gone up 14%. So on the studies that I looked at, it said it would self-regulate back to normal pricing. But it&#x27;s amazing that supply and demand and given the circumstances of what happened last year, that finally we have an appreciating asset that is a vehicle for one year.</p>
+          <p><span class="spk">Jason · 13:25</span>That really is madness. And just to throw in while we are talking end of financial year hacks, I&#x27;ve had a lot of clients that have talked about selling their commercial vehicles, being the Ford Rangers and the Nissan Navaras and whatnot. Big warning in that aspect is when, especially with accelerated depreciation, and then even before that, if it&#x27;s a couple of years old and they&#x27;ve depreciated their car right down, which means we&#x27;ve claimed the, the decreasing value of the car over years to help save tax.</p>
+          <p><span class="spk">Jason · 13:50</span>So let&#x27;s say in that example, they bought the secondhand— or they bought the Ford Ranger back in 2018 for $30,000. We&#x27;ve depreciated it down to, let&#x27;s say on paper it&#x27;s worth $10,000. That client comes in at the end of this year and they&#x27;ve sold it for $41,000.</p>
+          <p><span class="spk">Jason · 14:05</span>They have to pay tax on the profit on that sale of the Ford Ranger. So the $10,000— the difference between $10,000, the written down value on paper, and the $41,000 they&#x27;ve just put in their pocket. They&#x27;ve got to pay tax on another $31,000 of income.</p>
+          <p><span class="spk">Marty · 14:20</span>That&#x27;s incredible.</p>
+          <p><span class="spk">Nick · 14:22</span>They&#x27;ve claimed the depreciation. Yeah.</p>
+          <p><span class="spk">Jason · 14:23</span>So over the previous years, they&#x27;ve got the tax deduction. They&#x27;ve now made a profit on the sale. They&#x27;ve got to pay tax on that. So that&#x27;s a big one that it&#x27;s not, you know, some people let it skim over their head or don&#x27;t really pay attention to that. But that&#x27;s—</p>
+          <p><span class="spk">Marty · 14:36</span>We wouldn&#x27;t usually see it. So it&#x27;s a great point.</p>
+          <p><span class="spk">Jason · 14:38</span>And when the numbers get that big, that&#x27;s when you go, you know, they go, well, hang on, last year I got a $12,000 refund and this year I&#x27;m getting $3,000. I&#x27;m like, yeah, you&#x27;ve paid $9,000 on the trade-in of your vehicle. They go, oh, this is bullshit. I wouldn&#x27;t have traded it in if I knew. So warning out there before you go do it, talk to your advisor.</p>
+          <p><span class="spk">Jason · 14:53</span>And my phone has actually been running hot on that because end of financial year sales are coming up, tax planning, end of financial year, the immediate asset write-off dates, all that stuff. But anyway.</p>
+          <p><span class="spk">Marty · 15:04</span>Yeah, and buy shares in semiconductors. Who would have thought?</p>
+          <p><span class="spk">Nick · 15:08</span>Yeah, who would have thought?</p>
+          <p><span class="spk">Jason · 15:09</span>We&#x27;d love to hear from you. Send us an email, hello@thenumbersgamepodcast.com.au.</p>
+          <p><span class="spk">Marty · 15:17</span>Okay kids, hang on to your steering wheels, sit back, relax. It&#x27;s time to lose it. My favorite segment. And today Jason&#x27;s bringing something to the table. Jase, what do you got for us?</p>
+          <p><span class="spk">Jason · 15:27</span>Well guys, I just wanted to share a bit of a story on basically one of the clients that have come across to us over the last 12 months. COVID hit, it made them think about their business and where they were at, and they weren&#x27;t getting— they didn&#x27;t have a close relationship with their accountant. They were in a partnership, which meant their mate who they&#x27;re in the partnership with, the mate had the relationship with the advisor or the accountant, and he just trusted his mate and he trusted the mate&#x27;s accountant and just kind of things were done.</p>
+          <p><span class="spk">Jason · 15:54</span>And like a lot of business, business partnerships, that broke down. They&#x27;re still mates, it&#x27;s all good, but he decided to go his separate way. They split the business up and because he wanted to have his own advisor and accountant, he came across to us. And one of the things we do is a bit of a look under the hood before we take on a client to review what&#x27;s been going on in their books and how everything&#x27;s been handled.</p>
+          <p><span class="spk">Jason · 16:16</span>So in going back through a couple of years&#x27; worth of these figures, we found that there were things that could have been done to make this guy&#x27;s financial situation— gonna call him John— could have made John&#x27;s financial situation much, much better. On top of that, with the review, we found that he&#x27;d missed out on claiming GST on the purchase of a motor vehicle.</p>
+          <p><span class="spk">Jason · 16:35</span>So that&#x27;s $5,000 that wasn&#x27;t in his pocket for this vehicle that he bought. It just got overlooked and missed. So the BAS didn&#x27;t claim the GST. And then on that, the prior year, they had quite a large profit. And instead of using the immediate asset write-off, which as a small business you can immediately deduct the value of some of your purchases, they were left to just depreciate over a number of years.</p>
+          <p><span class="spk">Jason · 16:58</span>And then because the partnership dissolved and they took their things separate ways, he missed out on a huge deduction that would have saved him thousands and thousands of dollars in tax. So the lesson here is you need to know your numbers. You need to have a relationship with your accountant, your advisor.</p>
+          <p><span class="spk">Jason · 17:15</span>And it&#x27;s one thing to trust your mate or trust the accountant, but it&#x27;s on you to get in and understand your figures. And it&#x27;s all, again, look, we&#x27;re not perfect. We&#x27;ve missed things in the past and there&#x27;s a whole review process and whatever, but You as the business owner, you sign off on your BAS and you sign off on your tax return.</p>
+          <p><span class="spk">Jason · 17:33</span>And this goes down to individual tax returns as well for listeners that work a wage job. You are the person signing the tax return and you need to know what&#x27;s happening in your return. And while you don&#x27;t need to know tax legislation back to front, you&#x27;ve got to be aware of what&#x27;s going on and ask lots of questions. So for me, the lesson there is having a proactive advisor, seek a second opinion, ask lots of questions, and understand your position this year, but also have a look at what&#x27;s going on next year.</p>
+          <p><span class="spk">Jason · 17:58</span>Because if you&#x27;re not taking into consideration what your plans and aspirations are for next year, sometimes you make the wrong decision in the current year, which then affects what you&#x27;re trying to achieve the following year.</p>
+          <p><span class="spk">Marty · 18:10</span>So for business owners out there, we all talk about the asset write-off. Is that a benefit or is it better to depreciate the vehicle over 5 years or does it just depend on your individual circumstances?</p>
+          <p><span class="spk">Jason · 18:25</span>It really does depend on your individual circumstances. And I do have an example of what that would look like. And when I say individual circumstances, if you wrote off the full purchase price of the vehicle, you&#x27;re going to get your tax savings upfront in one year.</p>
+          <p><span class="spk">Marty · 18:39</span>Yeah.</p>
+          <p><span class="spk">Jason · 18:39</span>So that&#x27;s great if it makes sense to. So you&#x27;ve depreciated the vehicle, you pay less tax now, but then next year you don&#x27;t have that deduction because you haven&#x27;t spread your depreciation out over multiple years. So next year, you just end up paying more tax. So when I say think about your situation this year versus next year, prime example is we&#x27;ve just come off the back of COVID If you&#x27;ve had a smaller year than what you anticipate next year to be, you might be in a lower tax bracket.</p>
+          <p><span class="spk">Jason · 19:04</span>Your accountant goes, hey, we&#x27;re going to save you heaps of tax, let&#x27;s immediately write off your car. If you&#x27;re in a lower tax bracket now and you write off your car, you&#x27;re only saving, let&#x27;s say, 19 cents to the dollar or 32 cents to the dollar if you&#x27;re in the smaller bracket. If you know you&#x27;ve locked in some big jobs next year and your income is going to be high and you&#x27;re going to be paying tax at as high as 47 cents to the dollar next year, but you&#x27;ve wrote your car off this year.</p>
+          <p><span class="spk">Jason · 19:27</span>Missed opportunity. Because if you&#x27;d then elected to not write off your car and roll that into the following year, you&#x27;ve got the option for more depreciation next year when you&#x27;re getting taxed at 47 cents on the dollar.</p>
+          <p><span class="spk">Marty · 19:38</span>Yeah, I&#x27;m thinking get a bigger garage, buy more cars. But how long does that asset write-off last for? Is that just up until June 30 this year or?</p>
+          <p><span class="spk">Jason · 19:46</span>Yeah, so there&#x27;s multiple different dates that changed over and over again. It went from $20,000 was the immediate write-off, then there was a small period of $25,000, then it jumped up to $150,000. Back to the end of December 2020. So you&#x27;ve got, if you had assets bought and installed, then now they&#x27;ve extended again to have this basically business write-offs to accelerate depreciation, accelerate cash flow for small business owners, multiple different brackets.</p>
+          <p><span class="spk">Jason · 20:14</span>So just, you know, I want listeners to go out and look it up and see what they can do because there&#x27;s different tiers for different size business. So you need to know that you&#x27;re going to be an eligible small business entity before you go out and buy the I think got guys at the moment that are looking at $150,000 RAM utes because they want to get the big write-off.</p>
+          <p><span class="spk">Jason · 20:33</span>And it&#x27;s again, another one, you know, you don&#x27;t spend money just to save the tax. You actually have to be buying an asset that&#x27;s going to generate income in your business, you know, to make it worthwhile. Otherwise you&#x27;re just wasting your money.</p>
+          <p><span class="spk">Marty · 20:45</span>So is it relevant, Jase, in regards to if you&#x27;re on a wage, like there are novated leases, you can do various things, but everyone talks about cars being a depreciating asset. I mean, last year was a unicorn event. But as a business owner, it kind of does make sense, doesn&#x27;t it?</p>
+          <p><span class="spk">Marty · 21:03</span>Because you can get a brand new car and that depreciation cost and you can have a balloon on your repayment. So you&#x27;re paying a smaller portion on your loan on a chattel mortgage or a commercial hire purchase. So it does make sense as a business owner, but not always as a wage owner.</p>
+          <p><span class="spk">Marty · 21:19</span>Am I reading that right?</p>
+          <p><span class="spk">Jason · 21:20</span>Yeah. So as a wage owner, I&#x27;ll do the two scenarios. So as a business owner on a $55,000 car, Yep. Let&#x27;s say it&#x27;s 90% business use just for the example I&#x27;ve written down. You get $4,500 back straight away in GST refund on your purchase. So through your BAS. So on your $55,000 car, you&#x27;ve already got $4,500 back.</p>
+          <p><span class="spk">Jason · 21:38</span>So you&#x27;re out of pocket.</p>
+          <p><span class="spk">Marty · 21:40</span>So you claim that next quarter. Yep.</p>
+          <p><span class="spk">Jason · 21:42</span>Next quarter you get that back. So you&#x27;re out of pocket $50,050. Then the 90% remains to be depreciated. So you&#x27;ve got about $40,000 to depreciate. So as a business owner, if I just wipe that $40,000 using the immediate write-off, I&#x27;m going to save at least $10,000 if it&#x27;s in my company.</p>
+          <p><span class="spk">Jason · 22:00</span>So I get $10,000 off my tax bill. So again, just purely looking at that, that $40,000, the $50,000 that you&#x27;ve been out of pocket, you&#x27;re now going to save $10,000 on your tax. So really, you&#x27;re $40,000 out of pocket for your $55,000 car after the taxman gives you back some money.</p>
+          <p><span class="spk">Jason · 22:18</span>So that&#x27;s how a lot of people look at it when they go to buy the car. They go, well, hang on, this, you know, I&#x27;m a business owner. This car is actually only going to cost me $40,000. And they&#x27;re comfortable knowing that that&#x27;s what it&#x27;s going to cost after tax and GST.</p>
+          <p><span class="spk">Marty · 22:30</span>It covers the loss of the organic depreciation of that car. In a business owner&#x27;s mind, they&#x27;re going, well, it&#x27;s probably going to be worth $40,000 as soon as I drive it out, but I&#x27;ve got a benefit in the business because of that.</p>
+          <p><span class="spk">Jason · 22:41</span>And as an employee, if you use your car, same thing, 90% for work, in that same example, you had the $55,000 car for the year or the $50,000 car because you&#x27;re not going to claim the GST back. If you&#x27;re in the highest tax bracket and you depreciate the car, so as an individual, you don&#x27;t do the immediate write-off, you don&#x27;t get the small business stuff, but you&#x27;d claim the car value over 5 years.</p>
+          <p><span class="spk">Jason · 23:01</span>You&#x27;d be able to wipe in the first year, $10,000 roughly comes off your taxable income on that same car. So if you smush $10,000 off your taxable income, the ATO is giving you back $4,700 extra in your tax refund at year-end just for depreciation on the vehicle.</p>
+          <p><span class="spk">Jason · 23:17</span>So if your repayments are, you know, $100 a week, but the ATO is giving you back $5,000 at the end of the year, that tax refund is covering your weekly repayment on that new car.</p>
+          <p><span class="spk">Marty · 23:29</span>Sweet ride.</p>
+          <p><span class="spk">Nick · 23:30</span>Yeah, good burn.</p>
+          <p><span class="spk">Jason · 23:31</span>Nice. We&#x27;d love to hear from you. Send us an email, hello@thenumbersgamepodcast.com.au. Guys, we know this week, end of financial year hacks is what we&#x27;re all about in these One Percenters. So I want to kick it off by saying that if you haven&#x27;t got an appointment booked with your accountant as a business owner at the moment, April, May, June, it&#x27;s Christmas time for accountants.</p>
+          <p><span class="spk">Jason · 23:53</span>We are under the pump. We&#x27;re catching up with all of our clients because this is the time of year where if you implement strategies to lower your tax, it&#x27;s tax minimisation. It&#x27;s completely legal. It&#x27;s what we all should be doing. If you wait until July, August, September, go in to see your accountant and say, hey, I want to pay less tax last year, and you start moving stuff around in the books, that can be seen as tax avoidance, and that&#x27;s not the side of the ATO that you want to be on when they come and look at what&#x27;s happened to your figures after the fact.</p>
+          <p><span class="spk">Jason · 24:22</span>So good proactive business owner and a good proactive accountant, you&#x27;re getting in now and you&#x27;re having these conversations. So outside of being here today with you guys, most of my days at the moment are booked back to back sitting with business owners talking about tax planning. And as we&#x27;ve touched on the cars, immediate asset write-off, and a few other strategies, so we thought we&#x27;d talk about end of financial year hacks.</p>
+          <p><span class="spk">Jason · 24:43</span>Um, Nick, I know one of the biggest ones that I&#x27;m talking about with our clients at the moment, pretty much the only thing I can say to them in relation to superannuation is the tax effect of putting in money to super. So most years, $25,000, I&#x27;m saying to clients, if you haven&#x27;t put your $25,000 in, you should be topping up your contributions to super to claim a tax deduction for putting money into super, which is only taxed at 15 cents to the dollar.</p>
+          <p><span class="spk">Jason · 25:09</span>So around that, Nick, what are some strategies, or what are you seeing people do with that.</p>
+          <p><span class="spk">Nick · 25:14</span>Yeah, and look, I love what you said there, proactive. And when we see people and we ask about their accountant, you need a proactive relationship. So I know we&#x27;ve been talking about this particularly in losing it, but it is so important. And if your accountant is reactive and, you know, comes to you July 1st and asks for all your information, get a new accountant.</p>
+          <p><span class="spk">Nick · 25:33</span>You should be demanding a meeting sort of late April, early May, just to know, particularly if you&#x27;re a high income earner, is there anything I can do to save my tax? Because sometimes there&#x27;ll be money, there&#x27;ll be things you can do, which means you&#x27;re $2,000 or $3,000 better off in your pocket.</p>
+          <p><span class="spk">Nick · 25:49</span>Now, why wouldn&#x27;t you do that just by having a meeting? So traditionally, accountants have been very reactive, as you would know. So finding a proactive accountant is the first thing. There&#x27;s, look, there&#x27;s not, as you said, as a PAYG person, there&#x27;s not a great deal you can do.</p>
+          <p><span class="spk">Nick · 26:06</span>As a self-employed person, there&#x27;s a lot more you can do. But what everyone can do is super contributions. And And this has changed a lot in recent times, but traditionally you can make what they call concessional contributions of up to $25,000 a year. So that includes what your employer pays.</p>
+          <p><span class="spk">Nick · 26:22</span>So if you&#x27;re on $100,000, at the moment it&#x27;s 9.5% that your employer must pay. So call that $9,500, which means you&#x27;ve got roughly $15,000 that you have the ability to put into super in that financial year to claim a tax deduction. Now to clarify, tax deduction, it means if you put that extra $15,000 in, it reduces your taxable income by $15,000.</p>
+          <p><span class="spk">Nick · 26:45</span>It doesn&#x27;t get you $15,000 back. So.</p>
+          <p><span class="spk">Jason · 26:48</span>Thanks for clarifying that. We get that question a lot.</p>
+          <p><span class="spk">Nick · 26:50</span>All the time.</p>
+          <p><span class="spk">Jason · 26:51</span>Why isn&#x27;t my refund $15,000?</p>
+          <p><span class="spk">Nick · 26:53</span>Particularly with negative gearing. So yeah, if you&#x27;re 30 cents on the dollar and you put $15,000 into your super, you&#x27;ll get $5,000 back that you wouldn&#x27;t have had. What is really cool at the moment is the government has introduced what they call a carry forward. Forward policy. So they brought this policy in last year, last financial year, and you can actually carry forward 5 years of unused $25K cap into one year if you please.</p>
+          <p><span class="spk">Nick · 27:20</span>So let me just explain that in a little bit more detail. So at the moment, you know, we&#x27;re in the 2021 financial year. It only came in last year. So you, at the moment for this financial year, you can only bring forward 2 years. So if you&#x27;re a self-employed person, first example, self-employed person who has put nothing into super the last, this year and the year before, you can now put in, prior to June 30, $50,000 into super if you want.</p>
+          <p><span class="spk">Nick · 27:47</span>Now that $50,000 will then come off your taxable income. If you&#x27;re someone who&#x27;s employed on a wage, on $100,000 we&#x27;re talking about, so you know, you&#x27;ve put $20,000 in the last 2 years, you&#x27;ve got the ability to put $30,000 in. So, you know, People will sit here and they&#x27;ll say, well, who&#x27;s got $50,000 to put into super?</p>
+          <p><span class="spk">Nick · 28:07</span>But you&#x27;ll be surprised because it depends on where you are in your— how close you are to retirement. There&#x27;s a lot of people that are in their 50s that are trying to get as much as they can into super. You have, you know, you have a lot of businesses that have had really good years. Even if they&#x27;re in their mid to late 40s, if you can put $50,000 in, get $15,000 back in tax, why wouldn&#x27;t you do that?</p>
+          <p><span class="spk">Nick · 28:29</span>You do pay the 15% on the contribution, so people need to remember that. But probably where we find it has the most impact is with capital gains. So if you&#x27;ve got someone who&#x27;s, you know, what we see a lot is someone who&#x27;s in their mid-50s who might be selling down one or two investment properties, realising a capital gain of maybe $150,000 or $200,000.</p>
+          <p><span class="spk">Nick · 28:50</span>You&#x27;ve got the ability, you&#x27;re close to retirement, you&#x27;ve got the ability to wipe that by $50,000 if you can get that $50,000 into super. And this is going to get better and better because it will go up to 5 years. But again, it was only brought in last year. So the benefits are going to get better and better.</p>
+          <p><span class="spk">Nick · 29:06</span>So that&#x27;s something to definitely think about. We have a lot of people that are just on high incomes that are salespeople, for example, that might earn high, high hundreds. They&#x27;ll put $5,000 in, they&#x27;ll get $2,000 back and they&#x27;re happy because they&#x27;ve got the cash flow.</p>
+          <p><span class="spk">Nick · 29:24</span>They want to build their super, the money&#x27;s in the market, they&#x27;ve got $5,000 in their super, plus minus the 15%, and then $2,000 back in their pocket that they wouldn&#x27;t have had. So again, it&#x27;s getting the tax planning done and understanding it and seeing if it&#x27;s worth it for you. It&#x27;s different for everyone.</p>
+          <p><span class="spk">Jason · 29:40</span>That mindset of explaining that to someone that when they are in that top bracket, if they&#x27;re going to lose 47 cents to the ATO, but they can put some money into super and get a good chunk of money back. That they understand that and they get it, but it&#x27;s having the conversation and being told to do that before it&#x27;s too late.</p>
+          <p><span class="spk">Jason · 29:56</span>And I think you said it earlier, it has to be before 30 June.</p>
+          <p><span class="spk">Nick · 30:00</span>Yes. I&#x27;ve had people get stuck with this. It needs to be in there at least 4 days, I would say is safe. It takes the super companies a couple of days to actually process it. So, you know, I&#x27;ve had a close mate of mine, he&#x27;ll know who he is, but Hopeless, as in you&#x27;ll tell him 1,000 times.</p>
+          <p><span class="spk">Nick · 30:21</span>Transferred it on the 30th of June, hit the super account on the 2nd of July. So he lost that whole year&#x27;s worth of deductions. But again, it&#x27;s understanding it. And where it&#x27;s so powerful is the capital gains. Imagine a husband and wife, particularly what&#x27;s happening with the property market.</p>
+          <p><span class="spk">Nick · 30:38</span>They&#x27;re in their mid-50s, they&#x27;re getting close to retirement, they&#x27;ve sold an asset and they&#x27;ve made half a million. Now, at the moment, they could wipe $100,000 off that. If they haven&#x27;t been putting in their super contributions, which a lot of people don&#x27;t if they&#x27;re self-employed. So super is a big one.</p>
+          <p><span class="spk">Nick · 30:53</span>Other than that, the other things you can do is look at paying insurance premiums annually. Most people will pay their insurance premiums monthly. You might get to the end of the year, if it&#x27;s been a really good year, cash is pretty good. So if you can choose, opt in to pay your income protection or your life insurance whatever it is you&#x27;re paying, but income protection is the one that&#x27;s tax deductible for most people.</p>
+          <p><span class="spk">Nick · 31:16</span>So pay the annual premium if you&#x27;ve got the ability to do that. You could save some money that way as well. So be proactive and know what the options are.</p>
+          <p><span class="spk">Marty · 31:25</span>It&#x27;s the same with investment properties as well. There is the product out there where you could pay the interest in advance on that investment property for the next year, getting a tax deduction. Again, you&#x27;ve got to work it in with your cash flows as well. But it&#x27;s a relevant option.</p>
+          <p><span class="spk">Marty · 31:41</span>You&#x27;ve got to start preparing that now because there&#x27;s work to do. Takes a couple of months to get it all up and running, but it&#x27;s another valid option. But a lot of times I also see people who invest in property, they don&#x27;t always claim back the depreciation on the build and also the fixtures and fittings.</p>
+          <p><span class="spk">Marty · 31:59</span>And Jase, I thought I&#x27;d throw that up in regards to some ratios around that because that&#x27;s, again, another opportunity to reduce tax legitimately that people just miss out on by having an investment property and not talking to their accountant. So I&#x27;d, yeah, I&#x27;d be interested in some ratios around that of what you can claim and what you can&#x27;t.</p>
+          <p><span class="spk">Jason · 32:19</span>Yeah. So with the investment property, having a professionally done depreciation schedule is absolutely paramount, especially when it&#x27;s a newer property. The building depreciation over 40 years often is quite a healthy deduction. So if you buy a new property and you can write off $10,000 of depreciation on the building per year for 40 years, every year you&#x27;re getting back $4,000, roughly $3,000 to $4,000 depending on your tax bracket, purely for a write-off that&#x27;s on paper.</p>
+          <p><span class="spk">Jason · 32:47</span>That&#x27;s not physical cash out of your pocket. But yeah, there&#x27;s a lot that come across to us that don&#x27;t have these depreciation schedules. And when we&#x27;re asked the question, they said they never knew about it or nobody ever told them.</p>
+          <p><span class="spk">Marty · 32:58</span>Jason at Future Advisory, ring him now. Don&#x27;t leave money on the table.</p>
+          <p><span class="spk">Nick · 33:03</span>I&#x27;ll just add to that and another hack, and hopefully I&#x27;m right here, but a lot of people assume depreciation is only new properties, but existing properties that you&#x27;ve done renovations to, or maybe even not done renovations to, you can still depreciate those. Is that right?</p>
+          <p><span class="spk">Jason · 33:17</span>Yep, definitely. And it&#x27;s always, I mean, there&#x27;s businesses out there, we work with Capital Claims. Kylie, who sent in an email that we owe her a template for her budget. You know, they&#x27;re a fantastic business. They would happily do a free, like a free assessment. You tell them just some basic details about your property.</p>
+          <p><span class="spk">Jason · 33:33</span>And before they charge you a dollar, they&#x27;ll let you know, is it worthwhile doing this depreciation report? And often the report, which, you know, might cost you a couple of hundred dollars, it pays for itself in year 1. And then if you missed out on the prior year, often clients elect to amend their prior year returns to include the depreciation that they missed out on.</p>
+          <p><span class="spk">Jason · 33:51</span>So again, you know, you might get a double, double hit in one year that you&#x27;ve gone and assessed, should my property have a depreciation report? Happy days.</p>
+          <p><span class="spk">Marty · 34:00</span>It only costs about $500, $500, $600 and you can get so much upside.</p>
+          <p><span class="spk">Jason · 34:04</span>Yeah. There were some big changes around that where they turned around and said that you, you know, basically properties you couldn&#x27;t claim depreciation. So there&#x27;s certain dates and certain cutoffs, but worthwhile getting the assessment, just dropping an email to Capital Claims saying, hey, this is my property, this is when I bought it. They&#x27;ll give you what they they need. And if they say, yeah, cool, we can get you this much depreciation, which should get you back this much tax per year, it&#x27;s an absolute no-brainer.</p>
+          <p><span class="spk">Marty · 34:28</span>That&#x27;s fantastic. I love the investment into super to offset the capital gain. I think that&#x27;s brilliant. Everyone in that situation should be looking at that, even if they have a used car that&#x27;s appreciated.</p>
+          <p><span class="spk">Nick · 34:41</span>Well, yeah. And I just keep thinking of things as we&#x27;re going along, but I think the other one is the selling of a small business, Jase. It gets treated the same.</p>
+          <p><span class="spk">Marty · 34:49</span>You&#x27;ve got the ability to put some of that into super.</p>
+          <p><span class="spk">Jason · 34:51</span>Yep, yep, that rolling that into super to save a lot of tax and boost your super, uh, balance. Uh, I mean, why would you give extra money to the ATO if you don&#x27;t have to legally and above board? And you can boost your investment income in super for when you retire.</p>
+          <p><span class="spk">Jason · 35:06</span>With, um, tax planning strategies and some little hacks, I&#x27;ve noted down a couple of things just to share the power of the numbers. Um, this time of year we do a lot of restructuring around employee clients that are running their business in different structures. So I wrote down an example of a sole trader.</p>
+          <p><span class="spk">Jason · 35:22</span>Um, so a lot of people start off their business sole trader. We&#x27;ve touched on it in earlier episodes. It&#x27;s the easiest, cheapest way to start a business. You register your ABN and away you go. Got an example here of someone who&#x27;s a sole trader earning the same as we&#x27;ve done in the other earlier on the income splitting, $200,000 this sole trader earns.</p>
+          <p><span class="spk">Jason · 35:40</span>They&#x27;re going to pay $65,000 tax. Now, if they had restructured to be a company, paid themselves a wage of $120,000, and then the company had $80,000 profit remaining, they would pay $52,000 tax instead of $65,000 tax.</p>
+          <p><span class="spk">Jason · 35:57</span>So they&#x27;re going to have an extra $13,000 available in the business bank account to be able to continue to grow their business and use those funds for themselves or their business rather than giving it off to the ATO. So that extra money could become salary sacrifice into super or purchasing the new vehicle, the secondhand ute at an inflated price, Marty.</p>
+          <p><span class="spk">Jason · 36:16</span>So that&#x27;s an example.</p>
+          <p><span class="spk">Nick · 36:18</span>I was going to say, not to put you on the spot here, but is there a number where it becomes viable for someone to move from sole trader to a company? They&#x27;re thinking, I&#x27;m going to earn this much this year.</p>
+          <p><span class="spk">Jason · 36:28</span>Yeah, look, two sides. As soon as you prove the concept of the business, stop being a sole trader because you&#x27;re up for risk of being sued. Your assets are on the line because it&#x27;s you as the individual running the business. So even if you&#x27;re making $60,000, $70,000, I would challenge that the benefits of having a company or a trust over being the individual— you&#x27;re going to have a little bit less money in your pocket because you&#x27;ve got to pay the company fees for the tax return and the ASIC fees, but the price of asset protection and knowing that your family home&#x27;s safe in</p>
+          <p><span class="spk">Jason · 36:58</span>the event something goes pear-shaped. So, but I mean, once you get around the $100,000 figure, I mean, if you&#x27;re a sole trader and you&#x27;ve persevered long enough and you&#x27;re anything above $100,000, Definitely companies, trusts, because we talk about income splitting. So that $100K or more, if you then split that with, you know, family members using a family trust, you&#x27;re going to pay heaps less tax legally rather than being the sole trader in the individual name.</p>
+          <p><span class="spk">Jason · 37:23</span>You know, other strategies that people don&#x27;t take into consideration, you know, is simple things like delaying invoices at year-end. If you raise extra invoices before 30 June and you already know you&#x27;re in the top tax bracket, you&#x27;re bringing in extra income because you&#x27;re not proactively thinking about your tax position towards 30 June.</p>
+          <p><span class="spk">Jason · 37:41</span>And at the same thing, you touched on bringing forward expenses. So think about some of those expenses you can prepay before 30 June. If you&#x27;re going to buy the new laptop that you can immediately write off, if you— one that I always love throwing at clients is prepay your accounting fees, you know, sling, sling me a couple of grand and we&#x27;ll put pay your accounting fees up.</p>
+          <p><span class="spk">Marty · 37:59</span>Dirty dog, you, I know what you&#x27;re up to.</p>
+          <p><span class="spk">Jason · 38:02</span>And, you know, income protection, those kind kind of things are a great one. Um, one great example the other day for a cafe client, uh, we&#x27;re wrapping up their, their figures at year-end and we had noted down their stock balance. But then when I asked the client just to confirm, they, they weren&#x27;t sure if they&#x27;d given the right stock balance.</p>
+          <p><span class="spk">Jason · 38:22</span>We went back and forth a little bit to figure it out. But by recording the stock balance correctly at year-end, because this is something a lot of business owners don&#x27;t stop and do at 30 June, is write down an accurate stock balance. It was a difference in $20,000 profit depending on which way the stock balance went.</p>
+          <p><span class="spk">Jason · 38:38</span>So because we recorded the right number, it was a $20,000 benefit for the client based on their stock position. And because of the profit they&#x27;ve made this year, it&#x27;s going to save them $8,000 tax by recording the correct stock figure. So that&#x27;s an example. I mean, that&#x27;s, that&#x27;s huge that they get to keep $8,000 in their pocket.</p>
+          <p><span class="spk">Marty · 38:57</span>They see how much money is left on the table by not getting the advice. And I know there&#x27;s professional employees out there driving in their cars, tearing their hair out at the moment going, how can I income split? Is there any way as an employee to be able to do this? Are there any hacks there or are you limited in that situation?</p>
+          <p><span class="spk">Jason · 39:16</span>Employees, it&#x27;s really difficult. And then that is one of the ones we get a lot of. We look after a lot of individuals that are on PAYG or now it&#x27;s, you know, STP income statement. They do ask the question, how can I pay less tax? How can I pay less tax? And the income splitting, unfortunately, if if your partner has nothing to do with the business you&#x27;re working for and you&#x27;re not running your own business to be able to do income splitting, it&#x27;s difficult.</p>
+          <p><span class="spk">Jason · 39:38</span>It really is.</p>
+          <p><span class="spk">Marty · 39:39</span>So you&#x27;ve got to think of stuff like maybe buying an investment property and prepaying and doing it in other ways like that.</p>
+          <p><span class="spk">Jason · 39:46</span>And getting investment income into the partner&#x27;s name so that, you know, their lower tax bracket is being utilized like that income splitting that we talked about. The other one that I would touch on there, Marty, for the wage earner who&#x27;s looking at ways to minimize their tax is actually what Nick touched on with debt recycling. You know, so that&#x27;s another deduction for, you know, a wage earner who&#x27;s on a great income that wants to look at strategies.</p>
+          <p><span class="spk">Jason · 40:08</span>That debt recycling, that, you know, do some more research, but by getting tax-deductible debt into your name to then invest into the stock market and have capital growth each year, those interest repayments on that margin lending is tax-deductible in that employee&#x27;s name.</p>
+          <p><span class="spk">Jason · 40:23</span>So that&#x27;s one that a lot of people don&#x27;t think about and don&#x27;t utilize. But as an individual earner, the simple stuff like superannuation contributions, buying things that they need that are going to help them be better at their job and earn more money the following year. The other thing is, you know, we hear it all the time, you know, how do I pay less tax?</p>
+          <p><span class="spk">Jason · 40:41</span>That question. And I always challenge that, you know, people go, I&#x27;m going to go out and spend $1,000 before year end.</p>
+          <p><span class="spk">Marty · 40:49</span>Cool.</p>
+          <p><span class="spk">Jason · 40:50</span>If that saves you 30% tax, you&#x27;re still $700 out of pocket. So the question is always, if that— if you&#x27;re not going to be better off by having spent that $1,000 to save $300 in tax, don&#x27;t spend the $1,000 because you&#x27;re still $700 worse off.</p>
+          <p><span class="spk">Marty · 41:04</span>Right, right.</p>
+          <p><span class="spk">Jason · 41:05</span>Unless that is going to help you generate more income.</p>
+          <p><span class="spk">Marty · 41:07</span>How do I best leverage my income is the better question.</p>
+          <p><span class="spk">Nick · 41:10</span>Don&#x27;t just spend it for the sake of it. The one thing I want to touch on too is you mentioned the investment side and this is something we do. We have a lot of clients that come to us with direct equities. We don&#x27;t advise on direct equities, but we have clients that come in with portfolios from a while back.</p>
+          <p><span class="spk">Nick · 41:25</span>Stocks that aren&#x27;t doing well. We know stock— there&#x27;s stocks that are never going to do well based on what we know in the market. So a lot of the times, again, we talked about knowing when to take a loss, but you know, I was with a client this morning who has a self-managed super fund, has some of those.</p>
+          <p><span class="spk">Nick · 41:43</span>We&#x27;re actually selling down a lot of his direct equities and putting it into a managed fund. Now, some of those we haven&#x27;t sold, some we&#x27;ve chosen because we know there&#x27;s capital gains on others. So, you know, you&#x27;ve got capital gains in other stocks that you&#x27;ve sold throughout the year and there&#x27;s ones you want to get rid of.</p>
+          <p><span class="spk">Nick · 42:00</span>There&#x27;s no better time to get rid of them than in that same fin year because any loss that you&#x27;ve had will come off the gain you&#x27;ve made on the others. So, you know, you might find that the tax saving is better in your pocket than it&#x27;s going to be to try and wait to get a gain on that stock.</p>
+          <p><span class="spk">Jason · 42:15</span>So that&#x27;s why my Myer shares are now gone and the $3,000 loss.</p>
+          <p><span class="spk">Nick · 42:19</span>Use them, you know, if they&#x27;re not coming back, use them as a tax offset. Sell them, take the loss, pay less in tax, put that tax back, that tax saving back into the market, into what you want to invest in.</p>
+          <p><span class="spk">Marty · 42:28</span>So it&#x27;s a great strategy.</p>
+          <p><span class="spk">Jason · 42:30</span>Fantastic.</p>
+          <p><span class="spk">Marty · 42:31</span>Yeah. So one more question on that. I know we can offset capital losses with capital gains. What about business profits and losses? Can we offset losses of a previous year with profits in a new year? And how does that work?</p>
+          <p><span class="spk">Jason · 42:43</span>Great question. Yeah. So the losses from the prior year will definitely offset your gains or your profits in this year. So we did see some, some businesses had those losses in 2020 off the back of COVID Let&#x27;s call it a $100,000 loss just to make the numbers easy.</p>
+          <p><span class="spk">Jason · 42:58</span>They&#x27;ve recovered in 2021. They&#x27;re going to, they&#x27;re going to have a $100,000 profit sitting on the P&amp;L at the end of 2021. Last year&#x27;s loss will offset this year&#x27;s gain, and that business will pay no tax. So those carry— and those losses carry forward for years and years and years.</p>
+          <p><span class="spk">Jason · 43:14</span>So if you&#x27;ve, you know, lost the $100,000 and it takes you 4 years to make $25,000 a year profit in the company, then those losses will continue to roll forward and offset how much tax you need to pay, or that you won&#x27;t pay any tax until those losses are gone.</p>
+          <p><span class="spk">Marty · 43:27</span>Fantastic. Good to know.</p>
+          <p><span class="spk">Jason · 43:29</span>Yeah, definitely a good one there. One more, just because I&#x27;m really getting—</p>
+          <p><span class="spk">Marty · 43:33</span>Episode 10 has brought the absolute best out of you.</p>
+          <p><span class="spk">Jason · 43:36</span>Talk about tax hacks, and I&#x27;m just about to bring that cake in. And because it&#x27;s relevant, because we&#x27;re sitting with our clients every day doing these meetings, and, you know, we&#x27;re 5 years into having our clients really with a growing young accounting firm. So A lot of our clients started off younger growing businesses and they&#x27;ve developed with us.</p>
+          <p><span class="spk">Jason · 43:54</span>They&#x27;re now at a stage where there&#x27;s big profits sitting in their, in their companies or trusts and they&#x27;re going, well, you know, mum and dad, husband and wife can&#x27;t take it anymore, kids aren&#x27;t old enough to get a distribution through the family trust, but you don&#x27;t want to leave a whole bunch of cash parked in your trading company which is at risk of being sued because once again you&#x27;ve got an asset that is taking risk.</p>
+          <p><span class="spk">Jason · 44:17</span>So a bucket company— I&#x27;m sure you boys have heard of a bucket company before, but effectively we form a bucket company as part of the family group structure. The profits that are in the company get paid as a dividend to the family trust. Family trust then parks the dividend into the bucket company and pays no further tax because these profits have already had 26 cents to the dollar tax paid on them.</p>
+          <p><span class="spk">Jason · 44:42</span>So then that money gets out of the trading company, which is taking risk. It&#x27;s into an investment vehicle or a bucket company, which can be used as an investment vehicle, can make loans and buy property or loan to another investment trust, all sorts of things that I don&#x27;t need to go into now.</p>
+          <p><span class="spk">Jason · 44:57</span>But a bucket company, if you have not heard of one, if you&#x27;re looking at your business bank account and it&#x27;s full of cash and you&#x27;re thinking, well, hang on, why am I leaving all this cash in there? Talk about a bucket company with your advisor. Because that— we&#x27;re forming bucket companies every day at the moment for our clients, and they&#x27;re going, well, that&#x27;s a fantastic way to save tax.</p>
+          <p><span class="spk">Jason · 45:17</span>So again, that same example of the sole trader of, you know, not needing to have extra $100,000 of taxable income in mum and dad&#x27;s name or husband and wife&#x27;s name means that $100,000 taxable income can go to the bucket company and sit there until you&#x27;re ready to use it at a later date.</p>
+          <p><span class="spk">Marty · 45:33</span>So excuse my ignorance on this, but the bucket company doesn&#x27;t get taxed because it&#x27;s already been taxed. So I thought whatever the profits are have to be distributed through to the mum, the dad, and let&#x27;s say to the bucket company. But what you are saying is that actually it&#x27;s already pre-taxed.</p>
+          <p><span class="spk">Jason · 45:51</span>So if you&#x27;ve got a company that made $100,000 profit, it&#x27;s going to pay $26,000 tax on its $100,000 profit. It&#x27;s going to leave the $74,000 remaining in the bank account. You take that $74,000 up to the family trust, down to the bucket company&#x27;s bank account.</p>
+          <p><span class="spk">Marty · 46:07</span>So it just sits in the company&#x27;s bank account and that&#x27;s pure—</p>
+          <p><span class="spk">Jason · 46:10</span>No more tax.</p>
+          <p><span class="spk">Marty · 46:11</span>How&#x27;s that viewed? As income or just as—</p>
+          <p><span class="spk">Jason · 46:13</span>That&#x27;s, that&#x27;s, it&#x27;s distribution of income, but it&#x27;s already got the 26% credits on it because it&#x27;s already paid $26,000 tax on the $74,000 that&#x27;s been franked. Yeah, fully franked.</p>
+          <p><span class="spk">Nick · 46:25</span>They&#x27;re on the same tax rate.</p>
+          <p><span class="spk">Jason · 46:26</span>So they&#x27;re on the same tax rate. No more tax. But then each year, so that $74,000 is now available for that company to use to invest in something, to buy something, to become an asset holding vehicle. And any of the profits that are generated on the $74,000, you&#x27;ll pay tax at 26% in that new investment vehicle.</p>
+          <p><span class="spk">Jason · 46:44</span>What it&#x27;s doing is it&#x27;s separating that money out of your trading entity though, and you may loan that back. I mean, we&#x27;ve seen clients that then use that to loan it back to your trading company but secure it under a PPSR. Which means that in the event something does go pear-shaped, you&#x27;re getting your money back first because business is risk.</p>
+          <p><span class="spk">Nick · 47:02</span>One more question. Does that bucket company have to be a beneficiary of that initial trust?</p>
+          <p><span class="spk">Jason · 47:07</span>Yep. So if directors of one, directors of the family trust or the trustee company, and it&#x27;s definitely in the same family group, so that bucket company, once it&#x27;s formed, as long as there&#x27;s a connection between the shareholders and directors, that becomes a beneficiary of the trust as well.</p>
+          <p><span class="spk">Nick · 47:22</span>As long as husband, wife, and bucket company as 3 beneficiaries.</p>
+          <p><span class="spk">Jason · 47:25</span>Correct.</p>
+          <p><span class="spk">Marty · 47:26</span>All right, one more.</p>
+          <p><span class="spk">Nick · 47:27</span>I didn&#x27;t know that.</p>
+          <p><span class="spk">Marty · 47:27</span>One more. $100,000 in the bucket company. The next year, company doesn&#x27;t do so well, the original company. There&#x27;s not much income to be distributed. What happens with the bucket company? Can you just distribute that back to the individuals at that time?</p>
+          <p><span class="spk">Jason · 47:41</span>Yep. So you make sure that the— depending on who the shareholder of that bucket company is, but imagine it&#x27;s the same family trust or another family trust, that bucket company decides to pay a dividend, it pays the dividend out and then it goes to the individual beneficiaries who now the following year have a lower tax bracket.</p>
+          <p><span class="spk">Jason · 47:59</span>So then they can get that money out and effectively may not have to pay any top-up tax at all on that money because their tax bracket will be low enough to not cop any extra tax.</p>
+          <p><span class="spk">Marty · 48:09</span>Love that bucket, Dick. I know you&#x27;re gonna love it.</p>
+          <p><span class="spk">Nick · 48:11</span>I&#x27;ve got one more question. Is it— we&#x27;re talking about tax planning. So if you know that&#x27;s gonna— if you know you&#x27;re gonna have a tax issue, call it April, can you set that bucket company up?</p>
+          <p><span class="spk">Jason · 48:22</span>Yep.</p>
+          <p><span class="spk">Nick · 48:22</span>May?</p>
+          <p><span class="spk">Jason · 48:23</span>Do it now.</p>
+          <p><span class="spk">Nick · 48:23</span>It doesn&#x27;t have to be set up from the start of the fin year?</p>
+          <p><span class="spk">Jason · 48:25</span>No. So it&#x27;s all about, so again, great question though, because you set that up now, when you do your distribution minutes for your family trust, that is hands down paramount that you sign off your distribution minutes before 30 June 2021 or before 30 June each year.</p>
+          <p><span class="spk">Jason · 48:41</span>So when you have a family trust, one of the sticking points, and I think there&#x27;s a reason a lot of accountants get a bit funny about having family trust because there is a lot of management involved and making sure you do it right. But if you&#x27;ve got a family trust, you must declare where the income is being distributed.</p>
+          <p><span class="spk">Jason · 48:57</span>You can use percentages, you can use exact figures. So for example, partner is going to get $20,000, I&#x27;ll get the remaining income. And you can word that on the trust distribution. So, you know, the first $20,000 of income that hits the family trust goes to partner, all remaining income goes to me.</p>
+          <p><span class="spk">Jason · 49:14</span>So that you can word it like that. Or you might say 100 to Nick, 100 to Jase, 100 to Marty, balance to Josh. So you have to be specific about where the money&#x27;s going. So in your example, you can form the bucket company now, which will become a beneficiary, and you may decide that between you and Alicia there&#x27;s a sum of money.</p>
+          <p><span class="spk">Jason · 49:31</span>And then you&#x27;ll say after the sum of money, the balance will go to the bucket company, and you&#x27;ll sign that distribution minute before 30 June and it&#x27;ll get filed away. And when your accountant prepares your taxes, they must follow that distribution minute. And that&#x27;s why tax planning is so important and why we&#x27;re meeting all the clients now.</p>
+          <p><span class="spk">Jason · 49:48</span>If we don&#x27;t do that, we&#x27;re making it up. We&#x27;re going, oh, what do you reckon? Should we just do 50 to you and 50 over there and 20 to the bucket? And we sign off on it. It&#x27;s, yeah.</p>
+          <p><span class="spk">Marty · 49:57</span>Is that a certain trust where you could change the ratios as to who&#x27;s being distributed to? Is it just standard trust?</p>
+          <p><span class="spk">Jason · 50:02</span>Standard family trust. So discretionary trust.</p>
+          <p><span class="spk">Marty · 50:05</span>Discretionary.</p>
+          <p><span class="spk">Jason · 50:06</span>The same name or different name for a family trust. So discretionary trust, it&#x27;s at your discretion as the trustee. If you&#x27;re the trustee of the trust, it&#x27;s at your discretion where the money gets distributed to, but you must sign off on that before 30 June.</p>
+          <p><span class="spk">Marty · 50:19</span>Yep. Fantastic, mate. Producer Josh here. Question on crypto. If I have crypto bought and sold throughout the year, what do I have to give you guys as the accountant?</p>
+          <p><span class="spk">Jason · 50:29</span>Good question. We need a transaction history of your buys and your sells and the price at that time.. So we&#x27;ll trans— have to translate that back to AUD if it&#x27;s not. But effectively, you&#x27;ll need to pay tax on any gain you made. And if you held it for less than 12 months, you&#x27;ll pay tax on the full gain.</p>
+          <p><span class="spk">Jason · 50:47</span>If you held the crypto for more than 12 months, you&#x27;ll get a 50% CGT discount, so you won&#x27;t pay tax on the full gain. And if you made losses on your crypto trades, then you&#x27;ll have carry-forward capital losses.</p>
+          <p><span class="spk">Marty · 51:00</span>And would you recommend people use trusts? For— if they have a trust already for holding crypto?</p>
+          <p><span class="spk">Jason · 51:06</span>Yeah, so if you&#x27;ve got a trust for your investments, being shares, crypto, whatnot, it just means that the profits you generate don&#x27;t necessarily have to be paid in your name if you&#x27;ve got other family members. So you might pay it to your spouse who&#x27;s got a lower taxable income than you. So that family trust that&#x27;s generating investment income, again, the trustee can decide where that profits are going to be taxed.</p>
+          <p><span class="spk">Nick · 51:29</span>Thank you.</p>
+          <p><span class="spk">Jason · 51:30</span>You&#x27;re welcome.</p>
+          <p><span class="spk">Marty · 51:31</span>Thank you, Josh.</p>
+          <p><span class="spk">Nick · 51:32</span>Brilliant.</p>
+          <p><span class="spk">Marty · 51:33</span>Our wonderful producer. I told you we needed a special guest and there he is.</p>
+          <p><span class="spk">Jason · 51:38</span>We could go on forever about end of financial year hacks, but I just think what we probably highlighted there is there is so much potential if you&#x27;re having the conversations actually. Look, even the bucket company for you guys, I can see there&#x27;s some light bulb moments going off.</p>
+          <p><span class="spk">Marty · 51:50</span>Light bulb. I&#x27;m straight down to Bunnings, mate. Bucket company is an absolute absolute brilliant thing. And I&#x27;m about to put some, pump some money into super and I think buy an investment property. I think it&#x27;s been a great show.</p>
+          <p><span class="spk">Nick · 52:02</span>I think it just demonstrates how technical it is. And you know, I knew that bucket companies existed, but I&#x27;ll be honest, I didn&#x27;t really understand how logistically that would work. So I&#x27;ve definitely learned some stuff and I&#x27;ve, you know, I&#x27;ve been doing this for a long time. So it just demonstrates, get in, understand what all the technicalities are.</p>
+          <p><span class="spk">Nick · 52:21</span>What can you leverage off?</p>
+          <p><span class="spk">Marty · 52:22</span>I&#x27;ll tell you what I was thinking with the bucket company. I knew they existed, but what I was thinking I thought would happen is you&#x27;d distribute to the, um, yeah, the beneficiaries as the individuals, and then the bucket company would be taxed at 30%. But that was better than if you&#x27;re a high-income person being taxed at 47%.</p>
+          <p><span class="spk">Marty · 52:38</span>So the fact that that&#x27;s not taxed is an absolute goldmine of opportunity if you&#x27;re making great money in your business.</p>
+          <p><span class="spk">Jason · 52:45</span>Yep.</p>
+          <p><span class="spk">Marty · 52:45</span>So I love that strategy.</p>
+          <p><span class="spk">Jason · 52:47</span>It still works as well if you&#x27;re trading from the family trust and you haven&#x27;t paid tax on that money yet., then it can go to the company. That bucket company will then pay tax at 26% rather than 47% in the individual.</p>
+          <p><span class="spk">Marty · 52:58</span>Okay.</p>
+          <p><span class="spk">Jason · 52:58</span>That scenario can still exist too.</p>
+          <p><span class="spk">Marty · 53:00</span>Yeah.</p>
+          <p><span class="spk">Jason · 53:00</span>Okay, great. So guys, for me, some key takeaways or that I wanted to share just then that popped into my head is around the complexities at end of financial year and even just talking about Hacks. There is so much to know that even date-wise and off the back of COVID and some of the things the government have done with incentives, This year more than ever, there is so much to know and so much to get right.</p>
+          <p><span class="spk">Jason · 53:22</span>You would have— you may have received government grants that are taxable and some that aren&#x27;t taxable. You may have received JobKeeper, which is taxable, but a Victorian Support Grant, which is not. You may have got EMDG, which is an Export Marketing Development Grant, which is taxable. All of these things complicate the matter.</p>
+          <p><span class="spk">Jason · 53:38</span>So again, sit down, do the plan, talk to your advisor, get it right, and start to implement some of these strategies so that even a couple of grand in your pocket because of the meeting is better off than not doing it at all and having less money in your pocket after year-end.</p>
+          <p><span class="spk">Nick · 53:54</span>Yeah, and look, my key takeaway is just the proactiveness and review your accountant. If you&#x27;re listening to this and you&#x27;re thinking, geez, I haven&#x27;t had a meeting with my accountant for 4 years, they&#x27;re not the right accountant. Make a change, do the review, and make sure you give yourself plenty of time to make any changes you need to.</p>
+          <p><span class="spk">Nick · 54:12</span>So don&#x27;t do the review mid-June, do the review early May. Give yourself time to, you know, if you need to find some cash to put into super, give yourself the time to do it.</p>
+          <p><span class="spk">Marty · 54:21</span>Yeah. My takeaway is how much have we learnt today? Just us three and Josh, of course. But we&#x27;ve learnt so much. So I imagine our audience. So we&#x27;d love to hear from you to see what you&#x27;ve learnt because I think it is specialised knowledge and there&#x27;s always ways to save money if you get the right advice.</p>
+          <p><span class="spk">Jason · 54:39</span>This has been episode 10 of The Numbers Game. Please reach out, hello@thenumbersgamepodcast.com.au. Give us a follow on Instagram and even drop a message there. We&#x27;re happy to have a chat and send some cake for our 10th episode.</p>
+        </div>
+      </details>
+
+    </div>
+
+    <!-- audio-only: the Spotify player is the hero above; duplicate embed removed -->
+
+    <div class="listen">
+      <a href="https://open.spotify.com/episode/78k4JeUZ96kec4QH6qLsMA" target="_blank" rel="noopener" aria-label="Listen to this episode on Spotify">
+        <svg viewBox="0 0 24 24"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.52 17.34c-.24.36-.66.48-1.02.24-2.82-1.74-6.36-2.1-10.56-1.14-.42.12-.78-.18-.9-.54-.12-.42.18-.78.54-.9 4.56-1.02 8.52-.6 11.64 1.32.42.18.48.66.3 1.02zm1.44-3.3c-.3.42-.84.6-1.26.3-3.24-1.98-8.16-2.58-11.94-1.38-.48.12-1.02-.12-1.14-.6-.12-.48.12-1.02.6-1.14 4.32-1.32 9.72-.66 13.44 1.62.36.18.54.78.3 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.3c-.6.18-1.2-.18-1.38-.72-.18-.6.18-1.2.72-1.38 4.26-1.26 11.28-1.02 15.72 1.62.54.3.72 1.02.42 1.56-.3.42-1.02.6-1.56.3z"/></svg>
+        Spotify
+      </a>
+      <a href="https://podcasts.apple.com/au/podcast/id1555566088?i=1000776470464" target="_blank" rel="noopener" aria-label="Listen to this episode on Apple Podcasts">
+        <svg viewBox="0 0 24 24"><path d="M5.34 0A5.328 5.328 0 000 5.34v13.32A5.328 5.328 0 005.34 24h13.32A5.328 5.328 0 0024 18.66V5.34A5.328 5.328 0 0018.66 0H5.34zm6.525 2.568c2.336 0 4.448.902 6.056 2.587 1.224 1.272 1.912 2.619 2.264 4.392l.04.23c.04.272-.16.527-.432.567a.505.505 0 01-.567-.431l-.04-.213c-.312-1.57-.92-2.747-2.004-3.867-1.428-1.496-3.293-2.294-5.393-2.294-2.1 0-3.966.798-5.394 2.294-1.084 1.12-1.692 2.298-2.004 3.867l-.04.213a.507.507 0 01-.567.431.504.504 0 01-.432-.567l.04-.23c.352-1.773 1.04-3.12 2.264-4.392 1.608-1.685 3.72-2.587 6.056-2.587h.153zm.136 3.033c1.74 0 3.312.67 4.527 1.934.883.916 1.394 1.93 1.663 3.253l.04.23a.505.505 0 01-.431.567.503.503 0 01-.567-.432l-.04-.212c-.23-1.112-.659-1.97-1.396-2.732-1.052-1.1-2.404-1.672-3.9-1.672s-2.849.572-3.901 1.672c-.737.762-1.167 1.62-1.396 2.732l-.04.212a.503.503 0 01-.567.432.505.505 0 01-.432-.567l.04-.23c.27-1.323.78-2.337 1.664-3.253 1.215-1.264 2.787-1.934 4.527-1.934h.21zm-.078 3.05c1.092 0 2.091.424 2.89 1.22.582.58.924 1.245 1.107 2.15l.04.218a.501.501 0 01-.424.568.499.499 0 01-.568-.424l-.04-.198c-.146-.724-.413-1.253-.871-1.716-.63-.63-1.398-.957-2.226-.957s-1.595.328-2.225.957c-.459.463-.726.992-.871 1.716l-.04.198a.499.499 0 01-.568.424.501.501 0 01-.424-.568l.04-.219c.183-.904.525-1.569 1.106-2.149.8-.796 1.799-1.22 2.89-1.22h.184zM12 14.07a2.477 2.477 0 012.48 2.478A2.477 2.477 0 0112 19.024a2.477 2.477 0 01-2.48-2.477A2.477 2.477 0 0112 14.07z"/></svg>
+        Apple
+      </a>
+      <a class="yt-pill" href="https://www.youtube.com/@thenumbersgamepodcast?sub_confirmation=1" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.12-2.14C19.5 3.55 12 3.55 12 3.55s-7.5 0-9.38.51A3 3 0 0 0 .5 6.2 31.4 31.4 0 0 0 0 12a31.4 31.4 0 0 0 .5 5.8 3 3 0 0 0 2.12 2.14c1.88.51 9.38.51 9.38.51s7.5 0 9.38-.51a3 3 0 0 0 2.12-2.14A31.4 31.4 0 0 0 24 12a31.4 31.4 0 0 0-.5-5.8zM9.55 15.57V8.43L15.82 12z"/></svg>
+        Subscribe
+      </a>
+    </div>
+    <!-- LISTEN:END -->
+
+    <div class="relsec">
+      <span class="rtitle">Discover more</span>
+      <div class="relgrid">
+        <a class="relcard" href="/petrol-vs-electric-cars-how-much-you-actually-save-in-2026">
+          <img src="https://i.ytimg.com/vi/2vYQ6HlHtgA/hqdefault.jpg" alt="EP 276 thumbnail">
+          <span class="rt">Petrol vs Electric Cars: How Much You Actually Save in 2026</span>
+          <span class="rfoot"><span class="rwhy">11 May 2026</span><span class="rtag">EP 276</span></span>
+        </a>
+        <a class="relcard" href="/the-digital-heartbeat-of-business">
+          <img src="https://i.ytimg.com/vi/fOlNHc31USo/hqdefault.jpg" alt="EP 155 thumbnail">
+          <span class="rt">The Digital Heartbeat of Business</span>
+          <span class="rfoot"><span class="rwhy">19 February 2024</span><span class="rtag">EP 155</span></span>
+        </a>
+        <a class="relcard" href="/dollar-cost-averaging-the-easiest-way-to-build-wealth-over-time">
+          <img src="https://i.ytimg.com/vi/mbQ7UObCuHA/hqdefault.jpg" alt="EP 232 thumbnail">
+          <span class="rt">Dollar Cost Averaging - The Easiest Way to Build Wealth Over Time</span>
+          <span class="rfoot"><span class="rwhy">19 May 2025</span><span class="rtag">EP 232</span></span>
+        </a>
+        <a class="relcard" href="/your-guide-to-buying-and-financing-a-business">
+          <img src="https://i.ytimg.com/vi/HVojcU-gBSE/hqdefault.jpg" alt="EP 191 thumbnail">
+          <span class="rt">Your Guide to Buying and Financing a Business</span>
+          <span class="rfoot"><span class="rwhy">8 July 2024</span><span class="rtag">EP 191</span></span>
+        </a>
+        <a class="relcard" href="/smart-spending-in-a-consumer-world">
+          <img src="https://i.ytimg.com/vi/hDbCF-tIf2g/hqdefault.jpg" alt="EP 146 thumbnail">
+          <span class="rt">Smart Spending in a Consumer World</span>
+          <span class="rfoot"><span class="rwhy">7 December 2023</span><span class="rtag">EP 146</span></span>
+        </a>
+        <a class="relcard" href="/maximising-productivity-in-2024">
+          <img src="https://i.ytimg.com/vi/LsWLHuyfTsw/hqdefault.jpg" alt="EP 151 thumbnail">
+          <span class="rt">Maximising Productivity in 2024</span>
+          <span class="rfoot"><span class="rwhy">5 February 2024</span><span class="rtag">EP 151</span></span>
+        </a>
+      </div>
+      <div class="reldots" id="reldots"></div>
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="footgrid">
+      <div class="fcol">
+        <div class="foot-label">Brought to you by</div>
+        <div class="sponsors">
+          <a href="https://www.inovayt.com.au/" target="_blank" rel="noopener"><img src="assets/inovayt-white.png" alt="Inovayt"></a>
+          <a href="https://futureadvisory.com.au/" target="_blank" rel="noopener"><img src="assets/future-advisory-white.png" alt="Future Advisory"></a>
+        </div>
+      </div>
+      <div class="fcol produced">
+        <div class="foot-label">Produced by</div>
+        <a href="https://www.vidpod.com.au/" target="_blank" rel="noopener"><img src="assets/vidpod-white.png" alt="VIDPOD"></a>
+      </div>
+    </div>
+    <nav class="footnav">
+      <a href="index.html">Home</a><a href="episodes.html">Every episode</a><a href="adventure.html">Choose your own adventure</a><a href="about.html">About the show</a><a href="nick-reilly.html">Nick Reilly</a><a href="jason-robinson.html">Jason Robinson</a><a href="contact.html">Contact</a>
+    </nav>
+    <div class="copyright">© 2026 The Numbers Game</div>
+  </footer>
+
+  <script>
+    var VIDEO='RAQ80ecsDq0';
+
+    /* Mobile nav dropdown. */
+    var burger=document.getElementById('navburger'), navdrop=document.getElementById('navdrop');
+    if(burger&&navdrop){burger.addEventListener('click',function(){
+      navdrop.hidden=!navdrop.hidden;
+      burger.setAttribute('aria-expanded', navdrop.hidden?'false':'true');
+    });}
+
+    /* Voice-note button reveals the recorder; × tucks it away. */
+    var vbtn=document.getElementById('vbtn'), vslot=document.getElementById('vslot'), vclose=document.getElementById('vclose');
+    if(vbtn&&vslot){vbtn.addEventListener('click',function(){vslot.hidden=!vslot.hidden;});}
+    if(vclose&&vslot){vclose.addEventListener('click',function(){vslot.hidden=true;});}
+
+    /* Keep-exploring dots: only shown when the strip actually scrolls (mobile). */
+    var rg=document.querySelector('.relgrid'), rd=document.getElementById('reldots');
+    if(rg&&rd){
+      var relCards=rg.querySelectorAll('.relcard');
+      relCards.forEach(function(){rd.appendChild(document.createElement('span'))});
+      var updDots=function(){
+        var scrollable=rg.scrollWidth>rg.clientWidth+4;
+        rd.style.display=scrollable?'flex':'none';
+        if(!scrollable)return;
+        var i=Math.round(rg.scrollLeft/(rg.scrollWidth-rg.clientWidth)*(relCards.length-1));
+        rd.querySelectorAll('span').forEach(function(s,n){s.classList.toggle('on',n===i)});
+      };
+      rg.addEventListener('scroll',updDots,{passive:true});
+      window.addEventListener('resize',updDots);
+      updDots();
+    }
+
+    /* Explore tabs: swap the visible panel; the row stays put so you never lose your place. */
+    var tabBtns=document.querySelectorAll('.tabbtn');
+    tabBtns.forEach(function(b){
+      b.addEventListener('click',function(){
+        tabBtns.forEach(function(o){o.classList.remove('on')});
+        document.querySelectorAll('.tpanel').forEach(function(p){p.hidden=true});
+        b.classList.add('on');
+        document.getElementById(b.getAttribute('data-panel')).hidden=false;
+      });
+    });
+
+    /* Audio-only: Spotify player is the hero; chapters/questions seek it via the Spotify iFrame API. */
+    var spotifyCtrl=null, pendingSeek=null;
+    function nudge(){
+      var p=document.getElementById('player-wrap'), r=p.getBoundingClientRect();
+      if(r.bottom<80 || r.top>window.innerHeight-90){ p.scrollIntoView({behavior:'smooth',block:'start'}); }
+    }
+    function startAt(sec){
+      nudge();
+      if(spotifyCtrl){ spotifyCtrl.seek(sec); spotifyCtrl.resume(); } else { pendingSeek=sec; }
+    }
+    window.onSpotifyIframeApiReady=function(IFrameAPI){
+      IFrameAPI.createController(document.getElementById('spotify-embed'),
+        {uri:'spotify:episode:6h8LmJR8TkuffKfosicpH3', width:'100%', height:'232'},
+        function(c){ spotifyCtrl=c; if(pendingSeek!=null){ c.seek(pendingSeek); c.resume(); pendingSeek=null; } });
+    };
+    (function(){var sc=document.createElement('script');sc.src='https://open.spotify.com/embed/iframe-api/v1';sc.async=true;document.head.appendChild(sc);})();
+  </script>
+</body>
+</html>

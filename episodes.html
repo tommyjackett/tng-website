@@ -442,6 +442,7 @@
         var inTitle=rx.test(e.title);
         if(inTitle) s+=100;
         if(rx.test(e.topic+' '+(e.subtopic||''))) s+=50;
+        if(e.summary&&rx.test(e.summary)){ s+=40; if(!e._why) e._why='Inside the summary'; }  // audio-era eps: summary is searchable
         var guestStr=(e.guests||[]).join(' ');
         var inGuest=guestStr&&rx.test(guestStr);
         if(inGuest) s+=80;                       // guest name is a strong, deliberate match

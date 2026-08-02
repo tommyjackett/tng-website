@@ -1,0 +1,697 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EP 49 · Navigating The Road Forward | The Numbers Game</title>
+<meta name="description" content="Welcome to episode 49 of The Numbers Game. On today&#x27;s episode, we dive into some tools and strategies to navigate the ever-changing market. What needs to cha…">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" sizes="64x64" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="canonical" href="https://thenumbersgamepodcast.com.au/navigating-the-road-forward">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="The Numbers Game">
+<meta property="og:title" content="EP 49 · Navigating The Road Forward | The Numbers Game">
+<meta property="og:description" content="Welcome to episode 49 of The Numbers Game. On today&#x27;s episode, we dive into some tools and strategies to navigate the ever-changing market. What needs to cha…">
+<meta property="og:url" content="https://thenumbersgamepodcast.com.au/navigating-the-road-forward">
+<meta property="og:image" content="https://thenumbersgamepodcast.com.au/assets/tng-audio-only-thumbnail.webp">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+  :root{
+    --purple:#585af3; --purple-dark:#2c1b8a; --mint:#7ad9a8;
+    --white:#ffffff; --muted:rgba(255,255,255,.60); --dim:rgba(255,255,255,.42);
+    --line:rgba(255,255,255,.12); --card:rgba(255,255,255,.05); --card-hi:rgba(255,255,255,.09);
+    --display:'Anton',Impact,'Helvetica Neue',sans-serif;
+    --sans:'Inter',system-ui,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif;
+    --wrap:1280px;   /* page frame (nav spans this) */
+    --col:960px;     /* content column (player, tabs, text) */
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:var(--sans); color:var(--white); line-height:1.6; -webkit-font-smoothing:antialiased;
+    background:#12093a;
+    background-image:
+      radial-gradient(1200px 600px at 82% -6%, rgba(88,90,243,.45) 0%, transparent 55%),
+      radial-gradient(900px 700px at 5% 8%, rgba(122,217,168,.10) 0%, transparent 50%),
+      linear-gradient(180deg,#2c1b8a 0%,#1a1150 28%,#100b34 62%,#0b0820 100%);
+    background-attachment:fixed;
+  }
+  a{color:inherit}
+  .wrap{max-width:var(--wrap);margin:0 auto;padding:0 36px}
+  main.wrap{max-width:var(--col)}
+  @media(max-width:720px){.wrap{padding:0 22px}}
+
+  /* ── Navbar ── */
+  .nav{position:sticky;top:0;z-index:50;background:linear-gradient(180deg,rgba(24,15,74,.92),rgba(24,15,74,.72));backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+  .nav-in{max-width:var(--wrap);margin:0 auto;padding:11px 36px;display:flex;align-items:center;justify-content:space-between}
+  @media(max-width:720px){.nav-in{padding:11px 22px}}
+  .brand{display:block;line-height:0}
+  .brand img{height:36px;width:auto;display:block}
+  .navlinks{display:flex;gap:28px;align-items:center}
+  .navlinks a{text-decoration:none;font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);transition:.15s}
+  .navlinks a:hover{color:var(--white)}
+  .navlinks a.navtop{cursor:default}
+  .navgroup{position:relative;display:flex;align-items:center}
+  .navgroup .subnav{display:none;position:absolute;top:100%;left:50%;transform:translateX(-50%);padding-top:14px;min-width:180px}
+  .navgroup:hover .subnav,.navgroup:focus-within .subnav{display:block}
+  .subnav-in,.navgroup .subnav{z-index:60}
+  .navgroup .subnav a{display:block;background:#180f4a;border:1px solid var(--line);border-top:0;padding:12px 16px;font-size:12px;color:rgba(255,255,255,.85)}
+  .navgroup .subnav a:first-child{border-top:1px solid var(--line)}
+  .navgroup .subnav a:hover{background:#221768;color:var(--white)}
+  .navburger{display:none;background:none;border:1px solid var(--line);padding:8px 10px;cursor:pointer;color:var(--white);transition:.15s}
+  .navburger:hover{border-color:rgba(122,217,168,.6)}
+  .navburger svg{width:20px;height:20px;fill:currentColor;display:block}
+  .navdrop{display:none}
+  @media(max-width:720px){
+    .navlinks{display:none}
+    .navburger{display:block}
+    .navdrop{display:block;position:absolute;left:0;right:0;top:100%;
+      background:#180f4a;border-bottom:1px solid var(--line);box-shadow:0 24px 50px rgba(0,0,0,.45)}
+    .navdrop[hidden]{display:none}
+    .navdrop a{display:block;padding:15px 22px;text-decoration:none;font-size:14px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:rgba(255,255,255,.9);border-bottom:1px solid rgba(255,255,255,.06)}
+    .navdrop a:last-child{border-bottom:0}
+    .navdrop a.sub{padding-left:42px;font-size:13px;color:rgba(255,255,255,.72)}
+    .navdrop .navlabel{display:block;padding:15px 22px 6px;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.4)}
+  }
+
+  /* ── Hero / hook (marker-highlight system: purple hook wraps naturally, mint payoff below)
+     Rules: title splits at its natural break (colon/pipe/question mark). Front = hook (purple,
+     big), back = payoff (mint, smaller). No break in title = purple hook only. Highlights hug
+     the text (tight em padding tuned to Anton) and wrap via box-decoration-break — never
+     hand-pick line breaks or mint words. ── */
+  header.hero{padding:34px 0 6px}
+  .hook{--inx:clamp(8.4px,2.1vw,15.6px)} /* one shared text inset so hook + payoff first letters align */
+  .hook .hk{font-family:var(--display);font-weight:400;text-transform:uppercase;
+    font-size:clamp(28px,7vw,52px);line-height:1.3;letter-spacing:-.5px;text-wrap:balance}
+  .hook .hk span{color:var(--white);padding:.04em var(--inx) .02em;
+    background:linear-gradient(var(--purple),var(--purple)) 0 50%/100% 87% no-repeat;
+    -webkit-box-decoration-break:clone;box-decoration-break:clone}
+  .hook .pay{font-family:var(--display);font-weight:400;text-transform:uppercase;
+    font-size:clamp(16px,4vw,24px);line-height:1.5;letter-spacing:.6px;margin-top:8px;text-wrap:balance}
+  .hook .pay span{color:#0a0a0a;padding:.08em var(--inx) .04em;
+    background:linear-gradient(var(--mint),var(--mint)) 0 50%/100% 88% no-repeat;
+    -webkit-box-decoration-break:clone;box-decoration-break:clone}
+  /* no-hook titles: mid-split into two full-size rows, purple then mint */
+  .hook .hk span.hkrow{display:block;background:none;padding:0}
+  .hook .hk .hkrow+.hkrow{margin-top:8px}
+  .hook .hk span.mintseg{color:#0a0a0a;
+    background:linear-gradient(var(--mint),var(--mint)) 0 50%/100% 87% no-repeat}
+
+  /* ── Player (clean facade → real player on tap) ── */
+  .player-wrap{margin:24px 0 4px;scroll-margin-top:76px}
+  .audio-hero{width:100%;min-height:232px;border-radius:12px;overflow:hidden;box-shadow:0 30px 70px rgba(0,0,0,.5),0 0 0 1px rgba(255,255,255,.06)}
+  .audio-hero iframe{display:block;width:100%;border:0}
+  .player{position:relative;width:100%;padding-top:56.25%;border-radius:0;overflow:hidden;background:#000;box-shadow:0 30px 70px rgba(0,0,0,.5),0 0 0 1px rgba(255,255,255,.06)}
+  .facade{position:absolute;inset:0;border:0;cursor:pointer;background-size:cover;background-position:center;display:flex;align-items:center;justify-content:center;padding:0}
+  .facade .play{width:74px;height:74px;border-radius:50%;background:rgba(10,6,30,.40);border:2px solid rgba(255,255,255,.72);display:flex;align-items:center;justify-content:center;transition:.18s;-webkit-backdrop-filter:blur(1px);backdrop-filter:blur(1px)}
+  .facade:hover .play{background:rgba(88,90,243,.62);transform:scale(1.07);border-color:#fff}
+  .facade .play::after{content:"";border-style:solid;border-width:11px 0 11px 19px;border-color:transparent transparent transparent #fff;margin-left:5px}
+  .player iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+
+  /* ── Episode facts (bottom of the Summary panel — templated per episode) ── */
+  .sumfacts{margin:14px 10px 4px;padding-top:13px;border-top:1px solid rgba(255,255,255,.08);display:flex;flex-direction:column;gap:8px}
+  .fact{display:flex;gap:12px;font-size:13.5px}
+  .fact .fl{flex:none;width:104px;color:var(--dim);font-weight:600;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;padding-top:2px}
+  .fact .fv{color:rgba(255,255,255,.9);font-weight:500}
+  .fact .fv a{color:var(--mint);text-decoration:none;border-bottom:1px solid rgba(122,217,168,.4);transition:.15s}
+  .fact .fv a:hover{border-bottom-color:var(--mint)}
+
+  /* ── Episode tag (identity: black label hanging off the title corner) ── */
+  .eptag{display:inline-block;position:relative;left:-6px;margin-bottom:-7px;z-index:2;
+    background:#0a0a0a;color:var(--white);font-family:var(--display);font-weight:400;
+    font-size:13.5px;letter-spacing:1.5px;text-transform:uppercase;padding:6px 11px 4px}
+
+  /* ── Explore tabs (sticky mode switcher; one panel swaps below, nothing shoves) ── */
+  .explore{margin-top:22px}
+  .tabs{position:sticky;top:58px;z-index:40;display:flex;flex-wrap:wrap;gap:8px;padding:10px 0;
+    background:linear-gradient(180deg,rgba(18,10,55,.96),rgba(18,10,55,.86));
+    backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+  .tabbtn{font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.5px;
+    font-size:14.5px;color:var(--white);background:var(--purple);border:1px solid var(--purple);
+    padding:9px 13px 7px;cursor:pointer;transition:.15s}
+  .tabbtn:hover{filter:brightness(1.12)}
+  .tabbtn.on{background:var(--mint);border-color:var(--mint);color:#0a0a0a}
+  .tabbtn.on:hover{filter:none}
+  .tabbtn .ct{font-size:12px;opacity:.75;font-variant-numeric:tabular-nums}
+  .tabbtn .ct::before{content:" · "}
+  .tpanel{border:1px solid var(--line);background:var(--card);padding:12px 10px 14px}
+  .hint{font-size:12.5px;color:var(--muted);padding:2px 10px 10px;border-bottom:1px solid rgba(255,255,255,.08);margin-bottom:6px}
+
+  /* ── Listen row (no box: label left, service pills follow) ── */
+  .listen{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:12px 16px;margin-top:34px}
+  .listen .lname{font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--dim)}
+  .listen a{display:inline-flex;align-items:center;gap:9px;padding:11px 18px;border-radius:999px;
+    background:var(--mint);color:#08210f;text-decoration:none;font-weight:800;font-size:12.5px;
+    letter-spacing:.04em;text-transform:uppercase;transition:.15s}
+  .listen a:hover{filter:brightness(1.06);transform:translateY(-1px);box-shadow:0 12px 30px rgba(122,217,168,.25)}
+  .listen svg{width:20px;height:20px;fill:currentColor;flex:none}
+  /* ── Listen-now Spotify audio embed (full column width, above the pills) ── */
+  .listen-now{margin-top:40px}
+  .listen-now .ln-head{display:flex;align-items:baseline;justify-content:space-between;gap:14px;margin-bottom:13px}
+  .listen-now .ln-title{font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--dim)}
+  .audio-embed{border-radius:12px;overflow:hidden;box-shadow:0 20px 50px rgba(0,0,0,.4),0 0 0 1px rgba(255,255,255,.06)}
+  .audio-embed iframe{display:block;width:100%;border:0}
+  @media(max-width:720px){.listen-now{margin-top:32px}}
+
+  /* ── Keep exploring (thumbnails link to other episode PAGES, never timecodes).
+     Swipeable strip on mobile, fits three-up on desktop. Variant rule: claim
+     "similar ground" + reason lines ONLY when moment-level topic overlap is
+     genuinely strong; otherwise show the latest released episodes with dates —
+     never invent a connection. ── */
+  .relsec{margin-top:60px;padding-top:58px;border-top:1px solid var(--line)} /* line = end of this episode's info */
+  .reldots{display:flex;justify-content:center;gap:7px;margin-top:12px}
+  .reldots span{width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.25);transition:.2s}
+  .reldots span.on{background:var(--mint)}
+  .relsec .rtitle{display:inline-block;font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.5px;font-size:14.5px;background:var(--mint);color:#0a0a0a;padding:9px 13px 7px;margin-bottom:18px}
+  .relgrid{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding-bottom:6px;scrollbar-width:none}
+  .relgrid::-webkit-scrollbar{display:none}
+  .relcard{flex:0 0 56%;max-width:232px;scroll-snap-align:start;display:flex;flex-direction:column;text-decoration:none;background:var(--card);border:1px solid var(--line);transition:.15s}
+  .relcard:hover{background:var(--card-hi);border-color:rgba(122,217,168,.55)}
+  .relcard img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block}
+  .relcard .rt{display:block;font-size:12.5px;font-weight:600;color:rgba(255,255,255,.92);line-height:1.4;padding:8px 8px 0}
+  .relcard .rfoot{margin-top:auto;display:flex;justify-content:space-between;align-items:flex-end;gap:8px;padding:10px 8px 9px}
+  .relcard .rwhy{font-size:11.5px;color:var(--mint)}
+  .relcard .rtag{display:inline-block;background:#0a0a0a;color:var(--white);font-family:var(--display);font-size:10px;letter-spacing:1.2px;text-transform:uppercase;padding:3px 7px 2px;white-space:nowrap;flex:0 0 auto}
+
+  /* ── Dropdown sections (accordion under the player) ── */
+  .drops{margin-top:34px;display:flex;flex-direction:column;gap:11px}
+  .drop{border:1px solid var(--line);border-radius:0;background:var(--card);overflow:hidden;transition:border-color .15s}
+  .drop[open]{border-color:rgba(122,217,168,.35)}
+  .drop>summary{list-style:none;cursor:pointer;padding:16px 18px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+  .drop>summary::-webkit-details-marker{display:none}
+  .drop>summary .st{font-weight:700;font-size:15.5px;letter-spacing:.005em}
+  .drop>summary .ct{margin-left:auto;font-size:12px;color:var(--dim);font-weight:600;font-variant-numeric:tabular-nums}
+  .drop>summary .chev{flex:none;width:22px;height:22px;border-radius:50%;background:rgba(122,217,168,.14);color:var(--mint);display:flex;align-items:center;justify-content:center;font-family:var(--display);font-size:15px;line-height:1;transition:.2s;transform:translateY(-1px)}
+  .drop[open]>summary .chev{transform:rotate(45deg)}
+  .drop-body{padding:2px 12px 12px}
+
+  /* chapters */
+  .chapter{display:flex;align-items:baseline;gap:14px;width:100%;text-align:left;cursor:pointer;background:none;border:0;color:inherit;font-family:inherit;padding:11px 10px;border-radius:10px;transition:.13s}
+  .chapter:hover{background:var(--card-hi)}
+  .chapter .tc{font-variant-numeric:tabular-nums;font-weight:700;font-size:14px;color:var(--mint);flex:none;width:48px}
+  .chapter .cx{font-size:15px;font-weight:500;color:rgba(255,255,255,.9)}
+  .chapter:hover .cx{color:#fff}
+
+  /* questions */
+  .q{display:flex;align-items:center;gap:12px;width:100%;text-align:left;cursor:pointer;background:none;border:0;border-radius:11px;color:inherit;font-family:inherit;padding:12px 10px;transition:.14s}
+  .q+.q{border-top:1px solid rgba(255,255,255,.05)}
+  .q:hover{background:var(--card-hi)}
+  .q .qm{font-family:var(--display);font-size:15px;color:var(--mint);flex:none;line-height:1;transform:translateY(1px)}
+  .q .qx{font-size:15px;font-weight:500;color:rgba(255,255,255,.92)}
+  .q .go{margin-left:auto;flex:none;color:var(--dim);font-size:18px;transition:.15s}
+  .q:hover .go{color:var(--mint);transform:translateX(2px)}
+
+  /* summary + transcript bodies */
+  .summary-body p{font-size:16.5px;line-height:1.62;color:rgba(255,255,255,.9);padding:6px 10px 4px}
+  .tbody{padding:2px 10px 8px}
+  .tbody p{font-size:14.5px;line-height:1.7;color:rgba(255,255,255,.78);margin-top:15px;max-width:64ch}
+  .tbody .spk{display:block;font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--mint);margin-bottom:2px}
+
+  /* ── Voice note ask (lives at the bottom of the Summary panel) ── */
+  .vask{margin:16px 10px 4px}
+  .vbtn{display:inline-flex;align-items:center;gap:9px;padding:12px 20px;border-radius:999px;border:0;cursor:pointer;
+    background:var(--mint);color:#08210f;font-family:inherit;font-weight:800;font-size:12.5px;
+    letter-spacing:.04em;text-transform:uppercase;transition:.15s}
+  .vbtn:hover{filter:brightness(1.06);transform:translateY(-1px);box-shadow:0 12px 30px rgba(122,217,168,.25)}
+  .vbtn svg{width:18px;height:18px;fill:currentColor;flex:none}
+  .vslot{background:var(--purple);padding:12px 10px 10px;margin:14px 0 4px;box-shadow:0 18px 40px rgba(0,0,0,.35)}
+  .vslot[hidden]{display:none}
+  .vhead{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;margin-bottom:10px}
+  .vhead .vmsg{font-family:var(--sans);font-size:13px;line-height:1.55;color:rgba(255,255,255,.92);margin:2px 0 0;padding:0 2px}
+  .vclose{background:none;border:0;color:rgba(255,255,255,.85);font-size:22px;line-height:1;cursor:pointer;padding:0 2px}
+  .vclose:hover{color:var(--white)}
+  .vslot iframe{display:block}
+
+  /* ── YouTube subscribe pill (sits in the listen row; outranks .listen a's mint) ── */
+  .listen a.yt-pill{background:var(--purple);color:var(--white)}
+  .listen a.yt-pill:hover{filter:brightness(1.1);transform:translateY(-1px)}
+  @media(max-width:720px){ /* mobile: no label, three compact pills on one row */
+    .listen .lname{display:none}
+    .listen{gap:8px}
+    .listen a{padding:10px 13px;font-size:11px;gap:6px}
+    .listen svg{width:16px;height:16px}
+  }
+
+  /* ── Footer: two columns under the line (Brought to you by | Produced by), matches adventure.html ── */
+  footer{border-top:1px solid var(--line);margin-top:68px;padding:52px 20px 58px}
+  .footgrid{max-width:var(--wrap);margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:start}
+  @media(max-width:720px){.footgrid{grid-template-columns:1fr;gap:40px}}
+  .fcol{text-align:center}
+  .foot-label{font-size:11px;font-weight:700;letter-spacing:.26em;text-transform:uppercase;color:var(--dim);margin-bottom:16px}
+  .sponsors{display:flex;justify-content:center;align-items:center;gap:38px;flex-wrap:wrap}
+  .sponsors a{display:inline-flex;transition:.15s}
+  .sponsors a:hover{transform:translateY(-1px)}
+  .sponsors img{height:34px;width:auto;opacity:.92}
+  .sponsors a:hover img{opacity:1}
+  .produced a{display:inline-flex;transition:.15s}
+  .produced a:hover img{opacity:1}
+  .produced img{height:30px;width:auto;opacity:.95}
+  .footnav{margin-top:36px;display:flex;justify-content:center;flex-wrap:wrap;gap:6px 26px}
+  .footnav a{font-size:12px;font-weight:600;letter-spacing:.04em;color:var(--dim);text-decoration:none;transition:.15s}
+  .footnav a:hover{color:var(--mint)}
+  .copyright{margin-top:40px;font-size:12px;color:var(--dim);text-align:center}
+
+  @media(min-width:720px){header.hero{padding:48px 0 6px}}
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "PodcastEpisode", "name": "Buying Commercial Property With Your Super in 2026 | What the Numbers Say", "url": "https://thenumbersgamepodcast.com.au/episode-285.html", "datePublished": "2026-07-13", "episodeNumber": 285, "image": "https://i.ytimg.com/vi/RAQ80ecsDq0/maxresdefault.jpg", "partOfSeries": {"@type": "PodcastSeries", "name": "The Numbers Game", "url": "https://thenumbersgamepodcast.com.au/"}}</script>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-in">
+      <a class="brand" href="index.html" aria-label="The Numbers Game home"><img src="assets/tng-logo.png" alt="The Numbers Game"></a>
+      <div class="navlinks">
+        <a href="index.html">Home</a>
+        <div class="navgroup">
+          <a class="navtop">Episodes</a>
+          <div class="subnav">
+            <a href="episodes.html">All episodes</a>
+            <a href="adventure.html">Find moments</a>
+          </div>
+        </div>
+        <div class="navgroup">
+          <a class="navtop">About</a>
+          <div class="subnav">
+            <a href="about.html">The show</a>
+            <a href="nick-reilly.html">Nick Reilly</a>
+            <a href="jason-robinson.html">Jason Robinson</a>
+          </div>
+        </div>
+        <a href="contact.html">Contact</a>
+      </div>
+      <button class="navburger" id="navburger" type="button" aria-label="Menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24"><path d="M3 6h18v2H3zM3 11h18v2H3zM3 16h18v2H3z"/></svg>
+      </button>
+    </div>
+    <div class="navdrop" id="navdrop" hidden>
+      <a href="index.html">Home</a>
+      <span class="navlabel">Episodes</span>
+      <a class="sub" href="episodes.html">All episodes</a>
+      <a class="sub" href="adventure.html">Find moments</a>
+      <span class="navlabel">About</span>
+      <a class="sub" href="about.html">The show</a>
+      <a class="sub" href="nick-reilly.html">Nick Reilly</a>
+      <a class="sub" href="jason-robinson.html">Jason Robinson</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+
+  <main class="wrap">
+
+    <header class="hero">
+      <div class="hook">
+        <span class="eptag">EP 49</span>
+        <h1 class="hk"><span>Navigating The Road Forward</span></h1>
+      </div>
+    </header>
+
+    <div class="player-wrap" id="player-wrap">
+      <div class="audio-hero" id="spotify-embed"></div>
+    </div>
+
+    <div class="explore">
+      <div class="tabs" role="tablist">
+        <button class="tabbtn on" data-panel="p-summary">Summary</button>
+      </div>
+      <section class="tpanel" id="p-summary">
+        <div class="summary-body">
+          <p>Welcome to episode 49 of The Numbers Game. On today&#x27;s episode, we dive into some tools and strategies to navigate the ever-changing market. What needs to change in the workplace post covid, how technology increases productivity but can lead to burnout and the importance of inperson connection.</p>
+        </div>
+        <div class="vask">
+          <button class="vbtn" id="vbtn" type="button">
+            <svg viewBox="0 0 24 24"><path d="M12 14a3 3 0 0 0 3-3V6a3 3 0 1 0-6 0v5a3 3 0 0 0 3 3zm5-3a5 5 0 0 1-10 0H5a7 7 0 0 0 6 6.92V21h2v-3.08A7 7 0 0 0 19 11h-2z"/></svg>
+            Send us a voice note
+          </button>
+          <div class="vslot" id="vslot" hidden>
+            <div class="vhead">
+              <p class="vmsg">We'd love to hear from you. You can leave up to a 90 second voice note for us to play on the show: a question, some feedback, or a topic you want covered.</p>
+              <button class="vclose" id="vclose" type="button" aria-label="Close">&times;</button>
+            </div>
+            <iframe src="https://www.speakpipe.com/widget/inline/hhq6kzggsx7zpcsvakgxfrzun3zidpde" allow="microphone" width="100%" height="200" frameborder="0" title="Leave The Numbers Game a voice note"></iframe>
+          </div>
+          <script async src="https://www.speakpipe.com/widget/loader.js" charset="utf-8"></script>
+        </div>
+        <div class="sumfacts">
+          <div class="fact"><span class="fl">Release date</span><span class="fv">23 May 2022</span></div>
+          <div class="fact"><span class="fl">Hosts</span><span class="fv"><a href="jason-robinson.html">Jason Robinson</a> &amp; <a href="nick-reilly.html">Nick Reilly</a> &amp; <a href="marty-vidakovic.html">Marty Vidakovic</a></span></div>
+
+        </div>
+      </section>
+    </div>
+
+    <div class="drops">
+
+      <details class="drop">
+        <summary><span class="st">Episode transcript</span><span class="chev">+</span></summary>
+        <div class="drop-body tbody">
+          <p><span class="spk">Jason · 00:00</span>Thanks to our sponsor Walker Digital, who&#x27;ve stepped in to help the Numbers Game podcast with their social media. Walker Digital are a digital marketing agency covering strategy, content, video implementation, and education. The team at Walker have spread the word of our clients and love working with businesses doing good things, helping them to grow and reach more people so they can scale and get larger.</p>
+          <p><span class="spk">Jason · 00:20</span>I know personally the first thing I did when growing our business was to outsource social media, blogs, and copywriting because I knew it was something that was not the best use of my time, and the team at Walker Digital smashed it. Sometimes you need to walk before you can run. Find out more at their website, wlkr.digital. This podcast is for educational and informational purposes only.</p>
+          <p><span class="spk">Jason · 00:41</span>The conversations are of a general nature and do not qualify as financial or tax advice. We recommend before you make any financial decisions, you consult a licensed professional. Individuals on the podcast may hold positions in the companies discussed. Welcome to episode 49 of The Numbers Game.</p>
+          <p><span class="spk">Jason · 00:57</span>It&#x27;s Jase, Nick, and Marty here again, coming to you live on whatever you&#x27;re listening to us on. How you going?</p>
+          <p><span class="spk">Marty · 01:03</span>How are you today, boys? Oh, really excited today, Jase. You know, it&#x27;s after the election, but we&#x27;re pre-recording, so I don&#x27;t know who&#x27;s won. So it&#x27;s, but we&#x27;re not gonna talk about anything of the election &#x27;cause we know that can get very boring. But I&#x27;m excited about what we&#x27;re talking about today.</p>
+          <p><span class="spk">Marty · 01:19</span>Nick, how are you?</p>
+          <p><span class="spk">Nick · 01:20</span>I&#x27;m well, thanks, Marty. So yeah, looking forward to get stuck into the business stuff. This is the stuff we really like. So yeah, pumped for today&#x27;s episode.</p>
+          <p><span class="spk">Marty · 01:27</span>And Jase, how are you going? You&#x27;re still sort of carrying that Uh, flu, it&#x27;s lingering.</p>
+          <p><span class="spk">Jason · 01:31</span>Oh, just this, this long COVID is the gift that keeps on giving. And I don&#x27;t know, like, mix it with the man flu and who knows what else is going on. But I&#x27;ve just had, you know, lungs of copper smashing. But I&#x27;m again, I&#x27;m pushing through, guys. I&#x27;m here to add value and provide the extra insights with you two lovely gents.</p>
+          <p><span class="spk">Jason · 01:47</span>And, um, let&#x27;s kick off with what we&#x27;ve got on today&#x27;s show. Marty, what are you bringing to us today?</p>
+          <p><span class="spk">Marty · 01:52</span>Well, today I&#x27;m going to talk a little bit about, uh, customer loyalty and the damning stat on that. Which I think a lot of business owners will find interesting. Nick, what have you got?</p>
+          <p><span class="spk">Nick · 02:01</span>Mate, today I&#x27;m going to mention another Aussie success story that most people will be familiar with, especially the female listeners.</p>
+          <p><span class="spk">Marty · 02:09</span>And Jase?</p>
+          <p><span class="spk">Jason · 02:10</span>Well, I think off the back of our fundamentals, back to basics for our consumer listeners, we&#x27;re also gonna have a bit of a talk about what does navigating the road forward for business look like? And are there things we&#x27;ve learned in the last couple of years that have changed how we&#x27;re gonna navigate the road forward?</p>
+          <p><span class="spk">Marty · 02:24</span>Oh, I&#x27;m excited. Let&#x27;s play.</p>
+          <p><span class="spk">Jason · 02:27</span>Right guys, reading the play, my favorite segment. We bring interesting articles we&#x27;ve come across, news, tips, or resources we think are worth sharing. And, uh, look, off the back of last week&#x27;s episode, I went down a wormhole into the AFR looking at all the different accounting firms and top 100 and all the things that were going on.</p>
+          <p><span class="spk">Jason · 02:44</span>And off the back of looking at navigating the road forward, um, and fundamentals for business, I came across an article talking about an accounting firm that is chasing Google clicks to help it double in size. Now, anything that&#x27;s marketing, advertising, websites, those kind of things as a, you know, as a business advisor or someone who likes to help businesses grow, those things catch my, catch my attention.</p>
+          <p><span class="spk">Jason · 03:07</span>So the accounting firm is Liston Newton. Come across them, seen their marketing, seem like really great people. Their plan is to double its revenue over the next 5 years to hit $16 million. They want to acquire smaller firms, attract new customers, and they&#x27;ve been doing this through a bunch of online articles.</p>
+          <p><span class="spk">Jason · 03:27</span>So they&#x27;ve decided you know, this new age accounting firm strategy is about blogging, blogging and putting online blogs on so that when people search for how to sell my business or how to minimize capital gains tax when I sell my business, they&#x27;ve got specific search terms that they want to rank for that is helping them grow their business.</p>
+          <p><span class="spk">Jason · 03:46</span>Now they were 78 on la— out of the 100 top accounting firms in the country on last year&#x27;s list. And the MD, John Liston, talked about how potential customers have found them through those search terms, but specifically for what they want to rank for.</p>
+          <p><span class="spk">Jason · 04:02</span>He said, we don&#x27;t rank for cheapest tax return in Australia. We&#x27;re ranking for things that, that are helping our solid business accounting fees grow. And in this strategy, they&#x27;ve added an additional $50,000 to $80,000 a month in ongoing additional consulting and advisory fees for those kind of search terms, which I absolutely loved.</p>
+          <p><span class="spk">Jason · 04:23</span>I think, you know, for years I&#x27;ve been talking about how Google for your business, 5-star reviews, ranking for search terms that you want to rank for. And now to actually see another accounting firm with proof in the pudding that, that it&#x27;s working. Um, some of the numbers that, that I found interesting, they&#x27;re currently at $6 million turnover.</p>
+          <p><span class="spk">Jason · 04:41</span>So growth over the next 5 years, they&#x27;ve got to grow 20 to 25% year on year to hit that $16 million stretch target. Um, and they&#x27;re going to do this in a few different ways, um, which I thought was really great for them to share in the article. So one of them is to incentivize staff.</p>
+          <p><span class="spk">Jason · 04:57</span>And that&#x27;s to pay commissions for internally generated revenue, which now we&#x27;ve talked about, you know, how do we make sure the Future Advisory team to help add value to our clients, get them over to Innovate so that they&#x27;ve got great superannuation, great mortgage rates.</p>
+          <p><span class="spk">Jason · 05:14</span>One of the ways they&#x27;re doing it for their internally generated revenue is when a staff, when a team member identifies an upsell, that can help add some commission to that team member&#x27;s salary, which I found really interesting. I mean, there&#x27;s probably not a lot of business models out there that are doing it in that way.</p>
+          <p><span class="spk">Jason · 05:29</span>And it And if they are, I mean, looking at the way they&#x27;ve grown over the years is interesting. Revenue growth from digital marketing. Again, not a huge amount of accountants are pumping money into digital marketing. And then also they&#x27;ve expanded into overseas operation and hired 9 in their offshore team in the Philippines.</p>
+          <p><span class="spk">Jason · 05:47</span>So a couple of accountants, a couple of bookkeepers, and a couple of admin team members. So these are the kind of articles I think are really interesting for business owners. So if you&#x27;re, you know, you don&#x27;t have to be an accountant like me who gets interested in these, but if you&#x27;re you&#x27;re looking to grow your business, um, and you&#x27;re in a particular industry, model the masters.</p>
+          <p><span class="spk">Jason · 06:06</span>Have a look who else is out there doing a really good job and being well perceived in the market. And there&#x27;s no reason why you can&#x27;t— you know, I read on some of my notes last night, it&#x27;s called R&amp;D, rip off and duplicate, but do it in your own way that makes it authentic and organic for your business.</p>
+          <p><span class="spk">Jason · 06:22</span>Boys, what do you think of those, uh, those strategies?</p>
+          <p><span class="spk">Nick · 06:26</span>This commission one&#x27;s interesting, especially for an accounting business. Yeah, I think it&#x27;s a Oh, that, that would be normal in a sales business, but it&#x27;s, um, I&#x27;m not sure about that. I, I understand why they would be going that way, but I&#x27;m just not sure what sort of culture that drives.</p>
+          <p><span class="spk">Nick · 06:44</span>I don&#x27;t know, you&#x27;d probably speak to that better than I would, Jase, because you&#x27;re in an accounting business.</p>
+          <p><span class="spk">Jason · 06:49</span>So it&#x27;s funny where we&#x27;re sometimes a little bit too similar, Nick. It was the first thing I thought was, what would that do internally if an accountant that was client-facing has the most opportunity, let&#x27;s say, to upsell but then one of my Superstar client service coordinators or admin team may not have the opportunity because they&#x27;re not talking to clients about, you know, having a review of their super or their home loan.</p>
+          <p><span class="spk">Jason · 07:11</span>So that team member would miss out on these potential commissions. And would that cause a rift in the team from a culture point of view while somebody&#x27;s making it rain in commissions and somebody else is kicking back doing the heavy lifting in a different team that doesn&#x27;t have access to that? So yeah, it&#x27;d need to be well managed, that&#x27;s for sure.</p>
+          <p><span class="spk">Nick · 07:29</span>I think you could do it in another way though. You know, there could be a profit pool for a for a certain section or a certain team. And look, maybe that is how they&#x27;re doing it. Who knows how they&#x27;re logistically doing it? So yeah, it&#x27;s interesting.</p>
+          <p><span class="spk">Nick · 07:45</span>And I would say it&#x27;s, you know, there wouldn&#x27;t be many accounting businesses doing it. And look, the other stuff to me makes sense. We definitely understand the power of Google reviews. Digital marketing is what we think will fuel our next phase of growth. So it&#x27;s all good stuff.</p>
+          <p><span class="spk">Nick · 08:01</span>And I wouldn&#x27;t say they&#x27;re aggressive targets really. It&#x27;s 6 to 16 over 5 years.</p>
+          <p><span class="spk">Marty · 08:07</span>Yep.</p>
+          <p><span class="spk">Nick · 08:07</span>Marty?</p>
+          <p><span class="spk">Marty · 08:08</span>Yeah, I think that&#x27;s reasonable. And I just think that it&#x27;s interesting because I come from two different perspectives on what Jase has been talking about here. Prior to actually running my own podcast, I would&#x27;ve said write quality content and don&#x27;t worry about algorithms.</p>
+          <p><span class="spk">Marty · 08:28</span>Because you&#x27;re drawing in the market that you want to draw in. But then you realize, and it&#x27;s like we talked about in the past episode in regards to understanding investment and the science behind things, you know, can get you ahead or knock you down pretty quick.</p>
+          <p><span class="spk">Marty · 08:44</span>But I think it&#x27;s the same thing here. Once you understand the dynamics of the increase in business, you know what those ratios are and you know the impact on your business, then it totally makes sense to have absolutely still quality content and match it in with SEO.</p>
+          <p><span class="spk">Marty · 09:02</span>Um, and like I said, 5 years ago I would&#x27;ve disagreed with that because that would&#x27;ve only churned out a certain percentage, which I wouldn&#x27;t have liked. I&#x27;d like more impact for my content. So I would say I&#x27;d rather have an 80%, um, upswing in sales on a limited amount of content cuz I&#x27;m getting most of my efficiencies out of that.</p>
+          <p><span class="spk">Marty · 09:24</span>But you&#x27;re playing very small in a small patch. Whereas now when you see what some of these businesses can do for your business in optimization, it just makes sense. You can ratio it throughout the business. So I think on that level, I think that&#x27;s, yeah, you have to look into that now or you get left behind.</p>
+          <p><span class="spk">Marty · 09:43</span>And there&#x27;s going to be people out there that have quality content that are getting no traction. They&#x27;ll be spewing at people, business owners like ourselves and other accountancy practices that are doing these types of things, but you need to be doing it. On the commission front, I love your idea, Nick, about pooling commissions.</p>
+          <p><span class="spk">Marty · 10:03</span>And then I know we&#x27;re doing that internally with lead forms now where people are referring to different segments based on the client&#x27;s objectives and where that fit is going to be for the next professional coming in. But I really like that idea of pooling profits and then making it more in regards to client outcomes, customer experience, objectives being met within the business, even culturally.</p>
+          <p><span class="spk">Marty · 10:28</span>I think that&#x27;s a really smart use of that additional revenue that could be filtered through not only the salespeople in the group, but all people in the group. So I think that&#x27;s really clever.</p>
+          <p><span class="spk">Jason · 10:41</span>Nice one. Well, I&#x27;ve enjoyed that. Marty, why don&#x27;t we throw over to you, mate? Kind of runs into each other.</p>
+          <p><span class="spk">Marty · 10:46</span>Yeah, well, last week I was at an AFG conference, which is our licensee in the finance industry. And they had a fantastic chat on marketing, which, which I thought was, was interesting. And there was a damning stat on customer loyalty.</p>
+          <p><span class="spk">Marty · 11:03</span>So this is strategically for mortgage broking, but this could apply, I would think, across any service industry in regards to what an individual salesperson would think on a good service experience for a client.</p>
+          <p><span class="spk">Marty · 11:18</span>What percentage of those clients would come back to them? And most salespeople think that figure is up at 60%, but the data shows that it&#x27;s only 15%. So good service in this day and age is not going to secure your client, um, for the future.</p>
+          <p><span class="spk">Marty · 11:39</span>So you actually have to surprise and delight your client and turn them into an advocate of not only your own performance, but also the business. And then the upswing of referral on that. Is something quite extraordinary.</p>
+          <p><span class="spk">Marty · 11:54</span>Like I think it&#x27;s nearly 6 times the level of referrals, at least somewhere between 3 to 6 times when a person is an advocate. And I thought, yeah, it&#x27;s amazing the perception of, you know, how salespeople think and how businesses think about clients, that clients are very loyal.</p>
+          <p><span class="spk">Marty · 12:11</span>They&#x27;ll come back to them. They know there&#x27;ll be repeat business because we did a good job. But if we&#x27;re not surprising and delighting our clients, then we&#x27;re at risk. And one of the stats that came out, because a lot of people have been on low fixed rates over the last couple of years because they&#x27;ve never been at those levels, 1.99%, 1.89%.</p>
+          <p><span class="spk">Marty · 12:31</span>Now all those fixed rates have jumped to 4.3%, 4.8% on 3-year, 5-year rates over the next few years, 3 to 5 years. So there&#x27;s going to be nearly 2 million customers out there that are going to be looking for new rates and they need that service to work through what&#x27;s best for them.</p>
+          <p><span class="spk">Marty · 12:50</span>At this time now for the next 2 years. So if you&#x27;re not proactively servicing your clients, so we&#x27;re really focusing in on this because they will go, they will go and they&#x27;ll see the next ad on TV and be triggered to ring someone else.</p>
+          <p><span class="spk">Marty · 13:06</span>So it&#x27;s really important that not only are we on top of those market indicators to deal with clients effectively, but also that we&#x27;re developing the relationship deeply with clients. Surprise and delight, and then the ongoing service is really important too.</p>
+          <p><span class="spk">Marty · 13:21</span>And you You can use tech, you know, it might be out of 10 touchpoints, 8 touchpoints can be tech and still be personalized to the individual. But there still needs to be a human element a couple of times a year as well to really integrate that relationship with the business.</p>
+          <p><span class="spk">Marty · 13:38</span>So I thought there&#x27;d be other service providers out there, other business owners out there that would be thinking, yep, we do a good job, but we have to well and truly exceed expectation in these types of markets and think about ways to surprise and delight. So for me, might be personalized gifts to clients as a standout.</p>
+          <p><span class="spk">Marty · 13:57</span>You know, send it to their place of work instead of their home so they showcase it to other business owners. You know, monthly touch points, make sure you get in touch with your clients too. Really important. Guys?</p>
+          <p><span class="spk">Nick · 14:09</span>Couldn&#x27;t agree more. I think there&#x27;s a couple of key things there. The tech is huge. And I guess one of the things that we&#x27;ve realized is just the power of education too. So you know, for us it&#x27;s about creating blogs. It&#x27;s creating blogs and content that, that is really beneficial to our clients.</p>
+          <p><span class="spk">Nick · 14:27</span>Look, based on what we see with our clients, we know what they want to hear about and we know what they&#x27;re interested. So it&#x27;s, you know, we&#x27;ve got a lot of talent in this office that we can lean on to create content. So, you know, create some content that&#x27;s not sales-based, it&#x27;s education-based, and have a system where that&#x27;s consistently going to your clients.</p>
+          <p><span class="spk">Nick · 14:47</span>And it shouldn&#x27;t be ad hoc because, you know, there&#x27;s a particular time in the market. It should be consistent so they&#x27;re always hearing from you. And, you know, back to your point around the phone calls and the touch points, I think, yeah, the gifts and, and whatnot are great, but there is nothing better than picking the phone up and calling a client.</p>
+          <p><span class="spk">Nick · 15:06</span>There is absolutely nothing better.</p>
+          <p><span class="spk">Marty · 15:08</span>Absolutely.</p>
+          <p><span class="spk">Nick · 15:09</span>Most the time I found when I was in sales is you generally pick up, pick up more business off that conversation, whether it was the universe or whatever it was. But I found whenever I called the client, a lot of the times it was, I&#x27;m glad you called because, hey, I&#x27;m thinking about doing this, or I spoke to Jane Smith yesterday and she— I was thinking about you, you should talk to her.</p>
+          <p><span class="spk">Nick · 15:29</span>So we spend— well, maybe not so much anymore, but, you know, I used to spend so much time in the car in sales that I would use that time to write down a client list and just give them a call. How you going? And that that will exceed any gift, any hamper, you know, any, any blog.</p>
+          <p><span class="spk">Nick · 15:47</span>Pick the phone up, have a chat. Has only has to be a 5-minute chat and do it, you know, when you know you&#x27;ve got the downtime and, you know, you can actually have a proper chat to them, you know, and take in what and what they&#x27;re saying to you.</p>
+          <p><span class="spk">Marty · 15:59</span>And that&#x27;s been forgotten a little bit, Nick, in regards to what goes on in the digital age. I think you&#x27;ve got to have your IQ up, your EQ, but your DQ is very important in understanding in in understanding data and how to utilize strategy off that data. But those touchpoints I just think is exceptional.</p>
+          <p><span class="spk">Nick · 16:18</span>Sorry, mate. IQ, EQ, DQ. What are we talking about here? Am I that far behind?</p>
+          <p><span class="spk">Marty · 16:24</span>Yeah, no. Well, intelligence, you got your emotional intelligence, now you got your digital intelligence as well. So you must have as a business understand your digital intelligence. And what was happening, like there was a lot of content put out there originally just for SEO. And I think that can be damaging.</p>
+          <p><span class="spk">Marty · 16:40</span>You got to be careful. Like Nick said, you&#x27;ve got to create great relevant content to deepen relationships with clients, plus add in the SEO. You know, don&#x27;t just do it for SEO. You know, you&#x27;ve still got to have great content as well. And that&#x27;s where some businesses get trapped.</p>
+          <p><span class="spk">Marty · 16:57</span>But the phone call to clients, Nick&#x27;s right. I can&#x27;t tell you how many times you pick up that phone and opportunities present because you actually care enough to pick up the phone. And everyone&#x27;s got into this mindset of, I&#x27;ll send a text or a social media post.</p>
+          <p><span class="spk">Marty · 17:13</span>And it&#x27;s, and it just, yeah, again, that&#x27;s okay occasionally, but you still got to do, you still got to have those human relationships. And that&#x27;s what builds trust. And that&#x27;s what builds that stickiness to your brand as well, because you care enough to make that call.</p>
+          <p><span class="spk">Marty · 17:29</span>I think that&#x27;s, uh, that&#x27;s great advice, Nick.</p>
+          <p><span class="spk">Jason · 17:33</span>Yeah, love it, love it. In my head, I&#x27;m just thinking over all the different things that we&#x27;ve— we do and we&#x27;ve done in the past, and then where there&#x27;s always room for improvement. Um, you know, when our clients have babies, you know, we send a little baby gift, and, you know, the, the feedback and love we get from like, oh my God, that was so thoughtful.</p>
+          <p><span class="spk">Jason · 17:49</span>Um, you know, uh, every single day the team post whose birthdays it is into a channel in Slack so that the whole team knows, well, geez, if I speak to that client today, I&#x27;m gonna wish them a happy birthday and they&#x27;re gonna know that I know their birthday. Or we go out of our way to call or send an email or send a message for birthday.</p>
+          <p><span class="spk">Jason · 18:08</span>So all these little extra touch points that just add some personalization into the relationship. So that then, you know, a week later when you do call up and do the check-in, they&#x27;ve got a text or a message for their birthday. They&#x27;ve, you know, they&#x27;ve got a gift from in the last 6 or 12 months for something that&#x27;s happened in their lives.</p>
+          <p><span class="spk">Jason · 18:24</span>And, you know, they&#x27;re probably from a customer loyalty point of view, why would you be thinking of going anywhere else when you&#x27;ve got all of these different things set up?</p>
+          <p><span class="spk">Marty · 18:31</span>Yeah, it&#x27;s amazing, that birthday call to a client, how great that is. A lot of people, they get texts and all sorts of stuff, 100 comments on Facebook, but someone to actually pick up the phone is now unusual. And actually, I found that the people that do that really do care.</p>
+          <p><span class="spk">Marty · 18:49</span>And that&#x27;s my presumption, but that&#x27;s my feeling. And even from a business sense, I saw something, I did a presentation at, um, Jess Stevens. So shout out to Craig Stevens, um, the other week. And what they did— and you always— this is why it&#x27;s great getting out and about again and seeing faces again, no masks, seeing faces and seeing other businesses have great ideas— is, um, they actually had even internally, you know, people that had birthdays on the screen, like, who are we celebrating this week?</p>
+          <p><span class="spk">Marty · 19:19</span>And everyone, you obviously congratulate them. Just little things like when everyone was in the room and people were having babies and stuff and they highlighted that. And I took something away from that. I thought, you know, we do great things as well, but I actually really liked that being in the room and people being celebrated in the room.</p>
+          <p><span class="spk">Marty · 19:40</span>There was something about that that was very powerful too on a business front.</p>
+          <p><span class="spk">Jason · 19:44</span>Love it, Marty. Well, on a business front, Nick, you&#x27;ve got an exciting business story of Aussie success.</p>
+          <p><span class="spk">Nick · 19:51</span>I have. And our boy Sam Wood. So most people will remember Sam Wood. I know, Jase, one of your absolute all-time favorite shows from The Bachelor.</p>
+          <p><span class="spk">Jason · 20:00</span>Bachi, yeah.</p>
+          <p><span class="spk">Nick · 20:01</span>And Sam Wood was the 2015 Bachelor winner. I believe Sam Wood already had a— well, actually, I know Sam Wood had a personal training background prior to going into The Bachelor.</p>
+          <p><span class="spk">Jason · 20:14</span>Yep, Woodshed. The Woodshed was his business.</p>
+          <p><span class="spk">Nick · 20:17</span>And I had a— I&#x27;ve got a feeling that he went into kids as well, in and around Bayside Melbourne. He had a business where they focused on, you know, getting kids healthy. I think. Anyway, so Sam is a, well, I guess an entrepreneur at heart.</p>
+          <p><span class="spk">Nick · 20:33</span>I&#x27;ve watched a podcast with him and he was an entrepreneur from day one. So, you know, leveraging his 2015 status being The Bachelor winner and, you know, let&#x27;s not beat around the bush, extremely good-looking man and extremely, extremely great guy too from what I understand.</p>
+          <p><span class="spk">Nick · 20:50</span>So shout out to Sam. But he created an application or a subscription business which was called 28 by Sam Wood, which was 28-minute workouts. So I&#x27;m not too sure where the 28 minutes came from, but from what I understand, every morning there was a different workout that went for 28 minutes.</p>
+          <p><span class="spk">Nick · 21:12</span>And I&#x27;ve actually got a friend of mine who was doing this, and he was trying to lose weight. And I just thought, um, him and his wife were doing one of those sessions every morning I thought, how good is that? It&#x27;s 28 minutes. Anyone can do that. It&#x27;s actually really clever.</p>
+          <p><span class="spk">Nick · 21:28</span>It&#x27;s not daunting. That&#x27;s not half an hour, it&#x27;s just under half an hour. So it&#x27;d be interesting to understand the marketing concept on the 28 minutes, and there&#x27;s probably some, some psychology behind it, I would have thought. Anyway, um, so Sam got that business up to 400,000 subscribers or participants on the, on the application.</p>
+          <p><span class="spk">Nick · 21:47</span>Um, he has recently sold, uh, to a business um, that&#x27;s called MyDNA. So what MyDNA do is, based on your, your, your genetics, they will give you insights into your health and well-being via DNA tests.</p>
+          <p><span class="spk">Nick · 22:04</span>So what MyDNA would like to do with Sam&#x27;s business is they will just— they&#x27;ll have a— they&#x27;ll do the DNA test, and then they will provide not just, um, health and well-being advice around food and whatever it might be, but also around a specific exercise program backed by 28 by Sam Wood.</p>
+          <p><span class="spk">Nick · 22:25</span>The purchase price of 28 by Sam Wood is $70 million. So that to me is an incredible success story. Look, no doubt there was a lot of hard work that went into creating that business, but you know, it&#x27;s an application, it&#x27;s an exercise application.</p>
+          <p><span class="spk">Nick · 22:43</span>He&#x27;s done it all of himself by coming up with these workouts. Yeah, and he&#x27;s just sold his business for $70 million. I have no doubt he&#x27;s still involved in that business. I&#x27;m not sure what it&#x27;s going to look like logistically, but yeah, a great, um, you know, from, from a winner on Bachelor to, to leveraging that and starting the business only, you know, in 2016, which is only 7 years ago, 6, 7 years ago.</p>
+          <p><span class="spk">Nick · 23:07</span>So it&#x27;s a, it&#x27;s not a long journey, and he&#x27;s about to collect 70 mil, whatever that might look like. I just think it&#x27;s a great story, and there&#x27;s quite a few, few of these stories popping up from our, um, from Aussie grown success. So it&#x27;s good to see.</p>
+          <p><span class="spk">Marty · 23:23</span>Yeah, fantastic. I mean, it&#x27;s going to be a challenge for us boys all being happily married to get on The Bachelor, so that&#x27;s, um, yeah, a little limitation there. But I&#x27;m sure there&#x27;s other reality shows we could hit up, boys.</p>
+          <p><span class="spk">Jason · 23:34</span>But The Apprentice, we&#x27;ll go on The Apprentice.</p>
+          <p><span class="spk">Marty · 23:36</span>We&#x27;ll go on The Apprentice. That&#x27;ll be a bit of fun, actually.</p>
+          <p><span class="spk">Jason · 23:39</span>I think you need to be on maths before you can get on The Apprentice though, so we&#x27;re stuffed again. No bachelor, no maths for us. So yeah, we&#x27;re a bit screwed there.</p>
+          <p><span class="spk">Marty · 23:47</span>But what a great story, a good on you, because like we know that that sort of success doesn&#x27;t come with— that comes with a lot of hard work. And I love the fact that we&#x27;ve talked about in previous episodes with Tommy, our producer, following your passion, and he&#x27;s turned that passion into $70 mil.</p>
+          <p><span class="spk">Marty · 24:05</span>I mean, my goodness. I think that&#x27;s— it&#x27;s great how those dots join. And yeah, I think that&#x27;s incredible.</p>
+          <p><span class="spk">Nick · 24:12</span>Well, mate, can I just say too, and I&#x27;ve failed to mention this, but this is just the start. Hypothetically, this is the start of the wealth journey. I would only assume the $70 mil included some sort of stake for Sam in MyDNA. So MyDNA is about to list on the US stock exchange through a shell.</p>
+          <p><span class="spk">Nick · 24:33</span>So who knows where this could go? Assuming Sam is a decent-sized shareholder, who knows where this could go for him if they list and it is a success story. We all know what sort of money you can make when you actually list your business. So, um, good luck to him. Hope it goes well. As I said, from what I&#x27;ve seen, he&#x27;s, he&#x27;s just a great guy.</p>
+          <p><span class="spk">Nick · 24:50</span>So it&#x27;s good to see.</p>
+          <p><span class="spk">Jason · 24:52</span>Be interesting to look at the numbers also behind that. So, um, Sam&#x27;s 28 Minute Workout, Kayla Itsines was another famous 28-minute workout. Um, she had an app called Sweat and her app sold for $400 million. So it&#x27;d be interesting to see what the metrics were different to how many subscribers Sam Wood had to get his $70 mil.</p>
+          <p><span class="spk">Jason · 25:10</span>How many Kayla had to get her 400 mil. But, um, look, I&#x27;m sure Sam&#x27;s not, not too upset with these 70 mil compared to 400 mil anyway.</p>
+          <p><span class="spk">Nick · 25:19</span>I think the young females seem to, you know, they&#x27;re more, they&#x27;re more marketable as far as, you know, you think about Sam Wood being— I&#x27;m just guessing here, but he looks like he&#x27;s around 40 years old, similar age to me. Um, I&#x27;m not buying a t-shirt because Sam Wood&#x27;s wearing it.</p>
+          <p><span class="spk">Nick · 25:36</span>I&#x27;m not buying, you know, a particular set of activewear because Sam Wood&#x27;s buying it. Whereas I think that— and I&#x27;m just assuming this, but, you know, young girls see other young girls wearing something, so I just think they&#x27;re more marketable as far as pushing more products.</p>
+          <p><span class="spk">Jason · 25:53</span>Yeah, um, I could agree with that.</p>
+          <p><span class="spk">Nick · 25:54</span>That&#x27;s, that&#x27;s my assumption. I don&#x27;t think it&#x27;d be subscription-based.</p>
+          <p><span class="spk">Marty · 25:58</span>I love the idea of the merch off it. Like, I think that&#x27;s really, that&#x27;s really smart, actually. It&#x27;s, uh &quot;Can we do this in accountancy, Jase?&quot; You got some fantastic streetwear that you&#x27;ve got on today. Head over to YouTube. But what about the subscription model in accounting?</p>
+          <p><span class="spk">Marty · 26:16</span>I know that some accountants obviously utilize that over a course of a year&#x27;s annual payment over months. Is that happening more often?</p>
+          <p><span class="spk">Jason · 26:26</span>Yeah, definitely. I think from looking at the value of a business, if you&#x27;ve got you&#x27;ve got locked-in revenue that&#x27;s— and it&#x27;s subscription-based, it drops into your account every month, it&#x27;s spread out over 12 months, and it&#x27;s growing month on month. So your annual recurring revenue continues to grow.</p>
+          <p><span class="spk">Jason · 26:41</span>That&#x27;s a good telltale sign of, of how to value a business and increase the value in a business. So, um, as opposed to if you don&#x27;t have locked-in contracts and subscription-based revenue, you&#x27;re relying on making sure that client comes back the next year or the next quarter without an engagement or a signed contract.</p>
+          <p><span class="spk">Jason · 26:59</span>So yeah, definitely it&#x27;s, uh, not as sexy as a workout app where people subscribe and sit there on an app and do something cool like that. It&#x27;s a little bit less glorious. We&#x27;d love to hear from you. Send us an email, hello@thenumbersgamepodcast.com.au.</p>
+          <p><span class="spk">Marty · 27:17</span>Okay, it&#x27;s that special time of the podcast, listeners, where, uh, we learn from the mistakes of ourselves and others in losing it. So today we really like to get this segment out there because like we said, we can talk about our wins all day. Everyone likes to do that, but there&#x27;s real substance to when things don&#x27;t go quite according to plan as to what we can learn from it and hopefully shortcut those opportunities for you so you can actually do a hell of a lot better.</p>
+          <p><span class="spk">Marty · 27:46</span>So today, Jase is going to kick it off in regards to, we&#x27;re talking a little bit about team retention today, but Jase, you&#x27;ve got a story for us that&#x27;s happened in the last couple of weeks.</p>
+          <p><span class="spk">Jason · 27:57</span>Yeah, definitely. Now look, It starts off with a young fella called Nath, and for all of the times that I joked about firing him because he was a Collingwood supporter— don&#x27;t dob me into HR or WorkCover guys, but you know, I like to have a bit of fun. We&#x27;ve got a fun culture and a bit of banter.</p>
+          <p><span class="spk">Jason · 28:14</span>And yeah, so I&#x27;ve always joked about sacking this kid because he&#x27;s a Collingwood supporter. And as it turned out, he called me up a couple of weeks ago and with the news that he was finishing up, he&#x27;d got a tap on the shoulder from a recruiter A big fancy city accounting firm with deep pockets had sent their recruiter out to try and find the next gen of graduates that have got a couple of years experience coming through, you know, tech-savvy new age firms.</p>
+          <p><span class="spk">Jason · 28:42</span>And look, love the kid and I wish him all the best, and he&#x27;s going to move on to go and experience what else is out there in the world. This was his first job after uni. He was with us for about 1.5 years or a touch over. Um, awesome for culture, great fella, um, wish him all the best.</p>
+          <p><span class="spk">Jason · 29:00</span>But I share this story as a bit of a lesson in, in the war for talent. As unemployment continues to decrease and as businesses are looking to hire great talent for your business, this is going to continue to happen.</p>
+          <p><span class="spk">Jason · 29:16</span>And you need to be aware of, you know, was there some things we could have done to mitigate, um, this happening? Potentially not. But at the same time, I look at it and go maybe we didn&#x27;t have enough talks about the plans for his role moving forward. Maybe we didn&#x27;t sell the dream on, you know, year 1 you&#x27;re on a graduate salary, but then year 2 you move to this, and year 3 this is what happens.</p>
+          <p><span class="spk">Jason · 29:39</span>So I think the lesson that we can learn, you know, as Affirmative Future and with Nath moving on, um, apart from sometimes this is organically going to happen and people need to go out and experience the world and see what else is out there when you&#x27;re in your first job, job. But then on the flip side of that, I&#x27;ve got, you know, several other team members that we probably need to take this opportunity to sit down with them and talk about their career plans and what the future looks like.</p>
+          <p><span class="spk">Jason · 30:03</span>And this is just a good reminder that, that, you know, don&#x27;t take your team for granted. And in this market where there is this war for talent, you&#x27;ve got to be careful because there are recruiters that are calling your team all day, every day, trying to get them to, to hear their pitch and make the move to, you know, selling them that the grass is greener on the other Yeah, it&#x27;s a good point.</p>
+          <p><span class="spk">Nick · 30:24</span>And I think you just get so busy, don&#x27;t you? You get so busy in, you know, driving your business forward, doing the day-to-day stuff, that it is very easy to forget. You know, we&#x27;ve all been guilty of it, including me, but it&#x27;s very easy to forget that there&#x27;s, there&#x27;s people in your business and they&#x27;re on their, their own journey.</p>
+          <p><span class="spk">Nick · 30:41</span>You know, they, they, they want to be sure that, that they&#x27;re growing as much as your business is growing. So, you know, we believe so much in our our businesses, otherwise we wouldn&#x27;t do what we do. It&#x27;s so important to share that, and it&#x27;s so important to share that with your staff and help them understand how they are part of that journey and how they&#x27;re going to help you get to your goal.</p>
+          <p><span class="spk">Nick · 31:03</span>And at the same time, they&#x27;re going to grow as individuals as well.</p>
+          <p><span class="spk">Jason · 31:07</span>Yeah.</p>
+          <p><span class="spk">Nick · 31:08</span>But time, time goes really quick, and we can easily, you know, get caught up in the day-to-day, and before we know it, we, we haven&#x27;t, we haven&#x27;t spent time on our staff. So Yeah, Jase, look, as long as you take a lesson out of it, mate. You know, we&#x27;ve been through a similar process ourselves. We know we&#x27;ve, we&#x27;ve learned lessons and we&#x27;ve changed things because of that, and we&#x27;re a much better business because of it.</p>
+          <p><span class="spk">Nick · 31:29</span>So, um, yeah, as long as you, uh, make some changes. But good luck to Nath.</p>
+          <p><span class="spk">Marty · 31:34</span>Yeah, um, Jase, do you think in hindsight, is there anything personally you could have done? Because again, like we say, we get busy in business and we talk about scaling businesses and all the, all the corporate, corporatized stuff we talk about. But again, like Nick makes a good point with that human element.</p>
+          <p><span class="spk">Marty · 31:51</span>Is there anything personally you would have done differently? Because I think that helps as well for people.</p>
+          <p><span class="spk">Jason · 31:57</span>Yeah, definitely. I think it&#x27;s a tough balance in, in the business owner, how much time we can individually have for each individual team member. But reflecting and taking that time to have a look at my relationship with Nath you know, me running in and out of the office being super busy.</p>
+          <p><span class="spk">Jason · 32:12</span>Nate wants to ask a question, yeah, sorry mate, I&#x27;ll get back to you later kind of thing. And, you know, making more of an effort to lock in some time with the team for those kind of, uh, you know, just whether it&#x27;s general water cooler chat or being available to sit down and go through a review together and make sure that he was on the right track with some of the jobs he was working on.</p>
+          <p><span class="spk">Jason · 32:31</span>So it&#x27;s been a good reflection for me to, to look back and look over how the relationship was and what worked and what didn&#x27;t work. But yeah, that&#x27;s definitely something I can change, is, you know, I say yes to a million things and end up, you know, I hate using the word busy, but I end up slammed all week, Monday to Friday.</p>
+          <p><span class="spk">Jason · 32:47</span>And, you know, maybe it&#x27;s saying no to a few things so I&#x27;m more available to be there with my team and for my team. So that&#x27;s a lesson that I need to learn from that.</p>
+          <p><span class="spk">Nick · 32:56</span>Yeah, it doesn&#x27;t have to be a big part of your day either. Like, I think, um, I think you look for opportunities like like, you know, take— put in your diary to have breakfast with someone once every 6 months. You&#x27;ve got to eat breakfast, you&#x27;ve got to eat lunch, even dinner.</p>
+          <p><span class="spk">Nick · 33:11</span>Like, you know, I&#x27;ve taken numerous staff out for a bite to eat at dinner after work. They appreciate that. You&#x27;ve got to have dinner anyway. So it&#x27;s— if it&#x27;s very hard for most people, particularly in small business, to set that time aside during the day because we&#x27;re all super flat out and we&#x27;re trying to drive revenue you.</p>
+          <p><span class="spk">Nick · 33:29</span>But get— I think the other important thing is to get outside of the work environment because, you know, as you&#x27;ve mentioned, Jase, and again I&#x27;m guilty as well, you come in here and you think, geez, I&#x27;ve got to grab that person, have a chat to them. But there&#x27;s— you&#x27;re in the work environment and everything is going on around you and you&#x27;re like, nah, I&#x27;ve got to sit down and do the email, or I&#x27;ve got to do this.</p>
+          <p><span class="spk">Nick · 33:48</span>Get out of the environment. Yeah, go to, go to breakfast, go and have a bite to eat at lunch or dinner so they&#x27;ve got 100% focus from you. And there&#x27;s not these distractions. So, you know, that&#x27;s something I&#x27;ve done in the past that worked for me, and I probably should do it more as well.</p>
+          <p><span class="spk">Jason · 34:04</span>It&#x27;s great, great actionable advice. I love that.</p>
+          <p><span class="spk">Marty · 34:06</span>It is. And not to utilize COVID as an excuse, but, you know, people are sort of hell-bent on this work-from-home culture, and I think that&#x27;s a big risk to companies and business owners because, again, when you&#x27;re in the office, you&#x27;re building friendships, you&#x27;re getting an understanding of people at a deeper level.</p>
+          <p><span class="spk">Marty · 34:24</span>You&#x27;ve got to get to know people beyond what you want them to do for the business as well. And that&#x27;s why Nick said that really well. And I think, and particularly like we&#x27;re a fast-growing business as well, even though we&#x27;ve been around for a long time and you&#x27;re bringing in more corporatized structures, you&#x27;re scaling.</p>
+          <p><span class="spk">Marty · 34:41</span>So, and again, you might be thinking you&#x27;re doing the right thing by the business, but what&#x27;s the perspective of the team? As well. And generally where there&#x27;s smoke, there&#x27;s fire. So if you hear something like, oh, the good old days, or the little points or little conversation pieces that you pick up on, you really got to dig in on those types of things and go, well, we can have both.</p>
+          <p><span class="spk">Marty · 35:08</span>We&#x27;re scaling. Again, it&#x27;s a communication thing. This is what we&#x27;re doing here, being very transparent about it. And then also maintaining that level of culture that people love about your business as well. Easier said than done. I&#x27;m saying it out loud because, you know, there&#x27;s still work to do around it.</p>
+          <p><span class="spk">Marty · 35:24</span>But it&#x27;s, um, it&#x27;s really important because what you might think compared to what a team member might think could be a totally different perspective. So you just got to keep the channels of communication open, and when you pick up on something, be nimble enough to make the adjustments in order to move forward in a better way.</p>
+          <p><span class="spk">Marty · 35:43</span>But definitely trying to get people back in the office, I think that&#x27;s a necessity. You still want flexibility, but I feel like that&#x27;s where friendships are developed beyond just what they do as a function for clients, right? So I think that&#x27;s really, really important.</p>
+          <p><span class="spk">Marty · 35:59</span>And I don&#x27;t think a lot of businesses are there yet.</p>
+          <p><span class="spk">Nick · 36:01</span>All right, lads, now it&#x27;s time for my favorite segment. I know, Jase, you&#x27;re reading the play and Marty, you&#x27;re losing it. I&#x27;m all about the 1%ers, you know, the tough, gritty stuff. You know, just the little things that make us better people. I&#x27;m really keen to talk about this today because it&#x27;s— and I&#x27;m going to throw to you in a minute, Marty, but this is something that our business is going through at the moment.</p>
+          <p><span class="spk">Nick · 36:22</span>And I think a lot of businesses are, whether it&#x27;s because of the investment market, the housing market, an election, COVID. But there&#x27;s just— there&#x27;s a change for most businesses, and there&#x27;s a change in the market at the moment, whatever that market is that you are in. And how do you adapt to that market?</p>
+          <p><span class="spk">Nick · 36:39</span>You know, making sure that you&#x27;re consistently thinking about the market that you&#x27;re in and what you need to do different as a business to make sure that you get through the current period and not just get through it, but actually grow and take advantage of what&#x27;s happening. So Marty, I&#x27;ll throw to you.</p>
+          <p><span class="spk">Nick · 36:55</span>You&#x27;ve got some really good stuff to share with us on, I guess, what we&#x27;re doing in our business.</p>
+          <p><span class="spk">Marty · 37:00</span>Yeah, I think, I think you can get very complacent on last year&#x27;s results utilizing last year&#x27;s strategies, right? And I, I think And you have to be very careful as a business owner or a salesperson that you don&#x27;t get caught up in that trap. So you really need to meet the market where it&#x27;s at now.</p>
+          <p><span class="spk">Marty · 37:17</span>And I&#x27;ve always thought the market is, the best way to describe it is what&#x27;s the need for what you do now and over the next 6 months and 12 months? And it&#x27;s a really good way to just ask that question and get an answer to it for yourself.</p>
+          <p><span class="spk">Marty · 37:32</span>The other question I always ask is, is your capability to adapt to that market? Like, can you do it yourself? Do you need other people in your team to execute on that? Do you need external parties to execute on that opportunity? And how difficult is it to replace your service?</p>
+          <p><span class="spk">Marty · 37:50</span>So that&#x27;s more defensive, but I like what that question brings up. So we&#x27;re in the mortgage game. So how difficult would it be to replace what we do? And that brings up questions like, okay, we&#x27;ve got other services other than mortgages.</p>
+          <p><span class="spk">Marty · 38:07</span>We&#x27;re going to be proactive in regards to reviewing clients, particularly now when fixed rates are going up and they&#x27;re coming off low rates. You know, how do we advise them? How do we get them the lowest standard variable rate? Now, if we let the market dictate and we don&#x27;t respond to the opportunity, like I said earlier, there are 2 million clients coming off low fixed rates and are going to have a nasty surprise on the back end of it.</p>
+          <p><span class="spk">Marty · 38:33</span>Now they&#x27;re going to go to someone, and the stat that I shared earlier about people coming back to the same mortgage broker doesn&#x27;t always occur to what we think that percentage is. It&#x27;s a much lower percentage. So we have to be very, very proactive. The other thing that we&#x27;re looking at as well is that investment yields are up on investment properties.</p>
+          <p><span class="spk">Marty · 38:54</span>Investors are out there and they&#x27;ve got capital all of a sudden with the property market booming over the last 2 years and with higher yields all of a sudden, those up and interest rates going up, it&#x27;s a fairer market. There are good buying opportunities again.</p>
+          <p><span class="spk">Marty · 39:10</span>So again, we were in a high purchase market over the last 2 years with everyone upsizing, downsizing, moving regionally. You know, it was, it was, it was a, it was a purchase fanfare. It was amazing what was happening. But now it&#x27;s changed and we have to address the market that&#x27;s now and in front of us, not what it was last year.</p>
+          <p><span class="spk">Marty · 39:32</span>And people need to adapt. So our advice to our sales staff and our team is to make those adaptations and to get on the front foot because otherwise you will be left behind and you won&#x27;t even know why that&#x27;s occurred. But I really like that question.</p>
+          <p><span class="spk">Marty · 39:49</span>How difficult is it to replace your service? If you You think of that, Jase, in accountancy, like, and you already know the answer. I know the answer because you&#x27;re an advisor. You&#x27;re not just an accountant. You&#x27;re bringing a lot more to the table. But given where we&#x27;re at in the current market, how difficult is it to replace your service?</p>
+          <p><span class="spk">Marty · 40:07</span>And if you can answer that question, you&#x27;ll actually fuel the market need because you&#x27;re covering all those aspects and then your ability to execute as well on that is critical. So they&#x27;re those 3 components that I ask myself sometimes month to month.</p>
+          <p><span class="spk">Marty · 40:25</span>Quarter to quarter, year to year, and you find that you— Now, sometimes you can miss, you can misjudge, that&#x27;s fine. But at least if you&#x27;re asking the question, you&#x27;re having a red-hot crack as to where the market&#x27;s at. And it usually brings very good results if you&#x27;re doing that.</p>
+          <p><span class="spk">Marty · 40:41</span>So thoughts?</p>
+          <p><span class="spk">Nick · 40:42</span>It&#x27;s all gold as always from you, Marty V. That&#x27;s why you&#x27;re the leader on this program. But look, they&#x27;re great points. And just to add to that, I think the other thing is, you know, with what&#x27;s occurred in the last 2 years with COVID how does your business look different?</p>
+          <p><span class="spk">Nick · 41:00</span>And outside of just generating sales and, you know, knowing where that you can now generate sales and maybe having to pivot, it&#x27;s, well, what else looks different in your business? You know, for us, we&#x27;re looking at our premises, and our premises is beautiful, and it&#x27;s something that we did just before COVID Good.</p>
+          <p><span class="spk">Nick · 41:18</span>But we&#x27;re realizing now that, um, and, and this is just to give people an example, that now that there&#x27;s more Zoom meetings, we&#x27;ve got more people in the office. They&#x27;re not outside of the office anymore. So what does that do? It makes the office crowded as far as meeting rooms go. So yeah, we&#x27;re now rethinking, well, what does our business or premises need to look like the next 2 or 3 years?</p>
+          <p><span class="spk">Nick · 41:38</span>Probably need to get some more meeting rooms so people have some quiet time to do their Zoom meetings. Yeah. We&#x27;re then looking at our brokers, and our brokers traditionally, when they were going to see clients, might have done 2 meetings a day, 3 meetings a day.</p>
+          <p><span class="spk">Nick · 41:54</span>They&#x27;re now doing up to 5 and 6 meetings a day because it&#x27;s on Zoom, so it&#x27;s far more efficient. But then we risk the burnout. And Jase, you and I spoke about this, but there&#x27;s the screen time, being on the screen all day. So ensuring that they&#x27;re not getting burnt out because they&#x27;re actually doing 6 meetings a day now now and just, you know, being aware of that.</p>
+          <p><span class="spk">Nick · 42:13</span>And do our numbers change? So if we are being more efficient, we are doing more meetings, does that affect our productivity per broker or per salesperson? So there&#x27;s lots to think about. And I just want to give some examples because they&#x27;re what we&#x27;re thinking about, and every business will be different.</p>
+          <p><span class="spk">Nick · 42:31</span>But we are in an extremely different world to what we were 2 years ago from a market point of view, but, and also just the functionality and the day-to-day running of your business.</p>
+          <p><span class="spk">Marty · 42:44</span>I think we might need the cone of silence at people&#x27;s desks. You make such a good point, Nick, in regards to how we&#x27;ve changed because before COVID people would go out and see clients on their meetings or people would come in on the meetings. It was very easy to book.</p>
+          <p><span class="spk">Marty · 43:00</span>But now with Zoom, they actually need the meeting room for the Zoom. So they&#x27;re not doing that in an open space where people can overhear that meeting. So it&#x27;s really interesting, isn&#x27;t it, how that dynamic has changed? Of having has changed. And now we have to think about potentially creating pods where people can have that privacy and do their Zoom meetings.</p>
+          <p><span class="spk">Marty · 43:20</span>So it&#x27;s amazing as to the difference from 2 years ago, I find. Yeah. So, but a brilliant point.</p>
+          <p><span class="spk">Jason · 43:28</span>It&#x27;s interesting looking at the changing office spaces and the requirements. I actually completely agree. There was times where I&#x27;d walk around, we&#x27;re at the Commons in South Yarra and got another office in Narre Warren. Spaces over in Perth. Um, all of these spaces were all kind of built and fit out pre-COVID, and now with the many, many people more back in the office now— but if I end up on a phone call or a Zoom where I need some privacy, I&#x27;ll go walking to look for— and there&#x27;s so many pods and so many private office, um, private phone</p>
+          <p><span class="spk">Jason · 43:58</span>booths in the, in the Commons in South Yarra, all full. Basically all day, every day, they are full, and it&#x27;s kind of one in, one out because this is the nature of, of how people are operating now. Even though we have flexible and remote working, when people are in the office, their clients aren&#x27;t necessarily coming to sit with them face to face.</p>
+          <p><span class="spk">Jason · 44:15</span>So you&#x27;re not going to the coffee shop to grab a coffee with your client, or you&#x27;re not sitting in a meeting room doing it face to face. This new Zoom meeting world has changed the landscape of what our office spaces need to look like. And same thing that you said, Nick, when you got all your team in the office on their, on their phone calls or Zoom calls as opposed to being out at meetings, what that does in the office from a noise and sound, you know, you&#x27;ve got to change your equipment all of a sudden.</p>
+          <p><span class="spk">Jason · 44:40</span>You need better kind of noise-canceling headphones and microphones so that it doesn&#x27;t sound like you&#x27;re working out of a call center. So that&#x27;s definitely changed, changed that element there. And, um, yeah, look, Marty, you touched on as well is, you know, the change in, in customer experience. Or, you know, if you aren&#x27;t seeing your clients face to face and you are going to jump on a Zoom, you do have more time to fit more into a day.</p>
+          <p><span class="spk">Jason · 45:02</span>Um, and that, you know, Nick, sorry, you said that, and driving productivity. But the burnout and mental health side of sitting there staring at a screen all day or being locked in a bedroom at home has its other effects as well. So while there has been an increase in the amount of meetings you can get through, I think productivity probably hasn&#x27;t gone up as much as I would have expected knowing what we know now.</p>
+          <p><span class="spk">Marty · 45:23</span>So it&#x27;s, it&#x27;s interesting because I noticed that at the end of the day, when you&#x27;re on a lot of Zooms um, it almost dehumanizes the process to a degree. And I&#x27;m, you know, I&#x27;m really looking for that interaction with people. I really enjoy that quite naturally. And I noticed when people— we had a sales meeting in the office last Wednesday, it was fantastic.</p>
+          <p><span class="spk">Marty · 45:43</span>Like, it was actually really great to see people, talk to people, engage with people again. It, um— so there&#x27;s got to be a balance. I feel like you&#x27;re right, Jase. I feel like like people are actually getting cooked on technology. And I&#x27;m hearing people say that at the end of the day, I just have to get out and kick a footy and meet someone because it&#x27;s like, otherwise I go a bit stir crazy.</p>
+          <p><span class="spk">Marty · 46:06</span>So I guess these are all things we need to monitor in real time. And I&#x27;m just thinking for the people of Zoom out there, you know, maybe we can have a bit of an adventure and expand the business into Zoom rooms where all the technology&#x27;s set up and we just go in there and we have a chat.</p>
+          <p><span class="spk">Marty · 46:24</span>Very Star Trek, I know, but that&#x27;s not a bad idea when you think about it. You go, that&#x27;s what we would be thinking. What a great way to think forward. And, you know, something we&#x27;d probably use at this time.</p>
+          <p><span class="spk">Nick · 46:39</span>Yeah.</p>
+          <p><span class="spk">Jason · 46:40</span>I think one of the things that, you know, we probably all feel a lot is no matter how much technology you put in place, nothing will replace the human connection, which is at the core of, of business and relationships with our clients. The human connection is the thing that underpins the success of the business.</p>
+          <p><span class="spk">Jason · 46:58</span>And whether that&#x27;s trust and culture and values, they&#x27;re the main things that all relate around humans and the way humans interact with each other. So I think, you know, no matter how much technology you put in place to, you know, automate a process, which is all really, really important, the fundamentals or the, the thing that you still need to focus on to navigate the road forward will be how the human side fits in with everything else that&#x27;s gone on moving forward.</p>
+          <p><span class="spk">Marty · 47:25</span>So true. One thing I&#x27;ve noticed too, guys, is the communication skills of younger people. Now, don&#x27;t get— I&#x27;m generalizing here, but— and I thought about this the other day— you&#x27;ve got two people in a room, and I&#x27;ll put my hand up and say I&#x27;ve done this too, sitting with my wife in the lounge room.</p>
+          <p><span class="spk">Marty · 47:42</span>We&#x27;re both on technology and we&#x27;ll send each other a message, which we just could have spoken about, right? How crazy is that? And I&#x27;m going, but the younger generation are doing that ad nauseam. That&#x27;s what&#x27;s going on. And therefore they&#x27;re very comfortable in the technology world, but not so comfortable in the natural engagement world.</p>
+          <p><span class="spk">Marty · 48:02</span>And we&#x27;ve been interviewing for brokers over the last couple of weeks, and I can see the ones that come in and really engage in free flow style is incredible, and it&#x27;s really uplifting to see people communicating well.</p>
+          <p><span class="spk">Marty · 48:18</span>So I think again, you have to— technology is great, but you still got to get out amongst it, have great relationships with family, sporting clubs, everything that we know to do prior to COVID, and just be aware of the impact of technology, the good and challenges with it, and be just more holistic across the board.</p>
+          <p><span class="spk">Marty · 48:39</span>But definitely get back to communicating with people. It&#x27;s a real skill. And it comes across really well.</p>
+          <p><span class="spk">Jason · 48:47</span>Guys, this has been episode 49 of The Numbers Game. Really enjoyed today&#x27;s episode, guys. We&#x27;ve covered all different sorts of things and there&#x27;s nuggets of gold everywhere. Marty, what have you enjoyed about today&#x27;s episode?</p>
+          <p><span class="spk">Marty · 48:57</span>Yeah, I think my takeaway is markets move and you have to meet the market where it&#x27;s at. Don&#x27;t get complacent, be proactive and you&#x27;ll be on the front of the wave. Nick, what do you take away?</p>
+          <p><span class="spk">Nick · 49:08</span>Mate, for me, it&#x27;s just finding time to spend with your staff and it doesn&#x27;t have to be day to day. Think outside the box. You know, I spoke about maybe having a breakfast or a lunch together and getting outside of that work environment so you can really engage with proper conversation.</p>
+          <p><span class="spk">Nick · 49:24</span>You don&#x27;t have distractions.</p>
+          <p><span class="spk">Jason · 49:25</span>Well, guys, basically what I&#x27;ve thought about here is business may look different, our office space may look different, but at the end of the day, ultimately, if you&#x27;ve got great culture, great values, and the mission and vision of your business is clear and strong, well articulated and shared with your team, you&#x27;re gonna be on the right track because the core and the fundamentals are there.</p>
+          <p><span class="spk">Jason · 49:46</span>And Marty and Nick, human. Remember the human element in everything that we do is so important and stay connected with your people.</p>
+          <p><span class="spk">Nick · 49:53</span>Well said.</p>
+          <p><span class="spk">Marty · 49:54</span>Stay human, people. Stay human. You&#x27;ve been listening to The Numbers Game probably on Spotify or Apple Podcasts. So put the headphones down, go and have a breakfast, go and have some fun. Tell a friend about The Numbers Game podcast. We are here to serve and we will take you out for breakfast if you want.</p>
+          <p><span class="spk">Marty · 50:11</span>We&#x27;ll do a little group thing. Come on, we can do that. So yeah, tell your friends, family, associates, uh, you can catch us at LinkedIn. Uh, you can also catch us on the Numbers Game Pod on Instagram. So hook up, send us a question. We&#x27;re happy to help.</p>
+          <p><span class="spk">Marty · 50:27</span>We&#x27;re happy to serve. Game over.</p>
+        </div>
+      </details>
+
+    </div>
+
+    <!-- audio-only: the Spotify player is the hero above; duplicate embed removed -->
+
+    <div class="listen">
+      <a href="https://open.spotify.com/episode/78k4JeUZ96kec4QH6qLsMA" target="_blank" rel="noopener" aria-label="Listen to this episode on Spotify">
+        <svg viewBox="0 0 24 24"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.52 17.34c-.24.36-.66.48-1.02.24-2.82-1.74-6.36-2.1-10.56-1.14-.42.12-.78-.18-.9-.54-.12-.42.18-.78.54-.9 4.56-1.02 8.52-.6 11.64 1.32.42.18.48.66.3 1.02zm1.44-3.3c-.3.42-.84.6-1.26.3-3.24-1.98-8.16-2.58-11.94-1.38-.48.12-1.02-.12-1.14-.6-.12-.48.12-1.02.6-1.14 4.32-1.32 9.72-.66 13.44 1.62.36.18.54.78.3 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.3c-.6.18-1.2-.18-1.38-.72-.18-.6.18-1.2.72-1.38 4.26-1.26 11.28-1.02 15.72 1.62.54.3.72 1.02.42 1.56-.3.42-1.02.6-1.56.3z"/></svg>
+        Spotify
+      </a>
+      <a href="https://podcasts.apple.com/au/podcast/id1555566088?i=1000776470464" target="_blank" rel="noopener" aria-label="Listen to this episode on Apple Podcasts">
+        <svg viewBox="0 0 24 24"><path d="M5.34 0A5.328 5.328 0 000 5.34v13.32A5.328 5.328 0 005.34 24h13.32A5.328 5.328 0 0024 18.66V5.34A5.328 5.328 0 0018.66 0H5.34zm6.525 2.568c2.336 0 4.448.902 6.056 2.587 1.224 1.272 1.912 2.619 2.264 4.392l.04.23c.04.272-.16.527-.432.567a.505.505 0 01-.567-.431l-.04-.213c-.312-1.57-.92-2.747-2.004-3.867-1.428-1.496-3.293-2.294-5.393-2.294-2.1 0-3.966.798-5.394 2.294-1.084 1.12-1.692 2.298-2.004 3.867l-.04.213a.507.507 0 01-.567.431.504.504 0 01-.432-.567l.04-.23c.352-1.773 1.04-3.12 2.264-4.392 1.608-1.685 3.72-2.587 6.056-2.587h.153zm.136 3.033c1.74 0 3.312.67 4.527 1.934.883.916 1.394 1.93 1.663 3.253l.04.23a.505.505 0 01-.431.567.503.503 0 01-.567-.432l-.04-.212c-.23-1.112-.659-1.97-1.396-2.732-1.052-1.1-2.404-1.672-3.9-1.672s-2.849.572-3.901 1.672c-.737.762-1.167 1.62-1.396 2.732l-.04.212a.503.503 0 01-.567.432.505.505 0 01-.432-.567l.04-.23c.27-1.323.78-2.337 1.664-3.253 1.215-1.264 2.787-1.934 4.527-1.934h.21zm-.078 3.05c1.092 0 2.091.424 2.89 1.22.582.58.924 1.245 1.107 2.15l.04.218a.501.501 0 01-.424.568.499.499 0 01-.568-.424l-.04-.198c-.146-.724-.413-1.253-.871-1.716-.63-.63-1.398-.957-2.226-.957s-1.595.328-2.225.957c-.459.463-.726.992-.871 1.716l-.04.198a.499.499 0 01-.568.424.501.501 0 01-.424-.568l.04-.219c.183-.904.525-1.569 1.106-2.149.8-.796 1.799-1.22 2.89-1.22h.184zM12 14.07a2.477 2.477 0 012.48 2.478A2.477 2.477 0 0112 19.024a2.477 2.477 0 01-2.48-2.477A2.477 2.477 0 0112 14.07z"/></svg>
+        Apple
+      </a>
+      <a class="yt-pill" href="https://www.youtube.com/@thenumbersgamepodcast?sub_confirmation=1" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.12-2.14C19.5 3.55 12 3.55 12 3.55s-7.5 0-9.38.51A3 3 0 0 0 .5 6.2 31.4 31.4 0 0 0 0 12a31.4 31.4 0 0 0 .5 5.8 3 3 0 0 0 2.12 2.14c1.88.51 9.38.51 9.38.51s7.5 0 9.38-.51a3 3 0 0 0 2.12-2.14A31.4 31.4 0 0 0 24 12a31.4 31.4 0 0 0-.5-5.8zM9.55 15.57V8.43L15.82 12z"/></svg>
+        Subscribe
+      </a>
+    </div>
+    <!-- LISTEN:END -->
+
+    <div class="relsec">
+      <span class="rtitle">Discover more</span>
+      <div class="relgrid">
+        <a class="relcard" href="/tax-fraud-why-is-it-so-easy">
+          <img src="https://i.ytimg.com/vi/iuBCL0-gsdQ/hqdefault.jpg" alt="EP 160 thumbnail">
+          <span class="rt">Tax Fraud - Why Is It So Easy?</span>
+          <span class="rfoot"><span class="rwhy">7 March 2024</span><span class="rtag">EP 160</span></span>
+        </a>
+        <a class="relcard" href="/why-you-should-track-profit-per-hour-vs-revenue">
+          <img src="https://i.ytimg.com/vi/FUf4XcRx-w0/hqdefault.jpg" alt="EP 245 thumbnail">
+          <span class="rt">Why You Should Track Profit Per Hour vs Revenue</span>
+          <span class="rfoot"><span class="rwhy">18 August 2025</span><span class="rtag">EP 245</span></span>
+        </a>
+        <a class="relcard" href="/the-benefits-of-being-ai-curious">
+          <img src="https://i.ytimg.com/vi/dlfJYdPnkVs/hqdefault.jpg" alt="EP 213 thumbnail">
+          <span class="rt">The Benefits of Being AI-Curious</span>
+          <span class="rfoot"><span class="rwhy">25 November 2024</span><span class="rtag">EP 213</span></span>
+        </a>
+        <a class="relcard" href="/the-cost-of-sitting-on-the-sidelines">
+          <img src="https://i.ytimg.com/vi/cTdent0dFwU/hqdefault.jpg" alt="EP 179 thumbnail">
+          <span class="rt">The Cost of Sitting on the Sidelines</span>
+          <span class="rfoot"><span class="rwhy">27 May 2024</span><span class="rtag">EP 179</span></span>
+        </a>
+        <a class="relcard" href="/how-much-you-need-to-retire-and-how-to-get-there">
+          <img src="https://i.ytimg.com/vi/vlJlcVbI_BU/hqdefault.jpg" alt="EP 223 thumbnail">
+          <span class="rt">How Much You Need To Retire And How To Get There</span>
+          <span class="rfoot"><span class="rwhy">17 March 2025</span><span class="rtag">EP 223</span></span>
+        </a>
+        <a class="relcard" href="/enhanced-games-can-the-olympics-keep-up">
+          <img src="https://i.ytimg.com/vi/Ndgcpcg_TAw/hqdefault.jpg" alt="EP 242 thumbnail">
+          <span class="rt">Enhanced Games - Can The Olympics Keep Up?</span>
+          <span class="rfoot"><span class="rwhy">28 July 2025</span><span class="rtag">EP 242</span></span>
+        </a>
+      </div>
+      <div class="reldots" id="reldots"></div>
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="footgrid">
+      <div class="fcol">
+        <div class="foot-label">Brought to you by</div>
+        <div class="sponsors">
+          <a href="https://www.inovayt.com.au/" target="_blank" rel="noopener"><img src="assets/inovayt-white.png" alt="Inovayt"></a>
+          <a href="https://futureadvisory.com.au/" target="_blank" rel="noopener"><img src="assets/future-advisory-white.png" alt="Future Advisory"></a>
+        </div>
+      </div>
+      <div class="fcol produced">
+        <div class="foot-label">Produced by</div>
+        <a href="https://www.vidpod.com.au/" target="_blank" rel="noopener"><img src="assets/vidpod-white.png" alt="VIDPOD"></a>
+      </div>
+    </div>
+    <nav class="footnav">
+      <a href="index.html">Home</a><a href="episodes.html">Every episode</a><a href="adventure.html">Choose your own adventure</a><a href="about.html">About the show</a><a href="nick-reilly.html">Nick Reilly</a><a href="jason-robinson.html">Jason Robinson</a><a href="contact.html">Contact</a>
+    </nav>
+    <div class="copyright">© 2026 The Numbers Game</div>
+  </footer>
+
+  <script>
+    var VIDEO='RAQ80ecsDq0';
+
+    /* Mobile nav dropdown. */
+    var burger=document.getElementById('navburger'), navdrop=document.getElementById('navdrop');
+    if(burger&&navdrop){burger.addEventListener('click',function(){
+      navdrop.hidden=!navdrop.hidden;
+      burger.setAttribute('aria-expanded', navdrop.hidden?'false':'true');
+    });}
+
+    /* Voice-note button reveals the recorder; × tucks it away. */
+    var vbtn=document.getElementById('vbtn'), vslot=document.getElementById('vslot'), vclose=document.getElementById('vclose');
+    if(vbtn&&vslot){vbtn.addEventListener('click',function(){vslot.hidden=!vslot.hidden;});}
+    if(vclose&&vslot){vclose.addEventListener('click',function(){vslot.hidden=true;});}
+
+    /* Keep-exploring dots: only shown when the strip actually scrolls (mobile). */
+    var rg=document.querySelector('.relgrid'), rd=document.getElementById('reldots');
+    if(rg&&rd){
+      var relCards=rg.querySelectorAll('.relcard');
+      relCards.forEach(function(){rd.appendChild(document.createElement('span'))});
+      var updDots=function(){
+        var scrollable=rg.scrollWidth>rg.clientWidth+4;
+        rd.style.display=scrollable?'flex':'none';
+        if(!scrollable)return;
+        var i=Math.round(rg.scrollLeft/(rg.scrollWidth-rg.clientWidth)*(relCards.length-1));
+        rd.querySelectorAll('span').forEach(function(s,n){s.classList.toggle('on',n===i)});
+      };
+      rg.addEventListener('scroll',updDots,{passive:true});
+      window.addEventListener('resize',updDots);
+      updDots();
+    }
+
+    /* Explore tabs: swap the visible panel; the row stays put so you never lose your place. */
+    var tabBtns=document.querySelectorAll('.tabbtn');
+    tabBtns.forEach(function(b){
+      b.addEventListener('click',function(){
+        tabBtns.forEach(function(o){o.classList.remove('on')});
+        document.querySelectorAll('.tpanel').forEach(function(p){p.hidden=true});
+        b.classList.add('on');
+        document.getElementById(b.getAttribute('data-panel')).hidden=false;
+      });
+    });
+
+    /* Audio-only: Spotify player is the hero; chapters/questions seek it via the Spotify iFrame API. */
+    var spotifyCtrl=null, pendingSeek=null;
+    function nudge(){
+      var p=document.getElementById('player-wrap'), r=p.getBoundingClientRect();
+      if(r.bottom<80 || r.top>window.innerHeight-90){ p.scrollIntoView({behavior:'smooth',block:'start'}); }
+    }
+    function startAt(sec){
+      nudge();
+      if(spotifyCtrl){ spotifyCtrl.seek(sec); spotifyCtrl.resume(); } else { pendingSeek=sec; }
+    }
+    window.onSpotifyIframeApiReady=function(IFrameAPI){
+      IFrameAPI.createController(document.getElementById('spotify-embed'),
+        {uri:'spotify:episode:01dcELg32oXqWotl6vQxSO', width:'100%', height:'232'},
+        function(c){ spotifyCtrl=c; if(pendingSeek!=null){ c.seek(pendingSeek); c.resume(); pendingSeek=null; } });
+    };
+    (function(){var sc=document.createElement('script');sc.src='https://open.spotify.com/embed/iframe-api/v1';sc.async=true;document.head.appendChild(sc);})();
+  </script>
+</body>
+</html>
