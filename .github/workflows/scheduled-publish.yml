@@ -5,10 +5,12 @@ name: Scheduled episode publish
 # local time. Once listed they appear in All Episodes, search, and Choose-Your-Own-
 # Adventure. Idempotent. Platform links (Spotify/Apple) are backfilled separately.
 #
-# Cron runs at 15:00 and 16:00 UTC daily = ~1am Sydney (1am AEST winter / 2am AEDT
-# summer) — deliberately ~1hr AFTER the midnight YouTube/Spotify release so the
-# platforms have finished going live before the website lists the episode. promote.py
-# checks the real Sydney date; the second run is an idempotent retry (no double-publish).
+# Cron runs at 13:30, 14:30 and 15:00 UTC daily. 00:30 Sydney = 14:30 UTC in AEST
+# (UTC+10, winter) or 13:30 UTC in AEDT (UTC+11, summer), so the episode lists at
+# ~12:30am Sydney year-round — ~30min AFTER the midnight YouTube/Spotify release so the
+# platforms are live first. No run lands in the 00:00-00:30 Sydney window, so it can't
+# publish at midnight; the later run(s) are idempotent retries. promote.py checks the
+# real Sydney date (idempotent, so a repeat run never double-publishes).
 #
 # IMPORTANT (why this workflow deploys Pages itself): a commit pushed with the
 # built-in GITHUB_TOKEN does NOT trigger other workflows (GitHub loop-prevention),
@@ -18,7 +20,8 @@ name: Scheduled episode publish
 
 on:
   schedule:
-    - cron: '0 15,16 * * *'
+    - cron: '30 13,14 * * *'
+    - cron: '0 15 * * *'
   workflow_dispatch:
     inputs:
       test_today:
