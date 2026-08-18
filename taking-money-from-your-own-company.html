@@ -1,0 +1,698 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EP 293 · Taking Money From Your Own Company | What to Know Before You Do | The Numbers Game</title>
+<meta name="description" content="If you run a company, the money in it might feel like yours, but the ATO doesn't always see it that way.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" sizes="64x64" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="canonical" href="https://thenumbersgamepodcast.com.au/taking-money-from-your-own-company">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="The Numbers Game">
+<meta property="og:title" content="EP 293 · Taking Money From Your Own Company | What to Know Before You Do | The Numbers Game">
+<meta property="og:description" content="If you run a company, the money in it might feel like yours, but the ATO doesn't always see it that way.">
+<meta property="og:url" content="https://thenumbersgamepodcast.com.au/taking-money-from-your-own-company">
+<meta property="og:image" content="https://i.ytimg.com/vi/6uCo3-eXg_0/maxresdefault.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+  :root{
+    --purple:#585af3; --purple-dark:#2c1b8a; --mint:#7ad9a8;
+    --white:#ffffff; --muted:rgba(255,255,255,.60); --dim:rgba(255,255,255,.42);
+    --line:rgba(255,255,255,.12); --card:rgba(255,255,255,.05); --card-hi:rgba(255,255,255,.09);
+    --display:'Anton',Impact,'Helvetica Neue',sans-serif;
+    --sans:'Inter',system-ui,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif;
+    --wrap:1280px;   /* page frame (nav spans this) */
+    --col:960px;     /* content column (player, tabs, text) */
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:var(--sans); color:var(--white); line-height:1.6; -webkit-font-smoothing:antialiased;
+    background:#12093a;
+    background-image:
+      radial-gradient(1200px 600px at 82% -6%, rgba(88,90,243,.45) 0%, transparent 55%),
+      radial-gradient(900px 700px at 5% 8%, rgba(122,217,168,.10) 0%, transparent 50%),
+      linear-gradient(180deg,#2c1b8a 0%,#1a1150 28%,#100b34 62%,#0b0820 100%);
+    background-attachment:fixed;
+  }
+  a{color:inherit}
+  .wrap{max-width:var(--wrap);margin:0 auto;padding:0 36px}
+  main.wrap{max-width:var(--col)}
+  @media(max-width:720px){.wrap{padding:0 22px}}
+
+  /* ── Navbar ── */
+  .nav{position:sticky;top:0;z-index:50;background:linear-gradient(180deg,rgba(24,15,74,.92),rgba(24,15,74,.72));backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+  .nav-in{max-width:var(--wrap);margin:0 auto;padding:11px 36px;display:flex;align-items:center;justify-content:space-between}
+  @media(max-width:720px){.nav-in{padding:11px 22px}}
+  .brand{display:block;line-height:0}
+  .brand img{height:36px;width:auto;display:block}
+  .navlinks{display:flex;gap:28px;align-items:center}
+  .navlinks a{text-decoration:none;font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);transition:.15s}
+  .navlinks a:hover{color:var(--white)}
+  .navlinks a.navtop{cursor:default}
+  .navgroup{position:relative;display:flex;align-items:center}
+  .navgroup .subnav{display:none;position:absolute;top:100%;left:50%;transform:translateX(-50%);padding-top:14px;min-width:180px}
+  .navgroup:hover .subnav,.navgroup:focus-within .subnav{display:block}
+  .subnav-in,.navgroup .subnav{z-index:60}
+  .navgroup .subnav a{display:block;background:#180f4a;border:1px solid var(--line);border-top:0;padding:12px 16px;font-size:12px;color:rgba(255,255,255,.85)}
+  .navgroup .subnav a:first-child{border-top:1px solid var(--line)}
+  .navgroup .subnav a:hover{background:#221768;color:var(--white)}
+  .navburger{display:none;background:none;border:1px solid var(--line);padding:8px 10px;cursor:pointer;color:var(--white);transition:.15s}
+  .navburger:hover{border-color:rgba(122,217,168,.6)}
+  .navburger svg{width:20px;height:20px;fill:currentColor;display:block}
+  .navdrop{display:none}
+  @media(max-width:720px){
+    .navlinks{display:none}
+    .navburger{display:block}
+    .navdrop{display:block;position:absolute;left:0;right:0;top:100%;
+      background:#180f4a;border-bottom:1px solid var(--line);box-shadow:0 24px 50px rgba(0,0,0,.45)}
+    .navdrop[hidden]{display:none}
+    .navdrop a{display:block;padding:15px 22px;text-decoration:none;font-size:14px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:rgba(255,255,255,.9);border-bottom:1px solid rgba(255,255,255,.06)}
+    .navdrop a:last-child{border-bottom:0}
+    .navdrop a.sub{padding-left:42px;font-size:13px;color:rgba(255,255,255,.72)}
+    .navdrop .navlabel{display:block;padding:15px 22px 6px;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.4)}
+  }
+
+  /* ── Hero / hook (marker-highlight system: purple hook wraps naturally, mint payoff below)
+     Rules: title splits at its natural break (colon/pipe/question mark). Front = hook (purple,
+     big), back = payoff (mint, smaller). No break in title = purple hook only. Highlights hug
+     the text (tight em padding tuned to Anton) and wrap via box-decoration-break — never
+     hand-pick line breaks or mint words. ── */
+  header.hero{padding:34px 0 6px}
+  .hook{--inx:clamp(8.4px,2.1vw,15.6px)} /* one shared text inset so hook + payoff first letters align */
+  .hook .hk{font-family:var(--display);font-weight:400;text-transform:uppercase;
+    font-size:clamp(28px,7vw,52px);line-height:1.3;letter-spacing:-.5px;text-wrap:balance}
+  .hook .hk span{color:var(--white);padding:.04em var(--inx) .02em;
+    background:linear-gradient(var(--purple),var(--purple)) 0 50%/100% 87% no-repeat;
+    -webkit-box-decoration-break:clone;box-decoration-break:clone}
+  .hook .pay{font-family:var(--display);font-weight:400;text-transform:uppercase;
+    font-size:clamp(16px,4vw,24px);line-height:1.5;letter-spacing:.6px;margin-top:8px;text-wrap:balance}
+  .hook .pay span{color:#0a0a0a;padding:.08em var(--inx) .04em;
+    background:linear-gradient(var(--mint),var(--mint)) 0 50%/100% 88% no-repeat;
+    -webkit-box-decoration-break:clone;box-decoration-break:clone}
+  /* no-hook titles: mid-split into two full-size rows, purple then mint */
+  .hook .hk span.hkrow{display:block;background:none;padding:0}
+  .hook .hk .hkrow+.hkrow{margin-top:8px}
+  .hook .hk span.mintseg{color:#0a0a0a;
+    background:linear-gradient(var(--mint),var(--mint)) 0 50%/100% 87% no-repeat}
+
+  /* ── Player (clean facade → real player on tap) ── */
+  .player-wrap{margin:24px 0 4px;scroll-margin-top:76px}
+  .player{position:relative;width:100%;padding-top:56.25%;border-radius:0;overflow:hidden;background:#000;box-shadow:0 30px 70px rgba(0,0,0,.5),0 0 0 1px rgba(255,255,255,.06)}
+  .facade{position:absolute;inset:0;border:0;cursor:pointer;background-size:cover;background-position:center;display:flex;align-items:center;justify-content:center;padding:0}
+  .facade .play{width:74px;height:74px;border-radius:50%;background:rgba(10,6,30,.40);border:2px solid rgba(255,255,255,.72);display:flex;align-items:center;justify-content:center;transition:.18s;-webkit-backdrop-filter:blur(1px);backdrop-filter:blur(1px)}
+  .facade:hover .play{background:rgba(88,90,243,.62);transform:scale(1.07);border-color:#fff}
+  .facade .play::after{content:"";border-style:solid;border-width:11px 0 11px 19px;border-color:transparent transparent transparent #fff;margin-left:5px}
+  .player iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+
+  /* ── Episode facts (bottom of the Summary panel — templated per episode) ── */
+  .sumfacts{margin:14px 10px 4px;padding-top:13px;border-top:1px solid rgba(255,255,255,.08);display:flex;flex-direction:column;gap:8px}
+  .fact{display:flex;gap:12px;font-size:13.5px}
+  .fact .fl{flex:none;width:104px;color:var(--dim);font-weight:600;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;padding-top:2px}
+  .fact .fv{color:rgba(255,255,255,.9);font-weight:500}
+  .fact .fv a{color:var(--mint);text-decoration:none;border-bottom:1px solid rgba(122,217,168,.4);transition:.15s}
+  .fact .fv a:hover{border-bottom-color:var(--mint)}
+
+  /* ── Episode tag (identity: black label hanging off the title corner) ── */
+  .eptag{display:inline-block;position:relative;left:-6px;margin-bottom:-7px;z-index:2;
+    background:#0a0a0a;color:var(--white);font-family:var(--display);font-weight:400;
+    font-size:13.5px;letter-spacing:1.5px;text-transform:uppercase;padding:6px 11px 4px}
+
+  /* ── Explore tabs (sticky mode switcher; one panel swaps below, nothing shoves) ── */
+  .explore{margin-top:22px}
+  .tabs{position:sticky;top:58px;z-index:40;display:flex;flex-wrap:wrap;gap:8px;padding:10px 0;
+    background:linear-gradient(180deg,rgba(18,10,55,.96),rgba(18,10,55,.86));
+    backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+  .tabbtn{font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.5px;
+    font-size:14.5px;color:var(--white);background:var(--purple);border:1px solid var(--purple);
+    padding:9px 13px 7px;cursor:pointer;transition:.15s}
+  .tabbtn:hover{filter:brightness(1.12)}
+  .tabbtn.on{background:var(--mint);border-color:var(--mint);color:#0a0a0a}
+  .tabbtn.on:hover{filter:none}
+  .tabbtn .ct{font-size:12px;opacity:.75;font-variant-numeric:tabular-nums}
+  .tabbtn .ct::before{content:" · "}
+  .tpanel{border:1px solid var(--line);background:var(--card);padding:12px 10px 14px}
+  .hint{font-size:12.5px;color:var(--muted);padding:2px 10px 10px;border-bottom:1px solid rgba(255,255,255,.08);margin-bottom:6px}
+
+  /* ── Listen row (no box: label left, service pills follow) ── */
+  .listen{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:12px 16px;margin-top:34px}
+  .listen .lname{font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--dim)}
+  .listen a{display:inline-flex;align-items:center;gap:9px;padding:11px 18px;border-radius:999px;
+    background:var(--mint);color:#08210f;text-decoration:none;font-weight:800;font-size:12.5px;
+    letter-spacing:.04em;text-transform:uppercase;transition:.15s}
+  .listen a:hover{filter:brightness(1.06);transform:translateY(-1px);box-shadow:0 12px 30px rgba(122,217,168,.25)}
+  .listen svg{width:20px;height:20px;fill:currentColor;flex:none}
+  /* ── Listen-now Spotify audio embed (full column width, above the pills) ── */
+  .listen-now{margin-top:40px}
+  .listen-now .ln-head{display:flex;align-items:baseline;justify-content:space-between;gap:14px;margin-bottom:13px}
+  .listen-now .ln-title{font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--dim)}
+  .audio-embed{border-radius:12px;overflow:hidden;box-shadow:0 20px 50px rgba(0,0,0,.4),0 0 0 1px rgba(255,255,255,.06)}
+  .audio-embed iframe{display:block;width:100%;border:0}
+  @media(max-width:720px){.listen-now{margin-top:32px}}
+
+  /* ── Keep exploring (thumbnails link to other episode PAGES, never timecodes).
+     Swipeable strip on mobile, fits three-up on desktop. Variant rule: claim
+     "similar ground" + reason lines ONLY when moment-level topic overlap is
+     genuinely strong; otherwise show the latest released episodes with dates —
+     never invent a connection. ── */
+  .relsec{margin-top:60px;padding-top:58px;border-top:1px solid var(--line)} /* line = end of this episode's info */
+  .reldots{display:flex;justify-content:center;gap:7px;margin-top:12px}
+  .reldots span{width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.25);transition:.2s}
+  .reldots span.on{background:var(--mint)}
+  .relsec .rtitle{display:inline-block;font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.5px;font-size:14.5px;background:var(--mint);color:#0a0a0a;padding:9px 13px 7px;margin-bottom:18px}
+  .relgrid{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding-bottom:6px;scrollbar-width:none}
+  .relgrid::-webkit-scrollbar{display:none}
+  .relcard{flex:0 0 56%;max-width:232px;scroll-snap-align:start;display:flex;flex-direction:column;text-decoration:none;background:var(--card);border:1px solid var(--line);transition:.15s}
+  .relcard:hover{background:var(--card-hi);border-color:rgba(122,217,168,.55)}
+  .relcard img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block}
+  .relcard .rt{display:block;font-size:12.5px;font-weight:600;color:rgba(255,255,255,.92);line-height:1.4;padding:8px 8px 0}
+  .relcard .rfoot{margin-top:auto;display:flex;justify-content:space-between;align-items:flex-end;gap:8px;padding:10px 8px 9px}
+  .relcard .rwhy{font-size:11.5px;color:var(--mint)}
+  .relcard .rtag{display:inline-block;background:#0a0a0a;color:var(--white);font-family:var(--display);font-size:10px;letter-spacing:1.2px;text-transform:uppercase;padding:3px 7px 2px;white-space:nowrap;flex:0 0 auto}
+
+  /* ── Dropdown sections (accordion under the player) ── */
+  .drops{margin-top:34px;display:flex;flex-direction:column;gap:11px}
+  .drop{border:1px solid var(--line);border-radius:0;background:var(--card);overflow:hidden;transition:border-color .15s}
+  .drop[open]{border-color:rgba(122,217,168,.35)}
+  .drop>summary{list-style:none;cursor:pointer;padding:16px 18px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+  .drop>summary::-webkit-details-marker{display:none}
+  .drop>summary .st{font-weight:700;font-size:15.5px;letter-spacing:.005em}
+  .drop>summary .ct{margin-left:auto;font-size:12px;color:var(--dim);font-weight:600;font-variant-numeric:tabular-nums}
+  .drop>summary .chev{flex:none;width:22px;height:22px;border-radius:50%;background:rgba(122,217,168,.14);color:var(--mint);display:flex;align-items:center;justify-content:center;font-family:var(--display);font-size:15px;line-height:1;transition:.2s;transform:translateY(-1px)}
+  .drop[open]>summary .chev{transform:rotate(45deg)}
+  .drop-body{padding:2px 12px 12px}
+
+  /* chapters */
+  .chapter{display:flex;align-items:baseline;gap:14px;width:100%;text-align:left;cursor:pointer;background:none;border:0;color:inherit;font-family:inherit;padding:11px 10px;border-radius:10px;transition:.13s}
+  .chapter:hover{background:var(--card-hi)}
+  .chapter .tc{font-variant-numeric:tabular-nums;font-weight:700;font-size:14px;color:var(--mint);flex:none;width:48px}
+  .chapter .cx{font-size:15px;font-weight:500;color:rgba(255,255,255,.9)}
+  .chapter:hover .cx{color:#fff}
+
+  /* questions */
+  .q{display:flex;align-items:center;gap:12px;width:100%;text-align:left;cursor:pointer;background:none;border:0;border-radius:11px;color:inherit;font-family:inherit;padding:12px 10px;transition:.14s}
+  .q+.q{border-top:1px solid rgba(255,255,255,.05)}
+  .q:hover{background:var(--card-hi)}
+  .q .qm{font-family:var(--display);font-size:15px;color:var(--mint);flex:none;line-height:1;transform:translateY(1px)}
+  .q .qx{font-size:15px;font-weight:500;color:rgba(255,255,255,.92)}
+  .q .go{margin-left:auto;flex:none;color:var(--dim);font-size:18px;transition:.15s}
+  .q:hover .go{color:var(--mint);transform:translateX(2px)}
+
+  /* summary + transcript bodies */
+  .summary-body p{font-size:16.5px;line-height:1.62;color:rgba(255,255,255,.9);padding:6px 10px 4px}
+  .tbody{padding:2px 10px 8px}
+  .tbody p{font-size:14.5px;line-height:1.7;color:rgba(255,255,255,.78);margin-top:15px;max-width:64ch}
+  .tbody .spk{display:block;font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--mint);margin-bottom:2px}
+
+  /* ── Voice note ask (lives at the bottom of the Summary panel) ── */
+  .vask{margin:16px 10px 4px}
+  .vbtn{display:inline-flex;align-items:center;gap:9px;padding:12px 20px;border-radius:999px;border:0;cursor:pointer;
+    background:var(--mint);color:#08210f;font-family:inherit;font-weight:800;font-size:12.5px;
+    letter-spacing:.04em;text-transform:uppercase;transition:.15s}
+  .vbtn:hover{filter:brightness(1.06);transform:translateY(-1px);box-shadow:0 12px 30px rgba(122,217,168,.25)}
+  .vbtn svg{width:18px;height:18px;fill:currentColor;flex:none}
+  .vslot{background:var(--purple);padding:12px 10px 10px;margin:14px 0 4px;box-shadow:0 18px 40px rgba(0,0,0,.35)}
+  .vslot[hidden]{display:none}
+  .vhead{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;margin-bottom:10px}
+  .vhead .vmsg{font-family:var(--sans);font-size:13px;line-height:1.55;color:rgba(255,255,255,.92);margin:2px 0 0;padding:0 2px}
+  .vclose{background:none;border:0;color:rgba(255,255,255,.85);font-size:22px;line-height:1;cursor:pointer;padding:0 2px}
+  .vclose:hover{color:var(--white)}
+  .vslot iframe{display:block}
+
+  /* ── YouTube subscribe pill (sits in the listen row; outranks .listen a's mint) ── */
+  .listen a.yt-pill{background:var(--purple);color:var(--white)}
+  .listen a.yt-pill:hover{filter:brightness(1.1);transform:translateY(-1px)}
+  @media(max-width:720px){ /* mobile: no label, three compact pills on one row */
+    .listen .lname{display:none}
+    .listen{gap:8px}
+    .listen a{padding:10px 13px;font-size:11px;gap:6px}
+    .listen svg{width:16px;height:16px}
+  }
+
+  /* ── Footer: Follow us on | Brought to you by | Produced by, + Menu dropdown ── */
+  footer{border-top:1px solid var(--line);margin-top:68px;padding:52px 20px 58px}
+  .footgrid{max-width:var(--wrap);margin:0 auto;display:grid;grid-template-columns:1fr 1.15fr .8fr;gap:44px;align-items:start}
+  .fcol{text-align:center;display:flex;flex-direction:column;align-items:center}
+  .foot-label{font-size:11px;font-weight:700;letter-spacing:.26em;text-transform:uppercase;color:var(--dim);margin-bottom:18px}
+  .sponsors{display:flex;justify-content:center;align-items:center;gap:34px;flex-wrap:wrap}
+  .sponsors a,.produced a{display:inline-flex;transition:.15s}
+  .sponsors a:hover,.produced a:hover{transform:translateY(-1px)}
+  .sponsors img{height:32px;width:auto;opacity:.92}
+  .produced img{height:30px;width:auto;opacity:.95}
+  .sponsors a:hover img,.produced a:hover img{opacity:1}
+  footer .socials{display:flex;gap:11px;justify-content:center;flex-wrap:wrap;margin:0}
+  footer .socials a{width:40px;height:40px;border-radius:50%;border:1.5px solid rgba(122,217,168,.5);display:flex;align-items:center;justify-content:center;transition:.15s}
+  footer .socials a svg{width:18px;height:18px;fill:var(--mint);transition:.15s}
+  footer .socials a:hover{background:var(--mint);border-color:var(--mint);transform:translateY(-2px)}
+  footer .socials a:hover svg{fill:#0a0a0a}
+  .footbar{max-width:var(--wrap);margin:34px auto 0;border-top:1px solid var(--line);padding-top:20px;display:flex;flex-direction:column;align-items:center;gap:14px}
+  .footnav-dd{display:block;width:100%;max-width:var(--wrap);margin:0 auto;text-align:center}
+  .footnav-dd>summary{list-style:none;cursor:pointer;display:inline-flex;align-items:center;gap:9px;font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.5px;font-size:13px;color:var(--muted);background:transparent;border:1px solid var(--line);padding:8px 16px 6px;transition:.15s}
+  .footnav-dd>summary::-webkit-details-marker{display:none}
+  .footnav-dd>summary:hover{color:var(--mint);border-color:rgba(122,217,168,.45)}
+  .footnav-dd>summary .ham{width:15px;height:15px;fill:currentColor;transform:translateY(-1px)}
+  .footnav-dd .dd-links{display:flex;flex-direction:row;flex-wrap:wrap;justify-content:center;gap:12px 24px;padding:24px 0 4px}
+  .footnav-dd .dd-links a{font-size:11.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:.15s}
+  .footnav-dd .dd-links a:hover{color:var(--mint)}
+  .copyright{font-size:12px;color:var(--dim);text-align:center}
+  @media(max-width:720px){.footgrid{grid-template-columns:1fr;gap:34px}footer{padding:40px 16px 20px}.footbar{margin-top:34px;padding-top:24px;gap:20px}.footnav-dd .dd-links{flex-direction:column;align-items:center;gap:15px}}
+
+  @media(min-width:720px){header.hero{padding:48px 0 6px}}
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "PodcastEpisode", "name": "Taking Money From Your Own Company | What to Know Before You Do", "url": "https://thenumbersgamepodcast.com.au/taking-money-from-your-own-company", "datePublished": "2026-09-07", "episodeNumber": 293, "image": "https://i.ytimg.com/vi/6uCo3-eXg_0/maxresdefault.jpg", "partOfSeries": {"@type": "PodcastSeries", "name": "The Numbers Game", "url": "https://thenumbersgamepodcast.com.au/"}}</script>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-in">
+      <a class="brand" href="/" aria-label="The Numbers Game home"><img src="assets/tng-logo.png" alt="The Numbers Game"></a>
+      <div class="navlinks">
+        <a href="/">Home</a>
+        <div class="navgroup">
+          <a class="navtop">Episodes</a>
+          <div class="subnav">
+            <a href="/episodes">All episodes</a>
+            <a href="/adventure">Find moments</a>
+          </div>
+        </div>
+        <div class="navgroup">
+          <a class="navtop">About</a>
+          <div class="subnav">
+            <a href="/about">The show</a>
+            <a href="/nick-reilly">Nick Reilly</a>
+            <a href="/jason-robinson">Jason Robinson</a>
+          </div>
+        </div>
+        <a href="/contact">Contact</a>
+      </div>
+      <button class="navburger" id="navburger" type="button" aria-label="Menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24"><path d="M3 6h18v2H3zM3 11h18v2H3zM3 16h18v2H3z"/></svg>
+      </button>
+    </div>
+    <div class="navdrop" id="navdrop" hidden>
+      <a href="/">Home</a>
+      <span class="navlabel">Episodes</span>
+      <a class="sub" href="/episodes">All episodes</a>
+      <a class="sub" href="/adventure">Find moments</a>
+      <span class="navlabel">About</span>
+      <a class="sub" href="/about">The show</a>
+      <a class="sub" href="/nick-reilly">Nick Reilly</a>
+      <a class="sub" href="/jason-robinson">Jason Robinson</a>
+      <a href="/contact">Contact</a>
+    </div>
+  </nav>
+
+  <main class="wrap">
+
+    <header class="hero">
+      <div class="hook">
+        <span class="eptag">EP 293</span>
+        <h1 class="hk"><span>Taking Money From Your Own Company</span></h1>
+        <p class="pay"><span>What to Know Before You Do</span></p>
+      </div>
+    </header>
+
+    <div class="player-wrap" id="player-wrap">
+      <div class="player" id="player">
+        <button class="facade" id="facade" style="background-image:url('https://i.ytimg.com/vi/6uCo3-eXg_0/maxresdefault.jpg')" aria-label="Play episode">
+          <span class="play"></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="explore">
+      <div class="tabs" role="tablist">
+        <button class="tabbtn on" data-panel="p-summary">Summary</button>
+        <button class="tabbtn" data-panel="p-chapters">Chapters<span class="ct" id="chcount"></span></button>
+        <button class="tabbtn" data-panel="p-questions">Questions<span class="ct" id="qcount"></span></button>
+      </div>
+      <section class="tpanel" id="p-summary">
+        <div class="summary-body">
+          <p>If you run a company, the money in it might feel like yours, but the ATO doesn't always see it that way. Just ask the plumber who took a million out of his business, missed one piece of paperwork, and lost $470,000 to tax. Today we walk through what he did, the rule that caught him out, and what every business owner needs to know before touching company money.</p>
+        </div>
+        <div class="vask">
+          <button class="vbtn" id="vbtn" type="button">
+            <svg viewBox="0 0 24 24"><path d="M12 14a3 3 0 0 0 3-3V6a3 3 0 1 0-6 0v5a3 3 0 0 0 3 3zm5-3a5 5 0 0 1-10 0H5a7 7 0 0 0 6 6.92V21h2v-3.08A7 7 0 0 0 19 11h-2z"/></svg>
+            Send us a voice note
+          </button>
+          <div class="vslot" id="vslot" hidden>
+            <div class="vhead">
+              <p class="vmsg">We'd love to hear from you. You can leave up to a 90 second voice note for us to play on the show: a question, some feedback, or a topic you want covered.</p>
+              <button class="vclose" id="vclose" type="button" aria-label="Close">&times;</button>
+            </div>
+            <iframe src="https://www.speakpipe.com/widget/inline/hhq6kzggsx7zpcsvakgxfrzun3zidpde" allow="microphone" width="100%" height="200" frameborder="0" title="Leave The Numbers Game a voice note"></iframe>
+          </div>
+          <script async src="https://www.speakpipe.com/widget/loader.js" charset="utf-8"></script>
+        </div>
+        <div class="sumfacts">
+          <div class="fact"><span class="fl">Release date</span><span class="fv">7 September 2026</span></div>
+          <div class="fact"><span class="fl">Hosts</span><span class="fv"><a href="/nick-reilly">Nick Reilly</a> &amp; <a href="/jason-robinson">Jason Robinson</a></span></div>
+
+        </div>
+      </section>
+      <section class="tpanel" id="p-chapters" hidden>
+        <p class="hint">Jump straight to the part you need.</p>
+        <div id="chapters"></div>
+      </section>
+      <section class="tpanel" id="p-questions" hidden>
+        <p class="hint">Real questions this episode answers. Tap one to hear the answer.</p>
+        <div id="qa"></div>
+      </section>
+    </div>
+
+    <div class="drops">
+
+      <details class="drop">
+        <summary><span class="st">Episode transcript</span><span class="chev">+</span></summary>
+        <div class="drop-body tbody">
+          <p><span class="spk">Jason · 00:00</span>Welcome to episode 293 of The Numbers Game.</p>
+          <p><span class="spk">Nick · 00:03</span>I'm Jase.</p>
+          <p><span class="spk">Jason · 00:04</span>I'm here with Nick. How are you, buddy?</p>
+          <p><span class="spk">Nick · 00:06</span>Mate, I'm good. A little agitated, but let's move on. That's a different conversation. Let's talk about Div 7As. Well, another one of your mates has just not read the rule book, or what is—</p>
+          <p><span class="spk">Jason · 00:20</span>Yeah, yeah, pretty much. I think before we lose too many people, Div 7A will be explained. The probably the better way to kind of get your attention is a bucket company. Or even if you run a company and you've taken a loan, this is where you can make million-dollar mistakes like the plumber example that I want to tell you about, Nico.</p>
+          <p><span class="spk">Jason · 00:40</span>So I've got a question for you. I've got a plumber and he's got $1 million in his own company bank account. He's the sole director and the sole shareholder of the plumbing company. It's his money, right?</p>
+          <p><span class="spk">Nick · 00:55</span>Just go back a step. Must be a bloody good plumber.</p>
+          <p><span class="spk">Jason · 00:57</span>He's a bloody good plumbing company. He's doing very well.</p>
+          <p><span class="spk">Nick · 01:01</span>For all the young kids out there that are worried about their jobs being taken by AI.</p>
+          <p><span class="spk">Jason · 01:06</span>If you want to dig trenches and unblock toilets, there's money there.</p>
+          <p><span class="spk">Nick · 01:10</span>So yes, it's his money to answer your question. That's how I would see it.</p>
+          <p><span class="spk">Jason · 01:16</span>Yeah, correct. And look, in theory. When I say correct, incorrect. But in theory, and this is the mistake that so many people make that they are a sole shareholder, they're a sole director of a company. Company, they've made the money, they work hard, and then they can take that money and use it as they please.</p>
+          <p><span class="spk">Jason · 01:33</span>Now, this particular example has actually gone through Administrative Review Tribunal. They disagree with, uh, Johnny Buttella and his stance that that is his money and he can do what he wants with it. And the reason why he felt that way is he had a company constitution that, written into the company constitution, it said that any money that he takes automatically becomes a loan to the shareholder.</p>
+          <p><span class="spk">Jason · 01:58</span>And it's got certain terms and conditions to make it a complying loan. Now that is essentially DIV 7A. If you are a company director and you do borrow money from your company, you can set up a complying DIV 7A loan agreement.</p>
+          <p><span class="spk">Jason · 02:13</span>Goes for 7 years, there's repayments, there's interest, and it makes the loan real and valid. There's also sometimes some short-term lending where somebody might move some money out of their company and pay it back within a certain amount of time, making sure that they haven't actually triggered Div 7A by having the money out of the company for over a certain period of time.</p>
+          <p><span class="spk">Jason · 02:31</span>In the Johnny Battaglia example, this $1 million that he took, the Administrative Review Tribunal went, that is not a complying loan. You've missed some certain information, which I'll run through with you, Nico. But for the purpose of letting you— getting you up to speed with what happened, the million dollars that he took and said it was a loan, the ATO call it a deemed dividend and this deemed dividend is unfranked.</p>
+          <p><span class="spk">Jason · 02:56</span>Then what happens with that? Essentially he gets taxed at the top marginal rate 'cause for $1 million he's outside of the $190,000 bracket.</p>
+          <p><span class="spk">Nick · 03:04</span>Can we go back a step?</p>
+          <p><span class="spk">Jason · 03:05</span>Yes.</p>
+          <p><span class="spk">Nick · 03:06</span>So deemed dividend is unfranked?</p>
+          <p><span class="spk">Jason · 03:10</span>Unfranked.</p>
+          <p><span class="spk">Nick · 03:12</span>Why?</p>
+          <p><span class="spk">Jason · 03:13</span>Essentially it's like you've broken the rules, you didn't do it properly. So part of that,— that kind of smack.</p>
+          <p><span class="spk">Nick · 03:18</span>It's like a penalty.</p>
+          <p><span class="spk">Jason · 03:18</span>But essentially, yeah, part of that smack on the wrist and penalty is that they don't get to claim the franking credits if you didn't do it properly.</p>
+          <p><span class="spk">Nick · 03:23</span>But he still would've paid the corporate tax rate on his profitability.</p>
+          <p><span class="spk">Jason · 03:27</span>Correct.</p>
+          <p><span class="spk">Nick · 03:27</span>Which I assume was somewhere around $1 million if he's got that spare.</p>
+          <p><span class="spk">Jason · 03:30</span>He's already paid company tax at 25% on that money.</p>
+          <p><span class="spk">Nick · 03:33</span>So he's paid his 25%, but he's lost the franking credit that he would've got personally for that.</p>
+          <p><span class="spk">Jason · 03:37</span>Yep. Correct. So he gets the deemed dividend out to Johnny's name. It's $1 million on the top marginal tax bracket. Cost him $470,000 to make the mistake of not having a piece of paper in place.</p>
+          <p><span class="spk">Nick · 03:51</span>So effectively, let's go back and assume there is $1 million in profit. Yep. Over 1, 2, however many years it was. So that's $250,000 he would've saved 'cause he would've got the franking credit of the $250,000 on that.</p>
+          <p><span class="spk">Jason · 04:05</span>Yep.</p>
+          <p><span class="spk">Nick · 04:07</span>Mm, that's harsh.</p>
+          <p><span class="spk">Jason · 04:09</span>Yeah, it's very harsh.</p>
+          <p><span class="spk">Nick · 04:11</span>That's harsh.</p>
+          <p><span class="spk">Jason · 04:11</span>And that is the lesson why I bring this up today. There's a lot in the news and the media around bucket companies and there's changes coming. But for those that already have companies in play or are using bucket companies, these are very real rules that still exist today, and they're still going to exist moving forward if you've already got money trapped in a company or a bucket company.</p>
+          <p><span class="spk">Jason · 04:30</span>So talking about it today just to make sure that getting the basics and the fundamentals right and getting the timing right is extremely important when you're talking about losing franking credits or paying additional tax for no reason. If you didn't— you don't have to pay that extra tax if you structure this properly and do it properly.</p>
+          <p><span class="spk">Nick · 04:48</span>So if if he had done a DIV 7A loan, what's an interest rate that's?</p>
+          <p><span class="spk">Jason · 04:53</span>8.77%.</p>
+          <p><span class="spk">Nick · 04:54</span>8.7%. So effectively it's not the $250,000 loss because he would've paid the—</p>
+          <p><span class="spk">Jason · 04:58</span>Some interest, yep.</p>
+          <p><span class="spk">Nick · 04:59</span>Yep, some interest. Okay.</p>
+          <p><span class="spk">Jason · 05:01</span>That interest goes into his own company and then he pays company tax on that. So he pays the money back to his own company, the interest. So yes, you lose out because you pay, call it $1 million. Let's just use $80,000 and a nice round number. There's an additional $80,000 of income over the— for the year of that loan.</p>
+          <p><span class="spk">Jason · 05:17</span>He then pays 25% tax on that interest income in the company.</p>
+          <p><span class="spk">Nick · 05:21</span>So question to you as an accountant, like, because clearly it's just a— call it a knowledge gap. Some people might— there might be a touch of arrogance there where people say, it's my money, I'll do what I want to do with it. I've had that feedback. You've probably had that feedback.</p>
+          <p><span class="spk">Nick · 05:37</span>But the reality is, if you've used that money for personal expenditure or personal use, it's taxed at personal rates. So it's just really what I find interesting is that the government isn't just saying, no, no, this is what it should have looked like and this is what you would have owed us.</p>
+          <p><span class="spk">Nick · 05:57</span>What I find interesting is they're then hitting you with the inability to get a franking credit, which is a massive slap on the wrist for Amin Barks, especially for someone who thought they could rely on something written in their company constitution.</p>
+          <p><span class="spk">Jason · 06:12</span>It wasn't necessarily, I mean, on the surface it didn't seem like—</p>
+          <p><span class="spk">Nick · 06:16</span>Excuse the French, but he wasn't saying, "Fuck you." Yeah.</p>
+          <p><span class="spk">Jason · 06:18</span>He was recognising that he had the loan and he would have to make the repayments, but because he was missing all of the I's and T's dotted on the documents and he didn't have the separate loan agreement to the company constitution, that was essentially the biggest flag for the ATO to say, "Nah, this isn't set up properly. So you've got the million dollars in your pocket, you're going to pay full marginal rate on it." But yeah, I agree that the penalty of losing the franking credits when you've already paid tax on that money— Harsh.</p>
+          <p><span class="spk">Jason · 06:42</span>Very harsh.</p>
+          <p><span class="spk">Nick · 06:44</span>Again, I'll go back to the fact that you're dealing with a lot of this. Like, what— the ATO clearly think that they're going to miss a lot of this. Yeah. So they're not at the point yet where this stuff's easily picked up, otherwise there wouldn't be that penalty.</p>
+          <p><span class="spk">Nick · 07:01</span>So I guess the question I'm asking you is, well, the ATO is— is the ATO definitely going to pick this up if you're doing it wrong? Because clearly then there's no point doing it wrong. Even if you are trying to manipulate the system or do something wrong, there's no point because the ATO will pick it up.</p>
+          <p><span class="spk">Nick · 07:16</span>You might as well get your ducks in a row. Or are the ATO saying, you know what, we know we're going to miss some of this, so we need to then have a hefty penalty to stop people from doing it. So in the, in the off chance, or whatever the odds are, that they do get ordered, we're going to pick it up. But I would have thought the ATO would be picking this stuff up all the time now.</p>
+          <p><span class="spk">Nick · 07:35</span>So why would you not just get your ducks in a row?</p>
+          <p><span class="spk">Jason · 07:37</span>Yep. It's not just a numbers game for this. It's a volume game. It's the amount of people that, you know, have a Div 7A loan or have borrowed money from their company. It's the ability for the ATO to actually go and hunt it down, find out whether it was done right. There's the amount of people power at the back end of the ATO to actually go after this.</p>
+          <p><span class="spk">Jason · 07:54</span>Yeah. Where it is starting to become more traceable and picked up more is on the company tax return. A tax agent who does the return for their company client, there are certain line items on the tax return that says is there a director loan or a shareholder loan and the value.</p>
+          <p><span class="spk">Jason · 08:11</span>Now we are being stressed by the ATO, by CPA, by anyone out there, TPB. We must fill that number in. It's always been there. But, you know, sometimes, you know, people don't fill out the extra information on the tax return. You know, even people self-lodges, some tax agents that leave that off, just go, you know, it's there, but it's all good, it's all handled.</p>
+          <p><span class="spk">Jason · 08:32</span>There is now saying that you must fill this in if the ATO catch you out that you didn't add that number to that item on the tax return that exists. Tax agent looking in a bit of strife as well. And then obviously the client who has the director loan would need to be, or the shareholder loan, would need to prove that they've properly set up a proper loan agreement under the DIV 7A rules.</p>
+          <p><span class="spk">Nick · 08:52</span>I would think a lot of this would go back to the accountant, right? Because most people won't understand this stuff. Like I'm in the game and I'm sitting here asking you questions. So how is Johnny the plumber not discounting Johnny, but any average person out there who, as we've spoken about in the past, it's very easy to be a business owner in this country.</p>
+          <p><span class="spk">Nick · 09:12</span>You set an ABN up and you're away. And you know, this is at a million-dollar level. How much of this would be happening at a $100,000 level, right? Where trades or small businesses are just spending money out of their business account. So a lot of the responsibility falls back to the advisors around them, right?</p>
+          <p><span class="spk">Nick · 09:29</span>And the accountant. Would you say that's a fair argument? Very fair.</p>
+          <p><span class="spk">Jason · 09:32</span>And this is again somewhere where the ATO and government legislation has tried to clean this up, where you've got TPB rules around reporting previous tax agents or previous people who worked on the accounts not doing their job properly. Now, again, in our profession, I don't love the idea of having to dob in an accountant.</p>
+          <p><span class="spk">Jason · 09:50</span>Could be genuine, genuine slip-up, genuine error. Something was missed, something the client didn't provide, whatever it is. You know, I don't want to make up excuses for them, but the idea of having to dob someone in for missing this and then have to see a fellow accountant in strife lose their ability to trade.</p>
+          <p><span class="spk">Jason · 10:06</span>Yeah. Doesn't feel good. But at the same time, there are people out there that just don't do this properly and don't follow the rules and don't advise their clients properly. Yep. And at the end of the day, even though the ATO and the government might come down on the accountant, at the end of the day, it is the taxpayer that signs off on the tax return.</p>
+          <p><span class="spk">Nick · 10:22</span>Yep.</p>
+          <p><span class="spk">Jason · 10:22</span>It is the taxpayer that is responsible for having the loan agreement in place.</p>
+          <p><span class="spk">Nick · 10:25</span>And it's their money.</p>
+          <p><span class="spk">Jason · 10:26</span>And it is their money.</p>
+          <p><span class="spk">Nick · 10:27</span>It's their money. So.</p>
+          <p><span class="spk">Jason · 10:28</span>If they've taken it from the 25% tax environment, and they've got a benefit from it and they have no intention of paying it back, that is when there's a problem. If the intention is there to repay, if there is a loan agreement in place and they're happy to service the interest and sometimes you service it with dividends.</p>
+          <p><span class="spk">Jason · 10:44</span>If you've got franking credits, Nick, and you've got a million-dollar loan from your company, your accountant can declare a dividend big enough to cover the loan repayment, book the interest in your accounts, you pay company tax on it, your balance is coming down and over 7 years, Even if you don't reach into your pocket to repay that $7 million physically, you'll— $1 million, sorry.</p>
+          <p><span class="spk">Jason · 11:04</span>But over the 7 years, you'll have repaid it in fully franked dividends and you've paid the right amount of interest and the right amount of tax. So where it can be used properly at 8.77%, if you're then using that money in a really smart, appropriate way, you've got some kind of net benefit where you didn't have to go to the bank and get a million-dollar loan at 11% or 8% or whatever it would be.</p>
+          <p><span class="spk">Jason · 11:24</span>You've used your own available funds. And that is often where a bucket company comes into it. It is a funding vehicle for other entities.</p>
+          <p><span class="spk">Nick · 11:31</span>Yep.</p>
+          <p><span class="spk">Jason · 11:31</span>When used properly.</p>
+          <p><span class="spk">Nick · 11:33</span>Yep.</p>
+          <p><span class="spk">Jason · 11:33</span>So the money gets distributed down to a bucket company. Yep. And then you might use it as an investment vehicle inside the bucket company itself, buy a managed fund, an ETF, or you loan it sideways out to a unit trust or another investment company. And then that investment company buys a property, whatever it looks like.</p>
+          <p><span class="spk">Jason · 11:50</span>There are strategies out there. And they're well and truly worth it to keep that money at the 25% or 30% tax rate without it entering the 47% realm. And that is why it exists for now. Obviously, on some of the bucket company strategies, if it flows through a family trust after 1 July 2028, that's where we're looking at up to 60% tax on money to a bucket company.</p>
+          <p><span class="spk">Jason · 12:14</span>So speak to your accountant, speak to your advisor. If you are doing that at the moment, that's a thing that needs to be resolved in the coming years.</p>
+          <p><span class="spk">Nick · 12:21</span>Has that been unwound? Did I see something they were pulling back on that?</p>
+          <p><span class="spk">Jason · 12:24</span>It's, it's loose at the moment. It's not— I don't think it's been fully unwound, but I think, you know, and the— this, this is— the government lost Bendell, which I'll cover at a high level later, and we've touched on it before. So I think this is the government's way of going, we actually don't want you to have Div 7A loans, we don't want you to have bucket companies, but we can't fully get all that stuff to stop happening.</p>
+          <p><span class="spk">Jason · 12:45</span>But if we make a few of these little legislation changes that make a bucket company pay 60% tax, no one's gonna use it anyway.</p>
+          <p><span class="spk">Nick · 12:52</span>I've got another question for you. Shoot. Because I'm sitting here and I'm like, okay, you just gave an example of 8.75% versus 11, 12% unsecured loan. Maybe you think you can invest that and get a better return than that.</p>
+          <p><span class="spk">Nick · 13:09</span>But if you're doing, if you're chasing more than 8.75, it's a fairly risky investment, most people would say. Yep. What are the real circumstances that people take DIV 7A loans? 'Cause I would argue that it's probably not those two reasons in most cases.</p>
+          <p><span class="spk">Nick · 13:29</span>What are the real reasons people do this versus I'm just gonna take some income outta the business and declare the tax on it and move on? Is it because, like, I'm just, let's cut the weeds away.</p>
+          <p><span class="spk">Nick · 13:44</span>Why wouldn't you just take it as income? If you actually want access to that money, you know, and you haven't got plans for that money in your business in the next 3 or 4 years, outside of trying to reduce your tax for that given year, what's the reasons?</p>
+          <p><span class="spk">Nick · 14:00</span>Or is that the sole reason?</p>
+          <p><span class="spk">Jason · 14:01</span>That is up there in the reasons in a sense of playing the marginal tax game. So instead of taking all that income in one year and losing 47% of it, you can get access to the money put it on the complying loan agreement and then spread out the timing of when that, using the million dollars.</p>
+          <p><span class="spk">Jason · 14:17</span>If you get that over the next 7 years and you can keep more of it in the lower marginal tax bracket, you've got a better use of your 25% franking credits at marginal rates across a family group, for example, if it is flowing through a family trust and going to mum and dad or adult children following Section 100A and different rules to follow.</p>
+          <p><span class="spk">Jason · 14:37</span>But they're all available strategies. And this is why the government has made a lot of the changes they've made because They don't like not getting the 47% in the one year on the money that they can. They don't want it spread out and people paying a lower average rate of tax. But that is one of the big strategies.</p>
+          <p><span class="spk">Jason · 14:54</span>It is. And when you think about it, you go, you know, let's say John Battaglia, you know, had a wife who, you know, was working, but then they were planning on starting a family in a couple of years. All of a sudden, in the years where the family stuff's flowing, wife's income's not as high, dividend to wife's name.</p>
+          <p><span class="spk">Jason · 15:09</span>Boom, lower income tax brackets, 25% credits. Sometimes you can even get a physical cash refund from your franking credits. So while the strategies exist, smart accountants and smart business owners will use these strategies, you know, whether right or wrong.</p>
+          <p><span class="spk">Jason · 15:25</span>And now I don't say it's wrong because it is the rules. And if you play within the rules, I think you've said it multiple times, you know, use the rules to your advantage and play within the rules and you're fine. I'll finish on finish on, but I'll give you the final kicker of poor old Johnny's judgment. I couldn't believe it.</p>
+          <p><span class="spk">Jason · 15:43</span>And this is available online, so if anyone sends this to John Battalla, this is just available public news. I haven't kind of— I'm not John's accountant, for those who are worried that I'm sharing confidential information. So the two major things that happened to John were because he didn't have the complying loan agreement in place, and for the complying loan agreement, it needs to be done by lodgement date the following year.</p>
+          <p><span class="spk">Jason · 16:07</span>So give you a real example, Nick, you've got $500 grand out of your bucket company at 30 June 2026. If you don't have your DIV7A loan agreement drawn up, that's okay. You need to have it in place by the 15th of May 2027. Or you need to have repaid that $500 grand back way before then, just to show that it was a short-term money out, money in.</p>
+          <p><span class="spk">Jason · 16:29</span>And you weren't, you weren't doing it as a long-term 7-year complying loan, you've got until the 15th of May or the day you lodge your company tax return. If you and your accountant forget to talk about it, if for some reason something slips up and you don't get that DIV 7A loan agreement drawn up and signed and you're doing a loan somewhere else and the bank says, Nick, you need to lodge your tax return.</p>
+          <p><span class="spk">Jason · 16:49</span>You don't have until the 15th of May anymore. You have until the day your tax return was lodged to have that in place.</p>
+          <p><span class="spk">Nick · 16:55</span>So even if your accountant, which in most cases is the case, is reactive, You've got time. You can still sort this out.</p>
+          <p><span class="spk">Jason · 17:03</span>Yep, you've got time. It's if you've got historical years of these coming up and this is where sometimes we've taken over a new client and you can see a Director Loan 2017, Director Loan 2018, Director Loan 2019 and so on and so forth. And all of a sudden that million dollars is actually dribs and drabs over 10 years.</p>
+          <p><span class="spk">Nick · 17:23</span>Yeah.</p>
+          <p><span class="spk">Jason · 17:23</span>And you sit there and you bring on the new client and you go, Can I get a copy of all of your DIV 7A loan agreements? What's that? Oh, you're not paying interest on all these loans. What happened? I didn't know about it. What loans? It's like, well, sorry, Dave, you've got $1 million of loans you've pulled out.</p>
+          <p><span class="spk">Jason · 17:40</span>You've never paid interest on it. You're not in a complying agreement. All of these are unfranked deemed dividends into Dave's taxable income. And if you're the accountant that has to do that to someone, fuck, geez, you're the bad guy, right? And then often the new accountant does look like the bad guy who's going, well, my old accountant didn't do that.</p>
+          <p><span class="spk">Jason · 17:58</span>Can you just fix it? So the final straw on John's judgment, this is a Battalla case. So in 2018, the DIV 7A was deemed that it didn't work, it didn't stick. He didn't have the separate agreement to his company constitution.</p>
+          <p><span class="spk">Jason · 18:14</span>So lesson 1, separate agreement. Just dot I's and cross T's. Do a proper agreement, have the right interest rate, have the right repayment terms all built in. Bulletproof. Because he copped the million-dollar loan as taxable income and it was unfranked, he paid 47%, so $470,000 of income tax in the 2018 year.</p>
+          <p><span class="spk">Jason · 18:35</span>The following year, he'd also done a restructure where, because he was the sole shareholder, he was finding out, you know, again, like, you know, the amount of tax you have to pay as a sole shareholder when you might have a wife or other family members and you don't have a family trust in place or a holding company that you can move a lot of people want to move the money out of a risk-taking company.</p>
+          <p><span class="spk">Jason · 18:56</span>So a plumbing company generating that kind of profit, obviously pretty sizable. You don't want to leave more money in there than you have to, because if something goes wrong and you get sued, that money's up for grabs. So looks like John had a conversation with his accountant, wanted to restructure.</p>
+          <p><span class="spk">Jason · 19:11</span>They added a holding company and John sold his shares up to the holding company. And in the 2019 year, did a million-dollar dividend up to the holding company. That was also seen to not be appropriate. Whatever happened in the valuation of the transfer, they called it dividend stripping, which is Section 177E.</p>
+          <p><span class="spk">Jason · 19:32</span>So dividend stripping basically means that John was the shareholder entitled to those dividends. John should have received them and paid tax at his marginal rate. Adding the holding company and not doing it properly, meant that they were trying to game getting the money out of the company.</p>
+          <p><span class="spk">Jason · 19:47</span>Yep. So again, another million dollars pushed into John's name, another $470,000 of tax to pay. So John paid $940,000 across 2 years of assessable income that he'd already paid a very sizable amount of.</p>
+          <p><span class="spk">Jason · 20:06</span>He'd already paid $500,000 tax on that $2 million, and then he had to pay $940,000. He basically gave nearly the whole $2 million to the ATO. Devastating. This does not include, and I will, I will add this, this does not include administrative penalties, shortfall interest charges, legal costs of running the objection all the way up until the tribunal.</p>
+          <p><span class="spk">Jason · 20:27</span>So I dare say there's not much of that $2 million left, if any at all.</p>
+          <p><span class="spk">Nick · 20:33</span>Yeah. And, you know, I have to say that I feel sorry for John.</p>
+          <p><span class="spk">Jason · 20:37</span>Yeah, I agree. Well, like, if you do it right.</p>
+          <p><span class="spk">Nick · 20:40</span>Yeah, he's clearly Yeah, and we don't know John's background with the ATO. We don't know anything outside of this case. But wouldn't the ATO just try and get what they probably were owed based on the rules? Like, why drag? Like, that's enough money.</p>
+          <p><span class="spk">Nick · 20:56</span>Like, clearly John is a good business person because he's got this kind of money floating around, so he's clearly worked hard. Um, it's not really doing anything to hurt anyone. Um, he's just trying to play within the rules and he's got a few things wrong.</p>
+          <p><span class="spk">Nick · 21:14</span>Now, you know, there might— I'm not going to say there's not a little level of cunningness, um, but at the end of the day, the ATO basically is still going to take half of that money even if it's by the rules. So why don't you just do that and move on? Um, make an example of it in some way, but I just think it's I think it's a bit rough without knowing the background or if there's any other circumstances, you know.</p>
+          <p><span class="spk">Jason · 21:39</span>100%. So for those out there that may have a Div 7A loan or have borrowed money from their company, just, there is a section in the Tax Act called Section 109N. I'll give you the 3 basic steps of that. To do a Div 7A loan agreement to be complying, it needs to be in writing, separate loan agreement.</p>
+          <p><span class="spk">Jason · 21:59</span>So step 1, between the company and the specific borrower, whoever took that money, should be listed as a specific borrower. And there is a place in the tax return where this, the amount goes, and you need to have it set up, as I said, by tax return lodgement date, by the time, the day you lodge the tax return or its due date.</p>
+          <p><span class="spk">Jason · 22:18</span>Test 2, you must include the benchmark interest rate for the year you set up that loan. So if you're setting up the loan for the 26-27 year, as I said, it's 8.77%. You can find the other interest rates for different years on online if you are backdating one and you haven't lodged yet, good luck.</p>
+          <p><span class="spk">Jason · 22:33</span>Make sure you get it done. And test 3 is that you must have the term that you're using. Now, Div 7A loan can be 7 years unsecured or 25 years secured by a registered mortgage over real property. So that— they are the 3 tests of Section 109E and Section 109N that you need to make sure that you cover.</p>
+          <p><span class="spk">Jason · 22:55</span>And realistically, if you're using a bucket company properly, it should be— the thought process is that you, the individual, the shareholder, the director who's involved, if you're— you can't be taking that money out for your personal gain without paying the right amount of interest and doing it properly.</p>
+          <p><span class="spk">Jason · 23:11</span>If it is going from a company to a company, the tax rate is 25% and 25%, so nobody's missing out. So if you're using it for other investments, ETFs, property, you know, loans where you're charging a commercial rate to make money for that, for that money, these are all things that a related investment company can do.</p>
+          <p><span class="spk">Jason · 23:30</span>Just make sure you've got documented commercial loan agreements. Again, if something smells, if you're using it and you know you should have paid 47% tax, get the structure right, get in and chat to your accountant. And we've said stuff in previous episodes about how to use lump sum of money in a smart way, and it might be getting it into super using non-concessional.</p>
+          <p><span class="spk">Jason · 23:50</span>So even if you are taking it out into the 47% environment, getting a win back the other way. Use the 32%, use the $32,500 tax deduction to get it in. Use the 5-year carry forward rule if you haven't used.</p>
+          <p><span class="spk">Nick · 24:05</span>Big one.</p>
+          <p><span class="spk">Jason · 24:06</span>All different strategies, but don't mess up the bucket company or don't mess up loans from your trading company. These are all things that the ATO is hot on and we don't want to see people copying what John Battaglia copped.</p>
+          <p><span class="spk">Nick · 24:20</span>Yeah, thanks, Chase. That was awesome. And just some, there's just a lot of lessons there out of one person's mistakes and I think the way that you stop all this happening is if you are not sure, go see someone who knows. So lots of lessons.</p>
+          <p><span class="spk">Nick · 24:36</span>And to close out, don't be the plumber with a leaky bucket. Game over.</p>
+          <p><span class="spk">Jason · 24:43</span>This podcast is for educational and informational purposes only. The conversations are of a general nature and do not qualify as financial or tax advice. We recommend before you make any financial decisions, you consult a licensed professional. Individuals on the podcast may hold positions in the companies discussed.</p>
+        </div>
+      </details>
+
+    </div>
+
+    <!-- LISTEN:START (build_episode.py rewrites the 3 URLs + iframe title per episode; player dropped if no spotifyEmbedUrl) -->
+
+    <div class="listen">
+      <a href="https://open.spotify.com/search/the%20numbers%20game%20podcast" target="_blank" rel="noopener" aria-label="Listen to this episode on Spotify">
+        <svg viewBox="0 0 24 24"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.52 17.34c-.24.36-.66.48-1.02.24-2.82-1.74-6.36-2.1-10.56-1.14-.42.12-.78-.18-.9-.54-.12-.42.18-.78.54-.9 4.56-1.02 8.52-.6 11.64 1.32.42.18.48.66.3 1.02zm1.44-3.3c-.3.42-.84.6-1.26.3-3.24-1.98-8.16-2.58-11.94-1.38-.48.12-1.02-.12-1.14-.6-.12-.48.12-1.02.6-1.14 4.32-1.32 9.72-.66 13.44 1.62.36.18.54.78.3 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.3c-.6.18-1.2-.18-1.38-.72-.18-.6.18-1.2.72-1.38 4.26-1.26 11.28-1.02 15.72 1.62.54.3.72 1.02.42 1.56-.3.42-1.02.6-1.56.3z"/></svg>
+        Spotify
+      </a>
+      <a href="https://podcasts.apple.com/search?term=the%20numbers%20game" target="_blank" rel="noopener" aria-label="Listen to this episode on Apple Podcasts">
+        <svg viewBox="0 0 24 24"><path d="M5.34 0A5.328 5.328 0 000 5.34v13.32A5.328 5.328 0 005.34 24h13.32A5.328 5.328 0 0024 18.66V5.34A5.328 5.328 0 0018.66 0H5.34zm6.525 2.568c2.336 0 4.448.902 6.056 2.587 1.224 1.272 1.912 2.619 2.264 4.392l.04.23c.04.272-.16.527-.432.567a.505.505 0 01-.567-.431l-.04-.213c-.312-1.57-.92-2.747-2.004-3.867-1.428-1.496-3.293-2.294-5.393-2.294-2.1 0-3.966.798-5.394 2.294-1.084 1.12-1.692 2.298-2.004 3.867l-.04.213a.507.507 0 01-.567.431.504.504 0 01-.432-.567l.04-.23c.352-1.773 1.04-3.12 2.264-4.392 1.608-1.685 3.72-2.587 6.056-2.587h.153zm.136 3.033c1.74 0 3.312.67 4.527 1.934.883.916 1.394 1.93 1.663 3.253l.04.23a.505.505 0 01-.431.567.503.503 0 01-.567-.432l-.04-.212c-.23-1.112-.659-1.97-1.396-2.732-1.052-1.1-2.404-1.672-3.9-1.672s-2.849.572-3.901 1.672c-.737.762-1.167 1.62-1.396 2.732l-.04.212a.503.503 0 01-.567.432.505.505 0 01-.432-.567l.04-.23c.27-1.323.78-2.337 1.664-3.253 1.215-1.264 2.787-1.934 4.527-1.934h.21zm-.078 3.05c1.092 0 2.091.424 2.89 1.22.582.58.924 1.245 1.107 2.15l.04.218a.501.501 0 01-.424.568.499.499 0 01-.568-.424l-.04-.198c-.146-.724-.413-1.253-.871-1.716-.63-.63-1.398-.957-2.226-.957s-1.595.328-2.225.957c-.459.463-.726.992-.871 1.716l-.04.198a.499.499 0 01-.568.424.501.501 0 01-.424-.568l.04-.219c.183-.904.525-1.569 1.106-2.149.8-.796 1.799-1.22 2.89-1.22h.184zM12 14.07a2.477 2.477 0 012.48 2.478A2.477 2.477 0 0112 19.024a2.477 2.477 0 01-2.48-2.477A2.477 2.477 0 0112 14.07z"/></svg>
+        Apple
+      </a>
+      <a class="yt-pill" href="https://www.youtube.com/@thenumbersgamepodcast?sub_confirmation=1" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.12-2.14C19.5 3.55 12 3.55 12 3.55s-7.5 0-9.38.51A3 3 0 0 0 .5 6.2 31.4 31.4 0 0 0 0 12a31.4 31.4 0 0 0 .5 5.8 3 3 0 0 0 2.12 2.14c1.88.51 9.38.51 9.38.51s7.5 0 9.38-.51a3 3 0 0 0 2.12-2.14A31.4 31.4 0 0 0 24 12a31.4 31.4 0 0 0-.5-5.8zM9.55 15.57V8.43L15.82 12z"/></svg>
+        Subscribe
+      </a>
+    </div>
+    <!-- LISTEN:END -->
+
+    <div class="relsec">
+      <span class="rtitle">Discover more</span>
+      <div class="relgrid">
+        <a class="relcard" href="/how-to-get-ahead-in-your-20s">
+          <img src="https://i.ytimg.com/vi/OVk_TGBmlTg/hqdefault.jpg" alt="EP 290 thumbnail">
+          <span class="rt">How to Get Ahead in Your 20s</span>
+          <span class="rfoot"><span class="rwhy">17 August 2026</span><span class="rtag">EP 290</span></span>
+        </a>
+        <a class="relcard" href="/build-or-buy-a-business">
+          <img src="https://i.ytimg.com/vi/cdGolkBKKtU/hqdefault.jpg" alt="EP 289 thumbnail">
+          <span class="rt">Build or Buy a Business?</span>
+          <span class="rfoot"><span class="rwhy">10 August 2026</span><span class="rtag">EP 289</span></span>
+        </a>
+        <a class="relcard" href="/why-australia-isn-t-as-broken-as-the-media-says">
+          <img src="https://i.ytimg.com/vi/mRgwGlZkcdU/hqdefault.jpg" alt="EP 288 thumbnail">
+          <span class="rt">Why Australia Isn't as Broken as the Media Says</span>
+          <span class="rfoot"><span class="rwhy">3 August 2026</span><span class="rtag">EP 288</span></span>
+        </a>
+        <a class="relcard" href="/should-australia-ditch-super">
+          <img src="https://i.ytimg.com/vi/kaeaiK_FwDg/hqdefault.jpg" alt="EP 287 thumbnail">
+          <span class="rt">Should Australia Ditch Super?</span>
+          <span class="rfoot"><span class="rwhy">27 July 2026</span><span class="rtag">EP 287</span></span>
+        </a>
+        <a class="relcard" href="/pokemon-cards-vs-bitcoin-gold-and-the-asx">
+          <img src="https://i.ytimg.com/vi/7PHS9HCqNvM/hqdefault.jpg" alt="EP 286 thumbnail">
+          <span class="rt">Pokemon Cards vs Bitcoin, Gold and the ASX</span>
+          <span class="rfoot"><span class="rwhy">20 July 2026</span><span class="rtag">EP 286</span></span>
+        </a>
+        <a class="relcard" href="/buying-commercial-property-with-your-super-in-2026">
+          <img src="https://i.ytimg.com/vi/RAQ80ecsDq0/hqdefault.jpg" alt="EP 285 thumbnail">
+          <span class="rt">Buying Commercial Property With Your Super in 2026</span>
+          <span class="rfoot"><span class="rwhy">13 July 2026</span><span class="rtag">EP 285</span></span>
+        </a>
+      </div>
+      <div class="reldots" id="reldots"></div>
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="footgrid">
+      <div class="fcol">
+        <div class="foot-label">Follow us on</div>
+        <div class="socials">
+          <a href="https://www.instagram.com/thenumbersgamepodcast/" target="_blank" rel="noopener" aria-label="The Numbers Game on Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.8.2 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1 .4 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .4-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1-.4-2.2-.1-1.3-.1-1.7-.1-4.9s0-3.6.1-4.9c.1-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.4 2.2-.4 1.3-.1 1.7-.1 4.9-.1zm0 2c-3.1 0-3.5 0-4.8.1-1.1.1-1.5.2-1.8.3-.4.2-.7.3-1 .6-.3.3-.5.6-.6 1-.1.3-.3.7-.3 1.8-.1 1.3-.1 1.7-.1 4.8s0 3.5.1 4.8c.1 1.1.2 1.5.3 1.8.2.4.3.7.6 1 .3.3.6.5 1 .6.3.1.7.3 1.8.3 1.3.1 1.7.1 4.8.1s3.5 0 4.8-.1c1.1-.1 1.5-.2 1.8-.3.4-.2.7-.3 1-.6.3-.3.5-.6.6-1 .1-.3.3-.7.3-1.8.1-1.3.1-1.7.1-4.8s0-3.5-.1-4.8c-.1-1.1-.2-1.5-.3-1.8-.2-.4-.3-.7-.6-1-.3-.3-.6-.5-1-.6-.3-.1-.7-.3-1.8-.3-1.3-.1-1.7-.1-4.8-.1zm0 3.4a5.4 5.4 0 1 1 0 10.8 5.4 5.4 0 0 1 0-10.8zm0 2a3.4 3.4 0 1 0 0 6.8 3.4 3.4 0 0 0 0-6.8zm5.6-2.3a1.3 1.3 0 1 1-2.6 0 1.3 1.3 0 0 1 2.6 0z"/></svg></a>
+          <a href="https://www.tiktok.com/@thenumbersgamepodcast" target="_blank" rel="noopener" aria-label="The Numbers Game on TikTok"><svg viewBox="0 0 24 24"><path d="M12.53.02C13.84 0 15.14.01 16.44 0c.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg></a>
+          <a href="https://www.linkedin.com/company/the-numbers-game-podcast/" target="_blank" rel="noopener" aria-label="The Numbers Game on LinkedIn"><svg viewBox="0 0 24 24"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.24 8.25h4.52V23H.24V8.25zM8.34 8.25h4.33v2.01h.06c.6-1.14 2.08-2.34 4.28-2.34 4.58 0 5.42 3.01 5.42 6.92V23h-4.51v-7.16c0-1.71-.03-3.91-2.38-3.91-2.39 0-2.75 1.86-2.75 3.78V23H8.34V8.25z"/></svg></a>
+          <a href="https://www.facebook.com/profile.php?id=100071290388343" target="_blank" rel="noopener" aria-label="The Numbers Game on Facebook"><svg viewBox="0 0 24 24"><path d="M24 12.07C24 5.41 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.04V9.41c0-3.02 1.8-4.7 4.54-4.7 1.31 0 2.68.24 2.68.24v2.97h-1.5c-1.5 0-1.96.93-1.96 1.89v2.26h3.32l-.53 3.5h-2.8V24C19.62 23.1 24 18.1 24 12.07z"/></svg></a>
+          <a href="https://www.youtube.com/@thenumbersgamepodcast" target="_blank" rel="noopener" aria-label="The Numbers Game on YouTube"><svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.2C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31.7 31.7 0 0 0 0 12a31.7 31.7 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.2A31.7 31.7 0 0 0 24 12a31.7 31.7 0 0 0-.5-5.8zM9.6 15.6V8.4L15.8 12z"/></svg></a>
+        </div>
+      </div>
+      <div class="fcol">
+        <div class="foot-label">Brought to you by</div>
+        <div class="sponsors">
+          <a href="https://www.inovayt.com.au/" target="_blank" rel="noopener"><img src="assets/inovayt-white.png" alt="Inovayt"></a>
+          <a href="https://futureadvisory.com.au/" target="_blank" rel="noopener"><img src="assets/future-advisory-white.png" alt="Future Advisory"></a>
+        </div>
+      </div>
+      <div class="fcol produced">
+        <div class="foot-label">Produced by</div>
+        <a href="https://www.vidpod.com.au/" target="_blank" rel="noopener"><img src="assets/vidpod-white.png" alt="VIDPOD"></a>
+      </div>
+    </div>
+    <div class="footbar">
+      <details class="footnav-dd">
+        <summary><svg class="ham" viewBox="0 0 24 24"><path d="M3 6h18v2H3zM3 11h18v2H3zM3 16h18v2H3z"/></svg> Menu</summary>
+        <div class="dd-links">
+          <a href="/">Home</a><a href="/episodes">Every episode</a><a href="/adventure">Choose your own adventure</a><a href="/about">About the show</a><a href="/nick-reilly">Nick Reilly</a><a href="/jason-robinson">Jason Robinson</a><a href="/contact">Contact</a>
+        </div>
+      </details>
+      <div class="copyright">© 2026 The Numbers Game</div>
+    </div>
+  </footer>
+
+  <script>
+    var VIDEO='6uCo3-eXg_0';
+    var CHAPTERS=[
+      {t:"00:00",s:0,title:"Intro"},
+      {t:"00:40",s:40,title:"A plumber, a million dollars, and one costly mistake"},
+      {t:"01:33",s:93,title:"Inside the Battaglia tribunal case"},
+      {t:"02:31",s:151,title:"$1M taken, $470K lost to tax"},
+      {t:"05:01",s:301,title:"Bucket company owners, this affects you"},
+      {t:"05:37",s:337,title:"Why the ATO's penalty stings more than the tax"},
+      {t:"07:37",s:457,title:"What the ATO now checks on your tax return"},
+      {t:"09:32",s:572,title:"Accountant or business owner, who carries the blame?"},
+      {t:"10:44",s:644,title:"Doing it properly: the right way to use company money"},
+      {t:"12:24",s:744,title:"Big bucket company changes coming July 2028"},
+      {t:"13:44",s:824,title:"Real reasons business owners take these loans"},
+      {t:"16:07",s:967,title:"Lodgement date, the deadline that trips people up"},
+      {t:"18:35",s:1115,title:"Restructure gone wrong, another $470K down"},
+      {t:"21:39",s:1299,title:"Three tests to stay on the ATO's good side"}
+    ];
+    var QUESTIONS=[
+      {q:"Is money in your own company account yours to take?",s:40},
+      {q:"What is a Div 7A loan?",s:118},
+      {q:"What happens if a Div 7A loan is not complying?",s:151},
+      {q:"How much can a missing loan agreement cost?",s:217},
+      {q:"How is company money used personally taxed?",s:337},
+      {q:"Does the ATO catch every Div 7A mistake?",s:457},
+      {q:"What can you do with money in a bucket company?",s:693},
+      {q:"What makes a Div 7A loan agreement bulletproof?",s:1094},
+      {q:"How much did the Div 7A mistake cost in total?",s:1206},
+      {q:"How do you avoid a Div 7A mistake?",s:1460}
+    ];
+
+    var chEl=document.getElementById('chapters');
+    CHAPTERS.forEach(function(c){var b=document.createElement('button');b.className='chapter';b.onclick=function(){startAt(c.s)};b.innerHTML='<span class="tc">'+c.t+'</span><span class="cx">'+c.title+'</span>';chEl.appendChild(b);});
+    document.getElementById('chcount').textContent=CHAPTERS.length;
+    var qEl=document.getElementById('qa');
+    QUESTIONS.forEach(function(q){var b=document.createElement('button');b.className='q';b.onclick=function(){startAt(q.s)};b.innerHTML='<span class="qm">?</span><span class="qx">'+q.q+'</span><span class="go">›</span>';qEl.appendChild(b);});
+    document.getElementById('qcount').textContent=QUESTIONS.length;
+
+    /* Mobile nav dropdown. */
+    var burger=document.getElementById('navburger'), navdrop=document.getElementById('navdrop');
+    if(burger&&navdrop){burger.addEventListener('click',function(){
+      navdrop.hidden=!navdrop.hidden;
+      burger.setAttribute('aria-expanded', navdrop.hidden?'false':'true');
+    });}
+
+    /* Voice-note button reveals the recorder; × tucks it away. */
+    var vbtn=document.getElementById('vbtn'), vslot=document.getElementById('vslot'), vclose=document.getElementById('vclose');
+    if(vbtn&&vslot){vbtn.addEventListener('click',function(){vslot.hidden=!vslot.hidden;});}
+    if(vclose&&vslot){vclose.addEventListener('click',function(){vslot.hidden=true;});}
+
+    /* Keep-exploring dots: only shown when the strip actually scrolls (mobile). */
+    var rg=document.querySelector('.relgrid'), rd=document.getElementById('reldots');
+    if(rg&&rd){
+      var relCards=rg.querySelectorAll('.relcard');
+      relCards.forEach(function(){rd.appendChild(document.createElement('span'))});
+      var updDots=function(){
+        var scrollable=rg.scrollWidth>rg.clientWidth+4;
+        rd.style.display=scrollable?'flex':'none';
+        if(!scrollable)return;
+        var i=Math.round(rg.scrollLeft/(rg.scrollWidth-rg.clientWidth)*(relCards.length-1));
+        rd.querySelectorAll('span').forEach(function(s,n){s.classList.toggle('on',n===i)});
+      };
+      rg.addEventListener('scroll',updDots,{passive:true});
+      window.addEventListener('resize',updDots);
+      updDots();
+    }
+
+    /* Explore tabs: swap the visible panel; the row stays put so you never lose your place. */
+    var tabBtns=document.querySelectorAll('.tabbtn');
+    tabBtns.forEach(function(b){
+      b.addEventListener('click',function(){
+        tabBtns.forEach(function(o){o.classList.remove('on')});
+        document.querySelectorAll('.tpanel').forEach(function(p){p.hidden=true});
+        b.classList.add('on');
+        document.getElementById(b.getAttribute('data-panel')).hidden=false;
+      });
+    });
+
+    /* YouTube: clean facade, then real player on demand. Seek without yanking to top. */
+    var player=null, ready=false, apiReady=false, pending=null;
+    window.onYouTubeIframeAPIReady=function(){apiReady=true; if(pending!=null){var s=pending;pending=null;createPlayer(s);}};
+    function createPlayer(sec){
+      var wrap=document.getElementById('player'); wrap.innerHTML='<div id="yt"></div>';
+      player=new YT.Player('yt',{videoId:VIDEO,playerVars:{autoplay:1,rel:0,modestbranding:1,playsinline:1,start:Math.floor(sec||0)},events:{onReady:function(){ready=true;}}});
+    }
+    function nudge(){
+      var p=document.getElementById('player-wrap'), r=p.getBoundingClientRect();
+      if(r.bottom<80 || r.top>window.innerHeight-90){ p.scrollIntoView({behavior:'smooth',block:'start'}); }
+    }
+    function startAt(sec){
+      nudge();
+      if(player&&ready){ player.seekTo(sec,true); player.playVideo(); return; }
+      if(apiReady){ createPlayer(sec); } else { pending=sec; }
+    }
+    document.getElementById('facade').addEventListener('click',function(){startAt(0);});
+    (function(){var s=document.createElement('script');s.src='https://www.youtube.com/iframe_api';document.head.appendChild(s);})();
+  </script>
+</body>
+</html>

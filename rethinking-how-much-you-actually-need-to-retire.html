@@ -1,0 +1,725 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EP 294 · Rethinking How Much You Actually Need to Retire | The Numbers Game</title>
+<meta name="description" content="Most people try to work out how much they need to retire before they've worked out what they actually want retirement to look like.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" sizes="64x64" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="canonical" href="https://thenumbersgamepodcast.com.au/rethinking-how-much-you-actually-need-to-retire">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="The Numbers Game">
+<meta property="og:title" content="EP 294 · Rethinking How Much You Actually Need to Retire | The Numbers Game">
+<meta property="og:description" content="Most people try to work out how much they need to retire before they've worked out what they actually want retirement to look like.">
+<meta property="og:url" content="https://thenumbersgamepodcast.com.au/rethinking-how-much-you-actually-need-to-retire">
+<meta property="og:image" content="https://i.ytimg.com/vi/tzKP26vy3_4/maxresdefault.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+  :root{
+    --purple:#585af3; --purple-dark:#2c1b8a; --mint:#7ad9a8;
+    --white:#ffffff; --muted:rgba(255,255,255,.60); --dim:rgba(255,255,255,.42);
+    --line:rgba(255,255,255,.12); --card:rgba(255,255,255,.05); --card-hi:rgba(255,255,255,.09);
+    --display:'Anton',Impact,'Helvetica Neue',sans-serif;
+    --sans:'Inter',system-ui,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif;
+    --wrap:1280px;   /* page frame (nav spans this) */
+    --col:960px;     /* content column (player, tabs, text) */
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:var(--sans); color:var(--white); line-height:1.6; -webkit-font-smoothing:antialiased;
+    background:#12093a;
+    background-image:
+      radial-gradient(1200px 600px at 82% -6%, rgba(88,90,243,.45) 0%, transparent 55%),
+      radial-gradient(900px 700px at 5% 8%, rgba(122,217,168,.10) 0%, transparent 50%),
+      linear-gradient(180deg,#2c1b8a 0%,#1a1150 28%,#100b34 62%,#0b0820 100%);
+    background-attachment:fixed;
+  }
+  a{color:inherit}
+  .wrap{max-width:var(--wrap);margin:0 auto;padding:0 36px}
+  main.wrap{max-width:var(--col)}
+  @media(max-width:720px){.wrap{padding:0 22px}}
+
+  /* ── Navbar ── */
+  .nav{position:sticky;top:0;z-index:50;background:linear-gradient(180deg,rgba(24,15,74,.92),rgba(24,15,74,.72));backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+  .nav-in{max-width:var(--wrap);margin:0 auto;padding:11px 36px;display:flex;align-items:center;justify-content:space-between}
+  @media(max-width:720px){.nav-in{padding:11px 22px}}
+  .brand{display:block;line-height:0}
+  .brand img{height:36px;width:auto;display:block}
+  .navlinks{display:flex;gap:28px;align-items:center}
+  .navlinks a{text-decoration:none;font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);transition:.15s}
+  .navlinks a:hover{color:var(--white)}
+  .navlinks a.navtop{cursor:default}
+  .navgroup{position:relative;display:flex;align-items:center}
+  .navgroup .subnav{display:none;position:absolute;top:100%;left:50%;transform:translateX(-50%);padding-top:14px;min-width:180px}
+  .navgroup:hover .subnav,.navgroup:focus-within .subnav{display:block}
+  .subnav-in,.navgroup .subnav{z-index:60}
+  .navgroup .subnav a{display:block;background:#180f4a;border:1px solid var(--line);border-top:0;padding:12px 16px;font-size:12px;color:rgba(255,255,255,.85)}
+  .navgroup .subnav a:first-child{border-top:1px solid var(--line)}
+  .navgroup .subnav a:hover{background:#221768;color:var(--white)}
+  .navburger{display:none;background:none;border:1px solid var(--line);padding:8px 10px;cursor:pointer;color:var(--white);transition:.15s}
+  .navburger:hover{border-color:rgba(122,217,168,.6)}
+  .navburger svg{width:20px;height:20px;fill:currentColor;display:block}
+  .navdrop{display:none}
+  @media(max-width:720px){
+    .navlinks{display:none}
+    .navburger{display:block}
+    .navdrop{display:block;position:absolute;left:0;right:0;top:100%;
+      background:#180f4a;border-bottom:1px solid var(--line);box-shadow:0 24px 50px rgba(0,0,0,.45)}
+    .navdrop[hidden]{display:none}
+    .navdrop a{display:block;padding:15px 22px;text-decoration:none;font-size:14px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:rgba(255,255,255,.9);border-bottom:1px solid rgba(255,255,255,.06)}
+    .navdrop a:last-child{border-bottom:0}
+    .navdrop a.sub{padding-left:42px;font-size:13px;color:rgba(255,255,255,.72)}
+    .navdrop .navlabel{display:block;padding:15px 22px 6px;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.4)}
+  }
+
+  /* ── Hero / hook (marker-highlight system: purple hook wraps naturally, mint payoff below)
+     Rules: title splits at its natural break (colon/pipe/question mark). Front = hook (purple,
+     big), back = payoff (mint, smaller). No break in title = purple hook only. Highlights hug
+     the text (tight em padding tuned to Anton) and wrap via box-decoration-break — never
+     hand-pick line breaks or mint words. ── */
+  header.hero{padding:34px 0 6px}
+  .hook{--inx:clamp(8.4px,2.1vw,15.6px)} /* one shared text inset so hook + payoff first letters align */
+  .hook .hk{font-family:var(--display);font-weight:400;text-transform:uppercase;
+    font-size:clamp(28px,7vw,52px);line-height:1.3;letter-spacing:-.5px;text-wrap:balance}
+  .hook .hk span{color:var(--white);padding:.04em var(--inx) .02em;
+    background:linear-gradient(var(--purple),var(--purple)) 0 50%/100% 87% no-repeat;
+    -webkit-box-decoration-break:clone;box-decoration-break:clone}
+  .hook .pay{font-family:var(--display);font-weight:400;text-transform:uppercase;
+    font-size:clamp(16px,4vw,24px);line-height:1.5;letter-spacing:.6px;margin-top:8px;text-wrap:balance}
+  .hook .pay span{color:#0a0a0a;padding:.08em var(--inx) .04em;
+    background:linear-gradient(var(--mint),var(--mint)) 0 50%/100% 88% no-repeat;
+    -webkit-box-decoration-break:clone;box-decoration-break:clone}
+  /* no-hook titles: mid-split into two full-size rows, purple then mint */
+  .hook .hk span.hkrow{display:block;background:none;padding:0}
+  .hook .hk .hkrow+.hkrow{margin-top:8px}
+  .hook .hk span.mintseg{color:#0a0a0a;
+    background:linear-gradient(var(--mint),var(--mint)) 0 50%/100% 87% no-repeat}
+
+  /* ── Player (clean facade → real player on tap) ── */
+  .player-wrap{margin:24px 0 4px;scroll-margin-top:76px}
+  .player{position:relative;width:100%;padding-top:56.25%;border-radius:0;overflow:hidden;background:#000;box-shadow:0 30px 70px rgba(0,0,0,.5),0 0 0 1px rgba(255,255,255,.06)}
+  .facade{position:absolute;inset:0;border:0;cursor:pointer;background-size:cover;background-position:center;display:flex;align-items:center;justify-content:center;padding:0}
+  .facade .play{width:74px;height:74px;border-radius:50%;background:rgba(10,6,30,.40);border:2px solid rgba(255,255,255,.72);display:flex;align-items:center;justify-content:center;transition:.18s;-webkit-backdrop-filter:blur(1px);backdrop-filter:blur(1px)}
+  .facade:hover .play{background:rgba(88,90,243,.62);transform:scale(1.07);border-color:#fff}
+  .facade .play::after{content:"";border-style:solid;border-width:11px 0 11px 19px;border-color:transparent transparent transparent #fff;margin-left:5px}
+  .player iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+
+  /* ── Episode facts (bottom of the Summary panel — templated per episode) ── */
+  .sumfacts{margin:14px 10px 4px;padding-top:13px;border-top:1px solid rgba(255,255,255,.08);display:flex;flex-direction:column;gap:8px}
+  .fact{display:flex;gap:12px;font-size:13.5px}
+  .fact .fl{flex:none;width:104px;color:var(--dim);font-weight:600;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;padding-top:2px}
+  .fact .fv{color:rgba(255,255,255,.9);font-weight:500}
+  .fact .fv a{color:var(--mint);text-decoration:none;border-bottom:1px solid rgba(122,217,168,.4);transition:.15s}
+  .fact .fv a:hover{border-bottom-color:var(--mint)}
+
+  /* ── Episode tag (identity: black label hanging off the title corner) ── */
+  .eptag{display:inline-block;position:relative;left:-6px;margin-bottom:-7px;z-index:2;
+    background:#0a0a0a;color:var(--white);font-family:var(--display);font-weight:400;
+    font-size:13.5px;letter-spacing:1.5px;text-transform:uppercase;padding:6px 11px 4px}
+
+  /* ── Explore tabs (sticky mode switcher; one panel swaps below, nothing shoves) ── */
+  .explore{margin-top:22px}
+  .tabs{position:sticky;top:58px;z-index:40;display:flex;flex-wrap:wrap;gap:8px;padding:10px 0;
+    background:linear-gradient(180deg,rgba(18,10,55,.96),rgba(18,10,55,.86));
+    backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+  .tabbtn{font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.5px;
+    font-size:14.5px;color:var(--white);background:var(--purple);border:1px solid var(--purple);
+    padding:9px 13px 7px;cursor:pointer;transition:.15s}
+  .tabbtn:hover{filter:brightness(1.12)}
+  .tabbtn.on{background:var(--mint);border-color:var(--mint);color:#0a0a0a}
+  .tabbtn.on:hover{filter:none}
+  .tabbtn .ct{font-size:12px;opacity:.75;font-variant-numeric:tabular-nums}
+  .tabbtn .ct::before{content:" · "}
+  .tpanel{border:1px solid var(--line);background:var(--card);padding:12px 10px 14px}
+  .hint{font-size:12.5px;color:var(--muted);padding:2px 10px 10px;border-bottom:1px solid rgba(255,255,255,.08);margin-bottom:6px}
+
+  /* ── Listen row (no box: label left, service pills follow) ── */
+  .listen{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:12px 16px;margin-top:34px}
+  .listen .lname{font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--dim)}
+  .listen a{display:inline-flex;align-items:center;gap:9px;padding:11px 18px;border-radius:999px;
+    background:var(--mint);color:#08210f;text-decoration:none;font-weight:800;font-size:12.5px;
+    letter-spacing:.04em;text-transform:uppercase;transition:.15s}
+  .listen a:hover{filter:brightness(1.06);transform:translateY(-1px);box-shadow:0 12px 30px rgba(122,217,168,.25)}
+  .listen svg{width:20px;height:20px;fill:currentColor;flex:none}
+  /* ── Listen-now Spotify audio embed (full column width, above the pills) ── */
+  .listen-now{margin-top:40px}
+  .listen-now .ln-head{display:flex;align-items:baseline;justify-content:space-between;gap:14px;margin-bottom:13px}
+  .listen-now .ln-title{font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--dim)}
+  .audio-embed{border-radius:12px;overflow:hidden;box-shadow:0 20px 50px rgba(0,0,0,.4),0 0 0 1px rgba(255,255,255,.06)}
+  .audio-embed iframe{display:block;width:100%;border:0}
+  @media(max-width:720px){.listen-now{margin-top:32px}}
+
+  /* ── Keep exploring (thumbnails link to other episode PAGES, never timecodes).
+     Swipeable strip on mobile, fits three-up on desktop. Variant rule: claim
+     "similar ground" + reason lines ONLY when moment-level topic overlap is
+     genuinely strong; otherwise show the latest released episodes with dates —
+     never invent a connection. ── */
+  .relsec{margin-top:60px;padding-top:58px;border-top:1px solid var(--line)} /* line = end of this episode's info */
+  .reldots{display:flex;justify-content:center;gap:7px;margin-top:12px}
+  .reldots span{width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.25);transition:.2s}
+  .reldots span.on{background:var(--mint)}
+  .relsec .rtitle{display:inline-block;font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.5px;font-size:14.5px;background:var(--mint);color:#0a0a0a;padding:9px 13px 7px;margin-bottom:18px}
+  .relgrid{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding-bottom:6px;scrollbar-width:none}
+  .relgrid::-webkit-scrollbar{display:none}
+  .relcard{flex:0 0 56%;max-width:232px;scroll-snap-align:start;display:flex;flex-direction:column;text-decoration:none;background:var(--card);border:1px solid var(--line);transition:.15s}
+  .relcard:hover{background:var(--card-hi);border-color:rgba(122,217,168,.55)}
+  .relcard img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block}
+  .relcard .rt{display:block;font-size:12.5px;font-weight:600;color:rgba(255,255,255,.92);line-height:1.4;padding:8px 8px 0}
+  .relcard .rfoot{margin-top:auto;display:flex;justify-content:space-between;align-items:flex-end;gap:8px;padding:10px 8px 9px}
+  .relcard .rwhy{font-size:11.5px;color:var(--mint)}
+  .relcard .rtag{display:inline-block;background:#0a0a0a;color:var(--white);font-family:var(--display);font-size:10px;letter-spacing:1.2px;text-transform:uppercase;padding:3px 7px 2px;white-space:nowrap;flex:0 0 auto}
+
+  /* ── Dropdown sections (accordion under the player) ── */
+  .drops{margin-top:34px;display:flex;flex-direction:column;gap:11px}
+  .drop{border:1px solid var(--line);border-radius:0;background:var(--card);overflow:hidden;transition:border-color .15s}
+  .drop[open]{border-color:rgba(122,217,168,.35)}
+  .drop>summary{list-style:none;cursor:pointer;padding:16px 18px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+  .drop>summary::-webkit-details-marker{display:none}
+  .drop>summary .st{font-weight:700;font-size:15.5px;letter-spacing:.005em}
+  .drop>summary .ct{margin-left:auto;font-size:12px;color:var(--dim);font-weight:600;font-variant-numeric:tabular-nums}
+  .drop>summary .chev{flex:none;width:22px;height:22px;border-radius:50%;background:rgba(122,217,168,.14);color:var(--mint);display:flex;align-items:center;justify-content:center;font-family:var(--display);font-size:15px;line-height:1;transition:.2s;transform:translateY(-1px)}
+  .drop[open]>summary .chev{transform:rotate(45deg)}
+  .drop-body{padding:2px 12px 12px}
+
+  /* chapters */
+  .chapter{display:flex;align-items:baseline;gap:14px;width:100%;text-align:left;cursor:pointer;background:none;border:0;color:inherit;font-family:inherit;padding:11px 10px;border-radius:10px;transition:.13s}
+  .chapter:hover{background:var(--card-hi)}
+  .chapter .tc{font-variant-numeric:tabular-nums;font-weight:700;font-size:14px;color:var(--mint);flex:none;width:48px}
+  .chapter .cx{font-size:15px;font-weight:500;color:rgba(255,255,255,.9)}
+  .chapter:hover .cx{color:#fff}
+
+  /* questions */
+  .q{display:flex;align-items:center;gap:12px;width:100%;text-align:left;cursor:pointer;background:none;border:0;border-radius:11px;color:inherit;font-family:inherit;padding:12px 10px;transition:.14s}
+  .q+.q{border-top:1px solid rgba(255,255,255,.05)}
+  .q:hover{background:var(--card-hi)}
+  .q .qm{font-family:var(--display);font-size:15px;color:var(--mint);flex:none;line-height:1;transform:translateY(1px)}
+  .q .qx{font-size:15px;font-weight:500;color:rgba(255,255,255,.92)}
+  .q .go{margin-left:auto;flex:none;color:var(--dim);font-size:18px;transition:.15s}
+  .q:hover .go{color:var(--mint);transform:translateX(2px)}
+
+  /* summary + transcript bodies */
+  .summary-body p{font-size:16.5px;line-height:1.62;color:rgba(255,255,255,.9);padding:6px 10px 4px}
+  .tbody{padding:2px 10px 8px}
+  .tbody p{font-size:14.5px;line-height:1.7;color:rgba(255,255,255,.78);margin-top:15px;max-width:64ch}
+  .tbody .spk{display:block;font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--mint);margin-bottom:2px}
+
+  /* ── Voice note ask (lives at the bottom of the Summary panel) ── */
+  .vask{margin:16px 10px 4px}
+  .vbtn{display:inline-flex;align-items:center;gap:9px;padding:12px 20px;border-radius:999px;border:0;cursor:pointer;
+    background:var(--mint);color:#08210f;font-family:inherit;font-weight:800;font-size:12.5px;
+    letter-spacing:.04em;text-transform:uppercase;transition:.15s}
+  .vbtn:hover{filter:brightness(1.06);transform:translateY(-1px);box-shadow:0 12px 30px rgba(122,217,168,.25)}
+  .vbtn svg{width:18px;height:18px;fill:currentColor;flex:none}
+  .vslot{background:var(--purple);padding:12px 10px 10px;margin:14px 0 4px;box-shadow:0 18px 40px rgba(0,0,0,.35)}
+  .vslot[hidden]{display:none}
+  .vhead{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;margin-bottom:10px}
+  .vhead .vmsg{font-family:var(--sans);font-size:13px;line-height:1.55;color:rgba(255,255,255,.92);margin:2px 0 0;padding:0 2px}
+  .vclose{background:none;border:0;color:rgba(255,255,255,.85);font-size:22px;line-height:1;cursor:pointer;padding:0 2px}
+  .vclose:hover{color:var(--white)}
+  .vslot iframe{display:block}
+
+  /* ── YouTube subscribe pill (sits in the listen row; outranks .listen a's mint) ── */
+  .listen a.yt-pill{background:var(--purple);color:var(--white)}
+  .listen a.yt-pill:hover{filter:brightness(1.1);transform:translateY(-1px)}
+  @media(max-width:720px){ /* mobile: no label, three compact pills on one row */
+    .listen .lname{display:none}
+    .listen{gap:8px}
+    .listen a{padding:10px 13px;font-size:11px;gap:6px}
+    .listen svg{width:16px;height:16px}
+  }
+
+  /* ── Footer: Follow us on | Brought to you by | Produced by, + Menu dropdown ── */
+  footer{border-top:1px solid var(--line);margin-top:68px;padding:52px 20px 58px}
+  .footgrid{max-width:var(--wrap);margin:0 auto;display:grid;grid-template-columns:1fr 1.15fr .8fr;gap:44px;align-items:start}
+  .fcol{text-align:center;display:flex;flex-direction:column;align-items:center}
+  .foot-label{font-size:11px;font-weight:700;letter-spacing:.26em;text-transform:uppercase;color:var(--dim);margin-bottom:18px}
+  .sponsors{display:flex;justify-content:center;align-items:center;gap:34px;flex-wrap:wrap}
+  .sponsors a,.produced a{display:inline-flex;transition:.15s}
+  .sponsors a:hover,.produced a:hover{transform:translateY(-1px)}
+  .sponsors img{height:32px;width:auto;opacity:.92}
+  .produced img{height:30px;width:auto;opacity:.95}
+  .sponsors a:hover img,.produced a:hover img{opacity:1}
+  footer .socials{display:flex;gap:11px;justify-content:center;flex-wrap:wrap;margin:0}
+  footer .socials a{width:40px;height:40px;border-radius:50%;border:1.5px solid rgba(122,217,168,.5);display:flex;align-items:center;justify-content:center;transition:.15s}
+  footer .socials a svg{width:18px;height:18px;fill:var(--mint);transition:.15s}
+  footer .socials a:hover{background:var(--mint);border-color:var(--mint);transform:translateY(-2px)}
+  footer .socials a:hover svg{fill:#0a0a0a}
+  .footbar{max-width:var(--wrap);margin:34px auto 0;border-top:1px solid var(--line);padding-top:20px;display:flex;flex-direction:column;align-items:center;gap:14px}
+  .footnav-dd{display:block;width:100%;max-width:var(--wrap);margin:0 auto;text-align:center}
+  .footnav-dd>summary{list-style:none;cursor:pointer;display:inline-flex;align-items:center;gap:9px;font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.5px;font-size:13px;color:var(--muted);background:transparent;border:1px solid var(--line);padding:8px 16px 6px;transition:.15s}
+  .footnav-dd>summary::-webkit-details-marker{display:none}
+  .footnav-dd>summary:hover{color:var(--mint);border-color:rgba(122,217,168,.45)}
+  .footnav-dd>summary .ham{width:15px;height:15px;fill:currentColor;transform:translateY(-1px)}
+  .footnav-dd .dd-links{display:flex;flex-direction:row;flex-wrap:wrap;justify-content:center;gap:12px 24px;padding:24px 0 4px}
+  .footnav-dd .dd-links a{font-size:11.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:.15s}
+  .footnav-dd .dd-links a:hover{color:var(--mint)}
+  .copyright{font-size:12px;color:var(--dim);text-align:center}
+  @media(max-width:720px){.footgrid{grid-template-columns:1fr;gap:34px}footer{padding:40px 16px 20px}.footbar{margin-top:34px;padding-top:24px;gap:20px}.footnav-dd .dd-links{flex-direction:column;align-items:center;gap:15px}}
+
+  @media(min-width:720px){header.hero{padding:48px 0 6px}}
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "PodcastEpisode", "name": "Rethinking How Much You Actually Need to Retire", "url": "https://thenumbersgamepodcast.com.au/rethinking-how-much-you-actually-need-to-retire", "datePublished": "2026-09-14", "episodeNumber": 294, "image": "https://i.ytimg.com/vi/tzKP26vy3_4/maxresdefault.jpg", "partOfSeries": {"@type": "PodcastSeries", "name": "The Numbers Game", "url": "https://thenumbersgamepodcast.com.au/"}}</script>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-in">
+      <a class="brand" href="/" aria-label="The Numbers Game home"><img src="assets/tng-logo.png" alt="The Numbers Game"></a>
+      <div class="navlinks">
+        <a href="/">Home</a>
+        <div class="navgroup">
+          <a class="navtop">Episodes</a>
+          <div class="subnav">
+            <a href="/episodes">All episodes</a>
+            <a href="/adventure">Find moments</a>
+          </div>
+        </div>
+        <div class="navgroup">
+          <a class="navtop">About</a>
+          <div class="subnav">
+            <a href="/about">The show</a>
+            <a href="/nick-reilly">Nick Reilly</a>
+            <a href="/jason-robinson">Jason Robinson</a>
+          </div>
+        </div>
+        <a href="/contact">Contact</a>
+      </div>
+      <button class="navburger" id="navburger" type="button" aria-label="Menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24"><path d="M3 6h18v2H3zM3 11h18v2H3zM3 16h18v2H3z"/></svg>
+      </button>
+    </div>
+    <div class="navdrop" id="navdrop" hidden>
+      <a href="/">Home</a>
+      <span class="navlabel">Episodes</span>
+      <a class="sub" href="/episodes">All episodes</a>
+      <a class="sub" href="/adventure">Find moments</a>
+      <span class="navlabel">About</span>
+      <a class="sub" href="/about">The show</a>
+      <a class="sub" href="/nick-reilly">Nick Reilly</a>
+      <a class="sub" href="/jason-robinson">Jason Robinson</a>
+      <a href="/contact">Contact</a>
+    </div>
+  </nav>
+
+  <main class="wrap">
+
+    <header class="hero">
+      <div class="hook">
+        <span class="eptag">EP 294</span>
+        <h1 class="hk"><span class="hkrow"><span>Rethinking How Much You</span></span>
+        <span class="hkrow"><span class="mintseg">Actually Need to Retire</span></span></h1>
+      </div>
+    </header>
+
+    <div class="player-wrap" id="player-wrap">
+      <div class="player" id="player">
+        <button class="facade" id="facade" style="background-image:url('https://i.ytimg.com/vi/tzKP26vy3_4/maxresdefault.jpg')" aria-label="Play episode">
+          <span class="play"></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="explore">
+      <div class="tabs" role="tablist">
+        <button class="tabbtn on" data-panel="p-summary">Summary</button>
+        <button class="tabbtn" data-panel="p-chapters">Chapters<span class="ct" id="chcount"></span></button>
+        <button class="tabbtn" data-panel="p-questions">Questions<span class="ct" id="qcount"></span></button>
+      </div>
+      <section class="tpanel" id="p-summary">
+        <div class="summary-body">
+          <p>Most people try to work out how much they need to retire before they've worked out what they actually want retirement to look like. It's no wonder, when you're constantly hearing you need $2 million or some other massive number to retire. For a lot of Aussies, that turns retirement into something they'd rather not think about. Today Nick walks through how to work out what enough actually looks like for you, and why once you do, most Aussies find they're already further along than they think.</p>
+        </div>
+        <div class="vask">
+          <button class="vbtn" id="vbtn" type="button">
+            <svg viewBox="0 0 24 24"><path d="M12 14a3 3 0 0 0 3-3V6a3 3 0 1 0-6 0v5a3 3 0 0 0 3 3zm5-3a5 5 0 0 1-10 0H5a7 7 0 0 0 6 6.92V21h2v-3.08A7 7 0 0 0 19 11h-2z"/></svg>
+            Send us a voice note
+          </button>
+          <div class="vslot" id="vslot" hidden>
+            <div class="vhead">
+              <p class="vmsg">We'd love to hear from you. You can leave up to a 90 second voice note for us to play on the show: a question, some feedback, or a topic you want covered.</p>
+              <button class="vclose" id="vclose" type="button" aria-label="Close">&times;</button>
+            </div>
+            <iframe src="https://www.speakpipe.com/widget/inline/hhq6kzggsx7zpcsvakgxfrzun3zidpde" allow="microphone" width="100%" height="200" frameborder="0" title="Leave The Numbers Game a voice note"></iframe>
+          </div>
+          <script async src="https://www.speakpipe.com/widget/loader.js" charset="utf-8"></script>
+        </div>
+        <div class="sumfacts">
+          <div class="fact"><span class="fl">Release date</span><span class="fv">14 September 2026</span></div>
+          <div class="fact"><span class="fl">Hosts</span><span class="fv"><a href="/nick-reilly">Nick Reilly</a> &amp; <a href="/jason-robinson">Jason Robinson</a></span></div>
+
+        </div>
+      </section>
+      <section class="tpanel" id="p-chapters" hidden>
+        <p class="hint">Jump straight to the part you need.</p>
+        <div id="chapters"></div>
+      </section>
+      <section class="tpanel" id="p-questions" hidden>
+        <p class="hint">Real questions this episode answers. Tap one to hear the answer.</p>
+        <div id="qa"></div>
+      </section>
+    </div>
+
+    <div class="drops">
+
+      <details class="drop">
+        <summary><span class="st">Episode transcript</span><span class="chev">+</span></summary>
+        <div class="drop-body tbody">
+          <p><span class="spk">Jason · 00:00</span>Welcome to episode 294 of The Numbers Game. I'm Jase. I'm joined with Nick Riley. How are you, my friend?</p>
+          <p><span class="spk">Nick · 00:07</span>Mate, I'm good. I'm good. I'm past that agitation phase that we had last time and looking forward to today's episode because it's a bit of a pivot. Love that word, don't we? It's a bit of a pivot into— oh, it's probably feel-good, I think, today's episode.</p>
+          <p><span class="spk">Nick · 00:25</span>Rather than, you know, tax and government smashing or bashing. Yeah, I'm looking forward to today.</p>
+          <p><span class="spk">Jason · 00:35</span>I don't know about you, but every time someone says pivot, I see Ross from Friends in the stairwell with the couch. Do you know the episode? He's going, pivot, pivot.</p>
+          <p><span class="spk">Nick · 00:43</span>No, no, no.</p>
+          <p><span class="spk">Jason · 00:44</span>We're going to have to get the clip. And if that's not a copyright infringement.</p>
+          <p><span class="spk">Nick · 00:47</span>But anyway, so I watch a bit of Friends, but not, not enough to remember the episodes.</p>
+          <p><span class="spk">Jason · 00:52</span>There you go. If you're listening and you're following, please drop us a comment or a like and let us know that I'm not alone in my love for Ross from Friends.</p>
+          <p><span class="spk">Nick · 00:59</span>I actually hate the word 'cause I just attach it to COVID and how much it was overused when people were pivoting in their business. We probably said it 1,000 times in 2021, but—</p>
+          <p><span class="spk">Jason · 01:11</span>Is it still relevant for people pivoting with AI? So yeah, but no, I like where we're going with today's episode, Nick. I think the feel-good idea of what's your enough number and how do we come up with that? And I'm excited to run through it with you because I think there's no time like the present to understand where you're at in life and where you want to be.</p>
+          <p><span class="spk">Jason · 01:30</span>So yeah, let's crack in.</p>
+          <p><span class="spk">Nick · 01:32</span>Yeah, and I'll look, I'll give some context behind the word enough. Our business has just been through a rebrand and a pretty significant one. First one we've done in probably 10 years really. And we had a, we worked with a group to come up with clearly a new brand, but also something that just encapsulated everything that we did in our business.</p>
+          <p><span class="spk">Nick · 01:54</span>And we went through the process of looking at all our different types of clients. So whether they were mum and dads, whether they were, you know, young people trying to get into the property market, whether they were young people starting a family, professionals.</p>
+          <p><span class="spk">Nick · 02:09</span>And I guess what come out of that was it doesn't matter who you are or what your income is or what your hobbies are or, you know, how you grew up or where you want to live. It's really, for most people, what they really want is security.</p>
+          <p><span class="spk">Nick · 02:29</span>And when they come into our business, they want to know that they're going to be okay. And what came out of that was the word enough. So what is my enough? My enough might be less than yours. Your enough might be more than Tommy's. Everyone's version of what's enough is very different based on what they want in life what their values are, support they've got around them, and what they enjoy.</p>
+          <p><span class="spk">Nick · 02:54</span>What they enjoy.</p>
+          <p><span class="spk">Jason · 02:55</span>So can I tell you what mine and Tommy's enough is?</p>
+          <p><span class="spk">Nick · 02:58</span>What's that?</p>
+          <p><span class="spk">Jason · 02:59</span>We've been waiting for our own Innov8 merch. So for those who haven't seen the new branding, innovate.com.au, beautiful new branding. Yeah. But in our podcasting studio, there's all these boxes of beautiful, you know, What's Your Enough jumpers with Innov8 on it. And Tommy and I are just quietly waiting for this.</p>
+          <p><span class="spk">Nick · 03:16</span>So I'll give you this story. Look at— and they're unavailable at the moment because they've been used as curtains by our producer. But there is a lot of merchandise in here. And I came in the other day because I really like my jumper. And I said to Jordy, our GM, I said, what's going on with all the jumpers in there?</p>
+          <p><span class="spk">Nick · 03:32</span>So they aren't claimed or? So apparently whoever did the branding did something slightly wrong on the print. So the ones we're wearing are slightly wrong. Not that we know.</p>
+          <p><span class="spk">Jason · 03:43</span>Yeah.</p>
+          <p><span class="spk">Nick · 03:44</span>So that is a— everyone in our business gets everything replaced. But tell me what you want and I'll get it for you.</p>
+          <p><span class="spk">Jason · 03:52</span>Thank you very much. And now episode done. That is my enough. No, no, thank you.</p>
+          <p><span class="spk">Nick · 03:57</span>So that's what I want to cover today.</p>
+          <p><span class="spk">Jason · 04:00</span>What is that?</p>
+          <p><span class="spk">Nick · 04:00</span>What does that mean? And then just really, I think some of the numbers that I throw out there are going to give people a level of comfort and certainty. So the issue is that You know, if you look at most financial planning businesses or big super businesses, you will see, you know, a picture of a retired couple on a yacht sailing off into the sunset, you know.</p>
+          <p><span class="spk">Nick · 04:27</span>You know.</p>
+          <p><span class="spk">Jason · 04:28</span>The elderly couple on the beach looking out at the yacht.</p>
+          <p><span class="spk">Nick · 04:31</span>Oh yeah.</p>
+          <p><span class="spk">Jason · 04:31</span>Another one.</p>
+          <p><span class="spk">Nick · 04:31</span>You can just search retirement, that comes up a lot, you know, or, you know, holding the grandkids or whatever it might be. So I think it's really good for people to understand what their number is. One of the common questions we've got, and we've covered this in the podcast before, is how much do you need to retire?</p>
+          <p><span class="spk">Nick · 04:48</span>Well, there's so much that goes into that. How much are you going to spend when you retire is the first thing. What other means do you have? So what other investments do you have? Do you have a debt on your owner-occupied home? Do you have investment property you'll sell down? Have you got some inheritance which you may be able to get into super, which we just spoke about in a more recent episode.</p>
+          <p><span class="spk">Nick · 05:08</span>So That's the numbers side. But the first thing that people need to ask themselves is, well, what does retirement look like for me? And for most people, it doesn't need to be on a yacht to be happy. And I guess, I think as 45-year-olds, 40-year-olds, this might sound crazy, but you start thinking about retirement then.</p>
+          <p><span class="spk">Nick · 05:31</span>And I think it's a really good thing because you've got time to make changes. But the first thing you need to do is just go, well, I see all these things. Around of people being retired and buying a house on the Sunshine Coast, which is now going to cost $1.5 million. But what do you really want?</p>
+          <p><span class="spk">Nick · 05:47</span>So that's the first question you need to ask yourself. It can be as basic as, well, I don't need to buy a new house in a really expensive area where the climate's warmer. I want to be near my grandkids. My grandkids live here, or my grandkids live there.</p>
+          <p><span class="spk">Nick · 06:02</span>Do I want to go on an international holiday every year? Do I wanna do that every 24 months? Am I happy just to caravan around? When I go on an international holiday, do I wanna fly business? Do I wanna fly economy? What kind of hotels do I wanna stay in? So people need to stop thinking about how much do I need to retire?</p>
+          <p><span class="spk">Nick · 06:20</span>The first question you need to be asking yourself is what makes me happy? And if I'm projecting forward to a 65-year-old Jase, What would I like to do day to day that's going to fill my cup?</p>
+          <p><span class="spk">Nick · 06:36</span>That's the first thing you need to ask. Not, I'm retiring, so I need to buy a beach house, or I'm retiring, so I need to buy a boat so I can fish every day because I'm not going to have anything to do.</p>
+          <p><span class="spk">Jason · 06:47</span>So I love that it's less about how much money you have and more about what do you want to be doing to work this out. Yeah.</p>
+          <p><span class="spk">Nick · 06:53</span>So you're sitting opposite me, so let's pretend you're a client. If I was to ask you, Ideally, what does retirement look like for you? Be honest with me. What's the first thing you think about?</p>
+          <p><span class="spk">Jason · 07:07</span>International travel. Yeah, yeah, definitely. Like, I like the idea of seeing parts of the world that I haven't seen before. You know, Case and I made the deliberate decision, you know, we don't want to have kids, but we very much love our nieces and nephews and family. So there's still a big family tie to being around where our family will be.</p>
+          <p><span class="spk">Jason · 07:26</span>But yeah, I think then as well, it's being the fun auntie and uncle that sneak off overseas and go and see the world.</p>
+          <p><span class="spk">Nick · 07:32</span>So let's unpack that a bit. International travel, that's great. But is that what really fills your cup? I don't want to go too deep here, but you think about your life at the moment and you're a busy man and you're the face of Xero.</p>
+          <p><span class="spk">Nick · 07:48</span>We all know that. So you're pulled in a lot of different directions.</p>
+          <p><span class="spk">Jason · 07:51</span>Yeah.</p>
+          <p><span class="spk">Nick · 07:52</span>But what really makes you happy at the end of the day? Hmm.</p>
+          <p><span class="spk">Jason · 07:57</span>So it's a really hard question to answer.</p>
+          <p><span class="spk">Nick · 07:59</span>It is.</p>
+          <p><span class="spk">Jason · 07:59</span>I, from a health point of view, I really enjoy my running. I've done 4 of the 7 global major marathons, so I would like to continue to do that as part of traveling the world, is running marathons in different places. Yeah. What really makes me happy?</p>
+          <p><span class="spk">Jason · 08:16</span>Look, I think, I mean, why I do what I do, I enjoy helping people. I don't think I'm ever going to stop being involved in the work that I do, whether it's Xero or the CPA or consulting with business owners. But in true retirement, I guess, yeah, it's a great question.</p>
+          <p><span class="spk">Jason · 08:31</span>I mean, I don't know how to answer it properly.</p>
+          <p><span class="spk">Nick · 08:35</span>And this is the challenge we have with a lot of clients. And people come in here and it's all about the numbers. Yeah. And it goes back to numbers for sure because the numbers then provide what you want. But the hardest thing that we find in our unpacking is just what really makes you happy and what do you, what do you want?</p>
+          <p><span class="spk">Jason · 08:54</span>And that's even experiences for me, like experiences, experiences.</p>
+          <p><span class="spk">Nick · 08:58</span>Yeah. And that's even harder to answer at your age because when you're 65, you don't know what's going to be happening, right? So it's, um, yeah, I just, I just wanted to bring that up because it's, it's, it's the, it's the first thing you should be thinking about. What is your enough?</p>
+          <p><span class="spk">Nick · 09:14</span>Don't get hung up on numbers that you see. Don't get hung up on pictures or what someone else did in retirement. You know, your enough could be an international marathon every couple of years, time in your day to help people, time in your day to train for those marathons, and time in your day to spend time with nieces or family.</p>
+          <p><span class="spk">Nick · 09:38</span>Now, that's not necessarily expensive because your You're not driven by nice cars. We know that because you drive an EV.</p>
+          <p><span class="spk">Jason · 09:49</span>Oh, great drive-by.</p>
+          <p><span class="spk">Nick · 09:50</span>I just had to get that in there.</p>
+          <p><span class="spk">Jason · 09:51</span>It's a great drive-by.</p>
+          <p><span class="spk">Nick · 09:52</span>You know, you clearly like being around your friends. Most of your friends are going to be based in Melbourne.</p>
+          <p><span class="spk">Jason · 09:57</span>So you can't go far because of the range on the electric vehicle.</p>
+          <p><span class="spk">Nick · 10:00</span>You can't go very far anyway.</p>
+          <p><span class="spk">Jason · 10:01</span>680 kilometres. Give me a break.</p>
+          <p><span class="spk">Nick · 10:03</span>You're mostly stuck in Melbourne. So, but do you see how it's— we're just getting deeper beyond the money. And then what you have to do is you have to take that and then attach it to a figure. And then that's when you can work out what your figure should be.</p>
+          <p><span class="spk">Nick · 10:19</span>So, you know, if you say to us, well, as a financial planning client, I need $20,000 every 2 years because I want to go overseas.</p>
+          <p><span class="spk">Jason · 10:29</span>Yep.</p>
+          <p><span class="spk">Nick · 10:29</span>I want to go overseas, I want to travel business. So there's $6,000 gone and I probably want 2 weeks over there. I need another $14,000. I'm just picking numbers here.</p>
+          <p><span class="spk">Jason · 10:34</span>Yeah, no, that's fine.</p>
+          <p><span class="spk">Nick · 10:36</span>So I need $20,000 a year every 2 years and then I probably need another $5,000 a year because I want to at least go domestic, you know, every year on a holiday. This is my living expenses. So it's actually doing the numbers based on what your enough is. And I sat down with Luke Mace, who's one of our brilliant financial planners here.</p>
+          <p><span class="spk">Nick · 10:55</span>He's been on our podcast before talking about retirement. Luke has probably in the vicinity of 300. He's one of the better advisers you'll see from a numbers point of view, but he's got around 300 groups or couples that he advises.</p>
+          <p><span class="spk">Nick · 11:16</span>And a lot of those would be—</p>
+          <p><span class="spk">Jason · 11:17</span>Including Case and I, and he's trying to pin me down to have this conversation. So now I know how daunting it is. I'm going to be well prepared.</p>
+          <p><span class="spk">Nick · 11:22</span>A lot of those, or a majority of those people are either in retirement or on the path to retirement. Yeah. And I just sat down with him and got some numbers out of him and it was quite surprising, which is why I wanted to share them. But my first question to him was, forget about what the government says and forget about some of the stats about what people need to retire from an income point of view and then a lump sum point of view.</p>
+          <p><span class="spk">Nick · 11:47</span>I said, what are most mum and dads that you see— and we're very much a mum and dad business— what's a comfortable amount of income for them in retirement? What do you think he said?</p>
+          <p><span class="spk">Jason · 11:59</span>Mum and dad combined? Yep. Comfortable?</p>
+          <p><span class="spk">Nick · 12:02</span>Yep.</p>
+          <p><span class="spk">Jason · 12:04</span>Somewhere close to $100K?</p>
+          <p><span class="spk">Nick · 12:06</span>Spot on.</p>
+          <p><span class="spk">Jason · 12:07</span>Yeah.</p>
+          <p><span class="spk">Nick · 12:08</span>So his exact response to me was $70,000 to $80,000. And remember, this is not taxed. You're in pension phase. So this is cash flow. That's for regular living costs. And remember, you've got— this is assuming no mortgage.</p>
+          <p><span class="spk">Nick · 12:23</span>So you've got no debt. Which is the biggest cost. So you think about it, like it's quite a good amount of money.</p>
+          <p><span class="spk">Jason · 12:28</span>It's comfortable.</p>
+          <p><span class="spk">Nick · 12:29</span>You're just really spending money on yourself to live. And he said, if you want to do a significant trip annually, add $20K. So we got to $100K.</p>
+          <p><span class="spk">Jason · 12:38</span>Okay, yeah, yeah.</p>
+          <p><span class="spk">Nick · 12:38</span>We got to $100K. That's nearly $2,000 a week with just living expenses and expenditure.</p>
+          <p><span class="spk">Jason · 12:44</span>No, with no fuel to pay for.</p>
+          <p><span class="spk">Nick · 12:47</span>That's, yeah, it's pretty good. Again, I'll reiterate, we're assuming we own a house here, which most people do by the time they get to 65. So then we wanted to work out, well, what would you need in superannuation or a net or netting income or net investment to be able to achieve that?</p>
+          <p><span class="spk">Nick · 13:05</span>So, and this is a number that I think will be quite surprising. So getting to age 65, if you want to earn or live on $100,000 until age 92, and if you look at most government websites, they talk about age 92 and we'll talk a bit more about that in a minute.</p>
+          <p><span class="spk">Nick · 13:25</span>If you want to live on $100,000 a year from age 65 to 92 and you've got a house with no debt, you would need around $1.1 million within your super fund.</p>
+          <p><span class="spk">Jason · 13:37</span>Okay.</p>
+          <p><span class="spk">Nick · 13:38</span>That surprise you?</p>
+          <p><span class="spk">Jason · 13:40</span>Yeah. Yes and no. Yeah, I mean, it's a big number. It's a big number. But when I think about it now, I'm 38. Yeah. I've already got a couple hundred thousand from working since I was 15. I know the power of compounding interest. It doesn't feel unachievable.</p>
+          <p><span class="spk">Jason · 13:57</span>Like with continuing to make the right decisions.</p>
+          <p><span class="spk">Nick · 14:00</span>You'll get there with your employer super contributions. 'Cause what you're gonna see, which is what we see consistently, is once people get to that $200,000 and above mark, even $150,000, they start to see these significant jumps. Because if you've got $200,000 in there, I'm just picking a number.</p>
+          <p><span class="spk">Nick · 14:17</span>If you're on $150,000, you've basically got just north of $15,000 going in there a year. Plus if it's on average earning, let's say conservative on growth, 8%. So you've got $15,000 going in from your employer, a little bit more, plus it's earned 8%, so 16% returns, it's jumped by $30,000.</p>
+          <p><span class="spk">Nick · 14:34</span>So it'll start to jump for you. And most people at that $150,000 to $200,000, that's when they go, holy shit, this is significant. So most people though would think about that and they go, hang on, 65 to 92, that's 27 years at $100,000, that's $2.7 million.</p>
+          <p><span class="spk">Nick · 14:53</span>That does make sense, right?</p>
+          <p><span class="spk">Jason · 14:55</span>You got the numbers going, Nick?</p>
+          <p><span class="spk">Nick · 14:57</span>Yeah. So the first thing you need to remember is this should conservatively earn you, whilst it's even in retirement, let's say it earns you 6% a year. If you've got $1.1 million in there, 6% of that is $66,000.</p>
+          <p><span class="spk">Jason · 15:15</span>Yep.</p>
+          <p><span class="spk">Nick · 15:15</span>So that's $66,000 in earnings. Without touching the capital. Yeah.</p>
+          <p><span class="spk">Jason · 15:23</span>Wow. So for the couple that needs $100,000 to be comfortable.</p>
+          <p><span class="spk">Nick · 15:29</span>Yeah.</p>
+          <p><span class="spk">Jason · 15:30</span>Yeah. Not even making a dent.</p>
+          <p><span class="spk">Nick · 15:31</span>Yeah. So if you've got $66,000 and you're pulling $100,000 out, you've effectively, you're pulling out, you know, 34% of the capital. So that just goes to show the power of returns. The other thing is We do have this thing in this country called pension payments.</p>
+          <p><span class="spk">Nick · 15:47</span>And how the pension payments work is there's cutoffs. So if you're a homeowner, I think the cutoff is $330K roughly of investments outside of the home. If you're under that, you get the full pension.</p>
+          <p><span class="spk">Nick · 16:04</span>So what'll generally happen is when people retire, if they've got this kind of money, they won't get any pension. But over time, as they start to dwindle down that $1.1 million because they're using some of it, eventually they'll get into the bracket where they qualify for a pension.</p>
+          <p><span class="spk">Jason · 16:23</span>Is that rate indexed? Does it go up?</p>
+          <p><span class="spk">Nick · 16:25</span>Yes, it is. Cool. Yep. But you also got to remember, this is today's money.</p>
+          <p><span class="spk">Jason · 16:28</span>Yeah, of course.</p>
+          <p><span class="spk">Nick · 16:29</span>So, you know, we will need more. We're talking about today's money. So, but when we do these plans, we actually allow for that. So we allow for indexation and all that kind of stuff. So otherwise that would be irresponsible.</p>
+          <p><span class="spk">Jason · 16:45</span>Yeah, of course.</p>
+          <p><span class="spk">Nick · 16:46</span>All organisations should work on indexation and take less. Anyway, so I think a lot of people think, oh, I've got $1.1 million, I can't get the pension. Well, no, you can't, but you will. Because as you start to draw down on that, eventually you will get the pension. It's like a sliding scale.</p>
+          <p><span class="spk">Jason · 17:02</span>Yep.</p>
+          <p><span class="spk">Nick · 17:02</span>So what will happen when you first retire is majority of your income will come from super. And over time, that will change. For a long time, it'll come from super. Then over time, eventually the pension will kick in and then the pension will increase as your super fund amount decreases.</p>
+          <p><span class="spk">Nick · 17:18</span>Make sense?</p>
+          <p><span class="spk">Jason · 17:18</span>Yeah, definitely.</p>
+          <p><span class="spk">Nick · 17:19</span>What we generally see is people that retire are couples and we're talking about the current baby boomer population. So they're not going to have as much super as you and I are going to have because we've been earning it for longer at higher incomes. But they might have combined $500,000, $600,000, $700,000.</p>
+          <p><span class="spk">Nick · 17:36</span>That's not crazy, that's not crazy money. That happens all the time. Then they might have a house in the northern suburbs of Melbourne where they raise their family that's now worth $2.5 million 'cause it's on 650 square metres and it's a big home. They don't need that.</p>
+          <p><span class="spk">Nick · 17:51</span>He doesn't want to mow the lawns. So they want to sell down and they're comfortable that they can sell their house and they can get into something smaller, whether that be a villa they could probably get into a villa for $1.5 million. So they might say, well, we've sold for $2.5 million.</p>
+          <p><span class="spk">Nick · 18:07</span>After costs, we've got $2.45 million. We're gonna spend $1.5 million to get into a villa. We've got $950,000. Is that right? Give or take. We're gonna put $600,000 into super as a downsizer contribution.</p>
+          <p><span class="spk">Nick · 18:23</span>So our super's gone from $600,000 or $700,000 to $1.2 million to $1.3 million. We're sorted. We've got 3 kids, we've got $450,000 left. We're gonna split that up between all of them. They're all gonna get $130,000, whatever that is each. That's a very common scenario.</p>
+          <p><span class="spk">Nick · 18:39</span>So you can see how the normal mum and dad who bought a house in the north in Melbourne that's now worth $2.5 million has got $500,000 or a little bit more in super, can get that up to $1 million pretty quickly with a downsizer and help their kids out and then live on $100,000 a year till they're 92.</p>
+          <p><span class="spk">Nick · 18:54</span>What's your next question?</p>
+          <p><span class="spk">Jason · 18:57</span>When, when do I get my booking with Luke Mason? I keep—</p>
+          <p><span class="spk">Nick · 19:00</span>I keep— I was hoping you would say, but with the rise of peptides, what happens if we live past 92?</p>
+          <p><span class="spk">Jason · 19:06</span>Well, no, Nico, actually, what, what does happen when I live past 92? How can I continue to afford my supplements and keep me looking youthful and young? Um, that'll be— I should be approaching hopefully my 50th marathon's done by then too. But you know, 92 give it another crack.</p>
+          <p><span class="spk">Nick · 19:23</span>So in the world as we know it today, very early in the peptide journey, um, but generally what happens is once you get to that age, um, you're going into a home of some sort, um, whether that's retirement home or whether that's care depending on your health, um, and you'll often see that people will have a significant asset because remember, they bought a downsizer house at age 65.</p>
+          <p><span class="spk">Nick · 19:53</span>So we're talking, you know, 27 years later, what do you think that asset's worth?</p>
+          <p><span class="spk">Jason · 19:58</span>Conservatively 3. Yeah.</p>
+          <p><span class="spk">Nick · 19:59</span>So they've got levers to pull. So depending on their health, quite often you'll see people that will downsize again or will use that, will sell that and use that to go into a home of some sort, bonds and all that kinds of stuff. So If you're 92 and you're still really healthy, people will then generally leverage off the owner-occupied home.</p>
+          <p><span class="spk">Nick · 20:21</span>You can increase your pension by leveraging off your owner-occupied home with the government if the pension's not enough. There's lots of things that you can do past that age, but that's very rarely a problem. We actually are dealing with a lot of people in that situation at the moment because most of their kids are our clients.</p>
+          <p><span class="spk">Nick · 20:40</span>So we might have clients that are, age 65 in retirement, they're now starting to deal with parents in their 90s. So we are seeing this stuff and there's generally, when with the family, if there's still a home in there, not the family home because they've sold down, but there's still a decent property in there, you've got levers to pull.</p>
+          <p><span class="spk">Nick · 21:00</span>So that's generally what we see. Now that could change over time as we continue to live longer. So that super amount required might change. But when I hear that number, $1.1 million, I know for a lot of our clients that is more than achievable based on the sell-down of the family home and just some good planning, generally from only age 50 to 55.</p>
+          <p><span class="spk">Nick · 21:25</span>That's when people get serious about this. Imagine the impact you can have if you get serious about it when you're 40. You know.</p>
+          <p><span class="spk">Jason · 21:30</span>Or 30.</p>
+          <p><span class="spk">Nick · 21:31</span>Or 30. That's very difficult for people to do. And the only reason I say that is because they've got other responsibilities that are higher.</p>
+          <p><span class="spk">Jason · 21:39</span>Family, buying a home.</p>
+          <p><span class="spk">Nick · 21:40</span>They want to buy houses. They want to educate kids. Even, you know, in their 40s now, they're educating kids. So it is difficult to get people across this. 'Cause sometimes you're just trying to, you know, make ends meet every week. But if you've got the ability, and we talk about structure, if you've got the ability to invest $50 a week, if it's for your retirement, why not do it in super?</p>
+          <p><span class="spk">Nick · 22:02</span>We know what the tax advantages are. What is the endgame here? If it is for the endgame, then you might as well put it into super. So—</p>
+          <p><span class="spk">Jason · 22:12</span>Another Innovate Planner, Tim, just said that compounding interest is the 8th wonder of the world.</p>
+          <p><span class="spk">Nick · 22:16</span>The 8th wonder in the world. No doubt about it. So, Again, I just think it's good to unpack this stuff every now and then because I spoke to Tommy, our producer, who we were talking about this at the start of the day and he was talking about, he saw something floated that you needed $2 million to retire comfortably.</p>
+          <p><span class="spk">Nick · 22:33</span>And I think it's really good to sit down and ask yourself the questions that are not money related and then tie that into money and understand what that money would need to look like. To give you that life. And if you've got that figure, then you can make changes.</p>
+          <p><span class="spk">Nick · 22:49</span>Or you might be pleasantly surprised, then you might increase your marathons in retirement.</p>
+          <p><span class="spk">Jason · 22:59</span>I think as well, knowledge is power and understanding these numbers has taken away, even talking through this with you now has taken away this daunting idea of meeting with Macy was going to be like, oh, looking at our numbers and our budgets and oh, maybe I'm not where I need to be.</p>
+          <p><span class="spk">Jason · 23:14</span>But essentially, you know, that number sounds achievable. And, you know, it's doing the work, it's doing the boring stuff sometimes of actually understanding and not that reflecting on where you want to be in life. That's not the boring part, but it can be hard to actually envision it.</p>
+          <p><span class="spk">Jason · 23:29</span>Yeah, but the process that you've broken down for us today, I think it's quite simple in a sense. And it stops, it stops it from being scary, stops the numbers from, you know, overtaking the emotional side of it.</p>
+          <p><span class="spk">Nick · 23:39</span>It's a really good point. And something you said there resonated because one of the The challenge that we have is people think, I'm behind, I feel like I'm just getting by. So, you know, I've got a little bell curve that I used to draw all the time that would, if it didn't do anything else, it would give people comfort.</p>
+          <p><span class="spk">Nick · 23:58</span>And we talk about living costs throughout life. And so the bottom of the bell curve was your age, and then the vertical line was living costs. And you picture a bell curve. And you might start in your 20s and as you get into your 20s, you might start to, your rent and all of a sudden you've got cash flow to go out.</p>
+          <p><span class="spk">Nick · 24:18</span>You've started working, things are cool. You go up, you have a child or you wanna buy a house. All of a sudden cost of living goes up until you get to the absolute peak, which is generally mortgage and kids at school. And that's when people stress the most and they think, holy shit, I'm not getting ahead. How am I gonna retire?</p>
+          <p><span class="spk">Nick · 24:35</span>You know, so it's just unpacking that for people and saying, hey, you know what, this is where you are on the bell curve. So don't stress. You're in a phase of life where you actually, your main responsibility is to get your kids educated and pay down your debts.</p>
+          <p><span class="spk">Nick · 24:51</span>So if you're doing that, you're actually pushing through the bell curve and you're getting yourself closer to a point where you're then gonna be able to start to really create some wealth. You're already creating wealth by buying a house and paying your debt off. So, and you're creating wealth in a way by every year that goes by that you pay a school fee is one school fee less that you've gotta pay.</p>
+          <p><span class="spk">Nick · 25:10</span>So a lot of what we do is just giving people the comfort as to, hey, this is where you are at the moment and that's okay. You're doing pretty well because you've got all this on your plate. Knowing that when you get to here, then we start making some significant inroads. So if it does nothing else, it definitely gives people comfort as long as they're doing the right things, that hey, it's not all doom and gloom because it seems really expensive at the moment.</p>
+          <p><span class="spk">Jason · 25:35</span>Awesome, mate. Absolutely love it. I, uh, I think this is one of those ones that'll go down as super valuable and meaningful to so many people that have tuned in to hear this today. Um, if you have liked what you've heard, please share, send to someone else, because this could be an absolute life-changing thing for them to work through.</p>
+          <p><span class="spk">Jason · 25:51</span>Um, next episode I will be wearing my What is Enough? Or All You Need Is Enough Innovate jumper. Thank you to Nick and the Innovate team for sponsoring us for that. Just remember, your parents' retirement is not your retirement and the number on someone else's spreadsheet is not your number either.</p>
+          <p><span class="spk">Jason · 26:09</span>Do the work first and the numbers stop being scary. Till next time, game over. This podcast is for educational and informational purposes only. The conversations are of a general nature and do not qualify as financial or tax advice. We recommend before you make any financial decisions, you consult a licensed professional.</p>
+          <p><span class="spk">Jason · 26:28</span>Individuals on the podcast may hold positions in the companies discussed.</p>
+        </div>
+      </details>
+
+    </div>
+
+    <!-- LISTEN:START (build_episode.py rewrites the 3 URLs + iframe title per episode; player dropped if no spotifyEmbedUrl) -->
+
+    <div class="listen">
+      <a href="https://open.spotify.com/search/the%20numbers%20game%20podcast" target="_blank" rel="noopener" aria-label="Listen to this episode on Spotify">
+        <svg viewBox="0 0 24 24"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.52 17.34c-.24.36-.66.48-1.02.24-2.82-1.74-6.36-2.1-10.56-1.14-.42.12-.78-.18-.9-.54-.12-.42.18-.78.54-.9 4.56-1.02 8.52-.6 11.64 1.32.42.18.48.66.3 1.02zm1.44-3.3c-.3.42-.84.6-1.26.3-3.24-1.98-8.16-2.58-11.94-1.38-.48.12-1.02-.12-1.14-.6-.12-.48.12-1.02.6-1.14 4.32-1.32 9.72-.66 13.44 1.62.36.18.54.78.3 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.3c-.6.18-1.2-.18-1.38-.72-.18-.6.18-1.2.72-1.38 4.26-1.26 11.28-1.02 15.72 1.62.54.3.72 1.02.42 1.56-.3.42-1.02.6-1.56.3z"/></svg>
+        Spotify
+      </a>
+      <a href="https://podcasts.apple.com/search?term=the%20numbers%20game" target="_blank" rel="noopener" aria-label="Listen to this episode on Apple Podcasts">
+        <svg viewBox="0 0 24 24"><path d="M5.34 0A5.328 5.328 0 000 5.34v13.32A5.328 5.328 0 005.34 24h13.32A5.328 5.328 0 0024 18.66V5.34A5.328 5.328 0 0018.66 0H5.34zm6.525 2.568c2.336 0 4.448.902 6.056 2.587 1.224 1.272 1.912 2.619 2.264 4.392l.04.23c.04.272-.16.527-.432.567a.505.505 0 01-.567-.431l-.04-.213c-.312-1.57-.92-2.747-2.004-3.867-1.428-1.496-3.293-2.294-5.393-2.294-2.1 0-3.966.798-5.394 2.294-1.084 1.12-1.692 2.298-2.004 3.867l-.04.213a.507.507 0 01-.567.431.504.504 0 01-.432-.567l.04-.23c.352-1.773 1.04-3.12 2.264-4.392 1.608-1.685 3.72-2.587 6.056-2.587h.153zm.136 3.033c1.74 0 3.312.67 4.527 1.934.883.916 1.394 1.93 1.663 3.253l.04.23a.505.505 0 01-.431.567.503.503 0 01-.567-.432l-.04-.212c-.23-1.112-.659-1.97-1.396-2.732-1.052-1.1-2.404-1.672-3.9-1.672s-2.849.572-3.901 1.672c-.737.762-1.167 1.62-1.396 2.732l-.04.212a.503.503 0 01-.567.432.505.505 0 01-.432-.567l.04-.23c.27-1.323.78-2.337 1.664-3.253 1.215-1.264 2.787-1.934 4.527-1.934h.21zm-.078 3.05c1.092 0 2.091.424 2.89 1.22.582.58.924 1.245 1.107 2.15l.04.218a.501.501 0 01-.424.568.499.499 0 01-.568-.424l-.04-.198c-.146-.724-.413-1.253-.871-1.716-.63-.63-1.398-.957-2.226-.957s-1.595.328-2.225.957c-.459.463-.726.992-.871 1.716l-.04.198a.499.499 0 01-.568.424.501.501 0 01-.424-.568l.04-.219c.183-.904.525-1.569 1.106-2.149.8-.796 1.799-1.22 2.89-1.22h.184zM12 14.07a2.477 2.477 0 012.48 2.478A2.477 2.477 0 0112 19.024a2.477 2.477 0 01-2.48-2.477A2.477 2.477 0 0112 14.07z"/></svg>
+        Apple
+      </a>
+      <a class="yt-pill" href="https://www.youtube.com/@thenumbersgamepodcast?sub_confirmation=1" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.12-2.14C19.5 3.55 12 3.55 12 3.55s-7.5 0-9.38.51A3 3 0 0 0 .5 6.2 31.4 31.4 0 0 0 0 12a31.4 31.4 0 0 0 .5 5.8 3 3 0 0 0 2.12 2.14c1.88.51 9.38.51 9.38.51s7.5 0 9.38-.51a3 3 0 0 0 2.12-2.14A31.4 31.4 0 0 0 24 12a31.4 31.4 0 0 0-.5-5.8zM9.55 15.57V8.43L15.82 12z"/></svg>
+        Subscribe
+      </a>
+    </div>
+    <!-- LISTEN:END -->
+
+    <div class="relsec">
+      <span class="rtitle">Discover more</span>
+      <div class="relgrid">
+        <a class="relcard" href="/how-to-get-ahead-in-your-20s">
+          <img src="https://i.ytimg.com/vi/OVk_TGBmlTg/hqdefault.jpg" alt="EP 290 thumbnail">
+          <span class="rt">How to Get Ahead in Your 20s</span>
+          <span class="rfoot"><span class="rwhy">17 August 2026</span><span class="rtag">EP 290</span></span>
+        </a>
+        <a class="relcard" href="/build-or-buy-a-business">
+          <img src="https://i.ytimg.com/vi/cdGolkBKKtU/hqdefault.jpg" alt="EP 289 thumbnail">
+          <span class="rt">Build or Buy a Business?</span>
+          <span class="rfoot"><span class="rwhy">10 August 2026</span><span class="rtag">EP 289</span></span>
+        </a>
+        <a class="relcard" href="/why-australia-isn-t-as-broken-as-the-media-says">
+          <img src="https://i.ytimg.com/vi/mRgwGlZkcdU/hqdefault.jpg" alt="EP 288 thumbnail">
+          <span class="rt">Why Australia Isn't as Broken as the Media Says</span>
+          <span class="rfoot"><span class="rwhy">3 August 2026</span><span class="rtag">EP 288</span></span>
+        </a>
+        <a class="relcard" href="/should-australia-ditch-super">
+          <img src="https://i.ytimg.com/vi/kaeaiK_FwDg/hqdefault.jpg" alt="EP 287 thumbnail">
+          <span class="rt">Should Australia Ditch Super?</span>
+          <span class="rfoot"><span class="rwhy">27 July 2026</span><span class="rtag">EP 287</span></span>
+        </a>
+        <a class="relcard" href="/pokemon-cards-vs-bitcoin-gold-and-the-asx">
+          <img src="https://i.ytimg.com/vi/7PHS9HCqNvM/hqdefault.jpg" alt="EP 286 thumbnail">
+          <span class="rt">Pokemon Cards vs Bitcoin, Gold and the ASX</span>
+          <span class="rfoot"><span class="rwhy">20 July 2026</span><span class="rtag">EP 286</span></span>
+        </a>
+        <a class="relcard" href="/buying-commercial-property-with-your-super-in-2026">
+          <img src="https://i.ytimg.com/vi/RAQ80ecsDq0/hqdefault.jpg" alt="EP 285 thumbnail">
+          <span class="rt">Buying Commercial Property With Your Super in 2026</span>
+          <span class="rfoot"><span class="rwhy">13 July 2026</span><span class="rtag">EP 285</span></span>
+        </a>
+      </div>
+      <div class="reldots" id="reldots"></div>
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="footgrid">
+      <div class="fcol">
+        <div class="foot-label">Follow us on</div>
+        <div class="socials">
+          <a href="https://www.instagram.com/thenumbersgamepodcast/" target="_blank" rel="noopener" aria-label="The Numbers Game on Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.8.2 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1 .4 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .4-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1-.4-2.2-.1-1.3-.1-1.7-.1-4.9s0-3.6.1-4.9c.1-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.4 2.2-.4 1.3-.1 1.7-.1 4.9-.1zm0 2c-3.1 0-3.5 0-4.8.1-1.1.1-1.5.2-1.8.3-.4.2-.7.3-1 .6-.3.3-.5.6-.6 1-.1.3-.3.7-.3 1.8-.1 1.3-.1 1.7-.1 4.8s0 3.5.1 4.8c.1 1.1.2 1.5.3 1.8.2.4.3.7.6 1 .3.3.6.5 1 .6.3.1.7.3 1.8.3 1.3.1 1.7.1 4.8.1s3.5 0 4.8-.1c1.1-.1 1.5-.2 1.8-.3.4-.2.7-.3 1-.6.3-.3.5-.6.6-1 .1-.3.3-.7.3-1.8.1-1.3.1-1.7.1-4.8s0-3.5-.1-4.8c-.1-1.1-.2-1.5-.3-1.8-.2-.4-.3-.7-.6-1-.3-.3-.6-.5-1-.6-.3-.1-.7-.3-1.8-.3-1.3-.1-1.7-.1-4.8-.1zm0 3.4a5.4 5.4 0 1 1 0 10.8 5.4 5.4 0 0 1 0-10.8zm0 2a3.4 3.4 0 1 0 0 6.8 3.4 3.4 0 0 0 0-6.8zm5.6-2.3a1.3 1.3 0 1 1-2.6 0 1.3 1.3 0 0 1 2.6 0z"/></svg></a>
+          <a href="https://www.tiktok.com/@thenumbersgamepodcast" target="_blank" rel="noopener" aria-label="The Numbers Game on TikTok"><svg viewBox="0 0 24 24"><path d="M12.53.02C13.84 0 15.14.01 16.44 0c.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg></a>
+          <a href="https://www.linkedin.com/company/the-numbers-game-podcast/" target="_blank" rel="noopener" aria-label="The Numbers Game on LinkedIn"><svg viewBox="0 0 24 24"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.24 8.25h4.52V23H.24V8.25zM8.34 8.25h4.33v2.01h.06c.6-1.14 2.08-2.34 4.28-2.34 4.58 0 5.42 3.01 5.42 6.92V23h-4.51v-7.16c0-1.71-.03-3.91-2.38-3.91-2.39 0-2.75 1.86-2.75 3.78V23H8.34V8.25z"/></svg></a>
+          <a href="https://www.facebook.com/profile.php?id=100071290388343" target="_blank" rel="noopener" aria-label="The Numbers Game on Facebook"><svg viewBox="0 0 24 24"><path d="M24 12.07C24 5.41 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.04V9.41c0-3.02 1.8-4.7 4.54-4.7 1.31 0 2.68.24 2.68.24v2.97h-1.5c-1.5 0-1.96.93-1.96 1.89v2.26h3.32l-.53 3.5h-2.8V24C19.62 23.1 24 18.1 24 12.07z"/></svg></a>
+          <a href="https://www.youtube.com/@thenumbersgamepodcast" target="_blank" rel="noopener" aria-label="The Numbers Game on YouTube"><svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.2C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31.7 31.7 0 0 0 0 12a31.7 31.7 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.2A31.7 31.7 0 0 0 24 12a31.7 31.7 0 0 0-.5-5.8zM9.6 15.6V8.4L15.8 12z"/></svg></a>
+        </div>
+      </div>
+      <div class="fcol">
+        <div class="foot-label">Brought to you by</div>
+        <div class="sponsors">
+          <a href="https://www.inovayt.com.au/" target="_blank" rel="noopener"><img src="assets/inovayt-white.png" alt="Inovayt"></a>
+          <a href="https://futureadvisory.com.au/" target="_blank" rel="noopener"><img src="assets/future-advisory-white.png" alt="Future Advisory"></a>
+        </div>
+      </div>
+      <div class="fcol produced">
+        <div class="foot-label">Produced by</div>
+        <a href="https://www.vidpod.com.au/" target="_blank" rel="noopener"><img src="assets/vidpod-white.png" alt="VIDPOD"></a>
+      </div>
+    </div>
+    <div class="footbar">
+      <details class="footnav-dd">
+        <summary><svg class="ham" viewBox="0 0 24 24"><path d="M3 6h18v2H3zM3 11h18v2H3zM3 16h18v2H3z"/></svg> Menu</summary>
+        <div class="dd-links">
+          <a href="/">Home</a><a href="/episodes">Every episode</a><a href="/adventure">Choose your own adventure</a><a href="/about">About the show</a><a href="/nick-reilly">Nick Reilly</a><a href="/jason-robinson">Jason Robinson</a><a href="/contact">Contact</a>
+        </div>
+      </details>
+      <div class="copyright">© 2026 The Numbers Game</div>
+    </div>
+  </footer>
+
+  <script>
+    var VIDEO='tzKP26vy3_4';
+    var CHAPTERS=[
+      {t:"00:00",s:0,title:"Intro"},
+      {t:"04:48",s:288,title:"Why most people start retirement wrong"},
+      {t:"05:08",s:308,title:"Picturing your ideal retirement"},
+      {t:"06:20",s:380,title:"Ask what makes you happy first"},
+      {t:"08:35",s:515,title:"What fills your day at 65?"},
+      {t:"10:36",s:636,title:"Attaching numbers to what you want"},
+      {t:"12:08",s:728,title:"Real cost of a comfortable retirement"},
+      {t:"13:25",s:805,title:"Super figures for a $100K retirement"},
+      {t:"14:57",s:897,title:"Compound returns doing the heavy lifting"},
+      {t:"15:31",s:931,title:"When the pension kicks in"},
+      {t:"17:36",s:1056,title:"Downsizer move that boosts your super"},
+      {t:"19:23",s:1163,title:"What if you live past 92?"},
+      {t:"21:25",s:1285,title:"Getting serious at 40 vs 55"},
+      {t:"24:18",s:1458,title:"The bell curve, why you're not behind"}
+    ];
+    var QUESTIONS=[
+      {q:"What should you ask yourself first about retirement?",s:308},
+      {q:"Where should retirement planning start?",s:380},
+      {q:"What is a comfortable retirement income for a couple?",s:728},
+      {q:"How much extra do you need for annual travel in retirement?",s:749},
+      {q:"How much super do you need to retire on 100,000 a year?",s:805},
+      {q:"How much does 1.1 million in super earn a year?",s:897},
+      {q:"What is the age pension asset cutoff for homeowners?",s:947},
+      {q:"Can you get the age pension if you have 1.1 million in super?",s:1006},
+      {q:"How does a downsizer contribution boost your super?",s:1087},
+      {q:"Do you need 2 million dollars to retire?",s:1336}
+    ];
+
+    var chEl=document.getElementById('chapters');
+    CHAPTERS.forEach(function(c){var b=document.createElement('button');b.className='chapter';b.onclick=function(){startAt(c.s)};b.innerHTML='<span class="tc">'+c.t+'</span><span class="cx">'+c.title+'</span>';chEl.appendChild(b);});
+    document.getElementById('chcount').textContent=CHAPTERS.length;
+    var qEl=document.getElementById('qa');
+    QUESTIONS.forEach(function(q){var b=document.createElement('button');b.className='q';b.onclick=function(){startAt(q.s)};b.innerHTML='<span class="qm">?</span><span class="qx">'+q.q+'</span><span class="go">›</span>';qEl.appendChild(b);});
+    document.getElementById('qcount').textContent=QUESTIONS.length;
+
+    /* Mobile nav dropdown. */
+    var burger=document.getElementById('navburger'), navdrop=document.getElementById('navdrop');
+    if(burger&&navdrop){burger.addEventListener('click',function(){
+      navdrop.hidden=!navdrop.hidden;
+      burger.setAttribute('aria-expanded', navdrop.hidden?'false':'true');
+    });}
+
+    /* Voice-note button reveals the recorder; × tucks it away. */
+    var vbtn=document.getElementById('vbtn'), vslot=document.getElementById('vslot'), vclose=document.getElementById('vclose');
+    if(vbtn&&vslot){vbtn.addEventListener('click',function(){vslot.hidden=!vslot.hidden;});}
+    if(vclose&&vslot){vclose.addEventListener('click',function(){vslot.hidden=true;});}
+
+    /* Keep-exploring dots: only shown when the strip actually scrolls (mobile). */
+    var rg=document.querySelector('.relgrid'), rd=document.getElementById('reldots');
+    if(rg&&rd){
+      var relCards=rg.querySelectorAll('.relcard');
+      relCards.forEach(function(){rd.appendChild(document.createElement('span'))});
+      var updDots=function(){
+        var scrollable=rg.scrollWidth>rg.clientWidth+4;
+        rd.style.display=scrollable?'flex':'none';
+        if(!scrollable)return;
+        var i=Math.round(rg.scrollLeft/(rg.scrollWidth-rg.clientWidth)*(relCards.length-1));
+        rd.querySelectorAll('span').forEach(function(s,n){s.classList.toggle('on',n===i)});
+      };
+      rg.addEventListener('scroll',updDots,{passive:true});
+      window.addEventListener('resize',updDots);
+      updDots();
+    }
+
+    /* Explore tabs: swap the visible panel; the row stays put so you never lose your place. */
+    var tabBtns=document.querySelectorAll('.tabbtn');
+    tabBtns.forEach(function(b){
+      b.addEventListener('click',function(){
+        tabBtns.forEach(function(o){o.classList.remove('on')});
+        document.querySelectorAll('.tpanel').forEach(function(p){p.hidden=true});
+        b.classList.add('on');
+        document.getElementById(b.getAttribute('data-panel')).hidden=false;
+      });
+    });
+
+    /* YouTube: clean facade, then real player on demand. Seek without yanking to top. */
+    var player=null, ready=false, apiReady=false, pending=null;
+    window.onYouTubeIframeAPIReady=function(){apiReady=true; if(pending!=null){var s=pending;pending=null;createPlayer(s);}};
+    function createPlayer(sec){
+      var wrap=document.getElementById('player'); wrap.innerHTML='<div id="yt"></div>';
+      player=new YT.Player('yt',{videoId:VIDEO,playerVars:{autoplay:1,rel:0,modestbranding:1,playsinline:1,start:Math.floor(sec||0)},events:{onReady:function(){ready=true;}}});
+    }
+    function nudge(){
+      var p=document.getElementById('player-wrap'), r=p.getBoundingClientRect();
+      if(r.bottom<80 || r.top>window.innerHeight-90){ p.scrollIntoView({behavior:'smooth',block:'start'}); }
+    }
+    function startAt(sec){
+      nudge();
+      if(player&&ready){ player.seekTo(sec,true); player.playVideo(); return; }
+      if(apiReady){ createPlayer(sec); } else { pending=sec; }
+    }
+    document.getElementById('facade').addEventListener('click',function(){startAt(0);});
+    (function(){var s=document.createElement('script');s.src='https://www.youtube.com/iframe_api';document.head.appendChild(s);})();
+  </script>
+</body>
+</html>
