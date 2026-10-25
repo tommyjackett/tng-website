@@ -1,0 +1,733 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EP 306 · Draft EP 306 | Show Notes Pending | The Numbers Game</title>
+<meta name="description" content="[SHOW NOTES PENDING]">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" sizes="64x64" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="canonical" href="https://thenumbersgamepodcast.com.au/draft-ep-306">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="The Numbers Game">
+<meta property="og:title" content="EP 306 · Draft EP 306 | Show Notes Pending | The Numbers Game">
+<meta property="og:description" content="[SHOW NOTES PENDING]">
+<meta property="og:url" content="https://thenumbersgamepodcast.com.au/draft-ep-306">
+<meta property="og:image" content="https://i.ytimg.com/vi/kk-FH5JEEWw/maxresdefault.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+  :root{
+    --purple:#585af3; --purple-dark:#2c1b8a; --mint:#7ad9a8;
+    --white:#ffffff; --muted:rgba(255,255,255,.60); --dim:rgba(255,255,255,.42);
+    --line:rgba(255,255,255,.12); --card:rgba(255,255,255,.05); --card-hi:rgba(255,255,255,.09);
+    --display:'Anton',Impact,'Helvetica Neue',sans-serif;
+    --sans:'Inter',system-ui,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif;
+    --wrap:1280px;   /* page frame (nav spans this) */
+    --col:960px;     /* content column (player, tabs, text) */
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:var(--sans); color:var(--white); line-height:1.6; -webkit-font-smoothing:antialiased;
+    background:#12093a;
+    background-image:
+      radial-gradient(1200px 600px at 82% -6%, rgba(88,90,243,.45) 0%, transparent 55%),
+      radial-gradient(900px 700px at 5% 8%, rgba(122,217,168,.10) 0%, transparent 50%),
+      linear-gradient(180deg,#2c1b8a 0%,#1a1150 28%,#100b34 62%,#0b0820 100%);
+    background-attachment:fixed;
+  }
+  a{color:inherit}
+  .wrap{max-width:var(--wrap);margin:0 auto;padding:0 36px}
+  main.wrap{max-width:var(--col)}
+  @media(max-width:720px){.wrap{padding:0 22px}}
+
+  /* ── Navbar ── */
+  .nav{position:sticky;top:0;z-index:50;background:linear-gradient(180deg,rgba(24,15,74,.92),rgba(24,15,74,.72));backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+  .nav-in{max-width:var(--wrap);margin:0 auto;padding:11px 36px;display:flex;align-items:center;justify-content:space-between}
+  @media(max-width:720px){.nav-in{padding:11px 22px}}
+  .brand{display:block;line-height:0}
+  .brand img{height:36px;width:auto;display:block}
+  .navlinks{display:flex;gap:28px;align-items:center}
+  .navlinks a{text-decoration:none;font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);transition:.15s}
+  .navlinks a:hover{color:var(--white)}
+  .navlinks a.navtop{cursor:default}
+  .navgroup{position:relative;display:flex;align-items:center}
+  .navgroup .subnav{display:none;position:absolute;top:100%;left:50%;transform:translateX(-50%);padding-top:14px;min-width:180px}
+  .navgroup:hover .subnav,.navgroup:focus-within .subnav{display:block}
+  .subnav-in,.navgroup .subnav{z-index:60}
+  .navgroup .subnav a{display:block;background:#180f4a;border:1px solid var(--line);border-top:0;padding:12px 16px;font-size:12px;color:rgba(255,255,255,.85)}
+  .navgroup .subnav a:first-child{border-top:1px solid var(--line)}
+  .navgroup .subnav a:hover{background:#221768;color:var(--white)}
+  .navburger{display:none;background:none;border:1px solid var(--line);padding:8px 10px;cursor:pointer;color:var(--white);transition:.15s}
+  .navburger:hover{border-color:rgba(122,217,168,.6)}
+  .navburger svg{width:20px;height:20px;fill:currentColor;display:block}
+  .navdrop{display:none}
+  @media(max-width:720px){
+    .navlinks{display:none}
+    .navburger{display:block}
+    .navdrop{display:block;position:absolute;left:0;right:0;top:100%;
+      background:#180f4a;border-bottom:1px solid var(--line);box-shadow:0 24px 50px rgba(0,0,0,.45)}
+    .navdrop[hidden]{display:none}
+    .navdrop a{display:block;padding:15px 22px;text-decoration:none;font-size:14px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:rgba(255,255,255,.9);border-bottom:1px solid rgba(255,255,255,.06)}
+    .navdrop a:last-child{border-bottom:0}
+    .navdrop a.sub{padding-left:42px;font-size:13px;color:rgba(255,255,255,.72)}
+    .navdrop .navlabel{display:block;padding:15px 22px 6px;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.4)}
+  }
+
+  /* ── Hero / hook (marker-highlight system: purple hook wraps naturally, mint payoff below)
+     Rules: title splits at its natural break (colon/pipe/question mark). Front = hook (purple,
+     big), back = payoff (mint, smaller). No break in title = purple hook only. Highlights hug
+     the text (tight em padding tuned to Anton) and wrap via box-decoration-break — never
+     hand-pick line breaks or mint words. ── */
+  header.hero{padding:34px 0 6px}
+  .hook{--inx:clamp(8.4px,2.1vw,15.6px)} /* one shared text inset so hook + payoff first letters align */
+  .hook .hk{font-family:var(--display);font-weight:400;text-transform:uppercase;
+    font-size:clamp(28px,7vw,52px);line-height:1.3;letter-spacing:-.5px;text-wrap:balance}
+  .hook .hk span{color:var(--white);padding:.04em var(--inx) .02em;
+    background:linear-gradient(var(--purple),var(--purple)) 0 50%/100% 87% no-repeat;
+    -webkit-box-decoration-break:clone;box-decoration-break:clone}
+  .hook .pay{font-family:var(--display);font-weight:400;text-transform:uppercase;
+    font-size:clamp(16px,4vw,24px);line-height:1.5;letter-spacing:.6px;margin-top:8px;text-wrap:balance}
+  .hook .pay span{color:#0a0a0a;padding:.08em var(--inx) .04em;
+    background:linear-gradient(var(--mint),var(--mint)) 0 50%/100% 88% no-repeat;
+    -webkit-box-decoration-break:clone;box-decoration-break:clone}
+  /* no-hook titles: mid-split into two full-size rows, purple then mint */
+  .hook .hk span.hkrow{display:block;background:none;padding:0}
+  .hook .hk .hkrow+.hkrow{margin-top:8px}
+  .hook .hk span.mintseg{color:#0a0a0a;
+    background:linear-gradient(var(--mint),var(--mint)) 0 50%/100% 87% no-repeat}
+
+  /* ── Player (clean facade → real player on tap) ── */
+  .player-wrap{margin:24px 0 4px;scroll-margin-top:76px}
+  .player{position:relative;width:100%;padding-top:56.25%;border-radius:0;overflow:hidden;background:#000;box-shadow:0 30px 70px rgba(0,0,0,.5),0 0 0 1px rgba(255,255,255,.06)}
+  .facade{position:absolute;inset:0;border:0;cursor:pointer;background-size:cover;background-position:center;display:flex;align-items:center;justify-content:center;padding:0}
+  .facade .play{width:74px;height:74px;border-radius:50%;background:rgba(10,6,30,.40);border:2px solid rgba(255,255,255,.72);display:flex;align-items:center;justify-content:center;transition:.18s;-webkit-backdrop-filter:blur(1px);backdrop-filter:blur(1px)}
+  .facade:hover .play{background:rgba(88,90,243,.62);transform:scale(1.07);border-color:#fff}
+  .facade .play::after{content:"";border-style:solid;border-width:11px 0 11px 19px;border-color:transparent transparent transparent #fff;margin-left:5px}
+  .player iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+
+  /* ── Episode facts (bottom of the Summary panel — templated per episode) ── */
+  .sumfacts{margin:14px 10px 4px;padding-top:13px;border-top:1px solid rgba(255,255,255,.08);display:flex;flex-direction:column;gap:8px}
+  .fact{display:flex;gap:12px;font-size:13.5px}
+  .fact .fl{flex:none;width:104px;color:var(--dim);font-weight:600;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;padding-top:2px}
+  .fact .fv{color:rgba(255,255,255,.9);font-weight:500}
+  .fact .fv a{color:var(--mint);text-decoration:none;border-bottom:1px solid rgba(122,217,168,.4);transition:.15s}
+  .fact .fv a:hover{border-bottom-color:var(--mint)}
+
+  /* ── Episode tag (identity: black label hanging off the title corner) ── */
+  .eptag{display:inline-block;position:relative;left:-6px;margin-bottom:-7px;z-index:2;
+    background:#0a0a0a;color:var(--white);font-family:var(--display);font-weight:400;
+    font-size:13.5px;letter-spacing:1.5px;text-transform:uppercase;padding:6px 11px 4px}
+
+  /* ── Explore tabs (sticky mode switcher; one panel swaps below, nothing shoves) ── */
+  .explore{margin-top:22px}
+  .tabs{position:sticky;top:58px;z-index:40;display:flex;flex-wrap:wrap;gap:8px;padding:10px 0;
+    background:linear-gradient(180deg,rgba(18,10,55,.96),rgba(18,10,55,.86));
+    backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+  .tabbtn{font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.5px;
+    font-size:14.5px;color:var(--white);background:var(--purple);border:1px solid var(--purple);
+    padding:9px 13px 7px;cursor:pointer;transition:.15s}
+  .tabbtn:hover{filter:brightness(1.12)}
+  .tabbtn.on{background:var(--mint);border-color:var(--mint);color:#0a0a0a}
+  .tabbtn.on:hover{filter:none}
+  .tabbtn .ct{font-size:12px;opacity:.75;font-variant-numeric:tabular-nums}
+  .tabbtn .ct::before{content:" · "}
+  .tpanel{border:1px solid var(--line);background:var(--card);padding:12px 10px 14px}
+  .hint{font-size:12.5px;color:var(--muted);padding:2px 10px 10px;border-bottom:1px solid rgba(255,255,255,.08);margin-bottom:6px}
+
+  /* ── Listen row (no box: label left, service pills follow) ── */
+  .listen{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:12px 16px;margin-top:34px}
+  .listen .lname{font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--dim)}
+  .listen a{display:inline-flex;align-items:center;gap:9px;padding:11px 18px;border-radius:999px;
+    background:var(--mint);color:#08210f;text-decoration:none;font-weight:800;font-size:12.5px;
+    letter-spacing:.04em;text-transform:uppercase;transition:.15s}
+  .listen a:hover{filter:brightness(1.06);transform:translateY(-1px);box-shadow:0 12px 30px rgba(122,217,168,.25)}
+  .listen svg{width:20px;height:20px;fill:currentColor;flex:none}
+  /* ── Listen-now Spotify audio embed (full column width, above the pills) ── */
+  .listen-now{margin-top:40px}
+  .listen-now .ln-head{display:flex;align-items:baseline;justify-content:space-between;gap:14px;margin-bottom:13px}
+  .listen-now .ln-title{font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--dim)}
+  .audio-embed{border-radius:12px;overflow:hidden;box-shadow:0 20px 50px rgba(0,0,0,.4),0 0 0 1px rgba(255,255,255,.06)}
+  .audio-embed iframe{display:block;width:100%;border:0}
+  @media(max-width:720px){.listen-now{margin-top:32px}}
+
+  /* ── Keep exploring (thumbnails link to other episode PAGES, never timecodes).
+     Swipeable strip on mobile, fits three-up on desktop. Variant rule: claim
+     "similar ground" + reason lines ONLY when moment-level topic overlap is
+     genuinely strong; otherwise show the latest released episodes with dates —
+     never invent a connection. ── */
+  .relsec{margin-top:60px;padding-top:58px;border-top:1px solid var(--line)} /* line = end of this episode's info */
+  .reldots{display:flex;justify-content:center;gap:7px;margin-top:12px}
+  .reldots span{width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.25);transition:.2s}
+  .reldots span.on{background:var(--mint)}
+  .relsec .rtitle{display:inline-block;font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.5px;font-size:14.5px;background:var(--mint);color:#0a0a0a;padding:9px 13px 7px;margin-bottom:18px}
+  .relgrid{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding-bottom:6px;scrollbar-width:none}
+  .relgrid::-webkit-scrollbar{display:none}
+  .relcard{flex:0 0 56%;max-width:232px;scroll-snap-align:start;display:flex;flex-direction:column;text-decoration:none;background:var(--card);border:1px solid var(--line);transition:.15s}
+  .relcard:hover{background:var(--card-hi);border-color:rgba(122,217,168,.55)}
+  .relcard img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block}
+  .relcard .rt{display:block;font-size:12.5px;font-weight:600;color:rgba(255,255,255,.92);line-height:1.4;padding:8px 8px 0}
+  .relcard .rfoot{margin-top:auto;display:flex;justify-content:space-between;align-items:flex-end;gap:8px;padding:10px 8px 9px}
+  .relcard .rwhy{font-size:11.5px;color:var(--mint)}
+  .relcard .rtag{display:inline-block;background:#0a0a0a;color:var(--white);font-family:var(--display);font-size:10px;letter-spacing:1.2px;text-transform:uppercase;padding:3px 7px 2px;white-space:nowrap;flex:0 0 auto}
+
+  /* ── Dropdown sections (accordion under the player) ── */
+  .drops{margin-top:34px;display:flex;flex-direction:column;gap:11px}
+  .drop{border:1px solid var(--line);border-radius:0;background:var(--card);overflow:hidden;transition:border-color .15s}
+  .drop[open]{border-color:rgba(122,217,168,.35)}
+  .drop>summary{list-style:none;cursor:pointer;padding:16px 18px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+  .drop>summary::-webkit-details-marker{display:none}
+  .drop>summary .st{font-weight:700;font-size:15.5px;letter-spacing:.005em}
+  .drop>summary .ct{margin-left:auto;font-size:12px;color:var(--dim);font-weight:600;font-variant-numeric:tabular-nums}
+  .drop>summary .chev{flex:none;width:22px;height:22px;border-radius:50%;background:rgba(122,217,168,.14);color:var(--mint);display:flex;align-items:center;justify-content:center;font-family:var(--display);font-size:15px;line-height:1;transition:.2s;transform:translateY(-1px)}
+  .drop[open]>summary .chev{transform:rotate(45deg)}
+  .drop-body{padding:2px 12px 12px}
+
+  /* chapters */
+  .chapter{display:flex;align-items:baseline;gap:14px;width:100%;text-align:left;cursor:pointer;background:none;border:0;color:inherit;font-family:inherit;padding:11px 10px;border-radius:10px;transition:.13s}
+  .chapter:hover{background:var(--card-hi)}
+  .chapter .tc{font-variant-numeric:tabular-nums;font-weight:700;font-size:14px;color:var(--mint);flex:none;width:48px}
+  .chapter .cx{font-size:15px;font-weight:500;color:rgba(255,255,255,.9)}
+  .chapter:hover .cx{color:#fff}
+
+  /* questions */
+  .q{display:flex;align-items:center;gap:12px;width:100%;text-align:left;cursor:pointer;background:none;border:0;border-radius:11px;color:inherit;font-family:inherit;padding:12px 10px;transition:.14s}
+  .q+.q{border-top:1px solid rgba(255,255,255,.05)}
+  .q:hover{background:var(--card-hi)}
+  .q .qm{font-family:var(--display);font-size:15px;color:var(--mint);flex:none;line-height:1;transform:translateY(1px)}
+  .q .qx{font-size:15px;font-weight:500;color:rgba(255,255,255,.92)}
+  .q .go{margin-left:auto;flex:none;color:var(--dim);font-size:18px;transition:.15s}
+  .q:hover .go{color:var(--mint);transform:translateX(2px)}
+
+  /* summary + transcript bodies */
+  .summary-body p{font-size:16.5px;line-height:1.62;color:rgba(255,255,255,.9);padding:6px 10px 4px}
+  .tbody{padding:2px 10px 8px}
+  .tbody p{font-size:14.5px;line-height:1.7;color:rgba(255,255,255,.78);margin-top:15px;max-width:64ch}
+  .tbody .spk{display:block;font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--mint);margin-bottom:2px}
+
+  /* ── Voice note ask (lives at the bottom of the Summary panel) ── */
+  .vask{margin:16px 10px 4px}
+  .vbtn{display:inline-flex;align-items:center;gap:9px;padding:12px 20px;border-radius:999px;border:0;cursor:pointer;
+    background:var(--mint);color:#08210f;font-family:inherit;font-weight:800;font-size:12.5px;
+    letter-spacing:.04em;text-transform:uppercase;transition:.15s}
+  .vbtn:hover{filter:brightness(1.06);transform:translateY(-1px);box-shadow:0 12px 30px rgba(122,217,168,.25)}
+  .vbtn svg{width:18px;height:18px;fill:currentColor;flex:none}
+  .vslot{background:var(--purple);padding:12px 10px 10px;margin:14px 0 4px;box-shadow:0 18px 40px rgba(0,0,0,.35)}
+  .vslot[hidden]{display:none}
+  .vhead{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;margin-bottom:10px}
+  .vhead .vmsg{font-family:var(--sans);font-size:13px;line-height:1.55;color:rgba(255,255,255,.92);margin:2px 0 0;padding:0 2px}
+  .vclose{background:none;border:0;color:rgba(255,255,255,.85);font-size:22px;line-height:1;cursor:pointer;padding:0 2px}
+  .vclose:hover{color:var(--white)}
+  .vslot iframe{display:block}
+
+  /* ── YouTube subscribe pill (sits in the listen row; outranks .listen a's mint) ── */
+  .listen a.yt-pill{background:var(--purple);color:var(--white)}
+  .listen a.yt-pill:hover{filter:brightness(1.1);transform:translateY(-1px)}
+  @media(max-width:720px){ /* mobile: no label, three compact pills on one row */
+    .listen .lname{display:none}
+    .listen{gap:8px}
+    .listen a{padding:10px 13px;font-size:11px;gap:6px}
+    .listen svg{width:16px;height:16px}
+  }
+
+  /* ── Footer: Follow us on | Brought to you by | Produced by, + Menu dropdown ── */
+  footer{border-top:1px solid var(--line);margin-top:68px;padding:52px 20px 58px}
+  .footgrid{max-width:var(--wrap);margin:0 auto;display:grid;grid-template-columns:1fr 1.15fr .8fr;gap:44px;align-items:start}
+  .fcol{text-align:center;display:flex;flex-direction:column;align-items:center}
+  .foot-label{font-size:11px;font-weight:700;letter-spacing:.26em;text-transform:uppercase;color:var(--dim);margin-bottom:18px}
+  .sponsors{display:flex;justify-content:center;align-items:center;gap:34px;flex-wrap:wrap}
+  .sponsors a,.produced a{display:inline-flex;transition:.15s}
+  .sponsors a:hover,.produced a:hover{transform:translateY(-1px)}
+  .sponsors img{height:32px;width:auto;opacity:.92}
+  .produced img{height:30px;width:auto;opacity:.95}
+  .sponsors a:hover img,.produced a:hover img{opacity:1}
+  footer .socials{display:flex;gap:11px;justify-content:center;flex-wrap:wrap;margin:0}
+  footer .socials a{width:40px;height:40px;border-radius:50%;border:1.5px solid rgba(122,217,168,.5);display:flex;align-items:center;justify-content:center;transition:.15s}
+  footer .socials a svg{width:18px;height:18px;fill:var(--mint);transition:.15s}
+  footer .socials a:hover{background:var(--mint);border-color:var(--mint);transform:translateY(-2px)}
+  footer .socials a:hover svg{fill:#0a0a0a}
+  .footbar{max-width:var(--wrap);margin:34px auto 0;border-top:1px solid var(--line);padding-top:20px;display:flex;flex-direction:column;align-items:center;gap:14px}
+  .footnav-dd{display:block;width:100%;max-width:var(--wrap);margin:0 auto;text-align:center}
+  .footnav-dd>summary{list-style:none;cursor:pointer;display:inline-flex;align-items:center;gap:9px;font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.5px;font-size:13px;color:var(--muted);background:transparent;border:1px solid var(--line);padding:8px 16px 6px;transition:.15s}
+  .footnav-dd>summary::-webkit-details-marker{display:none}
+  .footnav-dd>summary:hover{color:var(--mint);border-color:rgba(122,217,168,.45)}
+  .footnav-dd>summary .ham{width:15px;height:15px;fill:currentColor;transform:translateY(-1px)}
+  .footnav-dd .dd-links{display:flex;flex-direction:row;flex-wrap:wrap;justify-content:center;gap:12px 24px;padding:24px 0 4px}
+  .footnav-dd .dd-links a{font-size:11.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:.15s}
+  .footnav-dd .dd-links a:hover{color:var(--mint)}
+  .copyright{font-size:12px;color:var(--dim);text-align:center}
+  @media(max-width:720px){.footgrid{grid-template-columns:1fr;gap:34px}footer{padding:40px 16px 20px}.footbar{margin-top:34px;padding-top:24px;gap:20px}.footnav-dd .dd-links{flex-direction:column;align-items:center;gap:15px}}
+
+  @media(min-width:720px){header.hero{padding:48px 0 6px}}
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "PodcastEpisode", "name": "Draft EP 306 | Show Notes Pending", "url": "https://thenumbersgamepodcast.com.au/draft-ep-306", "datePublished": "2026-12-07", "episodeNumber": 306, "image": "https://i.ytimg.com/vi/kk-FH5JEEWw/maxresdefault.jpg", "partOfSeries": {"@type": "PodcastSeries", "name": "The Numbers Game", "url": "https://thenumbersgamepodcast.com.au/"}}</script>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-in">
+      <a class="brand" href="/" aria-label="The Numbers Game home"><img src="assets/tng-logo.png" alt="The Numbers Game"></a>
+      <div class="navlinks">
+        <a href="/">Home</a>
+        <div class="navgroup">
+          <a class="navtop">Episodes</a>
+          <div class="subnav">
+            <a href="/episodes">All episodes</a>
+            <a href="/adventure">Find moments</a>
+          </div>
+        </div>
+        <div class="navgroup">
+          <a class="navtop">About</a>
+          <div class="subnav">
+            <a href="/about">The show</a>
+            <a href="/nick-reilly">Nick Reilly</a>
+            <a href="/jason-robinson">Jason Robinson</a>
+          </div>
+        </div>
+        <a href="/contact">Contact</a>
+      </div>
+      <button class="navburger" id="navburger" type="button" aria-label="Menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24"><path d="M3 6h18v2H3zM3 11h18v2H3zM3 16h18v2H3z"/></svg>
+      </button>
+    </div>
+    <div class="navdrop" id="navdrop" hidden>
+      <a href="/">Home</a>
+      <span class="navlabel">Episodes</span>
+      <a class="sub" href="/episodes">All episodes</a>
+      <a class="sub" href="/adventure">Find moments</a>
+      <span class="navlabel">About</span>
+      <a class="sub" href="/about">The show</a>
+      <a class="sub" href="/nick-reilly">Nick Reilly</a>
+      <a class="sub" href="/jason-robinson">Jason Robinson</a>
+      <a href="/contact">Contact</a>
+    </div>
+  </nav>
+
+  <main class="wrap">
+
+    <header class="hero">
+      <div class="hook">
+        <span class="eptag">EP 306</span>
+        <h1 class="hk"><span>Draft EP 306</span></h1>
+        <p class="pay"><span>Show Notes Pending</span></p>
+      </div>
+    </header>
+
+    <div class="player-wrap" id="player-wrap">
+      <div class="player" id="player">
+        <button class="facade" id="facade" style="background-image:url('https://i.ytimg.com/vi/kk-FH5JEEWw/maxresdefault.jpg')" aria-label="Play episode">
+          <span class="play"></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="explore">
+      <div class="tabs" role="tablist">
+        <button class="tabbtn on" data-panel="p-summary">Summary</button>
+        <button class="tabbtn" data-panel="p-chapters">Chapters<span class="ct" id="chcount"></span></button>
+        <button class="tabbtn" data-panel="p-questions">Questions<span class="ct" id="qcount"></span></button>
+      </div>
+      <section class="tpanel" id="p-summary">
+        <div class="summary-body">
+          <p>[SHOW NOTES PENDING]</p>
+        </div>
+        <div class="vask">
+          <button class="vbtn" id="vbtn" type="button">
+            <svg viewBox="0 0 24 24"><path d="M12 14a3 3 0 0 0 3-3V6a3 3 0 1 0-6 0v5a3 3 0 0 0 3 3zm5-3a5 5 0 0 1-10 0H5a7 7 0 0 0 6 6.92V21h2v-3.08A7 7 0 0 0 19 11h-2z"/></svg>
+            Send us a voice note
+          </button>
+          <div class="vslot" id="vslot" hidden>
+            <div class="vhead">
+              <p class="vmsg">We'd love to hear from you. You can leave up to a 90 second voice note for us to play on the show: a question, some feedback, or a topic you want covered.</p>
+              <button class="vclose" id="vclose" type="button" aria-label="Close">&times;</button>
+            </div>
+            <iframe src="https://www.speakpipe.com/widget/inline/hhq6kzggsx7zpcsvakgxfrzun3zidpde" allow="microphone" width="100%" height="200" frameborder="0" title="Leave The Numbers Game a voice note"></iframe>
+          </div>
+          <script async src="https://www.speakpipe.com/widget/loader.js" charset="utf-8"></script>
+        </div>
+        <div class="sumfacts">
+          <div class="fact"><span class="fl">Release date</span><span class="fv">7 December 2026</span></div>
+          <div class="fact"><span class="fl">Hosts</span><span class="fv"><a href="/nick-reilly">Nick Reilly</a> &amp; <a href="/jason-robinson">Jason Robinson</a></span></div>
+
+        </div>
+      </section>
+      <section class="tpanel" id="p-chapters" hidden>
+        <p class="hint">Jump straight to the part you need.</p>
+        <div id="chapters"></div>
+      </section>
+      <section class="tpanel" id="p-questions" hidden>
+        <p class="hint">Real questions this episode answers. Tap one to hear the answer.</p>
+        <div id="qa"></div>
+      </section>
+    </div>
+
+    <div class="drops">
+
+      <details class="drop">
+        <summary><span class="st">Episode transcript</span><span class="chev">+</span></summary>
+        <div class="drop-body tbody">
+          <p><span class="spk">Jason · 00:00</span>Welcome to episode 306 of The Numbers Game. Nick, it's my birthday this week. Oh, really? My birthday.</p>
+          <p><span class="spk">Nick · 00:08</span>Happy birthday.</p>
+          <p><span class="spk">Jason · 00:09</span>Thank you. Exciting.</p>
+          <p><span class="spk">Nick · 00:11</span>What do I get you? Mate, you've got everything.</p>
+          <p><span class="spk">Jason · 00:12</span>You're</p>
+          <p><span class="spk">Nick · 00:13</span>like my wife. You'd be very hard to buy for. I feel like nothing's really going to be appreciated.</p>
+          <p><span class="spk">Jason · 00:18</span>Running shoes?</p>
+          <p><span class="spk">Nick · 00:19</span>I don't know. No. Well,</p>
+          <p><span class="spk">Jason · 00:21</span>I need to get into cycling, so I've promised some friends I'd be— I'd do a cycling, like a minimum 100K cycling event.</p>
+          <p><span class="spk">Nick · 00:29</span>When?</p>
+          <p><span class="spk">Jason · 00:29</span>They want me to do They're talking of Three Peaks, but I'm like, let's start me off on an entry-level ride. So I am in the market for some riding gear, right?</p>
+          <p><span class="spk">Nick · 00:40</span>Okay.</p>
+          <p><span class="spk">Jason · 00:40</span>Trying to fit that between—</p>
+          <p><span class="spk">Nick · 00:41</span>You got a bike?</p>
+          <p><span class="spk">Jason · 00:42</span>No.</p>
+          <p><span class="spk">Nick · 00:43</span>You</p>
+          <p><span class="spk">Jason · 00:43</span>got one? You got a spare?</p>
+          <p><span class="spk">Nick · 00:45</span>I do. I'm not even joking. I'd be—</p>
+          <p><span class="spk">Jason · 00:49</span>Happy birthday, Jase.</p>
+          <p><span class="spk">Nick · 00:49</span>Happy for you to ride it. Thank you,</p>
+          <p><span class="spk">Jason · 00:51</span>mate. Or maybe I'll come around for me. But mate, it's— I want to kind of start this off apart from making it about me and my birthday, which I apparently do a fair bit of that. Mate, it's been a big year. It's, you know, Christmas around the corner.</p>
+          <p><span class="spk">Nick · 01:07</span>Just— you didn't ask me how I am either.</p>
+          <p><span class="spk">Jason · 01:09</span>No, it's not about you right now.</p>
+          <p><span class="spk">Nick · 01:11</span>It's just— self-centered today.</p>
+          <p><span class="spk">Jason · 01:12</span>Is it about me?</p>
+          <p><span class="spk">Nick · 01:12</span>Yeah. Well, I've got nothing to tell you.</p>
+          <p><span class="spk">Jason · 01:14</span>How are you, mate?</p>
+          <p><span class="spk">Nick · 01:14</span>I've got nothing for you, mate.</p>
+          <p><span class="spk">Jason · 01:15</span>Hey, good.</p>
+          <p><span class="spk">Nick · 01:16</span>I was just bringing it to your attention.</p>
+          <p><span class="spk">Jason · 01:18</span>We just got to— it's mixing it up and we're mixing it up to the point where we're even going to just bounce back and forth a little bit for this one. It's been a year. It's been a bloody year. I think, and it's probably almost like we've done more reps than ever on it, but it's because this year, so many changes.</p>
+          <p><span class="spk">Jason · 01:37</span>It felt like the government rewrote our money and the government rewrote the rules. It changed dates, it changed rules, it plugged gaps that maybe we didn't feel were gaps. And it's left us probably at the end of the year going, geez, we're ready to put this year behind us.</p>
+          <p><span class="spk">Jason · 01:53</span>So I wanted to kind of bounce back and forth with you, mate, a little bit on what are some of the things that happened this year that we call out and and go, fuck, that was this year and that happened and this is the aftermath of it. And where do we then land heading into next year?</p>
+          <p><span class="spk">Nick · 02:08</span>Yeah.</p>
+          <p><span class="spk">Jason · 02:09</span>Throw to you.</p>
+          <p><span class="spk">Nick · 02:10</span>Throw to me?</p>
+          <p><span class="spk">Jason · 02:11</span>Yeah, you can start us off.</p>
+          <p><span class="spk">Nick · 02:13</span>Well, I think you did give me a heads up on this, so I have put some thought into this and you did ask me for my top 4 impacts is the way that you— I think it was important to say that or explain that to give context.</p>
+          <p><span class="spk">Nick · 02:29</span>Of course.</p>
+          <p><span class="spk">Jason · 02:29</span>Appreciate it.</p>
+          <p><span class="spk">Nick · 02:30</span>Well, clearly, probably the biggest one is the budget or the proposed changes. Mm-hmm. So you did ask me to rank my impacts from 1 to 4.</p>
+          <p><span class="spk">Jason · 02:44</span>Yep.</p>
+          <p><span class="spk">Nick · 02:45</span>And depending on how you want to play this, I can maybe give you my number 1 and then you can give me yours.</p>
+          <p><span class="spk">Jason · 02:49</span>Yeah, let's do that.</p>
+          <p><span class="spk">Nick · 02:50</span>But my number 1 impact from some of the stuff that's happened this year wasn't numerical, it was actually emotional. And for me, it's just the lack of confidence.</p>
+          <p><span class="spk">Nick · 03:07</span>So, you know, if we look at the impacts or the things that have been impacted this year, it's property, it's income tax, capital gains tax, It's, you know, structures on, you know, on how you're investing.</p>
+          <p><span class="spk">Nick · 03:28</span>And it's also, oh, I won't go down that path actually. But I, for me, it's just the emotional side and everything they've done this year has just totally taken away people's confidence to actually do anything.</p>
+          <p><span class="spk">Nick · 03:47</span>Buyers don't wanna buy property. Because they're worried that if they do, it's gonna decline in value. Sellers don't wanna sell property because they don't think it's the right time because the market's not in a good spot, talking property market. Investors don't wanna invest because they're looking at markets and they're thinking, investment markets, and they're thinking, how are they still pushing ahead with all this headwind?</p>
+          <p><span class="spk">Nick · 04:11</span>And when's that gonna end? And if I make any money, how's that gonna be taxed? And why would I invest because the government's gonna take 40, 47% of it. Why would I start a business? The government's gonna take 47% of it. And businesses don't wanna grow.</p>
+          <p><span class="spk">Nick · 04:29</span>And like you're looking at, we've talked about this, but the risk for reward, you know, you've got your employees' wages and you've got another 17% 'cause of payroll tax and because of super. Then you've gotta look at all the rules around that.</p>
+          <p><span class="spk">Nick · 04:44</span>Hasn't happened, but you know, the work from home policies and— Yep. So businesses are looking and going, Why the hell am I doing this? So for me, the number one impact has been just the blow to our confidence. The fact that you and I are even sitting here talking about this today, like we should be having a positive conversation.</p>
+          <p><span class="spk">Jason · 05:04</span>Yep.</p>
+          <p><span class="spk">Nick · 05:04</span>And we like to do that regularly as well to change things up. But yeah, confidence. People just don't have the confidence to progress anymore, which is really sad.</p>
+          <p><span class="spk">Jason · 05:16</span>Yep. I think that's a great one to start with. And I think more than ever we saw on the rounds on social media, all those business owners coming out, you know, announcing their new shareholder was Anthony Albanese for 47% of their business and all the changes with capital gains tax, negative gearing, CGT trusts.</p>
+          <p><span class="spk">Jason · 05:34</span>Like it's, and it's still, those effects are lasting and we're not gonna see them into 1 July '27, 1 July '28. They're just gonna continue to hit us over and over. So it's not over yet. And it is a great one to start with. I'm going to go with one that's probably a little bit more simple, but, but it had a big effect on the first half of the year and a lot of the conversations we had with clients.</p>
+          <p><span class="spk">Jason · 05:57</span>And now we touched on it again in some more recent eps, but it's— I think it's about to hit really hard over December, January in the next period we're coming into. And that was the change to superannuation payments for Payday Super. Now, for most people, every day your super hits your account.</p>
+          <p><span class="spk">Jason · 06:15</span>Cool. All good. For the businesses that I work with though, from 1 July, it went from paying super every quarter. So you had 3 months to squirrel that cash away and then at the end of the quarter you had 28 days to get it into the super fund.</p>
+          <p><span class="spk">Jason · 06:32</span>Overnight on the 1st of July, it was 7 days and it was every single pay run.</p>
+          <p><span class="spk">Nick · 06:37</span>Yeah.</p>
+          <p><span class="spk">Jason · 06:38</span>So then to be able to cash flow that, not only were you paying the June quarter super in full within 28 days.</p>
+          <p><span class="spk">Nick · 06:45</span>Yeah.</p>
+          <p><span class="spk">Jason · 06:46</span>Every time you then run a pay run in the first couple of weeks of July, you also hit that super straight away. So it was this big double whammy of cash flow for businesses that are already kind of doing it relatively tough in Australia. I won't focus on Victoria.</p>
+          <p><span class="spk">Nick · 06:59</span>Yeah.</p>
+          <p><span class="spk">Jason · 06:59</span>Beyond that, the ATO shut down the Small Business Clearing House permanently. There was 200,000 small business owners that were using the free ATO Small Business Clearing House. And that was their way of paying super every quarter. So 200,000 small businesses had to go and find a new way to pay super.</p>
+          <p><span class="spk">Jason · 07:18</span>Which meant maybe paying their accountant, maybe paying for more Xero subscriptions that they weren't using before. Again, more cost, more burden to small business owners. So, you know, from my point of view, that impacted cash flow hard. It was massive changes across the profession.</p>
+          <p><span class="spk">Jason · 07:35</span>It was massive changes to business owners. And as I said, I don't think we're set, like we haven't seen how hard it's hit just yet, the fallout from that. The ATO has been pretty lenient on people that have missed the 7-day, 7 business day payments. There's been a bit of leniency.</p>
+          <p><span class="spk">Jason · 07:51</span>But as soon as we get past the little grace period that we're kind of in at the moment, again, this December, January will be a test. Christmas, New Year, cash flow can be really hard for a lot of businesses and they've got to pay, maybe they're shut down for a couple of weeks, they've still got to pay annual leave, they've still got 7 days to get super in.</p>
+          <p><span class="spk">Jason · 08:08</span>And if they run out of money, they can't pay that. There's going to be a delay in chasing that money in. It'll then become, because it's all through single-touch payroll, it's all electronic and automated. The fines, the penalties, the admin fees, it's just going to automatically start hitting directors of business and they will, it'll just be sent straight to them.</p>
+          <p><span class="spk">Jason · 08:28</span>There's no intervention. It'll just appear. And then all of a sudden you'll be looking at director penalty notices.</p>
+          <p><span class="spk">Nick · 08:33</span>Yeah.</p>
+          <p><span class="spk">Jason · 08:33</span>So</p>
+          <p><span class="spk">Nick · 08:34</span>yeah,</p>
+          <p><span class="spk">Jason · 08:34</span>that is my kind of big one from this year. Yep.</p>
+          <p><span class="spk">Nick · 08:39</span>Over to me?</p>
+          <p><span class="spk">Jason · 08:40</span>Over to you.</p>
+          <p><span class="spk">Nick · 08:40</span>So more numbers-based now. So number 2 for me is negative gearing with the budget on established property.</p>
+          <p><span class="spk">Jason · 08:47</span>Yep.</p>
+          <p><span class="spk">Nick · 08:48</span>Now I will say that, you know, I've been pretty clear in the fact that I don't think you should purely make investment decisions based on tax. But we are talking about implications of some of the changes.</p>
+          <p><span class="spk">Nick · 09:05</span>And I think negative gearing for a lot of people, it's really made the investment property pathway too hard and out of reach. Now, clearly you can chase positively geared properties and we've talked about that.</p>
+          <p><span class="spk">Nick · 09:23</span>But the reality is most people just wanna be passive investors. They wanna buy a house, put a renter in it and forget about it, not do improvements to improve, to fix the cash flow. So, You know, I just looked at an example in our own state and I have talked about the examples in Victoria before from a cash flow point of view.</p>
+          <p><span class="spk">Nick · 09:46</span>But using today's interest rates, a $720,000 investment property purchase, this particular property was in the southeast of Melbourne.</p>
+          <p><span class="spk">Jason · 09:57</span>Yep.</p>
+          <p><span class="spk">Nick · 09:57</span>You've got interest only repayments, so you are not repaying the principal. And that's generally the strategy for most people. They like to accelerate the repayment payments on their owner-occupied home and only pay the investment off once that is zero. Previously for tax reasons. $27,000 per annum negative cash flow.</p>
+          <p><span class="spk">Nick · 10:16</span>So how I got to that, that particular property is rented out for $520 a week. You've got your interest payments. This is assuming you've borrowed 100% plus costs. Most people will do that on an investment property. You've got, insurance now.</p>
+          <p><span class="spk">Nick · 10:34</span>So building insurance, landlord's insurance, you've got council rates, you've got compliance, gotta get the smoke alarms checked. $520 a week. Of that, the real estate agent will take sort of 5% or 6% depending on the agent.</p>
+          <p><span class="spk">Nick · 10:50</span>Then you've got your leasing fee. So you're $27K a year down. Now, which is $520 a week. And so that wasn't the rent. The rent, I think I was working on like 3.8% yield, which was about $28,000 a year.</p>
+          <p><span class="spk">Nick · 11:09</span>So you're $520 a week just to cash flow that property. Now, if you're on your top marginal tax rate, 2 years ago, you would've got hypothetically 48% of that back.</p>
+          <p><span class="spk">Jason · 11:22</span>Yep.</p>
+          <p><span class="spk">Nick · 11:23</span>Yep. So 48% of that, let's just call it, I don't know, half of it almost, $260, give or take, $250. So the whole theory was, well, you know what, I can afford $250 a week. The other $250 would've just been going to the ATO.</p>
+          <p><span class="spk">Nick · 11:38</span>I can swallow that. Now most people look at it and they say, well, actually, even if I could afford $520 a week, it is a lot of money to commit to. And then second to that, what's my confidence in the property market now? So if I'm spending $27,000 per annum, just to hold the place, I need to guarantee it's gonna go up $27K.</p>
+          <p><span class="spk">Jason · 12:00</span>Yep.</p>
+          <p><span class="spk">Nick · 12:01</span>Otherwise it's all for nothing. And if it doesn't, I'm actually going backwards. I might as well put the money in my offset. We were speaking about that before. So that is a significant impact. It's either, it's doing two things. It's either stopping people from investing or it's pouring money into other markets.</p>
+          <p><span class="spk">Nick · 12:19</span>So when I say other markets, I mean, In Melbourne at the moment, there's a big play for 1 and 2-bedroom units 'cause the cash flows look pretty good in comparison to some other states. So there will be certain markets that actually benefit from this.</p>
+          <p><span class="spk">Nick · 12:35</span>I think superannuation, people are going, well, why would I put money anywhere else other than super? I can actually get a tax deduction still for putting money in there. So negative gearing, whilst it's been a negative impact for property investors, I think other areas will see growth because of the changes.</p>
+          <p><span class="spk">Jason · 12:54</span>100%. And if you haven't looked at our website and you are interested in finding out a bit more about super, thenumbersgamepodcast.com.au, you've got to choose your own adventure section and you can jump in the word superannuation and you'll go back and find this year and previous years highlights.</p>
+          <p><span class="spk">Jason · 13:09</span>So you get those hot tips. I will add as well, you know, the property purchase there, just this isn't one of my things, probably should have been. The negative gearing cash flow side, you've got all of that. Then the CGT changes as well. I did a rough example for another episode, but I just brought it up.</p>
+          <p><span class="spk">Jason · 13:25</span>If you bought in July 2020 for $600,000, you then have to value the property July '27. So let's 7 years, let's say it's gone up a couple hundred grand. And then a hypothetical, you sell in July '32 for $1.1 million. So you bought the property for $600,000, you've held it for over 10 years and you're making $500,000.</p>
+          <p><span class="spk">Jason · 13:44</span>Yep. Now, The old rules, obviously 50% discount would have been across the whole thing. So you would have paid tax of $117,500, which is, and assuming this is a top marginal tax bracket.</p>
+          <p><span class="spk">Jason · 13:59</span>Now you value the property at 1 July '27. So let's, at that time it was $800,000. You get a 50% discount on your $200,000 gain and it kind of sits there quarantined until you sell the property.</p>
+          <p><span class="spk">Nick · 14:14</span>Yeah.</p>
+          <p><span class="spk">Jason · 14:14</span>You then switch over to the indexing rules and you have to then from 1 July '27, you index the value on that day up until when you sell it and you'll pay the flat rate of tax of 30% on that gain. So you end up $14,000, bit over $14,000 worse off or more out of pocket with the trust changes.</p>
+          <p><span class="spk">Jason · 14:33</span>So again, it's this disincentivisation of investing. Onto my number 2, mate. And this one, like I've reshuffled them a little bit just after what I've heard and what I felt out in the media and talking to small business owners.</p>
+          <p><span class="spk">Jason · 14:49</span>This one was the the card search out, card surcharge ban that started on the 1st of October. I've moved that up to number 2.</p>
+          <p><span class="spk">Nick · 14:56</span>Yep.</p>
+          <p><span class="spk">Jason · 14:57</span>Like, I think it had way more of an impact than what was kind of in the build-up, in the media, in the lead-up. So from, from early parts of Jan, Feb, March, we started, you know, putting it in our newsletters, telling our clients, putting it on blogs. And then as we got to the end of June, because we, you know, business owners, we're planning ahead, we cop around $30,000 to $40,000 a year in merchant fees through our provider of our direct debit system.</p>
+          <p><span class="spk">Jason · 15:24</span>We work on a retainer basis, and we would add the option that, Nick, if you wanted to pay on your Amex or your credit card and your fee was $1,000 a month, to pay via direct debit or direct deposit, it's $1,000 a month. But if you want to use your Amex or credit card, up to you, won't stop you.</p>
+          <p><span class="spk">Jason · 15:41</span>But we added the surcharge back and you copped it, but you get your points and you were happy.</p>
+          <p><span class="spk">Nick · 15:46</span>Yeah,</p>
+          <p><span class="spk">Jason · 15:46</span>but from 1 October onwards we couldn't do that. So either as a small business owner, we're looking at copping $40,000 of cost as a small business owner.</p>
+          <p><span class="spk">Nick · 15:54</span>Yeah.</p>
+          <p><span class="spk">Jason · 15:54</span>Or like what all business owners hit the media and started doing was adding that cost back.</p>
+          <p><span class="spk">Nick · 15:59</span>Yeah.</p>
+          <p><span class="spk">Jason · 16:00</span>We had Albo with his little debit card on X and Twitter and Instagram and everywhere he can get his face going. From tomorrow your coffee will be cheaper.</p>
+          <p><span class="spk">Nick · 16:09</span>And</p>
+          <p><span class="spk">Jason · 16:09</span>then every coffee shop came out going Nah, pal, like, we've just put it up and there was great social media campaigns. And, um, look, as much as we make light of a pretty shitty situation, like, I think so many small business owners made the most of that situation to turn it around and, and show that it wasn't this, um, great thing for the consumer that they weren't going to have to pay card costs, because somebody pays the costs.</p>
+          <p><span class="spk">Jason · 16:35</span>And unfortunately, it wasn't the idea of let's make the big banks cop the cost and it can come out of their $11 billion profit or whatever the numbers are. It was to push it onto the small business owner who already has really slim margins and expect them just to wear it. So they get really poorly handled, really bad moment throughout the year.</p>
+          <p><span class="spk">Jason · 16:56</span>And for people who weren't across it or aware of it, it caught up with them.</p>
+          <p><span class="spk">Nick · 17:00</span>Yeah.</p>
+          <p><span class="spk">Jason · 17:01</span>And then to add insult to injury for the government, the ATO then came out and banned the ability to use credit cards. But again, the rhetoric around it, they're like, oh, well, we We can't cop the credit card fee, so we're just going to turn it off. It's like, well, hang on, you expected everyone else in the country to cop the surcharge and you turned it off.</p>
+          <p><span class="spk">Jason · 17:17</span>It was laughable.</p>
+          <p><span class="spk">Nick · 17:18</span>And they were so stupid to think that, you know, prices weren't going to increase. And you've just got to look at all the businesses that are shutting their doors. Like, it's not only that they don't want to cop it, they actually can't cop it. You know, we've spoken about that before.</p>
+          <p><span class="spk">Jason · 17:34</span>Yeah, well, in café and restaurants, a lot of them are, it's 5% is usually what's left over for the owner. So on a million dollars turnover, you got 50 grand left over. But if you're then expecting that out of that 50 grand, you want 20 to 25 grand in card surcharge fees to cop the business owner, mate, one in eight cafes and restaurants shut down.</p>
+          <p><span class="spk">Nick · 17:54</span>It was so stupid when you think about it now in hindsight. Yeah, correct. So number 3 for me was the consecutive rate rises we've had this year. And there's the flow-on impact here is massive. So I think we mentioned most people are paying around 6.5% now.</p>
+          <p><span class="spk">Nick · 18:12</span>Yeah. Either just above or below that, depending on your situation. So the impacts that we've seen in our business, significant because number one, you can't borrow as much. So, you know, your borrowing capacity, I spoke to a couple of brokers on this and I just said, hey, what do you think the average either individual or couple has lost in borrowing capacity this year?</p>
+          <p><span class="spk">Nick · 18:38</span>And the answer I got was anywhere from sort of $80K to $100K in borrowing power. Now clearly that could be more or less depending on people's circumstances. But that's $80K to $100K less people have available to them to go and purchase a property. Clearly the flow on impact on that is property values because everyone's in the same boat.</p>
+          <p><span class="spk">Nick · 18:56</span>So that brings property values back. The other thing that probably doesn't get spoken about enough is when you are in a situation like we are at the moment where cost of living is difficult, you actually have lost, not lost your ability, but it's harder now to refinance.</p>
+          <p><span class="spk">Nick · 19:16</span>So what you were approved for 2 years ago when rates were a lot less or even God forbid, 3 or 4 years ago, You need to restructure some personal debt. If you only borrowed 2 or 3 years ago, your home loan won't have moved too much. You might go back to the bank now and find that you don't actually even qualify for the loan you've got because of the interest rates.</p>
+          <p><span class="spk">Nick · 19:38</span>So you're then stuck. So if you're trying to, let's say you're trying to refinance to pay a car out or you're trying to refinance to sort some credit cards out, whatever it might be, you might not be able to get a yes on that, which means you're kind of stuck in your current situation and you can't improve it.</p>
+          <p><span class="spk">Nick · 19:54</span>Second to that, If you have bought in the last 12 months and you do need to refinance, the other flow-on effect of these increases in interest rates is property values. So you might not be able to get your property value at where it was when you bought it so you can refinance.</p>
+          <p><span class="spk">Nick · 20:10</span>So clearly people have lost borrowing capacity and when people think about that, they really only think about, I can't go to the auction with as much. But there's also people that can't refinance into a better product or a better situation because they don't actually qualify for the loan they've currently got if it was to be assessed.</p>
+          <p><span class="spk">Nick · 20:26</span>Now.</p>
+          <p><span class="spk">Jason · 20:29</span>Big one that, yeah, all year, every time a rate rise hit, it's again, we're talking about the big things from 2026 that we recall back to. And yeah, I've got fond memories of the head of the RBA being asked, have you modeled what would happen if the government spent less money?</p>
+          <p><span class="spk">Jason · 20:47</span>And, you know, they both sat there and they're flipping their paperwork around and it was, no, we haven't run that scenario. It's like, well, hang on, you got all these scenarios about people spending too much money and inflation, but you haven't looked at what happens if the government spends less money. Like, would we be where we are?</p>
+          <p><span class="spk">Jason · 21:02</span>Would we have all these rate rises? And, you know, realistically, it's the only lever that they use or that they have to curb inflation or curb inflation is rate rises. So time will tell what happens into 2027. We'll save that for our predictions next week.</p>
+          <p><span class="spk">Jason · 21:18</span>So make sure you tune back in because it's a, it's a banger. For my third, Nick, And again, I've reordered this and pulled this one in. For me, a big shock that came out of nowhere. It wasn't advertised, it wasn't spoken about. It was a bit of a dodgy backdoor deal with the Greens when Labor needed to push some of their bills through.</p>
+          <p><span class="spk">Jason · 21:38</span>And that was the SMSF, SMSF residential borrowing ban.</p>
+          <p><span class="spk">Nick · 21:44</span>Yeah.</p>
+          <p><span class="spk">Jason · 21:44</span>So that happened on the 10th of August, 2026.</p>
+          <p><span class="spk">Nick · 21:48</span>Yeah.</p>
+          <p><span class="spk">Jason · 21:48</span>So essentially some people use their self-managed super funds to buy an investment property. We just talked about, you know, that $720,000 home out in the southeast. You might be able to pay the deposit, or you were pre-10th of August, pay the deposit from your self-managed super fund, set up a bare trust, do some lending, and you could buy yourself some bricks and mortar and a parcel of land, and happy days, a tenant pays the rent and good to go.</p>
+          <p><span class="spk">Jason · 22:12</span>So from 10th of August, unless you're already in a contract before that, gone. The ability for the average mum and dad or the average punter to buy a property in their super fund, a residential property, was gone. We work with several businesses in that space. It happened overnight. There was no warning.</p>
+          <p><span class="spk">Jason · 22:28</span>It was pretty devastating. And obviously, great businesses pivot. We look at, they look to commercial property now and those things are happening. But again, it's just an example of the lack of foresight or the lack of thinking as to the flow-on effects of what that means. And they're talking about creating more housing supply.</p>
+          <p><span class="spk">Jason · 22:45</span>But then limiting the potential for more homes to be purchased for more renters. So anyway, figure that one out. That was my third. It got bumped up the list as I've kind of looked and kind of gone with the feeling and the vibe of what I felt like hit hard this year.</p>
+          <p><span class="spk">Nick · 23:01</span>Yeah. Well, the other one, look, this isn't, this is number 4 and this probably hasn't, most people won't even think about this, but It's APRA's debt-to-income ratio. So basically—</p>
+          <p><span class="spk">Jason · 23:17</span>Something different?</p>
+          <p><span class="spk">Nick · 23:18</span>Well, it just— So APRA regulates our industry. And I guess what they've done is they've put ceilings on, you know, if your income— So outside of serviceability, so, you know, outside of this is your net income, this is the repayment, plus we need to factor in buffers.</p>
+          <p><span class="spk">Nick · 23:35</span>But your debt-to-income ratio means that your debt can't be 6 times what your income is, I guess. So it's just another, it's almost like another serviceability layer to a degree. And it's, it hasn't impacted many people and it won't impact most people.</p>
+          <p><span class="spk">Nick · 23:53</span>Who it does impact is those people that wanna build property portfolios. So when you get to 2 properties plus, it starts to become really difficult. So just something that we've seen. And again, I sort of quizzed our brokers on this stuff, you know, of the changes that we've seen, what's really impacted you in your business.</p>
+          <p><span class="spk">Nick · 24:17</span>And, you know, because there's so many people now, and let's go backwards. So before the budget and whatnot, everyone was trying to build property portfolios, you know, everyone's talking about it, but everyone's talking about structures so you can, get to 4, 5, 6, 7, 8 properties.</p>
+          <p><span class="spk">Nick · 24:33</span>But this is something that the brokers would say has had a significant impact on the money that people can borrow, particularly given the trend in trying to build investment property portfolios.</p>
+          <p><span class="spk">Jason · 24:48</span>Yep. I like it, mate. It's a good one. Left of centre and keep things interesting for us. Mate, my fourth and probably not of least impact, especially in the world that I'm in, relates back to the ATO.</p>
+          <p><span class="spk">Jason · 25:03</span>So the regulator that I work with, or the thing that keeps me often very busy. Some of the numbers we've talked about on the show before, 84,000 director penalty notices back in '24-'25, waiting for those '25-'26 numbers.</p>
+          <p><span class="spk">Jason · 25:19</span>I think they'll be probably up on the 84,000. It felt like a pretty heavy-handed year. The ATO strategy. So this is around the enforcement of the ATO and their turn of mindset. They want to move towards real-time intervention at scale.</p>
+          <p><span class="spk">Jason · 25:34</span>Talked about it in predictions last year. Again, we'll cover that next step. I don't know if I'm going to get a pass on that, but the use of AI and analytics to target a particular business or taxpayer based on the data and the automatic kind of reach out. We're starting to see a lot in the R&amp;D space where we're just getting automated hit with letters that your client has R&amp;D, we want to know.</p>
+          <p><span class="spk">Jason · 25:57</span>How, when, where, why, how is it calculated? And if they can then rip some money back from that, they're going to try and do it. Beyond the Director Penalty Notices that obviously put people on the hook for pay-as-you-go withholding, GST, super. We talked about the idea of lodge on time even if you can't pay.</p>
+          <p><span class="spk">Jason · 26:14</span>But then when the ATO hits you with a DPN, that's when liquidators and insolvency events happen. The other part of that that I think has caused probably some underlying pain as well that we're now seeing as we start to do financials and tax returns for the '26 year is the general interest charge not being tax deductible on ATO debt.</p>
+          <p><span class="spk">Jason · 26:35</span>So you're talking about a business that carries a $100,000 or $200,000 ATO debt, doesn't matter the size. You know, let's call it $100,000 so it's relatively easy to calculate. 11% GIC for the quarter, for example. That $11,000 annually of interest that you pay on that debt to the ATO, you can't claim that as a tax deduction.</p>
+          <p><span class="spk">Jason · 26:55</span>So that now is going even further into the business owner's pockets to add that back at tax and financials time and give them a bigger tax bill. So the double whammy is they've still got the interest to repay on their general, or their integrated client account for the ATO.</p>
+          <p><span class="spk">Jason · 27:11</span>They then cop their tax bill, which is bigger than it would've been if that interest was tax deductible. So the pain kind of keeps compounding. It's the first full year, the '24, '25, '26 year is the first a full year that we've now had to add that interest back and make the clients pay tax on it.</p>
+          <p><span class="spk">Jason · 27:28</span>And yeah, I don't know if you've got some honourable mentions that you might, that didn't make the top 4. Otherwise, I'll quickly reel through a couple of honourable mentions. 'Cause you covered it in a great episode not too long ago. The rents are up in every capital city and listings are down in 6 out of 8 states.</p>
+          <p><span class="spk">Jason · 27:45</span>So I think that hits pretty hard. The Vic land tax. So we talk about COVID levy and the $50K, still biting, still hurts, people paying those bills. And then I think the other one I had here was the $3 million super tax. You know, again, we're now got that in play.</p>
+          <p><span class="spk">Jason · 28:02</span>So as we're doing self-managed super fund tax returns for our clients, not too many $3 million balances out there. We're a younger firm with a younger client base. But speaking to other firms that have bigger SMSF portfolios with high net worth clients and whatnot, again, it's just more compliance, more paperwork, more pain on our side.</p>
+          <p><span class="spk">Jason · 28:23</span>And you know, again, more collecting tax from something that they said they wouldn't change. And there's changes and laws and things that, you know, what is it, the change position?</p>
+          <p><span class="spk">Nick · 28:33</span>Yeah.</p>
+          <p><span class="spk">Jason · 28:33</span>So, you know, it's been a big year of changing positions.</p>
+          <p><span class="spk">Nick · 28:36</span>Yeah, we've changed. Is it position? Is that the word they use?</p>
+          <p><span class="spk">Jason · 28:40</span>Change position? I think so.</p>
+          <p><span class="spk">Nick · 28:42</span>Yeah. Yeah. Yeah. Look at, look at the end of the day, I think it's, it's been a rough, it's been a rough few years. Right. And I wouldn't even say the last 12 months, like it's been a rough few years, but You know, I think if anything, it really, um, it makes our roles more rewarding.</p>
+          <p><span class="spk">Nick · 29:03</span>And this might sound really weird, but we can add so much value these days. And it's just people are just trying to work out what the hell— not what the hell is going on, but what the hell they should do. Um, so, you know, whether it's this or it's, you know, some of the stuff that's coming through or some of the information that's coming through now on social media or AI</p>
+          <p><span class="spk">Jason · 29:25</span>Yep.</p>
+          <p><span class="spk">Nick · 29:26</span>There's just so much confusion out there, so many changes, everything's moving so quick that the only positive of this is that, you know, you do have someone in your corner, whether it's yourself as a tax agent or us as an advisor or any advisor that you've got.</p>
+          <p><span class="spk">Nick · 29:41</span>It just really magnifies the importance of having someone in your corner that you trust, that you can talk to about this stuff, and then you can make sure that you're setting things up and doing the best with the rules that we've got, and we've spoken about that before. So</p>
+          <p><span class="spk">Jason · 29:56</span>100%.</p>
+          <p><span class="spk">Nick · 29:56</span>Yeah,</p>
+          <p><span class="spk">Jason · 29:57</span>mate, the year's not completely over yet. We have another really juicy and exciting episode next week for our predictions, so do tune in. But I do want to take an opportunity to say thank you to all of our listeners. It has been a fantastic year. We do appreciate the support, whether you tune in through Spotify, follow us and subscribe on YouTube, and if you've hit our new website, thenumbersgamepodcast.com.au, we love some voice notes coming through.</p>
+          <p><span class="spk">Jason · 30:20</span>Might cover a few of them on the next episode. So please keep the voice notes coming through. And if we don't get to it on the next step, we will cover it in our first couple of eps in the 2027 season next year. I just want to remind you that the government might tell you that they didn't put the tax rate up, but what they did do is they moved every date, they closed every gap, and they called it tax reform.</p>
+          <p><span class="spk">Jason · 30:41</span>Game over. This podcast is for educational and informational informational purposes only. The conversations are of a general nature and do not qualify as financial or tax advice. We recommend before you make any financial decisions, you consult a licensed professional.</p>
+          <p><span class="spk">Jason · 30:56</span>Individuals on the podcast may hold positions in the companies discussed.</p>
+        </div>
+      </details>
+
+    </div>
+
+    <!-- LISTEN:START (build_episode.py rewrites the 3 URLs + iframe title per episode; player dropped if no spotifyEmbedUrl) -->
+
+    <div class="listen">
+      <a href="https://open.spotify.com/search/the%20numbers%20game%20podcast" target="_blank" rel="noopener" aria-label="Listen to this episode on Spotify">
+        <svg viewBox="0 0 24 24"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.52 17.34c-.24.36-.66.48-1.02.24-2.82-1.74-6.36-2.1-10.56-1.14-.42.12-.78-.18-.9-.54-.12-.42.18-.78.54-.9 4.56-1.02 8.52-.6 11.64 1.32.42.18.48.66.3 1.02zm1.44-3.3c-.3.42-.84.6-1.26.3-3.24-1.98-8.16-2.58-11.94-1.38-.48.12-1.02-.12-1.14-.6-.12-.48.12-1.02.6-1.14 4.32-1.32 9.72-.66 13.44 1.62.36.18.54.78.3 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.3c-.6.18-1.2-.18-1.38-.72-.18-.6.18-1.2.72-1.38 4.26-1.26 11.28-1.02 15.72 1.62.54.3.72 1.02.42 1.56-.3.42-1.02.6-1.56.3z"/></svg>
+        Spotify
+      </a>
+      <a href="https://podcasts.apple.com/search?term=the%20numbers%20game" target="_blank" rel="noopener" aria-label="Listen to this episode on Apple Podcasts">
+        <svg viewBox="0 0 24 24"><path d="M5.34 0A5.328 5.328 0 000 5.34v13.32A5.328 5.328 0 005.34 24h13.32A5.328 5.328 0 0024 18.66V5.34A5.328 5.328 0 0018.66 0H5.34zm6.525 2.568c2.336 0 4.448.902 6.056 2.587 1.224 1.272 1.912 2.619 2.264 4.392l.04.23c.04.272-.16.527-.432.567a.505.505 0 01-.567-.431l-.04-.213c-.312-1.57-.92-2.747-2.004-3.867-1.428-1.496-3.293-2.294-5.393-2.294-2.1 0-3.966.798-5.394 2.294-1.084 1.12-1.692 2.298-2.004 3.867l-.04.213a.507.507 0 01-.567.431.504.504 0 01-.432-.567l.04-.23c.352-1.773 1.04-3.12 2.264-4.392 1.608-1.685 3.72-2.587 6.056-2.587h.153zm.136 3.033c1.74 0 3.312.67 4.527 1.934.883.916 1.394 1.93 1.663 3.253l.04.23a.505.505 0 01-.431.567.503.503 0 01-.567-.432l-.04-.212c-.23-1.112-.659-1.97-1.396-2.732-1.052-1.1-2.404-1.672-3.9-1.672s-2.849.572-3.901 1.672c-.737.762-1.167 1.62-1.396 2.732l-.04.212a.503.503 0 01-.567.432.505.505 0 01-.432-.567l.04-.23c.27-1.323.78-2.337 1.664-3.253 1.215-1.264 2.787-1.934 4.527-1.934h.21zm-.078 3.05c1.092 0 2.091.424 2.89 1.22.582.58.924 1.245 1.107 2.15l.04.218a.501.501 0 01-.424.568.499.499 0 01-.568-.424l-.04-.198c-.146-.724-.413-1.253-.871-1.716-.63-.63-1.398-.957-2.226-.957s-1.595.328-2.225.957c-.459.463-.726.992-.871 1.716l-.04.198a.499.499 0 01-.568.424.501.501 0 01-.424-.568l.04-.219c.183-.904.525-1.569 1.106-2.149.8-.796 1.799-1.22 2.89-1.22h.184zM12 14.07a2.477 2.477 0 012.48 2.478A2.477 2.477 0 0112 19.024a2.477 2.477 0 01-2.48-2.477A2.477 2.477 0 0112 14.07z"/></svg>
+        Apple
+      </a>
+      <a class="yt-pill" href="https://www.youtube.com/@thenumbersgamepodcast?sub_confirmation=1" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.12-2.14C19.5 3.55 12 3.55 12 3.55s-7.5 0-9.38.51A3 3 0 0 0 .5 6.2 31.4 31.4 0 0 0 0 12a31.4 31.4 0 0 0 .5 5.8 3 3 0 0 0 2.12 2.14c1.88.51 9.38.51 9.38.51s7.5 0 9.38-.51a3 3 0 0 0 2.12-2.14A31.4 31.4 0 0 0 24 12a31.4 31.4 0 0 0-.5-5.8zM9.55 15.57V8.43L15.82 12z"/></svg>
+        Subscribe
+      </a>
+    </div>
+    <!-- LISTEN:END -->
+
+    <div class="relsec">
+      <span class="rtitle">Discover more</span>
+      <div class="relgrid">
+        <a class="relcard" href="/how-money-has-changed-since-2021">
+          <img src="https://i.ytimg.com/vi/USK-bNAxT7Y/hqdefault.jpg" alt="EP 300 thumbnail">
+          <span class="rt">How Money Has Changed Since 2021</span>
+          <span class="rfoot"><span class="rwhy">26 October 2026</span><span class="rtag">EP 300</span></span>
+        </a>
+        <a class="relcard" href="/the-small-business-squeeze-right-now">
+          <img src="https://i.ytimg.com/vi/UcamObdACo0/hqdefault.jpg" alt="EP 299 thumbnail">
+          <span class="rt">The Small Business Squeeze Right Now</span>
+          <span class="rfoot"><span class="rwhy">19 October 2026</span><span class="rtag">EP 299</span></span>
+        </a>
+        <a class="relcard" href="/what-australia-can-learn-from-new-zealand-s-property-downturn">
+          <img src="https://i.ytimg.com/vi/j4l0VNj8IF4/hqdefault.jpg" alt="EP 298 thumbnail">
+          <span class="rt">What Australia Can Learn From New Zealand's Property Downturn</span>
+          <span class="rfoot"><span class="rwhy">12 October 2026</span><span class="rtag">EP 298</span></span>
+        </a>
+        <a class="relcard" href="/where-your-charity-donations-actually-end-up">
+          <img src="https://i.ytimg.com/vi/bo4ita9fFxY/hqdefault.jpg" alt="EP 297 thumbnail">
+          <span class="rt">Where Your Charity Donations Actually End Up</span>
+          <span class="rfoot"><span class="rwhy">5 October 2026</span><span class="rtag">EP 297</span></span>
+        </a>
+        <a class="relcard" href="/long-term-australian-property-returns">
+          <img src="https://i.ytimg.com/vi/QRCICFHBeTk/hqdefault.jpg" alt="EP 296 thumbnail">
+          <span class="rt">Long-Term Australian Property Returns</span>
+          <span class="rfoot"><span class="rwhy">28 September 2026</span><span class="rtag">EP 296</span></span>
+        </a>
+        <a class="relcard" href="/liquidation-bankruptcy-or-restructure">
+          <img src="https://i.ytimg.com/vi/gPCPOidYUPI/hqdefault.jpg" alt="EP 295 thumbnail">
+          <span class="rt">Liquidation, Bankruptcy or Restructure</span>
+          <span class="rfoot"><span class="rwhy">21 September 2026</span><span class="rtag">EP 295</span></span>
+        </a>
+      </div>
+      <div class="reldots" id="reldots"></div>
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="footgrid">
+      <div class="fcol">
+        <div class="foot-label">Follow us on</div>
+        <div class="socials">
+          <a href="https://www.instagram.com/thenumbersgamepodcast/" target="_blank" rel="noopener" aria-label="The Numbers Game on Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.8.2 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1 .4 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .4-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1-.4-2.2-.1-1.3-.1-1.7-.1-4.9s0-3.6.1-4.9c.1-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.4 2.2-.4 1.3-.1 1.7-.1 4.9-.1zm0 2c-3.1 0-3.5 0-4.8.1-1.1.1-1.5.2-1.8.3-.4.2-.7.3-1 .6-.3.3-.5.6-.6 1-.1.3-.3.7-.3 1.8-.1 1.3-.1 1.7-.1 4.8s0 3.5.1 4.8c.1 1.1.2 1.5.3 1.8.2.4.3.7.6 1 .3.3.6.5 1 .6.3.1.7.3 1.8.3 1.3.1 1.7.1 4.8.1s3.5 0 4.8-.1c1.1-.1 1.5-.2 1.8-.3.4-.2.7-.3 1-.6.3-.3.5-.6.6-1 .1-.3.3-.7.3-1.8.1-1.3.1-1.7.1-4.8s0-3.5-.1-4.8c-.1-1.1-.2-1.5-.3-1.8-.2-.4-.3-.7-.6-1-.3-.3-.6-.5-1-.6-.3-.1-.7-.3-1.8-.3-1.3-.1-1.7-.1-4.8-.1zm0 3.4a5.4 5.4 0 1 1 0 10.8 5.4 5.4 0 0 1 0-10.8zm0 2a3.4 3.4 0 1 0 0 6.8 3.4 3.4 0 0 0 0-6.8zm5.6-2.3a1.3 1.3 0 1 1-2.6 0 1.3 1.3 0 0 1 2.6 0z"/></svg></a>
+          <a href="https://www.tiktok.com/@thenumbersgamepodcast" target="_blank" rel="noopener" aria-label="The Numbers Game on TikTok"><svg viewBox="0 0 24 24"><path d="M12.53.02C13.84 0 15.14.01 16.44 0c.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg></a>
+          <a href="https://www.linkedin.com/company/the-numbers-game-podcast/" target="_blank" rel="noopener" aria-label="The Numbers Game on LinkedIn"><svg viewBox="0 0 24 24"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.24 8.25h4.52V23H.24V8.25zM8.34 8.25h4.33v2.01h.06c.6-1.14 2.08-2.34 4.28-2.34 4.58 0 5.42 3.01 5.42 6.92V23h-4.51v-7.16c0-1.71-.03-3.91-2.38-3.91-2.39 0-2.75 1.86-2.75 3.78V23H8.34V8.25z"/></svg></a>
+          <a href="https://www.facebook.com/profile.php?id=100071290388343" target="_blank" rel="noopener" aria-label="The Numbers Game on Facebook"><svg viewBox="0 0 24 24"><path d="M24 12.07C24 5.41 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.04V9.41c0-3.02 1.8-4.7 4.54-4.7 1.31 0 2.68.24 2.68.24v2.97h-1.5c-1.5 0-1.96.93-1.96 1.89v2.26h3.32l-.53 3.5h-2.8V24C19.62 23.1 24 18.1 24 12.07z"/></svg></a>
+          <a href="https://www.youtube.com/@thenumbersgamepodcast" target="_blank" rel="noopener" aria-label="The Numbers Game on YouTube"><svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.2C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31.7 31.7 0 0 0 0 12a31.7 31.7 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.2A31.7 31.7 0 0 0 24 12a31.7 31.7 0 0 0-.5-5.8zM9.6 15.6V8.4L15.8 12z"/></svg></a>
+        </div>
+      </div>
+      <div class="fcol">
+        <div class="foot-label">Brought to you by</div>
+        <div class="sponsors">
+          <a href="https://www.inovayt.com.au/" target="_blank" rel="noopener"><img src="assets/inovayt-white.png" alt="Inovayt"></a>
+          <a href="https://futureadvisory.com.au/" target="_blank" rel="noopener"><img src="assets/future-advisory-white.png" alt="Future Advisory"></a>
+        </div>
+      </div>
+      <div class="fcol produced">
+        <div class="foot-label">Produced by</div>
+        <a href="https://www.vidpod.com.au/" target="_blank" rel="noopener"><img src="assets/vidpod-white.png" alt="VIDPOD"></a>
+      </div>
+    </div>
+    <div class="footbar">
+      <details class="footnav-dd">
+        <summary><svg class="ham" viewBox="0 0 24 24"><path d="M3 6h18v2H3zM3 11h18v2H3zM3 16h18v2H3z"/></svg> Menu</summary>
+        <div class="dd-links">
+          <a href="/">Home</a><a href="/episodes">Every episode</a><a href="/adventure">Choose your own adventure</a><a href="/about">About the show</a><a href="/nick-reilly">Nick Reilly</a><a href="/jason-robinson">Jason Robinson</a><a href="/contact">Contact</a>
+        </div>
+      </details>
+      <div class="copyright">© 2026 The Numbers Game</div>
+    </div>
+  </footer>
+
+  <script>
+    var VIDEO='kk-FH5JEEWw';
+    var CHAPTERS=[
+      {t:"00:00",s:0,title:"Intro"},
+      {t:"01:18",s:78,title:""}
+    ];
+    var QUESTIONS=[
+      {q:"What changed with Payday Super on 1 July?",s:357},
+      {q:"How much negative cash flow does a $720,000 investment property have?",s:563},
+      {q:"Is a negatively geared property still worth holding without the tax refund?",s:669},
+      {q:"How did the card surcharge ban affect a small business?",s:876},
+      {q:"How much profit do cafes and restaurants make and what do card fees do to it?",s:1038},
+      {q:"How much borrowing power have people lost from the 2026 rate rises?",s:1074},
+      {q:"Why is it harder to refinance after the 2026 rate rises?",s:1136},
+      {q:"What is the SMSF residential property borrowing ban?",s:1278},
+      {q:"Is ATO general interest charge tax deductible?",s:1574},
+      {q:"Why do you need a trusted adviser when tax rules change so often?",s:1766}
+    ];
+
+    var chEl=document.getElementById('chapters');
+    CHAPTERS.forEach(function(c){var b=document.createElement('button');b.className='chapter';b.onclick=function(){startAt(c.s)};b.innerHTML='<span class="tc">'+c.t+'</span><span class="cx">'+c.title+'</span>';chEl.appendChild(b);});
+    document.getElementById('chcount').textContent=CHAPTERS.length;
+    var qEl=document.getElementById('qa');
+    QUESTIONS.forEach(function(q){var b=document.createElement('button');b.className='q';b.onclick=function(){startAt(q.s)};b.innerHTML='<span class="qm">?</span><span class="qx">'+q.q+'</span><span class="go">›</span>';qEl.appendChild(b);});
+    document.getElementById('qcount').textContent=QUESTIONS.length;
+
+    /* Mobile nav dropdown. */
+    var burger=document.getElementById('navburger'), navdrop=document.getElementById('navdrop');
+    if(burger&&navdrop){burger.addEventListener('click',function(){
+      navdrop.hidden=!navdrop.hidden;
+      burger.setAttribute('aria-expanded', navdrop.hidden?'false':'true');
+    });}
+
+    /* Voice-note button reveals the recorder; × tucks it away. */
+    var vbtn=document.getElementById('vbtn'), vslot=document.getElementById('vslot'), vclose=document.getElementById('vclose');
+    if(vbtn&&vslot){vbtn.addEventListener('click',function(){vslot.hidden=!vslot.hidden;});}
+    if(vclose&&vslot){vclose.addEventListener('click',function(){vslot.hidden=true;});}
+
+    /* Keep-exploring dots: only shown when the strip actually scrolls (mobile). */
+    var rg=document.querySelector('.relgrid'), rd=document.getElementById('reldots');
+    if(rg&&rd){
+      var relCards=rg.querySelectorAll('.relcard');
+      relCards.forEach(function(){rd.appendChild(document.createElement('span'))});
+      var updDots=function(){
+        var scrollable=rg.scrollWidth>rg.clientWidth+4;
+        rd.style.display=scrollable?'flex':'none';
+        if(!scrollable)return;
+        var i=Math.round(rg.scrollLeft/(rg.scrollWidth-rg.clientWidth)*(relCards.length-1));
+        rd.querySelectorAll('span').forEach(function(s,n){s.classList.toggle('on',n===i)});
+      };
+      rg.addEventListener('scroll',updDots,{passive:true});
+      window.addEventListener('resize',updDots);
+      updDots();
+    }
+
+    /* Explore tabs: swap the visible panel; the row stays put so you never lose your place. */
+    var tabBtns=document.querySelectorAll('.tabbtn');
+    tabBtns.forEach(function(b){
+      b.addEventListener('click',function(){
+        tabBtns.forEach(function(o){o.classList.remove('on')});
+        document.querySelectorAll('.tpanel').forEach(function(p){p.hidden=true});
+        b.classList.add('on');
+        document.getElementById(b.getAttribute('data-panel')).hidden=false;
+      });
+    });
+
+    /* YouTube: clean facade, then real player on demand. Seek without yanking to top. */
+    var player=null, ready=false, apiReady=false, pending=null;
+    window.onYouTubeIframeAPIReady=function(){apiReady=true; if(pending!=null){var s=pending;pending=null;createPlayer(s);}};
+    function createPlayer(sec){
+      var wrap=document.getElementById('player'); wrap.innerHTML='<div id="yt"></div>';
+      player=new YT.Player('yt',{videoId:VIDEO,playerVars:{autoplay:1,rel:0,modestbranding:1,playsinline:1,start:Math.floor(sec||0)},events:{onReady:function(){ready=true;}}});
+    }
+    function nudge(){
+      var p=document.getElementById('player-wrap'), r=p.getBoundingClientRect();
+      if(r.bottom<80 || r.top>window.innerHeight-90){ p.scrollIntoView({behavior:'smooth',block:'start'}); }
+    }
+    function startAt(sec){
+      nudge();
+      if(player&&ready){ player.seekTo(sec,true); player.playVideo(); return; }
+      if(apiReady){ createPlayer(sec); } else { pending=sec; }
+    }
+    document.getElementById('facade').addEventListener('click',function(){startAt(0);});
+    (function(){var s=document.createElement('script');s.src='https://www.youtube.com/iframe_api';document.head.appendChild(s);})();
+  </script>
+</body>
+</html>

@@ -1,0 +1,735 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EP 304 · Draft EP 304 | Show Notes Pending | The Numbers Game</title>
+<meta name="description" content="[SHOW NOTES PENDING]">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" sizes="64x64" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="canonical" href="https://thenumbersgamepodcast.com.au/draft-ep-304">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="The Numbers Game">
+<meta property="og:title" content="EP 304 · Draft EP 304 | Show Notes Pending | The Numbers Game">
+<meta property="og:description" content="[SHOW NOTES PENDING]">
+<meta property="og:url" content="https://thenumbersgamepodcast.com.au/draft-ep-304">
+<meta property="og:image" content="https://i.ytimg.com/vi/rdPBStU5jH4/maxresdefault.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+  :root{
+    --purple:#585af3; --purple-dark:#2c1b8a; --mint:#7ad9a8;
+    --white:#ffffff; --muted:rgba(255,255,255,.60); --dim:rgba(255,255,255,.42);
+    --line:rgba(255,255,255,.12); --card:rgba(255,255,255,.05); --card-hi:rgba(255,255,255,.09);
+    --display:'Anton',Impact,'Helvetica Neue',sans-serif;
+    --sans:'Inter',system-ui,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif;
+    --wrap:1280px;   /* page frame (nav spans this) */
+    --col:960px;     /* content column (player, tabs, text) */
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:var(--sans); color:var(--white); line-height:1.6; -webkit-font-smoothing:antialiased;
+    background:#12093a;
+    background-image:
+      radial-gradient(1200px 600px at 82% -6%, rgba(88,90,243,.45) 0%, transparent 55%),
+      radial-gradient(900px 700px at 5% 8%, rgba(122,217,168,.10) 0%, transparent 50%),
+      linear-gradient(180deg,#2c1b8a 0%,#1a1150 28%,#100b34 62%,#0b0820 100%);
+    background-attachment:fixed;
+  }
+  a{color:inherit}
+  .wrap{max-width:var(--wrap);margin:0 auto;padding:0 36px}
+  main.wrap{max-width:var(--col)}
+  @media(max-width:720px){.wrap{padding:0 22px}}
+
+  /* ── Navbar ── */
+  .nav{position:sticky;top:0;z-index:50;background:linear-gradient(180deg,rgba(24,15,74,.92),rgba(24,15,74,.72));backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+  .nav-in{max-width:var(--wrap);margin:0 auto;padding:11px 36px;display:flex;align-items:center;justify-content:space-between}
+  @media(max-width:720px){.nav-in{padding:11px 22px}}
+  .brand{display:block;line-height:0}
+  .brand img{height:36px;width:auto;display:block}
+  .navlinks{display:flex;gap:28px;align-items:center}
+  .navlinks a{text-decoration:none;font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);transition:.15s}
+  .navlinks a:hover{color:var(--white)}
+  .navlinks a.navtop{cursor:default}
+  .navgroup{position:relative;display:flex;align-items:center}
+  .navgroup .subnav{display:none;position:absolute;top:100%;left:50%;transform:translateX(-50%);padding-top:14px;min-width:180px}
+  .navgroup:hover .subnav,.navgroup:focus-within .subnav{display:block}
+  .subnav-in,.navgroup .subnav{z-index:60}
+  .navgroup .subnav a{display:block;background:#180f4a;border:1px solid var(--line);border-top:0;padding:12px 16px;font-size:12px;color:rgba(255,255,255,.85)}
+  .navgroup .subnav a:first-child{border-top:1px solid var(--line)}
+  .navgroup .subnav a:hover{background:#221768;color:var(--white)}
+  .navburger{display:none;background:none;border:1px solid var(--line);padding:8px 10px;cursor:pointer;color:var(--white);transition:.15s}
+  .navburger:hover{border-color:rgba(122,217,168,.6)}
+  .navburger svg{width:20px;height:20px;fill:currentColor;display:block}
+  .navdrop{display:none}
+  @media(max-width:720px){
+    .navlinks{display:none}
+    .navburger{display:block}
+    .navdrop{display:block;position:absolute;left:0;right:0;top:100%;
+      background:#180f4a;border-bottom:1px solid var(--line);box-shadow:0 24px 50px rgba(0,0,0,.45)}
+    .navdrop[hidden]{display:none}
+    .navdrop a{display:block;padding:15px 22px;text-decoration:none;font-size:14px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:rgba(255,255,255,.9);border-bottom:1px solid rgba(255,255,255,.06)}
+    .navdrop a:last-child{border-bottom:0}
+    .navdrop a.sub{padding-left:42px;font-size:13px;color:rgba(255,255,255,.72)}
+    .navdrop .navlabel{display:block;padding:15px 22px 6px;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.4)}
+  }
+
+  /* ── Hero / hook (marker-highlight system: purple hook wraps naturally, mint payoff below)
+     Rules: title splits at its natural break (colon/pipe/question mark). Front = hook (purple,
+     big), back = payoff (mint, smaller). No break in title = purple hook only. Highlights hug
+     the text (tight em padding tuned to Anton) and wrap via box-decoration-break — never
+     hand-pick line breaks or mint words. ── */
+  header.hero{padding:34px 0 6px}
+  .hook{--inx:clamp(8.4px,2.1vw,15.6px)} /* one shared text inset so hook + payoff first letters align */
+  .hook .hk{font-family:var(--display);font-weight:400;text-transform:uppercase;
+    font-size:clamp(28px,7vw,52px);line-height:1.3;letter-spacing:-.5px;text-wrap:balance}
+  .hook .hk span{color:var(--white);padding:.04em var(--inx) .02em;
+    background:linear-gradient(var(--purple),var(--purple)) 0 50%/100% 87% no-repeat;
+    -webkit-box-decoration-break:clone;box-decoration-break:clone}
+  .hook .pay{font-family:var(--display);font-weight:400;text-transform:uppercase;
+    font-size:clamp(16px,4vw,24px);line-height:1.5;letter-spacing:.6px;margin-top:8px;text-wrap:balance}
+  .hook .pay span{color:#0a0a0a;padding:.08em var(--inx) .04em;
+    background:linear-gradient(var(--mint),var(--mint)) 0 50%/100% 88% no-repeat;
+    -webkit-box-decoration-break:clone;box-decoration-break:clone}
+  /* no-hook titles: mid-split into two full-size rows, purple then mint */
+  .hook .hk span.hkrow{display:block;background:none;padding:0}
+  .hook .hk .hkrow+.hkrow{margin-top:8px}
+  .hook .hk span.mintseg{color:#0a0a0a;
+    background:linear-gradient(var(--mint),var(--mint)) 0 50%/100% 87% no-repeat}
+
+  /* ── Player (clean facade → real player on tap) ── */
+  .player-wrap{margin:24px 0 4px;scroll-margin-top:76px}
+  .player{position:relative;width:100%;padding-top:56.25%;border-radius:0;overflow:hidden;background:#000;box-shadow:0 30px 70px rgba(0,0,0,.5),0 0 0 1px rgba(255,255,255,.06)}
+  .facade{position:absolute;inset:0;border:0;cursor:pointer;background-size:cover;background-position:center;display:flex;align-items:center;justify-content:center;padding:0}
+  .facade .play{width:74px;height:74px;border-radius:50%;background:rgba(10,6,30,.40);border:2px solid rgba(255,255,255,.72);display:flex;align-items:center;justify-content:center;transition:.18s;-webkit-backdrop-filter:blur(1px);backdrop-filter:blur(1px)}
+  .facade:hover .play{background:rgba(88,90,243,.62);transform:scale(1.07);border-color:#fff}
+  .facade .play::after{content:"";border-style:solid;border-width:11px 0 11px 19px;border-color:transparent transparent transparent #fff;margin-left:5px}
+  .player iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+
+  /* ── Episode facts (bottom of the Summary panel — templated per episode) ── */
+  .sumfacts{margin:14px 10px 4px;padding-top:13px;border-top:1px solid rgba(255,255,255,.08);display:flex;flex-direction:column;gap:8px}
+  .fact{display:flex;gap:12px;font-size:13.5px}
+  .fact .fl{flex:none;width:104px;color:var(--dim);font-weight:600;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;padding-top:2px}
+  .fact .fv{color:rgba(255,255,255,.9);font-weight:500}
+  .fact .fv a{color:var(--mint);text-decoration:none;border-bottom:1px solid rgba(122,217,168,.4);transition:.15s}
+  .fact .fv a:hover{border-bottom-color:var(--mint)}
+
+  /* ── Episode tag (identity: black label hanging off the title corner) ── */
+  .eptag{display:inline-block;position:relative;left:-6px;margin-bottom:-7px;z-index:2;
+    background:#0a0a0a;color:var(--white);font-family:var(--display);font-weight:400;
+    font-size:13.5px;letter-spacing:1.5px;text-transform:uppercase;padding:6px 11px 4px}
+
+  /* ── Explore tabs (sticky mode switcher; one panel swaps below, nothing shoves) ── */
+  .explore{margin-top:22px}
+  .tabs{position:sticky;top:58px;z-index:40;display:flex;flex-wrap:wrap;gap:8px;padding:10px 0;
+    background:linear-gradient(180deg,rgba(18,10,55,.96),rgba(18,10,55,.86));
+    backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+  .tabbtn{font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.5px;
+    font-size:14.5px;color:var(--white);background:var(--purple);border:1px solid var(--purple);
+    padding:9px 13px 7px;cursor:pointer;transition:.15s}
+  .tabbtn:hover{filter:brightness(1.12)}
+  .tabbtn.on{background:var(--mint);border-color:var(--mint);color:#0a0a0a}
+  .tabbtn.on:hover{filter:none}
+  .tabbtn .ct{font-size:12px;opacity:.75;font-variant-numeric:tabular-nums}
+  .tabbtn .ct::before{content:" · "}
+  .tpanel{border:1px solid var(--line);background:var(--card);padding:12px 10px 14px}
+  .hint{font-size:12.5px;color:var(--muted);padding:2px 10px 10px;border-bottom:1px solid rgba(255,255,255,.08);margin-bottom:6px}
+
+  /* ── Listen row (no box: label left, service pills follow) ── */
+  .listen{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:12px 16px;margin-top:34px}
+  .listen .lname{font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--dim)}
+  .listen a{display:inline-flex;align-items:center;gap:9px;padding:11px 18px;border-radius:999px;
+    background:var(--mint);color:#08210f;text-decoration:none;font-weight:800;font-size:12.5px;
+    letter-spacing:.04em;text-transform:uppercase;transition:.15s}
+  .listen a:hover{filter:brightness(1.06);transform:translateY(-1px);box-shadow:0 12px 30px rgba(122,217,168,.25)}
+  .listen svg{width:20px;height:20px;fill:currentColor;flex:none}
+  /* ── Listen-now Spotify audio embed (full column width, above the pills) ── */
+  .listen-now{margin-top:40px}
+  .listen-now .ln-head{display:flex;align-items:baseline;justify-content:space-between;gap:14px;margin-bottom:13px}
+  .listen-now .ln-title{font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--dim)}
+  .audio-embed{border-radius:12px;overflow:hidden;box-shadow:0 20px 50px rgba(0,0,0,.4),0 0 0 1px rgba(255,255,255,.06)}
+  .audio-embed iframe{display:block;width:100%;border:0}
+  @media(max-width:720px){.listen-now{margin-top:32px}}
+
+  /* ── Keep exploring (thumbnails link to other episode PAGES, never timecodes).
+     Swipeable strip on mobile, fits three-up on desktop. Variant rule: claim
+     "similar ground" + reason lines ONLY when moment-level topic overlap is
+     genuinely strong; otherwise show the latest released episodes with dates —
+     never invent a connection. ── */
+  .relsec{margin-top:60px;padding-top:58px;border-top:1px solid var(--line)} /* line = end of this episode's info */
+  .reldots{display:flex;justify-content:center;gap:7px;margin-top:12px}
+  .reldots span{width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.25);transition:.2s}
+  .reldots span.on{background:var(--mint)}
+  .relsec .rtitle{display:inline-block;font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.5px;font-size:14.5px;background:var(--mint);color:#0a0a0a;padding:9px 13px 7px;margin-bottom:18px}
+  .relgrid{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding-bottom:6px;scrollbar-width:none}
+  .relgrid::-webkit-scrollbar{display:none}
+  .relcard{flex:0 0 56%;max-width:232px;scroll-snap-align:start;display:flex;flex-direction:column;text-decoration:none;background:var(--card);border:1px solid var(--line);transition:.15s}
+  .relcard:hover{background:var(--card-hi);border-color:rgba(122,217,168,.55)}
+  .relcard img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block}
+  .relcard .rt{display:block;font-size:12.5px;font-weight:600;color:rgba(255,255,255,.92);line-height:1.4;padding:8px 8px 0}
+  .relcard .rfoot{margin-top:auto;display:flex;justify-content:space-between;align-items:flex-end;gap:8px;padding:10px 8px 9px}
+  .relcard .rwhy{font-size:11.5px;color:var(--mint)}
+  .relcard .rtag{display:inline-block;background:#0a0a0a;color:var(--white);font-family:var(--display);font-size:10px;letter-spacing:1.2px;text-transform:uppercase;padding:3px 7px 2px;white-space:nowrap;flex:0 0 auto}
+
+  /* ── Dropdown sections (accordion under the player) ── */
+  .drops{margin-top:34px;display:flex;flex-direction:column;gap:11px}
+  .drop{border:1px solid var(--line);border-radius:0;background:var(--card);overflow:hidden;transition:border-color .15s}
+  .drop[open]{border-color:rgba(122,217,168,.35)}
+  .drop>summary{list-style:none;cursor:pointer;padding:16px 18px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+  .drop>summary::-webkit-details-marker{display:none}
+  .drop>summary .st{font-weight:700;font-size:15.5px;letter-spacing:.005em}
+  .drop>summary .ct{margin-left:auto;font-size:12px;color:var(--dim);font-weight:600;font-variant-numeric:tabular-nums}
+  .drop>summary .chev{flex:none;width:22px;height:22px;border-radius:50%;background:rgba(122,217,168,.14);color:var(--mint);display:flex;align-items:center;justify-content:center;font-family:var(--display);font-size:15px;line-height:1;transition:.2s;transform:translateY(-1px)}
+  .drop[open]>summary .chev{transform:rotate(45deg)}
+  .drop-body{padding:2px 12px 12px}
+
+  /* chapters */
+  .chapter{display:flex;align-items:baseline;gap:14px;width:100%;text-align:left;cursor:pointer;background:none;border:0;color:inherit;font-family:inherit;padding:11px 10px;border-radius:10px;transition:.13s}
+  .chapter:hover{background:var(--card-hi)}
+  .chapter .tc{font-variant-numeric:tabular-nums;font-weight:700;font-size:14px;color:var(--mint);flex:none;width:48px}
+  .chapter .cx{font-size:15px;font-weight:500;color:rgba(255,255,255,.9)}
+  .chapter:hover .cx{color:#fff}
+
+  /* questions */
+  .q{display:flex;align-items:center;gap:12px;width:100%;text-align:left;cursor:pointer;background:none;border:0;border-radius:11px;color:inherit;font-family:inherit;padding:12px 10px;transition:.14s}
+  .q+.q{border-top:1px solid rgba(255,255,255,.05)}
+  .q:hover{background:var(--card-hi)}
+  .q .qm{font-family:var(--display);font-size:15px;color:var(--mint);flex:none;line-height:1;transform:translateY(1px)}
+  .q .qx{font-size:15px;font-weight:500;color:rgba(255,255,255,.92)}
+  .q .go{margin-left:auto;flex:none;color:var(--dim);font-size:18px;transition:.15s}
+  .q:hover .go{color:var(--mint);transform:translateX(2px)}
+
+  /* summary + transcript bodies */
+  .summary-body p{font-size:16.5px;line-height:1.62;color:rgba(255,255,255,.9);padding:6px 10px 4px}
+  .tbody{padding:2px 10px 8px}
+  .tbody p{font-size:14.5px;line-height:1.7;color:rgba(255,255,255,.78);margin-top:15px;max-width:64ch}
+  .tbody .spk{display:block;font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--mint);margin-bottom:2px}
+
+  /* ── Voice note ask (lives at the bottom of the Summary panel) ── */
+  .vask{margin:16px 10px 4px}
+  .vbtn{display:inline-flex;align-items:center;gap:9px;padding:12px 20px;border-radius:999px;border:0;cursor:pointer;
+    background:var(--mint);color:#08210f;font-family:inherit;font-weight:800;font-size:12.5px;
+    letter-spacing:.04em;text-transform:uppercase;transition:.15s}
+  .vbtn:hover{filter:brightness(1.06);transform:translateY(-1px);box-shadow:0 12px 30px rgba(122,217,168,.25)}
+  .vbtn svg{width:18px;height:18px;fill:currentColor;flex:none}
+  .vslot{background:var(--purple);padding:12px 10px 10px;margin:14px 0 4px;box-shadow:0 18px 40px rgba(0,0,0,.35)}
+  .vslot[hidden]{display:none}
+  .vhead{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;margin-bottom:10px}
+  .vhead .vmsg{font-family:var(--sans);font-size:13px;line-height:1.55;color:rgba(255,255,255,.92);margin:2px 0 0;padding:0 2px}
+  .vclose{background:none;border:0;color:rgba(255,255,255,.85);font-size:22px;line-height:1;cursor:pointer;padding:0 2px}
+  .vclose:hover{color:var(--white)}
+  .vslot iframe{display:block}
+
+  /* ── YouTube subscribe pill (sits in the listen row; outranks .listen a's mint) ── */
+  .listen a.yt-pill{background:var(--purple);color:var(--white)}
+  .listen a.yt-pill:hover{filter:brightness(1.1);transform:translateY(-1px)}
+  @media(max-width:720px){ /* mobile: no label, three compact pills on one row */
+    .listen .lname{display:none}
+    .listen{gap:8px}
+    .listen a{padding:10px 13px;font-size:11px;gap:6px}
+    .listen svg{width:16px;height:16px}
+  }
+
+  /* ── Footer: Follow us on | Brought to you by | Produced by, + Menu dropdown ── */
+  footer{border-top:1px solid var(--line);margin-top:68px;padding:52px 20px 58px}
+  .footgrid{max-width:var(--wrap);margin:0 auto;display:grid;grid-template-columns:1fr 1.15fr .8fr;gap:44px;align-items:start}
+  .fcol{text-align:center;display:flex;flex-direction:column;align-items:center}
+  .foot-label{font-size:11px;font-weight:700;letter-spacing:.26em;text-transform:uppercase;color:var(--dim);margin-bottom:18px}
+  .sponsors{display:flex;justify-content:center;align-items:center;gap:34px;flex-wrap:wrap}
+  .sponsors a,.produced a{display:inline-flex;transition:.15s}
+  .sponsors a:hover,.produced a:hover{transform:translateY(-1px)}
+  .sponsors img{height:32px;width:auto;opacity:.92}
+  .produced img{height:30px;width:auto;opacity:.95}
+  .sponsors a:hover img,.produced a:hover img{opacity:1}
+  footer .socials{display:flex;gap:11px;justify-content:center;flex-wrap:wrap;margin:0}
+  footer .socials a{width:40px;height:40px;border-radius:50%;border:1.5px solid rgba(122,217,168,.5);display:flex;align-items:center;justify-content:center;transition:.15s}
+  footer .socials a svg{width:18px;height:18px;fill:var(--mint);transition:.15s}
+  footer .socials a:hover{background:var(--mint);border-color:var(--mint);transform:translateY(-2px)}
+  footer .socials a:hover svg{fill:#0a0a0a}
+  .footbar{max-width:var(--wrap);margin:34px auto 0;border-top:1px solid var(--line);padding-top:20px;display:flex;flex-direction:column;align-items:center;gap:14px}
+  .footnav-dd{display:block;width:100%;max-width:var(--wrap);margin:0 auto;text-align:center}
+  .footnav-dd>summary{list-style:none;cursor:pointer;display:inline-flex;align-items:center;gap:9px;font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.5px;font-size:13px;color:var(--muted);background:transparent;border:1px solid var(--line);padding:8px 16px 6px;transition:.15s}
+  .footnav-dd>summary::-webkit-details-marker{display:none}
+  .footnav-dd>summary:hover{color:var(--mint);border-color:rgba(122,217,168,.45)}
+  .footnav-dd>summary .ham{width:15px;height:15px;fill:currentColor;transform:translateY(-1px)}
+  .footnav-dd .dd-links{display:flex;flex-direction:row;flex-wrap:wrap;justify-content:center;gap:12px 24px;padding:24px 0 4px}
+  .footnav-dd .dd-links a{font-size:11.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:.15s}
+  .footnav-dd .dd-links a:hover{color:var(--mint)}
+  .copyright{font-size:12px;color:var(--dim);text-align:center}
+  @media(max-width:720px){.footgrid{grid-template-columns:1fr;gap:34px}footer{padding:40px 16px 20px}.footbar{margin-top:34px;padding-top:24px;gap:20px}.footnav-dd .dd-links{flex-direction:column;align-items:center;gap:15px}}
+
+  @media(min-width:720px){header.hero{padding:48px 0 6px}}
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "PodcastEpisode", "name": "Draft EP 304 | Show Notes Pending", "url": "https://thenumbersgamepodcast.com.au/draft-ep-304", "datePublished": "2026-11-23", "episodeNumber": 304, "image": "https://i.ytimg.com/vi/rdPBStU5jH4/maxresdefault.jpg", "partOfSeries": {"@type": "PodcastSeries", "name": "The Numbers Game", "url": "https://thenumbersgamepodcast.com.au/"}}</script>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-in">
+      <a class="brand" href="/" aria-label="The Numbers Game home"><img src="assets/tng-logo.png" alt="The Numbers Game"></a>
+      <div class="navlinks">
+        <a href="/">Home</a>
+        <div class="navgroup">
+          <a class="navtop">Episodes</a>
+          <div class="subnav">
+            <a href="/episodes">All episodes</a>
+            <a href="/adventure">Find moments</a>
+          </div>
+        </div>
+        <div class="navgroup">
+          <a class="navtop">About</a>
+          <div class="subnav">
+            <a href="/about">The show</a>
+            <a href="/nick-reilly">Nick Reilly</a>
+            <a href="/jason-robinson">Jason Robinson</a>
+          </div>
+        </div>
+        <a href="/contact">Contact</a>
+      </div>
+      <button class="navburger" id="navburger" type="button" aria-label="Menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24"><path d="M3 6h18v2H3zM3 11h18v2H3zM3 16h18v2H3z"/></svg>
+      </button>
+    </div>
+    <div class="navdrop" id="navdrop" hidden>
+      <a href="/">Home</a>
+      <span class="navlabel">Episodes</span>
+      <a class="sub" href="/episodes">All episodes</a>
+      <a class="sub" href="/adventure">Find moments</a>
+      <span class="navlabel">About</span>
+      <a class="sub" href="/about">The show</a>
+      <a class="sub" href="/nick-reilly">Nick Reilly</a>
+      <a class="sub" href="/jason-robinson">Jason Robinson</a>
+      <a href="/contact">Contact</a>
+    </div>
+  </nav>
+
+  <main class="wrap">
+
+    <header class="hero">
+      <div class="hook">
+        <span class="eptag">EP 304</span>
+        <h1 class="hk"><span>Draft EP 304</span></h1>
+        <p class="pay"><span>Show Notes Pending</span></p>
+      </div>
+    </header>
+
+    <div class="player-wrap" id="player-wrap">
+      <div class="player" id="player">
+        <button class="facade" id="facade" style="background-image:url('https://i.ytimg.com/vi/rdPBStU5jH4/maxresdefault.jpg')" aria-label="Play episode">
+          <span class="play"></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="explore">
+      <div class="tabs" role="tablist">
+        <button class="tabbtn on" data-panel="p-summary">Summary</button>
+        <button class="tabbtn" data-panel="p-chapters">Chapters<span class="ct" id="chcount"></span></button>
+        <button class="tabbtn" data-panel="p-questions">Questions<span class="ct" id="qcount"></span></button>
+      </div>
+      <section class="tpanel" id="p-summary">
+        <div class="summary-body">
+          <p>[SHOW NOTES PENDING]</p>
+        </div>
+        <div class="vask">
+          <button class="vbtn" id="vbtn" type="button">
+            <svg viewBox="0 0 24 24"><path d="M12 14a3 3 0 0 0 3-3V6a3 3 0 1 0-6 0v5a3 3 0 0 0 3 3zm5-3a5 5 0 0 1-10 0H5a7 7 0 0 0 6 6.92V21h2v-3.08A7 7 0 0 0 19 11h-2z"/></svg>
+            Send us a voice note
+          </button>
+          <div class="vslot" id="vslot" hidden>
+            <div class="vhead">
+              <p class="vmsg">We'd love to hear from you. You can leave up to a 90 second voice note for us to play on the show: a question, some feedback, or a topic you want covered.</p>
+              <button class="vclose" id="vclose" type="button" aria-label="Close">&times;</button>
+            </div>
+            <iframe src="https://www.speakpipe.com/widget/inline/hhq6kzggsx7zpcsvakgxfrzun3zidpde" allow="microphone" width="100%" height="200" frameborder="0" title="Leave The Numbers Game a voice note"></iframe>
+          </div>
+          <script async src="https://www.speakpipe.com/widget/loader.js" charset="utf-8"></script>
+        </div>
+        <div class="sumfacts">
+          <div class="fact"><span class="fl">Release date</span><span class="fv">23 November 2026</span></div>
+          <div class="fact"><span class="fl">Hosts</span><span class="fv"><a href="/nick-reilly">Nick Reilly</a> &amp; <a href="/jason-robinson">Jason Robinson</a></span></div>
+
+        </div>
+      </section>
+      <section class="tpanel" id="p-chapters" hidden>
+        <p class="hint">Jump straight to the part you need.</p>
+        <div id="chapters"></div>
+      </section>
+      <section class="tpanel" id="p-questions" hidden>
+        <p class="hint">Real questions this episode answers. Tap one to hear the answer.</p>
+        <div id="qa"></div>
+      </section>
+    </div>
+
+    <div class="drops">
+
+      <details class="drop">
+        <summary><span class="st">Episode transcript</span><span class="chev">+</span></summary>
+        <div class="drop-body tbody">
+          <p><span class="spk">Jason · 00:00</span>Welcome to episode 304 of The Numbers Game. I'm Jase. I'm here with my good friend Nick. It's blue skies and sunshine in Melbourne for us. How are you today, buddy?</p>
+          <p><span class="spk">Nick · 00:09</span>Good. I was actually just thinking the same. I was thinking the same. And we're— some big things happening in Victoria.</p>
+          <p><span class="spk">Jason · 00:15</span>It is, mate. It is. This week it's election week for those that are listening in time and in tune. And for those that aren't, we've got some exciting things to reel off anyway that will still hopefully make for a good listen about our great state here in Victoria. Who you voting for, mate?</p>
+          <p><span class="spk">Nick · 00:31</span>Is that a rude question these days?</p>
+          <p><span class="spk">Jason · 00:33</span>Oh, look, I don't know. I don't mind answering. I was a born and bred, like, you know, when you think about your parents and how they raised you, like, my dad was as liberal as they get, which was, I always felt a little bit strange. Like, he wasn't a blue, white collar worker and he wasn't a business owner.</p>
+          <p><span class="spk">Jason · 00:49</span>You know, he worked for, you know, Myer and big kind of corporate companies as like forklift driver, warehouse, picking, packing, that kind of thing. But he was liberal, as liberal as they come. I always thought he would have been a Labor man potentially. I think we'll get into a little bit of that.</p>
+          <p><span class="spk">Jason · 01:05</span>But yeah, I mean, I'm a creature of habit. It's Liberal at the moment,</p>
+          <p><span class="spk">Nick · 01:10</span>right?</p>
+          <p><span class="spk">Jason · 01:10</span>I've got a few more days to think this through. But, you know, it is a bit of a thing around what are the policies, how do they affect me and my business that I run in Victoria? And as do you. And then it'll come down to, yeah, I mean, can I sway if it was something else?</p>
+          <p><span class="spk">Jason · 01:29</span>Like, can I sway from the same tick that I've done in the box or the same number that I've done for Liberal every time? Yeah. What about yourself?</p>
+          <p><span class="spk">Nick · 01:35</span>Mate, I actually think it's a really rude question to ask,</p>
+          <p><span class="spk">Jason · 01:38</span>so</p>
+          <p><span class="spk">Nick · 01:38</span>I'm going to keep that to myself.</p>
+          <p><span class="spk">Jason · 01:41</span>Oh,</p>
+          <p><span class="spk">Nick · 01:41</span>so you actually wasn't expecting me to answer.</p>
+          <p><span class="spk">Jason · 01:43</span>Oh, that's all right.</p>
+          <p><span class="spk">Nick · 01:43</span>It was a bit of a joke, but you went on a bit of a journey there. So best of luck. Hope it works out.</p>
+          <p><span class="spk">Jason · 01:52</span>Shit. Well, everyone who now dislikes me because of my voting choice, thanks for joining. No, to get us back on track and we'll keep this, you know, interesting, I hope. Nick, if I told you that a Melbourne economist ranked 366 states and regions and their governments across 22 Western countries, who do you think or where do you think Victoria would rate on an index when it comes to</p>
+          <p><span class="spk">Jason · 02:22</span>wasteful projects, fiscal deterioration, Emergency powers, accountability, proven corruption, and organised crime.</p>
+          <p><span class="spk">Nick · 02:33</span>Organised crime. 366.</p>
+          <p><span class="spk">Jason · 02:38</span>366 different states and regions from around the Western world.</p>
+          <p><span class="spk">Nick · 02:43</span>We'd be top 20%.</p>
+          <p><span class="spk">Jason · 02:44</span>Top 20%. Okay, cool. All right. What if I told you we won?</p>
+          <p><span class="spk">Nick · 02:50</span>We won? We won. So,</p>
+          <p><span class="spk">Jason · 02:51</span>we were</p>
+          <p><span class="spk">Nick · 02:51</span>number 366.</p>
+          <p><span class="spk">Jason · 02:53</span>We are number one.</p>
+          <p><span class="spk">Nick · 02:54</span>Oh, that's that kind of win.</p>
+          <p><span class="spk">Jason · 02:56</span>This kind of— that kind of win. We won.</p>
+          <p><span class="spk">Nick · 02:59</span>That would shock me. Yeah. Mainly because you talked about organised crime.</p>
+          <p><span class="spk">Jason · 03:03</span>Yeah.</p>
+          <p><span class="spk">Nick · 03:04</span>So I'm just thinking there'd be some significant organised crime.</p>
+          <p><span class="spk">Jason · 03:08</span>So Chicago, Chicago, the mob in Chicago, Illinois, they came second. Mafia, Sicily, Italy, third. So Victoria ranked number one in all of the way it was done. And I'll explain it a little bit more and get into it. But, but I was out for a run with our friends Simon Birch and Birchy mentioned, oh, did you see that thing pop up on LinkedIn about Victoria is the most corrupt, worst-run government state in the world?</p>
+          <p><span class="spk">Jason · 03:34</span>And I was like, whoa, no, I didn't. I didn't see that. So I had to go and find what report he was talking about. And I'll go into why this is, you know, a bit of fun.</p>
+          <p><span class="spk">Nick · 03:43</span>Number one.</p>
+          <p><span class="spk">Jason · 03:44</span>Number one. Number one, the worst-run state.</p>
+          <p><span class="spk">Nick · 03:48</span>We know who Birchy's voting.</p>
+          <p><span class="spk">Jason · 03:49</span>Well, it's not Labor. We know he's not voting. We know he's not voting. Out of interest, and I'll get into it, where do you think— No, I'll go through it first and then we'll play over the rest of the states. So this does kind of land back to episode 280.</p>
+          <p><span class="spk">Jason · 04:05</span>Back on the 8th of June, we covered Victoria's debt, pushing up to $199 billion. We covered our interest repayments, which I've got a few more stats on that later. Since then, the Premier at the time was the Honourable Jacinta Allan, and we know that it's honourable because of the plaque that got redone for the $70,000 or $80,000.</p>
+          <p><span class="spk">Jason · 04:22</span>So we'll always remember that. Thank you, Jacinta. Ben Carroll took over, came out straight away, big swing, spent $50 million on the commission into the Big Build corruption.</p>
+          <p><span class="spk">Nick · 04:33</span>Yep.</p>
+          <p><span class="spk">Jason · 04:34</span>So that's, that's underway. Some of the things that, you know, along the way, you know, 3 in 4 Victorians say that Victoria is on the wrong track in an SEC Newgate study. And Victoria unemployment up until August is 5.2%. It's the highest of all of the states in Australia.</p>
+          <p><span class="spk">Nick · 04:50</span>Yep.</p>
+          <p><span class="spk">Jason · 04:51</span>So, Nick, I mean, you sit with some clients, you talk to a lot of your team. What do you feel the general sentiment is about Victoria at the moment? Are people complaining? Are they moving? Are they buying outside of Victoria? Or, you know, sometimes these studies say one thing, but the people living here just continue to go about their lives.</p>
+          <p><span class="spk">Nick · 05:09</span>Yeah, so definitely complaining, but I feel like that has been for quite some time. Clearly, the catalyst being COVID, and ever since then it's, you know, it's just been continuous. But I think there's this, particularly in the current environment with access to social media and whatnot, it's a flywheel effect at the moment, particularly in regards to Victorian government.</p>
+          <p><span class="spk">Nick · 05:38</span>Now, you know, I'm happy to say that based on algorithms, I might only be being fed that stuff. Actually, can I borrow your phone</p>
+          <p><span class="spk">Jason · 05:47</span>after this? I went and liberally said who I was voting for. And maybe if I get your algorithm, I might be able to see your preferences.</p>
+          <p><span class="spk">Nick · 05:56</span>So yeah, I feel like it's just that's been growing and growing. People, you know, with their nose out of joint, for lack of a better phrase, ever since COVID The move out of Melbourne, I think we've already seen that. We've recently hit, you know, net positive migration, I think, or something like that.</p>
+          <p><span class="spk">Nick · 06:19</span>So that's happened. But yeah, I just think people have been sad and, you know, felt like they've been hard done by ever since COVID</p>
+          <p><span class="spk">Jason · 06:31</span>Yep. Yep. I concur. I agree. I think being, being sitting with business owners as well who seem to be copping a bit of a raw end of the deal, you know, when it comes to running an economy poorly, a lot of the taxes that are collected are through small business owners and the general people of Australia.</p>
+          <p><span class="spk">Jason · 06:48</span>So they seem to be hit hardest at the moment. So with this report, Nick, give you a bit of detail about what it is and where it came from. So who it was, Maurice O'Shaughnessy. He's a Melbourne economist. He formerly ran BlackRock Australia and he was the managing director there for 23 years. So credentials check out famous and well-known Melbourne economist.</p>
+          <p><span class="spk">Jason · 07:07</span>The information is available for free on his Substack. So if you look up the most mismanaged state or region in the West, if you Google that, it's going to pop up. There was also a Daily Mail write-up and a few other bits and pieces, but where it really got around and how our good friend Bertie saw it would have been from a guy called Gideon Rosner.</p>
+          <p><span class="spk">Jason · 07:26</span>He is the head of advocacy for Fix Victoria and he's got this new campaign group. He's ex-IPA and he actually shared it on his LinkedIn and it kind of went a bit viral from there and, you know, went through how it was calculated. So there were 7 different categories.</p>
+          <p><span class="spk">Jason · 07:43</span>I mentioned them to you before and of the Morrison stress tested them because, I mean, obviously he's in Victoria, he's in Melbourne, didn't want to maybe seem biased. So we wanted to check, geez, did Victoria really come out the worst if I get it to work a bit of a different way?</p>
+          <p><span class="spk">Jason · 07:59</span>And he kept on kind of weighting different things, whether it was wasteful projects, organized crime, so on. And Victoria continued to finish in the top 5 out of all 6 of his weightings that he, that he re-tinkered with. So no matter what he did, Victoria was showing up as you know, the most mismanaged and worst region in the West from a government and projects point of view and policies.</p>
+          <p><span class="spk">Nick · 08:22</span>Yep.</p>
+          <p><span class="spk">Jason · 08:22</span>And in full disclosure, and it is there, essentially he built it using available true government data that was all publicly available, and he ran it through ChatGPT and Grok and stress tested it back and forth between two AI platforms. So this is an AI-built research or, you know, personal piece by Morris.</p>
+          <p><span class="spk">Jason · 08:41</span>So I guess with that in mind, like, you know, this guy's got 23 years of credentials running BlackRock Australia. Do you sit there and go, this is less interesting or less believable now? Or do you think—</p>
+          <p><span class="spk">Nick · 08:53</span>No, I think it's believable.</p>
+          <p><span class="spk">Jason · 08:54</span>Yeah.</p>
+          <p><span class="spk">Nick · 08:55</span>Because numbers are numbers, right? Yeah. And whichever way you look at it, like, who cares if it's— if we're number 1 or number 30?</p>
+          <p><span class="spk">Jason · 09:03</span>Yeah. Like, if you're up there though, out of 300, that's a real problem.</p>
+          <p><span class="spk">Nick · 09:07</span>And mate, the reality is we're in the state, so it's very easy to believe it based on what's happening.</p>
+          <p><span class="spk">Jason · 09:13</span>Yep. Yep. Perfect. So I'll give you the scores. I think I gave you the categories before. So the worst scores— Victoria got the top score, a possible 10 out of 10 for wasteful projects. For fiscal deterioration, deterioration 9, cronyism 9, emergency powers 8, accountability 8, proven corruption 6, organized crime 4.</p>
+          <p><span class="spk">Jason · 09:37</span>So organized crime, as you said, where there is more organized crime elsewhere. Yeah, that wasn't our top rated. But when you think about our our top 10 for waste. And again, these numbers have been shared, and I won't kind of go too crazy, but we have the Westgate Tunnel that was meant to be $5 billion, it cost over $10 billion.</p>
+          <p><span class="spk">Nick · 09:54</span>Yeah.</p>
+          <p><span class="spk">Jason · 09:54</span>We got the North East Link that was meant to be $10 billion, it cost $20 billion.</p>
+          <p><span class="spk">Nick · 09:58</span>Yeah.</p>
+          <p><span class="spk">Jason · 09:59</span>We've got the Suburban Rail Loop that when quoted it was $30 billion to $50 billion.</p>
+          <p><span class="spk">Nick · 10:03</span>Yeah.</p>
+          <p><span class="spk">Jason · 10:03</span>It's estimated to cost over $200 billion, and only 2 of the 3 projects, if they went with them, would be $100 billion. So more than double the initial quote anyway. You've got the tunnel that was canceled by Dan Andrews that cost $1.1 billion to end up with— I was— yeah, $1.1 billion to get nothing for it.</p>
+          <p><span class="spk">Jason · 10:22</span>You've got the Olympics. So the Commonwealth Games, sorry, not Olympics, Commonwealth Games that, you know, they said that the reason they couldn't run it, it was going to cost $6 to $7 billion to bring the Commonwealth Games to Victoria. Like, how are they spending this money?</p>
+          <p><span class="spk">Jason · 10:37</span>I guess if they're spending it the same way on all the other projects, that makes sense. So they canned it and cost better half of— better part of half a billion or more. So all of a sudden when you go Victoria got the top score for wasteful projects, you can kind of go, that makes a lot of sense.</p>
+          <p><span class="spk">Jason · 10:52</span>That one's easy. That one's easy. And then you throw in the estimated, I mean, it's the Watson Report, but the $15 billion that could be $30 billion that's gone through corruption through CFMEU and construction and whatnot.</p>
+          <p><span class="spk">Nick · 11:04</span>Jacinta Clark.</p>
+          <p><span class="spk">Jason · 11:05</span>Yeah.</p>
+          <p><span class="spk">Nick · 11:05</span>70,000.</p>
+          <p><span class="spk">Jason · 11:06</span>Yeah.</p>
+          <p><span class="spk">Nick · 11:08</span>You can do a lot with 70,000.</p>
+          <p><span class="spk">Jason · 11:08</span>It doesn't end. So I mean, it as a numbers guy and doing something like The Numbers Game, I must admit I got my little nerd off on going through this. So yeah, do check it out. Morris O'Shaughnessy, The Most Mismanaged State or Region in the West.</p>
+          <p><span class="spk">Jason · 11:24</span>Give it a Google, have a look at the numbers and play around. Yeah, it just, it's mind-blowing. And then we go into fiscal mismanagement. And Nick, you've probably got some numbers here around the bond roll. But just as we talked about in the previous episode at 280, pushing $200 billion in government debt by 2030.</p>
+          <p><span class="spk">Jason · 11:43</span>That were the numbers in the 26-27 budget paper.</p>
+          <p><span class="spk">Nick · 11:46</span>Yeah.</p>
+          <p><span class="spk">Jason · 11:46</span>Costing us interest of $24 million a day at the moment.</p>
+          <p><span class="spk">Nick · 11:51</span>Yeah.</p>
+          <p><span class="spk">Jason · 11:51</span>And expected to be $32 million a day by 2029-2030.</p>
+          <p><span class="spk">Nick · 11:56</span>Yeah.</p>
+          <p><span class="spk">Jason · 11:57</span>So what are the bond numbers telling us?</p>
+          <p><span class="spk">Nick · 11:59</span>Yeah. So it's no secret that interest rates are more expensive. Bond yields are right up. So A lot of those bonds that were initially issued in 2020, 2021 were when we had record low rates and are sitting at rates of sort of 1.25% to 1.5%.</p>
+          <p><span class="spk">Nick · 12:21</span>So as of next year, Victoria has to roll those bonds over, call it a refinance. That's probably the easiest way to explain it, into the current rates, which is sitting at around 6%. So they have to roll it all over next year.</p>
+          <p><span class="spk">Nick · 12:37</span>It's, I think it's staggered up to 2030. But that is why the projected, not just the balance of the debt, but the projected interest costs are so much more into the future.</p>
+          <p><span class="spk">Jason · 12:51</span>Yeah, and that makes sense. I mean, if you start to talk about the government start to talk about bringing down the spend, but we're looking at interest go from $24 million to $32 million a day.</p>
+          <p><span class="spk">Nick · 13:00</span>Yeah.</p>
+          <p><span class="spk">Jason · 13:00</span>All of a sudden the cost of money. A day.</p>
+          <p><span class="spk">Nick · 13:04</span>A day.</p>
+          <p><span class="spk">Jason · 13:05</span>It's incredible. Like, and then it goes into, you know, where does the money come from to cover this? And And again, won't go too crazy. This is a bit of a recap for those before we go to the voting, the voting booths. If you are catching this episode in time, you know, you're looking at O'Shaughnessy's best line in the report talks about Victoria is a creditor protected but citizen burdened state.</p>
+          <p><span class="spk">Jason · 13:27</span>So the citizen burdened is that it's the citizens that are paying for this. You're looking at payroll tax where the equal lowest threshold in the country. As soon as you have $1,000,000 worth of payroll, you start to pay an extra 4.85% tax. Tax on top of that.</p>
+          <p><span class="spk">Nick · 13:43</span>Yeah.</p>
+          <p><span class="spk">Jason · 13:44</span>To put it in numbers for people to make sense, you're a small business, you're running a cafe, restaurant, construction business, professional services. $2 million in wages is not, not huge.</p>
+          <p><span class="spk">Nick · 13:54</span>Yeah.</p>
+          <p><span class="spk">Jason · 13:55</span>$48,500 a year is your thanks for hiring people gift from the government. You pay them $48,500 for giving out jobs.</p>
+          <p><span class="spk">Nick · 14:04</span>And that's someone else they don't hire.</p>
+          <p><span class="spk">Jason · 14:05</span>Correct. Yeah. And you know, again, if the money was what well managed and going towards great things. I mean, I'm going to talk about it, a couple of the policies, but look at the potholes. Victoria roads, if you're not from Victoria, good on you and you're very lucky, you're probably driving on a smooth road.</p>
+          <p><span class="spk">Jason · 14:21</span>But we have a huge pothole problem to the point where somebody died recently. And if we're, if we're in a state where we can't drive on our roads and be safe, a friend was going to my brother's to pick up some stuff for the gym and He smashed his tyre, hit a pothole, broke his rim.</p>
+          <p><span class="spk">Jason · 14:38</span>And again, it's like this stuff happens to everyday people every day and it shouldn't be happening if our state was well managed.</p>
+          <p><span class="spk">Nick · 14:44</span>I was driving the other day. Tommy, our producer, will know this. There's a road called Bay Road and it goes all the way from Beach Road in Sandringham all the way through to Cheltenham, down to where Southland and whatnot is. Very busy road.</p>
+          <p><span class="spk">Nick · 14:59</span>Two lanes going each way. Last week, the traffic all suddenly stopped because there is a pothole, but they have got— they had, call it, 6 witch's hats around, like orange witch's hats around the pothole.</p>
+          <p><span class="spk">Nick · 15:16</span>So the pothole was so bad on a very busy road. Tommy will back me up here. And they had put witch's hats around it and the chaos that that was causing schools and stuff along that road.</p>
+          <p><span class="spk">Nick · 15:31</span>So, you know, quite a busy road. And it was just, it just made me think about everything we've been talking about and why people are dying or having serious accidents or seriously, you know, hurting their car.</p>
+          <p><span class="spk">Jason · 15:47</span>And it's the everyday person that cops the cost, right? Because I think it's something along the lines, unless your damages are more than $1,200, there's no claim. Like, and then you've got to go through the process of then getting that claim too, which is a mega pain in the arse.</p>
+          <p><span class="spk">Nick · 16:00</span>And everyone's insurance goes up because of the claims. Yeah.</p>
+          <p><span class="spk">Jason · 16:03</span>Yeah,</p>
+          <p><span class="spk">Nick · 16:03</span>that's the other impact.</p>
+          <p><span class="spk">Jason · 16:04</span>Yeah, no, crazy. On top of payroll tax, COVID debt levy and mental health surcharges on big payrolls. So if you have a $10 million payroll or more, you pay an extra percent in payroll tax, and that's to cover the COVID debt and the mental health surcharge to be able to put money back into the mental health system.</p>
+          <p><span class="spk">Jason · 16:20</span>And then if you have—</p>
+          <p><span class="spk">Nick · 16:22</span>because they're sending us crazy.</p>
+          <p><span class="spk">Jason · 16:23</span>Yes, correct. I mean, it's kind of a cause and effect, a bit of a revolving circle here. And if you have over $100 million payroll, you're paying an extra 2% payroll tax. And again, that's just to recontribute. The COVID one runs until 2033. So again, just think about the size of like the debt that they're trying to recoup there.</p>
+          <p><span class="spk">Jason · 16:41</span>Obviously, land tax, they cut the threshold to $50K. So if you owned land and it's more valued more than $50K, you're paying land tax straight away. Whereas in the past, there was a much higher threshold. The emergency services levy, and this is why Victoria rated so high in the most mismanaged and worst in those regions assessed because we're just copping it from every angle no matter what you do.</p>
+          <p><span class="spk">Jason · 17:04</span>So Nick, I guess one of the other things, I mean, does this stop people investing or starting businesses in Victoria at the moment? Definitely. Yeah. You're seeing and feeling that too?</p>
+          <p><span class="spk">Nick · 17:16</span>Oh mate, no doubt.</p>
+          <p><span class="spk">Jason · 17:17</span>Yeah.</p>
+          <p><span class="spk">Nick · 17:17</span>No one's confident that they can get an outcome, a positive outcome. And whether it's starting a business or buying some kind of asset, it's all investment. And in business, you're very heavily investing.</p>
+          <p><span class="spk">Nick · 17:33</span>So I think no one wants to make moves at the moment because the risk far outweighs the reward, which it probably should, but it just doesn't even add up as to why you should take a risk.</p>
+          <p><span class="spk">Jason · 17:49</span>Yeah. Before we go to the polls and before I say a little bit, actually, I'll finish this bit here first. Then I want to recap on some of the numbers. But the government is putting forward a case that they will hit a billion dollar surplus this year.</p>
+          <p><span class="spk">Nick · 18:01</span>Yeah.</p>
+          <p><span class="spk">Jason · 18:02</span>Digging into a few of the numbers we're looking at of that billion dollar surplus, one of the things that's being mentioned behind the scenes is actually coming from a $1.1 billion dividend from TAC.</p>
+          <p><span class="spk">Nick · 18:15</span>Right.</p>
+          <p><span class="spk">Jason · 18:16</span>So TAC, State, and same as WorkCover, as their coffers get full of money, there's the ability for the government to draw that money out of their coffers and put it against their balance sheet.</p>
+          <p><span class="spk">Nick · 18:28</span>Yeah.</p>
+          <p><span class="spk">Jason · 18:28</span>So it's said that TAC has such a surplus that, yeah, it's expecting to pay a $1.1 billion dividend. So without that,</p>
+          <p><span class="spk">Nick · 18:38</span>what about—</p>
+          <p><span class="spk">Jason · 18:39</span>it's wild.</p>
+          <p><span class="spk">Nick · 18:40</span>I mean, have you got— you might not have this and that's okay. We can still talk about it.</p>
+          <p><span class="spk">Jason · 18:43</span>Yeah.</p>
+          <p><span class="spk">Nick · 18:44</span>But I wonder what they're predicting from a stamp duty revenue point of view, because it's no secret here that our market has been smashed, property market. So not only have you got less transactions, which is a lot less stamp duty, you've got a declining market, which means what transactions do go ahead, the stamp duty is still less 'cause it's a percentage of the purchase price.</p>
+          <p><span class="spk">Nick · 19:09</span>Land tax, Properties get revalued, go backwards. I'd be really— maybe we should unpack that.</p>
+          <p><span class="spk">Jason · 19:19</span>Yeah.</p>
+          <p><span class="spk">Nick · 19:19</span>What they predict is going to happen to the stamp duty.</p>
+          <p><span class="spk">Jason · 19:22</span>Producer Tommy's probably already noted that down. We'll build that into some future unpacking. Nick, before I kind of round out on a bit of the off to the polls this week, and I've got some policies that they'll be timely to this and apologise if you're catching up with this later because you wanted to hear about Victoria being the worst run state in the west.</p>
+          <p><span class="spk">Jason · 19:42</span>But out of curiosity, do you want to hazard a guess as to where New South Wales, Queensland, and South Australia finished out of 366 regions or states?</p>
+          <p><span class="spk">Nick · 19:52</span>I'm not going to hazard a guess. Can I rank the states?</p>
+          <p><span class="spk">Jason · 19:56</span>Yep.</p>
+          <p><span class="spk">Nick · 19:57</span>Worst to best?</p>
+          <p><span class="spk">Jason · 19:58</span>Yep.</p>
+          <p><span class="spk">Nick · 20:00</span>Behind us, New South Wales.</p>
+          <p><span class="spk">Jason · 20:02</span>Bang. They came in at 9. Yeah, 9 out of 366. And not saying Not a conspiracy theorist here, but both Labor-controlled states at the moment.</p>
+          <p><span class="spk">Nick · 20:12</span>Yeah. You shouldn't have asked me who I was voting</p>
+          <p><span class="spk">Jason · 20:16</span>for.</p>
+          <p><span class="spk">Nick · 20:16</span>Behind New South Wales, Queensland?</p>
+          <p><span class="spk">Jason · 20:20</span>Yep. Came in at 39.</p>
+          <p><span class="spk">Nick · 20:21</span>Yeah. Behind Queensland, WA?</p>
+          <p><span class="spk">Jason · 20:25</span>South Australia, 66.</p>
+          <p><span class="spk">Nick · 20:27</span>Then WA.</p>
+          <p><span class="spk">Jason · 20:28</span>And then the rest.</p>
+          <p><span class="spk">Nick · 20:29</span>Interesting.</p>
+          <p><span class="spk">Jason · 20:29</span>Further down.</p>
+          <p><span class="spk">Nick · 20:30</span>Yeah.</p>
+          <p><span class="spk">Jason · 20:31</span>Yep.</p>
+          <p><span class="spk">Nick · 20:31</span>Tassie rank or?</p>
+          <p><span class="spk">Jason · 20:32</span>Yeah. They might have been 366 actually. You know what? I didn't even put them down. We'll let you off the hook this time, Tassie.</p>
+          <p><span class="spk">Nick · 20:40</span>I thought WA would have been higher than SA. SA seems to be a bit of a darling state at the moment.</p>
+          <p><span class="spk">Jason · 20:46</span>Yeah. I mean, think about wasteful projects, fiscal management. They're cashed up. They got all the mining stuff, corruption and organized crime. You'd imagine it'd all be relatively under control. Probably Liberal in power at the moment. Yeah. Just joking. I did get some of the stuff that if people are listening live, the episodes come out and you're in Victoria like a lot of our listeners.</p>
+          <p><span class="spk">Jason · 21:06</span>If you're not, thank you for listening. We appreciate you nonetheless. Labor have come out. They will cut land tax is one of their things. So they're going to bring the threshold from $50K back up to $300K. There's meant to be some cost of living relief, which of course, that's a usual way they go about getting the punters.</p>
+          <p><span class="spk">Jason · 21:23</span>Everyone's feeling the cost of living. Integrity and crime. They've talked about their royal commission. And then Jack's Knife Law and then tougher bail laws. Again, I'll believe it when I see it. Like, you know, Victoria's got to be one of the weakest on the bail laws ever.</p>
+          <p><span class="spk">Jason · 21:38</span>There was some girls who stole a car, 14 years old, flipped it, hit by a truck, ran down the Balti, both released on bail. And one of the girls got to go to Queensland on school holidays.</p>
+          <p><span class="spk">Nick · 21:48</span>And let's not forget how they try and fix things like, you know, the machete bins, you know. So yeah, what action are you taking? We understand what you're trying to do, but what does that relate to it.</p>
+          <p><span class="spk">Jason · 21:57</span>I'm going to try and remain unbiased, but yes, it doesn't sound that way at the moment. But that's okay. We're just going through a bit of fun stuff here. Infrastructure and energy. They will continue to push forward with the suburban rail loop. So that goes ahead with Labor. And then they're talking about the Liberal One Nation cutting $40 billion from frontline services as a bit of their attack line, whereas the rebuttal there is it's about public service, not the frontline.</p>
+          <p><span class="spk">Jason · 22:23</span>They, you know, Liberal and One Nation keep coming back and saying that it's about more nurses, more doctors, more police. So do your own research on the policies there. That was Labor. Libs are kind of more pro-business and pro, you know, looking after that cafe down at the end of the street and kind of making sure everyone's, you know, we want the cafes to thrive and we want small business to do well.</p>
+          <p><span class="spk">Jason · 22:43</span>It's a win for everyone because small business employs more than 50% of the country. It might even be higher than that. Yeah. Payroll threshold up to $1.1 million in year one, then $1.2 million matching New South Wales. So you can imagine that saving alone is tens of thousands.</p>
+          <p><span class="spk">Jason · 22:59</span>Same thing with land tax threshold back up to $300K. Crime, 3,000 extra police, reopen 40 more stations and then scrap part of— and then they'll pause and review the suburban rail loop rather than completely scrapping it.</p>
+          <p><span class="spk">Jason · 23:14</span>It's a pause and a review. Whereas One Nation scrap the suburban rail loop and the money goes to fund the airport rail, which has also been semi-announced by Labor. But then they didn't really show the plans to actually get it all the way to the airport.</p>
+          <p><span class="spk">Jason · 23:30</span>And the deal is not done with the Melbourne Airport. They haven't agreed at the moment to the airport rail actually coming in there. They'll wind back land tax and then crime. One Nation goes pretty hard on crime. For the rest of it, go and look into the Greens and the Independents and the Teals and whatnot.</p>
+          <p><span class="spk">Jason · 23:47</span>We are going to the polls. I think the important thing here is I reckon this year will be—</p>
+          <p><span class="spk">Nick · 23:54</span>I don't know if you heard that, maybe there's a siren. Someone's clearly about to do something wrong and get let out.</p>
+          <p><span class="spk">Jason · 23:59</span>Yeah. So I definitely lost my train of thought there. The siren got me. But yeah, look, just, just to round out, Nick, I think this is probably one of the most important votes for Victoria that we've got coming up. Not to mention a bit of fun unpacking those numbers. I want to see Victoria thrive. I want to see Victoria not be the number 1 on a list like that, whether it's done by a guy putting all the information in or whether it's some other majorly publicized list.</p>
+          <p><span class="spk">Jason · 24:23</span>I want Victoria to be flying. I want small businesses and individuals that live here to have a much better life than what it feels like we have the opportunity to at the moment with the debt that we're burdened with. So do your research on your party, go and do your vote. Thank you for joining us.</p>
+          <p><span class="spk">Jason · 24:38</span>And if you're not from Victoria but you've enjoyed listening, thank you again for tuning into the Numbers The Numbers Game. We do have a part on our website, thenumbersgamepodcast.com.au. Go and leave us a voice note. Tell us a topic you want to talk about. If you're in a particular state that you think we should be looking at and unpacking, feel free to drop us a note.</p>
+          <p><span class="spk">Jason · 24:54</span>And if not, please like, subscribe wherever you tune in. We appreciate the support.</p>
+          <p><span class="spk">Nick · 25:01</span>Very interesting information, Jase. $24 million in interest a day. It's your choice. Victoria. Game over.</p>
+          <p><span class="spk">Jason · 25:11</span>This podcast is for educational and informational purposes only. The conversations are of a general nature and do not qualify as financial or tax advice. We recommend before you make any financial decisions, you consult a licensed professional. Individuals on the podcast may hold positions in the companies discussed.</p>
+        </div>
+      </details>
+
+    </div>
+
+    <!-- LISTEN:START (build_episode.py rewrites the 3 URLs + iframe title per episode; player dropped if no spotifyEmbedUrl) -->
+
+    <div class="listen">
+      <a href="https://open.spotify.com/search/the%20numbers%20game%20podcast" target="_blank" rel="noopener" aria-label="Listen to this episode on Spotify">
+        <svg viewBox="0 0 24 24"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.52 17.34c-.24.36-.66.48-1.02.24-2.82-1.74-6.36-2.1-10.56-1.14-.42.12-.78-.18-.9-.54-.12-.42.18-.78.54-.9 4.56-1.02 8.52-.6 11.64 1.32.42.18.48.66.3 1.02zm1.44-3.3c-.3.42-.84.6-1.26.3-3.24-1.98-8.16-2.58-11.94-1.38-.48.12-1.02-.12-1.14-.6-.12-.48.12-1.02.6-1.14 4.32-1.32 9.72-.66 13.44 1.62.36.18.54.78.3 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.3c-.6.18-1.2-.18-1.38-.72-.18-.6.18-1.2.72-1.38 4.26-1.26 11.28-1.02 15.72 1.62.54.3.72 1.02.42 1.56-.3.42-1.02.6-1.56.3z"/></svg>
+        Spotify
+      </a>
+      <a href="https://podcasts.apple.com/search?term=the%20numbers%20game" target="_blank" rel="noopener" aria-label="Listen to this episode on Apple Podcasts">
+        <svg viewBox="0 0 24 24"><path d="M5.34 0A5.328 5.328 0 000 5.34v13.32A5.328 5.328 0 005.34 24h13.32A5.328 5.328 0 0024 18.66V5.34A5.328 5.328 0 0018.66 0H5.34zm6.525 2.568c2.336 0 4.448.902 6.056 2.587 1.224 1.272 1.912 2.619 2.264 4.392l.04.23c.04.272-.16.527-.432.567a.505.505 0 01-.567-.431l-.04-.213c-.312-1.57-.92-2.747-2.004-3.867-1.428-1.496-3.293-2.294-5.393-2.294-2.1 0-3.966.798-5.394 2.294-1.084 1.12-1.692 2.298-2.004 3.867l-.04.213a.507.507 0 01-.567.431.504.504 0 01-.432-.567l.04-.23c.352-1.773 1.04-3.12 2.264-4.392 1.608-1.685 3.72-2.587 6.056-2.587h.153zm.136 3.033c1.74 0 3.312.67 4.527 1.934.883.916 1.394 1.93 1.663 3.253l.04.23a.505.505 0 01-.431.567.503.503 0 01-.567-.432l-.04-.212c-.23-1.112-.659-1.97-1.396-2.732-1.052-1.1-2.404-1.672-3.9-1.672s-2.849.572-3.901 1.672c-.737.762-1.167 1.62-1.396 2.732l-.04.212a.503.503 0 01-.567.432.505.505 0 01-.432-.567l.04-.23c.27-1.323.78-2.337 1.664-3.253 1.215-1.264 2.787-1.934 4.527-1.934h.21zm-.078 3.05c1.092 0 2.091.424 2.89 1.22.582.58.924 1.245 1.107 2.15l.04.218a.501.501 0 01-.424.568.499.499 0 01-.568-.424l-.04-.198c-.146-.724-.413-1.253-.871-1.716-.63-.63-1.398-.957-2.226-.957s-1.595.328-2.225.957c-.459.463-.726.992-.871 1.716l-.04.198a.499.499 0 01-.568.424.501.501 0 01-.424-.568l.04-.219c.183-.904.525-1.569 1.106-2.149.8-.796 1.799-1.22 2.89-1.22h.184zM12 14.07a2.477 2.477 0 012.48 2.478A2.477 2.477 0 0112 19.024a2.477 2.477 0 01-2.48-2.477A2.477 2.477 0 0112 14.07z"/></svg>
+        Apple
+      </a>
+      <a class="yt-pill" href="https://www.youtube.com/@thenumbersgamepodcast?sub_confirmation=1" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.12-2.14C19.5 3.55 12 3.55 12 3.55s-7.5 0-9.38.51A3 3 0 0 0 .5 6.2 31.4 31.4 0 0 0 0 12a31.4 31.4 0 0 0 .5 5.8 3 3 0 0 0 2.12 2.14c1.88.51 9.38.51 9.38.51s7.5 0 9.38-.51a3 3 0 0 0 2.12-2.14A31.4 31.4 0 0 0 24 12a31.4 31.4 0 0 0-.5-5.8zM9.55 15.57V8.43L15.82 12z"/></svg>
+        Subscribe
+      </a>
+    </div>
+    <!-- LISTEN:END -->
+
+    <div class="relsec">
+      <span class="rtitle">Discover more</span>
+      <div class="relgrid">
+        <a class="relcard" href="/how-money-has-changed-since-2021">
+          <img src="https://i.ytimg.com/vi/USK-bNAxT7Y/hqdefault.jpg" alt="EP 300 thumbnail">
+          <span class="rt">How Money Has Changed Since 2021</span>
+          <span class="rfoot"><span class="rwhy">26 October 2026</span><span class="rtag">EP 300</span></span>
+        </a>
+        <a class="relcard" href="/the-small-business-squeeze-right-now">
+          <img src="https://i.ytimg.com/vi/UcamObdACo0/hqdefault.jpg" alt="EP 299 thumbnail">
+          <span class="rt">The Small Business Squeeze Right Now</span>
+          <span class="rfoot"><span class="rwhy">19 October 2026</span><span class="rtag">EP 299</span></span>
+        </a>
+        <a class="relcard" href="/what-australia-can-learn-from-new-zealand-s-property-downturn">
+          <img src="https://i.ytimg.com/vi/j4l0VNj8IF4/hqdefault.jpg" alt="EP 298 thumbnail">
+          <span class="rt">What Australia Can Learn From New Zealand's Property Downturn</span>
+          <span class="rfoot"><span class="rwhy">12 October 2026</span><span class="rtag">EP 298</span></span>
+        </a>
+        <a class="relcard" href="/where-your-charity-donations-actually-end-up">
+          <img src="https://i.ytimg.com/vi/bo4ita9fFxY/hqdefault.jpg" alt="EP 297 thumbnail">
+          <span class="rt">Where Your Charity Donations Actually End Up</span>
+          <span class="rfoot"><span class="rwhy">5 October 2026</span><span class="rtag">EP 297</span></span>
+        </a>
+        <a class="relcard" href="/long-term-australian-property-returns">
+          <img src="https://i.ytimg.com/vi/QRCICFHBeTk/hqdefault.jpg" alt="EP 296 thumbnail">
+          <span class="rt">Long-Term Australian Property Returns</span>
+          <span class="rfoot"><span class="rwhy">28 September 2026</span><span class="rtag">EP 296</span></span>
+        </a>
+        <a class="relcard" href="/liquidation-bankruptcy-or-restructure">
+          <img src="https://i.ytimg.com/vi/gPCPOidYUPI/hqdefault.jpg" alt="EP 295 thumbnail">
+          <span class="rt">Liquidation, Bankruptcy or Restructure</span>
+          <span class="rfoot"><span class="rwhy">21 September 2026</span><span class="rtag">EP 295</span></span>
+        </a>
+      </div>
+      <div class="reldots" id="reldots"></div>
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="footgrid">
+      <div class="fcol">
+        <div class="foot-label">Follow us on</div>
+        <div class="socials">
+          <a href="https://www.instagram.com/thenumbersgamepodcast/" target="_blank" rel="noopener" aria-label="The Numbers Game on Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.8.2 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1 .4 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .4-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1-.4-2.2-.1-1.3-.1-1.7-.1-4.9s0-3.6.1-4.9c.1-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.4 2.2-.4 1.3-.1 1.7-.1 4.9-.1zm0 2c-3.1 0-3.5 0-4.8.1-1.1.1-1.5.2-1.8.3-.4.2-.7.3-1 .6-.3.3-.5.6-.6 1-.1.3-.3.7-.3 1.8-.1 1.3-.1 1.7-.1 4.8s0 3.5.1 4.8c.1 1.1.2 1.5.3 1.8.2.4.3.7.6 1 .3.3.6.5 1 .6.3.1.7.3 1.8.3 1.3.1 1.7.1 4.8.1s3.5 0 4.8-.1c1.1-.1 1.5-.2 1.8-.3.4-.2.7-.3 1-.6.3-.3.5-.6.6-1 .1-.3.3-.7.3-1.8.1-1.3.1-1.7.1-4.8s0-3.5-.1-4.8c-.1-1.1-.2-1.5-.3-1.8-.2-.4-.3-.7-.6-1-.3-.3-.6-.5-1-.6-.3-.1-.7-.3-1.8-.3-1.3-.1-1.7-.1-4.8-.1zm0 3.4a5.4 5.4 0 1 1 0 10.8 5.4 5.4 0 0 1 0-10.8zm0 2a3.4 3.4 0 1 0 0 6.8 3.4 3.4 0 0 0 0-6.8zm5.6-2.3a1.3 1.3 0 1 1-2.6 0 1.3 1.3 0 0 1 2.6 0z"/></svg></a>
+          <a href="https://www.tiktok.com/@thenumbersgamepodcast" target="_blank" rel="noopener" aria-label="The Numbers Game on TikTok"><svg viewBox="0 0 24 24"><path d="M12.53.02C13.84 0 15.14.01 16.44 0c.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg></a>
+          <a href="https://www.linkedin.com/company/the-numbers-game-podcast/" target="_blank" rel="noopener" aria-label="The Numbers Game on LinkedIn"><svg viewBox="0 0 24 24"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.24 8.25h4.52V23H.24V8.25zM8.34 8.25h4.33v2.01h.06c.6-1.14 2.08-2.34 4.28-2.34 4.58 0 5.42 3.01 5.42 6.92V23h-4.51v-7.16c0-1.71-.03-3.91-2.38-3.91-2.39 0-2.75 1.86-2.75 3.78V23H8.34V8.25z"/></svg></a>
+          <a href="https://www.facebook.com/profile.php?id=100071290388343" target="_blank" rel="noopener" aria-label="The Numbers Game on Facebook"><svg viewBox="0 0 24 24"><path d="M24 12.07C24 5.41 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.04V9.41c0-3.02 1.8-4.7 4.54-4.7 1.31 0 2.68.24 2.68.24v2.97h-1.5c-1.5 0-1.96.93-1.96 1.89v2.26h3.32l-.53 3.5h-2.8V24C19.62 23.1 24 18.1 24 12.07z"/></svg></a>
+          <a href="https://www.youtube.com/@thenumbersgamepodcast" target="_blank" rel="noopener" aria-label="The Numbers Game on YouTube"><svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.2C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31.7 31.7 0 0 0 0 12a31.7 31.7 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.2A31.7 31.7 0 0 0 24 12a31.7 31.7 0 0 0-.5-5.8zM9.6 15.6V8.4L15.8 12z"/></svg></a>
+        </div>
+      </div>
+      <div class="fcol">
+        <div class="foot-label">Brought to you by</div>
+        <div class="sponsors">
+          <a href="https://www.inovayt.com.au/" target="_blank" rel="noopener"><img src="assets/inovayt-white.png" alt="Inovayt"></a>
+          <a href="https://futureadvisory.com.au/" target="_blank" rel="noopener"><img src="assets/future-advisory-white.png" alt="Future Advisory"></a>
+        </div>
+      </div>
+      <div class="fcol produced">
+        <div class="foot-label">Produced by</div>
+        <a href="https://www.vidpod.com.au/" target="_blank" rel="noopener"><img src="assets/vidpod-white.png" alt="VIDPOD"></a>
+      </div>
+    </div>
+    <div class="footbar">
+      <details class="footnav-dd">
+        <summary><svg class="ham" viewBox="0 0 24 24"><path d="M3 6h18v2H3zM3 11h18v2H3zM3 16h18v2H3z"/></svg> Menu</summary>
+        <div class="dd-links">
+          <a href="/">Home</a><a href="/episodes">Every episode</a><a href="/adventure">Choose your own adventure</a><a href="/about">About the show</a><a href="/nick-reilly">Nick Reilly</a><a href="/jason-robinson">Jason Robinson</a><a href="/contact">Contact</a>
+        </div>
+      </details>
+      <div class="copyright">© 2026 The Numbers Game</div>
+    </div>
+  </footer>
+
+  <script>
+    var VIDEO='rdPBStU5jH4';
+    var CHAPTERS=[
+      {t:"00:00",s:0,title:"Intro"},
+      {t:"01:52",s:112,title:""}
+    ];
+    var QUESTIONS=[
+      {q:"Which state or region was ranked the worst run in the Western world?",s:188},
+      {q:"Is an AI-built government ranking report still credible?",s:502},
+      {q:"What scores did Victoria get in each category of the index?",s:553},
+      {q:"Which Victorian infrastructure projects blew out their budgets?",s:577},
+      {q:"Why was the Commonwealth Games cancelled in Victoria?",s:622},
+      {q:"How much interest does Victoria pay each day on its debt?",s:684},
+      {q:"What do the bond numbers say about Victoria's rising interest costs?",s:719},
+      {q:"How much payroll tax do Victorian businesses pay?",s:785},
+      {q:"Does Victoria's tax and policy climate stop people investing or starting businesses?",s:1024},
+      {q:"How did the other states rank on the most mismanaged regions index?",s:1182}
+    ];
+
+    var chEl=document.getElementById('chapters');
+    CHAPTERS.forEach(function(c){var b=document.createElement('button');b.className='chapter';b.onclick=function(){startAt(c.s)};b.innerHTML='<span class="tc">'+c.t+'</span><span class="cx">'+c.title+'</span>';chEl.appendChild(b);});
+    document.getElementById('chcount').textContent=CHAPTERS.length;
+    var qEl=document.getElementById('qa');
+    QUESTIONS.forEach(function(q){var b=document.createElement('button');b.className='q';b.onclick=function(){startAt(q.s)};b.innerHTML='<span class="qm">?</span><span class="qx">'+q.q+'</span><span class="go">›</span>';qEl.appendChild(b);});
+    document.getElementById('qcount').textContent=QUESTIONS.length;
+
+    /* Mobile nav dropdown. */
+    var burger=document.getElementById('navburger'), navdrop=document.getElementById('navdrop');
+    if(burger&&navdrop){burger.addEventListener('click',function(){
+      navdrop.hidden=!navdrop.hidden;
+      burger.setAttribute('aria-expanded', navdrop.hidden?'false':'true');
+    });}
+
+    /* Voice-note button reveals the recorder; × tucks it away. */
+    var vbtn=document.getElementById('vbtn'), vslot=document.getElementById('vslot'), vclose=document.getElementById('vclose');
+    if(vbtn&&vslot){vbtn.addEventListener('click',function(){vslot.hidden=!vslot.hidden;});}
+    if(vclose&&vslot){vclose.addEventListener('click',function(){vslot.hidden=true;});}
+
+    /* Keep-exploring dots: only shown when the strip actually scrolls (mobile). */
+    var rg=document.querySelector('.relgrid'), rd=document.getElementById('reldots');
+    if(rg&&rd){
+      var relCards=rg.querySelectorAll('.relcard');
+      relCards.forEach(function(){rd.appendChild(document.createElement('span'))});
+      var updDots=function(){
+        var scrollable=rg.scrollWidth>rg.clientWidth+4;
+        rd.style.display=scrollable?'flex':'none';
+        if(!scrollable)return;
+        var i=Math.round(rg.scrollLeft/(rg.scrollWidth-rg.clientWidth)*(relCards.length-1));
+        rd.querySelectorAll('span').forEach(function(s,n){s.classList.toggle('on',n===i)});
+      };
+      rg.addEventListener('scroll',updDots,{passive:true});
+      window.addEventListener('resize',updDots);
+      updDots();
+    }
+
+    /* Explore tabs: swap the visible panel; the row stays put so you never lose your place. */
+    var tabBtns=document.querySelectorAll('.tabbtn');
+    tabBtns.forEach(function(b){
+      b.addEventListener('click',function(){
+        tabBtns.forEach(function(o){o.classList.remove('on')});
+        document.querySelectorAll('.tpanel').forEach(function(p){p.hidden=true});
+        b.classList.add('on');
+        document.getElementById(b.getAttribute('data-panel')).hidden=false;
+      });
+    });
+
+    /* YouTube: clean facade, then real player on demand. Seek without yanking to top. */
+    var player=null, ready=false, apiReady=false, pending=null;
+    window.onYouTubeIframeAPIReady=function(){apiReady=true; if(pending!=null){var s=pending;pending=null;createPlayer(s);}};
+    function createPlayer(sec){
+      var wrap=document.getElementById('player'); wrap.innerHTML='<div id="yt"></div>';
+      player=new YT.Player('yt',{videoId:VIDEO,playerVars:{autoplay:1,rel:0,modestbranding:1,playsinline:1,start:Math.floor(sec||0)},events:{onReady:function(){ready=true;}}});
+    }
+    function nudge(){
+      var p=document.getElementById('player-wrap'), r=p.getBoundingClientRect();
+      if(r.bottom<80 || r.top>window.innerHeight-90){ p.scrollIntoView({behavior:'smooth',block:'start'}); }
+    }
+    function startAt(sec){
+      nudge();
+      if(player&&ready){ player.seekTo(sec,true); player.playVideo(); return; }
+      if(apiReady){ createPlayer(sec); } else { pending=sec; }
+    }
+    document.getElementById('facade').addEventListener('click',function(){startAt(0);});
+    (function(){var s=document.createElement('script');s.src='https://www.youtube.com/iframe_api';document.head.appendChild(s);})();
+  </script>
+</body>
+</html>

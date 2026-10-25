@@ -1,0 +1,798 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EP 307 · Draft EP 307 | Show Notes Pending | The Numbers Game</title>
+<meta name="description" content="[SHOW NOTES PENDING]">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" sizes="64x64" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="canonical" href="https://thenumbersgamepodcast.com.au/draft-ep-307">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="The Numbers Game">
+<meta property="og:title" content="EP 307 · Draft EP 307 | Show Notes Pending | The Numbers Game">
+<meta property="og:description" content="[SHOW NOTES PENDING]">
+<meta property="og:url" content="https://thenumbersgamepodcast.com.au/draft-ep-307">
+<meta property="og:image" content="https://i.ytimg.com/vi/ooDLPewuo7M/maxresdefault.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+  :root{
+    --purple:#585af3; --purple-dark:#2c1b8a; --mint:#7ad9a8;
+    --white:#ffffff; --muted:rgba(255,255,255,.60); --dim:rgba(255,255,255,.42);
+    --line:rgba(255,255,255,.12); --card:rgba(255,255,255,.05); --card-hi:rgba(255,255,255,.09);
+    --display:'Anton',Impact,'Helvetica Neue',sans-serif;
+    --sans:'Inter',system-ui,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif;
+    --wrap:1280px;   /* page frame (nav spans this) */
+    --col:960px;     /* content column (player, tabs, text) */
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:var(--sans); color:var(--white); line-height:1.6; -webkit-font-smoothing:antialiased;
+    background:#12093a;
+    background-image:
+      radial-gradient(1200px 600px at 82% -6%, rgba(88,90,243,.45) 0%, transparent 55%),
+      radial-gradient(900px 700px at 5% 8%, rgba(122,217,168,.10) 0%, transparent 50%),
+      linear-gradient(180deg,#2c1b8a 0%,#1a1150 28%,#100b34 62%,#0b0820 100%);
+    background-attachment:fixed;
+  }
+  a{color:inherit}
+  .wrap{max-width:var(--wrap);margin:0 auto;padding:0 36px}
+  main.wrap{max-width:var(--col)}
+  @media(max-width:720px){.wrap{padding:0 22px}}
+
+  /* ── Navbar ── */
+  .nav{position:sticky;top:0;z-index:50;background:linear-gradient(180deg,rgba(24,15,74,.92),rgba(24,15,74,.72));backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+  .nav-in{max-width:var(--wrap);margin:0 auto;padding:11px 36px;display:flex;align-items:center;justify-content:space-between}
+  @media(max-width:720px){.nav-in{padding:11px 22px}}
+  .brand{display:block;line-height:0}
+  .brand img{height:36px;width:auto;display:block}
+  .navlinks{display:flex;gap:28px;align-items:center}
+  .navlinks a{text-decoration:none;font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);transition:.15s}
+  .navlinks a:hover{color:var(--white)}
+  .navlinks a.navtop{cursor:default}
+  .navgroup{position:relative;display:flex;align-items:center}
+  .navgroup .subnav{display:none;position:absolute;top:100%;left:50%;transform:translateX(-50%);padding-top:14px;min-width:180px}
+  .navgroup:hover .subnav,.navgroup:focus-within .subnav{display:block}
+  .subnav-in,.navgroup .subnav{z-index:60}
+  .navgroup .subnav a{display:block;background:#180f4a;border:1px solid var(--line);border-top:0;padding:12px 16px;font-size:12px;color:rgba(255,255,255,.85)}
+  .navgroup .subnav a:first-child{border-top:1px solid var(--line)}
+  .navgroup .subnav a:hover{background:#221768;color:var(--white)}
+  .navburger{display:none;background:none;border:1px solid var(--line);padding:8px 10px;cursor:pointer;color:var(--white);transition:.15s}
+  .navburger:hover{border-color:rgba(122,217,168,.6)}
+  .navburger svg{width:20px;height:20px;fill:currentColor;display:block}
+  .navdrop{display:none}
+  @media(max-width:720px){
+    .navlinks{display:none}
+    .navburger{display:block}
+    .navdrop{display:block;position:absolute;left:0;right:0;top:100%;
+      background:#180f4a;border-bottom:1px solid var(--line);box-shadow:0 24px 50px rgba(0,0,0,.45)}
+    .navdrop[hidden]{display:none}
+    .navdrop a{display:block;padding:15px 22px;text-decoration:none;font-size:14px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:rgba(255,255,255,.9);border-bottom:1px solid rgba(255,255,255,.06)}
+    .navdrop a:last-child{border-bottom:0}
+    .navdrop a.sub{padding-left:42px;font-size:13px;color:rgba(255,255,255,.72)}
+    .navdrop .navlabel{display:block;padding:15px 22px 6px;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.4)}
+  }
+
+  /* ── Hero / hook (marker-highlight system: purple hook wraps naturally, mint payoff below)
+     Rules: title splits at its natural break (colon/pipe/question mark). Front = hook (purple,
+     big), back = payoff (mint, smaller). No break in title = purple hook only. Highlights hug
+     the text (tight em padding tuned to Anton) and wrap via box-decoration-break — never
+     hand-pick line breaks or mint words. ── */
+  header.hero{padding:34px 0 6px}
+  .hook{--inx:clamp(8.4px,2.1vw,15.6px)} /* one shared text inset so hook + payoff first letters align */
+  .hook .hk{font-family:var(--display);font-weight:400;text-transform:uppercase;
+    font-size:clamp(28px,7vw,52px);line-height:1.3;letter-spacing:-.5px;text-wrap:balance}
+  .hook .hk span{color:var(--white);padding:.04em var(--inx) .02em;
+    background:linear-gradient(var(--purple),var(--purple)) 0 50%/100% 87% no-repeat;
+    -webkit-box-decoration-break:clone;box-decoration-break:clone}
+  .hook .pay{font-family:var(--display);font-weight:400;text-transform:uppercase;
+    font-size:clamp(16px,4vw,24px);line-height:1.5;letter-spacing:.6px;margin-top:8px;text-wrap:balance}
+  .hook .pay span{color:#0a0a0a;padding:.08em var(--inx) .04em;
+    background:linear-gradient(var(--mint),var(--mint)) 0 50%/100% 88% no-repeat;
+    -webkit-box-decoration-break:clone;box-decoration-break:clone}
+  /* no-hook titles: mid-split into two full-size rows, purple then mint */
+  .hook .hk span.hkrow{display:block;background:none;padding:0}
+  .hook .hk .hkrow+.hkrow{margin-top:8px}
+  .hook .hk span.mintseg{color:#0a0a0a;
+    background:linear-gradient(var(--mint),var(--mint)) 0 50%/100% 87% no-repeat}
+
+  /* ── Player (clean facade → real player on tap) ── */
+  .player-wrap{margin:24px 0 4px;scroll-margin-top:76px}
+  .player{position:relative;width:100%;padding-top:56.25%;border-radius:0;overflow:hidden;background:#000;box-shadow:0 30px 70px rgba(0,0,0,.5),0 0 0 1px rgba(255,255,255,.06)}
+  .facade{position:absolute;inset:0;border:0;cursor:pointer;background-size:cover;background-position:center;display:flex;align-items:center;justify-content:center;padding:0}
+  .facade .play{width:74px;height:74px;border-radius:50%;background:rgba(10,6,30,.40);border:2px solid rgba(255,255,255,.72);display:flex;align-items:center;justify-content:center;transition:.18s;-webkit-backdrop-filter:blur(1px);backdrop-filter:blur(1px)}
+  .facade:hover .play{background:rgba(88,90,243,.62);transform:scale(1.07);border-color:#fff}
+  .facade .play::after{content:"";border-style:solid;border-width:11px 0 11px 19px;border-color:transparent transparent transparent #fff;margin-left:5px}
+  .player iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+
+  /* ── Episode facts (bottom of the Summary panel — templated per episode) ── */
+  .sumfacts{margin:14px 10px 4px;padding-top:13px;border-top:1px solid rgba(255,255,255,.08);display:flex;flex-direction:column;gap:8px}
+  .fact{display:flex;gap:12px;font-size:13.5px}
+  .fact .fl{flex:none;width:104px;color:var(--dim);font-weight:600;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;padding-top:2px}
+  .fact .fv{color:rgba(255,255,255,.9);font-weight:500}
+  .fact .fv a{color:var(--mint);text-decoration:none;border-bottom:1px solid rgba(122,217,168,.4);transition:.15s}
+  .fact .fv a:hover{border-bottom-color:var(--mint)}
+
+  /* ── Episode tag (identity: black label hanging off the title corner) ── */
+  .eptag{display:inline-block;position:relative;left:-6px;margin-bottom:-7px;z-index:2;
+    background:#0a0a0a;color:var(--white);font-family:var(--display);font-weight:400;
+    font-size:13.5px;letter-spacing:1.5px;text-transform:uppercase;padding:6px 11px 4px}
+
+  /* ── Explore tabs (sticky mode switcher; one panel swaps below, nothing shoves) ── */
+  .explore{margin-top:22px}
+  .tabs{position:sticky;top:58px;z-index:40;display:flex;flex-wrap:wrap;gap:8px;padding:10px 0;
+    background:linear-gradient(180deg,rgba(18,10,55,.96),rgba(18,10,55,.86));
+    backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+  .tabbtn{font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.5px;
+    font-size:14.5px;color:var(--white);background:var(--purple);border:1px solid var(--purple);
+    padding:9px 13px 7px;cursor:pointer;transition:.15s}
+  .tabbtn:hover{filter:brightness(1.12)}
+  .tabbtn.on{background:var(--mint);border-color:var(--mint);color:#0a0a0a}
+  .tabbtn.on:hover{filter:none}
+  .tabbtn .ct{font-size:12px;opacity:.75;font-variant-numeric:tabular-nums}
+  .tabbtn .ct::before{content:" · "}
+  .tpanel{border:1px solid var(--line);background:var(--card);padding:12px 10px 14px}
+  .hint{font-size:12.5px;color:var(--muted);padding:2px 10px 10px;border-bottom:1px solid rgba(255,255,255,.08);margin-bottom:6px}
+
+  /* ── Listen row (no box: label left, service pills follow) ── */
+  .listen{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:12px 16px;margin-top:34px}
+  .listen .lname{font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--dim)}
+  .listen a{display:inline-flex;align-items:center;gap:9px;padding:11px 18px;border-radius:999px;
+    background:var(--mint);color:#08210f;text-decoration:none;font-weight:800;font-size:12.5px;
+    letter-spacing:.04em;text-transform:uppercase;transition:.15s}
+  .listen a:hover{filter:brightness(1.06);transform:translateY(-1px);box-shadow:0 12px 30px rgba(122,217,168,.25)}
+  .listen svg{width:20px;height:20px;fill:currentColor;flex:none}
+  /* ── Listen-now Spotify audio embed (full column width, above the pills) ── */
+  .listen-now{margin-top:40px}
+  .listen-now .ln-head{display:flex;align-items:baseline;justify-content:space-between;gap:14px;margin-bottom:13px}
+  .listen-now .ln-title{font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--dim)}
+  .audio-embed{border-radius:12px;overflow:hidden;box-shadow:0 20px 50px rgba(0,0,0,.4),0 0 0 1px rgba(255,255,255,.06)}
+  .audio-embed iframe{display:block;width:100%;border:0}
+  @media(max-width:720px){.listen-now{margin-top:32px}}
+
+  /* ── Keep exploring (thumbnails link to other episode PAGES, never timecodes).
+     Swipeable strip on mobile, fits three-up on desktop. Variant rule: claim
+     "similar ground" + reason lines ONLY when moment-level topic overlap is
+     genuinely strong; otherwise show the latest released episodes with dates —
+     never invent a connection. ── */
+  .relsec{margin-top:60px;padding-top:58px;border-top:1px solid var(--line)} /* line = end of this episode's info */
+  .reldots{display:flex;justify-content:center;gap:7px;margin-top:12px}
+  .reldots span{width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.25);transition:.2s}
+  .reldots span.on{background:var(--mint)}
+  .relsec .rtitle{display:inline-block;font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.5px;font-size:14.5px;background:var(--mint);color:#0a0a0a;padding:9px 13px 7px;margin-bottom:18px}
+  .relgrid{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding-bottom:6px;scrollbar-width:none}
+  .relgrid::-webkit-scrollbar{display:none}
+  .relcard{flex:0 0 56%;max-width:232px;scroll-snap-align:start;display:flex;flex-direction:column;text-decoration:none;background:var(--card);border:1px solid var(--line);transition:.15s}
+  .relcard:hover{background:var(--card-hi);border-color:rgba(122,217,168,.55)}
+  .relcard img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block}
+  .relcard .rt{display:block;font-size:12.5px;font-weight:600;color:rgba(255,255,255,.92);line-height:1.4;padding:8px 8px 0}
+  .relcard .rfoot{margin-top:auto;display:flex;justify-content:space-between;align-items:flex-end;gap:8px;padding:10px 8px 9px}
+  .relcard .rwhy{font-size:11.5px;color:var(--mint)}
+  .relcard .rtag{display:inline-block;background:#0a0a0a;color:var(--white);font-family:var(--display);font-size:10px;letter-spacing:1.2px;text-transform:uppercase;padding:3px 7px 2px;white-space:nowrap;flex:0 0 auto}
+
+  /* ── Dropdown sections (accordion under the player) ── */
+  .drops{margin-top:34px;display:flex;flex-direction:column;gap:11px}
+  .drop{border:1px solid var(--line);border-radius:0;background:var(--card);overflow:hidden;transition:border-color .15s}
+  .drop[open]{border-color:rgba(122,217,168,.35)}
+  .drop>summary{list-style:none;cursor:pointer;padding:16px 18px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+  .drop>summary::-webkit-details-marker{display:none}
+  .drop>summary .st{font-weight:700;font-size:15.5px;letter-spacing:.005em}
+  .drop>summary .ct{margin-left:auto;font-size:12px;color:var(--dim);font-weight:600;font-variant-numeric:tabular-nums}
+  .drop>summary .chev{flex:none;width:22px;height:22px;border-radius:50%;background:rgba(122,217,168,.14);color:var(--mint);display:flex;align-items:center;justify-content:center;font-family:var(--display);font-size:15px;line-height:1;transition:.2s;transform:translateY(-1px)}
+  .drop[open]>summary .chev{transform:rotate(45deg)}
+  .drop-body{padding:2px 12px 12px}
+
+  /* chapters */
+  .chapter{display:flex;align-items:baseline;gap:14px;width:100%;text-align:left;cursor:pointer;background:none;border:0;color:inherit;font-family:inherit;padding:11px 10px;border-radius:10px;transition:.13s}
+  .chapter:hover{background:var(--card-hi)}
+  .chapter .tc{font-variant-numeric:tabular-nums;font-weight:700;font-size:14px;color:var(--mint);flex:none;width:48px}
+  .chapter .cx{font-size:15px;font-weight:500;color:rgba(255,255,255,.9)}
+  .chapter:hover .cx{color:#fff}
+
+  /* questions */
+  .q{display:flex;align-items:center;gap:12px;width:100%;text-align:left;cursor:pointer;background:none;border:0;border-radius:11px;color:inherit;font-family:inherit;padding:12px 10px;transition:.14s}
+  .q+.q{border-top:1px solid rgba(255,255,255,.05)}
+  .q:hover{background:var(--card-hi)}
+  .q .qm{font-family:var(--display);font-size:15px;color:var(--mint);flex:none;line-height:1;transform:translateY(1px)}
+  .q .qx{font-size:15px;font-weight:500;color:rgba(255,255,255,.92)}
+  .q .go{margin-left:auto;flex:none;color:var(--dim);font-size:18px;transition:.15s}
+  .q:hover .go{color:var(--mint);transform:translateX(2px)}
+
+  /* summary + transcript bodies */
+  .summary-body p{font-size:16.5px;line-height:1.62;color:rgba(255,255,255,.9);padding:6px 10px 4px}
+  .tbody{padding:2px 10px 8px}
+  .tbody p{font-size:14.5px;line-height:1.7;color:rgba(255,255,255,.78);margin-top:15px;max-width:64ch}
+  .tbody .spk{display:block;font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--mint);margin-bottom:2px}
+
+  /* ── Voice note ask (lives at the bottom of the Summary panel) ── */
+  .vask{margin:16px 10px 4px}
+  .vbtn{display:inline-flex;align-items:center;gap:9px;padding:12px 20px;border-radius:999px;border:0;cursor:pointer;
+    background:var(--mint);color:#08210f;font-family:inherit;font-weight:800;font-size:12.5px;
+    letter-spacing:.04em;text-transform:uppercase;transition:.15s}
+  .vbtn:hover{filter:brightness(1.06);transform:translateY(-1px);box-shadow:0 12px 30px rgba(122,217,168,.25)}
+  .vbtn svg{width:18px;height:18px;fill:currentColor;flex:none}
+  .vslot{background:var(--purple);padding:12px 10px 10px;margin:14px 0 4px;box-shadow:0 18px 40px rgba(0,0,0,.35)}
+  .vslot[hidden]{display:none}
+  .vhead{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;margin-bottom:10px}
+  .vhead .vmsg{font-family:var(--sans);font-size:13px;line-height:1.55;color:rgba(255,255,255,.92);margin:2px 0 0;padding:0 2px}
+  .vclose{background:none;border:0;color:rgba(255,255,255,.85);font-size:22px;line-height:1;cursor:pointer;padding:0 2px}
+  .vclose:hover{color:var(--white)}
+  .vslot iframe{display:block}
+
+  /* ── YouTube subscribe pill (sits in the listen row; outranks .listen a's mint) ── */
+  .listen a.yt-pill{background:var(--purple);color:var(--white)}
+  .listen a.yt-pill:hover{filter:brightness(1.1);transform:translateY(-1px)}
+  @media(max-width:720px){ /* mobile: no label, three compact pills on one row */
+    .listen .lname{display:none}
+    .listen{gap:8px}
+    .listen a{padding:10px 13px;font-size:11px;gap:6px}
+    .listen svg{width:16px;height:16px}
+  }
+
+  /* ── Footer: Follow us on | Brought to you by | Produced by, + Menu dropdown ── */
+  footer{border-top:1px solid var(--line);margin-top:68px;padding:52px 20px 58px}
+  .footgrid{max-width:var(--wrap);margin:0 auto;display:grid;grid-template-columns:1fr 1.15fr .8fr;gap:44px;align-items:start}
+  .fcol{text-align:center;display:flex;flex-direction:column;align-items:center}
+  .foot-label{font-size:11px;font-weight:700;letter-spacing:.26em;text-transform:uppercase;color:var(--dim);margin-bottom:18px}
+  .sponsors{display:flex;justify-content:center;align-items:center;gap:34px;flex-wrap:wrap}
+  .sponsors a,.produced a{display:inline-flex;transition:.15s}
+  .sponsors a:hover,.produced a:hover{transform:translateY(-1px)}
+  .sponsors img{height:32px;width:auto;opacity:.92}
+  .produced img{height:30px;width:auto;opacity:.95}
+  .sponsors a:hover img,.produced a:hover img{opacity:1}
+  footer .socials{display:flex;gap:11px;justify-content:center;flex-wrap:wrap;margin:0}
+  footer .socials a{width:40px;height:40px;border-radius:50%;border:1.5px solid rgba(122,217,168,.5);display:flex;align-items:center;justify-content:center;transition:.15s}
+  footer .socials a svg{width:18px;height:18px;fill:var(--mint);transition:.15s}
+  footer .socials a:hover{background:var(--mint);border-color:var(--mint);transform:translateY(-2px)}
+  footer .socials a:hover svg{fill:#0a0a0a}
+  .footbar{max-width:var(--wrap);margin:34px auto 0;border-top:1px solid var(--line);padding-top:20px;display:flex;flex-direction:column;align-items:center;gap:14px}
+  .footnav-dd{display:block;width:100%;max-width:var(--wrap);margin:0 auto;text-align:center}
+  .footnav-dd>summary{list-style:none;cursor:pointer;display:inline-flex;align-items:center;gap:9px;font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.5px;font-size:13px;color:var(--muted);background:transparent;border:1px solid var(--line);padding:8px 16px 6px;transition:.15s}
+  .footnav-dd>summary::-webkit-details-marker{display:none}
+  .footnav-dd>summary:hover{color:var(--mint);border-color:rgba(122,217,168,.45)}
+  .footnav-dd>summary .ham{width:15px;height:15px;fill:currentColor;transform:translateY(-1px)}
+  .footnav-dd .dd-links{display:flex;flex-direction:row;flex-wrap:wrap;justify-content:center;gap:12px 24px;padding:24px 0 4px}
+  .footnav-dd .dd-links a{font-size:11.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:.15s}
+  .footnav-dd .dd-links a:hover{color:var(--mint)}
+  .copyright{font-size:12px;color:var(--dim);text-align:center}
+  @media(max-width:720px){.footgrid{grid-template-columns:1fr;gap:34px}footer{padding:40px 16px 20px}.footbar{margin-top:34px;padding-top:24px;gap:20px}.footnav-dd .dd-links{flex-direction:column;align-items:center;gap:15px}}
+
+  @media(min-width:720px){header.hero{padding:48px 0 6px}}
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "PodcastEpisode", "name": "Draft EP 307 | Show Notes Pending", "url": "https://thenumbersgamepodcast.com.au/draft-ep-307", "datePublished": "2026-12-14", "episodeNumber": 307, "image": "https://i.ytimg.com/vi/ooDLPewuo7M/maxresdefault.jpg", "partOfSeries": {"@type": "PodcastSeries", "name": "The Numbers Game", "url": "https://thenumbersgamepodcast.com.au/"}}</script>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-in">
+      <a class="brand" href="/" aria-label="The Numbers Game home"><img src="assets/tng-logo.png" alt="The Numbers Game"></a>
+      <div class="navlinks">
+        <a href="/">Home</a>
+        <div class="navgroup">
+          <a class="navtop">Episodes</a>
+          <div class="subnav">
+            <a href="/episodes">All episodes</a>
+            <a href="/adventure">Find moments</a>
+          </div>
+        </div>
+        <div class="navgroup">
+          <a class="navtop">About</a>
+          <div class="subnav">
+            <a href="/about">The show</a>
+            <a href="/nick-reilly">Nick Reilly</a>
+            <a href="/jason-robinson">Jason Robinson</a>
+          </div>
+        </div>
+        <a href="/contact">Contact</a>
+      </div>
+      <button class="navburger" id="navburger" type="button" aria-label="Menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24"><path d="M3 6h18v2H3zM3 11h18v2H3zM3 16h18v2H3z"/></svg>
+      </button>
+    </div>
+    <div class="navdrop" id="navdrop" hidden>
+      <a href="/">Home</a>
+      <span class="navlabel">Episodes</span>
+      <a class="sub" href="/episodes">All episodes</a>
+      <a class="sub" href="/adventure">Find moments</a>
+      <span class="navlabel">About</span>
+      <a class="sub" href="/about">The show</a>
+      <a class="sub" href="/nick-reilly">Nick Reilly</a>
+      <a class="sub" href="/jason-robinson">Jason Robinson</a>
+      <a href="/contact">Contact</a>
+    </div>
+  </nav>
+
+  <main class="wrap">
+
+    <header class="hero">
+      <div class="hook">
+        <span class="eptag">EP 307</span>
+        <h1 class="hk"><span>Draft EP 307</span></h1>
+        <p class="pay"><span>Show Notes Pending</span></p>
+      </div>
+    </header>
+
+    <div class="player-wrap" id="player-wrap">
+      <div class="player" id="player">
+        <button class="facade" id="facade" style="background-image:url('https://i.ytimg.com/vi/ooDLPewuo7M/maxresdefault.jpg')" aria-label="Play episode">
+          <span class="play"></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="explore">
+      <div class="tabs" role="tablist">
+        <button class="tabbtn on" data-panel="p-summary">Summary</button>
+        <button class="tabbtn" data-panel="p-chapters">Chapters<span class="ct" id="chcount"></span></button>
+        <button class="tabbtn" data-panel="p-questions">Questions<span class="ct" id="qcount"></span></button>
+      </div>
+      <section class="tpanel" id="p-summary">
+        <div class="summary-body">
+          <p>[SHOW NOTES PENDING]</p>
+        </div>
+        <div class="vask">
+          <button class="vbtn" id="vbtn" type="button">
+            <svg viewBox="0 0 24 24"><path d="M12 14a3 3 0 0 0 3-3V6a3 3 0 1 0-6 0v5a3 3 0 0 0 3 3zm5-3a5 5 0 0 1-10 0H5a7 7 0 0 0 6 6.92V21h2v-3.08A7 7 0 0 0 19 11h-2z"/></svg>
+            Send us a voice note
+          </button>
+          <div class="vslot" id="vslot" hidden>
+            <div class="vhead">
+              <p class="vmsg">We'd love to hear from you. You can leave up to a 90 second voice note for us to play on the show: a question, some feedback, or a topic you want covered.</p>
+              <button class="vclose" id="vclose" type="button" aria-label="Close">&times;</button>
+            </div>
+            <iframe src="https://www.speakpipe.com/widget/inline/hhq6kzggsx7zpcsvakgxfrzun3zidpde" allow="microphone" width="100%" height="200" frameborder="0" title="Leave The Numbers Game a voice note"></iframe>
+          </div>
+          <script async src="https://www.speakpipe.com/widget/loader.js" charset="utf-8"></script>
+        </div>
+        <div class="sumfacts">
+          <div class="fact"><span class="fl">Release date</span><span class="fv">14 December 2026</span></div>
+          <div class="fact"><span class="fl">Hosts</span><span class="fv"><a href="/nick-reilly">Nick Reilly</a> &amp; <a href="/jason-robinson">Jason Robinson</a></span></div>
+
+        </div>
+      </section>
+      <section class="tpanel" id="p-chapters" hidden>
+        <p class="hint">Jump straight to the part you need.</p>
+        <div id="chapters"></div>
+      </section>
+      <section class="tpanel" id="p-questions" hidden>
+        <p class="hint">Real questions this episode answers. Tap one to hear the answer.</p>
+        <div id="qa"></div>
+      </section>
+    </div>
+
+    <div class="drops">
+
+      <details class="drop">
+        <summary><span class="st">Episode transcript</span><span class="chev">+</span></summary>
+        <div class="drop-body tbody">
+          <p><span class="spk">Jason · 00:00</span>Welcome to episode 307 of The Numbers Game. I'm Jase. I'm here with Nick. How are you, buddy?</p>
+          <p><span class="spk">Nick · 00:06</span>Super excited for this one, mate. I'm looking to reclaim— not reclaim, maintain my title in the predictions war.</p>
+          <p><span class="spk">Jason · 00:15</span>Yes.</p>
+          <p><span class="spk">Nick · 00:16</span>For background, I've clearly dominated this for probably, you know, since it was in effect. We are missing Marty here, but he was never even a threat. You were, you were a threat, but I'm not.</p>
+          <p><span class="spk">Nick · 00:32</span>Floored you the last 2 years now.</p>
+          <p><span class="spk">Jason · 00:33</span>Yeah, look, I went heavy on technology and, and yeah, I think that's my downfall. So I'm going to change it up this year. And for those playing at home, this is our 2026 scorecard and our 2027 predictions. We've been doing this for years. So if you don't know, if you're Ep 150, Ep 217, Ep 262, that's the format.</p>
+          <p><span class="spk">Jason · 00:53</span>But we'll recap a little bit for you anyway. It is, it is a fun one. And while Marty's not here, we can definitely say that you know, he was never a shot anyway with his 2026 predictions. I don't know whether— should we start with going through Marty's quickly and we'll give him his pass/fail?</p>
+          <p><span class="spk">Nick · 01:08</span>Yeah, I actually failed to print those notes off, so are you happy to read them all out?</p>
+          <p><span class="spk">Jason · 01:12</span>Oh yeah, I can. I'm happy to, mate. No worries. Carrying the team here. You're the brains and I do, well, the hosting part.</p>
+          <p><span class="spk">Nick · 01:22</span>I'm the stream smarts. We'll go through it.</p>
+          <p><span class="spk">Jason · 01:23</span>I'll just tell you how badly it went in 2025 and I was hoping for redemption. So Nick, in 2025, you actually were 4 out of 5, and the only one you didn't get was the Liberals winning the election.</p>
+          <p><span class="spk">Nick · 01:37</span>Mm.</p>
+          <p><span class="spk">Jason · 01:37</span>Which, in knowing what we know now, and especially after our recap last week's episode of what happened in 2026 that kind of blew our minds, a lot of that was some Labor-driven things. So, you know what?</p>
+          <p><span class="spk">Nick · 01:50</span>So, you're saying they should have won?</p>
+          <p><span class="spk">Jason · 01:52</span>I'm just saying in hindsight, it would have been nice. I think we'd be sitting— I think 2026 might have gone a little bit differently and would have given you 5 out of 5. I don't know if I could live with myself. This is 2025 predictions. You had GDP under 2%, US market pumps under Trump, unemployment rises, and the ASX lags behind the US.</p>
+          <p><span class="spk">Jason · 02:11</span>They were your 4 out of 4.</p>
+          <p><span class="spk">Nick · 02:12</span>Yeah.</p>
+          <p><span class="spk">Jason · 02:13</span>Now for context, my, my poor results were that virtual reality at home would be more mainstream. Personal AI agents would be more common. Blockchain surges. And that GST reform would become more mainstream as well.</p>
+          <p><span class="spk">Jason · 02:30</span>Yeah, I pretty much, I mean, I think I gave myself a pass on GST reform because there's talk of it going up to 12.5% or whatever. But anyway,</p>
+          <p><span class="spk">Nick · 02:39</span>only</p>
+          <p><span class="spk">Jason · 02:39</span>checking yourself. You know what, I won't even worry about Marty. So, but Marty's 2025, just for context, was that Melbourne's property would pump.</p>
+          <p><span class="spk">Nick · 02:48</span>Yeah.</p>
+          <p><span class="spk">Jason · 02:49</span>He said 14 to 15% increase. It was a fail because it was 3.3%. Tech and mental health. He had some stuff around tech and mental health. Mental health, we gave that a pass. Uh, there was a Robot Olympics, that was a fail. And that there would be 3 rate cuts in 2025, which was a pass.</p>
+          <p><span class="spk">Jason · 03:05</span>So he got 2 out of 4. So, you know, you and Marty were doing pretty well, and I thought, uh, 2026 was going to be my year of redemption. We'll see how we went.</p>
+          <p><span class="spk">Nick · 03:14</span>Yep, let's go.</p>
+          <p><span class="spk">Jason · 03:16</span>Marty's 2026 call. So you can just give the fail or pass, I'll let you be the judge. One rate rise,</p>
+          <p><span class="spk">Nick · 03:23</span>fail.</p>
+          <p><span class="spk">Jason · 03:24</span>Correct. There was more. Well, there was, there was too many. We won't even say how many there were. There was too many.</p>
+          <p><span class="spk">Nick · 03:29</span>Hard fail.</p>
+          <p><span class="spk">Jason · 03:30</span>Hard fail. APRA cools lending.</p>
+          <p><span class="spk">Nick · 03:34</span>Correct.</p>
+          <p><span class="spk">Jason · 03:35</span>Correct. Now, my notes actually say that when our episode aired, that was already decided. So void. Marty doesn't get a pass. It was already void because it had already happened. Marty then followed up the Robot Olympics with robots arrive and unemployment rises.</p>
+          <p><span class="spk">Nick · 03:53</span>Robots arrive. I don't know about you, mate, but I've seen robots in sushi places for years.</p>
+          <p><span class="spk">Jason · 04:01</span>Have you not? You want to void him again?</p>
+          <p><span class="spk">Nick · 04:03</span>Void.</p>
+          <p><span class="spk">Jason · 04:03</span>Done. Void.</p>
+          <p><span class="spk">Nick · 04:05</span>Actually, what was the second part of</p>
+          <p><span class="spk">Jason · 04:06</span>that? Unemployment rises. Yeah, unemployment's— unemployment up across the board, 4.6% to August. Robots, yeah, I agree. Kidding himself. Yeah, he's kidding himself.</p>
+          <p><span class="spk">Nick · 04:19</span>Doesn't get out much, Marty.</p>
+          <p><span class="spk">Jason · 04:20</span>You know, I'll let you pass this. A number one hit that no human touched or recorded.</p>
+          <p><span class="spk">Nick · 04:27</span>Oh no, I would thought no.</p>
+          <p><span class="spk">Jason · 04:29</span>There's an AI track called Celebrate Me that topped the US iTunes store in April.</p>
+          <p><span class="spk">Nick · 04:35</span>We'll give him that,</p>
+          <p><span class="spk">Jason · 04:36</span>reportedly.</p>
+          <p><span class="spk">Nick · 04:37</span>Yeah,</p>
+          <p><span class="spk">Jason · 04:37</span>I don't know, we'll</p>
+          <p><span class="spk">Nick · 04:38</span>give it to him.</p>
+          <p><span class="spk">Jason · 04:39</span>Pass-ish. So we'll give him one.</p>
+          <p><span class="spk">Nick · 04:41</span>It's not going to win it, so we'll give it to him.</p>
+          <p><span class="spk">Jason · 04:43</span>One from his four. No, he's not going to win it. Um, we'll probably go through mine, um, because, you know, I don't want to give it away, but I don't know if I have enough to beat you, but I'll let you be the judge. So</p>
+          <p><span class="spk">Nick · 04:55</span>I can't even remember my predictions.</p>
+          <p><span class="spk">Jason · 04:56</span>Okay, so Jason's 2026 calls from a year ago. The payday super becomes a compliance nightmare in 2026.</p>
+          <p><span class="spk">Nick · 05:07</span>I'll give you a pass on that.</p>
+          <p><span class="spk">Jason · 05:09</span>Thank you.</p>
+          <p><span class="spk">Nick · 05:10</span>You're not really tying yourself to a number though, are you?</p>
+          <p><span class="spk">Jason · 05:14</span>Like, well, no, it's opinionated.</p>
+          <p><span class="spk">Nick · 05:17</span>Someone who's got the compliance in order might disagree.</p>
+          <p><span class="spk">Jason · 05:20</span>Well, if I recall back to that episode, you didn't want me to put a number on that.</p>
+          <p><span class="spk">Nick · 05:24</span>No, no, that's a pass on me.</p>
+          <p><span class="spk">Jason · 05:26</span>So yeah, started 1 July, Clearing House closed, 200,000 businesses in upheaval, and then 7 days start paying super.</p>
+          <p><span class="spk">Nick · 05:32</span>I will note that every second episode you tell us it's a compliance nightmare. Nightmare.</p>
+          <p><span class="spk">Jason · 05:37</span>So</p>
+          <p><span class="spk">Nick · 05:37</span>I reckon you've been gearing up for that.</p>
+          <p><span class="spk">Jason · 05:39</span>But I'm here recording episodes, just reminding people that next year as the letters start to roll in, that I did warn them that Payday Super was going to cause drama. AI bookkeeping becomes standard.</p>
+          <p><span class="spk">Nick · 05:55</span>Oh, well, that's the debate. Clearly there's some wins and clearly I assume I don't do bookkeeping, but I can only assume Xero's built in a lot of Xero and MYOB.</p>
+          <p><span class="spk">Jason · 06:07</span>Yeah, so Xero has auto bank rec, which is now widely used. It's still technically labeled beta. And it's an opt-in by account. So I've given myself a half mark.</p>
+          <p><span class="spk">Nick · 06:20</span>I'm happy to go with that.</p>
+          <p><span class="spk">Jason · 06:22</span>Thank you. I'll take it. Look, QuickBooks and other things, I mean, and the ability to connect to Claude and do all those different things. I mean, saying AI bookkeeping becomes standard, it's probably keeping bookkeepers who are talented and good at their job really busy because there's things they have to fix up.</p>
+          <p><span class="spk">Jason · 06:37</span>There's things that AI is not doing at the moment, but being desperate to not fall too far behind your results, I'm going to take the half.</p>
+          <p><span class="spk">Nick · 06:44</span>I'll give it to you.</p>
+          <p><span class="spk">Jason · 06:46</span>This one stings. Bombers to make the top 10 and win a final in the reformed top 10 setup.</p>
+          <p><span class="spk">Nick · 06:54</span>Well, you know, it's clearly a fail, but in the, in the past and now Zach Merritt's gone again. Is he gone? He's going.</p>
+          <p><span class="spk">Jason · 07:02</span>Gone. Zach Merritt gone. Jordan Ridley gone.</p>
+          <p><span class="spk">Nick · 07:05</span>Yeah. So, you know, in the past I would say that's almost a waste of a prediction. But last year, top 10. Reasonably even comp apart from a few. Um, but it was not to be.</p>
+          <p><span class="spk">Jason · 07:24</span>For those playing at home, uh, wooden spoon. The Bombers were last. If you're from around the world, that means my team are very bad. We actually won 2 games out of a possible 21, I believe. Um, and our coach was sacked after 11 rounds out of a possible 21, and we had, I think, possibly the worst percentage in the league.</p>
+          <p><span class="spk">Jason · 07:43</span>So That's a glorious fail. So the Bombers have let me down. This one I wanted to be different to you and Marty, and so you can be quick on this one. No rate rise in 2026. I literally said at the time, purely just to be different, I've got to stop making dumb calls if I want to beat you on here.</p>
+          <p><span class="spk">Jason · 08:05</span>So this is going to be different this year. And then the last one of my 5, so I'm, I'm giving myself I'll let you decide. ATO goes real-time with its live risk scores and ramps up real-time intervention at scale, including DPNs further up.</p>
+          <p><span class="spk">Nick · 08:24</span>Well, I would have no clue.</p>
+          <p><span class="spk">Jason · 08:26</span>Cool. How to take a half? It's probably not. It's like DPNs are up, but the real-time intervention I think is lagging. And I believe, you know, from media, media stuff that was talked about, they— ATO got in a bit of strife and the Tax Ombudsman, I'm pretty sure, is doing some kind of investigation because they turned on some AI stuff that wasn't properly checked, tested, tried, and it went a little bit rogue.</p>
+          <p><span class="spk">Jason · 08:48</span>Um, so they're kind of trying to pull that back, but I'm going to give myself 2.5 out of 5.</p>
+          <p><span class="spk">Nick · 08:54</span>Not bad, 50%.</p>
+          <p><span class="spk">Jason · 08:55</span>Yeah, it's up on the 1 out of 4 from the year before, so I've got a big 2027 coming.</p>
+          <p><span class="spk">Nick · 09:01</span>Gains, mate, gains, gains.</p>
+          <p><span class="spk">Jason · 09:03</span>So Nico, and you can be as hard or as soft on yourself as you like, Banks loosen lending on modular homes.</p>
+          <p><span class="spk">Nick · 09:17</span>No.</p>
+          <p><span class="spk">Jason · 09:18</span>Cool.</p>
+          <p><span class="spk">Nick · 09:18</span>I reckon I've failed there.</p>
+          <p><span class="spk">Jason · 09:20</span>Yeah, I thought modular homes would be more spoken about and be a bit more kind of, you know, well, the CBA</p>
+          <p><span class="spk">Nick · 09:26</span>are doing it. I'm sure some others are doing it, but it's not— to be honest, if it was happening, I would know about it just by default. And I haven't heard too much about it, so I'm going to say no.</p>
+          <p><span class="spk">Jason · 09:38</span>Yeah, cool. So it was good. I'm glad you judge yourself as harshly as you judge me, but mine are pretty obvious. Share market correction of 10% plus.</p>
+          <p><span class="spk">Nick · 09:49</span>That would have happened at some stage. We haven't had— like if you went back 12 months from today, it wouldn't— it won't be 10% up. We're talking about the ASX here.</p>
+          <p><span class="spk">Jason · 10:03</span>Yeah, sorry, ASX 200.</p>
+          <p><span class="spk">Nick · 10:04</span>At some point in the year, it would have been 10% up from its—</p>
+          <p><span class="spk">Jason · 10:11</span>Yep.</p>
+          <p><span class="spk">Nick · 10:11</span>Low.</p>
+          <p><span class="spk">Jason · 10:12</span>Okay. Yeah. Share market correction, 10%. Yes. I'm going to go pass. And I think some of the numbers here was at 23rd of March, it soared past 10% correction from, from when you mentioned it. So that is a pass. You are 1 out of 2 so far. This is a fun one.</p>
+          <p><span class="spk">Jason · 10:27</span>A major economy hikes rates. Good old Australia. I think you had Australia, the US, and a couple others, and unfortunately it was Australia. So yes, you are 2 from 3. Congratulations, uh, you only need one more to win, you bastard.</p>
+          <p><span class="spk">Jason · 10:45</span>Um, a geopolitical event where a major leader is gone.</p>
+          <p><span class="spk">Nick · 10:51</span>Well, what's the bloke from Iran? He's gone. What's his name?</p>
+          <p><span class="spk">Jason · 10:59</span>Is it Starmer?</p>
+          <p><span class="spk">Nick · 11:00</span>Producer? Tell</p>
+          <p><span class="spk">Jason · 11:00</span>me. Khamenei. Khamenei killed. Yeah. Killed by the US-Israeli strikes. Khamenei.</p>
+          <p><span class="spk">Nick · 11:06</span>Would you say that's a major leader?</p>
+          <p><span class="spk">Jason · 11:08</span>I'm going to give you half.</p>
+          <p><span class="spk">Nick · 11:10</span>It's not Trump or—</p>
+          <p><span class="spk">Jason · 11:11</span>No, I think you would. I think you specifically mentioned Trump, Xi, or Putin. But I'll give you half.</p>
+          <p><span class="spk">Nick · 11:18</span>Yeah, no, I agree.</p>
+          <p><span class="spk">Jason · 11:19</span>You were pretty lenient on me for a few. Do you want half?</p>
+          <p><span class="spk">Nick · 11:21</span>Well, thanks, mate. Yeah, I'll take it.</p>
+          <p><span class="spk">Jason · 11:23</span>Yeah. Done.</p>
+          <p><span class="spk">Nick · 11:25</span>Awesome. Iran's pretty major, but anyway, I'll take a half.</p>
+          <p><span class="spk">Jason · 11:27</span>And then, just</p>
+          <p><span class="spk">Nick · 11:28</span>make it</p>
+          <p><span class="spk">Jason · 11:29</span>interesting, you know, maybe we'll change our tune of some of our predictions here. But, uh, Marty qualifies for the Mr. Olympia Masters.</p>
+          <p><span class="spk">Nick · 11:38</span>Look, um, we could, we could ring, we could ring him. Um, I don't know the answer, but what I can tell you is, um, I've just noticed, and he'll be listening to this, so I have noticed he's gone on a Swing Trade journey and he has started a YouTube channel documenting his journey.</p>
+          <p><span class="spk">Jason · 12:02</span>Okay,</p>
+          <p><span class="spk">Nick · 12:02</span>a couple of things. Number one, I don't think you could do both. Number two, um, his biceps don't look any bigger on the Swing Trade videos to what they did when he was in here, so I'm going to say That's a, that's a fail.</p>
+          <p><span class="spk">Jason · 12:19</span>Yeah, I actually had a bonus Marty one as well. It was that we would get an AI Marty to co-host an episode of The Numbers Game with us.</p>
+          <p><span class="spk">Nick · 12:28</span>Well, we probably could have done that if we wanted</p>
+          <p><span class="spk">Jason · 12:31</span>to. So, so I'm, I'm probably going to bring that. I won't give away my 2027 predictions yet. And I did email Tommy, but I don't know if he wrote back to me whether we could make that a reality or not. But I'm hoping he can train our Numbers Game model We have an AI numbers game brain and we'll just get it to listen to Marty's voice and all of the things he said in the episodes over the 250+ that he was involved in.</p>
+          <p><span class="spk">Nick · 12:54</span>Beautiful.</p>
+          <p><span class="spk">Jason · 12:54</span>And then we can just get him here on a little device and we'll put him on a little robot that used to deliver sushi, but we'll put a Marty face iPad on there and it will wheel him in. It'll be great. So, Nick, you win. It was— I've got you at 3.5 out of 5 and I gave myself 2.5 out of 5.</p>
+          <p><span class="spk">Nick · 13:12</span>The gap is closing.</p>
+          <p><span class="spk">Jason · 13:14</span>Yeah. Yeah. Wasn't— wasn't your best year, but a difficult</p>
+          <p><span class="spk">Nick · 13:17</span>year though.</p>
+          <p><span class="spk">Jason · 13:18</span>Difficult year.</p>
+          <p><span class="spk">Nick · 13:19</span>Plus, I get a gimme with the Essendon prediction.</p>
+          <p><span class="spk">Jason · 13:22</span>Yeah, correct.</p>
+          <p><span class="spk">Nick · 13:23</span>So, you know, you could almost mention we were pretty much on par.</p>
+          <p><span class="spk">Jason · 13:26</span>Yeah, let's— let's just say we're— we're on par. We had a good year and now we're back for a one versus one. Nick versus Jase for 2027. Do you want to rip through your predictions. Nick's predictions for 2027.</p>
+          <p><span class="spk">Nick · 13:40</span>Okay, so I'm just going to quickly ask our producer Tommy, how many downloads have we had on The Numbers Game? I'll come back to you, mate, and I'll keep going through them. So my number 1 prediction, I'm going out on a couple of limbs here, so giving you a real chance to be conservative.</p>
+          <p><span class="spk">Nick · 14:00</span>And pick a win up in 2027.</p>
+          <p><span class="spk">Jason · 14:06</span>Okay, thank you. I'm excited.</p>
+          <p><span class="spk">Nick · 14:08</span>The Melbourne property market recovers by 5% from its low.</p>
+          <p><span class="spk">Jason · 14:14</span>Okay.</p>
+          <p><span class="spk">Nick · 14:14</span>At some stage in the year of 2027.</p>
+          <p><span class="spk">Jason · 14:18</span>So 2026 low?</p>
+          <p><span class="spk">Nick · 14:21</span>Well, whenever it reaches its low.</p>
+          <p><span class="spk">Jason · 14:22</span>Okay. Oh, so yeah. Okay, gotcha. So whenever it gets to its low, I think it's gonna turn around. I think it recovers 5%. Cool.</p>
+          <p><span class="spk">Nick · 14:27</span>If it hasn't turned around at all, I'm clearly wrong. Got it. If it turns around but only by 3%, I'm clearly wrong. But it, I'm talking about Melbourne only, not Victoria. And I'm talking about dwelling price. So houses and units, not one or the other. So Melbourne dwelling price recovers 5% from its low.</p>
+          <p><span class="spk">Nick · 14:45</span>One Nation declines in support. There's a decline in support for One Nation next year. How you want to rank this, I don't know. You can maybe look at the, maybe we choose a, choose a poll as of as early in 2027 as we can and see how it goes throughout the year.</p>
+          <p><span class="spk">Nick · 15:07</span>I'm not saying I want that to happen. I've just—</p>
+          <p><span class="spk">Jason · 15:11</span>Well, no, because you asked me my political views in a previous episode and then refused to answer yours. So,</p>
+          <p><span class="spk">Nick · 15:16</span>yeah, so I'm not saying I want that to happen. I think that One Nation got some really good policies, but history would say they can capitulate.</p>
+          <p><span class="spk">Jason · 15:28</span>Yep.</p>
+          <p><span class="spk">Nick · 15:29</span>Um, there's a few things I think, um, that put them in a better place these days. Clearly what's going on in the world. They've also got some better recruits, the likes of Barnaby Joyce and Chris Taylor, for example. Um, but there's been, you know, I wouldn't say outlandish policies mentioned, but there's been some pretty crazy policies mentioned in the last, in more recent times that have raised some eyebrows.</p>
+          <p><span class="spk">Nick · 15:55</span>So I think they might have had a sugar hit and we might see a decline. Super contributions, number 3, super contributions skyrocket. So I'm going to say, and I'm talking about contributions, not the balance of super, the amount people are contributing.</p>
+          <p><span class="spk">Nick · 16:13</span>So I'm going to say we, just so we can put a number to it.</p>
+          <p><span class="spk">Jason · 16:18</span>Yep.</p>
+          <p><span class="spk">Nick · 16:19</span>Whatever the average growth has been, I should have looked this up but I haven't, but we can tie a number to this. Whatever the average growth of super contributions has been for the last 3 years, I'm gonna say we do that again plus 5% growth.</p>
+          <p><span class="spk">Jason · 16:34</span>Okay.</p>
+          <p><span class="spk">Nick · 16:36</span>So the average growth was 12, I'm gonna say we do 17%. Yep.</p>
+          <p><span class="spk">Jason · 16:40</span>I like it.</p>
+          <p><span class="spk">Nick · 16:42</span>I'm also gonna put an estimate on how many downlines we have. Um, by the end of 2027. So Tommy, do you know how much we've had as of now? Yeah, and I shouldn't have put you on the spot. I forgot to research it.</p>
+          <p><span class="spk">Jason · 16:57</span>Tommy should have wrote back to both of our emails.</p>
+          <p><span class="spk">Nick · 17:00</span>His agent must have taken the— his agent must have taken the day off. We'll come back to that. My fifth one: Jason Case have a baby on the way. Now that's outlandish.</p>
+          <p><span class="spk">Jason · 17:11</span>It is.</p>
+          <p><span class="spk">Nick · 17:12</span>Based on the fact that you still think you're Peter Pan. So that's outlandish.</p>
+          <p><span class="spk">Jason · 17:20</span>Yeah.</p>
+          <p><span class="spk">Nick · 17:22</span>You can manipulate the results here, mate, at the end of the day.</p>
+          <p><span class="spk">Jason · 17:26</span>So Casey will love that if she wanted to have a baby next year. And I'm going, babe, you know, you might push her back to January 28th. I have to beat Nick in the predictions. We're pushing back.</p>
+          <p><span class="spk">Nick · 17:37</span>So let's go through your 5 while Tommy's working through the downlights.</p>
+          <p><span class="spk">Jason · 17:40</span>Yeah. Easy done. So I'm going to try and put some more numbers on there as well then. So I have at number 1, such an accounting nerd, but it is what it is, that the ATO will issue more DPNs than the 84,000 that it did in the previous year.</p>
+          <p><span class="spk">Jason · 17:56</span>So I'm going to put a number on a go. I think there'll be over 100,000 DPNs. Now, the reason—</p>
+          <p><span class="spk">Nick · 18:03</span>how many last year?</p>
+          <p><span class="spk">Jason · 18:04</span>84,000 was the most recent recorded numbers on how many were done, and that 84,000 was up 136% on the year before. It's a huge jump.</p>
+          <p><span class="spk">Nick · 18:14</span>Yeah.</p>
+          <p><span class="spk">Jason · 18:14</span>So for them to go up again is— it's dumb of me, but it is what it is. And, you know, I'm going out on a limb here. The Tax Ombudsman and there's, you know, the CPA and some others kind of coming out and kind of targeting the ATO for their heavy-handed approach using DPNs.</p>
+          <p><span class="spk">Jason · 18:29</span>So they're kind of saying that the use of DPNs then has a widespread effect onto industries like mine, insolvency numbers, and then small business owners, mental health, whatnot. So they're essentially suggesting that they went too hard. They sent too many.</p>
+          <p><span class="spk">Nick · 18:45</span>Yeah.</p>
+          <p><span class="spk">Jason · 18:46</span>I sit there and go, I think the ATO will just power on with it because it's getting the results that they want. People are either paying their debts or they're liquidating or shutting down their company or their small business restructures are happening. So DPN's up and it'll be 100,000 or more.</p>
+          <p><span class="spk">Nick · 19:00</span>Yeah. Cool. Yeah.</p>
+          <p><span class="spk">Jason · 19:03</span>I'm going to go with at least one rate cut in 2027.</p>
+          <p><span class="spk">Nick · 19:07</span>Oh, you. Bold man,</p>
+          <p><span class="spk">Jason · 19:09</span>you. I know, I know. I've got to get— I've got to try and get a win. It's been 4 or 5 years and I haven't had a win over you.</p>
+          <p><span class="spk">Nick · 19:15</span>So, nah, that's good.</p>
+          <p><span class="spk">Jason · 19:17</span>Yeah. Well, look, I mean, maybe it doesn't happen, but I'm going out with one. We had so many hikes this year. The rates are up, inflation, you know, they're trying to get it down. I'm looking— I'm hopeful for everyone that that is the case, that there is at least one. But again, for me, I'm going with at least one.</p>
+          <p><span class="spk">Nick · 19:33</span>Yeah.</p>
+          <p><span class="spk">Jason · 19:36</span>Now, I don't know if you're going to make me redo this one or not, but given that Xero's Auto Bank Rec wasn't a full pass and it's still in beta, I think heading into next year, and this is just a pure guess, you know, in full disclosure, I'm on Xero's partner advisory council, but sometimes I don't fully listen and pay attention in the meetings.</p>
+          <p><span class="spk">Jason · 19:58</span>I'm going to go with that. I think they eventually turn on the auto bank rec to be the standard in Xero files. So by next December, auto bank reconciliation so that, you know, you know, there's no manual intervention, that most of your transactions are reconciled before you even see them or look at them.</p>
+          <p><span class="spk">Jason · 20:16</span>You don't want me to have that one, do you?</p>
+          <p><span class="spk">Nick · 20:22</span>Mate, I just want you to be happy. So, okay, I'll change</p>
+          <p><span class="spk">Jason · 20:25</span>it. I'll change it.</p>
+          <p><span class="spk">Nick · 20:26</span>That means you get a mini 2027.</p>
+          <p><span class="spk">Jason · 20:28</span>No, I'll change it up.</p>
+          <p><span class="spk">Nick · 20:30</span>Can you put another— here's a— okay. Can you hang your hat on another number in relation to that zero and AI integration? Is there another measure?</p>
+          <p><span class="spk">Jason · 20:44</span>I'm going to give you another one.</p>
+          <p><span class="spk">Nick · 20:45</span>Okay.</p>
+          <p><span class="spk">Jason · 20:45</span>I'm going to go with that a big Aussie accounting firm, think top 10, maybe even the bigger like, you know, PwCs, KPMGs, EYs, whatever, like at the bigger end of town, I think they'll have public job cuts and point to publicly announced job cuts, less grad intakes, maybe some cuts in some of the bigger consulting end as well.</p>
+          <p><span class="spk">Jason · 21:10</span>And they will point to AI as the reason why when it comes to their public perception of it. That's number 3. So zero auto bank rate gets the, gets the boot. I'm happy with that. You're right. Can't keep rolling the same ones every year and keep losing.</p>
+          <p><span class="spk">Jason · 21:25</span>Got to change it up. This one, I can't believe I've brought it back in. Bombers to have 7 wins or more.</p>
+          <p><span class="spk">Nick · 21:34</span>Well,</p>
+          <p><span class="spk">Jason · 21:34</span>that's from 2. New coach Mark McVay, horse John Longmire, and maybe, who knows, trade period, hopefully relatively successful. But we'll wait and see how those players that we landed all come through. But, okay, you know, that's, that's more than triple last year's games won.</p>
+          <p><span class="spk">Jason · 21:52</span>So yeah, I think it's not It's not lean, but I'm—</p>
+          <p><span class="spk">Nick · 21:55</span>yep.</p>
+          <p><span class="spk">Jason · 21:56</span>Yeah. Okay with that?</p>
+          <p><span class="spk">Nick · 21:57</span>Yeah, I'll give you that.</p>
+          <p><span class="spk">Jason · 21:58</span>Cool. And there is 6 world major marathons.</p>
+          <p><span class="spk">Nick · 22:04</span>Yeah.</p>
+          <p><span class="spk">Jason · 22:05</span>I've completed New York, Chicago, Tokyo, London.</p>
+          <p><span class="spk">Nick · 22:09</span>Yeah.</p>
+          <p><span class="spk">Jason · 22:10</span>It leaves me with 2 to go.</p>
+          <p><span class="spk">Nick · 22:11</span>Yeah.</p>
+          <p><span class="spk">Jason · 22:11</span>I set a goal to complete them by the time I was 40.</p>
+          <p><span class="spk">Nick · 22:14</span>Yeah.</p>
+          <p><span class="spk">Jason · 22:14</span>And I'll be 40 next December when we do our 2027 predictions reveal.</p>
+          <p><span class="spk">Nick · 22:20</span>Yeah,</p>
+          <p><span class="spk">Jason · 22:21</span>I do not have a spot in Boston.</p>
+          <p><span class="spk">Nick · 22:23</span>Yeah.</p>
+          <p><span class="spk">Jason · 22:23</span>So Boston is very hard to get into. Greg has qualified, so I'm putting it out to the world and the internet and the universe. I need to get into Boston. Charity, travel package, whatever I'll do. Yeah, I will tattoo my body for a brand who wants to get me in.</p>
+          <p><span class="spk">Jason · 22:40</span>I will sell my soul, whatever you want to do. So it's not— it's not a given. So this is a hard one. I could fail because I don't have a Boston ticket. I'll do Berlin in September '27, and that will make it 6 of 6 World Majors, or 7 including Sydney.</p>
+          <p><span class="spk">Jason · 22:56</span>And I'm really pushing to achieve that goal of the Global Majors, but all the World Majors by the time I was 40.</p>
+          <p><span class="spk">Nick · 23:03</span>Okay, good.</p>
+          <p><span class="spk">Jason · 23:04</span>That's my number 5.</p>
+          <p><span class="spk">Nick · 23:05</span>Yep, yep.</p>
+          <p><span class="spk">Jason · 23:07</span>Somebody out there, please help.</p>
+          <p><span class="spk">Nick · 23:09</span>Geez, it's going to be hard to beat you in 2027. Um,</p>
+          <p><span class="spk">Jason · 23:12</span>well, I mean, yeah, I mean, Bombers might not win 7, I might not do Boston, Aussie accounting firm might not fire all their grads or their staff and blame AI. So I actually don't think they're easy ones either.</p>
+          <p><span class="spk">Nick · 23:24</span>Okay, well, my last prediction was obviously around the Numbers Game downloads. So, um, Tommy has given me the number, uh, to date. So we're 5 years in across all platforms, 250,000 downloads.</p>
+          <p><span class="spk">Jason · 23:39</span>Yeah, well, that's— I'm happy with the growth that we've seen there. But what, what you don't see in those numbers as well is we've had a great year on our other platforms like Instagram and TikTok where some reels have popped off. There's comments. Love that Hughesy got on board and jumped on a few comments on the numbers game and Hughesy's become this incredible political commentator.</p>
+          <p><span class="spk">Jason · 23:59</span>So yeah, really looking forward to continued growth there too. So if you're listening and you haven't followed us on Instagram or TikTok or all those socials, please jump on and support. We'd love that. How much are we growing by next year if we're going to use the 250,000 number?</p>
+          <p><span class="spk">Nick · 24:13</span>I'm going to say we grow that by 50%. Okay, that's pretty aggressive, isn't it?</p>
+          <p><span class="spk">Jason · 24:19</span>No, I think it's— I don't know, I think it's about right.</p>
+          <p><span class="spk">Nick · 24:22</span>$250,000 over 5 years.</p>
+          <p><span class="spk">Jason · 24:25</span>Yeah, we're hitting, we're hitting this curve.</p>
+          <p><span class="spk">Nick · 24:27</span>$375,000. Yep, from one more year.</p>
+          <p><span class="spk">Jason · 24:32</span>Yeah, yeah, I like it.</p>
+          <p><span class="spk">Nick · 24:35</span>Do you think I need to go harder?</p>
+          <p><span class="spk">Jason · 24:37</span>Um, no, no, no, I've—</p>
+          <p><span class="spk">Nick · 24:39</span>that's big, that's pretty—</p>
+          <p><span class="spk">Jason · 24:40</span>yeah, we're going to get there. Um, I want a bonus one. AI Marty makes it on air in a 2027 episode of The Numbers Game.</p>
+          <p><span class="spk">Nick · 24:50</span>Yeah.</p>
+          <p><span class="spk">Jason · 24:51</span>Okay.</p>
+          <p><span class="spk">Nick · 24:52</span>Yeah. Yeah. You know what? We can bring him in to talk about his swing trades.</p>
+          <p><span class="spk">Jason · 24:57</span>Just, just for those that sometimes aren't listening when they're in the car driving, Marty's not swinging. It's, it's a trade. It's trades. Swing trades. So just for Colleen, if she is listening, we've just cleared that up. Thank you, mate.</p>
+          <p><span class="spk">Jason · 25:12</span>I'm okay. I'm happy. I think we've got a bit to reflect back on. What I will say to listeners, though, I'd love to know your predictions for 2027. I think we should cherry-pick some listener predictions from the comments on YouTube or from the voice notes left on our website.</p>
+          <p><span class="spk">Jason · 25:30</span>So please, once you finish this ep, go back over the Christmas holidays and the break and into January while we're waiting for the 2027 eps to start. And please give us your predictions for 2027. We'd love to feature some of them across the year as we then recap a year from now.</p>
+          <p><span class="spk">Jason · 25:47</span>But thanks again to everyone for tuning in. It's been a ripping year with my good friend Nick and producer Tommy.</p>
+          <p><span class="spk">Nick · 25:55</span>No specific game over outside of— I'm just going to say I'd like to, to thank everyone as well for the year, particularly you, mate. You clearly drive the direction of this podcast. Can't believe we're 5 years in and we're doing what we're doing. Incredible support from Tommy, our producer.</p>
+          <p><span class="spk">Nick · 26:14</span>He really has become a good friend of not just us in business but in general, and we would look like idiots without him. And other than that, I'm just really hoping I can go 3 from 3 and take out 2027.</p>
+          <p><span class="spk">Nick · 26:31</span>Game over.</p>
+          <p><span class="spk">Jason · 26:34</span>Oh, sorry. No, I will add you. That's fine. What I was going to say, the game over that I had prepared for us was, for those that are playing at home, write yours down. Not because you'll be right, but because in 12 months you want to know what you were thinking.</p>
+          <p><span class="spk">Jason · 26:49</span>Game over. This podcast is for educational and informational purposes only. The conversations are of a general nature and do not qualify as financial or tax advice. We recommend before you make any financial decisions, you consult a licensed professional. Individuals on the podcast may hold positions in the companies discussed.</p>
+        </div>
+      </details>
+
+    </div>
+
+    <!-- LISTEN:START (build_episode.py rewrites the 3 URLs + iframe title per episode; player dropped if no spotifyEmbedUrl) -->
+
+    <div class="listen">
+      <a href="https://open.spotify.com/search/the%20numbers%20game%20podcast" target="_blank" rel="noopener" aria-label="Listen to this episode on Spotify">
+        <svg viewBox="0 0 24 24"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.52 17.34c-.24.36-.66.48-1.02.24-2.82-1.74-6.36-2.1-10.56-1.14-.42.12-.78-.18-.9-.54-.12-.42.18-.78.54-.9 4.56-1.02 8.52-.6 11.64 1.32.42.18.48.66.3 1.02zm1.44-3.3c-.3.42-.84.6-1.26.3-3.24-1.98-8.16-2.58-11.94-1.38-.48.12-1.02-.12-1.14-.6-.12-.48.12-1.02.6-1.14 4.32-1.32 9.72-.66 13.44 1.62.36.18.54.78.3 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.3c-.6.18-1.2-.18-1.38-.72-.18-.6.18-1.2.72-1.38 4.26-1.26 11.28-1.02 15.72 1.62.54.3.72 1.02.42 1.56-.3.42-1.02.6-1.56.3z"/></svg>
+        Spotify
+      </a>
+      <a href="https://podcasts.apple.com/search?term=the%20numbers%20game" target="_blank" rel="noopener" aria-label="Listen to this episode on Apple Podcasts">
+        <svg viewBox="0 0 24 24"><path d="M5.34 0A5.328 5.328 0 000 5.34v13.32A5.328 5.328 0 005.34 24h13.32A5.328 5.328 0 0024 18.66V5.34A5.328 5.328 0 0018.66 0H5.34zm6.525 2.568c2.336 0 4.448.902 6.056 2.587 1.224 1.272 1.912 2.619 2.264 4.392l.04.23c.04.272-.16.527-.432.567a.505.505 0 01-.567-.431l-.04-.213c-.312-1.57-.92-2.747-2.004-3.867-1.428-1.496-3.293-2.294-5.393-2.294-2.1 0-3.966.798-5.394 2.294-1.084 1.12-1.692 2.298-2.004 3.867l-.04.213a.507.507 0 01-.567.431.504.504 0 01-.432-.567l.04-.23c.352-1.773 1.04-3.12 2.264-4.392 1.608-1.685 3.72-2.587 6.056-2.587h.153zm.136 3.033c1.74 0 3.312.67 4.527 1.934.883.916 1.394 1.93 1.663 3.253l.04.23a.505.505 0 01-.431.567.503.503 0 01-.567-.432l-.04-.212c-.23-1.112-.659-1.97-1.396-2.732-1.052-1.1-2.404-1.672-3.9-1.672s-2.849.572-3.901 1.672c-.737.762-1.167 1.62-1.396 2.732l-.04.212a.503.503 0 01-.567.432.505.505 0 01-.432-.567l.04-.23c.27-1.323.78-2.337 1.664-3.253 1.215-1.264 2.787-1.934 4.527-1.934h.21zm-.078 3.05c1.092 0 2.091.424 2.89 1.22.582.58.924 1.245 1.107 2.15l.04.218a.501.501 0 01-.424.568.499.499 0 01-.568-.424l-.04-.198c-.146-.724-.413-1.253-.871-1.716-.63-.63-1.398-.957-2.226-.957s-1.595.328-2.225.957c-.459.463-.726.992-.871 1.716l-.04.198a.499.499 0 01-.568.424.501.501 0 01-.424-.568l.04-.219c.183-.904.525-1.569 1.106-2.149.8-.796 1.799-1.22 2.89-1.22h.184zM12 14.07a2.477 2.477 0 012.48 2.478A2.477 2.477 0 0112 19.024a2.477 2.477 0 01-2.48-2.477A2.477 2.477 0 0112 14.07z"/></svg>
+        Apple
+      </a>
+      <a class="yt-pill" href="https://www.youtube.com/@thenumbersgamepodcast?sub_confirmation=1" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.12-2.14C19.5 3.55 12 3.55 12 3.55s-7.5 0-9.38.51A3 3 0 0 0 .5 6.2 31.4 31.4 0 0 0 0 12a31.4 31.4 0 0 0 .5 5.8 3 3 0 0 0 2.12 2.14c1.88.51 9.38.51 9.38.51s7.5 0 9.38-.51a3 3 0 0 0 2.12-2.14A31.4 31.4 0 0 0 24 12a31.4 31.4 0 0 0-.5-5.8zM9.55 15.57V8.43L15.82 12z"/></svg>
+        Subscribe
+      </a>
+    </div>
+    <!-- LISTEN:END -->
+
+    <div class="relsec">
+      <span class="rtitle">Discover more</span>
+      <div class="relgrid">
+        <a class="relcard" href="/how-money-has-changed-since-2021">
+          <img src="https://i.ytimg.com/vi/USK-bNAxT7Y/hqdefault.jpg" alt="EP 300 thumbnail">
+          <span class="rt">How Money Has Changed Since 2021</span>
+          <span class="rfoot"><span class="rwhy">26 October 2026</span><span class="rtag">EP 300</span></span>
+        </a>
+        <a class="relcard" href="/the-small-business-squeeze-right-now">
+          <img src="https://i.ytimg.com/vi/UcamObdACo0/hqdefault.jpg" alt="EP 299 thumbnail">
+          <span class="rt">The Small Business Squeeze Right Now</span>
+          <span class="rfoot"><span class="rwhy">19 October 2026</span><span class="rtag">EP 299</span></span>
+        </a>
+        <a class="relcard" href="/what-australia-can-learn-from-new-zealand-s-property-downturn">
+          <img src="https://i.ytimg.com/vi/j4l0VNj8IF4/hqdefault.jpg" alt="EP 298 thumbnail">
+          <span class="rt">What Australia Can Learn From New Zealand's Property Downturn</span>
+          <span class="rfoot"><span class="rwhy">12 October 2026</span><span class="rtag">EP 298</span></span>
+        </a>
+        <a class="relcard" href="/where-your-charity-donations-actually-end-up">
+          <img src="https://i.ytimg.com/vi/bo4ita9fFxY/hqdefault.jpg" alt="EP 297 thumbnail">
+          <span class="rt">Where Your Charity Donations Actually End Up</span>
+          <span class="rfoot"><span class="rwhy">5 October 2026</span><span class="rtag">EP 297</span></span>
+        </a>
+        <a class="relcard" href="/long-term-australian-property-returns">
+          <img src="https://i.ytimg.com/vi/QRCICFHBeTk/hqdefault.jpg" alt="EP 296 thumbnail">
+          <span class="rt">Long-Term Australian Property Returns</span>
+          <span class="rfoot"><span class="rwhy">28 September 2026</span><span class="rtag">EP 296</span></span>
+        </a>
+        <a class="relcard" href="/liquidation-bankruptcy-or-restructure">
+          <img src="https://i.ytimg.com/vi/gPCPOidYUPI/hqdefault.jpg" alt="EP 295 thumbnail">
+          <span class="rt">Liquidation, Bankruptcy or Restructure</span>
+          <span class="rfoot"><span class="rwhy">21 September 2026</span><span class="rtag">EP 295</span></span>
+        </a>
+      </div>
+      <div class="reldots" id="reldots"></div>
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="footgrid">
+      <div class="fcol">
+        <div class="foot-label">Follow us on</div>
+        <div class="socials">
+          <a href="https://www.instagram.com/thenumbersgamepodcast/" target="_blank" rel="noopener" aria-label="The Numbers Game on Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.8.2 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1 .4 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .4-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1-.4-2.2-.1-1.3-.1-1.7-.1-4.9s0-3.6.1-4.9c.1-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.4 2.2-.4 1.3-.1 1.7-.1 4.9-.1zm0 2c-3.1 0-3.5 0-4.8.1-1.1.1-1.5.2-1.8.3-.4.2-.7.3-1 .6-.3.3-.5.6-.6 1-.1.3-.3.7-.3 1.8-.1 1.3-.1 1.7-.1 4.8s0 3.5.1 4.8c.1 1.1.2 1.5.3 1.8.2.4.3.7.6 1 .3.3.6.5 1 .6.3.1.7.3 1.8.3 1.3.1 1.7.1 4.8.1s3.5 0 4.8-.1c1.1-.1 1.5-.2 1.8-.3.4-.2.7-.3 1-.6.3-.3.5-.6.6-1 .1-.3.3-.7.3-1.8.1-1.3.1-1.7.1-4.8s0-3.5-.1-4.8c-.1-1.1-.2-1.5-.3-1.8-.2-.4-.3-.7-.6-1-.3-.3-.6-.5-1-.6-.3-.1-.7-.3-1.8-.3-1.3-.1-1.7-.1-4.8-.1zm0 3.4a5.4 5.4 0 1 1 0 10.8 5.4 5.4 0 0 1 0-10.8zm0 2a3.4 3.4 0 1 0 0 6.8 3.4 3.4 0 0 0 0-6.8zm5.6-2.3a1.3 1.3 0 1 1-2.6 0 1.3 1.3 0 0 1 2.6 0z"/></svg></a>
+          <a href="https://www.tiktok.com/@thenumbersgamepodcast" target="_blank" rel="noopener" aria-label="The Numbers Game on TikTok"><svg viewBox="0 0 24 24"><path d="M12.53.02C13.84 0 15.14.01 16.44 0c.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg></a>
+          <a href="https://www.linkedin.com/company/the-numbers-game-podcast/" target="_blank" rel="noopener" aria-label="The Numbers Game on LinkedIn"><svg viewBox="0 0 24 24"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.24 8.25h4.52V23H.24V8.25zM8.34 8.25h4.33v2.01h.06c.6-1.14 2.08-2.34 4.28-2.34 4.58 0 5.42 3.01 5.42 6.92V23h-4.51v-7.16c0-1.71-.03-3.91-2.38-3.91-2.39 0-2.75 1.86-2.75 3.78V23H8.34V8.25z"/></svg></a>
+          <a href="https://www.facebook.com/profile.php?id=100071290388343" target="_blank" rel="noopener" aria-label="The Numbers Game on Facebook"><svg viewBox="0 0 24 24"><path d="M24 12.07C24 5.41 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.04V9.41c0-3.02 1.8-4.7 4.54-4.7 1.31 0 2.68.24 2.68.24v2.97h-1.5c-1.5 0-1.96.93-1.96 1.89v2.26h3.32l-.53 3.5h-2.8V24C19.62 23.1 24 18.1 24 12.07z"/></svg></a>
+          <a href="https://www.youtube.com/@thenumbersgamepodcast" target="_blank" rel="noopener" aria-label="The Numbers Game on YouTube"><svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.2C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31.7 31.7 0 0 0 0 12a31.7 31.7 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.2A31.7 31.7 0 0 0 24 12a31.7 31.7 0 0 0-.5-5.8zM9.6 15.6V8.4L15.8 12z"/></svg></a>
+        </div>
+      </div>
+      <div class="fcol">
+        <div class="foot-label">Brought to you by</div>
+        <div class="sponsors">
+          <a href="https://www.inovayt.com.au/" target="_blank" rel="noopener"><img src="assets/inovayt-white.png" alt="Inovayt"></a>
+          <a href="https://futureadvisory.com.au/" target="_blank" rel="noopener"><img src="assets/future-advisory-white.png" alt="Future Advisory"></a>
+        </div>
+      </div>
+      <div class="fcol produced">
+        <div class="foot-label">Produced by</div>
+        <a href="https://www.vidpod.com.au/" target="_blank" rel="noopener"><img src="assets/vidpod-white.png" alt="VIDPOD"></a>
+      </div>
+    </div>
+    <div class="footbar">
+      <details class="footnav-dd">
+        <summary><svg class="ham" viewBox="0 0 24 24"><path d="M3 6h18v2H3zM3 11h18v2H3zM3 16h18v2H3z"/></svg> Menu</summary>
+        <div class="dd-links">
+          <a href="/">Home</a><a href="/episodes">Every episode</a><a href="/adventure">Choose your own adventure</a><a href="/about">About the show</a><a href="/nick-reilly">Nick Reilly</a><a href="/jason-robinson">Jason Robinson</a><a href="/contact">Contact</a>
+        </div>
+      </details>
+      <div class="copyright">© 2026 The Numbers Game</div>
+    </div>
+  </footer>
+
+  <script>
+    var VIDEO='ooDLPewuo7M';
+    var CHAPTERS=[
+      {t:"00:00",s:0,title:"Intro"},
+      {t:"00:33",s:33,title:""}
+    ];
+    var QUESTIONS=[
+      {q:"Did a major economy raise interest rates in 2026?",s:627},
+      {q:"Who won the Numbers Game 2026 predictions?",s:774},
+      {q:"Will Melbourne property prices recover in 2027?",s:848},
+      {q:"Will super contributions grow faster in 2027?",s:957},
+      {q:"How many DPNs does the ATO issue each year?",s:1060},
+      {q:"Will the ATO slow down on DPNs after criticism?",s:1109},
+      {q:"Will interest rates be cut in 2027?",s:1143},
+      {q:"Will big accounting firms cut jobs because of AI?",s:1230},
+      {q:"How many downloads does The Numbers Game podcast have?",s:1404},
+      {q:"How much will The Numbers Game podcast grow in 2027?",s:1453}
+    ];
+
+    var chEl=document.getElementById('chapters');
+    CHAPTERS.forEach(function(c){var b=document.createElement('button');b.className='chapter';b.onclick=function(){startAt(c.s)};b.innerHTML='<span class="tc">'+c.t+'</span><span class="cx">'+c.title+'</span>';chEl.appendChild(b);});
+    document.getElementById('chcount').textContent=CHAPTERS.length;
+    var qEl=document.getElementById('qa');
+    QUESTIONS.forEach(function(q){var b=document.createElement('button');b.className='q';b.onclick=function(){startAt(q.s)};b.innerHTML='<span class="qm">?</span><span class="qx">'+q.q+'</span><span class="go">›</span>';qEl.appendChild(b);});
+    document.getElementById('qcount').textContent=QUESTIONS.length;
+
+    /* Mobile nav dropdown. */
+    var burger=document.getElementById('navburger'), navdrop=document.getElementById('navdrop');
+    if(burger&&navdrop){burger.addEventListener('click',function(){
+      navdrop.hidden=!navdrop.hidden;
+      burger.setAttribute('aria-expanded', navdrop.hidden?'false':'true');
+    });}
+
+    /* Voice-note button reveals the recorder; × tucks it away. */
+    var vbtn=document.getElementById('vbtn'), vslot=document.getElementById('vslot'), vclose=document.getElementById('vclose');
+    if(vbtn&&vslot){vbtn.addEventListener('click',function(){vslot.hidden=!vslot.hidden;});}
+    if(vclose&&vslot){vclose.addEventListener('click',function(){vslot.hidden=true;});}
+
+    /* Keep-exploring dots: only shown when the strip actually scrolls (mobile). */
+    var rg=document.querySelector('.relgrid'), rd=document.getElementById('reldots');
+    if(rg&&rd){
+      var relCards=rg.querySelectorAll('.relcard');
+      relCards.forEach(function(){rd.appendChild(document.createElement('span'))});
+      var updDots=function(){
+        var scrollable=rg.scrollWidth>rg.clientWidth+4;
+        rd.style.display=scrollable?'flex':'none';
+        if(!scrollable)return;
+        var i=Math.round(rg.scrollLeft/(rg.scrollWidth-rg.clientWidth)*(relCards.length-1));
+        rd.querySelectorAll('span').forEach(function(s,n){s.classList.toggle('on',n===i)});
+      };
+      rg.addEventListener('scroll',updDots,{passive:true});
+      window.addEventListener('resize',updDots);
+      updDots();
+    }
+
+    /* Explore tabs: swap the visible panel; the row stays put so you never lose your place. */
+    var tabBtns=document.querySelectorAll('.tabbtn');
+    tabBtns.forEach(function(b){
+      b.addEventListener('click',function(){
+        tabBtns.forEach(function(o){o.classList.remove('on')});
+        document.querySelectorAll('.tpanel').forEach(function(p){p.hidden=true});
+        b.classList.add('on');
+        document.getElementById(b.getAttribute('data-panel')).hidden=false;
+      });
+    });
+
+    /* YouTube: clean facade, then real player on demand. Seek without yanking to top. */
+    var player=null, ready=false, apiReady=false, pending=null;
+    window.onYouTubeIframeAPIReady=function(){apiReady=true; if(pending!=null){var s=pending;pending=null;createPlayer(s);}};
+    function createPlayer(sec){
+      var wrap=document.getElementById('player'); wrap.innerHTML='<div id="yt"></div>';
+      player=new YT.Player('yt',{videoId:VIDEO,playerVars:{autoplay:1,rel:0,modestbranding:1,playsinline:1,start:Math.floor(sec||0)},events:{onReady:function(){ready=true;}}});
+    }
+    function nudge(){
+      var p=document.getElementById('player-wrap'), r=p.getBoundingClientRect();
+      if(r.bottom<80 || r.top>window.innerHeight-90){ p.scrollIntoView({behavior:'smooth',block:'start'}); }
+    }
+    function startAt(sec){
+      nudge();
+      if(player&&ready){ player.seekTo(sec,true); player.playVideo(); return; }
+      if(apiReady){ createPlayer(sec); } else { pending=sec; }
+    }
+    document.getElementById('facade').addEventListener('click',function(){startAt(0);});
+    (function(){var s=document.createElement('script');s.src='https://www.youtube.com/iframe_api';document.head.appendChild(s);})();
+  </script>
+</body>
+</html>

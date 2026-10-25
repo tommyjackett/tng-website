@@ -1,0 +1,747 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EP 305 · Draft EP 305 | Show Notes Pending | The Numbers Game</title>
+<meta name="description" content="[SHOW NOTES PENDING]">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" sizes="64x64" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="canonical" href="https://thenumbersgamepodcast.com.au/draft-ep-305">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="The Numbers Game">
+<meta property="og:title" content="EP 305 · Draft EP 305 | Show Notes Pending | The Numbers Game">
+<meta property="og:description" content="[SHOW NOTES PENDING]">
+<meta property="og:url" content="https://thenumbersgamepodcast.com.au/draft-ep-305">
+<meta property="og:image" content="https://i.ytimg.com/vi/hG_xeJft6l8/maxresdefault.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+  :root{
+    --purple:#585af3; --purple-dark:#2c1b8a; --mint:#7ad9a8;
+    --white:#ffffff; --muted:rgba(255,255,255,.60); --dim:rgba(255,255,255,.42);
+    --line:rgba(255,255,255,.12); --card:rgba(255,255,255,.05); --card-hi:rgba(255,255,255,.09);
+    --display:'Anton',Impact,'Helvetica Neue',sans-serif;
+    --sans:'Inter',system-ui,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif;
+    --wrap:1280px;   /* page frame (nav spans this) */
+    --col:960px;     /* content column (player, tabs, text) */
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:var(--sans); color:var(--white); line-height:1.6; -webkit-font-smoothing:antialiased;
+    background:#12093a;
+    background-image:
+      radial-gradient(1200px 600px at 82% -6%, rgba(88,90,243,.45) 0%, transparent 55%),
+      radial-gradient(900px 700px at 5% 8%, rgba(122,217,168,.10) 0%, transparent 50%),
+      linear-gradient(180deg,#2c1b8a 0%,#1a1150 28%,#100b34 62%,#0b0820 100%);
+    background-attachment:fixed;
+  }
+  a{color:inherit}
+  .wrap{max-width:var(--wrap);margin:0 auto;padding:0 36px}
+  main.wrap{max-width:var(--col)}
+  @media(max-width:720px){.wrap{padding:0 22px}}
+
+  /* ── Navbar ── */
+  .nav{position:sticky;top:0;z-index:50;background:linear-gradient(180deg,rgba(24,15,74,.92),rgba(24,15,74,.72));backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+  .nav-in{max-width:var(--wrap);margin:0 auto;padding:11px 36px;display:flex;align-items:center;justify-content:space-between}
+  @media(max-width:720px){.nav-in{padding:11px 22px}}
+  .brand{display:block;line-height:0}
+  .brand img{height:36px;width:auto;display:block}
+  .navlinks{display:flex;gap:28px;align-items:center}
+  .navlinks a{text-decoration:none;font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);transition:.15s}
+  .navlinks a:hover{color:var(--white)}
+  .navlinks a.navtop{cursor:default}
+  .navgroup{position:relative;display:flex;align-items:center}
+  .navgroup .subnav{display:none;position:absolute;top:100%;left:50%;transform:translateX(-50%);padding-top:14px;min-width:180px}
+  .navgroup:hover .subnav,.navgroup:focus-within .subnav{display:block}
+  .subnav-in,.navgroup .subnav{z-index:60}
+  .navgroup .subnav a{display:block;background:#180f4a;border:1px solid var(--line);border-top:0;padding:12px 16px;font-size:12px;color:rgba(255,255,255,.85)}
+  .navgroup .subnav a:first-child{border-top:1px solid var(--line)}
+  .navgroup .subnav a:hover{background:#221768;color:var(--white)}
+  .navburger{display:none;background:none;border:1px solid var(--line);padding:8px 10px;cursor:pointer;color:var(--white);transition:.15s}
+  .navburger:hover{border-color:rgba(122,217,168,.6)}
+  .navburger svg{width:20px;height:20px;fill:currentColor;display:block}
+  .navdrop{display:none}
+  @media(max-width:720px){
+    .navlinks{display:none}
+    .navburger{display:block}
+    .navdrop{display:block;position:absolute;left:0;right:0;top:100%;
+      background:#180f4a;border-bottom:1px solid var(--line);box-shadow:0 24px 50px rgba(0,0,0,.45)}
+    .navdrop[hidden]{display:none}
+    .navdrop a{display:block;padding:15px 22px;text-decoration:none;font-size:14px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:rgba(255,255,255,.9);border-bottom:1px solid rgba(255,255,255,.06)}
+    .navdrop a:last-child{border-bottom:0}
+    .navdrop a.sub{padding-left:42px;font-size:13px;color:rgba(255,255,255,.72)}
+    .navdrop .navlabel{display:block;padding:15px 22px 6px;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.4)}
+  }
+
+  /* ── Hero / hook (marker-highlight system: purple hook wraps naturally, mint payoff below)
+     Rules: title splits at its natural break (colon/pipe/question mark). Front = hook (purple,
+     big), back = payoff (mint, smaller). No break in title = purple hook only. Highlights hug
+     the text (tight em padding tuned to Anton) and wrap via box-decoration-break — never
+     hand-pick line breaks or mint words. ── */
+  header.hero{padding:34px 0 6px}
+  .hook{--inx:clamp(8.4px,2.1vw,15.6px)} /* one shared text inset so hook + payoff first letters align */
+  .hook .hk{font-family:var(--display);font-weight:400;text-transform:uppercase;
+    font-size:clamp(28px,7vw,52px);line-height:1.3;letter-spacing:-.5px;text-wrap:balance}
+  .hook .hk span{color:var(--white);padding:.04em var(--inx) .02em;
+    background:linear-gradient(var(--purple),var(--purple)) 0 50%/100% 87% no-repeat;
+    -webkit-box-decoration-break:clone;box-decoration-break:clone}
+  .hook .pay{font-family:var(--display);font-weight:400;text-transform:uppercase;
+    font-size:clamp(16px,4vw,24px);line-height:1.5;letter-spacing:.6px;margin-top:8px;text-wrap:balance}
+  .hook .pay span{color:#0a0a0a;padding:.08em var(--inx) .04em;
+    background:linear-gradient(var(--mint),var(--mint)) 0 50%/100% 88% no-repeat;
+    -webkit-box-decoration-break:clone;box-decoration-break:clone}
+  /* no-hook titles: mid-split into two full-size rows, purple then mint */
+  .hook .hk span.hkrow{display:block;background:none;padding:0}
+  .hook .hk .hkrow+.hkrow{margin-top:8px}
+  .hook .hk span.mintseg{color:#0a0a0a;
+    background:linear-gradient(var(--mint),var(--mint)) 0 50%/100% 87% no-repeat}
+
+  /* ── Player (clean facade → real player on tap) ── */
+  .player-wrap{margin:24px 0 4px;scroll-margin-top:76px}
+  .player{position:relative;width:100%;padding-top:56.25%;border-radius:0;overflow:hidden;background:#000;box-shadow:0 30px 70px rgba(0,0,0,.5),0 0 0 1px rgba(255,255,255,.06)}
+  .facade{position:absolute;inset:0;border:0;cursor:pointer;background-size:cover;background-position:center;display:flex;align-items:center;justify-content:center;padding:0}
+  .facade .play{width:74px;height:74px;border-radius:50%;background:rgba(10,6,30,.40);border:2px solid rgba(255,255,255,.72);display:flex;align-items:center;justify-content:center;transition:.18s;-webkit-backdrop-filter:blur(1px);backdrop-filter:blur(1px)}
+  .facade:hover .play{background:rgba(88,90,243,.62);transform:scale(1.07);border-color:#fff}
+  .facade .play::after{content:"";border-style:solid;border-width:11px 0 11px 19px;border-color:transparent transparent transparent #fff;margin-left:5px}
+  .player iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+
+  /* ── Episode facts (bottom of the Summary panel — templated per episode) ── */
+  .sumfacts{margin:14px 10px 4px;padding-top:13px;border-top:1px solid rgba(255,255,255,.08);display:flex;flex-direction:column;gap:8px}
+  .fact{display:flex;gap:12px;font-size:13.5px}
+  .fact .fl{flex:none;width:104px;color:var(--dim);font-weight:600;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;padding-top:2px}
+  .fact .fv{color:rgba(255,255,255,.9);font-weight:500}
+  .fact .fv a{color:var(--mint);text-decoration:none;border-bottom:1px solid rgba(122,217,168,.4);transition:.15s}
+  .fact .fv a:hover{border-bottom-color:var(--mint)}
+
+  /* ── Episode tag (identity: black label hanging off the title corner) ── */
+  .eptag{display:inline-block;position:relative;left:-6px;margin-bottom:-7px;z-index:2;
+    background:#0a0a0a;color:var(--white);font-family:var(--display);font-weight:400;
+    font-size:13.5px;letter-spacing:1.5px;text-transform:uppercase;padding:6px 11px 4px}
+
+  /* ── Explore tabs (sticky mode switcher; one panel swaps below, nothing shoves) ── */
+  .explore{margin-top:22px}
+  .tabs{position:sticky;top:58px;z-index:40;display:flex;flex-wrap:wrap;gap:8px;padding:10px 0;
+    background:linear-gradient(180deg,rgba(18,10,55,.96),rgba(18,10,55,.86));
+    backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+  .tabbtn{font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.5px;
+    font-size:14.5px;color:var(--white);background:var(--purple);border:1px solid var(--purple);
+    padding:9px 13px 7px;cursor:pointer;transition:.15s}
+  .tabbtn:hover{filter:brightness(1.12)}
+  .tabbtn.on{background:var(--mint);border-color:var(--mint);color:#0a0a0a}
+  .tabbtn.on:hover{filter:none}
+  .tabbtn .ct{font-size:12px;opacity:.75;font-variant-numeric:tabular-nums}
+  .tabbtn .ct::before{content:" · "}
+  .tpanel{border:1px solid var(--line);background:var(--card);padding:12px 10px 14px}
+  .hint{font-size:12.5px;color:var(--muted);padding:2px 10px 10px;border-bottom:1px solid rgba(255,255,255,.08);margin-bottom:6px}
+
+  /* ── Listen row (no box: label left, service pills follow) ── */
+  .listen{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:12px 16px;margin-top:34px}
+  .listen .lname{font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--dim)}
+  .listen a{display:inline-flex;align-items:center;gap:9px;padding:11px 18px;border-radius:999px;
+    background:var(--mint);color:#08210f;text-decoration:none;font-weight:800;font-size:12.5px;
+    letter-spacing:.04em;text-transform:uppercase;transition:.15s}
+  .listen a:hover{filter:brightness(1.06);transform:translateY(-1px);box-shadow:0 12px 30px rgba(122,217,168,.25)}
+  .listen svg{width:20px;height:20px;fill:currentColor;flex:none}
+  /* ── Listen-now Spotify audio embed (full column width, above the pills) ── */
+  .listen-now{margin-top:40px}
+  .listen-now .ln-head{display:flex;align-items:baseline;justify-content:space-between;gap:14px;margin-bottom:13px}
+  .listen-now .ln-title{font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--dim)}
+  .audio-embed{border-radius:12px;overflow:hidden;box-shadow:0 20px 50px rgba(0,0,0,.4),0 0 0 1px rgba(255,255,255,.06)}
+  .audio-embed iframe{display:block;width:100%;border:0}
+  @media(max-width:720px){.listen-now{margin-top:32px}}
+
+  /* ── Keep exploring (thumbnails link to other episode PAGES, never timecodes).
+     Swipeable strip on mobile, fits three-up on desktop. Variant rule: claim
+     "similar ground" + reason lines ONLY when moment-level topic overlap is
+     genuinely strong; otherwise show the latest released episodes with dates —
+     never invent a connection. ── */
+  .relsec{margin-top:60px;padding-top:58px;border-top:1px solid var(--line)} /* line = end of this episode's info */
+  .reldots{display:flex;justify-content:center;gap:7px;margin-top:12px}
+  .reldots span{width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.25);transition:.2s}
+  .reldots span.on{background:var(--mint)}
+  .relsec .rtitle{display:inline-block;font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.5px;font-size:14.5px;background:var(--mint);color:#0a0a0a;padding:9px 13px 7px;margin-bottom:18px}
+  .relgrid{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding-bottom:6px;scrollbar-width:none}
+  .relgrid::-webkit-scrollbar{display:none}
+  .relcard{flex:0 0 56%;max-width:232px;scroll-snap-align:start;display:flex;flex-direction:column;text-decoration:none;background:var(--card);border:1px solid var(--line);transition:.15s}
+  .relcard:hover{background:var(--card-hi);border-color:rgba(122,217,168,.55)}
+  .relcard img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block}
+  .relcard .rt{display:block;font-size:12.5px;font-weight:600;color:rgba(255,255,255,.92);line-height:1.4;padding:8px 8px 0}
+  .relcard .rfoot{margin-top:auto;display:flex;justify-content:space-between;align-items:flex-end;gap:8px;padding:10px 8px 9px}
+  .relcard .rwhy{font-size:11.5px;color:var(--mint)}
+  .relcard .rtag{display:inline-block;background:#0a0a0a;color:var(--white);font-family:var(--display);font-size:10px;letter-spacing:1.2px;text-transform:uppercase;padding:3px 7px 2px;white-space:nowrap;flex:0 0 auto}
+
+  /* ── Dropdown sections (accordion under the player) ── */
+  .drops{margin-top:34px;display:flex;flex-direction:column;gap:11px}
+  .drop{border:1px solid var(--line);border-radius:0;background:var(--card);overflow:hidden;transition:border-color .15s}
+  .drop[open]{border-color:rgba(122,217,168,.35)}
+  .drop>summary{list-style:none;cursor:pointer;padding:16px 18px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+  .drop>summary::-webkit-details-marker{display:none}
+  .drop>summary .st{font-weight:700;font-size:15.5px;letter-spacing:.005em}
+  .drop>summary .ct{margin-left:auto;font-size:12px;color:var(--dim);font-weight:600;font-variant-numeric:tabular-nums}
+  .drop>summary .chev{flex:none;width:22px;height:22px;border-radius:50%;background:rgba(122,217,168,.14);color:var(--mint);display:flex;align-items:center;justify-content:center;font-family:var(--display);font-size:15px;line-height:1;transition:.2s;transform:translateY(-1px)}
+  .drop[open]>summary .chev{transform:rotate(45deg)}
+  .drop-body{padding:2px 12px 12px}
+
+  /* chapters */
+  .chapter{display:flex;align-items:baseline;gap:14px;width:100%;text-align:left;cursor:pointer;background:none;border:0;color:inherit;font-family:inherit;padding:11px 10px;border-radius:10px;transition:.13s}
+  .chapter:hover{background:var(--card-hi)}
+  .chapter .tc{font-variant-numeric:tabular-nums;font-weight:700;font-size:14px;color:var(--mint);flex:none;width:48px}
+  .chapter .cx{font-size:15px;font-weight:500;color:rgba(255,255,255,.9)}
+  .chapter:hover .cx{color:#fff}
+
+  /* questions */
+  .q{display:flex;align-items:center;gap:12px;width:100%;text-align:left;cursor:pointer;background:none;border:0;border-radius:11px;color:inherit;font-family:inherit;padding:12px 10px;transition:.14s}
+  .q+.q{border-top:1px solid rgba(255,255,255,.05)}
+  .q:hover{background:var(--card-hi)}
+  .q .qm{font-family:var(--display);font-size:15px;color:var(--mint);flex:none;line-height:1;transform:translateY(1px)}
+  .q .qx{font-size:15px;font-weight:500;color:rgba(255,255,255,.92)}
+  .q .go{margin-left:auto;flex:none;color:var(--dim);font-size:18px;transition:.15s}
+  .q:hover .go{color:var(--mint);transform:translateX(2px)}
+
+  /* summary + transcript bodies */
+  .summary-body p{font-size:16.5px;line-height:1.62;color:rgba(255,255,255,.9);padding:6px 10px 4px}
+  .tbody{padding:2px 10px 8px}
+  .tbody p{font-size:14.5px;line-height:1.7;color:rgba(255,255,255,.78);margin-top:15px;max-width:64ch}
+  .tbody .spk{display:block;font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--mint);margin-bottom:2px}
+
+  /* ── Voice note ask (lives at the bottom of the Summary panel) ── */
+  .vask{margin:16px 10px 4px}
+  .vbtn{display:inline-flex;align-items:center;gap:9px;padding:12px 20px;border-radius:999px;border:0;cursor:pointer;
+    background:var(--mint);color:#08210f;font-family:inherit;font-weight:800;font-size:12.5px;
+    letter-spacing:.04em;text-transform:uppercase;transition:.15s}
+  .vbtn:hover{filter:brightness(1.06);transform:translateY(-1px);box-shadow:0 12px 30px rgba(122,217,168,.25)}
+  .vbtn svg{width:18px;height:18px;fill:currentColor;flex:none}
+  .vslot{background:var(--purple);padding:12px 10px 10px;margin:14px 0 4px;box-shadow:0 18px 40px rgba(0,0,0,.35)}
+  .vslot[hidden]{display:none}
+  .vhead{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;margin-bottom:10px}
+  .vhead .vmsg{font-family:var(--sans);font-size:13px;line-height:1.55;color:rgba(255,255,255,.92);margin:2px 0 0;padding:0 2px}
+  .vclose{background:none;border:0;color:rgba(255,255,255,.85);font-size:22px;line-height:1;cursor:pointer;padding:0 2px}
+  .vclose:hover{color:var(--white)}
+  .vslot iframe{display:block}
+
+  /* ── YouTube subscribe pill (sits in the listen row; outranks .listen a's mint) ── */
+  .listen a.yt-pill{background:var(--purple);color:var(--white)}
+  .listen a.yt-pill:hover{filter:brightness(1.1);transform:translateY(-1px)}
+  @media(max-width:720px){ /* mobile: no label, three compact pills on one row */
+    .listen .lname{display:none}
+    .listen{gap:8px}
+    .listen a{padding:10px 13px;font-size:11px;gap:6px}
+    .listen svg{width:16px;height:16px}
+  }
+
+  /* ── Footer: Follow us on | Brought to you by | Produced by, + Menu dropdown ── */
+  footer{border-top:1px solid var(--line);margin-top:68px;padding:52px 20px 58px}
+  .footgrid{max-width:var(--wrap);margin:0 auto;display:grid;grid-template-columns:1fr 1.15fr .8fr;gap:44px;align-items:start}
+  .fcol{text-align:center;display:flex;flex-direction:column;align-items:center}
+  .foot-label{font-size:11px;font-weight:700;letter-spacing:.26em;text-transform:uppercase;color:var(--dim);margin-bottom:18px}
+  .sponsors{display:flex;justify-content:center;align-items:center;gap:34px;flex-wrap:wrap}
+  .sponsors a,.produced a{display:inline-flex;transition:.15s}
+  .sponsors a:hover,.produced a:hover{transform:translateY(-1px)}
+  .sponsors img{height:32px;width:auto;opacity:.92}
+  .produced img{height:30px;width:auto;opacity:.95}
+  .sponsors a:hover img,.produced a:hover img{opacity:1}
+  footer .socials{display:flex;gap:11px;justify-content:center;flex-wrap:wrap;margin:0}
+  footer .socials a{width:40px;height:40px;border-radius:50%;border:1.5px solid rgba(122,217,168,.5);display:flex;align-items:center;justify-content:center;transition:.15s}
+  footer .socials a svg{width:18px;height:18px;fill:var(--mint);transition:.15s}
+  footer .socials a:hover{background:var(--mint);border-color:var(--mint);transform:translateY(-2px)}
+  footer .socials a:hover svg{fill:#0a0a0a}
+  .footbar{max-width:var(--wrap);margin:34px auto 0;border-top:1px solid var(--line);padding-top:20px;display:flex;flex-direction:column;align-items:center;gap:14px}
+  .footnav-dd{display:block;width:100%;max-width:var(--wrap);margin:0 auto;text-align:center}
+  .footnav-dd>summary{list-style:none;cursor:pointer;display:inline-flex;align-items:center;gap:9px;font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.5px;font-size:13px;color:var(--muted);background:transparent;border:1px solid var(--line);padding:8px 16px 6px;transition:.15s}
+  .footnav-dd>summary::-webkit-details-marker{display:none}
+  .footnav-dd>summary:hover{color:var(--mint);border-color:rgba(122,217,168,.45)}
+  .footnav-dd>summary .ham{width:15px;height:15px;fill:currentColor;transform:translateY(-1px)}
+  .footnav-dd .dd-links{display:flex;flex-direction:row;flex-wrap:wrap;justify-content:center;gap:12px 24px;padding:24px 0 4px}
+  .footnav-dd .dd-links a{font-size:11.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:.15s}
+  .footnav-dd .dd-links a:hover{color:var(--mint)}
+  .copyright{font-size:12px;color:var(--dim);text-align:center}
+  @media(max-width:720px){.footgrid{grid-template-columns:1fr;gap:34px}footer{padding:40px 16px 20px}.footbar{margin-top:34px;padding-top:24px;gap:20px}.footnav-dd .dd-links{flex-direction:column;align-items:center;gap:15px}}
+
+  @media(min-width:720px){header.hero{padding:48px 0 6px}}
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "PodcastEpisode", "name": "Draft EP 305 | Show Notes Pending", "url": "https://thenumbersgamepodcast.com.au/draft-ep-305", "datePublished": "2026-11-30", "episodeNumber": 305, "image": "https://i.ytimg.com/vi/hG_xeJft6l8/maxresdefault.jpg", "partOfSeries": {"@type": "PodcastSeries", "name": "The Numbers Game", "url": "https://thenumbersgamepodcast.com.au/"}}</script>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-in">
+      <a class="brand" href="/" aria-label="The Numbers Game home"><img src="assets/tng-logo.png" alt="The Numbers Game"></a>
+      <div class="navlinks">
+        <a href="/">Home</a>
+        <div class="navgroup">
+          <a class="navtop">Episodes</a>
+          <div class="subnav">
+            <a href="/episodes">All episodes</a>
+            <a href="/adventure">Find moments</a>
+          </div>
+        </div>
+        <div class="navgroup">
+          <a class="navtop">About</a>
+          <div class="subnav">
+            <a href="/about">The show</a>
+            <a href="/nick-reilly">Nick Reilly</a>
+            <a href="/jason-robinson">Jason Robinson</a>
+          </div>
+        </div>
+        <a href="/contact">Contact</a>
+      </div>
+      <button class="navburger" id="navburger" type="button" aria-label="Menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24"><path d="M3 6h18v2H3zM3 11h18v2H3zM3 16h18v2H3z"/></svg>
+      </button>
+    </div>
+    <div class="navdrop" id="navdrop" hidden>
+      <a href="/">Home</a>
+      <span class="navlabel">Episodes</span>
+      <a class="sub" href="/episodes">All episodes</a>
+      <a class="sub" href="/adventure">Find moments</a>
+      <span class="navlabel">About</span>
+      <a class="sub" href="/about">The show</a>
+      <a class="sub" href="/nick-reilly">Nick Reilly</a>
+      <a class="sub" href="/jason-robinson">Jason Robinson</a>
+      <a href="/contact">Contact</a>
+    </div>
+  </nav>
+
+  <main class="wrap">
+
+    <header class="hero">
+      <div class="hook">
+        <span class="eptag">EP 305</span>
+        <h1 class="hk"><span>Draft EP 305</span></h1>
+        <p class="pay"><span>Show Notes Pending</span></p>
+      </div>
+    </header>
+
+    <div class="player-wrap" id="player-wrap">
+      <div class="player" id="player">
+        <button class="facade" id="facade" style="background-image:url('https://i.ytimg.com/vi/hG_xeJft6l8/maxresdefault.jpg')" aria-label="Play episode">
+          <span class="play"></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="explore">
+      <div class="tabs" role="tablist">
+        <button class="tabbtn on" data-panel="p-summary">Summary</button>
+        <button class="tabbtn" data-panel="p-chapters">Chapters<span class="ct" id="chcount"></span></button>
+        <button class="tabbtn" data-panel="p-questions">Questions<span class="ct" id="qcount"></span></button>
+      </div>
+      <section class="tpanel" id="p-summary">
+        <div class="summary-body">
+          <p>[SHOW NOTES PENDING]</p>
+        </div>
+        <div class="vask">
+          <button class="vbtn" id="vbtn" type="button">
+            <svg viewBox="0 0 24 24"><path d="M12 14a3 3 0 0 0 3-3V6a3 3 0 1 0-6 0v5a3 3 0 0 0 3 3zm5-3a5 5 0 0 1-10 0H5a7 7 0 0 0 6 6.92V21h2v-3.08A7 7 0 0 0 19 11h-2z"/></svg>
+            Send us a voice note
+          </button>
+          <div class="vslot" id="vslot" hidden>
+            <div class="vhead">
+              <p class="vmsg">We'd love to hear from you. You can leave up to a 90 second voice note for us to play on the show: a question, some feedback, or a topic you want covered.</p>
+              <button class="vclose" id="vclose" type="button" aria-label="Close">&times;</button>
+            </div>
+            <iframe src="https://www.speakpipe.com/widget/inline/hhq6kzggsx7zpcsvakgxfrzun3zidpde" allow="microphone" width="100%" height="200" frameborder="0" title="Leave The Numbers Game a voice note"></iframe>
+          </div>
+          <script async src="https://www.speakpipe.com/widget/loader.js" charset="utf-8"></script>
+        </div>
+        <div class="sumfacts">
+          <div class="fact"><span class="fl">Release date</span><span class="fv">30 November 2026</span></div>
+          <div class="fact"><span class="fl">Hosts</span><span class="fv"><a href="/nick-reilly">Nick Reilly</a> &amp; <a href="/jason-robinson">Jason Robinson</a></span></div>
+
+        </div>
+      </section>
+      <section class="tpanel" id="p-chapters" hidden>
+        <p class="hint">Jump straight to the part you need.</p>
+        <div id="chapters"></div>
+      </section>
+      <section class="tpanel" id="p-questions" hidden>
+        <p class="hint">Real questions this episode answers. Tap one to hear the answer.</p>
+        <div id="qa"></div>
+      </section>
+    </div>
+
+    <div class="drops">
+
+      <details class="drop">
+        <summary><span class="st">Episode transcript</span><span class="chev">+</span></summary>
+        <div class="drop-body tbody">
+          <p><span class="spk">Jason · 00:00</span>Welcome to episode 305 of The Numbers Game. I'm Jase. I'm here with Nick. How are you, mate?</p>
+          <p><span class="spk">Nick · 00:06</span>Oh, mate, I am very good. Very good. Ready for a break. Ready for a break. Not from this and you love this, but just—</p>
+          <p><span class="spk">Jason · 00:14</span>we are getting to the pointy end of the season. You have ticked off, ticked off over 300 eps and you know, we're getting to the end of the year where December, December is very close and</p>
+          <p><span class="spk">Nick · 00:25</span>sun's out.</p>
+          <p><span class="spk">Jason · 00:26</span>Especially in professional services, things get pretty clear. In your</p>
+          <p><span class="spk">Nick · 00:28</span>case,</p>
+          <p><span class="spk">Jason · 00:29</span>pins are out below the screen, so we'll leave that.</p>
+          <p><span class="spk">Nick · 00:33</span>Marathon runner, you just love not wearing anything on your pins.</p>
+          <p><span class="spk">Jason · 00:36</span>Yes, correct, correct.</p>
+          <p><span class="spk">Nick · 00:41</span>They look good though, mate, they look good. I'll give that to you.</p>
+          <p><span class="spk">Jason · 00:43</span>Thank you. We'll get a shot on the Numbers Game Podcast Instagram when this episode goes up. Tommy can, uh, maybe get one where he's</p>
+          <p><span class="spk">Nick · 00:50</span>not flexing.</p>
+          <p><span class="spk">Jason · 00:51</span>Tommy, let me get the little pins out. Thanks, Tommy. Live shot, it'll be, uh, What do you mean not flexing? That's normal. I'm not a cyclist like you, so.</p>
+          <p><span class="spk">Nick · 00:59</span>I'm no longer a cyclist, mate.</p>
+          <p><span class="spk">Jason · 01:01</span>For those playing at home, Nick's having a hard time concentrating while he looks at my quads and my calves and my nice tanned legs.</p>
+          <p><span class="spk">Nick · 01:08</span>Very good.</p>
+          <p><span class="spk">Jason · 01:09</span>We'll get this back on track, Nick. Yes. What are we doing here today?</p>
+          <p><span class="spk">Nick · 01:12</span>I wanted to bring to the table today, first a question I'll ask you because it's a question that we're getting asked a lot in our business. Should I pay off my mortgage or should I invest? And the reason we're getting that question is we've got significant interest rate, significant interest rate burden at the moment.</p>
+          <p><span class="spk">Nick · 01:36</span>Most people on their home loan, depending on your financier, the type of loan you've got, are paying somewhere around 6.5%.</p>
+          <p><span class="spk">Jason · 01:43</span>Yep.</p>
+          <p><span class="spk">Nick · 01:44</span>Maybe more for an investment. So there's this real conundrum is, okay, do I actually invest and try and get a return or should I just focus on smashing my debt down?</p>
+          <p><span class="spk">Jason · 01:54</span>Yep.</p>
+          <p><span class="spk">Nick · 01:55</span>What would you do?</p>
+          <p><span class="spk">Jason · 01:56</span>Look, I think the easy conservative answer is to pay your debt down, especially for me and clients when we talk to them, if they've got an offset account especially rather than redraw, which we might get into a little bit more. But if you've got an offset account, you can smash money into your offset, especially with interest rates after the amount of rises we've had and how much interest people are paying.</p>
+          <p><span class="spk">Jason · 02:18</span>Most people towards the back end of this year, they've got more money leaving their account every month than they have, obviously, as rates have gone up. Up all year, they're feeling the pinch of it. When you've got an extra $200 a month, give or take, it's $50 a week. There's less money you got for the groceries or the coffee that you treated yourself.</p>
+          <p><span class="spk">Jason · 02:36</span>Maybe the gym membership's gone. So if you do have a way to, again, the simple choice of knock down your mortgage or invest, there's not that many people that have the spare cash. And if you do, I think the safety of an offset so you can access that money, but then knowing that you're bringing down that interest repayment seems to be the standard answer or the easy approach.</p>
+          <p><span class="spk">Nick · 03:00</span>Correct. Probably standard answer.</p>
+          <p><span class="spk">Jason · 03:02</span>Yep.</p>
+          <p><span class="spk">Nick · 03:02</span>And in an environment like today, probably where most people would go.</p>
+          <p><span class="spk">Jason · 03:06</span>Yep.</p>
+          <p><span class="spk">Nick · 03:06</span>Purely from a, you know, we talked about lack of confidence and a safety measure and you already mentioned that. There's so many variables. I'm going to take you through a couple today, which I think are really worth thinking about. But the reality is if your rate is 6.5% you are guaranteed a return or a saving, which is a return, at 6.5%.</p>
+          <p><span class="spk">Nick · 03:29</span>It's also a saving, so you haven't earned that money, so there's no tax associated.</p>
+          <p><span class="spk">Jason · 03:34</span>Beautiful. We love that.</p>
+          <p><span class="spk">Nick · 03:35</span>So you effectively are guaranteeing that you're going to earn 6.5% or the equivalent of whatever your interest rate is by paying that down.</p>
+          <p><span class="spk">Jason · 03:44</span>Some good certainty there.</p>
+          <p><span class="spk">Nick · 03:46</span>Well, it is certain, certain. And we are seeing some crazy things. So if you look at what's driving the mortgage market at the moment, given the property market is down, it's refinances. And a lot of our volume at the moment is from people restructuring debt.</p>
+          <p><span class="spk">Nick · 04:05</span>And I'm seeing stuff that is crazy. Like we had a guy come across our, come across one of our broker's desks in recent weeks. An investment property. He's retired, so he thought he couldn't restructure his loan.</p>
+          <p><span class="spk">Jason · 04:22</span>Yep.</p>
+          <p><span class="spk">Nick · 04:23</span>Which he's right, he can't. He doesn't have the ability to do it at the moment. But he was paying 8.4% on an investment property. This was before, this was a rate rise ago. So if he had left that, he would've probably been paying 8.65% or so now.</p>
+          <p><span class="spk">Nick · 04:39</span>We managed, we didn't move him because of his position, but we managed to renegotiate with the bank, which was ING, happy to mention that. And we got him down to like 6.3% or something.</p>
+          <p><span class="spk">Nick · 04:55</span>Incredible. At the time. So.</p>
+          <p><span class="spk">Jason · 04:57</span>Great saving.</p>
+          <p><span class="spk">Nick · 05:00</span>So effectively, if he had an offset, he's basically saving 8.5%. Yeah,</p>
+          <p><span class="spk">Jason · 05:04</span>at the</p>
+          <p><span class="spk">Nick · 05:05</span>time.</p>
+          <p><span class="spk">Jason · 05:05</span>Wow.</p>
+          <p><span class="spk">Nick · 05:06</span>Yeah, so look, that's, and to me that is a really sensible solution at the moment. Given there's so many uncertainties people aren't ready to take risk on or aren't willing to take risk on, that is a really good option for most people.</p>
+          <p><span class="spk">Nick · 05:21</span>And you know, you mentioned it, anything you do pay off above your minimum repayment, you can access that. So it sits there as a bit of a safety net. If you were to invest that money, yes, you can still access it, but there's a chance it won't be worth what it was when you put it in.</p>
+          <p><span class="spk">Nick · 05:40</span>And like any good investment strategy, you need time. So, you know, if you go into a 10-year strategy, which was a growth strategy, which means you're trying to achieve maybe 8% or 9%, if you don't last the 10 years, there's every chance you won't get your 8% to 9%.</p>
+          <p><span class="spk">Nick · 05:57</span>So, you know, again, it puts more risk on the fact that, you know, you're in on the method of investing versus, or the option of investing, sorry, versus in your home loan. However, I thought for this episode, we would just look at the numbers just to help people understand whilst emotionally and from a security point of view, paying your home off might be the best option, numbers might not say</p>
+          <p><span class="spk">Nick · 06:27</span>that.</p>
+          <p><span class="spk">Jason · 06:28</span>Oh, we do like numbers, Nico. What have you got for us?</p>
+          <p><span class="spk">Nick · 06:31</span>So the two big things to consider are number one, the vehicle that you do invest in. And number 2, how old you are and where you are on your journey, on either your investment journey or your debt journey. So let's say that we took our money and we invested in an environment that wasn't superannuation.</p>
+          <p><span class="spk">Nick · 06:53</span>So let's say Jason Robinson, PAYG income earner, then simply goes and buys a Vanguard ETF high growth. Based on tax rates, as we mentioned, you've gotta add that to what you would've earned or saved on your home loan.</p>
+          <p><span class="spk">Nick · 07:12</span>So let's use 6.49%, that is your home loan rate.</p>
+          <p><span class="spk">Jason · 07:17</span>Yep.</p>
+          <p><span class="spk">Nick · 07:18</span>If you're on the 15% tax bracket or you're in the 15% tax bracket plus the Medicare levy of 2%, you're paying 17% in income tax. Yeah. If you were to invest that money in your own name, you would need 7.82% from an investment return to be on par with a saving of 6.49%.</p>
+          <p><span class="spk">Jason · 07:45</span>Yep.</p>
+          <p><span class="spk">Nick · 07:45</span>Makes sense?</p>
+          <p><span class="spk">Jason · 07:46</span>Yep. 'Cause you gotta take the tax out of it.</p>
+          <p><span class="spk">Nick · 07:48</span>Correct. If you're at a 30%, a 32% tax bracket, which is 30% plus the Medicare levy, you'd need to be earning 9.2%. 5.4%.</p>
+          <p><span class="spk">Jason · 07:56</span>Getting up there.</p>
+          <p><span class="spk">Nick · 07:58</span>Yep. 39% tax, 10.64% return. 47% tax, 12.25% return. Very hard to achieve that. So if you look at most long-term growth investments, depending on, you know, whether you're Vanguard, Chantwest, ASX, whatever it might be.</p>
+          <p><span class="spk">Nick · 08:23</span>But I would suggest you could factor in around 9% return on a high growth or even growth to high growth investment over the long term. Clearly, some years are gonna be much better than that, some years are gonna be worse, but if you average it all out, you're looking at about 9%.</p>
+          <p><span class="spk">Nick · 08:40</span>So if you're on the top tax bracket and you're investing in your own personal name, you need to be sure that you can get 12.25% year on year for that to be a better result than paying your home loan off.</p>
+          <p><span class="spk">Jason · 08:53</span>Yeah, wow.</p>
+          <p><span class="spk">Nick · 08:54</span>Now the reality is most investments don't do that year on year. If they do that or more in one year, I can guarantee you they probably won't do it the next. So investing in your own name versus paying your home off, go pay your home off.</p>
+          <p><span class="spk">Nick · 09:10</span>The one thing this doesn't include, and I think it's worth noting, is any capital gains discounts you might get. If you were to sell things or sell investments, also franking credits that could come back. That's a whole new world. So we're just gonna look at really basic numbers.</p>
+          <p><span class="spk">Jason · 09:26</span>Yep. Which still, 12% is up there.</p>
+          <p><span class="spk">Nick · 09:29</span>Yep.</p>
+          <p><span class="spk">Jason · 09:29</span>If you are in that higher bracket. So there's a good decent push for the higher up the bracket you get, the more the mortgage offset makes a lot of sense.</p>
+          <p><span class="spk">Nick · 09:38</span>Yep. So let's just look at that as an example. So let's say you've got a loan of $600,000. So we've looked at the interest rates and what the return would need to be. But if you've got a home loan that's sitting at $600,000, pretty low these days, that amount, with a 25-year term at 6.49%, that would cost you just over $4,000 a month for 25 years.</p>
+          <p><span class="spk">Nick · 10:03</span>And over that 25 years, you would pay $614,000 in interest. Crazy, isn't it? You're basically paying double back. Yeah. If you took— so we're looking at someone with $10,000 in pre-tax earnings. That they have to do something extra with.</p>
+          <p><span class="spk">Nick · 10:19</span>So they could use that money to invest, as we said, or they could use that money to put into their home loan. So looking at a 32% marginal tax rate, that's the example I'm gonna use. I'll ask you, that's probably where most people sit, around that 30%?</p>
+          <p><span class="spk">Jason · 10:35</span>Yep, yep. Average rate of tax I think is around 29% across the country.</p>
+          <p><span class="spk">Nick · 10:39</span>Perfect. So you got $10,000 of your salary, you are going to lose 32% of that. So you've got net $6,800 to do something with after tax. If you were to put that into your loan, the loan is gone in 18 years and 10 months.</p>
+          <p><span class="spk">Nick · 10:58</span>So every year you're putting another $6,800 into your home loan. The loan is gone in 18 years and 10 months. So you're saving yourself just over 6 years from a loan repayment point of view, a loan term point of view. Term point of view, and you're saving $175,000 in interest.</p>
+          <p><span class="spk">Nick · 11:17</span>So that's the impact that putting extra money into your home loan. Now, most people think about that and they think that's actually ludicrous because I've got to pay back $1.2 million on $600,000 and I've only put another $6,800 a year in, but I've then wiped 6 years off.</p>
+          <p><span class="spk">Nick · 11:38</span>And then the compounding impact of that. I've now got 6 years without a home loan repayment. Well, now my only option is to invest because I've got no debt to get rid of. So it's not like you pay the home loan off and put your hands in your pocket. You'll pay the home loan off and that's when you then start to do other things.</p>
+          <p><span class="spk">Nick · 11:54</span>Any surprises there?</p>
+          <p><span class="spk">Jason · 11:59</span>No, look, I think hearing the numbers though, it's real confronting and eye-opening as to, you know, every time you make the decision to spend that bit of extra cash that maybe you could have put onto the home loan. Yep. It's taking, it's leaving the years on the mortgage as opposed to pulling those years back.</p>
+          <p><span class="spk">Jason · 12:15</span>And then even the idea of once it is paid off earlier, what you do with that extra cash, the opportunity to invest the money earlier than you would've. So time in the market, compounding, we know the power and effect that has. So yeah, I think it's a timely reminder as to the power of money.</p>
+          <p><span class="spk">Nick · 12:31</span>There is a couple of things to factor in here that are not measurable. And I think it's worth noting this because we see it every day in the business that we have. For this to work, that extra $6,800 has to stay there. So quite often, people will get ahead of their interest repayments or their mortgage repayments, get $30,000, $40,000 and go, "How good's this?</p>
+          <p><span class="spk">Nick · 12:56</span>I wanna go buy a new car. I'm gonna go on a holiday." So if you're putting the money in redraw or to your point, in an offset, there's not a huge percentage of the population that never touch that. So that's the first thing I'll say.</p>
+          <p><span class="spk">Nick · 13:13</span>So I'm not saying that's a negative, but you need to understand that this is— you're strictly paying the debt off. But from a positive point of view, the thing that this doesn't factor in is the emotional side. So if you are seeing your loan reduce quicker, you sleep easier at night.</p>
+          <p><span class="spk">Nick · 13:35</span>So creating that little buffer, knowing you've got $50,000, $60,000 in redraw, you can sleep easier at night. And what you'll find, just like any investment in compounding, but if you are continually putting that money in, if you're into your numbers enough and you look at your home loan repayment every month, and this is assuming rates don't go up, every month you will see more and more of your repayment going towards the principal.</p>
+          <p><span class="spk">Jason · 14:02</span>Yep.</p>
+          <p><span class="spk">Nick · 14:02</span>And every month you'll see your interest component of that repayment, the statement breaks it up, going down. And the satisfaction that gives people that are good with their money is crazy and it drives incentive to pay it off quicker. So, they're the two things that you can't really factor in.</p>
+          <p><span class="spk">Nick · 14:18</span>You've gotta be strict and if you are strict, you just get this momentum and you wanna do it quicker and quicker.</p>
+          <p><span class="spk">Jason · 14:23</span>Yep. Beautiful.</p>
+          <p><span class="spk">Nick · 14:25</span>However, we are only factoring in numbers here. We're talking about numbers. It's a different case if you decide to invest that money inside of your superannuation.</p>
+          <p><span class="spk">Jason · 14:36</span>I was waiting for it. I thought this might be a—</p>
+          <p><span class="spk">Nick · 14:38</span>You're a tax man, I knew you would.</p>
+          <p><span class="spk">Jason · 14:39</span>Yeah.</p>
+          <p><span class="spk">Nick · 14:40</span>Why is that, Jase?</p>
+          <p><span class="spk">Jason · 14:42</span>Well, it's the 15% tax bracket inside super that I think will allow those investments to prosper and grow go beyond potentially what we would have saved on the mortgage potentially. Yeah. I might need to unpack the numbers a little bit more, but yeah.</p>
+          <p><span class="spk">Jason · 14:58</span>And inside of that, the different concessions around then as you head towards retirement age, less capital gains tax as well. All those different kind of measures. So, and then you can't touch it. So as you said before, you know, one of those problems with paying off the extra on the home loan is that things can come up and there can be an emotional decision to draw back out because you've knocked some things down.</p>
+          <p><span class="spk">Jason · 15:18</span>But once it's in the super, it's very rare to be able to pull it out.</p>
+          <p><span class="spk">Nick · 15:22</span>Spot on. So I've got an example here for you. Same example.</p>
+          <p><span class="spk">Jason · 15:27</span>Yep.</p>
+          <p><span class="spk">Nick · 15:28</span>And you're right, it's the tax arbitrage. So we're making an assumption here that someone has the ability to make a concessional contribution. So at the moment, you can make up to $32,500 in super contributions.</p>
+          <p><span class="spk">Jason · 15:45</span>Yep.</p>
+          <p><span class="spk">Nick · 15:46</span>Including what your employer puts in. So if you're on $100,000, your employer puts in $12,500, you can put in the balance, call it $20,000. Whatever you then put in, you can claim a tax deduction for. Yep. So that $10,000 that I had earned that I was happy to invest, if I was to invest in my personal name, just to go back a step, that $10,000 would attract 32% in tax and I'd have $6,800 to invest.</p>
+          <p><span class="spk">Jason · 16:15</span>Yep.</p>
+          <p><span class="spk">Nick · 16:16</span>If I was to put that $10,000 into super, I would then get a tax deduction, not of $10,000, but at the marginal tax rate. So, but the thing to remember is my marginal tax rate would be taken off, but when it goes into super, I will get taxed the 15% contribution tax.</p>
+          <p><span class="spk">Nick · 16:33</span>But the net result into super is $8,500. So the net result of what's left after the tax, because it's only 15%, is $8,500. On top of that, you mentioned this, the earnings on the, when it's inside the super is taxed at 15%, not your marginal tax rate.</p>
+          <p><span class="spk">Nick · 16:56</span>As we know, the concessional contributions are $32,500. So most people, and you're probably better to answer this, most people have room in their $32,500 a year contribution cap. If not as a single person, at least as a couple, which as a couple is $65,000 to make an extra contribution unless they're earning sort of half a million a year, give or take, as a combined.</p>
+          <p><span class="spk">Nick · 17:21</span>So the other thing to remember is the carry forward rule. So if your balance is under $500,000, you can carry forward and get even more than.</p>
+          <p><span class="spk">Jason · 17:33</span>Yep. Which has been a very useful tool over the last couple of years for accountants at tax planning time. Yeah, particularly</p>
+          <p><span class="spk">Nick · 17:38</span>with people offloading investment property because of what our government has done.</p>
+          <p><span class="spk">Jason · 17:44</span>Which feels like we're going to see more and more of that in the lead up to 30 June 2027. For sure. So watch that space.</p>
+          <p><span class="spk">Nick · 17:50</span>For sure. So there's just a lot of tax advantages of getting the money into super and we've already covered that in the past. The thing we need to remember is that it still comes back to returns, right? So whether we're investing inside of or outside of super, we are factoring in a return.</p>
+          <p><span class="spk">Nick · 18:07</span>Historically, we can look at what returns have done, but we never, we cannot predict what is gonna happen in the future. But let's look at this head to head. So when I say head to head, we looked at mortgage versus investing in your own name.</p>
+          <p><span class="spk">Nick · 18:25</span>Let's now look at mortgage versus investing into super. Yep. Now the first thing I need to mention here is your age matters because if you're, in your mid-20s, even mid-30s, you're probably not going to want to put money into super because you're so far away from getting access to it.</p>
+          <p><span class="spk">Nick · 18:44</span>If you're getting closer to retirement and you can access that money hypothetically when you're 60 and retired, then you might lean towards the super option more and really go with what the numbers are saying.</p>
+          <p><span class="spk">Nick · 19:00</span>Versus someone in their mid-20s might say, I see the numbers, but the reality is that's so far away, I don't care.</p>
+          <p><span class="spk">Jason · 19:05</span>Yeah.</p>
+          <p><span class="spk">Nick · 19:06</span>I want access to that money 'cause I don't know what's gonna happen. We're gonna use an example. We're gonna call him Sam 'cause that's his name. 45, earns $120K a year. So he is on the 32% marginal tax rate. We use the same mortgage example.</p>
+          <p><span class="spk">Nick · 19:24</span>He owes $600 grand, 6.49% over 25. 15 years. What we want to do is understand what Sam's position would be at age 60. So he's 45 now, so we're fast-forwarding 15 years. At age 60, if Sam is in a position to, he could retire and start to access his super.</p>
+          <p><span class="spk">Nick · 19:43</span>So remembering with the mortgage, $6,800 extra a year went in. Sam owes $600,000 at age 45. By the time he gets to 60, he still owes $184,000. And he hasn't put any extra money into super.</p>
+          <p><span class="spk">Jason · 20:01</span>So that's with the offset version or paying, yeah, using the extra $10,000. Yep.</p>
+          <p><span class="spk">Nick · 20:05</span>Yep.</p>
+          <p><span class="spk">Jason · 20:06</span>Yep.</p>
+          <p><span class="spk">Nick · 20:07</span>Path B is Sam took the $10,000, his salary, sacrificed that into super. So he was in a position where he could earn, he could put extra into super.</p>
+          <p><span class="spk">Jason · 20:22</span>Yep.</p>
+          <p><span class="spk">Nick · 20:23</span>We're using a return of 8%. Yeah.</p>
+          <p><span class="spk">Jason · 20:28</span>Yep. Happy with that.</p>
+          <p><span class="spk">Nick · 20:30</span>Yep. So he hasn't paid anything extra off his mortgage. He's just done the minimum payments. He's put $10,000 into super, which is net $8,500 invested, 'cause the government took 15% contribution cap. At age 60, Sam still owes $356,000. Yep.</p>
+          <p><span class="spk">Nick · 20:48</span>'Cause he's only 15 years into the loan term. Important to mention too with loans, in the early days, the principal barely moves, most of it's interest and then you make big inroads as you get to the pointy end of the loan term. So Sam has the option then, and this is quite a common scenario.</p>
+          <p><span class="spk">Nick · 21:09</span>If people can see the numbers are gonna look better, the strategy will be, well, I'm gonna put extra into super. Because I know that at age 60 I can pull it out. If that is my plan to retire, I can pull it out and pay the mortgage off.</p>
+          <p><span class="spk">Jason · 21:23</span>So what was the better path? Or we're getting there.</p>
+          <p><span class="spk">Nick · 21:26</span>Good. So path B, which is super, leaves Sam give or take $67k better off. So I've got some numbers here. With the break-even super return only being 3.9%, so he only needs to earn better than 3.9% to be ahead.</p>
+          <p><span class="spk">Nick · 21:43</span>Couple of caveats. We don't know what's gonna happen with tax rules long term. Your marginal tax rate could go up or down. Sam might not be earning that for the rest of his life. God forbid they change tax inside of super.</p>
+          <p><span class="spk">Nick · 21:59</span>Who knows? We're just dealing with what it is at the moment. So a couple of scenarios. Base case, Sam's tax rate was 32%, 6.49% on the home loan with an 8% return.</p>
+          <p><span class="spk">Nick · 22:14</span>Path A, net debt $184K.</p>
+          <p><span class="spk">Jason · 22:20</span>Yep.</p>
+          <p><span class="spk">Nick · 22:21</span>Path B, which was inside super, net debt $117K, 'cause remember he's pulled the super money out.</p>
+          <p><span class="spk">Jason · 22:29</span>Okay.</p>
+          <p><span class="spk">Nick · 22:29</span>So he's $67K better off.</p>
+          <p><span class="spk">Jason · 22:31</span>So he had $240K extra in super.</p>
+          <p><span class="spk">Nick · 22:33</span>Super. Correct. And then he's taken money out of the super and then he wipes the debt. But he can do that because he's 60 and retired. Okay. Very important. And that's why advice is so important because you can't just assume that I'll be able to pull my money out of super. Couple other scenarios.</p>
+          <p><span class="spk">Jason · 22:50</span>I was gonna say, sorry to interrupt there, but I imagine if you also model that forward for a few more years, the $240,000 in super growing. Correct. And then more repayments, like yeah. So you continue to find a bit of a sweet spot, but sorry, yeah, my numbers brain's kind of looking at that going, that's, it's probably one that a lot of people don't consider.</p>
+          <p><span class="spk">Jason · 23:06</span>And we've covered it a few times, which I love because it's that bit of a secret sauce of having a financial advisor to present those options to you of why and how super can be this secret power to get ahead. But sorry, go on.</p>
+          <p><span class="spk">Nick · 23:20</span>Yeah, and I think where we do get this inquiry is people that are closer to retirement because, but the reality is people are are retiring with debt at the moment because of property prices, because of debt levels. There is this time, call it age 50.</p>
+          <p><span class="spk">Jason · 23:41</span>Yeah.</p>
+          <p><span class="spk">Nick · 23:41</span>Where they've still got a decent amount of debt, but they know that they're not that far from retiring. So it creates this real conundrum that, do I smash the debt down or do I increase my super? And the other thing to think about is, well, what is your plan with that house? Are you gonna sell that house and take some equity out and downsize.</p>
+          <p><span class="spk">Nick · 23:58</span>So all the stuff that we talk about. So just a couple of examples here because, you know, we don't know exactly what returns are gonna be, but just to recap, so on a 32% marginal tax rate with a 6.49% home loan, 8% super return, you're $67,000 off.</p>
+          <p><span class="spk">Nick · 24:15</span>If your super only earned 5%, you're still $15,000</p>
+          <p><span class="spk">Jason · 24:20</span>off.</p>
+          <p><span class="spk">Nick · 24:20</span>Over the long term, all of our clients earn more than 5%. If your super is at 7, if it earns 7.18%, this is mentioned that as autopilot. Most funds will do that. You're $56,000 up.</p>
+          <p><span class="spk">Nick · 24:36</span>If you're a higher marginal tax or if you're on a higher marginal tax rate, you're clearly getting a bigger tax deduction for that contribution into super. On a 39% marginal tax rate, you're $85,000 up. And if you're a lower tax earner or taxpayer, means you're not getting as much of a tax rebate for your $10k in, you're only $29k up.</p>
+          <p><span class="spk">Nick · 25:00</span>So where does this really work? High income earners, but not too high that you don't have enough gap in your cap. That rhymed. But yeah, it's a legitimate strategy that we actually do all the time because at a certain age the numbers just make sense.</p>
+          <p><span class="spk">Nick · 25:20</span>And us knowing what we know around the history of returns. But you also have to be super clear on your own strategy and not investment strategy, retirement strategy, life, house strategy, all these things.</p>
+          <p><span class="spk">Nick · 25:38</span>But yeah, I thought it was worth unpacking it because it is something that is coming up more and more now that the interest rates are so high. 2% interest rates, everyone's like, let's invest. When your rates are 6.5% and a good chunk of your take-home pay, people start to question where they should be putting their cash.</p>
+          <p><span class="spk">Jason · 25:59</span>I really like it and I wish I could re-record my answer at the start of the episode about what I'd do with money into offset or what the advice would be.</p>
+          <p><span class="spk">Nick · 26:08</span>But would you? Would you at your age?</p>
+          <p><span class="spk">Jason · 26:12</span>Money in the offset still for now. I think there's a lot of things to tick off and get done. Still got a few more of the global major marathons to do. To Casey's, there'll be Boston and Berlin next year. And then Casey wants me to retire from that goal. That'll be all 7 of the current 7 done.</p>
+          <p><span class="spk">Jason · 26:28</span>But anyway, but yes, there's personal goals. I mean, people have different preferences. So I think when you're, as you said, 40, 50 onwards or 50 onwards, like then you start to channel that retirement savings and planning what's happening with property value. Before that, people have got different goals, kids, family.</p>
+          <p><span class="spk">Jason · 26:46</span>Maybe upsizing the home, those kind of things.</p>
+          <p><span class="spk">Nick · 26:50</span>So</p>
+          <p><span class="spk">Jason · 26:50</span>yeah, interesting one. I like it.</p>
+          <p><span class="spk">Nick · 26:52</span>Cool, mate. Well, that's it for me. But a</p>
+          <p><span class="spk">Jason · 26:56</span>couple little accounting tidbits that I threw on there were just that offset versus redraw. I think is one that we see a lot is that people without an offset account, they pay down their loan and this is often sometimes works for, like happens for investment properties as well, but just thought it was worth noting.</p>
+          <p><span class="spk">Jason · 27:11</span>They then redraw the money and think that that interest is still deductible against an investment property. So just keep in mind that that is, that separate redraw is not. Once it's paid down, it's paid down. So offset versus redraw. I know the Innovate team do a great job explaining that.</p>
+          <p><span class="spk">Nick · 27:28</span>And if you're not sure, offset.</p>
+          <p><span class="spk">Jason · 27:30</span>Correct. Great advice. Salary sacrifice or self-employed, if you are making a personal deduction. So that's, that's with your after-tax money you're putting into super as we talked about. Make sure you fill out the lodge, the Notice of Intent to Claim a Tax Deduction. We often get people that come to get their tax done a long way down the track and they tell us they've put money into super and these days it appears on the pre-fill report and it pops up to say that it's ready to go into item D12 on the tax return.</p>
+          <p><span class="spk">Jason · 27:57</span>If you haven't filled in the Notice of Intent to Deduct and you lodge your return too early, pretty much cooked the books and it's no good. Also, a horror story that we've seen a few too many times is people roll their fund over before lodging the notice of intent to deduct with the fund that the money originally went into.</p>
+          <p><span class="spk">Jason · 28:15</span>So that, and that, that's, you know, we've unfortunately seen this where like, think back a few years or even recently, you know, big, big carry forward caps, client smacks in $50,000. Awesome. Tax time's a little bit down the track and had the opportunity to roll over into a self-managed super fund or roll into into something else, rolled all the money out, never did the form for the $50,000 tax deduction.</p>
+          <p><span class="spk">Nick · 28:40</span>Yep.</p>
+          <p><span class="spk">Jason · 28:41</span>Done. Gone. So don't be a horror story. Make sure you get those notice of intent to deduct forms in if you are using superannuation as a means of parking some of your money and that extra savings. And just adding, you know, one other one, DIV 296 passed earlier this year and we are getting questions about it.</p>
+          <p><span class="spk">Jason · 29:00</span>So what that is, is the extra tax on a super fund that has a $3 million or more balance. Obviously people thinking If you've got $3 million in super, lucky you.</p>
+          <p><span class="spk">Nick · 29:10</span>Yeah.</p>
+          <p><span class="spk">Jason · 29:10</span>But what it means is at the time, people had a bit of a meltdown and a freakout thinking that you were paying 30% tax inside super because you had a $3 million balance. But what it actually is, is it's your percentage of earnings. So if you had, and I've made the numbers easy, if you have a $4 million balance, you're only gonna pay 30% on the earnings of the million dollars that sits above $3 million.</p>
+          <p><span class="spk">Jason · 29:34</span>The $3 million below is still taxed at 15%. So there's no dramas there. And probably the other one to think about as you start to look at some of this stuff moving forward from an investment point of view, I mean, my advice is always sit with someone from Innovate or a financial advisor in general.</p>
+          <p><span class="spk">Jason · 29:51</span>Obviously the Innovate team do a fantastic job and we love working with them.</p>
+          <p><span class="spk">Nick · 29:55</span>The other one's DIV293.</p>
+          <p><span class="spk">Jason · 29:56</span>DIV293, yeah, correct. If</p>
+          <p><span class="spk">Nick · 29:59</span>you're a high income earner.</p>
+          <p><span class="spk">Jason · 30:00</span>Yeah. $250,000 combined income and super. If you're over $250,000, you pay DIV293, which again is that extra tax on the contributions. So topping it from 15% up to 30%. Real pain in the ass, that one, in a sense, because it hasn't been indexed for, I think like, it must have been the same rate for like 15 or 20 years or something.</p>
+          <p><span class="spk">Jason · 30:23</span>Don't quote me on that, but I—</p>
+          <p><span class="spk">Nick · 30:25</span>You've got to have the fuck you tax. You earn too much, so we're taking more.</p>
+          <p><span class="spk">Jason · 30:28</span>Yeah, well, but the thing is $250,000, 10 or 20 years ago was a good amount of money.</p>
+          <p><span class="spk">Nick · 30:35</span>So more of the bracket creep, bracket creep, which</p>
+          <p><span class="spk">Jason · 30:37</span>we've talked about. But the— and this is the thing that's so frustrating about, especially in Australia, there is no indexing of the basics that should be indexed. So $250K when DIV293 came out, if they indexed that every year by CPI inflation, whatever number you want to use today, it would probably be $350,000 for DIV293.</p>
+          <p><span class="spk">Jason · 30:58</span>But of course the government can't get their grubby little mitts on that tax. So just like bracket creep, they don't want to change it. The other one there with that might be like a wholesale sophisticated investment letter. That, I mean, that works in people's favour, but it was $250K income or $2.5 million in net assets.</p>
+          <p><span class="spk">Jason · 31:17</span>Now in this day and age, like you can, like a lot of people earn $250K, but that doesn't necessarily make you a sophisticated investor that warrants you being able to get a wholesale certificate signed. Again, these things aren't indexed. It is what it is. But good mention on the DIV293 because that is also, that is one that catches people out.</p>
+          <p><span class="spk">Jason · 31:36</span>Tax return software has come a long way now. We can actually add the super contribution and it adds it to the taxable income and on the tax return it'll give a notification to the client saying you will get a DIV293 bill because like anything, it's not simple. It's separate to your tax refund.</p>
+          <p><span class="spk">Jason · 31:52</span>So you might get a tax refund and then 4 weeks later, you get a bill from the government, from the ATO, and you're like, "Well, why even bother giving me back $3,000 and then asking me to pay you $4,500 4 weeks later?" Again, never easy with the ATO. And just finally, you know, people who are making plans, you might be listening to this at a different point in time down the track.</p>
+          <p><span class="spk">Jason · 32:14</span>Obviously, the 50% CGT discount, if you are looking at your options of investing outside of super, when you're comparing to your offset and your home loan. That 50% CGT discount does end 1 July '27 and we move to the indexing and a minimum rate of 30%, pending all of the finer details that'll be put through Parliament.</p>
+          <p><span class="spk">Jason · 32:34</span>But that will then change the numbers again as you kind of map your stuff forward. So the message there was work with a financial advisor. Don't try and run all this stuff yourself and get in and make a plan because You know, same dollar, different tax, different finish line.</p>
+          <p><span class="spk">Jason · 32:49</span>Game over. This podcast is for educational and informational purposes only. The conversations are of a general nature and do not qualify as financial or tax advice. We recommend before you make any financial decisions, you consult a licensed professional.</p>
+          <p><span class="spk">Jason · 33:05</span>Individuals on the podcast may hold positions in the companies discussed.</p>
+        </div>
+      </details>
+
+    </div>
+
+    <!-- LISTEN:START (build_episode.py rewrites the 3 URLs + iframe title per episode; player dropped if no spotifyEmbedUrl) -->
+
+    <div class="listen">
+      <a href="https://open.spotify.com/search/the%20numbers%20game%20podcast" target="_blank" rel="noopener" aria-label="Listen to this episode on Spotify">
+        <svg viewBox="0 0 24 24"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.52 17.34c-.24.36-.66.48-1.02.24-2.82-1.74-6.36-2.1-10.56-1.14-.42.12-.78-.18-.9-.54-.12-.42.18-.78.54-.9 4.56-1.02 8.52-.6 11.64 1.32.42.18.48.66.3 1.02zm1.44-3.3c-.3.42-.84.6-1.26.3-3.24-1.98-8.16-2.58-11.94-1.38-.48.12-1.02-.12-1.14-.6-.12-.48.12-1.02.6-1.14 4.32-1.32 9.72-.66 13.44 1.62.36.18.54.78.3 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.3c-.6.18-1.2-.18-1.38-.72-.18-.6.18-1.2.72-1.38 4.26-1.26 11.28-1.02 15.72 1.62.54.3.72 1.02.42 1.56-.3.42-1.02.6-1.56.3z"/></svg>
+        Spotify
+      </a>
+      <a href="https://podcasts.apple.com/search?term=the%20numbers%20game" target="_blank" rel="noopener" aria-label="Listen to this episode on Apple Podcasts">
+        <svg viewBox="0 0 24 24"><path d="M5.34 0A5.328 5.328 0 000 5.34v13.32A5.328 5.328 0 005.34 24h13.32A5.328 5.328 0 0024 18.66V5.34A5.328 5.328 0 0018.66 0H5.34zm6.525 2.568c2.336 0 4.448.902 6.056 2.587 1.224 1.272 1.912 2.619 2.264 4.392l.04.23c.04.272-.16.527-.432.567a.505.505 0 01-.567-.431l-.04-.213c-.312-1.57-.92-2.747-2.004-3.867-1.428-1.496-3.293-2.294-5.393-2.294-2.1 0-3.966.798-5.394 2.294-1.084 1.12-1.692 2.298-2.004 3.867l-.04.213a.507.507 0 01-.567.431.504.504 0 01-.432-.567l.04-.23c.352-1.773 1.04-3.12 2.264-4.392 1.608-1.685 3.72-2.587 6.056-2.587h.153zm.136 3.033c1.74 0 3.312.67 4.527 1.934.883.916 1.394 1.93 1.663 3.253l.04.23a.505.505 0 01-.431.567.503.503 0 01-.567-.432l-.04-.212c-.23-1.112-.659-1.97-1.396-2.732-1.052-1.1-2.404-1.672-3.9-1.672s-2.849.572-3.901 1.672c-.737.762-1.167 1.62-1.396 2.732l-.04.212a.503.503 0 01-.567.432.505.505 0 01-.432-.567l.04-.23c.27-1.323.78-2.337 1.664-3.253 1.215-1.264 2.787-1.934 4.527-1.934h.21zm-.078 3.05c1.092 0 2.091.424 2.89 1.22.582.58.924 1.245 1.107 2.15l.04.218a.501.501 0 01-.424.568.499.499 0 01-.568-.424l-.04-.198c-.146-.724-.413-1.253-.871-1.716-.63-.63-1.398-.957-2.226-.957s-1.595.328-2.225.957c-.459.463-.726.992-.871 1.716l-.04.198a.499.499 0 01-.568.424.501.501 0 01-.424-.568l.04-.219c.183-.904.525-1.569 1.106-2.149.8-.796 1.799-1.22 2.89-1.22h.184zM12 14.07a2.477 2.477 0 012.48 2.478A2.477 2.477 0 0112 19.024a2.477 2.477 0 01-2.48-2.477A2.477 2.477 0 0112 14.07z"/></svg>
+        Apple
+      </a>
+      <a class="yt-pill" href="https://www.youtube.com/@thenumbersgamepodcast?sub_confirmation=1" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.12-2.14C19.5 3.55 12 3.55 12 3.55s-7.5 0-9.38.51A3 3 0 0 0 .5 6.2 31.4 31.4 0 0 0 0 12a31.4 31.4 0 0 0 .5 5.8 3 3 0 0 0 2.12 2.14c1.88.51 9.38.51 9.38.51s7.5 0 9.38-.51a3 3 0 0 0 2.12-2.14A31.4 31.4 0 0 0 24 12a31.4 31.4 0 0 0-.5-5.8zM9.55 15.57V8.43L15.82 12z"/></svg>
+        Subscribe
+      </a>
+    </div>
+    <!-- LISTEN:END -->
+
+    <div class="relsec">
+      <span class="rtitle">Discover more</span>
+      <div class="relgrid">
+        <a class="relcard" href="/how-money-has-changed-since-2021">
+          <img src="https://i.ytimg.com/vi/USK-bNAxT7Y/hqdefault.jpg" alt="EP 300 thumbnail">
+          <span class="rt">How Money Has Changed Since 2021</span>
+          <span class="rfoot"><span class="rwhy">26 October 2026</span><span class="rtag">EP 300</span></span>
+        </a>
+        <a class="relcard" href="/the-small-business-squeeze-right-now">
+          <img src="https://i.ytimg.com/vi/UcamObdACo0/hqdefault.jpg" alt="EP 299 thumbnail">
+          <span class="rt">The Small Business Squeeze Right Now</span>
+          <span class="rfoot"><span class="rwhy">19 October 2026</span><span class="rtag">EP 299</span></span>
+        </a>
+        <a class="relcard" href="/what-australia-can-learn-from-new-zealand-s-property-downturn">
+          <img src="https://i.ytimg.com/vi/j4l0VNj8IF4/hqdefault.jpg" alt="EP 298 thumbnail">
+          <span class="rt">What Australia Can Learn From New Zealand's Property Downturn</span>
+          <span class="rfoot"><span class="rwhy">12 October 2026</span><span class="rtag">EP 298</span></span>
+        </a>
+        <a class="relcard" href="/where-your-charity-donations-actually-end-up">
+          <img src="https://i.ytimg.com/vi/bo4ita9fFxY/hqdefault.jpg" alt="EP 297 thumbnail">
+          <span class="rt">Where Your Charity Donations Actually End Up</span>
+          <span class="rfoot"><span class="rwhy">5 October 2026</span><span class="rtag">EP 297</span></span>
+        </a>
+        <a class="relcard" href="/long-term-australian-property-returns">
+          <img src="https://i.ytimg.com/vi/QRCICFHBeTk/hqdefault.jpg" alt="EP 296 thumbnail">
+          <span class="rt">Long-Term Australian Property Returns</span>
+          <span class="rfoot"><span class="rwhy">28 September 2026</span><span class="rtag">EP 296</span></span>
+        </a>
+        <a class="relcard" href="/liquidation-bankruptcy-or-restructure">
+          <img src="https://i.ytimg.com/vi/gPCPOidYUPI/hqdefault.jpg" alt="EP 295 thumbnail">
+          <span class="rt">Liquidation, Bankruptcy or Restructure</span>
+          <span class="rfoot"><span class="rwhy">21 September 2026</span><span class="rtag">EP 295</span></span>
+        </a>
+      </div>
+      <div class="reldots" id="reldots"></div>
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="footgrid">
+      <div class="fcol">
+        <div class="foot-label">Follow us on</div>
+        <div class="socials">
+          <a href="https://www.instagram.com/thenumbersgamepodcast/" target="_blank" rel="noopener" aria-label="The Numbers Game on Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.8.2 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1 .4 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .4-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1-.4-2.2-.1-1.3-.1-1.7-.1-4.9s0-3.6.1-4.9c.1-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.4 2.2-.4 1.3-.1 1.7-.1 4.9-.1zm0 2c-3.1 0-3.5 0-4.8.1-1.1.1-1.5.2-1.8.3-.4.2-.7.3-1 .6-.3.3-.5.6-.6 1-.1.3-.3.7-.3 1.8-.1 1.3-.1 1.7-.1 4.8s0 3.5.1 4.8c.1 1.1.2 1.5.3 1.8.2.4.3.7.6 1 .3.3.6.5 1 .6.3.1.7.3 1.8.3 1.3.1 1.7.1 4.8.1s3.5 0 4.8-.1c1.1-.1 1.5-.2 1.8-.3.4-.2.7-.3 1-.6.3-.3.5-.6.6-1 .1-.3.3-.7.3-1.8.1-1.3.1-1.7.1-4.8s0-3.5-.1-4.8c-.1-1.1-.2-1.5-.3-1.8-.2-.4-.3-.7-.6-1-.3-.3-.6-.5-1-.6-.3-.1-.7-.3-1.8-.3-1.3-.1-1.7-.1-4.8-.1zm0 3.4a5.4 5.4 0 1 1 0 10.8 5.4 5.4 0 0 1 0-10.8zm0 2a3.4 3.4 0 1 0 0 6.8 3.4 3.4 0 0 0 0-6.8zm5.6-2.3a1.3 1.3 0 1 1-2.6 0 1.3 1.3 0 0 1 2.6 0z"/></svg></a>
+          <a href="https://www.tiktok.com/@thenumbersgamepodcast" target="_blank" rel="noopener" aria-label="The Numbers Game on TikTok"><svg viewBox="0 0 24 24"><path d="M12.53.02C13.84 0 15.14.01 16.44 0c.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg></a>
+          <a href="https://www.linkedin.com/company/the-numbers-game-podcast/" target="_blank" rel="noopener" aria-label="The Numbers Game on LinkedIn"><svg viewBox="0 0 24 24"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.24 8.25h4.52V23H.24V8.25zM8.34 8.25h4.33v2.01h.06c.6-1.14 2.08-2.34 4.28-2.34 4.58 0 5.42 3.01 5.42 6.92V23h-4.51v-7.16c0-1.71-.03-3.91-2.38-3.91-2.39 0-2.75 1.86-2.75 3.78V23H8.34V8.25z"/></svg></a>
+          <a href="https://www.facebook.com/profile.php?id=100071290388343" target="_blank" rel="noopener" aria-label="The Numbers Game on Facebook"><svg viewBox="0 0 24 24"><path d="M24 12.07C24 5.41 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.04V9.41c0-3.02 1.8-4.7 4.54-4.7 1.31 0 2.68.24 2.68.24v2.97h-1.5c-1.5 0-1.96.93-1.96 1.89v2.26h3.32l-.53 3.5h-2.8V24C19.62 23.1 24 18.1 24 12.07z"/></svg></a>
+          <a href="https://www.youtube.com/@thenumbersgamepodcast" target="_blank" rel="noopener" aria-label="The Numbers Game on YouTube"><svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.2C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31.7 31.7 0 0 0 0 12a31.7 31.7 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.2A31.7 31.7 0 0 0 24 12a31.7 31.7 0 0 0-.5-5.8zM9.6 15.6V8.4L15.8 12z"/></svg></a>
+        </div>
+      </div>
+      <div class="fcol">
+        <div class="foot-label">Brought to you by</div>
+        <div class="sponsors">
+          <a href="https://www.inovayt.com.au/" target="_blank" rel="noopener"><img src="assets/inovayt-white.png" alt="Inovayt"></a>
+          <a href="https://futureadvisory.com.au/" target="_blank" rel="noopener"><img src="assets/future-advisory-white.png" alt="Future Advisory"></a>
+        </div>
+      </div>
+      <div class="fcol produced">
+        <div class="foot-label">Produced by</div>
+        <a href="https://www.vidpod.com.au/" target="_blank" rel="noopener"><img src="assets/vidpod-white.png" alt="VIDPOD"></a>
+      </div>
+    </div>
+    <div class="footbar">
+      <details class="footnav-dd">
+        <summary><svg class="ham" viewBox="0 0 24 24"><path d="M3 6h18v2H3zM3 11h18v2H3zM3 16h18v2H3z"/></svg> Menu</summary>
+        <div class="dd-links">
+          <a href="/">Home</a><a href="/episodes">Every episode</a><a href="/adventure">Choose your own adventure</a><a href="/about">About the show</a><a href="/nick-reilly">Nick Reilly</a><a href="/jason-robinson">Jason Robinson</a><a href="/contact">Contact</a>
+        </div>
+      </details>
+      <div class="copyright">© 2026 The Numbers Game</div>
+    </div>
+  </footer>
+
+  <script>
+    var VIDEO='hG_xeJft6l8';
+    var CHAPTERS=[
+      {t:"00:00",s:0,title:"Intro"},
+      {t:"01:12",s:72,title:""}
+    ];
+    var QUESTIONS=[
+      {q:"What return do I need to beat paying off my mortgage?",s:388},
+      {q:"Is investing in your own name better than paying off your mortgage?",s:503},
+      {q:"How much interest do you pay on a $600,000 mortgage?",s:578},
+      {q:"How much does an extra $6,800 a year take off a $600,000 mortgage?",s:619},
+      {q:"How much of a $10,000 super contribution is left after tax?",s:976},
+      {q:"Is super or the mortgage the better place for extra money?",s:1283},
+      {q:"How does the super return and tax rate change the benefit over the mortgage?",s:1438},
+      {q:"What happens if you roll over super before lodging the notice of intent?",s:1695},
+      {q:"How does Div 296 tax work on super balances over $3 million?",s:1732},
+      {q:"When does the 50 percent capital gains discount end?",s:1934}
+    ];
+
+    var chEl=document.getElementById('chapters');
+    CHAPTERS.forEach(function(c){var b=document.createElement('button');b.className='chapter';b.onclick=function(){startAt(c.s)};b.innerHTML='<span class="tc">'+c.t+'</span><span class="cx">'+c.title+'</span>';chEl.appendChild(b);});
+    document.getElementById('chcount').textContent=CHAPTERS.length;
+    var qEl=document.getElementById('qa');
+    QUESTIONS.forEach(function(q){var b=document.createElement('button');b.className='q';b.onclick=function(){startAt(q.s)};b.innerHTML='<span class="qm">?</span><span class="qx">'+q.q+'</span><span class="go">›</span>';qEl.appendChild(b);});
+    document.getElementById('qcount').textContent=QUESTIONS.length;
+
+    /* Mobile nav dropdown. */
+    var burger=document.getElementById('navburger'), navdrop=document.getElementById('navdrop');
+    if(burger&&navdrop){burger.addEventListener('click',function(){
+      navdrop.hidden=!navdrop.hidden;
+      burger.setAttribute('aria-expanded', navdrop.hidden?'false':'true');
+    });}
+
+    /* Voice-note button reveals the recorder; × tucks it away. */
+    var vbtn=document.getElementById('vbtn'), vslot=document.getElementById('vslot'), vclose=document.getElementById('vclose');
+    if(vbtn&&vslot){vbtn.addEventListener('click',function(){vslot.hidden=!vslot.hidden;});}
+    if(vclose&&vslot){vclose.addEventListener('click',function(){vslot.hidden=true;});}
+
+    /* Keep-exploring dots: only shown when the strip actually scrolls (mobile). */
+    var rg=document.querySelector('.relgrid'), rd=document.getElementById('reldots');
+    if(rg&&rd){
+      var relCards=rg.querySelectorAll('.relcard');
+      relCards.forEach(function(){rd.appendChild(document.createElement('span'))});
+      var updDots=function(){
+        var scrollable=rg.scrollWidth>rg.clientWidth+4;
+        rd.style.display=scrollable?'flex':'none';
+        if(!scrollable)return;
+        var i=Math.round(rg.scrollLeft/(rg.scrollWidth-rg.clientWidth)*(relCards.length-1));
+        rd.querySelectorAll('span').forEach(function(s,n){s.classList.toggle('on',n===i)});
+      };
+      rg.addEventListener('scroll',updDots,{passive:true});
+      window.addEventListener('resize',updDots);
+      updDots();
+    }
+
+    /* Explore tabs: swap the visible panel; the row stays put so you never lose your place. */
+    var tabBtns=document.querySelectorAll('.tabbtn');
+    tabBtns.forEach(function(b){
+      b.addEventListener('click',function(){
+        tabBtns.forEach(function(o){o.classList.remove('on')});
+        document.querySelectorAll('.tpanel').forEach(function(p){p.hidden=true});
+        b.classList.add('on');
+        document.getElementById(b.getAttribute('data-panel')).hidden=false;
+      });
+    });
+
+    /* YouTube: clean facade, then real player on demand. Seek without yanking to top. */
+    var player=null, ready=false, apiReady=false, pending=null;
+    window.onYouTubeIframeAPIReady=function(){apiReady=true; if(pending!=null){var s=pending;pending=null;createPlayer(s);}};
+    function createPlayer(sec){
+      var wrap=document.getElementById('player'); wrap.innerHTML='<div id="yt"></div>';
+      player=new YT.Player('yt',{videoId:VIDEO,playerVars:{autoplay:1,rel:0,modestbranding:1,playsinline:1,start:Math.floor(sec||0)},events:{onReady:function(){ready=true;}}});
+    }
+    function nudge(){
+      var p=document.getElementById('player-wrap'), r=p.getBoundingClientRect();
+      if(r.bottom<80 || r.top>window.innerHeight-90){ p.scrollIntoView({behavior:'smooth',block:'start'}); }
+    }
+    function startAt(sec){
+      nudge();
+      if(player&&ready){ player.seekTo(sec,true); player.playVideo(); return; }
+      if(apiReady){ createPlayer(sec); } else { pending=sec; }
+    }
+    document.getElementById('facade').addEventListener('click',function(){startAt(0);});
+    (function(){var s=document.createElement('script');s.src='https://www.youtube.com/iframe_api';document.head.appendChild(s);})();
+  </script>
+</body>
+</html>
