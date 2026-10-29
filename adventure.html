@@ -244,7 +244,7 @@
         <span class="tb tb-p">Choose your</span>
         <span class="tb tb-m">own adventure</span>
       </h1>
-      <p class="advsell" id="sell-line">Just discovered the show, or been here for years? With 300+ episodes and hundreds of hours of conversations, we've built a way to find the moments that interest you. Not whole episodes, the exact bits inside them. Pick a topic and we'll jump you straight there.</p>
+      <p class="advsell" id="sell-line">Just discovered the show, or been here for years? With <span id="adv-count">300</span> episodes and hundreds of hours of conversations, we've built a way to find the moments that interest you. Not whole episodes, the exact bits inside them. Pick a topic and we'll jump you straight there.</p>
     </div>
   </div>
 
@@ -360,6 +360,7 @@
     var today=new Date(); today.setHours(23,59,59);
     CAT=res[0].filter(function(e){return new Date(e.date+'T00:00:00')<=today});
     CAT.sort(function(a,b){return a.date<b.date?1:-1});
+    var advc=document.getElementById('adv-count'); if(advc) advc.textContent=CAT.length;
     var released={}, slugByEp={}, audioOnlyEp={}; CAT.forEach(function(e){released[e.episodeNumber]=true; slugByEp[e.episodeNumber]=e.slug; if(e.audioOnly)audioOnlyEp[e.episodeNumber]=true;});
     /* Score every released moment, then build the pool as a HYBRID union so the
        topic->subtopic browse actually works AND no episode vanishes:
