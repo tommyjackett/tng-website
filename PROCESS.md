@@ -4,6 +4,8 @@
 
 **Docs:** front door + state + §8 tooling = **`Website Build/TNG-MASTER-STATUS.md`**. Mining = `schema/EPISODE-PROCESSING-GUIDE.md` + `ENGINE-STATE.md`. Publishing = **`PUBLISH-EPISODE-RUNBOOK.md`**.
 
+Every page must keep the GA tag G-5QN0VF1L64 at the top of <head>.
+
 ## TWO FLOWS — new episode vs. old back-catalogue (this is the confusion, resolved)
 - **NEW episode (the weekly drop):** run the FULL pipeline — **Stage 1** (source: show notes + transcript) → **Stage 2** (mine through the schema → `episode-N-DEEP.json`, gated green) → **Stage 3** (publish, additive).
 - **OLD / back-catalogue episode:** the transcript + DEEP are ALREADY mined → **SKIP Stages 1–2, go straight to Stage 3** (publish). That's the back-catalogue batching (56/60 done this way).
