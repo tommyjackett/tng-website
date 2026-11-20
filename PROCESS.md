@@ -6,6 +6,8 @@
 
 Every page must keep the GA tag G-5QN0VF1L64 at the top of <head>.
 
+Exception to the GA rule: the epN.html short-link redirects for YouTube descriptions must NOT carry the GA tag. Each new episode gets an epN.html stub at publish time pointing to its slug with ?utm_source=youtube&utm_medium=description&utm_campaign=epN.
+
 ## TWO FLOWS — new episode vs. old back-catalogue (this is the confusion, resolved)
 - **NEW episode (the weekly drop):** run the FULL pipeline — **Stage 1** (source: show notes + transcript) → **Stage 2** (mine through the schema → `episode-N-DEEP.json`, gated green) → **Stage 3** (publish, additive).
 - **OLD / back-catalogue episode:** the transcript + DEEP are ALREADY mined → **SKIP Stages 1–2, go straight to Stage 3** (publish). That's the back-catalogue batching (56/60 done this way).
