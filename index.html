@@ -321,6 +321,27 @@
   .footnav-dd .dd-links a:hover{color:var(--mint)}
   .copyright{font-size:12px;color:var(--dim);text-align:center}
   @media(max-width:720px){.footgrid{grid-template-columns:1fr;gap:34px}footer{padding:40px 16px 20px}.footbar{margin-top:34px;padding-top:24px;gap:20px}.footnav-dd .dd-links{flex-direction:column;align-items:center;gap:15px}}
+  /* SEO round 2: the banner lockup is the page's one H1. Reset so it looks exactly as before. */
+  .banner-seq .bs-h1{margin:0;font:inherit;display:flex;flex-direction:column;align-items:center;align-self:stretch;gap:14px}
+  .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+
+  /* Latest episodes: plain links Google can read without JavaScript. Same cards as "Discover more" on episode pages. */
+  .latesteps{max-width:var(--wrap);margin:0 auto;padding:0 36px 64px}
+  @media(max-width:720px){.latesteps{padding:0 22px 56px}}
+  .latesteps .rtitle{display:inline-block;margin:0 0 18px;font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.5px;font-size:14.5px;line-height:normal;background:var(--mint);color:#0a0a0a;padding:9px 13px 7px}
+  .relgrid{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding-bottom:6px;scrollbar-width:none}
+  .relgrid::-webkit-scrollbar{display:none}
+  .relcard{flex:0 0 56%;max-width:232px;scroll-snap-align:start;display:flex;flex-direction:column;text-decoration:none;background:var(--card);border:1px solid var(--line);transition:.15s}
+  .relcard:hover{background:var(--card-hi);border-color:rgba(122,217,168,.55)}
+  .relcard img{width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;display:block}
+  .relcard .rt{display:block;font-size:12.5px;font-weight:600;color:rgba(255,255,255,.92);line-height:1.4;padding:8px 8px 0}
+  .relcard .rfoot{margin-top:auto;display:flex;justify-content:space-between;align-items:flex-end;gap:8px;padding:10px 8px 9px}
+  .relcard .rwhy{font-size:11.5px;color:var(--mint)}
+  .relcard .rtag{display:inline-block;background:#0a0a0a;color:var(--white);font-family:var(--display);font-size:10px;letter-spacing:1.2px;text-transform:uppercase;padding:3px 7px 2px;white-space:nowrap;flex:0 0 auto}
+  @media(min-width:900px){.latesteps .relgrid{display:grid;grid-template-columns:repeat(6,1fr);overflow:visible}.latesteps .relcard{max-width:none}}
+  .reldots{display:flex;justify-content:center;gap:7px;margin-top:12px}
+  .reldots span{width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.25);transition:.2s}
+  .reldots span.on{background:var(--mint)}
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "PodcastSeries", "name": "The Numbers Game", "description": "The Numbers Game with Nick Reilly and Jason Robinson. 300+ episodes on business, property, tax and wealth. Pick a topic and we'll show you the best moments.", "url": "https://thenumbersgamepodcast.com.au/", "image": "https://thenumbersgamepodcast.com.au/assets/og-image.jpg", "sameAs": ["https://www.instagram.com/thenumbersgamepodcast/", "https://www.tiktok.com/@thenumbersgamepodcast", "https://www.linkedin.com/company/the-numbers-game-podcast/", "https://www.facebook.com/profile.php?id=100071290388343", "https://www.youtube.com/@thenumbersgamepodcast"]}</script>
 </head>
@@ -374,8 +395,8 @@
       <div class="bs bs3" aria-hidden="true"><span class="bst">150+ hours</span></div>
       <div class="bs bs4" aria-hidden="true"><span class="bst"><span id="ep-count">300</span> episodes and counting</span></div>
       <div class="bs bs5">
-        <span class="l1">It's finance, investment, business</span>
-        <span class="l2">but not as you know it!</span>
+        <h1 class="bs-h1"><span class="sr-only">The Numbers Game podcast: </span><span class="l1">It's finance, investment, business</span>
+        <span class="l2">but not as you know it!</span></h1>
         <p class="locks">Each week, accountant Jason Robinson and financial planner Nick Reilly bring you strategy and advice on knowing your numbers, in life and business.</p>
       </div>
     </div>
@@ -419,6 +440,43 @@
       </a>
     </div>
   </div>
+
+  <section class="latesteps" aria-labelledby="latest-h">
+    <h2 class="rtitle" id="latest-h">Latest episodes</h2>
+    <div class="relgrid" id="latest-list">
+        <a class="relcard" href="/the-inheritance-tax-hiding-in-your-superannuation">
+          <img src="https://i.ytimg.com/vi/JmcSpAFJnZk/mqdefault.jpg" alt="EP 303 thumbnail" width="320" height="180" loading="lazy">
+          <span class="rt">The Inheritance Tax Hiding in Your Superannuation</span>
+          <span class="rfoot"><span class="rwhy">16 November 2026</span><span class="rtag">EP 303</span></span>
+        </a>
+        <a class="relcard" href="/christmas-shutdown-costs-and-the-300-party-rule">
+          <img src="https://i.ytimg.com/vi/TbwQWjRIVyo/mqdefault.jpg" alt="EP 302 thumbnail" width="320" height="180" loading="lazy">
+          <span class="rt">Christmas Shutdown Costs and the $300 Party Rule</span>
+          <span class="rfoot"><span class="rwhy">9 November 2026</span><span class="rtag">EP 302</span></span>
+        </a>
+        <a class="relcard" href="/what-rising-rents-are-telling-us-about-australian-property">
+          <img src="https://i.ytimg.com/vi/ukjCOE-TVjM/mqdefault.jpg" alt="EP 301 thumbnail" width="320" height="180" loading="lazy">
+          <span class="rt">What Rising Rents Are Telling Us About Australian Property</span>
+          <span class="rfoot"><span class="rwhy">2 November 2026</span><span class="rtag">EP 301</span></span>
+        </a>
+        <a class="relcard" href="/how-money-has-changed-since-2021">
+          <img src="https://i.ytimg.com/vi/USK-bNAxT7Y/mqdefault.jpg" alt="EP 300 thumbnail" width="320" height="180" loading="lazy">
+          <span class="rt">How Money Has Changed Since 2021</span>
+          <span class="rfoot"><span class="rwhy">26 October 2026</span><span class="rtag">EP 300</span></span>
+        </a>
+        <a class="relcard" href="/the-small-business-squeeze-right-now">
+          <img src="https://i.ytimg.com/vi/UcamObdACo0/mqdefault.jpg" alt="EP 299 thumbnail" width="320" height="180" loading="lazy">
+          <span class="rt">The Small Business Squeeze Right Now</span>
+          <span class="rfoot"><span class="rwhy">19 October 2026</span><span class="rtag">EP 299</span></span>
+        </a>
+        <a class="relcard" href="/what-australia-can-learn-from-new-zealand-s-property-downturn">
+          <img src="https://i.ytimg.com/vi/j4l0VNj8IF4/mqdefault.jpg" alt="EP 298 thumbnail" width="320" height="180" loading="lazy">
+          <span class="rt">What Australia Can Learn From New Zealand's Property Downturn</span>
+          <span class="rfoot"><span class="rwhy">12 October 2026</span><span class="rtag">EP 298</span></span>
+        </a>
+    </div>
+    <div class="reldots" id="reldots"></div>
+  </section>
 
   <div class="getinvolved">
     <h2>Get involved in the show</h2>
@@ -496,6 +554,22 @@
     vclose.addEventListener('click',function(){vslot.hidden=true});
   }
 
+  /* Latest-episodes dots: only shown when the strip actually scrolls (mobile). Same as episode pages. */
+  var rg=document.querySelector('.latesteps .relgrid'), rd=document.getElementById('reldots');
+  if(rg&&rd){
+    var updDots=function(){
+      var cards=rg.querySelectorAll('.relcard');
+      if(rd.children.length!==cards.length){ rd.innerHTML=''; cards.forEach(function(){rd.appendChild(document.createElement('span'))}); }
+      var scrollable=rg.scrollWidth>rg.clientWidth+4;
+      rd.style.display=scrollable?'flex':'none';
+      if(!scrollable)return;
+      var i=Math.round(rg.scrollLeft/(rg.scrollWidth-rg.clientWidth)*(cards.length-1));
+      rd.querySelectorAll('span').forEach(function(s,n){s.classList.toggle('on',n===i)});
+    };
+    rg.addEventListener('scroll',updDots,{passive:true});
+    window.addEventListener('resize',updDots);
+    updDots();
+  }
   /* Data-driven card previews: latest thumbnail + dynamic Watch EP button, real adventure inventory, library wall.
      Speed (SEO round 2): the small catalogue loads straight away for the live count, latest episode and library wall.
      The big moments file (data/search-index.json, about 5 MB) is only used for the Choose-your-own-adventure chips,
@@ -516,6 +590,27 @@
     lt.alt='EP '+rel[0].episodeNumber+': '+rel[0].title;
     document.getElementById('latest-go').textContent='Watch EP '+rel[0].episodeNumber;
 
+    /* Latest episodes strip: the HTML list is written into the page for Google; if a newer episode has
+       listed since, rebuild the six cards from the live catalogue so visitors always see the newest */
+    var ll=document.getElementById('latest-list');
+    if(ll){
+      var first=ll.querySelector('a.relcard');
+      if(!first || first.getAttribute('href')!=='/'+rel[0].slug){
+        var months=['January','February','March','April','May','June','July','August','September','October','November','December'];
+        ll.innerHTML='';
+        rel.slice(0,6).forEach(function(e){
+          var dt=new Date(e.date+'T00:00:00');
+          var a=document.createElement('a'); a.className='relcard'; a.href='/'+(e.slug||('episode-'+e.episodeNumber));
+          var im=document.createElement('img'); im.alt='EP '+e.episodeNumber+' thumbnail'; im.width=320; im.height=180; im.loading='lazy';
+          im.src=e.youtubeId?('https://i.ytimg.com/vi/'+e.youtubeId+'/mqdefault.jpg'):(e.thumbnail||'assets/og-image.jpg');
+          var rt=document.createElement('span'); rt.className='rt'; rt.textContent=e.title.split(' | ')[0];
+          var rf=document.createElement('span'); rf.className='rfoot';
+          var rw=document.createElement('span'); rw.className='rwhy'; rw.textContent=dt.getDate()+' '+months[dt.getMonth()]+' '+dt.getFullYear();
+          var tg=document.createElement('span'); tg.className='rtag'; tg.textContent='EP '+e.episodeNumber;
+          rf.appendChild(rw); rf.appendChild(tg); a.appendChild(im); a.appendChild(rt); a.appendChild(rf); ll.appendChild(a);
+        });
+      }
+    }
     /* library wall: 3 columns, stacks doubled for a seamless downward loop */
     var wall=document.getElementById('wall');
     for(var c=0;c<3;c++){
