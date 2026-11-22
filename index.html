@@ -318,12 +318,12 @@
   .wsec{margin-top:80px;padding-top:64px;border-top:1px solid var(--line)}
   .wherestart h2.hosth{margin-top:0}
   .topiclabel{font-size:12px;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;color:var(--dim);margin:0 0 12px}
+  .aboutp a{color:var(--mint);text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px}
+  .aboutp a:hover{text-decoration-thickness:2px}
   .aboutp{max-width:760px;font-size:15.5px;line-height:1.7;color:rgba(255,255,255,.86);margin:0 0 32px}
   .topiclinks{display:flex;flex-wrap:wrap;gap:8px}
   .topiclinks a{font-size:13px;font-weight:600;text-decoration:none;color:rgba(255,255,255,.92);border:1px solid rgba(255,255,255,.28);padding:6px 12px;transition:.15s}
   .topiclinks a:hover{background:var(--mint);color:#08210f;border-color:var(--mint)}
-  .reviewtag{display:none}
-  html.review .reviewtag{display:inline-block;margin-left:12px;vertical-align:middle;font-family:var(--sans);font-size:11px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;color:#1b1200;background:#ffb020;padding:3px 8px}
   .hostgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin:0}
   .hostgrid>*{min-width:0}
   @media(max-width:720px){.wsec{margin-top:56px;padding-top:48px}.hostgrid{grid-template-columns:1fr}}
@@ -510,9 +510,8 @@
     </div>
     </div>
     <div class="wsec">
-    <!-- REVIEW WORDING (Tommy): About the show paragraph + topic links. Preview with ?review=1 to see the amber tag. Edit text here only. -->
-    <h2 class="hosth" id="about-show">About the show<span class="reviewtag">Review wording</span></h2>
-    <p class="aboutp">The Numbers Game is a weekly Australian podcast on business, property, tax and money. Accountant Jason Robinson and financial planner Nick Reilly talk through the numbers behind life and business in plain English, with more than 300 episodes to dig into.</p>
+    <h2 class="hosth" id="about-show">About the show</h2>
+    <p class="aboutp">The Numbers Game is finance, investment and business, but not as you know it. Hosted by CPA <a href="/jason-robinson">Jason Robinson</a>, co-founder of <a href="https://futureadvisory.com.au/" target="_blank" rel="noopener">Future Advisory</a>, and <a href="/nick-reilly">Nick Reilly</a>, founder and CEO of <a href="https://www.inovayt.com.au/" target="_blank" rel="noopener">Inovayt</a>, it's five years and <a href="/episodes">more than 300 episodes</a>. Whatever money or business question you're working through, chances are they've already covered it, so you can walk away knowing exactly what to do next.</p>
     <p class="topiclabel" id="topiclabel">Browse episodes by topic</p>
     <nav class="topiclinks" aria-labelledby="topiclabel"><a href="/episodes?topic=Business%20Growth">Business Growth</a><a href="/episodes?topic=Property">Property</a><a href="/episodes?topic=Tax">Tax</a><a href="/episodes?topic=Superannuation">Superannuation</a><a href="/episodes?topic=Building%20Wealth">Building Wealth</a><a href="/episodes?topic=Economy">Economy</a><a href="/episodes?topic=Personal%20Finance">Personal Finance</a><a href="/episodes?topic=Business%20Finances">Business Finances</a><a href="/episodes?topic=Leadership">Leadership</a><a href="/episodes?topic=Technology">Technology</a><a href="/episodes?topic=Business%20Structures">Business Structures</a><a href="/episodes?topic=Retirement">Retirement</a><a href="/episodes?topic=Personal%20Development">Personal Development</a></nav>
     </div>
@@ -583,7 +582,6 @@
   });}
 
   /* Ways-to-explore cards pop in straight away, staggered (no JS = cards simply visible) */
-  if(/[?&]review=1/.test(location.search)) document.documentElement.classList.add('review');
   var bv=document.querySelector('.banner video'); if(bv&&window.innerWidth>900) bv.preload='auto'; /* phones keep metadata-only */
   var ws=document.querySelector('.wherestart');
   if(ws) ws.classList.add('inview');
