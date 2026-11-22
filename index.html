@@ -496,13 +496,13 @@
     vclose.addEventListener('click',function(){vslot.hidden=true});
   }
 
-  /* Data-driven card previews: latest thumbnail + dynamic Watch EP button, real adventure inventory, library wall */
-  Promise.all([
-    fetch('data/catalogue.json').then(function(r){return r.json()}),
-    fetch('data/search-index.json').then(function(r){return r.json()})
-  ]).then(function(res){
+  /* Data-driven card previews: latest thumbnail + dynamic Watch EP button, real adventure inventory, library wall.
+     Speed (SEO round 2): the small catalogue loads straight away for the live count, latest episode and library wall.
+     The big moments file (data/search-index.json, about 5 MB) is only used for the Choose-your-own-adventure chips,
+     so it loads when that card is about to scroll into view, not on page load. */
+  fetch('data/catalogue.json').then(function(r){return r.json()}).then(function(cat){
     var today=new Date(); today.setHours(23,59,59);
-    var rel=res[0].filter(function(e){return new Date(e.date+'T00:00:00')<=today});
+    var rel=cat.filter(function(e){return new Date(e.date+'T00:00:00')<=today});
     rel.sort(function(a,b){return a.date<b.date?1:-1});
     if(!rel.length) return;
 
@@ -511,33 +511,10 @@
 
     /* latest: link, full thumbnail, button carries the episode number */
     document.getElementById('banner-latest').href='/'+(rel[0].slug||('episode-'+rel[0].episodeNumber));
-    document.getElementById('latest-thumb').src='https://i.ytimg.com/vi/'+rel[0].youtubeId+'/mqdefault.jpg';
+    var lt=document.getElementById('latest-thumb');
+    lt.src='https://i.ytimg.com/vi/'+rel[0].youtubeId+'/mqdefault.jpg';
+    lt.alt='EP '+rel[0].episodeNumber+': '+rel[0].title;
     document.getElementById('latest-go').textContent='Watch EP '+rel[0].episodeNumber;
-
-    /* adventure demo: the REAL chip-earning topics + real subtopics, same rules as adventure.html */
-    var released={}; rel.forEach(function(e){released[e.episodeNumber]=true});
-    var pool=res[1].filter(function(m){return m.standalone>=80&&m.durationSec>=60&&released[m.episodeNumber]});
-    var byTopic={};
-    pool.forEach(function(m){var t=m.topic;byTopic[t]=byTopic[t]||{count:0,subs:{}};byTopic[t].count++;
-      var s=m.subtopic||'General';byTopic[t].subs[s]=(byTopic[t].subs[s]||0)+1;});
-    var topics=Object.keys(byTopic).filter(function(t){return byTopic[t].count>=5})
-      .sort(function(a,b){return byTopic[b].count-byTopic[a].count});
-    var trow=document.getElementById('topicrow');
-    var picked=['Business Structures','Building Wealth','Leadership'];
-    topics.forEach(function(t,i){
-      var s=document.createElement('span'); s.className='c'+(picked.indexOf(t)>-1?' sel':''); s.textContent=t;
-      s.style.animationDelay=(i*0.14)+'s'; trow.appendChild(s);
-    });
-    var subs=[];
-    topics.slice(0,3).forEach(function(t){
-      Object.keys(byTopic[t].subs).forEach(function(sname){subs.push({n:sname,c:byTopic[t].subs[sname]})});
-    });
-    subs.sort(function(a,b){return b.c-a.c});
-    var srow=document.getElementById('subrow');
-    subs.slice(0,9).forEach(function(t,i){
-      var s=document.createElement('span'); s.className='sc'+((i===1||i===4)?' sel':''); s.textContent=t.n;
-      s.style.animationDelay=(i*0.12)+'s'; srow.appendChild(s);
-    });
 
     /* library wall: 3 columns, stacks doubled for a seamless downward loop */
     var wall=document.getElementById('wall');
@@ -552,6 +529,58 @@
       });
       col.appendChild(inner); wall.appendChild(col);
     }
+
+    /* adventure demo: the REAL chip-earning topics + real subtopics, same rules as adventure.html */
+    var released={}; rel.forEach(function(e){released[e.episodeNumber]=true});
+    function buildChips(idx){
+      var pool=idx.filter(function(m){return m.standalone>=80&&m.durationSec>=60&&released[m.episodeNumber]});
+      var byTopic={};
+      pool.forEach(function(m){var t=m.topic;byTopic[t]=byTopic[t]||{count:0,subs:{}};byTopic[t].count++;
+        var s=m.subtopic||'General';byTopic[t].subs[s]=(byTopic[t].subs[s]||0)+1;});
+      var topics=Object.keys(byTopic).filter(function(t){return byTopic[t].count>=5})
+        .sort(function(a,b){return byTopic[b].count-byTopic[a].count});
+      var trow=document.getElementById('topicrow');
+      var picked=['Business Structures','Building Wealth','Leadership'];
+      topics.forEach(function(t,i){
+        var s=document.createElement('span'); s.className='c'+(picked.indexOf(t)>-1?' sel':''); s.textContent=t;
+        s.style.animationDelay=(i*0.14)+'s'; trow.appendChild(s);
+      });
+      var subs=[];
+      topics.slice(0,3).forEach(function(t){
+        Object.keys(byTopic[t].subs).forEach(function(sname){subs.push({n:sname,c:byTopic[t].subs[sname]})});
+      });
+      subs.sort(function(a,b){return b.c-a.c});
+      var srow=document.getElementById('subrow');
+      subs.slice(0,9).forEach(function(t,i){
+        var s=document.createElement('span'); s.className='sc'+((i===1||i===4)?' sel':''); s.textContent=t.n;
+        s.style.animationDelay=(i*0.12)+'s'; srow.appendChild(s);
+      });
+      /* the chips arrive after the card's 18s loop has started: line each chip up with the loop's
+         current point so chips stay in step with the "1 Pick a topic / 2 Dig a little deeper" labels */
+      try{
+        var p1=document.querySelector('.pv-adv .p1'), an=p1&&p1.getAnimations&&p1.getAnimations()[0];
+        if(an&&an.currentTime!=null){
+          [].forEach.call(document.querySelectorAll('#topicrow span,#subrow span'),function(s){
+            var a=s.getAnimations()[0]; if(a) a.currentTime=an.currentTime;
+          });
+        }
+      }catch(err){}
+    }
+    var momentsAsked=false;
+    function loadMoments(){
+      if(momentsAsked) return; momentsAsked=true;
+      fetch('data/search-index.json').then(function(r){return r.json()}).then(buildChips);
+    }
+    /* whichever comes first: the Adventure card nears the screen, or the browser goes idle after the page has loaded */
+    var adv=document.querySelector('.pv-adv');
+    if(adv && 'IntersectionObserver' in window){
+      var io=new IntersectionObserver(function(entries){
+        for(var k=0;k<entries.length;k++){ if(entries[k].isIntersecting){ io.disconnect(); loadMoments(); return; } }
+      },{rootMargin:'300px 0px'});
+      io.observe(adv);
+    }
+    function whenIdle(){ if('requestIdleCallback' in window){ requestIdleCallback(loadMoments,{timeout:3000}); } else { setTimeout(loadMoments,1500); } }
+    if(document.readyState==='complete'){ whenIdle(); } else { window.addEventListener('load',whenIdle); }
   });
   </script>
 </body>
