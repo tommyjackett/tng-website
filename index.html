@@ -86,17 +86,17 @@
   /* ── Section labels (mint block, template convention) ── */
   .seclabel{display:inline-block;font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.5px;font-size:14.5px;background:var(--mint);color:#0a0a0a;padding:9px 13px 7px}
 
-  /* ── Video banner (slim, full-bleed, tinted) ── */
-  /* Section 1 = a full first screen: nav + video own the viewport, nothing else peeks */
-  .banner{position:relative;height:clamp(440px,calc(100svh - 58px - 300px),620px);overflow:hidden;
+  /* ── Hero: split layout. Words on the left (desktop), the video on the right with nothing over it.
+     On phones and tablets it stacks: a clean video band on top, the words underneath. ── */
+  .banner{position:relative}
+  .banner-media{position:relative;height:clamp(200px,56vw,380px);overflow:hidden;
     background:url('assets/banner-poster.jpg') center/cover no-repeat;
-    -webkit-mask-image:linear-gradient(180deg,#000 88%,transparent 100%);
-    mask-image:linear-gradient(180deg,#000 88%,transparent 100%)}
-  .banner video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 30%}
-  .banner-tint{position:absolute;inset:-4px;background:rgba(44,27,138,.5)}
-  /* Hero over the video: tagline, description and buttons, all there from first paint */
-  .banner-seq{position:absolute;inset:0;z-index:1;pointer-events:none}
-  .banner-seq .bs{position:absolute;inset:0 0 10% 0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;padding:0 22px}
+    -webkit-mask-image:linear-gradient(180deg,#000 80%,transparent 100%);
+    mask-image:linear-gradient(180deg,#000 80%,transparent 100%)}
+  .banner video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 20%}
+  .banner-tint{position:absolute;inset:-4px;background:rgba(44,27,138,.18)}
+  .banner-seq{position:relative;z-index:1;pointer-events:none}
+  .banner-seq .bs{display:flex;flex-direction:column;align-items:center;gap:14px;padding:14px 22px 0}
   .banner-seq .l1{font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.3px;
     text-align:center;line-height:1.15;color:var(--white);font-size:clamp(22px,3.1vw,42px);
     text-shadow:0 6px 30px rgba(0,0,0,.65);text-wrap:balance}
@@ -321,6 +321,22 @@
   .hostcard .hgo{flex:0 0 auto;margin-left:auto;color:var(--mint);font-size:20px;line-height:1}
   @media(max-width:720px){.hostcard img{width:84px;height:84px}}
   .footbar .advice{max-width:72ch;line-height:1.6;color:var(--muted)}
+  @media(max-width:900px){.latesteps{padding-top:36px}}
+  /* Desktop hero: words left, video right (soft left edge and soft bottom edge), same height as before */
+  @media(min-width:901px){
+    .banner{height:clamp(440px,calc(100svh - 58px - 300px),620px);overflow:hidden}
+    .banner-media{position:absolute;top:0;right:0;bottom:0;width:60%;height:auto;
+      -webkit-mask-image:linear-gradient(90deg,transparent 0,#000 26%),linear-gradient(180deg,#000 84%,transparent 100%);
+      -webkit-mask-composite:source-in;
+      mask-image:linear-gradient(90deg,transparent 0,#000 26%),linear-gradient(180deg,#000 84%,transparent 100%);
+      mask-composite:intersect}
+    .banner-seq{position:absolute;inset:0}
+    .banner-seq .bs{position:absolute;inset:0 0 4% 0;justify-content:center;align-items:flex-start;padding:0 58% 0 max(36px,calc((100vw - var(--wrap))/2 + 36px))}
+    .banner .banner-seq .bs-h1{align-items:flex-start}
+    .banner-seq .l1,.banner-seq .locks{text-align:left}
+    .hero-cta{align-items:flex-start}
+    .hero-follow{justify-content:flex-start}
+  }
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "PodcastSeries", "name": "The Numbers Game", "description": "The Numbers Game with Nick Reilly and Jason Robinson. 300+ episodes on business, property, tax and wealth. Pick a topic and we'll show you the best moments.", "url": "https://thenumbersgamepodcast.com.au/", "image": "https://thenumbersgamepodcast.com.au/assets/og-image.jpg", "sameAs": ["https://www.instagram.com/thenumbersgamepodcast/", "https://www.tiktok.com/@thenumbersgamepodcast", "https://www.linkedin.com/company/the-numbers-game-podcast/", "https://www.facebook.com/profile.php?id=100071290388343", "https://www.youtube.com/@thenumbersgamepodcast"]}</script>
 </head>
@@ -364,10 +380,12 @@
   </nav>
 
   <div class="banner">
-    <video autoplay muted loop playsinline preload="auto" poster="assets/banner-poster.jpg" aria-hidden="true">
-      <source src="assets/banner-opener.mp4" type="video/mp4">
-    </video>
-    <div class="banner-tint"></div>
+    <div class="banner-media">
+      <video autoplay muted loop playsinline preload="auto" poster="assets/banner-poster.jpg" aria-hidden="true">
+        <source src="assets/banner-opener.mp4" type="video/mp4">
+      </video>
+      <div class="banner-tint"></div>
+    </div>
     <div class="banner-seq">
       <div class="bs bs5">
         <h1 class="bs-h1"><span class="sr-only">The Numbers Game podcast: </span><span class="l1">It's finance, investment, business</span>
