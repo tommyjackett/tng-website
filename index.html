@@ -94,13 +94,23 @@
     mask-image:linear-gradient(180deg,#000 74%,transparent 100%)}
   .banner video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
   .banner-tint{position:absolute;inset:-4px;background:rgba(44,27,138,.5)}
-  /* Title sequence over the video (plays once): logo → 5 years → 150+ hours / N episodes and counting → show lockup (holds) */
+  /* Hero over the video: logo and stats (quick build-up), then the tagline, description and buttons, all there from first paint */
   .banner-seq{position:absolute;inset:0;z-index:1;pointer-events:none}
-  .banner-seq .bs{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;opacity:0;padding:0 22px}
-  .banner-seq img{height:clamp(77px,13.2vw,156px);width:auto;filter:drop-shadow(0 14px 40px rgba(0,0,0,.5))}
-  .banner-seq .bst{font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.5px;
-    text-align:center;line-height:1.1;color:var(--white);font-size:clamp(31px,5.5vw,70px);text-wrap:balance;
-    text-shadow:0 6px 30px rgba(0,0,0,.65)}
+  .banner-seq .bs{position:absolute;inset:0 0 24% 0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;padding:0 22px}
+  .banner-seq img{height:clamp(46px,6vw,84px);width:auto;filter:drop-shadow(0 14px 40px rgba(0,0,0,.5))}
+  /* Quick opener: logo + three stats build up in under 2 seconds and stay. The tagline, description and buttons are there from first paint. */
+  .hero-stats{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:4px 20px}
+  .banner-seq .bst{font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.6px;
+    text-align:center;line-height:1.2;color:rgba(255,255,255,.92);font-size:clamp(14px,1.5vw,19px);
+    text-shadow:0 2px 14px rgba(0,0,0,.65)}
+  .banner-seq .hs{opacity:0;animation:statin .4s ease forwards}
+  .banner-seq .hs2{animation-delay:.5s}
+  .banner-seq .hs3{animation-delay:1s}
+  .banner-seq .hs4{animation-delay:1.5s}
+  @keyframes statin{
+    0%{opacity:0;transform:translateY(8px)}
+    100%{opacity:1;transform:translateY(0)}
+  }
   .banner-seq .l1{font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.3px;
     text-align:center;line-height:1.15;color:var(--white);font-size:clamp(22px,3.1vw,42px);
     text-shadow:0 6px 30px rgba(0,0,0,.65);text-wrap:balance}
@@ -108,40 +118,13 @@
     line-height:1;background:var(--mint);color:#0a0a0a;padding:.2em .55em .12em;font-size:clamp(20px,2.7vw,36px)}
   .banner-seq .locks{font-size:clamp(13px,1.35vw,16px);font-weight:500;color:var(--white);text-align:center;
     max-width:58ch;line-height:1.65;text-shadow:0 2px 6px rgba(10,6,30,.9),0 4px 22px rgba(0,0,0,.8)}
-  .bs1{animation:popthru 2.6s ease forwards}
-  .bs2{animation:slamthru 1.8s ease 2.6s forwards}
-  .bs3{animation:slamthru 1.8s ease 4.4s forwards}
-  .bs4{animation:slamthru 1.8s ease 6.2s forwards}
-  .banner-seq .bs5{opacity:1}
-  .bs5 .l1{opacity:0;animation:lockin .7s ease 8.1s forwards}
-  .bs5 .l2{opacity:0;animation:slamin .5s cubic-bezier(.2,1.4,.4,1) 8.9s forwards}
-  .bs5 .locks{opacity:0;animation:lockin .8s ease 9.6s forwards}
-  @keyframes popthru{
-    0%{opacity:0;transform:scale(.72) translateY(20px)}
-    18%,76%{opacity:1;transform:scale(1) translateY(0)}
-    100%{opacity:0;transform:scale(1.05) translateY(-12px)}
-  }
-  @keyframes slamthru{
-    0%{opacity:0;transform:scale(1.9)}
-    16%,78%{opacity:1;transform:scale(1)}
-    100%{opacity:0;transform:scale(.94)}
-  }
-  @keyframes lockin{
-    0%{opacity:0;transform:translateY(18px)}
-    100%{opacity:1;transform:translateY(0)}
-  }
-  @keyframes slamin{
-    0%{opacity:0;transform:scale(1.7)}
-    100%{opacity:1;transform:scale(1)}
-  }
   /* scroll cue sits low in the banner's fade, right at the fold, pulling you down */
   .banner-cue{position:relative;z-index:2;margin-top:-88px;display:flex;justify-content:center;pointer-events:none}
   .banner-cue span{color:var(--mint);font-size:30px;line-height:1;animation:cuebob 1.6s ease-in-out infinite}
   @keyframes cuebob{0%,100%{transform:translateY(0);opacity:.5}50%{transform:translateY(7px);opacity:1}}
   @media(prefers-reduced-motion:reduce){
     .banner video{display:none}
-    .bs1,.bs2,.bs3,.bs4{display:none}
-    .bs5 .l1,.bs5 .l2,.bs5 .locks{animation:none;opacity:1}
+    .banner-seq .hs{animation:none;opacity:1}
     .banner-cue span{animation:none}
   }
 
@@ -150,7 +133,7 @@
   @media(max-width:720px){.wherestart{padding:60px 22px 64px}}
   .wherestart h2{font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.3px;
     font-size:clamp(24px,2.4vw,32px);line-height:1.2;color:var(--white);text-align:center}
-  .pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:24px}
+  .pillars{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin:24px auto 0;max-width:860px}
   .pillars>*{min-width:0}
   @media(max-width:900px){.pillars{grid-template-columns:1fr}}
   /* whole section fades in immediately on load, cards pop staggered inside it;
@@ -196,9 +179,6 @@
     .pv-adv .plabel .pt{font-size:18px}
     .pv-adv .go{font-size:14px;padding:15px 28px}
   }
-
-  /* latest episode: the FULL thumbnail, uncropped and unobstructed */
-  .pv-latest img{width:100%;height:100%;display:block}
 
   /* adventure: acted-out session, 18s loop — chips pop IN, each beat fades out as ONE.
      Staggered elements return to hidden inside the faded window so the loop wrap can't flash stale chips. */
@@ -268,7 +248,7 @@
   .pv-lib img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block;border-radius:3px;opacity:.9}
   @keyframes driftdown{0%{transform:translateY(-50%)}100%{transform:translateY(0)}}
   @media(prefers-reduced-motion:reduce){
-    .pv-adv .phase,.pv-adv .plabel,.pv-adv .c,.pv-adv .sc,.pv-adv .go{animation:none}
+    .pv-adv .phase,.pv-adv .plabel,.pv-adv .c,.pv-adv .sc,.pv-adv .go,.pv-adv .p1 .plabel,.pv-adv .p2 .plabel,.pv-adv .p3 .plabel{animation:none}
     .pv-adv .p1,.pv-adv .p1 .plabel,.pv-adv .p1 .c{opacity:1}
     .pv-lib .col .inner{animation:none}
   }
@@ -326,8 +306,8 @@
   .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 
   /* Latest episodes: plain links Google can read without JavaScript. Same cards as "Discover more" on episode pages. */
-  .latesteps{max-width:var(--wrap);margin:0 auto;padding:0 36px 64px}
-  @media(max-width:720px){.latesteps{padding:0 22px 56px}}
+  .latesteps{max-width:var(--wrap);margin:0 auto;padding:28px 36px 0}
+  @media(max-width:720px){.latesteps{padding:24px 22px 0}}
   .latesteps .rtitle{display:inline-block;margin:0 0 18px;font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.5px;font-size:14.5px;line-height:normal;background:var(--mint);color:#0a0a0a;padding:9px 13px 7px}
   .relgrid{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding-bottom:6px;scrollbar-width:none}
   .relgrid::-webkit-scrollbar{display:none}
@@ -342,6 +322,25 @@
   .reldots{display:flex;justify-content:center;gap:7px;margin-top:12px}
   .reldots span{width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.25);transition:.2s}
   .reldots span.on{background:var(--mint)}
+
+  /* Homepage converts: hero buttons, Meet Nick and Jase, footer advice line */
+  .hero-cta{pointer-events:auto;display:flex;flex-direction:column;align-items:center;gap:12px;margin-top:6px}
+  .hero-follow{display:flex;flex-wrap:wrap;justify-content:center;gap:8px}
+  .vbtn.vout{background:transparent;color:var(--mint);box-shadow:inset 0 0 0 1.5px rgba(122,217,168,.8);padding:11px 18px;font-size:11.5px}
+  .vbtn.vout:hover{background:var(--mint);color:#08210f;box-shadow:inset 0 0 0 1.5px var(--mint)}
+  .hosth{margin-top:72px}
+  .hostgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin:24px auto 0;max-width:860px}
+  .hostgrid>*{min-width:0}
+  @media(max-width:720px){.hosth{margin-top:56px}.hostgrid{grid-template-columns:1fr}}
+  .hostcard{display:flex;align-items:center;gap:16px;padding:14px;text-decoration:none;background:var(--card);border:1px solid var(--line);transition:.15s}
+  .hostcard:hover{background:var(--card-hi);border-color:rgba(122,217,168,.55)}
+  .hostcard img{flex:0 0 auto;width:104px;height:104px;object-fit:cover;object-position:center 18%;display:block}
+  .hostcard .ht{display:flex;flex-direction:column;gap:6px;min-width:0}
+  .hostcard .hn{font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.3px;font-size:19px;line-height:1.15;color:var(--white)}
+  .hostcard .hl{font-size:13px;line-height:1.5;color:rgba(255,255,255,.82)}
+  .hostcard .hgo{flex:0 0 auto;margin-left:auto;color:var(--mint);font-size:20px;line-height:1}
+  @media(max-width:720px){.hostcard img{width:84px;height:84px}}
+  .footbar .advice{max-width:72ch;line-height:1.6;color:var(--muted)}
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "PodcastSeries", "name": "The Numbers Game", "description": "The Numbers Game with Nick Reilly and Jason Robinson. 300+ episodes on business, property, tax and wealth. Pick a topic and we'll show you the best moments.", "url": "https://thenumbersgamepodcast.com.au/", "image": "https://thenumbersgamepodcast.com.au/assets/og-image.jpg", "sameAs": ["https://www.instagram.com/thenumbersgamepodcast/", "https://www.tiktok.com/@thenumbersgamepodcast", "https://www.linkedin.com/company/the-numbers-game-podcast/", "https://www.facebook.com/profile.php?id=100071290388343", "https://www.youtube.com/@thenumbersgamepodcast"]}</script>
 </head>
@@ -390,56 +389,29 @@
     </video>
     <div class="banner-tint"></div>
     <div class="banner-seq">
-      <div class="bs bs1" aria-hidden="true"><img src="assets/tng-logo.png" alt=""></div>
-      <div class="bs bs2" aria-hidden="true"><span class="bst">5 years</span></div>
-      <div class="bs bs3" aria-hidden="true"><span class="bst">150+ hours</span></div>
-      <div class="bs bs4" aria-hidden="true"><span class="bst"><span id="ep-count">300</span> episodes and counting</span></div>
       <div class="bs bs5">
+        <img class="hs hs1" src="assets/tng-logo.png" alt="" width="802" height="329">
+        <div class="hero-stats">
+          <span class="bst hs hs2">5 years</span>
+          <span class="bst hs hs3">150+ hours</span>
+          <span class="bst hs hs4"><span id="ep-count">303</span> episodes and counting</span>
+        </div>
         <h1 class="bs-h1"><span class="sr-only">The Numbers Game podcast: </span><span class="l1">It's finance, investment, business</span>
         <span class="l2">but not as you know it!</span></h1>
         <p class="locks">Each week, accountant Jason Robinson and financial planner Nick Reilly bring you strategy and advice on knowing your numbers, in life and business.</p>
+        <div class="hero-cta">
+          <a class="vbtn" id="hero-watch" href="/the-inheritance-tax-hiding-in-your-superannuation">Watch the latest episode</a>
+          <div class="hero-follow">
+            <a class="vbtn vout" href="https://www.youtube.com/@thenumbersgamepodcast?sub_confirmation=1" target="_blank" rel="noopener">YouTube</a>
+            <a class="vbtn vout" href="https://open.spotify.com/show/41SVe1eJhucikhF3fWD3NW" target="_blank" rel="noopener">Spotify</a>
+            <a class="vbtn vout" href="https://podcasts.apple.com/au/podcast/id1555566088" target="_blank" rel="noopener">Apple Podcasts</a>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 
   <div class="banner-cue" aria-hidden="true"><span>&darr;</span></div>
-
-  <div class="wherestart">
-    <h2>Ways to explore the show</h2>
-    <div class="pillars">
-      <a class="pcard mintc" id="banner-latest" href="#">
-        <span class="ph">Latest episode</span>
-        <p class="pd">The freshest episode we've dropped. Jump straight into this week's conversation.</p>
-        <span class="pv pv-latest"><img id="latest-thumb" src="" alt=""></span>
-        <span class="pgo" id="latest-go">Watch now</span>
-      </a>
-      <a class="pcard purplec" href="/adventure">
-        <span class="ph">Choose your own adventure</span>
-        <p class="pd">Pick the topics you're into and we'll play you the standout moments. Not whole episodes, the exact bits inside them.</p>
-        <span class="pv pv-adv" aria-hidden="true">
-          <span class="phase p1">
-            <span class="plabel"><span class="pn">1</span><span class="pt">Pick a topic</span></span>
-            <span class="crow" id="topicrow"></span>
-          </span>
-          <span class="phase p2">
-            <span class="plabel"><span class="pn">2</span><span class="pt">Dig a little deeper</span></span>
-            <span class="crow" id="subrow"></span>
-          </span>
-          <span class="phase p3">
-            <span class="plabel"><span class="pn">3</span><span class="pt">Find the moments</span></span>
-            <span class="go">Show me the moments</span>
-          </span>
-        </span>
-        <span class="pgo">Pick your topics</span>
-      </a>
-      <a class="pcard blackc" href="/episodes">
-        <span class="ph">Explore every episode</span>
-        <p class="pd">Browse the full library and find whole episodes on the stuff you care about.</p>
-        <span class="pv pv-lib" aria-hidden="true"><span class="wall" id="wall"></span></span>
-        <span class="pgo">Explore episodes</span>
-      </a>
-    </div>
-  </div>
 
   <section class="latesteps" aria-labelledby="latest-h">
     <h2 class="rtitle" id="latest-h">Latest episodes</h2>
@@ -477,6 +449,50 @@
     </div>
     <div class="reldots" id="reldots"></div>
   </section>
+
+  <div class="wherestart">
+    <h2>Ways to explore the show</h2>
+    <div class="pillars">
+      <a class="pcard purplec" href="/adventure">
+        <span class="ph">Choose your own adventure</span>
+        <p class="pd">Pick the topics you're into and we'll play you the standout moments. Not whole episodes, the exact bits inside them.</p>
+        <span class="pv pv-adv" aria-hidden="true">
+          <span class="phase p1">
+            <span class="plabel"><span class="pn">1</span><span class="pt">Pick a topic</span></span>
+            <span class="crow" id="topicrow"></span>
+          </span>
+          <span class="phase p2">
+            <span class="plabel"><span class="pn">2</span><span class="pt">Dig a little deeper</span></span>
+            <span class="crow" id="subrow"></span>
+          </span>
+          <span class="phase p3">
+            <span class="plabel"><span class="pn">3</span><span class="pt">Find the moments</span></span>
+            <span class="go">Show me the moments</span>
+          </span>
+        </span>
+        <span class="pgo">Pick your topics</span>
+      </a>
+      <a class="pcard blackc" href="/episodes">
+        <span class="ph">Explore every episode</span>
+        <p class="pd">Browse the full library and find whole episodes on the stuff you care about.</p>
+        <span class="pv pv-lib" aria-hidden="true"><span class="wall" id="wall"></span></span>
+        <span class="pgo">Explore episodes</span>
+      </a>
+    </div>
+    <h2 class="hosth">Meet Nick and Jase</h2>
+    <div class="hostgrid">
+      <a class="hostcard" href="/nick-reilly">
+        <img src="assets/nick-reilly.jpg" alt="Nick Reilly, co-host of The Numbers Game" width="900" height="900" loading="lazy">
+        <span class="ht"><span class="hn">Nick Reilly</span><span class="hl">Nick Reilly is the planner who has played the game himself.</span></span>
+        <span class="hgo" aria-hidden="true">&rarr;</span>
+      </a>
+      <a class="hostcard" href="/jason-robinson">
+        <img src="assets/jason-robinson.jpg" alt="Jason Robinson, co-host of The Numbers Game" width="900" height="900" loading="lazy">
+        <span class="ht"><span class="hn">Jason Robinson</span><span class="hl">Jason Robinson is the accountant who makes the numbers make sense.</span></span>
+        <span class="hgo" aria-hidden="true">&rarr;</span>
+      </a>
+    </div>
+  </div>
 
   <div class="getinvolved">
     <h2>Get involved in the show</h2>
@@ -530,6 +546,7 @@
           <a href="/">Home</a><a href="/episodes">Every episode</a><a href="/adventure">Choose your own adventure</a><a href="/about">About the show</a><a href="/nick-reilly">Nick Reilly</a><a href="/jason-robinson">Jason Robinson</a><a href="/contact">Contact</a>
         </div>
       </details>
+      <p class="copyright advice">The Numbers Game provides general information only and does not take into account your personal objectives, financial situation or needs. Consider seeking professional advice before making any financial decision.</p>
       <div class="copyright">© 2026 The Numbers Game</div>
     </div>
   </footer>
@@ -570,7 +587,7 @@
     window.addEventListener('resize',updDots);
     updDots();
   }
-  /* Data-driven card previews: latest thumbnail + dynamic Watch EP button, real adventure inventory, library wall.
+  /* Data-driven card previews: live count, hero Watch button, Latest episodes strip, real adventure inventory, library wall.
      Speed (SEO round 2): the small catalogue loads straight away for the live count, latest episode and library wall.
      The big moments file (data/search-index.json, about 5 MB) is only used for the Choose-your-own-adventure chips,
      so it loads when that card is about to scroll into view, not on page load. */
@@ -580,15 +597,12 @@
     rel.sort(function(a,b){return a.date<b.date?1:-1});
     if(!rel.length) return;
 
-    /* live count: banner reads "N episodes and counting" straight from the catalogue, so it ticks up as each episode lists */
+    /* live count: the opener reads "N episodes and counting" straight from the catalogue, so it ticks up as each episode lists */
     var epc=document.getElementById('ep-count'); if(epc) epc.textContent=rel.length;
 
-    /* latest: link, full thumbnail, button carries the episode number */
-    document.getElementById('banner-latest').href='/'+(rel[0].slug||('episode-'+rel[0].episodeNumber));
-    var lt=document.getElementById('latest-thumb');
-    lt.src='https://i.ytimg.com/vi/'+rel[0].youtubeId+'/mqdefault.jpg';
-    lt.alt='EP '+rel[0].episodeNumber+': '+rel[0].title;
-    document.getElementById('latest-go').textContent='Watch EP '+rel[0].episodeNumber;
+    /* latest: the first-screen button points at the newest released episode */
+    var hw=document.getElementById('hero-watch');
+    if(hw) hw.href='/'+(rel[0].slug||('episode-'+rel[0].episodeNumber));
 
     /* Latest episodes strip: the HTML list is written into the page for Google; if a newer episode has
        listed since, rebuild the six cards from the live catalogue so visitors always see the newest */
