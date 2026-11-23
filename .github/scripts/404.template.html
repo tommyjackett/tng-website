@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+__MARK__
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Page not found | The Numbers Game</title>
+<meta name="robots" content="noindex">
+<script>
+/* Old-link resolver. Runs before anything else so a clear match redirects at once. */
+(function(){
+  var D=__DATA__;
+  var S={}, C={}, N={};
+  function compact(s){return s.toLowerCase().replace(/[^a-z0-9]/g,'');}
+  D.e.forEach(function(e){S[e[0]]=e[0]; N[e[2]]=e[0]; var c=compact(e[0]); C[c]=(c in C && C[c]!==e[0])?null:e[0];});
+  Object.keys(D.a).forEach(function(k){var c=compact(k); if(!(c in C)) C[c]=D.a[k];});
+  function look(k){
+    if(!k) return null;
+    var l=k.toLowerCase(), m, c;
+    if(S[l]) return S[l];
+    if(D.a[l]) return D.a[l];
+    m=l.match(/^(?:ep|episode-?)(\d+)$/);                 /* ep123 / episode-123 */
+    if(m && N[+m[1]]) return N[+m[1]];
+    c=compact(k); if(C[c]) return C[c];                    /* apostrophe / punctuation variants */
+    m=k.match(/^(.+)-([A-Za-z0-9_]{8})$/);                 /* Simplecast code suffix, only if the rest is known */
+    if(m){
+      var r=m[1].toLowerCase();
+      if(S[r]) return S[r]; if(D.a[r]) return D.a[r];
+      c=compact(r); if(C[c]) return C[c];
+    }
+    return null;
+  }
+  function bigrams(s){var o={},n=0;for(var i=0;i<s.length-1;i++){var b=s.substr(i,2);o[b]=(o[b]||0)+1;n++;}return {o:o,n:n};}
+  function dice(a,b){if(a===b)return 1;if(a.length<2||b.length<2)return 0;var A=bigrams(a),B=bigrams(b),x=0;for(var k in A.o){if(B.o[k])x+=Math.min(A.o[k],B.o[k]);}return 2*x/(A.n+B.n);}
+  function words(s){return s.toLowerCase().split(/[^a-z0-9]+/).filter(function(w){return w.length>2;});}
+  function rank(q){
+    var qc=compact(q), qw=words(q);
+    return D.e.map(function(e){
+      var sc=dice(qc,compact(e[0])), tw=words(e[0]+' '+e[1]), hit=0;
+      qw.forEach(function(w){if(tw.indexOf(w)>-1)hit++;});
+      var wo=qw.length?hit/qw.length:0;
+      return {e:e,s:Math.max(sc,0.6*sc+0.4*wo)};
+    }).sort(function(a,b){return b.s-a.s;});
+  }
+  var path=location.pathname, p=path;
+  try{p=decodeURIComponent(p);}catch(e){}
+  p=p.replace(/\/index\.html?$/i,'').replace(/\.html?$/i,'').replace(/\/+$/,'').replace(/^\/+/,'');
+  p=p.replace(/^episodes?\//i,'').replace(/^podcasts?\//i,'');
+  var segs=p.split('/').filter(Boolean), target=null, i;
+  for(i=0;i<segs.length && !target;i++) target=look(segs[i]);
+  var q=segs.join('-'), ranked=q?rank(q):[];
+  if(!target && ranked.length && ranked[0].s>=0.9 && (ranked.length<2 || ranked[0].s-ranked[1].s>=0.08)) target=ranked[0].e[0];
+  if(target && '/'+target===path) target=null;
+  window.__tng404={requested:path+location.search, target:target, top:ranked.slice(0,3).map(function(r){return r.e;})};
+  if(target){document.documentElement.className+=' tng-redirecting';}
+})();
+</script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=__GA_ID__"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  (function(){
+    var r=window.__tng404||{}, done=false;
+    function go(){ if(done) return; done=true; location.replace('/'+r.target+location.search+location.hash); }
+    gtag('config', '__GA_ID__', {send_page_view: !r.target});
+    gtag('event', 'page_not_found', {
+      page_path_requested: (r.requested||'').slice(0,100),
+      page_referrer: document.referrer || '(direct)',
+      redirect_to: r.target ? '/'+r.target : '(none)',
+      transport_type: 'beacon',
+      event_callback: r.target ? go : undefined
+    });
+    if(r.target) setTimeout(go, 400);
+  })();
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" sizes="64x64" href="/assets/favicon.png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<style>
+  :root{
+    --purple:#585af3; --mint:#7ad9a8; --white:#ffffff; --muted:rgba(255,255,255,.60);
+    --line:rgba(255,255,255,.12); --card:rgba(255,255,255,.05); --card-hi:rgba(255,255,255,.09);
+    --display:'Anton',Impact,'Helvetica Neue',sans-serif;
+    --sans:'Inter',system-ui,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html.tng-redirecting body{visibility:hidden}
+  body{font-family:var(--sans);color:var(--white);line-height:1.6;-webkit-font-smoothing:antialiased;min-height:100vh;
+    background:#12093a;
+    background-image:radial-gradient(1200px 600px at 82% -6%, rgba(88,90,243,.45) 0%, transparent 55%),
+      radial-gradient(900px 700px at 5% 8%, rgba(122,217,168,.10) 0%, transparent 50%),
+      linear-gradient(180deg,#2c1b8a 0%,#1a1150 28%,#100b34 62%,#0b0820 100%);
+    background-attachment:fixed}
+  a{color:inherit}
+  .nav{background:linear-gradient(180deg,rgba(24,15,74,.92),rgba(24,15,74,.72));border-bottom:1px solid var(--line)}
+  .nav-in{max-width:1280px;margin:0 auto;padding:11px 36px;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}
+  .brand img{height:36px;width:auto;display:block}
+  .navlinks{display:flex;gap:24px;flex-wrap:wrap}
+  .navlinks a{text-decoration:none;font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+  .navlinks a:hover{color:var(--white)}
+  main{max-width:760px;margin:0 auto;padding:70px 36px 90px;text-align:center}
+  .tb{display:inline-block;font-family:var(--display);font-weight:400;text-transform:uppercase;line-height:1;padding:.18em .5em .1em;font-size:clamp(30px,5vw,52px)}
+  .tb-p{background:var(--purple)} .tb-m{background:var(--mint);color:#0a0a0a}
+  .lead{color:var(--muted);font-size:16.5px;margin:26px auto 34px;max-width:56ch}
+  .sugs{list-style:none;display:flex;flex-direction:column;gap:12px;text-align:left;margin:0 0 34px}
+  .sugs a{display:block;text-decoration:none;background:var(--card);border:1px solid var(--line);padding:16px 18px;transition:.15s}
+  .sugs a:hover{background:var(--card-hi);border-color:rgba(122,217,168,.55)}
+  .sugs .n{display:block;font-family:var(--display);font-size:13px;letter-spacing:.6px;color:var(--mint);text-transform:uppercase}
+  .sugs .t{font-weight:700;font-size:16px}
+  .btn{display:inline-block;padding:15px 34px;border-radius:999px;background:var(--mint);color:#08210f;text-decoration:none;font-weight:800;font-size:13px;letter-spacing:.05em;text-transform:uppercase}
+  .btn:hover{filter:brightness(1.06)}
+  .hint{margin-top:22px;font-size:13px;color:var(--muted)}
+  @media(max-width:720px){.nav-in{padding:11px 22px} main{padding:48px 22px 70px} .navlinks{gap:16px}}
+</style>
+</head>
+<body>
+  <nav class="nav"><div class="nav-in">
+    <a class="brand" href="/" aria-label="The Numbers Game home"><img src="/assets/tng-logo.png" alt="The Numbers Game"></a>
+    <div class="navlinks"><a href="/">Home</a><a href="/episodes">All episodes</a><a href="/about">About</a><a href="/contact">Contact</a></div>
+  </div></nav>
+  <main>
+    <div><span class="tb tb-p">That page</span></div>
+    <div><span class="tb tb-m">isn't here</span></div>
+    <p class="lead" id="lead">The link may be old or mistyped. These episodes look like the closest match:</p>
+    <ul class="sugs" id="sugs"></ul>
+    <a class="btn" href="/episodes">Browse every episode</a>
+    <p class="hint">Episodes now live at thenumbersgamepodcast.com.au/episode-name</p>
+  </main>
+<script>
+(function(){
+  var r=window.__tng404||{}, ul=document.getElementById('sugs');
+  if(r.target){ul.innerHTML='<li><a href="/'+r.target+'"><span class="t">Taking you to the episode…</span></a></li>';return;}
+  var top=r.top||[];
+  if(!top.length){document.getElementById('lead').textContent='The link may be old or mistyped. Every episode is in the list below.';return;}
+  top.forEach(function(e){
+    var li=document.createElement('li'), a=document.createElement('a');
+    a.href='/'+e[0];
+    var n=document.createElement('span'); n.className='n'; n.textContent=e[2]?('Episode '+e[2]):'Episode';
+    var t=document.createElement('span'); t.className='t'; t.textContent=e[1];
+    a.appendChild(n); a.appendChild(t); li.appendChild(a); ul.appendChild(li);
+  });
+})();
+</script>
+</body>
+</html>
