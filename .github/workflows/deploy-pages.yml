@@ -25,6 +25,12 @@ jobs:
     steps:
       - uses: actions/checkout@v5
       - uses: actions/configure-pages@v5
+      # Old-link safety net: /episodes/<slug> + /<slug>/ redirect stubs, smart 404.html, llms.txt,
+      # rebuilt from data/catalogue.json so every listed episode is covered. Never blocks the deploy.
+      - name: Build old-link redirects, 404 page and llms.txt (never blocks the deploy)
+        continue-on-error: true
+        timeout-minutes: 2
+        run: python3 .github/scripts/build_old_links.py
       - uses: actions/upload-pages-artifact@v4
         with:
           path: .
