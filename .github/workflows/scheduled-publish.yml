@@ -3,7 +3,9 @@ name: Scheduled episode publish
 # Lists pre-staged episodes (pages already on the site, unlisted) into the live
 # catalogue + search-index on their release date, evaluated in Australia/Sydney
 # local time. Once listed they appear in All Episodes, search, and Choose-Your-Own-
-# Adventure. Idempotent. Platform links (Spotify/Apple) are backfilled separately.
+# Adventure. Idempotent. Direct Spotify/Apple links are then backfilled by
+# .github/scripts/enrich_episode_links.py when the platforms have the episode
+# (never blocks the listing).
 #
 # Cron runs at 13:30, 14:30 and 15:00 UTC daily. 00:30 Sydney = 14:30 UTC in AEST
 # (UTC+10, winter) or 13:30 UTC in AEDT (UTC+11, summer), so the episode lists at
@@ -68,6 +70,11 @@ jobs:
 
       # SEO (The Numbers Game, round 2): add newly listed episodes to sitemap.xml.
       # continue-on-error + timeout: this step can NEVER block or delay the release.
+      - name: Backfill direct Spotify and Apple episode links (never blocks the release)
+        continue-on-error: true
+        timeout-minutes: 3
+        run: python3 .github/scripts/enrich_episode_links.py --root .
+
       - name: SEO - add newly listed episodes to sitemap.xml (never blocks the release)
         id: seo
         continue-on-error: true
@@ -77,11 +84,15 @@ jobs:
       - name: Commit + push if an episode went live
         id: commit
         run: |
-          if [ -n "$(git status --porcelain data/catalogue.json data/search-index.json)" ]; then
+          if [ -n "$(git status --porcelain -- data/catalogue.json data/search-index.json sitemap.xml)" ] || [ -n "$(git diff --name-only -- '*.html')" ]; then
             git config user.name "tng-scheduler[bot]"
             git config user.email "actions@users.noreply.github.com"
             git add -- data/catalogue.json data/search-index.json
             git add -- sitemap.xml || echo "::warning::sitemap.xml not staged; release continues without it"
+            HTML_CHANGED=$(git diff --name-only -- '*.html')
+            if [ -n "$HTML_CHANGED" ]; then
+              git add -- $HTML_CHANGED
+            fi
             git commit -m "Scheduled publish: list due episode(s) in catalogue + search-index"
             git push origin main
             echo "published=true" >> "$GITHUB_OUTPUT"
