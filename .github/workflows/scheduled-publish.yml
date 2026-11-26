@@ -81,6 +81,15 @@ jobs:
         timeout-minutes: 2
         run: python3 .github/scripts/release_seo.py
 
+      # SEO (archive links): bake a crawlable <a href> to every released episode into episodes.html,
+      # so the back catalogue can be found without running JavaScript. Same safety as the step above:
+      # continue-on-error + timeout, it can NEVER block or delay the release.
+      - name: SEO - bake crawlable episode links into episodes.html (never blocks the release)
+        id: bake
+        continue-on-error: true
+        timeout-minutes: 2
+        run: python3 .github/scripts/bake_episode_links.py
+
       - name: Commit + push if an episode went live
         id: commit
         run: |
